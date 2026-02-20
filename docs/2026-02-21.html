@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전화영어 복습 - 2026년 02월 21일</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Noto Sans KR',sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.75;min-height:100vh}
+        .header{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);border-bottom:1px solid rgba(255,255,255,.06);padding:48px 24px 40px;text-align:center}
+        .header-date{font-size:13px;color:#94a3b8;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+        .header h1{font-size:28px;font-weight:700;color:#f1f5f9;margin-bottom:16px}
+        .header-meta{display:flex;justify-content:center;gap:24px;font-size:14px;color:#64748b}
+        .header-meta span{display:flex;align-items:center;gap:6px}
+        .cta-section{text-align:center;padding:40px 24px}
+        .cta-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:linear-gradient(135deg,#38bdf8,#818cf8);color:#fff;font-size:16px;font-weight:600;font-family:'Noto Sans KR',sans-serif;border:none;border-radius:50px;cursor:pointer;transition:all .3s;text-decoration:none;box-shadow:0 4px 24px rgba(56,189,248,.25)}
+        .cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(56,189,248,.35)}
+        .cta-btn svg{width:20px;height:20px}
+        .cta-sub{margin-top:12px;font-size:13px;color:#64748b}
+        .toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#38bdf8;padding:14px 28px;border-radius:12px;font-size:14px;font-weight:500;border:1px solid rgba(56,189,248,.2);box-shadow:0 8px 32px rgba(0,0,0,.4);opacity:0;transition:all .4s cubic-bezier(.16,1,.3,1);z-index:1000}
+        .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+        .container{max-width:720px;margin:0 auto;padding:0 24px 80px}
+        .tabs{display:flex;gap:4px;background:#1a1a24;padding:4px;border-radius:12px;margin-bottom:32px}
+        .tab{flex:1;padding:12px;text-align:center;font-size:14px;font-weight:500;color:#64748b;background:0 0;border:none;border-radius:8px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all .2s}
+        .tab.active{background:#262636;color:#f1f5f9}
+        .tab-content{display:none}.tab-content.active{display:block}
+        .feedback h2{font-size:18px;font-weight:700;color:#f1f5f9;margin:36px 0 16px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.06)}
+        .feedback h2:first-child{margin-top:0}
+        .feedback p{margin:8px 0;color:#cbd5e1}
+        .feedback .item{padding:6px 0 6px 16px;border-left:2px solid #334155;margin:6px 0;color:#cbd5e1}
+        .feedback .numbered{padding:8px 0 8px 16px;color:#cbd5e1}
+        .feedback .numbered strong{color:#38bdf8}
+        .feedback strong{color:#f1f5f9}
+        .feedback code{background:#1e293b;padding:2px 8px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#38bdf8}
+        .feedback table{width:100%;border-collapse:collapse;margin:12px 0}
+        .feedback th,.feedback td{padding:10px 14px;text-align:left;border-bottom:1px solid #262636}
+        .feedback th{color:#94a3b8;font-weight:500;font-size:13px}
+        .feedback td{color:#cbd5e1}
+        .arrow{color:#38bdf8;font-weight:700}
+        .transcript{background:#1a1a24;border-radius:12px;padding:28px;font-size:14px;line-height:2;color:#94a3b8;white-space:pre-wrap;word-break:break-word;font-family:'JetBrains Mono','Noto Sans KR',monospace}
+        .transcript .tutor{color:#38bdf8}
+        .transcript .student{color:#a78bfa}
+        @media(max-width:640px){.header{padding:32px 16px}.header h1{font-size:22px}.cta-btn{padding:14px 28px;font-size:15px}.container{padding:0 16px 60px}}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-date">2026년 02월 21일</div>
+        <h1>📚 전화영어 복습</h1>
+        <div class="header-meta">
+            <span>⏱ 19분 51초</span>
+            <span>🎙 전화영어_025180304_20260210080107.m4a</span>
+        </div>
+    </div>
+    <div class="cta-section">
+        <button class="cta-btn" onclick="startReview()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Gemini에서 복습 대화 시작하기
+        </button>
+        <div class="cta-sub">클릭하면 프롬프트가 복사되고 Gemini가 열립니다</div>
+    </div>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('feedback')">📋 AI 피드백</button>
+            <button class="tab" onclick="switchTab('transcript')">🎙 수업 전사</button>
+        </div>
+        <div id="tab-feedback" class="tab-content active">
+            <div class="feedback"><h2>📊 오늘의 수업 요약</h2>
+<p>수업은 일상 대화와 비즈니스 상황에서의 영어 회화 능력 향상을 목표로 했다. 학습자는 원어민 튜터와 아침 인사를 나누며 일상적인 대화를 시작했다. 이후, 비즈니스 상황을 가정하여 문제 해결과 의사 결정에 관한 토론을 진행했다. 마지막으로, 해외 여행과 비즈니스 트립에 관련된 대화를 나누었다.</p>
+<br>
+<h2>🔧 문법 및 표현 교정</h2>
+<br>
+<div class="item">❌ 학습자 원문: "It's a fresh day. But today morning I'm hard to get up."</div>
+<div class="item">✅ 교정: "It's a lovely day. However, I found it hard to get up this morning."</div>
+<div class="item">💡 설명: "today morning"은 자연스럽지 않으며, "this morning"을 사용하는 것이 더 적절하다.</div>
+<br>
+<div class="item">❌ 학습자 원문: "I don't make, I don't create my own business."</div>
+<div class="item">✅ 교정: "I haven't started my own business yet."</div>
+<div class="item">💡 설명: 더 자연스러운 표현으로 바꾸었다.</div>
+<br>
+<div class="item">❌ 학습자 원문: "The reason, the root cause, the first company don't admit."</div>
+<div class="item">✅ 교정: "The reason is that the company doesn't allow it."</div>
+<div class="item">💡 설명: 문장을 단순화하고 더 명확하게 만들었다.</div>
+<br>
+<div class="item">❌ 학습자 원문: "I have to observe that. I have, I will, I find out the solution to that problem."</div>
+<div class="item">✅ 교정: "I need to find a solution to that problem."</div>
+<div class="item">💡 설명: 더 간결하고 자연스러운 표현으로 바꾸었다.</div>
+<br>
+<div class="item">❌ 학습자 원문: "Maybe if that idea is great, that may be a success. Or not."</div>
+<div class="item">✅ 교정: "If the idea is good, it might be a success. Otherwise, it might not."</div>
+<div class="item">💡 설명: 더 명확하고 자연스러운 조건문을 사용했다.</div>
+<br>
+<h2>📗 핵심 단어장</h2>
+<br>
+<div class="item"><strong>Company</strong> /ˈkʌmpəni/ (명사)</div>
+<p>  - 뜻: 기업, 회사</p>
+<p>  - 동의어: Corporation, Firm</p>
+<p>  - 예문: "I work for a large company."</p>
+<p>  - 💡 팁: 회사와 관련된 업무에서 자주 사용된다.</p>
+<br>
+<div class="item"><strong>Business</strong> /ˈbɪznɪs/ (명사)</div>
+<p>  - 뜻: 사업, 상업</p>
+<p>  - 동의어: Commerce, Trade</p>
+<p>  - 예문: "She has her own business."</p>
+<p>  - 💡 팁: 개인이나 기업의 경제 활동과 관련된 용어이다.</p>
+<br>
+<div class="item"><strong>Trip</strong> /trɪp/ (명사)</div>
+<p>  - 뜻: 여행, 여행 일정</p>
+<p>  - 동의어: Journey, Tour</p>
+<p>  - 예문: "I'm going on a trip to Europe."</p>
+<p>  - 💡 팁: 여행과 관련된 계획이나 실제 이동을 의미한다.</p>
+<br>
+<div class="item"><strong>Schedule</strong> /ˈskɛdʒuːl/ (명사)</div>
+<p>  - 뜻: 일程, 계획</p>
+<p>  - 동의어: Timetable, Itinerary</p>
+<p>  - 예문: "My schedule is very tight today."</p>
+<p>  - 💡 팁: 시간과 관련된 계획이나 예약을 의미한다.</p>
+<br>
+<div class="item"><strong>Concern</strong> /kənˈsɜːrn/ (명사)</div>
+<p>  - 뜻: 우려, 염려</p>
+<p>  - 동의어: Worry, Anxiety</p>
+<p>  - 예문: "My main concern is the safety."</p>
+<p>  - 💡 팁: 어떤 상황이나 문제에 대한 걱정이나 우려를 나타낸다.</p>
+<br>
+<h2>📘 문법 포인트</h2>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>현재완료 시제 사용</strong></div>
+<p>   - 📌 규칙 설명: 과거부터 현재까지 계속되는 상황이나 행동을 나타낼 때 사용한다.</p>
+<p>   - ❌ 학습자 오류: "I don't make my own business."</p>
+<p>   - ✅ 올바른 표현: "I haven't started my own business yet."</p>
+<p>   - 📝 추가 예문: "I have been studying English for three years."</p>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>조건문 사용</strong></div>
+<p>   - 📌 규칙 설명: 특정 조건하에 어떤 일이 일어날 수 있는 상황을 나타낸다.</p>
+<p>   - ❌ 학습자 오류: "Maybe if that idea is great, that may be a success."</p>
+<p>   - ✅ 올바른 표현: "If the idea is good, it might be a success."</p>
+<p>   - 📝 추가 예문: "If it rains, I will take an umbrella."</p>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>의사소통 능력 향상</strong></div>
+<p>   - 📌 규칙 설명: 효과적으로 메시지를 전달하고 이해하는 능력이다.</p>
+<p>   - ❌ 학습자 오류: 어색한 표현이나 문법 오류로 인해 의사소통이 어려울 때</p>
+<p>   - ✅ 올바른 표현: 자연스럽고 정확한 영어 사용</p>
+<p>   - 📝 추가 예문: 다양한 상황에서의 영어 회화 연습</p>
+<br>
+<h2>🗣️ 실전 회화 패턴</h2>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>자기 소개 패턴</strong></div>
+<p>   - <strong>패턴</strong>: "My name is ~, and I'm from ~."</p>
+<p>   - 의미: 이름과 출신지를 소개한다.</p>
+<p>   - 상황 1: 새로운 사람을 만나서 자기소개를 할 때</p>
+<p>   - 상황 2: 비즈니스 미팅에서 파트너를 소개할 때</p>
+<p>   - 상황 3: 국제 컨퍼런스에서 참가자를 소개할 때</p>
+<p>   - 🔄 변형: "I'm ~, nice to meet you."</p>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>의견 제시 패턴</strong></div>
+<p>   - <strong>패턴</strong>: "I think ~ because ~."</p>
+<p>   - 의미: 자신의 의견이나 생각을 제시한다.</p>
+<p>   - 상황 1: 회의에서 의견을 나눌 때</p>
+<p>   - 상황 2: 논쟁이나 토론에서 자신의 입장을 설명할 때</p>
+<p>   - 상황 3: 친구와 의견을 교류할 때</p>
+<p>   - 🔄 변형: "In my opinion, ~."</p>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>계획 및 예약 패턴</strong></div>
+<p>   - <strong>패턴</strong>: "I have a ~ at ~."</p>
+<p>   - 의미: 일정이나 예약을 말한다.</p>
+<p>   - 상황 1: 일상적인 약속을 정할 때</p>
+<p>   - 상황 2: 비즈니스 미팅을 예약할 때</p>
+<p>   - 상황 3: 여행 계획을 설명할 때</p>
+<p>   - 🔄 변형: "I'm going to ~ at ~."</p>
+<br>
+<h2>🔄 반복 실수 패턴 분석</h2>
+<div class="item">학습자는 "It's a ~ day"와 같은 표현을 자주 사용했는데, 더 자연스러운 표현을 사용하는 것이 좋다. 또한, 비즈니스 상황에서 적절한 문법과 어휘를 사용하는 것이 중요하다.</div>
+<br>
+<h2>✅ 잘한 점</h2>
+<div class="item">학습자는 비즈니스 상황과 일상 대화 모두에서 적극적으로 참여하여 영어를 사용하려고 노력했다.</div>
+<br>
+<h2>🎯 개선 포인트 TOP 3</h2>
+<div class="numbered"><strong>1.</strong> <strong>문법 오류 최소화</strong>: 특히 조건문과 현재완료 시제의 사용에서 오류가 많이 나타났다. 더 많은 연습과 공부가 필요하다.</div>
+<div class="numbered"><strong>2.</strong> <strong>어휘 다양성 증가</strong>: 더 다양한 어휘를 사용하여 표현을 풍부하게 하는 것이 필요하다. 비즈니스 상황에서 자주 사용되는 전문 용어나 표현을 학습하는 것이 도움이 될 수 있다.</div>
+<div class="numbered"><strong>3.</strong> <strong>자연스러운 발음과 유창성</strong>: 더 자연스럽고 유창하게 영어를 발음하고 사용하는 것이 중요하다. 이를 위해 음성 및 비디오 자료를 활용하여 연습할 수 있다.</div>
+<br>
+<h2>📝 복습용 영작 연습</h2>
+<div class="item">Q: "나는 오늘 아침에 일찍 일어났다."</div>
+<p>  - A: "I woke up early this morning."</p>
+<div class="item">Q: "그 회사의 이름은 무엇입니까?"</div>
+<p>  - A: "What is the name of that company?"</p>
+<div class="item">Q: "나는 내 사업을 시작하기 위해 많은 돈이 필요하다."</div>
+<p>  - A: "I need a lot of money to start my own business."</p>
+<div class="item">Q: "그 회의는 몇 시에 시작합니까?"</div>
+<p>  - A: "What time does the meeting start?"</p>
+<div class="item">Q: "나는 해외 여행을 가고 싶어."</div>
+<p>  - A: "I want to go on an overseas trip."</p>
+<div class="item">Q: "그 비즈니스 모델은 성공적인가?"</div>
+<p>  - A: "Is that business model successful?"</p>
+<div class="item">Q: "나는 내 친구와 오늘 만나기로 했어."</div>
+<p>  - A: "I'm meeting my friend today."</p>
+<br>
+<h2>📈 유창성 평가</h2>
+<br>
+<table>
+<tr><th>항목</th><th>점수 (1-10)</th></tr>
+<tr><td>문법 정확도</td><td>6/10</td></tr>
+<tr><td>어휘 다양성</td><td>7/10</td></tr>
+<tr><td>유창성 (자연스러움)</td><td>6/10</td></tr>
+<tr><td>의사소통 능력</td><td>7/10</td></tr>
+<tr><td><strong>종합</strong></td><td><strong>26/40</strong></td></tr>
+</table>
+<br>
+<p>총평: 학습자는 비즈니스 상황과 일상 대화에서 적극적으로 영어를 사용하려고 노력했지만, 문법 오류와 어휘의 한계가 나타났다. 더 많은 연습과 공부가 필요하며, 특히 어휘의 다양성과 자연스러운 발음에 집중해야 한다.</p></div>
+        </div>
+        <div id="tab-transcript" class="tab-content">
+            <div class="transcript"><span class="tutor">[Tutor]</span>: Hello, good morning Joanna. 
+<span class="student">[Student]</span>: Hi. Hi Joey, how are you today? It&#x27;s a nice day. It&#x27;s a fresh day. But today morning I&#x27;m hard to get up. It&#x27;s hard to get up. 
+<span class="tutor">[Tutor]</span>: Yeah, because in the midnight I wake up and I can&#x27;t sleep. 
+<span class="student">[Student]</span>: In the morning it&#x27;s a little hard to wake up. But except that, everything is good. How are you today? 
+<span class="tutor">[Tutor]</span>: I am excellent. Thank you for asking. 
+<span class="student">[Student]</span>: Is it dark outside when you get up in the morning? 
+<span class="tutor">[Tutor]</span>: We close the curtains, so maybe that is dark, but I don&#x27;t open the window, not yet. 
+<span class="student">[Student]</span>: I find it hard to get up in the morning when it&#x27;s still dark outside. 
+<span class="tutor">[Tutor]</span>: I see. 
+<span class="student">[Student]</span>: In my room we have a curtain, so every night we close the curtain and there is darkness. 
+<span class="tutor">[Tutor]</span>: Okay. Well, hopefully a little bit of coffee will help get you going this morning. 
+<span class="student">[Student]</span>: Yeah, no problem. I&#x27;m Saturday man. I wake up almost 20 years, for 20 years, wake up in the morning. So that&#x27;s no problem. 
+<span class="tutor">[Tutor]</span>: And that&#x27;s it. If it&#x27;s not coffee, it&#x27;s English class. 
+<span class="student">[Student]</span>: Yes, it&#x27;s better. 
+<span class="tutor">[Tutor]</span>: Exactly. Yeah, better. 
+<span class="student">[Student]</span>: Let&#x27;s see what type of tough questions we have for you today. 
+<span class="tutor">[Tutor]</span>: Today we start the case scenario second. The page is 63. 
+<span class="student">[Student]</span>: Exactly. 
+<span class="tutor">[Tutor]</span>: Exactly. 
+<span class="student">[Student]</span>: So now it&#x27;s your turn to think about the problems in your company or your team some solutions. 
+<span class="tutor">[Tutor]</span>: Yeah, I give the solution for you. 
+<span class="student">[Student]</span>: The second question. Now compare your solution consequence with your partner. Whose solution do you think is better? 
+<span class="tutor">[Tutor]</span>: Okay, pass. 
+<span class="student">[Student]</span>: Exactly. 
+<span class="tutor">[Tutor]</span>: And second. 
+<span class="student">[Student]</span>: Next, create a table for your company. For your team. Who are for your team? What kind of problem is your company facing? What about your team? What are some solutions? Fill out table below. 
+<span class="tutor">[Tutor]</span>: I see, but that is empty so maybe we have to fill up that problem, solution, and consequence, right? 
+<span class="student">[Student]</span>: That&#x27;s exactly right. 
+<span class="tutor">[Tutor]</span>: Okay, I see. 
+<span class="student">[Student]</span>: Okay, yeah but I want to not apply to the company problem that apply to my personal problem. Is it possible? 
+<span class="tutor">[Tutor]</span>: Absolutely. 
+<span class="student">[Student]</span>: Okay. Problem. I don&#x27;t make, I don&#x27;t create my own business. 
+<span class="tutor">[Tutor]</span>: Mm-hmm. 
+<span class="student">[Student]</span>: Mm-hmm. The reason, the root cause, the first company don&#x27;t admit. Or company don&#x27;t allow to the new business, the employee, that is first. 
+<span class="tutor">[Tutor]</span>: The company doesn&#x27;t allow it. 
+<span class="student">[Student]</span>: Yeah. Company doesn&#x27;t allow to the employee start up or employ new business. That is first thing. 
+<span class="tutor">[Tutor]</span>: I work at auditing, so I need more ethics and responsibility of the company. 
+<span class="student">[Student]</span>: So that is one problem. And the second my idea is disconnect because I have a long time to my work. 
+<span class="tutor">[Tutor]</span>: So it is sometimes I have some good idea or I have some create a new thing. 
+<span class="student">[Student]</span>: But disconnect because whole time, you know, my whole day used to work in a company. in our company. 
+<span class="tutor">[Tutor]</span>: That is a problem. 
+<span class="student">[Student]</span>: Yeah. So I have to observe that. I have, I will, I find out the solution to that problem. 
+<span class="tutor">[Tutor]</span>: Yes. 
+<span class="student">[Student]</span>: Yes. 
+<span class="tutor">[Tutor]</span>: And possible solutions? 
+<span class="student">[Student]</span>: First, I think I will start with a small thing. Because if I take a small business, at the time, there is no list of the inner workings. government. 
+<span class="tutor">[Tutor]</span>: That is not? 
+<span class="student">[Student]</span>: Sorry? If I start a small business at the time, I don&#x27;t list off to my business in our government. It is not listed. 
+<span class="tutor">[Tutor]</span>: Yeah, it is not listed. 
+<span class="student">[Student]</span>: Or start my wife wife owns business. I make something and give my wife. 
+<span class="tutor">[Tutor]</span>: Excellent. Excellent solution. 
+<span class="student">[Student]</span>: Yes, or the last thing, just care of your mind, invest, not start up. Just care of your stock, own real estate, only think about the investment if possible. 
+<span class="tutor">[Tutor]</span>: So that is the solution. 
+<span class="student">[Student]</span>: How about that? 
+<span class="tutor">[Tutor]</span>: I like these solutions. 
+<span class="student">[Student]</span>: Oh, you&#x27;re right. 
+<span class="tutor">[Tutor]</span>: And what are some potential consequences? 
+<span class="student">[Student]</span>: Possible consequences. Yeah, my teacher said, oh, that&#x27;s a good idea. 
+<span class="tutor">[Tutor]</span>: So maybe that is a nice idea. 
+<span class="student">[Student]</span>: So, yeah. So I meet three kinds of them. The first, I start small. 
+<span class="tutor">[Tutor]</span>: And second, I focus on more invest. 
+<span class="student">[Student]</span>: And second, if my startup is bigger, at that time I make my business co-worker system, co-worker owner with my wife. 
+<span class="tutor">[Tutor]</span>: Co-owner. 
+<span class="student">[Student]</span>: Yeah, co-owner. 
+<span class="tutor">[Tutor]</span>: That is my solution. 
+<span class="student">[Student]</span>: Maybe if that idea is great, that may be a success. Or not. 
+<span class="tutor">[Tutor]</span>: Maybe that is failing. 
+<span class="student">[Student]</span>: Yeah, HR. 
+<span class="tutor">[Tutor]</span>: You won&#x27;t know until you try. 
+<span class="student">[Student]</span>: You won&#x27;t know until you try. 
+<span class="tutor">[Tutor]</span>: Yeah. 
+<span class="student">[Student]</span>: Yeah, you&#x27;re right. 
+<span class="tutor">[Tutor]</span>: Okay. 
+<span class="student">[Student]</span>: And I solve some problems. For example, my idea is disconnected because of my work. 
+<span class="tutor">[Tutor]</span>: So I wipe my idea to the Excel file, one week or two weeks. 
+<span class="student">[Student]</span>: At that time, my idea is not disconnected. connect and that is remind the SFI so it is possible to continue. 
+<span class="tutor">[Tutor]</span>: Yeah, make a, make a, yeah, start up or not. 
+<span class="student">[Student]</span>: Yeah, it&#x27;s your... 
+<span class="tutor">[Tutor]</span>: To work a little bit, yes, when you have time. 
+<span class="student">[Student]</span>: Yes. 
+<span class="tutor">[Tutor]</span>: Okay. 
+<span class="student">[Student]</span>: That&#x27;s the solution and problem and possible solution and possible consequence. 
+<span class="tutor">[Tutor]</span>: Yes. 
+<span class="student">[Student]</span>: We got them all. 
+<span class="tutor">[Tutor]</span>: Yes. 
+<span class="student">[Student]</span>: Okay. 
+<span class="tutor">[Tutor]</span>: Good. 
+<span class="student">[Student]</span>: Okay. 
+<span class="tutor">[Tutor]</span>: Okay Ready to move on to the next chapter. 
+<span class="student">[Student]</span>: Yeah no problem. 
+<span class="tutor">[Tutor]</span>: The next chapter is the business preparation. 
+<span class="student">[Student]</span>: Okay. 
+<span class="tutor">[Tutor]</span>: And the goal is for you to be able to make reservations for flights and hotel bookings and arrange meetings abroad. 
+<span class="student">[Student]</span>: Oh, yes. 
+<span class="tutor">[Tutor]</span>: That&#x27;s nice. 
+<span class="student">[Student]</span>: What is happening in the image in part A? 
+<span class="tutor">[Tutor]</span>: I see. 
+<span class="student">[Student]</span>: I can see the picture and one guy watch, check the time in the airport. 
+<span class="tutor">[Tutor]</span>: And beside him, there is a small-sized carrier or luggage, small-sized luggage. 
+<span class="student">[Student]</span>: And he wears the business suit. 
+<span class="tutor">[Tutor]</span>: So I guess he&#x27;s waiting for the airplane in the airport, and he prepares to go on a business trip. 
+<span class="student">[Student]</span>: and I guess this this robot size is small so maybe he go to the short trip not a long visit. 
+<span class="tutor">[Tutor]</span>: Yeah, yeah, sure. 
+<span class="student">[Student]</span>: Excellent description. 
+<span class="tutor">[Tutor]</span>: I like that. 
+<span class="student">[Student]</span>: I like that you inferred that he might be going on a short trip because his luggage is not very big. 
+<span class="tutor">[Tutor]</span>: Yeah, you&#x27;re right. 
+<span class="student">[Student]</span>: I like that. 
+<span class="tutor">[Tutor]</span>: It&#x27;s called inferring, right? 
+<span class="student">[Student]</span>: So you&#x27;re looking at something and you&#x27;re making a supposition about it. 
+<span class="tutor">[Tutor]</span>: Infer. 
+<span class="student">[Student]</span>: Oh, yes. 
+<span class="tutor">[Tutor]</span>: Thank you for... 
+<span class="student">[Student]</span>: Do you enjoy going... 
+<span class="tutor">[Tutor]</span>: Oh, yes. 
+<span class="student">[Student]</span>: Yeah. 
+<span class="tutor">[Tutor]</span>: Thank you for... 
+<span class="student">[Student]</span>: What can I say? 
+<span class="tutor">[Tutor]</span>: Thank you for... 
+<span class="student">[Student]</span>: How can I say? 
+<span class="tutor">[Tutor]</span>: Thank you for your... 
+<span class="student">[Student]</span>: Explanation. 
+<span class="tutor">[Tutor]</span>: Explanation or kind words. 
+<span class="student">[Student]</span>: Thank you for inspiration. 
+<span class="tutor">[Tutor]</span>: Kind words, yeah. 
+<span class="student">[Student]</span>: Thank you for kind words. 
+<span class="tutor">[Tutor]</span>: Okay. 
+<span class="student">[Student]</span>: Yes. 
+<span class="tutor">[Tutor]</span>: Next time I&#x27;ll try them. 
+<span class="student">[Student]</span>: Okay. 
+<span class="tutor">[Tutor]</span>: Excellent. 
+<span class="student">[Student]</span>: Okay. 
+<span class="tutor">[Tutor]</span>: Now let&#x27;s move on to part B. 
+<span class="student">[Student]</span>: Do you enjoy going on business trips? 
+<span class="tutor">[Tutor]</span>: Why or why not? 
+<span class="student">[Student]</span>: Yeah, I love that. 
+<span class="tutor">[Tutor]</span>: Yeah, some people don&#x27;t like the business trip. 
+<span class="student">[Student]</span>: That is a little stressful and they don&#x27;t have time and they don&#x27;t meet the family. 
+<span class="tutor">[Tutor]</span>: But in my case, I love the business trip because it is possible to travel in a world use the corporation card, corporation money. 
+<span class="student">[Student]</span>: So, and sometimes I can meet the people. 
+<span class="tutor">[Tutor]</span>: Yeah, the people business purpose. 
+<span class="student">[Student]</span>: So, yeah, I love that. 
+<span class="tutor">[Tutor]</span>: And last year I visit Singapore and this year maybe I will go to the USA. 
+<span class="student">[Student]</span>: That is Houston. 
+<span class="tutor">[Tutor]</span>: Yeah, because Houston has a small branch office because we import the LNG gas and LBG. 
+<span class="student">[Student]</span>: So maybe that&#x27;s a nice chance for me. 
+<span class="tutor">[Tutor]</span>: I think so. 
+<span class="student">[Student]</span>: That would be really nice. 
+<span class="tutor">[Tutor]</span>: Do you know what time of year you could possibly go to Houston? 
+<span class="student">[Student]</span>: Maybe November or December I will go there. 
+<span class="tutor">[Tutor]</span>: That&#x27;s great. 
+<span class="student">[Student]</span>: But maybe I will meet the Koreans. 
+<span class="tutor">[Tutor]</span>: Well, I was worried about summer. 
+<span class="student">[Student]</span>: Summer is very hot in Texas. 
+<span class="tutor">[Tutor]</span>: So that&#x27;s why November, December is great. 
+<span class="student">[Student]</span>: In the summer, it is very, very hot. 
+<span class="tutor">[Tutor]</span>: And Texas is nearby Houston, you say? 
+<span class="student">[Student]</span>: Houston is a city in Texas. 
+<span class="tutor">[Tutor]</span>: Texas is a huge state. 
+<span class="student">[Student]</span>: It&#x27;s humongous. 
+<span class="tutor">[Tutor]</span>: But Houston is in the state, yeah. 
+<span class="student">[Student]</span>: I see. 
+<span class="tutor">[Tutor]</span>: I understand. 
+<span class="student">[Student]</span>: Okay. 
+<span class="tutor">[Tutor]</span>: Okay. 
+<span class="student">[Student]</span>: What is the first thing you prepare when you are assigned to a business trip? 
+<span class="tutor">[Tutor]</span>: First I research the total pay. 
+<span class="student">[Student]</span>: The total cost? 
+<span class="tutor">[Tutor]</span>: Yeah, total pay. 
+<span class="student">[Student]</span>: Because I have to make a document and approve through my boss. 
+<span class="tutor">[Tutor]</span>: So first, I check the total cost. 
+<span class="student">[Student]</span>: And then if I approve that business trip, at that time I&#x27;m starting to reserve the hotels, the plane tickets, my accessories. 
+<span class="tutor">[Tutor]</span>: But maybe it is still different, the Korean corporation and the USA corporation are different. 
+<span class="student">[Student]</span>: Usually, USA company, they don&#x27;t approve. 
+<span class="tutor">[Tutor]</span>: Just send email to both or some guys. 
+<span class="student">[Student]</span>: But, you know, in Korea&#x27;s company, we usually approve, make approve document. 
+<span class="tutor">[Tutor]</span>: And then start new thing, new work. 
+<span class="student">[Student]</span>: So that is a big difference. 
+<span class="tutor">[Tutor]</span>: Can you tell me why you think there&#x27;s a difference? 
+<span class="student">[Student]</span>: I think the USA is more free time. 
+<span class="tutor">[Tutor]</span>: They think the efficiency is the best important. 
+<span class="student">[Student]</span>: So usually they send email to the boss and that system is checked and approval check system. 
+<span class="tutor">[Tutor]</span>: But in Korea, we usually more think about the inner system. 
+<span class="student">[Student]</span>: So we just make a document in our system and then start to work. 
+<span class="tutor">[Tutor]</span>: So that is more slow, but if we check the responsibility of the work or if we check some problem, at that time, that is more easy. 
+<span class="student">[Student]</span>: So both is so great, but sometimes US is more efficient and sometimes Korea is more have a better system. 
+<span class="tutor">[Tutor]</span>: So that is depend on the situation. 
+<span class="student">[Student]</span>: Interesting. 
+<span class="tutor">[Tutor]</span>: So my experience in Canada is similar to the experience in Korea. 
+<span class="student">[Student]</span>: So we always had to get approvals and a lot of approvals. 
+<span class="tutor">[Tutor]</span>: I see. 
+<span class="student">[Student]</span>: Yes. 
+<span class="tutor">[Tutor]</span>: When I visit Singapore or some place, at the time, they don&#x27;t approve their system, just send email. 
+<span class="student">[Student]</span>: They believe that is already system. 
+<span class="tutor">[Tutor]</span>: Because both already that see them and contact is similar if we share their contact document that is a pro the contact is their approval and their have was some blah blah blah. 
+<span class="student">[Student]</span>: Okay, okay, yeah. 
+<span class="tutor">[Tutor]</span>: Well, I think we can we can wrap up here for today with all of the questions. 
+<span class="student">[Student]</span>: Okay, well, we have time for one more. 
+<span class="tutor">[Tutor]</span>: What is your greatest concern when traveling to another country? 
+<span class="student">[Student]</span>: My concerns? 
+<span class="tutor">[Tutor]</span>: That depends. 
+<span class="student">[Student]</span>: That is different situation. 
+<span class="tutor">[Tutor]</span>: Usually I concern the schedule or meet the people because every traveler have a purpose. 
+<span class="student">[Student]</span>: So I focus on that purpose. 
+<span class="tutor">[Tutor]</span>: So that&#x27;s different situation. 
+<span class="student">[Student]</span>: Okay, so making sure you follow your itinerary. 
+<span class="tutor">[Tutor]</span>: Yeah, you&#x27;re right. 
+<span class="student">[Student]</span>: Okay, makes sense. 
+<span class="tutor">[Tutor]</span>: Okay, well, now we can wrap up. 
+<span class="student">[Student]</span>: I hope this woke you up. 
+<span class="tutor">[Tutor]</span>: And that you have an excellent few days and we will talk very soon. 
+<span class="student">[Student]</span>: Okay, yeah. 
+<span class="tutor">[Tutor]</span>: Thank you for your press. 
+<span class="student">[Student]</span>: Of course. 
+<span class="tutor">[Tutor]</span>: Yeah. 
+<span class="student">[Student]</span>: And have a nice day, teacher. 
+<span class="tutor">[Tutor]</span>: Thank you. 
+<span class="student">[Student]</span>: You as well. 
+<span class="tutor">[Tutor]</span>: Take care, Joey. 
+<span class="student">[Student]</span>: Okay, take care. 
+<span class="tutor">[Tutor]</span>: Bye-bye. 
+<span class="student">[Student]</span>: Bye-bye.</div>
+        </div>
+    </div>
+    <div class="toast" id="toast">✅ 프롬프트가 복사되었습니다!</div>
+    <script>
+        const REVIEW_PROMPT="너는 나의 영어 회화 복습 파트너야. 오늘 내 전화영어 수업 내용을 기반으로 대화하면서 복습을 도와줘.\n\n[오늘 수업 전사 내용]\n[Tutor]: Hello, good morning Joanna. \n[Student]: Hi. Hi Joey, how are you today? It's a nice day. It's a fresh day. But today morning I'm hard to get up. It's hard to get up. \n[Tutor]: Yeah, because in the midnight I wake up and I can't sleep. \n[Student]: In the morning it's a little hard to wake up. But except that, everything is good. How are you today? \n[Tutor]: I am excellent. Thank you for asking. \n[Student]: Is it dark outside when you get up in the morning? \n[Tutor]: We close the curtains, so maybe that is dark, but I don't open the window, not yet. \n[Student]: I find it hard to get up in the morning when it's still dark outside. \n[Tutor]: I see. \n[Student]: In my room we have a curtain, so every night we close the curtain and there is darkness. \n[Tutor]: Okay. Well, hopefully a little bit of coffee will help get you going this morning. \n[Student]: Yeah, no problem. I'm Saturday man. I wake up almost 20 years, for 20 years, wake up in the morning. So that's no problem. \n[Tutor]: And that's it. If it's not coffee, it's English class. \n[Student]: Yes, it's better. \n[Tutor]: Exactly. Yeah, better. \n[Student]: Let's see what type of tough questions we have for you today. \n[Tutor]: Today we start the case scenario second. The page is 63. \n[Student]: Exactly. \n[Tutor]: Exactly. \n[Student]: So now it's your turn to think about the problems in your company or your team some solutions. \n[Tutor]: Yeah, I give the solution for you. \n[Student]: The second question. Now compare your solution consequence with your partner. Whose solution do you think is better? \n[Tutor]: Okay, pass. \n[Student]: Exactly. \n[Tutor]: And second. \n[Student]: Next, create a table for your company. For your team. Who are for your team? What kind of problem is your company facing? What about your team? What are some solutions? Fill out table below. \n[Tutor]: I see, but that is empty so maybe we have to fill up that problem, solution, and consequence, right? \n[Student]: That's exactly right. \n[Tutor]: Okay, I see. \n[Student]: Okay, yeah but I want to not apply to the company problem that apply to my personal problem. Is it possible? \n[Tutor]: Absolutely. \n[Student]: Okay. Problem. I don't make, I don't create my own business. \n[Tutor]: Mm-hmm. \n[Student]: Mm-hmm. The reason, the root cause, the first company don't admit. Or company don't allow to the new business, the employee, that is first. \n[Tutor]: The company doesn't allow it. \n[Student]: Yeah. Company doesn't allow to the employee start up or employ new business. That is first thing. \n[Tutor]: I work at auditing, so I need more ethics and responsibility of the company. \n[Student]: So that is one problem. And the second my idea is disconnect because I have a long time to my work. \n[Tutor]: So it is sometimes I have some good idea or I have some create a new thing. \n[Student]: But disconnect because whole time, you know, my whole day used to work in a company. in our company. \n[Tutor]: That is a problem. \n[Student]: Yeah. So I have to observe that. I have, I will, I find out the solution to that problem. \n[Tutor]: Yes. \n[Student]: Yes. \n[Tutor]: And possible solutions? \n[Student]: First, I think I will start with a small thing. Because if I take a small business, at the time, there is no list of the inner workings. government. \n[Tutor]: That is not? \n[Student]: Sorry? If I start a small business at the time, I don't list off to my business in our government. It is not listed. \n[Tutor]: Yeah, it is not listed. \n[Student]: Or start my wife wife owns business. I make something and give my wife. \n[Tutor]: Excellent. Excellent solution. \n[Student]: Yes, or the last thing, just care of your mind, invest, not start up. Just care of your stock, own real estate, only think about the investment if possible. \n[Tutor]: So that is the solution. \n[Student]: How about that? \n[Tutor]: I like these solutions. \n[Student]: Oh, you're right. \n[Tutor]: And what are some potential consequences? \n[Student]: Possible consequences. Yeah, my teacher said, oh, that's a good idea. \n[Tutor]: So maybe that is a nice idea. \n[Student]: So, yeah. So I meet three kinds of them. The first, I start small. \n[Tutor]: And second, I focus on more invest. \n[Student]: And second, if my startup is bigger, at that time I make my business co-worker system, co-worker owner with my wife. \n[Tutor]: Co-owner. \n[Student]: Yeah, co-owner. \n[Tutor]: That is my solution. \n[Student]: Maybe if that idea is great, that may be a success. Or not. \n[Tutor]: Maybe that is failing. \n[Student]: Yeah, HR. \n[Tutor]: You won't know until you try. \n[Student]: You won't know until you try. \n[Tutor]: Yeah. \n[Student]: Yeah, you're right. \n[Tutor]: Okay. \n[Student]: And I solve some problems. For example, my idea is disconnected because of my work. \n[Tutor]: So I wipe my idea to the Excel file, one week or two weeks. \n[Student]: At that time, my idea is not disconnected. connect and that is remind the SFI so it is possible to continue. \n[Tutor]: Yeah, make a, make a, yeah, start up or not. \n[Student]: Yeah, it's your... \n[Tutor]: To work a little bit, yes, when you have time. \n[Student]: Yes. \n[Tutor]: Okay. \n[Student]: That's the solution and problem and possible solution and possible consequence. \n[Tutor]: Yes. \n[Student]: We got them all. \n[Tutor]: Yes. \n[Student]: Okay. \n[Tutor]: Good. \n[Student]: Okay. \n[Tutor]: Okay Ready to move on to the next chapter. \n[Student]: Yeah no problem. \n[Tutor]: The next chapter is the business preparation. \n[Student]: Okay. \n[Tutor]: And the goal is for you to be able to make reservations for flights and hotel bookings and arrange meetings abroad. \n[Student]: Oh, yes. \n[Tutor]: That's nice. \n[Student]: What is happening in the image in part A? \n[Tutor]: I see. \n[Student]: I can see the picture and one guy watch, check the time in the airport. \n[Tutor]: And beside him, there is a small-sized carrier or luggage, small-sized luggage. \n[Student]: And he wears the business suit. \n[Tutor]: So I guess he's waiting for the airplane in the airport, and he prepares to go on a business trip. \n[Student]: and I guess this this robot size is small so maybe he go to the short trip not a long visit. \n[Tutor]: Yeah, yeah, sure. \n[Student]: Excellent description. \n[Tutor]: I like that. \n[Student]: I like that you inferred that he might be going on a short trip because his luggage is not very big. \n[Tutor]: Yeah, you're right. \n[Student]: I like that. \n[Tutor]: It's called inferring, right? \n[Student]: So you're looking at something and you're making a supposition about it. \n[Tutor]: Infer. \n[Student]: Oh, yes. \n[Tutor]: Thank you for... \n[Student]: Do you enjoy going... \n[Tutor]: Oh, yes. \n[Student]: Yeah. \n[Tutor]: Thank you for... \n[Student]: What can I say? \n[Tutor]: Thank you for... \n[Student]: How can I say? \n[Tutor]: Thank you for your... \n[Student]: Explanation. \n[Tutor]: Explanation or kind words. \n[Student]: Thank you for inspiration. \n[Tutor]: Kind words, yeah. \n[Student]: Thank you for kind words. \n[Tutor]: Okay. \n[Student]: Yes. \n[Tutor]: Next time I'll try them. \n[Student]: Okay. \n[Tutor]: Excellent. \n[Student]: Okay. \n[Tutor]: Now let's move on to part B. \n[Student]: Do you enjoy going on business trips? \n[Tutor]: Why or why not? \n[Student]: Yeah, I love that. \n[Tutor]: Yeah, some people don't like the business trip. \n[Student]: That is a little stressful and they don't have time and they don't meet the family. \n[Tutor]: But in my case, I love the business trip because it is possible to travel in a world use the corporation card, corporation money. \n[Student]: So, and sometimes I can meet the people. \n[Tutor]: Yeah, the people business purpose. \n[Student]: So, yeah, I love that. \n[Tutor]: And last year I visit Singapore and this year maybe I will go to the USA. \n[Student]: That is Houston. \n[Tutor]: Yeah, because Houston has a small branch office because we import the LNG gas and LBG. \n[Student]: So maybe that's a nice chance for me. \n[Tutor]: I think so. \n[Student]: That would be really nice. \n[Tutor]: Do you know what time of year you could possibly go to Houston? \n[Student]: Maybe November or December I will go there. \n[Tutor]: That's great. \n[Student]: But maybe I will meet the Koreans. \n[Tutor]: Well, I was worried about summer. \n[Student]: Summer is very hot in Texas. \n[Tutor]: So that's why November, December is great. \n[Student]: In the summer, it is very, very hot. \n[Tutor]: And Texas is nearby Houston, you say? \n[Student]: Houston is a city in Texas. \n[Tutor]: Texas is a huge state. \n[Student]: It's humongous. \n[Tutor]: But Houston is in the state, yeah. \n[Student]: I see. \n[Tutor]: I understand. \n[Student]: Okay. \n[Tutor]: Okay. \n[Student]: What is the first thing you prepare when you are assigned to a business trip? \n[Tutor]: First I research the total pay. \n[Student]: The total cost? \n[Tutor]: Yeah, total pay. \n[Student]: Because I have to make a document and approve through my boss. \n[Tutor]: So first, I check the total cost. \n[Student]: And then if I approve that business trip, at that time I'm starting to reserve the hotels, the plane tickets, my accessories. \n[Tutor]: But maybe it is still different, the Korean corporation and the USA corporation are different. \n[Student]: Usually, USA company, they don't approve. \n[Tutor]: Just send email to both or some guys. \n[Student]: But, you know, in Korea's company, we usually approve, make approve document. \n[Tutor]: And then start new thing, new work. \n[Student]: So that is a big difference. \n[Tutor]: Can you tell me why you think there's a difference? \n[Student]: I think the USA is more free time. \n[Tutor]: They think the efficiency is the best important. \n[Student]: So usually they send email to the boss and that system is checked and approval check system. \n[Tutor]: But in Korea, we usually more think about the inner system. \n[Student]: So we just make a document in our system and then start to work. \n[Tutor]: So that is more slow, but if we check the responsibility of the work or if we check some problem, at that time, that is more easy. \n[Student]: So both is so great, but sometimes US is more efficient and sometimes Korea is more have a better system. \n[Tutor]: So that is depend on the situation. \n[Student]: Interesting. \n[Tutor]: So my experience in Canada is similar to the experience in Korea. \n[Student]: So we always had to get approvals and a lot of approvals. \n[Tutor]: I see. \n[Student]: Yes. \n[Tutor]: When I visit Singapore or some place, at the time, they don't approve their system, just send email. \n[Student]: They believe that is already system. \n[Tutor]: Because both already that see them and contact is similar if we share their contact document that is a pro the contact is their approval and their have was some blah blah blah. \n[Student]: Okay, okay, yeah. \n[Tutor]: Well, I think we can we can wrap up here for today with all of the questions. \n[Student]: Okay, well, we have time for one more. \n[Tutor]: What is your greatest concern when traveling to another country? \n[Student]: My concerns? \n[Tutor]: That depends. \n[Student]: That is different situation. \n[Tutor]: Usually I concern the schedule or meet the people because every traveler have a purpose. \n[Student]: So I focus on that purpose. \n[Tutor]: So that's different situation. \n[Student]: Okay, so making sure you follow your itinerary. \n[Tutor]: Yeah, you're right. \n[Student]: Okay, makes sense. \n[Tutor]: Okay, well, now we can wrap up. \n[Student]: I hope this woke you up. \n[Tutor]: And that you have an excellent few days and we will talk very soon. \n[Student]: Okay, yeah. \n[Tutor]: Thank you for your press. \n[Student]: Of course. \n[Tutor]: Yeah. \n[Student]: And have a nice day, teacher. \n[Tutor]: Thank you. \n[Student]: You as well. \n[Tutor]: Take care, Joey. \n[Student]: Okay, take care. \n[Tutor]: Bye-bye. \n[Student]: Bye-bye.\n\n[AI 피드백]\n## 📊 오늘의 수업 요약\n수업은 일상 대화와 비즈니스 상황에서의 영어 회화 능력 향상을 목표로 했다. 학습자는 원어민 튜터와 아침 인사를 나누며 일상적인 대화를 시작했다. 이후, 비즈니스 상황을 가정하여 문제 해결과 의사 결정에 관한 토론을 진행했다. 마지막으로, 해외 여행과 비즈니스 트립에 관련된 대화를 나누었다.\n\n## 🔧 문법 및 표현 교정\n\n- ❌ 학습자 원문: \"It's a fresh day. But today morning I'm hard to get up.\"\n- ✅ 교정: \"It's a lovely day. However, I found it hard to get up this morning.\"\n- 💡 설명: \"today morning\"은 자연스럽지 않으며, \"this morning\"을 사용하는 것이 더 적절하다.\n\n- ❌ 학습자 원문: \"I don't make, I don't create my own business.\"\n- ✅ 교정: \"I haven't started my own business yet.\"\n- 💡 설명: 더 자연스러운 표현으로 바꾸었다.\n\n- ❌ 학습자 원문: \"The reason, the root cause, the first company don't admit.\"\n- ✅ 교정: \"The reason is that the company doesn't allow it.\"\n- 💡 설명: 문장을 단순화하고 더 명확하게 만들었다.\n\n- ❌ 학습자 원문: \"I have to observe that. I have, I will, I find out the solution to that problem.\"\n- ✅ 교정: \"I need to find a solution to that problem.\"\n- 💡 설명: 더 간결하고 자연스러운 표현으로 바꾸었다.\n\n- ❌ 학습자 원문: \"Maybe if that idea is great, that may be a success. Or not.\"\n- ✅ 교정: \"If the idea is good, it might be a success. Otherwise, it might not.\"\n- 💡 설명: 더 명확하고 자연스러운 조건문을 사용했다.\n\n## 📗 핵심 단어장\n\n- **Company** /ˈkʌmpəni/ (명사)\n  - 뜻: 기업, 회사\n  - 동의어: Corporation, Firm\n  - 예문: \"I work for a large company.\"\n  - 💡 팁: 회사와 관련된 업무에서 자주 사용된다.\n\n- **Business** /ˈbɪznɪs/ (명사)\n  - 뜻: 사업, 상업\n  - 동의어: Commerce, Trade\n  - 예문: \"She has her own business.\"\n  - 💡 팁: 개인이나 기업의 경제 활동과 관련된 용어이다.\n\n- **Trip** /trɪp/ (명사)\n  - 뜻: 여행, 여행 일정\n  - 동의어: Journey, Tour\n  - 예문: \"I'm going on a trip to Europe.\"\n  - 💡 팁: 여행과 관련된 계획이나 실제 이동을 의미한다.\n\n- **Schedule** /ˈskɛdʒuːl/ (명사)\n  - 뜻: 일程, 계획\n  - 동의어: Timetable, Itinerary\n  - 예문: \"My schedule is very tight today.\"\n  - 💡 팁: 시간과 관련된 계획이나 예약을 의미한다.\n\n- **Concern** /kənˈsɜːrn/ (명사)\n  - 뜻: 우려, 염려\n  - 동의어: Worry, Anxiety\n  - 예문: \"My main concern is the safety.\"\n  - 💡 팁: 어떤 상황이나 문제에 대한 걱정이나 우려를 나타낸다.\n\n## 📘 문법 포인트\n\n1. **현재완료 시제 사용**\n   - 📌 규칙 설명: 과거부터 현재까지 계속되는 상황이나 행동을 나타낼 때 사용한다.\n   - ❌ 학습자 오류: \"I don't make my own business.\"\n   - ✅ 올바른 표현: \"I haven't started my own business yet.\"\n   - 📝 추가 예문: \"I have been studying English for three years.\"\n\n2. **조건문 사용**\n   - 📌 규칙 설명: 특정 조건하에 어떤 일이 일어날 수 있는 상황을 나타낸다.\n   - ❌ 학습자 오류: \"Maybe if that idea is great, that may be a success.\"\n   - ✅ 올바른 표현: \"If the idea is good, it might be a success.\"\n   - 📝 추가 예문: \"If it rains, I will take an umbrella.\"\n\n3. **의사소통 능력 향상**\n   - 📌 규칙 설명: 효과적으로 메시지를 전달하고 이해하는 능력이다.\n   - ❌ 학습자 오류: 어색한 표현이나 문법 오류로 인해 의사소통이 어려울 때\n   - ✅ 올바른 표현: 자연스럽고 정확한 영어 사용\n   - 📝 추가 예문: 다양한 상황에서의 영어 회화 연습\n\n## 🗣️ 실전 회화 패턴\n\n1. **자기 소개 패턴**\n   - **패턴**: \"My name is ~, and I'm from ~.\"\n   - 의미: 이름과 출신지를 소개한다.\n   - 상황 1: 새로운 사람을 만나서 자기소개를 할 때\n   - 상황 2: 비즈니스 미팅에서 파트너를 소개할 때\n   - 상황 3: 국제 컨퍼런스에서 참가자를 소개할 때\n   - 🔄 변형: \"I'm ~, nice to meet you.\"\n\n2. **의견 제시 패턴**\n   - **패턴**: \"I think ~ because ~.\"\n   - 의미: 자신의 의견이나 생각을 제시한다.\n   - 상황 1: 회의에서 의견을 나눌 때\n   - 상황 2: 논쟁이나 토론에서 자신의 입장을 설명할 때\n   - 상황 3: 친구와 의견을 교류할 때\n   - 🔄 변형: \"In my opinion, ~.\"\n\n3. **계획 및 예약 패턴**\n   - **패턴**: \"I have a ~ at ~.\"\n   - 의미: 일정이나 예약을 말한다.\n   - 상황 1: 일상적인 약속을 정할 때\n   - 상황 2: 비즈니스 미팅을 예약할 때\n   - 상황 3: 여행 계획을 설명할 때\n   - 🔄 변형: \"I'm going to ~ at ~.\"\n\n## 🔄 반복 실수 패턴 분석\n- 학습자는 \"It's a ~ day\"와 같은 표현을 자주 사용했는데, 더 자연스러운 표현을 사용하는 것이 좋다. 또한, 비즈니스 상황에서 적절한 문법과 어휘를 사용하는 것이 중요하다.\n\n## ✅ 잘한 점\n- 학습자는 비즈니스 상황과 일상 대화 모두에서 적극적으로 참여하여 영어를 사용하려고 노력했다.\n\n## 🎯 개선 포인트 TOP 3\n1. **문법 오류 최소화**: 특히 조건문과 현재완료 시제의 사용에서 오류가 많이 나타났다. 더 많은 연습과 공부가 필요하다.\n2. **어휘 다양성 증가**: 더 다양한 어휘를 사용하여 표현을 풍부하게 하는 것이 필요하다. 비즈니스 상황에서 자주 사용되는 전문 용어나 표현을 학습하는 것이 도움이 될 수 있다.\n3. **자연스러운 발음과 유창성**: 더 자연스럽고 유창하게 영어를 발음하고 사용하는 것이 중요하다. 이를 위해 음성 및 비디오 자료를 활용하여 연습할 수 있다.\n\n## 📝 복습용 영작 연습\n- Q: \"나는 오늘 아침에 일찍 일어났다.\"\n  - A: \"I woke up early this morning.\"\n- Q: \"그 회사의 이름은 무엇입니까?\"\n  - A: \"What is the name of that company?\"\n- Q: \"나는 내 사업을 시작하기 위해 많은 돈이 필요하다.\"\n  - A: \"I need a lot of money to start my own business.\"\n- Q: \"그 회의는 몇 시에 시작합니까?\"\n  - A: \"What time does the meeting start?\"\n- Q: \"나는 해외 여행을 가고 싶어.\"\n  - A: \"I want to go on an overseas trip.\"\n- Q: \"그 비즈니스 모델은 성공적인가?\"\n  - A: \"Is that business model successful?\"\n- Q: \"나는 내 친구와 오늘 만나기로 했어.\"\n  - A: \"I'm meeting my friend today.\"\n\n## 📈 유창성 평가\n\n| 항목 | 점수 (1-10) |\n|------|------------|\n| 문법 정확도 | 6/10 |\n| 어휘 다양성 | 7/10 |\n| 유창성 (자연스러움) | 6/10 |\n| 의사소통 능력 | 7/10 |\n| **종합** | **26/40** |\n\n총평: 학습자는 비즈니스 상황과 일상 대화에서 적극적으로 영어를 사용하려고 노력했지만, 문법 오류와 어휘의 한계가 나타났다. 더 많은 연습과 공부가 필요하며, 특히 어휘의 다양성과 자연스러운 발음에 집중해야 한다.\n\n위 내용을 바탕으로:\n1. 먼저 오늘 수업에서 내가 틀렸거나 어색했던 표현을 하나 골라서, 관련된 상황을 영어로 질문해줘.\n2. 내가 영어로 대답하면, 자연스러운지 확인하고 더 나은 표현이 있으면 알려줘.\n3. 특히 \"반복 실수 패턴\"에서 지적된 부분을 집중적으로 연습시켜줘.\n4. 이런 식으로 오늘 배운 표현들을 하나씩 복습하자.\n5. 한국어 설명은 필요할 때만 간단히, 대화는 최대한 영어로 진행해줘.\n\n그럼 시작하자!";
+        function startReview(){navigator.clipboard.writeText(REVIEW_PROMPT).then(()=>{showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)}).catch(()=>{const t=document.createElement('textarea');t.value=REVIEW_PROMPT;document.body.appendChild(t);t.select();document.execCommand('copy');document.body.removeChild(t);showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)})}
+        function showToast(){const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500)}
+        function switchTab(n){document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',n==='feedback'?i===0:i===1));document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));document.getElementById('tab-'+n).classList.add('active')}
+    </script>
+</body>
+</html>
