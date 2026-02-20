@@ -43,4 +43,4 @@ jobs:
           RECIPIENT_EMAIL: ${{ secrets.RECIPIENT_EMAIL }}
           DRIVE_FOLDER_ID: ${{ secrets.DRIVE_FOLDER_ID }}
           DRIVE_DONE_FOLDER_ID: ${{ secrets.DRIVE_DONE_FOLDER_ID }}
-          GITHUB_PAGES_URL: ${{ secrets.GITHUB_PAGES_URL }}
+          GITHUB_PAGES_URL: ${{ secrets.PAGES_URL }}
