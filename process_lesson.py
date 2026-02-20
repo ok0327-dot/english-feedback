@@ -95,11 +95,12 @@ GROQ_API_KEY = os.environ["GROQ_API_KEY"]
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
 
 # 이메일을 보내는 데 사용할 Gmail 주소 (예: "myname@gmail.com")
-GMAIL_ADDRESS = os.environ["GMAIL_ADDRESS"]
+GMAIL_ADDRESS = os.environ["GMAIL_ADDRESS"].strip()
 
 # Gmail "앱 비밀번호" (일반 비밀번호와 다름! 16자리 코드)
 # → Google 계정 → 보안 → 앱 비밀번호에서 생성
-GMAIL_APP_PASSWORD = os.environ["GMAIL_APP_PASSWORD"]
+# ⚠️ .strip()으로 복사 시 들어갈 수 있는 공백/특수문자 제거
+GMAIL_APP_PASSWORD = os.environ["GMAIL_APP_PASSWORD"].strip().replace('\xa0', '')
 
 # 피드백을 받을 이메일 주소 (기본값: 민욱 님의 회사 메일)
 RECIPIENT_EMAIL = os.environ.get("RECIPIENT_EMAIL", "minuk-kang@skgas.co.kr")
