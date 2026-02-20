@@ -4,7 +4,7 @@ on:
   schedule:
     # UTC 23:30 = KST 08:30 (월~금)
     # 수업 8:00~8:20 → Drive 동기화 여유 10분 확보
-    - cron: '30 23 * * 0-4'
+    - cron: '30 0 * * 1-5'
     # ※ cron 0=일요일, 0-4 = 일~목 (KST 월~금)
   
   workflow_dispatch:
