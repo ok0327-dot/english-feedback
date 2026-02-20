@@ -260,10 +260,11 @@ def transcribe_audio(audio_path):
 # ║  왜 필요? 전화 음질 한계 + 한국인 발음 특성 → 오인식 발생              ║
 # ╚══════════════════════════════════════════════════════════════════════════╝
 
-def gemini_request(payload, timeout=90, max_retries=3):
+def gemini_request(payload, timeout=90, max_retries=5):
     """
     Gemini API 호출 + 429(속도 제한) 시 자동 재시도.
-    무료 요금제는 분당 호출 제한이 있어서, 429가 오면 35초 대기 후 재시도.
+    무료 요금제는 분당 호출 제한이 있어서, 429가 오면 60초 대기 후 재시도.
+    최대 5번까지 시도 (총 대기 최대 ~5분).
     """
     url = (
         "https://generativelanguage.googleapis.com/v1beta/"
@@ -274,7 +275,7 @@ def gemini_request(payload, timeout=90, max_retries=3):
         if response.status_code == 200:
             return response
         elif response.status_code == 429:
-            wait = 35 * (attempt + 1)
+            wait = 60 * (attempt + 1)  # 60초, 120초, 180초, 240초, 300초
             print(f"⏳ Gemini 속도 제한 (429). {wait}초 대기 후 재시도... ({attempt+1}/{max_retries})")
             time.sleep(wait)
         else:
@@ -831,9 +832,9 @@ def main():
         # ━━ [3단계] 전사 보정 (화자 분리 + 오인식 수정) ━━
         transcript = clean_transcript(transcript_raw)
 
-        # Gemini 무료 요금제 속도 제한 방지: 호출 사이 10초 대기
-        print("⏳ Gemini API 속도 제한 방지 대기 (10초)...")
-        time.sleep(10)
+        # Gemini 무료 요금제 속도 제한 방지: 호출 사이 60초 대기
+        print("⏳ Gemini API 속도 제한 방지 대기 (60초)...")
+        time.sleep(60)
 
         # ━━ [4단계] AI 피드백 생성 ━━
         feedback = generate_feedback(transcript)
