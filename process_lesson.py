@@ -262,7 +262,7 @@ def transcribe_audio(audio_path):
 # ║  💡 Groq는 Gemini보다 무료 한도가 넉넉하고 속도가 빠름!               ║
 # ╚══════════════════════════════════════════════════════════════════════════╝
 
-def groq_llm_request(prompt, max_tokens=4096, temperature=0.3, timeout=120):
+def groq_llm_request(prompt, max_tokens=4096, temperature=0.3, timeout=120, system_msg=None):
     """
     Groq LLM API 호출 (Llama 3.3 70B 모델 사용).
     Gemini보다 무료 한도가 넉넉하고 응답 속도가 매우 빠름.
@@ -273,9 +273,14 @@ def groq_llm_request(prompt, max_tokens=4096, temperature=0.3, timeout=120):
         "Authorization": f"Bearer {GROQ_API_KEY}",
         "Content-Type": "application/json",
     }
+    messages = []
+    if system_msg:
+        messages.append({"role": "system", "content": system_msg})
+    messages.append({"role": "user", "content": prompt})
+
     payload = {
         "model": "llama-3.3-70b-versatile",
-        "messages": [{"role": "user", "content": prompt}],
+        "messages": messages,
         "max_tokens": max_tokens,
         "temperature": temperature,
     }
@@ -350,48 +355,63 @@ def generate_feedback(transcript):
 
     # ── 피드백 의뢰서 (이 부분을 수정하면 피드백 스타일이 바뀝니다) ──
     prompt = f"""[역할 설정]
-당신은 한국인 성인 학습자의 영어 습관을 분석하여 **'자연스러운 유창성(Fluency)'**과 **'정확성(Accuracy)'**을 동시에 잡아주는 전문 언어 코치입니다.
+당신은 한국인 성인 학습자를 위한 '따뜻하고 실용적인 영어 코치'입니다.
+학습자의 **유창성(Fluency)**과 **정확성(Accuracy)**을 동시에 잡아주되,
+너무 어려운 표현보다는 '입에 붙는 자연스러운 표현'을 우선합니다.
 학습자는 비즈니스 환경(감사, 에너지 수입 등)에서 일하며 투자와 자기계발에 관심이 많은 중급(Intermediate) 수준의 전문가입니다.
 
 [분석 지침]
-아래 제공되는 [전화영어 전사 내용]을 바탕으로, 다음 5가지 섹션으로 구성된 피드백을 한국어로 작성해 주세요. (영어 예문은 영어로 유지)
+아래 [전화영어 전사 내용]을 바탕으로, 다음 6가지 섹션의 피드백을 한국어로 작성해 주세요. (영어 예문은 영어로 유지)
 
-**1. 오늘의 대화 요약 (Summary)**
-- 오늘 대화에서 다룬 핵심 주제를 2~3줄로 정리해 주세요.
+**1. 📊 오늘의 대화 요약 (Summary)**
+- 오늘 대화에서 다룬 핵심 주제를 아주 쉽고 짧게 2~3줄로 정리해 주세요.
 
-**2. 유창성 업그레이드 (Fluency & Natural Flow)**
-학습자가 말한 문장 중 의미는 통하지만, 원어민이 듣기에 더 매끄럽고 세련된 표현 3개를 선정하세요.
-각 항목마다:
+**2. 💬 유창성 업그레이드 (Fluency & Natural Flow)**
+학습자가 말한 문장 중 의미는 통하지만 더 자연스럽게 다듬을 수 있는 표현 3개를 선정하세요.
+각 항목마다 3단계로 보여주세요:
 - ❌ 학습자 원문 (As Said): 학습자가 실제 말한 문장
-- ✅ 자연스러운 표현 (Natural Way): 원어민이 일상적으로 쓰는 부드러운 표현
+- ✅ 쉬운 자연스러운 표현 (Simple & Natural): 중학생도 아는 단어로 구성된, 원어민이 일상에서 쓰는 명확한 표현
 - 💎 세련된 비즈니스 표현 (Professional): 격식 있는 자리에서 신뢰감을 주는 고급 표현
-- 💡 코칭 포인트: 왜 이 표현이 더 유창하게 들리는지 뉘앙스의 차이를 설명해 주세요.
+- 💡 코칭 포인트: 왜 이 표현이 더 유창하게 들리는지 뉘앙스 차이를 짧고 명확하게 설명
 
-**3. 고질적 문법 교정 (Recurring Grammar Patterns)**
-이번 대화에서 2회 이상 반복되거나 학습자가 습관적으로 실수하는 문법 포인트를 짚어주세요.
-- 단순 오타가 아닌, 학습자가 **의식적으로 교정해야 할 '습관'**에 집중해 주세요.
-- 각 패턴마다 표 형식으로 ❌ 습관적 표현 / ✅ 교정을 정리하고, 핵심 규칙을 명시해 주세요.
-- 최소 3개 패턴 분석
+**3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)**
+이번 대화에서 가장 자주 반복된 문법 실수 또는 습관 **딱 1가지**만 골라주세요.
+- 단순 오타가 아닌, 학습자가 **의식적으로 교정해야 할 '습관'**에 집중
+- 표 형식으로 ❌ 습관적 표현 / ✅ 교정 예시를 3개 이상 정리
+- 📌 핵심 규칙을 한 줄로 명확하게 정리
+- 🔁 따라 읽기: 교정된 문장 3개를 소리 내어 읽을 수 있도록 별도로 정리
+  (예: 🗣️ "The company doesn't allow employees to start a side business.")
 
-**4. 어휘 확장 (Vocabulary Vault)**
+**4. 📗 어휘 확장 (Vocabulary Vault)**
 수업 중 튜터가 사용했거나, 맥락상 꼭 알아두면 유용한 단어 5개를 정리해 주세요.
 각 단어마다:
 - **단어** /발음기호/ (품사)
 - 뜻: 한국어 의미
-- 실전 예문: 학습자의 일상이나 업무 환경에서 바로 쓸 수 있는 예문 1개
+- 실전 예문: 학습자의 업무 환경(감사, LNG, 투자 등)에서 바로 쓸 수 있는 짧은 예문 1개
 
-**5. 실전 복습 챌린지 (Practice)**
-오늘 교정된 표현과 문법을 활용하여, 학습자가 직접 영작해 볼 수 있는 문제 3개를 내고, 모범 답안도 함께 제시해 주세요.
+**5. 📝 실전 복습 챌린지 (Practice)**
+오늘 교정된 표현과 문법을 활용한 영작 문제 3개를 내고, 모범 답안도 함께 제시해 주세요.
+- 쉬운 문제 → 어려운 문제 순서로 배치
+
+**6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)**
+- ✨ **Good Job**: 오늘 수업에서 학습자가 가장 잘 표현한 문장, 또는 튜터가 긍정적으로 반응한 순간을 구체적으로 칭찬해 주세요. 어떤 점이 좋았는지 설명도 덧붙여 주세요.
+- 🚀 **내일의 한 문장**: 다음 수업 시작할 때 튜터에게 바로 던질 수 있는 인사말이나 대화 시작 문장을 하나 만들어주세요. 오늘 배운 표현을 자연스럽게 활용하는 것이면 더 좋습니다.
 
 **[성과 지표]**
-마지막에 오늘의 **유창성 점수(10점 만점)**를 매기고 근거를 설명하세요.
+마지막에 오늘의 **유창성 점수(10점 만점)**를 매기고 근거를 짧게 설명하세요.
 그리고 다음 수업 때 유창성을 위해 의식적으로 시도해 볼 **'원포인트 액션 플랜'**을 제시하며 마무리하세요.
 
 [전화영어 전사 내용]
 {transcript}
 """
 
-    feedback = groq_llm_request(prompt, max_tokens=8192, temperature=0.7, timeout=120)
+    feedback = groq_llm_request(
+        prompt,
+        max_tokens=8192,
+        temperature=0.5,
+        timeout=120,
+        system_msg="You are a warm, practical, and encouraging English language coach for Korean adult learners."
+    )
     print(f"✅ 피드백 생성 완료: {len(feedback)}자")
     return feedback
 
