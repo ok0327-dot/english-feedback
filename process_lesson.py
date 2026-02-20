@@ -47,6 +47,7 @@ import os          # 파일/폴더를 다루는 도구 (파일 삭제, 경로 �
 import io          # 데이터를 메모리에 임시 저장하는 도구 (파일 다운로드 시 사용)
 import sys         # 프로그램을 종료시키는 도구 (exit 등)
 import json        # JSON 형식 데이터를 읽고 쓰는 도구 (API 통신에 필수)
+import time        # 대기(sleep) 기능 — API 속도 제한 시 재시도 대기에 사용
 import base64      # 데이터를 암호화/복호화하는 도구 (Google 인증 정보 처리)
 import smtplib     # 이메일을 보내는 도구 (Gmail SMTP 서버와 통신)
 import subprocess  # 터미널 명령어를 실행하는 도구 (git push 등)
@@ -259,6 +260,28 @@ def transcribe_audio(audio_path):
 # ║  왜 필요? 전화 음질 한계 + 한국인 발음 특성 → 오인식 발생              ║
 # ╚══════════════════════════════════════════════════════════════════════════╝
 
+def gemini_request(payload, timeout=90, max_retries=3):
+    """
+    Gemini API 호출 + 429(속도 제한) 시 자동 재시도.
+    무료 요금제는 분당 호출 제한이 있어서, 429가 오면 35초 대기 후 재시도.
+    """
+    url = (
+        "https://generativelanguage.googleapis.com/v1beta/"
+        f"models/gemini-2.0-flash:generateContent?key={GEMINI_API_KEY}"
+    )
+    for attempt in range(max_retries):
+        response = requests.post(url, json=payload, timeout=timeout)
+        if response.status_code == 200:
+            return response
+        elif response.status_code == 429:
+            wait = 35 * (attempt + 1)
+            print(f"⏳ Gemini 속도 제한 (429). {wait}초 대기 후 재시도... ({attempt+1}/{max_retries})")
+            time.sleep(wait)
+        else:
+            return response  # 다른 에러는 즉시 반환
+    return response  # 마지막 시도 결과 반환
+
+
 def clean_transcript(raw_transcript):
     """
     Whisper 원본 전사를 Gemini로 보정: 오인식 수정 + 화자 분리.
@@ -266,10 +289,6 @@ def clean_transcript(raw_transcript):
     보정 실패 시 → 원본 그대로 사용 (안전장치).
     """
     print("🔍 전사 내용 보정 중...")
-    url = (
-        "https://generativelanguage.googleapis.com/v1beta/"
-        f"models/gemini-2.0-flash:generateContent?key={GEMINI_API_KEY}"
-    )
 
     # Gemini에게 보내는 "교정 의뢰서"
     prompt = f"""아래는 한국인 학습자와 원어민 튜터 간의 전화영어 수업을 STT(음성→텍스트)로 전사한 원본입니다.
@@ -293,12 +312,11 @@ def clean_transcript(raw_transcript):
 
 보정된 전사 결과만 출력해주세요. 추가 설명은 필요 없습니다."""
 
-    response = requests.post(
-        url,
-        json={
+    response = gemini_request(
+        payload={
             "contents": [{"parts": [{"text": prompt}]}],
             "generationConfig": {
-                "temperature": 0.3,       # 낮은 창의성 = 원본에 충실하게
+                "temperature": 0.3,
                 "maxOutputTokens": 4096,
             },
         },
@@ -330,10 +348,6 @@ def generate_feedback(transcript):
               잘한 점, 개선 포인트, 영작 연습, 유창성 점수(4항목)
     """
     print("🤖 AI 피드백 생성 중...")
-    url = (
-        "https://generativelanguage.googleapis.com/v1beta/"
-        f"models/gemini-2.0-flash:generateContent?key={GEMINI_API_KEY}"
-    )
 
     # ── 피드백 의뢰서 (이 부분을 수정하면 피드백 스타일이 바뀝니다) ──
     prompt = f"""Role: 당신은 10년 경력의 영어 회화 교정 전문 튜터입니다.
@@ -405,13 +419,12 @@ Task: 한국인 학습자의 전화영어 수업을 분석하여 구조화된 �
 ---
 """
 
-    response = requests.post(
-        url,
-        json={
+    response = gemini_request(
+        payload={
             "contents": [{"parts": [{"text": prompt}]}],
             "generationConfig": {
-                "temperature": 0.7,       # 적당한 창의성
-                "maxOutputTokens": 8192,  # 상세 피드백을 위해 넉넉하게
+                "temperature": 0.7,
+                "maxOutputTokens": 8192,
             },
         },
         timeout=90,
@@ -817,6 +830,10 @@ def main():
 
         # ━━ [3단계] 전사 보정 (화자 분리 + 오인식 수정) ━━
         transcript = clean_transcript(transcript_raw)
+
+        # Gemini 무료 요금제 속도 제한 방지: 호출 사이 10초 대기
+        print("⏳ Gemini API 속도 제한 방지 대기 (10초)...")
+        time.sleep(10)
 
         # ━━ [4단계] AI 피드백 생성 ━━
         feedback = generate_feedback(transcript)
