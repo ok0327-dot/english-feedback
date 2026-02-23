@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전화영어 복습 - 2026년 02월 23일</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Noto Sans KR',sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.75;min-height:100vh}
+        .header{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);border-bottom:1px solid rgba(255,255,255,.06);padding:48px 24px 40px;text-align:center}
+        .header-date{font-size:13px;color:#94a3b8;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+        .header h1{font-size:28px;font-weight:700;color:#f1f5f9;margin-bottom:16px}
+        .header-meta{display:flex;justify-content:center;gap:24px;font-size:14px;color:#64748b}
+        .header-meta span{display:flex;align-items:center;gap:6px}
+        .cta-section{text-align:center;padding:40px 24px}
+        .cta-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:linear-gradient(135deg,#38bdf8,#818cf8);color:#fff;font-size:16px;font-weight:600;font-family:'Noto Sans KR',sans-serif;border:none;border-radius:50px;cursor:pointer;transition:all .3s;text-decoration:none;box-shadow:0 4px 24px rgba(56,189,248,.25)}
+        .cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(56,189,248,.35)}
+        .cta-btn svg{width:20px;height:20px}
+        .cta-sub{margin-top:12px;font-size:13px;color:#64748b}
+        .toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#38bdf8;padding:14px 28px;border-radius:12px;font-size:14px;font-weight:500;border:1px solid rgba(56,189,248,.2);box-shadow:0 8px 32px rgba(0,0,0,.4);opacity:0;transition:all .4s cubic-bezier(.16,1,.3,1);z-index:1000}
+        .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+        .container{max-width:720px;margin:0 auto;padding:0 24px 80px}
+        .tabs{display:flex;gap:4px;background:#1a1a24;padding:4px;border-radius:12px;margin-bottom:32px}
+        .tab{flex:1;padding:12px;text-align:center;font-size:14px;font-weight:500;color:#64748b;background:0 0;border:none;border-radius:8px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all .2s}
+        .tab.active{background:#262636;color:#f1f5f9}
+        .tab-content{display:none}.tab-content.active{display:block}
+        .feedback h2{font-size:18px;font-weight:700;color:#f1f5f9;margin:36px 0 16px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.06)}
+        .feedback h2:first-child{margin-top:0}
+        .feedback p{margin:8px 0;color:#cbd5e1}
+        .feedback .item{padding:6px 0 6px 16px;border-left:2px solid #334155;margin:6px 0;color:#cbd5e1}
+        .feedback .numbered{padding:8px 0 8px 16px;color:#cbd5e1}
+        .feedback .numbered strong{color:#38bdf8}
+        .feedback strong{color:#f1f5f9}
+        .feedback code{background:#1e293b;padding:2px 8px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#38bdf8}
+        .feedback table{width:100%;border-collapse:collapse;margin:12px 0}
+        .feedback th,.feedback td{padding:10px 14px;text-align:left;border-bottom:1px solid #262636}
+        .feedback th{color:#94a3b8;font-weight:500;font-size:13px}
+        .feedback td{color:#cbd5e1}
+        .arrow{color:#38bdf8;font-weight:700}
+        .transcript{background:#1a1a24;border-radius:12px;padding:28px;font-size:14px;line-height:2;color:#94a3b8;white-space:pre-wrap;word-break:break-word;font-family:'JetBrains Mono','Noto Sans KR',monospace}
+        .transcript .tutor{color:#38bdf8}
+        .transcript .student{color:#a78bfa}
+        @media(max-width:640px){.header{padding:32px 16px}.header h1{font-size:22px}.cta-btn{padding:14px 28px;font-size:15px}.container{padding:0 16px 60px}}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-date">2026년 02월 23일</div>
+        <h1>📚 전화영어 복습</h1>
+        <div class="header-meta">
+            <span>⏱ 21분 0초</span>
+            <span>🎙 전화영어_025180304_20260223080019.m4a</span>
+        </div>
+    </div>
+    <div class="cta-section">
+        <button class="cta-btn" onclick="startReview()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Gemini에서 복습 대화 시작하기
+        </button>
+        <div class="cta-sub">클릭하면 프롬프트가 복사되고 Gemini가 열립니다</div>
+    </div>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('feedback')">📋 AI 피드백</button>
+            <button class="tab" onclick="switchTab('transcript')">🎙 수업 전사</button>
+        </div>
+        <div id="tab-feedback" class="tab-content active">
+            <div class="feedback"><p><strong>1. 오늘의 대화 요약 (Summary)</strong></p>
+<p>오늘 대화에서는 학습자의 최근 휴일 계획, AI를 이용한 자동화 시스템 개발, 그리고 비즈니스 영어 대화 연습을 통해 다양한 주제를 다루었습니다. 특히, 학습자는 자신의 AI 프로젝트와 관련된 경험을 공유하며 영어로 표현하는 능력을 향상하는 시간을 가졌습니다.</p>
+<br>
+<p><strong>2. 유창성 업그레이드 (Fluency & Natural Flow)</strong></p>
+<div class="numbered"><strong>1.</strong> ❌ 학습자 원문: "I made some system over the weekend."</div>
+<p>✅ 쉬운 자연스러운 표현: "I developed a system over the weekend."</p>
+<p>💎 세련된 비즈니스 표현: "I successfully implemented a new system over the weekend."</p>
+<p>💡 코칭 포인트: 더 자연스러운 표현으로 바꾸어 주어 문장이 더流暢하게 들리도록 합니다.</p>
+<br>
+<div class="numbered"><strong>2.</strong> ❌ 학습자 원문: "If I take the English class every month, every day, 8 a.m. to 8:20 minutes"</div>
+<p>✅ 쉬운 자연스러운 표현: "If I take an English class every day from 8 a.m. to 8:20 a.m."</p>
+<p>💎 세련된 비즈니스 표현: "If I attend daily English classes from 8 a.m. to 8:20 a.m."</p>
+<p>💡 코칭 포인트: 시간을 더 명확하게 표현하고, 문장 구조를 간결하게 만듭니다.</p>
+<br>
+<div class="numbered"><strong>3.</strong> ❌ 학습자 원문: "And then the AI is to analyze that and transfer it to textbook text"</div>
+<p>✅ 쉬운 자연스러운 표현: "And then the AI analyzes it and converts it into textbook format"</p>
+<p>💎 세련된 비즈니스 표현: "And then the AI analyzes the data and translates it into a textbook format"</p>
+<p>💡 코칭 포인트: 동사와 명사를 더 적절하게 사용하여 문장을 더 자연스럽게 만듭니다.</p>
+<br>
+<p><strong>3. 고질적 문법 '한 놈만 패기' (Target Grammar)</strong></p>
+<div class="item">❌ 습관적 표현: "I made a feedback"</div>
+<p>✅ 교정 예시: "I received feedback" 또는 "I got feedback"</p>
+<div class="item">❌ 습관적 표현: "The AI has to analyze my class"</div>
+<p>✅ 교정 예시: "The AI will analyze my class"</p>
+<div class="item">❌ 습관적 표현: "If I take the English class every month, every day"</div>
+<p>✅ 교정 예시: "If I take an English class every day"</p>
+<p>📌 핵심 규칙: 영어에서 피드백은 수동적으로 받는 것이므로 "receive" 또는 "get"을 사용해야 합니다. 또한, AI는 시스템이므로 "it"으로 지칭해야 합니다.</p>
+<p>🔁 따라 읽기: </p>
+<p>🗣️ "The company doesn't allow employees to start a side business."</p>
+<p>🗣️ "I received feedback on my presentation."</p>
+<p>🗣️ "The AI will analyze the data and provide insights."</p>
+<br>
+<p><strong>4. 어휘 확장 (Vocabulary Vault)</strong></p>
+<div class="numbered"><strong>1.</strong> <strong>단어</strong>: automate /ˈɔːtəmeɪt/ (동사)</div>
+<p>뜻: 자동화하다</p>
+<p>실전 예문: "I'm trying to automate my daily tasks to save time."</p>
+<div class="numbered"><strong>2.</strong> <strong>단어</strong>: collaboration /kəˌlæbəˈreɪʃən/ (명사)</div>
+<p>뜻: 협력</p>
+<p>실전 예문: "Our team's collaboration on the project was very successful."</p>
+<div class="numbered"><strong>3.</strong> <strong>단어</strong>: equivalent /ɪˈkwɪvələnt/ (형용사)</div>
+<p>뜻: 동등한</p>
+<p>실전 예문: "The two companies are equivalent in terms of market share."</p>
+<div class="numbered"><strong>4.</strong> <strong>단어</strong>: impossible /ɪmˈpɔsəbəl/ (형용사)</div>
+<p>뜻: 불가능한</p>
+<p>실전 예문: "It's impossible to meet the deadline with the current resources."</p>
+<div class="numbered"><strong>5.</strong> <strong>단어</strong>: confirmation /kɒnfərˈmeɪʃən/ (명사)</div>
+<p>뜻: 확인</p>
+<p>실전 예문: "I'm waiting for confirmation of the meeting schedule."</p>
+<br>
+<p><strong>5. 실전 복습 챌린지 (Practice)</strong></p>
+<div class="numbered"><strong>1.</strong> 쉬운 문제: "If I _______ (attend) an English class every day, I will improve my speaking skills."</div>
+<p>모범 답안: "attend"</p>
+<div class="numbered"><strong>2.</strong> 중간 문제: "The company is trying to _______ (automate) its customer service process to reduce costs."</div>
+<p>모범 답안: "automate"</p>
+<div class="numbered"><strong>3.</strong> 어려운 문제: "The two teams are _______ (equivalent) in terms of skills and experience, so it will be a tough competition."</div>
+<p>모범 답안: "equivalent"</p>
+<br>
+<p><strong>6. 자신감 충전 & 내일의 미션 (Confidence & Mission)</strong></p>
+<p>✨ <strong>Good Job</strong>: 학습자는 AI 프로젝트에 대한 설명을 매우 잘했습니다. 특히, "I made a system over the weekend"라는 문장을 통해 자신의 경험을 영어로 자연스럽게 표현한 점이 좋았습니다.</p>
+<p>🚀 <strong>내일의 한 문장</strong>: "I'm looking forward to implementing the new automated system in our company to increase efficiency."</p>
+<br>
+<p><strong>성과 지표</strong></p>
+<p>유창성 점수: 7/10</p>
+<p>근거: 학습자는 대화에서 자신의 생각과 경험을 영어로 잘 표현했지만, 때때로 문법적 오류와 어휘의 제한으로 인해 유창성이 떨어지는 부분이 있었습니다.</p>
+<p>'원포인트 액션 플랜': 다음 수업에서는 학습자가 더 다양한 어휘와 문법을 사용하여 유창성을 향상시키기 위해 노력합니다. 특히, 동사와 명사를 더 적절하게 사용하고, 문장 구조를 간결하게 만드는 연습을 합니다.</p></div>
+        </div>
+        <div id="tab-transcript" class="tab-content">
+            <div class="transcript"><span class="tutor">[Tutor]</span>: Hello, teacher. Good evening. 
+<span class="student">[Student]</span>: Hi. Hi, Joey. How are you today? I&#x27;m doing great. It&#x27;s fresh Monday. 
+<span class="tutor">[Tutor]</span>: Yeah, it&#x27;s a little tired, but it&#x27;s fresh. 
+<span class="student">[Student]</span>: Yes. How was your holiday? 
+<span class="tutor">[Tutor]</span>: My holiday? The weekends? 
+<span class="student">[Student]</span>: Hmm, ah, it is good, yeah. Yesterday, hmm, I see. I visited there. I walked near the park nearby my home, nearby park. So I, and then I took a bicycle with my son. So yeah, it was nice. 
+<span class="tutor">[Tutor]</span>: And it wasn&#x27;t too cold to ride a bicycle? 
+<span class="student">[Student]</span>: Ah, yes, but my hometown is Busan, so it&#x27;s a southeast area in Korea. Nowadays, it&#x27;s coming into spring. Some trees bloom flowers, so it&#x27;s a little warm. 
+<span class="tutor">[Tutor]</span>: Yeah, better than one month ago. 
+<span class="student">[Student]</span>: And I made some system over the weekend. 
+<span class="tutor">[Tutor]</span>: Okay. Yeah, that system is the automatic system. 
+<span class="student">[Student]</span>: Okay. If I take the English class every month, every day, 8 a.m. to 8:20 minutes, at that time, our class recording is on the standard website. And then the AI has to analyze my class. 
+<span class="tutor">[Tutor]</span>: Has to analyze. 
+<span class="student">[Student]</span>: I have to analyze my class, and then the AI is to analyze that and transfer it to textbook text, and then give two kinds of feedback for me. 
+<span class="tutor">[Tutor]</span>: The first is to send to email automatically to my company emails. 
+<span class="student">[Student]</span>: And the other thing is the recording to my homepage. The homepage is the English class homepage. So it&#x27;s to use the AI. 
+<span class="tutor">[Tutor]</span>: So today I&#x27;m really excited because today is the first day to apply to that system. 
+<span class="student">[Student]</span>: Okay, if we finish the request and then the AI analyzes and gives us some feedback, grammar, words, and sentence, etc. So amazing. 
+<span class="tutor">[Tutor]</span>: How long did it take you to build that? 
+<span class="student">[Student]</span>: Just the Friday night, I came back home, took a train, came back home, and took 4 hours, and fixed them, and added 2 hours more in my home. 
+<span class="tutor">[Tutor]</span>: So, totally six hours. 
+<span class="student">[Student]</span>: Take six hours. I made that system, and it&#x27;s possible everything. 
+<span class="tutor">[Tutor]</span>: So, this week I will try to make an automatic system, the blog. 
+<span class="student">[Student]</span>: Yeah, because I write some investor blog, but I stopped writing the blog one year ago because it takes a little time every day. 
+<span class="tutor">[Tutor]</span>: So yeah, I made some system to automate the writing part? 
+<span class="student">[Student]</span>: The first gathering information, the currency and their stock market price and bonds price and news and people&#x27;s interesting news, etc., and gathering them, and then analyzing what keyword is important, what keyword is perfect, and then the AI analyzes this keyword and adopts it, and it has my already written blog letter, and it writes my blog, the economic blog, and automatically lists it up, and I can see the homepage, the first blog, and just copy and paste in my blog. 
+<span class="tutor">[Tutor]</span>: Yeah, it&#x27;s all. 
+<span class="student">[Student]</span>: And the Google blog is possible to total automatic, but the neighbor or local blog is only possible half automatic. 
+<span class="tutor">[Tutor]</span>: So this week I will have to make that system. 
+<span class="student">[Student]</span>: Yeah, it&#x27;s all. 
+<span class="tutor">[Tutor]</span>: Okay, well, it sounds like you did, yes. You worked a lot on this over the last 10 days. 
+<span class="student">[Student]</span>: Oh, because I opened my eyes to coding using AI. So many people said that it&#x27;s the Bible of coding, so this day it is there. Sorry, oh, Bible coding, just we, uh, I don&#x27;t know, the, uh, study the coding, but AI has some AI, uh, coding vibe, right? 
+<span class="tutor">[Tutor]</span>: Yeah, yeah, right, yeah. 
+<span class="student">[Student]</span>: So these days I used two kinds of AI. The first is crude code, and the second is causal AI. 
+<span class="tutor">[Tutor]</span>: So this AI runs and opens the eye. 
+<span class="student">[Student]</span>: Yeah, it&#x27;s so fun to make some system automatically. 
+<span class="tutor">[Tutor]</span>: Yeah, it&#x27;s sure. 
+<span class="student">[Student]</span>: That&#x27;s good. It&#x27;s good that you&#x27;re having fun with it. 
+<span class="tutor">[Tutor]</span>: Yeah, it&#x27;s so fun. 
+<span class="student">[Student]</span>: Yeah, I love that. 
+<span class="tutor">[Tutor]</span>: And I guess you get to see exactly the results of your work, right? 
+<span class="student">[Student]</span>: Yes, you&#x27;re right. 
+<span class="tutor">[Tutor]</span>: So, I think by one month later or six months later, I can do everything. 
+<span class="student">[Student]</span>: Yeah, and my son also is interested in this day, AI coding. 
+<span class="tutor">[Tutor]</span>: So, last weekend, he made the 3D Go game. 
+<span class="student">[Student]</span>: Okay. Usually, the Go game is the 19 multiple 19. That is the 2D. 
+<span class="tutor">[Tutor]</span>: But my son thinks those, that is more interesting, the 3D. 
+<span class="student">[Student]</span>: It sounds a lot harder. 
+<span class="tutor">[Tutor]</span>: Oh, yes. 
+<span class="student">[Student]</span>: Yeah, that is possible, a hard game, just, but that&#x27;s so interesting. 
+<span class="tutor">[Tutor]</span>: That game is the 19 multiple 19 multiple 19, that is space. 
+<span class="student">[Student]</span>: And the stone is just a small perfect stone like the earth, so he made them, and we tried to play the game, but it is impossible because it was too hard. 
+<span class="tutor">[Tutor]</span>: Yes, but I evaluate the game. 
+<span class="student">[Student]</span>: It&#x27;s so nice because that image is so nice. 
+<span class="tutor">[Tutor]</span>: These days we make a game or make a system. 
+<span class="student">[Student]</span>: Yeah, so it&#x27;s fun. 
+<span class="tutor">[Tutor]</span>: It sounds like it. One thing I noticed when you&#x27;re talking about AI using &quot;he&quot; in English, we would use &quot;it&quot; - the system is an &quot;it&quot;, so I&#x27;m asking &quot;it&quot; to give me feedback, and &quot;it&quot; will give me feedback, and so on. 
+<span class="student">[Student]</span>: Made a feedback, yeah, that is great feedback. Thank you so much. 
+<span class="tutor">[Tutor]</span>: That is just a machine, hopefully, the AI exactly, hopefully, the AI doesn&#x27;t get mad at us for calling it an &quot;it&quot;. 
+<span class="student">[Student]</span>: It feedback, it gives us feedback for me. 
+<span class="tutor">[Tutor]</span>: Okay. Exactly. 
+<span class="student">[Student]</span>: Thanks so much. 
+<span class="tutor">[Tutor]</span>: Okay. Do we want to continue with free talk or do we want to take a look at the book? 
+<span class="student">[Student]</span>: We just remind the textbook, just more. 
+<span class="tutor">[Tutor]</span>: So it is better to start the textbook. 
+<span class="student">[Student]</span>: That is the... 
+<span class="tutor">[Tutor]</span>: Okay. We page on the 66. 
+<span class="student">[Student]</span>: We are on page 66. 
+<span class="tutor">[Tutor]</span>: We are on. The key scenarios. 
+<span class="student">[Student]</span>: Yes. We are on page 66. 
+<span class="tutor">[Tutor]</span>: Okay. Scenario. 
+<span class="student">[Student]</span>: Dustin, I read that. You were scheduled to leave for a business trip tonight, but a situation at work has forced you to delay the trip to next week. 
+<span class="tutor">[Tutor]</span>: Call the airline to change the departure date of your ticket from tonight at 8 o&#x27;clock to the same next week. 
+<span class="student">[Student]</span>: The customer service representative will check availability of the ticket for you. 
+<span class="tutor">[Tutor]</span>: I see. 
+<span class="student">[Student]</span>: Okay, so there are two roles. 
+<span class="tutor">[Tutor]</span>: Okay, one role A is that it is a tip. 
+<span class="student">[Student]</span>: Want to change flight date. 
+<span class="tutor">[Tutor]</span>: And role B, airline customer service representative. 
+<span class="student">[Student]</span>: Check objective of the ticket. 
+<span class="tutor">[Tutor]</span>: Okay. So do you want to be the executive or the customer service representative? 
+<span class="student">[Student]</span>: Usually I&#x27;m the customer, so I select role A. 
+<span class="tutor">[Tutor]</span>: Okay, all right. 
+<span class="student">[Student]</span>: Good morning. You have reached Pure Airlines. How can I help you today? 
+<span class="tutor">[Tutor]</span>: Thank you so much. My name is Joey. I reserved a ticket two weeks ago from Busan to Seattle in March, March 27. 
+<span class="student">[Student]</span>: Yes, but my flight has to change. 
+<span class="tutor">[Tutor]</span>: My schedule has changed. 
+<span class="student">[Student]</span>: So I will change the flight schedule. 
+<span class="tutor">[Tutor]</span>: Is it possible? 
+<span class="student">[Student]</span>: Okay, well, hi Joey. Thank you for calling us. 
+<span class="tutor">[Tutor]</span>: If I understand this correctly, you reserved a ticket two weeks ago. 
+<span class="student">[Student]</span>: Yes, you&#x27;re right. 
+<span class="tutor">[Tutor]</span>: And you would like to change the date. 
+<span class="student">[Student]</span>: Yes, you are right. 
+<span class="tutor">[Tutor]</span>: Do you know your reservation number? 
+<span class="student">[Student]</span>: My reservation number is page 66, blah blah blah. 
+<span class="tutor">[Tutor]</span>: And the time is at 8 o&#x27;clock. 
+<span class="student">[Student]</span>: So I want to change the same Monday and same time. 
+<span class="tutor">[Tutor]</span>: Just delay the one week. 
+<span class="student">[Student]</span>: Change the one week later. 
+<span class="tutor">[Tutor]</span>: Okay, let me look into that for you. 
+<span class="student">[Student]</span>: Thank you for the information. 
+<span class="tutor">[Tutor]</span>: Oh, I see your reservation. 
+<span class="student">[Student]</span>: Okay, let me see if there is any availability for, we said March 29th is the new date? 
+<span class="tutor">[Tutor]</span>: The original date is March 27th, and I will want to change the April 4th. 
+<span class="student">[Student]</span>: Yeah, it&#x27;s the same day. 
+<span class="tutor">[Tutor]</span>: April 4th. 
+<span class="student">[Student]</span>: April 3rd. 
+<span class="tutor">[Tutor]</span>: Okay. April 3rd and Monday. 
+<span class="student">[Student]</span>: April 3rd. 
+<span class="tutor">[Tutor]</span>: Yes, you&#x27;re right. 
+<span class="student">[Student]</span>: And same day. 
+<span class="tutor">[Tutor]</span>: Unfortunately, there are no flights on that day to Seattle. 
+<span class="student">[Student]</span>: Oh, my God. 
+<span class="tutor">[Tutor]</span>: So we have... 
+<span class="student">[Student]</span>: Yes. 
+<span class="tutor">[Tutor]</span>: Oh, my God. 
+<span class="student">[Student]</span>: Yes. 
+<span class="tutor">[Tutor]</span>: There is a flight on the 4th on April 4th at 10 a.m. 
+<span class="student">[Student]</span>: Would that work for you? 
+<span class="tutor">[Tutor]</span>: Oh yes, it&#x27;s impossible. 
+<span class="student">[Student]</span>: So could you report my ticket? 
+<span class="tutor">[Tutor]</span>: Because I have to only that time scheduled. 
+<span class="student">[Student]</span>: So I will try to other airplane company. 
+<span class="tutor">[Tutor]</span>: So could you report my ticket? 
+<span class="student">[Student]</span>: Absolutely. 
+<span class="tutor">[Tutor]</span>: It&#x27;s not a problem. 
+<span class="student">[Student]</span>: We can process that for you. 
+<span class="tutor">[Tutor]</span>: And you will see the refund on your credit card in about 10 to 15 business days. 
+<span class="student">[Student]</span>: Okay. 
+<span class="tutor">[Tutor]</span>: Thank you so much. 
+<span class="student">[Student]</span>: Yes, I give you my credit card number. 
+<span class="tutor">[Tutor]</span>: Thank you so much. 
+<span class="student">[Student]</span>: Thank you very much. 
+<span class="tutor">[Tutor]</span>: And thank you for choosing Pure Airlines. 
+<span class="student">[Student]</span>: Oh, yes. 
+<span class="tutor">[Tutor]</span>: Next time I use that company, use the airline. 
+<span class="student">[Student]</span>: Thank you so much. 
+<span class="tutor">[Tutor]</span>: Have a nice day. 
+<span class="student">[Student]</span>: Bye-bye. 
+<span class="tutor">[Tutor]</span>: Thank you. 
+<span class="student">[Student]</span>: Bye-bye. 
+<span class="tutor">[Tutor]</span>: Bye-bye. 
+<span class="student">[Student]</span>: Okay. 
+<span class="tutor">[Tutor]</span>: That was great. 
+<span class="student">[Student]</span>: I remember it. 
+<span class="tutor">[Tutor]</span>: I threw you for a loop by saying there&#x27;s no availability. 
+<span class="student">[Student]</span>: Yes, I see. 
+<span class="tutor">[Tutor]</span>: That was great. 
+<span class="student">[Student]</span>: Great reaction. 
+<span class="tutor">[Tutor]</span>: Yeah, that&#x27;s exactly how a conversation like that would go. 
+<span class="student">[Student]</span>: Yeah, you&#x27;re right. 
+<span class="tutor">[Tutor]</span>: There are so many possibilities in an airline event. 
+<span class="student">[Student]</span>: Yes. 
+<span class="tutor">[Tutor]</span>: Yes. 
+<span class="student">[Student]</span>: Okay. 
+<span class="tutor">[Tutor]</span>: Okay, let&#x27;s try scene two. 
+<span class="student">[Student]</span>: The second, you are scheduling a business trip to meet with a partner at Taylor, Inc. about an upcoming collaboration project. 
+<span class="tutor">[Tutor]</span>: You want to visit their headquarter at the end of next week, but there is a schedule complete. 
+<span class="student">[Student]</span>: Workhouse another day to meet. 
+<span class="tutor">[Tutor]</span>: Okay. The role A, project manager at Vice Electronic. 
+<span class="student">[Student]</span>: Prefer meeting at end of the week. 
+<span class="tutor">[Tutor]</span>: Project manager at Taylor Inc. has trouble finding time of schedule meeting. 
+<span class="student">[Student]</span>: I see. 
+<span class="tutor">[Tutor]</span>: They are co-working some project. 
+<span class="student">[Student]</span>: Right. 
+<span class="tutor">[Tutor]</span>: They are equivalent in different companies. 
+<span class="student">[Student]</span>: Yes, you&#x27;re right. 
+<span class="tutor">[Tutor]</span>: And they have to meet. 
+<span class="student">[Student]</span>: Yeah, okay. 
+<span class="tutor">[Tutor]</span>: They have to meet. 
+<span class="student">[Student]</span>: Yeah. 
+<span class="tutor">[Tutor]</span>: I&#x27;m selected to role B. 
+<span class="student">[Student]</span>: That is more easy. 
+<span class="tutor">[Tutor]</span>: Okay. 
+<span class="student">[Student]</span>: All right, Joey. 
+<span class="tutor">[Tutor]</span>: Looking forward to our meeting at the end of this week or next week, I very much look forward to you visiting our headquarters and getting this project going. 
+<span class="student">[Student]</span>: Oh, nice to meet you, Jonah. 
+<span class="tutor">[Tutor]</span>: Yes, are exciting too. 
+<span class="student">[Student]</span>: And maybe we will meet Friday, right? 
+<span class="tutor">[Tutor]</span>: Friday meeting the next week, right? 
+<span class="student">[Student]</span>: Exactly. 
+<span class="tutor">[Tutor]</span>: Next Friday at 2 p.m. is our time. 
+<span class="student">[Student]</span>: I see. 
+<span class="tutor">[Tutor]</span>: But I&#x27;m so sorry, but my airline&#x27;s schedule is impossible to change. 
+<span class="student">[Student]</span>: Great. 
+<span class="tutor">[Tutor]</span>: Yeah, it&#x27;s impossible to meet Friday. 
+<span class="student">[Student]</span>: How about the middle of Wednesday? 
+<span class="tutor">[Tutor]</span>: Is it possible to schedule? 
+<span class="student">[Student]</span>: Wednesday, I am out of the office the whole day. 
+<span class="tutor">[Tutor]</span>: What about the following Monday? 
+<span class="student">[Student]</span>: Monday. 
+<span class="tutor">[Tutor]</span>: Does Monday at 10 a.m. work for you? 
+<span class="student">[Student]</span>: Ah, yes. 
+<span class="tutor">[Tutor]</span>: First, I check the schedule to airline and then I will answer to email or to call. 
+<span class="student">[Student]</span>: Is it possible? 
+<span class="tutor">[Tutor]</span>: Great. 
+<span class="student">[Student]</span>: Absolutely. 
+<span class="tutor">[Tutor]</span>: Okay. 
+<span class="student">[Student]</span>: So, I will wait for you to confirm the new date. 
+<span class="tutor">[Tutor]</span>: Yes, and I thought it&#x27;s impossible because if I meet Monday, I will depart the Friday night or Saturday morning, Saturday night. 
+<span class="student">[Student]</span>: So I have to share the time with my family. 
+<span class="tutor">[Tutor]</span>: Maybe it&#x27;s possible the Tuesday to Thursday. 
+<span class="student">[Student]</span>: Okay, I think we can do Tuesday. 
+<span class="tutor">[Tutor]</span>: Yes, it&#x27;s better. 
+<span class="student">[Student]</span>: I&#x27;ll check them and maybe it&#x27;s possible. 
+<span class="tutor">[Tutor]</span>: And I will send the confirmation. 
+<span class="student">[Student]</span>: Perfect. 
+<span class="tutor">[Tutor]</span>: I will wait for your email confirmation. 
+<span class="student">[Student]</span>: Thank you so much. 
+<span class="tutor">[Tutor]</span>: And thank you so much, teacher. 
+<span class="student">[Student]</span>: It&#x27;s finished. 
+<span class="tutor">[Tutor]</span>: Of course. 
+<span class="student">[Student]</span>: Thank you. 
+<span class="tutor">[Tutor]</span>: And I know we had troubles with airlines today. 
+<span class="student">[Student]</span>: Okay. 
+<span class="tutor">[Tutor]</span>: You&#x27;re right. 
+<span class="student">[Student]</span>: Thank you so much. 
+<span class="tutor">[Tutor]</span>: Have a great day and we&#x27;ll talk tomorrow. 
+<span class="student">[Student]</span>: Okay. 
+<span class="tutor">[Tutor]</span>: Talk to you tomorrow. 
+<span class="student">[Student]</span>: Bye-bye. 
+<span class="tutor">[Tutor]</span>: Bye-bye. 
+<span class="student">[Student]</span>: Bye-bye.</div>
+        </div>
+    </div>
+    <div class="toast" id="toast">✅ 프롬프트가 복사되었습니다!</div>
+    <script>
+        const REVIEW_PROMPT="너는 나의 영어 회화 복습 파트너야. 오늘 내 전화영어 수업 내용을 기반으로 대화하면서 복습을 도와줘.\n\n[오늘 수업 전사 내용]\n[Tutor]: Hello, teacher. Good evening. \n[Student]: Hi. Hi, Joey. How are you today? I'm doing great. It's fresh Monday. \n[Tutor]: Yeah, it's a little tired, but it's fresh. \n[Student]: Yes. How was your holiday? \n[Tutor]: My holiday? The weekends? \n[Student]: Hmm, ah, it is good, yeah. Yesterday, hmm, I see. I visited there. I walked near the park nearby my home, nearby park. So I, and then I took a bicycle with my son. So yeah, it was nice. \n[Tutor]: And it wasn't too cold to ride a bicycle? \n[Student]: Ah, yes, but my hometown is Busan, so it's a southeast area in Korea. Nowadays, it's coming into spring. Some trees bloom flowers, so it's a little warm. \n[Tutor]: Yeah, better than one month ago. \n[Student]: And I made some system over the weekend. \n[Tutor]: Okay. Yeah, that system is the automatic system. \n[Student]: Okay. If I take the English class every month, every day, 8 a.m. to 8:20 minutes, at that time, our class recording is on the standard website. And then the AI has to analyze my class. \n[Tutor]: Has to analyze. \n[Student]: I have to analyze my class, and then the AI is to analyze that and transfer it to textbook text, and then give two kinds of feedback for me. \n[Tutor]: The first is to send to email automatically to my company emails. \n[Student]: And the other thing is the recording to my homepage. The homepage is the English class homepage. So it's to use the AI. \n[Tutor]: So today I'm really excited because today is the first day to apply to that system. \n[Student]: Okay, if we finish the request and then the AI analyzes and gives us some feedback, grammar, words, and sentence, etc. So amazing. \n[Tutor]: How long did it take you to build that? \n[Student]: Just the Friday night, I came back home, took a train, came back home, and took 4 hours, and fixed them, and added 2 hours more in my home. \n[Tutor]: So, totally six hours. \n[Student]: Take six hours. I made that system, and it's possible everything. \n[Tutor]: So, this week I will try to make an automatic system, the blog. \n[Student]: Yeah, because I write some investor blog, but I stopped writing the blog one year ago because it takes a little time every day. \n[Tutor]: So yeah, I made some system to automate the writing part? \n[Student]: The first gathering information, the currency and their stock market price and bonds price and news and people's interesting news, etc., and gathering them, and then analyzing what keyword is important, what keyword is perfect, and then the AI analyzes this keyword and adopts it, and it has my already written blog letter, and it writes my blog, the economic blog, and automatically lists it up, and I can see the homepage, the first blog, and just copy and paste in my blog. \n[Tutor]: Yeah, it's all. \n[Student]: And the Google blog is possible to total automatic, but the neighbor or local blog is only possible half automatic. \n[Tutor]: So this week I will have to make that system. \n[Student]: Yeah, it's all. \n[Tutor]: Okay, well, it sounds like you did, yes. You worked a lot on this over the last 10 days. \n[Student]: Oh, because I opened my eyes to coding using AI. So many people said that it's the Bible of coding, so this day it is there. Sorry, oh, Bible coding, just we, uh, I don't know, the, uh, study the coding, but AI has some AI, uh, coding vibe, right? \n[Tutor]: Yeah, yeah, right, yeah. \n[Student]: So these days I used two kinds of AI. The first is crude code, and the second is causal AI. \n[Tutor]: So this AI runs and opens the eye. \n[Student]: Yeah, it's so fun to make some system automatically. \n[Tutor]: Yeah, it's sure. \n[Student]: That's good. It's good that you're having fun with it. \n[Tutor]: Yeah, it's so fun. \n[Student]: Yeah, I love that. \n[Tutor]: And I guess you get to see exactly the results of your work, right? \n[Student]: Yes, you're right. \n[Tutor]: So, I think by one month later or six months later, I can do everything. \n[Student]: Yeah, and my son also is interested in this day, AI coding. \n[Tutor]: So, last weekend, he made the 3D Go game. \n[Student]: Okay. Usually, the Go game is the 19 multiple 19. That is the 2D. \n[Tutor]: But my son thinks those, that is more interesting, the 3D. \n[Student]: It sounds a lot harder. \n[Tutor]: Oh, yes. \n[Student]: Yeah, that is possible, a hard game, just, but that's so interesting. \n[Tutor]: That game is the 19 multiple 19 multiple 19, that is space. \n[Student]: And the stone is just a small perfect stone like the earth, so he made them, and we tried to play the game, but it is impossible because it was too hard. \n[Tutor]: Yes, but I evaluate the game. \n[Student]: It's so nice because that image is so nice. \n[Tutor]: These days we make a game or make a system. \n[Student]: Yeah, so it's fun. \n[Tutor]: It sounds like it. One thing I noticed when you're talking about AI using \"he\" in English, we would use \"it\" - the system is an \"it\", so I'm asking \"it\" to give me feedback, and \"it\" will give me feedback, and so on. \n[Student]: Made a feedback, yeah, that is great feedback. Thank you so much. \n[Tutor]: That is just a machine, hopefully, the AI exactly, hopefully, the AI doesn't get mad at us for calling it an \"it\". \n[Student]: It feedback, it gives us feedback for me. \n[Tutor]: Okay. Exactly. \n[Student]: Thanks so much. \n[Tutor]: Okay. Do we want to continue with free talk or do we want to take a look at the book? \n[Student]: We just remind the textbook, just more. \n[Tutor]: So it is better to start the textbook. \n[Student]: That is the... \n[Tutor]: Okay. We page on the 66. \n[Student]: We are on page 66. \n[Tutor]: We are on. The key scenarios. \n[Student]: Yes. We are on page 66. \n[Tutor]: Okay. Scenario. \n[Student]: Dustin, I read that. You were scheduled to leave for a business trip tonight, but a situation at work has forced you to delay the trip to next week. \n[Tutor]: Call the airline to change the departure date of your ticket from tonight at 8 o'clock to the same next week. \n[Student]: The customer service representative will check availability of the ticket for you. \n[Tutor]: I see. \n[Student]: Okay, so there are two roles. \n[Tutor]: Okay, one role A is that it is a tip. \n[Student]: Want to change flight date. \n[Tutor]: And role B, airline customer service representative. \n[Student]: Check objective of the ticket. \n[Tutor]: Okay. So do you want to be the executive or the customer service representative? \n[Student]: Usually I'm the customer, so I select role A. \n[Tutor]: Okay, all right. \n[Student]: Good morning. You have reached Pure Airlines. How can I help you today? \n[Tutor]: Thank you so much. My name is Joey. I reserved a ticket two weeks ago from Busan to Seattle in March, March 27. \n[Student]: Yes, but my flight has to change. \n[Tutor]: My schedule has changed. \n[Student]: So I will change the flight schedule. \n[Tutor]: Is it possible? \n[Student]: Okay, well, hi Joey. Thank you for calling us. \n[Tutor]: If I understand this correctly, you reserved a ticket two weeks ago. \n[Student]: Yes, you're right. \n[Tutor]: And you would like to change the date. \n[Student]: Yes, you are right. \n[Tutor]: Do you know your reservation number? \n[Student]: My reservation number is page 66, blah blah blah. \n[Tutor]: And the time is at 8 o'clock. \n[Student]: So I want to change the same Monday and same time. \n[Tutor]: Just delay the one week. \n[Student]: Change the one week later. \n[Tutor]: Okay, let me look into that for you. \n[Student]: Thank you for the information. \n[Tutor]: Oh, I see your reservation. \n[Student]: Okay, let me see if there is any availability for, we said March 29th is the new date? \n[Tutor]: The original date is March 27th, and I will want to change the April 4th. \n[Student]: Yeah, it's the same day. \n[Tutor]: April 4th. \n[Student]: April 3rd. \n[Tutor]: Okay. April 3rd and Monday. \n[Student]: April 3rd. \n[Tutor]: Yes, you're right. \n[Student]: And same day. \n[Tutor]: Unfortunately, there are no flights on that day to Seattle. \n[Student]: Oh, my God. \n[Tutor]: So we have... \n[Student]: Yes. \n[Tutor]: Oh, my God. \n[Student]: Yes. \n[Tutor]: There is a flight on the 4th on April 4th at 10 a.m. \n[Student]: Would that work for you? \n[Tutor]: Oh yes, it's impossible. \n[Student]: So could you report my ticket? \n[Tutor]: Because I have to only that time scheduled. \n[Student]: So I will try to other airplane company. \n[Tutor]: So could you report my ticket? \n[Student]: Absolutely. \n[Tutor]: It's not a problem. \n[Student]: We can process that for you. \n[Tutor]: And you will see the refund on your credit card in about 10 to 15 business days. \n[Student]: Okay. \n[Tutor]: Thank you so much. \n[Student]: Yes, I give you my credit card number. \n[Tutor]: Thank you so much. \n[Student]: Thank you very much. \n[Tutor]: And thank you for choosing Pure Airlines. \n[Student]: Oh, yes. \n[Tutor]: Next time I use that company, use the airline. \n[Student]: Thank you so much. \n[Tutor]: Have a nice day. \n[Student]: Bye-bye. \n[Tutor]: Thank you. \n[Student]: Bye-bye. \n[Tutor]: Bye-bye. \n[Student]: Okay. \n[Tutor]: That was great. \n[Student]: I remember it. \n[Tutor]: I threw you for a loop by saying there's no availability. \n[Student]: Yes, I see. \n[Tutor]: That was great. \n[Student]: Great reaction. \n[Tutor]: Yeah, that's exactly how a conversation like that would go. \n[Student]: Yeah, you're right. \n[Tutor]: There are so many possibilities in an airline event. \n[Student]: Yes. \n[Tutor]: Yes. \n[Student]: Okay. \n[Tutor]: Okay, let's try scene two. \n[Student]: The second, you are scheduling a business trip to meet with a partner at Taylor, Inc. about an upcoming collaboration project. \n[Tutor]: You want to visit their headquarter at the end of next week, but there is a schedule complete. \n[Student]: Workhouse another day to meet. \n[Tutor]: Okay. The role A, project manager at Vice Electronic. \n[Student]: Prefer meeting at end of the week. \n[Tutor]: Project manager at Taylor Inc. has trouble finding time of schedule meeting. \n[Student]: I see. \n[Tutor]: They are co-working some project. \n[Student]: Right. \n[Tutor]: They are equivalent in different companies. \n[Student]: Yes, you're right. \n[Tutor]: And they have to meet. \n[Student]: Yeah, okay. \n[Tutor]: They have to meet. \n[Student]: Yeah. \n[Tutor]: I'm selected to role B. \n[Student]: That is more easy. \n[Tutor]: Okay. \n[Student]: All right, Joey. \n[Tutor]: Looking forward to our meeting at the end of this week or next week, I very much look forward to you visiting our headquarters and getting this project going. \n[Student]: Oh, nice to meet you, Jonah. \n[Tutor]: Yes, are exciting too. \n[Student]: And maybe we will meet Friday, right? \n[Tutor]: Friday meeting the next week, right? \n[Student]: Exactly. \n[Tutor]: Next Friday at 2 p.m. is our time. \n[Student]: I see. \n[Tutor]: But I'm so sorry, but my airline's schedule is impossible to change. \n[Student]: Great. \n[Tutor]: Yeah, it's impossible to meet Friday. \n[Student]: How about the middle of Wednesday? \n[Tutor]: Is it possible to schedule? \n[Student]: Wednesday, I am out of the office the whole day. \n[Tutor]: What about the following Monday? \n[Student]: Monday. \n[Tutor]: Does Monday at 10 a.m. work for you? \n[Student]: Ah, yes. \n[Tutor]: First, I check the schedule to airline and then I will answer to email or to call. \n[Student]: Is it possible? \n[Tutor]: Great. \n[Student]: Absolutely. \n[Tutor]: Okay. \n[Student]: So, I will wait for you to confirm the new date. \n[Tutor]: Yes, and I thought it's impossible because if I meet Monday, I will depart the Friday night or Saturday morning, Saturday night. \n[Student]: So I have to share the time with my family. \n[Tutor]: Maybe it's possible the Tuesday to Thursday. \n[Student]: Okay, I think we can do Tuesday. \n[Tutor]: Yes, it's better. \n[Student]: I'll check them and maybe it's possible. \n[Tutor]: And I will send the confirmation. \n[Student]: Perfect. \n[Tutor]: I will wait for your email confirmation. \n[Student]: Thank you so much. \n[Tutor]: And thank you so much, teacher. \n[Student]: It's finished. \n[Tutor]: Of course. \n[Student]: Thank you. \n[Tutor]: And I know we had troubles with airlines today. \n[Student]: Okay. \n[Tutor]: You're right. \n[Student]: Thank you so much. \n[Tutor]: Have a great day and we'll talk tomorrow. \n[Student]: Okay. \n[Tutor]: Talk to you tomorrow. \n[Student]: Bye-bye. \n[Tutor]: Bye-bye. \n[Student]: Bye-bye.\n\n[AI 피드백]\n**1. 오늘의 대화 요약 (Summary)**\n오늘 대화에서는 학습자의 최근 휴일 계획, AI를 이용한 자동화 시스템 개발, 그리고 비즈니스 영어 대화 연습을 통해 다양한 주제를 다루었습니다. 특히, 학습자는 자신의 AI 프로젝트와 관련된 경험을 공유하며 영어로 표현하는 능력을 향상하는 시간을 가졌습니다.\n\n**2. 유창성 업그레이드 (Fluency & Natural Flow)**\n1. ❌ 학습자 원문: \"I made some system over the weekend.\"\n✅ 쉬운 자연스러운 표현: \"I developed a system over the weekend.\"\n💎 세련된 비즈니스 표현: \"I successfully implemented a new system over the weekend.\"\n💡 코칭 포인트: 더 자연스러운 표현으로 바꾸어 주어 문장이 더流暢하게 들리도록 합니다.\n\n2. ❌ 학습자 원문: \"If I take the English class every month, every day, 8 a.m. to 8:20 minutes\"\n✅ 쉬운 자연스러운 표현: \"If I take an English class every day from 8 a.m. to 8:20 a.m.\"\n💎 세련된 비즈니스 표현: \"If I attend daily English classes from 8 a.m. to 8:20 a.m.\"\n💡 코칭 포인트: 시간을 더 명확하게 표현하고, 문장 구조를 간결하게 만듭니다.\n\n3. ❌ 학습자 원문: \"And then the AI is to analyze that and transfer it to textbook text\"\n✅ 쉬운 자연스러운 표현: \"And then the AI analyzes it and converts it into textbook format\"\n💎 세련된 비즈니스 표현: \"And then the AI analyzes the data and translates it into a textbook format\"\n💡 코칭 포인트: 동사와 명사를 더 적절하게 사용하여 문장을 더 자연스럽게 만듭니다.\n\n**3. 고질적 문법 '한 놈만 패기' (Target Grammar)**\n- ❌ 습관적 표현: \"I made a feedback\"\n✅ 교정 예시: \"I received feedback\" 또는 \"I got feedback\"\n- ❌ 습관적 표현: \"The AI has to analyze my class\"\n✅ 교정 예시: \"The AI will analyze my class\"\n- ❌ 습관적 표현: \"If I take the English class every month, every day\"\n✅ 교정 예시: \"If I take an English class every day\"\n📌 핵심 규칙: 영어에서 피드백은 수동적으로 받는 것이므로 \"receive\" 또는 \"get\"을 사용해야 합니다. 또한, AI는 시스템이므로 \"it\"으로 지칭해야 합니다.\n🔁 따라 읽기: \n🗣️ \"The company doesn't allow employees to start a side business.\"\n🗣️ \"I received feedback on my presentation.\"\n🗣️ \"The AI will analyze the data and provide insights.\"\n\n**4. 어휘 확장 (Vocabulary Vault)**\n1. **단어**: automate /ˈɔːtəmeɪt/ (동사)\n뜻: 자동화하다\n실전 예문: \"I'm trying to automate my daily tasks to save time.\"\n2. **단어**: collaboration /kəˌlæbəˈreɪʃən/ (명사)\n뜻: 협력\n실전 예문: \"Our team's collaboration on the project was very successful.\"\n3. **단어**: equivalent /ɪˈkwɪvələnt/ (형용사)\n뜻: 동등한\n실전 예문: \"The two companies are equivalent in terms of market share.\"\n4. **단어**: impossible /ɪmˈpɔsəbəl/ (형용사)\n뜻: 불가능한\n실전 예문: \"It's impossible to meet the deadline with the current resources.\"\n5. **단어**: confirmation /kɒnfərˈmeɪʃən/ (명사)\n뜻: 확인\n실전 예문: \"I'm waiting for confirmation of the meeting schedule.\"\n\n**5. 실전 복습 챌린지 (Practice)**\n1. 쉬운 문제: \"If I _______ (attend) an English class every day, I will improve my speaking skills.\"\n모범 답안: \"attend\"\n2. 중간 문제: \"The company is trying to _______ (automate) its customer service process to reduce costs.\"\n모범 답안: \"automate\"\n3. 어려운 문제: \"The two teams are _______ (equivalent) in terms of skills and experience, so it will be a tough competition.\"\n모범 답안: \"equivalent\"\n\n**6. 자신감 충전 & 내일의 미션 (Confidence & Mission)**\n✨ **Good Job**: 학습자는 AI 프로젝트에 대한 설명을 매우 잘했습니다. 특히, \"I made a system over the weekend\"라는 문장을 통해 자신의 경험을 영어로 자연스럽게 표현한 점이 좋았습니다.\n🚀 **내일의 한 문장**: \"I'm looking forward to implementing the new automated system in our company to increase efficiency.\"\n\n**성과 지표**\n유창성 점수: 7/10\n근거: 학습자는 대화에서 자신의 생각과 경험을 영어로 잘 표현했지만, 때때로 문법적 오류와 어휘의 제한으로 인해 유창성이 떨어지는 부분이 있었습니다.\n'원포인트 액션 플랜': 다음 수업에서는 학습자가 더 다양한 어휘와 문법을 사용하여 유창성을 향상시키기 위해 노력합니다. 특히, 동사와 명사를 더 적절하게 사용하고, 문장 구조를 간결하게 만드는 연습을 합니다.\n\n위 내용을 바탕으로:\n1. 먼저 오늘 수업에서 내가 틀렸거나 어색했던 표현을 하나 골라서, 관련된 상황을 영어로 질문해줘.\n2. 내가 영어로 대답하면, 자연스러운지 확인하고 더 나은 표현이 있으면 알려줘.\n3. 특히 \"반복 실수 패턴\"에서 지적된 부분을 집중적으로 연습시켜줘.\n4. 이런 식으로 오늘 배운 표현들을 하나씩 복습하자.\n5. 한국어 설명은 필요할 때만 간단히, 대화는 최대한 영어로 진행해줘.\n\n그럼 시작하자!";
+        function startReview(){navigator.clipboard.writeText(REVIEW_PROMPT).then(()=>{showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)}).catch(()=>{const t=document.createElement('textarea');t.value=REVIEW_PROMPT;document.body.appendChild(t);t.select();document.execCommand('copy');document.body.removeChild(t);showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)})}
+        function showToast(){const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500)}
+        function switchTab(n){document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',n==='feedback'?i===0:i===1));document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));document.getElementById('tab-'+n).classList.add('active')}
+    </script>
+</body>
+</html>
