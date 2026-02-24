@@ -28,6 +28,10 @@
 ║  [7단계] 📦 처리 끝난 녹음 파일을 '완료' 폴더로 이동 (Google Drive)        ║
 ║          → 비유: 처리된 택배를 '배송완료' 창고로 옮기는 것                  ║
 ║                                                                            ║
+║  [8단계] 📋 처리 완료 기록 저장 (GitHub에 기록)                            ║
+║          → 비유: 택배 수령 대장에 "처리 완료" 도장 찍는 것                  ║
+║          → 다음 실행 시 이 기록을 확인하여 중복 처리를 방지합니다.          ║
+║                                                                            ║
 ║  ⚠️ 만약 오늘 녹음 파일이 없으면? (수업 없는 날, 동기화 지연 등)           ║
 ║     → 에러 없이 조용히 "오늘은 할 일 없음"으로 종료됩니다.                 ║
 ║     → GitHub Actions 로그에 빨간 X가 뜨지 않으니 걱정 안 해도 됩니다.      ║
@@ -196,6 +200,69 @@ def download_latest_recording(service):
 
     print(f"✅ 다운로드 완료: {local_path} ({os.path.getsize(local_path)/1024/1024:.1f}MB)")
     return local_path, target["name"], target["id"]
+
+
+# ╔══════════════════════════════════════════════════════════════════════════╗
+# ║  📋 처리 완료 기록 (중복 처리 방지 — 멱등성 보장)                      ║
+# ║  비유: 택배 수령 대장에 "이 택배는 이미 처리함" 도장 찍는 것            ║
+# ║                                                                        ║
+# ║  왜 필요?                                                               ║
+# ║  - 백업 스케줄(10:00)이 메인(9:30) 이후 또 실행될 때 중복 방지          ║
+# ║  - FolderSync가 같은 파일을 재업로드해도 중복 방지                      ║
+# ║  - '완료' 폴더 이동이 실패해도 중복 방지                                ║
+# ║                                                                        ║
+# ║  작동 원리:                                                             ║
+# ║  docs/processed.txt에 처리한 파일 ID를 한 줄씩 기록.                    ║
+# ║  다음 실행 시 이 파일을 읽어서, 이미 기록된 ID면 건너뜀.                ║
+# ║  이 파일은 git push로 GitHub에 저장되므로 다음 실행에서도 유지됨.       ║
+# ╚══════════════════════════════════════════════════════════════════════════╝
+
+PROCESSED_FILE = "docs/processed.txt"
+
+
+def load_processed_ids():
+    """처리 완료된 파일 ID 목록을 읽어옴. 파일이 없으면 빈 세트 반환."""
+    if not os.path.exists(PROCESSED_FILE):
+        return set()
+    with open(PROCESSED_FILE, "r") as f:
+        return set(line.strip() for line in f if line.strip())
+
+
+def save_processed_id(file_id):
+    """처리 완료된 파일 ID를 기록에 추가."""
+    os.makedirs(os.path.dirname(PROCESSED_FILE), exist_ok=True)
+    with open(PROCESSED_FILE, "a") as f:
+        f.write(f"{file_id}\n")
+    print(f"📋 처리 완료 기록 추가: {file_id}")
+
+
+def is_already_processed(file_id):
+    """이 파일이 이미 처리되었는지 확인."""
+    processed = load_processed_ids()
+    if file_id in processed:
+        print(f"ℹ️ 이미 처리된 파일입니다 (ID: {file_id[:20]}...). 건너뜁니다.")
+        return True
+    return False
+
+
+def commit_processed_record():
+    """처리 기록(processed.txt)을 GitHub에 저장. 복습 페이지 배포와 별도로 실행."""
+    try:
+        subprocess.run(["git", "config", "user.name", "github-actions"], check=True)
+        subprocess.run(["git", "config", "user.email", "actions@github.com"], check=True)
+        subprocess.run(["git", "add", PROCESSED_FILE], check=True)
+        # 변경사항이 없으면 commit이 실패하므로, 실패해도 무시
+        result = subprocess.run(
+            ["git", "commit", "-m", "📋 Update processed records"],
+            capture_output=True, text=True
+        )
+        if result.returncode == 0:
+            subprocess.run(["git", "push"], check=True)
+            print("✅ 처리 기록 저장 완료")
+        else:
+            print("ℹ️ 처리 기록 변경 없음 (이미 최신)")
+    except Exception as e:
+        print(f"⚠️ 처리 기록 저장 실패 (치명적이지 않음): {e}")
 
 
 def move_to_done_folder(file_id):
@@ -813,6 +880,11 @@ def main():
         print("ℹ️ 오늘 녹음 파일이 없습니다. 수업이 없는 날이거나 동기화 지연일 수 있습니다.")
         sys.exit(0)
 
+    # ━━ [중복 체크] 이미 처리한 파일인지 확인 ━━
+    if is_already_processed(file_id):
+        print("✅ 이미 처리 완료된 파일입니다. 중복 실행 방지로 종료합니다.")
+        sys.exit(0)
+
     date_str = now.strftime("%Y년 %m월 %d일")
 
     try:
@@ -838,6 +910,10 @@ def main():
 
         # ━━ [7단계] 완료 파일 이동 ━━
         move_to_done_folder(file_id)
+
+        # ━━ [8단계] 처리 완료 기록 저장 ━━
+        save_processed_id(file_id)
+        commit_processed_record()
 
         print("\n" + "=" * 50)
         print("✅ 모든 과정이 완료되었습니다!")
