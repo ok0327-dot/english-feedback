@@ -1,46 +1,39 @@
 name: 📚 English Lesson Feedback
-
 on:
   schedule:
-    # UTC 00:30 = KST 09:30 (월~금)
-    # 수업 8:00~8:20 → FolderSync 9:00 동기화 후 30분 여유
+    # UTC 00:30 = KST 09:30 (월~금) — 메인 스케줄
     - cron: '30 0 * * 1-5'
-    # ※ cron 0=일요일, 1-5 = 월~금 (KST 월~금)
-  
+    # UTC 01:00 = KST 10:00 (월~금) — 백업 스케줄 (9:30 누락 대비)
+    - cron: '0 1 * * 1-5'
+    # ※ 중복 실행돼도 안전: 파일 처리 후 '완료' 폴더로 이동되므로 재처리 없음
+
   workflow_dispatch:
     inputs:
       debug:
         description: '디버그 모드'
         required: false
         default: 'false'
-
 permissions:
   contents: write
-
 # 🛡️ 중복 실행 방지: 버튼을 여러 번 눌러도 마지막 1개만 실행
 concurrency:
   group: english-feedback
   cancel-in-progress: true
-
 jobs:
   process-lesson:
     runs-on: ubuntu-latest
     timeout-minutes: 10
-
     steps:
       - name: 📥 체크아웃
         uses: actions/checkout@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-
       - name: 🐍 Python 설정
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-
       - name: 📦 의존성 설치
         run: pip install -r requirements.txt
-
       - name: 🚀 피드백 생성 및 발송
         run: python process_lesson.py
         env:
