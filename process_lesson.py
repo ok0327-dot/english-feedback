@@ -297,6 +297,7 @@ def move_to_done_folder(file_id):
 def transcribe_audio(audio_path):
     """
     음성 파일 → 텍스트 변환. Groq Whisper API(무료) 사용.
+    세그먼트별 타임스탬프를 함께 반환하여 화자 분리 정확도를 높임.
     흔한 에러: API 키 만료, 파일 25MB 초과, 서버 일시 장애
     """
     print("🎤 음성 전사 중...")
@@ -308,7 +309,8 @@ def transcribe_audio(audio_path):
             data={
                 "model": "whisper-large-v3",       # 가장 정확한 모델
                 "language": "en",                   # 음성 언어: 영어
-                "response_format": "verbose_json",  # 상세 결과 (녹음 길이 포함)
+                "response_format": "verbose_json",  # 상세 결과 (세그먼트 타임스탬프 포함)
+                "timestamp_granularities": "segment",  # 세그먼트별 시간 정보 (화자 분리용)
             },
             timeout=120,  # 최대 2분 대기
         )
@@ -318,8 +320,9 @@ def transcribe_audio(audio_path):
     result = response.json()
     transcript = result.get("text", "")
     duration = result.get("duration", 0)
-    print(f"✅ 전사 완료: {len(transcript)}자, {duration:.0f}초")
-    return transcript, duration
+    segments = result.get("segments", [])
+    print(f"✅ 전사 완료: {len(transcript)}자, {duration:.0f}초, {len(segments)}개 세그먼트")
+    return transcript, duration, segments
 
 
 # ╔══════════════════════════════════════════════════════════════════════════╗
@@ -365,47 +368,119 @@ def groq_llm_request(prompt, max_tokens=4096, temperature=0.3, timeout=120, syst
     raise Exception(f"Groq LLM 재시도 초과 (429 에러 지속)")
 
 
-def clean_transcript(raw_transcript):
+def _format_segments_with_gaps(segments):
+    """
+    Whisper 세그먼트를 타임스탬프 + 침묵 구간 표시 형식으로 변환.
+    침묵(gap)이 1.5초 이상이면 화자 전환 가능성이 높으므로 표시해줌.
+    비유: 대화 녹취에 "여기서 잠깐 멈춤" 메모를 달아주는 것.
+    """
+    if not segments:
+        return ""
+
+    lines = []
+    for i, seg in enumerate(segments):
+        start = seg.get("start", 0)
+        end = seg.get("end", 0)
+        text = seg.get("text", "").strip()
+        if not text:
+            continue
+
+        # 이전 세그먼트와의 침묵 구간 계산
+        if i > 0:
+            prev_end = segments[i - 1].get("end", 0)
+            gap = start - prev_end
+            if gap >= 1.5:
+                lines.append(f"  --- ({gap:.1f}초 침묵 — 화자 전환 가능성 높음) ---")
+
+        lines.append(f"[{start:.1f}s ~ {end:.1f}s] {text}")
+
+    return "\n".join(lines)
+
+
+def clean_transcript(raw_transcript, segments=None):
     """
     Whisper 원본 전사를 Groq Llama로 보정: 오인식 수정 + 화자 분리.
     학생의 문법 오류는 일부러 유지 (피드백에서 교정하므로).
     보정 실패 시 → 원본 그대로 사용 (안전장치).
 
-    ※ v2.1 업데이트: 화자 식별 규칙 강화 (Tutor/Student 뒤바뀜 방지)
+    ※ v2.2 업데이트: 세그먼트 타임스탬프 기반 화자 분리 강화
+      - 침묵 구간(gap)을 화자 전환 단서로 활용
+      - LLM이 텍스트 내용 + 시간 정보를 함께 분석
     """
     print("🔍 전사 내용 보정 중...")
+
+    # 세그먼트 타임스탬프 정보를 텍스트로 변환
+    segments_text = _format_segments_with_gaps(segments) if segments else ""
 
     # Groq Llama에게 보내는 "교정 의뢰서"
     prompt = f"""아래는 한국인 학습자와 원어민 튜터 간의 전화영어 수업을 STT(음성→텍스트)로 전사한 원본입니다.
 전화 통화 특성상 음질이 완벽하지 않아 오인식이 포함되어 있을 수 있습니다.
 
-다음 작업을 수행해주세요:
+다음 작업을 **반드시 아래 순서대로** 수행해주세요:
 
-1. **전사 오류 보정**: 문맥상 맞지 않는 단어를 올바른 단어로 수정
-   - 한국인 발음 특성 고려 (r/l, p/f, v/b 혼동 등)
-   - 소음으로 인한 잡음 텍스트 제거
-   
-2. **화자 분리**: 각 발화 앞에 화자를 표시
-   - [Tutor]: 원어민 튜터의 발화
-   - [Student]: 한국인 학습자의 발화
-   
-   ⚠️ 화자 식별 핵심 규칙 (반드시 준수):
-   - **[Student]는 한국인 학습자**입니다. 다음 특징으로 식별하세요:
-     • 문법 오류가 있음 (예: "nearby park" → "a nearby park", "took a bicycle" → "rode a bicycle")
-     • 한국 관련 이야기를 함 (부산, 서울, 한국의 날씨, 회사 등)
-     • 영어가 비교적 짧고 단순한 문장 구조
-     • 더듬거림, "hmm", "ah" 등 망설임이 많음
-     • "teacher"라고 상대방을 부르는 쪽이 학습자
-   - **[Tutor]는 원어민 튜터**입니다. 다음 특징으로 식별하세요:
-     • 유창하고 자연스러운 영어 사용
-     • 학습자에게 질문을 던지는 역할 (대화를 이끄는 사람)
-     • 학습자의 이름을 부르는 쪽이 튜터
-     • 교정, 되묻기, 리액션("That sounds nice!", "Oh really?") 등
-   - **대화 흐름 규칙**: 질문한 사람과 대답한 사람은 반드시 다른 화자여야 합니다
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+## STEP 1: 전체 대화 맥락 파악 (먼저 읽고 생각하기)
+
+결과를 출력하기 전에, 전사 전체를 끝까지 읽고 다음을 파악하세요:
+- **대화 주제**: 오늘 수업에서 무슨 이야기를 했는가? (여행, 주말, 업무, 취미 등)
+- **대화 흐름**: 누가 질문하고 누가 대답하는 패턴인가?
+- **영어 실력 차이**: 어떤 발화들이 문법적으로 완벽하고, 어떤 발화들에 실수가 있는가?
+- **역할 구조**: 전화영어 수업은 "튜터가 질문 → 학생이 대답 → 튜터가 리액션/추가질문"의 패턴이 반복됨
+
+이 맥락을 바탕으로 화자를 배정하세요. 개별 문장만 보지 말고 대화 전체 흐름을 고려하세요.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+## STEP 2: 전사 오류 보정
+
+- 문맥상 맞지 않는 단어를 올바른 단어로 수정
+- 한국인 발음 특성 고려 (r/l, p/f, v/b, th/s 혼동 등)
+- 소음으로 인한 잡음 텍스트 제거
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+## STEP 3: 화자 분리
+
+각 발화 앞에 [Tutor] 또는 [Student]를 표시하세요.
+
+⚠️ **화자 식별 규칙 (우선순위 순)**:
+
+🥇 **1순위 — 영어 실수 여부 (가장 강력한 단서)**:
+   - **영문법 실수가 있는 쪽이 [Student]입니다** (이것이 가장 확실한 판별 기준!)
+   - 관사 누락/오용 (a/an/the), 전치사 오류, 시제 불일치, 어색한 어순 등
+   - 더듬거림, "hmm", "ah", "uh" 등 망설임이 많은 쪽
+   - 문법적으로 완벽하고 유창한 쪽이 [Tutor]입니다
+
+🥈 **2순위 — 대화 맥락과 역할**:
+   - 질문을 던지며 대화를 이끄는 쪽 → [Tutor]
+   - 질문에 대답하는 쪽 → [Student]
+   - 리액션/칭찬("That sounds nice!", "Oh really?", "Good job!") → [Tutor]
+   - 교정하거나 되묻는 쪽("You mean...?", "Did you say...?") → [Tutor]
+   - 한국 관련 자기 이야기를 하는 쪽 → [Student]
+   - "teacher"라고 부르는 쪽 → [Student], 이름을 부르는 쪽 → [Tutor]
+
+🥉 **3순위 — 타임스탬프 기반 화자 전환**:
+   - 세그먼트 사이 **1.5초 이상 침묵**이 있으면 화자가 바뀔 가능성이 높음
+   - 전화 통화는 한 사람이 말하면 다른 사람이 듣는 구조
+   - 짧은 침묵(0.5초 미만)은 같은 화자의 쉼
+
+📌 **일관성 검증**:
+   - 한번 [Student]로 판단한 화자의 영어 수준이 갑자기 유창해지면 화자를 잘못 배정한 것!
+   - 질문한 사람과 대답한 사람은 반드시 다른 화자여야 함
    - 학습자의 문법 오류는 그대로 유지 (나중에 피드백에서 교정하므로)
 
-3. **포맷**: 화자가 바뀔 때마다 줄바꿈
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+## 출력 포맷
+- 화자가 바뀔 때마다 줄바꿈
+- 타임스탬프는 최종 결과에 포함하지 마세요"""
 
+    # 세그먼트 타임스탬프가 있으면 추가 (화자 분리의 핵심 단서)
+    if segments_text:
+        prompt += f"""
+
+📊 세그먼트별 타임스탬프 (화자 분리 참고용):
+{segments_text}
+
+"""
+    prompt += f"""
 원본 전사:
 {raw_transcript}
 
@@ -663,12 +738,27 @@ def deploy_review_page(page_html, date_str):
 
 
 def _update_index_page(docs_dir):
-    """복습 기록 전체 목록(index.html)을 최신순으로 갱신."""
+    """복습 기록 전체 목록(index.html)을 최신순으로 갱신. 삭제 버튼 포함."""
+    from urllib.parse import urlparse
+
     pages = sorted(glob.glob(os.path.join(docs_dir, "2*.html")), reverse=True)
-    links_html = ""
+
+    # GITHUB_PAGES_URL에서 owner/repo 추출 (삭제 API 호출용)
+    github_repo = ""
+    if GITHUB_PAGES_URL:
+        try:
+            parsed = urlparse(GITHUB_PAGES_URL)
+            owner = parsed.hostname.split(".")[0]
+            repo = parsed.path.strip("/")
+            github_repo = f"{owner}/{repo}"
+        except Exception:
+            pass
+    repo_escaped = json.dumps(github_repo, ensure_ascii=False)
+
+    items_html = ""
     for p in pages:
         name = os.path.basename(p).replace(".html", "")
-        links_html += f'        <a href="{os.path.basename(p)}" class="link">{name}</a>\n'
+        items_html += f'        <div class="item"><a href="{os.path.basename(p)}" class="link">{name}</a><button class="del-btn" onclick="deleteReview(\'{name}\',this)" title="삭제">✕</button></div>\n'
 
     index = f"""<!DOCTYPE html>
 <html lang="ko">
@@ -682,15 +772,27 @@ def _update_index_page(docs_dir):
         body{{font-family:'Noto Sans KR',sans-serif;background:#0f0f13;color:#e4e4e7;min-height:100vh;padding:48px 24px}}
         h1{{text-align:center;font-size:28px;margin-bottom:40px;color:#f1f5f9}}
         .list{{max-width:480px;margin:0 auto;display:flex;flex-direction:column;gap:8px}}
-        .link{{display:block;padding:16px 20px;background:#1a1a24;border-radius:10px;color:#cbd5e1;text-decoration:none;font-size:15px;transition:all .2s;border:1px solid transparent}}
+        .item{{display:flex;align-items:center;gap:8px}}
+        .link{{flex:1;display:block;padding:16px 20px;background:#1a1a24;border-radius:10px;color:#cbd5e1;text-decoration:none;font-size:15px;transition:all .2s;border:1px solid transparent}}
         .link:hover{{background:#262636;border-color:rgba(56,189,248,.2);color:#38bdf8}}
+        .del-btn{{width:40px;height:40px;background:#1a1a24;border:1px solid transparent;border-radius:10px;color:#64748b;font-size:16px;cursor:pointer;transition:all .2s;flex-shrink:0}}
+        .del-btn:hover{{background:#2a1a1e;border-color:rgba(239,68,68,.3);color:#ef4444}}
+        .toast{{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#38bdf8;padding:14px 28px;border-radius:12px;font-size:14px;font-weight:500;border:1px solid rgba(56,189,248,.2);box-shadow:0 8px 32px rgba(0,0,0,.4);opacity:0;transition:all .4s cubic-bezier(.16,1,.3,1);z-index:1000}}
+        .toast.show{{opacity:1;transform:translateX(-50%) translateY(0)}}
+        .toast.error{{color:#ef4444;border-color:rgba(239,68,68,.2)}}
     </style>
 </head>
 <body>
     <h1>📚 전화영어 복습 기록</h1>
     <div class="list">
-{links_html if links_html else '        <p style="text-align:center;color:#64748b">아직 복습 기록이 없습니다.</p>'}
+{items_html if items_html else '        <p style="text-align:center;color:#64748b">아직 복습 기록이 없습니다.</p>'}
     </div>
+    <div class="toast" id="toast"></div>
+    <script>
+    const REPO={repo_escaped};
+    function deleteReview(date,btn){{if(!confirm(date+' 복습 기록을 삭제할까요?'))return;let t=localStorage.getItem('gh_pat');if(!t){{t=prompt('GitHub Personal Access Token을 입력해주세요.\\n\\n발급: GitHub → Settings → Developer settings → Fine-grained tokens\\n권한: Actions (Read and Write)');if(!t)return;localStorage.setItem('gh_pat',t)}}fetch('https://api.github.com/repos/'+REPO+'/actions/workflows/delete-review.yml/dispatches',{{method:'POST',headers:{{'Authorization':'Bearer '+t,'Accept':'application/vnd.github.v3+json'}},body:JSON.stringify({{ref:'main',inputs:{{date:date}}}})}} ).then(r=>{{if(r.status===204){{btn.closest('.item').style.display='none';showToast('✅ 삭제 요청 완료! 1~2분 후 반영됩니다.')}}else if(r.status===401||r.status===403){{localStorage.removeItem('gh_pat');showToast('❌ 토큰이 유효하지 않습니다. 다시 시도해주세요.','error')}}else{{showToast('❌ 삭제 실패 ('+r.status+')','error')}}}}).catch(()=>showToast('❌ 네트워크 오류','error'))}}
+    function showToast(msg,type){{const t=document.getElementById('toast');t.textContent=msg;t.className='toast'+(type?' '+type:'')+' show';setTimeout(()=>t.classList.remove('show'),3000)}}
+    </script>
 </body>
 </html>"""
     with open(os.path.join(docs_dir, "index.html"), "w", encoding="utf-8") as f:
@@ -889,14 +991,14 @@ def main():
 
     try:
         # ━━ [2단계] 음성 → 텍스트 (Groq Whisper) ━━
-        transcript_raw, duration = transcribe_audio(audio_path)
+        transcript_raw, duration, segments = transcribe_audio(audio_path)
         if not transcript_raw.strip():
             print("❌ 전사 결과가 비어있습니다.")
             sys.exit(0)
         print(f"\n📝 원본 전사 (첫 200자):\n{transcript_raw[:200]}...\n")
 
         # ━━ [3단계] 전사 보정 (화자 분리 + 오인식 수정) ━━
-        transcript = clean_transcript(transcript_raw)
+        transcript = clean_transcript(transcript_raw, segments)
 
         # ━━ [4단계] AI 피드백 생성 ━━
         feedback = generate_feedback(transcript)

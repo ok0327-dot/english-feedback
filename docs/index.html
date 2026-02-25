@@ -10,19 +10,30 @@
         body{font-family:'Noto Sans KR',sans-serif;background:#0f0f13;color:#e4e4e7;min-height:100vh;padding:48px 24px}
         h1{text-align:center;font-size:28px;margin-bottom:40px;color:#f1f5f9}
         .list{max-width:480px;margin:0 auto;display:flex;flex-direction:column;gap:8px}
-        .link{display:block;padding:16px 20px;background:#1a1a24;border-radius:10px;color:#cbd5e1;text-decoration:none;font-size:15px;transition:all .2s;border:1px solid transparent}
+        .item{display:flex;align-items:center;gap:8px}
+        .link{flex:1;display:block;padding:16px 20px;background:#1a1a24;border-radius:10px;color:#cbd5e1;text-decoration:none;font-size:15px;transition:all .2s;border:1px solid transparent}
         .link:hover{background:#262636;border-color:rgba(56,189,248,.2);color:#38bdf8}
+        .del-btn{width:40px;height:40px;background:#1a1a24;border:1px solid transparent;border-radius:10px;color:#64748b;font-size:16px;cursor:pointer;transition:all .2s;flex-shrink:0}
+        .del-btn:hover{background:#2a1a1e;border-color:rgba(239,68,68,.3);color:#ef4444}
+        .toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#38bdf8;padding:14px 28px;border-radius:12px;font-size:14px;font-weight:500;border:1px solid rgba(56,189,248,.2);box-shadow:0 8px 32px rgba(0,0,0,.4);opacity:0;transition:all .4s cubic-bezier(.16,1,.3,1);z-index:1000}
+        .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+        .toast.error{color:#ef4444;border-color:rgba(239,68,68,.2)}
     </style>
 </head>
 <body>
     <h1>📚 전화영어 복습 기록</h1>
     <div class="list">
-        <a href="2026-02-25.html" class="link">2026-02-25</a>
-        <a href="2026-02-24.html" class="link">2026-02-24</a>
-        <a href="2026-02-23.html" class="link">2026-02-23</a>
-        <a href="2026-02-21.html" class="link">2026-02-21</a>
-        <a href="2026-02-20.html" class="link">2026-02-20</a>
-
+        <div class="item"><a href="2026-02-25.html" class="link">2026-02-25</a><button class="del-btn" onclick="deleteReview('2026-02-25',this)" title="삭제">✕</button></div>
+        <div class="item"><a href="2026-02-24.html" class="link">2026-02-24</a><button class="del-btn" onclick="deleteReview('2026-02-24',this)" title="삭제">✕</button></div>
+        <div class="item"><a href="2026-02-23.html" class="link">2026-02-23</a><button class="del-btn" onclick="deleteReview('2026-02-23',this)" title="삭제">✕</button></div>
+        <div class="item"><a href="2026-02-21.html" class="link">2026-02-21</a><button class="del-btn" onclick="deleteReview('2026-02-21',this)" title="삭제">✕</button></div>
+        <div class="item"><a href="2026-02-20.html" class="link">2026-02-20</a><button class="del-btn" onclick="deleteReview('2026-02-20',this)" title="삭제">✕</button></div>
     </div>
+    <div class="toast" id="toast"></div>
+    <script>
+    const REPO="ok0327-dot/english-feedback";
+    function deleteReview(date,btn){if(!confirm(date+' 복습 기록을 삭제할까요?'))return;let t=localStorage.getItem('gh_pat');if(!t){t=prompt('GitHub Personal Access Token을 입력해주세요.\n\n발급: GitHub → Settings → Developer settings → Fine-grained tokens\n권한: Actions (Read and Write)');if(!t)return;localStorage.setItem('gh_pat',t)}fetch('https://api.github.com/repos/'+REPO+'/actions/workflows/delete-review.yml/dispatches',{method:'POST',headers:{'Authorization':'Bearer '+t,'Accept':'application/vnd.github.v3+json'},body:JSON.stringify({ref:'main',inputs:{date:date}})} ).then(r=>{if(r.status===204){btn.closest('.item').style.display='none';showToast('✅ 삭제 요청 완료! 1~2분 후 반영됩니다.')}else if(r.status===401||r.status===403){localStorage.removeItem('gh_pat');showToast('❌ 토큰이 유효하지 않습니다. 다시 시도해주세요.','error')}else{showToast('❌ 삭제 실패 ('+r.status+')','error')}}).catch(()=>showToast('❌ 네트워크 오류','error'))}
+    function showToast(msg,type){const t=document.getElementById('toast');t.textContent=msg;t.className='toast'+(type?' '+type:'')+' show';setTimeout(()=>t.classList.remove('show'),3000)}
+    </script>
 </body>
 </html>
