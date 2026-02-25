@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전화영어 복습 - 2026년 02월 25일</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Noto Sans KR',sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.75;min-height:100vh}
+        .header{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);border-bottom:1px solid rgba(255,255,255,.06);padding:48px 24px 40px;text-align:center}
+        .header-date{font-size:13px;color:#94a3b8;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+        .header h1{font-size:28px;font-weight:700;color:#f1f5f9;margin-bottom:16px}
+        .header-meta{display:flex;justify-content:center;gap:24px;font-size:14px;color:#64748b}
+        .header-meta span{display:flex;align-items:center;gap:6px}
+        .cta-section{text-align:center;padding:40px 24px}
+        .cta-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:linear-gradient(135deg,#38bdf8,#818cf8);color:#fff;font-size:16px;font-weight:600;font-family:'Noto Sans KR',sans-serif;border:none;border-radius:50px;cursor:pointer;transition:all .3s;text-decoration:none;box-shadow:0 4px 24px rgba(56,189,248,.25)}
+        .cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(56,189,248,.35)}
+        .cta-btn svg{width:20px;height:20px}
+        .cta-sub{margin-top:12px;font-size:13px;color:#64748b}
+        .toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#38bdf8;padding:14px 28px;border-radius:12px;font-size:14px;font-weight:500;border:1px solid rgba(56,189,248,.2);box-shadow:0 8px 32px rgba(0,0,0,.4);opacity:0;transition:all .4s cubic-bezier(.16,1,.3,1);z-index:1000}
+        .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+        .container{max-width:720px;margin:0 auto;padding:0 24px 80px}
+        .tabs{display:flex;gap:4px;background:#1a1a24;padding:4px;border-radius:12px;margin-bottom:32px}
+        .tab{flex:1;padding:12px;text-align:center;font-size:14px;font-weight:500;color:#64748b;background:0 0;border:none;border-radius:8px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all .2s}
+        .tab.active{background:#262636;color:#f1f5f9}
+        .tab-content{display:none}.tab-content.active{display:block}
+        .feedback h2{font-size:18px;font-weight:700;color:#f1f5f9;margin:36px 0 16px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.06)}
+        .feedback h2:first-child{margin-top:0}
+        .feedback p{margin:8px 0;color:#cbd5e1}
+        .feedback .item{padding:6px 0 6px 16px;border-left:2px solid #334155;margin:6px 0;color:#cbd5e1}
+        .feedback .numbered{padding:8px 0 8px 16px;color:#cbd5e1}
+        .feedback .numbered strong{color:#38bdf8}
+        .feedback strong{color:#f1f5f9}
+        .feedback code{background:#1e293b;padding:2px 8px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#38bdf8}
+        .feedback table{width:100%;border-collapse:collapse;margin:12px 0}
+        .feedback th,.feedback td{padding:10px 14px;text-align:left;border-bottom:1px solid #262636}
+        .feedback th{color:#94a3b8;font-weight:500;font-size:13px}
+        .feedback td{color:#cbd5e1}
+        .arrow{color:#38bdf8;font-weight:700}
+        .transcript{background:#1a1a24;border-radius:12px;padding:28px;font-size:14px;line-height:2;color:#94a3b8;white-space:pre-wrap;word-break:break-word;font-family:'JetBrains Mono','Noto Sans KR',monospace}
+        .transcript .tutor{color:#38bdf8}
+        .transcript .student{color:#a78bfa}
+        @media(max-width:640px){.header{padding:32px 16px}.header h1{font-size:22px}.cta-btn{padding:14px 28px;font-size:15px}.container{padding:0 16px 60px}}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-date">2026년 02월 25일</div>
+        <h1>📚 전화영어 복습</h1>
+        <div class="header-meta">
+            <span>⏱ 0분 36초</span>
+            <span>🎙 전화영어_025180304_20260225091020.m4a</span>
+        </div>
+    </div>
+    <div class="cta-section">
+        <button class="cta-btn" onclick="startReview()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Gemini에서 복습 대화 시작하기
+        </button>
+        <div class="cta-sub">클릭하면 프롬프트가 복사되고 Gemini가 열립니다</div>
+    </div>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('feedback')">📋 AI 피드백</button>
+            <button class="tab" onclick="switchTab('transcript')">🎙 수업 전사</button>
+        </div>
+        <div id="tab-feedback" class="tab-content active">
+            <div class="feedback"><p><strong>1. 📊 오늘의 대화 요약 (Summary)</strong></p>
+<p>오늘의 대화는 전화영어 수업의 시작 부분을 다루었습니다. 학생은 튜터와 처음 인사를 나누고, 이름을 확인하는 과정을 거쳤습니다. 튜터와 학생은 간단한 대화를 나누었으며, 수업을 시작하기 위한 준비를 했습니다.</p>
+<br>
+<p><strong>2. 💬 유창성 업그레이드 (Fluency & Natural Flow)</strong></p>
+<div class="numbered"><strong>1.</strong> ❌ 학습자 원문: "Hi, hi, is this Joe?"</div>
+<p>✅ 쉬운 자연스러운 표현: "Hello, is this Joe?"</p>
+<p>💎 세련된 비즈니스 표현: "Hello, may I speak with Joe?"</p>
+<p>💡 코칭 포인트: 더 자연스럽게 들리기 위해 반복되는 인사를 피하고, 명확한 질문을 하는 것이 중요합니다.</p>
+<br>
+<div class="numbered"><strong>2.</strong> ❌ 학습자 원문: "I'm sorry, I'm Joe."</div>
+<p>✅ 쉬운 자연스러운 표현: "I'm Joe."</p>
+<p>💎 세련된 비즈니스 표현: "I'm Joe, nice to meet you."</p>
+<p>💡 코칭 포인트: 불필요한 사과를 피하고, 간단명료하게 자기 소개를 하는 것이 중요합니다.</p>
+<br>
+<div class="numbered"><strong>3.</strong> ❌ 학습자 원문: "I'm sorry, I can't take a phone, mobile phone, sorry."</div>
+<p>✅ 쉬운 자연스러운 표현: "I'm sorry, I'm not available on the phone right now."</p>
+<p>💎 세련된 비즈니스 표현: "I apologize, but I'm currently unavailable to take calls."</p>
+<p>💡 코칭 포인트: 더 명확하게 자신의 상황을 설명하고, 불필요한 단어를 피하는 것이 중요합니다.</p>
+<br>
+<p><strong>3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)</strong></p>
+<p>❌ 습관적 표현 / ✅ 교정 예시:</p>
+<div class="item">❌ "I'm sorry, I'm Joe." / ✅ "I'm Joe."</div>
+<div class="item">❌ "I'm sorry, I can't take a phone." / ✅ "I'm not available on the phone right now."</div>
+<div class="item">❌ "You can't take it?" / ✅ "You can't take the class?"</div>
+<p>📌 핵심 규칙: 불필요한 사과를 피하고, 명확하게 자신의 상황을 설명하는 것이 중요합니다.</p>
+<p>🔁 따라 읽기:</p>
+<div class="item">🗣️ "I'm Joe."</div>
+<div class="item">🗣️ "I'm not available on the phone right now."</div>
+<div class="item">🗣️ "You can't take the class?"</div>
+<br>
+<p><strong>4. 📗 어휘 확장 (Vocabulary Vault)</strong></p>
+<div class="numbered"><strong>1.</strong> <strong>available</strong> /əˈveɪləbəl/ (형용사)</div>
+<p>뜻: 사용할 수 있는, 이용할 수 있는</p>
+<p>실전 예문: "I'm available to meet at 2 PM today."</p>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>currently</strong> /ˈkʌrəntli/ (부사)</div>
+<p>뜻: 현재, 지금</p>
+<p>실전 예문: "I'm currently working on a project."</p>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>unavailable</strong> /ˌʌnəˈveɪləbəl/ (형용사)</div>
+<p>뜻: 사용할 수 없는, 이용할 수 없는</p>
+<p>실전 예문: "I'm unavailable to take calls during the meeting."</p>
+<br>
+<div class="numbered"><strong>4.</strong> <strong>nice to meet you</strong> /naɪs tə ˈmiːt juː/ (표현)</div>
+<p>뜻: 만나서 반가워</p>
+<p>실전 예문: "Hello, I'm Joe, nice to meet you."</p>
+<br>
+<div class="numbered"><strong>5.</strong> <strong>take calls</strong> /teɪk kɔːlz/ (표현)</div>
+<p>뜻: 전화를 받다</p>
+<p>실전 예문: "I'm not available to take calls right now."</p>
+<br>
+<p><strong>5. 📝 실전 복습 챌린지 (Practice)</strong></p>
+<div class="numbered"><strong>1.</strong> 다음 상황에서 적절한 인사를 작성해 보세요: 튜터와 처음 만났을 때</div>
+<p>모범 답안: "Hello, I'm Joe, nice to meet you."</p>
+<br>
+<div class="numbered"><strong>2.</strong> 다음 상황에서 적절한 표현을 작성해 보세요: 전화로 통화할 수 없을 때</div>
+<p>모범 답안: "I'm not available on the phone right now."</p>
+<br>
+<div class="numbered"><strong>3.</strong> 다음 상황에서 적절한 대화를 작성해 보세요: 튜터와 처음 인사를 나눈 후 수업을 시작하기 전에</div>
+<p>모범 답안: "Hello, I'm Joe. I'm ready to start the lesson. What's the topic for today?"</p>
+<br>
+<p><strong>6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)</strong></p>
+<p>✨ <strong>Good Job</strong>: 오늘 수업에서 학습자가 튜터와 처음 인사를 나눌 때 명확하게 자기 소개를 한 것이 좋았습니다.</p>
+<p>🚀 <strong>내일의 한 문장</strong>: "Hello, I'm Joe, nice to meet you. I'm looking forward to today's lesson."</p>
+<br>
+<p><strong>[성과 지표]</strong></p>
+<p>오늘의 유창성 점수: 6/10</p>
+<p>근거: 학습자는 튜터와 처음 인사를 나눌 때 명확하게 자기 소개를 했으며, 간단한 대화를 나눌 때도 노력했습니다. 그러나 아직 불필요한 사과를 많이 사용하며, 더 명확하게 자신의 상황을 설명할 필요가 있습니다.</p>
+<p>원포인트 액션 플랜: 내일 수업에서는 불필요한 사과를 피하고, 더 명확하게 자신의 상황을 설명하는 것을 목표로 합니다.</p></div>
+        </div>
+        <div id="tab-transcript" class="tab-content">
+            <div class="transcript"><span class="tutor">[Tutor]</span>: Hello? 
+<span class="student">[Student]</span>: Hi, hi, is this Joe? Hi, teacher, I&#x27;m sorry, yes. 
+<span class="tutor">[Tutor]</span>: I&#x27;m James. 
+<span class="student">[Student]</span>: Oh, teacher, I&#x27;m Joe. 
+<span class="tutor">[Tutor]</span>: Yeah, okay, no problem. 
+<span class="student">[Student]</span>: I&#x27;m sorry, I can&#x27;t take a phone, mobile phone, sorry. 
+<span class="tutor">[Tutor]</span>: Yeah, yeah, take the phone. 
+<span class="student">[Student]</span>: Yeah, you can&#x27;t take it? 
+<span class="tutor">[Tutor]</span>: Oh, you can&#x27;t take a class. 
+<span class="student">[Student]</span>: Oh, okay. 
+<span class="tutor">[Tutor]</span>: All right. No problem. 
+<span class="student">[Student]</span>: Okay, then. 
+<span class="tutor">[Tutor]</span>: All right. Well, have a good day. 
+<span class="student">[Student]</span>: Have a nice day. 
+<span class="tutor">[Tutor]</span>: Bye-bye. 
+<span class="student">[Student]</span>: Take care. 
+<span class="tutor">[Tutor]</span>: Bye.</div>
+        </div>
+    </div>
+    <div class="toast" id="toast">✅ 프롬프트가 복사되었습니다!</div>
+    <script>
+        const REVIEW_PROMPT="너는 나의 영어 회화 복습 파트너야. 오늘 내 전화영어 수업 내용을 기반으로 대화하면서 복습을 도와줘.\n\n[오늘 수업 전사 내용]\n[Tutor]: Hello? \n[Student]: Hi, hi, is this Joe? Hi, teacher, I'm sorry, yes. \n[Tutor]: I'm James. \n[Student]: Oh, teacher, I'm Joe. \n[Tutor]: Yeah, okay, no problem. \n[Student]: I'm sorry, I can't take a phone, mobile phone, sorry. \n[Tutor]: Yeah, yeah, take the phone. \n[Student]: Yeah, you can't take it? \n[Tutor]: Oh, you can't take a class. \n[Student]: Oh, okay. \n[Tutor]: All right. No problem. \n[Student]: Okay, then. \n[Tutor]: All right. Well, have a good day. \n[Student]: Have a nice day. \n[Tutor]: Bye-bye. \n[Student]: Take care. \n[Tutor]: Bye.\n\n[AI 피드백]\n**1. 📊 오늘의 대화 요약 (Summary)**\n오늘의 대화는 전화영어 수업의 시작 부분을 다루었습니다. 학생은 튜터와 처음 인사를 나누고, 이름을 확인하는 과정을 거쳤습니다. 튜터와 학생은 간단한 대화를 나누었으며, 수업을 시작하기 위한 준비를 했습니다.\n\n**2. 💬 유창성 업그레이드 (Fluency & Natural Flow)**\n1. ❌ 학습자 원문: \"Hi, hi, is this Joe?\"\n✅ 쉬운 자연스러운 표현: \"Hello, is this Joe?\"\n💎 세련된 비즈니스 표현: \"Hello, may I speak with Joe?\"\n💡 코칭 포인트: 더 자연스럽게 들리기 위해 반복되는 인사를 피하고, 명확한 질문을 하는 것이 중요합니다.\n\n2. ❌ 학습자 원문: \"I'm sorry, I'm Joe.\"\n✅ 쉬운 자연스러운 표현: \"I'm Joe.\"\n💎 세련된 비즈니스 표현: \"I'm Joe, nice to meet you.\"\n💡 코칭 포인트: 불필요한 사과를 피하고, 간단명료하게 자기 소개를 하는 것이 중요합니다.\n\n3. ❌ 학습자 원문: \"I'm sorry, I can't take a phone, mobile phone, sorry.\"\n✅ 쉬운 자연스러운 표현: \"I'm sorry, I'm not available on the phone right now.\"\n💎 세련된 비즈니스 표현: \"I apologize, but I'm currently unavailable to take calls.\"\n💡 코칭 포인트: 더 명확하게 자신의 상황을 설명하고, 불필요한 단어를 피하는 것이 중요합니다.\n\n**3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)**\n❌ 습관적 표현 / ✅ 교정 예시:\n- ❌ \"I'm sorry, I'm Joe.\" / ✅ \"I'm Joe.\"\n- ❌ \"I'm sorry, I can't take a phone.\" / ✅ \"I'm not available on the phone right now.\"\n- ❌ \"You can't take it?\" / ✅ \"You can't take the class?\"\n📌 핵심 규칙: 불필요한 사과를 피하고, 명확하게 자신의 상황을 설명하는 것이 중요합니다.\n🔁 따라 읽기:\n- 🗣️ \"I'm Joe.\"\n- 🗣️ \"I'm not available on the phone right now.\"\n- 🗣️ \"You can't take the class?\"\n\n**4. 📗 어휘 확장 (Vocabulary Vault)**\n1. **available** /əˈveɪləbəl/ (형용사)\n뜻: 사용할 수 있는, 이용할 수 있는\n실전 예문: \"I'm available to meet at 2 PM today.\"\n\n2. **currently** /ˈkʌrəntli/ (부사)\n뜻: 현재, 지금\n실전 예문: \"I'm currently working on a project.\"\n\n3. **unavailable** /ˌʌnəˈveɪləbəl/ (형용사)\n뜻: 사용할 수 없는, 이용할 수 없는\n실전 예문: \"I'm unavailable to take calls during the meeting.\"\n\n4. **nice to meet you** /naɪs tə ˈmiːt juː/ (표현)\n뜻: 만나서 반가워\n실전 예문: \"Hello, I'm Joe, nice to meet you.\"\n\n5. **take calls** /teɪk kɔːlz/ (표현)\n뜻: 전화를 받다\n실전 예문: \"I'm not available to take calls right now.\"\n\n**5. 📝 실전 복습 챌린지 (Practice)**\n1. 다음 상황에서 적절한 인사를 작성해 보세요: 튜터와 처음 만났을 때\n모범 답안: \"Hello, I'm Joe, nice to meet you.\"\n\n2. 다음 상황에서 적절한 표현을 작성해 보세요: 전화로 통화할 수 없을 때\n모범 답안: \"I'm not available on the phone right now.\"\n\n3. 다음 상황에서 적절한 대화를 작성해 보세요: 튜터와 처음 인사를 나눈 후 수업을 시작하기 전에\n모범 답안: \"Hello, I'm Joe. I'm ready to start the lesson. What's the topic for today?\"\n\n**6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)**\n✨ **Good Job**: 오늘 수업에서 학습자가 튜터와 처음 인사를 나눌 때 명확하게 자기 소개를 한 것이 좋았습니다.\n🚀 **내일의 한 문장**: \"Hello, I'm Joe, nice to meet you. I'm looking forward to today's lesson.\"\n\n**[성과 지표]**\n오늘의 유창성 점수: 6/10\n근거: 학습자는 튜터와 처음 인사를 나눌 때 명확하게 자기 소개를 했으며, 간단한 대화를 나눌 때도 노력했습니다. 그러나 아직 불필요한 사과를 많이 사용하며, 더 명확하게 자신의 상황을 설명할 필요가 있습니다.\n원포인트 액션 플랜: 내일 수업에서는 불필요한 사과를 피하고, 더 명확하게 자신의 상황을 설명하는 것을 목표로 합니다.\n\n위 내용을 바탕으로:\n1. 먼저 오늘 수업에서 내가 틀렸거나 어색했던 표현을 하나 골라서, 관련된 상황을 영어로 질문해줘.\n2. 내가 영어로 대답하면, 자연스러운지 확인하고 더 나은 표현이 있으면 알려줘.\n3. 특히 \"반복 실수 패턴\"에서 지적된 부분을 집중적으로 연습시켜줘.\n4. 이런 식으로 오늘 배운 표현들을 하나씩 복습하자.\n5. 한국어 설명은 필요할 때만 간단히, 대화는 최대한 영어로 진행해줘.\n\n그럼 시작하자!";
+        function startReview(){navigator.clipboard.writeText(REVIEW_PROMPT).then(()=>{showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)}).catch(()=>{const t=document.createElement('textarea');t.value=REVIEW_PROMPT;document.body.appendChild(t);t.select();document.execCommand('copy');document.body.removeChild(t);showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)})}
+        function showToast(){const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500)}
+        function switchTab(n){document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',n==='feedback'?i===0:i===1));document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));document.getElementById('tab-'+n).classList.add('active')}
+    </script>
+</body>
+</html>
