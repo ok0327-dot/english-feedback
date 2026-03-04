@@ -12,11 +12,11 @@
 ║  [2단계] 🎤 녹음 파일을 텍스트로 변환 (Groq Whisper)                       ║
 ║          → 비유: 속기사가 음성을 듣고 받아쓰기 하는 것                      ║
 ║                                                                            ║
-║  [3단계] 🔍 받아쓰기 내용을 교정 (Groq Llama - 전처리)                     ║
+║  [3단계] 🔍 받아쓰기 내용을 교정 (Gemini - 전처리)                         ║
 ║          → 비유: 교정 선생님이 속기사의 받아쓰기 오타를 잡고,               ║
 ║                  "이건 선생님 말, 이건 학생 말"로 구분해주는 것              ║
 ║                                                                            ║
-║  [4단계] 🤖 교정된 내용으로 학습 피드백 생성 (Groq Llama - 피드백)          ║
+║  [4단계] 🤖 교정된 내용으로 학습 피드백 생성 (Gemini - 피드백)              ║
 ║          → 비유: 영어 과외 선생님이 수업 내용을 분석하고 성적표를 써주는 것  ║
 ║                                                                            ║
 ║  [5단계] 🌐 복습 웹페이지 생성 & 인터넷에 공개 (GitHub Pages)              ║
@@ -94,9 +94,9 @@ GOOGLE_CREDENTIALS = os.environ["GOOGLE_CREDENTIALS"]
 # → console.groq.com 에서 발급 (sk-... 로 시작)
 GROQ_API_KEY = os.environ["GROQ_API_KEY"]
 
-# Google Gemini API의 "출입증" (현재 미사용 - 향후 복습 기능 등에 활용 가능)
+# Google Gemini API의 "출입증" (텍스트 보정 + 피드백 생성에 사용)
 # → aistudio.google.com/apikey 에서 발급 (AI... 로 시작)
-GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
+GEMINI_API_KEY = os.environ["GEMINI_API_KEY"]
 
 # 이메일을 보내는 데 사용할 Gmail 주소 (예: "myname@gmail.com")
 GMAIL_ADDRESS = os.environ["GMAIL_ADDRESS"].strip()
@@ -326,46 +326,58 @@ def transcribe_audio(audio_path):
 
 
 # ╔══════════════════════════════════════════════════════════════════════════╗
-# ║  [3단계] 🔍 전사 내용 보정 (Groq Llama - 전처리)                      ║
+# ║  [3단계] 🔍 전사 내용 보정 (Gemini - 전처리)                          ║
 # ║  비유: 교정 선생님이 속기사의 오타를 잡고 화자를 구분해주는 것          ║
 # ║  왜 필요? 전화 음질 한계 + 한국인 발음 특성 → 오인식 발생              ║
-# ║  💡 Groq는 Gemini보다 무료 한도가 넉넉하고 속도가 빠름!               ║
 # ╚══════════════════════════════════════════════════════════════════════════╝
 
-def groq_llm_request(prompt, max_tokens=4096, temperature=0.3, timeout=120, system_msg=None):
+def gemini_request(prompt, max_tokens=4096, temperature=0.3, timeout=120, system_msg=None):
     """
-    Groq LLM API 호출 (Llama 3.3 70B 모델 사용).
-    Gemini보다 무료 한도가 넉넉하고 응답 속도가 매우 빠름.
+    Google Gemini API 호출 (Gemini 2.5 Flash 모델 사용).
+    전사 보정 및 피드백 생성에 사용.
     429 에러 시 자동 재시도 (최대 3회).
     """
-    url = "https://api.groq.com/openai/v1/chat/completions"
+    url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent"
     headers = {
-        "Authorization": f"Bearer {GROQ_API_KEY}",
+        "x-goog-api-key": GEMINI_API_KEY,
         "Content-Type": "application/json",
     }
-    messages = []
-    if system_msg:
-        messages.append({"role": "system", "content": system_msg})
-    messages.append({"role": "user", "content": prompt})
 
+    # 요청 페이로드 구성
     payload = {
-        "model": "llama-3.3-70b-versatile",
-        "messages": messages,
-        "max_tokens": max_tokens,
-        "temperature": temperature,
+        "contents": [
+            {"parts": [{"text": prompt}]}
+        ],
+        "generationConfig": {
+            "maxOutputTokens": max_tokens,
+            "temperature": temperature,
+        },
     }
+
+    # system_msg가 있으면 systemInstruction 추가
+    if system_msg:
+        payload["system_instruction"] = {
+            "parts": [{"text": system_msg}]
+        }
 
     for attempt in range(3):
         response = requests.post(url, json=payload, headers=headers, timeout=timeout)
         if response.status_code == 200:
-            return response.json()["choices"][0]["message"]["content"]
+            result = response.json()
+            candidates = result.get("candidates", [])
+            if not candidates:
+                block_reason = result.get("promptFeedback", {}).get("blockReason", "알 수 없음")
+                raise Exception(f"Gemini 응답 없음 (차단 사유: {block_reason})")
+            if candidates[0].get("finishReason") == "SAFETY":
+                raise Exception("Gemini 안전 필터에 의해 응답 차단됨")
+            return candidates[0]["content"]["parts"][0]["text"]
         elif response.status_code == 429:
             wait = 30 * (attempt + 1)  # 30초, 60초, 90초
-            print(f"⏳ Groq 속도 제한 (429). {wait}초 대기 후 재시도... ({attempt+1}/3)")
+            print(f"⏳ Gemini 속도 제한 (429). {wait}초 대기 후 재시도... ({attempt+1}/3)")
             time.sleep(wait)
         else:
-            raise Exception(f"Groq LLM 오류 ({response.status_code}): {response.text}")
-    raise Exception(f"Groq LLM 재시도 초과 (429 에러 지속)")
+            raise Exception(f"Gemini API 오류 ({response.status_code}): {response.text}")
+    raise Exception(f"Gemini API 재시도 초과 (429 에러 지속)")
 
 
 def _format_segments_with_gaps(segments):
@@ -399,7 +411,7 @@ def _format_segments_with_gaps(segments):
 
 def clean_transcript(raw_transcript, segments=None):
     """
-    Whisper 원본 전사를 Groq Llama로 보정: 오인식 수정 + 화자 분리.
+    Whisper 원본 전사를 Gemini로 보정: 오인식 수정 + 화자 분리.
     학생의 문법 오류는 일부러 유지 (피드백에서 교정하므로).
     보정 실패 시 → 원본 그대로 사용 (안전장치).
 
@@ -412,7 +424,7 @@ def clean_transcript(raw_transcript, segments=None):
     # 세그먼트 타임스탬프 정보를 텍스트로 변환
     segments_text = _format_segments_with_gaps(segments) if segments else ""
 
-    # Groq Llama에게 보내는 "교정 의뢰서"
+    # Gemini에게 보내는 "교정 의뢰서"
     prompt = f"""아래는 한국인 학습자와 원어민 튜터 간의 전화영어 수업을 STT(음성→텍스트)로 전사한 원본입니다.
 전화 통화 특성상 음질이 완벽하지 않아 오인식이 포함되어 있을 수 있습니다.
 
@@ -487,7 +499,7 @@ def clean_transcript(raw_transcript, segments=None):
 보정된 전사 결과만 출력해주세요. 추가 설명은 필요 없습니다."""
 
     try:
-        cleaned = groq_llm_request(prompt, max_tokens=4096, temperature=0.3)
+        cleaned = gemini_request(prompt, max_tokens=4096, temperature=0.3)
         print(f"✅ 전사 보정 완료: {len(cleaned)}자")
         return cleaned
     except Exception as e:
@@ -496,7 +508,7 @@ def clean_transcript(raw_transcript, segments=None):
 
 
 # ╔══════════════════════════════════════════════════════════════════════════╗
-# ║  [4단계] 🤖 AI 피드백 생성 (Groq Llama - 메인 분석)                   ║
+# ║  [4단계] 🤖 AI 피드백 생성 (Gemini - 메인 분석)                       ║
 # ║  비유: 영어 과외 선생님에게 수업 녹취록 보여주며 성적표 부탁            ║
 # ║                                                                        ║
 # ║  🔧 이 단계가 가장 중요! 아래 prompt를 수정하면 피드백 내용이 바뀜      ║
@@ -563,7 +575,7 @@ def generate_feedback(transcript):
 {transcript}
 """
 
-    feedback = groq_llm_request(
+    feedback = gemini_request(
         prompt,
         max_tokens=8192,
         temperature=0.5,
