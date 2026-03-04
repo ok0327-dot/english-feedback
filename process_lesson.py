@@ -813,28 +813,14 @@ def deploy_review_page(page_html, date_str):
 
 
 def _update_index_page(docs_dir):
-    """복습 기록 전체 목록(index.html)을 최신순으로 갱신. 삭제 버튼 포함."""
-    from urllib.parse import urlparse
+    """복습 기록 전체 목록(index.html)을 최신순으로 갱신. 숨기기 버튼 포함."""
 
     pages = sorted(glob.glob(os.path.join(docs_dir, "2*.html")), reverse=True)
-
-    # GitHub repo 이름 추출 (삭제 API 호출용)
-    # GITHUB_REPOSITORY는 Actions에서 자동 제공 (예: "ok0327-dot/english-feedback")
-    github_repo = os.environ.get("GITHUB_REPOSITORY", "")
-    if not github_repo and GITHUB_PAGES_URL:
-        try:
-            parsed = urlparse(GITHUB_PAGES_URL)
-            owner = parsed.hostname.split(".")[0]
-            repo = parsed.path.strip("/")
-            github_repo = f"{owner}/{repo}"
-        except Exception:
-            pass
-    repo_escaped = json.dumps(github_repo, ensure_ascii=False)
 
     items_html = ""
     for p in pages:
         name = os.path.basename(p).replace(".html", "")
-        items_html += f'        <div class="item"><a href="{os.path.basename(p)}" class="link">{name}</a><button class="del-btn" onclick="deleteReview(\'{name}\',this)" title="삭제">✕</button></div>\n'
+        items_html += f'        <div class="item" data-date="{name}"><a href="{os.path.basename(p)}" class="link">{name}</a><button class="del-btn" onclick="hideReview(\'{name}\',this)" title="숨기기">✕</button></div>\n'
 
     index = f"""<!DOCTYPE html>
 <html lang="ko">
@@ -853,21 +839,29 @@ def _update_index_page(docs_dir):
         .link:hover{{background:#262636;border-color:rgba(56,189,248,.2);color:#38bdf8}}
         .del-btn{{width:40px;height:40px;background:#1a1a24;border:1px solid transparent;border-radius:10px;color:#64748b;font-size:16px;cursor:pointer;transition:all .2s;flex-shrink:0}}
         .del-btn:hover{{background:#2a1a1e;border-color:rgba(239,68,68,.3);color:#ef4444}}
+        .restore{{display:none;text-align:center;margin-top:16px;max-width:480px;margin-left:auto;margin-right:auto}}
+        .restore a{{color:#64748b;font-size:13px;cursor:pointer;text-decoration:underline;text-underline-offset:3px}}
+        .restore a:hover{{color:#94a3b8}}
         .toast{{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#38bdf8;padding:14px 28px;border-radius:12px;font-size:14px;font-weight:500;border:1px solid rgba(56,189,248,.2);box-shadow:0 8px 32px rgba(0,0,0,.4);opacity:0;transition:all .4s cubic-bezier(.16,1,.3,1);z-index:1000}}
         .toast.show{{opacity:1;transform:translateX(-50%) translateY(0)}}
-        .toast.error{{color:#ef4444;border-color:rgba(239,68,68,.2)}}
     </style>
 </head>
 <body>
     <h1>📚 전화영어 복습 기록</h1>
-    <div class="list">
+    <div class="list" id="list">
 {items_html if items_html else '        <p style="text-align:center;color:#64748b">아직 복습 기록이 없습니다.</p>'}
     </div>
+    <div class="restore" id="restore"><a onclick="restoreAll()">숨긴 항목 다시 보기</a></div>
     <div class="toast" id="toast"></div>
     <script>
-    const REPO={repo_escaped};
-    function deleteReview(date,btn){{if(!confirm(date+' 복습 기록을 삭제할까요?'))return;let t=localStorage.getItem('gh_pat');if(!t){{t=prompt('🔑 GitHub 토큰 입력 (최초 1회만, 이후 자동 저장)\\n\\n발급: GitHub → Settings → Developer settings → Fine-grained tokens\\n권한: Actions (Read and Write)');if(!t)return;localStorage.setItem('gh_pat',t)}}fetch('https://api.github.com/repos/'+REPO+'/actions/workflows/delete-review.yml/dispatches',{{method:'POST',headers:{{'Authorization':'Bearer '+t,'Accept':'application/vnd.github.v3+json'}},body:JSON.stringify({{ref:'main',inputs:{{date:date}}}})}} ).then(r=>{{if(r.status===204){{btn.closest('.item').style.display='none';showToast('✅ 삭제 요청 완료! 1~2분 후 반영됩니다.')}}else if(r.status===401||r.status===403){{localStorage.removeItem('gh_pat');showToast('❌ 토큰이 유효하지 않습니다. 다시 시도해주세요.','error')}}else{{showToast('❌ 삭제 실패 ('+r.status+')','error')}}}}).catch(()=>showToast('❌ 네트워크 오류','error'))}}
-    function showToast(msg,type){{const t=document.getElementById('toast');t.textContent=msg;t.className='toast'+(type?' '+type:'')+' show';setTimeout(()=>t.classList.remove('show'),3000)}}
+    function getHidden(){{return JSON.parse(localStorage.getItem('hidden_reviews')||'[]')}}
+    function setHidden(arr){{localStorage.setItem('hidden_reviews',JSON.stringify(arr))}}
+    function hideReview(date,btn){{if(!confirm(date+' 복습 기록을 숨길까요?'))return;const h=getHidden();if(!h.includes(date))h.push(date);setHidden(h);btn.closest('.item').style.display='none';updateRestore();showToast('숨김 처리됨')}}
+    function restoreAll(){{if(!confirm('숨긴 항목을 모두 다시 표시할까요?'))return;setHidden([]);document.querySelectorAll('.item').forEach(el=>el.style.display='');updateRestore();showToast('모두 복원됨')}}
+    function updateRestore(){{document.getElementById('restore').style.display=getHidden().length?'block':'none'}}
+    function applyHidden(){{const h=getHidden();document.querySelectorAll('.item').forEach(el=>{{if(h.includes(el.dataset.date))el.style.display='none'}});updateRestore()}}
+    function showToast(msg){{const t=document.getElementById('toast');t.textContent=msg;t.className='toast show';setTimeout(()=>t.classList.remove('show'),3000)}}
+    applyHidden();
     </script>
 </body>
 </html>"""
