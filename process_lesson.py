@@ -94,9 +94,9 @@ GOOGLE_CREDENTIALS = os.environ["GOOGLE_CREDENTIALS"]
 # → console.groq.com 에서 발급 (sk-... 로 시작)
 GROQ_API_KEY = os.environ["GROQ_API_KEY"]
 
-# Google Gemini API의 "출입증" (텍스트 보정 + 피드백 생성에 사용)
+# Google Gemini API의 "출입증" (텍스트 보정 + 피드백 생성에 사용, 미설정 시 Groq로 대체)
 # → aistudio.google.com/apikey 에서 발급 (AI... 로 시작)
-GEMINI_API_KEY = os.environ["GEMINI_API_KEY"]
+GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
 
 # 이메일을 보내는 데 사용할 Gmail 주소 (예: "myname@gmail.com")
 GMAIL_ADDRESS = os.environ["GMAIL_ADDRESS"].strip()
@@ -337,6 +337,9 @@ def gemini_request(prompt, max_tokens=4096, temperature=0.3, timeout=120, system
     전사 보정 및 피드백 생성에 사용.
     429 에러 시 자동 재시도 (최대 3회).
     """
+    if not GEMINI_API_KEY:
+        raise Exception("GEMINI_API_KEY 미설정")
+
     url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent"
     headers = {
         "x-goog-api-key": GEMINI_API_KEY,
@@ -378,6 +381,58 @@ def gemini_request(prompt, max_tokens=4096, temperature=0.3, timeout=120, system
         else:
             raise Exception(f"Gemini API 오류 ({response.status_code}): {response.text}")
     raise Exception(f"Gemini API 재시도 초과 (429 에러 지속)")
+
+
+def groq_llm_request(prompt, max_tokens=4096, temperature=0.3, timeout=120, system_msg=None):
+    """
+    Groq LLM API 호출 (Llama 3.3 70B 모델 사용).
+    Gemini 실패 시 백업용으로 사용.
+    429 에러 시 자동 재시도 (최대 3회).
+    """
+    url = "https://api.groq.com/openai/v1/chat/completions"
+    headers = {
+        "Authorization": f"Bearer {GROQ_API_KEY}",
+        "Content-Type": "application/json",
+    }
+    messages = []
+    if system_msg:
+        messages.append({"role": "system", "content": system_msg})
+    messages.append({"role": "user", "content": prompt})
+
+    payload = {
+        "model": "llama-3.3-70b-versatile",
+        "messages": messages,
+        "max_tokens": max_tokens,
+        "temperature": temperature,
+    }
+
+    for attempt in range(3):
+        response = requests.post(url, json=payload, headers=headers, timeout=timeout)
+        if response.status_code == 200:
+            return response.json()["choices"][0]["message"]["content"]
+        elif response.status_code == 429:
+            wait = 30 * (attempt + 1)
+            print(f"⏳ Groq 속도 제한 (429). {wait}초 대기 후 재시도... ({attempt+1}/3)")
+            time.sleep(wait)
+        else:
+            raise Exception(f"Groq LLM 오류 ({response.status_code}): {response.text}")
+    raise Exception(f"Groq LLM 재시도 초과 (429 에러 지속)")
+
+
+def llm_request(prompt, max_tokens=4096, temperature=0.3, timeout=120, system_msg=None):
+    """
+    LLM 호출 (Gemini 우선, 실패 시 Groq로 자동 전환).
+    무료 한도 초과, 네트워크 오류 등 Gemini 장애 시에도 파이프라인이 중단되지 않음.
+    """
+    try:
+        result = gemini_request(prompt, max_tokens, temperature, timeout, system_msg)
+        print("  (🟢 Gemini)")
+        return result
+    except Exception as e:
+        print(f"⚠️ Gemini 실패 ({e}), Groq로 대체 실행...")
+        result = groq_llm_request(prompt, max_tokens, temperature, timeout, system_msg)
+        print("  (🟡 Groq fallback)")
+        return result
 
 
 def _format_segments_with_gaps(segments):
@@ -499,7 +554,7 @@ def clean_transcript(raw_transcript, segments=None):
 보정된 전사 결과만 출력해주세요. 추가 설명은 필요 없습니다."""
 
     try:
-        cleaned = gemini_request(prompt, max_tokens=4096, temperature=0.3)
+        cleaned = llm_request(prompt, max_tokens=4096, temperature=0.3)
         print(f"✅ 전사 보정 완료: {len(cleaned)}자")
         return cleaned
     except Exception as e:
@@ -575,7 +630,7 @@ def generate_feedback(transcript):
 {transcript}
 """
 
-    feedback = gemini_request(
+    feedback = llm_request(
         prompt,
         max_tokens=8192,
         temperature=0.5,
