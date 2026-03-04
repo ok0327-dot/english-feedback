@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전화영어 복습 - 2026년 03월 04일</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Noto Sans KR',sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.75;min-height:100vh}
+        .header{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);border-bottom:1px solid rgba(255,255,255,.06);padding:48px 24px 40px;text-align:center}
+        .header-date{font-size:13px;color:#94a3b8;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+        .header h1{font-size:28px;font-weight:700;color:#f1f5f9;margin-bottom:16px}
+        .header-meta{display:flex;justify-content:center;gap:24px;font-size:14px;color:#64748b}
+        .header-meta span{display:flex;align-items:center;gap:6px}
+        .cta-section{text-align:center;padding:40px 24px}
+        .cta-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:linear-gradient(135deg,#38bdf8,#818cf8);color:#fff;font-size:16px;font-weight:600;font-family:'Noto Sans KR',sans-serif;border:none;border-radius:50px;cursor:pointer;transition:all .3s;text-decoration:none;box-shadow:0 4px 24px rgba(56,189,248,.25)}
+        .cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(56,189,248,.35)}
+        .cta-btn svg{width:20px;height:20px}
+        .cta-sub{margin-top:12px;font-size:13px;color:#64748b}
+        .toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#38bdf8;padding:14px 28px;border-radius:12px;font-size:14px;font-weight:500;border:1px solid rgba(56,189,248,.2);box-shadow:0 8px 32px rgba(0,0,0,.4);opacity:0;transition:all .4s cubic-bezier(.16,1,.3,1);z-index:1000}
+        .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+        .container{max-width:720px;margin:0 auto;padding:0 24px 80px}
+        .tabs{display:flex;gap:4px;background:#1a1a24;padding:4px;border-radius:12px;margin-bottom:32px}
+        .tab{flex:1;padding:12px;text-align:center;font-size:14px;font-weight:500;color:#64748b;background:0 0;border:none;border-radius:8px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all .2s}
+        .tab.active{background:#262636;color:#f1f5f9}
+        .tab-content{display:none}.tab-content.active{display:block}
+        .feedback h2{font-size:18px;font-weight:700;color:#f1f5f9;margin:36px 0 16px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.06)}
+        .feedback h2:first-child{margin-top:0}
+        .feedback p{margin:8px 0;color:#cbd5e1}
+        .feedback .item{padding:6px 0 6px 16px;border-left:2px solid #334155;margin:6px 0;color:#cbd5e1}
+        .feedback .numbered{padding:8px 0 8px 16px;color:#cbd5e1}
+        .feedback .numbered strong{color:#38bdf8}
+        .feedback strong{color:#f1f5f9}
+        .feedback code{background:#1e293b;padding:2px 8px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#38bdf8}
+        .feedback table{width:100%;border-collapse:collapse;margin:12px 0}
+        .feedback th,.feedback td{padding:10px 14px;text-align:left;border-bottom:1px solid #262636}
+        .feedback th{color:#94a3b8;font-weight:500;font-size:13px}
+        .feedback td{color:#cbd5e1}
+        .arrow{color:#38bdf8;font-weight:700}
+        .transcript{background:#1a1a24;border-radius:12px;padding:28px;font-size:14px;line-height:2;color:#94a3b8;white-space:pre-wrap;word-break:break-word;font-family:'JetBrains Mono','Noto Sans KR',monospace}
+        .transcript .tutor{color:#38bdf8}
+        .transcript .student{color:#a78bfa}
+        @media(max-width:640px){.header{padding:32px 16px}.header h1{font-size:22px}.cta-btn{padding:14px 28px;font-size:15px}.container{padding:0 16px 60px}}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-date">2026년 03월 04일</div>
+        <h1>📚 전화영어 복습</h1>
+        <div class="header-meta">
+            <span>⏱ 19분 38초</span>
+            <span>🎙 전화영어_025180304_20260304080041.m4a</span>
+        </div>
+    </div>
+    <div class="cta-section">
+        <button class="cta-btn" onclick="startReview()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Gemini에서 복습 대화 시작하기
+        </button>
+        <div class="cta-sub">클릭하면 프롬프트가 복사되고 Gemini가 열립니다</div>
+    </div>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('feedback')">📋 AI 피드백</button>
+            <button class="tab" onclick="switchTab('transcript')">🎙 수업 전사</button>
+        </div>
+        <div id="tab-feedback" class="tab-content active">
+            <div class="feedback"><p><strong>1. 📊 오늘의 대화 요약 (Summary)</strong></p>
+<p>오늘 대화는 영어 수업의 형식으로 진행되었으며, 튜터와 학습자는 다양한 주제에 대해 대화했다. 학습자는 비즈니스 영어와 관련된 내용을 읽고, 튜터와 함께 퀴즈를 풀었다. 또한, 학습자는 자신의 문화에 대해 설명하고, 튜터와 함께 대화했다.</p>
+<br>
+<p><strong>2. 💬 유창성 업그레이드 (Fluency & Natural Flow)</strong></p>
+<div class="numbered"><strong>1.</strong> ❌ 학습자 원문: "I think so too actually yeah"</div>
+<p>✅ 쉬운 자연스러운 표현: "I agree"</p>
+<p>💎 세련된 비즈니스 표현: "I concur"</p>
+<p>💡 코칭 포인트: 단순한 동의를 표현할 때, "I agree" 또는 "I concur"를 사용하면 더 자연스럽고 세련된 표현이 된다.</p>
+<br>
+<div class="numbered"><strong>2.</strong> ❌ 학습자 원문: "yeah we will start after 70"</div>
+<p>✅ 쉬운 자연스러운 표현: "We'll start from page 70"</p>
+<p>💎 세련된 비즈니스 표현: "Let's begin with page 70"</p>
+<p>💡 코칭 포인트: 페이지 번호를 지정할 때, "from" 또는 "with"를 사용하여 더 명확하고 자연스럽게 표현할 수 있다.</p>
+<br>
+<div class="numbered"><strong>3.</strong> ❌ 학습자 원문: "I don't know the answer"</div>
+<p>✅ 쉬운 자연스러운 표현: "I'm not sure"</p>
+<p>💎 세련된 비즈니스 표현: "I'm uncertain about that"</p>
+<p>💡 코칭 포인트: 모르는 것을 표현할 때, "I'm not sure" 또는 "I'm uncertain"를 사용하면 더 자연스럽고 세련된 표현이 된다.</p>
+<br>
+<p><strong>3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)</strong></p>
+<p>* ❌ 습관적 표현: "I think so too actually yeah"</p>
+<p>✅ 교정 예시: "I agree" 또는 "I concur"</p>
+<p>* ❌ 습관적 표현: "yeah we will start after 70"</p>
+<p>✅ 교정 예시: "We'll start from page 70" 또는 "Let's begin with page 70"</p>
+<p>* ❌ 습관적 표현: "I don't know the answer"</p>
+<p>✅ 교정 예시: "I'm not sure" 또는 "I'm uncertain about that"</p>
+<p>📌 핵심 규칙: 단순한 표현을 사용하고, 문장 구조를 명확하게 하여 더 자연스럽고 세련된 영어를 구사할 수 있다.</p>
+<p>🔁 따라 읽기: </p>
+<p>* "I agree with your opinion."</p>
+<p>* "We'll start from page 70."</p>
+<p>* "I'm not sure about the answer."</p>
+<br>
+<p><strong>4. 📗 어휘 확장 (Vocabulary Vault)</strong></p>
+<div class="numbered"><strong>1.</strong> <strong>단어</strong>: Hostile</div>
+<p>발음기호: /ˈhɒstʌɪl/</p>
+<p>품사: 형용사</p>
+<p>뜻: 적대적인, 우호적이지 않은</p>
+<p>실전 예문: "The company has a hostile relationship with its competitors."</p>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>단어</strong>: Denote</div>
+<p>발음기호: /dɪˈnoʊt/</p>
+<p>품사: 동사</p>
+<p>뜻: 나타내다, 의미하다</p>
+<p>실전 예문: "The symbol denotes a warning sign."</p>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>단어</strong>: Sake</div>
+<p>발음기호: /seɪk/</p>
+<p>품사: 명사</p>
+<p>뜻: 목적, 이유</p>
+<p>실전 예문: "I'm doing this for the sake of my family."</p>
+<br>
+<div class="numbered"><strong>4.</strong> <strong>단어</strong>: Funner</div>
+<p>발음기호: /ˈfʌnər/</p>
+<p>품사: 형용사</p>
+<p>뜻: 더 즐거운, 더 유쾌한</p>
+<p>실전 예문: "This party is going to be funner than the last one."</p>
+<br>
+<div class="numbered"><strong>5.</strong> <strong>단어</strong>: Overtake</div>
+<p>발음기호: /ˌoʊvərˈteɪk/</p>
+<p>품사: 동사</p>
+<p>뜻: 추월하다, 앞지르다</p>
+<p>실전 예문: "I'm going to overtake the car in front of me."</p>
+<br>
+<p><strong>5. 📝 실전 복습 챌린지 (Practice)</strong></p>
+<div class="numbered"><strong>1.</strong> 다음 문장을 완성하세요: "I'm doing this ____________________ the sake of my family."</div>
+<p>(답: for)</p>
+<div class="numbered"><strong>2.</strong> 다음 문장을 번역하세요: "이 회사는 경쟁사와 적대적인 관계를 가지고 있다."</div>
+<p>(답: The company has a hostile relationship with its competitors.)</p>
+<div class="numbered"><strong>3.</strong> 다음 문장을 완성하세요: "이 기호는 ____________________ 경고 표시를 나타낸다."</div>
+<p>(답: denotes a warning sign)</p>
+<br>
+<p><strong>6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)</strong></p>
+<p>* ✨ <strong>Good Job</strong>: 학습자가 오늘 수업에서 잘 표현한 문장은 "I think so too actually yeah"였다. 이 문장은 튜터와의 대화에서 자연스럽게 사용된 표현이다.</p>
+<p>* 🚀 <strong>내일의 한 문장</strong>: "I'm looking forward to our next lesson, and I hope to learn more about business English."</p>
+<br>
+<p><strong>[성과 지표]</strong></p>
+<p>오늘의 유창성 점수: 6/10</p>
+<p>근거: 학습자는 오늘 수업에서 다양한 주제에 대해 대화했으며, 튜터와 함께 퀴즈를 풀었다. 그러나, 학습자는 때때로 단순한 표현을 사용하고, 문장 구조를 명확하게 하지 못했다. 따라서, 내일의 수업에서는 더 자연스럽고 세련된 영어를 구사하는 것을 목표로 해야 한다.</p>
+<p>원포인트 액션 플랜: 내일의 수업에서, 학습자는 더 자연스럽고 세련된 영어를 구사하기 위해 "I agree" 또는 "I concur"와 같은 표현을 사용하도록 노력해야 한다. 또한, 학습자는 문장 구조를 명확하게 하여 더 효과적인 의사소통을 할 수 있도록 해야 한다.</p></div>
+        </div>
+        <div id="tab-transcript" class="tab-content">
+            <div class="transcript"><span class="tutor">[Tutor]</span> Hi, how are you? Good morning. How are you today?
+<span class="student">[Student]</span> Just a moment. Yeah. Sorry, teacher.
+<span class="tutor">[Tutor]</span> Oh, yeah, I&#x27;m doing good. Yeah, I&#x27;m doing good. Yeah. How are you today? 
+<span class="tutor">[Tutor]</span> I&#x27;m doing great. My name is Bessie. I don&#x27;t know if you remember me, but my name is Bessie. 
+<span class="tutor">[Tutor]</span> and I&#x27;ve been teaching English for over 8 years and it&#x27;s lovely to meet you, Joey.
+<span class="student">[Student]</span> Yeah. 
+<span class="tutor">[Tutor]</span> Basti, yeah, I see your name. 
+<span class="student">[Student]</span> Yeah, I know your name. 
+<span class="tutor">[Tutor]</span> I remember. 
+<span class="tutor">[Tutor]</span> And your regular class, their Wednesday and their Friday, right?
+<span class="student">[Student]</span> So. 
+<span class="student">[Student]</span> I think so, yes. 
+<span class="student">[Student]</span> Yes, yes.
+<span class="tutor">[Tutor]</span> So I see here we have the book. 
+<span class="tutor">[Tutor]</span> You were on page 77, I think.
+<span class="student">[Student]</span> 77?
+<span class="tutor">[Tutor]</span> Yes, from your previous teacher. 
+<span class="student">[Student]</span> Just a moment. 
+<span class="student">[Student]</span> Okay.
+<span class="student">[Student]</span> 77?
+<span class="tutor">[Tutor]</span> Yeah, she wrote 77, so I&#x27;m not sure. 
+<span class="student">[Student]</span> Is it the right one? 
+<span class="student">[Student]</span> I missed the page, so just a moment. 
+<span class="student">[Student]</span> Okay.
+<span class="tutor">[Tutor]</span> Because I print out some page but mixed page just a moment. 
+<span class="tutor">[Tutor]</span> Okay. 
+<span class="tutor">[Tutor]</span> Okay. Are you okay? 
+<span class="tutor">[Tutor]</span> It&#x27;s okay. I&#x27;m right here with you. 
+<span class="tutor">[Tutor]</span> Let me know where you find it.
+<span class="student">[Student]</span> oh yeah we will start after 70 
+<span class="student">[Student]</span> yeah 70 
+<span class="student">[Student]</span> page of 70 
+<span class="student">[Student]</span> not 70 
+<span class="student">[Student]</span> page 70 
+<span class="student">[Student]</span> 70 
+<span class="student">[Student]</span> yeah yeah 70 
+<span class="student">[Student]</span> oh okay not 77 
+<span class="student">[Student]</span> okay let me 
+<span class="student">[Student]</span> okay let me go back 
+<span class="student">[Student]</span> 70 
+<span class="student">[Student]</span> in case scenario 
+<span class="student">[Student]</span> second 
+<span class="student">[Student]</span> okay 
+<span class="student">[Student]</span> just hold on for me 
+<span class="student">[Student]</span> sorry 
+<span class="student">[Student]</span> 71 
+<span class="student">[Student]</span> 71 
+<span class="student">[Student]</span> okay 
+<span class="student">[Student]</span> okay
+<span class="tutor">[Tutor]</span> I see it. 
+<span class="tutor">[Tutor]</span> So we have A, benefits of business travel. 
+<span class="tutor">[Tutor]</span> Do you mind reading that paragraph? 
+<span class="student">[Student]</span> Oh yes, of course.
+<span class="student">[Student]</span> Business traveling can be one of the most unrighting as productive experience if if it is for shake 
+<span class="student">[Student]</span> hmm? 
+<span class="student">[Student]</span> if 
+<span class="student">[Student]</span> experiences 
+<span class="student">[Student]</span> okay 
+<span class="student">[Student]</span> since 
+<span class="student">[Student]</span> uh huh 
+<span class="student">[Student]</span> experience 
+<span class="student">[Student]</span> is it right? 
+<span class="student">[Student]</span> experiences 
+<span class="student">[Student]</span> experiences 
+<span class="student">[Student]</span> good 
+<span class="student">[Student]</span> better? 
+<span class="student">[Student]</span> hmm 
+<span class="student">[Student]</span> experiences 
+<span class="student">[Student]</span> yes 
+<span class="student">[Student]</span> if it is for shake 
+<span class="student">[Student]</span> business, international travel can lead to increased trade and commerce. 
+<span class="student">[Student]</span> Thus, the country might both become wealthier through the exchange. 
+<span class="student">[Student]</span> on the downside international travel can cause friction between different 
+<span class="student">[Student]</span> religion race as ethics 
+<span class="student">[Student]</span> okay we have to say that one again 
+<span class="student">[Student]</span> ethnicities ethnicity
+<span class="tutor">[Tutor]</span> Okay.
+<span class="tutor">[Tutor]</span> And it says here, B, share your thoughts, right?
+<span class="student">[Student]</span> Okay.
+<span class="tutor">[Tutor]</span> Take the following quiz. 
+<span class="tutor">[Tutor]</span> See how well you know about different cultures. 
+<span class="tutor">[Tutor]</span> Do you want to take it? 
+<span class="student">[Student]</span> Yes.
+<span class="tutor">[Tutor]</span> All right All right so it says here in Russia what is the preferred way to drink vodka A B C or D 
+<span class="tutor">[Tutor]</span> okay first I read that straight no addiction of anything 
+<span class="tutor">[Tutor]</span> the second and as I make a cooler and cut their harshness and mister in cocktail 
+<span class="tutor">[Tutor]</span> drink mixed with beer as a type of no no reason month no reason month no no
+<span class="student">[Student]</span> I think they are enjoying the straight no addition of anything 
+<span class="student">[Student]</span> I think so too actually yeah 
+<span class="student">[Student]</span> have you ever been to Russia? 
+<span class="student">[Student]</span> oh no not at all just I mean yeah we are across the country but between the 
+<span class="student">[Student]</span> Russia and South Korea there is the North Korea so it is the little yeah it 
+<span class="student">[Student]</span> is real dangerous to travel and yeah and nowadays Ukraine and Russia have a world 
+<span class="student">[Student]</span> so yeah that is also difficult to travel yeah dangerous to travel Russia
+<span class="tutor">[Tutor]</span> that&#x27;s true yeah yeah okay I think you&#x27;re correct with a yeah 
+<span class="tutor">[Tutor]</span> and second 
+<span class="tutor">[Tutor]</span> the second one in Hong Kong which color should you avoid wearing 
+<span class="tutor">[Tutor]</span> wearing yeah 
+<span class="tutor">[Tutor]</span> people&#x27;s questions yeah 
+<span class="tutor">[Tutor]</span> I&#x27;m re back there are basic business basic and I 
+<span class="tutor">[Tutor]</span> have a one question 
+<span class="tutor">[Tutor]</span> Wow yeah do the other in the sentence there are all or 
+<span class="tutor">[Tutor]</span> shake of business 
+<span class="tutor">[Tutor]</span> the second line you find that yeah 
+<span class="tutor">[Tutor]</span> second line the shake of 
+<span class="tutor">[Tutor]</span> their business international blah blah blah 
+<span class="tutor">[Tutor]</span> the shake yeah 
+<span class="tutor">[Tutor]</span> what it&#x27;s mean 
+<span class="tutor">[Tutor]</span> their shape where where uh-huh 
+<span class="tutor">[Tutor]</span> which question 
+<span class="tutor">[Tutor]</span> ah the first 
+<span class="tutor">[Tutor]</span> the section a business of 
+<span class="tutor">[Tutor]</span> business travel and that&#x27;s how I got at the second line 
+<span class="tutor">[Tutor]</span> it is per second 
+<span class="student">[Student]</span> Okay.
+<span class="tutor">[Tutor]</span> Ah, okay. 
+<span class="tutor">[Tutor]</span> It is for the sake of business. 
+<span class="tutor">[Tutor]</span> Okay, okay, okay. 
+<span class="tutor">[Tutor]</span> Yeah. 
+<span class="tutor">[Tutor]</span> Let me get you that meaning. 
+<span class="tutor">[Tutor]</span> It&#x27;s an expression as well. 
+<span class="tutor">[Tutor]</span> Wow. 
+<span class="tutor">[Tutor]</span> sake of 
+<span class="tutor">[Tutor]</span> is for the purpose of 
+<span class="tutor">[Tutor]</span> or the benefit 
+<span class="tutor">[Tutor]</span> or advantage of something. 
+<span class="tutor">[Tutor]</span> Benefit. 
+<span class="tutor">[Tutor]</span> Yes. 
+<span class="tutor">[Tutor]</span> If we say 
+<span class="tutor">[Tutor]</span> it&#x27;s for the sake of business, 
+<span class="tutor">[Tutor]</span> if it&#x27;s for the purpose of business. 
+<span class="tutor">[Tutor]</span> Okay, I see. 
+<span class="tutor">[Tutor]</span> Yeah, Rebecca, Hong Kong. 
+<span class="tutor">[Tutor]</span> Okay. 
+<span class="tutor">[Tutor]</span> In Hong Kong, which color should you avoid wearing? 
+<span class="tutor">[Tutor]</span> First, red. 
+<span class="tutor">[Tutor]</span> It is color of royalty. 
+<span class="tutor">[Tutor]</span> So people will think you are elegant. 
+<span class="tutor">[Tutor]</span> elegant white 
+<span class="tutor">[Tutor]</span> Wow yeah white 
+<span class="tutor">[Tutor]</span> it is color associated with funner and that pink 
+<span class="tutor">[Tutor]</span> this color is dispersed for Buddhist print is as monk 
+<span class="tutor">[Tutor]</span> black this color is associated with ancient worry class as denoite denoited 
+<span class="tutor">[Tutor]</span> or acutely 
+<span class="tutor">[Tutor]</span> I can select because I don&#x27;t know the answer 
+<span class="tutor">[Tutor]</span> do you know that 
+<span class="student">[Student]</span> I don&#x27;t know the answer 
+<span class="student">[Student]</span> I thought you would know 
+<span class="student">[Student]</span> yeah but do you mind 
+<span class="student">[Student]</span> googling it 
+<span class="student">[Student]</span> what do you think 
+<span class="student">[Student]</span> do you think you can google it 
+<span class="student">[Student]</span> but but i don have the device 
+<span class="student">[Student]</span> yeah so okay i check them next time 
+<span class="student">[Student]</span> okay i can google it 
+<span class="student">[Student]</span> hang on 
+<span class="student">[Student]</span> so in hong kong which color people should avoid 
+<span class="student">[Student]</span> wearing 
+<span class="tutor">[Tutor]</span> black or white 
+<span class="tutor">[Tutor]</span> it says here black or white 
+<span class="tutor">[Tutor]</span> that is the color associated with the funnel and that 
+<span class="tutor">[Tutor]</span> but in our country the 
+<span class="tutor">[Tutor]</span> in Asia usually the black is the color associated with the funeral and death 
+<span class="tutor">[Tutor]</span> for us as well black is associated death and mourning 
+<span class="tutor">[Tutor]</span> yeah but in Hong Kong 
+<span class="tutor">[Tutor]</span> apparently white is the color of death 
+<span class="tutor">[Tutor]</span> yes I see 
+<span class="tutor">[Tutor]</span> and I have one more question 
+<span class="tutor">[Tutor]</span> the last sentence D 
+<span class="tutor">[Tutor]</span> the warrior crest and denoited have hostile 
+<span class="tutor">[Tutor]</span> hostile or 
+<span class="tutor">[Tutor]</span> tutied 
+<span class="tutor">[Tutor]</span> they said denoited hostile 
+<span class="tutor">[Tutor]</span> what&#x27;s mean 
+<span class="tutor">[Tutor]</span> teacher denotes hostile 
+<span class="student">[Student]</span> yes 
+<span class="student">[Student]</span> yeah denotes hostile attitude 
+<span class="student">[Student]</span> so which word do you want to know 
+<span class="student">[Student]</span> denotes a second 
+<span class="tutor">[Tutor]</span> They&#x27;re not hostile. 
+<span class="tutor">[Tutor]</span> Yeah, both. 
+<span class="tutor">[Tutor]</span> Hostile. 
+<span class="tutor">[Tutor]</span> Okay. 
+<span class="tutor">[Tutor]</span> Hostile. 
+<span class="tutor">[Tutor]</span> Let me give you that one. 
+<span class="tutor">[Tutor]</span> Hostile. 
+<span class="tutor">[Tutor]</span> When somebody is hostile, they are unfriendly. 
+<span class="tutor">[Tutor]</span> Friendly. 
+<span class="tutor">[Tutor]</span> Yeah, unfriendly. 
+<span class="tutor">[Tutor]</span> Unfriendly. 
+<span class="tutor">[Tutor]</span> Unfriendly. 
+<span class="tutor">[Tutor]</span> Unfriendly. 
+<span class="tutor">[Tutor]</span> Unfriendly. 
+<span class="tutor">[Tutor]</span> Okay. 
+<span class="tutor">[Tutor]</span> And they show like a dislike. 
+<span class="tutor">[Tutor]</span> They don&#x27;t like you. 
+<span class="tutor">[Tutor]</span> When somebody is hostile towards you, they are a little aggressive and they don&#x27;t like you. 
+<span class="tutor">[Tutor]</span> Don&#x27;t like and little aggressive, donated, hostile. 
+<span class="tutor">[Tutor]</span> Okay, I see. 
+<span class="tutor">[Tutor]</span> But this is hostile, just the word hostile. 
+<span class="tutor">[Tutor]</span> And then denote, to denote is to show something. 
+<span class="tutor">[Tutor]</span> so if you say the notes hostile attitude you&#x27;re showing a hostile attitude you&#x27;re showing dislike or bad or yeah bad attitude 
+<span class="tutor">[Tutor]</span> does it make sense 
+<span class="tutor">[Tutor]</span> So to denote is to show something, to indicate. 
+<span class="tutor">[Tutor]</span> Okay. 
+<span class="tutor">[Tutor]</span> When driving in Turkey, which of the following should you be aware of? 
+<span class="tutor">[Tutor]</span> The first? 
+<span class="tutor">[Tutor]</span> Aware of. 
+<span class="tutor">[Tutor]</span> When driving in Turkey, 
+<span class="tutor">[Tutor]</span> which of the following should you be aware of? 
+<span class="tutor">[Tutor]</span> it is a Muslim country and woman can drive 
+<span class="tutor">[Tutor]</span> so men race the best as possible 
+<span class="tutor">[Tutor]</span> the second woman have a right of way 
+<span class="tutor">[Tutor]</span> so they typically do not yard 
+<span class="tutor">[Tutor]</span> while driver have a right of way 
+<span class="tutor">[Tutor]</span> Smoke while driving is illegal. 
+<span class="tutor">[Tutor]</span> Flashing the headlight is commonly used to indicate that driver intends to go first and overtake. 
+<span class="student">[Student]</span> Flashing 
+<span class="student">[Student]</span> hmm yeah maybe three years ago I take a I borrowed the rent car in Turkey but I&#x27;m 
+<span class="student">[Student]</span> I&#x27;m select the answer I I don&#x27;t give the answer yeah but I guess 
+<span class="student">[Student]</span> uh-huh maybe 
+<span class="student">[Student]</span> hmm 
+<span class="student">[Student]</span> oh 
+<span class="student">[Student]</span> I don&#x27;t select the answer also 
+<span class="student">[Student]</span> yeah do you like do you know that 
+<span class="student">[Student]</span> hmm I know this answer i actually know i not that familiar with uh turkey like i know a lot of people who go there but i not familiar 
+<span class="student">[Student]</span> with their customs um government can&#x27;t drive so man 
+<span class="student">[Student]</span> spooky while driving is illegal it could be the smoking 
+<span class="student">[Student]</span> okay wait let me see 
+<span class="student">[Student]</span> let&#x27;s find out 
+<span class="student">[Student]</span> you find out for the googling 
+<span class="student">[Student]</span> yeah okay yes 
+<span class="student">[Student]</span> what say the google 
+<span class="student">[Student]</span> oh I&#x27;m still asking 
+<span class="student">[Student]</span> hold on 
+<span class="student">[Student]</span> okay 
+<span class="student">[Student]</span> I&#x27;m still looking 
+<span class="student">[Student]</span> I can&#x27;t find 
+<span class="student">[Student]</span> our options 
+<span class="student">[Student]</span> I thought 
+<span class="student">[Student]</span> that is not important to this class 
+<span class="student">[Student]</span> discuss 
+<span class="student">[Student]</span> if we want 
+<span class="student">[Student]</span> like remember this is a quiz 
+<span class="student">[Student]</span> it just tests our general 
+<span class="student">[Student]</span> knowledge just to see 
+<span class="student">[Student]</span> what we could possibly know 
+<span class="student">[Student]</span> but 
+<span class="student">[Student]</span> I think it&#x27;s D 
+<span class="student">[Student]</span> I think it&#x27;s D 
+<span class="student">[Student]</span> the flashing and headlight is 
+<span class="student">[Student]</span> commonly used to indicate 
+<span class="student">[Student]</span> the driver intends to 
+<span class="student">[Student]</span> first 
+<span class="student">[Student]</span> overtake 
+<span class="tutor">[Tutor]</span> yes I think you see 
+<span class="tutor">[Tutor]</span> yeah 
+<span class="tutor">[Tutor]</span> so this was just a fun 
+<span class="tutor">[Tutor]</span> light little quiz 
+<span class="tutor">[Tutor]</span> just to see 
+<span class="tutor">[Tutor]</span> how much we know about other countries 
+<span class="tutor">[Tutor]</span> okay 
+<span class="tutor">[Tutor]</span> yeah don&#x27;t feel 
+<span class="tutor">[Tutor]</span> weird about it 
+<span class="tutor">[Tutor]</span> it&#x27;s okay to not 
+<span class="tutor">[Tutor]</span> know because we couldn&#x27;t 
+<span class="tutor">[Tutor]</span> have prepared for it 
+<span class="tutor">[Tutor]</span> okay let&#x27;s 
+<span class="tutor">[Tutor]</span> see we have a number two 
+<span class="tutor">[Tutor]</span> there? 
+<span class="tutor">[Tutor]</span> Nope. 
+<span class="tutor">[Tutor]</span> Number three. 
+<span class="tutor">[Tutor]</span> Okay, teacher. 
+<span class="tutor">[Tutor]</span> That&#x27;s why it&#x27;s important. 
+<span class="tutor">[Tutor]</span> Yeah. 
+<span class="tutor">[Tutor]</span> True or not. 
+<span class="tutor">[Tutor]</span> Just I thought it is important to understanding those each sentence. 
+<span class="tutor">[Tutor]</span> Yeah. 
+<span class="tutor">[Tutor]</span> Yes, it is. 
+<span class="tutor">[Tutor]</span> Okay. 
+<span class="tutor">[Tutor]</span> Yes, it is. 
+<span class="tutor">[Tutor]</span> Absolutely. 
+<span class="tutor">[Tutor]</span> I want to ask you number three there. 
+<span class="tutor">[Tutor]</span> Which part of your country&#x27;s 
+<span class="tutor">[Tutor]</span> culture do you want to let others know about? 
+<span class="tutor">[Tutor]</span> So tourists, people that don&#x27;t live in Korea, 
+<span class="tutor">[Tutor]</span> which part of your culture do you think 
+<span class="tutor">[Tutor]</span> they should know about? 
+<span class="student">[Student]</span> Maybe the 
+<span class="student">[Student]</span> foreigners don&#x27;t use their chapstick, so 
+<span class="student">[Student]</span> maybe it is concerned to their 
+<span class="student">[Student]</span> the eating culture 
+<span class="student">[Student]</span> that is total difference 
+<span class="student">[Student]</span> so 
+<span class="student">[Student]</span> I&#x27;m teaching to people 
+<span class="student">[Student]</span> that&#x27;s true 
+<span class="student">[Student]</span> that&#x27;s true 
+<span class="student">[Student]</span> usually 
+<span class="student">[Student]</span> the people use the pork and knife 
+<span class="student">[Student]</span> so 
+<span class="student">[Student]</span> it is a little difficult to use 
+<span class="student">[Student]</span> the chapstick 
+<span class="student">[Student]</span> and wait 
+<span class="student">[Student]</span> very 
+<span class="student">[Student]</span> very very difficult for us 
+<span class="tutor">[Tutor]</span> yeah okay very nice 
+<span class="tutor">[Tutor]</span> how do you use your country 
+<span class="tutor">[Tutor]</span> yeah they use their poker knife 
+<span class="tutor">[Tutor]</span> with a spoon and fork and knife 
+<span class="tutor">[Tutor]</span> yeah spoon and fork and knife 
+<span class="tutor">[Tutor]</span> and press press plate right 
+<span class="tutor">[Tutor]</span> plate right 
+<span class="tutor">[Tutor]</span> it&#x27;s a useful 
+<span class="tutor">[Tutor]</span> we use a bowl 
+<span class="student">[Student]</span> okay 
+<span class="student">[Student]</span> yeah what about you 
+<span class="student">[Student]</span> what do you use 
+<span class="student">[Student]</span> uh we used to 
+<span class="student">[Student]</span> uh that depends on the restaurant kind 
+<span class="student">[Student]</span> of restaurant but traditional korean restaurant used to a bowl and spoon and sharpness 
+<span class="student">[Student]</span> nice 
+<span class="student">[Student]</span> yeah very nice 
+<span class="student">[Student]</span> i like at least i can handle a bowl 
+<span class="student">[Student]</span> if i&#x27;m using chopsticks i can handle a bowl 
+<span class="student">[Student]</span> i can try 
+<span class="student">[Student]</span> because the bowl keeps the food in one place 
+<span class="tutor">[Tutor]</span> okay i see 
+<span class="tutor">[Tutor]</span> it sounds good 
+<span class="tutor">[Tutor]</span> sounds really good 
+<span class="tutor">[Tutor]</span> all right so i think we have a few seconds left 
+<span class="tutor">[Tutor]</span> okay 
+<span class="tutor">[Tutor]</span> so let&#x27;s agree 
+<span class="tutor">[Tutor]</span> the next page 
+<span class="tutor">[Tutor]</span> that you&#x27;re doing 
+<span class="tutor">[Tutor]</span> is what page 72 
+<span class="student">[Student]</span> okay
+<span class="tutor">[Tutor]</span> so till next time 
+<span class="tutor">[Tutor]</span> have a nice day teacher 
+<span class="student">[Student]</span> have a great day 
+<span class="tutor">[Tutor]</span> Joey it was lovely to hear from you 
+<span class="student">[Student]</span> okay bye bye</div>
+        </div>
+    </div>
+    <div class="toast" id="toast">✅ 프롬프트가 복사되었습니다!</div>
+    <script>
+        const REVIEW_PROMPT="너는 나의 영어 회화 복습 파트너야. 오늘 내 전화영어 수업 내용을 기반으로 대화하면서 복습을 도와줘.\n\n[오늘 수업 전사 내용]\n[Tutor] Hi, how are you? Good morning. How are you today?\n[Student] Just a moment. Yeah. Sorry, teacher.\n[Tutor] Oh, yeah, I'm doing good. Yeah, I'm doing good. Yeah. How are you today? \n[Tutor] I'm doing great. My name is Bessie. I don't know if you remember me, but my name is Bessie. \n[Tutor] and I've been teaching English for over 8 years and it's lovely to meet you, Joey.\n[Student] Yeah. \n[Tutor] Basti, yeah, I see your name. \n[Student] Yeah, I know your name. \n[Tutor] I remember. \n[Tutor] And your regular class, their Wednesday and their Friday, right?\n[Student] So. \n[Student] I think so, yes. \n[Student] Yes, yes.\n[Tutor] So I see here we have the book. \n[Tutor] You were on page 77, I think.\n[Student] 77?\n[Tutor] Yes, from your previous teacher. \n[Student] Just a moment. \n[Student] Okay.\n[Student] 77?\n[Tutor] Yeah, she wrote 77, so I'm not sure. \n[Student] Is it the right one? \n[Student] I missed the page, so just a moment. \n[Student] Okay.\n[Tutor] Because I print out some page but mixed page just a moment. \n[Tutor] Okay. \n[Tutor] Okay. Are you okay? \n[Tutor] It's okay. I'm right here with you. \n[Tutor] Let me know where you find it.\n[Student] oh yeah we will start after 70 \n[Student] yeah 70 \n[Student] page of 70 \n[Student] not 70 \n[Student] page 70 \n[Student] 70 \n[Student] yeah yeah 70 \n[Student] oh okay not 77 \n[Student] okay let me \n[Student] okay let me go back \n[Student] 70 \n[Student] in case scenario \n[Student] second \n[Student] okay \n[Student] just hold on for me \n[Student] sorry \n[Student] 71 \n[Student] 71 \n[Student] okay \n[Student] okay\n[Tutor] I see it. \n[Tutor] So we have A, benefits of business travel. \n[Tutor] Do you mind reading that paragraph? \n[Student] Oh yes, of course.\n[Student] Business traveling can be one of the most unrighting as productive experience if if it is for shake \n[Student] hmm? \n[Student] if \n[Student] experiences \n[Student] okay \n[Student] since \n[Student] uh huh \n[Student] experience \n[Student] is it right? \n[Student] experiences \n[Student] experiences \n[Student] good \n[Student] better? \n[Student] hmm \n[Student] experiences \n[Student] yes \n[Student] if it is for shake \n[Student] business, international travel can lead to increased trade and commerce. \n[Student] Thus, the country might both become wealthier through the exchange. \n[Student] on the downside international travel can cause friction between different \n[Student] religion race as ethics \n[Student] okay we have to say that one again \n[Student] ethnicities ethnicity\n[Tutor] Okay.\n[Tutor] And it says here, B, share your thoughts, right?\n[Student] Okay.\n[Tutor] Take the following quiz. \n[Tutor] See how well you know about different cultures. \n[Tutor] Do you want to take it? \n[Student] Yes.\n[Tutor] All right All right so it says here in Russia what is the preferred way to drink vodka A B C or D \n[Tutor] okay first I read that straight no addiction of anything \n[Tutor] the second and as I make a cooler and cut their harshness and mister in cocktail \n[Tutor] drink mixed with beer as a type of no no reason month no reason month no no\n[Student] I think they are enjoying the straight no addition of anything \n[Student] I think so too actually yeah \n[Student] have you ever been to Russia? \n[Student] oh no not at all just I mean yeah we are across the country but between the \n[Student] Russia and South Korea there is the North Korea so it is the little yeah it \n[Student] is real dangerous to travel and yeah and nowadays Ukraine and Russia have a world \n[Student] so yeah that is also difficult to travel yeah dangerous to travel Russia\n[Tutor] that's true yeah yeah okay I think you're correct with a yeah \n[Tutor] and second \n[Tutor] the second one in Hong Kong which color should you avoid wearing \n[Tutor] wearing yeah \n[Tutor] people's questions yeah \n[Tutor] I'm re back there are basic business basic and I \n[Tutor] have a one question \n[Tutor] Wow yeah do the other in the sentence there are all or \n[Tutor] shake of business \n[Tutor] the second line you find that yeah \n[Tutor] second line the shake of \n[Tutor] their business international blah blah blah \n[Tutor] the shake yeah \n[Tutor] what it's mean \n[Tutor] their shape where where uh-huh \n[Tutor] which question \n[Tutor] ah the first \n[Tutor] the section a business of \n[Tutor] business travel and that's how I got at the second line \n[Tutor] it is per second \n[Student] Okay.\n[Tutor] Ah, okay. \n[Tutor] It is for the sake of business. \n[Tutor] Okay, okay, okay. \n[Tutor] Yeah. \n[Tutor] Let me get you that meaning. \n[Tutor] It's an expression as well. \n[Tutor] Wow. \n[Tutor] sake of \n[Tutor] is for the purpose of \n[Tutor] or the benefit \n[Tutor] or advantage of something. \n[Tutor] Benefit. \n[Tutor] Yes. \n[Tutor] If we say \n[Tutor] it's for the sake of business, \n[Tutor] if it's for the purpose of business. \n[Tutor] Okay, I see. \n[Tutor] Yeah, Rebecca, Hong Kong. \n[Tutor] Okay. \n[Tutor] In Hong Kong, which color should you avoid wearing? \n[Tutor] First, red. \n[Tutor] It is color of royalty. \n[Tutor] So people will think you are elegant. \n[Tutor] elegant white \n[Tutor] Wow yeah white \n[Tutor] it is color associated with funner and that pink \n[Tutor] this color is dispersed for Buddhist print is as monk \n[Tutor] black this color is associated with ancient worry class as denoite denoited \n[Tutor] or acutely \n[Tutor] I can select because I don't know the answer \n[Tutor] do you know that \n[Student] I don't know the answer \n[Student] I thought you would know \n[Student] yeah but do you mind \n[Student] googling it \n[Student] what do you think \n[Student] do you think you can google it \n[Student] but but i don have the device \n[Student] yeah so okay i check them next time \n[Student] okay i can google it \n[Student] hang on \n[Student] so in hong kong which color people should avoid \n[Student] wearing \n[Tutor] black or white \n[Tutor] it says here black or white \n[Tutor] that is the color associated with the funnel and that \n[Tutor] but in our country the \n[Tutor] in Asia usually the black is the color associated with the funeral and death \n[Tutor] for us as well black is associated death and mourning \n[Tutor] yeah but in Hong Kong \n[Tutor] apparently white is the color of death \n[Tutor] yes I see \n[Tutor] and I have one more question \n[Tutor] the last sentence D \n[Tutor] the warrior crest and denoited have hostile \n[Tutor] hostile or \n[Tutor] tutied \n[Tutor] they said denoited hostile \n[Tutor] what's mean \n[Tutor] teacher denotes hostile \n[Student] yes \n[Student] yeah denotes hostile attitude \n[Student] so which word do you want to know \n[Student] denotes a second \n[Tutor] They're not hostile. \n[Tutor] Yeah, both. \n[Tutor] Hostile. \n[Tutor] Okay. \n[Tutor] Hostile. \n[Tutor] Let me give you that one. \n[Tutor] Hostile. \n[Tutor] When somebody is hostile, they are unfriendly. \n[Tutor] Friendly. \n[Tutor] Yeah, unfriendly. \n[Tutor] Unfriendly. \n[Tutor] Unfriendly. \n[Tutor] Unfriendly. \n[Tutor] Unfriendly. \n[Tutor] Okay. \n[Tutor] And they show like a dislike. \n[Tutor] They don't like you. \n[Tutor] When somebody is hostile towards you, they are a little aggressive and they don't like you. \n[Tutor] Don't like and little aggressive, donated, hostile. \n[Tutor] Okay, I see. \n[Tutor] But this is hostile, just the word hostile. \n[Tutor] And then denote, to denote is to show something. \n[Tutor] so if you say the notes hostile attitude you're showing a hostile attitude you're showing dislike or bad or yeah bad attitude \n[Tutor] does it make sense \n[Tutor] So to denote is to show something, to indicate. \n[Tutor] Okay. \n[Tutor] When driving in Turkey, which of the following should you be aware of? \n[Tutor] The first? \n[Tutor] Aware of. \n[Tutor] When driving in Turkey, \n[Tutor] which of the following should you be aware of? \n[Tutor] it is a Muslim country and woman can drive \n[Tutor] so men race the best as possible \n[Tutor] the second woman have a right of way \n[Tutor] so they typically do not yard \n[Tutor] while driver have a right of way \n[Tutor] Smoke while driving is illegal. \n[Tutor] Flashing the headlight is commonly used to indicate that driver intends to go first and overtake. \n[Student] Flashing \n[Student] hmm yeah maybe three years ago I take a I borrowed the rent car in Turkey but I'm \n[Student] I'm select the answer I I don't give the answer yeah but I guess \n[Student] uh-huh maybe \n[Student] hmm \n[Student] oh \n[Student] I don't select the answer also \n[Student] yeah do you like do you know that \n[Student] hmm I know this answer i actually know i not that familiar with uh turkey like i know a lot of people who go there but i not familiar \n[Student] with their customs um government can't drive so man \n[Student] spooky while driving is illegal it could be the smoking \n[Student] okay wait let me see \n[Student] let's find out \n[Student] you find out for the googling \n[Student] yeah okay yes \n[Student] what say the google \n[Student] oh I'm still asking \n[Student] hold on \n[Student] okay \n[Student] I'm still looking \n[Student] I can't find \n[Student] our options \n[Student] I thought \n[Student] that is not important to this class \n[Student] discuss \n[Student] if we want \n[Student] like remember this is a quiz \n[Student] it just tests our general \n[Student] knowledge just to see \n[Student] what we could possibly know \n[Student] but \n[Student] I think it's D \n[Student] I think it's D \n[Student] the flashing and headlight is \n[Student] commonly used to indicate \n[Student] the driver intends to \n[Student] first \n[Student] overtake \n[Tutor] yes I think you see \n[Tutor] yeah \n[Tutor] so this was just a fun \n[Tutor] light little quiz \n[Tutor] just to see \n[Tutor] how much we know about other countries \n[Tutor] okay \n[Tutor] yeah don't feel \n[Tutor] weird about it \n[Tutor] it's okay to not \n[Tutor] know because we couldn't \n[Tutor] have prepared for it \n[Tutor] okay let's \n[Tutor] see we have a number two \n[Tutor] there? \n[Tutor] Nope. \n[Tutor] Number three. \n[Tutor] Okay, teacher. \n[Tutor] That's why it's important. \n[Tutor] Yeah. \n[Tutor] True or not. \n[Tutor] Just I thought it is important to understanding those each sentence. \n[Tutor] Yeah. \n[Tutor] Yes, it is. \n[Tutor] Okay. \n[Tutor] Yes, it is. \n[Tutor] Absolutely. \n[Tutor] I want to ask you number three there. \n[Tutor] Which part of your country's \n[Tutor] culture do you want to let others know about? \n[Tutor] So tourists, people that don't live in Korea, \n[Tutor] which part of your culture do you think \n[Tutor] they should know about? \n[Student] Maybe the \n[Student] foreigners don't use their chapstick, so \n[Student] maybe it is concerned to their \n[Student] the eating culture \n[Student] that is total difference \n[Student] so \n[Student] I'm teaching to people \n[Student] that's true \n[Student] that's true \n[Student] usually \n[Student] the people use the pork and knife \n[Student] so \n[Student] it is a little difficult to use \n[Student] the chapstick \n[Student] and wait \n[Student] very \n[Student] very very difficult for us \n[Tutor] yeah okay very nice \n[Tutor] how do you use your country \n[Tutor] yeah they use their poker knife \n[Tutor] with a spoon and fork and knife \n[Tutor] yeah spoon and fork and knife \n[Tutor] and press press plate right \n[Tutor] plate right \n[Tutor] it's a useful \n[Tutor] we use a bowl \n[Student] okay \n[Student] yeah what about you \n[Student] what do you use \n[Student] uh we used to \n[Student] uh that depends on the restaurant kind \n[Student] of restaurant but traditional korean restaurant used to a bowl and spoon and sharpness \n[Student] nice \n[Student] yeah very nice \n[Student] i like at least i can handle a bowl \n[Student] if i'm using chopsticks i can handle a bowl \n[Student] i can try \n[Student] because the bowl keeps the food in one place \n[Tutor] okay i see \n[Tutor] it sounds good \n[Tutor] sounds really good \n[Tutor] all right so i think we have a few seconds left \n[Tutor] okay \n[Tutor] so let's agree \n[Tutor] the next page \n[Tutor] that you're doing \n[Tutor] is what page 72 \n[Student] okay\n[Tutor] so till next time \n[Tutor] have a nice day teacher \n[Student] have a great day \n[Tutor] Joey it was lovely to hear from you \n[Student] okay bye bye\n\n[AI 피드백]\n**1. 📊 오늘의 대화 요약 (Summary)**\n오늘 대화는 영어 수업의 형식으로 진행되었으며, 튜터와 학습자는 다양한 주제에 대해 대화했다. 학습자는 비즈니스 영어와 관련된 내용을 읽고, 튜터와 함께 퀴즈를 풀었다. 또한, 학습자는 자신의 문화에 대해 설명하고, 튜터와 함께 대화했다.\n\n**2. 💬 유창성 업그레이드 (Fluency & Natural Flow)**\n1. ❌ 학습자 원문: \"I think so too actually yeah\"\n✅ 쉬운 자연스러운 표현: \"I agree\"\n💎 세련된 비즈니스 표현: \"I concur\"\n💡 코칭 포인트: 단순한 동의를 표현할 때, \"I agree\" 또는 \"I concur\"를 사용하면 더 자연스럽고 세련된 표현이 된다.\n\n2. ❌ 학습자 원문: \"yeah we will start after 70\"\n✅ 쉬운 자연스러운 표현: \"We'll start from page 70\"\n💎 세련된 비즈니스 표현: \"Let's begin with page 70\"\n💡 코칭 포인트: 페이지 번호를 지정할 때, \"from\" 또는 \"with\"를 사용하여 더 명확하고 자연스럽게 표현할 수 있다.\n\n3. ❌ 학습자 원문: \"I don't know the answer\"\n✅ 쉬운 자연스러운 표현: \"I'm not sure\"\n💎 세련된 비즈니스 표현: \"I'm uncertain about that\"\n💡 코칭 포인트: 모르는 것을 표현할 때, \"I'm not sure\" 또는 \"I'm uncertain\"를 사용하면 더 자연스럽고 세련된 표현이 된다.\n\n**3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)**\n* ❌ 습관적 표현: \"I think so too actually yeah\"\n✅ 교정 예시: \"I agree\" 또는 \"I concur\"\n* ❌ 습관적 표현: \"yeah we will start after 70\"\n✅ 교정 예시: \"We'll start from page 70\" 또는 \"Let's begin with page 70\"\n* ❌ 습관적 표현: \"I don't know the answer\"\n✅ 교정 예시: \"I'm not sure\" 또는 \"I'm uncertain about that\"\n📌 핵심 규칙: 단순한 표현을 사용하고, 문장 구조를 명확하게 하여 더 자연스럽고 세련된 영어를 구사할 수 있다.\n🔁 따라 읽기: \n* \"I agree with your opinion.\"\n* \"We'll start from page 70.\"\n* \"I'm not sure about the answer.\"\n\n**4. 📗 어휘 확장 (Vocabulary Vault)**\n1. **단어**: Hostile\n발음기호: /ˈhɒstʌɪl/\n품사: 형용사\n뜻: 적대적인, 우호적이지 않은\n실전 예문: \"The company has a hostile relationship with its competitors.\"\n\n2. **단어**: Denote\n발음기호: /dɪˈnoʊt/\n품사: 동사\n뜻: 나타내다, 의미하다\n실전 예문: \"The symbol denotes a warning sign.\"\n\n3. **단어**: Sake\n발음기호: /seɪk/\n품사: 명사\n뜻: 목적, 이유\n실전 예문: \"I'm doing this for the sake of my family.\"\n\n4. **단어**: Funner\n발음기호: /ˈfʌnər/\n품사: 형용사\n뜻: 더 즐거운, 더 유쾌한\n실전 예문: \"This party is going to be funner than the last one.\"\n\n5. **단어**: Overtake\n발음기호: /ˌoʊvərˈteɪk/\n품사: 동사\n뜻: 추월하다, 앞지르다\n실전 예문: \"I'm going to overtake the car in front of me.\"\n\n**5. 📝 실전 복습 챌린지 (Practice)**\n1. 다음 문장을 완성하세요: \"I'm doing this ____________________ the sake of my family.\"\n(답: for)\n2. 다음 문장을 번역하세요: \"이 회사는 경쟁사와 적대적인 관계를 가지고 있다.\"\n(답: The company has a hostile relationship with its competitors.)\n3. 다음 문장을 완성하세요: \"이 기호는 ____________________ 경고 표시를 나타낸다.\"\n(답: denotes a warning sign)\n\n**6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)**\n* ✨ **Good Job**: 학습자가 오늘 수업에서 잘 표현한 문장은 \"I think so too actually yeah\"였다. 이 문장은 튜터와의 대화에서 자연스럽게 사용된 표현이다.\n* 🚀 **내일의 한 문장**: \"I'm looking forward to our next lesson, and I hope to learn more about business English.\"\n\n**[성과 지표]**\n오늘의 유창성 점수: 6/10\n근거: 학습자는 오늘 수업에서 다양한 주제에 대해 대화했으며, 튜터와 함께 퀴즈를 풀었다. 그러나, 학습자는 때때로 단순한 표현을 사용하고, 문장 구조를 명확하게 하지 못했다. 따라서, 내일의 수업에서는 더 자연스럽고 세련된 영어를 구사하는 것을 목표로 해야 한다.\n원포인트 액션 플랜: 내일의 수업에서, 학습자는 더 자연스럽고 세련된 영어를 구사하기 위해 \"I agree\" 또는 \"I concur\"와 같은 표현을 사용하도록 노력해야 한다. 또한, 학습자는 문장 구조를 명확하게 하여 더 효과적인 의사소통을 할 수 있도록 해야 한다.\n\n위 내용을 바탕으로:\n1. 먼저 오늘 수업에서 내가 틀렸거나 어색했던 표현을 하나 골라서, 관련된 상황을 영어로 질문해줘.\n2. 내가 영어로 대답하면, 자연스러운지 확인하고 더 나은 표현이 있으면 알려줘.\n3. 특히 \"반복 실수 패턴\"에서 지적된 부분을 집중적으로 연습시켜줘.\n4. 이런 식으로 오늘 배운 표현들을 하나씩 복습하자.\n5. 한국어 설명은 필요할 때만 간단히, 대화는 최대한 영어로 진행해줘.\n\n그럼 시작하자!";
+        function startReview(){navigator.clipboard.writeText(REVIEW_PROMPT).then(()=>{showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)}).catch(()=>{const t=document.createElement('textarea');t.value=REVIEW_PROMPT;document.body.appendChild(t);t.select();document.execCommand('copy');document.body.removeChild(t);showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)})}
+        function showToast(){const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500)}
+        function switchTab(n){document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',n==='feedback'?i===0:i===1));document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));document.getElementById('tab-'+n).classList.add('active')}
+    </script>
+</body>
+</html>
