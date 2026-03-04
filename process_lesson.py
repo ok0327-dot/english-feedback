@@ -310,7 +310,7 @@ def transcribe_audio(audio_path):
                 "model": "whisper-large-v3",       # 가장 정확한 모델
                 "language": "en",                   # 음성 언어: 영어
                 "response_format": "verbose_json",  # 상세 결과 (세그먼트 타임스탬프 포함)
-                "timestamp_granularities": "segment",  # 세그먼트별 시간 정보 (화자 분리용)
+                # verbose_json 기본값이 segment이므로 별도 지정 불필요
             },
             timeout=120,  # 최대 2분 대기
         )
