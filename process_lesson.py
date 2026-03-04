@@ -818,9 +818,10 @@ def _update_index_page(docs_dir):
 
     pages = sorted(glob.glob(os.path.join(docs_dir, "2*.html")), reverse=True)
 
-    # GITHUB_PAGES_URL에서 owner/repo 추출 (삭제 API 호출용)
-    github_repo = ""
-    if GITHUB_PAGES_URL:
+    # GitHub repo 이름 추출 (삭제 API 호출용)
+    # GITHUB_REPOSITORY는 Actions에서 자동 제공 (예: "ok0327-dot/english-feedback")
+    github_repo = os.environ.get("GITHUB_REPOSITORY", "")
+    if not github_repo and GITHUB_PAGES_URL:
         try:
             parsed = urlparse(GITHUB_PAGES_URL)
             owner = parsed.hostname.split(".")[0]
@@ -865,7 +866,7 @@ def _update_index_page(docs_dir):
     <div class="toast" id="toast"></div>
     <script>
     const REPO={repo_escaped};
-    function deleteReview(date,btn){{if(!confirm(date+' 복습 기록을 삭제할까요?'))return;let t=localStorage.getItem('gh_pat');if(!t){{t=prompt('GitHub Personal Access Token을 입력해주세요.\\n\\n발급: GitHub → Settings → Developer settings → Fine-grained tokens\\n권한: Actions (Read and Write)');if(!t)return;localStorage.setItem('gh_pat',t)}}fetch('https://api.github.com/repos/'+REPO+'/actions/workflows/delete-review.yml/dispatches',{{method:'POST',headers:{{'Authorization':'Bearer '+t,'Accept':'application/vnd.github.v3+json'}},body:JSON.stringify({{ref:'main',inputs:{{date:date}}}})}} ).then(r=>{{if(r.status===204){{btn.closest('.item').style.display='none';showToast('✅ 삭제 요청 완료! 1~2분 후 반영됩니다.')}}else if(r.status===401||r.status===403){{localStorage.removeItem('gh_pat');showToast('❌ 토큰이 유효하지 않습니다. 다시 시도해주세요.','error')}}else{{showToast('❌ 삭제 실패 ('+r.status+')','error')}}}}).catch(()=>showToast('❌ 네트워크 오류','error'))}}
+    function deleteReview(date,btn){{if(!confirm(date+' 복습 기록을 삭제할까요?'))return;let t=localStorage.getItem('gh_pat');if(!t){{t=prompt('🔑 GitHub 토큰 입력 (최초 1회만, 이후 자동 저장)\\n\\n발급: GitHub → Settings → Developer settings → Fine-grained tokens\\n권한: Actions (Read and Write)');if(!t)return;localStorage.setItem('gh_pat',t)}}fetch('https://api.github.com/repos/'+REPO+'/actions/workflows/delete-review.yml/dispatches',{{method:'POST',headers:{{'Authorization':'Bearer '+t,'Accept':'application/vnd.github.v3+json'}},body:JSON.stringify({{ref:'main',inputs:{{date:date}}}})}} ).then(r=>{{if(r.status===204){{btn.closest('.item').style.display='none';showToast('✅ 삭제 요청 완료! 1~2분 후 반영됩니다.')}}else if(r.status===401||r.status===403){{localStorage.removeItem('gh_pat');showToast('❌ 토큰이 유효하지 않습니다. 다시 시도해주세요.','error')}}else{{showToast('❌ 삭제 실패 ('+r.status+')','error')}}}}).catch(()=>showToast('❌ 네트워크 오류','error'))}}
     function showToast(msg,type){{const t=document.getElementById('toast');t.textContent=msg;t.className='toast'+(type?' '+type:'')+' show';setTimeout(()=>t.classList.remove('show'),3000)}}
     </script>
 </body>
