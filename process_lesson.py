@@ -353,11 +353,12 @@ def transcribe_audio(audio_path):
 # ║  왜 필요? 전화 음질 한계 + 한국인 발음 특성 → 오인식 발생              ║
 # ╚══════════════════════════════════════════════════════════════════════════╝
 
-def gemini_request(prompt, max_tokens=4096, temperature=0.3, timeout=120, system_msg=None):
+def gemini_request(prompt, max_tokens=4096, temperature=0.3, timeout=120, system_msg=None, thinking_budget=2048):
     """
     Google Gemini API 호출 (Gemini 2.5 Flash 모델 사용).
     전사 보정 및 피드백 생성에 사용.
     429 에러 시 자동 재시도 (최대 3회).
+    thinking_budget: 추론에 사용할 최대 토큰 수 (maxOutputTokens에 포함됨)
     """
     if not GEMINI_API_KEY:
         raise Exception("GEMINI_API_KEY 미설정")
@@ -378,7 +379,7 @@ def gemini_request(prompt, max_tokens=4096, temperature=0.3, timeout=120, system
         "generationConfig": {
             "maxOutputTokens": max_tokens,
             "temperature": temperature,
-            "thinkingConfig": {"thinkingBudget": 2048},
+            "thinkingConfig": {"thinkingBudget": thinking_budget},
         },
     }
 
@@ -446,13 +447,14 @@ def groq_llm_request(prompt, max_tokens=4096, temperature=0.3, timeout=120, syst
     raise Exception(f"Groq LLM 재시도 초과 (429 에러 지속)")
 
 
-def llm_request(prompt, max_tokens=4096, temperature=0.3, timeout=120, system_msg=None):
+def llm_request(prompt, max_tokens=4096, temperature=0.3, timeout=120, system_msg=None, thinking_budget=2048):
     """
     LLM 호출 (Gemini 우선, 실패 시 Groq로 자동 전환).
     무료 한도 초과, 네트워크 오류 등 Gemini 장애 시에도 파이프라인이 중단되지 않음.
+    thinking_budget: Gemini 추론 토큰 한도 (Groq fallback 시에는 미사용)
     """
     try:
-        result = gemini_request(prompt, max_tokens, temperature, timeout, system_msg)
+        result = gemini_request(prompt, max_tokens, temperature, timeout, system_msg, thinking_budget)
         print("  (🟢 Gemini)")
         return result
     except Exception as e:
@@ -581,7 +583,7 @@ def clean_transcript(raw_transcript, segments=None):
 보정된 전사 결과만 출력해주세요. 추가 설명은 필요 없습니다."""
 
     try:
-        cleaned = llm_request(prompt, max_tokens=4096, temperature=0.3)
+        cleaned = llm_request(prompt, max_tokens=8192, temperature=0.3, thinking_budget=2048)
         print(f"✅ 전사 보정 완료: {len(cleaned)}자")
         return cleaned
     except Exception as e:
@@ -670,7 +672,8 @@ def generate_feedback(transcript):
         max_tokens=12288,
         temperature=0.5,
         timeout=120,
-        system_msg=system_msg
+        system_msg=system_msg,
+        thinking_budget=2048
     )
     print(f"✅ 피드백 생성 완료: {len(feedback)}자")
     return feedback
