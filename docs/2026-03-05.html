@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전화영어 복습 - 2026년 03월 05일</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Noto Sans KR',sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.75;min-height:100vh}
+        .header{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);border-bottom:1px solid rgba(255,255,255,.06);padding:48px 24px 40px;text-align:center}
+        .header-date{font-size:13px;color:#94a3b8;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+        .header h1{font-size:28px;font-weight:700;color:#f1f5f9;margin-bottom:16px}
+        .header-meta{display:flex;justify-content:center;gap:24px;font-size:14px;color:#64748b}
+        .header-meta span{display:flex;align-items:center;gap:6px}
+        .cta-section{text-align:center;padding:40px 24px}
+        .cta-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:linear-gradient(135deg,#38bdf8,#818cf8);color:#fff;font-size:16px;font-weight:600;font-family:'Noto Sans KR',sans-serif;border:none;border-radius:50px;cursor:pointer;transition:all .3s;text-decoration:none;box-shadow:0 4px 24px rgba(56,189,248,.25)}
+        .cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(56,189,248,.35)}
+        .cta-btn svg{width:20px;height:20px}
+        .cta-sub{margin-top:12px;font-size:13px;color:#64748b}
+        .toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#38bdf8;padding:14px 28px;border-radius:12px;font-size:14px;font-weight:500;border:1px solid rgba(56,189,248,.2);box-shadow:0 8px 32px rgba(0,0,0,.4);opacity:0;transition:all .4s cubic-bezier(.16,1,.3,1);z-index:1000}
+        .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+        .container{max-width:720px;margin:0 auto;padding:0 24px 80px}
+        .tabs{display:flex;gap:4px;background:#1a1a24;padding:4px;border-radius:12px;margin-bottom:32px}
+        .tab{flex:1;padding:12px;text-align:center;font-size:14px;font-weight:500;color:#64748b;background:0 0;border:none;border-radius:8px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all .2s}
+        .tab.active{background:#262636;color:#f1f5f9}
+        .tab-content{display:none}.tab-content.active{display:block}
+        .feedback h2{font-size:18px;font-weight:700;color:#f1f5f9;margin:36px 0 16px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.06)}
+        .feedback h2:first-child{margin-top:0}
+        .feedback p{margin:8px 0;color:#cbd5e1}
+        .feedback .item{padding:6px 0 6px 16px;border-left:2px solid #334155;margin:6px 0;color:#cbd5e1}
+        .feedback .numbered{padding:8px 0 8px 16px;color:#cbd5e1}
+        .feedback .numbered strong{color:#38bdf8}
+        .feedback strong{color:#f1f5f9}
+        .feedback code{background:#1e293b;padding:2px 8px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#38bdf8}
+        .feedback table{width:100%;border-collapse:collapse;margin:12px 0}
+        .feedback th,.feedback td{padding:10px 14px;text-align:left;border-bottom:1px solid #262636}
+        .feedback th{color:#94a3b8;font-weight:500;font-size:13px}
+        .feedback td{color:#cbd5e1}
+        .arrow{color:#38bdf8;font-weight:700}
+        .transcript{background:#1a1a24;border-radius:12px;padding:28px;font-size:14px;line-height:2;color:#94a3b8;white-space:pre-wrap;word-break:break-word;font-family:'JetBrains Mono','Noto Sans KR',monospace}
+        .transcript .tutor{color:#38bdf8}
+        .transcript .student{color:#a78bfa}
+        @media(max-width:640px){.header{padding:32px 16px}.header h1{font-size:22px}.cta-btn{padding:14px 28px;font-size:15px}.container{padding:0 16px 60px}}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-date">2026년 03월 05일</div>
+        <h1>📚 전화영어 복습</h1>
+        <div class="header-meta">
+            <span>⏱ 19분 38초</span>
+            <span>🎙 전화영어_025180304_20260304080041.m4a</span>
+        </div>
+    </div>
+    <div class="cta-section">
+        <button class="cta-btn" onclick="startReview()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Gemini에서 복습 대화 시작하기
+        </button>
+        <div class="cta-sub">클릭하면 프롬프트가 복사되고 Gemini가 열립니다</div>
+    </div>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('feedback')">📋 AI 피드백</button>
+            <button class="tab" onclick="switchTab('transcript')">🎙 수업 전사</button>
+        </div>
+        <div id="tab-feedback" class="tab-content active">
+            <div class="feedback"><p>안녕하세요, [Student] 학습자님! 따뜻하고 실용적인 영어 코치 베시입니다.</p>
+<p>오늘 첫 만남이라 아직 많은 대화를 나누지는 못했지만, 간결하고 명확하게 의사를 표현하시는 모습이 인상 깊었습니다. 앞으로 저와 함께 영어 실력을 한 단계 더 업그레이드할 수 있도록 최선을 다해 돕겠습니다!</p>
+<br>
+<br>
+<p>### <strong>1. 📊 오늘의 대화 요약 (Summary)</strong></p>
+<br>
+<p>오늘 수업은 튜터와 [Student] 학습자님 간의 첫 만남으로 시작되었습니다. 서로 간단한 인사를 나누고 이름을 확인하며 앞으로의 수업을 위한 첫 발을 내디뎠습니다. 본격적인 대화 주제로 들어가기 전의 짧은 오리엔테이션 성격의 대화였습니다.</p>
+<br>
+<p>### <strong>2. 💬 유창성 업그레이드 (Fluency & Natural Flow)</strong></p>
+<br>
+<p>[Student] 학습자님의 발화는 의미 전달에 전혀 문제가 없었지만, 조금 더 자연스럽거나 격식 있는 표현으로 다듬을 수 있는 부분들이 있었습니다.</p>
+<br>
+<div class="numbered"><strong>1.</strong>  ❌ 학습자 원문 (As Said): "Sorry, teacher."</div>
+<p>    *   ✅ 자연스러운 표현 (Natural): "Sorry about that." / "My apologies."</p>
+<p>    *   💎 비즈니스 표현 (Professional): "My apologies for the brief delay." / "I apologize for the interruption."</p>
+<p>    *   💡 코칭 포인트: "Sorry, teacher"는 괜찮지만, "Sorry about that"이 훨씬 더 일반적이고 자연스러운 사과 표현입니다. 비즈니스 환경에서는 "My apologies"나 "I apologize"를 활용하여 좀 더 격식을 갖출 수 있습니다.</p>
+<br>
+<div class="numbered"><strong>2.</strong>  ❌ 학습자 원문 (As Said): "Yeah, I know your name."</div>
+<p>    *   ✅ 자연스러운 표현 (Natural): "Yes, I remember your name." / "I do remember your name."</p>
+<p>    *   💎 비즈니스 표현 (Professional): "Yes, I recall your name."</p>
+<p>    *   💡 코칭 포인트: "know"는 사실을 아는 것에 가깝고, "remember"는 기억을 떠올리는 뉘앙스입니다. 상대방이 "Do you remember me?"와 같은 뉘앙스로 물었을 때, "remember"를 쓰는 것이 더 자연스럽습니다. "recall"은 "remember"보다 좀 더 격식 있는 표현입니다.</p>
+<br>
+<div class="numbered"><strong>3.</strong>  ❌ 학습자 원문 (As Said): "Yeah." (반복 사용)</div>
+<p>    *   ✅ 자연스러운 표현 (Natural): "Yes." / "That's right." / "Exactly."</p>
+<p>    *   💎 비즈니스 표현 (Professional): "Indeed." / "Certainly."</p>
+<p>    *   💡 코칭 포인트: "Yeah"는 캐주얼한 대화에서 아주 흔하게 쓰이지만, 답변을 다양하게 하면 좀 더 유창하고 풍부하게 들립니다. 특히 비즈니스 환경에서는 "Yes"나 "Indeed"처럼 격식 있는 표현을 섞어 쓰는 것이 좋습니다.</p>
+<br>
+<p>### <strong>3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)</strong></p>
+<br>
+<p>제공된 전화영어 전사 내용이 매우 짧고, [Student] 학습자님의 발화가 간결하여 이번 대화에서는 반복적인 문법 오류 패턴을 찾기 어려웠습니다. 현재까지의 발화는 문법적으로 정확했습니다. 따라서 이 섹션은 다음 수업에서 더 많은 대화 내용을 바탕으로 구체적인 피드백을 드릴 수 있도록 하겠습니다.</p>
+<br>
+<p>### <strong>4. 📗 어휘 확장 (Vocabulary Vault)</strong></p>
+<br>
+<p>[Student] 학습자님의 비즈니스 환경과 자기계발 관심사를 고려하여 유용한 어휘를 선정했습니다.</p>
+<br>
+<div class="numbered"><strong>1.</strong>  <strong>recall</strong> /rɪˈkɔːl/ (v)</div>
+<p>    *   뜻: (정보 등을) 기억해내다, 상기하다</p>
+<p>    *   실전 예문: "I can't <strong>recall</strong> the exact figures from last quarter's report."</p>
+<div class="numbered"><strong>2.</strong>  <strong>moment</strong> /ˈmoʊmənt/ (n)</div>
+<p>    *   뜻: 순간, 잠시</p>
+<p>    *   실전 예문: "Could you spare a <strong>moment</strong> to discuss the new project proposal?"</p>
+<div class="numbered"><strong>3.</strong>  <strong>appreciate</strong> /əˈpriːʃieɪt/ (v)</div>
+<p>    *   뜻: 감사하다, 진가를 알다</p>
+<p>    *   실전 예문: "We deeply <strong>appreciate</strong> your continued support and trust in our company."</p>
+<div class="numbered"><strong>4.</strong>  <strong>investment</strong> /ɪnˈvɛstmənt/ (n)</div>
+<p>    *   뜻: 투자, 투자액</p>
+<p>    *   실전 예문: "Our company is looking for strategic <strong>investment</strong> opportunities in renewable energy."</p>
+<div class="numbered"><strong>5.</strong>  <strong>initiative</strong> /ɪˈnɪʃiətɪv/ (n)</div>
+<p>    *   뜻: 주도권, 솔선수범, 진취성</p>
+<p>    *   실전 예문: "Taking <strong>initiative</strong> in problem-solving is highly valued in our team."</p>
+<br>
+<p>### <strong>5. 📝 실전 복습 챌린지 (Practice)</strong></p>
+<br>
+<p>오늘 배운 표현과 어휘를 활용하여 아래 상황에 맞게 영작해 보세요.</p>
+<br>
+<div class="numbered"><strong>1.</strong>  <strong>상황:</strong> 회의 시작 전, 전화 연결에 잠시 문제가 생겨 다른 사람들을 기다리게 했습니다. 이 상황에 대해 정중하게 사과하고 싶습니다.</div>
+<p>    *   영작: (My apologies...)</p>
+<p>    *   모범 답안: "My apologies for the brief delay in connecting. We can start now."</p>
+<br>
+<div class="numbered"><strong>2.</strong>  <strong>상황:</strong> 새로운 팀원에게 이전에 함께 일했던 프로젝트에 대해 설명하며, 그 팀원이 그 프로젝트를 기억하는지 묻고 싶습니다.</div>
+<p>    *   영작: (Do you recall...?)</p>
+<p>    *   모범 답안: "Do you recall the 'Project Alpha' we worked on last year?"</p>
+<br>
+<div class="numbered"><strong>3.</strong>  <strong>상황:</strong> 동료가 급한 업무를 도와준 것에 대해 진심으로 감사하며, 그 동료의 적극적인 태도(initiative)를 칭찬하고 싶습니다.</div>
+<p>    *   영작: (I appreciate... and your initiative...)</p>
+<p>    *   모범 답안: "I truly appreciate your help with the urgent task. Your initiative really made a difference."</p>
+<br>
+<p>### <strong>6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)</strong></p>
+<br>
+<p>*   ✨ <strong>Good Job</strong>: "Just a moment."</p>
+<p>    *   [Student] 학습자님께서 "Just a moment."이라고 말씀하신 것은 아주 간결하고 정확하며, 원어민들이 일상에서 흔히 쓰는 자연스러운 표현입니다. 상황에 맞는 적절한 표현을 바로 사용하신 점이 훌륭했습니다!</p>
+<br>
+<p>*   🚀 <strong>내일의 한 문장</strong>: 다음 수업 시작 시 튜터에게 오늘 배운 표현을 활용하여 던질 수 있는 대화 시작 문장입니다.</p>
+<p>    *   "Good morning, Bessie! I recall we discussed some useful phrases last time. How are you today?"</p>
+<br>
+<br>
+<p><strong>[성과 지표]</strong></p>
+<br>
+<p>*   <strong>유창성 점수</strong>: 7/10점</p>
+<p>*   <strong>근거</strong>: 제공된 대화 내용이 짧았음에도 불구하고, [Student] 학습자님은 자신의 의사를 명확하게 전달했습니다. 발음이나 억양에서 큰 어려움은 없었으며, 기본적인 의사소통에는 문제가 없었습니다. 다만, 일부 표현에서 좀 더 자연스럽거나 격식 있는 대안을 활용하면 유창성과 표현의 폭을 넓힐 수 있을 것으로 보입니다.</p>
+<p>*   <strong>다음 수업 '원포인트 액션 플랜'</strong>:</p>
+<p>    1.  <strong>다양한 긍정 표현 연습</strong>: "Yeah" 외에 "Yes, that's right, exactly, indeed, certainly" 등 다양한 긍정 표현을 의식적으로 사용해보기.</p>
+<p>    2.  <strong>질문 확장 연습</strong>: 단순한 답변을 넘어, 상대방의 질문에 덧붙여 자신의 의견이나 추가 질문을 하는 연습을 통해 대화를 더 풍성하게 이끌어보기.</p>
+<br>
+<p>다음 수업도 기대됩니다! 화이팅!</p></div>
+        </div>
+        <div id="tab-transcript" class="tab-content">
+            <div class="transcript"><span class="tutor">[Tutor]</span> Hi, how are you? Good morning. How are you today?
+<span class="student">[Student]</span> Just a moment. Yeah. Sorry, teacher.
+<span class="tutor">[Tutor]</span> Oh, yeah, I&#x27;m doing good. Yeah, I&#x27;m doing good. Yeah. How are you today?
+<span class="tutor">[Tutor]</span> I&#x27;m doing great. My name is Bessie. I don&#x27;t know if you remember me, but my name is Bessie.
+<span class="tutor">[Tutor]</span> and I&#x27;ve been teaching English for over 8 years
+<span class="tutor">[Tutor]</span> and it&#x27;s lovely to meet you, Joey.
+<span class="student">[Student]</span> Yeah.
+<span class="tutor">[Tutor]</span> Bessie, yeah, I see your name.
+<span class="student">[Student]</span> Yeah, I know your name.</div>
+        </div>
+    </div>
+    <div class="toast" id="toast">✅ 프롬프트가 복사되었습니다!</div>
+    <script>
+        const REVIEW_PROMPT="너는 나의 영어 회화 복습 파트너야. 오늘 내 전화영어 수업 내용을 기반으로 대화하면서 복습을 도와줘.\n\n[오늘 수업 전사 내용]\n[Tutor] Hi, how are you? Good morning. How are you today?\n[Student] Just a moment. Yeah. Sorry, teacher.\n[Tutor] Oh, yeah, I'm doing good. Yeah, I'm doing good. Yeah. How are you today?\n[Tutor] I'm doing great. My name is Bessie. I don't know if you remember me, but my name is Bessie.\n[Tutor] and I've been teaching English for over 8 years\n[Tutor] and it's lovely to meet you, Joey.\n[Student] Yeah.\n[Tutor] Bessie, yeah, I see your name.\n[Student] Yeah, I know your name.\n\n[AI 피드백]\n안녕하세요, [Student] 학습자님! 따뜻하고 실용적인 영어 코치 베시입니다.\n오늘 첫 만남이라 아직 많은 대화를 나누지는 못했지만, 간결하고 명확하게 의사를 표현하시는 모습이 인상 깊었습니다. 앞으로 저와 함께 영어 실력을 한 단계 더 업그레이드할 수 있도록 최선을 다해 돕겠습니다!\n\n---\n\n### **1. 📊 오늘의 대화 요약 (Summary)**\n\n오늘 수업은 튜터와 [Student] 학습자님 간의 첫 만남으로 시작되었습니다. 서로 간단한 인사를 나누고 이름을 확인하며 앞으로의 수업을 위한 첫 발을 내디뎠습니다. 본격적인 대화 주제로 들어가기 전의 짧은 오리엔테이션 성격의 대화였습니다.\n\n### **2. 💬 유창성 업그레이드 (Fluency & Natural Flow)**\n\n[Student] 학습자님의 발화는 의미 전달에 전혀 문제가 없었지만, 조금 더 자연스럽거나 격식 있는 표현으로 다듬을 수 있는 부분들이 있었습니다.\n\n1.  ❌ 학습자 원문 (As Said): \"Sorry, teacher.\"\n    *   ✅ 자연스러운 표현 (Natural): \"Sorry about that.\" / \"My apologies.\"\n    *   💎 비즈니스 표현 (Professional): \"My apologies for the brief delay.\" / \"I apologize for the interruption.\"\n    *   💡 코칭 포인트: \"Sorry, teacher\"는 괜찮지만, \"Sorry about that\"이 훨씬 더 일반적이고 자연스러운 사과 표현입니다. 비즈니스 환경에서는 \"My apologies\"나 \"I apologize\"를 활용하여 좀 더 격식을 갖출 수 있습니다.\n\n2.  ❌ 학습자 원문 (As Said): \"Yeah, I know your name.\"\n    *   ✅ 자연스러운 표현 (Natural): \"Yes, I remember your name.\" / \"I do remember your name.\"\n    *   💎 비즈니스 표현 (Professional): \"Yes, I recall your name.\"\n    *   💡 코칭 포인트: \"know\"는 사실을 아는 것에 가깝고, \"remember\"는 기억을 떠올리는 뉘앙스입니다. 상대방이 \"Do you remember me?\"와 같은 뉘앙스로 물었을 때, \"remember\"를 쓰는 것이 더 자연스럽습니다. \"recall\"은 \"remember\"보다 좀 더 격식 있는 표현입니다.\n\n3.  ❌ 학습자 원문 (As Said): \"Yeah.\" (반복 사용)\n    *   ✅ 자연스러운 표현 (Natural): \"Yes.\" / \"That's right.\" / \"Exactly.\"\n    *   💎 비즈니스 표현 (Professional): \"Indeed.\" / \"Certainly.\"\n    *   💡 코칭 포인트: \"Yeah\"는 캐주얼한 대화에서 아주 흔하게 쓰이지만, 답변을 다양하게 하면 좀 더 유창하고 풍부하게 들립니다. 특히 비즈니스 환경에서는 \"Yes\"나 \"Indeed\"처럼 격식 있는 표현을 섞어 쓰는 것이 좋습니다.\n\n### **3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)**\n\n제공된 전화영어 전사 내용이 매우 짧고, [Student] 학습자님의 발화가 간결하여 이번 대화에서는 반복적인 문법 오류 패턴을 찾기 어려웠습니다. 현재까지의 발화는 문법적으로 정확했습니다. 따라서 이 섹션은 다음 수업에서 더 많은 대화 내용을 바탕으로 구체적인 피드백을 드릴 수 있도록 하겠습니다.\n\n### **4. 📗 어휘 확장 (Vocabulary Vault)**\n\n[Student] 학습자님의 비즈니스 환경과 자기계발 관심사를 고려하여 유용한 어휘를 선정했습니다.\n\n1.  **recall** /rɪˈkɔːl/ (v)\n    *   뜻: (정보 등을) 기억해내다, 상기하다\n    *   실전 예문: \"I can't **recall** the exact figures from last quarter's report.\"\n2.  **moment** /ˈmoʊmənt/ (n)\n    *   뜻: 순간, 잠시\n    *   실전 예문: \"Could you spare a **moment** to discuss the new project proposal?\"\n3.  **appreciate** /əˈpriːʃieɪt/ (v)\n    *   뜻: 감사하다, 진가를 알다\n    *   실전 예문: \"We deeply **appreciate** your continued support and trust in our company.\"\n4.  **investment** /ɪnˈvɛstmənt/ (n)\n    *   뜻: 투자, 투자액\n    *   실전 예문: \"Our company is looking for strategic **investment** opportunities in renewable energy.\"\n5.  **initiative** /ɪˈnɪʃiətɪv/ (n)\n    *   뜻: 주도권, 솔선수범, 진취성\n    *   실전 예문: \"Taking **initiative** in problem-solving is highly valued in our team.\"\n\n### **5. 📝 실전 복습 챌린지 (Practice)**\n\n오늘 배운 표현과 어휘를 활용하여 아래 상황에 맞게 영작해 보세요.\n\n1.  **상황:** 회의 시작 전, 전화 연결에 잠시 문제가 생겨 다른 사람들을 기다리게 했습니다. 이 상황에 대해 정중하게 사과하고 싶습니다.\n    *   영작: (My apologies...)\n    *   모범 답안: \"My apologies for the brief delay in connecting. We can start now.\"\n\n2.  **상황:** 새로운 팀원에게 이전에 함께 일했던 프로젝트에 대해 설명하며, 그 팀원이 그 프로젝트를 기억하는지 묻고 싶습니다.\n    *   영작: (Do you recall...?)\n    *   모범 답안: \"Do you recall the 'Project Alpha' we worked on last year?\"\n\n3.  **상황:** 동료가 급한 업무를 도와준 것에 대해 진심으로 감사하며, 그 동료의 적극적인 태도(initiative)를 칭찬하고 싶습니다.\n    *   영작: (I appreciate... and your initiative...)\n    *   모범 답안: \"I truly appreciate your help with the urgent task. Your initiative really made a difference.\"\n\n### **6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)**\n\n*   ✨ **Good Job**: \"Just a moment.\"\n    *   [Student] 학습자님께서 \"Just a moment.\"이라고 말씀하신 것은 아주 간결하고 정확하며, 원어민들이 일상에서 흔히 쓰는 자연스러운 표현입니다. 상황에 맞는 적절한 표현을 바로 사용하신 점이 훌륭했습니다!\n\n*   🚀 **내일의 한 문장**: 다음 수업 시작 시 튜터에게 오늘 배운 표현을 활용하여 던질 수 있는 대화 시작 문장입니다.\n    *   \"Good morning, Bessie! I recall we discussed some useful phrases last time. How are you today?\"\n\n---\n\n**[성과 지표]**\n\n*   **유창성 점수**: 7/10점\n*   **근거**: 제공된 대화 내용이 짧았음에도 불구하고, [Student] 학습자님은 자신의 의사를 명확하게 전달했습니다. 발음이나 억양에서 큰 어려움은 없었으며, 기본적인 의사소통에는 문제가 없었습니다. 다만, 일부 표현에서 좀 더 자연스럽거나 격식 있는 대안을 활용하면 유창성과 표현의 폭을 넓힐 수 있을 것으로 보입니다.\n*   **다음 수업 '원포인트 액션 플랜'**:\n    1.  **다양한 긍정 표현 연습**: \"Yeah\" 외에 \"Yes, that's right, exactly, indeed, certainly\" 등 다양한 긍정 표현을 의식적으로 사용해보기.\n    2.  **질문 확장 연습**: 단순한 답변을 넘어, 상대방의 질문에 덧붙여 자신의 의견이나 추가 질문을 하는 연습을 통해 대화를 더 풍성하게 이끌어보기.\n\n다음 수업도 기대됩니다! 화이팅!\n\n위 내용을 바탕으로:\n1. 먼저 오늘 수업에서 내가 틀렸거나 어색했던 표현을 하나 골라서, 관련된 상황을 영어로 질문해줘.\n2. 내가 영어로 대답하면, 자연스러운지 확인하고 더 나은 표현이 있으면 알려줘.\n3. 특히 \"반복 실수 패턴\"에서 지적된 부분을 집중적으로 연습시켜줘.\n4. 이런 식으로 오늘 배운 표현들을 하나씩 복습하자.\n5. 한국어 설명은 필요할 때만 간단히, 대화는 최대한 영어로 진행해줘.\n\n그럼 시작하자!";
+        function startReview(){navigator.clipboard.writeText(REVIEW_PROMPT).then(()=>{showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)}).catch(()=>{const t=document.createElement('textarea');t.value=REVIEW_PROMPT;document.body.appendChild(t);t.select();document.execCommand('copy');document.body.removeChild(t);showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)})}
+        function showToast(){const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500)}
+        function switchTab(n){document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',n==='feedback'?i===0:i===1));document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));document.getElementById('tab-'+n).classList.add('active')}
+    </script>
+</body>
+</html>
