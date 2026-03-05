@@ -369,6 +369,8 @@ def gemini_request(prompt, max_tokens=4096, temperature=0.3, timeout=120, system
     }
 
     # 요청 페이로드 구성
+    # Gemini 2.5 Flash는 thinking 모델이라 추론 토큰도 maxOutputTokens에 포함됨
+    # → 추론 토큰을 제한하여 실제 출력에 충분한 토큰을 확보
     payload = {
         "contents": [
             {"parts": [{"text": prompt}]}
@@ -376,6 +378,7 @@ def gemini_request(prompt, max_tokens=4096, temperature=0.3, timeout=120, system
         "generationConfig": {
             "maxOutputTokens": max_tokens,
             "temperature": temperature,
+            "thinkingConfig": {"thinkingBudget": 2048},
         },
     }
 
@@ -395,6 +398,8 @@ def gemini_request(prompt, max_tokens=4096, temperature=0.3, timeout=120, system
                 raise Exception(f"Gemini 응답 없음 (차단 사유: {block_reason})")
             if candidates[0].get("finishReason") == "SAFETY":
                 raise Exception("Gemini 안전 필터에 의해 응답 차단됨")
+            if candidates[0].get("finishReason") == "MAX_TOKENS":
+                print("⚠️ Gemini 출력이 토큰 한도에 도달하여 잘렸을 수 있습니다.")
             return candidates[0]["content"]["parts"][0]["text"]
         elif response.status_code == 429:
             wait = 30 * (attempt + 1)  # 30초, 60초, 90초
@@ -662,7 +667,7 @@ def generate_feedback(transcript):
 
     feedback = llm_request(
         prompt,
-        max_tokens=8192,
+        max_tokens=12288,
         temperature=0.5,
         timeout=120,
         system_msg=system_msg
