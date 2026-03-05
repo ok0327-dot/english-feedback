@@ -151,6 +151,28 @@ def get_drive_service(readonly=True):
     return build("drive", "v3", credentials=credentials)
 
 
+def extract_lesson_date(filename):
+    """
+    녹음 파일명에서 실제 수업 날짜를 추출하는 함수.
+    예: "전화영어_025180304_20260304080041.m4a" → datetime(2026, 3, 4)
+    파일명에서 YYYYMMDD 패턴(20XX로 시작하는 8자리)을 찾아 수업 날짜로 사용.
+    파싱 실패 시 None 반환 → 호출부에서 현재 시간으로 대체.
+    """
+    match = re.search(r'(20\d{2})(0[1-9]|1[0-2])(0[1-9]|[12]\d|3[01])', filename)
+    if match:
+        try:
+            lesson_date = datetime(
+                int(match.group(1)), int(match.group(2)), int(match.group(3)),
+                tzinfo=KST
+            )
+            print(f"📅 파일명에서 수업 날짜 추출: {lesson_date.strftime('%Y-%m-%d')}")
+            return lesson_date
+        except ValueError:
+            pass
+    print(f"⚠️ 파일명에서 날짜를 추출할 수 없어 현재 날짜를 사용합니다: {filename}")
+    return None
+
+
 def download_latest_recording(service):
     """
     Google Drive에서 "오늘"에 올라온 가장 최신 녹음 파일을 찾아 다운로드.
@@ -782,16 +804,17 @@ def _colorize_transcript(escaped_transcript):
     return result
 
 
-def deploy_review_page(page_html, date_str):
+def deploy_review_page(page_html, date_str, lesson_date=None):
     """
     HTML을 docs/ 폴더에 저장 → 인덱스 갱신 → git push → GitHub Pages에 자동 배포.
     비유: 학습지를 인쇄 → 게시판 목차 갱신 → 게시판에 핀으로 꽂기.
+    lesson_date가 주어지면 해당 날짜로 파일명 생성, 없으면 현재 날짜 사용.
     """
     print("🌐 복습 페이지 배포 중...")
     docs_dir = "docs"
     os.makedirs(docs_dir, exist_ok=True)
 
-    slug = datetime.now(KST).strftime("%Y-%m-%d")
+    slug = (lesson_date or datetime.now(KST)).strftime("%Y-%m-%d")
     filename = f"{slug}.html"
     filepath = os.path.join(docs_dir, filename)
 
@@ -1057,7 +1080,9 @@ def main():
         print("✅ 이미 처리 완료된 파일입니다. 중복 실행 방지로 종료합니다.")
         sys.exit(0)
 
-    date_str = now.strftime("%Y년 %m월 %d일")
+    # 파일명에서 실제 수업 날짜 추출 (동기화 지연으로 다른 날 처리될 때 대비)
+    lesson_date = extract_lesson_date(filename)
+    date_str = (lesson_date or now).strftime("%Y년 %m월 %d일")
 
     try:
         # ━━ [2단계] 음성 → 텍스트 (Groq Whisper) ━━
@@ -1075,7 +1100,7 @@ def main():
 
         # ━━ [5단계] 복습 페이지 생성 & 배포 ━━
         page_html = generate_review_page(transcript, feedback, filename, duration, date_str)
-        review_url = deploy_review_page(page_html, date_str)
+        review_url = deploy_review_page(page_html, date_str, lesson_date)
 
         # ━━ [6단계] 이메일 발송 ━━
         send_email(feedback, filename, duration, review_url)
