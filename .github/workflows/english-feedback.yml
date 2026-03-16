@@ -1,11 +1,9 @@
 name: 📚 English Lesson Feedback
 on:
   schedule:
-    # UTC 00:10 = KST 09:10 (월~금) — 메인 스케줄
+    # UTC 00:10 = KST 09:10 (월~금)
+    # ※ GitHub Actions 무료 cron은 2~3시간 지연 → 실제 실행 KST 11:30~12:00 경
     - cron: '10 0 * * 1-5'
-    # UTC 01:00 = KST 10:00 (월~금) — 백업 스케줄 (9:00 누락 대비)
-    - cron: '0 1 * * 1-5'
-    # ※ 중복 실행돼도 안전: 파일 처리 후 '완료' 폴더로 이동되므로 재처리 없음
 
   workflow_dispatch:
     inputs:
