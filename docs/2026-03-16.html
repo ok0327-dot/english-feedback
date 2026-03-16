@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전화영어 복습 - 2026년 03월 16일</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Noto Sans KR',sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.75;min-height:100vh}
+        .header{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);border-bottom:1px solid rgba(255,255,255,.06);padding:48px 24px 40px;text-align:center}
+        .header-date{font-size:13px;color:#94a3b8;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+        .header h1{font-size:28px;font-weight:700;color:#f1f5f9;margin-bottom:16px}
+        .header-meta{display:flex;justify-content:center;gap:24px;font-size:14px;color:#64748b}
+        .header-meta span{display:flex;align-items:center;gap:6px}
+        .cta-section{text-align:center;padding:40px 24px}
+        .cta-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:linear-gradient(135deg,#38bdf8,#818cf8);color:#fff;font-size:16px;font-weight:600;font-family:'Noto Sans KR',sans-serif;border:none;border-radius:50px;cursor:pointer;transition:all .3s;text-decoration:none;box-shadow:0 4px 24px rgba(56,189,248,.25)}
+        .cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(56,189,248,.35)}
+        .cta-btn svg{width:20px;height:20px}
+        .cta-sub{margin-top:12px;font-size:13px;color:#64748b}
+        .toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#38bdf8;padding:14px 28px;border-radius:12px;font-size:14px;font-weight:500;border:1px solid rgba(56,189,248,.2);box-shadow:0 8px 32px rgba(0,0,0,.4);opacity:0;transition:all .4s cubic-bezier(.16,1,.3,1);z-index:1000}
+        .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+        .container{max-width:720px;margin:0 auto;padding:0 24px 80px}
+        .tabs{display:flex;gap:4px;background:#1a1a24;padding:4px;border-radius:12px;margin-bottom:32px}
+        .tab{flex:1;padding:12px;text-align:center;font-size:14px;font-weight:500;color:#64748b;background:0 0;border:none;border-radius:8px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all .2s}
+        .tab.active{background:#262636;color:#f1f5f9}
+        .tab-content{display:none}.tab-content.active{display:block}
+        .feedback h2{font-size:18px;font-weight:700;color:#f1f5f9;margin:36px 0 16px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.06)}
+        .feedback h2:first-child{margin-top:0}
+        .feedback p{margin:8px 0;color:#cbd5e1}
+        .feedback .item{padding:6px 0 6px 16px;border-left:2px solid #334155;margin:6px 0;color:#cbd5e1}
+        .feedback .numbered{padding:8px 0 8px 16px;color:#cbd5e1}
+        .feedback .numbered strong{color:#38bdf8}
+        .feedback strong{color:#f1f5f9}
+        .feedback code{background:#1e293b;padding:2px 8px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#38bdf8}
+        .feedback table{width:100%;border-collapse:collapse;margin:12px 0}
+        .feedback th,.feedback td{padding:10px 14px;text-align:left;border-bottom:1px solid #262636}
+        .feedback th{color:#94a3b8;font-weight:500;font-size:13px}
+        .feedback td{color:#cbd5e1}
+        .arrow{color:#38bdf8;font-weight:700}
+        .transcript{background:#1a1a24;border-radius:12px;padding:28px;font-size:14px;line-height:2;color:#94a3b8;white-space:pre-wrap;word-break:break-word;font-family:'JetBrains Mono','Noto Sans KR',monospace}
+        .transcript .tutor{color:#38bdf8}
+        .transcript .student{color:#a78bfa}
+        @media(max-width:640px){.header{padding:32px 16px}.header h1{font-size:22px}.cta-btn{padding:14px 28px;font-size:15px}.container{padding:0 16px 60px}}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-date">2026년 03월 16일</div>
+        <h1>📚 전화영어 복습</h1>
+        <div class="header-meta">
+            <span>⏱ 19분 32초</span>
+            <span>🎙 전화영어_025180304_20260316080044.m4a</span>
+        </div>
+    </div>
+    <div class="cta-section">
+        <button class="cta-btn" onclick="startReview()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Gemini에서 복습 대화 시작하기
+        </button>
+        <div class="cta-sub">클릭하면 프롬프트가 복사되고 Gemini가 열립니다</div>
+    </div>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('feedback')">📋 AI 피드백</button>
+            <button class="tab" onclick="switchTab('transcript')">🎙 수업 전사</button>
+        </div>
+        <div id="tab-feedback" class="tab-content active">
+            <div class="feedback"><p>### 1. 📊 오늘의 대화 요약 (Summary)</p>
+<p>오늘의 대화는 주로 비즈니스 환경에서 Accountability와 호텔의 멤버십, 그리고 영어 수업의 진행에 관한 주제를 다뤘습니다. 특히, 호텔에서 제공하는 멤버십과 비즈니스에서 책임감의 중요성에 대해 토론하였습니다.</p>
+<br>
+<p>### 2. 💬 유창성 업그레이드 (Fluency & Natural Flow)</p>
+<div class="numbered"><strong>1.</strong> ❌ 학습자 원문: "On Sunday, I had a free time for myself."</div>
+<p>✅ 자연스러운 표현: "I had some free time on Sunday."</p>
+<p>💎 비즈니스 표현: "I had a bit of downtime on Sunday."</p>
+<p>💡 코칭 포인트: "free time"은 자연스러운 표현이지만, 비즈니스 환경에서는 조금 더 격식을 차린 표현을 사용하는 것이 좋습니다.</p>
+<br>
+<div class="numbered"><strong>2.</strong> ❌ 학습자 원문: "I went to swimming in at the luxury hotel pool"</div>
+<p>✅ 자연스러운 표현: "I went swimming at the luxury hotel pool"</p>
+<p>💎 비즈니스 표현: "I utilized the luxury hotel's pool facilities"</p>
+<p>💡 코칭 포인트: "in at"은 불필요한 단어이므로 생략하는 것이 좋습니다.</p>
+<br>
+<div class="numbered"><strong>3.</strong> ❌ 학습자 원문: "And some hotels sell their membership because if they don't have their customer in a hotel"</div>
+<p>✅ 자연스러운 표현: "Some hotels sell memberships when they don't have enough customers"</p>
+<p>💎 비즈니스 표현: "Hotels may offer memberships to attract more customers during off-peak periods"</p>
+<p>💡 코칭 포인트: 문장을簡潔하게 만들어 이해하기 쉽게 합니다.</p>
+<br>
+<p>### 3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)</p>
+<div class="item">❌ 원문: "On Sunday, I had a free time for myself.", "I went to swimming in at the luxury hotel pool", "And some hotels sell their membership because if they don't have their customer in a hotel"</div>
+<p>✅ 교정 예시: </p>
+<table>
+<tr><th>원문</th><th>교정</th></tr>
+<tr><td>On Sunday, I had a free time for myself.</td><td>On Sunday, I had some free time.</td></tr>
+<tr><td>I went to swimming in at the luxury hotel pool</td><td>I went swimming at the luxury hotel pool.</td></tr>
+<tr><td>And some hotels sell their membership because if they don't have their customer in a hotel</td><td>Some hotels sell memberships when they don't have enough customers.</td></tr>
+</table>
+<p>📌 핵심 규칙: 영어에서 시간이나 장소를 나타낼 때는 간결하고 명확한 표현을 사용합니다.</p>
+<p>🔁 따라 읽기: </p>
+<p>🗣️ "On Sunday, I had some free time."</p>
+<p>🗣️ "I went swimming at the luxury hotel pool."</p>
+<p>🗣️ "Some hotels sell memberships when they don't have enough customers."</p>
+<br>
+<p>### 4. 📗 어휘 확장 (Vocabulary Vault)</p>
+<div class="numbered"><strong>1.</strong> <strong>Accountability</strong> /ˌækaʊntəˈbɪlɪti/ (명사)</div>
+<p>뜻: 책임감</p>
+<p>실전 예문: "In business, accountability is crucial for success."</p>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>Membership</strong> /ˈmɛmbəʃɪp/ (명사)</div>
+<p>뜻: 회원권</p>
+<p>실전 예문: "The hotel offers a membership program for frequent guests."</p>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>Hospitality</strong> /hɒsˈpɪtəlɪti/ (명사)</div>
+<p>뜻: 접대</p>
+<p>실전 예문: "The company is known for its excellent hospitality towards clients."</p>
+<br>
+<div class="numbered"><strong>4.</strong> <strong>Convivial</strong> /kənˈvɪvɪəl/ (형용사)</div>
+<p>뜻: 상쾌한, 즐거운</p>
+<p>실전 예문: "The convivial atmosphere of the party made it a night to remember."</p>
+<br>
+<div class="numbered"><strong>5.</strong> <strong>Amiability</strong> /ˌæmɪəˈbɪlɪti/ (명사)</div>
+<p>뜻: 상냥함</p>
+<p>실전 예문: "Her amiability made her a beloved figure in the community."</p>
+<br>
+<p>### 5. 📝 실전 복습 챌린지 (Practice)</p>
+<div class="numbered"><strong>1.</strong> 당신이 호텔의 멤버십을 판매하는 책임자라면, 어떻게 고객을 유혹하여 회원가입을 하게 할 수 있을까요?</div>
+<p>모범 답안: "I would emphasize the exclusive benefits and discounts that come with membership, such as access to luxury facilities and priority service."</p>
+<br>
+<div class="numbered"><strong>2.</strong> 비즈니스 환경에서 책임감이 중요한 이유는 무엇일까요?</div>
+<p>모범 답안: "Accountability is crucial in business because it ensures that individuals and teams are responsible for their actions and outcomes, leading to increased trust and efficiency."</p>
+<br>
+<div class="numbered"><strong>3.</strong> 당신이 외국인 고객을 접대해야 한다면, 어떻게 하면 그들을 편안하게 느끼게 할 수 있을까요?</div>
+<p>모범 답안: "I would offer them a warm welcome, provide them with refreshments, and engage in conversation to make them feel at ease and valued."</p>
+<br>
+<p>### 6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)</p>
+<div class="item">✨ <strong>Good Job</strong>: "[Student]가 가장 잘 표현한 문장은 'I went swimming at the luxury hotel pool'입니다. 이 문장은 자연스럽고 명확하게 표현되어 있습니다."</div>
+<div class="item">🚀 <strong>내일의 한 문장</strong>: "What are some effective ways to promote hotel memberships to potential customers?"</div></div>
+        </div>
+        <div id="tab-transcript" class="tab-content">
+            <div class="transcript"><span class="tutor">[Tutor]</span> Hello, Joanna. Good morning.
+<span class="student">[Student]</span> Hi, Joey. How are you this morning?
+<span class="tutor">[Tutor]</span> Yes, it&#x27;s a nice Sunday night and Monday morning.
+<span class="student">[Student]</span> Yes. I&#x27;m doing great. Yeah. It&#x27;s a fresh day.
+<span class="tutor">[Tutor]</span> Fresh week? How was your weekend?
+<span class="student">[Student]</span> On Sunday, I had a free time for myself.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="student">[Student]</span> I went to swimming in at the luxury hotel pool because you know hotel my hometown has so many luxury hotel because that is popular tourist place so I had so many voucher to use the swimming pool So if I have time for myself, at that time I&#x27;m do swimming at the hotel.
+<span class="tutor">[Tutor]</span> That&#x27;s excellent. That&#x27;s a good idea too.
+<span class="student">[Student]</span> Yes, you&#x27;re right.
+<span class="tutor">[Tutor]</span> If I retire at that time, 
+<span class="student">[Student]</span> And I&#x27;m the, yeah, I&#x27;m the swimming at that way.
+<span class="tutor">[Tutor]</span> So that&#x27;s a nice way.
+<span class="student">[Student]</span> Okay.
+<span class="tutor">[Tutor]</span> I was just going to say that I was at an event yesterday at a luxury hotel near me.
+<span class="student">[Student]</span> And somebody noted that they have a pool.
+<span class="tutor">[Tutor]</span> So you just gave me an idea that I&#x27;m going to ask if I can use a pass to go swimming there.
+<span class="student">[Student]</span> Oh, yeah.
+<span class="tutor">[Tutor]</span> That&#x27;s a nice way.
+<span class="student">[Student]</span> Yeah. Very good idea. Thank you.
+<span class="tutor">[Tutor]</span> Yes. Okay.
+<span class="student">[Student]</span> And some hotels sell their membership because if they don&#x27;t have their customer in a hotel, at that time they sell some membership and it&#x27;s possible to live nearby that hotel.
+<span class="tutor">[Tutor]</span> So, yeah, that&#x27;s a nice way to find membership in a hotel.
+<span class="student">[Student]</span> Right.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="student">[Student]</span> And exactly, it&#x27;s about 15 minutes away from me, so.
+<span class="tutor">[Tutor]</span> Okay. Great. Great. All right. Let&#x27;s take a look at our book today.
+<span class="student">[Student]</span> Where are we?
+<span class="tutor">[Tutor]</span> 79.
+<span class="student">[Student]</span> We are on page 79.
+<span class="tutor">[Tutor]</span> Yes.
+<span class="student">[Student]</span> Okay. This is basic.
+<span class="tutor">[Tutor]</span> Can I read that?
+<span class="student">[Student]</span> Yes, absolutely.
+<span class="tutor">[Tutor]</span> The paragraph.
+<span class="student">[Student]</span> In business, accountability is one of highest quality. accountability involve tracking, measuring, and above all claim responsibility for performance of duty.
+<span class="tutor">[Tutor]</span> You must be able to explain what happened, why it happened, and how this result corresponds to your mission.
+<span class="student">[Student]</span> To add thinking and discuss discussion of business activities, business people have devised many tools such as spreadsheet and report formats.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="student">[Student]</span> Okay, I see.
+<span class="tutor">[Tutor]</span> That document is kind of insurance company. Sometimes they need to explain some explanation to the customer.
+<span class="student">[Student]</span> So accountability is similar.
+<span class="tutor">[Tutor]</span> accountability yes is when you just justify in a way you write down or you explain what you have been doing right yeah so it&#x27;s it&#x27;s a way to keep track of what we&#x27;re we&#x27;re doing whether we&#x27;re on business trip or not.
+<span class="student">[Student]</span> We are accountable for our work.
+<span class="tutor">[Tutor]</span> Yeah, but this document is not the contract document, right?
+<span class="student">[Student]</span> No, no. The report… 
+<span class="tutor">[Tutor]</span> Yeah that is kind of report explanation something to Exactly kind of their contract or some rule or some explanation etc right exactly okay yes good
+<span class="student">[Student]</span> all right so i think we are looking at writing a follow-up report part b right
+<span class="tutor">[Tutor]</span> Yes, we have some information table below.
+<span class="student">[Student]</span> But it&#x27;s not, right?
+<span class="tutor">[Tutor]</span> Yes.
+<span class="student">[Student]</span> Okay, pass and share your thoughts.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="student">[Student]</span> I also read that.
+<span class="tutor">[Tutor]</span> Write a follow-up report using RELAND&#x27;s notes.
+<span class="student">[Student]</span> Use all the key data as organized in the proper order according to the template.
+<span class="tutor">[Tutor]</span> Name, company, date, nature of business.
+<span class="student">[Student]</span> Nature of business?
+<span class="tutor">[Tutor]</span> Nature of the business.
+<span class="student">[Student]</span> What was the business about?
+<span class="tutor">[Tutor]</span> Exactly.
+<span class="student">[Student]</span> What was the... What was it about?
+<span class="tutor">[Tutor]</span> Yeah, purpose or nature. of the business.
+<span class="student">[Student]</span> Why that expression use the nature?
+<span class="tutor">[Tutor]</span> It&#x27;s a very typical expression. What&#x27;s the nature of your business? For example, is a question you will often hear at immigration when you cross the borders.
+<span class="student">[Student]</span> How about that question? What is nature of your life? Is it possible?
+<span class="tutor">[Tutor]</span> what is what is nature of your life of your life 
+<span class="student">[Student]</span> I didn&#x27;t hear the last word 
+<span class="tutor">[Tutor]</span> life 
+<span class="student">[Student]</span> life 
+<span class="tutor">[Tutor]</span> yeah 
+<span class="student">[Student]</span> it&#x27;s possible 
+<span class="tutor">[Tutor]</span> no 
+<span class="student">[Student]</span> we don&#x27;t 
+<span class="tutor">[Tutor]</span> usually use that no 
+<span class="student">[Student]</span> ah yes 
+<span class="tutor">[Tutor]</span> okay 
+<span class="student">[Student]</span> nature of your business is just very much 
+<span class="tutor">[Tutor]</span> what are you doing here 
+<span class="student">[Student]</span> what are you doing here 
+<span class="tutor">[Tutor]</span> yes 
+<span class="student">[Student]</span> what are you doing 
+<span class="tutor">[Tutor]</span> what is happening 
+<span class="student">[Student]</span> what are you doing 
+<span class="tutor">[Tutor]</span> yeah 
+<span class="student">[Student]</span> Okay, so if I change that question, what is your nature in this place?
+<span class="tutor">[Tutor]</span> What is the nature of your business?
+<span class="student">[Student]</span> We have to keep it together.
+<span class="tutor">[Tutor]</span> Yes, nature of business.
+<span class="student">[Student]</span> Okay, great.
+<span class="tutor">[Tutor]</span> Okay, so let&#x27;s take a look at what information we have to put together for this report.
+<span class="student">[Student]</span> Okay, made a report. Meeting partner. Okay, meeting partner. My teacher, Joanna.
+<span class="tutor">[Tutor]</span> Okay, meeting date and location today is your what just now 15 march monday and locations all lines
+<span class="student">[Student]</span> and meeting agenda is the english class yeah new english english class outcome
+<span class="tutor">[Tutor]</span> Of course. Above my ability to speak English, we can speak about accountability.
+<span class="student">[Student]</span> You&#x27;re right? Yeah, absolutely. Our meeting today, yes.
+<span class="tutor">[Tutor]</span> Yes, yes. Okay. Do you use a template to write trip reports?
+<span class="student">[Student]</span> Sometimes. Sometimes we use the template but there is no important template.
+<span class="tutor">[Tutor]</span> Okay, the template is not important. Yeah, in our company because long time ago we have a template.
+<span class="student">[Student]</span> But these days, every people use their template to freestyle, but just contains the question or important question.
+<span class="tutor">[Tutor]</span> Anyway.
+<span class="student">[Student]</span> So the content is more important than the template Got it Yeah Yes You right You right everyone can use whatever template whatever format they want as long as the
+<span class="tutor">[Tutor]</span> important information is there yeah make sense yeah you&#x27;re right information is
+<span class="student">[Student]</span> more important the necessary information is more important better than template
+<span class="tutor">[Tutor]</span> I like that
+<span class="student">[Student]</span> okay
+<span class="tutor">[Tutor]</span> okay
+<span class="student">[Student]</span> okay
+<span class="tutor">[Tutor]</span> so
+<span class="student">[Student]</span> let&#x27;s take a look
+<span class="tutor">[Tutor]</span> at the next page
+<span class="student">[Student]</span> next page
+<span class="tutor">[Tutor]</span> page 80
+<span class="student">[Student]</span> yes
+<span class="tutor">[Tutor]</span> I think that&#x27;s going to be our last
+<span class="student">[Student]</span> topic
+<span class="tutor">[Tutor]</span> yeah
+<span class="student">[Student]</span> this is the last topic
+<span class="tutor">[Tutor]</span> and I guess
+<span class="student">[Student]</span> this week we will finish our textbook
+<span class="tutor">[Tutor]</span> and continue. Today I will find some new textbook in my office.
+<span class="student">[Student]</span> Okay, so do you know what kind of textbook you&#x27;re looking for?
+<span class="tutor">[Tutor]</span> What kind? Maybe if I find their homepage, Carrot English, at the time I
+<span class="student">[Student]</span> I found some new textbook. But in my case, it is more easy to print out textbook because
+<span class="tutor">[Tutor]</span> it is more adaptable for me. So, first, it is similar to my ability to speak English
+<span class="student">[Student]</span> and it&#x27;s possible to print out the textbook.
+<span class="tutor">[Tutor]</span> So make sure to find out some new textbook.
+<span class="student">[Student]</span> So I can change it for you after today&#x27;s class
+<span class="tutor">[Tutor]</span> because there&#x27;s another one that follows this one.
+<span class="student">[Student]</span> This one is called Business Basics 1.2,
+<span class="tutor">[Tutor]</span> and then there&#x27;s another one that is 2.1 and 2.2.
+<span class="student">[Student]</span> so
+<span class="tutor">[Tutor]</span> there is the 2.2
+<span class="student">[Student]</span> the finish
+<span class="tutor">[Tutor]</span> okay I see
+<span class="student">[Student]</span> yes
+<span class="tutor">[Tutor]</span> I can change it for you
+<span class="student">[Student]</span> so that you have it ready
+<span class="tutor">[Tutor]</span> in your profile when
+<span class="student">[Student]</span> you want to print it
+<span class="tutor">[Tutor]</span> okay yeah that is
+<span class="student">[Student]</span> thank you so much
+<span class="tutor">[Tutor]</span> thank you for your timing
+<span class="student">[Student]</span> okay
+<span class="tutor">[Tutor]</span> alright
+<span class="student">[Student]</span> now let&#x27;s take a look
+<span class="tutor">[Tutor]</span> at this
+<span class="student">[Student]</span> last topic.
+<span class="tutor">[Tutor]</span> Before we go on this topic,
+<span class="student">[Student]</span> you mean you prepared the next textbook for me, right?
+<span class="tutor">[Tutor]</span> Exactly.
+<span class="student">[Student]</span> That is kind of the this textbook
+<span class="tutor">[Tutor]</span> is similar, this
+<span class="student">[Student]</span> textbook, right?
+<span class="tutor">[Tutor]</span> If you want to keep going with this,
+<span class="student">[Student]</span> absolutely. Yeah, we can
+<span class="tutor">[Tutor]</span> because there&#x27;s a similar one.
+<span class="student">[Student]</span> I see. It&#x27;s so nice.
+<span class="tutor">[Tutor]</span> Okay, good. Okay, let&#x27;s go to business.
+<span class="student">[Student]</span> All right.
+<span class="tutor">[Tutor]</span> Okay. The background, can I read that?
+<span class="student">[Student]</span> Absolutely.
+<span class="tutor">[Tutor]</span> Okay. Often doing business means receiving visitors and showing hospitality.
+<span class="student">[Student]</span> Hospitality.
+<span class="tutor">[Tutor]</span> Hospitality. You got it.
+<span class="student">[Student]</span> Yeah, lip sessions at the office are typically where you would offer your guest talking of your goodwill, such as a cup of hot tea or gift bag.
+<span class="tutor">[Tutor]</span> However, to show friendliness and ambitiously, on a more convivial and intimate level,
+<span class="student">[Student]</span> scale many business people take their counterparty out for a task meal
+<span class="tutor">[Tutor]</span> imagine that you will receive visit from three people each from different country
+<span class="student">[Student]</span> each person has as his or her own unique trait and preference
+<span class="tutor">[Tutor]</span> your goal is match
+<span class="student">[Student]</span> each person to the right restaurant for him or her
+<span class="tutor">[Tutor]</span> okay okay I understand there eight percent okay
+<span class="student">[Student]</span> are there any words that are strange or that we need to clear up
+<span class="tutor">[Tutor]</span> But maybe if you explain that word the time is
+<span class="student">[Student]</span> Time is... got it. Yeah, so I&#x27;ll find. Yeah
+<span class="tutor">[Tutor]</span> Okay, so the whole thing is basically saying
+<span class="student">[Student]</span> you want to be hospitable
+<span class="tutor">[Tutor]</span> so show hospitality to people
+<span class="student">[Student]</span> sometimes you&#x27;ll give them
+<span class="tutor">[Tutor]</span> a cup
+<span class="student">[Student]</span> you&#x27;ll offer them
+<span class="tutor">[Tutor]</span> coffee or tea
+<span class="student">[Student]</span> and sometimes if you want
+<span class="tutor">[Tutor]</span> to be even more friendly
+<span class="student">[Student]</span> you&#x27;re going to take them
+<span class="tutor">[Tutor]</span> out for a meal
+<span class="student">[Student]</span> that&#x27;s all it&#x27;s saying
+<span class="tutor">[Tutor]</span> yeah you&#x27;re right
+<span class="student">[Student]</span> so
+<span class="tutor">[Tutor]</span> let&#x27;s read
+<span class="student">[Student]</span> about each of the person.
+<span class="tutor">[Tutor]</span> Okay, I see.
+<span class="student">[Student]</span> But I think our time is limited,
+<span class="tutor">[Tutor]</span> so it&#x27;s better to ask to you the word.
+<span class="student">[Student]</span> Okay.
+<span class="tutor">[Tutor]</span> Whichever way.
+<span class="student">[Student]</span> Absolutely.
+<span class="tutor">[Tutor]</span> First line and second line.
+<span class="student">[Student]</span> Or third line.
+<span class="tutor">[Tutor]</span> The amiability.
+<span class="student">[Student]</span> Amiability?
+<span class="tutor">[Tutor]</span> amiability. What does it mean? Friendship.
+<span class="student">[Student]</span> Friendship.
+<span class="tutor">[Tutor]</span> And how about convivial? Is it a vivial?
+<span class="student">[Student]</span> It is also friendly, lively, enjoyable.
+<span class="tutor">[Tutor]</span> I see.
+<span class="student">[Student]</span> Okay.
+<span class="tutor">[Tutor]</span> Yes.
+<span class="student">[Student]</span> I understand.
+<span class="tutor">[Tutor]</span> Good.
+<span class="student">[Student]</span> Okay.
+<span class="tutor">[Tutor]</span> We&#x27;re back to the people.
+<span class="student">[Student]</span> Okay.
+<span class="tutor">[Tutor]</span> To the people.
+<span class="student">[Student]</span> The profile.
+<span class="tutor">[Tutor]</span> the name&#x27;s Ahim Whopper
+<span class="student">[Student]</span> the company Tech Park Inc.
+<span class="tutor">[Tutor]</span> the title team leader of scale
+<span class="student">[Student]</span> department a sales department
+<span class="tutor">[Tutor]</span> the age 33
+<span class="student">[Student]</span> he&#x27;s the German and he also social but
+<span class="tutor">[Tutor]</span> His character is social but conservative type.
+<span class="student">[Student]</span> Conservative.
+<span class="tutor">[Tutor]</span> Conservative, yeah.
+<span class="student">[Student]</span> Conservative.
+<span class="tutor">[Tutor]</span> Conservative.
+<span class="student">[Student]</span> Care about his art like the green salad.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="student">[Student]</span> Enjoy classic music.
+<span class="tutor">[Tutor]</span> Oh, love wine.
+<span class="student">[Student]</span> Maybe I think I invite him to a vegetable restaurant.
+<span class="tutor">[Tutor]</span> And the classic, yeah.
+<span class="student">[Student]</span> I think we have the restaurant choices on the next page.
+<span class="tutor">[Tutor]</span> Oh, next page.
+<span class="student">[Student]</span> Ah, yes.
+<span class="tutor">[Tutor]</span> Yes, yes, yes.
+<span class="student">[Student]</span> And read more.
+<span class="tutor">[Tutor]</span> The Oscar.
+<span class="student">[Student]</span> Karkina.
+<span class="tutor">[Tutor]</span> And her.
+<span class="student">[Student]</span> Oscar Karkina.
+<span class="tutor">[Tutor]</span> Maybe.
+<span class="student">[Student]</span> He.
+<span class="tutor">[Tutor]</span> She.
+<span class="student">[Student]</span> He.
+<span class="tutor">[Tutor]</span> Maybe a he.
+<span class="student">[Student]</span> Yeah.
+<span class="tutor">[Tutor]</span> He.
+<span class="student">[Student]</span> He.
+<span class="tutor">[Tutor]</span> His company.
+<span class="student">[Student]</span> His company is a semiconductor manufacturing company.
+<span class="tutor">[Tutor]</span> He is the director of the product development team.
+<span class="student">[Student]</span> His age is 52.
+<span class="tutor">[Tutor]</span> He is Russian and quite has a warm manner.
+<span class="student">[Student]</span> of different class and level. Tolerant means accepts.
+<span class="tutor">[Tutor]</span> Enjoy heart meal like the seafood and fish dish and like the drink cocktail.
+<span class="student">[Student]</span> cocktail. Okay, okay.
+<span class="tutor">[Tutor]</span> Maybe it&#x27;s better to finish this class and continue to the next.
+<span class="student">[Student]</span> Yeah, maybe the time is only limited one minute.
+<span class="tutor">[Tutor]</span> Yes, yes.
+<span class="student">[Student]</span> Okay, so we will finish
+<span class="tutor">[Tutor]</span> this book tomorrow
+<span class="student">[Student]</span> and then I will add the next book for you
+<span class="tutor">[Tutor]</span> so you have it
+<span class="student">[Student]</span> you have it ready.
+<span class="tutor">[Tutor]</span> Okay, I see.
+<span class="student">[Student]</span> Okay. Thank you so much, teacher.
+<span class="tutor">[Tutor]</span> Makes sense. Thank you so much,
+<span class="student">[Student]</span> Joey.
+<span class="tutor">[Tutor]</span> Have a great day. Have a great day, too. Bye-bye.
+<span class="student">[Student]</span> Bye.</div>
+        </div>
+    </div>
+    <div class="toast" id="toast">✅ 프롬프트가 복사되었습니다!</div>
+    <script>
+        const REVIEW_PROMPT="너는 나의 영어 회화 복습 파트너야. 오늘 내 전화영어 수업 내용을 기반으로 대화하면서 복습을 도와줘.\n\n[오늘 수업 전사 내용]\n[Tutor] Hello, Joanna. Good morning.\n[Student] Hi, Joey. How are you this morning?\n[Tutor] Yes, it's a nice Sunday night and Monday morning.\n[Student] Yes. I'm doing great. Yeah. It's a fresh day.\n[Tutor] Fresh week? How was your weekend?\n[Student] On Sunday, I had a free time for myself.\n[Tutor] Okay.\n[Student] I went to swimming in at the luxury hotel pool because you know hotel my hometown has so many luxury hotel because that is popular tourist place so I had so many voucher to use the swimming pool So if I have time for myself, at that time I'm do swimming at the hotel.\n[Tutor] That's excellent. That's a good idea too.\n[Student] Yes, you're right.\n[Tutor] If I retire at that time, \n[Student] And I'm the, yeah, I'm the swimming at that way.\n[Tutor] So that's a nice way.\n[Student] Okay.\n[Tutor] I was just going to say that I was at an event yesterday at a luxury hotel near me.\n[Student] And somebody noted that they have a pool.\n[Tutor] So you just gave me an idea that I'm going to ask if I can use a pass to go swimming there.\n[Student] Oh, yeah.\n[Tutor] That's a nice way.\n[Student] Yeah. Very good idea. Thank you.\n[Tutor] Yes. Okay.\n[Student] And some hotels sell their membership because if they don't have their customer in a hotel, at that time they sell some membership and it's possible to live nearby that hotel.\n[Tutor] So, yeah, that's a nice way to find membership in a hotel.\n[Student] Right.\n[Tutor] Okay.\n[Student] And exactly, it's about 15 minutes away from me, so.\n[Tutor] Okay. Great. Great. All right. Let's take a look at our book today.\n[Student] Where are we?\n[Tutor] 79.\n[Student] We are on page 79.\n[Tutor] Yes.\n[Student] Okay. This is basic.\n[Tutor] Can I read that?\n[Student] Yes, absolutely.\n[Tutor] The paragraph.\n[Student] In business, accountability is one of highest quality. accountability involve tracking, measuring, and above all claim responsibility for performance of duty.\n[Tutor] You must be able to explain what happened, why it happened, and how this result corresponds to your mission.\n[Student] To add thinking and discuss discussion of business activities, business people have devised many tools such as spreadsheet and report formats.\n[Tutor] Okay.\n[Student] Okay, I see.\n[Tutor] That document is kind of insurance company. Sometimes they need to explain some explanation to the customer.\n[Student] So accountability is similar.\n[Tutor] accountability yes is when you just justify in a way you write down or you explain what you have been doing right yeah so it's it's a way to keep track of what we're we're doing whether we're on business trip or not.\n[Student] We are accountable for our work.\n[Tutor] Yeah, but this document is not the contract document, right?\n[Student] No, no. The report… \n[Tutor] Yeah that is kind of report explanation something to Exactly kind of their contract or some rule or some explanation etc right exactly okay yes good\n[Student] all right so i think we are looking at writing a follow-up report part b right\n[Tutor] Yes, we have some information table below.\n[Student] But it's not, right?\n[Tutor] Yes.\n[Student] Okay, pass and share your thoughts.\n[Tutor] Okay.\n[Student] I also read that.\n[Tutor] Write a follow-up report using RELAND's notes.\n[Student] Use all the key data as organized in the proper order according to the template.\n[Tutor] Name, company, date, nature of business.\n[Student] Nature of business?\n[Tutor] Nature of the business.\n[Student] What was the business about?\n[Tutor] Exactly.\n[Student] What was the... What was it about?\n[Tutor] Yeah, purpose or nature. of the business.\n[Student] Why that expression use the nature?\n[Tutor] It's a very typical expression. What's the nature of your business? For example, is a question you will often hear at immigration when you cross the borders.\n[Student] How about that question? What is nature of your life? Is it possible?\n[Tutor] what is what is nature of your life of your life \n[Student] I didn't hear the last word \n[Tutor] life \n[Student] life \n[Tutor] yeah \n[Student] it's possible \n[Tutor] no \n[Student] we don't \n[Tutor] usually use that no \n[Student] ah yes \n[Tutor] okay \n[Student] nature of your business is just very much \n[Tutor] what are you doing here \n[Student] what are you doing here \n[Tutor] yes \n[Student] what are you doing \n[Tutor] what is happening \n[Student] what are you doing \n[Tutor] yeah \n[Student] Okay, so if I change that question, what is your nature in this place?\n[Tutor] What is the nature of your business?\n[Student] We have to keep it together.\n[Tutor] Yes, nature of business.\n[Student] Okay, great.\n[Tutor] Okay, so let's take a look at what information we have to put together for this report.\n[Student] Okay, made a report. Meeting partner. Okay, meeting partner. My teacher, Joanna.\n[Tutor] Okay, meeting date and location today is your what just now 15 march monday and locations all lines\n[Student] and meeting agenda is the english class yeah new english english class outcome\n[Tutor] Of course. Above my ability to speak English, we can speak about accountability.\n[Student] You're right? Yeah, absolutely. Our meeting today, yes.\n[Tutor] Yes, yes. Okay. Do you use a template to write trip reports?\n[Student] Sometimes. Sometimes we use the template but there is no important template.\n[Tutor] Okay, the template is not important. Yeah, in our company because long time ago we have a template.\n[Student] But these days, every people use their template to freestyle, but just contains the question or important question.\n[Tutor] Anyway.\n[Student] So the content is more important than the template Got it Yeah Yes You right You right everyone can use whatever template whatever format they want as long as the\n[Tutor] important information is there yeah make sense yeah you're right information is\n[Student] more important the necessary information is more important better than template\n[Tutor] I like that\n[Student] okay\n[Tutor] okay\n[Student] okay\n[Tutor] so\n[Student] let's take a look\n[Tutor] at the next page\n[Student] next page\n[Tutor] page 80\n[Student] yes\n[Tutor] I think that's going to be our last\n[Student] topic\n[Tutor] yeah\n[Student] this is the last topic\n[Tutor] and I guess\n[Student] this week we will finish our textbook\n[Tutor] and continue. Today I will find some new textbook in my office.\n[Student] Okay, so do you know what kind of textbook you're looking for?\n[Tutor] What kind? Maybe if I find their homepage, Carrot English, at the time I\n[Student] I found some new textbook. But in my case, it is more easy to print out textbook because\n[Tutor] it is more adaptable for me. So, first, it is similar to my ability to speak English\n[Student] and it's possible to print out the textbook.\n[Tutor] So make sure to find out some new textbook.\n[Student] So I can change it for you after today's class\n[Tutor] because there's another one that follows this one.\n[Student] This one is called Business Basics 1.2,\n[Tutor] and then there's another one that is 2.1 and 2.2.\n[Student] so\n[Tutor] there is the 2.2\n[Student] the finish\n[Tutor] okay I see\n[Student] yes\n[Tutor] I can change it for you\n[Student] so that you have it ready\n[Tutor] in your profile when\n[Student] you want to print it\n[Tutor] okay yeah that is\n[Student] thank you so much\n[Tutor] thank you for your timing\n[Student] okay\n[Tutor] alright\n[Student] now let's take a look\n[Tutor] at this\n[Student] last topic.\n[Tutor] Before we go on this topic,\n[Student] you mean you prepared the next textbook for me, right?\n[Tutor] Exactly.\n[Student] That is kind of the this textbook\n[Tutor] is similar, this\n[Student] textbook, right?\n[Tutor] If you want to keep going with this,\n[Student] absolutely. Yeah, we can\n[Tutor] because there's a similar one.\n[Student] I see. It's so nice.\n[Tutor] Okay, good. Okay, let's go to business.\n[Student] All right.\n[Tutor] Okay. The background, can I read that?\n[Student] Absolutely.\n[Tutor] Okay. Often doing business means receiving visitors and showing hospitality.\n[Student] Hospitality.\n[Tutor] Hospitality. You got it.\n[Student] Yeah, lip sessions at the office are typically where you would offer your guest talking of your goodwill, such as a cup of hot tea or gift bag.\n[Tutor] However, to show friendliness and ambitiously, on a more convivial and intimate level,\n[Student] scale many business people take their counterparty out for a task meal\n[Tutor] imagine that you will receive visit from three people each from different country\n[Student] each person has as his or her own unique trait and preference\n[Tutor] your goal is match\n[Student] each person to the right restaurant for him or her\n[Tutor] okay okay I understand there eight percent okay\n[Student] are there any words that are strange or that we need to clear up\n[Tutor] But maybe if you explain that word the time is\n[Student] Time is... got it. Yeah, so I'll find. Yeah\n[Tutor] Okay, so the whole thing is basically saying\n[Student] you want to be hospitable\n[Tutor] so show hospitality to people\n[Student] sometimes you'll give them\n[Tutor] a cup\n[Student] you'll offer them\n[Tutor] coffee or tea\n[Student] and sometimes if you want\n[Tutor] to be even more friendly\n[Student] you're going to take them\n[Tutor] out for a meal\n[Student] that's all it's saying\n[Tutor] yeah you're right\n[Student] so\n[Tutor] let's read\n[Student] about each of the person.\n[Tutor] Okay, I see.\n[Student] But I think our time is limited,\n[Tutor] so it's better to ask to you the word.\n[Student] Okay.\n[Tutor] Whichever way.\n[Student] Absolutely.\n[Tutor] First line and second line.\n[Student] Or third line.\n[Tutor] The amiability.\n[Student] Amiability?\n[Tutor] amiability. What does it mean? Friendship.\n[Student] Friendship.\n[Tutor] And how about convivial? Is it a vivial?\n[Student] It is also friendly, lively, enjoyable.\n[Tutor] I see.\n[Student] Okay.\n[Tutor] Yes.\n[Student] I understand.\n[Tutor] Good.\n[Student] Okay.\n[Tutor] We're back to the people.\n[Student] Okay.\n[Tutor] To the people.\n[Student] The profile.\n[Tutor] the name's Ahim Whopper\n[Student] the company Tech Park Inc.\n[Tutor] the title team leader of scale\n[Student] department a sales department\n[Tutor] the age 33\n[Student] he's the German and he also social but\n[Tutor] His character is social but conservative type.\n[Student] Conservative.\n[Tutor] Conservative, yeah.\n[Student] Conservative.\n[Tutor] Conservative.\n[Student] Care about his art like the green salad.\n[Tutor] Okay.\n[Student] Enjoy classic music.\n[Tutor] Oh, love wine.\n[Student] Maybe I think I invite him to a vegetable restaurant.\n[Tutor] And the classic, yeah.\n[Student] I think we have the restaurant choices on the next page.\n[Tutor] Oh, next page.\n[Student] Ah, yes.\n[Tutor] Yes, yes, yes.\n[Student] And read more.\n[Tutor] The Oscar.\n[Student] Karkina.\n[Tutor] And her.\n[Student] Oscar Karkina.\n[Tutor] Maybe.\n[Student] He.\n[Tutor] She.\n[Student] He.\n[Tutor] Maybe a he.\n[Student] Yeah.\n[Tutor] He.\n[Student] He.\n[Tutor] His company.\n[Student] His company is a semiconductor manufacturing company.\n[Tutor] He is the director of the product development team.\n[Student] His age is 52.\n[Tutor] He is Russian and quite has a warm manner.\n[Student] of different class and level. Tolerant means accepts.\n[Tutor] Enjoy heart meal like the seafood and fish dish and like the drink cocktail.\n[Student] cocktail. Okay, okay.\n[Tutor] Maybe it's better to finish this class and continue to the next.\n[Student] Yeah, maybe the time is only limited one minute.\n[Tutor] Yes, yes.\n[Student] Okay, so we will finish\n[Tutor] this book tomorrow\n[Student] and then I will add the next book for you\n[Tutor] so you have it\n[Student] you have it ready.\n[Tutor] Okay, I see.\n[Student] Okay. Thank you so much, teacher.\n[Tutor] Makes sense. Thank you so much,\n[Student] Joey.\n[Tutor] Have a great day. Have a great day, too. Bye-bye.\n[Student] Bye.\n\n[AI 피드백]\n### 1. 📊 오늘의 대화 요약 (Summary)\n오늘의 대화는 주로 비즈니스 환경에서 Accountability와 호텔의 멤버십, 그리고 영어 수업의 진행에 관한 주제를 다뤘습니다. 특히, 호텔에서 제공하는 멤버십과 비즈니스에서 책임감의 중요성에 대해 토론하였습니다.\n\n### 2. 💬 유창성 업그레이드 (Fluency & Natural Flow)\n1. ❌ 학습자 원문: \"On Sunday, I had a free time for myself.\"\n✅ 자연스러운 표현: \"I had some free time on Sunday.\"\n💎 비즈니스 표현: \"I had a bit of downtime on Sunday.\"\n💡 코칭 포인트: \"free time\"은 자연스러운 표현이지만, 비즈니스 환경에서는 조금 더 격식을 차린 표현을 사용하는 것이 좋습니다.\n\n2. ❌ 학습자 원문: \"I went to swimming in at the luxury hotel pool\"\n✅ 자연스러운 표현: \"I went swimming at the luxury hotel pool\"\n💎 비즈니스 표현: \"I utilized the luxury hotel's pool facilities\"\n💡 코칭 포인트: \"in at\"은 불필요한 단어이므로 생략하는 것이 좋습니다.\n\n3. ❌ 학습자 원문: \"And some hotels sell their membership because if they don't have their customer in a hotel\"\n✅ 자연스러운 표현: \"Some hotels sell memberships when they don't have enough customers\"\n💎 비즈니스 표현: \"Hotels may offer memberships to attract more customers during off-peak periods\"\n💡 코칭 포인트: 문장을簡潔하게 만들어 이해하기 쉽게 합니다.\n\n### 3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)\n- ❌ 원문: \"On Sunday, I had a free time for myself.\", \"I went to swimming in at the luxury hotel pool\", \"And some hotels sell their membership because if they don't have their customer in a hotel\"\n✅ 교정 예시: \n| 원문 | 교정 |\n| --- | --- |\n| On Sunday, I had a free time for myself. | On Sunday, I had some free time. |\n| I went to swimming in at the luxury hotel pool | I went swimming at the luxury hotel pool. |\n| And some hotels sell their membership because if they don't have their customer in a hotel | Some hotels sell memberships when they don't have enough customers. |\n📌 핵심 규칙: 영어에서 시간이나 장소를 나타낼 때는 간결하고 명확한 표현을 사용합니다.\n🔁 따라 읽기: \n🗣️ \"On Sunday, I had some free time.\"\n🗣️ \"I went swimming at the luxury hotel pool.\"\n🗣️ \"Some hotels sell memberships when they don't have enough customers.\"\n\n### 4. 📗 어휘 확장 (Vocabulary Vault)\n1. **Accountability** /ˌækaʊntəˈbɪlɪti/ (명사)\n뜻: 책임감\n실전 예문: \"In business, accountability is crucial for success.\"\n\n2. **Membership** /ˈmɛmbəʃɪp/ (명사)\n뜻: 회원권\n실전 예문: \"The hotel offers a membership program for frequent guests.\"\n\n3. **Hospitality** /hɒsˈpɪtəlɪti/ (명사)\n뜻: 접대\n실전 예문: \"The company is known for its excellent hospitality towards clients.\"\n\n4. **Convivial** /kənˈvɪvɪəl/ (형용사)\n뜻: 상쾌한, 즐거운\n실전 예문: \"The convivial atmosphere of the party made it a night to remember.\"\n\n5. **Amiability** /ˌæmɪəˈbɪlɪti/ (명사)\n뜻: 상냥함\n실전 예문: \"Her amiability made her a beloved figure in the community.\"\n\n### 5. 📝 실전 복습 챌린지 (Practice)\n1. 당신이 호텔의 멤버십을 판매하는 책임자라면, 어떻게 고객을 유혹하여 회원가입을 하게 할 수 있을까요?\n모범 답안: \"I would emphasize the exclusive benefits and discounts that come with membership, such as access to luxury facilities and priority service.\"\n\n2. 비즈니스 환경에서 책임감이 중요한 이유는 무엇일까요?\n모범 답안: \"Accountability is crucial in business because it ensures that individuals and teams are responsible for their actions and outcomes, leading to increased trust and efficiency.\"\n\n3. 당신이 외국인 고객을 접대해야 한다면, 어떻게 하면 그들을 편안하게 느끼게 할 수 있을까요?\n모범 답안: \"I would offer them a warm welcome, provide them with refreshments, and engage in conversation to make them feel at ease and valued.\"\n\n### 6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)\n- ✨ **Good Job**: \"[Student]가 가장 잘 표현한 문장은 'I went swimming at the luxury hotel pool'입니다. 이 문장은 자연스럽고 명확하게 표현되어 있습니다.\"\n- 🚀 **내일의 한 문장**: \"What are some effective ways to promote hotel memberships to potential customers?\"\n\n위 내용을 바탕으로:\n1. 먼저 오늘 수업에서 내가 틀렸거나 어색했던 표현을 하나 골라서, 관련된 상황을 영어로 질문해줘.\n2. 내가 영어로 대답하면, 자연스러운지 확인하고 더 나은 표현이 있으면 알려줘.\n3. 특히 \"반복 실수 패턴\"에서 지적된 부분을 집중적으로 연습시켜줘.\n4. 이런 식으로 오늘 배운 표현들을 하나씩 복습하자.\n5. 한국어 설명은 필요할 때만 간단히, 대화는 최대한 영어로 진행해줘.\n\n그럼 시작하자!";
+        function startReview(){navigator.clipboard.writeText(REVIEW_PROMPT).then(()=>{showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)}).catch(()=>{const t=document.createElement('textarea');t.value=REVIEW_PROMPT;document.body.appendChild(t);t.select();document.execCommand('copy');document.body.removeChild(t);showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)})}
+        function showToast(){const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500)}
+        function switchTab(n){document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',n==='feedback'?i===0:i===1));document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));document.getElementById('tab-'+n).classList.add('active')}
+    </script>
+</body>
+</html>
