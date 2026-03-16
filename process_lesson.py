@@ -229,40 +229,61 @@ def download_latest_recording(service):
 # ║  비유: 택배 수령 대장에 "이 택배는 이미 처리함" 도장 찍는 것            ║
 # ║                                                                        ║
 # ║  왜 필요?                                                               ║
-# ║  - 백업 스케줄(10:00)이 메인(9:30) 이후 또 실행될 때 중복 방지          ║
-# ║  - FolderSync가 같은 파일을 재업로드해도 중복 방지                      ║
+# ║  - FolderSync가 같은 파일을 새 ID로 재업로드해도 중복 방지              ║
 # ║  - '완료' 폴더 이동이 실패해도 중복 방지                                ║
 # ║                                                                        ║
 # ║  작동 원리:                                                             ║
-# ║  docs/processed.txt에 처리한 파일 ID를 한 줄씩 기록.                    ║
-# ║  다음 실행 시 이 파일을 읽어서, 이미 기록된 ID면 건너뜀.                ║
+# ║  docs/processed.txt에 "파일ID|파일명" 형태로 한 줄씩 기록.              ║
+# ║  다음 실행 시 파일 ID와 파일명 모두 확인 → 둘 중 하나만 일치해도 건너뜀.║
 # ║  이 파일은 git push로 GitHub에 저장되므로 다음 실행에서도 유지됨.       ║
 # ╚══════════════════════════════════════════════════════════════════════════╝
 
 PROCESSED_FILE = "docs/processed.txt"
 
 
-def load_processed_ids():
-    """처리 완료된 파일 ID 목록을 읽어옴. 파일이 없으면 빈 세트 반환."""
+def load_processed_records():
+    """
+    처리 완료 기록을 읽어옴. (file_ids 세트, filenames 세트) 튜플 반환.
+    기존 형식(ID만)과 새 형식(ID|파일명) 모두 호환.
+    """
+    ids = set()
+    names = set()
     if not os.path.exists(PROCESSED_FILE):
-        return set()
+        return ids, names
     with open(PROCESSED_FILE, "r") as f:
-        return set(line.strip() for line in f if line.strip())
+        for line in f:
+            line = line.strip()
+            if not line:
+                continue
+            if "|" in line:
+                file_id, filename = line.split("|", 1)
+                ids.add(file_id.strip())
+                names.add(filename.strip())
+            else:
+                ids.add(line)
+    return ids, names
 
 
-def save_processed_id(file_id):
-    """처리 완료된 파일 ID를 기록에 추가."""
+def save_processed_id(file_id, filename=""):
+    """처리 완료된 파일 ID와 파일명을 기록에 추가."""
     os.makedirs(os.path.dirname(PROCESSED_FILE), exist_ok=True)
     with open(PROCESSED_FILE, "a") as f:
-        f.write(f"{file_id}\n")
-    print(f"📋 처리 완료 기록 추가: {file_id}")
+        f.write(f"{file_id}|{filename}\n")
+    print(f"📋 처리 완료 기록 추가: {file_id} ({filename})")
 
 
-def is_already_processed(file_id):
-    """이 파일이 이미 처리되었는지 확인."""
-    processed = load_processed_ids()
-    if file_id in processed:
+def is_already_processed(file_id, filename=""):
+    """
+    이 파일이 이미 처리되었는지 확인.
+    파일 ID 또는 파일명 중 하나라도 일치하면 중복으로 판단.
+    → FolderSync가 같은 파일을 새 ID로 재업로드해도 파일명으로 잡아냄.
+    """
+    processed_ids, processed_names = load_processed_records()
+    if file_id in processed_ids:
         print(f"ℹ️ 이미 처리된 파일입니다 (ID: {file_id[:20]}...). 건너뜁니다.")
+        return True
+    if filename and filename in processed_names:
+        print(f"ℹ️ 이미 처리된 파일명입니다 ({filename}). 건너뜁니다.")
         return True
     return False
 
@@ -1083,8 +1104,8 @@ def main():
         print("ℹ️ 오늘 녹음 파일이 없습니다. 수업이 없는 날이거나 동기화 지연일 수 있습니다.")
         sys.exit(0)
 
-    # ━━ [중복 체크] 이미 처리한 파일인지 확인 ━━
-    if is_already_processed(file_id):
+    # ━━ [중복 체크] 이미 처리한 파일인지 확인 (ID + 파일명 이중 체크) ━━
+    if is_already_processed(file_id, filename):
         print("✅ 이미 처리 완료된 파일입니다. 중복 실행 방지로 종료합니다.")
         sys.exit(0)
 
@@ -1117,7 +1138,7 @@ def main():
         move_to_done_folder(file_id)
 
         # ━━ [8단계] 처리 완료 기록 저장 ━━
-        save_processed_id(file_id)
+        save_processed_id(file_id, filename)
         commit_processed_record()
 
         print("\n" + "=" * 50)
