@@ -173,16 +173,16 @@ def extract_lesson_date(filename):
     return None
 
 
-def download_latest_recording(service):
+def find_todays_recordings(service):
     """
-    Google Drive에서 "오늘"에 올라온 가장 최신 녹음 파일을 찾아 다운로드.
-    파일이 없으면 (None, None, None)을 돌려줌 → 프로그램이 조용히 종료됨.
+    Google Drive에서 "오늘"에 올라온 녹음 파일 목록을 검색.
+    파일이 없으면 빈 리스트 반환 → 프로그램이 조용히 종료됨.
+    비유: 창고에서 오늘 도착한 택배 목록을 확인하는 것 (아직 꺼내진 않음).
     """
     today = datetime.now(KST).strftime("%Y-%m-%d")
     today_start = f"{today}T00:00:00+09:00"
 
     # 검색 조건: 오늘 생성 + 휴지통 아님 + 오디오 파일
-    # 비유: "오늘 들어온 택배 중 음성 파일만 찾아주세요"
     query_parts = [
         f"createdTime >= '{today_start}'",
         "trashed = false",
@@ -194,34 +194,39 @@ def download_latest_recording(service):
     results = service.files().list(
         q=" and ".join(query_parts),
         orderBy="createdTime desc",   # 최신순 정렬
-        pageSize=5,
+        pageSize=10,
         fields="files(id, name, mimeType, createdTime)",
     ).execute()
 
     files = results.get("files", [])
-    if not files:
-        return None, None, None  # 파일 없음 → 메인 함수에서 조용히 종료
+    if files:
+        print(f"📁 파일 {len(files)}개 발견:")
+        for f in files:
+            print(f"   - {f['name']} ({f['createdTime']})")
+    return [(f["name"], f["id"]) for f in files]
 
-    target = files[0]  # 가장 최근 파일
-    print(f"📁 파일 발견: {target['name']} ({target['createdTime']})")
 
-    # 파일 다운로드 (비유: 택배를 트럭에 싣는 과정)
-    request = service.files().get_media(fileId=target["id"])
+def download_recording(service, file_id, filename):
+    """
+    Google Drive에서 파일 1개를 다운로드. 로컬 경로 반환.
+    비유: 택배 1개를 창고에서 꺼내 트럭에 싣는 것.
+    """
+    print(f"📥 다운로드 중: {filename}")
+    request = service.files().get_media(fileId=file_id)
     buffer = io.BytesIO()
     downloader = MediaIoBaseDownload(buffer, request)
     done = False
     while not done:
         _, done = downloader.next_chunk()
 
-    # 임시 파일로 저장
     buffer.seek(0)
-    ext = os.path.splitext(target["name"])[1] or ".m4a"
+    ext = os.path.splitext(filename)[1] or ".m4a"
     local_path = f"/tmp/recording{ext}"
     with open(local_path, "wb") as f:
         f.write(buffer.read())
 
     print(f"✅ 다운로드 완료: {local_path} ({os.path.getsize(local_path)/1024/1024:.1f}MB)")
-    return local_path, target["name"], target["id"]
+    return local_path
 
 
 # ╔══════════════════════════════════════════════════════════════════════════╗
@@ -422,7 +427,13 @@ def gemini_request(prompt, max_tokens=4096, temperature=0.3, timeout=120, system
                 raise Exception("Gemini 안전 필터에 의해 응답 차단됨")
             if candidates[0].get("finishReason") == "MAX_TOKENS":
                 print("⚠️ Gemini 출력이 토큰 한도에 도달하여 잘렸을 수 있습니다.")
-            return candidates[0]["content"]["parts"][0]["text"]
+            # thinking 모델은 parts에 사고 과정(thought=True)과 실제 응답이 분리됨
+            # → 실제 응답(non-thought) 파트만 추출
+            parts = candidates[0]["content"]["parts"]
+            for part in reversed(parts):
+                if not part.get("thought", False):
+                    return part["text"]
+            return parts[-1]["text"]  # fallback
         elif response.status_code == 429:
             wait = 30 * (attempt + 1)  # 30초, 60초, 90초
             print(f"⏳ Gemini 속도 제한 (429). {wait}초 대기 후 재시도... ({attempt+1}/3)")
@@ -1068,11 +1079,11 @@ def _markdown_to_html(md_text):
     return result
 
 
-def send_email(feedback, filename, duration, review_url):
+def send_email(feedback, filename, duration, review_url, date_str=None):
     """Gmail SMTP로 피드백 이메일 발송. 텍스트+HTML 두 버전 포함."""
     print(f"📧 이메일 발송 중... → {RECIPIENT_EMAIL}")
 
-    today = datetime.now(KST).strftime("%Y년 %m월 %d일")
+    today = date_str or datetime.now(KST).strftime("%Y년 %m월 %d일")
     duration_min = int(duration // 60)
     duration_sec = int(duration % 60)
 
@@ -1185,67 +1196,86 @@ def main():
     print(f"📅 {now.strftime('%Y-%m-%d %H:%M KST')}")
     print("=" * 50)
 
-    # ━━ [1단계] Google Drive에서 녹음 파일 다운로드 ━━
+    # ━━ [1단계] Google Drive에서 오늘 녹음 파일 목록 검색 ━━
     service = get_drive_service()
-    audio_path, filename, file_id = download_latest_recording(service)
+    recordings = find_todays_recordings(service)
 
-    # 파일 없으면 조용히 종료 (exit 0 = 에러 아님 = 초록 체크마크)
-    if not audio_path:
+    if not recordings:
         print("ℹ️ 오늘 녹음 파일이 없습니다. 수업이 없는 날이거나 동기화 지연일 수 있습니다.")
         sys.exit(0)
 
-    # ━━ [중복 체크] 이미 처리한 파일인지 확인 (ID + 파일명 이중 체크) ━━
-    if is_already_processed(file_id, filename):
-        print("✅ 이미 처리 완료된 파일입니다. 중복 실행 방지로 종료합니다.")
-        sys.exit(0)
+    processed_count = 0
+    error_count = 0
 
-    # 파일명에서 실제 수업 날짜 추출 (동기화 지연으로 다른 날 처리될 때 대비)
-    lesson_date = extract_lesson_date(filename)
-    date_str = (lesson_date or now).strftime("%Y년 %m월 %d일")
+    for filename, file_id in recordings:
+        # ━━ [중복 체크] 이미 처리한 파일인지 확인 (ID + 파일명 이중 체크) ━━
+        if is_already_processed(file_id, filename):
+            continue
 
-    try:
-        # ━━ [2단계] 음성 → 텍스트 (Groq Whisper) ━━
-        transcript_raw, duration, segments = transcribe_audio(audio_path)
-        if not transcript_raw.strip():
-            print("❌ 전사 결과가 비어있습니다.")
-            sys.exit(0)
-        print(f"\n📝 원본 전사 (첫 200자):\n{transcript_raw[:200]}...\n")
+        lesson_date = extract_lesson_date(filename)
+        date_str = (lesson_date or now).strftime("%Y년 %m월 %d일")
+        audio_path = None
 
-        # ━━ [3단계] 전사 보정 (화자 분리 + 오인식 수정) ━━
-        transcript = clean_transcript(transcript_raw, segments)
+        try:
+            # ━━ 다운로드 ━━
+            audio_path = download_recording(service, file_id, filename)
 
-        # ━━ [3.5단계] 화자 라벨 검증 (Tutor↔Student 뒤바뀜 방지) ━━
-        transcript = verify_speaker_labels(transcript)
+            # ━━ [2단계] 음성 → 텍스트 (Groq Whisper) ━━
+            transcript_raw, duration, segments = transcribe_audio(audio_path)
+            if not transcript_raw.strip():
+                print(f"❌ 전사 결과가 비어있습니다: {filename}")
+                continue
+            print(f"\n📝 원본 전사 (첫 200자):\n{transcript_raw[:200]}...\n")
 
-        # ━━ [4단계] AI 피드백 생성 ━━
-        feedback = generate_feedback(transcript)
+            # ━━ [3단계] 전사 보정 (화자 분리 + 오인식 수정) ━━
+            transcript = clean_transcript(transcript_raw, segments)
 
-        # ━━ [4.5단계] 피드백 품질 검토 (인용 정확성, 화자 혼동, 누락 보완) ━━
-        feedback = review_feedback(transcript, feedback)
+            # ━━ [3.5단계] 화자 라벨 검증 (Tutor↔Student 뒤바뀜 방지) ━━
+            transcript = verify_speaker_labels(transcript)
 
-        # ━━ [5단계] 복습 페이지 생성 & 배포 ━━
-        page_html = generate_review_page(transcript, feedback, filename, duration, date_str)
-        review_url = deploy_review_page(page_html, date_str, lesson_date)
+            # ━━ [4단계] AI 피드백 생성 ━━
+            feedback = generate_feedback(transcript)
 
-        # ━━ [6단계] 이메일 발송 ━━
-        send_email(feedback, filename, duration, review_url)
+            # ━━ [4.5단계] 피드백 품질 검토 (인용 정확성, 화자 혼동, 누락 보완) ━━
+            feedback = review_feedback(transcript, feedback)
 
-        # ━━ [7단계] 완료 파일 이동 ━━
-        move_to_done_folder(file_id)
+            # ━━ [5단계] 복습 페이지 생성 & 배포 ━━
+            page_html = generate_review_page(transcript, feedback, filename, duration, date_str)
+            review_url = deploy_review_page(page_html, date_str, lesson_date)
 
-        # ━━ [8단계] 처리 완료 기록 저장 ━━
-        save_processed_id(file_id, filename)
-        commit_processed_record()
+            # ━━ [6단계] 이메일 발송 ━━
+            send_email(feedback, filename, duration, review_url, date_str)
 
-        print("\n" + "=" * 50)
-        print("✅ 모든 과정이 완료되었습니다!")
-        print(f"🌐 복습 페이지: {review_url}")
-        print("=" * 50)
+            # ━━ [7단계] 완료 파일 이동 ━━
+            move_to_done_folder(file_id)
 
-    finally:
-        # 임시 녹음 파일 삭제 (에러가 나도 반드시 실행)
-        if audio_path and os.path.exists(audio_path):
-            os.remove(audio_path)
+            # ━━ [8단계] 처리 완료 기록 저장 ━━
+            save_processed_id(file_id, filename)
+            commit_processed_record()
+
+            processed_count += 1
+            print(f"\n✅ 처리 완료: {filename}")
+            print(f"🌐 복습 페이지: {review_url}")
+
+        except Exception as e:
+            error_count += 1
+            print(f"❌ 파일 처리 실패 ({filename}): {e}")
+            continue
+
+        finally:
+            if audio_path and os.path.exists(audio_path):
+                os.remove(audio_path)
+
+    # ━━ 결과 요약 ━━
+    print("\n" + "=" * 50)
+    if processed_count > 0:
+        print(f"✅ 총 {processed_count}개 파일 처리 완료!")
+    elif error_count > 0:
+        print(f"❌ {error_count}개 파일 처리 실패")
+        sys.exit(1)
+    else:
+        print("ℹ️ 새로 처리할 파일이 없습니다.")
+    print("=" * 50)
 
 
 # ┌─────────────────────────────────────────────────────────────────────────┐
