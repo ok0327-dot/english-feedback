@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전화영어 복습 - 2026년 03월 18일</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Noto Sans KR',sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.75;min-height:100vh}
+        .header{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);border-bottom:1px solid rgba(255,255,255,.06);padding:48px 24px 40px;text-align:center}
+        .header-date{font-size:13px;color:#94a3b8;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+        .header h1{font-size:28px;font-weight:700;color:#f1f5f9;margin-bottom:16px}
+        .header-meta{display:flex;justify-content:center;gap:24px;font-size:14px;color:#64748b}
+        .header-meta span{display:flex;align-items:center;gap:6px}
+        .cta-section{text-align:center;padding:40px 24px}
+        .cta-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:linear-gradient(135deg,#38bdf8,#818cf8);color:#fff;font-size:16px;font-weight:600;font-family:'Noto Sans KR',sans-serif;border:none;border-radius:50px;cursor:pointer;transition:all .3s;text-decoration:none;box-shadow:0 4px 24px rgba(56,189,248,.25)}
+        .cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(56,189,248,.35)}
+        .cta-btn svg{width:20px;height:20px}
+        .cta-sub{margin-top:12px;font-size:13px;color:#64748b}
+        .toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#38bdf8;padding:14px 28px;border-radius:12px;font-size:14px;font-weight:500;border:1px solid rgba(56,189,248,.2);box-shadow:0 8px 32px rgba(0,0,0,.4);opacity:0;transition:all .4s cubic-bezier(.16,1,.3,1);z-index:1000}
+        .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+        .container{max-width:720px;margin:0 auto;padding:0 24px 80px}
+        .tabs{display:flex;gap:4px;background:#1a1a24;padding:4px;border-radius:12px;margin-bottom:32px}
+        .tab{flex:1;padding:12px;text-align:center;font-size:14px;font-weight:500;color:#64748b;background:0 0;border:none;border-radius:8px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all .2s}
+        .tab.active{background:#262636;color:#f1f5f9}
+        .tab-content{display:none}.tab-content.active{display:block}
+        .feedback h2{font-size:18px;font-weight:700;color:#f1f5f9;margin:36px 0 16px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.06)}
+        .feedback h2:first-child{margin-top:0}
+        .feedback p{margin:8px 0;color:#cbd5e1}
+        .feedback .item{padding:6px 0 6px 16px;border-left:2px solid #334155;margin:6px 0;color:#cbd5e1}
+        .feedback .numbered{padding:8px 0 8px 16px;color:#cbd5e1}
+        .feedback .numbered strong{color:#38bdf8}
+        .feedback strong{color:#f1f5f9}
+        .feedback code{background:#1e293b;padding:2px 8px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#38bdf8}
+        .feedback table{width:100%;border-collapse:collapse;margin:12px 0}
+        .feedback th,.feedback td{padding:10px 14px;text-align:left;border-bottom:1px solid #262636}
+        .feedback th{color:#94a3b8;font-weight:500;font-size:13px}
+        .feedback td{color:#cbd5e1}
+        .arrow{color:#38bdf8;font-weight:700}
+        .transcript{background:#1a1a24;border-radius:12px;padding:28px;font-size:14px;line-height:2;color:#94a3b8;white-space:pre-wrap;word-break:break-word;font-family:'JetBrains Mono','Noto Sans KR',monospace}
+        .transcript .tutor{color:#38bdf8}
+        .transcript .student{color:#a78bfa}
+        @media(max-width:640px){.header{padding:32px 16px}.header h1{font-size:22px}.cta-btn{padding:14px 28px;font-size:15px}.container{padding:0 16px 60px}}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-date">2026년 03월 18일</div>
+        <h1>📚 전화영어 복습</h1>
+        <div class="header-meta">
+            <span>⏱ 19분 35초</span>
+            <span>🎙 전화영어_025180304_20260318080023.m4a</span>
+        </div>
+    </div>
+    <div class="cta-section">
+        <button class="cta-btn" onclick="startReview()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Gemini에서 복습 대화 시작하기
+        </button>
+        <div class="cta-sub">클릭하면 프롬프트가 복사되고 Gemini가 열립니다</div>
+    </div>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('feedback')">📋 AI 피드백</button>
+            <button class="tab" onclick="switchTab('transcript')">🎙 수업 전사</button>
+        </div>
+        <div id="tab-feedback" class="tab-content active">
+            <div class="feedback"><p>안녕하세요, Joey님! Belle 코치입니다.</p>
+<br>
+<p>오늘도 즐거운 대화 나누셨네요! 새로운 텍스트북 없이 자유롭게 대화를 이끌어가려는 적극적인 모습과 AI 공부에 대한 깊은 관심이 인상 깊었습니다. 특히 질문 만들기에 대한 고민을 직접 이야기하며 개선하려는 태도에서 영어를 향한 뜨거운 열정이 느껴졌어요.</p>
+<br>
+<br>
+<p><strong>1. 📊 오늘의 대화 요약 (Summary)</strong></p>
+<br>
+<p>오늘은 새로운 교재 없이 자유 대화로 수업을 진행했습니다. Joey님의 AI 공부와 늦게 잠드는 습관, 그리고 튜터의 근무 스케줄과 캐나다의 날씨 변화에 대해 이야기했습니다. 특히 영어 질문을 만드는 '나쁜 습관'에 대해 스스로 인지하고 개선하려는 노력을 함께 나누며 효과적인 질문 형식에 대해 집중적으로 연습했습니다.</p>
+<br>
+<br>
+<p><strong>2. 💬 유창성 업그레이드 (Fluency & Natural Flow)</strong></p>
+<br>
+<p>Joey님이 의미는 잘 전달했지만, 원어민들이 더 자연스럽게 쓰는 표현들을 짚어드릴게요.</p>
+<br>
+<table>
+<tr><th>구분</th><th>❌ 학습자 원문 (As Said)</th><th>✅ 자연스러운 표현 (Natural)</th><th>💎 비즈니스 표현 (Professional)</th><th>💡 코칭 포인트</th></tr>
+<tr><td>:---</td><td>:---</td><td>:---</td><td>:---</td><td>:---</td></tr>
+<tr><td><strong>1</strong></td><td>So it is possible to print out tomorrow or Friday.</td><td>Can I print it out tomorrow or Friday?</td><td>Would it be possible to print it out tomorrow or Friday?</td><td>'Is it possible to ~?'도 맞지만, 'Can I ~?'는 허락이나 가능성을 물을 때 훨씬 더 일상적이고 자연스럽습니다.</td></tr>
+<tr><td><strong>2</strong></td><td>So yeah, I need to some change the schedule, falling asleep.</td><td>So I need to change my sleep schedule.</td><td>Therefore, I must adjust my sleep routine.</td><td>'some change the schedule'은 어색해요. 'change the schedule' 또는 'change my schedule'이 자연스럽고, 'falling asleep' 대신 'sleep schedule'로 명확하게 표현할 수 있습니다.</td></tr>
+<tr><td><strong>3</strong></td><td>How many times you teach English, the online or the offline?</td><td>How often do you teach English, online or offline?</td><td>What is your teaching frequency for online and offline classes?</td><td>'How many times'는 횟수를 셀 때 쓰지만, '얼마나 자주'라는 빈도를 물을 때는 'How often'이 훨씬 자연스럽습니다. 'the'는 필요하지 않습니다.</td></tr>
+</table>
+<br>
+<br>
+<p><strong>3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)</strong></p>
+<br>
+<p>Joey님, 오늘 대화에서 <strong>관사 (a/an/the) 및 소유격</strong> 사용에 대한 혼동이 반복적으로 나타났습니다. 특히 특정 대상을 지칭할 때 'the'를 빠뜨리거나, 일반적인 명사에 'a'를 붙이지 않는 경우, 그리고 신체 부위 표현 시 소유격을 사용하지 않는 경우가 있었어요.</p>
+<br>
+<table>
+<tr><th>❌ 원문 (As Said)</th><th>✅ 교정 예시 (Corrected)</th></tr>
+<tr><td>:---</td><td>:---</td></tr>
+<tr><td>These days I fell asleep at <strong>late time</strong> because I studied AI.</td><td>These days I fell asleep at <strong>a late time</strong> because I studied AI.</td></tr>
+<tr><td>So usually I close <strong>the eye</strong> if I have time. I'm close <strong>the eye</strong>.</td><td>So usually I close <strong>my eyes</strong> if I have time. I close <strong>my eyes</strong>.</td></tr>
+<tr><td>So when I quit <strong>the job</strong>, I feel <strong>heart</strong> to change my routines.</td><td>So when I quit <strong>the job</strong>, I found it <strong>hard</strong> to change my routines.</td></tr>
+</table>
+<br>
+<p>📌 <strong>핵심 규칙:</strong> 명사가 셀 수 있는 단수 명사일 때는 'a/an'을 붙이고, 특정 대상을 가리킬 때는 'the'를 사용합니다. 신체 부위는 보통 'my/your'와 같은 소유격을 사용합니다. 또한, 'feel heart'는 'find it hard' 또는 'feel it is hard'로 표현해야 자연스럽습니다.</p>
+<br>
+<p>🔁 <strong>따라 읽기:</strong></p>
+<p>🗣️ "These days I fell asleep at <strong>a late time</strong> because I studied AI."</p>
+<p>🗣️ "So usually I close <strong>my eyes</strong> if I have time."</p>
+<p>🗣️ "So when I quit <strong>the job</strong>, I found it <strong>hard</strong> to change my routines."</p>
+<br>
+<br>
+<p><strong>4. 📗 어휘 확장 (Vocabulary Vault)</strong></p>
+<br>
+<p>학습자님의 비즈니스 환경과 자기계발 관심사를 고려한 유용한 단어들입니다.</p>
+<br>
+<div class="numbered"><strong>1.</strong>  <strong>routine</strong> /ruːˈtiːn/ (명사)</div>
+<p>    *   뜻: 일상적인 일, 정해진 순서, 판에 박힌 일</p>
+<p>    *   실전 예문: Establishing a clear <strong>routine</strong> helps improve productivity and time management.</p>
+<div class="numbered"><strong>2.</strong>  <strong>platform</strong> /ˈplæt.fɔːrm/ (명사)</div>
+<p>    *   뜻: (온라인) 플랫폼, 기반, 발판</p>
+<p>    *   실전 예문: Our company is exploring new digital <strong>platforms</strong> to expand our market reach.</p>
+<div class="numbered"><strong>3.</strong>  <strong>mild</strong> /maɪld/ (형용사)</div>
+<p>    *   뜻: 온화한, 가벼운, 순한</p>
+<p>    *   실전 예문: Vancouver is known for its <strong>mild</strong> winters compared to other Canadian cities.</p>
+<div class="numbered"><strong>4.</strong>  <strong>shift worker</strong> /ʃɪft ˈwɜːr.kər/ (명사)</div>
+<p>    *   뜻: 교대 근무자</p>
+<p>    *   실전 예문: As a former <strong>shift worker</strong>, my wife understands the challenges of irregular hours.</p>
+<div class="numbered"><strong>5.</strong>  <strong>adjust</strong> /əˈdʒʌst/ (동사)</div>
+<p>    *   뜻: 조절하다, 적응하다, 조정하다</p>
+<p>    *   실전 예문: We may need to <strong>adjust</strong> our investment strategy based on the latest market trends.</p>
+<br>
+<br>
+<p><strong>5. 📝 실전 복습 챌린지 (Practice)</strong></p>
+<br>
+<p>오늘 배운 표현과 문법을 활용하여 영작해 보세요.</p>
+<br>
+<div class="numbered"><strong>1.</strong>  <strong>[쉬운 문제]</strong></div>
+<p>    *   <strong>상황:</strong> 당신은 요즘 매일 밤 늦게까지 AI를 공부하고 있습니다.</p>
+<p>    *   <strong>영작:</strong> 요즘 저는 매일 밤 늦게까지 AI를 공부하고 있습니다.</p>
+<p>    *   <strong>모범 답안:</strong> These days, I'm studying AI late every night.</p>
+<div class="numbered"><strong>2.</strong>  <strong>[중간 문제]</strong></div>
+<p>    *   <strong>상황:</strong> 당신은 늦게 잠드는 습관 때문에 수면 스케줄을 바꿔야 할 필요를 느낍니다.</p>
+<p>    *   <strong>영작:</strong> 늦게 잠들어서, 저는 수면 스케줄을 바꿔야 해요.</p>
+<p>    *   <strong>모범 답안:</strong> Because I go to bed late, I need to change my sleep schedule.</p>
+<div class="numbered"><strong>3.</strong>  <strong>[어려운 문제]</strong></div>
+<p>    *   <strong>상황:</strong> 당신은 동료에게 그들이 주말에 영화를 얼마나 자주 보는지 묻고 싶습니다.</p>
+<p>    *   <strong>영작:</strong> 주말에 영화를 얼마나 자주 보세요?</p>
+<p>    *   <strong>모범 답안:</strong> How often do you watch movies on weekends?</p>
+<br>
+<br>
+<p><strong>6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)</strong></p>
+<br>
+<p>✨ <strong>Good Job</strong>: "So usually your student is Korean, right? Do you have some other nationality student?"</p>
+<p>이 문장은 질문의 흐름이 아주 자연스러웠고, 'right?'를 붙여 확인하는 방식도 좋았습니다. 비록 'other nationality student'에서 관사 오류가 있었지만, 전체적인 의사소통에는 전혀 문제가 없었고, 궁금한 점을 명확하게 표현하는 능력이 돋보였습니다!</p>
+<br>
+<p>🚀 <strong>내일의 한 문장</strong>: 다음 수업 시작 시, 튜터에게 오늘 배운 표현을 활용하여 이렇게 질문해 보세요.</p>
+<p>"How often do you teach English on weekends?"</p>
+<br>
+<br>
+<p><strong>[성과 지표]</strong></p>
+<br>
+<p><strong>유창성 점수: 7/10점</strong></p>
+<br>
+<p><strong>근거:</strong> Joey님은 다양한 주제에 대해 막힘없이 자신의 의견을 표현하려는 의지가 매우 강합니다. 문장이 다소 길어지거나 복잡해질 때 어색한 표현이나 문법적 오류가 나타나기도 하지만, 대화의 흐름을 주도하고 유지하는 능력이 뛰어납니다. 특히 스스로의 '나쁜 습관'을 인지하고 개선하려는 적극적인 태도는 유창성 향상에 큰 도움이 될 것입니다.</p>
+<br>
+<p><strong>다음 수업 '원포인트 액션 플랜':</strong></p>
+<p><strong>"질문 만들 때 '동사-주어' 순서 의식적으로 연습하기"</strong></p>
+<p>오늘 스스로 질문 만들기에 대한 고민을 나누셨죠. 다음 수업에서는 질문을 할 때, 특히 'be동사'나 '조동사'가 있는 문장에서 <strong>동사가 주어 앞으로 오는 패턴</strong>을 의식적으로 연습해 보세요. 예를 들어, "Is it...?", "Do you...?", "Can I...?" 와 같이요. 의식적인 연습이 습관으로 이어질 거예요!</p></div>
+        </div>
+        <div id="tab-transcript" class="tab-content">
+            <div class="transcript"><span class="student">[Student]</span> Hello, hello teacher.
+<span class="tutor">[Tutor]</span> Yeah, hi, this is Belle calling from Carrot English.
+<span class="student">[Student]</span> Yes, you&#x27;re right. Nice to meet you, teacher. I&#x27;m Joey.
+<span class="tutor">[Tutor]</span> Yeah, we&#x27;ve met before.
+<span class="student">[Student]</span> I see. Every Wednesday and Friday, yeah, we will meet, right?
+<span class="tutor">[Tutor]</span> Yeah, yeah, we usually meet.
+<span class="student">[Student]</span> Yeah, and I know your name also. Belle, right?
+<span class="tutor">[Tutor]</span> Yes.
+<span class="tutor">[Tutor]</span> Okay, good.
+<span class="tutor">[Tutor]</span> And so it looks like you moved on to the new textbook.
+<span class="student">[Student]</span> Oh, you&#x27;re right, but I didn&#x27;t find some new textbook.
+<span class="student">[Student]</span> So it is possible to print out tomorrow or Friday.
+<span class="student">[Student]</span> So is it possible to free talk? Because I don&#x27;t have a textbook.
+<span class="tutor">[Tutor]</span> Okay, yeah, you can do a free talk here.
+<span class="tutor">[Tutor]</span> Any topic you wanted to discuss?
+<span class="student">[Student]</span> Yeah, I think it&#x27;s okay.
+<span class="student">[Student]</span> How about your day?
+<span class="student">[Student]</span> Yeah, nowadays, do you have some special things in your life?
+<span class="tutor">[Tutor]</span> No, just kind of working and teaching so far.
+<span class="tutor">[Tutor]</span> Weather&#x27;s been kind of rainy.
+<span class="student">[Student]</span> Kind of rainy, I see.
+<span class="tutor">[Tutor]</span> Yeah, a little.
+<span class="tutor">[Tutor]</span> And how about you?
+<span class="tutor">[Tutor]</span> How was your weekend?
+<span class="student">[Student]</span> These days I fell asleep at late time because I studied AI.
+<span class="student">[Student]</span> So every time, every day I&#x27;m falling asleep late, almost 2 a.m.
+<span class="student">[Student]</span> So every time I&#x27;m a little tired, yeah, it is a little problem.
+<span class="student">[Student]</span> So yeah, I need to some change the schedule, falling asleep.
+<span class="student">[Student]</span> Yeah.
+<span class="tutor">[Tutor]</span> Oh, yeah, 2 a.m. is pretty late.
+<span class="tutor">[Tutor]</span> And what time do you have to get up for work or get up in the morning?
+<span class="student">[Student]</span> These days, I&#x27;m interested in the AI.
+<span class="student">[Student]</span> Yeah, so maybe I make a report to use the AI,
+<span class="student">[Student]</span> but these days, I&#x27;m focused on the GPU
+<span class="student">[Student]</span> because in the online, it is possible to borrow GPU
+<span class="student">[Student]</span> and try to study to AI.
+<span class="student">[Student]</span> some image or some clip, movie clip or some document. So I try to that.
+<span class="tutor">[Tutor]</span> Okay, usually just kind of studying or staying up studying.
+<span class="student">[Student]</span> That is my not my study. That is AI study and usually we use the so many AI like the
+<span class="student">[Student]</span> chat GPT or
+<span class="student">[Student]</span> Claude or
+<span class="student">[Student]</span> Gemini, etc.
+<span class="student">[Student]</span> But it is
+<span class="student">[Student]</span> this is the big
+<span class="student">[Student]</span> platform. So I
+<span class="student">[Student]</span> wanted to
+<span class="student">[Student]</span> make my local
+<span class="student">[Student]</span> AI. So
+<span class="student">[Student]</span> I follow the GPU
+<span class="student">[Student]</span> and then I try to
+<span class="student">[Student]</span> study and
+<span class="student">[Student]</span> I try to make my
+<span class="student">[Student]</span> local AI.
+<span class="student">[Student]</span> So I don&#x27;t know it is have a good quality or not but I&#x27;m interested in and I&#x27;m focused on the study AI.
+<span class="student">[Student]</span> So these day I&#x27;m every day I&#x27;m sleep a little late time.
+<span class="student">[Student]</span> Yeah, it is a little problem. Every day I my eye is a little sick.
+<span class="student">[Student]</span> So usually I close the eye if I have time. I&#x27;m close the eye.
+<span class="tutor">[Tutor]</span> Okay, do you have to get up early in the mornings?
+<span class="student">[Student]</span> 7 a.m. or 7:40. It is not early, but I&#x27;m a little tired. Yes, I get up at 7:30, but
+<span class="student">[Student]</span> today I got up at 7 o&#x27;clock.
+<span class="student">[Student]</span> Yes.
+<span class="tutor">[Tutor]</span> Okay, yeah, a little bit early.
+<span class="student">[Student]</span> Yeah, a little bit early.
+<span class="student">[Student]</span> How about you?
+<span class="student">[Student]</span> How many times you teach English,
+<span class="student">[Student]</span> the online or the offline?
+<span class="tutor">[Tutor]</span> Well, because, yeah, the time zone difference.
+<span class="tutor">[Tutor]</span> So it&#x27;s my afternoon.
+<span class="tutor">[Tutor]</span> So I get usually the day for free and then the afternoon teaching.
+<span class="student">[Student]</span> This class is the last class in your routine or not?
+<span class="tutor">[Tutor]</span> First class.
+<span class="student">[Student]</span> Oh, first class.
+<span class="student">[Student]</span> Yes, it&#x27;s good.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="tutor">[Tutor]</span> So it&#x27;s nice. I have the mornings and afternoon and then later. Okay, I see.
+<span class="student">[Student]</span> So usually your student is Korean, right?
+<span class="student">[Student]</span> Do you have some other nationality student?
+<span class="student">[Student]</span> The Japan or China or...
+<span class="tutor">[Tutor]</span> Well, right now with this program with Carrot English, it&#x27;s mostly it&#x27;s Korean students.
+<span class="student">[Student]</span> Ah, yes, yes. You&#x27;re right.
+<span class="student">[Student]</span> And you use the platform, the DG platform is the only one through Carrot English, right?
+<span class="tutor">[Tutor]</span> Yeah, this one that I&#x27;m using, yeah.
+<span class="student">[Student]</span> Ah, yes, okay, I see. It&#x27;s good.
+<span class="tutor">[Tutor]</span> Okay, I see. But yeah, and with the time zone difference too, so in Canada we have the time
+<span class="tutor">[Tutor]</span> zone change. Yeah.
+<span class="student">[Student]</span> What time now in your country? 4 p.m. 4 p.m. Yeah, that is nice time to
+<span class="student">[Student]</span> outside, go to outside. And these days, the Canada also coming the spring or not? Yeah.
+<span class="tutor">[Tutor]</span> Yeah, it&#x27;s starting to become springtime.
+<span class="student">[Student]</span> What degree now, these days?
+<span class="tutor">[Tutor]</span> In Vancouver, 11 degrees.
+<span class="student">[Student]</span> 11? It&#x27;s similar in Korea.
+<span class="student">[Student]</span> Yeah, our city is similar.
+<span class="student">[Student]</span> 10 or between 12, 13.
+<span class="student">[Student]</span> So when was the winter time? The temperature is so different but
+<span class="student">[Student]</span> spring is similar and coming speed is similar.
+<span class="tutor">[Tutor]</span> Although winter in Vancouver is very mild, so it&#x27;s not not very cold.
+<span class="student">[Student]</span> Oh, I see. Vancouver is located in the south, right?
+<span class="tutor">[Tutor]</span> Probably the most, yeah, on the border.
+<span class="student">[Student]</span> On the border.
+<span class="student">[Student]</span> Teacher, I have a little bad habit.
+<span class="student">[Student]</span> For example, if I make a question in English, at that time, I just say something,
+<span class="student">[Student]</span> and then I just say right or not.
+<span class="student">[Student]</span> So how about the correct this expression?
+<span class="student">[Student]</span> For example, the Canada located in the south area,
+<span class="student">[Student]</span> but I wanted to change the
+<span class="student">[Student]</span> question.
+<span class="student">[Student]</span> So usually we do
+<span class="student">[Student]</span> or some have first.
+<span class="student">[Student]</span> So how can I change the
+<span class="student">[Student]</span> normal life routine
+<span class="student">[Student]</span> English,
+<span class="student">[Student]</span> so the question form?
+<span class="student">[Student]</span> Is Canada located in the south? Is Canada...
+<span class="student">[Student]</span> I have some bad habit.
+<span class="student">[Student]</span> Just say some common sentence
+<span class="student">[Student]</span> and then ask some right or not.
+<span class="student">[Student]</span> So that is bad habit.
+<span class="student">[Student]</span> I change the verb.
+<span class="student">[Student]</span> And yes, okay, is... Yeah, so usually switch the verb, the be verb or the have or the question verb. So,
+<span class="student">[Student]</span> yeah, so the Canada is becoming spring. Is can... Is it becoming spring in Canada? Is it Canada
+<span class="student">[Student]</span> coming spring? Or to Canada... To Canada located in the south, south area. Is your right?
+<span class="tutor">[Tutor]</span> So because &quot;is,&quot; so &quot;Canada is located in the south&quot; would be the answer.
+<span class="student">[Student]</span> It is located in.
+<span class="student">[Student]</span> So question form is.
+<span class="tutor">[Tutor]</span> Yeah.
+<span class="student">[Student]</span> Is Canada.
+<span class="student">[Student]</span> Is Canada located in south area?
+<span class="tutor">[Tutor]</span> Okay.
+<span class="student">[Student]</span> Yeah, I try to make time and practice this.
+<span class="student">[Student]</span> That is so easy, but if I just talk at the time I meet or I have some mistake.
+<span class="student">[Student]</span> So yeah, I try to more.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="tutor">[Tutor]</span> Or like you have, the question would be like, do you have?
+<span class="student">[Student]</span> Do you have?
+<span class="tutor">[Tutor]</span> Okay.
+<span class="tutor">[Tutor]</span> Yes.
+<span class="student">[Student]</span> Sometimes I&#x27;m used to, yes, verb first, but usually I miss the fact.
+<span class="student">[Student]</span> So just make the other things.
+<span class="student">[Student]</span> Yes.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="student">[Student]</span> I try on.
+<span class="tutor">[Tutor]</span> So for example, are there any movies that you want to watch or do you want to watch any movies or TV shows?
+<span class="student">[Student]</span> Yes.
+<span class="student">[Student]</span> These days my eyes are a little sick, so usually I don&#x27;t try to watch YouTube or channel,
+<span class="student">[Student]</span> But maybe every weekend I try to watch movie with my son.
+<span class="tutor">[Tutor]</span> So what&#x27;s the name?
+<span class="student">[Student]</span> That animation is made in USA.
+<span class="student">[Student]</span> And I forgot that title.
+<span class="student">[Student]</span> But the bunny and bunny cop.
+<span class="student">[Student]</span> And she has so many plans, the animal.
+<span class="student">[Student]</span> Do you know that?
+<span class="student">[Student]</span> Just a moment.
+<span class="student">[Student]</span> This is the animation made in the USA.
+<span class="student">[Student]</span> And it is famous in the world.
+<span class="student">[Student]</span> And the rabbit is a small cat.
+<span class="student">[Student]</span> And she has so many plans in this world.
+<span class="student">[Student]</span> Do you know the name of the animation?
+<span class="tutor">[Tutor]</span> Is it a movie or a TV series?
+<span class="student">[Student]</span> Ah, that is the animation, the animation movie.
+<span class="student">[Student]</span> Just a moment.
+<span class="student">[Student]</span> Sorry, teacher.
+<span class="student">[Student]</span> Ah, yes, the Zootopia second story.
+<span class="tutor">[Tutor]</span> Oh, okay, Zootopia 2. Okay, yeah, the rabbit and the fox police officer.
+<span class="student">[Student]</span> Yeah, rabbit and fox. So in Korea, this is the open Zootopia 2, one month ago, two months ago, but I missed to watch with my son.
+<span class="student">[Student]</span> So every weekend I try to watch that movie with my son.
+<span class="student">[Student]</span> But maybe this weekend I try to watch that movie.
+<span class="tutor">[Tutor]</span> Have you seen Zootopia 2?
+<span class="tutor">[Tutor]</span> I&#x27;ve seen the first Zootopia.
+<span class="student">[Student]</span> The second story. How about the second story?
+<span class="tutor">[Tutor]</span> Just the first story. No, I haven&#x27;t seen the second story yet.
+<span class="student">[Student]</span> Yes, yes.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="tutor">[Tutor]</span> Usually it comes free to, it&#x27;ll come free to streaming soon.
+<span class="student">[Student]</span> Yes.
+<span class="student">[Student]</span> Maybe it opens, it is open to Canada also, right?
+<span class="tutor">[Tutor]</span> Yeah, it&#x27;s in the theaters now still.
+<span class="student">[Student]</span> Yes, yes, yes.
+<span class="student">[Student]</span> Okay.
+<span class="tutor">[Tutor]</span> But I think I&#x27;m waiting.
+<span class="tutor">[Tutor]</span> I can wait a year.
+<span class="tutor">[Tutor]</span> I can wait when it&#x27;s for free, maybe on Netflix or something.
+<span class="student">[Student]</span> Yes, that is a nice choice.
+<span class="student">[Student]</span> How about you?
+<span class="student">[Student]</span> What kind of movie do you like?
+<span class="student">[Student]</span> The movie or the TV show or something?
+<span class="tutor">[Tutor]</span> I looked at the movies this week.
+<span class="tutor">[Tutor]</span> And yeah, there is just the only thing that looked good was Zootopia and maybe Hoppers, I think.
+<span class="student">[Student]</span> Yes.
+<span class="student">[Student]</span> I haven&#x27;t seen yet.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="student">[Student]</span> These days, what kind of movie do you like?
+<span class="student">[Student]</span> Movie or TV show or some interesting show, etc.
+<span class="tutor">[Tutor]</span> Movies I generally like.
+<span class="tutor">[Tutor]</span> I like comedies.
+<span class="student">[Student]</span> Comedy.
+<span class="student">[Student]</span> Later movie.
+<span class="tutor">[Tutor]</span> TV show?
+<span class="tutor">[Tutor]</span> I watch Night of the Seven Kingdoms.
+<span class="student">[Student]</span> Seven Kingdoms?
+<span class="tutor">[Tutor]</span> Yeah, Night of the Seven Kingdoms.
+<span class="student">[Student]</span> Night of the Seven Kingdoms.
+<span class="student">[Student]</span> That is the Netflix series?
+<span class="student">[Student]</span> Is this...
+<span class="student">[Student]</span> Sorry, teacher.
+<span class="student">[Student]</span> I&#x27;m trying to...
+<span class="student">[Student]</span> Is this...
+<span class="student">[Student]</span> Is this...
+<span class="student">[Student]</span> Is this the Netflix series?
+<span class="tutor">[Tutor]</span> It&#x27;s on HBO.
+<span class="student">[Student]</span> HBO?
+<span class="tutor">[Tutor]</span> Yeah, HBO.
+<span class="student">[Student]</span> So it&#x27;s a network TV show. Yes, yes. Okay. Today is a little difficult to talk without the textbook.
+<span class="tutor">[Tutor]</span> Okay. Oh yeah, a little more practice. HBO does television shows like Sopranos.
+<span class="student">[Student]</span> The Sopranos.
+<span class="student">[Student]</span> Soprano.
+<span class="tutor">[Tutor]</span> Like a gangster mafia show.
+<span class="student">[Student]</span> Okay.
+<span class="student">[Student]</span> Yes.
+<span class="student">[Student]</span> Okay.
+<span class="student">[Student]</span> And what is your plan this afternoon?
+<span class="student">[Student]</span> You have so many.
+<span class="student">[Student]</span> Maybe you have the original job.
+<span class="student">[Student]</span> And this teaching English is the side job, right?
+<span class="tutor">[Tutor]</span> No, I just usually teach English in the afternoon.
+<span class="student">[Student]</span> But start is a little late. The afternoon start and finish the little late time.
+<span class="student">[Student]</span> Yeah, usually I finish at 9 o&#x27;clock.
+<span class="student">[Student]</span> 9 o&#x27;clock. Yes, it&#x27;s good. Okay. I see.
+<span class="tutor">[Tutor]</span> Yeah, when people are getting off work, they&#x27;re finishing work, I&#x27;m starting work.
+<span class="student">[Student]</span> Starting work. Yes, yes. Maybe you, okay, I see.
+<span class="tutor">[Tutor]</span> Have you ever worked a different schedule? So instead of working in the mornings, you work in the evenings?
+<span class="student">[Student]</span> Oh, yes. When I was a student of the university, at that time, I had to work, make money.
+<span class="student">[Student]</span> So every night, I went to some pub and have some part-time job.
+<span class="student">[Student]</span> And then in the morning, I go back to my school and study.
+<span class="student">[Student]</span> Yeah, so yeah, the pub is the start late and finish late. So yeah, it is a
+<span class="student">[Student]</span> little hard. Yeah, especially if you have to do work in the morning too. Yes. And and
+<span class="student">[Student]</span> And my wife is nurse. She is the nurse. So usually in Korea, nurse is the kind of the work, working time, have a kind of a working time. So day, evening and night.
+<span class="student">[Student]</span> So usually she worked the night, we start to work 9 p.m. and finish the 5 a.m.
+<span class="student">[Student]</span> So it is really, really hard.
+<span class="student">[Student]</span> So she quit the job, but yeah, usually the nurse is the hard job in Korea, the night time.
+<span class="tutor">[Tutor]</span> Yeah, so she was a shift worker.
+<span class="tutor">[Tutor]</span> So she worked shifts.
+<span class="tutor">[Tutor]</span> Yeah, she was a shift worker.
+<span class="tutor">[Tutor]</span> Yeah, have you ever had to do
+<span class="tutor">[Tutor]</span> something like a night shift
+<span class="tutor">[Tutor]</span> or overnight shift?
+<span class="student">[Student]</span> Oh,
+<span class="student">[Student]</span> I had a part-time
+<span class="student">[Student]</span> job but that is not
+<span class="student">[Student]</span> shift job.
+<span class="student">[Student]</span> Just work in a night.
+<span class="student">[Student]</span> Yeah, in a pub.
+<span class="student">[Student]</span> So that is also start
+<span class="student">[Student]</span> to yeah night.
+<span class="student">[Student]</span> Or 7 p.m. and finish through 4 or 3 a.m. So it is also yeah start late and finish
+<span class="student">[Student]</span> late.
+<span class="tutor">[Tutor]</span> Yeah, that&#x27;s yeah, finishing at 3 or 4 a.m.
+<span class="student">[Student]</span> Yeah, yeah, you&#x27;re right. Yeah, and if I come back, came back my home, at the time I&#x27;m
+<span class="student">[Student]</span> I&#x27;m sleep there until the noon or 1 p.m.
+<span class="student">[Student]</span> So time schedule is changed totally.
+<span class="student">[Student]</span> So when I quit the job, I feel the heart to change my routines.
+<span class="student">[Student]</span> Yeah, get up early and work the day.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="tutor">[Tutor]</span> Anyway.
+<span class="tutor">[Tutor]</span> I was going to say, it&#x27;s really hard to sleep during the day, too.
+<span class="tutor">[Tutor]</span> Everybody&#x27;s up.
+<span class="tutor">[Tutor]</span> Everyone&#x27;s awake.
+<span class="student">[Student]</span> You&#x27;re right.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="tutor">[Tutor]</span> Yeah, that&#x27;s about it for time.
+<span class="tutor">[Tutor]</span> Yeah, it was nice talking with you today.
+<span class="student">[Student]</span> Uh-huh.
+<span class="student">[Student]</span> Me too, teacher.
+<span class="student">[Student]</span> Thank you for your class, and have a nice day.
+<span class="tutor">[Tutor]</span> You too.
+<span class="tutor">[Tutor]</span> Goodbye.
+<span class="student">[Student]</span> Bye-bye.</div>
+        </div>
+    </div>
+    <div class="toast" id="toast">✅ 프롬프트가 복사되었습니다!</div>
+    <script>
+        const REVIEW_PROMPT="너는 나의 영어 회화 복습 파트너야. 오늘 내 전화영어 수업 내용을 기반으로 대화하면서 복습을 도와줘.\n\n[오늘 수업 전사 내용]\n[Student] Hello, hello teacher.\n[Tutor] Yeah, hi, this is Belle calling from Carrot English.\n[Student] Yes, you're right. Nice to meet you, teacher. I'm Joey.\n[Tutor] Yeah, we've met before.\n[Student] I see. Every Wednesday and Friday, yeah, we will meet, right?\n[Tutor] Yeah, yeah, we usually meet.\n[Student] Yeah, and I know your name also. Belle, right?\n[Tutor] Yes.\n[Tutor] Okay, good.\n[Tutor] And so it looks like you moved on to the new textbook.\n[Student] Oh, you're right, but I didn't find some new textbook.\n[Student] So it is possible to print out tomorrow or Friday.\n[Student] So is it possible to free talk? Because I don't have a textbook.\n[Tutor] Okay, yeah, you can do a free talk here.\n[Tutor] Any topic you wanted to discuss?\n[Student] Yeah, I think it's okay.\n[Student] How about your day?\n[Student] Yeah, nowadays, do you have some special things in your life?\n[Tutor] No, just kind of working and teaching so far.\n[Tutor] Weather's been kind of rainy.\n[Student] Kind of rainy, I see.\n[Tutor] Yeah, a little.\n[Tutor] And how about you?\n[Tutor] How was your weekend?\n[Student] These days I fell asleep at late time because I studied AI.\n[Student] So every time, every day I'm falling asleep late, almost 2 a.m.\n[Student] So every time I'm a little tired, yeah, it is a little problem.\n[Student] So yeah, I need to some change the schedule, falling asleep.\n[Student] Yeah.\n[Tutor] Oh, yeah, 2 a.m. is pretty late.\n[Tutor] And what time do you have to get up for work or get up in the morning?\n[Student] These days, I'm interested in the AI.\n[Student] Yeah, so maybe I make a report to use the AI,\n[Student] but these days, I'm focused on the GPU\n[Student] because in the online, it is possible to borrow GPU\n[Student] and try to study to AI.\n[Student] some image or some clip, movie clip or some document. So I try to that.\n[Tutor] Okay, usually just kind of studying or staying up studying.\n[Student] That is my not my study. That is AI study and usually we use the so many AI like the\n[Student] chat GPT or\n[Student] Claude or\n[Student] Gemini, etc.\n[Student] But it is\n[Student] this is the big\n[Student] platform. So I\n[Student] wanted to\n[Student] make my local\n[Student] AI. So\n[Student] I follow the GPU\n[Student] and then I try to\n[Student] study and\n[Student] I try to make my\n[Student] local AI.\n[Student] So I don't know it is have a good quality or not but I'm interested in and I'm focused on the study AI.\n[Student] So these day I'm every day I'm sleep a little late time.\n[Student] Yeah, it is a little problem. Every day I my eye is a little sick.\n[Student] So usually I close the eye if I have time. I'm close the eye.\n[Tutor] Okay, do you have to get up early in the mornings?\n[Student] 7 a.m. or 7:40. It is not early, but I'm a little tired. Yes, I get up at 7:30, but\n[Student] today I got up at 7 o'clock.\n[Student] Yes.\n[Tutor] Okay, yeah, a little bit early.\n[Student] Yeah, a little bit early.\n[Student] How about you?\n[Student] How many times you teach English,\n[Student] the online or the offline?\n[Tutor] Well, because, yeah, the time zone difference.\n[Tutor] So it's my afternoon.\n[Tutor] So I get usually the day for free and then the afternoon teaching.\n[Student] This class is the last class in your routine or not?\n[Tutor] First class.\n[Student] Oh, first class.\n[Student] Yes, it's good.\n[Tutor] Okay.\n[Tutor] So it's nice. I have the mornings and afternoon and then later. Okay, I see.\n[Student] So usually your student is Korean, right?\n[Student] Do you have some other nationality student?\n[Student] The Japan or China or...\n[Tutor] Well, right now with this program with Carrot English, it's mostly it's Korean students.\n[Student] Ah, yes, yes. You're right.\n[Student] And you use the platform, the DG platform is the only one through Carrot English, right?\n[Tutor] Yeah, this one that I'm using, yeah.\n[Student] Ah, yes, okay, I see. It's good.\n[Tutor] Okay, I see. But yeah, and with the time zone difference too, so in Canada we have the time\n[Tutor] zone change. Yeah.\n[Student] What time now in your country? 4 p.m. 4 p.m. Yeah, that is nice time to\n[Student] outside, go to outside. And these days, the Canada also coming the spring or not? Yeah.\n[Tutor] Yeah, it's starting to become springtime.\n[Student] What degree now, these days?\n[Tutor] In Vancouver, 11 degrees.\n[Student] 11? It's similar in Korea.\n[Student] Yeah, our city is similar.\n[Student] 10 or between 12, 13.\n[Student] So when was the winter time? The temperature is so different but\n[Student] spring is similar and coming speed is similar.\n[Tutor] Although winter in Vancouver is very mild, so it's not not very cold.\n[Student] Oh, I see. Vancouver is located in the south, right?\n[Tutor] Probably the most, yeah, on the border.\n[Student] On the border.\n[Student] Teacher, I have a little bad habit.\n[Student] For example, if I make a question in English, at that time, I just say something,\n[Student] and then I just say right or not.\n[Student] So how about the correct this expression?\n[Student] For example, the Canada located in the south area,\n[Student] but I wanted to change the\n[Student] question.\n[Student] So usually we do\n[Student] or some have first.\n[Student] So how can I change the\n[Student] normal life routine\n[Student] English,\n[Student] so the question form?\n[Student] Is Canada located in the south? Is Canada...\n[Student] I have some bad habit.\n[Student] Just say some common sentence\n[Student] and then ask some right or not.\n[Student] So that is bad habit.\n[Student] I change the verb.\n[Student] And yes, okay, is... Yeah, so usually switch the verb, the be verb or the have or the question verb. So,\n[Student] yeah, so the Canada is becoming spring. Is can... Is it becoming spring in Canada? Is it Canada\n[Student] coming spring? Or to Canada... To Canada located in the south, south area. Is your right?\n[Tutor] So because \"is,\" so \"Canada is located in the south\" would be the answer.\n[Student] It is located in.\n[Student] So question form is.\n[Tutor] Yeah.\n[Student] Is Canada.\n[Student] Is Canada located in south area?\n[Tutor] Okay.\n[Student] Yeah, I try to make time and practice this.\n[Student] That is so easy, but if I just talk at the time I meet or I have some mistake.\n[Student] So yeah, I try to more.\n[Tutor] Okay.\n[Tutor] Okay.\n[Tutor] Or like you have, the question would be like, do you have?\n[Student] Do you have?\n[Tutor] Okay.\n[Tutor] Yes.\n[Student] Sometimes I'm used to, yes, verb first, but usually I miss the fact.\n[Student] So just make the other things.\n[Student] Yes.\n[Tutor] Okay.\n[Student] I try on.\n[Tutor] So for example, are there any movies that you want to watch or do you want to watch any movies or TV shows?\n[Student] Yes.\n[Student] These days my eyes are a little sick, so usually I don't try to watch YouTube or channel,\n[Student] But maybe every weekend I try to watch movie with my son.\n[Tutor] So what's the name?\n[Student] That animation is made in USA.\n[Student] And I forgot that title.\n[Student] But the bunny and bunny cop.\n[Student] And she has so many plans, the animal.\n[Student] Do you know that?\n[Student] Just a moment.\n[Student] This is the animation made in the USA.\n[Student] And it is famous in the world.\n[Student] And the rabbit is a small cat.\n[Student] And she has so many plans in this world.\n[Student] Do you know the name of the animation?\n[Tutor] Is it a movie or a TV series?\n[Student] Ah, that is the animation, the animation movie.\n[Student] Just a moment.\n[Student] Sorry, teacher.\n[Student] Ah, yes, the Zootopia second story.\n[Tutor] Oh, okay, Zootopia 2. Okay, yeah, the rabbit and the fox police officer.\n[Student] Yeah, rabbit and fox. So in Korea, this is the open Zootopia 2, one month ago, two months ago, but I missed to watch with my son.\n[Student] So every weekend I try to watch that movie with my son.\n[Student] But maybe this weekend I try to watch that movie.\n[Tutor] Have you seen Zootopia 2?\n[Tutor] I've seen the first Zootopia.\n[Student] The second story. How about the second story?\n[Tutor] Just the first story. No, I haven't seen the second story yet.\n[Student] Yes, yes.\n[Tutor] Okay.\n[Tutor] Usually it comes free to, it'll come free to streaming soon.\n[Student] Yes.\n[Student] Maybe it opens, it is open to Canada also, right?\n[Tutor] Yeah, it's in the theaters now still.\n[Student] Yes, yes, yes.\n[Student] Okay.\n[Tutor] But I think I'm waiting.\n[Tutor] I can wait a year.\n[Tutor] I can wait when it's for free, maybe on Netflix or something.\n[Student] Yes, that is a nice choice.\n[Student] How about you?\n[Student] What kind of movie do you like?\n[Student] The movie or the TV show or something?\n[Tutor] I looked at the movies this week.\n[Tutor] And yeah, there is just the only thing that looked good was Zootopia and maybe Hoppers, I think.\n[Student] Yes.\n[Student] I haven't seen yet.\n[Tutor] Okay.\n[Student] These days, what kind of movie do you like?\n[Student] Movie or TV show or some interesting show, etc.\n[Tutor] Movies I generally like.\n[Tutor] I like comedies.\n[Student] Comedy.\n[Student] Later movie.\n[Tutor] TV show?\n[Tutor] I watch Night of the Seven Kingdoms.\n[Student] Seven Kingdoms?\n[Tutor] Yeah, Night of the Seven Kingdoms.\n[Student] Night of the Seven Kingdoms.\n[Student] That is the Netflix series?\n[Student] Is this...\n[Student] Sorry, teacher.\n[Student] I'm trying to...\n[Student] Is this...\n[Student] Is this...\n[Student] Is this the Netflix series?\n[Tutor] It's on HBO.\n[Student] HBO?\n[Tutor] Yeah, HBO.\n[Student] So it's a network TV show. Yes, yes. Okay. Today is a little difficult to talk without the textbook.\n[Tutor] Okay. Oh yeah, a little more practice. HBO does television shows like Sopranos.\n[Student] The Sopranos.\n[Student] Soprano.\n[Tutor] Like a gangster mafia show.\n[Student] Okay.\n[Student] Yes.\n[Student] Okay.\n[Student] And what is your plan this afternoon?\n[Student] You have so many.\n[Student] Maybe you have the original job.\n[Student] And this teaching English is the side job, right?\n[Tutor] No, I just usually teach English in the afternoon.\n[Student] But start is a little late. The afternoon start and finish the little late time.\n[Student] Yeah, usually I finish at 9 o'clock.\n[Student] 9 o'clock. Yes, it's good. Okay. I see.\n[Tutor] Yeah, when people are getting off work, they're finishing work, I'm starting work.\n[Student] Starting work. Yes, yes. Maybe you, okay, I see.\n[Tutor] Have you ever worked a different schedule? So instead of working in the mornings, you work in the evenings?\n[Student] Oh, yes. When I was a student of the university, at that time, I had to work, make money.\n[Student] So every night, I went to some pub and have some part-time job.\n[Student] And then in the morning, I go back to my school and study.\n[Student] Yeah, so yeah, the pub is the start late and finish late. So yeah, it is a\n[Student] little hard. Yeah, especially if you have to do work in the morning too. Yes. And and\n[Student] And my wife is nurse. She is the nurse. So usually in Korea, nurse is the kind of the work, working time, have a kind of a working time. So day, evening and night.\n[Student] So usually she worked the night, we start to work 9 p.m. and finish the 5 a.m.\n[Student] So it is really, really hard.\n[Student] So she quit the job, but yeah, usually the nurse is the hard job in Korea, the night time.\n[Tutor] Yeah, so she was a shift worker.\n[Tutor] So she worked shifts.\n[Tutor] Yeah, she was a shift worker.\n[Tutor] Yeah, have you ever had to do\n[Tutor] something like a night shift\n[Tutor] or overnight shift?\n[Student] Oh,\n[Student] I had a part-time\n[Student] job but that is not\n[Student] shift job.\n[Student] Just work in a night.\n[Student] Yeah, in a pub.\n[Student] So that is also start\n[Student] to yeah night.\n[Student] Or 7 p.m. and finish through 4 or 3 a.m. So it is also yeah start late and finish\n[Student] late.\n[Tutor] Yeah, that's yeah, finishing at 3 or 4 a.m.\n[Student] Yeah, yeah, you're right. Yeah, and if I come back, came back my home, at the time I'm\n[Student] I'm sleep there until the noon or 1 p.m.\n[Student] So time schedule is changed totally.\n[Student] So when I quit the job, I feel the heart to change my routines.\n[Student] Yeah, get up early and work the day.\n[Tutor] Okay.\n[Tutor] Anyway.\n[Tutor] I was going to say, it's really hard to sleep during the day, too.\n[Tutor] Everybody's up.\n[Tutor] Everyone's awake.\n[Student] You're right.\n[Tutor] Okay.\n[Tutor] Yeah, that's about it for time.\n[Tutor] Yeah, it was nice talking with you today.\n[Student] Uh-huh.\n[Student] Me too, teacher.\n[Student] Thank you for your class, and have a nice day.\n[Tutor] You too.\n[Tutor] Goodbye.\n[Student] Bye-bye.\n\n[AI 피드백]\n안녕하세요, Joey님! Belle 코치입니다.\n\n오늘도 즐거운 대화 나누셨네요! 새로운 텍스트북 없이 자유롭게 대화를 이끌어가려는 적극적인 모습과 AI 공부에 대한 깊은 관심이 인상 깊었습니다. 특히 질문 만들기에 대한 고민을 직접 이야기하며 개선하려는 태도에서 영어를 향한 뜨거운 열정이 느껴졌어요.\n\n---\n\n**1. 📊 오늘의 대화 요약 (Summary)**\n\n오늘은 새로운 교재 없이 자유 대화로 수업을 진행했습니다. Joey님의 AI 공부와 늦게 잠드는 습관, 그리고 튜터의 근무 스케줄과 캐나다의 날씨 변화에 대해 이야기했습니다. 특히 영어 질문을 만드는 '나쁜 습관'에 대해 스스로 인지하고 개선하려는 노력을 함께 나누며 효과적인 질문 형식에 대해 집중적으로 연습했습니다.\n\n---\n\n**2. 💬 유창성 업그레이드 (Fluency & Natural Flow)**\n\nJoey님이 의미는 잘 전달했지만, 원어민들이 더 자연스럽게 쓰는 표현들을 짚어드릴게요.\n\n| 구분 | ❌ 학습자 원문 (As Said) | ✅ 자연스러운 표현 (Natural) | 💎 비즈니스 표현 (Professional) | 💡 코칭 포인트 |\n| :--- | :--- | :--- | :--- | :--- |\n| **1** | So it is possible to print out tomorrow or Friday. | Can I print it out tomorrow or Friday? | Would it be possible to print it out tomorrow or Friday? | 'Is it possible to ~?'도 맞지만, 'Can I ~?'는 허락이나 가능성을 물을 때 훨씬 더 일상적이고 자연스럽습니다. |\n| **2** | So yeah, I need to some change the schedule, falling asleep. | So I need to change my sleep schedule. | Therefore, I must adjust my sleep routine. | 'some change the schedule'은 어색해요. 'change the schedule' 또는 'change my schedule'이 자연스럽고, 'falling asleep' 대신 'sleep schedule'로 명확하게 표현할 수 있습니다. |\n| **3** | How many times you teach English, the online or the offline? | How often do you teach English, online or offline? | What is your teaching frequency for online and offline classes? | 'How many times'는 횟수를 셀 때 쓰지만, '얼마나 자주'라는 빈도를 물을 때는 'How often'이 훨씬 자연스럽습니다. 'the'는 필요하지 않습니다. |\n\n---\n\n**3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)**\n\nJoey님, 오늘 대화에서 **관사 (a/an/the) 및 소유격** 사용에 대한 혼동이 반복적으로 나타났습니다. 특히 특정 대상을 지칭할 때 'the'를 빠뜨리거나, 일반적인 명사에 'a'를 붙이지 않는 경우, 그리고 신체 부위 표현 시 소유격을 사용하지 않는 경우가 있었어요.\n\n| ❌ 원문 (As Said) | ✅ 교정 예시 (Corrected) |\n| :--- | :--- |\n| These days I fell asleep at **late time** because I studied AI. | These days I fell asleep at **a late time** because I studied AI. |\n| So usually I close **the eye** if I have time. I'm close **the eye**. | So usually I close **my eyes** if I have time. I close **my eyes**. |\n| So when I quit **the job**, I feel **heart** to change my routines. | So when I quit **the job**, I found it **hard** to change my routines. |\n\n📌 **핵심 규칙:** 명사가 셀 수 있는 단수 명사일 때는 'a/an'을 붙이고, 특정 대상을 가리킬 때는 'the'를 사용합니다. 신체 부위는 보통 'my/your'와 같은 소유격을 사용합니다. 또한, 'feel heart'는 'find it hard' 또는 'feel it is hard'로 표현해야 자연스럽습니다.\n\n🔁 **따라 읽기:**\n🗣️ \"These days I fell asleep at **a late time** because I studied AI.\"\n🗣️ \"So usually I close **my eyes** if I have time.\"\n🗣️ \"So when I quit **the job**, I found it **hard** to change my routines.\"\n\n---\n\n**4. 📗 어휘 확장 (Vocabulary Vault)**\n\n학습자님의 비즈니스 환경과 자기계발 관심사를 고려한 유용한 단어들입니다.\n\n1.  **routine** /ruːˈtiːn/ (명사)\n    *   뜻: 일상적인 일, 정해진 순서, 판에 박힌 일\n    *   실전 예문: Establishing a clear **routine** helps improve productivity and time management.\n2.  **platform** /ˈplæt.fɔːrm/ (명사)\n    *   뜻: (온라인) 플랫폼, 기반, 발판\n    *   실전 예문: Our company is exploring new digital **platforms** to expand our market reach.\n3.  **mild** /maɪld/ (형용사)\n    *   뜻: 온화한, 가벼운, 순한\n    *   실전 예문: Vancouver is known for its **mild** winters compared to other Canadian cities.\n4.  **shift worker** /ʃɪft ˈwɜːr.kər/ (명사)\n    *   뜻: 교대 근무자\n    *   실전 예문: As a former **shift worker**, my wife understands the challenges of irregular hours.\n5.  **adjust** /əˈdʒʌst/ (동사)\n    *   뜻: 조절하다, 적응하다, 조정하다\n    *   실전 예문: We may need to **adjust** our investment strategy based on the latest market trends.\n\n---\n\n**5. 📝 실전 복습 챌린지 (Practice)**\n\n오늘 배운 표현과 문법을 활용하여 영작해 보세요.\n\n1.  **[쉬운 문제]**\n    *   **상황:** 당신은 요즘 매일 밤 늦게까지 AI를 공부하고 있습니다.\n    *   **영작:** 요즘 저는 매일 밤 늦게까지 AI를 공부하고 있습니다.\n    *   **모범 답안:** These days, I'm studying AI late every night.\n2.  **[중간 문제]**\n    *   **상황:** 당신은 늦게 잠드는 습관 때문에 수면 스케줄을 바꿔야 할 필요를 느낍니다.\n    *   **영작:** 늦게 잠들어서, 저는 수면 스케줄을 바꿔야 해요.\n    *   **모범 답안:** Because I go to bed late, I need to change my sleep schedule.\n3.  **[어려운 문제]**\n    *   **상황:** 당신은 동료에게 그들이 주말에 영화를 얼마나 자주 보는지 묻고 싶습니다.\n    *   **영작:** 주말에 영화를 얼마나 자주 보세요?\n    *   **모범 답안:** How often do you watch movies on weekends?\n\n---\n\n**6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)**\n\n✨ **Good Job**: \"So usually your student is Korean, right? Do you have some other nationality student?\"\n이 문장은 질문의 흐름이 아주 자연스러웠고, 'right?'를 붙여 확인하는 방식도 좋았습니다. 비록 'other nationality student'에서 관사 오류가 있었지만, 전체적인 의사소통에는 전혀 문제가 없었고, 궁금한 점을 명확하게 표현하는 능력이 돋보였습니다!\n\n🚀 **내일의 한 문장**: 다음 수업 시작 시, 튜터에게 오늘 배운 표현을 활용하여 이렇게 질문해 보세요.\n\"How often do you teach English on weekends?\"\n\n---\n\n**[성과 지표]**\n\n**유창성 점수: 7/10점**\n\n**근거:** Joey님은 다양한 주제에 대해 막힘없이 자신의 의견을 표현하려는 의지가 매우 강합니다. 문장이 다소 길어지거나 복잡해질 때 어색한 표현이나 문법적 오류가 나타나기도 하지만, 대화의 흐름을 주도하고 유지하는 능력이 뛰어납니다. 특히 스스로의 '나쁜 습관'을 인지하고 개선하려는 적극적인 태도는 유창성 향상에 큰 도움이 될 것입니다.\n\n**다음 수업 '원포인트 액션 플랜':**\n**\"질문 만들 때 '동사-주어' 순서 의식적으로 연습하기\"**\n오늘 스스로 질문 만들기에 대한 고민을 나누셨죠. 다음 수업에서는 질문을 할 때, 특히 'be동사'나 '조동사'가 있는 문장에서 **동사가 주어 앞으로 오는 패턴**을 의식적으로 연습해 보세요. 예를 들어, \"Is it...?\", \"Do you...?\", \"Can I...?\" 와 같이요. 의식적인 연습이 습관으로 이어질 거예요!\n\n위 내용을 바탕으로:\n1. 먼저 오늘 수업에서 내가 틀렸거나 어색했던 표현을 하나 골라서, 관련된 상황을 영어로 질문해줘.\n2. 내가 영어로 대답하면, 자연스러운지 확인하고 더 나은 표현이 있으면 알려줘.\n3. 특히 \"반복 실수 패턴\"에서 지적된 부분을 집중적으로 연습시켜줘.\n4. 이런 식으로 오늘 배운 표현들을 하나씩 복습하자.\n5. 한국어 설명은 필요할 때만 간단히, 대화는 최대한 영어로 진행해줘.\n\n그럼 시작하자!";
+        function startReview(){navigator.clipboard.writeText(REVIEW_PROMPT).then(()=>{showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)}).catch(()=>{const t=document.createElement('textarea');t.value=REVIEW_PROMPT;document.body.appendChild(t);t.select();document.execCommand('copy');document.body.removeChild(t);showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)})}
+        function showToast(){const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500)}
+        function switchTab(n){document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',n==='feedback'?i===0:i===1));document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));document.getElementById('tab-'+n).classList.add('active')}
+    </script>
+</body>
+</html>
