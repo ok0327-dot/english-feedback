@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전화영어 복습 - 2026년 03월 19일</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Noto Sans KR',sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.75;min-height:100vh}
+        .header{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);border-bottom:1px solid rgba(255,255,255,.06);padding:48px 24px 40px;text-align:center}
+        .header-date{font-size:13px;color:#94a3b8;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+        .header h1{font-size:28px;font-weight:700;color:#f1f5f9;margin-bottom:16px}
+        .header-meta{display:flex;justify-content:center;gap:24px;font-size:14px;color:#64748b}
+        .header-meta span{display:flex;align-items:center;gap:6px}
+        .cta-section{text-align:center;padding:40px 24px}
+        .cta-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:linear-gradient(135deg,#38bdf8,#818cf8);color:#fff;font-size:16px;font-weight:600;font-family:'Noto Sans KR',sans-serif;border:none;border-radius:50px;cursor:pointer;transition:all .3s;text-decoration:none;box-shadow:0 4px 24px rgba(56,189,248,.25)}
+        .cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(56,189,248,.35)}
+        .cta-btn svg{width:20px;height:20px}
+        .cta-sub{margin-top:12px;font-size:13px;color:#64748b}
+        .toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#38bdf8;padding:14px 28px;border-radius:12px;font-size:14px;font-weight:500;border:1px solid rgba(56,189,248,.2);box-shadow:0 8px 32px rgba(0,0,0,.4);opacity:0;transition:all .4s cubic-bezier(.16,1,.3,1);z-index:1000}
+        .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+        .container{max-width:720px;margin:0 auto;padding:0 24px 80px}
+        .tabs{display:flex;gap:4px;background:#1a1a24;padding:4px;border-radius:12px;margin-bottom:32px}
+        .tab{flex:1;padding:12px;text-align:center;font-size:14px;font-weight:500;color:#64748b;background:0 0;border:none;border-radius:8px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all .2s}
+        .tab.active{background:#262636;color:#f1f5f9}
+        .tab-content{display:none}.tab-content.active{display:block}
+        .feedback h2{font-size:18px;font-weight:700;color:#f1f5f9;margin:36px 0 16px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.06)}
+        .feedback h2:first-child{margin-top:0}
+        .feedback p{margin:8px 0;color:#cbd5e1}
+        .feedback .item{padding:6px 0 6px 16px;border-left:2px solid #334155;margin:6px 0;color:#cbd5e1}
+        .feedback .numbered{padding:8px 0 8px 16px;color:#cbd5e1}
+        .feedback .numbered strong{color:#38bdf8}
+        .feedback strong{color:#f1f5f9}
+        .feedback code{background:#1e293b;padding:2px 8px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#38bdf8}
+        .feedback table{width:100%;border-collapse:collapse;margin:12px 0}
+        .feedback th,.feedback td{padding:10px 14px;text-align:left;border-bottom:1px solid #262636}
+        .feedback th{color:#94a3b8;font-weight:500;font-size:13px}
+        .feedback td{color:#cbd5e1}
+        .arrow{color:#38bdf8;font-weight:700}
+        .transcript{background:#1a1a24;border-radius:12px;padding:28px;font-size:14px;line-height:2;color:#94a3b8;white-space:pre-wrap;word-break:break-word;font-family:'JetBrains Mono','Noto Sans KR',monospace}
+        .transcript .tutor{color:#38bdf8}
+        .transcript .student{color:#a78bfa}
+        @media(max-width:640px){.header{padding:32px 16px}.header h1{font-size:22px}.cta-btn{padding:14px 28px;font-size:15px}.container{padding:0 16px 60px}}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-date">2026년 03월 19일</div>
+        <h1>📚 전화영어 복습</h1>
+        <div class="header-meta">
+            <span>⏱ 19분 21초</span>
+            <span>🎙 전화영어_025180304_20260319080142.m4a</span>
+        </div>
+    </div>
+    <div class="cta-section">
+        <button class="cta-btn" onclick="startReview()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Gemini에서 복습 대화 시작하기
+        </button>
+        <div class="cta-sub">클릭하면 프롬프트가 복사되고 Gemini가 열립니다</div>
+    </div>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('feedback')">📋 AI 피드백</button>
+            <button class="tab" onclick="switchTab('transcript')">🎙 수업 전사</button>
+        </div>
+        <div id="tab-feedback" class="tab-content active">
+            <div class="feedback"><p>조이님, 안녕하세요! 바쁜 업무 중에도 전화영어 수업에 꾸준히 참여하며 영어 실력을 갈고닦으시는 모습이 정말 멋집니다. 오늘 수업 내용에 대한 따뜻하고 실용적인 피드백을 드릴게요.</p>
+<br>
+<br>
+<p><strong>1. 📊 오늘의 대화 요약 (Summary)</strong></p>
+<br>
+<p>오늘 수업에서는 먼저 봄이 오는 날씨 변화와 조이님의 바쁜 일상에 대해 가볍게 대화하며 몸을 풀었습니다. 이어서 'Mastering Written Communication' 단원을 시작하여, 비즈니스 환경에서 서면 의사소통(written communication)이 효과적인 팀 협업에 어떻게 기여하는지, 그리고 구두 의사소통(verbal communication)과 어떤 차이가 있는지 심도 있게 논의했습니다. 특히 감사(audit) 업무에서 서면 기록의 중요성과 메시지 전달 매체에 따른 격식(formality) 수준의 변화에 대해서도 이야기 나누었습니다.</p>
+<br>
+<br>
+<p><strong>2. 💬 유창성 업그레이드 (Fluency & Natural Flow)</strong></p>
+<br>
+<p>의미는 잘 전달되었지만, 원어민들이 더 자연스럽게 쓰는 표현으로 다듬을 수 있는 문장들을 살펴볼게요.</p>
+<br>
+<p>*   <strong>❌ 학습자 원문 (As Said):</strong> "Yesterday night, I printed out my textbook."</p>
+<p>    *   <strong>✅ 자연스러운 표현 (Natural):</strong> "Last night, I printed out my textbook."</p>
+<p>    *   <strong>💎 비즈니스 표현 (Professional):</strong> "I printed out my textbook last night." (문장 끝에 두는 것이 자연스러움)</p>
+<p>    *   <strong>💡 코칭 포인트:</strong> '어제 밤'을 표현할 때는 "yesterday night" 대신 "last night"을 사용하는 것이 훨씬 자연스럽습니다. "Yesterday evening"도 가능하지만, "last night"이 가장 흔하게 쓰입니다.</p>
+<br>
+<p>*   <strong>❌ 학습자 원문 (As Said):</strong> "So it's useful to written communication better than verbal communication."</p>
+<p>    *   <strong>✅ 자연스러운 표현 (Natural):</strong> "So, written communication is more useful than verbal communication."</p>
+<p>    *   <strong>💎 비즈니스 표현 (Professional):</strong> "Therefore, written communication offers greater utility compared to verbal communication."</p>
+<p>    *   <strong>💡 코칭 포인트:</strong> '~보다 더 유용하다'고 비교할 때는 "more useful than ~" 형태가 일반적입니다. "It's useful to [동사] better than [동사]"는 어색하게 들릴 수 있어요.</p>
+<br>
+<p>*   <strong>❌ 학습자 원문 (As Said):</strong> "Your example makes me more yeah, understand more easy in the understanding."</p>
+<p>    *   <strong>✅ 자연스러운 표현 (Natural):</strong> "Your example makes it easier for me to understand."</p>
+<p>    *   <strong>💎 비즈니스 표현 (Professional):</strong> "Your example significantly enhanced my comprehension."</p>
+<p>    *   <strong>💡 코칭 포인트:</strong> "make + 목적어 + 형용사" 구문을 활용하여 "makes it easier"로 표현하면 간결하고 자연스럽습니다. "understand more easy"는 "understand more easily" (부사) 또는 "easier to understand" (형용사)로 바꿔야 정확합니다.</p>
+<br>
+<br>
+<p><strong>3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)</strong></p>
+<br>
+<p>오늘 수업에서 조이님이 반복적으로 혼동했던 'explain (동사)'과 'explanation (명사)'의 사용법에 대해 집중적으로 다뤄볼게요.</p>
+<br>
+<table>
+<tr><th>❌ 원문 (As Said)</th><th>✅ 교정 예시 (Corrected)</th></tr>
+<tr><td>:--------------------------------------------------</td><td>:-----------------------------------------------------</td></tr>
+<tr><td>"could you bring some explain?"</td><td>"Could you provide some <strong>explanation</strong>?"</td></tr>
+<tr><td>"we need more explanation, explain."</td><td>"We need more <strong>explanation</strong>."</td></tr>
+<tr><td>"Could you provide an explanation?" "explain it."</td><td>"Could you provide an <strong>explanation</strong>?" "Please <strong>explain</strong> it."</td></tr>
+<tr><td>"Please provide me explanation."</td><td>"Please provide me <strong>an explanation</strong>."</td></tr>
+</table>
+<br>
+<p>*   <strong>📌 핵심 규칙:</strong> '설명하다'라는 동사는 <strong>explain</strong>, '설명'이라는 명사는 <strong>explanation</strong>입니다. 명사 'explanation' 앞에는 보통 관사(a/an/the)가 붙거나 수량형용사(some, more)가 함께 쓰입니다. 동사 'explain'은 목적어를 바로 취하거나 "explain something to someone" 형태로 사용합니다.</p>
+<br>
+<p>*   <strong>🔁 따라 읽기:</strong></p>
+<p>    *   🗣️ "Could you provide some <strong>explanation</strong>?"</p>
+<p>    *   🗣️ "We need more <strong>explanation</strong>."</p>
+<p>    *   🗣️ "Please <strong>explain</strong> your decision to me."</p>
+<br>
+<br>
+<p><strong>4. 📗 어휘 확장 (Vocabulary Vault)</strong></p>
+<br>
+<p>학습자님의 업무 환경에서 바로 활용할 수 있는 유용한 단어들을 소개합니다.</p>
+<br>
+<p>*   <strong>formality</strong> /fɔːrmǽləti/ (명사)</p>
+<p>    *   <strong>뜻:</strong> 격식, 형식적인 절차</p>
+<p>    *   <strong>실전 예문:</strong> The level of <strong>formality</strong> in our email communication depends on the recipient.</p>
+<p>*   <strong>medium</strong> /míːdiəm/ (명사)</p>
+<p>    *   <strong>뜻:</strong> (정보 전달) 매체, 수단</p>
+<p>    *   <strong>실전 예문:</strong> Choosing the right communication <strong>medium</strong> is crucial for effective messaging.</p>
+<p>*   <strong>obligated</strong> /ɑ́blɪgeɪtɪd/ (형용사)</p>
+<p>    *   <strong>뜻:</strong> 의무가 있는, 강제된</p>
+<p>    *   <strong>실전 예문:</strong> We are <strong>obligated</strong> to submit the report by the end of the day.</p>
+<p>*   <strong>clarity</strong> /klǽrəti/ (명사)</p>
+<p>    *   <strong>뜻:</strong> 명확성, 선명성</p>
+<p>    *   <strong>실전 예문:</strong> The goal of this presentation is to ensure <strong>clarity</strong> in our project objectives.</p>
+<p>*   <strong>recall</strong> /rɪkɔ́ːl/ (동사)</p>
+<p>    *   <strong>뜻:</strong> 기억해내다, 상기하다; (정보를) 불러오다</p>
+<p>    *   <strong>실전 예문:</strong> It's hard to <strong>recall</strong> all the details of a verbal conversation without notes.</p>
+<br>
+<br>
+<p><strong>5. 📝 실전 복습 챌린지 (Practice)</strong></p>
+<br>
+<p>오늘 배운 표현과 문법을 활용하여 다음 문장들을 영작해 보세요.</p>
+<br>
+<div class="numbered"><strong>1.</strong>  <strong>상황:</strong> 감사 보고서에 대한 추가 설명이 필요합니다.</div>
+<p>    *   <strong>영작:</strong> (추가 설명 좀 해주실 수 있나요?)</p>
+<p>    *   <strong>모범 답안:</strong> Could you provide an additional explanation for the audit report?</p>
+<div class="numbered"><strong>2.</strong>  <strong>상황:</strong> 이메일은 공식적인 의사소통 매체로 사용됩니다.</div>
+<p>    *   <strong>영작:</strong> (이메일은 공식적인 의사소통 매체로 사용됩니다.)</p>
+<p>    *   <strong>모범 답안:</strong> Email is used as a formal communication medium.</p>
+<div class="numbered"><strong>3.</strong>  <strong>상황:</strong> 상사에게 프로젝트 지연 이유를 더 쉽게 이해할 수 있도록 설명해야 합니다.</div>
+<p>    *   <strong>영작:</strong> (상사에게 프로젝트 지연 이유를 더 쉽게 이해할 수 있도록 설명해야 합니다.)</p>
+<p>    *   <strong>모범 답안:</strong> I need to explain the reason for the project delay to my boss in a way that makes it easier for him/her to understand.</p>
+<br>
+<br>
+<p><strong>6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)</strong></p>
+<br>
+<p>*   ✨ <strong>Good Job:</strong> "My work is the audit. So, that is so useful, control the history or make some history. Because some interviewee, sometimes they have had lie something or they don't speak the truth. At that time, we have to have evidence. Yeah, we have to have evidence. So it's useful to written communication better than verbal communication."</p>
+<p>    *   조이님은 감사(audit) 업무의 특성을 들어 서면 의사소통의 중요성을 아주 논리적이고 설득력 있게 설명해 주셨습니다. 다소 긴 문장이었지만, 핵심 아이디어인 '기록 관리'와 '증거 확보'의 중요성을 명확하게 전달했고, 비즈니스 환경에서의 실질적인 필요성을 잘 연결 지어 말씀하신 점이 인상 깊었습니다!</p>
+<br>
+<p>*   🚀 <strong>내일의 한 문장:</strong> "Could you explain the key takeaways from our last discussion?"</p>
+<p>    *   다음 수업 시작 시, 지난 수업 내용을 상기하며 튜터에게 이렇게 질문해 보세요. 오늘 배운 'explain' 동사를 활용하고, 비즈니스 대화에서 유용한 'key takeaways' 표현도 익힐 수 있습니다.</p>
+<br>
+<br>
+<p><strong>[성과 지표]</strong></p>
+<br>
+<p>*   <strong>유창성 점수:</strong> 7.5/10점</p>
+<p>    *   <strong>근거:</strong> 조이님은 다양한 주제에 대해 막힘없이 자신의 의견을 표현하며 대화를 이어나가는 능력이 뛰어납니다. 특히 비즈니스 관련 주제에서는 전문 용어를 적절히 사용하며 논리적인 설명을 시도하는 모습이 아주 좋습니다. 다만, 일부 표현에서 원어민들이 더 자연스럽게 쓰는 관용적인 표현이나 문장 구조를 다듬을 필요가 있습니다. 'explain'과 'explanation'처럼 품사 사용에서 혼동이 있었지만, 튜터의 도움으로 바로 교정하려는 적극적인 태도도 긍정적입니다.</p>
+<p>*   <strong>다음 수업 '원포인트 액션 플랜':</strong> "동사/명사 형태 혼동 줄이기"</p>
+<p>    *   오늘 'explain'과 'explanation'처럼, 비슷한 의미를 가진 동사와 명사 형태를 혼동하는 경우가 간혹 보입니다. 다음 수업에서는 이 부분을 의식하며 말하기 연습을 해볼게요. 새로운 단어를 배울 때 동사, 명사, 형용사 형태를 함께 익히는 습관을 들이면 유창성과 정확성을 동시에 높일 수 있습니다.</p>
+<br>
+<p>조이님, 오늘도 정말 수고 많으셨습니다! 다음 수업에서 더 성장한 모습으로 만나요!</p></div>
+        </div>
+        <div id="tab-transcript" class="tab-content">
+            <div class="transcript"><span class="tutor">[Tutor]</span> Hello. Hi Joey, how are you today? I&#x27;m sorry I&#x27;m late.
+<span class="student">[Student]</span> I&#x27;m good. Yeah, I&#x27;m doing great. Yeah, how are you? How are you today?
+<span class="tutor">[Tutor]</span> I am also great. Thank you very much for asking. It was a bit of a busy day, but all good.
+<span class="student">[Student]</span> Yeah, pretty busy. Yeah, I&#x27;m similar. These days I focus on my tasks, my personal tasks and my work. So these days I&#x27;m really sleepy and tired. But it&#x27;s okay.
+<span class="tutor">[Tutor]</span> Long days.
+<span class="student">[Student]</span> Yeah.
+<span class="tutor">[Tutor]</span> Is the weather getting better?
+<span class="student">[Student]</span> Oh, yeah, of course. The spring is coming. So maybe if I go outside, there are so many beautiful leaves. I can see the beautiful leaves. And so the spring is coming and people&#x27;s clothes also change. They take off their jumper and some people are wearing cardigans or some just not just a long-sleeved shirt. So it&#x27;s a nice...
+<span class="tutor">[Tutor]</span> I agree. We&#x27;re getting out of those big heavy clothes.
+<span class="student">[Student]</span> Yeah, you&#x27;re right. And I&#x27;m also, I take off my coat and take it to the washing room. Yeah, so yeah, it&#x27;s better to wear light my clothes.
+<span class="tutor">[Tutor]</span> It&#x27;s more comfortable.
+<span class="student">[Student]</span> More comfortable.
+<span class="tutor">[Tutor]</span> Yeah, you&#x27;re right. More comfortable.
+<span class="tutor">[Tutor]</span> Did you have a chance to print out the book?
+<span class="student">[Student]</span> Yes, last night. Yesterday night, I printed out my textbook. And today is my birthday. And I&#x27;m just printing my textbook. Well, that is a little difficult for me. I&#x27;m a little upset.
+<span class="tutor">[Tutor]</span> No, no, no. We&#x27;ll figure it out.
+<span class="student">[Student]</span> Yes.
+<span class="tutor">[Tutor]</span> We&#x27;ll figure it out together.
+<span class="student">[Student]</span> My plan is our textbook is the Business Basic and last season is one, this season is second, right?
+<span class="tutor">[Tutor]</span> Exactly right.
+<span class="student">[Student]</span> If I will complete the section of the Business Two, at that time I&#x27;m going back to pages 1 and 2.
+<span class="tutor">[Tutor]</span> No, no, no. We&#x27;re not going back.
+<span class="student">[Student]</span> I&#x27;m going back to page 1 and try to do it twice. Because I know my knowledge of the English. So if I do it twice, this textbook, you are boring, but I&#x27;m good.
+<span class="tutor">[Tutor]</span> I&#x27;m going to keep challenging you.
+<span class="student">[Student]</span> Yes.
+<span class="tutor">[Tutor]</span> You can&#x27;t fool me. I have a good memory. I&#x27;m going to remember that we already did one.
+<span class="student">[Student]</span> Yeah, I remember. Yeah, maybe this textbook is divided one and two. So if I go into textbooks, the page one to two, maybe this year we don&#x27;t consider, we don&#x27;t stress about the textbook. So that&#x27;s nice.
+<span class="tutor">[Tutor]</span> The textbook is a guideline, right? You&#x27;re never obligated to use the textbook, right? So if you ever get tired of it or you want to do something different, you just tell me.
+<span class="student">[Student]</span> Yeah. Ah, yes.
+<span class="tutor">[Tutor]</span> Never a problem.
+<span class="student">[Student]</span> Ah, yes. You&#x27;re right. You&#x27;re a nice teacher.
+<span class="tutor">[Tutor]</span> Yeah. I believe in you. Well, I mean, class has to also be fun, right? It can&#x27;t just be hard and awful.
+<span class="student">[Student]</span> Yes, you&#x27;re right. You&#x27;re right. So there&#x27;s no problem.
+<span class="tutor">[Tutor]</span> Nope.
+<span class="student">[Student]</span> Okay.
+<span class="tutor">[Tutor]</span> Mm-hmm. So we start on page 10.
+<span class="student">[Student]</span> 10. Maybe that is the first Mastering Written Communication. Yeah. Or mastering right? Yes. Writing. That right. Written Writing. Which is better?
+<span class="tutor">[Tutor]</span> Written.
+<span class="student">[Student]</span> Written.
+<span class="tutor">[Tutor]</span> Yeah, written. You got it.
+<span class="student">[Student]</span> Yeah. Written communication. Okay. Yes.
+<span class="tutor">[Tutor]</span> And the goal today with this lesson is to structure messages for clarity and impact and demonstrate professionalism in written communication.
+<span class="student">[Student]</span> Yeah, if we start twice, it&#x27;s possible. But today is impossible. So today my purpose is just understanding that below sentence.
+<span class="tutor">[Tutor]</span> Okay. Okay. We&#x27;ll start with number one on the left-hand side, and I&#x27;m going to ask for your opinion.
+<span class="student">[Student]</span> Oh, yeah, no problem.
+<span class="tutor">[Tutor]</span> How does written communication contribute to effective team collaboration?
+<span class="student">[Student]</span> I see. I mean, our work is communicated using email or just verbal speaking. So, ah, written, just with the report or the send email. So, if we, yeah, communication, the written something like their email or report, that is more promise and that also record our communication history. So, it is so effective to control the history and understanding our content. So that is useful, the written communication.
+<span class="tutor">[Tutor]</span> Absolutely. See, you got it. That was easy.
+<span class="student">[Student]</span> Yes. Yes, you&#x27;re a liar.
+<span class="tutor">[Tutor]</span> Okay. No, that was the right answer. You got it.
+<span class="student">[Student]</span> Okay, thank you so much. Okay.
+<span class="tutor">[Tutor]</span> Another opinion. In what ways is written communication different from verbal communication?
+<span class="student">[Student]</span> Hmm. Verbal communication is so direct, but that can&#x27;t control the history. So, and doesn&#x27;t remind that history. But if we use the written communication, it is possible to control history. So, my work is the audit. So, that is so useful, control the history or make some history. Because some interviewee, sometimes they have had lie something or they don&#x27;t speak the truth. At that time, we have to have evidence. Yeah, we have to have evidence. So it&#x27;s useful to written communication better than verbal communication.
+<span class="tutor">[Tutor]</span> Exactly. I completely agree. Yeah. And let&#x27;s change one word. I heard you say, &quot;don&#x27;t remind that history.&quot; We can say it doesn&#x27;t record the history of the conversation.
+<span class="student">[Student]</span> Yes, if you compare conversation with conversation. It doesn&#x27;t record, it doesn&#x27;t recall.
+<span class="tutor">[Tutor]</span> And it doesn&#x27;t recall the conversation history.
+<span class="student">[Student]</span> Conversation history. It doesn&#x27;t recur. It doesn&#x27;t recur. Conversation history. Okay.
+<span class="tutor">[Tutor]</span> Exactly. So you can&#x27;t keep track of who said what. So yes, it&#x27;s better to write it down sometimes, especially in audit.
+<span class="student">[Student]</span> Yeah, you&#x27;re right.
+<span class="tutor">[Tutor]</span> And the last question is, what types of written messages do you exchange daily? So when we&#x27;re talking about types, we&#x27;re talking about methods. So is it a text message? Is it an instant message? Is it an email? Is it a report?
+<span class="student">[Student]</span> Okay, I see. How does the level of formality change depend on medium? I, I understand the first sentence question. The second question, I need more information.
+<span class="tutor">[Tutor]</span> How does the level of formality change depending on the medium? What&#x27;s medium?
+<span class="tutor">[Tutor]</span> So let&#x27;s answer the first question first.
+<span class="student">[Student]</span> Okay, perfect. Okay, today I do my audit. This audit is about the cost, the employee cost. So usually I&#x27;m writing message, &quot;Why do you use that cost?&quot; And &quot;This process is not correct, so could you bring some explain?&quot; So that is our method. So usually we are, we research the cost and and then some some bad information, some if some fact we need more explanation, explain. So sometimes we send email and we want to reply to the answer in more detail. So yes, &quot;Could you provide an explanation?&quot; &quot;Could you provide an explanation?&quot; Yeah, you provide that&#x27;s it explanation. Could you provide it? Okay, explain it.
+<span class="tutor">[Tutor]</span> So, okay. So then when you write a text message to ask the question, is it different than when you write an email to ask the question?
+<span class="student">[Student]</span> Uh-huh. Oh, yes, yes, you&#x27;re right. It is impossible every people meet in online. So, usually we send email because this way is possible to give the time to the people. So, so that is efficient. But we can use the text like the send message or just online chatting to work.
+<span class="tutor">[Tutor]</span> Yes, exactly. Online chat, online chatting.
+<span class="student">[Student]</span> Yeah, but that is also a little direct. It is difficult to control the remind or control the history. So I like to use the email because that is the counter to the history. If I search some fact, I can find more easily. And that is the great evidence to the audit. So I like that.
+<span class="tutor">[Tutor]</span> Excellent explanation. That&#x27;s exactly what I was looking for. And now, let me ask you, when you write an email, do you just send one line saying, &quot;Could you provide an explanation?&quot; Or do you say, &quot;Hello, Joey, I&#x27;m writing to you about audit XYZ. I have a question about how you calculate the cost of human resources. Can you tell me by Friday, blah, blah, blah?&quot;
+<span class="student">[Student]</span> Yeah, blah, blah, blah.
+<span class="tutor">[Tutor]</span> Right?
+<span class="student">[Student]</span> Blah, blah, blah. Go ahead. In my case, I&#x27;m shading my information because I&#x27;m human. Sometimes I send my email to my friends and my co-workers. That is a little heavy to my mind. So I have some strategies, some other things. I made a system of mail. And then I send the email and send to from the system. That system name is the audit system. So if I send email, I don&#x27;t I don&#x27;t say my yeah, my my name or my my my information. But yes, yes, so that is a little difference. But normal normal my email is you&#x27;re right, you&#x27;re right. I&#x27;m usually say, &quot;Hey, hey, hello.&quot; Yes, yeah. And that is the important part. Blah, blah, blah. Yeah.
+<span class="tutor">[Tutor]</span> That is the level of formality. Yes, you&#x27;re right. That is the level of formality. Exactly. So that was the second question. Uh-huh. If you think that the level of formality changes between an instant message and an email, for example.
+<span class="student">[Student]</span> Yeah, I understand. Wow, you&#x27;re a genius. I understand perfectly.
+<span class="tutor">[Tutor]</span> No, you&#x27;re the genius. I just talked you through the steps.
+<span class="student">[Student]</span> Your example makes me more yeah, understand more easy in the understanding. So anyway, in my case, I think the email is the more formal, but text, the direct text, that is more friendly, but instant. So if I make some, if I make appointment the lunch time, of lunch time, at that time I&#x27;m, and he is also my friend, at that time I send the direct text because that is more easy and and then they don&#x27;t need to history. So, just then.
+<span class="tutor">[Tutor]</span> Yeah, just then.
+<span class="student">[Student]</span> And say more, not more easy, more casual speaking.
+<span class="tutor">[Tutor]</span> Mm-hmm. But... More casual or easier?
+<span class="student">[Student]</span> Yeah, more casual and easier. Yeah, our communication more easier and casual. But if I send an email, that is more formal.
+<span class="tutor">[Tutor]</span> Exactly. Yeah. So that&#x27;s it. That was the only meaning of that question.
+<span class="tutor">[Tutor]</span> So now we finished with our warm-up. That was great.
+<span class="student">[Student]</span> Yeah.
+<span class="tutor">[Tutor]</span> Let&#x27;s take a look on the right-hand side. We won&#x27;t finish it today, but let&#x27;s start it.
+<span class="student">[Student]</span> Oh, really?
+<span class="tutor">[Tutor]</span> The idea is to figure out which sentence is more formal and which one is more informal.
+<span class="student">[Student]</span> Uh-huh. I see. Yes, yes. But teacher, today I thought it is impossible to continue.
+<span class="tutor">[Tutor]</span> Yes. We only have one minute in mind.
+<span class="student">[Student]</span> Okay. All right.
+<span class="tutor">[Tutor]</span> Well, we will wrap it up here.
+<span class="student">[Student]</span> Uh-huh.
+<span class="tutor">[Tutor]</span> Do you have any questions?
+<span class="student">[Student]</span> Ah, yes, I have a question. Usually, we say explanation, right? We say, I said explanation. Could you reply one more?
+<span class="tutor">[Tutor]</span> I follow you. Absolutely. Yes. Yes. Please provide me an explanation.
+<span class="student">[Student]</span> Ah, provide me. Give me. Please give me is pretty give me. Yeah, please. That&#x27;s exactly right. Please provide me explanation. Okay. Yeah, thank you so much.
+<span class="tutor">[Tutor]</span> And of course, explain is the verb. Yeah, if you want to use the verb, I have to say, &quot;Please explain it to me.&quot;
+<span class="student">[Student]</span> Please explain. If you use the verb, just explain.
+<span class="tutor">[Tutor]</span> Explain it to me. Please explain your decision to me.
+<span class="student">[Student]</span> Please explain your decision to me.
+<span class="tutor">[Tutor]</span> Exactly.
+<span class="student">[Student]</span> Okay.
+<span class="tutor">[Tutor]</span> Make sense?
+<span class="student">[Student]</span> Oh, make sense. Of course.
+<span class="tutor">[Tutor]</span> Okay. All right. Well, thank you once again for your time today. I hope you have an excellent end of your week and an excellent weekend.
+<span class="student">[Student]</span> I hope too. Yeah, you have a great weekend. Thank you. Bye-bye, teacher.
+<span class="tutor">[Tutor]</span> Bye-bye.</div>
+        </div>
+    </div>
+    <div class="toast" id="toast">✅ 프롬프트가 복사되었습니다!</div>
+    <script>
+        const REVIEW_PROMPT="너는 나의 영어 회화 복습 파트너야. 오늘 내 전화영어 수업 내용을 기반으로 대화하면서 복습을 도와줘.\n\n[오늘 수업 전사 내용]\n[Tutor] Hello. Hi Joey, how are you today? I'm sorry I'm late.\n[Student] I'm good. Yeah, I'm doing great. Yeah, how are you? How are you today?\n[Tutor] I am also great. Thank you very much for asking. It was a bit of a busy day, but all good.\n[Student] Yeah, pretty busy. Yeah, I'm similar. These days I focus on my tasks, my personal tasks and my work. So these days I'm really sleepy and tired. But it's okay.\n[Tutor] Long days.\n[Student] Yeah.\n[Tutor] Is the weather getting better?\n[Student] Oh, yeah, of course. The spring is coming. So maybe if I go outside, there are so many beautiful leaves. I can see the beautiful leaves. And so the spring is coming and people's clothes also change. They take off their jumper and some people are wearing cardigans or some just not just a long-sleeved shirt. So it's a nice...\n[Tutor] I agree. We're getting out of those big heavy clothes.\n[Student] Yeah, you're right. And I'm also, I take off my coat and take it to the washing room. Yeah, so yeah, it's better to wear light my clothes.\n[Tutor] It's more comfortable.\n[Student] More comfortable.\n[Tutor] Yeah, you're right. More comfortable.\n[Tutor] Did you have a chance to print out the book?\n[Student] Yes, last night. Yesterday night, I printed out my textbook. And today is my birthday. And I'm just printing my textbook. Well, that is a little difficult for me. I'm a little upset.\n[Tutor] No, no, no. We'll figure it out.\n[Student] Yes.\n[Tutor] We'll figure it out together.\n[Student] My plan is our textbook is the Business Basic and last season is one, this season is second, right?\n[Tutor] Exactly right.\n[Student] If I will complete the section of the Business Two, at that time I'm going back to pages 1 and 2.\n[Tutor] No, no, no. We're not going back.\n[Student] I'm going back to page 1 and try to do it twice. Because I know my knowledge of the English. So if I do it twice, this textbook, you are boring, but I'm good.\n[Tutor] I'm going to keep challenging you.\n[Student] Yes.\n[Tutor] You can't fool me. I have a good memory. I'm going to remember that we already did one.\n[Student] Yeah, I remember. Yeah, maybe this textbook is divided one and two. So if I go into textbooks, the page one to two, maybe this year we don't consider, we don't stress about the textbook. So that's nice.\n[Tutor] The textbook is a guideline, right? You're never obligated to use the textbook, right? So if you ever get tired of it or you want to do something different, you just tell me.\n[Student] Yeah. Ah, yes.\n[Tutor] Never a problem.\n[Student] Ah, yes. You're right. You're a nice teacher.\n[Tutor] Yeah. I believe in you. Well, I mean, class has to also be fun, right? It can't just be hard and awful.\n[Student] Yes, you're right. You're right. So there's no problem.\n[Tutor] Nope.\n[Student] Okay.\n[Tutor] Mm-hmm. So we start on page 10.\n[Student] 10. Maybe that is the first Mastering Written Communication. Yeah. Or mastering right? Yes. Writing. That right. Written Writing. Which is better?\n[Tutor] Written.\n[Student] Written.\n[Tutor] Yeah, written. You got it.\n[Student] Yeah. Written communication. Okay. Yes.\n[Tutor] And the goal today with this lesson is to structure messages for clarity and impact and demonstrate professionalism in written communication.\n[Student] Yeah, if we start twice, it's possible. But today is impossible. So today my purpose is just understanding that below sentence.\n[Tutor] Okay. Okay. We'll start with number one on the left-hand side, and I'm going to ask for your opinion.\n[Student] Oh, yeah, no problem.\n[Tutor] How does written communication contribute to effective team collaboration?\n[Student] I see. I mean, our work is communicated using email or just verbal speaking. So, ah, written, just with the report or the send email. So, if we, yeah, communication, the written something like their email or report, that is more promise and that also record our communication history. So, it is so effective to control the history and understanding our content. So that is useful, the written communication.\n[Tutor] Absolutely. See, you got it. That was easy.\n[Student] Yes. Yes, you're a liar.\n[Tutor] Okay. No, that was the right answer. You got it.\n[Student] Okay, thank you so much. Okay.\n[Tutor] Another opinion. In what ways is written communication different from verbal communication?\n[Student] Hmm. Verbal communication is so direct, but that can't control the history. So, and doesn't remind that history. But if we use the written communication, it is possible to control history. So, my work is the audit. So, that is so useful, control the history or make some history. Because some interviewee, sometimes they have had lie something or they don't speak the truth. At that time, we have to have evidence. Yeah, we have to have evidence. So it's useful to written communication better than verbal communication.\n[Tutor] Exactly. I completely agree. Yeah. And let's change one word. I heard you say, \"don't remind that history.\" We can say it doesn't record the history of the conversation.\n[Student] Yes, if you compare conversation with conversation. It doesn't record, it doesn't recall.\n[Tutor] And it doesn't recall the conversation history.\n[Student] Conversation history. It doesn't recur. It doesn't recur. Conversation history. Okay.\n[Tutor] Exactly. So you can't keep track of who said what. So yes, it's better to write it down sometimes, especially in audit.\n[Student] Yeah, you're right.\n[Tutor] And the last question is, what types of written messages do you exchange daily? So when we're talking about types, we're talking about methods. So is it a text message? Is it an instant message? Is it an email? Is it a report?\n[Student] Okay, I see. How does the level of formality change depend on medium? I, I understand the first sentence question. The second question, I need more information.\n[Tutor] How does the level of formality change depending on the medium? What's medium?\n[Tutor] So let's answer the first question first.\n[Student] Okay, perfect. Okay, today I do my audit. This audit is about the cost, the employee cost. So usually I'm writing message, \"Why do you use that cost?\" And \"This process is not correct, so could you bring some explain?\" So that is our method. So usually we are, we research the cost and and then some some bad information, some if some fact we need more explanation, explain. So sometimes we send email and we want to reply to the answer in more detail. So yes, \"Could you provide an explanation?\" \"Could you provide an explanation?\" Yeah, you provide that's it explanation. Could you provide it? Okay, explain it.\n[Tutor] So, okay. So then when you write a text message to ask the question, is it different than when you write an email to ask the question?\n[Student] Uh-huh. Oh, yes, yes, you're right. It is impossible every people meet in online. So, usually we send email because this way is possible to give the time to the people. So, so that is efficient. But we can use the text like the send message or just online chatting to work.\n[Tutor] Yes, exactly. Online chat, online chatting.\n[Student] Yeah, but that is also a little direct. It is difficult to control the remind or control the history. So I like to use the email because that is the counter to the history. If I search some fact, I can find more easily. And that is the great evidence to the audit. So I like that.\n[Tutor] Excellent explanation. That's exactly what I was looking for. And now, let me ask you, when you write an email, do you just send one line saying, \"Could you provide an explanation?\" Or do you say, \"Hello, Joey, I'm writing to you about audit XYZ. I have a question about how you calculate the cost of human resources. Can you tell me by Friday, blah, blah, blah?\"\n[Student] Yeah, blah, blah, blah.\n[Tutor] Right?\n[Student] Blah, blah, blah. Go ahead. In my case, I'm shading my information because I'm human. Sometimes I send my email to my friends and my co-workers. That is a little heavy to my mind. So I have some strategies, some other things. I made a system of mail. And then I send the email and send to from the system. That system name is the audit system. So if I send email, I don't I don't say my yeah, my my name or my my my information. But yes, yes, so that is a little difference. But normal normal my email is you're right, you're right. I'm usually say, \"Hey, hey, hello.\" Yes, yeah. And that is the important part. Blah, blah, blah. Yeah.\n[Tutor] That is the level of formality. Yes, you're right. That is the level of formality. Exactly. So that was the second question. Uh-huh. If you think that the level of formality changes between an instant message and an email, for example.\n[Student] Yeah, I understand. Wow, you're a genius. I understand perfectly.\n[Tutor] No, you're the genius. I just talked you through the steps.\n[Student] Your example makes me more yeah, understand more easy in the understanding. So anyway, in my case, I think the email is the more formal, but text, the direct text, that is more friendly, but instant. So if I make some, if I make appointment the lunch time, of lunch time, at that time I'm, and he is also my friend, at that time I send the direct text because that is more easy and and then they don't need to history. So, just then.\n[Tutor] Yeah, just then.\n[Student] And say more, not more easy, more casual speaking.\n[Tutor] Mm-hmm. But... More casual or easier?\n[Student] Yeah, more casual and easier. Yeah, our communication more easier and casual. But if I send an email, that is more formal.\n[Tutor] Exactly. Yeah. So that's it. That was the only meaning of that question.\n[Tutor] So now we finished with our warm-up. That was great.\n[Student] Yeah.\n[Tutor] Let's take a look on the right-hand side. We won't finish it today, but let's start it.\n[Student] Oh, really?\n[Tutor] The idea is to figure out which sentence is more formal and which one is more informal.\n[Student] Uh-huh. I see. Yes, yes. But teacher, today I thought it is impossible to continue.\n[Tutor] Yes. We only have one minute in mind.\n[Student] Okay. All right.\n[Tutor] Well, we will wrap it up here.\n[Student] Uh-huh.\n[Tutor] Do you have any questions?\n[Student] Ah, yes, I have a question. Usually, we say explanation, right? We say, I said explanation. Could you reply one more?\n[Tutor] I follow you. Absolutely. Yes. Yes. Please provide me an explanation.\n[Student] Ah, provide me. Give me. Please give me is pretty give me. Yeah, please. That's exactly right. Please provide me explanation. Okay. Yeah, thank you so much.\n[Tutor] And of course, explain is the verb. Yeah, if you want to use the verb, I have to say, \"Please explain it to me.\"\n[Student] Please explain. If you use the verb, just explain.\n[Tutor] Explain it to me. Please explain your decision to me.\n[Student] Please explain your decision to me.\n[Tutor] Exactly.\n[Student] Okay.\n[Tutor] Make sense?\n[Student] Oh, make sense. Of course.\n[Tutor] Okay. All right. Well, thank you once again for your time today. I hope you have an excellent end of your week and an excellent weekend.\n[Student] I hope too. Yeah, you have a great weekend. Thank you. Bye-bye, teacher.\n[Tutor] Bye-bye.\n\n[AI 피드백]\n조이님, 안녕하세요! 바쁜 업무 중에도 전화영어 수업에 꾸준히 참여하며 영어 실력을 갈고닦으시는 모습이 정말 멋집니다. 오늘 수업 내용에 대한 따뜻하고 실용적인 피드백을 드릴게요.\n\n---\n\n**1. 📊 오늘의 대화 요약 (Summary)**\n\n오늘 수업에서는 먼저 봄이 오는 날씨 변화와 조이님의 바쁜 일상에 대해 가볍게 대화하며 몸을 풀었습니다. 이어서 'Mastering Written Communication' 단원을 시작하여, 비즈니스 환경에서 서면 의사소통(written communication)이 효과적인 팀 협업에 어떻게 기여하는지, 그리고 구두 의사소통(verbal communication)과 어떤 차이가 있는지 심도 있게 논의했습니다. 특히 감사(audit) 업무에서 서면 기록의 중요성과 메시지 전달 매체에 따른 격식(formality) 수준의 변화에 대해서도 이야기 나누었습니다.\n\n---\n\n**2. 💬 유창성 업그레이드 (Fluency & Natural Flow)**\n\n의미는 잘 전달되었지만, 원어민들이 더 자연스럽게 쓰는 표현으로 다듬을 수 있는 문장들을 살펴볼게요.\n\n*   **❌ 학습자 원문 (As Said):** \"Yesterday night, I printed out my textbook.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"Last night, I printed out my textbook.\"\n    *   **💎 비즈니스 표현 (Professional):** \"I printed out my textbook last night.\" (문장 끝에 두는 것이 자연스러움)\n    *   **💡 코칭 포인트:** '어제 밤'을 표현할 때는 \"yesterday night\" 대신 \"last night\"을 사용하는 것이 훨씬 자연스럽습니다. \"Yesterday evening\"도 가능하지만, \"last night\"이 가장 흔하게 쓰입니다.\n\n*   **❌ 학습자 원문 (As Said):** \"So it's useful to written communication better than verbal communication.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"So, written communication is more useful than verbal communication.\"\n    *   **💎 비즈니스 표현 (Professional):** \"Therefore, written communication offers greater utility compared to verbal communication.\"\n    *   **💡 코칭 포인트:** '~보다 더 유용하다'고 비교할 때는 \"more useful than ~\" 형태가 일반적입니다. \"It's useful to [동사] better than [동사]\"는 어색하게 들릴 수 있어요.\n\n*   **❌ 학습자 원문 (As Said):** \"Your example makes me more yeah, understand more easy in the understanding.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"Your example makes it easier for me to understand.\"\n    *   **💎 비즈니스 표현 (Professional):** \"Your example significantly enhanced my comprehension.\"\n    *   **💡 코칭 포인트:** \"make + 목적어 + 형용사\" 구문을 활용하여 \"makes it easier\"로 표현하면 간결하고 자연스럽습니다. \"understand more easy\"는 \"understand more easily\" (부사) 또는 \"easier to understand\" (형용사)로 바꿔야 정확합니다.\n\n---\n\n**3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)**\n\n오늘 수업에서 조이님이 반복적으로 혼동했던 'explain (동사)'과 'explanation (명사)'의 사용법에 대해 집중적으로 다뤄볼게요.\n\n| ❌ 원문 (As Said)                                   | ✅ 교정 예시 (Corrected)                                |\n| :-------------------------------------------------- | :----------------------------------------------------- |\n| \"could you bring some explain?\"                     | \"Could you provide some **explanation**?\"              |\n| \"we need more explanation, explain.\"                | \"We need more **explanation**.\"                        |\n| \"Could you provide an explanation?\" \"explain it.\"   | \"Could you provide an **explanation**?\" \"Please **explain** it.\" |\n| \"Please provide me explanation.\"                    | \"Please provide me **an explanation**.\"                |\n\n*   **📌 핵심 규칙:** '설명하다'라는 동사는 **explain**, '설명'이라는 명사는 **explanation**입니다. 명사 'explanation' 앞에는 보통 관사(a/an/the)가 붙거나 수량형용사(some, more)가 함께 쓰입니다. 동사 'explain'은 목적어를 바로 취하거나 \"explain something to someone\" 형태로 사용합니다.\n\n*   **🔁 따라 읽기:**\n    *   🗣️ \"Could you provide some **explanation**?\"\n    *   🗣️ \"We need more **explanation**.\"\n    *   🗣️ \"Please **explain** your decision to me.\"\n\n---\n\n**4. 📗 어휘 확장 (Vocabulary Vault)**\n\n학습자님의 업무 환경에서 바로 활용할 수 있는 유용한 단어들을 소개합니다.\n\n*   **formality** /fɔːrmǽləti/ (명사)\n    *   **뜻:** 격식, 형식적인 절차\n    *   **실전 예문:** The level of **formality** in our email communication depends on the recipient.\n*   **medium** /míːdiəm/ (명사)\n    *   **뜻:** (정보 전달) 매체, 수단\n    *   **실전 예문:** Choosing the right communication **medium** is crucial for effective messaging.\n*   **obligated** /ɑ́blɪgeɪtɪd/ (형용사)\n    *   **뜻:** 의무가 있는, 강제된\n    *   **실전 예문:** We are **obligated** to submit the report by the end of the day.\n*   **clarity** /klǽrəti/ (명사)\n    *   **뜻:** 명확성, 선명성\n    *   **실전 예문:** The goal of this presentation is to ensure **clarity** in our project objectives.\n*   **recall** /rɪkɔ́ːl/ (동사)\n    *   **뜻:** 기억해내다, 상기하다; (정보를) 불러오다\n    *   **실전 예문:** It's hard to **recall** all the details of a verbal conversation without notes.\n\n---\n\n**5. 📝 실전 복습 챌린지 (Practice)**\n\n오늘 배운 표현과 문법을 활용하여 다음 문장들을 영작해 보세요.\n\n1.  **상황:** 감사 보고서에 대한 추가 설명이 필요합니다.\n    *   **영작:** (추가 설명 좀 해주실 수 있나요?)\n    *   **모범 답안:** Could you provide an additional explanation for the audit report?\n2.  **상황:** 이메일은 공식적인 의사소통 매체로 사용됩니다.\n    *   **영작:** (이메일은 공식적인 의사소통 매체로 사용됩니다.)\n    *   **모범 답안:** Email is used as a formal communication medium.\n3.  **상황:** 상사에게 프로젝트 지연 이유를 더 쉽게 이해할 수 있도록 설명해야 합니다.\n    *   **영작:** (상사에게 프로젝트 지연 이유를 더 쉽게 이해할 수 있도록 설명해야 합니다.)\n    *   **모범 답안:** I need to explain the reason for the project delay to my boss in a way that makes it easier for him/her to understand.\n\n---\n\n**6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)**\n\n*   ✨ **Good Job:** \"My work is the audit. So, that is so useful, control the history or make some history. Because some interviewee, sometimes they have had lie something or they don't speak the truth. At that time, we have to have evidence. Yeah, we have to have evidence. So it's useful to written communication better than verbal communication.\"\n    *   조이님은 감사(audit) 업무의 특성을 들어 서면 의사소통의 중요성을 아주 논리적이고 설득력 있게 설명해 주셨습니다. 다소 긴 문장이었지만, 핵심 아이디어인 '기록 관리'와 '증거 확보'의 중요성을 명확하게 전달했고, 비즈니스 환경에서의 실질적인 필요성을 잘 연결 지어 말씀하신 점이 인상 깊었습니다!\n\n*   🚀 **내일의 한 문장:** \"Could you explain the key takeaways from our last discussion?\"\n    *   다음 수업 시작 시, 지난 수업 내용을 상기하며 튜터에게 이렇게 질문해 보세요. 오늘 배운 'explain' 동사를 활용하고, 비즈니스 대화에서 유용한 'key takeaways' 표현도 익힐 수 있습니다.\n\n---\n\n**[성과 지표]**\n\n*   **유창성 점수:** 7.5/10점\n    *   **근거:** 조이님은 다양한 주제에 대해 막힘없이 자신의 의견을 표현하며 대화를 이어나가는 능력이 뛰어납니다. 특히 비즈니스 관련 주제에서는 전문 용어를 적절히 사용하며 논리적인 설명을 시도하는 모습이 아주 좋습니다. 다만, 일부 표현에서 원어민들이 더 자연스럽게 쓰는 관용적인 표현이나 문장 구조를 다듬을 필요가 있습니다. 'explain'과 'explanation'처럼 품사 사용에서 혼동이 있었지만, 튜터의 도움으로 바로 교정하려는 적극적인 태도도 긍정적입니다.\n*   **다음 수업 '원포인트 액션 플랜':** \"동사/명사 형태 혼동 줄이기\"\n    *   오늘 'explain'과 'explanation'처럼, 비슷한 의미를 가진 동사와 명사 형태를 혼동하는 경우가 간혹 보입니다. 다음 수업에서는 이 부분을 의식하며 말하기 연습을 해볼게요. 새로운 단어를 배울 때 동사, 명사, 형용사 형태를 함께 익히는 습관을 들이면 유창성과 정확성을 동시에 높일 수 있습니다.\n\n조이님, 오늘도 정말 수고 많으셨습니다! 다음 수업에서 더 성장한 모습으로 만나요!\n\n위 내용을 바탕으로:\n1. 먼저 오늘 수업에서 내가 틀렸거나 어색했던 표현을 하나 골라서, 관련된 상황을 영어로 질문해줘.\n2. 내가 영어로 대답하면, 자연스러운지 확인하고 더 나은 표현이 있으면 알려줘.\n3. 특히 \"반복 실수 패턴\"에서 지적된 부분을 집중적으로 연습시켜줘.\n4. 이런 식으로 오늘 배운 표현들을 하나씩 복습하자.\n5. 한국어 설명은 필요할 때만 간단히, 대화는 최대한 영어로 진행해줘.\n\n그럼 시작하자!";
+        function startReview(){navigator.clipboard.writeText(REVIEW_PROMPT).then(()=>{showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)}).catch(()=>{const t=document.createElement('textarea');t.value=REVIEW_PROMPT;document.body.appendChild(t);t.select();document.execCommand('copy');document.body.removeChild(t);showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)})}
+        function showToast(){const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500)}
+        function switchTab(n){document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',n==='feedback'?i===0:i===1));document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));document.getElementById('tab-'+n).classList.add('active')}
+    </script>
+</body>
+</html>
