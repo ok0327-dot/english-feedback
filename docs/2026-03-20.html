@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전화영어 복습 - 2026년 03월 20일</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Noto Sans KR',sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.75;min-height:100vh}
+        .header{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);border-bottom:1px solid rgba(255,255,255,.06);padding:48px 24px 40px;text-align:center}
+        .header-date{font-size:13px;color:#94a3b8;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+        .header h1{font-size:28px;font-weight:700;color:#f1f5f9;margin-bottom:16px}
+        .header-meta{display:flex;justify-content:center;gap:24px;font-size:14px;color:#64748b}
+        .header-meta span{display:flex;align-items:center;gap:6px}
+        .cta-section{text-align:center;padding:40px 24px}
+        .cta-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:linear-gradient(135deg,#38bdf8,#818cf8);color:#fff;font-size:16px;font-weight:600;font-family:'Noto Sans KR',sans-serif;border:none;border-radius:50px;cursor:pointer;transition:all .3s;text-decoration:none;box-shadow:0 4px 24px rgba(56,189,248,.25)}
+        .cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(56,189,248,.35)}
+        .cta-btn svg{width:20px;height:20px}
+        .cta-sub{margin-top:12px;font-size:13px;color:#64748b}
+        .toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#38bdf8;padding:14px 28px;border-radius:12px;font-size:14px;font-weight:500;border:1px solid rgba(56,189,248,.2);box-shadow:0 8px 32px rgba(0,0,0,.4);opacity:0;transition:all .4s cubic-bezier(.16,1,.3,1);z-index:1000}
+        .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+        .container{max-width:720px;margin:0 auto;padding:0 24px 80px}
+        .tabs{display:flex;gap:4px;background:#1a1a24;padding:4px;border-radius:12px;margin-bottom:32px}
+        .tab{flex:1;padding:12px;text-align:center;font-size:14px;font-weight:500;color:#64748b;background:0 0;border:none;border-radius:8px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all .2s}
+        .tab.active{background:#262636;color:#f1f5f9}
+        .tab-content{display:none}.tab-content.active{display:block}
+        .feedback h2{font-size:18px;font-weight:700;color:#f1f5f9;margin:36px 0 16px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.06)}
+        .feedback h2:first-child{margin-top:0}
+        .feedback p{margin:8px 0;color:#cbd5e1}
+        .feedback .item{padding:6px 0 6px 16px;border-left:2px solid #334155;margin:6px 0;color:#cbd5e1}
+        .feedback .numbered{padding:8px 0 8px 16px;color:#cbd5e1}
+        .feedback .numbered strong{color:#38bdf8}
+        .feedback strong{color:#f1f5f9}
+        .feedback code{background:#1e293b;padding:2px 8px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#38bdf8}
+        .feedback table{width:100%;border-collapse:collapse;margin:12px 0}
+        .feedback th,.feedback td{padding:10px 14px;text-align:left;border-bottom:1px solid #262636}
+        .feedback th{color:#94a3b8;font-weight:500;font-size:13px}
+        .feedback td{color:#cbd5e1}
+        .arrow{color:#38bdf8;font-weight:700}
+        .transcript{background:#1a1a24;border-radius:12px;padding:28px;font-size:14px;line-height:2;color:#94a3b8;white-space:pre-wrap;word-break:break-word;font-family:'JetBrains Mono','Noto Sans KR',monospace}
+        .transcript .tutor{color:#38bdf8}
+        .transcript .student{color:#a78bfa}
+        @media(max-width:640px){.header{padding:32px 16px}.header h1{font-size:22px}.cta-btn{padding:14px 28px;font-size:15px}.container{padding:0 16px 60px}}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-date">2026년 03월 20일</div>
+        <h1>📚 전화영어 복습</h1>
+        <div class="header-meta">
+            <span>⏱ 19분 55초</span>
+            <span>🎙 전화영어_025180304_20260320080017.m4a</span>
+        </div>
+    </div>
+    <div class="cta-section">
+        <button class="cta-btn" onclick="startReview()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Gemini에서 복습 대화 시작하기
+        </button>
+        <div class="cta-sub">클릭하면 프롬프트가 복사되고 Gemini가 열립니다</div>
+    </div>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('feedback')">📋 AI 피드백</button>
+            <button class="tab" onclick="switchTab('transcript')">🎙 수업 전사</button>
+        </div>
+        <div id="tab-feedback" class="tab-content active">
+            <div class="feedback"><p>따뜻하고 실용적인 영어 코치입니다! 오늘 수업도 정말 수고 많으셨습니다. 캐나다의 광활한 영토에 대한 이야기부터 격식체/비격식체 표현까지, 다양한 주제에 대해 열정적으로 참여해주셔서 감사해요. 특히 새로운 교재에 대한 학습 계획을 구체적으로 세우고, AI까지 활용해서 미리 예습해 오시는 모습에서 학습에 대한 뜨거운 의지가 느껴졌습니다. 정말 멋져요!</p>
+<br>
+<p>오늘 대화 내용을 바탕으로 유창성과 정확성을 동시에 잡을 수 있는 피드백을 드릴게요.</p>
+<br>
+<br>
+<p>### <strong>1. 📊 오늘의 대화 요약 (Summary)</strong></p>
+<br>
+<p>오늘 수업에서는 주말 계획에 대한 자유로운 대화로 시작하여, 캐나다의 넓은 영토와 여행 경험에 대해 이야기 나누었습니다. 이어서 새로운 교재의 '격식체와 비격식체 표현 매칭' 활동을 통해 비즈니스 커뮤니케이션의 뉘앙스를 학습하고, 전치사 'on'과 'by'의 차이를 명확히 이해하는 시간을 가졌습니다. 특히, 격식체와 비격식체 표현의 특징을 스스로 분석하고 설명하려는 노력이 돋보였습니다.</p>
+<br>
+<p>### <strong>2. 💬 유창성 업그레이드 (Fluency & Natural Flow)</strong></p>
+<br>
+<p>[Student]님이 실제 말한 문장 중, 의미는 통하지만 더 자연스럽게 다듬을 수 있는 표현 3가지를 선정했습니다.</p>
+<br>
+<div class="numbered"><strong>1.</strong>  <strong>❌ 학습자 원문 (As Said):</strong> "I haven't set up the plan yet, but maybe today I will take a train and then I'm thinking about that."</div>
+<p>    *   <strong>✅ 자연스러운 표현 (Natural):</strong> "I haven't made any plans yet, but I'm thinking of taking a train today."</p>
+<p>    *   <strong>💎 비즈니스 표현 (Professional):</strong> "My plans are not yet finalized, but I am considering taking a train today."</p>
+<p>    *   <strong>💡 코칭 포인트:</strong> 'set up a plan'은 계획을 '수립하다'는 의미로 쓰이지만, 일상적인 주말 계획에는 'make a plan'이 훨씬 자연스럽습니다. 'thinking about that'보다는 'thinking of ~ing' 또는 'thinking about ~ing'으로 구체적인 행동을 연결하는 것이 좋습니다.</p>
+<br>
+<div class="numbered"><strong>2.</strong>  <strong>❌ 학습자 원문 (As Said):</strong> "How about your plan on the weekend?"</div>
+<p>    *   <strong>✅ 자연스러운 표현 (Natural):</strong> "How about your plans for the weekend?"</p>
+<p>    *   <strong>💎 비즈니스 표현 (Professional):</strong> "What are your plans for the upcoming weekend?"</p>
+<p>    *   <strong>💡 코칭 포인트:</strong> 주말 계획은 보통 복수형 'plans'로 사용하며, 특정 요일이 아닌 기간을 나타낼 때는 전치사 'on' 대신 'for'를 쓰는 것이 일반적입니다.</p>
+<br>
+<div class="numbered"><strong>3.</strong>  <strong>❌ 학습자 원문 (As Said):</strong> "Our country, it is only 500 kilometers. So your country, the biggest, better than our country. Multiple times."</div>
+<p>    *   <strong>✅ 자연스러운 표현 (Natural):</strong> "Our country is only 500 kilometers. Your country is multiple times bigger than ours."</p>
+<p>    *   <strong>💎 비즈니스 표현 (Professional):</strong> "Our country spans only 500 kilometers, whereas your country is significantly larger, multiple times the size."</p>
+<p>    *   <strong>💡 코칭 포인트:</strong> 문장이 길어지면 주어와 동사를 다시 한번 확인하는 습관을 들이면 좋습니다. 'the biggest, better than our country'는 'multiple times bigger than ours'처럼 비교급을 활용하는 것이 더 자연스럽습니다.</p>
+<br>
+<p>### <strong>3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)</strong></p>
+<br>
+<p>이번 대화에서는 <strong>관사 (a/the)</strong> 사용에 실수가 반복적으로 나타났습니다. 특히 특정 명사를 지칭하거나, 일반적인 명사를 처음 언급할 때 관사를 빠뜨리는 경우가 있었습니다.</p>
+<br>
+<table>
+<tr><th>❌ 원문 (As Said)</th><th>✅ 교정 예시 (Corrected)</th></tr>
+<tr><td>:-------------------------------</td><td>:-----------------------------------------------------</td></tr>
+<tr><td>"What temperature now?"</td><td>"What <strong>is the</strong> temperature now?"</td></tr>
+<tr><td>"Sorry for late reply."</td><td>"Sorry for <strong>the</strong> late reply."</td></tr>
+<tr><td>"Ask if you have question."</td><td>"Ask if you have <strong>a</strong> question."</td></tr>
+<tr><td>"I don't understand perfectly the Basic One."</td><td>"I don't perfectly understand <strong>Basic One</strong>." (고유명사로 간주하여 the 생략 가능) 또는 "I don't perfectly understand <strong>the Basic One</strong> (textbook)."</td></tr>
+</table>
+<br>
+<p>📌 <strong>핵심 규칙:</strong> 명사 앞에는 관사 (a/an/the)나 소유격 등이 붙어 명사를 한정해주는 경우가 많습니다. 특히 특정 대상을 가리킬 때는 'the'를, 처음 언급하는 일반적인 단수 명사 앞에는 'a/an'을 붙이는 것을 신경 써 주세요.</p>
+<br>
+<p>🔁 <strong>따라 읽기:</strong></p>
+<p>🗣️ "What <strong>is the</strong> temperature now?"</p>
+<p>🗣️ "Sorry for <strong>the</strong> late reply."</p>
+<p>🗣️ "Ask if you have <strong>a</strong> question."</p>
+<br>
+<p>### <strong>4. 📗 어휘 확장 (Vocabulary Vault)</strong></p>
+<br>
+<p>학습자님의 업무 환경에서 바로 쓸 수 있는 유용한 단어 5개를 소개합니다.</p>
+<br>
+<div class="numbered"><strong>1.</strong>  <strong>mild</strong> /maɪld/ (형용사)</div>
+<p>    *   뜻: (날씨가) 온화한, 포근한</p>
+<p>    *   실전 예문: The weather in this region is usually <strong>mild</strong>, which is good for outdoor activities.</p>
+<div class="numbered"><strong>2.</strong>  <strong>vast</strong> /væst/ (형용사)</div>
+<p>    *   뜻: (지역·면적 등이) 광대한, 어마어마한</p>
+<p>    *   실전 예문: Canada has <strong>vast</strong> natural resources, including oil and gas.</p>
+<div class="numbered"><strong>3.</strong>  <strong>confirm</strong> /kənˈfɜːrm/ (동사)</div>
+<p>    *   뜻: (사실임을) 확인하다, 확정하다</p>
+<p>    *   실전 예문: Please <strong>confirm</strong> the meeting time by the end of the day.</p>
+<div class="numbered"><strong>4.</strong>  <strong>policy</strong> /ˈpɑːləsi/ (명사)</div>
+<p>    *   뜻: 정책, 방침</p>
+<p>    *   실전 예문: Our company has a new <strong>policy</strong> regarding remote work.</p>
+<div class="numbered"><strong>5.</strong>  <strong>apologize</strong> /əˈpɑːləˌdʒaɪz/ (동사)</div>
+<p>    *   뜻: 사과하다</p>
+<p>    *   실전 예문: I would like to <strong>apologize</strong> for the inconvenience caused.</p>
+<br>
+<p>### <strong>5. 📝 실전 복습 챌린지 (Practice)</strong></p>
+<br>
+<p>오늘 배운 표현과 문법을 활용하여 다음 상황을 영어로 작문해 보세요.</p>
+<br>
+<div class="numbered"><strong>1.</strong>  <strong>[쉬움]</strong> 늦은 회신에 대해 사과하고 싶습니다.</div>
+<p>    *   <strong>모범 답안:</strong> I <strong>apologize</strong> for the late reply.</p>
+<div class="numbered"><strong>2.</strong>  <strong>[중간]</strong> 다음 주 금요일까지 이 보고서를 제출해 주실 수 있나요?</div>
+<p>    *   <strong>모범 답안:</strong> Could you please submit this report <strong>by</strong> next Friday?</p>
+<div class="numbered"><strong>3.</strong>  <strong>[어려움]</strong> 저희는 다음 달 1일부터 새로운 에너지 수입 정책을 시행할 예정입니다. 궁금한 점이 있으시면 언제든지 문의해 주세요.</div>
+<p>    *   <strong>모범 답안:</strong> We will implement <strong>a</strong> new energy import <strong>policy</strong> starting <strong>on</strong> the 1st of next month. Please don't hesitate to ask if you have any questions.</p>
+<br>
+<p>### <strong>6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)</strong></p>
+<br>
+<p>✨ <strong>Good Job:</strong></p>
+<p>"I guess the formal expression is more complicated and they use the more luxury word. So I check them. But the casual or informal is the more easy, but not complicated, and it is the use the more normal life conversation, right?"</p>
+<br>
+<p>이 문장은 비록 표현이 완벽하진 않았지만, 격식체와 비격식체의 차이를 스스로 분석하고 이해하려는 깊이 있는 사고 과정이 돋보였습니다. 'luxury word'라는 표현으로 격식체의 특징을 설명하려는 시도도 매우 인상 깊었어요! 복잡한 개념을 자신만의 방식으로 정리하려는 노력이 훌륭합니다.</p>
+<br>
+<p>🚀 <strong>내일의 한 문장:</strong></p>
+<p>다음 수업 시작 시 튜터에게 오늘 배운 표현을 활용하여 이렇게 말해보세요.</p>
+<p>"I'd like to <strong>confirm</strong> my plans for the weekend." (주말 계획을 확인하고 싶어요.)</p>
+<br>
+<br>
+<p>### <strong>[성과 지표]</strong></p>
+<br>
+<p><strong>유창성 점수:</strong> 7/10</p>
+<p><strong>근거:</strong> 학습자님은 다양한 주제에 대해 자신의 의견을 적극적으로 표현하며 대화를 이끌어가는 능력이 뛰어납니다. 주저함 없이 많은 말을 시도하고, 궁금한 점은 바로 질문하는 모습이 매우 좋습니다. 다만, 문장 구조를 완성하는 과정에서 간헐적인 멈춤이나 어색한 표현이 있어 흐름이 다소 끊기는 경우가 있습니다. 이는 더 많은 연습을 통해 자연스럽게 개선될 수 있습니다.</p>
+<br>
+<p><strong>다음 수업 '원포인트 액션 플랜':</strong></p>
+<p><strong>'명사 앞 관사 (a/the) 사용 습관화하기'</strong></p>
+<p>다음 수업에서는 말하기 전에 명사 앞에 'a/an' 또는 'the'를 붙여야 할지 한 번 더 생각하는 연습을 해보세요. 특히 처음 언급하는 단수 명사 앞에는 'a/an'을, 특정 명사나 이미 언급된 명사 앞에는 'the'를 붙이는 것을 의식적으로 시도해 봅시다.</p></div>
+        </div>
+        <div id="tab-transcript" class="tab-content">
+            <div class="transcript"><span class="tutor">[Tutor]</span> Oh, well, good morning.
+<span class="student">[Student]</span> Yeah, good morning.
+<span class="student">[Student]</span> Yeah.
+<span class="tutor">[Tutor]</span> Hi.
+<span class="tutor">[Tutor]</span> Hi, I was going to ask, how was your Friday?
+<span class="student">[Student]</span> I&#x27;m doing great.
+<span class="student">[Student]</span> Yeah, I&#x27;ve come back today. So it&#x27;s good.
+<span class="student">[Student]</span> How was your day?
+<span class="tutor">[Tutor]</span> I guess it&#x27;s pretty good.
+<span class="tutor">[Tutor]</span> Do you have any plans for the weekend?
+<span class="student">[Student]</span> This weekend?
+<span class="tutor">[Tutor]</span> Yes.
+<span class="student">[Student]</span> I haven&#x27;t set up the plan yet, but maybe today I will take a train and then I&#x27;m thinking about that.
+<span class="student">[Student]</span> Yeah, what we&#x27;ll do. Yeah, so maybe this season is spring, so maybe we will go outside.
+<span class="student">[Student]</span> Yeah, and feel the nature, feel the spring.
+<span class="student">[Student]</span> How about you? How about your plan on the weekend?
+<span class="tutor">[Tutor]</span> Oh, not sure. You&#x27;re on the weekend. Yeah, yeah, yeah, not sure. Yeah, it&#x27;s been rainy here, so something indoors.
+<span class="student">[Student]</span> Ah, yeah. What temperature now?
+<span class="tutor">[Tutor]</span> Uh, 12.
+<span class="tutor">[Tutor]</span> 12. Yeah, not cold, or a little chilly, but yeah, not cold.
+<span class="student">[Student]</span> I see. Yeah, the weather is usually very mild.
+<span class="student">[Student]</span> Canada also coming spring, right?
+<span class="tutor">[Tutor]</span> Different areas. In my area, it&#x27;s...
+<span class="student">[Student]</span> Yeah, because your country is huge. So, how about your area?
+<span class="tutor">[Tutor]</span> Yeah, my area is pretty warm. Yeah, we didn&#x27;t have any snow. Yeah.
+<span class="student">[Student]</span> Yeah, and but some area in Canada there is a fair snow, right?
+<span class="tutor">[Tutor]</span> Well, yeah, it depends where you are. Yeah, up north, definitely snow. Yeah, that is a huge...
+<span class="student">[Student]</span> Do you have some travel in your country, the whole area?
+<span class="tutor">[Tutor]</span> Am I planning to travel? No, not planning. Yeah, it&#x27;s planned.
+<span class="tutor">[Tutor]</span> Experience? I&#x27;ve traveled in my area, but usually a long drive, like nine-hour drive, 12-hour drive.
+<span class="student">[Student]</span> Wow, it&#x27;s a huge. I see. It&#x27;s pretty hard to go to the next area.
+<span class="student">[Student]</span> If you travel in your country, and in the West and East to the East, how far away is it? Is it more about 1,000 kilometers? Yeah, yeah, more than that. How long is the distance?
+<span class="tutor">[Tutor]</span> I guess, well, it depends if you&#x27;re going like extreme east because there&#x27;s islands too that count. I guess the length part of the zone from 5,000 kilometers.
+<span class="student">[Student]</span> Wow, that is so great. Yeah. Our country, it is only 500 kilometers. So your country, the biggest, better than our country. Multiple times.
+<span class="tutor">[Tutor]</span> The border. The Canada-US border is 8,000 kilometers.
+<span class="student">[Student]</span> 8,000 kilometers. Wow, it&#x27;s so huge.
+<span class="student">[Student]</span> If you travel USA and Canada, it is a long travel. And it is impossible to travel every area.
+<span class="student">[Student]</span> I see.
+<span class="tutor">[Tutor]</span> You&#x27;d have to do a lot of driving or flying.
+<span class="student">[Student]</span> Definitely. Yes, yes, you&#x27;re right.
+<span class="student">[Student]</span> But if I live there in your country, and if I&#x27;m a citizen in Canada or USA, at that time, I will travel the whole area by my car.
+<span class="student">[Student]</span> Yeah, that is so great.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="tutor">[Tutor]</span> Yeah, are you able to?
+<span class="student">[Student]</span> Some Koreans travel using a camping car in USA. So I understand why they follow the road map, as why they go to their travel in their area.
+<span class="tutor">[Tutor]</span> I see. Yeah, camper vans and RVs are pretty popular.
+<span class="student">[Student]</span> Pretty popular. Yes. Great. Someday I will travel.
+<span class="student">[Student]</span> Okay, yes. And teacher, today we have changed our textbook. So, do you inform them?
+<span class="tutor">[Tutor]</span> Yeah, you&#x27;re on page 10 now.
+<span class="student">[Student]</span> Maybe that is first Master of Written Communication and Formal and Informal.
+<span class="tutor">[Tutor]</span> Yes, we will start Formal and Informal.
+<span class="tutor">[Tutor]</span> Okay, yeah.
+<span class="tutor">[Tutor]</span> So, yeah, I&#x27;m looking at that. Yeah.
+<span class="student">[Student]</span> And I guess this textbook is a little hard for me. So my plan is if I finish that textbook, and then I will go back to just finish the Business Basic Second, and then I will go back to Business Basic One and Two. That&#x27;s my plan.
+<span class="tutor">[Tutor]</span> So you want to restart it?
+<span class="student">[Student]</span> Yeah, you&#x27;re right, because I don&#x27;t understand perfectly the Basic One. So if I finish the Basic Two, and then I will go back to Basic One and finish the Basic One and Two.
+<span class="tutor">[Tutor]</span> Okay, I&#x27;ll make a note for that.
+<span class="student">[Student]</span> Okay, yes.
+<span class="tutor">[Tutor]</span> So this year we have the formal and informal one. So looking at these phrases, would you like to try to find the match?
+<span class="tutor">[Tutor]</span> For example, A, which one would match A?
+<span class="student">[Student]</span> Yes, that is, yeah, I&#x27;m trying, they&#x27;re matching. But anyway, I&#x27;ll try that.
+<span class="student">[Student]</span> How about that? That is just the first sentence read and then check the paragraph, right?
+<span class="tutor">[Tutor]</span> Well, do you want to, yeah, read, so it&#x27;s matching. So A to R, they have a match.
+<span class="student">[Student]</span> Yes, I see.
+<span class="tutor">[Tutor]</span> &quot;When can you chat this week?&quot;
+<span class="student">[Student]</span> That is the informal, because if I use the formal conversation, we don&#x27;t say the chat. So if I change the formal, &quot;When could you communicate this week?&quot; So the match should be L.
+<span class="tutor">[Tutor]</span> L?
+<span class="tutor">[Tutor]</span> So these letters and letters match. So A, &quot;When you can chat this week&quot; matches, &quot;Let me know when you can call this week.&quot;
+<span class="student">[Student]</span> You&#x27;re right, you&#x27;re right. Just a moment. Ah, yes.
+<span class="student">[Student]</span> &quot;Let me know when you call back, when you call, when can call you this week.&quot;
+<span class="tutor">[Tutor]</span> &quot;When you can call this week.&quot;
+<span class="tutor">[Tutor]</span> &quot;Let me know when you can call this week.&quot;
+<span class="student">[Student]</span> Okay, I see.
+<span class="tutor">[Tutor]</span> And you find the directory?
+<span class="tutor">[Tutor]</span> Did you find the directory that A matching L?
+<span class="tutor">[Tutor]</span> Yeah, looking at these. So A, like these are matching. So there&#x27;s the table. So A matches L. So there&#x27;s an informal one and then a formal one.
+<span class="student">[Student]</span> Wow, you&#x27;re great. There are so many sentences, but you can find.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="student">[Student]</span> I see. Yeah, the second.
+<span class="tutor">[Tutor]</span> &quot;Can I get the report by Friday?&quot;
+<span class="student">[Student]</span> &quot;Can I get the report by Friday?&quot;
+<span class="tutor">[Tutor]</span> Usually, &quot;Can I... blah, blah, blah&quot; is a little informal.
+<span class="student">[Student]</span> So I&#x27;m okay, actually that is the correct J.
+<span class="tutor">[Tutor]</span> Yeah, the hint there is Friday.
+<span class="student">[Student]</span> Yeah, &quot;Please send me the report by Friday.&quot; And teacher, I have one question. If I use the Monday, Tuesday, blah, blah, blah, at the time we use the &quot;on,&quot; but this sentence used &quot;by.&quot; That meaning is the &quot;until&quot; or what&#x27;s mean the &quot;by&quot;?
+<span class="tutor">[Tutor]</span> So that replaces the preposition &quot;on.&quot; So the &quot;by&quot; is just another preposition.
+<span class="student">[Student]</span> I will... Can you say it&#x27;s possible to replace, right? Uh, presently &quot;on Friday.&quot; And if I use the &quot;by Friday,&quot; &quot;I will go travel by Friday.&quot; Is it right expression?
+<span class="tutor">[Tutor]</span> No, so &quot;on&quot; means on that day, but &quot;by Friday&quot; means you can do it any day, but Friday is the deadline.
+<span class="student">[Student]</span> Ah, yes, I see. The &quot;by&quot; means the period. Until the period, meaning the period, including the period meaning. I think before Friday.
+<span class="student">[Student]</span> Okay, great explanation. Okay, C, &quot;The new policy starts on September 1st.&quot; Wow, that is so formal.
+<span class="student">[Student]</span> And oh, yes, I checked the formal is same, &quot;The new policy starts on September 1st.&quot; Yeah, they didn&#x27;t change it. Yeah, the both is the formal, right? Actually, it is impossible to solve directly, so yeah, yesterday I checked, I used AI. So, yes.
+<span class="student">[Student]</span> Anyway, yeah, go to the D. &quot;How are last week&#x27;s tasks?&quot; &quot;How are last week&#x27;s tasks?&quot; Hmm, &quot;How are last week&#x27;s tasks?&quot; That is too formal. Use the &quot;task,&quot; yeah, but informal is the &quot;work.&quot; So...
+<span class="student">[Student]</span> Oh, no, just a moment. Actually, last day I checked the D and I, yes.
+<span class="student">[Student]</span> D and Q. D and Q is the same sentence, but I&#x27;m checking on &quot;How are last week&#x27;s tasks?&quot; That is more formal, Q, because...
+<span class="tutor">[Tutor]</span> Yeah, Q.
+<span class="student">[Student]</span> Yeah, because &quot;How are you, blah, blah, blah.&quot; &quot;How about blah, blah, blah&quot; is more formal. Not informal. That is informal. So I think Q is the better formal than D.
+<span class="student">[Student]</span> Okay, and then the E is &quot;Meeting at 10th on the 15th.&quot; Good.
+<span class="tutor">[Tutor]</span> Okay, I see.
+<span class="student">[Student]</span> &quot;I want to confirm.&quot; Okay, it&#x27;s the same sentence. &quot;I want to...&quot; &quot;Is meeting 10-15 still good?&quot; &quot;I want to confirm our 10 a.m. meeting on August 15.&quot; I guess K is the formal, but better than E.
+<span class="student">[Student]</span> Because yeah, K is more, yeah, because if I, uh, the compound is the more formal expression, explanation, so I&#x27;m selected.
+<span class="student">[Student]</span> And the F here, &quot;How to reset your password here.&quot; &quot;How...&quot;
+<span class="student">[Student]</span> M is the same word. &quot;Follow.&quot; Yes, &quot;Follow these steps to reset your password&quot; is more formal. But here, it is more casual explanation.
+<span class="student">[Student]</span> What is better explanation or expression or exclamation?
+<span class="tutor">[Tutor]</span> Oh, my God. Oh, my. Please, we could do expression, expression, expression. Okay, expression.
+<span class="student">[Student]</span> How about the difference? Is explanation, explanation is different? Is it different?
+<span class="tutor">[Tutor]</span> Well, there&#x27;s exclamation, which is stating something, but explanation is explaining something.
+<span class="student">[Student]</span> Explanation or exclamation? Exclamation.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="student">[Student]</span> Yes. And G, &quot;Can you explain project role?&quot; &quot;Can you, can you,&quot; that&#x27;s casual expression. &quot;Can you explain project role?&quot; G.
+<span class="student">[Student]</span> R is same expression. Explanation. &quot;I need to understand the role.&quot; &quot;Can you explain project role?&quot; &quot;I need to understand the role.&quot; I guess R is more formal, but...
+<span class="student">[Student]</span> If I change, if that expression change, &quot;Could you explain the project role?&quot; It is formal, but &quot;Can you&quot; is a little casual. Just my opinion.
+<span class="tutor">[Tutor]</span> Well, I think G is probably more formal instead. &quot;I need to understand it&quot; versus &quot;Can you explain.&quot;
+<span class="student">[Student]</span> Okay, I see.
+<span class="student">[Student]</span> And the &quot;Sorry for late reply.&quot; &quot;Sorry for reply.&quot; That is so informal, that casual. And &quot;I apologize for the response&quot; or &quot;I&#x27;m sorry for response.&quot; Yeah, &quot;response&quot; if there are more formal word, so that is connect.
+<span class="student">[Student]</span> And the last thing, &quot;Ask if you have question.&quot; &quot;Ask if you have a question.&quot; I just a moment.
+<span class="student">[Student]</span> But every sentence is through, ah, &quot;I can help with the question.&quot; It is same, so Q is the better formal than &quot;Ask if they have a question.&quot; I think, yeah, the both is a little...
+<span class="tutor">[Tutor]</span> P is a more polite offering. &quot;I can help you with any question.&quot;
+<span class="student">[Student]</span> &quot;I can help with the question.&quot; It&#x27;s more formal. I guess the formal expression is more complicated and they use the more luxury word. So I check them. But the casual or informal is the more easy, but not complicated, and it is the use the more normal life conversation, right?
+<span class="tutor">[Tutor]</span> Usually more simple versus &quot;Can I get the report?&quot;
+<span class="student">[Student]</span> &quot;Can I get the report?&quot; Yes, I see. Okay, I understand.
+<span class="tutor">[Tutor]</span> Also like using &quot;please&quot; or polite forms.
+<span class="student">[Student]</span> Right, right. And you also work at the company or lecture, right? How about use that language? Usually, did you use the formal language in your company or in your academy?
+<span class="tutor">[Tutor]</span> Most workplaces in Canada are pretty casual, but if you&#x27;re writing, you can definitely use more formal in written communication.
+<span class="student">[Student]</span> I see. Just to write an email or send an email, at that time we used the formal expression. How about the senior people? If you talk to your grandmother at the time, do you use the formal communication or informal communication?
+<span class="tutor">[Tutor]</span> Informal. In workplaces, bosses ask you to call them by first name.
+<span class="student">[Student]</span> It is very important to the place. I see. Okay. I understand.
+<span class="tutor">[Tutor]</span> Okay. That&#x27;s about it for time. I can send you the answer key for this for today. Any other questions here before I go?
+<span class="student">[Student]</span> Oh, no. I don&#x27;t have questions, teacher. Thank you for your class every day.
+<span class="tutor">[Tutor]</span> Okay. You&#x27;re welcome. Have a great day.
+<span class="student">[Student]</span> Have a great day, too. Bye-bye.
+<span class="tutor">[Tutor]</span> Bye.</div>
+        </div>
+    </div>
+    <div class="toast" id="toast">✅ 프롬프트가 복사되었습니다!</div>
+    <script>
+        const REVIEW_PROMPT="너는 나의 영어 회화 복습 파트너야. 오늘 내 전화영어 수업 내용을 기반으로 대화하면서 복습을 도와줘.\n\n[오늘 수업 전사 내용]\n[Tutor] Oh, well, good morning.\n[Student] Yeah, good morning.\n[Student] Yeah.\n[Tutor] Hi.\n[Tutor] Hi, I was going to ask, how was your Friday?\n[Student] I'm doing great.\n[Student] Yeah, I've come back today. So it's good.\n[Student] How was your day?\n[Tutor] I guess it's pretty good.\n[Tutor] Do you have any plans for the weekend?\n[Student] This weekend?\n[Tutor] Yes.\n[Student] I haven't set up the plan yet, but maybe today I will take a train and then I'm thinking about that.\n[Student] Yeah, what we'll do. Yeah, so maybe this season is spring, so maybe we will go outside.\n[Student] Yeah, and feel the nature, feel the spring.\n[Student] How about you? How about your plan on the weekend?\n[Tutor] Oh, not sure. You're on the weekend. Yeah, yeah, yeah, not sure. Yeah, it's been rainy here, so something indoors.\n[Student] Ah, yeah. What temperature now?\n[Tutor] Uh, 12.\n[Tutor] 12. Yeah, not cold, or a little chilly, but yeah, not cold.\n[Student] I see. Yeah, the weather is usually very mild.\n[Student] Canada also coming spring, right?\n[Tutor] Different areas. In my area, it's...\n[Student] Yeah, because your country is huge. So, how about your area?\n[Tutor] Yeah, my area is pretty warm. Yeah, we didn't have any snow. Yeah.\n[Student] Yeah, and but some area in Canada there is a fair snow, right?\n[Tutor] Well, yeah, it depends where you are. Yeah, up north, definitely snow. Yeah, that is a huge...\n[Student] Do you have some travel in your country, the whole area?\n[Tutor] Am I planning to travel? No, not planning. Yeah, it's planned.\n[Tutor] Experience? I've traveled in my area, but usually a long drive, like nine-hour drive, 12-hour drive.\n[Student] Wow, it's a huge. I see. It's pretty hard to go to the next area.\n[Student] If you travel in your country, and in the West and East to the East, how far away is it? Is it more about 1,000 kilometers? Yeah, yeah, more than that. How long is the distance?\n[Tutor] I guess, well, it depends if you're going like extreme east because there's islands too that count. I guess the length part of the zone from 5,000 kilometers.\n[Student] Wow, that is so great. Yeah. Our country, it is only 500 kilometers. So your country, the biggest, better than our country. Multiple times.\n[Tutor] The border. The Canada-US border is 8,000 kilometers.\n[Student] 8,000 kilometers. Wow, it's so huge.\n[Student] If you travel USA and Canada, it is a long travel. And it is impossible to travel every area.\n[Student] I see.\n[Tutor] You'd have to do a lot of driving or flying.\n[Student] Definitely. Yes, yes, you're right.\n[Student] But if I live there in your country, and if I'm a citizen in Canada or USA, at that time, I will travel the whole area by my car.\n[Student] Yeah, that is so great.\n[Tutor] Okay.\n[Tutor] Yeah, are you able to?\n[Student] Some Koreans travel using a camping car in USA. So I understand why they follow the road map, as why they go to their travel in their area.\n[Tutor] I see. Yeah, camper vans and RVs are pretty popular.\n[Student] Pretty popular. Yes. Great. Someday I will travel.\n[Student] Okay, yes. And teacher, today we have changed our textbook. So, do you inform them?\n[Tutor] Yeah, you're on page 10 now.\n[Student] Maybe that is first Master of Written Communication and Formal and Informal.\n[Tutor] Yes, we will start Formal and Informal.\n[Tutor] Okay, yeah.\n[Tutor] So, yeah, I'm looking at that. Yeah.\n[Student] And I guess this textbook is a little hard for me. So my plan is if I finish that textbook, and then I will go back to just finish the Business Basic Second, and then I will go back to Business Basic One and Two. That's my plan.\n[Tutor] So you want to restart it?\n[Student] Yeah, you're right, because I don't understand perfectly the Basic One. So if I finish the Basic Two, and then I will go back to Basic One and finish the Basic One and Two.\n[Tutor] Okay, I'll make a note for that.\n[Student] Okay, yes.\n[Tutor] So this year we have the formal and informal one. So looking at these phrases, would you like to try to find the match?\n[Tutor] For example, A, which one would match A?\n[Student] Yes, that is, yeah, I'm trying, they're matching. But anyway, I'll try that.\n[Student] How about that? That is just the first sentence read and then check the paragraph, right?\n[Tutor] Well, do you want to, yeah, read, so it's matching. So A to R, they have a match.\n[Student] Yes, I see.\n[Tutor] \"When can you chat this week?\"\n[Student] That is the informal, because if I use the formal conversation, we don't say the chat. So if I change the formal, \"When could you communicate this week?\" So the match should be L.\n[Tutor] L?\n[Tutor] So these letters and letters match. So A, \"When you can chat this week\" matches, \"Let me know when you can call this week.\"\n[Student] You're right, you're right. Just a moment. Ah, yes.\n[Student] \"Let me know when you call back, when you call, when can call you this week.\"\n[Tutor] \"When you can call this week.\"\n[Tutor] \"Let me know when you can call this week.\"\n[Student] Okay, I see.\n[Tutor] And you find the directory?\n[Tutor] Did you find the directory that A matching L?\n[Tutor] Yeah, looking at these. So A, like these are matching. So there's the table. So A matches L. So there's an informal one and then a formal one.\n[Student] Wow, you're great. There are so many sentences, but you can find.\n[Tutor] Okay.\n[Student] I see. Yeah, the second.\n[Tutor] \"Can I get the report by Friday?\"\n[Student] \"Can I get the report by Friday?\"\n[Tutor] Usually, \"Can I... blah, blah, blah\" is a little informal.\n[Student] So I'm okay, actually that is the correct J.\n[Tutor] Yeah, the hint there is Friday.\n[Student] Yeah, \"Please send me the report by Friday.\" And teacher, I have one question. If I use the Monday, Tuesday, blah, blah, blah, at the time we use the \"on,\" but this sentence used \"by.\" That meaning is the \"until\" or what's mean the \"by\"?\n[Tutor] So that replaces the preposition \"on.\" So the \"by\" is just another preposition.\n[Student] I will... Can you say it's possible to replace, right? Uh, presently \"on Friday.\" And if I use the \"by Friday,\" \"I will go travel by Friday.\" Is it right expression?\n[Tutor] No, so \"on\" means on that day, but \"by Friday\" means you can do it any day, but Friday is the deadline.\n[Student] Ah, yes, I see. The \"by\" means the period. Until the period, meaning the period, including the period meaning. I think before Friday.\n[Student] Okay, great explanation. Okay, C, \"The new policy starts on September 1st.\" Wow, that is so formal.\n[Student] And oh, yes, I checked the formal is same, \"The new policy starts on September 1st.\" Yeah, they didn't change it. Yeah, the both is the formal, right? Actually, it is impossible to solve directly, so yeah, yesterday I checked, I used AI. So, yes.\n[Student] Anyway, yeah, go to the D. \"How are last week's tasks?\" \"How are last week's tasks?\" Hmm, \"How are last week's tasks?\" That is too formal. Use the \"task,\" yeah, but informal is the \"work.\" So...\n[Student] Oh, no, just a moment. Actually, last day I checked the D and I, yes.\n[Student] D and Q. D and Q is the same sentence, but I'm checking on \"How are last week's tasks?\" That is more formal, Q, because...\n[Tutor] Yeah, Q.\n[Student] Yeah, because \"How are you, blah, blah, blah.\" \"How about blah, blah, blah\" is more formal. Not informal. That is informal. So I think Q is the better formal than D.\n[Student] Okay, and then the E is \"Meeting at 10th on the 15th.\" Good.\n[Tutor] Okay, I see.\n[Student] \"I want to confirm.\" Okay, it's the same sentence. \"I want to...\" \"Is meeting 10-15 still good?\" \"I want to confirm our 10 a.m. meeting on August 15.\" I guess K is the formal, but better than E.\n[Student] Because yeah, K is more, yeah, because if I, uh, the compound is the more formal expression, explanation, so I'm selected.\n[Student] And the F here, \"How to reset your password here.\" \"How...\"\n[Student] M is the same word. \"Follow.\" Yes, \"Follow these steps to reset your password\" is more formal. But here, it is more casual explanation.\n[Student] What is better explanation or expression or exclamation?\n[Tutor] Oh, my God. Oh, my. Please, we could do expression, expression, expression. Okay, expression.\n[Student] How about the difference? Is explanation, explanation is different? Is it different?\n[Tutor] Well, there's exclamation, which is stating something, but explanation is explaining something.\n[Student] Explanation or exclamation? Exclamation.\n[Tutor] Okay.\n[Student] Yes. And G, \"Can you explain project role?\" \"Can you, can you,\" that's casual expression. \"Can you explain project role?\" G.\n[Student] R is same expression. Explanation. \"I need to understand the role.\" \"Can you explain project role?\" \"I need to understand the role.\" I guess R is more formal, but...\n[Student] If I change, if that expression change, \"Could you explain the project role?\" It is formal, but \"Can you\" is a little casual. Just my opinion.\n[Tutor] Well, I think G is probably more formal instead. \"I need to understand it\" versus \"Can you explain.\"\n[Student] Okay, I see.\n[Student] And the \"Sorry for late reply.\" \"Sorry for reply.\" That is so informal, that casual. And \"I apologize for the response\" or \"I'm sorry for response.\" Yeah, \"response\" if there are more formal word, so that is connect.\n[Student] And the last thing, \"Ask if you have question.\" \"Ask if you have a question.\" I just a moment.\n[Student] But every sentence is through, ah, \"I can help with the question.\" It is same, so Q is the better formal than \"Ask if they have a question.\" I think, yeah, the both is a little...\n[Tutor] P is a more polite offering. \"I can help you with any question.\"\n[Student] \"I can help with the question.\" It's more formal. I guess the formal expression is more complicated and they use the more luxury word. So I check them. But the casual or informal is the more easy, but not complicated, and it is the use the more normal life conversation, right?\n[Tutor] Usually more simple versus \"Can I get the report?\"\n[Student] \"Can I get the report?\" Yes, I see. Okay, I understand.\n[Tutor] Also like using \"please\" or polite forms.\n[Student] Right, right. And you also work at the company or lecture, right? How about use that language? Usually, did you use the formal language in your company or in your academy?\n[Tutor] Most workplaces in Canada are pretty casual, but if you're writing, you can definitely use more formal in written communication.\n[Student] I see. Just to write an email or send an email, at that time we used the formal expression. How about the senior people? If you talk to your grandmother at the time, do you use the formal communication or informal communication?\n[Tutor] Informal. In workplaces, bosses ask you to call them by first name.\n[Student] It is very important to the place. I see. Okay. I understand.\n[Tutor] Okay. That's about it for time. I can send you the answer key for this for today. Any other questions here before I go?\n[Student] Oh, no. I don't have questions, teacher. Thank you for your class every day.\n[Tutor] Okay. You're welcome. Have a great day.\n[Student] Have a great day, too. Bye-bye.\n[Tutor] Bye.\n\n[AI 피드백]\n따뜻하고 실용적인 영어 코치입니다! 오늘 수업도 정말 수고 많으셨습니다. 캐나다의 광활한 영토에 대한 이야기부터 격식체/비격식체 표현까지, 다양한 주제에 대해 열정적으로 참여해주셔서 감사해요. 특히 새로운 교재에 대한 학습 계획을 구체적으로 세우고, AI까지 활용해서 미리 예습해 오시는 모습에서 학습에 대한 뜨거운 의지가 느껴졌습니다. 정말 멋져요!\n\n오늘 대화 내용을 바탕으로 유창성과 정확성을 동시에 잡을 수 있는 피드백을 드릴게요.\n\n---\n\n### **1. 📊 오늘의 대화 요약 (Summary)**\n\n오늘 수업에서는 주말 계획에 대한 자유로운 대화로 시작하여, 캐나다의 넓은 영토와 여행 경험에 대해 이야기 나누었습니다. 이어서 새로운 교재의 '격식체와 비격식체 표현 매칭' 활동을 통해 비즈니스 커뮤니케이션의 뉘앙스를 학습하고, 전치사 'on'과 'by'의 차이를 명확히 이해하는 시간을 가졌습니다. 특히, 격식체와 비격식체 표현의 특징을 스스로 분석하고 설명하려는 노력이 돋보였습니다.\n\n### **2. 💬 유창성 업그레이드 (Fluency & Natural Flow)**\n\n[Student]님이 실제 말한 문장 중, 의미는 통하지만 더 자연스럽게 다듬을 수 있는 표현 3가지를 선정했습니다.\n\n1.  **❌ 학습자 원문 (As Said):** \"I haven't set up the plan yet, but maybe today I will take a train and then I'm thinking about that.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"I haven't made any plans yet, but I'm thinking of taking a train today.\"\n    *   **💎 비즈니스 표현 (Professional):** \"My plans are not yet finalized, but I am considering taking a train today.\"\n    *   **💡 코칭 포인트:** 'set up a plan'은 계획을 '수립하다'는 의미로 쓰이지만, 일상적인 주말 계획에는 'make a plan'이 훨씬 자연스럽습니다. 'thinking about that'보다는 'thinking of ~ing' 또는 'thinking about ~ing'으로 구체적인 행동을 연결하는 것이 좋습니다.\n\n2.  **❌ 학습자 원문 (As Said):** \"How about your plan on the weekend?\"\n    *   **✅ 자연스러운 표현 (Natural):** \"How about your plans for the weekend?\"\n    *   **💎 비즈니스 표현 (Professional):** \"What are your plans for the upcoming weekend?\"\n    *   **💡 코칭 포인트:** 주말 계획은 보통 복수형 'plans'로 사용하며, 특정 요일이 아닌 기간을 나타낼 때는 전치사 'on' 대신 'for'를 쓰는 것이 일반적입니다.\n\n3.  **❌ 학습자 원문 (As Said):** \"Our country, it is only 500 kilometers. So your country, the biggest, better than our country. Multiple times.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"Our country is only 500 kilometers. Your country is multiple times bigger than ours.\"\n    *   **💎 비즈니스 표현 (Professional):** \"Our country spans only 500 kilometers, whereas your country is significantly larger, multiple times the size.\"\n    *   **💡 코칭 포인트:** 문장이 길어지면 주어와 동사를 다시 한번 확인하는 습관을 들이면 좋습니다. 'the biggest, better than our country'는 'multiple times bigger than ours'처럼 비교급을 활용하는 것이 더 자연스럽습니다.\n\n### **3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)**\n\n이번 대화에서는 **관사 (a/the)** 사용에 실수가 반복적으로 나타났습니다. 특히 특정 명사를 지칭하거나, 일반적인 명사를 처음 언급할 때 관사를 빠뜨리는 경우가 있었습니다.\n\n| ❌ 원문 (As Said)                 | ✅ 교정 예시 (Corrected)                                |\n| :------------------------------- | :----------------------------------------------------- |\n| \"What temperature now?\"          | \"What **is the** temperature now?\"                      |\n| \"Sorry for late reply.\"          | \"Sorry for **the** late reply.\"                        |\n| \"Ask if you have question.\"      | \"Ask if you have **a** question.\"                      |\n| \"I don't understand perfectly the Basic One.\" | \"I don't perfectly understand **Basic One**.\" (고유명사로 간주하여 the 생략 가능) 또는 \"I don't perfectly understand **the Basic One** (textbook).\" |\n\n📌 **핵심 규칙:** 명사 앞에는 관사 (a/an/the)나 소유격 등이 붙어 명사를 한정해주는 경우가 많습니다. 특히 특정 대상을 가리킬 때는 'the'를, 처음 언급하는 일반적인 단수 명사 앞에는 'a/an'을 붙이는 것을 신경 써 주세요.\n\n🔁 **따라 읽기:**\n🗣️ \"What **is the** temperature now?\"\n🗣️ \"Sorry for **the** late reply.\"\n🗣️ \"Ask if you have **a** question.\"\n\n### **4. 📗 어휘 확장 (Vocabulary Vault)**\n\n학습자님의 업무 환경에서 바로 쓸 수 있는 유용한 단어 5개를 소개합니다.\n\n1.  **mild** /maɪld/ (형용사)\n    *   뜻: (날씨가) 온화한, 포근한\n    *   실전 예문: The weather in this region is usually **mild**, which is good for outdoor activities.\n2.  **vast** /væst/ (형용사)\n    *   뜻: (지역·면적 등이) 광대한, 어마어마한\n    *   실전 예문: Canada has **vast** natural resources, including oil and gas.\n3.  **confirm** /kənˈfɜːrm/ (동사)\n    *   뜻: (사실임을) 확인하다, 확정하다\n    *   실전 예문: Please **confirm** the meeting time by the end of the day.\n4.  **policy** /ˈpɑːləsi/ (명사)\n    *   뜻: 정책, 방침\n    *   실전 예문: Our company has a new **policy** regarding remote work.\n5.  **apologize** /əˈpɑːləˌdʒaɪz/ (동사)\n    *   뜻: 사과하다\n    *   실전 예문: I would like to **apologize** for the inconvenience caused.\n\n### **5. 📝 실전 복습 챌린지 (Practice)**\n\n오늘 배운 표현과 문법을 활용하여 다음 상황을 영어로 작문해 보세요.\n\n1.  **[쉬움]** 늦은 회신에 대해 사과하고 싶습니다.\n    *   **모범 답안:** I **apologize** for the late reply.\n2.  **[중간]** 다음 주 금요일까지 이 보고서를 제출해 주실 수 있나요?\n    *   **모범 답안:** Could you please submit this report **by** next Friday?\n3.  **[어려움]** 저희는 다음 달 1일부터 새로운 에너지 수입 정책을 시행할 예정입니다. 궁금한 점이 있으시면 언제든지 문의해 주세요.\n    *   **모범 답안:** We will implement **a** new energy import **policy** starting **on** the 1st of next month. Please don't hesitate to ask if you have any questions.\n\n### **6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)**\n\n✨ **Good Job:**\n\"I guess the formal expression is more complicated and they use the more luxury word. So I check them. But the casual or informal is the more easy, but not complicated, and it is the use the more normal life conversation, right?\"\n\n이 문장은 비록 표현이 완벽하진 않았지만, 격식체와 비격식체의 차이를 스스로 분석하고 이해하려는 깊이 있는 사고 과정이 돋보였습니다. 'luxury word'라는 표현으로 격식체의 특징을 설명하려는 시도도 매우 인상 깊었어요! 복잡한 개념을 자신만의 방식으로 정리하려는 노력이 훌륭합니다.\n\n🚀 **내일의 한 문장:**\n다음 수업 시작 시 튜터에게 오늘 배운 표현을 활용하여 이렇게 말해보세요.\n\"I'd like to **confirm** my plans for the weekend.\" (주말 계획을 확인하고 싶어요.)\n\n---\n\n### **[성과 지표]**\n\n**유창성 점수:** 7/10\n**근거:** 학습자님은 다양한 주제에 대해 자신의 의견을 적극적으로 표현하며 대화를 이끌어가는 능력이 뛰어납니다. 주저함 없이 많은 말을 시도하고, 궁금한 점은 바로 질문하는 모습이 매우 좋습니다. 다만, 문장 구조를 완성하는 과정에서 간헐적인 멈춤이나 어색한 표현이 있어 흐름이 다소 끊기는 경우가 있습니다. 이는 더 많은 연습을 통해 자연스럽게 개선될 수 있습니다.\n\n**다음 수업 '원포인트 액션 플랜':**\n**'명사 앞 관사 (a/the) 사용 습관화하기'**\n다음 수업에서는 말하기 전에 명사 앞에 'a/an' 또는 'the'를 붙여야 할지 한 번 더 생각하는 연습을 해보세요. 특히 처음 언급하는 단수 명사 앞에는 'a/an'을, 특정 명사나 이미 언급된 명사 앞에는 'the'를 붙이는 것을 의식적으로 시도해 봅시다.\n\n위 내용을 바탕으로:\n1. 먼저 오늘 수업에서 내가 틀렸거나 어색했던 표현을 하나 골라서, 관련된 상황을 영어로 질문해줘.\n2. 내가 영어로 대답하면, 자연스러운지 확인하고 더 나은 표현이 있으면 알려줘.\n3. 특히 \"반복 실수 패턴\"에서 지적된 부분을 집중적으로 연습시켜줘.\n4. 이런 식으로 오늘 배운 표현들을 하나씩 복습하자.\n5. 한국어 설명은 필요할 때만 간단히, 대화는 최대한 영어로 진행해줘.\n\n그럼 시작하자!";
+        function startReview(){navigator.clipboard.writeText(REVIEW_PROMPT).then(()=>{showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)}).catch(()=>{const t=document.createElement('textarea');t.value=REVIEW_PROMPT;document.body.appendChild(t);t.select();document.execCommand('copy');document.body.removeChild(t);showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)})}
+        function showToast(){const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500)}
+        function switchTab(n){document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',n==='feedback'?i===0:i===1));document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));document.getElementById('tab-'+n).classList.add('active')}
+    </script>
+</body>
+</html>
