@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전화영어 복습 - 2026년 03월 23일</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Noto Sans KR',sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.75;min-height:100vh}
+        .header{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);border-bottom:1px solid rgba(255,255,255,.06);padding:48px 24px 40px;text-align:center}
+        .header-date{font-size:13px;color:#94a3b8;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+        .header h1{font-size:28px;font-weight:700;color:#f1f5f9;margin-bottom:16px}
+        .header-meta{display:flex;justify-content:center;gap:24px;font-size:14px;color:#64748b}
+        .header-meta span{display:flex;align-items:center;gap:6px}
+        .cta-section{text-align:center;padding:40px 24px}
+        .cta-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:linear-gradient(135deg,#38bdf8,#818cf8);color:#fff;font-size:16px;font-weight:600;font-family:'Noto Sans KR',sans-serif;border:none;border-radius:50px;cursor:pointer;transition:all .3s;text-decoration:none;box-shadow:0 4px 24px rgba(56,189,248,.25)}
+        .cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(56,189,248,.35)}
+        .cta-btn svg{width:20px;height:20px}
+        .cta-sub{margin-top:12px;font-size:13px;color:#64748b}
+        .toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#38bdf8;padding:14px 28px;border-radius:12px;font-size:14px;font-weight:500;border:1px solid rgba(56,189,248,.2);box-shadow:0 8px 32px rgba(0,0,0,.4);opacity:0;transition:all .4s cubic-bezier(.16,1,.3,1);z-index:1000}
+        .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+        .container{max-width:720px;margin:0 auto;padding:0 24px 80px}
+        .tabs{display:flex;gap:4px;background:#1a1a24;padding:4px;border-radius:12px;margin-bottom:32px}
+        .tab{flex:1;padding:12px;text-align:center;font-size:14px;font-weight:500;color:#64748b;background:0 0;border:none;border-radius:8px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all .2s}
+        .tab.active{background:#262636;color:#f1f5f9}
+        .tab-content{display:none}.tab-content.active{display:block}
+        .feedback h2{font-size:18px;font-weight:700;color:#f1f5f9;margin:36px 0 16px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.06)}
+        .feedback h2:first-child{margin-top:0}
+        .feedback p{margin:8px 0;color:#cbd5e1}
+        .feedback .item{padding:6px 0 6px 16px;border-left:2px solid #334155;margin:6px 0;color:#cbd5e1}
+        .feedback .numbered{padding:8px 0 8px 16px;color:#cbd5e1}
+        .feedback .numbered strong{color:#38bdf8}
+        .feedback strong{color:#f1f5f9}
+        .feedback code{background:#1e293b;padding:2px 8px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#38bdf8}
+        .feedback table{width:100%;border-collapse:collapse;margin:12px 0}
+        .feedback th,.feedback td{padding:10px 14px;text-align:left;border-bottom:1px solid #262636}
+        .feedback th{color:#94a3b8;font-weight:500;font-size:13px}
+        .feedback td{color:#cbd5e1}
+        .arrow{color:#38bdf8;font-weight:700}
+        .transcript{background:#1a1a24;border-radius:12px;padding:28px;font-size:14px;line-height:2;color:#94a3b8;white-space:pre-wrap;word-break:break-word;font-family:'JetBrains Mono','Noto Sans KR',monospace}
+        .transcript .tutor{color:#38bdf8}
+        .transcript .student{color:#a78bfa}
+        @media(max-width:640px){.header{padding:32px 16px}.header h1{font-size:22px}.cta-btn{padding:14px 28px;font-size:15px}.container{padding:0 16px 60px}}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-date">2026년 03월 23일</div>
+        <h1>📚 전화영어 복습</h1>
+        <div class="header-meta">
+            <span>⏱ 19분 56초</span>
+            <span>🎙 전화영어_025180304_20260323080050.m4a</span>
+        </div>
+    </div>
+    <div class="cta-section">
+        <button class="cta-btn" onclick="startReview()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Gemini에서 복습 대화 시작하기
+        </button>
+        <div class="cta-sub">클릭하면 프롬프트가 복사되고 Gemini가 열립니다</div>
+    </div>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('feedback')">📋 AI 피드백</button>
+            <button class="tab" onclick="switchTab('transcript')">🎙 수업 전사</button>
+        </div>
+        <div id="tab-feedback" class="tab-content active">
+            <div class="feedback"><p>안녕하세요, [Student]님! 따뜻하고 실용적인 영어 코치입니다.</p>
+<br>
+<p>지난 수업에서는 주말 이야기로 편안하게 시작해서, 비즈니스 환경에서의 효과적인 메신저 소통 방식과 그 장단점에 대해 깊이 있는 대화를 나누셨죠. 특히 'skip the preliminaries', 'get the ball rolling', 'call it a day' 같은 유용한 비즈니스 표현들을 배우고 직접 문장을 만들어보는 시간이 인상 깊었습니다. 적극적으로 참여해주셔서 정말 좋았어요!</p>
+<br>
+<p>자, 그럼 오늘 수업 내용을 바탕으로 [Student]님의 영어 실력 향상을 위한 맞춤 피드백을 드릴게요.</p>
+<br>
+<br>
+<p>### <strong>1. 📊 오늘의 대화 요약 (Summary)</strong></p>
+<br>
+<p>이번 수업에서는 주말 동안 있었던 튜터의 특별한 댄스 이벤트 준비 이야기로 시작하여, 비즈니스 환경에서 메신저를 통한 프로젝트 역할 및 책임 조율 시나리오를 분석했습니다. 특히 메신저 소통의 효율성과 증거 확보의 중요성에 대해 토론하고, 'skip the preliminaries', 'get the ball rolling', 'call it a day'와 같은 실용적인 비즈니스 관용구의 의미와 활용법을 익혔습니다.</p>
+<br>
+<p>### <strong>2. 💬 유창성 업그레이드 (Fluency & Natural Flow)</strong></p>
+<br>
+<p>[Student]님이 말씀하신 문장 중 의미는 잘 전달되었지만, 원어민들이 더 자연스럽게 사용하는 표현으로 다듬을 수 있는 부분들을 살펴볼게요.</p>
+<br>
+<p>*   <strong>❌ 학습자 원문 (As Said):</strong> "I had a good condition."</p>
+<p>    *   <strong>✅ 자연스러운 표현 (Natural):</strong> "I'm in good condition." 또는 "I feel good/well."</p>
+<p>    *   <strong>💎 비즈니스 표현 (Professional):</strong> "I'm feeling quite refreshed."</p>
+<p>    *   <strong>💡 코칭 포인트:</strong> 'condition'은 주로 'in good/bad condition'처럼 전치사 'in'과 함께 쓰여 몸의 상태를 나타내거나, 사물의 상태를 말할 때 사용해요. 'I had a good condition'보다는 'I'm in good condition'이 훨씬 자연스럽습니다.</p>
+<br>
+<p>*   <strong>❌ 학습자 원문 (As Said):</strong> "It is my first event." (튜터의 댄스 이벤트에 대해 말할 때)</p>
+<p>    *   <strong>✅ 자연스러운 표현 (Natural):</strong> "This is the first time I've heard about an event like this (from you)." 또는 "This is the first event of this kind that I'm aware of."</p>
+<p>    *   <strong>💡 코칭 포인트:</strong> 튜터의 댄스 이벤트에 대해 언급할 때 'my first event'라고 하면 어떤 종류의 이벤트인지 불분명하거나, 마치 본인의 이벤트인 것처럼 들릴 수 있어요. 튜터의 상황처럼 특정 종류의 댄스 이벤트라면, 'this style of dance'나 'of this kind'와 같이 구체적인 정보를 덧붙여주거나, '처음 듣는다'는 의미를 명확히 해주는 것이 더 좋습니다.</p>
+<br>
+<p>*   <strong>❌ 학습자 원문 (As Said):</strong> "That waiting period is so long."</p>
+<p>    *   <strong>✅ 자연스러운 표현 (Natural):</strong> "The waiting period is too long." 또는 "That waiting period takes too long."</p>
+<p>    *   <strong>💎 비즈니스 표현 (Professional):</strong> "The extended waiting period can be quite inefficient."</p>
+<p>    *   <strong>💡 코칭 포인트:</strong> 'so long'은 주로 감탄문이나 강조할 때 쓰이지만, 불편함이나 문제점을 지적할 때는 'too long'이 더 적절해요. '너무 길다'는 부정적인 뉘앙스를 담을 때 'too'를 사용합니다.</p>
+<br>
+<p>### <strong>3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)</strong></p>
+<br>
+<p>이번 대화에서 [Student]님이 반복적으로 사용한 문법 오류 중 <strong>관사 (a/the)</strong> 사용에 대해 집중적으로 다뤄볼게요. 한국어에는 관사가 없기 때문에 많은 한국인 학습자들이 어려워하는 부분이죠.</p>
+<br>
+<table>
+<tr><th>❌ 원문 (As Said)</th><th>✅ 교정 예시 (Corrected)</th></tr>
+<tr><td>:--------------------------------------------------</td><td>:------------------------------------------------------</td></tr>
+<tr><td>"This project deadline is Friday."</td><td>"The project deadline is Friday."</td></tr>
+<tr><td>"If they need more direct discussion, that way is better."</td><td>"If they need a more direct discussion, that method is better."</td></tr>
+<tr><td>"That waiting period is so long."</td><td>"The waiting period is so long."</td></tr>
+</table>
+<br>
+<p>*   <strong>📌 핵심 규칙:</strong></p>
+<p>    *   <strong>The:</strong> 듣는 사람도 알고 있는 <strong>특정</strong> 대상이나, 문맥상 <strong>유일한</strong> 대상을 가리킬 때 사용합니다. (예: "The project deadline" - 지금 이야기하는 바로 그 프로젝트의 마감일)</p>
+<p>    *   <strong>A/An:</strong> 처음 언급되거나, 여러 개 중 <strong>하나</strong>를 가리킬 때, 또는 <strong>일반적인</strong> 대상을 말할 때 사용합니다. (예: "a more direct discussion" - 여러 가지 직접적인 토론 방식 중 하나)</p>
+<p>    *   <strong>무관사:</strong> 셀 수 없는 명사나 복수 명사가 <strong>일반적인 의미</strong>로 쓰일 때, 또는 고유 명사 앞에 사용하지 않습니다.</p>
+<br>
+<p>*   <strong>🔁 따라 읽기:</strong></p>
+<p>    *   🗣️ "The project deadline is Friday."</p>
+<p>    *   🗣️ "If they need a more direct discussion, that method is better."</p>
+<p>    *   🗣️ "The waiting period is so long."</p>
+<br>
+<p>### <strong>4. 📗 어휘 확장 (Vocabulary Vault)</strong></p>
+<br>
+<p>수업 중 등장했거나, [Student]님의 비즈니스 환경에서 유용하게 쓰일 수 있는 단어들을 소개합니다.</p>
+<br>
+<div class="numbered"><strong>1.</strong>  <strong>clarify</strong> /klǽrəfài/ (동사)</div>
+<p>    *   뜻: 명확히 하다, 분명히 밝히다</p>
+<p>    *   실전 예문: We need to <strong>clarify</strong> the roles and responsibilities for this new project.</p>
+<br>
+<div class="numbered"><strong>2.</strong>  <strong>scenario</strong> /sənǽrioʊ/ (명사)</div>
+<p>    *   뜻: 시나리오, 예상되는 상황, 가상 상황</p>
+<p>    *   실전 예문: Let's consider a few different <strong>scenarios</strong> before making a final decision.</p>
+<br>
+<div class="numbered"><strong>3.</strong>  <strong>via</strong> /váɪə/ (전치사)</div>
+<p>    *   뜻: ~을 통하여, ~경유로</p>
+<p>    *   실전 예문: Please send the updated report <strong>via</strong> email by tomorrow morning.</p>
+<br>
+<div class="numbered"><strong>4.</strong>  <strong>inefficient</strong> /ìnɪfíʃənt/ (형용사)</div>
+<p>    *   뜻: 비효율적인, 능률적이지 못한</p>
+<p>    *   실전 예문: Waiting for approvals for too long can make the entire process <strong>inefficient</strong>.</p>
+<br>
+<div class="numbered"><strong>5.</strong>  <strong>preliminaries</strong> /prɪlímɪnèriz/ (명사)</div>
+<p>    *   뜻: 예비 단계, 서두, 준비 작업 (주로 복수형으로 사용)</p>
+<p>    *   실전 예문: Let's skip the <strong>preliminaries</strong> and get straight to the main agenda.</p>
+<br>
+<p>### <strong>5. 📝 실전 복습 챌린지 (Practice)</strong></p>
+<br>
+<p>오늘 배운 표현과 문법을 활용하여 영작 챌린지에 도전해보세요!</p>
+<br>
+<div class="numbered"><strong>1.</strong>  <strong>상황:</strong> 다음 주에 있을 중요한 회의의 안건을 명확히 하고 싶습니다.</div>
+<p>    *   <strong>영작:</strong> 다음 주 회의 안건을 명확히 해야 합니다.</p>
+<p>    *   <strong>모범 답안:</strong> We need to <strong>clarify</strong> the agenda for next week's important meeting.</p>
+<br>
+<div class="numbered"><strong>2.</strong>  <strong>상황:</strong> 새로운 프로젝트를 시작할 때, 팀원들에게 각자의 역할을 할당하여 빠르게 진행하고 싶습니다.</div>
+<p>    *   <strong>영작:</strong> 새 프로젝트를 시작하기 위해, 각 팀원에게 역할을 할당하여 빨리 진행합시다.</p>
+<p>    *   <strong>모범 답안:</strong> To <strong>get the ball rolling</strong> on our new project, let's assign roles to each team member.</p>
+<br>
+<div class="numbered"><strong>3.</strong>  <strong>상황:</strong> 오늘 업무가 매우 비효율적이었고, 더 이상 진행하기 어렵다고 판단하여 퇴근하고 싶습니다.</div>
+<p>    *   <strong>영작:</strong> 오늘 업무는 정말 비효율적이었어요. 이쯤에서 마무리하고 퇴근합시다.</p>
+<p>    *   <strong>모범 답안:</strong> Today's work was quite <strong>inefficient</strong>. Let's <strong>call it a day</strong>.</p>
+<br>
+<p>### <strong>6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)</strong></p>
+<br>
+<p>*   ✨ <strong>Good Job:</strong> "Because that is more direct. If they need more direct discussion, that way is better. Because if I send an email, I wait one day or I wait two days. Yeah, that waiting period is so long. But direct message is so fast, so that is easy."</p>
+<p>    *   [Student]님, 메신저 소통의 장점을 설명할 때, 문장이 길어졌음에도 불구하고 논리적인 흐름을 유지하며 자신의 생각을 자신감 있게 전달하셨습니다. 'direct', 'fast', 'easy'와 같은 핵심 단어들을 효과적으로 사용하여 주장의 설득력을 높인 점이 매우 좋았습니다!</p>
+<br>
+<p>*   🚀 <strong>내일의 한 문장:</strong> 다음 수업 시작 시 튜터에게 오늘 배운 표현을 활용하여 대화를 시작해보세요.</p>
+<p>    *   "Shall we <strong>get the ball rolling</strong> on today's lesson?" (오늘 수업을 시작해볼까요?)</p>
+<br>
+<br>
+<p><strong>[성과 지표]</strong></p>
+<br>
+<p>*   <strong>유창성 점수:</strong> 7/10점</p>
+<p>*   <strong>근거:</strong> 전반적으로 의미 전달이 원활하고, 다양한 주제에 대해 막힘없이 의견을 표현하셨습니다. 다만, 일부 표현에서 더 자연스러운 어순이나 어휘 선택이 가능하며, 관사 사용에 대한 꾸준한 연습이 필요합니다.</p>
+<p>*   <strong>다음 수업 '원포인트 액션 플랜':</strong> 문장 말하기 전, <strong>"관사 (a/an/the)를 써야 할까?"</strong> 한 번 더 생각해보고 말하는 습관 들이기. 특히 명사 앞에 관사가 필요한지, 아니면 무관사로 써야 하는지 의식적으로 점검하는 연습을 해봅시다.</p>
+<br>
+<p>오늘도 정말 수고 많으셨습니다! 다음 수업에서 또 만나요!</p></div>
+        </div>
+        <div id="tab-transcript" class="tab-content">
+            <div class="transcript"><span class="tutor">[Tutor]</span> Hello, hello, Joanna.
+<span class="student">[Student]</span> Hi.
+<span class="tutor">[Tutor]</span> Good morning.
+<span class="student">[Student]</span> Hi, Joey.
+<span class="tutor">[Tutor]</span> Good evening.
+<span class="tutor">[Tutor]</span> How are you this morning?
+<span class="student">[Student]</span> I&#x27;m good. I&#x27;m good. Yes. Usually I&#x27;m tired, but now I&#x27;m okay because on the weekends I sleep a lot. And last night I slept more, so I had a good condition. How about you?
+<span class="tutor">[Tutor]</span> Excellent. My weekend was busy, but in a very good way. So I&#x27;m happy with how the weekend went. And now getting ready for another busy week.
+<span class="student">[Student]</span> I see. I understand. Do you have a special event on the weekend?
+<span class="tutor">[Tutor]</span> At the farmer&#x27;s market where I go to help my friend who has a small business.
+<span class="tutor">[Tutor]</span> And Saturday was pretty busy.
+<span class="tutor">[Tutor]</span> It was good.
+<span class="student">[Student]</span> Yes, yes.
+<span class="tutor">[Tutor]</span> And then this coming weekend, I have a special event because it is the anniversary of my dance school. So there will be a show and it&#x27;s very exciting.
+<span class="student">[Student]</span> Yeah. Wow. It&#x27;s great.
+<span class="student">[Student]</span> A month or two ago, you started to dance.
+<span class="tutor">[Tutor]</span> Yes.
+<span class="student">[Student]</span> Yes.
+<span class="tutor">[Tutor]</span> Yeah.
+<span class="tutor">[Tutor]</span> You remembered.
+<span class="student">[Student]</span> Yeah.
+<span class="student">[Student]</span> It is my first event.
+<span class="tutor">[Tutor]</span> Yeah.
+<span class="tutor">[Tutor]</span> Yes.
+<span class="tutor">[Tutor]</span> It&#x27;s my first event in this style of dance.
+<span class="tutor">[Tutor]</span> So we&#x27;ll see how it goes.
+<span class="student">[Student]</span> Yeah.
+<span class="student">[Student]</span> I know.
+<span class="student">[Student]</span> Is it similar to tango or a special dance?
+<span class="tutor">[Tutor]</span> It is.
+<span class="tutor">[Tutor]</span> It is oriental dances, so Arabic-style dances.
+<span class="student">[Student]</span> I see.
+<span class="student">[Student]</span> Is it a couple or single dance?
+<span class="tutor">[Tutor]</span> No, it is only single.
+<span class="tutor">[Tutor]</span> We dance in groups, though, but women.
+<span class="student">[Student]</span> Single or group.
+<span class="student">[Student]</span> I see.
+<span class="tutor">[Tutor]</span> Exactly.
+<span class="student">[Student]</span> It is so nice.
+<span class="tutor">[Tutor]</span> It is.
+<span class="student">[Student]</span> Yeah, right, right.
+<span class="tutor">[Tutor]</span> I think so, too.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="tutor">[Tutor]</span> All right.
+<span class="tutor">[Tutor]</span> Let&#x27;s get back to our business or mastering written communication section here.
+<span class="student">[Student]</span> Yes.
+<span class="tutor">[Tutor]</span> And page 11.
+<span class="tutor">[Tutor]</span> I think we... did you finish 10 with formal and informal?
+<span class="student">[Student]</span> Oh yes, finished. Yes. And yeah, we will start 11.
+<span class="tutor">[Tutor]</span> 11, okay.
+<span class="tutor">[Tutor]</span> So let&#x27;s see what is happening with Ms. Lee and Mr. Davis.
+<span class="student">[Student]</span> Okay, no problem.
+<span class="student">[Student]</span> There are two people, Ms. Lee and Mr. Davis.
+<span class="student">[Student]</span> The scenario describes Emily Lee. She is a project manager at S&amp;D company and her mission is to clarify project role and responsibility with Alex over message.
+<span class="student">[Student]</span> And Mr. Davis, his full name is Alex Davis. He is a data analyst at Core Solutions.
+<span class="student">[Student]</span> His mission is to discuss responsibility and deadlines with Emily via messenger.
+<span class="student">[Student]</span> And teacher, this explanation has two words. One is the...
+<span class="student">[Student]</span> Just a moment.
+<span class="student">[Student]</span> &quot;Over-messenger&quot; and &quot;via messenger.&quot;
+<span class="tutor">[Tutor]</span> &quot;Over-messenger&quot; and &quot;via messenger.&quot;
+<span class="tutor">[Tutor]</span> It means exactly the same thing as mode of communication, like instant message.
+<span class="tutor">[Tutor]</span> Or text message.
+<span class="student">[Student]</span> Text message.
+<span class="tutor">[Tutor]</span> Text message or instant message.
+<span class="tutor">[Tutor]</span> Yep, exactly.
+<span class="student">[Student]</span> Why they use &quot;over&quot; or &quot;via messenger&quot;? &quot;Over messenger&quot; or &quot;via messenger&quot; to give two different examples?
+<span class="tutor">[Tutor]</span> Because you can use both. Send it to me via email or send it to me over email. Both work.
+<span class="student">[Student]</span> Over. Okay, let me check then.
+<span class="student">[Student]</span> Maybe if I read the paragraph, I understand more.
+<span class="tutor">[Tutor]</span> So it&#x27;s just saying that they&#x27;re having their discussion over instant message.
+<span class="student">[Student]</span> Yes, yes. Over SNS.
+<span class="student">[Student]</span> Yes, yes, yes. Okay, I see.
+<span class="tutor">[Tutor]</span> Okay, so I will read Ms. Lee.
+<span class="student">[Student]</span> Huh?
+<span class="tutor">[Tutor]</span> If you could read Mr. Davis.
+<span class="student">[Student]</span> Oh, yeah, no problem.
+<span class="tutor">[Tutor]</span> Hey, Alex, do you have a minute to discuss the project?
+<span class="student">[Student]</span> Sure, Emily. What&#x27;s up?
+<span class="tutor">[Tutor]</span> I wanted to clarify who is handling the client presentation slides. Are you taking care of that, or should I?
+<span class="student">[Student]</span> I was doing the data analysis, but I can take on slides too if you need.
+<span class="tutor">[Tutor]</span> No worries. I can handle the slides. That way, you can focus on the analysis.
+<span class="student">[Student]</span> Sounds good to me. When do you need it by?
+<span class="tutor">[Tutor]</span> If you could have it done by Wednesday, that would be great. I&#x27;ll send you a draft of the slides by Friday for your input.
+<span class="student">[Student]</span> Perfect. I&#x27;ll look at the slides on Friday. Thank you for messaging to clear those up.
+<span class="tutor">[Tutor]</span> No problem. Let me know if you need any help.
+<span class="student">[Student]</span> Will do. Thanks, Emily.
+<span class="tutor">[Tutor]</span> Right. Was that a very formal or informal discussion?
+<span class="student">[Student]</span> That&#x27;s so informal because the workshop or I&#x27;m working, yeah, so that is so friendly, yeah, not formal. So it is more, maybe they have a close relationship.
+<span class="tutor">[Tutor]</span> In our company. Maybe. But I think also because this discussion is happening via instant message, it&#x27;s a lot easier, right? To be informal.
+<span class="student">[Student]</span> Yes, you&#x27;re right. That is more...
+<span class="tutor">[Tutor]</span> Okay. Yes. Yes. So...
+<span class="student">[Student]</span> So, hmm?
+<span class="tutor">[Tutor]</span> Let&#x27;s take a look at the questions.
+<span class="student">[Student]</span> Okay. Hmm.
+<span class="tutor">[Tutor]</span> What follow-up actions are suggested in this conversation?
+<span class="student">[Student]</span> Hmm.
+<span class="tutor">[Tutor]</span> And why are they important?
+<span class="student">[Student]</span> Hmm. I see.
+<span class="student">[Student]</span> Maybe they have a project together.
+<span class="student">[Student]</span> And Mr. Davis is a data analyst.
+<span class="student">[Student]</span> And Ms. Lee is the project manager.
+<span class="student">[Student]</span> So Ms. Lee controls the deadline.
+<span class="student">[Student]</span> She will...
+<span class="student">[Student]</span> This project deadline is Friday.
+<span class="student">[Student]</span> So Ms. Lee needs help from Mr. Davis.
+<span class="student">[Student]</span> On Wednesday, Mr. Davis will finish the data analysis.
+<span class="student">[Student]</span> And then, Ms. Lee made a slide and she will finish the project on Friday.
+<span class="tutor">[Tutor]</span> Exactly.
+<span class="tutor">[Tutor]</span> You got it.
+<span class="tutor">[Tutor]</span> And what do you think will be the next steps after this conversation to keep the project on track?
+<span class="student">[Student]</span> Yeah, maybe I will... maybe that answer is reply.
+<span class="student">[Student]</span> So they are finished their project on Friday.
+<span class="student">[Student]</span> And yeah, the same answer to number one question.
+<span class="tutor">[Tutor]</span> Why do you think messaging is more effective to communicate this type of discussion than email or a phone call?
+<span class="student">[Student]</span> I see. Because that is more direct.
+<span class="student">[Student]</span> If they need more direct discussion, that way is better. Because if I send an email, I wait one day or I wait two days. Yeah, that waiting period is so long.
+<span class="student">[Student]</span> But direct message is so fast, so that is easy.
+<span class="student">[Student]</span> But sometimes, some people say to others,
+<span class="student">[Student]</span> For example, they talked on instant message but they say, no, I don&#x27;t know that situation.
+<span class="student">[Student]</span> So, yeah, we don&#x27;t have the evidence at that time.
+<span class="tutor">[Tutor]</span> Yes.
+<span class="student">[Student]</span> Yeah, we send email and we talk through direct message both because we have the evidence of the work.
+<span class="tutor">[Tutor]</span> Mm-hmm. Another something that you can do that I&#x27;ve done in the past is after a direct message conversation like this, to send a quick email and say, hey, Alex, as per our conversation, you will send me the input by Wednesday, and I will send you the slides by Friday.
+<span class="tutor">[Tutor]</span> You&#x27;re right. So you have that email trail.
+<span class="student">[Student]</span> Yeah.
+<span class="tutor">[Tutor]</span> But you&#x27;re not waiting for an answer.
+<span class="student">[Student]</span> Yeah. That&#x27;s a nice strategy to work. Yeah. Sometimes I talk on a messenger and both I send email and have evidence. Yeah. Exactly.
+<span class="tutor">[Tutor]</span> Exactly. Okay. Okay. Let&#x27;s move on to the next page. Okay. And yes. Okay. Read the expression and write your own sentence using each expression.
+<span class="student">[Student]</span> Okay, first I&#x27;ll read that.
+<span class="tutor">[Tutor]</span> Perfect.
+<span class="student">[Student]</span> Skip the preliminaries.
+<span class="student">[Student]</span> Preliminaries.
+<span class="tutor">[Tutor]</span> Preliminaries.
+<span class="tutor">[Tutor]</span> Preliminaries.
+<span class="student">[Student]</span> Preliminaries.
+<span class="student">[Student]</span> To skip necessary details and focus direct on the main point.
+<span class="student">[Student]</span> Hmm.
+<span class="student">[Student]</span> Preliminaries.
+<span class="student">[Student]</span> The preliminaries.
+<span class="student">[Student]</span> Let&#x27;s skip preliminaries.
+<span class="student">[Student]</span> I don&#x27;t think it&#x27;s interesting in this proposal or not.
+<span class="tutor">[Tutor]</span> Oh.
+<span class="student">[Student]</span> Yeah.
+<span class="tutor">[Tutor]</span> Very direct.
+<span class="student">[Student]</span> Yeah, very direct.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="student">[Student]</span> Oh. My sentence?
+<span class="tutor">[Tutor]</span> Mm-hmm.
+<span class="student">[Student]</span> Let&#x27;s skip preliminaries. What&#x27;s the topic today in English class? What&#x27;s the topic today? Yeah, what&#x27;s the topic today in this class?
+<span class="tutor">[Tutor]</span> That is a little rude.
+<span class="tutor">[Tutor]</span> I was going to ask you, is it common in meetings in Korea to skip all the preliminaries and just jump straight to the topic?
+<span class="tutor">[Tutor]</span> Or is it better to do a little bit of small talk?
+<span class="student">[Student]</span> Yes, but that depends on the person.
+<span class="student">[Student]</span> Yeah. So I don&#x27;t care.
+<span class="student">[Student]</span> Yeah, I don&#x27;t care because sometimes many things are more important.
+<span class="student">[Student]</span> And sometimes we don&#x27;t have time. So I think that is better for people in a relationship. If they are close and friendly, at that time it&#x27;s possible, why not? But that is the first time to meet and they are starting for the first time. And one person says, let&#x27;s just skip the preliminaries. So that is a little rude because that is meeting for the first time and maybe that it&#x27;s possible to talk about the level of the relationship.
+<span class="student">[Student]</span> So yeah, that is the middle.
+<span class="student">[Student]</span> I thought that is really rude in the first time.
+<span class="tutor">[Tutor]</span> So basically the answer is always it depends on the context.
+<span class="tutor">[Tutor]</span> It depends on the context. Right? Because as you just explained really well, if it&#x27;s somebody that you work with every day, you might not need to have small talk every time you see them.
+<span class="student">[Student]</span> Yes, yes, you&#x27;re right.
+<span class="tutor">[Tutor]</span> But if it&#x27;s somebody you&#x27;re meeting for the first time, skipping straight to the point might be rude.
+<span class="student">[Student]</span> Yeah, you&#x27;re right.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="student">[Student]</span> Next expression: get the ball rolling. Get the ball rolling. To take the first step in getting something started. To take the first step in getting something started.
+<span class="student">[Student]</span> Get the ball rolling. To get the ball rolling. Let&#x27;s start a session. Take...
+<span class="student">[Student]</span> It means assigning tasks to each team member.
+<span class="student">[Student]</span> Maybe that&#x27;s similar to gathering before the game, the gathering ball.
+<span class="student">[Student]</span> Yeah, a rolling.
+<span class="student">[Student]</span> So it is before to work, they start preparing something.
+<span class="tutor">[Tutor]</span> Yes, it really comes from the physics concept, right?
+<span class="tutor">[Tutor]</span> So a ball in motion, right?
+<span class="tutor">[Tutor]</span> So any ball, soccer ball, whatever it is, to get it rolling, you need to push it or kick it, right?
+<span class="student">[Student]</span> Yeah.
+<span class="tutor">[Tutor]</span> So that&#x27;s what it means.
+<span class="tutor">[Tutor]</span> Let&#x27;s get the ball rolling means let&#x27;s push it.
+<span class="tutor">[Tutor]</span> Let&#x27;s get it moving.
+<span class="student">[Student]</span> Let&#x27;s get it moving. Yes, you&#x27;re right. I understand.
+<span class="student">[Student]</span> Okay, my sentence.
+<span class="student">[Student]</span> Let&#x27;s get the ball rolling.
+<span class="student">[Student]</span> Our...
+<span class="student">[Student]</span> Our...
+<span class="student">[Student]</span> Our startup is starting.
+<span class="tutor">[Tutor]</span> Our startup is? Starting.
+<span class="student">[Student]</span> Starting.
+<span class="tutor">[Tutor]</span> Starting. Begin.
+<span class="tutor">[Tutor]</span> Okay. Let&#x27;s get the ball rolling on our startup?
+<span class="student">[Student]</span> No. Let&#x27;s get the ball rolling.
+<span class="student">[Student]</span> And our business, our startup, to start.
+<span class="tutor">[Tutor]</span> It&#x27;s a lot of &quot;start,&quot; right?
+<span class="student">[Student]</span> Yes, yes.
+<span class="tutor">[Tutor]</span> To begin.
+<span class="tutor">[Tutor]</span> Open, to begin, to initiate, to initiate our startup.
+<span class="student">[Student]</span> Initiate.
+<span class="student">[Student]</span> I see.
+<span class="student">[Student]</span> Our restaurant is beginning. Our restaurant is starting.
+<span class="tutor">[Tutor]</span> Starting.
+<span class="student">[Student]</span> Starting, yeah. Our restaurant is starting.
+<span class="tutor">[Tutor]</span> Let&#x27;s get the ball rolling.
+<span class="student">[Student]</span> Our restaurant is starting.
+<span class="tutor">[Tutor]</span> You got it. Okay.
+<span class="student">[Student]</span> Yes.
+<span class="student">[Student]</span> The last sentence? Oh my god.
+<span class="tutor">[Tutor]</span> It&#x27;s the perfect, perfect way to end the class.
+<span class="tutor">[Tutor]</span> Call it a day.
+<span class="student">[Student]</span> Call it a day.
+<span class="student">[Student]</span> Although, teacher, it&#x27;s only one limit.
+<span class="tutor">[Tutor]</span> That&#x27;s okay.
+<span class="student">[Student]</span> That&#x27;s okay? Okay.
+<span class="student">[Student]</span> I say best.
+<span class="student">[Student]</span> Call it a day.
+<span class="student">[Student]</span> To stop work a day.
+<span class="tutor">[Tutor]</span> We have made good progress this afternoon. So I think we can call it a day.
+<span class="student">[Student]</span> Call it a day.
+<span class="student">[Student]</span> Yeah, our class is called a day. Our class is ending. Hmm. Let&#x27;s call it a day. Yeah, our class is called a day. Is it right? Our class is ending. Ending. Class is ending. Call it a day. Let&#x27;s call it a day.
+<span class="tutor">[Tutor]</span> Let&#x27;s call it a day.
+<span class="tutor">[Tutor]</span> There you go.
+<span class="student">[Student]</span> Let&#x27;s call it a day.
+<span class="tutor">[Tutor]</span> That was perfect.
+<span class="student">[Student]</span> Yeah, it&#x27;s perfect.
+<span class="student">[Student]</span> It&#x27;s precious.
+<span class="student">[Student]</span> It&#x27;s good.
+<span class="tutor">[Tutor]</span> All right.
+<span class="tutor">[Tutor]</span> Well, we will continue talking about this tomorrow.
+<span class="tutor">[Tutor]</span> And in the meantime, I hope you have an excellent start to your week.
+<span class="student">[Student]</span> Oh, yes.
+<span class="student">[Student]</span> Thank you so much, teacher.
+<span class="student">[Student]</span> Have a nice weekend dinner.
+<span class="tutor">[Tutor]</span> Thank you.
+<span class="tutor">[Tutor]</span> Bye-bye.
+<span class="student">[Student]</span> Thank you. Bye.</div>
+        </div>
+    </div>
+    <div class="toast" id="toast">✅ 프롬프트가 복사되었습니다!</div>
+    <script>
+        const REVIEW_PROMPT="너는 나의 영어 회화 복습 파트너야. 오늘 내 전화영어 수업 내용을 기반으로 대화하면서 복습을 도와줘.\n\n[오늘 수업 전사 내용]\n[Tutor] Hello, hello, Joanna.\n[Student] Hi.\n[Tutor] Good morning.\n[Student] Hi, Joey.\n[Tutor] Good evening.\n[Tutor] How are you this morning?\n[Student] I'm good. I'm good. Yes. Usually I'm tired, but now I'm okay because on the weekends I sleep a lot. And last night I slept more, so I had a good condition. How about you?\n[Tutor] Excellent. My weekend was busy, but in a very good way. So I'm happy with how the weekend went. And now getting ready for another busy week.\n[Student] I see. I understand. Do you have a special event on the weekend?\n[Tutor] At the farmer's market where I go to help my friend who has a small business.\n[Tutor] And Saturday was pretty busy.\n[Tutor] It was good.\n[Student] Yes, yes.\n[Tutor] And then this coming weekend, I have a special event because it is the anniversary of my dance school. So there will be a show and it's very exciting.\n[Student] Yeah. Wow. It's great.\n[Student] A month or two ago, you started to dance.\n[Tutor] Yes.\n[Student] Yes.\n[Tutor] Yeah.\n[Tutor] You remembered.\n[Student] Yeah.\n[Student] It is my first event.\n[Tutor] Yeah.\n[Tutor] Yes.\n[Tutor] It's my first event in this style of dance.\n[Tutor] So we'll see how it goes.\n[Student] Yeah.\n[Student] I know.\n[Student] Is it similar to tango or a special dance?\n[Tutor] It is.\n[Tutor] It is oriental dances, so Arabic-style dances.\n[Student] I see.\n[Student] Is it a couple or single dance?\n[Tutor] No, it is only single.\n[Tutor] We dance in groups, though, but women.\n[Student] Single or group.\n[Student] I see.\n[Tutor] Exactly.\n[Student] It is so nice.\n[Tutor] It is.\n[Student] Yeah, right, right.\n[Tutor] I think so, too.\n[Tutor] Okay.\n[Tutor] All right.\n[Tutor] Let's get back to our business or mastering written communication section here.\n[Student] Yes.\n[Tutor] And page 11.\n[Tutor] I think we... did you finish 10 with formal and informal?\n[Student] Oh yes, finished. Yes. And yeah, we will start 11.\n[Tutor] 11, okay.\n[Tutor] So let's see what is happening with Ms. Lee and Mr. Davis.\n[Student] Okay, no problem.\n[Student] There are two people, Ms. Lee and Mr. Davis.\n[Student] The scenario describes Emily Lee. She is a project manager at S&D company and her mission is to clarify project role and responsibility with Alex over message.\n[Student] And Mr. Davis, his full name is Alex Davis. He is a data analyst at Core Solutions.\n[Student] His mission is to discuss responsibility and deadlines with Emily via messenger.\n[Student] And teacher, this explanation has two words. One is the...\n[Student] Just a moment.\n[Student] \"Over-messenger\" and \"via messenger.\"\n[Tutor] \"Over-messenger\" and \"via messenger.\"\n[Tutor] It means exactly the same thing as mode of communication, like instant message.\n[Tutor] Or text message.\n[Student] Text message.\n[Tutor] Text message or instant message.\n[Tutor] Yep, exactly.\n[Student] Why they use \"over\" or \"via messenger\"? \"Over messenger\" or \"via messenger\" to give two different examples?\n[Tutor] Because you can use both. Send it to me via email or send it to me over email. Both work.\n[Student] Over. Okay, let me check then.\n[Student] Maybe if I read the paragraph, I understand more.\n[Tutor] So it's just saying that they're having their discussion over instant message.\n[Student] Yes, yes. Over SNS.\n[Student] Yes, yes, yes. Okay, I see.\n[Tutor] Okay, so I will read Ms. Lee.\n[Student] Huh?\n[Tutor] If you could read Mr. Davis.\n[Student] Oh, yeah, no problem.\n[Tutor] Hey, Alex, do you have a minute to discuss the project?\n[Student] Sure, Emily. What's up?\n[Tutor] I wanted to clarify who is handling the client presentation slides. Are you taking care of that, or should I?\n[Student] I was doing the data analysis, but I can take on slides too if you need.\n[Tutor] No worries. I can handle the slides. That way, you can focus on the analysis.\n[Student] Sounds good to me. When do you need it by?\n[Tutor] If you could have it done by Wednesday, that would be great. I'll send you a draft of the slides by Friday for your input.\n[Student] Perfect. I'll look at the slides on Friday. Thank you for messaging to clear those up.\n[Tutor] No problem. Let me know if you need any help.\n[Student] Will do. Thanks, Emily.\n[Tutor] Right. Was that a very formal or informal discussion?\n[Student] That's so informal because the workshop or I'm working, yeah, so that is so friendly, yeah, not formal. So it is more, maybe they have a close relationship.\n[Tutor] In our company. Maybe. But I think also because this discussion is happening via instant message, it's a lot easier, right? To be informal.\n[Student] Yes, you're right. That is more...\n[Tutor] Okay. Yes. Yes. So...\n[Student] So, hmm?\n[Tutor] Let's take a look at the questions.\n[Student] Okay. Hmm.\n[Tutor] What follow-up actions are suggested in this conversation?\n[Student] Hmm.\n[Tutor] And why are they important?\n[Student] Hmm. I see.\n[Student] Maybe they have a project together.\n[Student] And Mr. Davis is a data analyst.\n[Student] And Ms. Lee is the project manager.\n[Student] So Ms. Lee controls the deadline.\n[Student] She will...\n[Student] This project deadline is Friday.\n[Student] So Ms. Lee needs help from Mr. Davis.\n[Student] On Wednesday, Mr. Davis will finish the data analysis.\n[Student] And then, Ms. Lee made a slide and she will finish the project on Friday.\n[Tutor] Exactly.\n[Tutor] You got it.\n[Tutor] And what do you think will be the next steps after this conversation to keep the project on track?\n[Student] Yeah, maybe I will... maybe that answer is reply.\n[Student] So they are finished their project on Friday.\n[Student] And yeah, the same answer to number one question.\n[Tutor] Why do you think messaging is more effective to communicate this type of discussion than email or a phone call?\n[Student] I see. Because that is more direct.\n[Student] If they need more direct discussion, that way is better. Because if I send an email, I wait one day or I wait two days. Yeah, that waiting period is so long.\n[Student] But direct message is so fast, so that is easy.\n[Student] But sometimes, some people say to others,\n[Student] For example, they talked on instant message but they say, no, I don't know that situation.\n[Student] So, yeah, we don't have the evidence at that time.\n[Tutor] Yes.\n[Student] Yeah, we send email and we talk through direct message both because we have the evidence of the work.\n[Tutor] Mm-hmm. Another something that you can do that I've done in the past is after a direct message conversation like this, to send a quick email and say, hey, Alex, as per our conversation, you will send me the input by Wednesday, and I will send you the slides by Friday.\n[Tutor] You're right. So you have that email trail.\n[Student] Yeah.\n[Tutor] But you're not waiting for an answer.\n[Student] Yeah. That's a nice strategy to work. Yeah. Sometimes I talk on a messenger and both I send email and have evidence. Yeah. Exactly.\n[Tutor] Exactly. Okay. Okay. Let's move on to the next page. Okay. And yes. Okay. Read the expression and write your own sentence using each expression.\n[Student] Okay, first I'll read that.\n[Tutor] Perfect.\n[Student] Skip the preliminaries.\n[Student] Preliminaries.\n[Tutor] Preliminaries.\n[Tutor] Preliminaries.\n[Student] Preliminaries.\n[Student] To skip necessary details and focus direct on the main point.\n[Student] Hmm.\n[Student] Preliminaries.\n[Student] The preliminaries.\n[Student] Let's skip preliminaries.\n[Student] I don't think it's interesting in this proposal or not.\n[Tutor] Oh.\n[Student] Yeah.\n[Tutor] Very direct.\n[Student] Yeah, very direct.\n[Tutor] Okay.\n[Student] Oh. My sentence?\n[Tutor] Mm-hmm.\n[Student] Let's skip preliminaries. What's the topic today in English class? What's the topic today? Yeah, what's the topic today in this class?\n[Tutor] That is a little rude.\n[Tutor] I was going to ask you, is it common in meetings in Korea to skip all the preliminaries and just jump straight to the topic?\n[Tutor] Or is it better to do a little bit of small talk?\n[Student] Yes, but that depends on the person.\n[Student] Yeah. So I don't care.\n[Student] Yeah, I don't care because sometimes many things are more important.\n[Student] And sometimes we don't have time. So I think that is better for people in a relationship. If they are close and friendly, at that time it's possible, why not? But that is the first time to meet and they are starting for the first time. And one person says, let's just skip the preliminaries. So that is a little rude because that is meeting for the first time and maybe that it's possible to talk about the level of the relationship.\n[Student] So yeah, that is the middle.\n[Student] I thought that is really rude in the first time.\n[Tutor] So basically the answer is always it depends on the context.\n[Tutor] It depends on the context. Right? Because as you just explained really well, if it's somebody that you work with every day, you might not need to have small talk every time you see them.\n[Student] Yes, yes, you're right.\n[Tutor] But if it's somebody you're meeting for the first time, skipping straight to the point might be rude.\n[Student] Yeah, you're right.\n[Tutor] Okay.\n[Student] Next expression: get the ball rolling. Get the ball rolling. To take the first step in getting something started. To take the first step in getting something started.\n[Student] Get the ball rolling. To get the ball rolling. Let's start a session. Take...\n[Student] It means assigning tasks to each team member.\n[Student] Maybe that's similar to gathering before the game, the gathering ball.\n[Student] Yeah, a rolling.\n[Student] So it is before to work, they start preparing something.\n[Tutor] Yes, it really comes from the physics concept, right?\n[Tutor] So a ball in motion, right?\n[Tutor] So any ball, soccer ball, whatever it is, to get it rolling, you need to push it or kick it, right?\n[Student] Yeah.\n[Tutor] So that's what it means.\n[Tutor] Let's get the ball rolling means let's push it.\n[Tutor] Let's get it moving.\n[Student] Let's get it moving. Yes, you're right. I understand.\n[Student] Okay, my sentence.\n[Student] Let's get the ball rolling.\n[Student] Our...\n[Student] Our...\n[Student] Our startup is starting.\n[Tutor] Our startup is? Starting.\n[Student] Starting.\n[Tutor] Starting. Begin.\n[Tutor] Okay. Let's get the ball rolling on our startup?\n[Student] No. Let's get the ball rolling.\n[Student] And our business, our startup, to start.\n[Tutor] It's a lot of \"start,\" right?\n[Student] Yes, yes.\n[Tutor] To begin.\n[Tutor] Open, to begin, to initiate, to initiate our startup.\n[Student] Initiate.\n[Student] I see.\n[Student] Our restaurant is beginning. Our restaurant is starting.\n[Tutor] Starting.\n[Student] Starting, yeah. Our restaurant is starting.\n[Tutor] Let's get the ball rolling.\n[Student] Our restaurant is starting.\n[Tutor] You got it. Okay.\n[Student] Yes.\n[Student] The last sentence? Oh my god.\n[Tutor] It's the perfect, perfect way to end the class.\n[Tutor] Call it a day.\n[Student] Call it a day.\n[Student] Although, teacher, it's only one limit.\n[Tutor] That's okay.\n[Student] That's okay? Okay.\n[Student] I say best.\n[Student] Call it a day.\n[Student] To stop work a day.\n[Tutor] We have made good progress this afternoon. So I think we can call it a day.\n[Student] Call it a day.\n[Student] Yeah, our class is called a day. Our class is ending. Hmm. Let's call it a day. Yeah, our class is called a day. Is it right? Our class is ending. Ending. Class is ending. Call it a day. Let's call it a day.\n[Tutor] Let's call it a day.\n[Tutor] There you go.\n[Student] Let's call it a day.\n[Tutor] That was perfect.\n[Student] Yeah, it's perfect.\n[Student] It's precious.\n[Student] It's good.\n[Tutor] All right.\n[Tutor] Well, we will continue talking about this tomorrow.\n[Tutor] And in the meantime, I hope you have an excellent start to your week.\n[Student] Oh, yes.\n[Student] Thank you so much, teacher.\n[Student] Have a nice weekend dinner.\n[Tutor] Thank you.\n[Tutor] Bye-bye.\n[Student] Thank you. Bye.\n\n[AI 피드백]\n안녕하세요, [Student]님! 따뜻하고 실용적인 영어 코치입니다.\n\n지난 수업에서는 주말 이야기로 편안하게 시작해서, 비즈니스 환경에서의 효과적인 메신저 소통 방식과 그 장단점에 대해 깊이 있는 대화를 나누셨죠. 특히 'skip the preliminaries', 'get the ball rolling', 'call it a day' 같은 유용한 비즈니스 표현들을 배우고 직접 문장을 만들어보는 시간이 인상 깊었습니다. 적극적으로 참여해주셔서 정말 좋았어요!\n\n자, 그럼 오늘 수업 내용을 바탕으로 [Student]님의 영어 실력 향상을 위한 맞춤 피드백을 드릴게요.\n\n---\n\n### **1. 📊 오늘의 대화 요약 (Summary)**\n\n이번 수업에서는 주말 동안 있었던 튜터의 특별한 댄스 이벤트 준비 이야기로 시작하여, 비즈니스 환경에서 메신저를 통한 프로젝트 역할 및 책임 조율 시나리오를 분석했습니다. 특히 메신저 소통의 효율성과 증거 확보의 중요성에 대해 토론하고, 'skip the preliminaries', 'get the ball rolling', 'call it a day'와 같은 실용적인 비즈니스 관용구의 의미와 활용법을 익혔습니다.\n\n### **2. 💬 유창성 업그레이드 (Fluency & Natural Flow)**\n\n[Student]님이 말씀하신 문장 중 의미는 잘 전달되었지만, 원어민들이 더 자연스럽게 사용하는 표현으로 다듬을 수 있는 부분들을 살펴볼게요.\n\n*   **❌ 학습자 원문 (As Said):** \"I had a good condition.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"I'm in good condition.\" 또는 \"I feel good/well.\"\n    *   **💎 비즈니스 표현 (Professional):** \"I'm feeling quite refreshed.\"\n    *   **💡 코칭 포인트:** 'condition'은 주로 'in good/bad condition'처럼 전치사 'in'과 함께 쓰여 몸의 상태를 나타내거나, 사물의 상태를 말할 때 사용해요. 'I had a good condition'보다는 'I'm in good condition'이 훨씬 자연스럽습니다.\n\n*   **❌ 학습자 원문 (As Said):** \"It is my first event.\" (튜터의 댄스 이벤트에 대해 말할 때)\n    *   **✅ 자연스러운 표현 (Natural):** \"This is the first time I've heard about an event like this (from you).\" 또는 \"This is the first event of this kind that I'm aware of.\"\n    *   **💡 코칭 포인트:** 튜터의 댄스 이벤트에 대해 언급할 때 'my first event'라고 하면 어떤 종류의 이벤트인지 불분명하거나, 마치 본인의 이벤트인 것처럼 들릴 수 있어요. 튜터의 상황처럼 특정 종류의 댄스 이벤트라면, 'this style of dance'나 'of this kind'와 같이 구체적인 정보를 덧붙여주거나, '처음 듣는다'는 의미를 명확히 해주는 것이 더 좋습니다.\n\n*   **❌ 학습자 원문 (As Said):** \"That waiting period is so long.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"The waiting period is too long.\" 또는 \"That waiting period takes too long.\"\n    *   **💎 비즈니스 표현 (Professional):** \"The extended waiting period can be quite inefficient.\"\n    *   **💡 코칭 포인트:** 'so long'은 주로 감탄문이나 강조할 때 쓰이지만, 불편함이나 문제점을 지적할 때는 'too long'이 더 적절해요. '너무 길다'는 부정적인 뉘앙스를 담을 때 'too'를 사용합니다.\n\n### **3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)**\n\n이번 대화에서 [Student]님이 반복적으로 사용한 문법 오류 중 **관사 (a/the)** 사용에 대해 집중적으로 다뤄볼게요. 한국어에는 관사가 없기 때문에 많은 한국인 학습자들이 어려워하는 부분이죠.\n\n| ❌ 원문 (As Said)                                  | ✅ 교정 예시 (Corrected)                                |\n| :-------------------------------------------------- | :------------------------------------------------------ |\n| \"This project deadline is Friday.\"                  | \"The project deadline is Friday.\"                       |\n| \"If they need more direct discussion, that way is better.\" | \"If they need a more direct discussion, that method is better.\" |\n| \"That waiting period is so long.\"                   | \"The waiting period is so long.\"                        |\n\n*   **📌 핵심 규칙:**\n    *   **The:** 듣는 사람도 알고 있는 **특정** 대상이나, 문맥상 **유일한** 대상을 가리킬 때 사용합니다. (예: \"The project deadline\" - 지금 이야기하는 바로 그 프로젝트의 마감일)\n    *   **A/An:** 처음 언급되거나, 여러 개 중 **하나**를 가리킬 때, 또는 **일반적인** 대상을 말할 때 사용합니다. (예: \"a more direct discussion\" - 여러 가지 직접적인 토론 방식 중 하나)\n    *   **무관사:** 셀 수 없는 명사나 복수 명사가 **일반적인 의미**로 쓰일 때, 또는 고유 명사 앞에 사용하지 않습니다.\n\n*   **🔁 따라 읽기:**\n    *   🗣️ \"The project deadline is Friday.\"\n    *   🗣️ \"If they need a more direct discussion, that method is better.\"\n    *   🗣️ \"The waiting period is so long.\"\n\n### **4. 📗 어휘 확장 (Vocabulary Vault)**\n\n수업 중 등장했거나, [Student]님의 비즈니스 환경에서 유용하게 쓰일 수 있는 단어들을 소개합니다.\n\n1.  **clarify** /klǽrəfài/ (동사)\n    *   뜻: 명확히 하다, 분명히 밝히다\n    *   실전 예문: We need to **clarify** the roles and responsibilities for this new project.\n\n2.  **scenario** /sənǽrioʊ/ (명사)\n    *   뜻: 시나리오, 예상되는 상황, 가상 상황\n    *   실전 예문: Let's consider a few different **scenarios** before making a final decision.\n\n3.  **via** /váɪə/ (전치사)\n    *   뜻: ~을 통하여, ~경유로\n    *   실전 예문: Please send the updated report **via** email by tomorrow morning.\n\n4.  **inefficient** /ìnɪfíʃənt/ (형용사)\n    *   뜻: 비효율적인, 능률적이지 못한\n    *   실전 예문: Waiting for approvals for too long can make the entire process **inefficient**.\n\n5.  **preliminaries** /prɪlímɪnèriz/ (명사)\n    *   뜻: 예비 단계, 서두, 준비 작업 (주로 복수형으로 사용)\n    *   실전 예문: Let's skip the **preliminaries** and get straight to the main agenda.\n\n### **5. 📝 실전 복습 챌린지 (Practice)**\n\n오늘 배운 표현과 문법을 활용하여 영작 챌린지에 도전해보세요!\n\n1.  **상황:** 다음 주에 있을 중요한 회의의 안건을 명확히 하고 싶습니다.\n    *   **영작:** 다음 주 회의 안건을 명확히 해야 합니다.\n    *   **모범 답안:** We need to **clarify** the agenda for next week's important meeting.\n\n2.  **상황:** 새로운 프로젝트를 시작할 때, 팀원들에게 각자의 역할을 할당하여 빠르게 진행하고 싶습니다.\n    *   **영작:** 새 프로젝트를 시작하기 위해, 각 팀원에게 역할을 할당하여 빨리 진행합시다.\n    *   **모범 답안:** To **get the ball rolling** on our new project, let's assign roles to each team member.\n\n3.  **상황:** 오늘 업무가 매우 비효율적이었고, 더 이상 진행하기 어렵다고 판단하여 퇴근하고 싶습니다.\n    *   **영작:** 오늘 업무는 정말 비효율적이었어요. 이쯤에서 마무리하고 퇴근합시다.\n    *   **모범 답안:** Today's work was quite **inefficient**. Let's **call it a day**.\n\n### **6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)**\n\n*   ✨ **Good Job:** \"Because that is more direct. If they need more direct discussion, that way is better. Because if I send an email, I wait one day or I wait two days. Yeah, that waiting period is so long. But direct message is so fast, so that is easy.\"\n    *   [Student]님, 메신저 소통의 장점을 설명할 때, 문장이 길어졌음에도 불구하고 논리적인 흐름을 유지하며 자신의 생각을 자신감 있게 전달하셨습니다. 'direct', 'fast', 'easy'와 같은 핵심 단어들을 효과적으로 사용하여 주장의 설득력을 높인 점이 매우 좋았습니다!\n\n*   🚀 **내일의 한 문장:** 다음 수업 시작 시 튜터에게 오늘 배운 표현을 활용하여 대화를 시작해보세요.\n    *   \"Shall we **get the ball rolling** on today's lesson?\" (오늘 수업을 시작해볼까요?)\n\n---\n\n**[성과 지표]**\n\n*   **유창성 점수:** 7/10점\n*   **근거:** 전반적으로 의미 전달이 원활하고, 다양한 주제에 대해 막힘없이 의견을 표현하셨습니다. 다만, 일부 표현에서 더 자연스러운 어순이나 어휘 선택이 가능하며, 관사 사용에 대한 꾸준한 연습이 필요합니다.\n*   **다음 수업 '원포인트 액션 플랜':** 문장 말하기 전, **\"관사 (a/an/the)를 써야 할까?\"** 한 번 더 생각해보고 말하는 습관 들이기. 특히 명사 앞에 관사가 필요한지, 아니면 무관사로 써야 하는지 의식적으로 점검하는 연습을 해봅시다.\n\n오늘도 정말 수고 많으셨습니다! 다음 수업에서 또 만나요!\n\n위 내용을 바탕으로:\n1. 먼저 오늘 수업에서 내가 틀렸거나 어색했던 표현을 하나 골라서, 관련된 상황을 영어로 질문해줘.\n2. 내가 영어로 대답하면, 자연스러운지 확인하고 더 나은 표현이 있으면 알려줘.\n3. 특히 \"반복 실수 패턴\"에서 지적된 부분을 집중적으로 연습시켜줘.\n4. 이런 식으로 오늘 배운 표현들을 하나씩 복습하자.\n5. 한국어 설명은 필요할 때만 간단히, 대화는 최대한 영어로 진행해줘.\n\n그럼 시작하자!";
+        function startReview(){navigator.clipboard.writeText(REVIEW_PROMPT).then(()=>{showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)}).catch(()=>{const t=document.createElement('textarea');t.value=REVIEW_PROMPT;document.body.appendChild(t);t.select();document.execCommand('copy');document.body.removeChild(t);showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)})}
+        function showToast(){const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500)}
+        function switchTab(n){document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',n==='feedback'?i===0:i===1));document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));document.getElementById('tab-'+n).classList.add('active')}
+    </script>
+</body>
+</html>
