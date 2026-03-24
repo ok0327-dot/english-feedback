@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전화영어 복습 - 2026년 03월 24일</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Noto Sans KR',sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.75;min-height:100vh}
+        .header{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);border-bottom:1px solid rgba(255,255,255,.06);padding:48px 24px 40px;text-align:center}
+        .header-date{font-size:13px;color:#94a3b8;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+        .header h1{font-size:28px;font-weight:700;color:#f1f5f9;margin-bottom:16px}
+        .header-meta{display:flex;justify-content:center;gap:24px;font-size:14px;color:#64748b}
+        .header-meta span{display:flex;align-items:center;gap:6px}
+        .cta-section{text-align:center;padding:40px 24px}
+        .cta-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:linear-gradient(135deg,#38bdf8,#818cf8);color:#fff;font-size:16px;font-weight:600;font-family:'Noto Sans KR',sans-serif;border:none;border-radius:50px;cursor:pointer;transition:all .3s;text-decoration:none;box-shadow:0 4px 24px rgba(56,189,248,.25)}
+        .cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(56,189,248,.35)}
+        .cta-btn svg{width:20px;height:20px}
+        .cta-sub{margin-top:12px;font-size:13px;color:#64748b}
+        .toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#38bdf8;padding:14px 28px;border-radius:12px;font-size:14px;font-weight:500;border:1px solid rgba(56,189,248,.2);box-shadow:0 8px 32px rgba(0,0,0,.4);opacity:0;transition:all .4s cubic-bezier(.16,1,.3,1);z-index:1000}
+        .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+        .container{max-width:720px;margin:0 auto;padding:0 24px 80px}
+        .tabs{display:flex;gap:4px;background:#1a1a24;padding:4px;border-radius:12px;margin-bottom:32px}
+        .tab{flex:1;padding:12px;text-align:center;font-size:14px;font-weight:500;color:#64748b;background:0 0;border:none;border-radius:8px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all .2s}
+        .tab.active{background:#262636;color:#f1f5f9}
+        .tab-content{display:none}.tab-content.active{display:block}
+        .feedback h2{font-size:18px;font-weight:700;color:#f1f5f9;margin:36px 0 16px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.06)}
+        .feedback h2:first-child{margin-top:0}
+        .feedback p{margin:8px 0;color:#cbd5e1}
+        .feedback .item{padding:6px 0 6px 16px;border-left:2px solid #334155;margin:6px 0;color:#cbd5e1}
+        .feedback .numbered{padding:8px 0 8px 16px;color:#cbd5e1}
+        .feedback .numbered strong{color:#38bdf8}
+        .feedback strong{color:#f1f5f9}
+        .feedback code{background:#1e293b;padding:2px 8px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#38bdf8}
+        .feedback table{width:100%;border-collapse:collapse;margin:12px 0}
+        .feedback th,.feedback td{padding:10px 14px;text-align:left;border-bottom:1px solid #262636}
+        .feedback th{color:#94a3b8;font-weight:500;font-size:13px}
+        .feedback td{color:#cbd5e1}
+        .arrow{color:#38bdf8;font-weight:700}
+        .transcript{background:#1a1a24;border-radius:12px;padding:28px;font-size:14px;line-height:2;color:#94a3b8;white-space:pre-wrap;word-break:break-word;font-family:'JetBrains Mono','Noto Sans KR',monospace}
+        .transcript .tutor{color:#38bdf8}
+        .transcript .student{color:#a78bfa}
+        @media(max-width:640px){.header{padding:32px 16px}.header h1{font-size:22px}.cta-btn{padding:14px 28px;font-size:15px}.container{padding:0 16px 60px}}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-date">2026년 03월 24일</div>
+        <h1>📚 전화영어 복습</h1>
+        <div class="header-meta">
+            <span>⏱ 19분 41초</span>
+            <span>🎙 전화영어_025180304_20260324080049.m4a</span>
+        </div>
+    </div>
+    <div class="cta-section">
+        <button class="cta-btn" onclick="startReview()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Gemini에서 복습 대화 시작하기
+        </button>
+        <div class="cta-sub">클릭하면 프롬프트가 복사되고 Gemini가 열립니다</div>
+    </div>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('feedback')">📋 AI 피드백</button>
+            <button class="tab" onclick="switchTab('transcript')">🎙 수업 전사</button>
+        </div>
+        <div id="tab-feedback" class="tab-content active">
+            <div class="feedback"><p>안녕하세요, Johanna님! 오늘도 활기찬 수업이었습니다. 로봇 청소기 이야기부터 비즈니스 이메일 표현, 그리고 긴급 상황 롤플레잉까지 다양한 주제를 소화하시느라 수고 많으셨어요! 특히 어려운 비즈니스 시나리오에서도 침착하게 대처하고 해결책을 모색하는 모습이 인상 깊었습니다.</p>
+<br>
+<br>
+<p>### 1. 📊 오늘의 대화 요약 (Summary)</p>
+<br>
+<p>오늘 수업에서는 Johanna님이 새로 구매하신 로봇 청소기에 대한 흥미로운 대화를 시작으로, 비즈니스 이메일 및 메시지에서 자주 사용되는 핵심 표현들("I'm reaching out to...", "Just checking in to...", "I'll get back to you...")을 학습했습니다. 이어서 공급망 문제로 인한 프로젝트 지연 상황을 가정하고, 팀 리더에게 상황을 보고하고 타임라인 조정을 제안하는 롤플레잉을 진행했습니다.</p>
+<br>
+<br>
+<p>### 2. 💬 유창성 업그레이드 (Fluency & Natural Flow)</p>
+<br>
+<p>의미는 잘 전달되었지만, 원어민이 들었을 때 조금 더 자연스럽게 느껴질 수 있는 표현들을 살펴볼게요.</p>
+<br>
+<table>
+<tr><th></th><th>❌ 학습자 원문 (As Said)</th><th>✅ 자연스러운 표현 (Natural)</th><th>💎 비즈니스 표현 (Professional)</th><th>💡 코칭 포인트</th></tr>
+<tr><td><strong>1.</strong></td><td><code>always it is so hard to clean my room.</code></td><td><code>It's always so hard to clean my room.</code></td><td><code>Maintaining a tidy room is consistently challenging.</code></td><td>영어는 주어(It)와 동사(is)가 먼저 나오는 구조를 선호합니다. '항상 ~하다'는 <code>It's always ~</code>가 더 자연스러워요.</td></tr>
+<tr><td><strong>2.</strong></td><td><code>I suggest it to you.</code></td><td><code>I recommend it.</code></td><td><code>I highly recommend it for your consideration.</code></td><td>'Suggest'는 '제안하다'는 의미가 강하고, 'recommend'는 '추천하다'는 의미로 특정 물건이나 서비스를 권할 때 훨씬 자연스럽습니다.</td></tr>
+<tr><td><strong>3.</strong></td><td><code>our textbook is leveled at one more</code></td><td><code>our textbook is one level higher</code></td><td><code>The current textbook presents a slightly more advanced level.</code></td><td>'level'은 동사로 사용되기도 하지만, 난이도를 말할 때는 'one level higher/lower' 또는 'a bit more advanced'와 같이 표현하는 것이 자연스럽습니다.</td></tr>
+<tr><td><strong>4.</strong></td><td><code>that factory is fired.</code></td><td><code>that factory caught fire.</code></td><td><code>The factory experienced a fire incident.</code></td><td>공장이 '해고당했다(fired)'는 의미가 아니라, '불이 났다'고 할 때는 <code>caught fire</code> 또는 <code>there was a fire at the factory</code>라고 표현합니다.</td></tr>
+<tr><td><strong>5.</strong></td><td><code>I will communication with my boss.</code></td><td><code>I will communicate with my boss.</code></td><td><code>I will communicate with my supervisor.</code></td><td>'communication'은 명사이고, 'communicate'는 동사입니다. '나는 ~와 소통할 것이다'라고 할 때는 동사 <code>communicate</code>를 사용해야 합니다.</td></tr>
+</table>
+<br>
+<br>
+<p>### 3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)</p>
+<br>
+<p>이번 대화에서는 <strong>관사 (a/an/the)</strong> 사용에 대한 연습이 필요해 보입니다. 특정하지 않은 일반적인 것을 말할 때는 <code>a/an</code>을, 이미 언급되었거나 모두가 아는 특정 대상을 말할 때는 <code>the</code>를 사용합니다.</p>
+<br>
+<table>
+<tr><th></th><th>❌ 원문 (As Said)</th><th>✅ 교정 예시 (Corrected)</th></tr>
+<tr><td><strong>1.</strong></td><td><code>So today I bought the robot cleaner in flea market.</code></td><td><code>So today I bought a robot cleaner at a flea market.</code></td></tr>
+<tr><td><strong>2.</strong></td><td><code>it is some problem to supply chain.</code></td><td><code>It is a problem with the supply chain.</code></td></tr>
+<tr><td><strong>3.</strong></td><td><code>I will find some solution.</code></td><td><code>I will find a solution.</code></td></tr>
+<tr><td><strong>4.</strong></td><td><code>I have some big problem.</code></td><td><code>I have a big problem.</code></td></tr>
+</table>
+<br>
+<p>📌 <strong>핵심 규칙:</strong> 처음 언급되거나 일반적인 명사 앞에는 <code>a/an</code>을, 특정하거나 이미 알고 있는 명사 앞에는 <code>the</code>를 사용합니다.</p>
+<br>
+<p>🔁 <strong>따라 읽기:</strong></p>
+<p>🗣️ "So today I bought <strong>a</strong> robot cleaner at <strong>a</strong> flea market."</p>
+<p>🗣️ "It is <strong>a</strong> problem with <strong>the</strong> supply chain."</p>
+<p>🗣️ "I will find <strong>a</strong> solution."</p>
+<p>🗣️ "I have <strong>a</strong> big problem."</p>
+<br>
+<br>
+<p>### 4. 📗 어휘 확장 (Vocabulary Vault)</p>
+<br>
+<p>오늘 대화에서 유용하게 쓰였거나 비즈니스 환경에서 활용도 높은 표현 5가지입니다.</p>
+<br>
+<div class="numbered"><strong>1.</strong>  <strong>reach out</strong> /riːtʃ aʊt/ (phrasal verb)</div>
+<p>    *   <strong>뜻:</strong> (도움을 요청하거나 정보를 얻기 위해) 연락하다, 접촉하다</p>
+<p>    *   <strong>실전 예문:</strong> <code>I'm reaching out to confirm the details for our upcoming meeting.</code></p>
+<div class="numbered"><strong>2.</strong>  <strong>check in</strong> /tʃek ɪn/ (phrasal verb)</div>
+<p>    *   <strong>뜻:</strong> (상황을 확인하거나 안부를 묻기 위해) 연락하다, 확인하다</p>
+<p>    *   <strong>실전 예문:</strong> <code>Just checking in to see how you're progressing with the report.</code></p>
+<div class="numbered"><strong>3.</strong>  <strong>get back to</strong> /ɡet bæk tuː/ (phrasal verb)</div>
+<p>    *   <strong>뜻:</strong> (나중에) 다시 연락하다, 회신하다</p>
+<p>    *   <strong>실전 예문:</strong> <code>I'll get back to you once I have more information about the project.</code></p>
+<div class="numbered"><strong>4.</strong>  <strong>supply chain</strong> /səˈplaɪ tʃeɪn/ (noun)</div>
+<p>    *   <strong>뜻:</strong> 공급망 (제품이나 서비스가 소비자에게 도달하기까지의 모든 과정)</p>
+<p>    *   <strong>실전 예문:</strong> <code>We are experiencing delays due to an issue in our global supply chain.</code></p>
+<div class="numbered"><strong>5.</strong>  <strong>prompt</strong> /prɒmpt/ (adjective)</div>
+<p>    *   <strong>뜻:</strong> 신속한, 즉각적인</p>
+<p>    *   <strong>실전 예문:</strong> <code>We need a prompt response from the client to proceed with the plan.</code></p>
+<br>
+<br>
+<p>### 5. 📝 실전 복습 챌린지 (Practice)</p>
+<br>
+<p>오늘 배운 표현과 문법을 활용하여 다음 문장들을 영작해 보세요.</p>
+<br>
+<div class="numbered"><strong>1.</strong>  <strong>상황:</strong> 저는 어제 중고시장에서 아주 좋은 가격에 로봇 청소기를 샀어요.</div>
+<p>    *   <strong>영작:</strong> I bought ( ) robot cleaner at ( ) flea market for ( ) great price yesterday.</p>
+<p>    *   <strong>모범 답안:</strong> <code>I bought <strong>a</strong> robot cleaner at <strong>a</strong> flea market for <strong>a</strong> great price yesterday.</code></p>
+<div class="numbered"><strong>2.</strong>  <strong>상황:</strong> 보고서 진행 상황을 확인하기 위해 연락드렸습니다.</div>
+<p>    *   <strong>영작:</strong> Just ( ) ( ) to see how you are progressing with the report.</p>
+<p>    *   <strong>모범 답안:</strong> <code>Just <strong>checking in</strong> to see how you are progressing with the report.</code></p>
+<div class="numbered"><strong>3.</strong>  <strong>상황:</strong> 공급망 문제로 인해 프로젝트가 지연될 것 같습니다. 자세한 정보를 확인하는 대로 다시 연락드리겠습니다.</div>
+<p>    *   <strong>영작:</strong> It seems our project will be delayed due to ( ) supply chain issue. I'll ( ) ( ) ( ) you once I have more details.</p>
+<p>    *   <strong>모범 답안:</strong> <code>It seems our project will be delayed due to <strong>a</strong> supply chain issue. I'll <strong>get back to</strong> you once I have more details.</code></p>
+<br>
+<br>
+<p>### 6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)</p>
+<br>
+<p>✨ <strong>Good Job</strong>: <code>I'm a project manager and I have a project but it is some problem to supply chain.</code></p>
+<p>이 문장은 비록 관사나 전치사 오류가 있었지만, Johanna님이 주어진 시나리오를 이해하고 자신의 역할을 설명하는 데 전혀 막힘이 없었습니다. 특히 'I'm a project manager'로 시작하여 상황을 명확하게 제시하고 문제점을 설명하는 흐름이 아주 좋았습니다. 어려운 상황 설명을 주저 없이 시도하는 모습에서 큰 자신감을 엿볼 수 있었습니다!</p>
+<br>
+<p>🚀 <strong>내일의 한 문장</strong>: 다음 수업 시작 시 튜터에게 오늘 배운 표현을 활용하여 이렇게 말해보세요.</p>
+<p><code>"I'm reaching out to you to continue our discussion on scenario two from last class."</code></p>
+<p>(지난 수업의 시나리오 2에 대한 논의를 계속하기 위해 연락드렸습니다.)</p>
+<br>
+<br>
+<p><strong>[성과 지표]</strong></p>
+<br>
+<p>*   <strong>유창성 점수:</strong> 7.5/10점</p>
+<p>*   <strong>근거:</strong> Johanna님은 다양한 주제에 대해 막힘없이 자신의 의견을 표현하며 대화를 이어나가는 능력이 뛰어납니다. 특히 어려운 비즈니스 시나리오에서도 주저하지 않고 설명을 시도하는 모습이 인상적입니다. 다만, 일부 표현에서 원어민이 더 자연스럽게 사용하는 어휘나 구문으로 다듬을 부분이 있었고, 문법적 정확성(특히 관사 및 전치사)에서 개선의 여지가 있어 유창성 점수를 7.5점으로 책정했습니다.</p>
+<p>*   <strong>다음 수업 '원포인트 액션 플랜':</strong> "관사 (a/an/the) 사용 시 의식적으로 한 번 더 생각하기"</p>
+<p>    *   말하기 전에 명사 앞에 어떤 관사가 와야 할지 잠시 멈춰 생각하는 연습을 해보세요. 예를 들어, 'problem'이나 'solution' 같은 일반적인 명사 앞에는 <code>a</code>를, 이미 언급되었거나 특정 상황의 명사 앞에는 <code>the</code>를 붙이는 습관을 들이면 좋습니다.</p></div>
+        </div>
+        <div id="tab-transcript" class="tab-content">
+            <div class="transcript"><span class="tutor">[Tutor]</span> Hello Johanna, good morning, good evening.
+<span class="student">[Student]</span> Hi Joey, how are you today?
+<span class="tutor">[Tutor]</span> I&#x27;m doing great. It&#x27;s a funny day. How was your day?
+<span class="student">[Student]</span> My day was good. Nothing special happened.
+<span class="tutor">[Tutor]</span> Really? In my case...
+<span class="student">[Student]</span> Yes, tell me, in your case?
+<span class="student">[Student]</span> Last night, I bought some items to clean in the flea market. I bought a robot cleaner.
+<span class="tutor">[Tutor]</span> Oh, I want one of those.
+<span class="student">[Student]</span> Yeah, because always it is so hard to clean my room. So today I bought the robot cleaner in flea market. It is so cheap. So yesterday I tried for the first time cleaning, so that is successful and this machine is so cute like a puppy.
+<span class="tutor">[Tutor]</span> Oh, I love it. I really want one of those because I&#x27;m always picking up dog hair, right?
+<span class="student">[Student]</span> Ah, yes, yes, you&#x27;re right.
+<span class="tutor">[Tutor]</span> So, yeah, that is a nice way to clean dog hair.
+<span class="student">[Student]</span> Yeah.
+<span class="student">[Student]</span> Yeah, I suggest it to you.
+<span class="tutor">[Tutor]</span> I think so. I really want to get one. So when I take my dog out for a walk, I can just set the robot cleaner to do the work, and then I come back and there&#x27;s no hair. I think it&#x27;s great.
+<span class="student">[Student]</span> Okay, I see.
+<span class="student">[Student]</span> Yeah.
+<span class="tutor">[Tutor]</span> All right. Let&#x27;s take a look at our book.
+<span class="student">[Student]</span> Uh-huh.
+<span class="student">[Student]</span> Today we will start the page 11.
+<span class="tutor">[Tutor]</span> Page 11, 11?
+<span class="student">[Student]</span> 11?
+<span class="tutor">[Tutor]</span> Mm-hmm.
+<span class="tutor">[Tutor]</span> We are on 12.
+<span class="student">[Student]</span> Oh, 12?
+<span class="student">[Student]</span> Oh, yes.
+<span class="tutor">[Tutor]</span> You&#x27;re right.
+<span class="student">[Student]</span> 12.
+<span class="tutor">[Tutor]</span> You have to finish the course today.
+<span class="student">[Student]</span> Yes.
+<span class="tutor">[Tutor]</span> And we finished the business expressions.
+<span class="student">[Student]</span> Yes.
+<span class="tutor">[Tutor]</span> So, let&#x27;s do the key patterns on the left first.
+<span class="student">[Student]</span> Uh-huh. Language Focus. Can I read the paragraph?
+<span class="tutor">[Tutor]</span> Of course.
+<span class="student">[Student]</span> Yes. Key Patterns. Here are some key patterns that you can use when you are texting, messaging, or emailing in a professional setting. I&#x27;m reaching out to follow up our last conversation. I&#x27;m reaching out to get your input on the presentation materials. I&#x27;m reaching out to confirm the details for our meeting. Maybe that expression means to find out or find some details.
+<span class="tutor">[Tutor]</span> Yeah, reach out. Yeah, it&#x27;s a good way to say this is the reason why I&#x27;m talking to you.
+<span class="student">[Student]</span> Why I&#x27;m talking to you. Why I&#x27;m talking to you. Reaching out to do?
+<span class="tutor">[Tutor]</span> Exactly. This is the reason for my call. This is the reason for my email.
+<span class="student">[Student]</span> That&#x27;s the same meaning?
+<span class="tutor">[Tutor]</span> I&#x27;m reaching out to...
+<span class="student">[Student]</span> That&#x27;s the same meaning.
+<span class="tutor">[Tutor]</span> Exactly.
+<span class="student">[Student]</span> Because it found some evidence or the detailed explanation, right?
+<span class="tutor">[Tutor]</span> What do you mean?
+<span class="student">[Student]</span> It found the reason. It found the reason.
+<span class="tutor">[Tutor]</span> Exactly.
+<span class="student">[Student]</span> Okay, maybe, for example, if we start the class, at that time we check our page. So I am reaching out to our textbook to find proceeds.
+<span class="tutor">[Tutor]</span> It&#x27;s more so when somebody picks up the phone, you tell them, &quot;I&#x27;m calling you to follow up on our last conversation,&quot; or &quot;I&#x27;m calling you to confirm the details for our meeting.&quot; So it&#x27;s literally saying, &quot;This is why I&#x27;m calling you.&quot;
+<span class="student">[Student]</span> Yes, I understand. And I&#x27;m reaching out to follow up on our... maybe it is... Maybe there are two persons, A and B, and A is speaking that I&#x27;m reaching out to blah, blah, blah. B will try to something.
+<span class="tutor">[Tutor]</span> Exactly.
+<span class="student">[Student]</span> I&#x27;m reaching out to find some issue to our meeting. At that time, we found the issue and summary, etc. I&#x27;m reaching out too.
+<span class="tutor">[Tutor]</span> Okay. All right. Let&#x27;s see the second one.
+<span class="student">[Student]</span> Okay. Just checking in to... just checking in to see how you are progressing with the report. Just checking in to follow up the document I sent. Just checking in to make sure everything is on track. That is similar the first sentence, first expression, but that is more focus on the document or check some details?
+<span class="tutor">[Tutor]</span> It&#x27;s more like the equivalent of &quot;I&#x27;m just seeing how you&#x27;re doing.&quot;
+<span class="student">[Student]</span> Yeah, in my case, I&#x27;m used, for example, just checking in to our textbook.
+<span class="tutor">[Tutor]</span> That&#x27;s not quite how we would use it. Just checking in, to check in, usually check in with someone, not a thing, right? So you&#x27;re checking in with your son to make sure that he&#x27;s doing his homework.
+<span class="student">[Student]</span> Just checking in to how... Just checking in to how... Explanation to our student. How explain... Just... Explan... Explan... Explain to... To the student. This document?
+<span class="tutor">[Tutor]</span> It&#x27;s just exactly &quot;just checking in&quot; to see if our student understood this project.
+<span class="student">[Student]</span> I see.
+<span class="student">[Student]</span> You, okay, you as the... you just checking in to...
+<span class="student">[Student]</span> Just checking in to...
+<span class="tutor">[Tutor]</span> See how you&#x27;re...
+<span class="student">[Student]</span> progressing with the report. Okay, I try the next time. Okay. The second phrase to our document.
+<span class="tutor">[Tutor]</span> All right. All right, yes. Oh, that is more. And the last one.
+<span class="student">[Student]</span> Yeah, I will get back to you once I have more information. I will get back to you as soon as I have checked with the team. I will get back to you after reviewing the materials. Okay. I&#x27;ll get back to you after I study this sentence more. More. Okay.
+<span class="tutor">[Tutor]</span> Good.
+<span class="student">[Student]</span> Okay. Okay.
+<span class="tutor">[Tutor]</span> Let&#x27;s take a look at the scenarios.
+<span class="student">[Student]</span> Scenario. Okay.
+<span class="tutor">[Tutor]</span> The first scenario. You are a project manager facing unexpected delay due to a supply chain issue. You need to quickly inform your team leader and suggest adjusting the project timeline. Write a clear and concise text message to communicate the situation.
+<span class="student">[Student]</span> Text message. Okay. First, brainstorming mission each character. Second, role play. Be sure complete mission of each character and use list key to key pattern. Oh my God. Okay. Yes.
+<span class="tutor">[Tutor]</span> You got this. You&#x27;ve got this.
+<span class="student">[Student]</span> Yes. Yes. First, stage one. Yeah. Start stage one. Before the stage zero. Stage one. Uh-huh. Yeah. Stage zero. So I explain that paragraph.
+<span class="tutor">[Tutor]</span> Perfect. I love stage zero.
+<span class="student">[Student]</span> Yeah. The stage zero. I&#x27;m a project manager and I have a project but it is some problem to supply chain. For example, I made some pilot product but the pilot product produced by the factory is fired. So it is a big problem. I will find some factory to make my product. So we control our project timeline. So I will text. I will make some text. I will text.
+<span class="tutor">[Tutor]</span> That was good.
+<span class="student">[Student]</span> Yeah. And then I will communication with my boss. Yeah, with my boss and with my co-worker. I will communicate. I will communicate. I will communicate with my boss and my coworkers. Yeah, that&#x27;s our situation. And first, brainstorming is shown each character. Yes, I have some problems. Yeah, and you are my boss. How about that?
+<span class="tutor">[Tutor]</span> Okay. Okay. Yeah.
+<span class="student">[Student]</span> Before I said it is a big problem. So we have to adjust the timeline. Boss. Hey, boss. Hey, boss. Hello, boss. Nice to meet you. It&#x27;s a good day. How are you?
+<span class="tutor">[Tutor]</span> I am great. Thank you for asking. What&#x27;s going on?
+<span class="student">[Student]</span> I have some big problem. Yeah. Yesterday, I had some, I had a project to start a new product, the final new product. But yesterday, our factory in Daegu, that factory is fired. So it is impossible to pursue. Yeah. Oh, no. Yeah. So I think that is a small fire but the factory is the fire so it is impossible to pursue more. So I need to change our factory line.
+<span class="tutor">[Tutor]</span> Okay. Yes. And what does this mean for our timeline?
+<span class="student">[Student]</span> Our product timeline is to finish this year, December 15, but it is impossible to pursue until December. Maybe we have to delay one more month because we have to choose another factory to this product.
+<span class="tutor">[Tutor]</span> Okay, and how do we minimize the delays?
+<span class="student">[Student]</span> Maybe I guess it just adds one month.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="student">[Student]</span> Yeah, so it is possible to January 15th.
+<span class="tutor">[Tutor]</span> Okay, so now we&#x27;re moving to January 15th. That&#x27;s what I&#x27;m understanding, right?
+<span class="student">[Student]</span> Yeah, you&#x27;re right. I will send the text. I sent my email.
+<span class="tutor">[Tutor]</span> Perfect. Okay, well, thank you for letting me know. It&#x27;s out of our control. So, yes. Thank you for looking into it and finding a solution.
+<span class="student">[Student]</span> Okay, yeah, no problem. I will send this issue, I will send the email to to this issue and I found the new factory about this issue. Yeah, about this issue and I will find some solution.
+<span class="tutor">[Tutor]</span> Okay. Thank you, Joey.
+<span class="student">[Student]</span> Yeah, thank you, Johanna. Okay, that was great. Okay, yeah, role play a little difficult. Yeah, every day it&#x27;s it it&#x27;s it was a tough situation and you did really well because I was asking you tough questions.
+<span class="student">[Student]</span> Hmm, yes, because I guess our our textbook is leveled at one more, so I feel more difficult. But it&#x27;s okay. We have to study twice.
+<span class="tutor">[Tutor]</span> You&#x27;ve got this.
+<span class="student">[Student]</span> Yes, okay. And role play?
+<span class="tutor">[Tutor]</span> All right, you too.
+<span class="student">[Student]</span> Oh, yes. To ensure complete mission each character and use the two key patterns. I see. Oh, I will get back to you. I can use I&#x27;ll get back to you. I&#x27;ll get back to you. Summary the solutions.
+<span class="tutor">[Tutor]</span> I&#x27;ll get back to you after I find the solution.
+<span class="student">[Student]</span> Yeah, find the solution. And just checking in to... you said just checking in to how you make a solution, right?
+<span class="tutor">[Tutor]</span> Just checking in to see how the project is going.
+<span class="student">[Student]</span> Yes. Okay. Good. And is it possible to second scenario?
+<span class="tutor">[Tutor]</span> I think so. Okay. You are planning a seminar for a client. You are planning a seminar for a client.
+<span class="student">[Student]</span> Seminar, seminar, right? Seminar.
+<span class="tutor">[Tutor]</span> You are planning a seminar for a client, but one of the key speakers has canceled at the last minute.
+<span class="student">[Student]</span> Oh, my God.
+<span class="tutor">[Tutor]</span> To find a suitable replacement, you need more detail from the client about the preferences for a suitable speaker. Text the client to ask for their input and request a prompt response.
+<span class="student">[Student]</span> Text to client to ask their input and request prompt response. Prompt, prompt, a quick response. Prompt response. Request a prompt response. Okay, I see. Maybe this situation is a problem to the seminar, prepare seminar. I&#x27;m preparing a seminar for a client but one of the key speakers has canceled our schedule. So I find the replacement person. And then I will give us, so I give us some explanation this situation to client, for a client, to client.
+<span class="tutor">[Tutor]</span> And replace the key speaker. Ask them, ask them who they want, like what they&#x27;re looking for in a speaker, right? So you can, you can, you can choose another speaker, but you need information from the client about what they want in a speaker. The client, like the client. Mm-hmm. Exactly. Like, do they want exactly, do they want a CEO? Do they want somebody who is has the same experience as the person who dropped out? That kind of question.
+<span class="student">[Student]</span> I see, I understand.
+<span class="tutor">[Tutor]</span> But you are saved by the bell because our time is coming to an end, so you don&#x27;t have to do it today.
+<span class="student">[Student]</span> Uh-huh, you&#x27;re right. Yeah.
+<span class="tutor">[Tutor]</span> We will keep it for next class. Okay, talk to next time.
+<span class="tutor">[Tutor]</span> So we will do scenario two next time.
+<span class="student">[Student]</span> Okay. Yeah. Thank you for your time. Any questions?
+<span class="tutor">[Tutor]</span> Of course. Any questions today?
+<span class="student">[Student]</span> Okay. All right.
+<span class="tutor">[Tutor]</span> Okay. We&#x27;ll talk next time, Joey. Okay. You take care. Have a nice day. Bye-bye.
+<span class="student">[Student]</span> You too. Bye.</div>
+        </div>
+    </div>
+    <div class="toast" id="toast">✅ 프롬프트가 복사되었습니다!</div>
+    <script>
+        const REVIEW_PROMPT="너는 나의 영어 회화 복습 파트너야. 오늘 내 전화영어 수업 내용을 기반으로 대화하면서 복습을 도와줘.\n\n[오늘 수업 전사 내용]\n[Tutor] Hello Johanna, good morning, good evening.\n[Student] Hi Joey, how are you today?\n[Tutor] I'm doing great. It's a funny day. How was your day?\n[Student] My day was good. Nothing special happened.\n[Tutor] Really? In my case...\n[Student] Yes, tell me, in your case?\n[Student] Last night, I bought some items to clean in the flea market. I bought a robot cleaner.\n[Tutor] Oh, I want one of those.\n[Student] Yeah, because always it is so hard to clean my room. So today I bought the robot cleaner in flea market. It is so cheap. So yesterday I tried for the first time cleaning, so that is successful and this machine is so cute like a puppy.\n[Tutor] Oh, I love it. I really want one of those because I'm always picking up dog hair, right?\n[Student] Ah, yes, yes, you're right.\n[Tutor] So, yeah, that is a nice way to clean dog hair.\n[Student] Yeah.\n[Student] Yeah, I suggest it to you.\n[Tutor] I think so. I really want to get one. So when I take my dog out for a walk, I can just set the robot cleaner to do the work, and then I come back and there's no hair. I think it's great.\n[Student] Okay, I see.\n[Student] Yeah.\n[Tutor] All right. Let's take a look at our book.\n[Student] Uh-huh.\n[Student] Today we will start the page 11.\n[Tutor] Page 11, 11?\n[Student] 11?\n[Tutor] Mm-hmm.\n[Tutor] We are on 12.\n[Student] Oh, 12?\n[Student] Oh, yes.\n[Tutor] You're right.\n[Student] 12.\n[Tutor] You have to finish the course today.\n[Student] Yes.\n[Tutor] And we finished the business expressions.\n[Student] Yes.\n[Tutor] So, let's do the key patterns on the left first.\n[Student] Uh-huh. Language Focus. Can I read the paragraph?\n[Tutor] Of course.\n[Student] Yes. Key Patterns. Here are some key patterns that you can use when you are texting, messaging, or emailing in a professional setting. I'm reaching out to follow up our last conversation. I'm reaching out to get your input on the presentation materials. I'm reaching out to confirm the details for our meeting. Maybe that expression means to find out or find some details.\n[Tutor] Yeah, reach out. Yeah, it's a good way to say this is the reason why I'm talking to you.\n[Student] Why I'm talking to you. Why I'm talking to you. Reaching out to do?\n[Tutor] Exactly. This is the reason for my call. This is the reason for my email.\n[Student] That's the same meaning?\n[Tutor] I'm reaching out to...\n[Student] That's the same meaning.\n[Tutor] Exactly.\n[Student] Because it found some evidence or the detailed explanation, right?\n[Tutor] What do you mean?\n[Student] It found the reason. It found the reason.\n[Tutor] Exactly.\n[Student] Okay, maybe, for example, if we start the class, at that time we check our page. So I am reaching out to our textbook to find proceeds.\n[Tutor] It's more so when somebody picks up the phone, you tell them, \"I'm calling you to follow up on our last conversation,\" or \"I'm calling you to confirm the details for our meeting.\" So it's literally saying, \"This is why I'm calling you.\"\n[Student] Yes, I understand. And I'm reaching out to follow up on our... maybe it is... Maybe there are two persons, A and B, and A is speaking that I'm reaching out to blah, blah, blah. B will try to something.\n[Tutor] Exactly.\n[Student] I'm reaching out to find some issue to our meeting. At that time, we found the issue and summary, etc. I'm reaching out too.\n[Tutor] Okay. All right. Let's see the second one.\n[Student] Okay. Just checking in to... just checking in to see how you are progressing with the report. Just checking in to follow up the document I sent. Just checking in to make sure everything is on track. That is similar the first sentence, first expression, but that is more focus on the document or check some details?\n[Tutor] It's more like the equivalent of \"I'm just seeing how you're doing.\"\n[Student] Yeah, in my case, I'm used, for example, just checking in to our textbook.\n[Tutor] That's not quite how we would use it. Just checking in, to check in, usually check in with someone, not a thing, right? So you're checking in with your son to make sure that he's doing his homework.\n[Student] Just checking in to how... Just checking in to how... Explanation to our student. How explain... Just... Explan... Explan... Explain to... To the student. This document?\n[Tutor] It's just exactly \"just checking in\" to see if our student understood this project.\n[Student] I see.\n[Student] You, okay, you as the... you just checking in to...\n[Student] Just checking in to...\n[Tutor] See how you're...\n[Student] progressing with the report. Okay, I try the next time. Okay. The second phrase to our document.\n[Tutor] All right. All right, yes. Oh, that is more. And the last one.\n[Student] Yeah, I will get back to you once I have more information. I will get back to you as soon as I have checked with the team. I will get back to you after reviewing the materials. Okay. I'll get back to you after I study this sentence more. More. Okay.\n[Tutor] Good.\n[Student] Okay. Okay.\n[Tutor] Let's take a look at the scenarios.\n[Student] Scenario. Okay.\n[Tutor] The first scenario. You are a project manager facing unexpected delay due to a supply chain issue. You need to quickly inform your team leader and suggest adjusting the project timeline. Write a clear and concise text message to communicate the situation.\n[Student] Text message. Okay. First, brainstorming mission each character. Second, role play. Be sure complete mission of each character and use list key to key pattern. Oh my God. Okay. Yes.\n[Tutor] You got this. You've got this.\n[Student] Yes. Yes. First, stage one. Yeah. Start stage one. Before the stage zero. Stage one. Uh-huh. Yeah. Stage zero. So I explain that paragraph.\n[Tutor] Perfect. I love stage zero.\n[Student] Yeah. The stage zero. I'm a project manager and I have a project but it is some problem to supply chain. For example, I made some pilot product but the pilot product produced by the factory is fired. So it is a big problem. I will find some factory to make my product. So we control our project timeline. So I will text. I will make some text. I will text.\n[Tutor] That was good.\n[Student] Yeah. And then I will communication with my boss. Yeah, with my boss and with my co-worker. I will communicate. I will communicate. I will communicate with my boss and my coworkers. Yeah, that's our situation. And first, brainstorming is shown each character. Yes, I have some problems. Yeah, and you are my boss. How about that?\n[Tutor] Okay. Okay. Yeah.\n[Student] Before I said it is a big problem. So we have to adjust the timeline. Boss. Hey, boss. Hey, boss. Hello, boss. Nice to meet you. It's a good day. How are you?\n[Tutor] I am great. Thank you for asking. What's going on?\n[Student] I have some big problem. Yeah. Yesterday, I had some, I had a project to start a new product, the final new product. But yesterday, our factory in Daegu, that factory is fired. So it is impossible to pursue. Yeah. Oh, no. Yeah. So I think that is a small fire but the factory is the fire so it is impossible to pursue more. So I need to change our factory line.\n[Tutor] Okay. Yes. And what does this mean for our timeline?\n[Student] Our product timeline is to finish this year, December 15, but it is impossible to pursue until December. Maybe we have to delay one more month because we have to choose another factory to this product.\n[Tutor] Okay, and how do we minimize the delays?\n[Student] Maybe I guess it just adds one month.\n[Tutor] Okay.\n[Student] Yeah, so it is possible to January 15th.\n[Tutor] Okay, so now we're moving to January 15th. That's what I'm understanding, right?\n[Student] Yeah, you're right. I will send the text. I sent my email.\n[Tutor] Perfect. Okay, well, thank you for letting me know. It's out of our control. So, yes. Thank you for looking into it and finding a solution.\n[Student] Okay, yeah, no problem. I will send this issue, I will send the email to to this issue and I found the new factory about this issue. Yeah, about this issue and I will find some solution.\n[Tutor] Okay. Thank you, Joey.\n[Student] Yeah, thank you, Johanna. Okay, that was great. Okay, yeah, role play a little difficult. Yeah, every day it's it it's it was a tough situation and you did really well because I was asking you tough questions.\n[Student] Hmm, yes, because I guess our our textbook is leveled at one more, so I feel more difficult. But it's okay. We have to study twice.\n[Tutor] You've got this.\n[Student] Yes, okay. And role play?\n[Tutor] All right, you too.\n[Student] Oh, yes. To ensure complete mission each character and use the two key patterns. I see. Oh, I will get back to you. I can use I'll get back to you. I'll get back to you. Summary the solutions.\n[Tutor] I'll get back to you after I find the solution.\n[Student] Yeah, find the solution. And just checking in to... you said just checking in to how you make a solution, right?\n[Tutor] Just checking in to see how the project is going.\n[Student] Yes. Okay. Good. And is it possible to second scenario?\n[Tutor] I think so. Okay. You are planning a seminar for a client. You are planning a seminar for a client.\n[Student] Seminar, seminar, right? Seminar.\n[Tutor] You are planning a seminar for a client, but one of the key speakers has canceled at the last minute.\n[Student] Oh, my God.\n[Tutor] To find a suitable replacement, you need more detail from the client about the preferences for a suitable speaker. Text the client to ask for their input and request a prompt response.\n[Student] Text to client to ask their input and request prompt response. Prompt, prompt, a quick response. Prompt response. Request a prompt response. Okay, I see. Maybe this situation is a problem to the seminar, prepare seminar. I'm preparing a seminar for a client but one of the key speakers has canceled our schedule. So I find the replacement person. And then I will give us, so I give us some explanation this situation to client, for a client, to client.\n[Tutor] And replace the key speaker. Ask them, ask them who they want, like what they're looking for in a speaker, right? So you can, you can, you can choose another speaker, but you need information from the client about what they want in a speaker. The client, like the client. Mm-hmm. Exactly. Like, do they want exactly, do they want a CEO? Do they want somebody who is has the same experience as the person who dropped out? That kind of question.\n[Student] I see, I understand.\n[Tutor] But you are saved by the bell because our time is coming to an end, so you don't have to do it today.\n[Student] Uh-huh, you're right. Yeah.\n[Tutor] We will keep it for next class. Okay, talk to next time.\n[Tutor] So we will do scenario two next time.\n[Student] Okay. Yeah. Thank you for your time. Any questions?\n[Tutor] Of course. Any questions today?\n[Student] Okay. All right.\n[Tutor] Okay. We'll talk next time, Joey. Okay. You take care. Have a nice day. Bye-bye.\n[Student] You too. Bye.\n\n[AI 피드백]\n안녕하세요, Johanna님! 오늘도 활기찬 수업이었습니다. 로봇 청소기 이야기부터 비즈니스 이메일 표현, 그리고 긴급 상황 롤플레잉까지 다양한 주제를 소화하시느라 수고 많으셨어요! 특히 어려운 비즈니스 시나리오에서도 침착하게 대처하고 해결책을 모색하는 모습이 인상 깊었습니다.\n\n---\n\n### 1. 📊 오늘의 대화 요약 (Summary)\n\n오늘 수업에서는 Johanna님이 새로 구매하신 로봇 청소기에 대한 흥미로운 대화를 시작으로, 비즈니스 이메일 및 메시지에서 자주 사용되는 핵심 표현들(\"I'm reaching out to...\", \"Just checking in to...\", \"I'll get back to you...\")을 학습했습니다. 이어서 공급망 문제로 인한 프로젝트 지연 상황을 가정하고, 팀 리더에게 상황을 보고하고 타임라인 조정을 제안하는 롤플레잉을 진행했습니다.\n\n---\n\n### 2. 💬 유창성 업그레이드 (Fluency & Natural Flow)\n\n의미는 잘 전달되었지만, 원어민이 들었을 때 조금 더 자연스럽게 느껴질 수 있는 표현들을 살펴볼게요.\n\n| | ❌ 학습자 원문 (As Said) | ✅ 자연스러운 표현 (Natural) | 💎 비즈니스 표현 (Professional) | 💡 코칭 포인트 |\n|---|---|---|---|---|\n| **1.** | `always it is so hard to clean my room.` | `It's always so hard to clean my room.` | `Maintaining a tidy room is consistently challenging.` | 영어는 주어(It)와 동사(is)가 먼저 나오는 구조를 선호합니다. '항상 ~하다'는 `It's always ~`가 더 자연스러워요. |\n| **2.** | `I suggest it to you.` | `I recommend it.` | `I highly recommend it for your consideration.` | 'Suggest'는 '제안하다'는 의미가 강하고, 'recommend'는 '추천하다'는 의미로 특정 물건이나 서비스를 권할 때 훨씬 자연스럽습니다. |\n| **3.** | `our textbook is leveled at one more` | `our textbook is one level higher` | `The current textbook presents a slightly more advanced level.` | 'level'은 동사로 사용되기도 하지만, 난이도를 말할 때는 'one level higher/lower' 또는 'a bit more advanced'와 같이 표현하는 것이 자연스럽습니다. |\n| **4.** | `that factory is fired.` | `that factory caught fire.` | `The factory experienced a fire incident.` | 공장이 '해고당했다(fired)'는 의미가 아니라, '불이 났다'고 할 때는 `caught fire` 또는 `there was a fire at the factory`라고 표현합니다. |\n| **5.** | `I will communication with my boss.` | `I will communicate with my boss.` | `I will communicate with my supervisor.` | 'communication'은 명사이고, 'communicate'는 동사입니다. '나는 ~와 소통할 것이다'라고 할 때는 동사 `communicate`를 사용해야 합니다. |\n\n---\n\n### 3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)\n\n이번 대화에서는 **관사 (a/an/the)** 사용에 대한 연습이 필요해 보입니다. 특정하지 않은 일반적인 것을 말할 때는 `a/an`을, 이미 언급되었거나 모두가 아는 특정 대상을 말할 때는 `the`를 사용합니다.\n\n| | ❌ 원문 (As Said) | ✅ 교정 예시 (Corrected) |\n|---|---|---|\n| **1.** | `So today I bought the robot cleaner in flea market.` | `So today I bought a robot cleaner at a flea market.` |\n| **2.** | `it is some problem to supply chain.` | `It is a problem with the supply chain.` |\n| **3.** | `I will find some solution.` | `I will find a solution.` |\n| **4.** | `I have some big problem.` | `I have a big problem.` |\n\n📌 **핵심 규칙:** 처음 언급되거나 일반적인 명사 앞에는 `a/an`을, 특정하거나 이미 알고 있는 명사 앞에는 `the`를 사용합니다.\n\n🔁 **따라 읽기:**\n🗣️ \"So today I bought **a** robot cleaner at **a** flea market.\"\n🗣️ \"It is **a** problem with **the** supply chain.\"\n🗣️ \"I will find **a** solution.\"\n🗣️ \"I have **a** big problem.\"\n\n---\n\n### 4. 📗 어휘 확장 (Vocabulary Vault)\n\n오늘 대화에서 유용하게 쓰였거나 비즈니스 환경에서 활용도 높은 표현 5가지입니다.\n\n1.  **reach out** /riːtʃ aʊt/ (phrasal verb)\n    *   **뜻:** (도움을 요청하거나 정보를 얻기 위해) 연락하다, 접촉하다\n    *   **실전 예문:** `I'm reaching out to confirm the details for our upcoming meeting.`\n2.  **check in** /tʃek ɪn/ (phrasal verb)\n    *   **뜻:** (상황을 확인하거나 안부를 묻기 위해) 연락하다, 확인하다\n    *   **실전 예문:** `Just checking in to see how you're progressing with the report.`\n3.  **get back to** /ɡet bæk tuː/ (phrasal verb)\n    *   **뜻:** (나중에) 다시 연락하다, 회신하다\n    *   **실전 예문:** `I'll get back to you once I have more information about the project.`\n4.  **supply chain** /səˈplaɪ tʃeɪn/ (noun)\n    *   **뜻:** 공급망 (제품이나 서비스가 소비자에게 도달하기까지의 모든 과정)\n    *   **실전 예문:** `We are experiencing delays due to an issue in our global supply chain.`\n5.  **prompt** /prɒmpt/ (adjective)\n    *   **뜻:** 신속한, 즉각적인\n    *   **실전 예문:** `We need a prompt response from the client to proceed with the plan.`\n\n---\n\n### 5. 📝 실전 복습 챌린지 (Practice)\n\n오늘 배운 표현과 문법을 활용하여 다음 문장들을 영작해 보세요.\n\n1.  **상황:** 저는 어제 중고시장에서 아주 좋은 가격에 로봇 청소기를 샀어요.\n    *   **영작:** I bought ( ) robot cleaner at ( ) flea market for ( ) great price yesterday.\n    *   **모범 답안:** `I bought **a** robot cleaner at **a** flea market for **a** great price yesterday.`\n2.  **상황:** 보고서 진행 상황을 확인하기 위해 연락드렸습니다.\n    *   **영작:** Just ( ) ( ) to see how you are progressing with the report.\n    *   **모범 답안:** `Just **checking in** to see how you are progressing with the report.`\n3.  **상황:** 공급망 문제로 인해 프로젝트가 지연될 것 같습니다. 자세한 정보를 확인하는 대로 다시 연락드리겠습니다.\n    *   **영작:** It seems our project will be delayed due to ( ) supply chain issue. I'll ( ) ( ) ( ) you once I have more details.\n    *   **모범 답안:** `It seems our project will be delayed due to **a** supply chain issue. I'll **get back to** you once I have more details.`\n\n---\n\n### 6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)\n\n✨ **Good Job**: `I'm a project manager and I have a project but it is some problem to supply chain.`\n이 문장은 비록 관사나 전치사 오류가 있었지만, Johanna님이 주어진 시나리오를 이해하고 자신의 역할을 설명하는 데 전혀 막힘이 없었습니다. 특히 'I'm a project manager'로 시작하여 상황을 명확하게 제시하고 문제점을 설명하는 흐름이 아주 좋았습니다. 어려운 상황 설명을 주저 없이 시도하는 모습에서 큰 자신감을 엿볼 수 있었습니다!\n\n🚀 **내일의 한 문장**: 다음 수업 시작 시 튜터에게 오늘 배운 표현을 활용하여 이렇게 말해보세요.\n`\"I'm reaching out to you to continue our discussion on scenario two from last class.\"`\n(지난 수업의 시나리오 2에 대한 논의를 계속하기 위해 연락드렸습니다.)\n\n---\n\n**[성과 지표]**\n\n*   **유창성 점수:** 7.5/10점\n*   **근거:** Johanna님은 다양한 주제에 대해 막힘없이 자신의 의견을 표현하며 대화를 이어나가는 능력이 뛰어납니다. 특히 어려운 비즈니스 시나리오에서도 주저하지 않고 설명을 시도하는 모습이 인상적입니다. 다만, 일부 표현에서 원어민이 더 자연스럽게 사용하는 어휘나 구문으로 다듬을 부분이 있었고, 문법적 정확성(특히 관사 및 전치사)에서 개선의 여지가 있어 유창성 점수를 7.5점으로 책정했습니다.\n*   **다음 수업 '원포인트 액션 플랜':** \"관사 (a/an/the) 사용 시 의식적으로 한 번 더 생각하기\"\n    *   말하기 전에 명사 앞에 어떤 관사가 와야 할지 잠시 멈춰 생각하는 연습을 해보세요. 예를 들어, 'problem'이나 'solution' 같은 일반적인 명사 앞에는 `a`를, 이미 언급되었거나 특정 상황의 명사 앞에는 `the`를 붙이는 습관을 들이면 좋습니다.\n\n위 내용을 바탕으로:\n1. 먼저 오늘 수업에서 내가 틀렸거나 어색했던 표현을 하나 골라서, 관련된 상황을 영어로 질문해줘.\n2. 내가 영어로 대답하면, 자연스러운지 확인하고 더 나은 표현이 있으면 알려줘.\n3. 특히 \"반복 실수 패턴\"에서 지적된 부분을 집중적으로 연습시켜줘.\n4. 이런 식으로 오늘 배운 표현들을 하나씩 복습하자.\n5. 한국어 설명은 필요할 때만 간단히, 대화는 최대한 영어로 진행해줘.\n\n그럼 시작하자!";
+        function startReview(){navigator.clipboard.writeText(REVIEW_PROMPT).then(()=>{showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)}).catch(()=>{const t=document.createElement('textarea');t.value=REVIEW_PROMPT;document.body.appendChild(t);t.select();document.execCommand('copy');document.body.removeChild(t);showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)})}
+        function showToast(){const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500)}
+        function switchTab(n){document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',n==='feedback'?i===0:i===1));document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));document.getElementById('tab-'+n).classList.add('active')}
+    </script>
+</body>
+</html>
