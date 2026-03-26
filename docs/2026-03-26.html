@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전화영어 복습 - 2026년 03월 26일</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Noto Sans KR',sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.75;min-height:100vh}
+        .header{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);border-bottom:1px solid rgba(255,255,255,.06);padding:48px 24px 40px;text-align:center}
+        .header-date{font-size:13px;color:#94a3b8;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+        .header h1{font-size:28px;font-weight:700;color:#f1f5f9;margin-bottom:16px}
+        .header-meta{display:flex;justify-content:center;gap:24px;font-size:14px;color:#64748b}
+        .header-meta span{display:flex;align-items:center;gap:6px}
+        .cta-section{text-align:center;padding:40px 24px}
+        .cta-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:linear-gradient(135deg,#38bdf8,#818cf8);color:#fff;font-size:16px;font-weight:600;font-family:'Noto Sans KR',sans-serif;border:none;border-radius:50px;cursor:pointer;transition:all .3s;text-decoration:none;box-shadow:0 4px 24px rgba(56,189,248,.25)}
+        .cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(56,189,248,.35)}
+        .cta-btn svg{width:20px;height:20px}
+        .cta-sub{margin-top:12px;font-size:13px;color:#64748b}
+        .toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#38bdf8;padding:14px 28px;border-radius:12px;font-size:14px;font-weight:500;border:1px solid rgba(56,189,248,.2);box-shadow:0 8px 32px rgba(0,0,0,.4);opacity:0;transition:all .4s cubic-bezier(.16,1,.3,1);z-index:1000}
+        .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+        .container{max-width:720px;margin:0 auto;padding:0 24px 80px}
+        .tabs{display:flex;gap:4px;background:#1a1a24;padding:4px;border-radius:12px;margin-bottom:32px}
+        .tab{flex:1;padding:12px;text-align:center;font-size:14px;font-weight:500;color:#64748b;background:0 0;border:none;border-radius:8px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all .2s}
+        .tab.active{background:#262636;color:#f1f5f9}
+        .tab-content{display:none}.tab-content.active{display:block}
+        .feedback h2{font-size:18px;font-weight:700;color:#f1f5f9;margin:36px 0 16px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.06)}
+        .feedback h2:first-child{margin-top:0}
+        .feedback p{margin:8px 0;color:#cbd5e1}
+        .feedback .item{padding:6px 0 6px 16px;border-left:2px solid #334155;margin:6px 0;color:#cbd5e1}
+        .feedback .numbered{padding:8px 0 8px 16px;color:#cbd5e1}
+        .feedback .numbered strong{color:#38bdf8}
+        .feedback strong{color:#f1f5f9}
+        .feedback code{background:#1e293b;padding:2px 8px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#38bdf8}
+        .feedback table{width:100%;border-collapse:collapse;margin:12px 0}
+        .feedback th,.feedback td{padding:10px 14px;text-align:left;border-bottom:1px solid #262636}
+        .feedback th{color:#94a3b8;font-weight:500;font-size:13px}
+        .feedback td{color:#cbd5e1}
+        .arrow{color:#38bdf8;font-weight:700}
+        .transcript{background:#1a1a24;border-radius:12px;padding:28px;font-size:14px;line-height:2;color:#94a3b8;white-space:pre-wrap;word-break:break-word;font-family:'JetBrains Mono','Noto Sans KR',monospace}
+        .transcript .tutor{color:#38bdf8}
+        .transcript .student{color:#a78bfa}
+        @media(max-width:640px){.header{padding:32px 16px}.header h1{font-size:22px}.cta-btn{padding:14px 28px;font-size:15px}.container{padding:0 16px 60px}}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-date">2026년 03월 26일</div>
+        <h1>📚 전화영어 복습</h1>
+        <div class="header-meta">
+            <span>⏱ 19분 54초</span>
+            <span>🎙 전화영어_025180304_20260326080051.m4a</span>
+        </div>
+    </div>
+    <div class="cta-section">
+        <button class="cta-btn" onclick="startReview()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Gemini에서 복습 대화 시작하기
+        </button>
+        <div class="cta-sub">클릭하면 프롬프트가 복사되고 Gemini가 열립니다</div>
+    </div>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('feedback')">📋 AI 피드백</button>
+            <button class="tab" onclick="switchTab('transcript')">🎙 수업 전사</button>
+        </div>
+        <div id="tab-feedback" class="tab-content active">
+            <div class="feedback"><p>안녕하세요, 학습자님! 오늘도 알찬 영어 대화 나누시느라 수고 많으셨습니다. 특히 AI 딥러닝 프로젝트와 선생님의 새로운 비즈니스에 대한 이야기는 흥미로웠고, 모바일 메신저 앱 시장 분석에서는 날카로운 통찰력을 보여주셨어요. 꾸준히 성장하는 모습이 정말 멋집니다!</p>
+<br>
+<br>
+<p>### 1. 📊 오늘의 대화 요약 (Summary)</p>
+<br>
+<p>오늘 수업에서는 선생님의 새로운 비즈니스(캐나다 레시피를 활용한 콜롬비아 내 케이크 판매)와 학습자님의 AI 딥러닝 프로젝트에 대해 이야기 나누었습니다. 이어서 모바일 메신저 앱 시장 현황 그래프를 분석하며 각 앱의 특징과 메신저 앱의 성장 추세에 대해 심도 깊은 토론을 진행했습니다.</p>
+<br>
+<br>
+<p>### 2. 💬 유창성 업그레이드 (Fluency & Natural Flow)</p>
+<br>
+<p>의미 전달은 충분히 잘 되었지만, 원어민들이 일상에서 더 자연스럽게 사용하는 표현으로 다듬어 볼 문장들을 함께 살펴볼까요?</p>
+<br>
+<div class="numbered"><strong>1.</strong>  <strong>❌ 학습자 원문 (As Said):</strong> "So that means is it the import or export of the product?"</div>
+<p>    *   <strong>✅ 자연스러운 표현 (Natural):</strong> "So, does that mean it involves importing or exporting the product?"</p>
+<p>    *   <strong>💎 비즈니스 표현 (Professional):</strong> "Therefore, does this initiative entail the import or export of the product?"</p>
+<p>    *   <strong>💡 코칭 포인트:</strong> 'is it' 대신 'does that mean it involves'를 사용하여 문장을 더 자연스럽게 연결하고, 'import or export' 앞에 동사를 넣어 의미를 명확히 합니다.</p>
+<br>
+<div class="numbered"><strong>2.</strong>  <strong>❌ 학습자 원문 (As Said):</strong> "My future becomes a millionaire."</div>
+<p>    *   <strong>✅ 자연스러운 표현 (Natural):</strong> "I'm going to be a millionaire in the future."</p>
+<p>    *   <strong>💎 비즈니스 표현 (Professional):</strong> "I aspire to achieve financial independence in the future."</p>
+<p>    *   <strong>💡 코칭 포인트:</strong> 미래의 소망이나 계획을 말할 때는 'My future becomes'보다 'I'm going to be'나 'I aspire to'와 같은 주어 중심의 표현이 더 자연스럽습니다.</p>
+<br>
+<div class="numbered"><strong>3.</strong>  <strong>❌ 학습자 원문 (As Said):</strong> "I can distinguish only just Telegram or Line, but the other things, I can't distinguish what their applications are."</div>
+<p>    *   <strong>✅ 자연스러운 표현 (Natural):</strong> "I can only recognize Telegram or Line; I can't identify the other applications."</p>
+<p>    *   <strong>💎 비즈니스 표현 (Professional):</strong> "I am only familiar with Telegram and Line among these, and I'm unable to identify the remaining applications."</p>
+<p>    *   <strong>💡 코칭 포인트:</strong> 'only just'는 'only'로 충분하며, 'distinguish'보다는 'recognize'가 더 자연스러울 수 있습니다. 또한, 'the other things' 대신 'the other applications'로 명확히 하고, 문장을 좀 더 간결하게 다듬을 수 있습니다.</p>
+<br>
+<br>
+<p>### 3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)</p>
+<br>
+<p>이번 수업에서 학습자님께서 자주 혼동하셨던 문법 패턴은 바로 <strong>관사 (a/an/the)</strong> 사용입니다. 특히 특정하지 않은 일반적인 명사를 언급할 때 'a/an'을 생략하거나, 반대로 이미 언급되었거나 모두가 아는 특정 명사에 'the'를 붙이지 않는 경우가 있었습니다.</p>
+<br>
+<table>
+<tr><th>❌ 원문 (As Said)</th><th>✅ 교정 예시 (Corrected)</th></tr>
+<tr><td>:----------------------------------------------------------------------------------</td><td>:----------------------------------------------------------------------------------------</td></tr>
+<tr><td>"So yesterday, I followed <strong>the GPU</strong>..."</td><td>"So yesterday, I followed <strong>a GPU</strong>..." (특정 GPU가 아닌 일반적인 GPU를 지칭)</td></tr>
+<tr><td>"Maybe they are interested in <strong>the Canada-style new design</strong>."</td><td>"Maybe they are interested in <strong>a new Canada-style design</strong>." (특정 디자인이 아닌 새로운 디자인 중 하나)</td></tr>
+<tr><td>"I think in <strong>the world</strong>, population is the same."</td><td>"I think <strong>the world's</strong> population is the same." (소유격으로 '세계의 인구'를 표현)</td></tr>
+</table>
+<br>
+<p>*   <strong>📌 핵심 규칙:</strong></p>
+<p>    *   <strong>'a/an'</strong>: 처음 언급되거나, 일반적이고 불특정한 단수 명사 앞에 사용합니다. (예: a book, an apple)</p>
+<p>    *   <strong>'the'</strong>: 이미 언급되었거나, 듣는 사람과 말하는 사람 모두가 아는 특정한 명사 앞에 사용합니다. (예: the book I mentioned, the sun)</p>
+<p>    *   <strong>관사 생략</strong>: 고유명사, 복수 명사, 셀 수 없는 명사, 소유격이나 지시형용사(this, that 등)가 붙은 명사 앞에는 관사를 사용하지 않습니다.</p>
+<br>
+<p>*   <strong>🔁 따라 읽기:</strong></p>
+<p>    *   🗣️ "So yesterday, I followed a GPU..."</p>
+<p>    *   🗣️ "Maybe they are interested in a new Canada-style design."</p>
+<p>    *   🗣️ "I think the world's population is the same."</p>
+<br>
+<br>
+<p>### 4. 📗 어휘 확장 (Vocabulary Vault)</p>
+<br>
+<p>오늘 대화에서 유용하게 쓰였거나, 학습자님의 비즈니스 환경에서 활용하기 좋은 단어 5가지를 소개합니다.</p>
+<br>
+<div class="numbered"><strong>1.</strong>  <strong>domain</strong> /doʊˈmeɪn/ (명사)</div>
+<p>    *   뜻: (인터넷) 도메인, 영역, 분야</p>
+<p>    *   실전 예문: We need to secure a custom <strong>domain</strong> name for our new product launch.</p>
+<br>
+<div class="numbered"><strong>2.</strong>  <strong>recipient</strong> /rɪˈsɪpiənt/ (명사)</div>
+<p>    *   뜻: 수신자, 받는 사람</p>
+<p>    *   실전 예문: Please ensure all <strong>recipients</strong> have received the project proposal.</p>
+<br>
+<div class="numbered"><strong>3.</strong>  <strong>integrate</strong> /ˈɪntɪˌɡreɪt/ (동사)</div>
+<p>    *   뜻: 통합하다, 합치다</p>
+<p>    *   실전 예문: We are working to <strong>integrate</strong> this new AI module into our existing system.</p>
+<br>
+<div class="numbered"><strong>4.</strong>  <strong>dominate</strong> /ˈdɒmɪˌneɪt/ (동사)</div>
+<p>    *   뜻: 지배하다, 우위를 차지하다</p>
+<p>    *   실전 예문: Our company aims to <strong>dominate</strong> the renewable energy market in the region.</p>
+<br>
+<div class="numbered"><strong>5.</strong>  <strong>saturated</strong> /ˈsætʃəˌreɪtɪd/ (형용사)</div>
+<p>    *   뜻: 포화 상태의, 더 이상 들어갈 틈이 없는</p>
+<p>    *   실전 예문: The smartphone market is becoming increasingly <strong>saturated</strong>, making it harder for new entrants.</p>
+<br>
+<br>
+<p>### 5. 📝 실전 복습 챌린지 (Practice)</p>
+<br>
+<p>오늘 배운 표현과 문법을 활용하여 다음 상황에 맞는 문장을 영작해 보세요.</p>
+<br>
+<div class="numbered"><strong>1.</strong>  <strong>상황:</strong> 당신은 새로운 사업 아이디어를 구상 중이며, 미래에 이 사업으로 큰 성공을 거두고 싶다고 말하고 싶습니다.</div>
+<p>    *   <strong>영작:</strong> (I'm going to be a millionaire in the future.)</p>
+<p>    *   <strong>모범 답안:</strong> I'm excited about this new business idea, and I'm going to be a millionaire in the future.</p>
+<br>
+<div class="numbered"><strong>2.</strong>  <strong>상황:</strong> 회의에서 특정 보고서의 수신자가 누구인지 명확히 하고 싶습니다.</div>
+<p>    *   <strong>영작:</strong> (Who was the main recipient of that report?)</p>
+<p>    *   <strong>모범 답안:</strong> Could you clarify who was the main recipient of that report?</p>
+<br>
+<div class="numbered"><strong>3.</strong>  <strong>상황:</strong> 현재 시장이 특정 제품으로 포화 상태이며, 새로운 전략이 필요하다고 생각합니다.</div>
+<p>    *   <strong>영작:</strong> (The market for this product is quite saturated, so we need a new strategy.)</p>
+<p>    *   <strong>모범 답안:</strong> The market for this product is quite saturated, so we need a new strategy to differentiate ourselves.</p>
+<br>
+<br>
+<p>### 6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)</p>
+<br>
+<p>*   ✨ <strong>Good Job</strong>: "I'm also proud of this."</p>
+<p>    *   AI 딥러닝 프로젝트 성공에 대해 이야기하며 "I'm also proud of this."라고 말씀하신 부분은 정말 좋았습니다. 자신의 성과에 대한 자부심을 간결하고 명확하게 표현하여 듣는 사람에게도 긍정적인 에너지를 전달했습니다. 이런 자신감 있는 표현은 유창성 향상에 큰 도움이 됩니다!</p>
+<br>
+<p>*   🚀 <strong>내일의 한 문장</strong>:</p>
+<p>    다음 수업 시작 시, 오늘 배운 'saturated'를 활용하여 선생님께 이렇게 질문해보세요.</p>
+<p>    "Do you think the AI market is getting saturated as well?"</p>
+<p>    (AI 시장도 포화 상태가 되어가고 있다고 생각하시나요?)</p>
+<br>
+<br>
+<p>### [성과 지표]</p>
+<br>
+<p>*   <strong>유창성 점수(10점 만점): 7점</strong></p>
+<p>    *   <strong>근거:</strong> 학습자님은 다양한 주제에 대해 막힘없이 자신의 의견을 표현하고 대화를 이어나가는 능력이 뛰어납니다. 특히 선생님의 비즈니스에 대한 질문이나 그래프 분석 시의 추론 과정이 논리적이고 풍부했습니다. 다만, 몇몇 표현에서 더 자연스러운 어순이나 단어 선택을 통해 유창성을 더욱 높일 수 있는 여지가 보였습니다. 관사 사용과 같은 문법적 정확성을 조금 더 신경 쓰면 훨씬 더 매끄러운 영어를 구사하실 수 있을 것입니다.</p>
+<p>    *   <strong>다음 수업 '원포인트 액션 플랜':</strong> "관사 (a/an/the) 사용에 유의하며 말하기"</p>
+<p>        *   다음 수업에서는 문장을 만들 때 명사 앞에 'a', 'an', 'the' 중 어떤 관사가 들어가야 할지 한 번 더 생각하고 말하는 연습을 해봅시다. 특히 처음 언급하는 일반적인 단수 명사 앞에는 'a/an'을 붙이는 것을 의식적으로 연습해 보세요.</p>
+<br>
+<p>오늘도 정말 고생 많으셨습니다! 다음 수업에서 더 성장한 모습으로 만나요! 😊</p></div>
+        </div>
+        <div id="tab-transcript" class="tab-content">
+            <div class="transcript"><span class="student">[Student]</span> Hello, good evening, teacher.
+<span class="tutor">[Tutor]</span> Hi. Good morning, Joey. How are you today?
+<span class="student">[Student]</span> I&#x27;m doing great. Yeah, I&#x27;m doing good.
+<span class="tutor">[Tutor]</span> Good. I&#x27;m glad to hear it.
+<span class="student">[Student]</span> I&#x27;m a little tired, but it&#x27;s okay. Yeah. How was your day?
+<span class="tutor">[Tutor]</span> My day was good. Nothing unusual to report. I&#x27;m very happy with myself because I set up a custom domain for an email, and it worked.
+<span class="student">[Student]</span> Oh, you made a new domain for your email?
+<span class="tutor">[Tutor]</span> Yes, exactly. I thought so. I was proud of myself.
+<span class="student">[Student]</span> Oh, that email is about business, right? Yes. Oh, yes, I see. These days, I tried to run AI. So yesterday, I followed the GPU, and then I tried to deep learning in this project.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="student">[Student]</span> So I&#x27;m also proud of this.
+<span class="tutor">[Tutor]</span> It&#x27;s tough. Sometimes when things are hard, even if it seems like a simple thing, no, we should be proud of ourselves.
+<span class="student">[Student]</span> Yes, you&#x27;re right. That is not simple. That is so difficult. And in my case, I tried too many times.
+<span class="student">[Student]</span> Yeah, so yeah, it&#x27;s good. Yes. And how about the first email? Or who was the first recipient?
+<span class="tutor">[Tutor]</span> To myself, to my other emails, to make sure that it works, right? Yes, you&#x27;re right. Yeah. The very classic test, &quot;Hello World&quot; email.
+<span class="student">[Student]</span> &quot;Hello World&quot; email?
+<span class="tutor">[Tutor]</span> Yes.
+<span class="student">[Student]</span> Yes.
+<span class="tutor">[Tutor]</span> That&#x27;s it. But it works. My integrations work, and I&#x27;m very proud of myself.
+<span class="student">[Student]</span> Yes. And this email, you really use it for business, and maybe it is concerned with your brand, right?
+<span class="tutor">[Tutor]</span> Actually, I&#x27;m starting my own business.
+<span class="student">[Student]</span> Starting your own?
+<span class="tutor">[Tutor]</span> Yes.
+<span class="student">[Student]</span> Another business?
+<span class="tutor">[Tutor]</span> Another business, right? Too. Yeah.
+<span class="student">[Student]</span> So nice.
+<span class="tutor">[Tutor]</span> I think so. I think it will be good. It is making some Canadian recipes, like banana cake and things that we like a lot in Canada, but make them here in Colombia.
+<span class="student">[Student]</span> Yes. So that means is it the import or export of the product?
+<span class="tutor">[Tutor]</span> No.
+<span class="student">[Student]</span> No? Ah, yes.
+<span class="tutor">[Tutor]</span> The only thing that we&#x27;re importing is the recipe.
+<span class="student">[Student]</span> Ah, import the recipe.
+<span class="tutor">[Tutor]</span> All of the ingredients are local.
+<span class="student">[Student]</span> Ah, yes. I see. I understand half.
+<span class="student">[Student]</span> So the main reason to make your email, the main reason is to import the recipe from...
+<span class="tutor">[Tutor]</span> Well, the main reason for the email is so people can contact us if they want to order the cakes.
+<span class="student">[Student]</span> Order the cake. I see. You&#x27;re preparing a side job.
+<span class="tutor">[Tutor]</span> Exactly.
+<span class="student">[Student]</span> Ah, same. Same to me.
+<span class="tutor">[Tutor]</span> Yes, exactly. Okay. Yes, we&#x27;ll see how it goes. We&#x27;re just starting.
+<span class="student">[Student]</span> And this item is similar to your plan. To make a cake or make an ingredient, right?
+<span class="tutor">[Tutor]</span> We&#x27;re going to make the cakes.
+<span class="student">[Student]</span> Make a cake? Wow, that&#x27;s great. So the recipes are from Canada. The ingredients are from Colombia. I understand perfectly. I see. So you will make the Canada-style cake, but the ingredients are from Colombia. So the price is reasonable.
+<span class="tutor">[Tutor]</span> That&#x27;s exactly right.
+<span class="student">[Student]</span> Yeah, and who is the market? Is it Colombia? Yes. Ah, yes. Maybe they are interested in the Canada-style new design.
+<span class="tutor">[Tutor]</span> I think so. I think so because they don&#x27;t have this type of cake here.
+<span class="student">[Student]</span> Yeah.
+<span class="tutor">[Tutor]</span> And everybody who tries it loves it. So hopefully, they&#x27;ll be interested in buying it.
+<span class="student">[Student]</span> Yes. I wish your business gets bigger.
+<span class="tutor">[Tutor]</span> Thank you. I will keep you posted. I will keep you posted when we start for real.
+<span class="student">[Student]</span> Yes. I&#x27;m excited too. My future becomes a millionaire.
+<span class="tutor">[Tutor]</span> Oh, right? And then I can finally travel to Korea.
+<span class="student">[Student]</span> Well, maybe you can borrow your own, you take your own plane, right?
+<span class="tutor">[Tutor]</span> No, that&#x27;s not eco-friendly. That&#x27;s bad for the environment.
+<span class="student">[Student]</span> Yes, okay, good.
+<span class="tutor">[Tutor]</span> All right, let&#x27;s take a look at our book. We are on page 14.
+<span class="student">[Student]</span> 14, yes. Good. Wow. Yes. I can see the graph.
+<span class="tutor">[Tutor]</span> Okay. So what can you tell me about this graph?
+<span class="student">[Student]</span> First, I read the caption. Most popular. Yes.
+<span class="tutor">[Tutor]</span> Yes, exactly. The caption.
+<span class="student">[Student]</span> Caption. We can say that it is caption, caption, or legend. Legend. Ah, yeah, caption. &quot;Most popular mobile messenger app as of January 2024, based on the number of monthly active users in millions.&quot; Monthly.
+<span class="tutor">[Tutor]</span> I see. Oh, that is a huge market. I can distinguish only just Telegram or Line, but the other things, I can&#x27;t distinguish what their applications are. But that is also similar communication and telecommunications application, right? So the first one at the top is WhatsApp. First time, maybe that is WhatsApp.
+<span class="student">[Student]</span> Yeah, direct call.
+<span class="tutor">[Tutor]</span> No, it&#x27;s WhatsApp.
+<span class="student">[Student]</span> WhatsApp? Ah, WhatsApp. WhatsApp. WhatsApp. Ah, you&#x27;re right. WhatsApp.
+<span class="tutor">[Tutor]</span> Yep. That&#x27;s WhatsApp.
+<span class="student">[Student]</span> Yeah. We don&#x27;t use that in Korea.
+<span class="tutor">[Tutor]</span> No, it is very, very popular in...
+<span class="student">[Student]</span> Yes, but not in Canada.
+<span class="tutor">[Tutor]</span> Oh, yes, I understand. But in Colombia and Morocco, very, very popular.
+<span class="student">[Student]</span> Oh, I see. The second one, I don&#x27;t know it. Maybe that is a native one. That is a similar messenger. Yes. Yes. And Messenger. Yeah. Messenger. And they developed Japanese or some Asia. I can speak English first. Do you know that?
+<span class="tutor">[Tutor]</span> That&#x27;s Messenger, right? Maybe, but I don&#x27;t know.
+<span class="student">[Student]</span> I think that&#x27;s Messenger. Messenger. Oh, yes. And the fourth, that is Telegram.
+<span class="tutor">[Tutor]</span> Telegram.
+<span class="student">[Student]</span> Yeah. I see. And the fifth? I don&#x27;t know. I&#x27;m not sure. What&#x27;s that?
+<span class="tutor">[Tutor]</span> Snapchat.
+<span class="student">[Student]</span> Snapchat. Snapchat. Snapchat. Snapchat. Uh-huh. And the rotting penguin. I know.
+<span class="tutor">[Tutor]</span> I have no idea what that is.
+<span class="student">[Student]</span> Yes. That&#x27;s cute.
+<span class="tutor">[Tutor]</span> Yes. Exactly. It&#x27;s a cute penguin, but more than that, I can&#x27;t tell you.
+<span class="student">[Student]</span> Okay, I see.
+<span class="tutor">[Tutor]</span> All right. Now let&#x27;s take a look at the questions.
+<span class="student">[Student]</span> Yes. &quot;Which application dominates in the market? Why do you think so? Why do you think this is? Explain the growth trends using the chart above.&quot; I see. I guess that is a huge market because they calculate the monthly user, but WhatsApp is almost 2,000 million per month.
+<span class="tutor">[Tutor]</span> Exactly.
+<span class="student">[Student]</span> Yeah, maybe I guess the population of the country is huge. So I guess, I don&#x27;t know. Just, I guess, the big country, India or Vietnam? Yeah, I don&#x27;t know.
+<span class="tutor">[Tutor]</span> I think it&#x27;s popular all over the world. Oh, you&#x27;re thinking it&#x27;s the equivalent of a country, right? It&#x27;s 2 billion, 2 billion people.
+<span class="student">[Student]</span> Might be India, yes? Yeah, 2 billion per month. So if we divide one daily, that is almost 100 million more. I don&#x27;t know, just more. Yeah, almost. Maybe some people use it twice. About this, that is the usual. So if we divide by 30 or 31, the population is similar to Vietnam or Japan, but Japan doesn&#x27;t use that application. So I guess some Asia over there.
+<span class="tutor">[Tutor]</span> Asia, South Asia, or maybe the other world, the West. I don&#x27;t know. I&#x27;m not sure.
+<span class="student">[Student]</span> Okay. Maybe. Maybe. That is a hard question. Yeah, anyway.
+<span class="tutor">[Tutor]</span> And why do you think so many people use WhatsApp?
+<span class="student">[Student]</span> WhatsApp. I don&#x27;t use WhatsApp. But if I travel to some country, at that time, some country people used WhatsApp. And that is so convenient. Convenient because if I list up the other people&#x27;s phone numbers, the people list up in my WhatsApp, and it is more easy to communicate with each other. So many people use that.
+<span class="tutor">[Tutor]</span> Great answer. Great answer. Yes, really? Okay. And let&#x27;s go to question two.
+<span class="student">[Student]</span> Okay. &quot;Why has there been a shift from email and phone calls to messenger apps? What&#x27;s your personal preference?&quot; Ah, yes. The young generation, the MG generation, or the more young generation, they don&#x27;t prefer communication through direct phone calls, direct communication, or direct communication with the phone. So many people use applications like WhatsApp and KakaoTalk or Telegram, etc., because that is easier. If I meet someone for the first time, you can add them easily and friendly. So yeah, so that is easier. Yes.
+<span class="tutor">[Tutor]</span> Yeah, more easier.
+<span class="tutor">[Tutor]</span> Just easier.
+<span class="student">[Student]</span> Yeah.
+<span class="tutor">[Tutor]</span> Yeah, it&#x27;s your... And what about your personal preference? Do you prefer using email and phone calls or messaging apps?
+<span class="student">[Student]</span> I&#x27;m a little older man, so it is easier to directly call because... Okay. It is so that one time, everything. And I listen to their voice and understand what they do. So it is easier. But sometimes I need more records for communication. At that time, the messenger app is more convenient. Yes.
+<span class="tutor">[Tutor]</span> Okay, and the last question.
+<span class="student">[Student]</span> Yes. And teacher, before the answer to the last question, I&#x27;ll give you some information. First, in this graph, I found the first is WhatsApp, and second is WeChat.
+<span class="tutor">[Tutor]</span> WeChat, China, yes.
+<span class="student">[Student]</span> Yeah, China. And third is Facebook Messenger, and fourth is Telegram, and fifth is Snapchat, and the last thing is QQ. So, this country is... What is that? I don&#x27;t know. Maybe that is about QQ is the Chinese-based messenger. So that is the Chinese user monthly graph, monthly paragraph.
+<span class="tutor">[Tutor]</span> Oh, no, no, no. Monthly users, no. Oh, whole world, whole world mobile messenger app.
+<span class="student">[Student]</span> Which one? Whole world. Whole world. Whole world. Yeah, in the world, the monthly. But China, oh, yes, it is. Yeah, yeah, yeah. China is so bigger, big. So yeah, they list up QQ or WeChat. Yeah, and Telegram. Yeah, yeah. I understand.
+<span class="tutor">[Tutor]</span> Interesting. Well, I mean, China is obviously very big in terms of population. So they have 1.3 billion users per month. And that&#x27;s just in China because I don&#x27;t think WeChat is available outside of China. It&#x27;s very interesting.
+<span class="student">[Student]</span> Yeah, you&#x27;re right. So I guess it is, it is calculating the whole world. But China is a little bigger. So that&#x27;s also that application, QQ or what&#x27;s that? Also, WeChat in the world. WeChat is the result.
+<span class="tutor">[Tutor]</span> Right, actually, yes, if you add them both up, 1.34 and 1.5, you&#x27;re getting to, yes, 1.9 billion, almost as much as WhatsApp.
+<span class="student">[Student]</span> Yeah. Wow. You&#x27;re right. So, great. Okay. Okay.
+<span class="tutor">[Tutor]</span> Thank you for sharing that.
+<span class="student">[Student]</span> Yes. Thank you, too.
+<span class="tutor">[Tutor]</span> You, too. And so the last question, do you think messaging apps will continue to grow in popularity?
+<span class="student">[Student]</span> I think in the world, population is the same. So that market also maybe stays, not going higher or not going low. So, that application app market is similar, I guess, a few years. But maybe developed more AI, it is easier to develop application apps. So, this application competes with each other. So, maybe this market is below.
+<span class="tutor">[Tutor]</span> I agree with you. It&#x27;s getting saturated. There&#x27;s not much room here.
+<span class="student">[Student]</span> Yes, you&#x27;re right.
+<span class="tutor">[Tutor]</span> Okay, well, that was a very interesting discussion with the graph.
+<span class="student">[Student]</span> Oh, me too. Yeah, thank you so much, your graph.
+<span class="tutor">[Tutor]</span> Well, thank you very much for your time again this morning. And I hope you have an excellent weekend.
+<span class="student">[Student]</span> You too, have a great weekend. Bye-bye, teacher. Thank you.
+<span class="tutor">[Tutor]</span> Bye, Joey.</div>
+        </div>
+    </div>
+    <div class="toast" id="toast">✅ 프롬프트가 복사되었습니다!</div>
+    <script>
+        const REVIEW_PROMPT="너는 나의 영어 회화 복습 파트너야. 오늘 내 전화영어 수업 내용을 기반으로 대화하면서 복습을 도와줘.\n\n[오늘 수업 전사 내용]\n[Student] Hello, good evening, teacher.\n[Tutor] Hi. Good morning, Joey. How are you today?\n[Student] I'm doing great. Yeah, I'm doing good.\n[Tutor] Good. I'm glad to hear it.\n[Student] I'm a little tired, but it's okay. Yeah. How was your day?\n[Tutor] My day was good. Nothing unusual to report. I'm very happy with myself because I set up a custom domain for an email, and it worked.\n[Student] Oh, you made a new domain for your email?\n[Tutor] Yes, exactly. I thought so. I was proud of myself.\n[Student] Oh, that email is about business, right? Yes. Oh, yes, I see. These days, I tried to run AI. So yesterday, I followed the GPU, and then I tried to deep learning in this project.\n[Tutor] Okay.\n[Student] So I'm also proud of this.\n[Tutor] It's tough. Sometimes when things are hard, even if it seems like a simple thing, no, we should be proud of ourselves.\n[Student] Yes, you're right. That is not simple. That is so difficult. And in my case, I tried too many times.\n[Student] Yeah, so yeah, it's good. Yes. And how about the first email? Or who was the first recipient?\n[Tutor] To myself, to my other emails, to make sure that it works, right? Yes, you're right. Yeah. The very classic test, \"Hello World\" email.\n[Student] \"Hello World\" email?\n[Tutor] Yes.\n[Student] Yes.\n[Tutor] That's it. But it works. My integrations work, and I'm very proud of myself.\n[Student] Yes. And this email, you really use it for business, and maybe it is concerned with your brand, right?\n[Tutor] Actually, I'm starting my own business.\n[Student] Starting your own?\n[Tutor] Yes.\n[Student] Another business?\n[Tutor] Another business, right? Too. Yeah.\n[Student] So nice.\n[Tutor] I think so. I think it will be good. It is making some Canadian recipes, like banana cake and things that we like a lot in Canada, but make them here in Colombia.\n[Student] Yes. So that means is it the import or export of the product?\n[Tutor] No.\n[Student] No? Ah, yes.\n[Tutor] The only thing that we're importing is the recipe.\n[Student] Ah, import the recipe.\n[Tutor] All of the ingredients are local.\n[Student] Ah, yes. I see. I understand half.\n[Student] So the main reason to make your email, the main reason is to import the recipe from...\n[Tutor] Well, the main reason for the email is so people can contact us if they want to order the cakes.\n[Student] Order the cake. I see. You're preparing a side job.\n[Tutor] Exactly.\n[Student] Ah, same. Same to me.\n[Tutor] Yes, exactly. Okay. Yes, we'll see how it goes. We're just starting.\n[Student] And this item is similar to your plan. To make a cake or make an ingredient, right?\n[Tutor] We're going to make the cakes.\n[Student] Make a cake? Wow, that's great. So the recipes are from Canada. The ingredients are from Colombia. I understand perfectly. I see. So you will make the Canada-style cake, but the ingredients are from Colombia. So the price is reasonable.\n[Tutor] That's exactly right.\n[Student] Yeah, and who is the market? Is it Colombia? Yes. Ah, yes. Maybe they are interested in the Canada-style new design.\n[Tutor] I think so. I think so because they don't have this type of cake here.\n[Student] Yeah.\n[Tutor] And everybody who tries it loves it. So hopefully, they'll be interested in buying it.\n[Student] Yes. I wish your business gets bigger.\n[Tutor] Thank you. I will keep you posted. I will keep you posted when we start for real.\n[Student] Yes. I'm excited too. My future becomes a millionaire.\n[Tutor] Oh, right? And then I can finally travel to Korea.\n[Student] Well, maybe you can borrow your own, you take your own plane, right?\n[Tutor] No, that's not eco-friendly. That's bad for the environment.\n[Student] Yes, okay, good.\n[Tutor] All right, let's take a look at our book. We are on page 14.\n[Student] 14, yes. Good. Wow. Yes. I can see the graph.\n[Tutor] Okay. So what can you tell me about this graph?\n[Student] First, I read the caption. Most popular. Yes.\n[Tutor] Yes, exactly. The caption.\n[Student] Caption. We can say that it is caption, caption, or legend. Legend. Ah, yeah, caption. \"Most popular mobile messenger app as of January 2024, based on the number of monthly active users in millions.\" Monthly.\n[Tutor] I see. Oh, that is a huge market. I can distinguish only just Telegram or Line, but the other things, I can't distinguish what their applications are. But that is also similar communication and telecommunications application, right? So the first one at the top is WhatsApp. First time, maybe that is WhatsApp.\n[Student] Yeah, direct call.\n[Tutor] No, it's WhatsApp.\n[Student] WhatsApp? Ah, WhatsApp. WhatsApp. WhatsApp. Ah, you're right. WhatsApp.\n[Tutor] Yep. That's WhatsApp.\n[Student] Yeah. We don't use that in Korea.\n[Tutor] No, it is very, very popular in...\n[Student] Yes, but not in Canada.\n[Tutor] Oh, yes, I understand. But in Colombia and Morocco, very, very popular.\n[Student] Oh, I see. The second one, I don't know it. Maybe that is a native one. That is a similar messenger. Yes. Yes. And Messenger. Yeah. Messenger. And they developed Japanese or some Asia. I can speak English first. Do you know that?\n[Tutor] That's Messenger, right? Maybe, but I don't know.\n[Student] I think that's Messenger. Messenger. Oh, yes. And the fourth, that is Telegram.\n[Tutor] Telegram.\n[Student] Yeah. I see. And the fifth? I don't know. I'm not sure. What's that?\n[Tutor] Snapchat.\n[Student] Snapchat. Snapchat. Snapchat. Snapchat. Uh-huh. And the rotting penguin. I know.\n[Tutor] I have no idea what that is.\n[Student] Yes. That's cute.\n[Tutor] Yes. Exactly. It's a cute penguin, but more than that, I can't tell you.\n[Student] Okay, I see.\n[Tutor] All right. Now let's take a look at the questions.\n[Student] Yes. \"Which application dominates in the market? Why do you think so? Why do you think this is? Explain the growth trends using the chart above.\" I see. I guess that is a huge market because they calculate the monthly user, but WhatsApp is almost 2,000 million per month.\n[Tutor] Exactly.\n[Student] Yeah, maybe I guess the population of the country is huge. So I guess, I don't know. Just, I guess, the big country, India or Vietnam? Yeah, I don't know.\n[Tutor] I think it's popular all over the world. Oh, you're thinking it's the equivalent of a country, right? It's 2 billion, 2 billion people.\n[Student] Might be India, yes? Yeah, 2 billion per month. So if we divide one daily, that is almost 100 million more. I don't know, just more. Yeah, almost. Maybe some people use it twice. About this, that is the usual. So if we divide by 30 or 31, the population is similar to Vietnam or Japan, but Japan doesn't use that application. So I guess some Asia over there.\n[Tutor] Asia, South Asia, or maybe the other world, the West. I don't know. I'm not sure.\n[Student] Okay. Maybe. Maybe. That is a hard question. Yeah, anyway.\n[Tutor] And why do you think so many people use WhatsApp?\n[Student] WhatsApp. I don't use WhatsApp. But if I travel to some country, at that time, some country people used WhatsApp. And that is so convenient. Convenient because if I list up the other people's phone numbers, the people list up in my WhatsApp, and it is more easy to communicate with each other. So many people use that.\n[Tutor] Great answer. Great answer. Yes, really? Okay. And let's go to question two.\n[Student] Okay. \"Why has there been a shift from email and phone calls to messenger apps? What's your personal preference?\" Ah, yes. The young generation, the MG generation, or the more young generation, they don't prefer communication through direct phone calls, direct communication, or direct communication with the phone. So many people use applications like WhatsApp and KakaoTalk or Telegram, etc., because that is easier. If I meet someone for the first time, you can add them easily and friendly. So yeah, so that is easier. Yes.\n[Tutor] Yeah, more easier.\n[Tutor] Just easier.\n[Student] Yeah.\n[Tutor] Yeah, it's your... And what about your personal preference? Do you prefer using email and phone calls or messaging apps?\n[Student] I'm a little older man, so it is easier to directly call because... Okay. It is so that one time, everything. And I listen to their voice and understand what they do. So it is easier. But sometimes I need more records for communication. At that time, the messenger app is more convenient. Yes.\n[Tutor] Okay, and the last question.\n[Student] Yes. And teacher, before the answer to the last question, I'll give you some information. First, in this graph, I found the first is WhatsApp, and second is WeChat.\n[Tutor] WeChat, China, yes.\n[Student] Yeah, China. And third is Facebook Messenger, and fourth is Telegram, and fifth is Snapchat, and the last thing is QQ. So, this country is... What is that? I don't know. Maybe that is about QQ is the Chinese-based messenger. So that is the Chinese user monthly graph, monthly paragraph.\n[Tutor] Oh, no, no, no. Monthly users, no. Oh, whole world, whole world mobile messenger app.\n[Student] Which one? Whole world. Whole world. Whole world. Yeah, in the world, the monthly. But China, oh, yes, it is. Yeah, yeah, yeah. China is so bigger, big. So yeah, they list up QQ or WeChat. Yeah, and Telegram. Yeah, yeah. I understand.\n[Tutor] Interesting. Well, I mean, China is obviously very big in terms of population. So they have 1.3 billion users per month. And that's just in China because I don't think WeChat is available outside of China. It's very interesting.\n[Student] Yeah, you're right. So I guess it is, it is calculating the whole world. But China is a little bigger. So that's also that application, QQ or what's that? Also, WeChat in the world. WeChat is the result.\n[Tutor] Right, actually, yes, if you add them both up, 1.34 and 1.5, you're getting to, yes, 1.9 billion, almost as much as WhatsApp.\n[Student] Yeah. Wow. You're right. So, great. Okay. Okay.\n[Tutor] Thank you for sharing that.\n[Student] Yes. Thank you, too.\n[Tutor] You, too. And so the last question, do you think messaging apps will continue to grow in popularity?\n[Student] I think in the world, population is the same. So that market also maybe stays, not going higher or not going low. So, that application app market is similar, I guess, a few years. But maybe developed more AI, it is easier to develop application apps. So, this application competes with each other. So, maybe this market is below.\n[Tutor] I agree with you. It's getting saturated. There's not much room here.\n[Student] Yes, you're right.\n[Tutor] Okay, well, that was a very interesting discussion with the graph.\n[Student] Oh, me too. Yeah, thank you so much, your graph.\n[Tutor] Well, thank you very much for your time again this morning. And I hope you have an excellent weekend.\n[Student] You too, have a great weekend. Bye-bye, teacher. Thank you.\n[Tutor] Bye, Joey.\n\n[AI 피드백]\n안녕하세요, 학습자님! 오늘도 알찬 영어 대화 나누시느라 수고 많으셨습니다. 특히 AI 딥러닝 프로젝트와 선생님의 새로운 비즈니스에 대한 이야기는 흥미로웠고, 모바일 메신저 앱 시장 분석에서는 날카로운 통찰력을 보여주셨어요. 꾸준히 성장하는 모습이 정말 멋집니다!\n\n---\n\n### 1. 📊 오늘의 대화 요약 (Summary)\n\n오늘 수업에서는 선생님의 새로운 비즈니스(캐나다 레시피를 활용한 콜롬비아 내 케이크 판매)와 학습자님의 AI 딥러닝 프로젝트에 대해 이야기 나누었습니다. 이어서 모바일 메신저 앱 시장 현황 그래프를 분석하며 각 앱의 특징과 메신저 앱의 성장 추세에 대해 심도 깊은 토론을 진행했습니다.\n\n---\n\n### 2. 💬 유창성 업그레이드 (Fluency & Natural Flow)\n\n의미 전달은 충분히 잘 되었지만, 원어민들이 일상에서 더 자연스럽게 사용하는 표현으로 다듬어 볼 문장들을 함께 살펴볼까요?\n\n1.  **❌ 학습자 원문 (As Said):** \"So that means is it the import or export of the product?\"\n    *   **✅ 자연스러운 표현 (Natural):** \"So, does that mean it involves importing or exporting the product?\"\n    *   **💎 비즈니스 표현 (Professional):** \"Therefore, does this initiative entail the import or export of the product?\"\n    *   **💡 코칭 포인트:** 'is it' 대신 'does that mean it involves'를 사용하여 문장을 더 자연스럽게 연결하고, 'import or export' 앞에 동사를 넣어 의미를 명확히 합니다.\n\n2.  **❌ 학습자 원문 (As Said):** \"My future becomes a millionaire.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"I'm going to be a millionaire in the future.\"\n    *   **💎 비즈니스 표현 (Professional):** \"I aspire to achieve financial independence in the future.\"\n    *   **💡 코칭 포인트:** 미래의 소망이나 계획을 말할 때는 'My future becomes'보다 'I'm going to be'나 'I aspire to'와 같은 주어 중심의 표현이 더 자연스럽습니다.\n\n3.  **❌ 학습자 원문 (As Said):** \"I can distinguish only just Telegram or Line, but the other things, I can't distinguish what their applications are.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"I can only recognize Telegram or Line; I can't identify the other applications.\"\n    *   **💎 비즈니스 표현 (Professional):** \"I am only familiar with Telegram and Line among these, and I'm unable to identify the remaining applications.\"\n    *   **💡 코칭 포인트:** 'only just'는 'only'로 충분하며, 'distinguish'보다는 'recognize'가 더 자연스러울 수 있습니다. 또한, 'the other things' 대신 'the other applications'로 명확히 하고, 문장을 좀 더 간결하게 다듬을 수 있습니다.\n\n---\n\n### 3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)\n\n이번 수업에서 학습자님께서 자주 혼동하셨던 문법 패턴은 바로 **관사 (a/an/the)** 사용입니다. 특히 특정하지 않은 일반적인 명사를 언급할 때 'a/an'을 생략하거나, 반대로 이미 언급되었거나 모두가 아는 특정 명사에 'the'를 붙이지 않는 경우가 있었습니다.\n\n| ❌ 원문 (As Said)                                                                  | ✅ 교정 예시 (Corrected)                                                                  |\n| :---------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------- |\n| \"So yesterday, I followed **the GPU**...\"                                           | \"So yesterday, I followed **a GPU**...\" (특정 GPU가 아닌 일반적인 GPU를 지칭)            |\n| \"Maybe they are interested in **the Canada-style new design**.\"                     | \"Maybe they are interested in **a new Canada-style design**.\" (특정 디자인이 아닌 새로운 디자인 중 하나) |\n| \"I think in **the world**, population is the same.\"                                 | \"I think **the world's** population is the same.\" (소유격으로 '세계의 인구'를 표현)       |\n\n*   **📌 핵심 규칙:**\n    *   **'a/an'**: 처음 언급되거나, 일반적이고 불특정한 단수 명사 앞에 사용합니다. (예: a book, an apple)\n    *   **'the'**: 이미 언급되었거나, 듣는 사람과 말하는 사람 모두가 아는 특정한 명사 앞에 사용합니다. (예: the book I mentioned, the sun)\n    *   **관사 생략**: 고유명사, 복수 명사, 셀 수 없는 명사, 소유격이나 지시형용사(this, that 등)가 붙은 명사 앞에는 관사를 사용하지 않습니다.\n\n*   **🔁 따라 읽기:**\n    *   🗣️ \"So yesterday, I followed a GPU...\"\n    *   🗣️ \"Maybe they are interested in a new Canada-style design.\"\n    *   🗣️ \"I think the world's population is the same.\"\n\n---\n\n### 4. 📗 어휘 확장 (Vocabulary Vault)\n\n오늘 대화에서 유용하게 쓰였거나, 학습자님의 비즈니스 환경에서 활용하기 좋은 단어 5가지를 소개합니다.\n\n1.  **domain** /doʊˈmeɪn/ (명사)\n    *   뜻: (인터넷) 도메인, 영역, 분야\n    *   실전 예문: We need to secure a custom **domain** name for our new product launch.\n\n2.  **recipient** /rɪˈsɪpiənt/ (명사)\n    *   뜻: 수신자, 받는 사람\n    *   실전 예문: Please ensure all **recipients** have received the project proposal.\n\n3.  **integrate** /ˈɪntɪˌɡreɪt/ (동사)\n    *   뜻: 통합하다, 합치다\n    *   실전 예문: We are working to **integrate** this new AI module into our existing system.\n\n4.  **dominate** /ˈdɒmɪˌneɪt/ (동사)\n    *   뜻: 지배하다, 우위를 차지하다\n    *   실전 예문: Our company aims to **dominate** the renewable energy market in the region.\n\n5.  **saturated** /ˈsætʃəˌreɪtɪd/ (형용사)\n    *   뜻: 포화 상태의, 더 이상 들어갈 틈이 없는\n    *   실전 예문: The smartphone market is becoming increasingly **saturated**, making it harder for new entrants.\n\n---\n\n### 5. 📝 실전 복습 챌린지 (Practice)\n\n오늘 배운 표현과 문법을 활용하여 다음 상황에 맞는 문장을 영작해 보세요.\n\n1.  **상황:** 당신은 새로운 사업 아이디어를 구상 중이며, 미래에 이 사업으로 큰 성공을 거두고 싶다고 말하고 싶습니다.\n    *   **영작:** (I'm going to be a millionaire in the future.)\n    *   **모범 답안:** I'm excited about this new business idea, and I'm going to be a millionaire in the future.\n\n2.  **상황:** 회의에서 특정 보고서의 수신자가 누구인지 명확히 하고 싶습니다.\n    *   **영작:** (Who was the main recipient of that report?)\n    *   **모범 답안:** Could you clarify who was the main recipient of that report?\n\n3.  **상황:** 현재 시장이 특정 제품으로 포화 상태이며, 새로운 전략이 필요하다고 생각합니다.\n    *   **영작:** (The market for this product is quite saturated, so we need a new strategy.)\n    *   **모범 답안:** The market for this product is quite saturated, so we need a new strategy to differentiate ourselves.\n\n---\n\n### 6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)\n\n*   ✨ **Good Job**: \"I'm also proud of this.\"\n    *   AI 딥러닝 프로젝트 성공에 대해 이야기하며 \"I'm also proud of this.\"라고 말씀하신 부분은 정말 좋았습니다. 자신의 성과에 대한 자부심을 간결하고 명확하게 표현하여 듣는 사람에게도 긍정적인 에너지를 전달했습니다. 이런 자신감 있는 표현은 유창성 향상에 큰 도움이 됩니다!\n\n*   🚀 **내일의 한 문장**:\n    다음 수업 시작 시, 오늘 배운 'saturated'를 활용하여 선생님께 이렇게 질문해보세요.\n    \"Do you think the AI market is getting saturated as well?\"\n    (AI 시장도 포화 상태가 되어가고 있다고 생각하시나요?)\n\n---\n\n### [성과 지표]\n\n*   **유창성 점수(10점 만점): 7점**\n    *   **근거:** 학습자님은 다양한 주제에 대해 막힘없이 자신의 의견을 표현하고 대화를 이어나가는 능력이 뛰어납니다. 특히 선생님의 비즈니스에 대한 질문이나 그래프 분석 시의 추론 과정이 논리적이고 풍부했습니다. 다만, 몇몇 표현에서 더 자연스러운 어순이나 단어 선택을 통해 유창성을 더욱 높일 수 있는 여지가 보였습니다. 관사 사용과 같은 문법적 정확성을 조금 더 신경 쓰면 훨씬 더 매끄러운 영어를 구사하실 수 있을 것입니다.\n    *   **다음 수업 '원포인트 액션 플랜':** \"관사 (a/an/the) 사용에 유의하며 말하기\"\n        *   다음 수업에서는 문장을 만들 때 명사 앞에 'a', 'an', 'the' 중 어떤 관사가 들어가야 할지 한 번 더 생각하고 말하는 연습을 해봅시다. 특히 처음 언급하는 일반적인 단수 명사 앞에는 'a/an'을 붙이는 것을 의식적으로 연습해 보세요.\n\n오늘도 정말 고생 많으셨습니다! 다음 수업에서 더 성장한 모습으로 만나요! 😊\n\n위 내용을 바탕으로:\n1. 먼저 오늘 수업에서 내가 틀렸거나 어색했던 표현을 하나 골라서, 관련된 상황을 영어로 질문해줘.\n2. 내가 영어로 대답하면, 자연스러운지 확인하고 더 나은 표현이 있으면 알려줘.\n3. 특히 \"반복 실수 패턴\"에서 지적된 부분을 집중적으로 연습시켜줘.\n4. 이런 식으로 오늘 배운 표현들을 하나씩 복습하자.\n5. 한국어 설명은 필요할 때만 간단히, 대화는 최대한 영어로 진행해줘.\n\n그럼 시작하자!";
+        function startReview(){navigator.clipboard.writeText(REVIEW_PROMPT).then(()=>{showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)}).catch(()=>{const t=document.createElement('textarea');t.value=REVIEW_PROMPT;document.body.appendChild(t);t.select();document.execCommand('copy');document.body.removeChild(t);showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)})}
+        function showToast(){const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500)}
+        function switchTab(n){document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',n==='feedback'?i===0:i===1));document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));document.getElementById('tab-'+n).classList.add('active')}
+    </script>
+</body>
+</html>
