@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전화영어 복습 - 2026년 03월 27일</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Noto Sans KR',sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.75;min-height:100vh}
+        .header{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);border-bottom:1px solid rgba(255,255,255,.06);padding:48px 24px 40px;text-align:center}
+        .header-date{font-size:13px;color:#94a3b8;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+        .header h1{font-size:28px;font-weight:700;color:#f1f5f9;margin-bottom:16px}
+        .header-meta{display:flex;justify-content:center;gap:24px;font-size:14px;color:#64748b}
+        .header-meta span{display:flex;align-items:center;gap:6px}
+        .cta-section{text-align:center;padding:40px 24px}
+        .cta-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:linear-gradient(135deg,#38bdf8,#818cf8);color:#fff;font-size:16px;font-weight:600;font-family:'Noto Sans KR',sans-serif;border:none;border-radius:50px;cursor:pointer;transition:all .3s;text-decoration:none;box-shadow:0 4px 24px rgba(56,189,248,.25)}
+        .cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(56,189,248,.35)}
+        .cta-btn svg{width:20px;height:20px}
+        .cta-sub{margin-top:12px;font-size:13px;color:#64748b}
+        .toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#38bdf8;padding:14px 28px;border-radius:12px;font-size:14px;font-weight:500;border:1px solid rgba(56,189,248,.2);box-shadow:0 8px 32px rgba(0,0,0,.4);opacity:0;transition:all .4s cubic-bezier(.16,1,.3,1);z-index:1000}
+        .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+        .container{max-width:720px;margin:0 auto;padding:0 24px 80px}
+        .tabs{display:flex;gap:4px;background:#1a1a24;padding:4px;border-radius:12px;margin-bottom:32px}
+        .tab{flex:1;padding:12px;text-align:center;font-size:14px;font-weight:500;color:#64748b;background:0 0;border:none;border-radius:8px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all .2s}
+        .tab.active{background:#262636;color:#f1f5f9}
+        .tab-content{display:none}.tab-content.active{display:block}
+        .feedback h2{font-size:18px;font-weight:700;color:#f1f5f9;margin:36px 0 16px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.06)}
+        .feedback h2:first-child{margin-top:0}
+        .feedback p{margin:8px 0;color:#cbd5e1}
+        .feedback .item{padding:6px 0 6px 16px;border-left:2px solid #334155;margin:6px 0;color:#cbd5e1}
+        .feedback .numbered{padding:8px 0 8px 16px;color:#cbd5e1}
+        .feedback .numbered strong{color:#38bdf8}
+        .feedback strong{color:#f1f5f9}
+        .feedback code{background:#1e293b;padding:2px 8px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#38bdf8}
+        .feedback table{width:100%;border-collapse:collapse;margin:12px 0}
+        .feedback th,.feedback td{padding:10px 14px;text-align:left;border-bottom:1px solid #262636}
+        .feedback th{color:#94a3b8;font-weight:500;font-size:13px}
+        .feedback td{color:#cbd5e1}
+        .arrow{color:#38bdf8;font-weight:700}
+        .transcript{background:#1a1a24;border-radius:12px;padding:28px;font-size:14px;line-height:2;color:#94a3b8;white-space:pre-wrap;word-break:break-word;font-family:'JetBrains Mono','Noto Sans KR',monospace}
+        .transcript .tutor{color:#38bdf8}
+        .transcript .student{color:#a78bfa}
+        @media(max-width:640px){.header{padding:32px 16px}.header h1{font-size:22px}.cta-btn{padding:14px 28px;font-size:15px}.container{padding:0 16px 60px}}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-date">2026년 03월 27일</div>
+        <h1>📚 전화영어 복습</h1>
+        <div class="header-meta">
+            <span>⏱ 19분 34초</span>
+            <span>🎙 전화영어_025180304_20260327080019.m4a</span>
+        </div>
+    </div>
+    <div class="cta-section">
+        <button class="cta-btn" onclick="startReview()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Gemini에서 복습 대화 시작하기
+        </button>
+        <div class="cta-sub">클릭하면 프롬프트가 복사되고 Gemini가 열립니다</div>
+    </div>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('feedback')">📋 AI 피드백</button>
+            <button class="tab" onclick="switchTab('transcript')">🎙 수업 전사</button>
+        </div>
+        <div id="tab-feedback" class="tab-content active">
+            <div class="feedback"><p>안녕하세요, Berr님!</p>
+<br>
+<p>오늘 전화영어 수업 정말 즐거웠습니다. 생일이셔서 더욱 특별한 하루였는데, 영어 공부까지 열심히 해주셔서 감동했어요! 문화적 차이와 비즈니스 커뮤니케이션 스타일에 대해 깊이 있는 이야기를 나눌 수 있어서 저도 많이 배웠습니다. 특히 격식체와 비격식체 표현을 매칭하는 활동에서 어려운 부분도 있었지만, 끝까지 집중해서 잘 따라와 주셨어요. Berr님의 꾸준함과 배우려는 열정이 정말 대단합니다!</p>
+<br>
+<br>
+<p>### <strong>1. 📊 오늘의 대화 요약 (Summary)</strong></p>
+<br>
+<p>오늘은 Berr님의 생일 계획으로 대화를 시작하여, 문화적 차이가 소통 방식에 미치는 영향에 대해 토론했습니다. 특히 직장 내 호칭, 나이, 존대어 사용 등 한국과 다른 문화권의 커뮤니케이션 스타일을 비교하고, 격식체와 비격식체 표현을 구분하는 연습을 통해 비즈니스 환경에서의 적절한 언어 사용법을 익혔습니다.</p>
+<br>
+<br>
+<p>### <strong>2. 💬 유창성 업그레이드 (Fluency & Natural Flow)</strong></p>
+<br>
+<p>Berr님이 의미를 잘 전달하셨지만, 원어민들이 더 자연스럽게 쓰는 표현 3가지를 알려드릴게요.</p>
+<br>
+<div class="numbered"><strong>1.</strong>  <strong>❌ 학습자 원문 (As Said):</strong> "Every year, it is so fast."</div>
+<p>    *   <strong>✅ 자연스러운 표현 (Natural):</strong> "Every year just <strong>flies by</strong>."</p>
+<p>    *   <strong>💎 비즈니스 표현 (Professional):</strong> "Time seems to <strong>accelerate with each passing year</strong>."</p>
+<p>    *   <strong>💡 코칭 포인트:</strong> 시간이 빨리 흐른다는 표현을 할 때 'flies by'는 일상에서 아주 흔하게 쓰이는 관용구입니다. 'it is so fast'보다 훨씬 자연스럽게 들려요.</p>
+<br>
+<div class="numbered"><strong>2.</strong>  <strong>❌ 학습자 원문 (As Said):</strong> "I don't have a chance to discussion"</div>
+<p>    *   <strong>✅ 자연스러운 표현 (Natural):</strong> "I don't have a chance <strong>to discuss</strong> (it)." 또는 "I don't have a chance <strong>for discussion</strong>."</p>
+<p>    *   <strong>💎 비즈니스 표현 (Professional):</strong> "Opportunities for <strong>in-depth discussion are limited</strong>."</p>
+<p>    *   <strong>💡 코칭 포인트:</strong> 'to' 다음에는 동사 원형('discuss')이 오거나, 'for' 다음에 명사('discussion')가 와야 합니다. 문법적으로 정확하면서도 훨씬 자연스럽게 들립니다.</p>
+<br>
+<div class="numbered"><strong>3.</strong>  <strong>❌ 학습자 원문 (As Said):</strong> "So I always think it is the respectful language of their people or their culture."</div>
+<p>    *   <strong>✅ 자연스러운 표현 (Natural):</strong> "So I always think it is important to use <strong>respectful language towards</strong> their people or their culture."</p>
+<p>    *   <strong>💎 비즈니스 표현 (Professional):</strong> "I consistently advocate for the use of <strong>culturally sensitive language</strong>."</p>
+<p>    *   <strong>💡 코칭 포인트:</strong> 'respectful language of their people'보다는 'respectful language towards their people'이 더 자연스럽습니다. 또는 'culturally sensitive language'처럼 한 단어로 표현할 수도 있습니다.</p>
+<br>
+<br>
+<p>### <strong>3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)</strong></p>
+<br>
+<p>이번 대화에서 Berr님이 자주 놓치신 부분은 <strong>'일반적인 명사 앞에 관사(a/the) 사용 또는 생략'</strong> 이었습니다. 특정 대상을 지칭하는지, 아니면 일반적인 개념을 말하는지에 따라 관사 사용이 달라집니다.</p>
+<br>
+<table>
+<tr><th>❌ 원문 (As Said)</th><th>✅ 교정 예시 (Corrected)</th></tr>
+<tr><td>:------------------------------------------------</td><td>:--------------------------------------------------------</td></tr>
+<tr><td>"I will go to <strong>the</strong> small concert"</td><td>"I will go to <strong>a</strong> small concert" (특정하지 않은 작은 콘서트)</td></tr>
+<tr><td>"In Asia, <strong>the</strong> age is so important."</td><td>"In Asia, <strong>age</strong> is so important." (나이라는 일반적인 개념)</td></tr>
+<tr><td>"we consider of <strong>the</strong> age."</td><td>"we consider <strong>age</strong>." (동사 'consider' 뒤에 'of' 불필요, 'age'는 일반적인 개념)</td></tr>
+<tr><td>"The Korean guys don't use many gestures with <strong>the</strong> language."</td><td>"<strong>Koreans</strong> don't use many gestures with <strong>their</strong> language." (한국인, 한국인의 언어)</td></tr>
+</table>
+<br>
+<p><strong>📌 핵심 규칙:</strong> 일반적인 개념을 말할 때는 관사를 생략하거나, 'a/an'을 사용하고, 특정 대상을 지칭할 때만 'the'를 사용합니다. 또한, 'Korean guys'보다는 'Koreans'가 더 자연스럽습니다.</p>
+<br>
+<p><strong>🔁 따라 읽기:</strong></p>
+<p>🗣️ "I will go to <strong>a</strong> small concert."</p>
+<p>🗣️ "In Asia, <strong>age</strong> is so important."</p>
+<p>🗣️ "<strong>Koreans</strong> don't use many gestures with <strong>their</strong> language."</p>
+<br>
+<br>
+<p>### <strong>4. 📗 어휘 확장 (Vocabulary Vault)</strong></p>
+<br>
+<p>학습자님의 업무 환경에서 유용하게 쓸 수 있는 단어 5개를 준비했습니다.</p>
+<br>
+<div class="numbered"><strong>1.</strong>  <strong>nuance</strong> /nuːˈɑːns/ (명사)</div>
+<p>    *   뜻: 미묘한 차이, 뉘앙스</p>
+<p>    *   실전 예문: Understanding cultural <strong>nuances</strong> is crucial for international business negotiations.</p>
+<br>
+<div class="numbered"><strong>2.</strong>  <strong>deference</strong> /ˈdɛfərəns/ (명사)</div>
+<p>    *   뜻: 존중, 경의 (특히 나이나 지위에 대한)</p>
+<p>    *   실전 예문: In some cultures, employees show <strong>deference</strong> to their superiors by using formal language.</p>
+<br>
+<div class="numbered"><strong>3.</strong>  <strong>protocol</strong> /ˈproʊtəkɔːl/ (명사)</div>
+<p>    *   뜻: 의례, 외교 의례, (조직 내) 절차, 규약</p>
+<p>    *   실전 예문: We need to follow the company <strong>protocol</strong> when communicating with external partners.</p>
+<br>
+<div class="numbered"><strong>4.</strong>  <strong>rapport</strong> /ræˈpɔːr/ (명사)</div>
+<p>    *   뜻: (친밀한) 관계, 공감대</p>
+<p>    *   실전 예문: Building <strong>rapport</strong> with clients is essential for long-term business relationships.</p>
+<br>
+<div class="numbered"><strong>5.</strong>  <strong>facilitate</strong> /fəˈsɪlɪteɪt/ (동사)</div>
+<p>    *   뜻: 용이하게 하다, 가능하게 하다</p>
+<p>    *   실전 예문: Our new system will <strong>facilitate</strong> smoother communication between departments.</p>
+<br>
+<br>
+<p>### <strong>5. 📝 실전 복습 챌린지 (Practice)</strong></p>
+<br>
+<p>오늘 배운 표현과 문법을 활용하여 영작 챌린지에 도전해 보세요!</p>
+<br>
+<div class="numbered"><strong>1.</strong>  <strong>상황:</strong> 시간이 정말 빨리 가는 것 같다고 말하고 싶을 때.</div>
+<p>    *   <strong>영작:</strong> 와, 벌써 3월이네요. 매년 시간이 정말 빨리 지나가는 것 같아요.</p>
+<p>    *   <strong>모범 답안:</strong> Wow, it's already March. Every year just <strong>flies by</strong>.</p>
+<br>
+<div class="numbered"><strong>2.</strong>  <strong>상황:</strong> 해외 출장 시 현지 문화의 미묘한 차이를 이해하는 것이 중요하다고 강조하고 싶을 때.</div>
+<p>    *   <strong>영작:</strong> 해외 출장 시에는 현지 문화의 뉘앙스를 이해하는 것이 정말 중요합니다.</p>
+<p>    *   <strong>모범 답안:</strong> When on a business trip abroad, it's really important to understand the <strong>nuances</strong> of the local culture.</p>
+<br>
+<div class="numbered"><strong>3.</strong>  <strong>상황:</strong> 회의에서 특정 주제에 대해 더 깊이 토론할 기회가 없었다고 설명하고 싶을 때.</div>
+<p>    *   <strong>영작:</strong> 죄송합니다만, 그 주제에 대해 더 깊이 토론할 기회가 없었습니다.</p>
+<p>    *   <strong>모범 답안:</strong> I apologize, but I didn't have a chance <strong>to discuss</strong> that issue <strong>in depth</strong>. (또는 "I didn't have an opportunity for an in-depth discussion on that issue.")</p>
+<br>
+<br>
+<p>### <strong>6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)</strong></p>
+<br>
+<p>✨ <strong>Good Job:</strong> "So I always think it is the respectful language of their people or their culture."</p>
+<p>이 문장은 Berr님이 문화적 존중의 중요성을 명확하게 설명하는 데 아주 좋았습니다. 'respectful language'라는 표현과 'their people or their culture'를 연결하여 깊이 있는 이해를 보여주셨어요. 아주 훌륭합니다! (위 유창성 섹션에서 더 자연스러운 표현을 제안했지만, 이 문장 자체로도 의미 전달이 명확하고 좋습니다.)</p>
+<br>
+<p>🚀 <strong>내일의 한 문장:</strong> 다음 수업 시작 시 튜터에게 오늘 배운 표현을 활용하여 이렇게 말해보세요.</p>
+<p>"I'm mindful of the time, so let's start today's lesson." (시간을 염두에 두고, 오늘의 수업을 시작하죠.)</p>
+<br>
+<br>
+<p>### <strong>[성과 지표]</strong></p>
+<br>
+<p><strong>유창성 점수:</strong> 7/10</p>
+<p><strong>근거:</strong> Berr님은 자신의 생각을 막힘없이 표현하려는 노력이 돋보였습니다. 다양한 주제에 대해 적극적으로 의견을 개진하며 대화를 이어나가는 능력이 뛰어납니다. 다만, 몇몇 표현에서 더 자연스러운 원어민식 표현을 사용하거나, 관사 및 전치사 사용에 조금 더 주의를 기울인다면 유창성이 한 단계 더 향상될 것입니다.</p>
+<p><strong>다음 수업 '원포인트 액션 플랜':</strong> 다음 수업에서는 <strong>'관사(a/an/the)의 정확한 사용'</strong> 에 집중하여, 일반적인 개념과 특정 대상을 구분하는 연습을 해보겠습니다.</p></div>
+        </div>
+        <div id="tab-transcript" class="tab-content">
+            <div class="transcript"><span class="tutor">[Tutor]</span> Hello, Berr. Good morning. Good evening.
+<span class="student">[Student]</span> Yay! Good morning.
+<span class="student">[Student]</span> Good morning, teacher.
+<span class="tutor">[Tutor]</span> How are you today?
+<span class="student">[Student]</span> Yeah, it&#x27;s so nice. It&#x27;s Friday. And it&#x27;s my birthday, so it is a good day for me.
+<span class="tutor">[Tutor]</span> Nice. Happy birthday.
+<span class="student">[Student]</span> Thank you so much. How about you? How about your day?
+<span class="tutor">[Tutor]</span> Good, yeah, nice day, yes. Good weather today.
+<span class="tutor">[Tutor]</span> Do you have any plans for your birthday?
+<span class="student">[Student]</span> Today, I will go to the small concert, yeah, in my company.
+<span class="student">[Student]</span> because our company prepared some small concert.
+<span class="student">[Student]</span> The title is Coming Spring.
+<span class="student">[Student]</span> So maybe that is a small classic concert.
+<span class="student">[Student]</span> So I will go there.
+<span class="student">[Student]</span> And then if I finish work,
+<span class="student">[Student]</span> I go back my home.
+<span class="student">[Student]</span> Yeah, and have a little party, small party with my family.
+<span class="tutor">[Tutor]</span> Sure.
+<span class="tutor">[Tutor]</span> Okay, nice, kind of quiet, relaxing weekend.
+<span class="tutor">[Tutor]</span> Yeah, birthday weekend.
+<span class="student">[Student]</span> Oh, yes.
+<span class="student">[Student]</span> Every year, it is so fast.
+<span class="student">[Student]</span> Yeah, time is right.
+<span class="tutor">[Tutor]</span> Yeah, it&#x27;s nice having it on a Friday or a weekend, though.
+<span class="student">[Student]</span> Yes, yes, you&#x27;re right.
+<span class="student">[Student]</span> And when is your birthday?
+<span class="tutor">[Tutor]</span> December. December 25th. No, okay, yes, okay, good. Um, did you want to have a look at page, figure, page 15 now? Yeah, no problem. Today we will start the share, free, you, you learn from this lesson and this is the review page 50, page 50. Ah, yes, that is a new section, Communication and Culture.
+<span class="tutor">[Tutor]</span> Okay, I find. So we have the number one, getting started question.
+<span class="student">[Student]</span> Okay, can I read that?
+<span class="tutor">[Tutor]</span> Yeah, whenever you&#x27;re ready.
+<span class="tutor">[Tutor]</span> Warm up. Let&#x27;s open the floor. What are your opinions?
+<span class="student">[Student]</span> Okay, let&#x27;s open the floor. What are your opinions?
+<span class="student">[Student]</span> First, what are some cultural differences that you have observed when interacting with foreigners? Explain.
+<span class="student">[Student]</span> Hmmmmmmmm...
+<span class="student">[Student]</span> Yes. Usually if I open the window in my office, I ask my co-worker,
+<span class="student">[Student]</span> Can I open the window?
+<span class="student">[Student]</span> Yeah, so it&#x27;s the same.
+<span class="student">[Student]</span> First we ask their opinion and then react.
+<span class="student">[Student]</span> So, yeah, it&#x27;s the same.
+<span class="student">[Student]</span> and I&#x27;m not sure it is the answer to this question.
+<span class="tutor">[Tutor]</span> So do you meet a lot of foreigners in your workplace or people from different countries?
+<span class="student">[Student]</span> Oh, different countries, yes, this is similar. I visit another country but
+<span class="student">[Student]</span> but usually I don&#x27;t have a chance to discussion because usually I stay in my hotel or go to restaurant and go to place
+<span class="student">[Student]</span> but usually discussion in office so I&#x27;m not sure it is same or not
+<span class="student">[Student]</span> but when I visit the Singapore travel, the Venice travel, at that time it is same.
+<span class="student">[Student]</span> So usually, almost countries say, right?
+<span class="tutor">[Tutor]</span> Do you have some other opinions?
+<span class="tutor">[Tutor]</span> For example, in the workplace, in Canadian workplace,
+<span class="tutor">[Tutor]</span> it&#x27;s common to call your supervisor by their first name. So just casually like, &quot;Hey Bill,&quot; &quot;Hey John.&quot;
+<span class="student">[Student]</span> Hey Bill, hey John, just ask their name and also age is not important. Ah, I see, I see. In Asia, the age is so important.
+<span class="student">[Student]</span> but the more important is the level of their job but usually we
+<span class="student">[Student]</span> consider of the age. For example, in our homes, if there are grandpa or grandma, we ask first,
+<span class="student">[Student]</span> hey grandpa, hey grandma, and their language is different. We include more respect for language,
+<span class="student">[Student]</span> like informal language.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="tutor">[Tutor]</span> Great. And what about number two?
+<span class="student">[Student]</span> Okay. Why do you think it is important to be aware of cultural differences when interacting with people from other cultures?
+<span class="student">[Student]</span> Support your opinion with detail.
+<span class="student">[Student]</span> Yeah, that is so important because if we talk to other people, that is their interaction to opinion, shared opinion.
+<span class="student">[Student]</span> So always we share their ideas or their language and their culture.
+<span class="student">[Student]</span> So if we talk to other people and they feel that is a little rude, that is a problem.
+<span class="student">[Student]</span> So I always think it is the respectful language of their people or their culture.
+<span class="student">[Student]</span> So I care about that situation and their culture.
+<span class="tutor">[Tutor]</span> Yeah, so making sure they&#x27;re not upset or offended.
+<span class="student">[Student]</span> Yeah, you&#x27;re right.
+<span class="tutor">[Tutor]</span> What about number three?
+<span class="student">[Student]</span> Number three.
+<span class="student">[Student]</span> How would you explain your country&#x27;s communication style to foreign visitors?
+<span class="student">[Student]</span> Are there any type of body language or gesture that should be aware of too?
+<span class="student">[Student]</span> The Korean guys don&#x27;t use many gestures with the language.
+<span class="student">[Student]</span> But before I said, our language includes respect language.
+<span class="student">[Student]</span> We divide formal and informal language.
+<span class="student">[Student]</span> So usually if we talk, if we communicate with the senior people or old people, we use the
+<span class="student">[Student]</span> more formal language.
+<span class="student">[Student]</span> So yeah, that is the, yeah, useful.
+<span class="student">[Student]</span> But if we talk, communicate with foreigner, we don&#x27;t care because we know, we are aware that
+<span class="student">[Student]</span> foreigners are not good at Korean, so if they use informal language, it&#x27;s okay because we
+<span class="student">[Student]</span> understand that they are not good at Korean. So it&#x27;s okay.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="tutor">[Tutor]</span> Next one. Do you want to have a look at the formal versus informal, number two?
+<span class="student">[Student]</span> Oh, yes. Every section of the first is difficult, this textbook.
+<span class="tutor">[Tutor]</span> Oh, these ones, yeah, matching.
+<span class="student">[Student]</span> Yeah, matching is so hard for me.
+<span class="student">[Student]</span> Okay, why to correct first person in formal and or informal column of the table according to tone?
+<span class="student">[Student]</span> And teacher, could you inform the pronunciation to phrase?
+<span class="student">[Student]</span> Is it right? Phrase?
+<span class="tutor">[Tutor]</span> Phrase? Phrase.
+<span class="student">[Student]</span> Phrase. Phrase.
+<span class="tutor">[Tutor]</span> Phrase. Okay.
+<span class="tutor">[Tutor]</span> The first,
+<span class="tutor">[Tutor]</span> asking
+<span class="tutor">[Tutor]</span> for
+<span class="tutor">[Tutor]</span> &quot;How can I
+<span class="tutor">[Tutor]</span> solve this problem?&quot;
+<span class="tutor">[Tutor]</span> So you can just have a look at
+<span class="student">[Student]</span> What do you mean?
+<span class="student">[Student]</span> What do you mean?
+<span class="student">[Student]</span> What do you mean? Just a moment. I find. Okay, that is similar M. I&#x27;m sorry,
+<span class="student">[Student]</span> but could you explain that again? What do you mean? I&#x27;m sorry, could you explain
+<span class="student">[Student]</span> that means that again?
+<span class="tutor">[Tutor]</span> And B,
+<span class="tutor">[Tutor]</span> &quot;Great work.&quot;
+<span class="student">[Student]</span> Great work.
+<span class="tutor">[Tutor]</span> Oh, there are.
+<span class="tutor">[Tutor]</span> &quot;You did
+<span class="tutor">[Tutor]</span> an excellent job on the last project.&quot;
+<span class="student">[Student]</span> How about that?
+<span class="tutor">[Tutor]</span> Oh, yeah, definitely.
+<span class="student">[Student]</span> You did an excellent job.
+<span class="tutor">[Tutor]</span> And C,
+<span class="tutor">[Tutor]</span> &quot;Miss Jones, Mr. Smith.&quot;
+<span class="student">[Student]</span> Ah, that is her.
+<span class="student">[Student]</span> I, Miss Adams, I&#x27;d like to introduce to Mr.
+<span class="student">[Student]</span> But that name is different.
+<span class="student">[Student]</span> But pattern is the same.
+<span class="student">[Student]</span> Right?
+<span class="tutor">[Tutor]</span> Yeah.
+<span class="student">[Student]</span> Yeah.
+<span class="tutor">[Tutor]</span> L.
+<span class="student">[Student]</span> L?
+<span class="tutor">[Tutor]</span> Yeah.
+<span class="student">[Student]</span> Oh, yeah.
+<span class="tutor">[Tutor]</span> L.
+<span class="student">[Student]</span> Okay, you&#x27;re right.
+<span class="tutor">[Tutor]</span> And D, thanks.
+<span class="student">[Student]</span> Thank you for your kind work.
+<span class="student">[Student]</span> Thank you for your kind work.
+<span class="student">[Student]</span> Q, I got it.
+<span class="student">[Student]</span> Yeah, D, Q, yeah, thanks.
+<span class="student">[Student]</span> Thank you for your kind work.
+<span class="student">[Student]</span> Oh, I understand your point.
+<span class="tutor">[Tutor]</span> No, thank you.
+<span class="tutor">[Tutor]</span> I&#x27;m fine.
+<span class="student">[Student]</span> F?
+<span class="tutor">[Tutor]</span> So this one&#x27;s tricky. This one&#x27;s the more formal style. So we need an informal. &quot;I&#x27;m
+<span class="tutor">[Tutor]</span> fine.&quot;
+<span class="student">[Student]</span> I&#x27;m fine. No, thank you. I&#x27;m fine. I&#x27;m okay.
+<span class="student">[Student]</span> Yeah, I&#x27;m okay.
+<span class="student">[Student]</span> How about the... are you really the same?
+<span class="tutor">[Tutor]</span> Yeah.
+<span class="student">[Student]</span> Yes.
+<span class="tutor">[Tutor]</span> Fine, okay. &quot;Sorry, I&#x27;d like to apologize for my mistake.&quot;
+<span class="student">[Student]</span> Hmm.
+<span class="student">[Student]</span> The chain.
+<span class="tutor">[Tutor]</span> Yeah, &quot;I&#x27;d like to apologize.&quot;
+<span class="tutor">[Tutor]</span> And &quot;What do you think?&quot; &quot;What do you think?&quot;
+<span class="tutor">[Tutor]</span> &quot;I would like to hear your thoughts on the issue.&quot;
+<span class="student">[Student]</span> Yes.
+<span class="student">[Student]</span> Okay.
+<span class="tutor">[Tutor]</span> And the last thing, &quot;Please excuse me for a minute.&quot;
+<span class="tutor">[Tutor]</span> &quot;I&#x27;ll be back in a minute.&quot;
+<span class="student">[Student]</span> Okay.
+<span class="student">[Student]</span> Yes.
+<span class="student">[Student]</span> Yeah.
+<span class="student">[Student]</span> Everything connect.
+<span class="student">[Student]</span> and we divide the section paragraph we divide this paragraph asking for, oh my
+<span class="student">[Student]</span> god, we, we matching the, yeah, this section function formal informal asking for
+<span class="student">[Student]</span> clarification.
+<span class="tutor">[Tutor]</span> Asking for, yeah, clarification to make things clear.
+<span class="tutor">[Tutor]</span> A and M.
+<span class="tutor">[Tutor]</span> A is the informal and M is the formal.
+<span class="tutor">[Tutor]</span> Apologize.
+<span class="tutor">[Tutor]</span> J is the informal.
+<span class="tutor">[Tutor]</span> and sorry, Q is the formal.
+<span class="tutor">[Tutor]</span> Appreciating a compliment.
+<span class="student">[Student]</span> Compliment.
+<span class="student">[Student]</span> Great job.
+<span class="student">[Student]</span> B is the informal.
+<span class="student">[Student]</span> Right?
+<span class="tutor">[Tutor]</span> B and R is the informal.
+<span class="tutor">[Tutor]</span> R is the formal.
+<span class="tutor">[Tutor]</span> &quot;You did an excellent job.&quot;
+<span class="student">[Student]</span> R is formal.
+<span class="student">[Student]</span> You&#x27;re right.
+<span class="student">[Student]</span> You&#x27;re right.
+<span class="tutor">[Tutor]</span> Accepting a compliment.
+<span class="tutor">[Tutor]</span> So after someone says &quot;Great job,&quot; you can say, yeah, &quot;Great job.&quot; Oh, &quot;Great job.&quot; You could say &quot;Thanks.&quot; Yes. So accepting. Accepted. Hmm.
+<span class="student">[Student]</span> I got it.
+<span class="student">[Student]</span> I got it.
+<span class="tutor">[Tutor]</span> So accepting the compliment would be D.
+<span class="student">[Student]</span> D?
+<span class="tutor">[Tutor]</span> Thanks.
+<span class="student">[Student]</span> Ah, yes.
+<span class="student">[Student]</span> D.
+<span class="student">[Student]</span> D and Q.
+<span class="student">[Student]</span> Thank you for your.
+<span class="tutor">[Tutor]</span> Yes.
+<span class="student">[Student]</span> For Q, it&#x27;s formal.
+<span class="tutor">[Tutor]</span> And introduce others.
+<span class="student">[Student]</span> Oh, this is the C and where is the C is the K, J, L, L, the Mr. Adam, blah blah blah.
+<span class="student">[Student]</span> Yeah, introducing, yeah, people. Yes, C. Refusing a drink. Refusing a drink.
+<span class="student">[Student]</span> No, thank you, I&#x27;m fine. It&#x27;s informal and...
+<span class="tutor">[Tutor]</span> I&#x27;m so... I&#x27;m sorry?
+<span class="tutor">[Tutor]</span> So remember then F and H are matches. &quot;No, thank you, I&#x27;m fine&quot; and &quot;I&#x27;m okay.&quot;
+<span class="student">[Student]</span> H, H, H. Where is the H? Just a moment.
+<span class="student">[Student]</span> Ah, &quot;I&#x27;m okay.&quot; Yes, yes, yes, you&#x27;re right. F, H. And excusing yourself from
+<span class="student">[Student]</span> conversation, your conversation, from your conversation. Excusing yourself.
+<span class="student">[Student]</span> Um,
+<span class="tutor">[Tutor]</span> &quot;Excuse me.&quot; What do you mean the same? So, um, &quot;Excuse me,&quot; say, &quot;I need to go.&quot;
+<span class="student">[Student]</span> So, um, oh, excusing yourself. &quot;Please excuse me for a minute.&quot;
+<span class="student">[Student]</span> Ah, &quot;Please excuse for a minute.&quot; Ah, &quot;Excuse me.&quot; Okay, please.
+<span class="student">[Student]</span> Okay, N is the formal. Q is the informal. A, P, P, they in problem. And expression
+<span class="student">[Student]</span> understanding is expression understanding. &quot;I got it.&quot; And and all is the always through
+<span class="student">[Student]</span> formal.
+<span class="tutor">[Tutor]</span> Yes, &quot;I understand your point.&quot;
+<span class="tutor">[Tutor]</span> And E is the informal, the last thing.
+<span class="tutor">[Tutor]</span> Asking for an opinion.
+<span class="tutor">[Tutor]</span> &quot;What do you think?&quot;
+<span class="tutor">[Tutor]</span> Is there a formal?
+<span class="tutor">[Tutor]</span> &quot;I would like to hear your thoughts on the issue.&quot;
+<span class="tutor">[Tutor]</span> is the formal. Okay, finished.
+<span class="student">[Student]</span> Yes.
+<span class="tutor">[Tutor]</span> Okay, so yeah, any questions or thoughts with these, like going over these?
+<span class="student">[Student]</span> It&#x27;s better to Section A. Section A is really difficult for me, but this is better
+<span class="student">[Student]</span> understanding. So there is no problem for me.
+<span class="tutor">[Tutor]</span> Okay, and what do you notice about the formal and informal difference?
+<span class="student">[Student]</span> Formal and informal? I think the informal language is more casual and more easy and more simple.
+<span class="student">[Student]</span> So that is, so if I talk informal language, that is more comfortable but the
+<span class="student">[Student]</span> formal language is more complex and difficult but they, if I used that
+<span class="student">[Student]</span> language, I respect them or they respect me. I feel that, I can feel that. So that
+<span class="student">[Student]</span> But if I use the situation, it&#x27;s a situation. At that time, we have better language in a field.
+<span class="tutor">[Tutor]</span> Yeah, it&#x27;s going to be more polite language.
+<span class="student">[Student]</span> Yeah, more polite language. You&#x27;re right.
+<span class="tutor">[Tutor]</span> So yeah, that&#x27;s about it for time. Any other questions before I go?
+<span class="student">[Student]</span> Oh, no, teacher. Thank you for your class and have a nice weekend.
+<span class="tutor">[Tutor]</span> Yeah, you too. And once again, happy birthday.
+<span class="student">[Student]</span> Thank you so much. Bye-bye. You take care. Bye-bye.
+<span class="tutor">[Tutor]</span> Goodbye.</div>
+        </div>
+    </div>
+    <div class="toast" id="toast">✅ 프롬프트가 복사되었습니다!</div>
+    <script>
+        const REVIEW_PROMPT="너는 나의 영어 회화 복습 파트너야. 오늘 내 전화영어 수업 내용을 기반으로 대화하면서 복습을 도와줘.\n\n[오늘 수업 전사 내용]\n[Tutor] Hello, Berr. Good morning. Good evening.\n[Student] Yay! Good morning.\n[Student] Good morning, teacher.\n[Tutor] How are you today?\n[Student] Yeah, it's so nice. It's Friday. And it's my birthday, so it is a good day for me.\n[Tutor] Nice. Happy birthday.\n[Student] Thank you so much. How about you? How about your day?\n[Tutor] Good, yeah, nice day, yes. Good weather today.\n[Tutor] Do you have any plans for your birthday?\n[Student] Today, I will go to the small concert, yeah, in my company.\n[Student] because our company prepared some small concert.\n[Student] The title is Coming Spring.\n[Student] So maybe that is a small classic concert.\n[Student] So I will go there.\n[Student] And then if I finish work,\n[Student] I go back my home.\n[Student] Yeah, and have a little party, small party with my family.\n[Tutor] Sure.\n[Tutor] Okay, nice, kind of quiet, relaxing weekend.\n[Tutor] Yeah, birthday weekend.\n[Student] Oh, yes.\n[Student] Every year, it is so fast.\n[Student] Yeah, time is right.\n[Tutor] Yeah, it's nice having it on a Friday or a weekend, though.\n[Student] Yes, yes, you're right.\n[Student] And when is your birthday?\n[Tutor] December. December 25th. No, okay, yes, okay, good. Um, did you want to have a look at page, figure, page 15 now? Yeah, no problem. Today we will start the share, free, you, you learn from this lesson and this is the review page 50, page 50. Ah, yes, that is a new section, Communication and Culture.\n[Tutor] Okay, I find. So we have the number one, getting started question.\n[Student] Okay, can I read that?\n[Tutor] Yeah, whenever you're ready.\n[Tutor] Warm up. Let's open the floor. What are your opinions?\n[Student] Okay, let's open the floor. What are your opinions?\n[Student] First, what are some cultural differences that you have observed when interacting with foreigners? Explain.\n[Student] Hmmmmmmmm...\n[Student] Yes. Usually if I open the window in my office, I ask my co-worker,\n[Student] Can I open the window?\n[Student] Yeah, so it's the same.\n[Student] First we ask their opinion and then react.\n[Student] So, yeah, it's the same.\n[Student] and I'm not sure it is the answer to this question.\n[Tutor] So do you meet a lot of foreigners in your workplace or people from different countries?\n[Student] Oh, different countries, yes, this is similar. I visit another country but\n[Student] but usually I don't have a chance to discussion because usually I stay in my hotel or go to restaurant and go to place\n[Student] but usually discussion in office so I'm not sure it is same or not\n[Student] but when I visit the Singapore travel, the Venice travel, at that time it is same.\n[Student] So usually, almost countries say, right?\n[Tutor] Do you have some other opinions?\n[Tutor] For example, in the workplace, in Canadian workplace,\n[Tutor] it's common to call your supervisor by their first name. So just casually like, \"Hey Bill,\" \"Hey John.\"\n[Student] Hey Bill, hey John, just ask their name and also age is not important. Ah, I see, I see. In Asia, the age is so important.\n[Student] but the more important is the level of their job but usually we\n[Student] consider of the age. For example, in our homes, if there are grandpa or grandma, we ask first,\n[Student] hey grandpa, hey grandma, and their language is different. We include more respect for language,\n[Student] like informal language.\n[Tutor] Okay.\n[Tutor] Great. And what about number two?\n[Student] Okay. Why do you think it is important to be aware of cultural differences when interacting with people from other cultures?\n[Student] Support your opinion with detail.\n[Student] Yeah, that is so important because if we talk to other people, that is their interaction to opinion, shared opinion.\n[Student] So always we share their ideas or their language and their culture.\n[Student] So if we talk to other people and they feel that is a little rude, that is a problem.\n[Student] So I always think it is the respectful language of their people or their culture.\n[Student] So I care about that situation and their culture.\n[Tutor] Yeah, so making sure they're not upset or offended.\n[Student] Yeah, you're right.\n[Tutor] What about number three?\n[Student] Number three.\n[Student] How would you explain your country's communication style to foreign visitors?\n[Student] Are there any type of body language or gesture that should be aware of too?\n[Student] The Korean guys don't use many gestures with the language.\n[Student] But before I said, our language includes respect language.\n[Student] We divide formal and informal language.\n[Student] So usually if we talk, if we communicate with the senior people or old people, we use the\n[Student] more formal language.\n[Student] So yeah, that is the, yeah, useful.\n[Student] But if we talk, communicate with foreigner, we don't care because we know, we are aware that\n[Student] foreigners are not good at Korean, so if they use informal language, it's okay because we\n[Student] understand that they are not good at Korean. So it's okay.\n[Tutor] Okay.\n[Tutor] Next one. Do you want to have a look at the formal versus informal, number two?\n[Student] Oh, yes. Every section of the first is difficult, this textbook.\n[Tutor] Oh, these ones, yeah, matching.\n[Student] Yeah, matching is so hard for me.\n[Student] Okay, why to correct first person in formal and or informal column of the table according to tone?\n[Student] And teacher, could you inform the pronunciation to phrase?\n[Student] Is it right? Phrase?\n[Tutor] Phrase? Phrase.\n[Student] Phrase. Phrase.\n[Tutor] Phrase. Okay.\n[Tutor] The first,\n[Tutor] asking\n[Tutor] for\n[Tutor] \"How can I\n[Tutor] solve this problem?\"\n[Tutor] So you can just have a look at\n[Student] What do you mean?\n[Student] What do you mean?\n[Student] What do you mean? Just a moment. I find. Okay, that is similar M. I'm sorry,\n[Student] but could you explain that again? What do you mean? I'm sorry, could you explain\n[Student] that means that again?\n[Tutor] And B,\n[Tutor] \"Great work.\"\n[Student] Great work.\n[Tutor] Oh, there are.\n[Tutor] \"You did\n[Tutor] an excellent job on the last project.\"\n[Student] How about that?\n[Tutor] Oh, yeah, definitely.\n[Student] You did an excellent job.\n[Tutor] And C,\n[Tutor] \"Miss Jones, Mr. Smith.\"\n[Student] Ah, that is her.\n[Student] I, Miss Adams, I'd like to introduce to Mr.\n[Student] But that name is different.\n[Student] But pattern is the same.\n[Student] Right?\n[Tutor] Yeah.\n[Student] Yeah.\n[Tutor] L.\n[Student] L?\n[Tutor] Yeah.\n[Student] Oh, yeah.\n[Tutor] L.\n[Student] Okay, you're right.\n[Tutor] And D, thanks.\n[Student] Thank you for your kind work.\n[Student] Thank you for your kind work.\n[Student] Q, I got it.\n[Student] Yeah, D, Q, yeah, thanks.\n[Student] Thank you for your kind work.\n[Student] Oh, I understand your point.\n[Tutor] No, thank you.\n[Tutor] I'm fine.\n[Student] F?\n[Tutor] So this one's tricky. This one's the more formal style. So we need an informal. \"I'm\n[Tutor] fine.\"\n[Student] I'm fine. No, thank you. I'm fine. I'm okay.\n[Student] Yeah, I'm okay.\n[Student] How about the... are you really the same?\n[Tutor] Yeah.\n[Student] Yes.\n[Tutor] Fine, okay. \"Sorry, I'd like to apologize for my mistake.\"\n[Student] Hmm.\n[Student] The chain.\n[Tutor] Yeah, \"I'd like to apologize.\"\n[Tutor] And \"What do you think?\" \"What do you think?\"\n[Tutor] \"I would like to hear your thoughts on the issue.\"\n[Student] Yes.\n[Student] Okay.\n[Tutor] And the last thing, \"Please excuse me for a minute.\"\n[Tutor] \"I'll be back in a minute.\"\n[Student] Okay.\n[Student] Yes.\n[Student] Yeah.\n[Student] Everything connect.\n[Student] and we divide the section paragraph we divide this paragraph asking for, oh my\n[Student] god, we, we matching the, yeah, this section function formal informal asking for\n[Student] clarification.\n[Tutor] Asking for, yeah, clarification to make things clear.\n[Tutor] A and M.\n[Tutor] A is the informal and M is the formal.\n[Tutor] Apologize.\n[Tutor] J is the informal.\n[Tutor] and sorry, Q is the formal.\n[Tutor] Appreciating a compliment.\n[Student] Compliment.\n[Student] Great job.\n[Student] B is the informal.\n[Student] Right?\n[Tutor] B and R is the informal.\n[Tutor] R is the formal.\n[Tutor] \"You did an excellent job.\"\n[Student] R is formal.\n[Student] You're right.\n[Student] You're right.\n[Tutor] Accepting a compliment.\n[Tutor] So after someone says \"Great job,\" you can say, yeah, \"Great job.\" Oh, \"Great job.\" You could say \"Thanks.\" Yes. So accepting. Accepted. Hmm.\n[Student] I got it.\n[Student] I got it.\n[Tutor] So accepting the compliment would be D.\n[Student] D?\n[Tutor] Thanks.\n[Student] Ah, yes.\n[Student] D.\n[Student] D and Q.\n[Student] Thank you for your.\n[Tutor] Yes.\n[Student] For Q, it's formal.\n[Tutor] And introduce others.\n[Student] Oh, this is the C and where is the C is the K, J, L, L, the Mr. Adam, blah blah blah.\n[Student] Yeah, introducing, yeah, people. Yes, C. Refusing a drink. Refusing a drink.\n[Student] No, thank you, I'm fine. It's informal and...\n[Tutor] I'm so... I'm sorry?\n[Tutor] So remember then F and H are matches. \"No, thank you, I'm fine\" and \"I'm okay.\"\n[Student] H, H, H. Where is the H? Just a moment.\n[Student] Ah, \"I'm okay.\" Yes, yes, yes, you're right. F, H. And excusing yourself from\n[Student] conversation, your conversation, from your conversation. Excusing yourself.\n[Student] Um,\n[Tutor] \"Excuse me.\" What do you mean the same? So, um, \"Excuse me,\" say, \"I need to go.\"\n[Student] So, um, oh, excusing yourself. \"Please excuse me for a minute.\"\n[Student] Ah, \"Please excuse for a minute.\" Ah, \"Excuse me.\" Okay, please.\n[Student] Okay, N is the formal. Q is the informal. A, P, P, they in problem. And expression\n[Student] understanding is expression understanding. \"I got it.\" And and all is the always through\n[Student] formal.\n[Tutor] Yes, \"I understand your point.\"\n[Tutor] And E is the informal, the last thing.\n[Tutor] Asking for an opinion.\n[Tutor] \"What do you think?\"\n[Tutor] Is there a formal?\n[Tutor] \"I would like to hear your thoughts on the issue.\"\n[Tutor] is the formal. Okay, finished.\n[Student] Yes.\n[Tutor] Okay, so yeah, any questions or thoughts with these, like going over these?\n[Student] It's better to Section A. Section A is really difficult for me, but this is better\n[Student] understanding. So there is no problem for me.\n[Tutor] Okay, and what do you notice about the formal and informal difference?\n[Student] Formal and informal? I think the informal language is more casual and more easy and more simple.\n[Student] So that is, so if I talk informal language, that is more comfortable but the\n[Student] formal language is more complex and difficult but they, if I used that\n[Student] language, I respect them or they respect me. I feel that, I can feel that. So that\n[Student] But if I use the situation, it's a situation. At that time, we have better language in a field.\n[Tutor] Yeah, it's going to be more polite language.\n[Student] Yeah, more polite language. You're right.\n[Tutor] So yeah, that's about it for time. Any other questions before I go?\n[Student] Oh, no, teacher. Thank you for your class and have a nice weekend.\n[Tutor] Yeah, you too. And once again, happy birthday.\n[Student] Thank you so much. Bye-bye. You take care. Bye-bye.\n[Tutor] Goodbye.\n\n[AI 피드백]\n안녕하세요, Berr님!\n\n오늘 전화영어 수업 정말 즐거웠습니다. 생일이셔서 더욱 특별한 하루였는데, 영어 공부까지 열심히 해주셔서 감동했어요! 문화적 차이와 비즈니스 커뮤니케이션 스타일에 대해 깊이 있는 이야기를 나눌 수 있어서 저도 많이 배웠습니다. 특히 격식체와 비격식체 표현을 매칭하는 활동에서 어려운 부분도 있었지만, 끝까지 집중해서 잘 따라와 주셨어요. Berr님의 꾸준함과 배우려는 열정이 정말 대단합니다!\n\n---\n\n### **1. 📊 오늘의 대화 요약 (Summary)**\n\n오늘은 Berr님의 생일 계획으로 대화를 시작하여, 문화적 차이가 소통 방식에 미치는 영향에 대해 토론했습니다. 특히 직장 내 호칭, 나이, 존대어 사용 등 한국과 다른 문화권의 커뮤니케이션 스타일을 비교하고, 격식체와 비격식체 표현을 구분하는 연습을 통해 비즈니스 환경에서의 적절한 언어 사용법을 익혔습니다.\n\n---\n\n### **2. 💬 유창성 업그레이드 (Fluency & Natural Flow)**\n\nBerr님이 의미를 잘 전달하셨지만, 원어민들이 더 자연스럽게 쓰는 표현 3가지를 알려드릴게요.\n\n1.  **❌ 학습자 원문 (As Said):** \"Every year, it is so fast.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"Every year just **flies by**.\"\n    *   **💎 비즈니스 표현 (Professional):** \"Time seems to **accelerate with each passing year**.\"\n    *   **💡 코칭 포인트:** 시간이 빨리 흐른다는 표현을 할 때 'flies by'는 일상에서 아주 흔하게 쓰이는 관용구입니다. 'it is so fast'보다 훨씬 자연스럽게 들려요.\n\n2.  **❌ 학습자 원문 (As Said):** \"I don't have a chance to discussion\"\n    *   **✅ 자연스러운 표현 (Natural):** \"I don't have a chance **to discuss** (it).\" 또는 \"I don't have a chance **for discussion**.\"\n    *   **💎 비즈니스 표현 (Professional):** \"Opportunities for **in-depth discussion are limited**.\"\n    *   **💡 코칭 포인트:** 'to' 다음에는 동사 원형('discuss')이 오거나, 'for' 다음에 명사('discussion')가 와야 합니다. 문법적으로 정확하면서도 훨씬 자연스럽게 들립니다.\n\n3.  **❌ 학습자 원문 (As Said):** \"So I always think it is the respectful language of their people or their culture.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"So I always think it is important to use **respectful language towards** their people or their culture.\"\n    *   **💎 비즈니스 표현 (Professional):** \"I consistently advocate for the use of **culturally sensitive language**.\"\n    *   **💡 코칭 포인트:** 'respectful language of their people'보다는 'respectful language towards their people'이 더 자연스럽습니다. 또는 'culturally sensitive language'처럼 한 단어로 표현할 수도 있습니다.\n\n---\n\n### **3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)**\n\n이번 대화에서 Berr님이 자주 놓치신 부분은 **'일반적인 명사 앞에 관사(a/the) 사용 또는 생략'** 이었습니다. 특정 대상을 지칭하는지, 아니면 일반적인 개념을 말하는지에 따라 관사 사용이 달라집니다.\n\n| ❌ 원문 (As Said)                                  | ✅ 교정 예시 (Corrected)                                   |\n| :------------------------------------------------ | :-------------------------------------------------------- |\n| \"I will go to **the** small concert\"              | \"I will go to **a** small concert\" (특정하지 않은 작은 콘서트) |\n| \"In Asia, **the** age is so important.\"           | \"In Asia, **age** is so important.\" (나이라는 일반적인 개념) |\n| \"we consider of **the** age.\"                     | \"we consider **age**.\" (동사 'consider' 뒤에 'of' 불필요, 'age'는 일반적인 개념) |\n| \"The Korean guys don't use many gestures with **the** language.\" | \"**Koreans** don't use many gestures with **their** language.\" (한국인, 한국인의 언어) |\n\n**📌 핵심 규칙:** 일반적인 개념을 말할 때는 관사를 생략하거나, 'a/an'을 사용하고, 특정 대상을 지칭할 때만 'the'를 사용합니다. 또한, 'Korean guys'보다는 'Koreans'가 더 자연스럽습니다.\n\n**🔁 따라 읽기:**\n🗣️ \"I will go to **a** small concert.\"\n🗣️ \"In Asia, **age** is so important.\"\n🗣️ \"**Koreans** don't use many gestures with **their** language.\"\n\n---\n\n### **4. 📗 어휘 확장 (Vocabulary Vault)**\n\n학습자님의 업무 환경에서 유용하게 쓸 수 있는 단어 5개를 준비했습니다.\n\n1.  **nuance** /nuːˈɑːns/ (명사)\n    *   뜻: 미묘한 차이, 뉘앙스\n    *   실전 예문: Understanding cultural **nuances** is crucial for international business negotiations.\n\n2.  **deference** /ˈdɛfərəns/ (명사)\n    *   뜻: 존중, 경의 (특히 나이나 지위에 대한)\n    *   실전 예문: In some cultures, employees show **deference** to their superiors by using formal language.\n\n3.  **protocol** /ˈproʊtəkɔːl/ (명사)\n    *   뜻: 의례, 외교 의례, (조직 내) 절차, 규약\n    *   실전 예문: We need to follow the company **protocol** when communicating with external partners.\n\n4.  **rapport** /ræˈpɔːr/ (명사)\n    *   뜻: (친밀한) 관계, 공감대\n    *   실전 예문: Building **rapport** with clients is essential for long-term business relationships.\n\n5.  **facilitate** /fəˈsɪlɪteɪt/ (동사)\n    *   뜻: 용이하게 하다, 가능하게 하다\n    *   실전 예문: Our new system will **facilitate** smoother communication between departments.\n\n---\n\n### **5. 📝 실전 복습 챌린지 (Practice)**\n\n오늘 배운 표현과 문법을 활용하여 영작 챌린지에 도전해 보세요!\n\n1.  **상황:** 시간이 정말 빨리 가는 것 같다고 말하고 싶을 때.\n    *   **영작:** 와, 벌써 3월이네요. 매년 시간이 정말 빨리 지나가는 것 같아요.\n    *   **모범 답안:** Wow, it's already March. Every year just **flies by**.\n\n2.  **상황:** 해외 출장 시 현지 문화의 미묘한 차이를 이해하는 것이 중요하다고 강조하고 싶을 때.\n    *   **영작:** 해외 출장 시에는 현지 문화의 뉘앙스를 이해하는 것이 정말 중요합니다.\n    *   **모범 답안:** When on a business trip abroad, it's really important to understand the **nuances** of the local culture.\n\n3.  **상황:** 회의에서 특정 주제에 대해 더 깊이 토론할 기회가 없었다고 설명하고 싶을 때.\n    *   **영작:** 죄송합니다만, 그 주제에 대해 더 깊이 토론할 기회가 없었습니다.\n    *   **모범 답안:** I apologize, but I didn't have a chance **to discuss** that issue **in depth**. (또는 \"I didn't have an opportunity for an in-depth discussion on that issue.\")\n\n---\n\n### **6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)**\n\n✨ **Good Job:** \"So I always think it is the respectful language of their people or their culture.\"\n이 문장은 Berr님이 문화적 존중의 중요성을 명확하게 설명하는 데 아주 좋았습니다. 'respectful language'라는 표현과 'their people or their culture'를 연결하여 깊이 있는 이해를 보여주셨어요. 아주 훌륭합니다! (위 유창성 섹션에서 더 자연스러운 표현을 제안했지만, 이 문장 자체로도 의미 전달이 명확하고 좋습니다.)\n\n🚀 **내일의 한 문장:** 다음 수업 시작 시 튜터에게 오늘 배운 표현을 활용하여 이렇게 말해보세요.\n\"I'm mindful of the time, so let's start today's lesson.\" (시간을 염두에 두고, 오늘의 수업을 시작하죠.)\n\n---\n\n### **[성과 지표]**\n\n**유창성 점수:** 7/10\n**근거:** Berr님은 자신의 생각을 막힘없이 표현하려는 노력이 돋보였습니다. 다양한 주제에 대해 적극적으로 의견을 개진하며 대화를 이어나가는 능력이 뛰어납니다. 다만, 몇몇 표현에서 더 자연스러운 원어민식 표현을 사용하거나, 관사 및 전치사 사용에 조금 더 주의를 기울인다면 유창성이 한 단계 더 향상될 것입니다.\n**다음 수업 '원포인트 액션 플랜':** 다음 수업에서는 **'관사(a/an/the)의 정확한 사용'** 에 집중하여, 일반적인 개념과 특정 대상을 구분하는 연습을 해보겠습니다.\n\n위 내용을 바탕으로:\n1. 먼저 오늘 수업에서 내가 틀렸거나 어색했던 표현을 하나 골라서, 관련된 상황을 영어로 질문해줘.\n2. 내가 영어로 대답하면, 자연스러운지 확인하고 더 나은 표현이 있으면 알려줘.\n3. 특히 \"반복 실수 패턴\"에서 지적된 부분을 집중적으로 연습시켜줘.\n4. 이런 식으로 오늘 배운 표현들을 하나씩 복습하자.\n5. 한국어 설명은 필요할 때만 간단히, 대화는 최대한 영어로 진행해줘.\n\n그럼 시작하자!";
+        function startReview(){navigator.clipboard.writeText(REVIEW_PROMPT).then(()=>{showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)}).catch(()=>{const t=document.createElement('textarea');t.value=REVIEW_PROMPT;document.body.appendChild(t);t.select();document.execCommand('copy');document.body.removeChild(t);showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)})}
+        function showToast(){const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500)}
+        function switchTab(n){document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',n==='feedback'?i===0:i===1));document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));document.getElementById('tab-'+n).classList.add('active')}
+    </script>
+</body>
+</html>
