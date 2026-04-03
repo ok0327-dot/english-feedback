@@ -713,7 +713,7 @@ def generate_feedback(transcript):
 - ❌ 학습자 원문 (As Said): [Student]가 실제 말한 문장을 그대로 인용
 - ✅ 자연스러운 표현 (Natural): 원어민이 일상에서 쓰는 쉽고 명확한 표현
 - 💎 비즈니스 표현 (Professional): 격식 있는 자리에서 쓸 수 있는 고급 표현
-- 💡 코칭 포인트: 뉘앙스 차이를 짧고 명확하게 설명
+- 💡 코칭 포인트: 뉘앙스 차이를 **영어로 먼저 설명**하고, 바로 아래 한국어 번역을 병기 (예: "Using 'get to' adds a sense of opportunity. → 'get to'를 쓰면 기회의 뉘앙스가 더해집니다.")
 
 **3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)**
 ⚠️ 이 섹션은 2번(유창성)과 **완전히 다른 관점**입니다.
