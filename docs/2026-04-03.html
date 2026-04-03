@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전화영어 복습 - 2026년 04월 03일</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Noto Sans KR',sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.75;min-height:100vh}
+        .header{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);border-bottom:1px solid rgba(255,255,255,.06);padding:48px 24px 40px;text-align:center}
+        .header-date{font-size:13px;color:#94a3b8;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+        .header h1{font-size:28px;font-weight:700;color:#f1f5f9;margin-bottom:16px}
+        .header-meta{display:flex;justify-content:center;gap:24px;font-size:14px;color:#64748b}
+        .header-meta span{display:flex;align-items:center;gap:6px}
+        .cta-section{text-align:center;padding:40px 24px}
+        .cta-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:linear-gradient(135deg,#38bdf8,#818cf8);color:#fff;font-size:16px;font-weight:600;font-family:'Noto Sans KR',sans-serif;border:none;border-radius:50px;cursor:pointer;transition:all .3s;text-decoration:none;box-shadow:0 4px 24px rgba(56,189,248,.25)}
+        .cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(56,189,248,.35)}
+        .cta-btn svg{width:20px;height:20px}
+        .cta-sub{margin-top:12px;font-size:13px;color:#64748b}
+        .toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#38bdf8;padding:14px 28px;border-radius:12px;font-size:14px;font-weight:500;border:1px solid rgba(56,189,248,.2);box-shadow:0 8px 32px rgba(0,0,0,.4);opacity:0;transition:all .4s cubic-bezier(.16,1,.3,1);z-index:1000}
+        .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+        .container{max-width:720px;margin:0 auto;padding:0 24px 80px}
+        .tabs{display:flex;gap:4px;background:#1a1a24;padding:4px;border-radius:12px;margin-bottom:32px}
+        .tab{flex:1;padding:12px;text-align:center;font-size:14px;font-weight:500;color:#64748b;background:0 0;border:none;border-radius:8px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all .2s}
+        .tab.active{background:#262636;color:#f1f5f9}
+        .tab-content{display:none}.tab-content.active{display:block}
+        .feedback h2{font-size:18px;font-weight:700;color:#f1f5f9;margin:36px 0 16px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.06)}
+        .feedback h2:first-child{margin-top:0}
+        .feedback p{margin:8px 0;color:#cbd5e1}
+        .feedback .item{padding:6px 0 6px 16px;border-left:2px solid #334155;margin:6px 0;color:#cbd5e1}
+        .feedback .numbered{padding:8px 0 8px 16px;color:#cbd5e1}
+        .feedback .numbered strong{color:#38bdf8}
+        .feedback strong{color:#f1f5f9}
+        .feedback code{background:#1e293b;padding:2px 8px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#38bdf8}
+        .feedback table{width:100%;border-collapse:collapse;margin:12px 0}
+        .feedback th,.feedback td{padding:10px 14px;text-align:left;border-bottom:1px solid #262636}
+        .feedback th{color:#94a3b8;font-weight:500;font-size:13px}
+        .feedback td{color:#cbd5e1}
+        .arrow{color:#38bdf8;font-weight:700}
+        .transcript{background:#1a1a24;border-radius:12px;padding:28px;font-size:14px;line-height:2;color:#94a3b8;white-space:pre-wrap;word-break:break-word;font-family:'JetBrains Mono','Noto Sans KR',monospace}
+        .transcript .tutor{color:#38bdf8}
+        .transcript .student{color:#a78bfa}
+        @media(max-width:640px){.header{padding:32px 16px}.header h1{font-size:22px}.cta-btn{padding:14px 28px;font-size:15px}.container{padding:0 16px 60px}}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-date">2026년 04월 03일</div>
+        <h1>📚 전화영어 복습</h1>
+        <div class="header-meta">
+            <span>⏱ 20분 14초</span>
+            <span>🎙 전화영어_025180304_20260403080013.m4a</span>
+        </div>
+    </div>
+    <div class="cta-section">
+        <button class="cta-btn" onclick="startReview()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Gemini에서 복습 대화 시작하기
+        </button>
+        <div class="cta-sub">클릭하면 프롬프트가 복사되고 Gemini가 열립니다</div>
+    </div>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('feedback')">📋 AI 피드백</button>
+            <button class="tab" onclick="switchTab('transcript')">🎙 수업 전사</button>
+        </div>
+        <div id="tab-feedback" class="tab-content active">
+            <div class="feedback"><p>안녕하세요, 학습자님! 오늘도 유익하고 즐거운 영어 대화 시간이었습니다. 특히 동서양 문화 차이에 대한 깊이 있는 토론이 인상 깊었어요. 복잡한 개념들을 이해하고 자신의 경험에 비추어 설명하려는 노력이 아주 돋보였습니다.</p>
+<br>
+<br>
+<p>### <strong>1. 📊 오늘의 대화 요약 (Summary)</strong></p>
+<br>
+<p>오늘은 주말 벚꽃 나들이 계획에 대한 가벼운 대화로 시작하여, 교재의 비즈니스 시나리오(뉴욕 본사 직원이 베이징 지점의 외국인 고객 소통 능력을 평가하고 피드백을 주는 상황)를 다루었습니다. 이어서 수사학(rhetoric)과 비언어적 소통의 중요성에 대해 논의했으며, 특히 직접적인 눈 맞춤, 낯선 사람에게 미소 짓기, 과장된 손짓, 고개 숙여 인사하기, 동성 간 손잡기 등 다양한 제스처의 동서양 문화별 해석과 학습자님의 개인적인 의견을 활발하게 공유했습니다.</p>
+<br>
+<p>### <strong>2. 💬 유창성 업그레이드 (Fluency & Natural Flow)</strong></p>
+<br>
+<p>의미 전달은 충분히 잘 되었지만, 원어민들이 더 자연스럽게 쓰는 표현으로 다듬으면 유창성이 한층 더 향상될 수 있습니다.</p>
+<br>
+<div class="numbered"><strong>1.</strong>  <strong>❌ 학습자 원문 (As Said):</strong> "This weekend is so important because this weekend is the peak day of cherry blossom's bloom season."</div>
+<p>    *   <strong>✅ 자연스러운 표현 (Natural):</strong> "This weekend is special because it's the peak of cherry blossom season."</p>
+<p>    *   <strong>💎 비즈니스 표현 (Professional):</strong> "This weekend marks the peak of the cherry blossom season, making it a particularly significant period."</p>
+<p>    *   <strong>💡 코칭 포인트:</strong> 'important' 대신 'special'을 사용하여 개인적인 의미를 더하고, 'peak day of bloom season' 대신 'peak of cherry blossom season'으로 간결하게 표현할 수 있습니다.</p>
+<br>
+<div class="numbered"><strong>2.</strong>  <strong>❌ 학습자 원문 (As Said):</strong> "Usually China's employees speak well, so maybe they have a good skill, but usually the Chinese people don't use the speak in front of the foreign people."</div>
+<p>    *   <strong>✅ 자연스러운 표현 (Natural):</strong> "Chinese employees usually speak well, so they might have good skills, but often Chinese people don't speak English in front of foreigners."</p>
+<p>    *   <strong>💎 비즈니스 표현 (Professional):</strong> "While Chinese employees generally possess strong communication skills, they often refrain from speaking English in the presence of foreign individuals."</p>
+<p>    *   <strong>💡 코칭 포인트:</strong> 'China's employees' 대신 'Chinese employees'가 더 자연스럽고, 'don't use the speak' 대신 'don't speak'이 간결합니다. 'foreign people' 대신 'foreigners'가 일반적인 표현입니다. 'skill'은 보통 복수형 'skills'로 사용될 때가 많습니다.</p>
+<br>
+<div class="numbered"><strong>3.</strong>  <strong>❌ 학습자 원문 (As Said):</strong> "So usually the head bowing is the gesture about how understanding to speaker speaking or not understanding."</div>
+<p>    *   <strong>✅ 자연스러운 표현 (Natural):</strong> "So usually, head bowing is a gesture that shows whether you understand what the speaker is saying or not."</p>
+<p>    *   <strong>💎 비즈니스 표현 (Professional):</strong> "Typically, head bowing serves as a non-verbal cue indicating comprehension or lack thereof regarding the speaker's message."</p>
+<p>    *   <strong>💡 코칭 포인트:</strong> 'how understanding to speaker speaking or not understanding'은 문장 구조가 복잡하고 어색합니다. 'that shows whether you understand what the speaker is saying or not'처럼 명확하게 풀어서 설명하는 것이 훨씬 자연스럽습니다.</p>
+<br>
+<p>### <strong>3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)</strong></p>
+<br>
+<p>이번 대화에서는 <strong>관사 (a/an/the)</strong> 사용에 있어 아쉬운 부분이 자주 보였습니다. 명사를 사용할 때 어떤 관사를 써야 할지 한 번 더 고민해 보면 정확성이 크게 향상될 거예요.</p>
+<br>
+<table>
+<tr><th>❌ 학습자 원문 (As Said)</th><th>✅ 교정 예시 (Corrected)</th></tr>
+<tr><td>:---------------------------------------------------------------------------------------</td><td>:---------------------------------------------------------------------------------------</td></tr>
+<tr><td>"It's possible to enjoy rainy day."</td><td>"It's possible to enjoy <strong>a</strong> rainy day."</td></tr>
+<tr><td>"So, our family is also going to some small picnic."</td><td>"So, our family is also going to <strong>a</strong> small picnic."</td></tr>
+<tr><td>"The first people visiting representative from a head office in New York and second other people is manager of the Beijing branch."</td><td>"The first <strong>person is a</strong> visiting representative from <strong>the</strong> head office in New York and <strong>the</strong> second <strong>person</strong> is <strong>the</strong> manager of the Beijing branch."</td></tr>
+</table>
+<br>
+<p>*   <strong>📌 핵심 규칙:</strong> 셀 수 있는 단수 명사 앞에는 일반적으로 <strong>a/an</strong> 또는 <strong>the</strong>와 같은 관사가 필요합니다. 특정하지 않은 명사 앞에는 <code>a/an</code>을, 특정하거나 모두가 아는 명사 앞에는 <code>the</code>를 사용합니다. 또한, 'people'은 복수형 명사이므로 'persons' 대신 'people'을 사용하는 것이 더 자연스럽습니다.</p>
+<br>
+<p>*   <strong>🔁 따라 읽기:</strong></p>
+<p>    🗣️ "It's possible to enjoy <strong>a</strong> rainy day."</p>
+<p>    🗣️ "Our family is also going to <strong>a</strong> small picnic."</p>
+<p>    🗣️ "The first <strong>person is a</strong> visiting representative from <strong>the</strong> head office in New York."</p>
+<br>
+<p>### <strong>4. 📗 어휘 확장 (Vocabulary Vault)</strong></p>
+<br>
+<p>이번 수업에서 다룬 내용과 학습자님의 비즈니스 환경에 유용한 어휘 5가지입니다.</p>
+<br>
+<div class="numbered"><strong>1.</strong>  <strong>interpret</strong> /ɪnˈtɜːrprɪt/ (동사)</div>
+<p>    *   <strong>뜻:</strong> 해석하다, 이해하다</p>
+<p>    *   <strong>실전 예문:</strong> We need to <strong>interpret</strong> the market data carefully before making investment decisions.</p>
+<br>
+<div class="numbered"><strong>2.</strong>  <strong>rhetoric</strong> /ˈrɛtərɪk/ (명사)</div>
+<p>    *   <strong>뜻:</strong> 수사법, 웅변술, 설득력 있는 언어 사용</p>
+<p>    *   <strong>실전 예문:</strong> The CEO's powerful <strong>rhetoric</strong> inspired the employees during the quarterly meeting.</p>
+<br>
+<div class="numbered"><strong>3.</strong>  <strong>attuned</strong> /əˈtuːnd/ (형용사)</div>
+<p>    *   <strong>뜻:</strong> ~에 익숙한, ~을 잘 이해하는, 조율된</p>
+<p>    *   <strong>실전 예문:</strong> A good sales manager must be <strong>attuned</strong> to the needs of their clients.</p>
+<br>
+<div class="numbered"><strong>4.</strong>  <strong>subservient</strong> /səbˈsɜːrviənt/ (형용사)</div>
+<p>    *   <strong>뜻:</strong> 굴종적인, 비굴한; 부차적인</p>
+<p>    *   <strong>실전 예문:</strong> We should avoid creating a corporate culture where employees feel <strong>subservient</strong> to their superiors.</p>
+<br>
+<div class="numbered"><strong>5.</strong>  <strong>hallmark</strong> /ˈhɔːlmɑːrk/ (명사)</div>
+<p>    *   <strong>뜻:</strong> 특징, 전형적인 표시; (품질 보증) 각인</p>
+<p>    *   <strong>실전 예문:</strong> Innovation is a <strong>hallmark</strong> of our company's success in the energy sector.</p>
+<br>
+<p>### <strong>5. 📝 실전 복습 챌린지 (Practice)</strong></p>
+<br>
+<p>오늘 배운 표현과 문법을 활용하여 다음 상황을 영어로 작문해 보세요.</p>
+<br>
+<div class="numbered"><strong>1.</strong>  <strong>쉬움:</strong> 이번 주말은 날씨가 좋아서 야외 활동하기에 완벽해요.</div>
+<p>    *   <strong>모범 답안:</strong> This weekend is perfect for outdoor activities because of the good weather.</p>
+<br>
+<div class="numbered"><strong>2.</strong>  <strong>중간:</strong> 저는 동료들과의 관계에서 비언어적 소통을 해석하는 데 익숙해지려고 노력하고 있습니다.</div>
+<p>    *   <strong>모범 답안:</strong> I'm trying to become <strong>attuned</strong> to <strong>interpreting</strong> non-verbal communication in my relationships with colleagues.</p>
+<br>
+<div class="numbered"><strong>3.</strong>  <strong>어려움:</strong> 우리 팀은 설득력 있는 언어(rhetoric)를 사용하여 고객들에게 우리의 새로운 투자 전략을 명확하게 설명해야 합니다.</div>
+<p>    *   <strong>모범 답안:</strong> Our team needs to use effective <strong>rhetoric</strong> to clearly explain our new investment strategy to clients.</p>
+<br>
+<p>### <strong>6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)</strong></p>
+<br>
+<p>*   ✨ <strong>Good Job:</strong> "I'm really an Eastern, so sometimes it is possible to close to relationship, but usually if I meet the first time and eye contact, sometimes that is aggressive and rude."</p>
+<p>    *   <strong>코칭 포인트:</strong> 이 문장은 "I'm really an Eastern" 부분에서 약간의 어색함이 있지만, 이어서 자신의 문화적 배경과 경험을 바탕으로 'direct eye contact'에 대한 동양적 해석을 아주 상세하고 설득력 있게 설명했습니다. 복잡한 뉘앙스를 전달하려는 노력이 돋보였고, 'close to relationship'과 같은 표현으로 '친밀한 관계'를 표현하려는 시도도 훌륭했습니다.</p>
+<br>
+<p>*   🚀 <strong>내일의 한 문장:</strong> "Could you share your interpretation of the current market trends?"</p>
+<p>    *   <strong>활용 표현:</strong> <code>interpretation</code> (어휘 확장), <code>share your interpretation</code> (비즈니스 상황에서 의견을 묻는 자연스러운 표현)</p>
+<p>    *   <strong>미션:</strong> 다음 수업 시작 시 튜터에게 이 문장으로 대화를 시작하며, 오늘 배운 어휘 <code>interpretation</code>을 자연스럽게 사용해 보세요.</p>
+<br>
+<br>
+<p>### <strong>[성과 지표]</strong></p>
+<br>
+<p>*   <strong>유창성 점수:</strong> 7/10점</p>
+<p>*   <strong>근거:</strong> 학습자님은 다양한 주제에 대해 막힘없이 자신의 의견을 표현하려는 의지가 매우 강합니다. 문장이 다소 길어지거나 복잡해질 때 어색한 표현이나 문법적 오류가 발생하기도 하지만, 의미 전달에는 전혀 문제가 없으며 대화의 흐름을 끊지 않고 이어가는 능력이 뛰어납니다. 특히 어려운 어휘나 개념을 만나면 주저하지 않고 질문하여 이해하려는 적극적인 태도가 인상 깊었습니다.</p>
+<p>*   <strong>다음 수업 '원포인트 액션 플랜':</strong> "셀 수 있는 단수 명사 앞에 관사 (a/an/the)를 사용하는 습관 들이기"</p>
+<p>    *   문장을 말하기 전, 명사 앞에 어떤 관사가 필요한지 0.5초만 더 생각하는 연습을 해보세요. 특히 'a'를 놓치는 경우가 많으니 의식적으로 'a'를 붙여보는 훈련을 추천합니다.</p></div>
+        </div>
+        <div id="tab-transcript" class="tab-content">
+            <div class="transcript"><span class="student">[Student]</span> Hello, teacher. Good evening. Good morning.
+<span class="tutor">[Tutor]</span> Yeah, this is Belle. How are you doing today?
+<span class="student">[Student]</span> Yeah, hello, Belle. Yeah, I&#x27;m doing great. I&#x27;m doing good. How are you today?
+<span class="tutor">[Tutor]</span> Pretty good. Do you have any plans for the weekend?
+<span class="student">[Student]</span> This weekend is so important because this weekend is the peak day of cherry blossom&#x27;s bloom season. So maybe I guess there are so many people in the street. So, our family is also going to some small picnic. But yesterday, I heard that the forecast, the weather forecast, Saturday will be raining. So, I&#x27;m a little afraid. But we will go to a picnic and enjoy that. How about you? Do you have some special plans?
+<span class="tutor">[Tutor]</span> Yeah, just probably enjoy if it&#x27;s not raining, enjoy outside.
+<span class="student">[Student]</span> Yes, yes. It&#x27;s possible to enjoy rainy day.
+<span class="tutor">[Tutor]</span> Yeah, and so are you able to look at the textbook today?
+<span class="student">[Student]</span> Oh yes, no problem. Yeah, we have, we will go on page 17 and scenario 2, the second scenario.
+<span class="tutor">[Tutor]</span> Heather?
+<span class="student">[Student]</span> Yeah, 17, yes.
+<span class="tutor">[Tutor]</span> Okay, so would you like to read the scenario?
+<span class="student">[Student]</span> Oh yeah, no problem. Okay, there are two persons. The first people visiting representative from a head office in New York and second other people is manager of the Beijing branch. Okay, yeah, you have been sent to regional branch of your company to evaluate their ability to communicate with foreign client. Just a moment. You have been sent to regional branch of your company to evaluate their ability to communicate with foreign clients, you need to give feedback to the branch manager about the communication strategy they use with visiting customers. Try explaining the issue in a separate way by illustrating difference between the two cultures. Actually, I don&#x27;t understand perfectly this paragraph. Just a moment. Maybe the manager of the Beijing branch company, Beijing branch, they, he need to evaluate from visiting representative from head office in New York. So, I&#x27;m so sorry, but could you explain more easily, easier, easier? Yes, because this sentence is difficult for me.
+<span class="tutor">[Tutor]</span> So the representative from New York needs to give the manager of the Beijing branch feedback on how to communicate with Western customers.
+<span class="student">[Student]</span> That is about the feedback. Give the feedback.
+<span class="tutor">[Tutor]</span> He&#x27;s evaluating and giving feedback for the Beijing branch manager.
+<span class="student">[Student]</span> I see. Maybe the role A, the work in New York, is the HR headquarter, right?
+<span class="tutor">[Tutor]</span> Yeah, there&#x27;s a representative from New York.
+<span class="student">[Student]</span> I see. Representative of the head office in New York.
+<span class="tutor">[Tutor]</span> Okay, I see. And so giving advice to the Beijing branch on how to communicate with Western customers.
+<span class="student">[Student]</span> Yeah, usually China&#x27;s employees speak well, so maybe they have a good skill, but usually the Chinese people don&#x27;t use the speak in front of the foreign people. They use just Chinese language. So sometimes the foreigner embrace that situation. So maybe if I give some feedback, yeah, I give some advice to about just use to give environment or language to foreign people. Today it is a little difficult to explain or read some situation. Anyway, yeah, it&#x27;s all done.
+<span class="tutor">[Tutor]</span> Okay, so yeah, they&#x27;re just giving them communication tips for Western customers and different cultural differences.
+<span class="student">[Student]</span> Yes, yes.
+<span class="tutor">[Tutor]</span> Okay. Yes, would you like to look at the next page?
+<span class="student">[Student]</span> Oh, yes, no problem. The next page. Oh, okay. Can I read the paragraph?
+<span class="tutor">[Tutor]</span> Whenever you&#x27;re ready.
+<span class="student">[Student]</span> Yes, yes, yes. Rhetoric refer to human traffic ability to use words. Rhetoric. What is that? Rhetoric.
+<span class="tutor">[Tutor]</span> Rhetoric. So rhetoric is the human&#x27;s ability to use words, phrases, and power of language.
+<span class="student">[Student]</span> One more.
+<span class="tutor">[Tutor]</span> So it explains it in the sentence. Rhetoric means human&#x27;s ability to use words, phrases, and language to talk to others.
+<span class="student">[Student]</span> I see. It is kind of the language ability, right? Rhetoric. Rhetoric refers to human traffic ability to use words, parrots, and the total power of language to pursue other humans. Humans, however, are also very physically attuned. We respond to what we see in another person&#x27;s face, body, mannerisms, gestures, and overall behavior. Non-verbal, without the use of language, communication is a significant component of how two people view each other. Maybe that paragraph explain about the gesture or action or with a language. Yeah, so maybe they, the next, they teach it to me the action or some body language or gesture. Yeah, yeah, yeah.
+<span class="tutor">[Tutor]</span> So here we have a list of gestures. Would you like to read the interpretation and then give your interpretation?
+<span class="student">[Student]</span> Oh, interpretation. Okay, the first line of the paragraph. Gesture, Eastern interpretation, Western interpretation, my interpretation. First, direct eye contact. Direct eye contact. The Easterns aggressive or rude. The Western attentive and honest. Okay, I&#x27;m really an Eastern, so sometimes it is possible to close to relationship, but usually if I meet the first time and eye contact, sometimes that is aggressive and rude. Yeah. For example, if I eye contact to meet first people, they feel rude and aggressive and sometimes we will fight physically. So, yeah, that is so careful in Eastern area.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="student">[Student]</span> And one more, please.
+<span class="tutor">[Tutor]</span> Yeah, and the second one.
+<span class="student">[Student]</span> Second one. Smiling at stranger and saying hello. Oh, usually a bit of a curt since that two people have never formally met. But Western interpretation, signaling outgoingness, friendliness, and democratic mind. Yeah, I agree with that. I live the Eastern, but these days the Eastern people also change, slowly change. So yeah, that is a good culture. Sometimes if we met an elevator, yeah, some Western guys is smiling and say hello. Yeah, that is a good, great culture. So my interpretation is same. Yeah, I learned to that. Yeah, sometimes you said, &quot;Enjoy day, enjoy your day,&quot; and go out, go elevator, go out elevator. So yeah, that&#x27;s so nice. Mm-hmm. The Western culture.
+<span class="tutor">[Tutor]</span> Yes. And the next one?
+<span class="student">[Student]</span> Next one? Emphatic hand gesture. Emphatic. Sorry, could you explain the emphatic?
+<span class="tutor">[Tutor]</span> Emphatic. So maybe emphasis.
+<span class="student">[Student]</span> Emphatic. What&#x27;s the meaning of emphatic?
+<span class="tutor">[Tutor]</span> So when you emphasize something, so when you&#x27;re speaking and your hands move.
+<span class="student">[Student]</span> Hand move. Hand move. Okay. Usually a bit too dramatic and concise, emotional. But Western interpretation, objectively as could you even show the energy and emphasis of the speaker. In my case, it is good to use the gesture. So sometimes I have interview to my co-worker in audit work. So at the time, if I use the gesture hand or emphatic hand gesture, that is so efficient, efficient. So I love that. Mm-hmm. And head bowing. The second line. Head bowing. Very reverent as polite or hallmark of their culture. Reverent and polite is a bit, a bit so subservient and more appropriate for religious, contact, or not at all.
+<span class="tutor">[Tutor]</span> A bit subservient.
+<span class="student">[Student]</span> Appreciate.
+<span class="tutor">[Tutor]</span> A subservient, yeah.
+<span class="student">[Student]</span> A bit subservient. What&#x27;s the meaning here? Oh, today there is a lot of words, the difficult words. Yeah, sorry.
+<span class="tutor">[Tutor]</span> Yeah, go on. So subservient is like below someone.
+<span class="student">[Student]</span> Below.
+<span class="tutor">[Tutor]</span> Like a servant.
+<span class="student">[Student]</span> Below someone and more appropriate, more appropriate, appropriate. Yeah. Context or not at all. Hmm. Oh, head bowing. Yeah, that is also important gesture in my case. Usually if I listen something speaking, at the time I&#x27;m head bowing because that means, &quot;Yes, I understand.&quot; Yeah, or, &quot;Yes, you speaking it right.&quot; So usually the head bowing is the gesture about how understanding to speaker speaking or not understanding. Nodding. Yeah, nodding is different.
+<span class="tutor">[Tutor]</span> Yes. So putting your head up and down, that is different from head bowing.
+<span class="student">[Student]</span> Yeah, you&#x27;re right. The left side, right side, or upside or downside is different. But usually I use the upside or downside head bowing.
+<span class="tutor">[Tutor]</span> But that isn&#x27;t considered head bowing. So just bowing your head when greeting somebody. Nodding when somebody is talking is okay.
+<span class="student">[Student]</span> Okay, could you explain more? So when somebody&#x27;s speaking and you nod your head up and down, that&#x27;s okay. Oh, yes, you&#x27;re right. But by head bowing, they&#x27;re talking about when greeting someone and you bow. Yes, you&#x27;re right. That is different, difference. You&#x27;re wrong. And the last line, people of the same gender. People of the same gender holding hands. Hmm. A sign of deep friendship and bonding. The Eastern, really? Okay. The Western, very strange for heterosexual and uncommonly seen. Ah, I see. Understand that that culture. Usually that is not a man&#x27;s, you know, Asians. Some people of the woman Asians hand to hand and walk the street because they are so friendly. So yeah, we understand that. But some Western guy said that is a little strange. Yeah, so but our culture understand that. Yeah. Because in our culture, the women, the middle school and high school students, they are so friendly and have a good relationship. So usually they will go to the toilet, they go together and they go to the street, walk the street, at the time they hand to hand. So yeah, that is not stranger in Asia. So the next one, which foreign gestures do you find most interesting?
+<span class="tutor">[Tutor]</span> Oh, I&#x27;m interested in, yeah, the good ad is smiling at the stranger and say hello because many Asian guy is so shy, so don&#x27;t say the hello or hello, good morning, etc. So usually, yeah, that is good culture and we have to learn about that culture. Are there any foreign gestures that irritate you? Yes, and I want to learn. Usually I use the head bowing or emphatic hand gesture, so it&#x27;s okay. And same gender holder hand is the if it&#x27;s two guys, yeah, because not, I&#x27;m not a woman. And direct eye contact is the sometimes that is a good gesture, but if I met first, yeah, they, that action make some fight. So yeah, we avoid that situation. But if I interview and have a good relationship, at that time eye contact is great because, because I carefully listen your language, your talk. So that&#x27;s a nice gesture for me.
+<span class="student">[Student]</span> Okay, well, that&#x27;s about it for time. I will send you the questions in just a bit. Any questions before I go?
+<span class="tutor">[Tutor]</span> Oh, no, I don&#x27;t have a question, teacher. Thank you for your class and have a nice weekend.
+<span class="student">[Student]</span> You too. Goodbye.
+<span class="tutor">[Tutor]</span> Okay, bye-bye.</div>
+        </div>
+    </div>
+    <div class="toast" id="toast">✅ 프롬프트가 복사되었습니다!</div>
+    <script>
+        const REVIEW_PROMPT="너는 나의 영어 회화 복습 파트너야. 오늘 내 전화영어 수업 내용을 기반으로 대화하면서 복습을 도와줘.\n\n[오늘 수업 전사 내용]\n[Student] Hello, teacher. Good evening. Good morning.\n[Tutor] Yeah, this is Belle. How are you doing today?\n[Student] Yeah, hello, Belle. Yeah, I'm doing great. I'm doing good. How are you today?\n[Tutor] Pretty good. Do you have any plans for the weekend?\n[Student] This weekend is so important because this weekend is the peak day of cherry blossom's bloom season. So maybe I guess there are so many people in the street. So, our family is also going to some small picnic. But yesterday, I heard that the forecast, the weather forecast, Saturday will be raining. So, I'm a little afraid. But we will go to a picnic and enjoy that. How about you? Do you have some special plans?\n[Tutor] Yeah, just probably enjoy if it's not raining, enjoy outside.\n[Student] Yes, yes. It's possible to enjoy rainy day.\n[Tutor] Yeah, and so are you able to look at the textbook today?\n[Student] Oh yes, no problem. Yeah, we have, we will go on page 17 and scenario 2, the second scenario.\n[Tutor] Heather?\n[Student] Yeah, 17, yes.\n[Tutor] Okay, so would you like to read the scenario?\n[Student] Oh yeah, no problem. Okay, there are two persons. The first people visiting representative from a head office in New York and second other people is manager of the Beijing branch. Okay, yeah, you have been sent to regional branch of your company to evaluate their ability to communicate with foreign client. Just a moment. You have been sent to regional branch of your company to evaluate their ability to communicate with foreign clients, you need to give feedback to the branch manager about the communication strategy they use with visiting customers. Try explaining the issue in a separate way by illustrating difference between the two cultures. Actually, I don't understand perfectly this paragraph. Just a moment. Maybe the manager of the Beijing branch company, Beijing branch, they, he need to evaluate from visiting representative from head office in New York. So, I'm so sorry, but could you explain more easily, easier, easier? Yes, because this sentence is difficult for me.\n[Tutor] So the representative from New York needs to give the manager of the Beijing branch feedback on how to communicate with Western customers.\n[Student] That is about the feedback. Give the feedback.\n[Tutor] He's evaluating and giving feedback for the Beijing branch manager.\n[Student] I see. Maybe the role A, the work in New York, is the HR headquarter, right?\n[Tutor] Yeah, there's a representative from New York.\n[Student] I see. Representative of the head office in New York.\n[Tutor] Okay, I see. And so giving advice to the Beijing branch on how to communicate with Western customers.\n[Student] Yeah, usually China's employees speak well, so maybe they have a good skill, but usually the Chinese people don't use the speak in front of the foreign people. They use just Chinese language. So sometimes the foreigner embrace that situation. So maybe if I give some feedback, yeah, I give some advice to about just use to give environment or language to foreign people. Today it is a little difficult to explain or read some situation. Anyway, yeah, it's all done.\n[Tutor] Okay, so yeah, they're just giving them communication tips for Western customers and different cultural differences.\n[Student] Yes, yes.\n[Tutor] Okay. Yes, would you like to look at the next page?\n[Student] Oh, yes, no problem. The next page. Oh, okay. Can I read the paragraph?\n[Tutor] Whenever you're ready.\n[Student] Yes, yes, yes. Rhetoric refer to human traffic ability to use words. Rhetoric. What is that? Rhetoric.\n[Tutor] Rhetoric. So rhetoric is the human's ability to use words, phrases, and power of language.\n[Student] One more.\n[Tutor] So it explains it in the sentence. Rhetoric means human's ability to use words, phrases, and language to talk to others.\n[Student] I see. It is kind of the language ability, right? Rhetoric. Rhetoric refers to human traffic ability to use words, parrots, and the total power of language to pursue other humans. Humans, however, are also very physically attuned. We respond to what we see in another person's face, body, mannerisms, gestures, and overall behavior. Non-verbal, without the use of language, communication is a significant component of how two people view each other. Maybe that paragraph explain about the gesture or action or with a language. Yeah, so maybe they, the next, they teach it to me the action or some body language or gesture. Yeah, yeah, yeah.\n[Tutor] So here we have a list of gestures. Would you like to read the interpretation and then give your interpretation?\n[Student] Oh, interpretation. Okay, the first line of the paragraph. Gesture, Eastern interpretation, Western interpretation, my interpretation. First, direct eye contact. Direct eye contact. The Easterns aggressive or rude. The Western attentive and honest. Okay, I'm really an Eastern, so sometimes it is possible to close to relationship, but usually if I meet the first time and eye contact, sometimes that is aggressive and rude. Yeah. For example, if I eye contact to meet first people, they feel rude and aggressive and sometimes we will fight physically. So, yeah, that is so careful in Eastern area.\n[Tutor] Okay.\n[Student] And one more, please.\n[Tutor] Yeah, and the second one.\n[Student] Second one. Smiling at stranger and saying hello. Oh, usually a bit of a curt since that two people have never formally met. But Western interpretation, signaling outgoingness, friendliness, and democratic mind. Yeah, I agree with that. I live the Eastern, but these days the Eastern people also change, slowly change. So yeah, that is a good culture. Sometimes if we met an elevator, yeah, some Western guys is smiling and say hello. Yeah, that is a good, great culture. So my interpretation is same. Yeah, I learned to that. Yeah, sometimes you said, \"Enjoy day, enjoy your day,\" and go out, go elevator, go out elevator. So yeah, that's so nice. Mm-hmm. The Western culture.\n[Tutor] Yes. And the next one?\n[Student] Next one? Emphatic hand gesture. Emphatic. Sorry, could you explain the emphatic?\n[Tutor] Emphatic. So maybe emphasis.\n[Student] Emphatic. What's the meaning of emphatic?\n[Tutor] So when you emphasize something, so when you're speaking and your hands move.\n[Student] Hand move. Hand move. Okay. Usually a bit too dramatic and concise, emotional. But Western interpretation, objectively as could you even show the energy and emphasis of the speaker. In my case, it is good to use the gesture. So sometimes I have interview to my co-worker in audit work. So at the time, if I use the gesture hand or emphatic hand gesture, that is so efficient, efficient. So I love that. Mm-hmm. And head bowing. The second line. Head bowing. Very reverent as polite or hallmark of their culture. Reverent and polite is a bit, a bit so subservient and more appropriate for religious, contact, or not at all.\n[Tutor] A bit subservient.\n[Student] Appreciate.\n[Tutor] A subservient, yeah.\n[Student] A bit subservient. What's the meaning here? Oh, today there is a lot of words, the difficult words. Yeah, sorry.\n[Tutor] Yeah, go on. So subservient is like below someone.\n[Student] Below.\n[Tutor] Like a servant.\n[Student] Below someone and more appropriate, more appropriate, appropriate. Yeah. Context or not at all. Hmm. Oh, head bowing. Yeah, that is also important gesture in my case. Usually if I listen something speaking, at the time I'm head bowing because that means, \"Yes, I understand.\" Yeah, or, \"Yes, you speaking it right.\" So usually the head bowing is the gesture about how understanding to speaker speaking or not understanding. Nodding. Yeah, nodding is different.\n[Tutor] Yes. So putting your head up and down, that is different from head bowing.\n[Student] Yeah, you're right. The left side, right side, or upside or downside is different. But usually I use the upside or downside head bowing.\n[Tutor] But that isn't considered head bowing. So just bowing your head when greeting somebody. Nodding when somebody is talking is okay.\n[Student] Okay, could you explain more? So when somebody's speaking and you nod your head up and down, that's okay. Oh, yes, you're right. But by head bowing, they're talking about when greeting someone and you bow. Yes, you're right. That is different, difference. You're wrong. And the last line, people of the same gender. People of the same gender holding hands. Hmm. A sign of deep friendship and bonding. The Eastern, really? Okay. The Western, very strange for heterosexual and uncommonly seen. Ah, I see. Understand that that culture. Usually that is not a man's, you know, Asians. Some people of the woman Asians hand to hand and walk the street because they are so friendly. So yeah, we understand that. But some Western guy said that is a little strange. Yeah, so but our culture understand that. Yeah. Because in our culture, the women, the middle school and high school students, they are so friendly and have a good relationship. So usually they will go to the toilet, they go together and they go to the street, walk the street, at the time they hand to hand. So yeah, that is not stranger in Asia. So the next one, which foreign gestures do you find most interesting?\n[Tutor] Oh, I'm interested in, yeah, the good ad is smiling at the stranger and say hello because many Asian guy is so shy, so don't say the hello or hello, good morning, etc. So usually, yeah, that is good culture and we have to learn about that culture. Are there any foreign gestures that irritate you? Yes, and I want to learn. Usually I use the head bowing or emphatic hand gesture, so it's okay. And same gender holder hand is the if it's two guys, yeah, because not, I'm not a woman. And direct eye contact is the sometimes that is a good gesture, but if I met first, yeah, they, that action make some fight. So yeah, we avoid that situation. But if I interview and have a good relationship, at that time eye contact is great because, because I carefully listen your language, your talk. So that's a nice gesture for me.\n[Student] Okay, well, that's about it for time. I will send you the questions in just a bit. Any questions before I go?\n[Tutor] Oh, no, I don't have a question, teacher. Thank you for your class and have a nice weekend.\n[Student] You too. Goodbye.\n[Tutor] Okay, bye-bye.\n\n[AI 피드백]\n안녕하세요, 학습자님! 오늘도 유익하고 즐거운 영어 대화 시간이었습니다. 특히 동서양 문화 차이에 대한 깊이 있는 토론이 인상 깊었어요. 복잡한 개념들을 이해하고 자신의 경험에 비추어 설명하려는 노력이 아주 돋보였습니다.\n\n---\n\n### **1. 📊 오늘의 대화 요약 (Summary)**\n\n오늘은 주말 벚꽃 나들이 계획에 대한 가벼운 대화로 시작하여, 교재의 비즈니스 시나리오(뉴욕 본사 직원이 베이징 지점의 외국인 고객 소통 능력을 평가하고 피드백을 주는 상황)를 다루었습니다. 이어서 수사학(rhetoric)과 비언어적 소통의 중요성에 대해 논의했으며, 특히 직접적인 눈 맞춤, 낯선 사람에게 미소 짓기, 과장된 손짓, 고개 숙여 인사하기, 동성 간 손잡기 등 다양한 제스처의 동서양 문화별 해석과 학습자님의 개인적인 의견을 활발하게 공유했습니다.\n\n### **2. 💬 유창성 업그레이드 (Fluency & Natural Flow)**\n\n의미 전달은 충분히 잘 되었지만, 원어민들이 더 자연스럽게 쓰는 표현으로 다듬으면 유창성이 한층 더 향상될 수 있습니다.\n\n1.  **❌ 학습자 원문 (As Said):** \"This weekend is so important because this weekend is the peak day of cherry blossom's bloom season.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"This weekend is special because it's the peak of cherry blossom season.\"\n    *   **💎 비즈니스 표현 (Professional):** \"This weekend marks the peak of the cherry blossom season, making it a particularly significant period.\"\n    *   **💡 코칭 포인트:** 'important' 대신 'special'을 사용하여 개인적인 의미를 더하고, 'peak day of bloom season' 대신 'peak of cherry blossom season'으로 간결하게 표현할 수 있습니다.\n\n2.  **❌ 학습자 원문 (As Said):** \"Usually China's employees speak well, so maybe they have a good skill, but usually the Chinese people don't use the speak in front of the foreign people.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"Chinese employees usually speak well, so they might have good skills, but often Chinese people don't speak English in front of foreigners.\"\n    *   **💎 비즈니스 표현 (Professional):** \"While Chinese employees generally possess strong communication skills, they often refrain from speaking English in the presence of foreign individuals.\"\n    *   **💡 코칭 포인트:** 'China's employees' 대신 'Chinese employees'가 더 자연스럽고, 'don't use the speak' 대신 'don't speak'이 간결합니다. 'foreign people' 대신 'foreigners'가 일반적인 표현입니다. 'skill'은 보통 복수형 'skills'로 사용될 때가 많습니다.\n\n3.  **❌ 학습자 원문 (As Said):** \"So usually the head bowing is the gesture about how understanding to speaker speaking or not understanding.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"So usually, head bowing is a gesture that shows whether you understand what the speaker is saying or not.\"\n    *   **💎 비즈니스 표현 (Professional):** \"Typically, head bowing serves as a non-verbal cue indicating comprehension or lack thereof regarding the speaker's message.\"\n    *   **💡 코칭 포인트:** 'how understanding to speaker speaking or not understanding'은 문장 구조가 복잡하고 어색합니다. 'that shows whether you understand what the speaker is saying or not'처럼 명확하게 풀어서 설명하는 것이 훨씬 자연스럽습니다.\n\n### **3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)**\n\n이번 대화에서는 **관사 (a/an/the)** 사용에 있어 아쉬운 부분이 자주 보였습니다. 명사를 사용할 때 어떤 관사를 써야 할지 한 번 더 고민해 보면 정확성이 크게 향상될 거예요.\n\n| ❌ 학습자 원문 (As Said)                                                                  | ✅ 교정 예시 (Corrected)                                                                 |\n| :--------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------- |\n| \"It's possible to enjoy rainy day.\"                                                      | \"It's possible to enjoy **a** rainy day.\"                                                |\n| \"So, our family is also going to some small picnic.\"                                     | \"So, our family is also going to **a** small picnic.\"                                    |\n| \"The first people visiting representative from a head office in New York and second other people is manager of the Beijing branch.\" | \"The first **person is a** visiting representative from **the** head office in New York and **the** second **person** is **the** manager of the Beijing branch.\" |\n\n*   **📌 핵심 규칙:** 셀 수 있는 단수 명사 앞에는 일반적으로 **a/an** 또는 **the**와 같은 관사가 필요합니다. 특정하지 않은 명사 앞에는 `a/an`을, 특정하거나 모두가 아는 명사 앞에는 `the`를 사용합니다. 또한, 'people'은 복수형 명사이므로 'persons' 대신 'people'을 사용하는 것이 더 자연스럽습니다.\n\n*   **🔁 따라 읽기:**\n    🗣️ \"It's possible to enjoy **a** rainy day.\"\n    🗣️ \"Our family is also going to **a** small picnic.\"\n    🗣️ \"The first **person is a** visiting representative from **the** head office in New York.\"\n\n### **4. 📗 어휘 확장 (Vocabulary Vault)**\n\n이번 수업에서 다룬 내용과 학습자님의 비즈니스 환경에 유용한 어휘 5가지입니다.\n\n1.  **interpret** /ɪnˈtɜːrprɪt/ (동사)\n    *   **뜻:** 해석하다, 이해하다\n    *   **실전 예문:** We need to **interpret** the market data carefully before making investment decisions.\n\n2.  **rhetoric** /ˈrɛtərɪk/ (명사)\n    *   **뜻:** 수사법, 웅변술, 설득력 있는 언어 사용\n    *   **실전 예문:** The CEO's powerful **rhetoric** inspired the employees during the quarterly meeting.\n\n3.  **attuned** /əˈtuːnd/ (형용사)\n    *   **뜻:** ~에 익숙한, ~을 잘 이해하는, 조율된\n    *   **실전 예문:** A good sales manager must be **attuned** to the needs of their clients.\n\n4.  **subservient** /səbˈsɜːrviənt/ (형용사)\n    *   **뜻:** 굴종적인, 비굴한; 부차적인\n    *   **실전 예문:** We should avoid creating a corporate culture where employees feel **subservient** to their superiors.\n\n5.  **hallmark** /ˈhɔːlmɑːrk/ (명사)\n    *   **뜻:** 특징, 전형적인 표시; (품질 보증) 각인\n    *   **실전 예문:** Innovation is a **hallmark** of our company's success in the energy sector.\n\n### **5. 📝 실전 복습 챌린지 (Practice)**\n\n오늘 배운 표현과 문법을 활용하여 다음 상황을 영어로 작문해 보세요.\n\n1.  **쉬움:** 이번 주말은 날씨가 좋아서 야외 활동하기에 완벽해요.\n    *   **모범 답안:** This weekend is perfect for outdoor activities because of the good weather.\n\n2.  **중간:** 저는 동료들과의 관계에서 비언어적 소통을 해석하는 데 익숙해지려고 노력하고 있습니다.\n    *   **모범 답안:** I'm trying to become **attuned** to **interpreting** non-verbal communication in my relationships with colleagues.\n\n3.  **어려움:** 우리 팀은 설득력 있는 언어(rhetoric)를 사용하여 고객들에게 우리의 새로운 투자 전략을 명확하게 설명해야 합니다.\n    *   **모범 답안:** Our team needs to use effective **rhetoric** to clearly explain our new investment strategy to clients.\n\n### **6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)**\n\n*   ✨ **Good Job:** \"I'm really an Eastern, so sometimes it is possible to close to relationship, but usually if I meet the first time and eye contact, sometimes that is aggressive and rude.\"\n    *   **코칭 포인트:** 이 문장은 \"I'm really an Eastern\" 부분에서 약간의 어색함이 있지만, 이어서 자신의 문화적 배경과 경험을 바탕으로 'direct eye contact'에 대한 동양적 해석을 아주 상세하고 설득력 있게 설명했습니다. 복잡한 뉘앙스를 전달하려는 노력이 돋보였고, 'close to relationship'과 같은 표현으로 '친밀한 관계'를 표현하려는 시도도 훌륭했습니다.\n\n*   🚀 **내일의 한 문장:** \"Could you share your interpretation of the current market trends?\"\n    *   **활용 표현:** `interpretation` (어휘 확장), `share your interpretation` (비즈니스 상황에서 의견을 묻는 자연스러운 표현)\n    *   **미션:** 다음 수업 시작 시 튜터에게 이 문장으로 대화를 시작하며, 오늘 배운 어휘 `interpretation`을 자연스럽게 사용해 보세요.\n\n---\n\n### **[성과 지표]**\n\n*   **유창성 점수:** 7/10점\n*   **근거:** 학습자님은 다양한 주제에 대해 막힘없이 자신의 의견을 표현하려는 의지가 매우 강합니다. 문장이 다소 길어지거나 복잡해질 때 어색한 표현이나 문법적 오류가 발생하기도 하지만, 의미 전달에는 전혀 문제가 없으며 대화의 흐름을 끊지 않고 이어가는 능력이 뛰어납니다. 특히 어려운 어휘나 개념을 만나면 주저하지 않고 질문하여 이해하려는 적극적인 태도가 인상 깊었습니다.\n*   **다음 수업 '원포인트 액션 플랜':** \"셀 수 있는 단수 명사 앞에 관사 (a/an/the)를 사용하는 습관 들이기\"\n    *   문장을 말하기 전, 명사 앞에 어떤 관사가 필요한지 0.5초만 더 생각하는 연습을 해보세요. 특히 'a'를 놓치는 경우가 많으니 의식적으로 'a'를 붙여보는 훈련을 추천합니다.\n\n위 내용을 바탕으로:\n1. 먼저 오늘 수업에서 내가 틀렸거나 어색했던 표현을 하나 골라서, 관련된 상황을 영어로 질문해줘.\n2. 내가 영어로 대답하면, 자연스러운지 확인하고 더 나은 표현이 있으면 알려줘.\n3. 특히 \"반복 실수 패턴\"에서 지적된 부분을 집중적으로 연습시켜줘.\n4. 이런 식으로 오늘 배운 표현들을 하나씩 복습하자.\n5. 한국어 설명은 필요할 때만 간단히, 대화는 최대한 영어로 진행해줘.\n\n그럼 시작하자!";
+        function startReview(){navigator.clipboard.writeText(REVIEW_PROMPT).then(()=>{showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)}).catch(()=>{const t=document.createElement('textarea');t.value=REVIEW_PROMPT;document.body.appendChild(t);t.select();document.execCommand('copy');document.body.removeChild(t);showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)})}
+        function showToast(){const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500)}
+        function switchTab(n){document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',n==='feedback'?i===0:i===1));document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));document.getElementById('tab-'+n).classList.add('active')}
+    </script>
+</body>
+</html>
