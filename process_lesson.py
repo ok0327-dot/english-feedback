@@ -695,8 +695,12 @@ def generate_feedback(transcript):
 - 각 섹션은 서로 다른 관점을 다뤄야 합니다. 같은 예문을 여러 섹션에서 반복하지 마세요.
 - 표준 영어만 가르치세요. 비표준 표현(funner 등)은 포함하지 마세요."""
 
-    prompt = f"""아래 [전화영어 전사 내용]을 분석하여 6가지 섹션의 피드백을 한국어로 작성해 주세요.
+    prompt = f"""아래 [전화영어 전사 내용]을 분석하여 7가지 섹션의 피드백을 한국어로 작성해 주세요.
 (영어 예문은 영어로 유지)
+
+**0. 📌 Topic**
+- 오늘 수업의 핵심 주제를 **영어로** 짧게 한 줄 요약 (예: "Discussing Pros and Cons of Business Travel")
+- 반드시 "Topic: ..." 형식으로 작성
 
 **1. 📊 오늘의 대화 요약 (Summary)**
 - 오늘 **구체적으로** 무슨 주제를 다뤘는지 2~3줄로 정리 (예: "business travel의 장단점에 대해 읽고 토론", "주말 계획에 대해 자유 대화")
@@ -934,6 +938,68 @@ def _colorize_transcript(escaped_transcript):
     return result
 
 
+def extract_metadata(feedback):
+    """피드백 텍스트에서 영어 수업 제목을 추출."""
+    topic = ""
+    lines = feedback.split("\n")
+
+    for i, line in enumerate(lines):
+        # "Topic" 키워드가 있는 줄 찾기
+        if "Topic" not in line and "📌" not in line:
+            continue
+
+        # 같은 줄에 "Topic: 내용" 형태인 경우
+        m = re.search(r"Topic\s*[:：]\s*(.+)", line)
+        if m:
+            topic = m.group(1).strip().strip('"\'*')
+            break
+
+        # 헤더 줄이면 다음 비어있지 않은 줄에서 추출
+        for j in range(i + 1, min(i + 4, len(lines))):
+            next_line = lines[j].strip()
+            if not next_line:
+                continue
+            if re.match(r"^(\*\*\d|#{1,3}\s)", next_line):
+                break  # 다음 섹션 시작
+            # "Topic: ..." 또는 "- ..." 형태
+            m2 = re.search(r"Topic\s*[:：]\s*(.+)", next_line)
+            if m2:
+                topic = m2.group(1).strip().strip('"\'*')
+            else:
+                topic = re.sub(r"^[-•]\s*", "", next_line).strip().strip('"\'*')
+            break
+        break
+
+    return {"topic": topic[:80]}
+
+
+def save_metadata(docs_dir, date_slug, meta):
+    """날짜별 메타데이터를 docs/metadata.json에 저장."""
+    meta_path = os.path.join(docs_dir, "metadata.json")
+    data = {}
+    if os.path.exists(meta_path):
+        with open(meta_path, "r", encoding="utf-8") as f:
+            try:
+                data = json.load(f)
+            except json.JSONDecodeError:
+                data = {}
+    data[date_slug] = meta
+    with open(meta_path, "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+
+
+def load_metadata(docs_dir):
+    """docs/metadata.json에서 전체 메타데이터 로드."""
+    meta_path = os.path.join(docs_dir, "metadata.json")
+    if os.path.exists(meta_path):
+        with open(meta_path, "r", encoding="utf-8") as f:
+            try:
+                return json.load(f)
+            except json.JSONDecodeError:
+                return {}
+    return {}
+
+
 def deploy_review_page(page_html, date_str, lesson_date=None):
     """
     HTML을 docs/ 폴더에 저장 → 인덱스 갱신 → git push → GitHub Pages에 자동 배포.
@@ -966,14 +1032,17 @@ def deploy_review_page(page_html, date_str, lesson_date=None):
 
 
 def _update_index_page(docs_dir):
-    """복습 기록 전체 목록(index.html)을 최신순으로 갱신. 숨기기 버튼 포함."""
+    """복습 기록 전체 목록(index.html)을 최신순으로 갱신. 영어 제목 + 숨기기 버튼 포함."""
 
     pages = sorted(glob.glob(os.path.join(docs_dir, "2*.html")), reverse=True)
+    metadata = load_metadata(docs_dir)
 
     items_html = ""
     for p in pages:
         name = os.path.basename(p).replace(".html", "")
-        items_html += f'        <div class="item" data-date="{name}"><a href="{os.path.basename(p)}" class="link">{name}</a><button class="del-btn" onclick="hideReview(\'{name}\',this)" title="숨기기">✕</button></div>\n'
+        topic = metadata.get(name, {}).get("topic", "")
+        topic_html = f'<span class="topic">{html_module.escape(topic)}</span>' if topic else ""
+        items_html += f'        <div class="item" data-date="{name}"><a href="{os.path.basename(p)}" class="link"><span class="date">{name}</span>{topic_html}</a><button class="del-btn" onclick="hideReview(\'{name}\',this)" title="숨기기">✕</button></div>\n'
 
     index = f"""<!DOCTYPE html>
 <html lang="ko">
@@ -986,13 +1055,16 @@ def _update_index_page(docs_dir):
         *{{margin:0;padding:0;box-sizing:border-box}}
         body{{font-family:'Noto Sans KR',sans-serif;background:#0f0f13;color:#e4e4e7;min-height:100vh;padding:48px 24px}}
         h1{{text-align:center;font-size:28px;margin-bottom:40px;color:#f1f5f9}}
-        .list{{max-width:480px;margin:0 auto;display:flex;flex-direction:column;gap:8px}}
+        .list{{max-width:580px;margin:0 auto;display:flex;flex-direction:column;gap:8px}}
         .item{{display:flex;align-items:center;gap:8px}}
-        .link{{flex:1;display:block;padding:16px 20px;background:#1a1a24;border-radius:10px;color:#cbd5e1;text-decoration:none;font-size:15px;transition:all .2s;border:1px solid transparent}}
+        .link{{flex:1;display:flex;flex-direction:column;gap:4px;padding:16px 20px;background:#1a1a24;border-radius:10px;color:#cbd5e1;text-decoration:none;font-size:15px;transition:all .2s;border:1px solid transparent}}
         .link:hover{{background:#262636;border-color:rgba(56,189,248,.2);color:#38bdf8}}
+        .date{{font-weight:600}}
+        .topic{{font-size:13px;color:#64748b;font-style:italic}}
+        .link:hover .topic{{color:#94a3b8}}
         .del-btn{{width:40px;height:40px;background:#1a1a24;border:1px solid transparent;border-radius:10px;color:#64748b;font-size:16px;cursor:pointer;transition:all .2s;flex-shrink:0}}
         .del-btn:hover{{background:#2a1a1e;border-color:rgba(239,68,68,.3);color:#ef4444}}
-        .restore{{display:none;text-align:center;margin-top:16px;max-width:480px;margin-left:auto;margin-right:auto}}
+        .restore{{display:none;text-align:center;margin-top:16px;max-width:580px;margin-left:auto;margin-right:auto}}
         .restore a{{color:#64748b;font-size:13px;cursor:pointer;text-decoration:underline;text-underline-offset:3px}}
         .restore a:hover{{color:#94a3b8}}
         .toast{{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#38bdf8;padding:14px 28px;border-radius:12px;font-size:14px;font-weight:500;border:1px solid rgba(56,189,248,.2);box-shadow:0 8px 32px rgba(0,0,0,.4);opacity:0;transition:all .4s cubic-bezier(.16,1,.3,1);z-index:1000}}
@@ -1238,6 +1310,11 @@ def main():
 
             # ━━ [4.5단계] 피드백 품질 검토 (인용 정확성, 화자 혼동, 누락 보완) ━━
             feedback = review_feedback(transcript, feedback)
+
+            # ━━ [4.6단계] 인덱스용 메타데이터 추출 & 저장 ━━
+            meta = extract_metadata(feedback)
+            slug = (lesson_date or now).strftime("%Y-%m-%d")
+            save_metadata("docs", slug, meta)
 
             # ━━ [5단계] 복습 페이지 생성 & 배포 ━━
             page_html = generate_review_page(transcript, feedback, filename, duration, date_str)
