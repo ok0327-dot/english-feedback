@@ -1035,7 +1035,7 @@ def _markdown_to_html(md_text):
     in_table = False
 
     for line in lines:
-        if re.match(r"^\|[-\s|]+\|$", line):
+        if re.match(r"^\|[-:\s|]+\|$", line):
             continue
         if line.startswith("|") and line.endswith("|"):
             cells = [c.strip() for c in line.strip("|").split("|")]
@@ -1114,7 +1114,7 @@ def send_email(feedback, filename, duration, review_url, date_str=None):
     in_table = False
 
     for line in feedback_lines:
-        if re.match(r"^\|[-\s|]+\|$", line):
+        if re.match(r"^\|[-:\s|]+\|$", line):
             continue
         if line.startswith("|") and line.endswith("|"):
             cells = [c.strip() for c in line.strip("|").split("|")]
