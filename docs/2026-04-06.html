@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전화영어 복습 - 2026년 04월 06일</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Noto Sans KR',sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.75;min-height:100vh}
+        .header{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);border-bottom:1px solid rgba(255,255,255,.06);padding:48px 24px 40px;text-align:center}
+        .header-date{font-size:13px;color:#94a3b8;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+        .header h1{font-size:28px;font-weight:700;color:#f1f5f9;margin-bottom:16px}
+        .header-meta{display:flex;justify-content:center;gap:24px;font-size:14px;color:#64748b}
+        .header-meta span{display:flex;align-items:center;gap:6px}
+        .cta-section{text-align:center;padding:40px 24px}
+        .cta-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:linear-gradient(135deg,#38bdf8,#818cf8);color:#fff;font-size:16px;font-weight:600;font-family:'Noto Sans KR',sans-serif;border:none;border-radius:50px;cursor:pointer;transition:all .3s;text-decoration:none;box-shadow:0 4px 24px rgba(56,189,248,.25)}
+        .cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(56,189,248,.35)}
+        .cta-btn svg{width:20px;height:20px}
+        .cta-sub{margin-top:12px;font-size:13px;color:#64748b}
+        .toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#38bdf8;padding:14px 28px;border-radius:12px;font-size:14px;font-weight:500;border:1px solid rgba(56,189,248,.2);box-shadow:0 8px 32px rgba(0,0,0,.4);opacity:0;transition:all .4s cubic-bezier(.16,1,.3,1);z-index:1000}
+        .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+        .container{max-width:720px;margin:0 auto;padding:0 24px 80px}
+        .tabs{display:flex;gap:4px;background:#1a1a24;padding:4px;border-radius:12px;margin-bottom:32px}
+        .tab{flex:1;padding:12px;text-align:center;font-size:14px;font-weight:500;color:#64748b;background:0 0;border:none;border-radius:8px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all .2s}
+        .tab.active{background:#262636;color:#f1f5f9}
+        .tab-content{display:none}.tab-content.active{display:block}
+        .feedback h2{font-size:18px;font-weight:700;color:#f1f5f9;margin:36px 0 16px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.06)}
+        .feedback h2:first-child{margin-top:0}
+        .feedback p{margin:8px 0;color:#cbd5e1}
+        .feedback .item{padding:6px 0 6px 16px;border-left:2px solid #334155;margin:6px 0;color:#cbd5e1}
+        .feedback .numbered{padding:8px 0 8px 16px;color:#cbd5e1}
+        .feedback .numbered strong{color:#38bdf8}
+        .feedback strong{color:#f1f5f9}
+        .feedback code{background:#1e293b;padding:2px 8px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#38bdf8}
+        .feedback table{width:100%;border-collapse:collapse;margin:12px 0}
+        .feedback th,.feedback td{padding:10px 14px;text-align:left;border-bottom:1px solid #262636}
+        .feedback th{color:#94a3b8;font-weight:500;font-size:13px}
+        .feedback td{color:#cbd5e1}
+        .arrow{color:#38bdf8;font-weight:700}
+        .transcript{background:#1a1a24;border-radius:12px;padding:28px;font-size:14px;line-height:2;color:#94a3b8;white-space:pre-wrap;word-break:break-word;font-family:'JetBrains Mono','Noto Sans KR',monospace}
+        .transcript .tutor{color:#38bdf8}
+        .transcript .student{color:#a78bfa}
+        @media(max-width:640px){.header{padding:32px 16px}.header h1{font-size:22px}.cta-btn{padding:14px 28px;font-size:15px}.container{padding:0 16px 60px}}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-date">2026년 04월 06일</div>
+        <h1>📚 전화영어 복습</h1>
+        <div class="header-meta">
+            <span>⏱ 19분 25초</span>
+            <span>🎙 전화영어_025180304_20260406080037.m4a</span>
+        </div>
+    </div>
+    <div class="cta-section">
+        <button class="cta-btn" onclick="startReview()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Gemini에서 복습 대화 시작하기
+        </button>
+        <div class="cta-sub">클릭하면 프롬프트가 복사되고 Gemini가 열립니다</div>
+    </div>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('feedback')">📋 AI 피드백</button>
+            <button class="tab" onclick="switchTab('transcript')">🎙 수업 전사</button>
+        </div>
+        <div id="tab-feedback" class="tab-content active">
+            <div class="feedback"><p>따뜻하고 실용적인 영어 코치 Joey입니다!</p>
+<p>오늘 수업도 활기차게 시작해주셔서 정말 좋았어요. 주말 이야기도 흥미로웠고, 교재 내용에 대해서도 깊이 있는 질문과 답변을 주고받으며 알찬 시간을 보냈습니다. 특히 여행 시 발생할 수 있는 다양한 위험 요소에 대해 진지하게 고민하고 대비하는 모습이 인상 깊었어요.</p>
+<br>
+<br>
+<p><strong>0. 📌 Topic</strong></p>
+<p>Topic: Discussing traveler concerns and cultural differences in apologies.</p>
+<br>
+<p><strong>1. 📊 오늘의 대화 요약 (Summary)</strong></p>
+<p>오늘은 주말에 있었던 벚꽃 구경 이야기로 시작하여, 교재에서 제시된 여행객들의 주요 걱정거리(개인 안전, 의료, 정부 불안정성 등)에 대해 심도 있게 토론했습니다. 또한, 인도와 한국의 사과 제스처 문화 차이에 대해서도 알아보는 시간을 가졌습니다.</p>
+<br>
+<p><strong>2. 💬 유창성 업그레이드 (Fluency & Natural Flow)</strong></p>
+<br>
+<div class="numbered"><strong>1.</strong>  <strong>❌ 학습자 원문 (As Said):</strong> "I didn't have to work at any market"</div>
+<p>    *   <strong>✅ 자연스러운 표현 (Natural):</strong> "I didn't have any work."</p>
+<p>    *   <strong>💎 비즈니스 표현 (Professional):</strong> "I had no work commitments."</p>
+<p>    *   <strong>💡 코칭 포인트:</strong> "At any market"은 문법적으로 맞지만, 전반적으로 일이 없었다는 의미일 때는 다소 특정하게 들릴 수 있습니다. "I didn't have any work"는 일이 없었다는 것을 표현하는 더 흔하고 자연스러운 방식입니다. 만약 특정 '시장'에서의 일을 의미한다면 "I didn't have to work at the market"이라고 할 수 있습니다.</p>
+<br>
+<div class="numbered"><strong>2.</strong>  <strong>❌ 학습자 원문 (As Said):</strong> "So your son really is obviously an expert at this."</div>
+<p>    *   <strong>✅ 자연스러운 표현 (Natural):</strong> "Your son is clearly an expert at this!"</p>
+<p>    *   <strong>💎 비즈니스 표현 (Professional):</strong> "Your son demonstrates remarkable proficiency in this area."</p>
+<p>    *   <strong>💡 코칭 포인트:</strong> "really"와 "obviously"를 함께 사용하면 문장이 다소 장황하거나 불필요하게 반복되는 느낌을 줄 수 있습니다. "Clearly"나 단순히 "obviously" (really 없이)를 사용하면 같은 강한 의미를 전달하면서도 더 간결하고 자연스럽게 들립니다.</p>
+<br>
+<div class="numbered"><strong>3.</strong>  <strong>❌ 학습자 원문 (As Said):</strong> "I still understand." (인도 문화 설명을 들은 후, 이해가 잘 안 되는 상황)</div>
+<p>    *   <strong>✅ 자연스러운 표현 (Natural):</strong> "I still don't quite understand." 또는 "I'm still a bit confused."</p>
+<p>    *   <strong>💎 비즈니스 표현 (Professional):</strong> "I'm still seeking clarification on that point."</p>
+<p>    *   <strong>💡 코칭 포인트:</strong> "I still understand"는 '여전히 이해하고 있다'는 긍정적인 의미로 들릴 수 있습니다. 하지만 문맥상 '아직 완전히 이해하지 못했다'는 의미를 전달하고 싶을 때는 부정형인 "I still don't understand" 또는 "I'm still a bit confused"와 같이 표현하는 것이 더 자연스럽습니다.</p>
+<br>
+<p><strong>3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)</strong></p>
+<br>
+<p>이번 수업에서는 <strong>관사 (a/an/the)</strong> 사용에 대한 연습이 필요해 보입니다. 특정 대상을 지칭할 때 'the'를 사용하거나, 불특정한 대상을 처음 언급할 때 'a/an'을 사용하는 규칙을 좀 더 명확히 익히면 좋습니다.</p>
+<br>
+<table>
+<tr><th>❌ 원문 (As Said)</th><th>✅ 교정 예시 (Corrected)</th></tr>
+<tr><td>"I'm a little tired, a little bit tired, but it's okay."</td><td>"I'm a little tired, a little bit tired, but it's <strong>all</strong> okay."</td></tr>
+<tr><td>"So that's a beautiful scene for me."</td><td>"So that's <strong>a</strong> beautiful scene for me."</td></tr>
+<tr><td>"So usually we take some medicine, emergency medicine."</td><td>"So usually we take some <strong>emergency</strong> medicine."</td></tr>
+<tr><td>"Because always we think about the emergency situation."</td><td>"Because we always think about <strong>emergency situations</strong>."</td></tr>
+<tr><td>"So 52% is more than half have experienced the issue of their medical."</td><td>"So 52% is more than half <strong>who</strong> have experienced medical issues."</td></tr>
+<tr><td>"Maybe that step and the weight to the toe is important, right?"</td><td>"Maybe <strong>the</strong> step and <strong>the</strong> weight on the toe is important, right?"</td></tr>
+<tr><td>"And stand up, so one toe is the direction one way, and other toe is the direction another way, right?"</td><td>"And stand up, so one toe is pointing one way, and <strong>the</strong> other toe is pointing another way, right?"</td></tr>
+</table>
+<br>
+<p>*   <strong>📌 핵심 규칙:</strong> 명사를 처음 소개하거나 불특정한 것을 말할 때는 'a/an'을, 이미 언급되었거나 모두가 아는 특정한 것을 말할 때는 'the'를 사용합니다. 때로는 복수형 명사나 일반적인 개념 앞에서는 관사를 생략하기도 합니다.</p>
+<br>
+<p>*   <strong>🔁 따라 읽기:</strong></p>
+<p>    🗣️ "I'm a little tired, but it's all okay."</p>
+<p>    🗣️ "Because we always think about emergency situations."</p>
+<p>    🗣️ "Maybe the step and the weight on the toe is important, right?"</p>
+<br>
+<p><strong>4. 📗 어휘 확장 (Vocabulary Vault)</strong></p>
+<br>
+<div class="numbered"><strong>1.</strong>  <strong>concern</strong> /kənˈsɜːrn/ (명사)</div>
+<p>    *   뜻: 걱정, 우려, 염려</p>
+<p>    *   실전 예문: Investor <strong>concerns</strong> about market volatility are growing.</p>
+<br>
+<div class="numbered"><strong>2.</strong>  <strong>instability</strong> /ˌɪnstəˈbɪləti/ (명사)</div>
+<p>    *   뜻: 불안정, 불안정성</p>
+<p>    *   실전 예문: Political <strong>instability</strong> in the region could impact our energy supply.</p>
+<br>
+<div class="numbered"><strong>3.</strong>  <strong>infrastructure</strong> /ˈɪnfrəˌstrʌktʃər/ (명사)</div>
+<p>    *   뜻: 사회 기반 시설 (도로, 통신망 등)</p>
+<p>    *   실전 예문: Investing in modern <strong>infrastructure</strong> is crucial for economic growth.</p>
+<br>
+<div class="numbered"><strong>4.</strong>  <strong>disadvantage</strong> /ˌdɪsədˈvæntɪdʒ/ (명사)</div>
+<p>    *   뜻: 불리한 점, 불이익</p>
+<p>    *   실전 예문: Not speaking the local language can put you at a significant <strong>disadvantage</strong> when traveling.</p>
+<br>
+<div class="numbered"><strong>5.</strong>  <strong>offensive</strong> /əˈfɛnsɪv/ (형용사)</div>
+<p>    *   뜻: 불쾌한, 모욕적인</p>
+<p>    *   실전 예문: Making such a comment in a professional setting can be highly <strong>offensive</strong>.</p>
+<br>
+<p><strong>5. 📝 실전 복습 챌린지 (Practice)</strong></p>
+<br>
+<div class="numbered"><strong>1.</strong>  <strong>[쉬운 문제]</strong></div>
+<p>    *   <strong>상황:</strong> 당신은 오늘 아침에 약간 피곤했지만 괜찮다고 말하고 싶습니다.</p>
+<p>    *   <strong>영작:</strong> (오늘 배운 자연스러운 표현을 활용하여)</p>
+<p>    *   <strong>모범 답안:</strong> I'm a little tired this morning, but it's all okay.</p>
+<br>
+<div class="numbered"><strong>2.</strong>  <strong>[중간 문제]</strong></div>
+<p>    *   <strong>상황:</strong> 해외 출장 중 예상치 못한 상황에 대비하는 것이 중요하다고 강조하고 싶습니다.</p>
+<p>    *   <strong>영작:</strong> (오늘 배운 문법 규칙과 어휘를 활용하여)</p>
+<p>    *   <strong>모범 답안:</strong> It's important to prepare for emergency situations when traveling abroad.</p>
+<br>
+<div class="numbered"><strong>3.</strong>  <strong>[어려운 문제]</strong></div>
+<p>    *   <strong>상황:</strong> 어떤 국가의 정치적 불안정성이 투자에 큰 우려 사항이 될 수 있다고 설명하고 싶습니다.</p>
+<p>    *   <strong>영작:</strong> (오늘 배운 어휘와 비즈니스 표현을 활용하여)</p>
+<p>    *   <strong>모범 답안:</strong> Political <strong>instability</strong> in a country can be a significant <strong>concern</strong> for investors.</p>
+<br>
+<p><strong>6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)</strong></p>
+<br>
+<p>*   ✨ <strong>Good Job:</strong> "I'm pleased to talk with you."</p>
+<p>    *   이 문장은 수업을 마무리하며 튜터에게 진심으로 감사와 만족감을 표현하는 아주 따뜻하고 자연스러운 표현이었습니다. 상대방에게 좋은 인상을 주는 데 큰 도움이 됩니다!</p>
+<br>
+<p>*   🚀 <strong>내일의 한 문장:</strong> "I'm ready to discuss today's topic, and I'm curious about your thoughts on [오늘 배운 어휘 중 하나: e.g., 'government instability']."</p>
+<p>    *   오늘 배운 어휘를 활용하여 다음 수업 시작 시 튜터에게 먼저 질문을 던져보세요!</p>
+<br>
+<br>
+<p><strong>[성과 지표]</strong></p>
+<p>*   <strong>유창성 점수:</strong> 7/10점</p>
+<p>    *   <strong>근거:</strong> 전반적으로 대화의 흐름이 자연스럽고, 자신의 의견을 막힘없이 표현하려는 노력이 돋보였습니다. 다만, 특정 표현에서 원어민들이 더 자주 쓰는 관용적인 표현을 익히면 더욱 유창해질 수 있는 부분이 있었습니다. (예: "really is obviously" <span class="arrow">→</span> "clearly is")</p>
+<p>*   <strong>다음 수업 '원포인트 액션 플랜':</strong> '관사 (a/an/the)' 사용에 유의하며 말하기 연습하기. 특히, 일반적인 상황이나 복수 명사 앞에서 관사를 생략하는 경우와 특정한 대상을 지칭할 때 'the'를 사용하는 경우를 집중적으로 연습해 봅시다.</p></div>
+        </div>
+        <div id="tab-transcript" class="tab-content">
+            <div class="transcript"><span class="tutor">[Tutor]</span> Hello, Joanna. Happy Sunday.
+<span class="tutor">[Tutor]</span> Hi, Joey. Happy Monday morning. How are you today?
+<span class="student">[Student]</span> It&#x27;s a fresh day. I&#x27;m a little tired, a little bit tired, but it&#x27;s okay.
+<span class="tutor">[Tutor]</span> It&#x27;s a fresh Monday, and it is the new spring day, so it&#x27;s nice.
+<span class="tutor">[Tutor]</span> How was your weekend, Sunday?
+<span class="student">[Student]</span> My weekend was pretty quiet, actually.
+<span class="student">[Student]</span> I didn&#x27;t have to work at any market
+<span class="student">[Student]</span> so I took it easy.
+<span class="tutor">[Tutor]</span> Oh, I see.
+<span class="student">[Student]</span> How about you?
+<span class="student">[Student]</span> How was your weekend?
+<span class="tutor">[Tutor]</span> This weekend,
+<span class="tutor">[Tutor]</span> we
+<span class="tutor">[Tutor]</span> we had a small picnic
+<span class="tutor">[Tutor]</span> on Saturday and Sunday.
+<span class="tutor">[Tutor]</span> So,
+<span class="tutor">[Tutor]</span> this past Saturday and Sunday was the peak of the cherry blossom day.
+<span class="tutor">[Tutor]</span> So we visited a nearby park and the nearby area.
+<span class="tutor">[Tutor]</span> So just to walk and look at the cherry blossoms
+<span class="tutor">[Tutor]</span> and had a lunch and dinner with my family.
+<span class="tutor">[Tutor]</span> So it&#x27;s fantastic.
+<span class="tutor">[Tutor]</span> On the picnic, and then Sunday, my son wore a cap, and then he caught the flowers because if it was windy at that time, cherry blossom petals, the cherry blossom flowers are
+<span class="tutor">[Tutor]</span> thrown out in the air. So my son caught them with his cap. So he caught almost 20 flowers.
+<span class="student">[Student]</span> He caught?
+<span class="tutor">[Tutor]</span> Yeah, caught. Yeah, caught. And in my case, I just caught the seeds. And my wife only caught
+<span class="tutor">[Tutor]</span> one flower.
+<span class="student">[Student]</span> Wow.
+<span class="student">[Student]</span> So nice.
+<span class="student">[Student]</span> So your son really
+<span class="student">[Student]</span> is
+<span class="student">[Student]</span> obviously an expert at this.
+<span class="tutor">[Tutor]</span> Yes.
+<span class="tutor">[Tutor]</span> Yes.
+<span class="tutor">[Tutor]</span> He ran and ran
+<span class="tutor">[Tutor]</span> and he caught.
+<span class="student">[Student]</span> Caught, right? Caught.
+<span class="tutor">[Tutor]</span> Caught, yeah.
+<span class="student">[Student]</span> Caught.
+<span class="tutor">[Tutor]</span> There were so many flowers.
+<span class="tutor">[Tutor]</span> So that&#x27;s a
+<span class="tutor">[Tutor]</span> beautiful scene
+<span class="tutor">[Tutor]</span> for me.
+<span class="student">[Student]</span> And what did you do with all the flowers that you all caught?
+<span class="tutor">[Tutor]</span> Oh, just leave them to nature.
+<span class="tutor">[Tutor]</span> Just took a picture and then we left them on the land.
+<span class="tutor">[Tutor]</span> Because those, the nature comes back to nature, we come back to nature.
+<span class="tutor">[Tutor]</span> I have to come back to nature.
+<span class="tutor">[Tutor]</span> So, yeah, we just took them.
+<span class="tutor">[Tutor]</span> Yeah.
+<span class="tutor">[Tutor]</span> Yeah, it&#x27;s a funny day.
+<span class="tutor">[Tutor]</span> Yeah.
+<span class="student">[Student]</span> It sounds nice.
+<span class="tutor">[Tutor]</span> Yes, absolutely.
+<span class="tutor">[Tutor]</span> Yes.
+<span class="student">[Student]</span> Let&#x27;s take a look at our book, which I&#x27;m sure is not going to be as magical as cherry blossoms.
+<span class="tutor">[Tutor]</span> Yes.
+<span class="tutor">[Tutor]</span> We have to go to the textbook.
+<span class="tutor">[Tutor]</span> Yes.
+<span class="student">[Student]</span> And I think we are on page 19.
+<span class="tutor">[Tutor]</span> 19.
+<span class="tutor">[Tutor]</span> Just a moment.
+<span class="student">[Student]</span> Okay, you&#x27;re right.
+<span class="tutor">[Tutor]</span> Thank you.
+<span class="student">[Student]</span> Oh, that is the paragraph.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="student">[Student]</span> So let&#x27;s take a look at the chart, the blue chart.
+<span class="tutor">[Tutor]</span> Blue chart.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="tutor">[Tutor]</span> Can I read the blue chart?
+<span class="student">[Student]</span> Yes.
+<span class="student">[Student]</span> What can you tell me about it?
+<span class="tutor">[Tutor]</span> Okay, first I read that.
+<span class="tutor">[Tutor]</span> Personal security top traveler concerns.
+<span class="tutor">[Tutor]</span> The first traveler concerns range from a variety of security issues.
+<span class="tutor">[Tutor]</span> And second, medical and health-related issues.
+<span class="tutor">[Tutor]</span> And last, two incidents that could impact both their health and security.
+<span class="tutor">[Tutor]</span> Hmm, I see. And the first thing, the range from variety of the security issue, the 31% personal security, and second, terrorism.
+<span class="student">[Student]</span> Terrorism.
+<span class="tutor">[Tutor]</span> Yeah, terrorism.
+<span class="tutor">[Tutor]</span> Ah, yeah, terrorism.
+<span class="tutor">[Tutor]</span> And the last thing, government instability.
+<span class="student">[Student]</span> Instability.
+<span class="tutor">[Tutor]</span> Instability.
+<span class="student">[Student]</span> Instability.
+<span class="tutor">[Tutor]</span> Instability.
+<span class="student">[Student]</span> What does it mean, government instability?
+<span class="tutor">[Tutor]</span> Instability means that they are not sure whether the country itself is stable enough to travel to.
+<span class="tutor">[Tutor]</span> So government instability means, you know, in places like, for example, right now, Venezuela, when we don&#x27;t know what&#x27;s happening, the president is gone, right?
+<span class="tutor">[Tutor]</span> Things like that, government instability. Instability, yeah, is the opposite of
+<span class="student">[Student]</span> stability. Stability. Stability. Yes, I see. Okay, stability. Okay, I see. And the second
+<span class="tutor">[Tutor]</span> is the medical needs, the 26%, and 70% leads driving accident. Okay, the wrong
+<span class="student">[Student]</span> I think it&#x27;s the infrastructure concerns.
+<span class="tutor">[Tutor]</span> Infrastructure.
+<span class="student">[Student]</span> Infrastructure.
+<span class="tutor">[Tutor]</span> Infrastructure concern, 70%.
+<span class="tutor">[Tutor]</span> Natural disaster, 11%.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="tutor">[Tutor]</span> There are so many concerns of a person.
+<span class="student">[Student]</span> Yes.
+<span class="student">[Student]</span> Yes.
+<span class="student">[Student]</span> You&#x27;re absolutely right.
+<span class="student">[Student]</span> Right, yes.
+<span class="tutor">[Tutor]</span> And the second paragraph,
+<span class="tutor">[Tutor]</span> many have experienced incidents while traveling.
+<span class="tutor">[Tutor]</span> Half travelers have experienced medical needs.
+<span class="tutor">[Tutor]</span> Of those who have
+<span class="tutor">[Tutor]</span> had a doctor,
+<span class="tutor">[Tutor]</span> have been hospitalized.
+<span class="tutor">[Tutor]</span> I see. Okay, I see, I understand that paragraph. This paragraph is explaining about the concerns
+<span class="tutor">[Tutor]</span> to travelers. And usually there are three kinds of the concerns. The first is the security
+<span class="tutor">[Tutor]</span> of the country, and second, medical and health, and the last thing is both.
+<span class="tutor">[Tutor]</span> So yeah, that is concern about the personal security, medical, and natural disaster, and
+<span class="tutor">[Tutor]</span> government&#x27;s instability, etc.
+<span class="tutor">[Tutor]</span> Yeah.
+<span class="student">[Student]</span> Yeah.
+<span class="student">[Student]</span> Do you think of these things when you plan a trip?
+<span class="tutor">[Tutor]</span> Oh, yes, because we take a kid.
+<span class="tutor">[Tutor]</span> So we imagine the emergency situation.
+<span class="tutor">[Tutor]</span> For example, if my son catches a cold, we have to prepare something.
+<span class="tutor">[Tutor]</span> So usually we take some medicine, emergency medicine.
+<span class="tutor">[Tutor]</span> But sometimes, some countries, it is impossible to take that medicine.
+<span class="tutor">[Tutor]</span> Because...
+<span class="student">[Student]</span> Medicine?
+<span class="tutor">[Tutor]</span> Medicine, because that country is rigid about taking medicine.
+<span class="tutor">[Tutor]</span> So at that time, we prepared a hospital nearby a hotel and emergency call to Korea.
+<span class="tutor">[Tutor]</span> Because always we think about the emergency situation.
+<span class="student">[Student]</span> Yeah, that&#x27;s right. So yes, you have to be prepared. So if my son catches a cold, we have to be prepared.
+<span class="tutor">[Tutor]</span> Yeah, you&#x27;re right. And sometimes, uh, we consider about the government instability.
+<span class="tutor">[Tutor]</span> When I visited the Philippines, my son was only two years old.
+<span class="student">[Student]</span> He was?
+<span class="tutor">[Tutor]</span> He was. He was only two years old.
+<span class="tutor">[Tutor]</span> But when I arrived at the Philippines, I regretted that I arrived in the Philippines because every, when I arrived at the hotel, the guard
+<span class="tutor">[Tutor]</span> is there, they had guns in front of the hotel, right?
+<span class="student">[Student]</span> They had armed guards.
+<span class="tutor">[Tutor]</span> Yeah.
+<span class="tutor">[Tutor]</span> Armed guards. And when I took a taxi and went to the city, at that time, I feared that
+<span class="tutor">[Tutor]</span> it is so dangerous and I&#x27;m a little afraid. Yeah, so I regretted to travel to the
+<span class="tutor">[Tutor]</span> Philippines. So, and then we, if we choose some country to travel, we always
+<span class="tutor">[Tutor]</span> consider about government instability.
+<span class="student">[Student]</span> Okay, let&#x27;s take a look at the questions underneath the chart. So question one,
+<span class="student">[Student]</span> what percentage of travelers had medical issues while traveling?
+<span class="tutor">[Tutor]</span> There are two kinds of the paragraph. The first is the concern, but second is the experience.
+<span class="tutor">[Tutor]</span> So I will find the second paragraph, and that question means medical issues.
+<span class="tutor">[Tutor]</span> So I&#x27;m sure that 52% have had a doctor and 11% have been hospitalized.
+<span class="student">[Student]</span> You got it.
+<span class="tutor">[Tutor]</span> Hospitalized.
+<span class="student">[Student]</span> Hospitalized.
+<span class="tutor">[Tutor]</span> Hospitalized, right.
+<span class="tutor">[Tutor]</span> So 52% is more than half have experienced
+<span class="tutor">[Tutor]</span> the issue of their medical.
+<span class="student">[Student]</span> More than half.
+<span class="tutor">[Tutor]</span> Yeah, more than half.
+<span class="student">[Student]</span> You&#x27;re right.
+<span class="student">[Student]</span> Okay.
+<span class="student">[Student]</span> You already answered number two.
+<span class="tutor">[Tutor]</span> Oh, really?
+<span class="student">[Student]</span> So, let&#x27;s take a look at number three.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="student">[Student]</span> How justified do you think travelers&#x27; worries are?
+<span class="student">[Student]</span> Do you think travelers over-worry or do you think that their fears are rational?
+<span class="tutor">[Tutor]</span> That is so difficult question.
+<span class="tutor">[Tutor]</span> Sometimes I agree to people&#x27;s fear, over-worry.
+<span class="tutor">[Tutor]</span> But we have to prepare.
+<span class="tutor">[Tutor]</span> We need to prepare.
+<span class="tutor">[Tutor]</span> So I agree with both.
+<span class="tutor">[Tutor]</span> Yeah.
+<span class="tutor">[Tutor]</span> Because when we visit other countries, we are weak people because we are foreigners.
+<span class="student">[Student]</span> Right.
+<span class="tutor">[Tutor]</span> So we don&#x27;t have enough money.
+<span class="student">[Student]</span> Maybe instead of saying weak, we can say we are at a disadvantage.
+<span class="tutor">[Tutor]</span> We are at a disadvantage. The language means we are at a disadvantage. We don&#x27;t have enough money,
+<span class="tutor">[Tutor]</span> and we don&#x27;t speak the local language.
+<span class="student">[Student]</span> You got it.
+<span class="tutor">[Tutor]</span> Yeah, so we prepare already.
+<span class="tutor">[Tutor]</span> And some countries, they are so dangerous due to criminals.
+<span class="tutor">[Tutor]</span> So always we save, we keep safe.
+<span class="tutor">[Tutor]</span> Yeah, that is important.
+<span class="student">[Student]</span> I agree with your assessment.
+<span class="student">[Student]</span> That was a good assessment, and I completely agree with it.
+<span class="tutor">[Tutor]</span> Oh, yeah.
+<span class="tutor">[Tutor]</span> Thank you so much.
+<span class="student">[Student]</span> Me too.
+<span class="student">[Student]</span> All right.
+<span class="student">[Student]</span> Well, we are wrapping up this lesson.
+<span class="student">[Student]</span> Do you have any questions about it?
+<span class="tutor">[Tutor]</span> Oh, no, but I was wondering the left paragraph, cultural note.
+<span class="student">[Student]</span> Yes.
+<span class="tutor">[Tutor]</span> Can I read that?
+<span class="student">[Student]</span> You want to read it?
+<span class="student">[Student]</span> Absolutely.
+<span class="tutor">[Tutor]</span> I want to read that.
+<span class="tutor">[Tutor]</span> Okay, in India, touching another person, even in, even in a slight way, like a step on his or her toes, is considered very offensive. One way to apologize is to tap the other person,
+<span class="tutor">[Tutor]</span> usually on the shoulder, and then to touch your own forehead immediately with the same hand.
+<span class="tutor">[Tutor]</span> Okay, I can imagine the detail.
+<span class="tutor">[Tutor]</span> Maybe that step and the weight to the toe is important, right?
+<span class="tutor">[Tutor]</span> Maybe this paragraph means if we stand and the toe direction is important.
+<span class="student">[Student]</span> If I, you&#x27;re right.
+<span class="student">[Student]</span> It&#x27;s if we accidentally touch somebody.
+<span class="tutor">[Tutor]</span> And stand up, so one toe is the direction one way, and other toe is the direction another way, right?
+<span class="student">[Student]</span> No, just simply if you accidentally touch somebody.
+<span class="student">[Student]</span> Like stepping on their toes means you&#x27;re walking, and then accidentally, instead of stepping on the ground,
+<span class="student">[Student]</span> you step on somebody&#x27;s foot.
+<span class="tutor">[Tutor]</span> Oh.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="tutor">[Tutor]</span> Just a moment, teacher.
+<span class="tutor">[Tutor]</span> I can understand perfectly.
+<span class="tutor">[Tutor]</span> Just a moment. Sorry.
+<span class="student">[Student]</span> No problem.
+<span class="tutor">[Tutor]</span> Okay, next time I&#x27;m searching them.
+<span class="student">[Student]</span> Yes.
+<span class="student">[Student]</span> It just means that in India, it&#x27;s considered very offensive to accidentally touch somebody.
+<span class="student">[Student]</span> That&#x27;s it.
+<span class="tutor">[Tutor]</span> That&#x27;s it.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="student">[Student]</span> And that you have to apologize a very specific way.
+<span class="tutor">[Tutor]</span> Oh, specific way.
+<span class="tutor">[Tutor]</span> Ah, I see. If I touch the toe, that is rude.
+<span class="student">[Student]</span> Yes, exactly.
+<span class="tutor">[Tutor]</span> If I apologize, just touch it small and indirectly, just with the same hand, touch our forehead.
+<span class="student">[Student]</span> Yes, that&#x27;s it.
+<span class="tutor">[Tutor]</span> Really, forehead.
+<span class="tutor">[Tutor]</span> I still understand.
+<span class="student">[Student]</span> Excellent.
+<span class="student">[Student]</span> Is it
+<span class="student">[Student]</span> considered terribly offensive
+<span class="student">[Student]</span> if you accidentally
+<span class="student">[Student]</span> touch or bump into somebody in Korea?
+<span class="tutor">[Tutor]</span> It is
+<span class="tutor">[Tutor]</span> similar, mixing the culture.
+<span class="tutor">[Tutor]</span> Some people
+<span class="tutor">[Tutor]</span> holding their
+<span class="tutor">[Tutor]</span> chest,
+<span class="tutor">[Tutor]</span> chest.
+<span class="tutor">[Tutor]</span> And then, I&#x27;m sorry,
+<span class="tutor">[Tutor]</span> but some people
+<span class="tutor">[Tutor]</span> gathering their hand, like
+<span class="tutor">[Tutor]</span> South Asia. I&#x27;m sorry.
+<span class="tutor">[Tutor]</span> But
+<span class="tutor">[Tutor]</span> that is not common way.
+<span class="tutor">[Tutor]</span> Just to speak, I&#x27;m sorry.
+<span class="tutor">[Tutor]</span> Yeah.
+<span class="tutor">[Tutor]</span> But the gesture is not the same.
+<span class="tutor">[Tutor]</span> So, we don&#x27;t have
+<span class="tutor">[Tutor]</span> the gesture about the sorry.
+<span class="student">[Student]</span> Right. It sounds
+<span class="student">[Student]</span> exactly like in Canada. You just say,
+<span class="student">[Student]</span> Oh, so sorry.
+<span class="student">[Student]</span> Didn&#x27;t mean to do that.
+<span class="student">[Student]</span> So sorry.
+<span class="tutor">[Tutor]</span> Yeah, so sorry.
+<span class="tutor">[Tutor]</span> You&#x27;re right.
+<span class="student">[Student]</span> That&#x27;s it.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="student">[Student]</span> Any questions about what we saw today?
+<span class="tutor">[Tutor]</span> Oh, no.
+<span class="tutor">[Tutor]</span> No, teacher.
+<span class="tutor">[Tutor]</span> I don&#x27;t have a question.
+<span class="tutor">[Tutor]</span> I&#x27;m pleased to talk with you.
+<span class="student">[Student]</span> Likewise.
+<span class="student">[Student]</span> As usual, it was
+<span class="student">[Student]</span> a lot of
+<span class="student">[Student]</span> fun. You&#x27;re answering all the
+<span class="student">[Student]</span> questions really well.
+<span class="tutor">[Tutor]</span> Thanks so much.
+<span class="student">[Student]</span> I loved hearing your story
+<span class="student">[Student]</span> about catching cherry blossoms.
+<span class="student">[Student]</span> I think that&#x27;s wonderful.
+<span class="tutor">[Tutor]</span> Yes, that is
+<span class="tutor">[Tutor]</span> a nice experience. Thank you so
+<span class="tutor">[Tutor]</span> much, teacher. I hope to
+<span class="tutor">[Tutor]</span> talk to you next time.
+<span class="tutor">[Tutor]</span> Have a nice day and enjoy your day.
+<span class="student">[Student]</span> Thank you. I think
+<span class="student">[Student]</span> we have a class tomorrow. Enjoy your day, Joey. Okay. Bye-bye. Okay. Thank you. Bye-bye.</div>
+        </div>
+    </div>
+    <div class="toast" id="toast">✅ 프롬프트가 복사되었습니다!</div>
+    <script>
+        const REVIEW_PROMPT="너는 나의 영어 회화 복습 파트너야. 오늘 내 전화영어 수업 내용을 기반으로 대화하면서 복습을 도와줘.\n\n[오늘 수업 전사 내용]\n[Tutor] Hello, Joanna. Happy Sunday.\n[Tutor] Hi, Joey. Happy Monday morning. How are you today?\n[Student] It's a fresh day. I'm a little tired, a little bit tired, but it's okay.\n[Tutor] It's a fresh Monday, and it is the new spring day, so it's nice.\n[Tutor] How was your weekend, Sunday?\n[Student] My weekend was pretty quiet, actually.\n[Student] I didn't have to work at any market\n[Student] so I took it easy.\n[Tutor] Oh, I see.\n[Student] How about you?\n[Student] How was your weekend?\n[Tutor] This weekend,\n[Tutor] we\n[Tutor] we had a small picnic\n[Tutor] on Saturday and Sunday.\n[Tutor] So,\n[Tutor] this past Saturday and Sunday was the peak of the cherry blossom day.\n[Tutor] So we visited a nearby park and the nearby area.\n[Tutor] So just to walk and look at the cherry blossoms\n[Tutor] and had a lunch and dinner with my family.\n[Tutor] So it's fantastic.\n[Tutor] On the picnic, and then Sunday, my son wore a cap, and then he caught the flowers because if it was windy at that time, cherry blossom petals, the cherry blossom flowers are\n[Tutor] thrown out in the air. So my son caught them with his cap. So he caught almost 20 flowers.\n[Student] He caught?\n[Tutor] Yeah, caught. Yeah, caught. And in my case, I just caught the seeds. And my wife only caught\n[Tutor] one flower.\n[Student] Wow.\n[Student] So nice.\n[Student] So your son really\n[Student] is\n[Student] obviously an expert at this.\n[Tutor] Yes.\n[Tutor] Yes.\n[Tutor] He ran and ran\n[Tutor] and he caught.\n[Student] Caught, right? Caught.\n[Tutor] Caught, yeah.\n[Student] Caught.\n[Tutor] There were so many flowers.\n[Tutor] So that's a\n[Tutor] beautiful scene\n[Tutor] for me.\n[Student] And what did you do with all the flowers that you all caught?\n[Tutor] Oh, just leave them to nature.\n[Tutor] Just took a picture and then we left them on the land.\n[Tutor] Because those, the nature comes back to nature, we come back to nature.\n[Tutor] I have to come back to nature.\n[Tutor] So, yeah, we just took them.\n[Tutor] Yeah.\n[Tutor] Yeah, it's a funny day.\n[Tutor] Yeah.\n[Student] It sounds nice.\n[Tutor] Yes, absolutely.\n[Tutor] Yes.\n[Student] Let's take a look at our book, which I'm sure is not going to be as magical as cherry blossoms.\n[Tutor] Yes.\n[Tutor] We have to go to the textbook.\n[Tutor] Yes.\n[Student] And I think we are on page 19.\n[Tutor] 19.\n[Tutor] Just a moment.\n[Student] Okay, you're right.\n[Tutor] Thank you.\n[Student] Oh, that is the paragraph.\n[Tutor] Okay.\n[Student] So let's take a look at the chart, the blue chart.\n[Tutor] Blue chart.\n[Tutor] Okay.\n[Tutor] Can I read the blue chart?\n[Student] Yes.\n[Student] What can you tell me about it?\n[Tutor] Okay, first I read that.\n[Tutor] Personal security top traveler concerns.\n[Tutor] The first traveler concerns range from a variety of security issues.\n[Tutor] And second, medical and health-related issues.\n[Tutor] And last, two incidents that could impact both their health and security.\n[Tutor] Hmm, I see. And the first thing, the range from variety of the security issue, the 31% personal security, and second, terrorism.\n[Student] Terrorism.\n[Tutor] Yeah, terrorism.\n[Tutor] Ah, yeah, terrorism.\n[Tutor] And the last thing, government instability.\n[Student] Instability.\n[Tutor] Instability.\n[Student] Instability.\n[Tutor] Instability.\n[Student] What does it mean, government instability?\n[Tutor] Instability means that they are not sure whether the country itself is stable enough to travel to.\n[Tutor] So government instability means, you know, in places like, for example, right now, Venezuela, when we don't know what's happening, the president is gone, right?\n[Tutor] Things like that, government instability. Instability, yeah, is the opposite of\n[Student] stability. Stability. Stability. Yes, I see. Okay, stability. Okay, I see. And the second\n[Tutor] is the medical needs, the 26%, and 70% leads driving accident. Okay, the wrong\n[Student] I think it's the infrastructure concerns.\n[Tutor] Infrastructure.\n[Student] Infrastructure.\n[Tutor] Infrastructure concern, 70%.\n[Tutor] Natural disaster, 11%.\n[Tutor] Okay.\n[Tutor] There are so many concerns of a person.\n[Student] Yes.\n[Student] Yes.\n[Student] You're absolutely right.\n[Student] Right, yes.\n[Tutor] And the second paragraph,\n[Tutor] many have experienced incidents while traveling.\n[Tutor] Half travelers have experienced medical needs.\n[Tutor] Of those who have\n[Tutor] had a doctor,\n[Tutor] have been hospitalized.\n[Tutor] I see. Okay, I see, I understand that paragraph. This paragraph is explaining about the concerns\n[Tutor] to travelers. And usually there are three kinds of the concerns. The first is the security\n[Tutor] of the country, and second, medical and health, and the last thing is both.\n[Tutor] So yeah, that is concern about the personal security, medical, and natural disaster, and\n[Tutor] government's instability, etc.\n[Tutor] Yeah.\n[Student] Yeah.\n[Student] Do you think of these things when you plan a trip?\n[Tutor] Oh, yes, because we take a kid.\n[Tutor] So we imagine the emergency situation.\n[Tutor] For example, if my son catches a cold, we have to prepare something.\n[Tutor] So usually we take some medicine, emergency medicine.\n[Tutor] But sometimes, some countries, it is impossible to take that medicine.\n[Tutor] Because...\n[Student] Medicine?\n[Tutor] Medicine, because that country is rigid about taking medicine.\n[Tutor] So at that time, we prepared a hospital nearby a hotel and emergency call to Korea.\n[Tutor] Because always we think about the emergency situation.\n[Student] Yeah, that's right. So yes, you have to be prepared. So if my son catches a cold, we have to be prepared.\n[Tutor] Yeah, you're right. And sometimes, uh, we consider about the government instability.\n[Tutor] When I visited the Philippines, my son was only two years old.\n[Student] He was?\n[Tutor] He was. He was only two years old.\n[Tutor] But when I arrived at the Philippines, I regretted that I arrived in the Philippines because every, when I arrived at the hotel, the guard\n[Tutor] is there, they had guns in front of the hotel, right?\n[Student] They had armed guards.\n[Tutor] Yeah.\n[Tutor] Armed guards. And when I took a taxi and went to the city, at that time, I feared that\n[Tutor] it is so dangerous and I'm a little afraid. Yeah, so I regretted to travel to the\n[Tutor] Philippines. So, and then we, if we choose some country to travel, we always\n[Tutor] consider about government instability.\n[Student] Okay, let's take a look at the questions underneath the chart. So question one,\n[Student] what percentage of travelers had medical issues while traveling?\n[Tutor] There are two kinds of the paragraph. The first is the concern, but second is the experience.\n[Tutor] So I will find the second paragraph, and that question means medical issues.\n[Tutor] So I'm sure that 52% have had a doctor and 11% have been hospitalized.\n[Student] You got it.\n[Tutor] Hospitalized.\n[Student] Hospitalized.\n[Tutor] Hospitalized, right.\n[Tutor] So 52% is more than half have experienced\n[Tutor] the issue of their medical.\n[Student] More than half.\n[Tutor] Yeah, more than half.\n[Student] You're right.\n[Student] Okay.\n[Student] You already answered number two.\n[Tutor] Oh, really?\n[Student] So, let's take a look at number three.\n[Tutor] Okay.\n[Student] How justified do you think travelers' worries are?\n[Student] Do you think travelers over-worry or do you think that their fears are rational?\n[Tutor] That is so difficult question.\n[Tutor] Sometimes I agree to people's fear, over-worry.\n[Tutor] But we have to prepare.\n[Tutor] We need to prepare.\n[Tutor] So I agree with both.\n[Tutor] Yeah.\n[Tutor] Because when we visit other countries, we are weak people because we are foreigners.\n[Student] Right.\n[Tutor] So we don't have enough money.\n[Student] Maybe instead of saying weak, we can say we are at a disadvantage.\n[Tutor] We are at a disadvantage. The language means we are at a disadvantage. We don't have enough money,\n[Tutor] and we don't speak the local language.\n[Student] You got it.\n[Tutor] Yeah, so we prepare already.\n[Tutor] And some countries, they are so dangerous due to criminals.\n[Tutor] So always we save, we keep safe.\n[Tutor] Yeah, that is important.\n[Student] I agree with your assessment.\n[Student] That was a good assessment, and I completely agree with it.\n[Tutor] Oh, yeah.\n[Tutor] Thank you so much.\n[Student] Me too.\n[Student] All right.\n[Student] Well, we are wrapping up this lesson.\n[Student] Do you have any questions about it?\n[Tutor] Oh, no, but I was wondering the left paragraph, cultural note.\n[Student] Yes.\n[Tutor] Can I read that?\n[Student] You want to read it?\n[Student] Absolutely.\n[Tutor] I want to read that.\n[Tutor] Okay, in India, touching another person, even in, even in a slight way, like a step on his or her toes, is considered very offensive. One way to apologize is to tap the other person,\n[Tutor] usually on the shoulder, and then to touch your own forehead immediately with the same hand.\n[Tutor] Okay, I can imagine the detail.\n[Tutor] Maybe that step and the weight to the toe is important, right?\n[Tutor] Maybe this paragraph means if we stand and the toe direction is important.\n[Student] If I, you're right.\n[Student] It's if we accidentally touch somebody.\n[Tutor] And stand up, so one toe is the direction one way, and other toe is the direction another way, right?\n[Student] No, just simply if you accidentally touch somebody.\n[Student] Like stepping on their toes means you're walking, and then accidentally, instead of stepping on the ground,\n[Student] you step on somebody's foot.\n[Tutor] Oh.\n[Tutor] Okay.\n[Tutor] Just a moment, teacher.\n[Tutor] I can understand perfectly.\n[Tutor] Just a moment. Sorry.\n[Student] No problem.\n[Tutor] Okay, next time I'm searching them.\n[Student] Yes.\n[Student] It just means that in India, it's considered very offensive to accidentally touch somebody.\n[Student] That's it.\n[Tutor] That's it.\n[Tutor] Okay.\n[Student] And that you have to apologize a very specific way.\n[Tutor] Oh, specific way.\n[Tutor] Ah, I see. If I touch the toe, that is rude.\n[Student] Yes, exactly.\n[Tutor] If I apologize, just touch it small and indirectly, just with the same hand, touch our forehead.\n[Student] Yes, that's it.\n[Tutor] Really, forehead.\n[Tutor] I still understand.\n[Student] Excellent.\n[Student] Is it\n[Student] considered terribly offensive\n[Student] if you accidentally\n[Student] touch or bump into somebody in Korea?\n[Tutor] It is\n[Tutor] similar, mixing the culture.\n[Tutor] Some people\n[Tutor] holding their\n[Tutor] chest,\n[Tutor] chest.\n[Tutor] And then, I'm sorry,\n[Tutor] but some people\n[Tutor] gathering their hand, like\n[Tutor] South Asia. I'm sorry.\n[Tutor] But\n[Tutor] that is not common way.\n[Tutor] Just to speak, I'm sorry.\n[Tutor] Yeah.\n[Tutor] But the gesture is not the same.\n[Tutor] So, we don't have\n[Tutor] the gesture about the sorry.\n[Student] Right. It sounds\n[Student] exactly like in Canada. You just say,\n[Student] Oh, so sorry.\n[Student] Didn't mean to do that.\n[Student] So sorry.\n[Tutor] Yeah, so sorry.\n[Tutor] You're right.\n[Student] That's it.\n[Tutor] Okay.\n[Tutor] Okay.\n[Student] Any questions about what we saw today?\n[Tutor] Oh, no.\n[Tutor] No, teacher.\n[Tutor] I don't have a question.\n[Tutor] I'm pleased to talk with you.\n[Student] Likewise.\n[Student] As usual, it was\n[Student] a lot of\n[Student] fun. You're answering all the\n[Student] questions really well.\n[Tutor] Thanks so much.\n[Student] I loved hearing your story\n[Student] about catching cherry blossoms.\n[Student] I think that's wonderful.\n[Tutor] Yes, that is\n[Tutor] a nice experience. Thank you so\n[Tutor] much, teacher. I hope to\n[Tutor] talk to you next time.\n[Tutor] Have a nice day and enjoy your day.\n[Student] Thank you. I think\n[Student] we have a class tomorrow. Enjoy your day, Joey. Okay. Bye-bye. Okay. Thank you. Bye-bye.\n\n[AI 피드백]\n따뜻하고 실용적인 영어 코치 Joey입니다!\n오늘 수업도 활기차게 시작해주셔서 정말 좋았어요. 주말 이야기도 흥미로웠고, 교재 내용에 대해서도 깊이 있는 질문과 답변을 주고받으며 알찬 시간을 보냈습니다. 특히 여행 시 발생할 수 있는 다양한 위험 요소에 대해 진지하게 고민하고 대비하는 모습이 인상 깊었어요.\n\n---\n\n**0. 📌 Topic**\nTopic: Discussing traveler concerns and cultural differences in apologies.\n\n**1. 📊 오늘의 대화 요약 (Summary)**\n오늘은 주말에 있었던 벚꽃 구경 이야기로 시작하여, 교재에서 제시된 여행객들의 주요 걱정거리(개인 안전, 의료, 정부 불안정성 등)에 대해 심도 있게 토론했습니다. 또한, 인도와 한국의 사과 제스처 문화 차이에 대해서도 알아보는 시간을 가졌습니다.\n\n**2. 💬 유창성 업그레이드 (Fluency & Natural Flow)**\n\n1.  **❌ 학습자 원문 (As Said):** \"I didn't have to work at any market\"\n    *   **✅ 자연스러운 표현 (Natural):** \"I didn't have any work.\"\n    *   **💎 비즈니스 표현 (Professional):** \"I had no work commitments.\"\n    *   **💡 코칭 포인트:** \"At any market\"은 문법적으로 맞지만, 전반적으로 일이 없었다는 의미일 때는 다소 특정하게 들릴 수 있습니다. \"I didn't have any work\"는 일이 없었다는 것을 표현하는 더 흔하고 자연스러운 방식입니다. 만약 특정 '시장'에서의 일을 의미한다면 \"I didn't have to work at the market\"이라고 할 수 있습니다.\n\n2.  **❌ 학습자 원문 (As Said):** \"So your son really is obviously an expert at this.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"Your son is clearly an expert at this!\"\n    *   **💎 비즈니스 표현 (Professional):** \"Your son demonstrates remarkable proficiency in this area.\"\n    *   **💡 코칭 포인트:** \"really\"와 \"obviously\"를 함께 사용하면 문장이 다소 장황하거나 불필요하게 반복되는 느낌을 줄 수 있습니다. \"Clearly\"나 단순히 \"obviously\" (really 없이)를 사용하면 같은 강한 의미를 전달하면서도 더 간결하고 자연스럽게 들립니다.\n\n3.  **❌ 학습자 원문 (As Said):** \"I still understand.\" (인도 문화 설명을 들은 후, 이해가 잘 안 되는 상황)\n    *   **✅ 자연스러운 표현 (Natural):** \"I still don't quite understand.\" 또는 \"I'm still a bit confused.\"\n    *   **💎 비즈니스 표현 (Professional):** \"I'm still seeking clarification on that point.\"\n    *   **💡 코칭 포인트:** \"I still understand\"는 '여전히 이해하고 있다'는 긍정적인 의미로 들릴 수 있습니다. 하지만 문맥상 '아직 완전히 이해하지 못했다'는 의미를 전달하고 싶을 때는 부정형인 \"I still don't understand\" 또는 \"I'm still a bit confused\"와 같이 표현하는 것이 더 자연스럽습니다.\n\n**3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)**\n\n이번 수업에서는 **관사 (a/an/the)** 사용에 대한 연습이 필요해 보입니다. 특정 대상을 지칭할 때 'the'를 사용하거나, 불특정한 대상을 처음 언급할 때 'a/an'을 사용하는 규칙을 좀 더 명확히 익히면 좋습니다.\n\n| ❌ 원문 (As Said)                                         | ✅ 교정 예시 (Corrected)                                         |\n| :--------------------------------------------------------- | :--------------------------------------------------------------- |\n| \"I'm a little tired, a little bit tired, but it's okay.\"   | \"I'm a little tired, a little bit tired, but it's **all** okay.\" |\n| \"So that's a beautiful scene for me.\"                      | \"So that's **a** beautiful scene for me.\"                        |\n| \"So usually we take some medicine, emergency medicine.\"    | \"So usually we take some **emergency** medicine.\"                |\n| \"Because always we think about the emergency situation.\"   | \"Because we always think about **emergency situations**.\"        |\n| \"So 52% is more than half have experienced the issue of their medical.\" | \"So 52% is more than half **who** have experienced medical issues.\" |\n| \"Maybe that step and the weight to the toe is important, right?\" | \"Maybe **the** step and **the** weight on the toe is important, right?\" |\n| \"And stand up, so one toe is the direction one way, and other toe is the direction another way, right?\" | \"And stand up, so one toe is pointing one way, and **the** other toe is pointing another way, right?\" |\n\n*   **📌 핵심 규칙:** 명사를 처음 소개하거나 불특정한 것을 말할 때는 'a/an'을, 이미 언급되었거나 모두가 아는 특정한 것을 말할 때는 'the'를 사용합니다. 때로는 복수형 명사나 일반적인 개념 앞에서는 관사를 생략하기도 합니다.\n\n*   **🔁 따라 읽기:**\n    🗣️ \"I'm a little tired, but it's all okay.\"\n    🗣️ \"Because we always think about emergency situations.\"\n    🗣️ \"Maybe the step and the weight on the toe is important, right?\"\n\n**4. 📗 어휘 확장 (Vocabulary Vault)**\n\n1.  **concern** /kənˈsɜːrn/ (명사)\n    *   뜻: 걱정, 우려, 염려\n    *   실전 예문: Investor **concerns** about market volatility are growing.\n\n2.  **instability** /ˌɪnstəˈbɪləti/ (명사)\n    *   뜻: 불안정, 불안정성\n    *   실전 예문: Political **instability** in the region could impact our energy supply.\n\n3.  **infrastructure** /ˈɪnfrəˌstrʌktʃər/ (명사)\n    *   뜻: 사회 기반 시설 (도로, 통신망 등)\n    *   실전 예문: Investing in modern **infrastructure** is crucial for economic growth.\n\n4.  **disadvantage** /ˌdɪsədˈvæntɪdʒ/ (명사)\n    *   뜻: 불리한 점, 불이익\n    *   실전 예문: Not speaking the local language can put you at a significant **disadvantage** when traveling.\n\n5.  **offensive** /əˈfɛnsɪv/ (형용사)\n    *   뜻: 불쾌한, 모욕적인\n    *   실전 예문: Making such a comment in a professional setting can be highly **offensive**.\n\n**5. 📝 실전 복습 챌린지 (Practice)**\n\n1.  **[쉬운 문제]**\n    *   **상황:** 당신은 오늘 아침에 약간 피곤했지만 괜찮다고 말하고 싶습니다.\n    *   **영작:** (오늘 배운 자연스러운 표현을 활용하여)\n    *   **모범 답안:** I'm a little tired this morning, but it's all okay.\n\n2.  **[중간 문제]**\n    *   **상황:** 해외 출장 중 예상치 못한 상황에 대비하는 것이 중요하다고 강조하고 싶습니다.\n    *   **영작:** (오늘 배운 문법 규칙과 어휘를 활용하여)\n    *   **모범 답안:** It's important to prepare for emergency situations when traveling abroad.\n\n3.  **[어려운 문제]**\n    *   **상황:** 어떤 국가의 정치적 불안정성이 투자에 큰 우려 사항이 될 수 있다고 설명하고 싶습니다.\n    *   **영작:** (오늘 배운 어휘와 비즈니스 표현을 활용하여)\n    *   **모범 답안:** Political **instability** in a country can be a significant **concern** for investors.\n\n**6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)**\n\n*   ✨ **Good Job:** \"I'm pleased to talk with you.\"\n    *   이 문장은 수업을 마무리하며 튜터에게 진심으로 감사와 만족감을 표현하는 아주 따뜻하고 자연스러운 표현이었습니다. 상대방에게 좋은 인상을 주는 데 큰 도움이 됩니다!\n\n*   🚀 **내일의 한 문장:** \"I'm ready to discuss today's topic, and I'm curious about your thoughts on [오늘 배운 어휘 중 하나: e.g., 'government instability'].\"\n    *   오늘 배운 어휘를 활용하여 다음 수업 시작 시 튜터에게 먼저 질문을 던져보세요!\n\n---\n\n**[성과 지표]**\n*   **유창성 점수:** 7/10점\n    *   **근거:** 전반적으로 대화의 흐름이 자연스럽고, 자신의 의견을 막힘없이 표현하려는 노력이 돋보였습니다. 다만, 특정 표현에서 원어민들이 더 자주 쓰는 관용적인 표현을 익히면 더욱 유창해질 수 있는 부분이 있었습니다. (예: \"really is obviously\" → \"clearly is\")\n*   **다음 수업 '원포인트 액션 플랜':** '관사 (a/an/the)' 사용에 유의하며 말하기 연습하기. 특히, 일반적인 상황이나 복수 명사 앞에서 관사를 생략하는 경우와 특정한 대상을 지칭할 때 'the'를 사용하는 경우를 집중적으로 연습해 봅시다.\n\n위 내용을 바탕으로:\n1. 먼저 오늘 수업에서 내가 틀렸거나 어색했던 표현을 하나 골라서, 관련된 상황을 영어로 질문해줘.\n2. 내가 영어로 대답하면, 자연스러운지 확인하고 더 나은 표현이 있으면 알려줘.\n3. 특히 \"반복 실수 패턴\"에서 지적된 부분을 집중적으로 연습시켜줘.\n4. 이런 식으로 오늘 배운 표현들을 하나씩 복습하자.\n5. 한국어 설명은 필요할 때만 간단히, 대화는 최대한 영어로 진행해줘.\n\n그럼 시작하자!";
+        function startReview(){navigator.clipboard.writeText(REVIEW_PROMPT).then(()=>{showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)}).catch(()=>{const t=document.createElement('textarea');t.value=REVIEW_PROMPT;document.body.appendChild(t);t.select();document.execCommand('copy');document.body.removeChild(t);showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)})}
+        function showToast(){const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500)}
+        function switchTab(n){document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',n==='feedback'?i===0:i===1));document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));document.getElementById('tab-'+n).classList.add('active')}
+    </script>
+</body>
+</html>
