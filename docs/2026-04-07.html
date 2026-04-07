@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전화영어 복습 - 2026년 04월 07일</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Noto Sans KR',sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.75;min-height:100vh}
+        .header{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);border-bottom:1px solid rgba(255,255,255,.06);padding:48px 24px 40px;text-align:center}
+        .header-date{font-size:13px;color:#94a3b8;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+        .header h1{font-size:28px;font-weight:700;color:#f1f5f9;margin-bottom:16px}
+        .header-meta{display:flex;justify-content:center;gap:24px;font-size:14px;color:#64748b}
+        .header-meta span{display:flex;align-items:center;gap:6px}
+        .cta-section{text-align:center;padding:40px 24px}
+        .cta-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:linear-gradient(135deg,#38bdf8,#818cf8);color:#fff;font-size:16px;font-weight:600;font-family:'Noto Sans KR',sans-serif;border:none;border-radius:50px;cursor:pointer;transition:all .3s;text-decoration:none;box-shadow:0 4px 24px rgba(56,189,248,.25)}
+        .cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(56,189,248,.35)}
+        .cta-btn svg{width:20px;height:20px}
+        .cta-sub{margin-top:12px;font-size:13px;color:#64748b}
+        .toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#38bdf8;padding:14px 28px;border-radius:12px;font-size:14px;font-weight:500;border:1px solid rgba(56,189,248,.2);box-shadow:0 8px 32px rgba(0,0,0,.4);opacity:0;transition:all .4s cubic-bezier(.16,1,.3,1);z-index:1000}
+        .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+        .container{max-width:720px;margin:0 auto;padding:0 24px 80px}
+        .tabs{display:flex;gap:4px;background:#1a1a24;padding:4px;border-radius:12px;margin-bottom:32px}
+        .tab{flex:1;padding:12px;text-align:center;font-size:14px;font-weight:500;color:#64748b;background:0 0;border:none;border-radius:8px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all .2s}
+        .tab.active{background:#262636;color:#f1f5f9}
+        .tab-content{display:none}.tab-content.active{display:block}
+        .feedback h2{font-size:18px;font-weight:700;color:#f1f5f9;margin:36px 0 16px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.06)}
+        .feedback h2:first-child{margin-top:0}
+        .feedback p{margin:8px 0;color:#cbd5e1}
+        .feedback .item{padding:6px 0 6px 16px;border-left:2px solid #334155;margin:6px 0;color:#cbd5e1}
+        .feedback .numbered{padding:8px 0 8px 16px;color:#cbd5e1}
+        .feedback .numbered strong{color:#38bdf8}
+        .feedback strong{color:#f1f5f9}
+        .feedback code{background:#1e293b;padding:2px 8px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#38bdf8}
+        .feedback table{width:100%;border-collapse:collapse;margin:12px 0}
+        .feedback th,.feedback td{padding:10px 14px;text-align:left;border-bottom:1px solid #262636}
+        .feedback th{color:#94a3b8;font-weight:500;font-size:13px}
+        .feedback td{color:#cbd5e1}
+        .arrow{color:#38bdf8;font-weight:700}
+        .transcript{background:#1a1a24;border-radius:12px;padding:28px;font-size:14px;line-height:2;color:#94a3b8;white-space:pre-wrap;word-break:break-word;font-family:'JetBrains Mono','Noto Sans KR',monospace}
+        .transcript .tutor{color:#38bdf8}
+        .transcript .student{color:#a78bfa}
+        @media(max-width:640px){.header{padding:32px 16px}.header h1{font-size:22px}.cta-btn{padding:14px 28px;font-size:15px}.container{padding:0 16px 60px}}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-date">2026년 04월 07일</div>
+        <h1>📚 전화영어 복습</h1>
+        <div class="header-meta">
+            <span>⏱ 20분 34초</span>
+            <span>🎙 전화영어_025180304_20260407080040.m4a</span>
+        </div>
+    </div>
+    <div class="cta-section">
+        <button class="cta-btn" onclick="startReview()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Gemini에서 복습 대화 시작하기
+        </button>
+        <div class="cta-sub">클릭하면 프롬프트가 복사되고 Gemini가 열립니다</div>
+    </div>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('feedback')">📋 AI 피드백</button>
+            <button class="tab" onclick="switchTab('transcript')">🎙 수업 전사</button>
+        </div>
+        <div id="tab-feedback" class="tab-content active">
+            <div class="feedback"><p>안녕하세요, Joanna! 오늘 수업도 정말 즐겁고 유익했습니다. 발표 전략과 격식/비격식 표현을 익히는 과정에서 Joanna님의 적극적인 참여와 날카로운 통찰력 덕분에 저도 많이 배웠습니다. 특히 발표 시 청중의 이해를 최우선으로 생각해야 한다는 말씀이 인상 깊었습니다.</p>
+<br>
+<p>오늘 배운 내용을 바탕으로 유창성과 정확성을 동시에 잡을 수 있도록 따뜻하고 실용적인 피드백을 준비했습니다. 함께 살펴보면서 영어 실력을 한 단계 더 끌어올려 볼까요?</p>
+<br>
+<br>
+<p><strong>0. 📌 Topic</strong></p>
+<p>Topic: Discussing presentation strategies and distinguishing between formal and informal expressions.</p>
+<br>
+<br>
+<p><strong>1. 📊 오늘의 대화 요약 (Summary)</strong></p>
+<p>오늘 수업에서는 발표(presentation)를 앞두고 준비하는 전략과 좋은 발표의 특징에 대해 토론했습니다. 이어서 비즈니스 환경에서 자주 사용되는 다양한 표현들을 격식체(formal)와 비격식체(informal)로 구분하고, 통계 발표, 주제 소개, 청중 환영 등 각 상황에 맞는 표현들을 매칭하는 연습을 진행했습니다.</p>
+<br>
+<br>
+<p><strong>2. 💬 유창성 업그레이드 (Fluency & Natural Flow)</strong></p>
+<p>Joanna님이 말씀하신 내용 중 의미는 통하지만, 원어민이 들었을 때 조금 더 자연스럽게 들릴 수 있는 표현들을 함께 다듬어 보겠습니다.</p>
+<br>
+<div class="numbered"><strong>1.</strong>  <strong>❌ 학습자 원문 (As Said):</strong> "This day, I don't enough sleep, but yesterday night, I'm well."</div>
+<p>    *   <strong>✅ 자연스러운 표현 (Natural):</strong> "I didn't get enough sleep today, but last night I slept really well."</p>
+<p>    *   <strong>💎 비즈니스 표현 (Professional):</strong> "I experienced a lack of sleep today, though I rested exceptionally well last night."</p>
+<p>    *   <strong>💡 코칭 포인트:</strong> "get enough sleep"은 충분히 잠을 잤다는 것을 표현하는 가장 자연스러운 방법입니다. 또한, 과거에 일어난 일에는 과거 시제("didn't get," "slept")를 사용하는 것을 기억하세요.</p>
+<br>
+<div class="numbered"><strong>2.</strong>  <strong>❌ 학습자 원문 (As Said):</strong> "I forecast your condition recovery fast."</div>
+<p>    *   <strong>✅ 자연스러운 표현 (Natural):</strong> "I hope you recover quickly."</p>
+<p>    *   <strong>💎 비즈니스 표현 (Professional):</strong> "I anticipate a swift recovery for you."</p>
+<p>    *   <strong>💡 코칭 포인트:</strong> "forecast"는 일반적으로 날씨, 경제 동향 또는 미래 사건을 예측할 때 사용되며, 개인의 건강 회복에는 잘 쓰이지 않습니다. 누군가의 안녕을 바랄 때는 "hope"가 더 적절하며, "recover quickly/fast"는 자연스러운 연어(collocation)입니다.</p>
+<br>
+<div class="numbered"><strong>3.</strong>  <strong>❌ 학습자 원문 (As Said):</strong> "I wish you have recovered your body condition."</div>
+<p>    *   <strong>✅ 자연스러운 표현 (Natural):</strong> "I hope you recover soon." (or "I wish you a speedy recovery.")</p>
+<p>    *   <strong>💎 비즈니스 표현 (Professional):</strong> "I wish you a full and swift recovery."</p>
+<p>    *   <strong>💡 코칭 포인트:</strong> 누군가의 미래 회복을 바랄 때 "I hope you recover soon"이 가장 일반적이고 직접적인 표현입니다. "body condition"은 한국어를 직역한 표현으로 다소 부자연스럽습니다. 단순히 "recover" 또는 "get better"면 충분합니다.</p>
+<br>
+<div class="numbered"><strong>4.</strong>  <strong>❌ 학습자 원문 (As Said):</strong> "I guess many people are afraid to presentation to many people."</div>
+<p>    *   <strong>✅ 자연스러운 표현 (Natural):</strong> "I guess many people are afraid to present to many people." (or "afraid of presenting to many people.")</p>
+<p>    *   <strong>💎 비즈니스 표현 (Professional):</strong> "I believe many individuals experience apprehension when presenting to a large audience."</p>
+<p>    *   <strong>💡 코칭 포인트:</strong> "present"는 동사로 '발표하다'라는 의미를 가집니다. "presentation"은 명사로 '발표' 자체를 의미하므로, 동사가 필요한 자리에 "present"를 사용하는 것이 자연스럽습니다. "be afraid of ~ing" 또는 "be afraid to do" 형태로 사용합니다.</p>
+<br>
+<br>
+<p><strong>3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)</strong></p>
+<p>오늘 대화에서 Joanna님이 반복적으로 사용한 문법 실수 패턴은 <strong>주어-동사 수일치 (Subject-Verb Agreement)</strong> 오류였습니다. 특히 3인칭 단수 주어 뒤에 오는 동사의 형태에서 실수가 있었습니다.</p>
+<br>
+<table>
+<tr><th>❌ 학습자 원문 (As Said)</th><th>✅ 교정 예시 (Corrected)</th></tr>
+<tr><td>"my job <strong>don't</strong> have many presentations"</td><td>"my job <strong>doesn't</strong> have many presentations"</td></tr>
+<tr><td>"some country <strong>don't</strong> allow that take medicine"</td><td>"some country <strong>doesn't</strong> allow taking medicine"</td></tr>
+<tr><td>"our presentation purpose to speak to the listener"</td><td>"our presentation <strong>purpose is</strong> to speak to the listener"</td></tr>
+<tr><td>"The research shows a 2% increase in <strong>sale</strong> of product."</td><td>"The research shows a 2% increase in <strong>sales</strong> of products."</td></tr>
+</table>
+<br>
+<p>📌 <strong>핵심 규칙:</strong> 3인칭 단수 주어 (He, She, It, My job, Some country 등) 뒤에는 동사 끝에 '-s' 또는 '-es'를 붙이거나, 조동사 'do' 대신 'does'를 사용해야 합니다. 또한, '판매'를 의미할 때는 보통 복수형 'sales'를 사용합니다.</p>
+<br>
+<p>🔁 <strong>따라 읽기:</strong></p>
+<p>🗣️ "My job doesn't have many presentations."</p>
+<p>🗣️ "Some country doesn't allow taking medicine."</p>
+<p>🗣️ "Our presentation purpose is to speak to the listener."</p>
+<p>🗣️ "The research shows a 2% increase in sales of products."</p>
+<br>
+<br>
+<p><strong>4. 📗 어휘 확장 (Vocabulary Vault)</strong></p>
+<p>수업 중 등장했거나 비즈니스 환경에서 유용하게 쓸 수 있는 표준 영어 단어 5가지를 소개합니다.</p>
+<br>
+<div class="numbered"><strong>1.</strong>  <strong>anticipate</strong> /ænˈtɪsɪpeɪt/ (동사)</div>
+<p>    *   뜻: 예상하다, 기대하다, 미리 대비하다</p>
+<p>    *   실전 예문: We <strong>anticipate</strong> a significant increase in demand for renewable energy next quarter.</p>
+<br>
+<div class="numbered"><strong>2.</strong>  <strong>comprehension</strong> /ˌkɒmprɪˈhenʃən/ (명사)</div>
+<p>    *   뜻: 이해, 이해력</p>
+<p>    *   실전 예문: The presenter's clear visuals greatly aided the audience's <strong>comprehension</strong> of complex data.</p>
+<br>
+<div class="numbered"><strong>3.</strong>  <strong>convey</strong> /kənˈveɪ/ (동사)</div>
+<p>    *   뜻: (생각, 감정 등을) 전달하다, 운반하다</p>
+<p>    *   실전 예문: It's crucial to <strong>convey</strong> our investment strategy clearly to all stakeholders.</p>
+<br>
+<div class="numbered"><strong>4.</strong>  <strong>stakeholder</strong> /ˈsteɪkˌhoʊldər/ (명사)</div>
+<p>    *   뜻: 이해관계자 (기업, 프로젝트 등에 이해관계를 가진 개인이나 집단)</p>
+<p>    *   실전 예문: We need to ensure all <strong>stakeholders</strong> are aligned with the new project timeline.</p>
+<br>
+<div class="numbered"><strong>5.</strong>  <strong>facilitate</strong> /fəˈsɪlɪteɪt/ (동사)</div>
+<p>    *   뜻: (처리, 진행을) 용이하게 하다, 촉진하다</p>
+<p>    *   실전 예문: Our new software aims to <strong>facilitate</strong> more efficient data analysis.</p>
+<br>
+<br>
+<p><strong>5. 📝 실전 복습 챌린지 (Practice)</strong></p>
+<p>오늘 배운 표현과 문법을 활용하여 다음 상황들을 영어로 영작해 보세요.</p>
+<br>
+<div class="numbered"><strong>1.</strong>  <strong>상황:</strong> 당신의 팀은 다음 주에 새로운 투자 기회에 대한 발표를 준비하고 있습니다. 발표가 성공적으로 진행되기를 바라는 마음을 표현해 보세요.</div>
+<p>    *   <strong>영작:</strong> (I hope our team's presentation on the new investment opportunity goes well next week.)</p>
+<br>
+<div class="numbered"><strong>2.</strong>  <strong>상황:</strong> 당신은 비즈니스 파트너에게 최근 시장 동향에 대한 정보를 명확하게 전달하는 것이 중요하다고 말하고 싶습니다.</div>
+<p>    *   <strong>영작:</strong> (It's important to convey the latest market trends clearly to our business partners.)</p>
+<br>
+<div class="numbered"><strong>3.</strong>  <strong>상황:</strong> 당신의 회사는 새로운 에너지 수입 계약을 체결했습니다. 이 계약이 향후 5년간 안정적인 에너지 공급을 촉진할 것으로 예상된다고 말해 보세요. (힌트: anticipate, facilitate)</div>
+<p>    *   <strong>영작:</strong> (Our company has signed a new energy import agreement. We anticipate this contract will facilitate a stable energy supply for the next five years.)</p>
+<br>
+<br>
+<p><strong>6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)</strong></p>
+<br>
+<p>✨ <strong>Good Job:</strong></p>
+<p>"So I think we should consider the audience. We have to consider the audience. Okay, I see."</p>
+<p><span class="arrow">→</span> "listener" 대신 "audience"라는 단어를 배우신 후, 바로 자신의 문장에 적용하여 반복적으로 사용하신 점이 정말 훌륭했습니다. 새로운 어휘를 즉각적으로 활용하려는 적극적인 태도는 유창성 향상에 큰 도움이 됩니다!</p>
+<br>
+<p>🚀 <strong>내일의 한 문장:</strong></p>
+<p>"I anticipate our discussion today will facilitate a deeper understanding of [topic]."</p>
+<p><span class="arrow">→</span> 다음 수업 시작 시, 오늘 배운 'anticipate'와 'facilitate'를 활용하여 수업 주제에 대한 기대감을 표현하며 대화를 시작해 보세요.</p>
+<br>
+<br>
+<p><strong>[성과 지표]</strong></p>
+<p><strong>유창성 점수:</strong> 7/10점</p>
+<br>
+<p><strong>근거:</strong> Joanna님은 다양한 주제에 대해 막힘없이 자신의 의견을 표현하려는 의지가 매우 강합니다. 문법적 오류나 어색한 표현이 있더라도 주저하지 않고 문장을 이어나가는 모습은 유창성 측면에서 매우 긍정적입니다. 특히 새로운 어휘를 배우면 바로 자신의 문장에 적용하려는 노력이 돋보입니다. 다만, 복잡한 문장을 구사할 때 문장 구조나 시제, 주어-동사 수일치 등에서 오류가 발생하여 의미 전달이 다소 모호해지는 경우가 있어, 이를 개선하면 더욱 자연스러운 대화가 가능할 것입니다.</p>
+<br>
+<p><strong>다음 수업 '원포인트 액션 플랜':</strong></p>
+<p>다음 수업에서는 <strong>"3인칭 단수 주어-동사 수일치"</strong>에 집중하여 대화해 봅시다. 문장을 말하기 전에 주어가 3인칭 단수인지 한번 더 확인하고, 동사에 '-s'를 붙이거나 'does'를 사용하는 연습을 의식적으로 해보는 것이 목표입니다.</p></div>
+        </div>
+        <div id="tab-transcript" class="tab-content">
+            <div class="transcript"><span class="tutor">[Tutor]</span> Hello, Joanna. Good evening. Good morning.
+<span class="student">[Student]</span> Hi, Joey. Good morning. How are you today?
+<span class="tutor">[Tutor]</span> I&#x27;m doing great.
+<span class="student">[Student]</span> This day, I don&#x27;t enough sleep, but yesterday night, I&#x27;m well.
+<span class="tutor">[Tutor]</span> Yeah, it&#x27;s so nice. Good.
+<span class="student">[Student]</span> Yeah, I slept almost 10 hours more. So, yeah, my recovery is so good.
+<span class="tutor">[Tutor]</span> How was your day?
+<span class="student">[Student]</span> My day was very quiet. I rested a lot because I have a cold. So I needed the rest.
+<span class="tutor">[Tutor]</span> Ah, yeah, you need the rest. You&#x27;re right.
+<span class="student">[Student]</span> And you have to eat many fruits.
+<span class="tutor">[Tutor]</span> Yes, fruit and vegetables and soup. I like eating soup when I&#x27;m sick.
+<span class="student">[Student]</span> Yeah, that is nice.
+<span class="tutor">[Tutor]</span> And today I heard your voice a little different. Maybe you had a catch-up cold.
+<span class="student">[Student]</span> I see. Exactly.
+<span class="tutor">[Tutor]</span> We can say you sound stuffy.
+<span class="student">[Student]</span> Stuffy.
+<span class="tutor">[Tutor]</span> Stuffy or stuffed up.
+<span class="student">[Student]</span> Stop, stop. Your sound is a little stuffy. Yeah, I see. I wish you have recovered your body condition.
+<span class="tutor">[Tutor]</span> Thank you. It&#x27;s not too bad. It&#x27;s a head cold. A head cold means it&#x27;s just my head, it is my nose and my head, like I have a headache, but it&#x27;s not my lungs, so I&#x27;m not coughing, I don&#x27;t have a fever. It&#x27;s just my nose.
+<span class="student">[Student]</span> Just your nose. I see.
+<span class="tutor">[Tutor]</span> But better.
+<span class="student">[Student]</span> Your country weather is so nice. I forecast your condition recovery fast.
+<span class="tutor">[Tutor]</span> Thank you. Yes. Okay.
+<span class="tutor">[Tutor]</span> Let&#x27;s jump into our book.
+<span class="student">[Student]</span> Okay. Jump in my textbook.
+<span class="tutor">[Tutor]</span> And today we will start the sneak peek and go to the next section.
+<span class="student">[Student]</span> You got it. Yes, yes. The sneak peek? Okay. Okay.
+<span class="student">[Student]</span> Can I read the sneak peek?
+<span class="tutor">[Tutor]</span> Absolutely.
+<span class="student">[Student]</span> Okay.
+<span class="tutor">[Tutor]</span> And you answer it.
+<span class="student">[Student]</span> Automation? Automation? Okay.
+<span class="tutor">[Tutor]</span> How do you feel before giving a presentation? Do you have any strategy for getting ready?
+<span class="student">[Student]</span> Okay, I see. Yeah, this paragraph is the... Yeah, it&#x27;s natural. But some people read that a little... a lot. In my case, that is the reasonable, so I prepare for my family travel. And my strategy is to just have a simulation, had a simulation, have a simulation this situation and prepare some risk and prepare that. That&#x27;s my strategy.
+<span class="tutor">[Tutor]</span> And second question, what is the worst thing that you could do during a presentation?
+<span class="student">[Student]</span> The worst thing? I guess it is about the medicine because some country it&#x27;s impossible to take medicine. So we prepare, usually we prepare medicine, but if some country don&#x27;t allow that take medicine, at that time, we just find and restore the hospital and drugstore.
+<span class="tutor">[Tutor]</span> Yeah, sure. Okay, excellent answers.
+<span class="student">[Student]</span> Okay, thank you. I like being prepared, yes. Yes.
+<span class="tutor">[Tutor]</span> Could you go to the next page? We are going to the next page, Presentation Know. Presentation Know. Okay. The goals are to use skills for effective presentations and discuss the verbal and physical delivery aspects of presentations.
+<span class="student">[Student]</span> I see. When you finish audit reports, do you have to present them to the other team?
+<span class="tutor">[Tutor]</span> Yeah, maybe. Okay. Sometimes. Yeah, a little bit. Okay. Let&#x27;s start on the left-hand side with number one, getting started.
+<span class="student">[Student]</span> Getting started. Okay.
+<span class="tutor">[Tutor]</span> And we want to hear your opinions.
+<span class="student">[Student]</span> Okay.
+<span class="tutor">[Tutor]</span> Okay, first question. What do you consider to be the characteristics of a good presentation? Explain.
+<span class="student">[Student]</span> I think we are consider the listener, always listener, because our presentation purpose to speak to the listener. So we already consider the listener is their understanding or listener understanding more easier or listener more, my transfer is more clear. So every purpose is their understanding listener.
+<span class="tutor">[Tutor]</span> Another word we could use when we&#x27;re talking about presenting instead of listener, we can say the audience.
+<span class="student">[Student]</span> Audience, I see. So I think we should consider the audience. We have to consider the audience. Okay, I see.
+<span class="tutor">[Tutor]</span> Okay, the second question. Do you give many presentations for your job? How do you prepare?
+<span class="student">[Student]</span> No, my job don&#x27;t have many presentations, but our job is to lead to many interviews. So we have so many interview skills, but I think it is something is a little common. So I can adjust that skill to presentation.
+<span class="tutor">[Tutor]</span> I completely agree. The common thing is that two both ways have an audience.
+<span class="student">[Student]</span> So we carefully test audience.
+<span class="tutor">[Tutor]</span> Mm-hmm. Okay. Yes. Both of them have an audience and you have to consider them first.
+<span class="student">[Student]</span> Absolutely. Yes, you&#x27;re right.
+<span class="tutor">[Tutor]</span> The last question. What tips would you give someone who has never given a presentation before? Or what should he or she be aware of?
+<span class="student">[Student]</span> Hmm, usually I guess many people are afraid to presentation to many people. So if we reduce our mistake, we just imagine just speaking one way, one people. We just speak to one person, like a teacher, like a friend. Just explain to one person. Yeah, that is my tip.
+<span class="tutor">[Tutor]</span> That&#x27;s a great tip. Because sometimes people get really nervous speaking in front of a lot of people. But if you pretend you&#x27;re addressing one person, then it might be easier.
+<span class="student">[Student]</span> Yeah, you&#x27;re right. That&#x27;s a great tip.
+<span class="tutor">[Tutor]</span> Oh, thank you so much.
+<span class="tutor">[Tutor]</span> Okay, now we&#x27;re going to organize formal and informal expressions.
+<span class="student">[Student]</span> Oh my gosh. Okay, I see. Maybe you have so many time, you need so many time to wait.
+<span class="tutor">[Tutor]</span> I don&#x27;t think so. I think you got this. Okay, I see. Okay. So let&#x27;s see. First, let&#x27;s read the function in the table.
+<span class="student">[Student]</span> In the table.
+<span class="tutor">[Tutor]</span> Let&#x27;s read those exactly so we know what categories we&#x27;re looking for.
+<span class="student">[Student]</span> I see. Teacher, I suggest this way is a little change.
+<span class="tutor">[Tutor]</span> Okay, tell me.
+<span class="student">[Student]</span> Because first I make some function, formal, informal, and make a greeting on audience, blah blah blah. That is really difficult for me, to my level.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="student">[Student]</span> So my suggestion is to just read A and make some pair.
+<span class="tutor">[Tutor]</span> And figure out where it goes.
+<span class="student">[Student]</span> Yeah, and then reset the functions. Okay. Okay.
+<span class="student">[Student]</span> Okay, A is the sale has gone up 10% in last few weeks. Hmm, sale has grown up 10% the last few week. Can I find 10%? Oh, teacher, I have one question. Is it the same meaning or same, same similar? Or it is same meaning I made a pair. For example, if I just find just formal-informal or if I find a pair just 10% is the same.
+<span class="tutor">[Tutor]</span> Similar.
+<span class="student">[Student]</span> Similar?
+<span class="tutor">[Tutor]</span> Similar, yes.
+<span class="student">[Student]</span> So I guess the H.
+<span class="tutor">[Tutor]</span> Yes.
+<span class="student">[Student]</span> The research shows a 2% increase in sale of product. The same. Mm-hmm.
+<span class="tutor">[Tutor]</span> And which one is formal, which one is informal?
+<span class="student">[Student]</span> H is formal. Yes. And A is the informal. And that is, and just a moment, function. I can find the function. Addressing specific audience member. Addressing the topic. Maybe explain the graph. No?
+<span class="tutor">[Tutor]</span> No. No.
+<span class="student">[Student]</span> Introducing topic? It&#x27;s after explaining a graph. After… you list it after… The last one? Last one, presentation strategy? Is it right?
+<span class="tutor">[Tutor]</span> Presenting statistics, exactly. 10%, 2% increase, gone up. Yeah, you got it.
+<span class="student">[Student]</span> I see.
+<span class="tutor">[Tutor]</span> And then check out this chart.
+<span class="student">[Student]</span> Check out this chart. Check out this chart. Just a moment.
+<span class="tutor">[Tutor]</span> As you can see the graph, the sales have increased steadily over the last year. How about that?
+<span class="student">[Student]</span> You got it. Yeah, that is the informal. And check it out. This chart is the informal.
+<span class="tutor">[Tutor]</span> You got it.
+<span class="student">[Student]</span> Yes, and that is true. It&#x27;s plain graph. The formal, yeah, formal is the P, informal is B.
+<span class="tutor">[Tutor]</span> You got it.
+<span class="student">[Student]</span> Okay, the next. Let&#x27;s start now. Let&#x27;s start now. Hmm. Okay, the next. Let&#x27;s start now. Let&#x27;s start now.
+<span class="tutor">[Tutor]</span> We will begin by discussing your business. How about that?
+<span class="student">[Student]</span> Yes, I like that. And introduce a topic. Yes.
+<span class="tutor">[Tutor]</span> Introducing a topic, you got it.
+<span class="student">[Student]</span> Yes. N is the formal and B is the C is the informal.
+<span class="tutor">[Tutor]</span> You got it.
+<span class="student">[Student]</span> Yes. And yes. Mr. Mark. Yes, Mr. Mark.
+<span class="tutor">[Tutor]</span> Do you have something to add, Mr. Darf?
+<span class="student">[Student]</span> Exactly. Okay. The I-D-D. Okay. Maybe addressing a specific audience member?
+<span class="tutor">[Tutor]</span> That&#x27;s exactly what it is.
+<span class="student">[Student]</span> Okay, so D is the informal and J is the formal.
+<span class="tutor">[Tutor]</span> You got it.
+<span class="student">[Student]</span> Okay, and just a moment. Hi, everyone. Yes, good morning, ladies and gentlemen. Uh-huh. Yes. It is greeting an audience. I is the formal and E is the informal. And any question?
+<span class="tutor">[Tutor]</span> Does anyone have anything to ask? How about that?
+<span class="student">[Student]</span> You&#x27;ve got it. Okay. And that is encouraging question.
+<span class="tutor">[Tutor]</span> Encouraging questions.
+<span class="student">[Student]</span> Yes. Yes. I is the informal and I is formal and F is the informal. Okay, maybe almost the right.
+<span class="tutor">[Tutor]</span> You got it.
+<span class="student">[Student]</span> Okay, two. We have a really mind, two. I think we are done here. I think we are done here. And and with that I will conclude my presentation. Yes. Okay, so maybe closing the presentation. G is the informal. And yes. Say K. K is the formal. And remind. K is the formal way to say it. Yes. Sorry. Go ahead. And the last. This graph shows good informal. Could you everyone please recall the dramacy? Drawing and attention to images. This graph is so good improvement and the pair is the... Yeah, the Q. OQ is the same pair. And Q is the formal and O is the informal.
+<span class="tutor">[Tutor]</span> Okay. You got it.
+<span class="student">[Student]</span> Thank you so much. Okay. Okay.
+<span class="tutor">[Tutor]</span> Let&#x27;s wrap it up here. Thank you very much for all of your hard work this morning. And I hope you have a great few days and we will talk soon.
+<span class="student">[Student]</span> Yeah, talk soon. Have a nice day, teacher.
+<span class="tutor">[Tutor]</span> Thank you. You too. Bye-bye.</div>
+        </div>
+    </div>
+    <div class="toast" id="toast">✅ 프롬프트가 복사되었습니다!</div>
+    <script>
+        const REVIEW_PROMPT="너는 나의 영어 회화 복습 파트너야. 오늘 내 전화영어 수업 내용을 기반으로 대화하면서 복습을 도와줘.\n\n[오늘 수업 전사 내용]\n[Tutor] Hello, Joanna. Good evening. Good morning.\n[Student] Hi, Joey. Good morning. How are you today?\n[Tutor] I'm doing great.\n[Student] This day, I don't enough sleep, but yesterday night, I'm well.\n[Tutor] Yeah, it's so nice. Good.\n[Student] Yeah, I slept almost 10 hours more. So, yeah, my recovery is so good.\n[Tutor] How was your day?\n[Student] My day was very quiet. I rested a lot because I have a cold. So I needed the rest.\n[Tutor] Ah, yeah, you need the rest. You're right.\n[Student] And you have to eat many fruits.\n[Tutor] Yes, fruit and vegetables and soup. I like eating soup when I'm sick.\n[Student] Yeah, that is nice.\n[Tutor] And today I heard your voice a little different. Maybe you had a catch-up cold.\n[Student] I see. Exactly.\n[Tutor] We can say you sound stuffy.\n[Student] Stuffy.\n[Tutor] Stuffy or stuffed up.\n[Student] Stop, stop. Your sound is a little stuffy. Yeah, I see. I wish you have recovered your body condition.\n[Tutor] Thank you. It's not too bad. It's a head cold. A head cold means it's just my head, it is my nose and my head, like I have a headache, but it's not my lungs, so I'm not coughing, I don't have a fever. It's just my nose.\n[Student] Just your nose. I see.\n[Tutor] But better.\n[Student] Your country weather is so nice. I forecast your condition recovery fast.\n[Tutor] Thank you. Yes. Okay.\n[Tutor] Let's jump into our book.\n[Student] Okay. Jump in my textbook.\n[Tutor] And today we will start the sneak peek and go to the next section.\n[Student] You got it. Yes, yes. The sneak peek? Okay. Okay.\n[Student] Can I read the sneak peek?\n[Tutor] Absolutely.\n[Student] Okay.\n[Tutor] And you answer it.\n[Student] Automation? Automation? Okay.\n[Tutor] How do you feel before giving a presentation? Do you have any strategy for getting ready?\n[Student] Okay, I see. Yeah, this paragraph is the... Yeah, it's natural. But some people read that a little... a lot. In my case, that is the reasonable, so I prepare for my family travel. And my strategy is to just have a simulation, had a simulation, have a simulation this situation and prepare some risk and prepare that. That's my strategy.\n[Tutor] And second question, what is the worst thing that you could do during a presentation?\n[Student] The worst thing? I guess it is about the medicine because some country it's impossible to take medicine. So we prepare, usually we prepare medicine, but if some country don't allow that take medicine, at that time, we just find and restore the hospital and drugstore.\n[Tutor] Yeah, sure. Okay, excellent answers.\n[Student] Okay, thank you. I like being prepared, yes. Yes.\n[Tutor] Could you go to the next page? We are going to the next page, Presentation Know. Presentation Know. Okay. The goals are to use skills for effective presentations and discuss the verbal and physical delivery aspects of presentations.\n[Student] I see. When you finish audit reports, do you have to present them to the other team?\n[Tutor] Yeah, maybe. Okay. Sometimes. Yeah, a little bit. Okay. Let's start on the left-hand side with number one, getting started.\n[Student] Getting started. Okay.\n[Tutor] And we want to hear your opinions.\n[Student] Okay.\n[Tutor] Okay, first question. What do you consider to be the characteristics of a good presentation? Explain.\n[Student] I think we are consider the listener, always listener, because our presentation purpose to speak to the listener. So we already consider the listener is their understanding or listener understanding more easier or listener more, my transfer is more clear. So every purpose is their understanding listener.\n[Tutor] Another word we could use when we're talking about presenting instead of listener, we can say the audience.\n[Student] Audience, I see. So I think we should consider the audience. We have to consider the audience. Okay, I see.\n[Tutor] Okay, the second question. Do you give many presentations for your job? How do you prepare?\n[Student] No, my job don't have many presentations, but our job is to lead to many interviews. So we have so many interview skills, but I think it is something is a little common. So I can adjust that skill to presentation.\n[Tutor] I completely agree. The common thing is that two both ways have an audience.\n[Student] So we carefully test audience.\n[Tutor] Mm-hmm. Okay. Yes. Both of them have an audience and you have to consider them first.\n[Student] Absolutely. Yes, you're right.\n[Tutor] The last question. What tips would you give someone who has never given a presentation before? Or what should he or she be aware of?\n[Student] Hmm, usually I guess many people are afraid to presentation to many people. So if we reduce our mistake, we just imagine just speaking one way, one people. We just speak to one person, like a teacher, like a friend. Just explain to one person. Yeah, that is my tip.\n[Tutor] That's a great tip. Because sometimes people get really nervous speaking in front of a lot of people. But if you pretend you're addressing one person, then it might be easier.\n[Student] Yeah, you're right. That's a great tip.\n[Tutor] Oh, thank you so much.\n[Tutor] Okay, now we're going to organize formal and informal expressions.\n[Student] Oh my gosh. Okay, I see. Maybe you have so many time, you need so many time to wait.\n[Tutor] I don't think so. I think you got this. Okay, I see. Okay. So let's see. First, let's read the function in the table.\n[Student] In the table.\n[Tutor] Let's read those exactly so we know what categories we're looking for.\n[Student] I see. Teacher, I suggest this way is a little change.\n[Tutor] Okay, tell me.\n[Student] Because first I make some function, formal, informal, and make a greeting on audience, blah blah blah. That is really difficult for me, to my level.\n[Tutor] Okay.\n[Student] So my suggestion is to just read A and make some pair.\n[Tutor] And figure out where it goes.\n[Student] Yeah, and then reset the functions. Okay. Okay.\n[Student] Okay, A is the sale has gone up 10% in last few weeks. Hmm, sale has grown up 10% the last few week. Can I find 10%? Oh, teacher, I have one question. Is it the same meaning or same, same similar? Or it is same meaning I made a pair. For example, if I just find just formal-informal or if I find a pair just 10% is the same.\n[Tutor] Similar.\n[Student] Similar?\n[Tutor] Similar, yes.\n[Student] So I guess the H.\n[Tutor] Yes.\n[Student] The research shows a 2% increase in sale of product. The same. Mm-hmm.\n[Tutor] And which one is formal, which one is informal?\n[Student] H is formal. Yes. And A is the informal. And that is, and just a moment, function. I can find the function. Addressing specific audience member. Addressing the topic. Maybe explain the graph. No?\n[Tutor] No. No.\n[Student] Introducing topic? It's after explaining a graph. After… you list it after… The last one? Last one, presentation strategy? Is it right?\n[Tutor] Presenting statistics, exactly. 10%, 2% increase, gone up. Yeah, you got it.\n[Student] I see.\n[Tutor] And then check out this chart.\n[Student] Check out this chart. Check out this chart. Just a moment.\n[Tutor] As you can see the graph, the sales have increased steadily over the last year. How about that?\n[Student] You got it. Yeah, that is the informal. And check it out. This chart is the informal.\n[Tutor] You got it.\n[Student] Yes, and that is true. It's plain graph. The formal, yeah, formal is the P, informal is B.\n[Tutor] You got it.\n[Student] Okay, the next. Let's start now. Let's start now. Hmm. Okay, the next. Let's start now. Let's start now.\n[Tutor] We will begin by discussing your business. How about that?\n[Student] Yes, I like that. And introduce a topic. Yes.\n[Tutor] Introducing a topic, you got it.\n[Student] Yes. N is the formal and B is the C is the informal.\n[Tutor] You got it.\n[Student] Yes. And yes. Mr. Mark. Yes, Mr. Mark.\n[Tutor] Do you have something to add, Mr. Darf?\n[Student] Exactly. Okay. The I-D-D. Okay. Maybe addressing a specific audience member?\n[Tutor] That's exactly what it is.\n[Student] Okay, so D is the informal and J is the formal.\n[Tutor] You got it.\n[Student] Okay, and just a moment. Hi, everyone. Yes, good morning, ladies and gentlemen. Uh-huh. Yes. It is greeting an audience. I is the formal and E is the informal. And any question?\n[Tutor] Does anyone have anything to ask? How about that?\n[Student] You've got it. Okay. And that is encouraging question.\n[Tutor] Encouraging questions.\n[Student] Yes. Yes. I is the informal and I is formal and F is the informal. Okay, maybe almost the right.\n[Tutor] You got it.\n[Student] Okay, two. We have a really mind, two. I think we are done here. I think we are done here. And and with that I will conclude my presentation. Yes. Okay, so maybe closing the presentation. G is the informal. And yes. Say K. K is the formal. And remind. K is the formal way to say it. Yes. Sorry. Go ahead. And the last. This graph shows good informal. Could you everyone please recall the dramacy? Drawing and attention to images. This graph is so good improvement and the pair is the... Yeah, the Q. OQ is the same pair. And Q is the formal and O is the informal.\n[Tutor] Okay. You got it.\n[Student] Thank you so much. Okay. Okay.\n[Tutor] Let's wrap it up here. Thank you very much for all of your hard work this morning. And I hope you have a great few days and we will talk soon.\n[Student] Yeah, talk soon. Have a nice day, teacher.\n[Tutor] Thank you. You too. Bye-bye.\n\n[AI 피드백]\n안녕하세요, Joanna! 오늘 수업도 정말 즐겁고 유익했습니다. 발표 전략과 격식/비격식 표현을 익히는 과정에서 Joanna님의 적극적인 참여와 날카로운 통찰력 덕분에 저도 많이 배웠습니다. 특히 발표 시 청중의 이해를 최우선으로 생각해야 한다는 말씀이 인상 깊었습니다.\n\n오늘 배운 내용을 바탕으로 유창성과 정확성을 동시에 잡을 수 있도록 따뜻하고 실용적인 피드백을 준비했습니다. 함께 살펴보면서 영어 실력을 한 단계 더 끌어올려 볼까요?\n\n---\n\n**0. 📌 Topic**\nTopic: Discussing presentation strategies and distinguishing between formal and informal expressions.\n\n---\n\n**1. 📊 오늘의 대화 요약 (Summary)**\n오늘 수업에서는 발표(presentation)를 앞두고 준비하는 전략과 좋은 발표의 특징에 대해 토론했습니다. 이어서 비즈니스 환경에서 자주 사용되는 다양한 표현들을 격식체(formal)와 비격식체(informal)로 구분하고, 통계 발표, 주제 소개, 청중 환영 등 각 상황에 맞는 표현들을 매칭하는 연습을 진행했습니다.\n\n---\n\n**2. 💬 유창성 업그레이드 (Fluency & Natural Flow)**\nJoanna님이 말씀하신 내용 중 의미는 통하지만, 원어민이 들었을 때 조금 더 자연스럽게 들릴 수 있는 표현들을 함께 다듬어 보겠습니다.\n\n1.  **❌ 학습자 원문 (As Said):** \"This day, I don't enough sleep, but yesterday night, I'm well.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"I didn't get enough sleep today, but last night I slept really well.\"\n    *   **💎 비즈니스 표현 (Professional):** \"I experienced a lack of sleep today, though I rested exceptionally well last night.\"\n    *   **💡 코칭 포인트:** \"get enough sleep\"은 충분히 잠을 잤다는 것을 표현하는 가장 자연스러운 방법입니다. 또한, 과거에 일어난 일에는 과거 시제(\"didn't get,\" \"slept\")를 사용하는 것을 기억하세요.\n\n2.  **❌ 학습자 원문 (As Said):** \"I forecast your condition recovery fast.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"I hope you recover quickly.\"\n    *   **💎 비즈니스 표현 (Professional):** \"I anticipate a swift recovery for you.\"\n    *   **💡 코칭 포인트:** \"forecast\"는 일반적으로 날씨, 경제 동향 또는 미래 사건을 예측할 때 사용되며, 개인의 건강 회복에는 잘 쓰이지 않습니다. 누군가의 안녕을 바랄 때는 \"hope\"가 더 적절하며, \"recover quickly/fast\"는 자연스러운 연어(collocation)입니다.\n\n3.  **❌ 학습자 원문 (As Said):** \"I wish you have recovered your body condition.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"I hope you recover soon.\" (or \"I wish you a speedy recovery.\")\n    *   **💎 비즈니스 표현 (Professional):** \"I wish you a full and swift recovery.\"\n    *   **💡 코칭 포인트:** 누군가의 미래 회복을 바랄 때 \"I hope you recover soon\"이 가장 일반적이고 직접적인 표현입니다. \"body condition\"은 한국어를 직역한 표현으로 다소 부자연스럽습니다. 단순히 \"recover\" 또는 \"get better\"면 충분합니다.\n\n4.  **❌ 학습자 원문 (As Said):** \"I guess many people are afraid to presentation to many people.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"I guess many people are afraid to present to many people.\" (or \"afraid of presenting to many people.\")\n    *   **💎 비즈니스 표현 (Professional):** \"I believe many individuals experience apprehension when presenting to a large audience.\"\n    *   **💡 코칭 포인트:** \"present\"는 동사로 '발표하다'라는 의미를 가집니다. \"presentation\"은 명사로 '발표' 자체를 의미하므로, 동사가 필요한 자리에 \"present\"를 사용하는 것이 자연스럽습니다. \"be afraid of ~ing\" 또는 \"be afraid to do\" 형태로 사용합니다.\n\n---\n\n**3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)**\n오늘 대화에서 Joanna님이 반복적으로 사용한 문법 실수 패턴은 **주어-동사 수일치 (Subject-Verb Agreement)** 오류였습니다. 특히 3인칭 단수 주어 뒤에 오는 동사의 형태에서 실수가 있었습니다.\n\n| ❌ 학습자 원문 (As Said)             | ✅ 교정 예시 (Corrected)             |\n| :----------------------------------- | :----------------------------------- |\n| \"my job **don't** have many presentations\" | \"my job **doesn't** have many presentations\" |\n| \"some country **don't** allow that take medicine\" | \"some country **doesn't** allow taking medicine\" |\n| \"our presentation purpose to speak to the listener\" | \"our presentation **purpose is** to speak to the listener\" |\n| \"The research shows a 2% increase in **sale** of product.\" | \"The research shows a 2% increase in **sales** of products.\" |\n\n📌 **핵심 규칙:** 3인칭 단수 주어 (He, She, It, My job, Some country 등) 뒤에는 동사 끝에 '-s' 또는 '-es'를 붙이거나, 조동사 'do' 대신 'does'를 사용해야 합니다. 또한, '판매'를 의미할 때는 보통 복수형 'sales'를 사용합니다.\n\n🔁 **따라 읽기:**\n🗣️ \"My job doesn't have many presentations.\"\n🗣️ \"Some country doesn't allow taking medicine.\"\n🗣️ \"Our presentation purpose is to speak to the listener.\"\n🗣️ \"The research shows a 2% increase in sales of products.\"\n\n---\n\n**4. 📗 어휘 확장 (Vocabulary Vault)**\n수업 중 등장했거나 비즈니스 환경에서 유용하게 쓸 수 있는 표준 영어 단어 5가지를 소개합니다.\n\n1.  **anticipate** /ænˈtɪsɪpeɪt/ (동사)\n    *   뜻: 예상하다, 기대하다, 미리 대비하다\n    *   실전 예문: We **anticipate** a significant increase in demand for renewable energy next quarter.\n\n2.  **comprehension** /ˌkɒmprɪˈhenʃən/ (명사)\n    *   뜻: 이해, 이해력\n    *   실전 예문: The presenter's clear visuals greatly aided the audience's **comprehension** of complex data.\n\n3.  **convey** /kənˈveɪ/ (동사)\n    *   뜻: (생각, 감정 등을) 전달하다, 운반하다\n    *   실전 예문: It's crucial to **convey** our investment strategy clearly to all stakeholders.\n\n4.  **stakeholder** /ˈsteɪkˌhoʊldər/ (명사)\n    *   뜻: 이해관계자 (기업, 프로젝트 등에 이해관계를 가진 개인이나 집단)\n    *   실전 예문: We need to ensure all **stakeholders** are aligned with the new project timeline.\n\n5.  **facilitate** /fəˈsɪlɪteɪt/ (동사)\n    *   뜻: (처리, 진행을) 용이하게 하다, 촉진하다\n    *   실전 예문: Our new software aims to **facilitate** more efficient data analysis.\n\n---\n\n**5. 📝 실전 복습 챌린지 (Practice)**\n오늘 배운 표현과 문법을 활용하여 다음 상황들을 영어로 영작해 보세요.\n\n1.  **상황:** 당신의 팀은 다음 주에 새로운 투자 기회에 대한 발표를 준비하고 있습니다. 발표가 성공적으로 진행되기를 바라는 마음을 표현해 보세요.\n    *   **영작:** (I hope our team's presentation on the new investment opportunity goes well next week.)\n\n2.  **상황:** 당신은 비즈니스 파트너에게 최근 시장 동향에 대한 정보를 명확하게 전달하는 것이 중요하다고 말하고 싶습니다.\n    *   **영작:** (It's important to convey the latest market trends clearly to our business partners.)\n\n3.  **상황:** 당신의 회사는 새로운 에너지 수입 계약을 체결했습니다. 이 계약이 향후 5년간 안정적인 에너지 공급을 촉진할 것으로 예상된다고 말해 보세요. (힌트: anticipate, facilitate)\n    *   **영작:** (Our company has signed a new energy import agreement. We anticipate this contract will facilitate a stable energy supply for the next five years.)\n\n---\n\n**6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)**\n\n✨ **Good Job:**\n\"So I think we should consider the audience. We have to consider the audience. Okay, I see.\"\n→ \"listener\" 대신 \"audience\"라는 단어를 배우신 후, 바로 자신의 문장에 적용하여 반복적으로 사용하신 점이 정말 훌륭했습니다. 새로운 어휘를 즉각적으로 활용하려는 적극적인 태도는 유창성 향상에 큰 도움이 됩니다!\n\n🚀 **내일의 한 문장:**\n\"I anticipate our discussion today will facilitate a deeper understanding of [topic].\"\n→ 다음 수업 시작 시, 오늘 배운 'anticipate'와 'facilitate'를 활용하여 수업 주제에 대한 기대감을 표현하며 대화를 시작해 보세요.\n\n---\n\n**[성과 지표]**\n**유창성 점수:** 7/10점\n\n**근거:** Joanna님은 다양한 주제에 대해 막힘없이 자신의 의견을 표현하려는 의지가 매우 강합니다. 문법적 오류나 어색한 표현이 있더라도 주저하지 않고 문장을 이어나가는 모습은 유창성 측면에서 매우 긍정적입니다. 특히 새로운 어휘를 배우면 바로 자신의 문장에 적용하려는 노력이 돋보입니다. 다만, 복잡한 문장을 구사할 때 문장 구조나 시제, 주어-동사 수일치 등에서 오류가 발생하여 의미 전달이 다소 모호해지는 경우가 있어, 이를 개선하면 더욱 자연스러운 대화가 가능할 것입니다.\n\n**다음 수업 '원포인트 액션 플랜':**\n다음 수업에서는 **\"3인칭 단수 주어-동사 수일치\"**에 집중하여 대화해 봅시다. 문장을 말하기 전에 주어가 3인칭 단수인지 한번 더 확인하고, 동사에 '-s'를 붙이거나 'does'를 사용하는 연습을 의식적으로 해보는 것이 목표입니다.\n\n위 내용을 바탕으로:\n1. 먼저 오늘 수업에서 내가 틀렸거나 어색했던 표현을 하나 골라서, 관련된 상황을 영어로 질문해줘.\n2. 내가 영어로 대답하면, 자연스러운지 확인하고 더 나은 표현이 있으면 알려줘.\n3. 특히 \"반복 실수 패턴\"에서 지적된 부분을 집중적으로 연습시켜줘.\n4. 이런 식으로 오늘 배운 표현들을 하나씩 복습하자.\n5. 한국어 설명은 필요할 때만 간단히, 대화는 최대한 영어로 진행해줘.\n\n그럼 시작하자!";
+        function startReview(){navigator.clipboard.writeText(REVIEW_PROMPT).then(()=>{showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)}).catch(()=>{const t=document.createElement('textarea');t.value=REVIEW_PROMPT;document.body.appendChild(t);t.select();document.execCommand('copy');document.body.removeChild(t);showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)})}
+        function showToast(){const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500)}
+        function switchTab(n){document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',n==='feedback'?i===0:i===1));document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));document.getElementById('tab-'+n).classList.add('active')}
+    </script>
+</body>
+</html>
