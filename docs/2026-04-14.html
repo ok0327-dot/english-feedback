@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전화영어 복습 - 2026년 04월 14일</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Noto Sans KR',sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.75;min-height:100vh}
+        .header{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);border-bottom:1px solid rgba(255,255,255,.06);padding:48px 24px 40px;text-align:center}
+        .header-date{font-size:13px;color:#94a3b8;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+        .header h1{font-size:28px;font-weight:700;color:#f1f5f9;margin-bottom:16px}
+        .header-meta{display:flex;justify-content:center;gap:24px;font-size:14px;color:#64748b}
+        .header-meta span{display:flex;align-items:center;gap:6px}
+        .cta-section{text-align:center;padding:40px 24px}
+        .cta-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:linear-gradient(135deg,#38bdf8,#818cf8);color:#fff;font-size:16px;font-weight:600;font-family:'Noto Sans KR',sans-serif;border:none;border-radius:50px;cursor:pointer;transition:all .3s;text-decoration:none;box-shadow:0 4px 24px rgba(56,189,248,.25)}
+        .cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(56,189,248,.35)}
+        .cta-btn svg{width:20px;height:20px}
+        .cta-sub{margin-top:12px;font-size:13px;color:#64748b}
+        .toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#38bdf8;padding:14px 28px;border-radius:12px;font-size:14px;font-weight:500;border:1px solid rgba(56,189,248,.2);box-shadow:0 8px 32px rgba(0,0,0,.4);opacity:0;transition:all .4s cubic-bezier(.16,1,.3,1);z-index:1000}
+        .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+        .container{max-width:720px;margin:0 auto;padding:0 24px 80px}
+        .tabs{display:flex;gap:4px;background:#1a1a24;padding:4px;border-radius:12px;margin-bottom:32px}
+        .tab{flex:1;padding:12px;text-align:center;font-size:14px;font-weight:500;color:#64748b;background:0 0;border:none;border-radius:8px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all .2s}
+        .tab.active{background:#262636;color:#f1f5f9}
+        .tab-content{display:none}.tab-content.active{display:block}
+        .feedback h2{font-size:18px;font-weight:700;color:#f1f5f9;margin:36px 0 16px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.06)}
+        .feedback h2:first-child{margin-top:0}
+        .feedback p{margin:8px 0;color:#cbd5e1}
+        .feedback .item{padding:6px 0 6px 16px;border-left:2px solid #334155;margin:6px 0;color:#cbd5e1}
+        .feedback .numbered{padding:8px 0 8px 16px;color:#cbd5e1}
+        .feedback .numbered strong{color:#38bdf8}
+        .feedback strong{color:#f1f5f9}
+        .feedback code{background:#1e293b;padding:2px 8px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#38bdf8}
+        .feedback table{width:100%;border-collapse:collapse;margin:12px 0}
+        .feedback th,.feedback td{padding:10px 14px;text-align:left;border-bottom:1px solid #262636}
+        .feedback th{color:#94a3b8;font-weight:500;font-size:13px}
+        .feedback td{color:#cbd5e1}
+        .arrow{color:#38bdf8;font-weight:700}
+        .transcript{background:#1a1a24;border-radius:12px;padding:28px;font-size:14px;line-height:2;color:#94a3b8;white-space:pre-wrap;word-break:break-word;font-family:'JetBrains Mono','Noto Sans KR',monospace}
+        .transcript .tutor{color:#38bdf8}
+        .transcript .student{color:#a78bfa}
+        @media(max-width:640px){.header{padding:32px 16px}.header h1{font-size:22px}.cta-btn{padding:14px 28px;font-size:15px}.container{padding:0 16px 60px}}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-date">2026년 04월 14일</div>
+        <h1>📚 전화영어 복습</h1>
+        <div class="header-meta">
+            <span>⏱ 20분 27초</span>
+            <span>🎙 전화영어_025180304_20260414080019.m4a</span>
+        </div>
+    </div>
+    <div class="cta-section">
+        <button class="cta-btn" onclick="startReview()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Gemini에서 복습 대화 시작하기
+        </button>
+        <div class="cta-sub">클릭하면 프롬프트가 복사되고 Gemini가 열립니다</div>
+    </div>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('feedback')">📋 AI 피드백</button>
+            <button class="tab" onclick="switchTab('transcript')">🎙 수업 전사</button>
+        </div>
+        <div id="tab-feedback" class="tab-content active">
+            <div class="feedback"><p>안녕하세요, Joey님! 오늘도 활기찬 에너지로 수업에 참여해 주셔서 감사합니다. 특히 발표 자료를 '숫자로 이야기'하는 부분에서 Joey님의 경험과 통찰력이 빛났어요. 작은 점들이 모여 선이 되고 그림이 된다는 말씀은 정말 감명 깊었습니다.</p>
+<br>
+<br>
+<p><strong>0. 📌 Topic</strong></p>
+<p>Topic: Discussing effective presentation strategies and common speaking errors.</p>
+<br>
+<br>
+<p><strong>1. 📊 오늘의 대화 요약 (Summary)</strong></p>
+<p>오늘 수업은 감기에 대한 가벼운 대화로 시작하여, 비즈니스 프레젠테이션 조언 역할극으로 이어졌습니다. 특히 숫자를 활용해 스토리를 만드는 방법과 발표 시 흔히 저지르는 말하기 실수(예: 음성 채움, 너무 빠른 속도) 및 그 해결책에 대해 심도 있게 논의했습니다.</p>
+<br>
+<br>
+<p><strong>2. 💬 유창성 업그레이드 (Fluency & Natural Flow)</strong></p>
+<br>
+<p>*   <strong>❌ 학습자 원문 (As Said):</strong> "Some countries drink the honey, and some countries eat the soup, asparagus soup."</p>
+<p>    *   <strong>✅ 자연스러운 표현 (Natural):</strong> "In some countries, people drink honey, and in others, they eat soup, like asparagus soup."</p>
+<p>    *   <strong>💎 비즈니스 표현 (Professional):</strong> "Cultural practices vary; for instance, some regions incorporate honey into remedies, while others utilize specific soups, such as asparagus soup."</p>
+<p>    *   <strong>💡 코칭 포인트:</strong> "In some countries, people..."은 일반적인 관행을 이야기할 때 더 자연스럽습니다. 또한, "the honey"는 특정 꿀을 의미하지만, 'the'가 없는 "honey"는 일반적으로 꿀을 지칭합니다.</p>
+<br>
+<p>*   <strong>❌ 학습자 원문 (As Said):</strong> "I feel this small dot is connected and makes a line."</p>
+<p>    *   <strong>✅ 자연스러운 표현 (Natural):</strong> "I feel these small dots connect and form a line."</p>
+<p>    *   <strong>💎 비즈니스 표현 (Professional):</strong> "I perceive that individual experiences, like small data points, ultimately interconnect to form a cohesive narrative or trajectory."</p>
+<p>    *   <strong>💡 코칭 포인트:</strong> 여러 '점'들이 연결되는 것을 이야기할 때는 복수형 "these small dots"와 복수 동사 "connect"를 사용하는 것이 더 정확합니다. "Form a line" 또한 이 아이디어를 표현하는 매우 자연스러운 방식입니다.</p>
+<br>
+<p>*   <strong>❌ 학습자 원문 (As Said):</strong> "My mind wanted to finish quickly. So, so my speaking too fast, speaking too quickly, and then it makes some problem."</p>
+<p>    *   <strong>✅ 자연스러운 표현 (Natural):</strong> "My mind wants to finish quickly. So I speak too fast, which creates problems."</p>
+<p>    *   <strong>💎 비즈니스 표현 (Professional):</strong> "I tend to expedite my delivery when nervous, which can lead to communication challenges."</p>
+<p>    *   <strong>💡 코칭 포인트:</strong> 습관적인 행동이나 경향을 설명할 때는 현재 시제("My mind *wants* to finish quickly," "I *speak* too fast")가 더 적절합니다. "Creates problems"는 "makes some problem"보다 더 자연스럽고 간결한 표현입니다.</p>
+<br>
+<br>
+<p><strong>3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)</strong></p>
+<p>이번 대화에서는 <strong>관사 (a/an/the)의 사용</strong>에서 실수가 반복되었습니다. 특히 일반적인 명사 앞에 'the'를 사용하거나, 특정하지 않은 명사 앞에 관사를 생략하는 경우가 있었습니다.</p>
+<br>
+<table>
+<tr><th>❌ 원문 (As Said)</th><th>✅ 교정 예시</th></tr>
+<tr><td>"Some countries drink <strong>the</strong> honey..."</td><td>"Some countries drink <strong>honey</strong>..."</td></tr>
+<tr><td>"We usually eat <strong>a</strong> soup, so many vegetables..."</td><td>"We usually eat <strong>soup</strong> with many vegetables..."</td></tr>
+<tr><td>"You can make <strong>audience</strong> alert or apathetic."</td><td>"You can make <strong>the audience</strong> alert or apathetic."</td></tr>
+<tr><td>"I become <strong>the</strong> more age."</td><td>"I <strong>gained</strong> more experience."</td></tr>
+</table>
+<br>
+<p>📌 <strong>핵심 규칙:</strong> 일반적인 개념이나 셀 수 없는 명사 앞에는 관사를 생략하거나 (예: honey, soup), 특정 집단을 지칭할 때는 'the'를 사용합니다 (예: the audience). 또한, '나이를 먹다'는 "get older" 또는 "gain experience" 등으로 표현하는 것이 자연스럽습니다.</p>
+<br>
+<p>🔁 <strong>따라 읽기:</strong></p>
+<p>🗣️ "Some countries drink honey."</p>
+<p>🗣️ "We usually eat soup with many vegetables."</p>
+<p>🗣️ "You can make the audience alert or apathetic."</p>
+<br>
+<br>
+<p><strong>4. 📗 어휘 확장 (Vocabulary Vault)</strong></p>
+<br>
+<p>*   <strong>tweak</strong> /twiːk/ (동사, 명사)</p>
+<p>    *   뜻: (작은) 수정, 약간 고치다, 조정하다</p>
+<p>    *   실전 예문: We need to <strong>tweak</strong> the presentation slides slightly before the meeting.</p>
+<br>
+<p>*   <strong>apathetic</strong> /ˌæpəˈθɛtɪk/ (형용사)</p>
+<p>    *   뜻: 무관심한, 무감각한</p>
+<p>    *   실전 예문: An engaging speaker can prevent the audience from becoming <strong>apathetic</strong>.</p>
+<br>
+<p>*   <strong>sizzling</strong> /ˈsɪzlɪŋ/ (형용사)</p>
+<p>    *   뜻: 아주 흥미로운, 열정적인, 대단한 (원래는 지글거리는 소리)</p>
+<p>    *   실전 예문: Her new investment strategy is generating <strong>sizzling</strong> returns.</p>
+<br>
+<p>*   <strong>disorganized</strong> /dɪsˈɔːrɡənaɪzd/ (형용사)</p>
+<p>    *   뜻: 정리가 안 된, 체계적이지 못한</p>
+<p>    *   실전 예문: A <strong>disorganized</strong> presentation can make the speaker seem unprepared.</p>
+<br>
+<p>*   <strong>trajectory</strong> /trəˈdʒɛktəri/ (명사)</p>
+<p>    *   뜻: 궤적, 경로 (특히 경력이나 프로젝트의 진행 방향)</p>
+<p>    *   실전 예문: This new project could significantly alter the company's growth <strong>trajectory</strong>.</p>
+<br>
+<br>
+<p><strong>5. 📝 실전 복습 챌린지 (Practice)</strong></p>
+<br>
+<div class="numbered"><strong>1.</strong>  <strong>상황:</strong> 당신은 새로운 프로젝트에 대한 아이디어를 팀에 발표해야 합니다. 발표 자료를 조금 <strong>수정</strong>해야 할 것 같아요.</div>
+<p>    *   <strong>영작:</strong> (힌트: 오늘 배운 '작은 수정'을 뜻하는 동사를 사용해 보세요.)</p>
+<p>    *   <strong>모범 답안:</strong> I need to <strong>tweak</strong> the presentation slides for the new project.</p>
+<br>
+<div class="numbered"><strong>2.</strong>  <strong>상황:</strong> 너무 많은 숫자를 나열하면 청중이 <strong>무관심해질</strong> 수 있습니다. 중요한 숫자를 연결하여 <strong>이야기를 전달해야</strong> 합니다.</div>
+<p>    *   <strong>영작:</strong> (힌트: '무관심한'을 뜻하는 형용사와 '이야기를 전달하다' 표현을 사용해 보세요.)</p>
+<p>    *   <strong>모범 답안:</strong> Too many numbers can make the audience <strong>apathetic</strong>. You need to <strong>tell a story</strong> using the important figures.</p>
+<br>
+<div class="numbered"><strong>3.</strong>  <strong>상황:</strong> 당신의 상사가 보고서가 너무 <strong>정리가 안 되어</strong> 있다고 피드백을 주었습니다. 다음번에는 더 <strong>체계적으로</strong> 작성해야겠다고 생각합니다.</div>
+<p>    *   <strong>영작:</strong> (힌트: '정리가 안 된'을 뜻하는 형용사와 '체계적으로'를 뜻하는 부사를 사용해 보세요.)</p>
+<p>    *   <strong>모범 답안:</strong> My boss said the report was too <strong>disorganized</strong>. I need to write it more <strong>systematically</strong> next time.</p>
+<br>
+<br>
+<p><strong>6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)</strong></p>
+<br>
+<p>*   ✨ <strong>Good Job</strong>: "I feel this small dot is connected and makes a line. And then sometimes that line makes one side. Sometimes that is business. Sometimes that is the human relationship. Sometimes that is the job."</p>
+<p>    *   Joey님, 이 부분에서 정말 깊은 통찰력과 자신만의 철학을 보여주셨어요. 비록 문법적으로 다듬을 부분은 있었지만, '점들이 모여 선이 되고, 그 선이 비즈니스, 인간관계, 직업 등 삶의 다양한 측면을 이룬다'는 비유는 매우 창의적이고 인상적이었습니다. 복잡한 생각을 영어로 이렇게 표현할 수 있다는 것은 Joey님의 유창성과 사고력을 잘 보여줍니다. 훌륭해요!</p>
+<br>
+<p>*   🚀 <strong>내일의 한 문장</strong>: "I've been thinking about how to make our presentations more sizzling and engage the audience."</p>
+<p>    *   다음 수업 시작 시 이 문장을 사용하여 오늘 배운 'sizzling'과 'engage the audience'를 활용해 보세요.</p>
+<br>
+<br>
+<p><strong>[성과 지표]</strong></p>
+<p><strong>유창성 점수:</strong> 7.5/10</p>
+<p><strong>근거:</strong> Joey님은 다양한 주제에 대해 막힘없이 자신의 의견을 표현하며 대화를 이어나가는 능력이 뛰어납니다. 특히 추상적인 개념이나 개인적인 철학을 설명할 때도 주저함 없이 말하고자 하는 바를 전달하려는 노력이 돋보였습니다. 다만, 문장의 구조나 어휘 선택에서 좀 더 자연스럽고 간결한 표현을 사용하면 유창성이 더욱 향상될 것입니다.</p>
+<br>
+<p><strong>다음 수업 '원포인트 액션 플랜':</strong></p>
+<p>다음 수업에서는 <strong>"관사 (a/an/the)의 정확한 사용"</strong>에 집중해 봅시다. 특히 일반적인 명사 앞과 특정 명사 앞에서 관사를 어떻게 사용해야 하는지 의식적으로 연습해 볼 거예요.</p></div>
+        </div>
+        <div id="tab-transcript" class="tab-content">
+            <div class="transcript"><span class="tutor">[Tutor]</span> Hello. Good evening, Joanna.
+<span class="student">[Student]</span> Good morning, Joey. How are you today?
+<span class="tutor">[Tutor]</span> Yeah, it&#x27;s so nice. Yeah, it&#x27;s a perfect Tuesday.
+<span class="student">[Student]</span> Okay. I&#x27;m glad to hear that.
+<span class="student">[Student]</span> Okay. How about you? Yeah, how are you today?
+<span class="tutor">[Tutor]</span> I am excellent. Thank you very much for asking. I think I&#x27;m finally getting over my cold.
+<span class="student">[Student]</span> Oh, yes.
+<span class="student">[Student]</span> That&#x27;s good news.
+<span class="tutor">[Tutor]</span> Yes, it&#x27;s nice.
+<span class="student">[Student]</span> Yes.
+<span class="student">[Student]</span> Your voice is clearer.
+<span class="tutor">[Tutor]</span> A little bit, yes.
+<span class="student">[Student]</span> A little bit?
+<span class="tutor">[Tutor]</span> I think we&#x27;re almost at the end, yes.
+<span class="student">[Student]</span> Almost the end.
+<span class="student">[Student]</span> Just one or two more days, right?
+<span class="tutor">[Tutor]</span> Hopefully, hopefully.
+<span class="student">[Student]</span> Hopefully, yes, okay.
+<span class="student">[Student]</span> Yeah, many people have their own ways to cure their cold.
+<span class="student">[Student]</span> Some countries...
+<span class="tutor">[Tutor]</span> Oh, my goodness.
+<span class="tutor">[Tutor]</span> Yes, you&#x27;re so right.
+<span class="student">[Student]</span> Some countries drink the honey, and some countries eat the soup, asparagus soup.
+<span class="tutor">[Tutor]</span> Asparagus, okay.
+<span class="student">[Student]</span> Yes.
+<span class="tutor">[Tutor]</span> So in your case, what do you do for a cold?
+<span class="student">[Student]</span> I try everything.
+<span class="tutor">[Tutor]</span> Try everything?
+<span class="student">[Student]</span> Yes.
+<span class="tutor">[Tutor]</span> So usually I like chicken soup.
+<span class="student">[Student]</span> Oh, yes, yes. So nice.
+<span class="tutor">[Tutor]</span> Mm-hmm.
+<span class="tutor">[Tutor]</span> I didn&#x27;t have any chicken, so I made lentil soup.
+<span class="student">[Student]</span> Lentil soup.
+<span class="student">[Student]</span> Lentil beans?
+<span class="tutor">[Tutor]</span> Exactly.
+<span class="student">[Student]</span> I see. Yes, yes. Mm-hmm.
+<span class="tutor">[Tutor]</span> And then I also made a leek and potato soup.
+<span class="student">[Student]</span> Oh, potato soup. Okay.
+<span class="tutor">[Tutor]</span> And leek and potato.
+<span class="student">[Student]</span> Leek and potato, yes.
+<span class="student">[Student]</span> How about the orange, skewered orange?
+<span class="tutor">[Tutor]</span> I was also eating oranges with honey.
+<span class="student">[Student]</span> Honey and orange, yeah.
+<span class="tutor">[Tutor]</span> Orange juice, yeah, a little bit of squeezed orange juice and a little bit of honey.
+<span class="tutor">[Tutor]</span> And then I tried oregano oil.
+<span class="student">[Student]</span> Oregano oil.
+<span class="tutor">[Tutor]</span> It tastes terrible. I don&#x27;t recommend it.
+<span class="student">[Student]</span> I see. It&#x27;s similar in our country.
+<span class="tutor">[Tutor]</span> That&#x27;s so interesting.
+<span class="student">[Student]</span> Yes, I see.
+<span class="student">[Student]</span> We usually eat a soup, so many vegetables, and eat the fruit.
+<span class="student">[Student]</span> It&#x27;s the same, so maybe almost similar.
+<span class="tutor">[Tutor]</span> I hope.
+<span class="tutor">[Tutor]</span> I think so, yes.
+<span class="student">[Student]</span> Thank you. I appreciate it.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="tutor">[Tutor]</span> Alright, let&#x27;s take a look at our book. We are on page 22.
+<span class="student">[Student]</span> Yes, you&#x27;re right. The scenario is…
+<span class="tutor">[Tutor]</span> We&#x27;re going to do… Yes, exactly. You got it.
+<span class="student">[Student]</span> Yes. Okay. The case scenario, the second section, employee one has a role responsible for presenting team research.
+<span class="student">[Student]</span> Employee two has a role about giving feedback.
+<span class="student">[Student]</span> Okay. I will read that.
+<span class="student">[Student]</span> You are responsible for presenting data about your sales team progress over the past quarter.
+<span class="student">[Student]</span> It is your first time performing this role, so you are a little nervous.
+<span class="student">[Student]</span> Ask your more experienced co-worker for advice on what information to include and how to organize it.
+<span class="student">[Student]</span> And teacher, I have a question.
+<span class="student">[Student]</span> The first line, there is a word, presenting.
+<span class="student">[Student]</span> This word is the meaning report, right?
+<span class="tutor">[Tutor]</span> Presenting is making a presentation.
+<span class="student">[Student]</span> Ah, yeah, making a presentation, presenting. Okay, I understand.
+<span class="tutor">[Tutor]</span> Good.
+<span class="tutor">[Tutor]</span> So, are you making the presentation or are you giving me feedback?
+<span class="student">[Student]</span> Oh, I think it&#x27;s okay. Please select for me.
+<span class="tutor">[Tutor]</span> Let&#x27;s change.
+<span class="tutor">[Tutor]</span> I will be responsible for presenting.
+<span class="student">[Student]</span> Oh, yes, yes. That is a good idea.
+<span class="tutor">[Tutor]</span> And you will give me advice because you have lots of experience.
+<span class="student">[Student]</span> Ah, yes. That is good. Yeah. Hey, Joanna, good morning. Hi, Joey. Yes, hi. How was your cold? Is it better?
+<span class="tutor">[Tutor]</span> My cold is much better. Thank you very much for checking.
+<span class="student">[Student]</span> Ah, yeah. It&#x27;s good news. Okay.
+<span class="tutor">[Tutor]</span> And thank you for taking the time to help me with my presentation.
+<span class="tutor">[Tutor]</span> As you know, I&#x27;m a little bit new in the company, and I&#x27;m nervous about presenting this data to the team.
+<span class="student">[Student]</span> I see.
+<span class="tutor">[Tutor]</span> So thank you for helping me.
+<span class="student">[Student]</span> Oh, yeah, no problem.
+<span class="student">[Student]</span> You have so much raw data to present.
+<span class="student">[Student]</span> So it is so easy to make changes through presenting.
+<span class="tutor">[Tutor]</span> Okay, okay.
+<span class="tutor">[Tutor]</span> So I know we have to talk about the last quarter.
+<span class="student">[Student]</span> Last quarter.
+<span class="tutor">[Tutor]</span> Does everyone know when the quarter starts and ends?
+<span class="student">[Student]</span> Uh-huh. Everyone, yes.
+<span class="tutor">[Tutor]</span> Everyone knows? Okay. Uh-huh.
+<span class="tutor">[Tutor]</span> And what should I tell them about the data? What&#x27;s the story I should say?
+<span class="student">[Student]</span> I see.
+<span class="student">[Student]</span> Maybe the problem is that you have so many numbers.
+<span class="tutor">[Tutor]</span> Yes.
+<span class="student">[Student]</span> There are profits. Everything has so many. You have so many numbers.
+<span class="student">[Student]</span> So first, I give some advice to you.
+<span class="student">[Student]</span> You will have to tell a story about using the numbers.
+<span class="student">[Student]</span> For example, just select the important numbers, and that number is connected and makes a story.
+<span class="student">[Student]</span> It is possible to use the AI.
+<span class="student">[Student]</span> So, you will decide what to tell the audience about the story.
+<span class="student">[Student]</span> So first you select a number and make a story and then start the presentation. It is more easy.
+<span class="tutor">[Tutor]</span> Okay, thank you. I really appreciate that advice.
+<span class="tutor">[Tutor]</span> I think it&#x27;s going to help me organize my ideas better.
+<span class="student">[Student]</span> Yeah, you&#x27;re right. You&#x27;re right.
+<span class="tutor">[Tutor]</span> Okay. Okay, good.
+<span class="tutor">[Tutor]</span> I will go work on this and then can I ask you to look at my draft?
+<span class="student">[Student]</span> Oh, yeah, no problem. Why not? Yeah.
+<span class="tutor">[Tutor]</span> Thank you very much for your help, Joey.
+<span class="student">[Student]</span> Thank you so much, Joanna.
+<span class="student">[Student]</span> That was great. That was great advice.
+<span class="tutor">[Tutor]</span> Oh, yeah, yeah, good.
+<span class="tutor">[Tutor]</span> And you said it very well.
+<span class="student">[Student]</span> Ah, yes. I thought this is real because when I was young and when I was a kid, at that time, I made so many marks, some points, some experiences.
+<span class="student">[Student]</span> And then I gained more experience.
+<span class="student">[Student]</span> I feel this small dot is connected and makes a line.
+<span class="student">[Student]</span> And then sometimes that line makes one side.
+<span class="student">[Student]</span> Sometimes that is business.
+<span class="student">[Student]</span> Sometimes that is the human relationship.
+<span class="student">[Student]</span> Sometimes that is the job.
+<span class="student">[Student]</span> So that is so interesting.
+<span class="student">[Student]</span> So when I was young or nowadays, you have to make a small dot, small experience.
+<span class="student">[Student]</span> That point is the connection.
+<span class="student">[Student]</span> So this day I feel that, and I start to mark more points, make more points.
+<span class="tutor">[Tutor]</span> That is a wonderful way to look at it.
+<span class="tutor">[Tutor]</span> And at the end, you are able to paint a picture, right?
+<span class="student">[Student]</span> Yeah, you&#x27;re right.
+<span class="tutor">[Tutor]</span> All of the dots that you connected and the lines that you connected, you&#x27;re able to build a complete picture. That&#x27;s wonderful.
+<span class="student">[Student]</span> Yeah, and maybe this is to find and connect and create it.
+<span class="student">[Student]</span> That is my motto.
+<span class="tutor">[Tutor]</span> I like it. I like it a lot. Look at us solving the problems of the world in English class. This is great.
+<span class="student">[Student]</span> Yes, that is great.
+<span class="tutor">[Tutor]</span> One small thing we&#x27;re going to just tweak is...
+<span class="student">[Student]</span> Tweak?
+<span class="student">[Student]</span> I heard tweak means change.
+<span class="tutor">[Tutor]</span> It&#x27;s a small change.
+<span class="student">[Student]</span> Tweak. Small change. I see.
+<span class="tutor">[Tutor]</span> Tweak. Yeah. T-W.
+<span class="student">[Student]</span> T-W. E-A-K. Tweak. It&#x27;s a small change.
+<span class="tutor">[Tutor]</span> Exactly.
+<span class="student">[Student]</span> Okay.
+<span class="tutor">[Tutor]</span> So, I heard &quot;I become the more age.&quot;
+<span class="tutor">[Tutor]</span> Let&#x27;s change that to &quot;I gained more experience.&quot;
+<span class="student">[Student]</span> I see. Tweak. Okay. Mm-hmm.
+<span class="student">[Student]</span> Oh, it is a K. All right. Okay. It is what?
+<span class="tutor">[Tutor]</span> Yeah, we&#x27;re good.
+<span class="student">[Student]</span> Okay. No, no. Okay.
+<span class="tutor">[Tutor]</span> We will move on to effective presentation skills.
+<span class="student">[Student]</span> Okay, yeah, no problem.
+<span class="tutor">[Tutor]</span> The business basics.
+<span class="student">[Student]</span> 50? 5?
+<span class="tutor">[Tutor]</span> Yes, you got it.
+<span class="tutor">[Tutor]</span> Effective presentation skills.
+<span class="student">[Student]</span> I will read that.
+<span class="student">[Student]</span> Presentations are a way to build your career.
+<span class="student">[Student]</span> While you are speaking, you are in the spotlight for that block of time.
+<span class="student">[Student]</span> You can either control or bore your audience.
+<span class="student">[Student]</span> You can make audience alert or apathetic.
+<span class="tutor">[Tutor]</span> Apathetic.
+<span class="student">[Student]</span> Apathetic.
+<span class="tutor">[Tutor]</span> Apathetic.
+<span class="student">[Student]</span> It is good to know what input makes a presentation sizzling, although technology can make the role of a presenter easier.
+<span class="student">[Student]</span> The two main resources are your own voice and body.
+<span class="student">[Student]</span> So, the art of presentation can divide into two main categories, voice and body, verbal and physical.
+<span class="student">[Student]</span> Is it right?
+<span class="tutor">[Tutor]</span> Verbal. Yes. Verbal. You got it. Yeah. Yeah. Okay. I see.
+<span class="student">[Student]</span> And teacher, the second line, &quot;you can make audience alter.&quot;
+<span class="student">[Student]</span> That is choice, right?
+<span class="tutor">[Tutor]</span> Alert.
+<span class="tutor">[Tutor]</span> Alert means paying attention, listening to you.
+<span class="student">[Student]</span> Paying attention? Yes.
+<span class="tutor">[Tutor]</span> Being responsive to what you&#x27;re saying as a speaker, being interested.
+<span class="student">[Student]</span> That carefully listen?
+<span class="tutor">[Tutor]</span> Yes.
+<span class="student">[Student]</span> Okay, I see. Okay, I see, understand.
+<span class="tutor">[Tutor]</span> And apathetic is the opposite of that.
+<span class="tutor">[Tutor]</span> Apathetic means they&#x27;re basically sleeping.
+<span class="student">[Student]</span> Basically sleeping. Apathetic. Yes.
+<span class="student">[Student]</span> Oh, apathetic.
+<span class="student">[Student]</span> Apathetic. I guess that word is meaning same emotion, same...
+<span class="tutor">[Tutor]</span> Bored.
+<span class="student">[Student]</span> Bored.
+<span class="tutor">[Tutor]</span> Uninterested.
+<span class="student">[Student]</span> Oh, uninteresting. Ah.
+<span class="student">[Student]</span> So you said it comes to sleeping to audience, right?
+<span class="tutor">[Tutor]</span> Yep. Exactly. Yes, you&#x27;re right. You&#x27;re right.
+<span class="tutor">[Tutor]</span> They don&#x27;t care about what you&#x27;re saying. It&#x27;s just…
+<span class="student">[Student]</span> Yeah, maybe that is important to make my speaking to audience and make more interesting and focus on my voice.
+<span class="tutor">[Tutor]</span> Exactly.
+<span class="tutor">[Tutor]</span> So before we get into the table with speaking errors and effects, do you agree with the paragraph that you just read?
+<span class="student">[Student]</span> Oh, yes, of course. Yes. Okay. That is a nice advice.
+<span class="tutor">[Tutor]</span> Okay. All right. So let&#x27;s take a look at some of the errors we can make as presenters.
+<span class="student">[Student]</span> Yeah.
+<span class="tutor">[Tutor]</span> So the errors on the left-hand side, the effect on the right-hand side. Okay. And tell me what you think about it and how you can correct that.
+<span class="student">[Student]</span> Oh, I see. This paragraph is the divided part. The first is the speaking error and impact.
+<span class="student">[Student]</span> And the next section, speaking strategies, impact.
+<span class="student">[Student]</span> So maybe the first line is the negative of the presentation.
+<span class="student">[Student]</span> The speaking error. Got it. Yes.
+<span class="student">[Student]</span> So the first line, using vocalized pauses such as &quot;eh,&quot; &quot;mm,&quot; and &quot;like,&quot;
+<span class="student">[Student]</span> That&#x27;s the effect is the audience believe speaker&#x27;s thoughts are not organized.
+<span class="tutor">[Tutor]</span> Organized.
+<span class="student">[Student]</span> Organized. Organized. Organized.
+<span class="tutor">[Tutor]</span> You got it.
+<span class="student">[Student]</span> Organized.
+<span class="student">[Student]</span> Yeah, I understand.
+<span class="student">[Student]</span> Some people have their vocal pauses the same. They have some habit.
+<span class="student">[Student]</span> But the people believe, the audience believe that presenter is a little, what can I say, not organized his thoughts.
+<span class="student">[Student]</span> Yes, so...
+<span class="tutor">[Tutor]</span> Disorganized, yeah.
+<span class="student">[Student]</span> Yeah, so, yeah, this is the problem.
+<span class="student">[Student]</span> So, big problem is some people have a habit. Yes.
+<span class="student">[Student]</span> Yeah, vocalize pauses. Yeah.
+<span class="tutor">[Tutor]</span> And how do you think you can fix that?
+<span class="student">[Student]</span> Oh my God, that is almost impossible.
+<span class="tutor">[Tutor]</span> I know, it&#x27;s so hard.
+<span class="student">[Student]</span> Yeah, so hard.
+<span class="student">[Student]</span> In Korea, they say it is really hard to start something.
+<span class="tutor">[Tutor]</span> Yes.
+<span class="tutor">[Tutor]</span> You know, &quot;how about think?&quot; &quot;How about think?&quot; You know, blah, blah, blah, blah.
+<span class="tutor">[Tutor]</span> It&#x27;s better, you know, it&#x27;s so hard to get rid of those. Yeah, it&#x27;s it&#x27;s a it&#x27;s very tough. Yes, we have a lot of &quot;uh,&quot; yeah, and &quot;like.&quot;
+<span class="tutor">[Tutor]</span> So, like, &quot;So, like, you watched TV last night, right? Like, did you like the movie?&quot; Like, so many people use &quot;like,&quot; right?
+<span class="student">[Student]</span> I, yes.
+<span class="student">[Student]</span> I think the best way is to practice the language at that time. We just listen to our voice. Yes.
+<span class="tutor">[Tutor]</span> Yes, correct. Yes. Yes.
+<span class="tutor">[Tutor]</span> You have to record yourself and listen to it. Absolutely.
+<span class="student">[Student]</span> But if our habit is fixed, at that time we can resolve that problem.
+<span class="tutor">[Tutor]</span> Yes.
+<span class="student">[Student]</span> Okay. Okay.
+<span class="student">[Student]</span> Next one. Okay.
+<span class="student">[Student]</span> Speaking too quickly.
+<span class="student">[Student]</span> This effect is difficulty in understanding contents.
+<span class="student">[Student]</span> Doesn&#x27;t allow time for audience to reflect on the content.
+<span class="student">[Student]</span> Yes, I agree with that. I totally agree with that.
+<span class="student">[Student]</span> That is my habit.
+<span class="student">[Student]</span> Because I&#x27;m a shy guy.
+<span class="student">[Student]</span> So if we&#x27;re gathering so many audience, at that time I&#x27;m nervous.
+<span class="student">[Student]</span> My mind wanted to finish quickly.
+<span class="student">[Student]</span> So, so my speaking too fast, speaking too quickly, and then it makes some problem.
+<span class="student">[Student]</span> So, yeah, so I practice more speaking slowly.
+<span class="student">[Student]</span> And always I find the reaction of the audience.
+<span class="student">[Student]</span> Speak one line and and carefully watch the audience.
+<span class="student">[Student]</span> So if they don&#x27;t understand my speaking, at that time I&#x27;m speaking more slowly or add an explanation.
+<span class="tutor">[Tutor]</span> Explanation, okay.
+<span class="student">[Student]</span> An expression.
+<span class="tutor">[Tutor]</span> An expression, yes, okay.
+<span class="tutor">[Tutor]</span> That is a great tip. I like that.
+<span class="student">[Student]</span> Okay, thank you so much, teacher.
+<span class="tutor">[Tutor]</span> We&#x27;ll have to continue this during next class.
+<span class="tutor">[Tutor]</span> But these are excellent, excellent tips.
+<span class="student">[Student]</span> Yes, thank you so much, teacher. Have a nice day.
+<span class="tutor">[Tutor]</span> Thank you, Joey. You too.
+<span class="tutor">[Tutor]</span> You take care, bye-bye.
+<span class="student">[Student]</span> Bye-bye.</div>
+        </div>
+    </div>
+    <div class="toast" id="toast">✅ 프롬프트가 복사되었습니다!</div>
+    <script>
+        const REVIEW_PROMPT="너는 나의 영어 회화 복습 파트너야. 오늘 내 전화영어 수업 내용을 기반으로 대화하면서 복습을 도와줘.\n\n[오늘 수업 전사 내용]\n[Tutor] Hello. Good evening, Joanna.\n[Student] Good morning, Joey. How are you today?\n[Tutor] Yeah, it's so nice. Yeah, it's a perfect Tuesday.\n[Student] Okay. I'm glad to hear that.\n[Student] Okay. How about you? Yeah, how are you today?\n[Tutor] I am excellent. Thank you very much for asking. I think I'm finally getting over my cold.\n[Student] Oh, yes.\n[Student] That's good news.\n[Tutor] Yes, it's nice.\n[Student] Yes.\n[Student] Your voice is clearer.\n[Tutor] A little bit, yes.\n[Student] A little bit?\n[Tutor] I think we're almost at the end, yes.\n[Student] Almost the end.\n[Student] Just one or two more days, right?\n[Tutor] Hopefully, hopefully.\n[Student] Hopefully, yes, okay.\n[Student] Yeah, many people have their own ways to cure their cold.\n[Student] Some countries...\n[Tutor] Oh, my goodness.\n[Tutor] Yes, you're so right.\n[Student] Some countries drink the honey, and some countries eat the soup, asparagus soup.\n[Tutor] Asparagus, okay.\n[Student] Yes.\n[Tutor] So in your case, what do you do for a cold?\n[Student] I try everything.\n[Tutor] Try everything?\n[Student] Yes.\n[Tutor] So usually I like chicken soup.\n[Student] Oh, yes, yes. So nice.\n[Tutor] Mm-hmm.\n[Tutor] I didn't have any chicken, so I made lentil soup.\n[Student] Lentil soup.\n[Student] Lentil beans?\n[Tutor] Exactly.\n[Student] I see. Yes, yes. Mm-hmm.\n[Tutor] And then I also made a leek and potato soup.\n[Student] Oh, potato soup. Okay.\n[Tutor] And leek and potato.\n[Student] Leek and potato, yes.\n[Student] How about the orange, skewered orange?\n[Tutor] I was also eating oranges with honey.\n[Student] Honey and orange, yeah.\n[Tutor] Orange juice, yeah, a little bit of squeezed orange juice and a little bit of honey.\n[Tutor] And then I tried oregano oil.\n[Student] Oregano oil.\n[Tutor] It tastes terrible. I don't recommend it.\n[Student] I see. It's similar in our country.\n[Tutor] That's so interesting.\n[Student] Yes, I see.\n[Student] We usually eat a soup, so many vegetables, and eat the fruit.\n[Student] It's the same, so maybe almost similar.\n[Tutor] I hope.\n[Tutor] I think so, yes.\n[Student] Thank you. I appreciate it.\n[Tutor] Okay.\n[Tutor] Alright, let's take a look at our book. We are on page 22.\n[Student] Yes, you're right. The scenario is…\n[Tutor] We're going to do… Yes, exactly. You got it.\n[Student] Yes. Okay. The case scenario, the second section, employee one has a role responsible for presenting team research.\n[Student] Employee two has a role about giving feedback.\n[Student] Okay. I will read that.\n[Student] You are responsible for presenting data about your sales team progress over the past quarter.\n[Student] It is your first time performing this role, so you are a little nervous.\n[Student] Ask your more experienced co-worker for advice on what information to include and how to organize it.\n[Student] And teacher, I have a question.\n[Student] The first line, there is a word, presenting.\n[Student] This word is the meaning report, right?\n[Tutor] Presenting is making a presentation.\n[Student] Ah, yeah, making a presentation, presenting. Okay, I understand.\n[Tutor] Good.\n[Tutor] So, are you making the presentation or are you giving me feedback?\n[Student] Oh, I think it's okay. Please select for me.\n[Tutor] Let's change.\n[Tutor] I will be responsible for presenting.\n[Student] Oh, yes, yes. That is a good idea.\n[Tutor] And you will give me advice because you have lots of experience.\n[Student] Ah, yes. That is good. Yeah. Hey, Joanna, good morning. Hi, Joey. Yes, hi. How was your cold? Is it better?\n[Tutor] My cold is much better. Thank you very much for checking.\n[Student] Ah, yeah. It's good news. Okay.\n[Tutor] And thank you for taking the time to help me with my presentation.\n[Tutor] As you know, I'm a little bit new in the company, and I'm nervous about presenting this data to the team.\n[Student] I see.\n[Tutor] So thank you for helping me.\n[Student] Oh, yeah, no problem.\n[Student] You have so much raw data to present.\n[Student] So it is so easy to make changes through presenting.\n[Tutor] Okay, okay.\n[Tutor] So I know we have to talk about the last quarter.\n[Student] Last quarter.\n[Tutor] Does everyone know when the quarter starts and ends?\n[Student] Uh-huh. Everyone, yes.\n[Tutor] Everyone knows? Okay. Uh-huh.\n[Tutor] And what should I tell them about the data? What's the story I should say?\n[Student] I see.\n[Student] Maybe the problem is that you have so many numbers.\n[Tutor] Yes.\n[Student] There are profits. Everything has so many. You have so many numbers.\n[Student] So first, I give some advice to you.\n[Student] You will have to tell a story about using the numbers.\n[Student] For example, just select the important numbers, and that number is connected and makes a story.\n[Student] It is possible to use the AI.\n[Student] So, you will decide what to tell the audience about the story.\n[Student] So first you select a number and make a story and then start the presentation. It is more easy.\n[Tutor] Okay, thank you. I really appreciate that advice.\n[Tutor] I think it's going to help me organize my ideas better.\n[Student] Yeah, you're right. You're right.\n[Tutor] Okay. Okay, good.\n[Tutor] I will go work on this and then can I ask you to look at my draft?\n[Student] Oh, yeah, no problem. Why not? Yeah.\n[Tutor] Thank you very much for your help, Joey.\n[Student] Thank you so much, Joanna.\n[Student] That was great. That was great advice.\n[Tutor] Oh, yeah, yeah, good.\n[Tutor] And you said it very well.\n[Student] Ah, yes. I thought this is real because when I was young and when I was a kid, at that time, I made so many marks, some points, some experiences.\n[Student] And then I gained more experience.\n[Student] I feel this small dot is connected and makes a line.\n[Student] And then sometimes that line makes one side.\n[Student] Sometimes that is business.\n[Student] Sometimes that is the human relationship.\n[Student] Sometimes that is the job.\n[Student] So that is so interesting.\n[Student] So when I was young or nowadays, you have to make a small dot, small experience.\n[Student] That point is the connection.\n[Student] So this day I feel that, and I start to mark more points, make more points.\n[Tutor] That is a wonderful way to look at it.\n[Tutor] And at the end, you are able to paint a picture, right?\n[Student] Yeah, you're right.\n[Tutor] All of the dots that you connected and the lines that you connected, you're able to build a complete picture. That's wonderful.\n[Student] Yeah, and maybe this is to find and connect and create it.\n[Student] That is my motto.\n[Tutor] I like it. I like it a lot. Look at us solving the problems of the world in English class. This is great.\n[Student] Yes, that is great.\n[Tutor] One small thing we're going to just tweak is...\n[Student] Tweak?\n[Student] I heard tweak means change.\n[Tutor] It's a small change.\n[Student] Tweak. Small change. I see.\n[Tutor] Tweak. Yeah. T-W.\n[Student] T-W. E-A-K. Tweak. It's a small change.\n[Tutor] Exactly.\n[Student] Okay.\n[Tutor] So, I heard \"I become the more age.\"\n[Tutor] Let's change that to \"I gained more experience.\"\n[Student] I see. Tweak. Okay. Mm-hmm.\n[Student] Oh, it is a K. All right. Okay. It is what?\n[Tutor] Yeah, we're good.\n[Student] Okay. No, no. Okay.\n[Tutor] We will move on to effective presentation skills.\n[Student] Okay, yeah, no problem.\n[Tutor] The business basics.\n[Student] 50? 5?\n[Tutor] Yes, you got it.\n[Tutor] Effective presentation skills.\n[Student] I will read that.\n[Student] Presentations are a way to build your career.\n[Student] While you are speaking, you are in the spotlight for that block of time.\n[Student] You can either control or bore your audience.\n[Student] You can make audience alert or apathetic.\n[Tutor] Apathetic.\n[Student] Apathetic.\n[Tutor] Apathetic.\n[Student] It is good to know what input makes a presentation sizzling, although technology can make the role of a presenter easier.\n[Student] The two main resources are your own voice and body.\n[Student] So, the art of presentation can divide into two main categories, voice and body, verbal and physical.\n[Student] Is it right?\n[Tutor] Verbal. Yes. Verbal. You got it. Yeah. Yeah. Okay. I see.\n[Student] And teacher, the second line, \"you can make audience alter.\"\n[Student] That is choice, right?\n[Tutor] Alert.\n[Tutor] Alert means paying attention, listening to you.\n[Student] Paying attention? Yes.\n[Tutor] Being responsive to what you're saying as a speaker, being interested.\n[Student] That carefully listen?\n[Tutor] Yes.\n[Student] Okay, I see. Okay, I see, understand.\n[Tutor] And apathetic is the opposite of that.\n[Tutor] Apathetic means they're basically sleeping.\n[Student] Basically sleeping. Apathetic. Yes.\n[Student] Oh, apathetic.\n[Student] Apathetic. I guess that word is meaning same emotion, same...\n[Tutor] Bored.\n[Student] Bored.\n[Tutor] Uninterested.\n[Student] Oh, uninteresting. Ah.\n[Student] So you said it comes to sleeping to audience, right?\n[Tutor] Yep. Exactly. Yes, you're right. You're right.\n[Tutor] They don't care about what you're saying. It's just…\n[Student] Yeah, maybe that is important to make my speaking to audience and make more interesting and focus on my voice.\n[Tutor] Exactly.\n[Tutor] So before we get into the table with speaking errors and effects, do you agree with the paragraph that you just read?\n[Student] Oh, yes, of course. Yes. Okay. That is a nice advice.\n[Tutor] Okay. All right. So let's take a look at some of the errors we can make as presenters.\n[Student] Yeah.\n[Tutor] So the errors on the left-hand side, the effect on the right-hand side. Okay. And tell me what you think about it and how you can correct that.\n[Student] Oh, I see. This paragraph is the divided part. The first is the speaking error and impact.\n[Student] And the next section, speaking strategies, impact.\n[Student] So maybe the first line is the negative of the presentation.\n[Student] The speaking error. Got it. Yes.\n[Student] So the first line, using vocalized pauses such as \"eh,\" \"mm,\" and \"like,\"\n[Student] That's the effect is the audience believe speaker's thoughts are not organized.\n[Tutor] Organized.\n[Student] Organized. Organized. Organized.\n[Tutor] You got it.\n[Student] Organized.\n[Student] Yeah, I understand.\n[Student] Some people have their vocal pauses the same. They have some habit.\n[Student] But the people believe, the audience believe that presenter is a little, what can I say, not organized his thoughts.\n[Student] Yes, so...\n[Tutor] Disorganized, yeah.\n[Student] Yeah, so, yeah, this is the problem.\n[Student] So, big problem is some people have a habit. Yes.\n[Student] Yeah, vocalize pauses. Yeah.\n[Tutor] And how do you think you can fix that?\n[Student] Oh my God, that is almost impossible.\n[Tutor] I know, it's so hard.\n[Student] Yeah, so hard.\n[Student] In Korea, they say it is really hard to start something.\n[Tutor] Yes.\n[Tutor] You know, \"how about think?\" \"How about think?\" You know, blah, blah, blah, blah.\n[Tutor] It's better, you know, it's so hard to get rid of those. Yeah, it's it's a it's very tough. Yes, we have a lot of \"uh,\" yeah, and \"like.\"\n[Tutor] So, like, \"So, like, you watched TV last night, right? Like, did you like the movie?\" Like, so many people use \"like,\" right?\n[Student] I, yes.\n[Student] I think the best way is to practice the language at that time. We just listen to our voice. Yes.\n[Tutor] Yes, correct. Yes. Yes.\n[Tutor] You have to record yourself and listen to it. Absolutely.\n[Student] But if our habit is fixed, at that time we can resolve that problem.\n[Tutor] Yes.\n[Student] Okay. Okay.\n[Student] Next one. Okay.\n[Student] Speaking too quickly.\n[Student] This effect is difficulty in understanding contents.\n[Student] Doesn't allow time for audience to reflect on the content.\n[Student] Yes, I agree with that. I totally agree with that.\n[Student] That is my habit.\n[Student] Because I'm a shy guy.\n[Student] So if we're gathering so many audience, at that time I'm nervous.\n[Student] My mind wanted to finish quickly.\n[Student] So, so my speaking too fast, speaking too quickly, and then it makes some problem.\n[Student] So, yeah, so I practice more speaking slowly.\n[Student] And always I find the reaction of the audience.\n[Student] Speak one line and and carefully watch the audience.\n[Student] So if they don't understand my speaking, at that time I'm speaking more slowly or add an explanation.\n[Tutor] Explanation, okay.\n[Student] An expression.\n[Tutor] An expression, yes, okay.\n[Tutor] That is a great tip. I like that.\n[Student] Okay, thank you so much, teacher.\n[Tutor] We'll have to continue this during next class.\n[Tutor] But these are excellent, excellent tips.\n[Student] Yes, thank you so much, teacher. Have a nice day.\n[Tutor] Thank you, Joey. You too.\n[Tutor] You take care, bye-bye.\n[Student] Bye-bye.\n\n[AI 피드백]\n안녕하세요, Joey님! 오늘도 활기찬 에너지로 수업에 참여해 주셔서 감사합니다. 특히 발표 자료를 '숫자로 이야기'하는 부분에서 Joey님의 경험과 통찰력이 빛났어요. 작은 점들이 모여 선이 되고 그림이 된다는 말씀은 정말 감명 깊었습니다.\n\n---\n\n**0. 📌 Topic**\nTopic: Discussing effective presentation strategies and common speaking errors.\n\n---\n\n**1. 📊 오늘의 대화 요약 (Summary)**\n오늘 수업은 감기에 대한 가벼운 대화로 시작하여, 비즈니스 프레젠테이션 조언 역할극으로 이어졌습니다. 특히 숫자를 활용해 스토리를 만드는 방법과 발표 시 흔히 저지르는 말하기 실수(예: 음성 채움, 너무 빠른 속도) 및 그 해결책에 대해 심도 있게 논의했습니다.\n\n---\n\n**2. 💬 유창성 업그레이드 (Fluency & Natural Flow)**\n\n*   **❌ 학습자 원문 (As Said):** \"Some countries drink the honey, and some countries eat the soup, asparagus soup.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"In some countries, people drink honey, and in others, they eat soup, like asparagus soup.\"\n    *   **💎 비즈니스 표현 (Professional):** \"Cultural practices vary; for instance, some regions incorporate honey into remedies, while others utilize specific soups, such as asparagus soup.\"\n    *   **💡 코칭 포인트:** \"In some countries, people...\"은 일반적인 관행을 이야기할 때 더 자연스럽습니다. 또한, \"the honey\"는 특정 꿀을 의미하지만, 'the'가 없는 \"honey\"는 일반적으로 꿀을 지칭합니다.\n\n*   **❌ 학습자 원문 (As Said):** \"I feel this small dot is connected and makes a line.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"I feel these small dots connect and form a line.\"\n    *   **💎 비즈니스 표현 (Professional):** \"I perceive that individual experiences, like small data points, ultimately interconnect to form a cohesive narrative or trajectory.\"\n    *   **💡 코칭 포인트:** 여러 '점'들이 연결되는 것을 이야기할 때는 복수형 \"these small dots\"와 복수 동사 \"connect\"를 사용하는 것이 더 정확합니다. \"Form a line\" 또한 이 아이디어를 표현하는 매우 자연스러운 방식입니다.\n\n*   **❌ 학습자 원문 (As Said):** \"My mind wanted to finish quickly. So, so my speaking too fast, speaking too quickly, and then it makes some problem.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"My mind wants to finish quickly. So I speak too fast, which creates problems.\"\n    *   **💎 비즈니스 표현 (Professional):** \"I tend to expedite my delivery when nervous, which can lead to communication challenges.\"\n    *   **💡 코칭 포인트:** 습관적인 행동이나 경향을 설명할 때는 현재 시제(\"My mind *wants* to finish quickly,\" \"I *speak* too fast\")가 더 적절합니다. \"Creates problems\"는 \"makes some problem\"보다 더 자연스럽고 간결한 표현입니다.\n\n---\n\n**3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)**\n이번 대화에서는 **관사 (a/an/the)의 사용**에서 실수가 반복되었습니다. 특히 일반적인 명사 앞에 'the'를 사용하거나, 특정하지 않은 명사 앞에 관사를 생략하는 경우가 있었습니다.\n\n| ❌ 원문 (As Said)                                         | ✅ 교정 예시                                             |\n| :------------------------------------------------------- | :------------------------------------------------------- |\n| \"Some countries drink **the** honey...\"                  | \"Some countries drink **honey**...\"                      |\n| \"We usually eat **a** soup, so many vegetables...\"       | \"We usually eat **soup** with many vegetables...\"        |\n| \"You can make **audience** alert or apathetic.\"          | \"You can make **the audience** alert or apathetic.\"      |\n| \"I become **the** more age.\"                             | \"I **gained** more experience.\"                          |\n\n📌 **핵심 규칙:** 일반적인 개념이나 셀 수 없는 명사 앞에는 관사를 생략하거나 (예: honey, soup), 특정 집단을 지칭할 때는 'the'를 사용합니다 (예: the audience). 또한, '나이를 먹다'는 \"get older\" 또는 \"gain experience\" 등으로 표현하는 것이 자연스럽습니다.\n\n🔁 **따라 읽기:**\n🗣️ \"Some countries drink honey.\"\n🗣️ \"We usually eat soup with many vegetables.\"\n🗣️ \"You can make the audience alert or apathetic.\"\n\n---\n\n**4. 📗 어휘 확장 (Vocabulary Vault)**\n\n*   **tweak** /twiːk/ (동사, 명사)\n    *   뜻: (작은) 수정, 약간 고치다, 조정하다\n    *   실전 예문: We need to **tweak** the presentation slides slightly before the meeting.\n\n*   **apathetic** /ˌæpəˈθɛtɪk/ (형용사)\n    *   뜻: 무관심한, 무감각한\n    *   실전 예문: An engaging speaker can prevent the audience from becoming **apathetic**.\n\n*   **sizzling** /ˈsɪzlɪŋ/ (형용사)\n    *   뜻: 아주 흥미로운, 열정적인, 대단한 (원래는 지글거리는 소리)\n    *   실전 예문: Her new investment strategy is generating **sizzling** returns.\n\n*   **disorganized** /dɪsˈɔːrɡənaɪzd/ (형용사)\n    *   뜻: 정리가 안 된, 체계적이지 못한\n    *   실전 예문: A **disorganized** presentation can make the speaker seem unprepared.\n\n*   **trajectory** /trəˈdʒɛktəri/ (명사)\n    *   뜻: 궤적, 경로 (특히 경력이나 프로젝트의 진행 방향)\n    *   실전 예문: This new project could significantly alter the company's growth **trajectory**.\n\n---\n\n**5. 📝 실전 복습 챌린지 (Practice)**\n\n1.  **상황:** 당신은 새로운 프로젝트에 대한 아이디어를 팀에 발표해야 합니다. 발표 자료를 조금 **수정**해야 할 것 같아요.\n    *   **영작:** (힌트: 오늘 배운 '작은 수정'을 뜻하는 동사를 사용해 보세요.)\n    *   **모범 답안:** I need to **tweak** the presentation slides for the new project.\n\n2.  **상황:** 너무 많은 숫자를 나열하면 청중이 **무관심해질** 수 있습니다. 중요한 숫자를 연결하여 **이야기를 전달해야** 합니다.\n    *   **영작:** (힌트: '무관심한'을 뜻하는 형용사와 '이야기를 전달하다' 표현을 사용해 보세요.)\n    *   **모범 답안:** Too many numbers can make the audience **apathetic**. You need to **tell a story** using the important figures.\n\n3.  **상황:** 당신의 상사가 보고서가 너무 **정리가 안 되어** 있다고 피드백을 주었습니다. 다음번에는 더 **체계적으로** 작성해야겠다고 생각합니다.\n    *   **영작:** (힌트: '정리가 안 된'을 뜻하는 형용사와 '체계적으로'를 뜻하는 부사를 사용해 보세요.)\n    *   **모범 답안:** My boss said the report was too **disorganized**. I need to write it more **systematically** next time.\n\n---\n\n**6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)**\n\n*   ✨ **Good Job**: \"I feel this small dot is connected and makes a line. And then sometimes that line makes one side. Sometimes that is business. Sometimes that is the human relationship. Sometimes that is the job.\"\n    *   Joey님, 이 부분에서 정말 깊은 통찰력과 자신만의 철학을 보여주셨어요. 비록 문법적으로 다듬을 부분은 있었지만, '점들이 모여 선이 되고, 그 선이 비즈니스, 인간관계, 직업 등 삶의 다양한 측면을 이룬다'는 비유는 매우 창의적이고 인상적이었습니다. 복잡한 생각을 영어로 이렇게 표현할 수 있다는 것은 Joey님의 유창성과 사고력을 잘 보여줍니다. 훌륭해요!\n\n*   🚀 **내일의 한 문장**: \"I've been thinking about how to make our presentations more sizzling and engage the audience.\"\n    *   다음 수업 시작 시 이 문장을 사용하여 오늘 배운 'sizzling'과 'engage the audience'를 활용해 보세요.\n\n---\n\n**[성과 지표]**\n**유창성 점수:** 7.5/10\n**근거:** Joey님은 다양한 주제에 대해 막힘없이 자신의 의견을 표현하며 대화를 이어나가는 능력이 뛰어납니다. 특히 추상적인 개념이나 개인적인 철학을 설명할 때도 주저함 없이 말하고자 하는 바를 전달하려는 노력이 돋보였습니다. 다만, 문장의 구조나 어휘 선택에서 좀 더 자연스럽고 간결한 표현을 사용하면 유창성이 더욱 향상될 것입니다.\n\n**다음 수업 '원포인트 액션 플랜':**\n다음 수업에서는 **\"관사 (a/an/the)의 정확한 사용\"**에 집중해 봅시다. 특히 일반적인 명사 앞과 특정 명사 앞에서 관사를 어떻게 사용해야 하는지 의식적으로 연습해 볼 거예요.\n\n위 내용을 바탕으로:\n1. 먼저 오늘 수업에서 내가 틀렸거나 어색했던 표현을 하나 골라서, 관련된 상황을 영어로 질문해줘.\n2. 내가 영어로 대답하면, 자연스러운지 확인하고 더 나은 표현이 있으면 알려줘.\n3. 특히 \"반복 실수 패턴\"에서 지적된 부분을 집중적으로 연습시켜줘.\n4. 이런 식으로 오늘 배운 표현들을 하나씩 복습하자.\n5. 한국어 설명은 필요할 때만 간단히, 대화는 최대한 영어로 진행해줘.\n\n그럼 시작하자!";
+        function startReview(){navigator.clipboard.writeText(REVIEW_PROMPT).then(()=>{showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)}).catch(()=>{const t=document.createElement('textarea');t.value=REVIEW_PROMPT;document.body.appendChild(t);t.select();document.execCommand('copy');document.body.removeChild(t);showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)})}
+        function showToast(){const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500)}
+        function switchTab(n){document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',n==='feedback'?i===0:i===1));document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));document.getElementById('tab-'+n).classList.add('active')}
+    </script>
+</body>
+</html>
