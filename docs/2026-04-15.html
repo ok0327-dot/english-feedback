@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전화영어 복습 - 2026년 04월 15일</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Noto Sans KR',sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.75;min-height:100vh}
+        .header{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);border-bottom:1px solid rgba(255,255,255,.06);padding:48px 24px 40px;text-align:center}
+        .header-date{font-size:13px;color:#94a3b8;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+        .header h1{font-size:28px;font-weight:700;color:#f1f5f9;margin-bottom:16px}
+        .header-meta{display:flex;justify-content:center;gap:24px;font-size:14px;color:#64748b}
+        .header-meta span{display:flex;align-items:center;gap:6px}
+        .cta-section{text-align:center;padding:40px 24px}
+        .cta-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:linear-gradient(135deg,#38bdf8,#818cf8);color:#fff;font-size:16px;font-weight:600;font-family:'Noto Sans KR',sans-serif;border:none;border-radius:50px;cursor:pointer;transition:all .3s;text-decoration:none;box-shadow:0 4px 24px rgba(56,189,248,.25)}
+        .cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(56,189,248,.35)}
+        .cta-btn svg{width:20px;height:20px}
+        .cta-sub{margin-top:12px;font-size:13px;color:#64748b}
+        .toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#38bdf8;padding:14px 28px;border-radius:12px;font-size:14px;font-weight:500;border:1px solid rgba(56,189,248,.2);box-shadow:0 8px 32px rgba(0,0,0,.4);opacity:0;transition:all .4s cubic-bezier(.16,1,.3,1);z-index:1000}
+        .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+        .container{max-width:720px;margin:0 auto;padding:0 24px 80px}
+        .tabs{display:flex;gap:4px;background:#1a1a24;padding:4px;border-radius:12px;margin-bottom:32px}
+        .tab{flex:1;padding:12px;text-align:center;font-size:14px;font-weight:500;color:#64748b;background:0 0;border:none;border-radius:8px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all .2s}
+        .tab.active{background:#262636;color:#f1f5f9}
+        .tab-content{display:none}.tab-content.active{display:block}
+        .feedback h2{font-size:18px;font-weight:700;color:#f1f5f9;margin:36px 0 16px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.06)}
+        .feedback h2:first-child{margin-top:0}
+        .feedback p{margin:8px 0;color:#cbd5e1}
+        .feedback .item{padding:6px 0 6px 16px;border-left:2px solid #334155;margin:6px 0;color:#cbd5e1}
+        .feedback .numbered{padding:8px 0 8px 16px;color:#cbd5e1}
+        .feedback .numbered strong{color:#38bdf8}
+        .feedback strong{color:#f1f5f9}
+        .feedback code{background:#1e293b;padding:2px 8px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#38bdf8}
+        .feedback table{width:100%;border-collapse:collapse;margin:12px 0}
+        .feedback th,.feedback td{padding:10px 14px;text-align:left;border-bottom:1px solid #262636}
+        .feedback th{color:#94a3b8;font-weight:500;font-size:13px}
+        .feedback td{color:#cbd5e1}
+        .arrow{color:#38bdf8;font-weight:700}
+        .transcript{background:#1a1a24;border-radius:12px;padding:28px;font-size:14px;line-height:2;color:#94a3b8;white-space:pre-wrap;word-break:break-word;font-family:'JetBrains Mono','Noto Sans KR',monospace}
+        .transcript .tutor{color:#38bdf8}
+        .transcript .student{color:#a78bfa}
+        @media(max-width:640px){.header{padding:32px 16px}.header h1{font-size:22px}.cta-btn{padding:14px 28px;font-size:15px}.container{padding:0 16px 60px}}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-date">2026년 04월 15일</div>
+        <h1>📚 전화영어 복습</h1>
+        <div class="header-meta">
+            <span>⏱ 20분 0초</span>
+            <span>🎙 전화영어_025180304_20260415080017.m4a</span>
+        </div>
+    </div>
+    <div class="cta-section">
+        <button class="cta-btn" onclick="startReview()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Gemini에서 복습 대화 시작하기
+        </button>
+        <div class="cta-sub">클릭하면 프롬프트가 복사되고 Gemini가 열립니다</div>
+    </div>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('feedback')">📋 AI 피드백</button>
+            <button class="tab" onclick="switchTab('transcript')">🎙 수업 전사</button>
+        </div>
+        <div id="tab-feedback" class="tab-content active">
+            <div class="feedback"><p>안녕하세요, 학습자님! 오늘도 열정적으로 영어 실력을 갈고닦는 모습에 저도 긍정적인 에너지를 얻습니다. 비즈니스 환경에서 필요한 유창성과 정확성을 동시에 잡으면서, 입에 착 붙는 자연스러운 표현들을 함께 익혀나가 봐요.</p>
+<br>
+<br>
+<p><strong>0. 📌 Topic</strong></p>
+<p>Topic: Discussing effective presentation skills and public speaking anxiety.</p>
+<br>
+<p><strong>1. 📊 오늘의 대화 요약 (Summary)</strong></p>
+<p>오늘은 효과적인 프레젠테이션 스킬에 대한 글을 읽고, 크리키 보이스, 단조로운 목소리, 상향 억양 등 발표 시 피해야 할 습관들을 짚어보았습니다. 또한, 발표 구성, 페이싱, 제스처, 시각 자료 등 성공적인 발표를 위한 전략들을 학습하고, 대중 연설 불안감(glossophobia)에 대한 자신의 경험과 극복 방법에 대해 이야기 나누었습니다.</p>
+<br>
+<p><strong>2. 💬 유창성 업그레이드 (Fluency & Natural Flow)</strong></p>
+<br>
+<p>*   <strong>❌ 학습자 원문 (As Said):</strong> "That makes effect, depletes energy and message. Sound boring, uninteresting. Lacks punch and pizzazz."</p>
+<p>    *   <strong>✅ 자연스러운 표현 (Natural):</strong> "This has the effect of depleting energy and making the message sound boring, uninteresting, and lacking punch and pizzazz."</p>
+<p>    *   <strong>💎 비즈니스 표현 (Professional):</strong> "This effect tends to deplete energy, making the message sound monotonous and unengaging, thereby diminishing its impact."</p>
+<p>    *   <strong>💡 코칭 포인트:</strong> "~ing의 효과를 가진다"는 표현은 결과를 설명할 때 자연스럽습니다. 또한 주어-동사 일치(예: "sound" 대신 "sounds")를 확인하는 것이 중요합니다.</p>
+<br>
+<p>*   <strong>❌ 학습자 원문 (As Said):</strong> "Just somebody have some problem, I will say just relax."</p>
+<p>    *   <strong>✅ 자연스러운 표현 (Natural):</strong> "If someone has this problem, I would tell them to just relax."</p>
+<p>    *   <strong>💎 비즈니스 표현 (Professional):</strong> "For individuals experiencing this challenge, my advice would be to prioritize relaxation."</p>
+<p>    *   <strong>💡 코칭 포인트:</strong> "If someone has..."는 가상의 상황을 설정할 때 흔히 쓰이는 표현입니다. "I would tell them to..."는 조언을 표현하는 자연스러운 방식입니다.</p>
+<br>
+<p>*   <strong>❌ 학습자 원문 (As Said):</strong> "So I'm more, I'm in my case, I'm more understanding more easily."</p>
+<p>    *   <strong>✅ 자연스러운 표현 (Natural):</strong> "In my case, I understand it more easily."</p>
+<p>    *   <strong>💎 비즈니스 표현 (Professional):</strong> "From my perspective, this approach facilitates easier comprehension."</p>
+<p>    *   <strong>💡 코칭 포인트:</strong> 무언가를 이해한다고 말할 때는 "I understand it"을 직접 사용하세요. "I'm understanding"은 주로 진행 중인 과정을 나타낼 때 씁니다. "More easily"도 맞지만, "easier"만으로도 충분한 경우가 많습니다.</p>
+<br>
+<p><strong>3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)</strong></p>
+<br>
+<p>이번 대화에서는 <strong>관사(a/an/the) 사용</strong>에서 혼동이 있었습니다. 특히 'the'와 'a/an'의 차이를 명확히 이해하고 연습하는 것이 중요합니다.</p>
+<br>
+<table>
+<tr><th>❌ 학습자 원문 (As Said)</th><th>✅ 교정 예시 (Corrected)</th></tr>
+<tr><td>"At <strong>the</strong> time he gives some philosophy of his life."</td><td>"At <strong>that</strong> time, he shares <strong>a</strong> philosophy of his life." (또는 "his philosophy")</td></tr>
+<tr><td>"So it is more hard <strong>the</strong> reason to unknown people speaking."</td><td>"So <strong>that is the reason why</strong> speaking to unknown people is harder." (또는 "That's why speaking to unknown people is harder.")</td></tr>
+<tr><td>"But our group of, group of company people, my co-worker, they are if I finish my speech and then we are remit."</td><td>"But with <strong>our group of company people</strong>, my co-workers, if I finish my speech, then we will meet again."</td></tr>
+</table>
+<br>
+<p>*   <strong>📌 핵심 규칙:</strong> 특정한 것을 지칭할 때는 'the'를, 불특정한 것을 지칭할 때는 'a/an'을 사용하며, 문장 구조에 따라 관사 없이 명사만 쓰는 경우도 있습니다.</p>
+<br>
+<p>*   <strong>🔁 따라 읽기:</strong></p>
+<p>    🗣️ "At that time, he shares a philosophy of his life."</p>
+<p>    🗣️ "That is the reason why speaking to unknown people is harder."</p>
+<p>    🗣️ "But with our group of company people, my co-workers, if I finish my speech, then we will meet again."</p>
+<br>
+<p><strong>4. 📗 어휘 확장 (Vocabulary Vault)</strong></p>
+<br>
+<p>*   <strong>distracting</strong> /dɪˈstræktɪŋ/ (형용사)</p>
+<p>    *   뜻: 주의를 산만하게 하는</p>
+<p>    *   실전 예문: During a presentation, unnecessary gestures can be <strong>distracting</strong> to the audience.</p>
+<br>
+<p>*   <strong>deplete</strong> /dɪˈpliːt/ (동사)</p>
+<p>    *   뜻: 고갈시키다, 격감시키다</p>
+<p>    *   실전 예문: A monotonous voice can <strong>deplete</strong> the audience's energy and interest.</p>
+<br>
+<p>*   <strong>pizzazz</strong> /pɪˈzæz/ (명사)</p>
+<p>    *   뜻: 활기, 매력, 생기; 열정</p>
+<p>    *   실전 예문: Her presentation lacked a certain <strong>pizzazz</strong>, making it less memorable.</p>
+<br>
+<p>*   <strong>monotonous</strong> /məˈnɒtənəs/ (형용사)</p>
+<p>    *   뜻: 단조로운, 지루한</p>
+<p>    *   실전 예문: To avoid a <strong>monotonous</strong> delivery, vary your tone and pace during the speech.</p>
+<br>
+<p>*   <strong>glossophobia</strong> /ˌɡlɒsəˈfoʊbiə/ (명사)</p>
+<p>    *   뜻: 대중 연설 공포증</p>
+<p>    *   실전 예문: Many professionals suffer from <strong>glossophobia</strong>, but it can be managed with practice and techniques.</p>
+<br>
+<p><strong>5. 📝 실전 복습 챌린지 (Practice)</strong></p>
+<br>
+<div class="numbered"><strong>1.</strong>  <strong>한국어 상황:</strong> "그의 발표는 너무 단조로워서 청중의 에너지를 고갈시켰다."</div>
+<p>    *   <strong>영작 요구:</strong> 'monotonous'와 'deplete'를 사용하여 영작하세요.</p>
+<p>    *   <strong>모범 답안:</strong> His presentation was so monotonous that it depleted the audience's energy.</p>
+<br>
+<div class="numbered"><strong>2.</strong>  <strong>한국어 상황:</strong> "새로운 프로젝트를 시작할 때, 팀원들이 긴장을 풀도록 조언하는 것이 중요합니다."</div>
+<p>    *   <strong>영작 요구:</strong> 'If someone has a problem'과 'relax'를 활용하여 조언하는 문장을 만들어 보세요.</p>
+<p>    *   <strong>모범 답안:</strong> If someone has a problem starting a new project, I would tell them to just relax and take a deep breath.</p>
+<br>
+<div class="numbered"><strong>3.</strong>  <strong>한국어 상황:</strong> "그녀는 발표에 활기를 더하기 위해 시각 자료를 활용하는 효과적인 방법을 알고 있습니다."</div>
+<p>    *   <strong>영작 요구:</strong> 'pizzazz'와 'has the effect of ~ing' 또는 'knows how to effectively use'를 활용하여 영작하세요.</p>
+<p>    *   <strong>모범 답안:</strong> She knows how to effectively use visual aids to add pizzazz to her presentations.</p>
+<br>
+<p><strong>6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)</strong></p>
+<br>
+<p>*   ✨ <strong>Good Job</strong>: "[Student] Oh, yeah, I totally agree with that. Because that is the importance, strategy, and secret to the presentation."</p>
+<p>    *   <strong>코칭 포인트:</strong> 이 문장은 자신의 의견을 명확하게 표현하고, 그 이유를 'because'를 사용하여 논리적으로 뒷받침하는 아주 좋은 예시입니다. 'importance, strategy, and secret'이라는 세 가지 핵심 단어를 나열하여 설득력을 높였습니다. 훌륭합니다!</p>
+<br>
+<p>*   🚀 <strong>내일의 한 문장</strong>: "I've been practicing how to add more pizzazz to my presentations. Do you have any tips?"</p>
+<p>    *   (오늘 배운 'pizzazz'를 활용하여 다음 수업 시작 시 튜터에게 던질 수 있는 대화 시작 문장입니다.)</p>
+<br>
+<p><strong>[성과 지표]</strong></p>
+<p>*   <strong>유창성 점수:</strong> 7/10점</p>
+<p>*   <strong>근거:</strong> 학습자님은 다양한 주제에 대해 막힘없이 자신의 의견을 표현하고 긴 문장을 구사하는 데 능숙합니다. 대화의 흐름을 주도하고 질문에 즉각적으로 반응하는 모습도 인상 깊습니다. 다만, 특정 구문이나 표현에서 한국어 직역투가 느껴지거나, 문법적 정확성(특히 관사 사용)에서 미흡한 부분이 있어 더 자연스러운 영어 표현으로 다듬을 필요가 있습니다.</p>
+<p>*   <strong>다음 수업 '원포인트 액션 플랜':</strong> 다음 수업에서는 <strong>"관사(a/an/the) 사용"</strong>에 집중하여, 명사가 특정 대상인지 불특정 대상인지 구분하는 연습을 더 해보겠습니다. 또한, 오늘 배운 '유창성 업그레이드' 표현들을 실제 대화에서 의식적으로 사용해 보는 시간을 가질 예정입니다.</p></div>
+        </div>
+        <div id="tab-transcript" class="tab-content">
+            <div class="transcript"><span class="tutor">[Tutor]</span> Hey, good morning. Good evening.
+<span class="student">[Student]</span> Yeah, good evening. Yeah, how are you doing today?
+<span class="tutor">[Tutor]</span> I&#x27;m doing great. Yes, it&#x27;s Wednesday, spring day. It&#x27;s so nice. Yeah, weather is perfect. How was your day?
+<span class="student">[Student]</span> Oh, pretty good. Yeah, a little rainy here today.
+<span class="tutor">[Tutor]</span> A little rainy, I see. Okay.
+<span class="student">[Student]</span> And do you have any plans for today?
+<span class="tutor">[Tutor]</span> Today, I will make some application in my office. Usually this season, I made some report, cost audit in the company. And I finished the report and then I will make some application, automation to that audit cost, cost audit. For example, this application, if I press one button, all the information gathering and analysis and makes a report. So yeah, I&#x27;m making them and I&#x27;m searching and constructing some application. So maybe this month I will do that work in my office. How about you? How about your plans?
+<span class="student">[Student]</span> My plans this evening are teaching, I guess working.
+<span class="tutor">[Tutor]</span> Yes, yes, it&#x27;s great work. Yes, you&#x27;re right.
+<span class="tutor">[Tutor]</span> I think you were last on page 24 looking through effective presentation skills.
+<span class="student">[Student]</span> Oh no no. On page 23.
+<span class="tutor">[Tutor]</span> Yeah, you&#x27;re right. And yesterday I finished the paragraph, the second line. So we will start the creaky voice. Yeah, creaky voice. Yeah, we will start the creaky voice.
+<span class="tutor">[Tutor]</span> Would you like to read?
+<span class="student">[Student]</span> Oh yeah, no problem. Speaking error, the creaky voice, the effect, unpleasant to listen to and distracting and tearing off the end of sentence. That makes effect, depletes energy and message. Sound boring, uninteresting. Lacks punch and pizzazz.
+<span class="tutor">[Tutor]</span> Pizzazz.
+<span class="student">[Student]</span> Pizzazz.
+<span class="tutor">[Tutor]</span> Pizzazz.
+<span class="student">[Student]</span> Pizzazz.
+<span class="tutor">[Tutor]</span> Punch and pizzazz.
+<span class="student">[Student]</span> Upward intonation at the end of phrase, for example, voice pitch goes higher, it makes a statement sound like a question. That is impact. And monotonous voice, it makes extremely boring and causes for audience to take note. Audience to take a note, causes for audience to take a note. Okay, that is first paragraph. Any questions with these? A lot of questions. I just ask one thing. The pizzazz, what&#x27;s mean, teacher? Pizzazz. Pizzazz. Yes, what&#x27;s it mean?
+<span class="tutor">[Tutor]</span> It just means kind of a punch or a zest or vitality. Yeah.
+<span class="student">[Student]</span> Could you explain explanation? So like it means lively, glamorous, lively.
+<span class="tutor">[Tutor]</span> Lively, glamorous, yeah, kind of a flair, something energetic.
+<span class="student">[Student]</span> Energetic. I see. Okay, I see. Love of the future. So that is a positive word.
+<span class="tutor">[Tutor]</span> Having pizzazz is positive.
+<span class="student">[Student]</span> Positive. That is to make energy and more good things. Okay, and second paragraph, can I read that? Yes. Okay. Yes. Speaking practice effect.
+<span class="tutor">[Tutor]</span> Just a moment.
+<span class="student">[Student]</span> Organization. Each part has its own purpose which supports main idea. Clear connection among ideas. Use metaphor as analogy. A concept that&#x27;s hard to understand on its own becomes easy to understand. Pacing. Let&#x27;s draw out words to gain interest. Interest. Audience has time to take in information. Gesture and movement. Limited and controlled movement can grab the audience&#x27;s attention and emphasize key aspects of the speech. Visual aids. Humans can remember pictures much more easily than abandoned words.
+<span class="tutor">[Tutor]</span> Hmm. Okay. And so, any of these you agree with or disagree with?
+<span class="student">[Student]</span> Oh, yeah, I totally agree with that. Because that is the importance, strategy, and secret to the presentation.
+<span class="tutor">[Tutor]</span> So, which of the negative habits above do you think would most ruin a speech?
+<span class="student">[Student]</span> Usually many speakers have a problem speaking too quickly because they want to finish their report or presentation early. So if they, if it&#x27;s their first time, they feel the urgent and speaking too quickly. That is the same to me.
+<span class="tutor">[Tutor]</span> So what advice would you give to someone who does that?
+<span class="student">[Student]</span> Just somebody have some problem, I will say just relax. It is finished. So yeah, if you don&#x27;t hurry up, just catch your speed and speak. Yeah, I will give some advice that to people.
+<span class="tutor">[Tutor]</span> And have you ever watched a famous speech on YouTube or as part of a class?
+<span class="student">[Student]</span> Oh, yes, um. Yes, yes, in our company, the group CEO has some presentation for the co-worker. At the time he gives some philosophy of his life. So that is so funny because usually that subject is not hard, so soft. And we feel because he compares, he has some example of his life. So that is so soft and enjoyable, his speech. So I love that.
+<span class="tutor">[Tutor]</span> So what kind of qualities does he use during the speech? What made it remarkable?
+<span class="student">[Student]</span> For example, he has a presentation at that time. He has some example. If he has some philosophy, he cleans up some picture of his travel, during the travel picture. And then he just compares his life and travel and something to do, something to do. So I&#x27;m more, I&#x27;m in my case, I&#x27;m more understanding more easily. So yeah, it&#x27;s so nice.
+<span class="tutor">[Tutor]</span> And so what do you think would be harder, giving a speech to your fellow employees or giving a speech to a group of people unknown to you?
+<span class="student">[Student]</span> Okay, pardon, teacher. Sorry, one more, please.
+<span class="tutor">[Tutor]</span> So the last question, number three. Which do you think would be harder, giving a speech to your fellow employees or giving a speech to a group of people unknown to you?
+<span class="student">[Student]</span> Hmm. Or giving speech to a group of people unknown to you. Giving a speech to your fellow employees. You follow, or giving speech to a group of people unknown to you. Oh, of course, unknown people is more hard because usually we have connections in our company, the relation connections. So usually we know about his information or her information and upset. And then we listen his speech. So that is more understand better than unknown people. Yeah, so it is more hard the reason to unknown people speaking.
+<span class="tutor">[Tutor]</span> You&#x27;re right. Well, what about giving a speech? So when you have to give a speech?
+<span class="student">[Student]</span> Hmm, that depends on, but usually it is more easy unknown people because they are only meet only one time and then we don&#x27;t know we are remit or not. But our group of, group of company people, my co-worker, they are if I finish my speech and then we are remit. So yeah, this is more, that is more hard to speaking.
+<span class="tutor">[Tutor]</span> Hmm. And the last we have the fun facts. Would you like to read that? Did you know?
+<span class="student">[Student]</span> Fun fact. Did you know? Can I read that?
+<span class="tutor">[Tutor]</span> Yes.
+<span class="student">[Student]</span> Oh, yes. The first. In a presentation, facts are 20 times more likely to be remembered if they are part of a story. In a presentation, facts are 20 times more likely to be remembered if they are part of a story.
+<span class="tutor">[Tutor]</span> Okay, and some memorable vivid images added to a presentation will make the audience remember 95% of what they hear and see at the moment.
+<span class="student">[Student]</span> Okay.
+<span class="tutor">[Tutor]</span> Do you feel you remember more if they&#x27;re images or if it&#x27;s part of a story?
+<span class="student">[Student]</span> Oh yes, that is the strong image, strong remember because sometimes our brain remember just a lot of words, just a picture better than a lot of words. So usually if we put on some image or some graph, that is more impact better than some words.
+<span class="tutor">[Tutor]</span> It definitely has more impact maybe than just a speech.
+<span class="student">[Student]</span> Yes, yes, you&#x27;re right.
+<span class="tutor">[Tutor]</span> And would you like to look at the next page?
+<span class="student">[Student]</span> Okay, before we go to the next page, I have one question, teacher. Usually I say the speaking strategies. Strategy. Frankly speaking, I can speak more, I&#x27;m a little, I feel more little hard speak strategies. Could you speak the strategies? The penultimate. Yes, strategy. Strategy. Strategy. Strategy. Strategy. Strategy. Strategy. Okay. Is it speaking strategy? Is that the one or speaking strength? That is the strategy. The second graph, second graph, speaking strategy. Is it a strategy? S-strength. Yes, I&#x27;m a little confused. Strategy and, one more, please.
+<span class="tutor">[Tutor]</span> Strength.
+<span class="student">[Student]</span> Strength.
+<span class="tutor">[Tutor]</span> Strength.
+<span class="student">[Student]</span> Strength.
+<span class="tutor">[Tutor]</span> Strength.
+<span class="student">[Student]</span> Strength.
+<span class="tutor">[Tutor]</span> Strength.
+<span class="student">[Student]</span> Strength.
+<span class="tutor">[Tutor]</span> Strength.
+<span class="student">[Student]</span> Strength.
+<span class="tutor">[Tutor]</span> Strength.
+<span class="student">[Student]</span> Keep practicing like a string, string, string, string, string. That is really hard. So it&#x27;s a stress, drag, drag, drag, drag, do, drag, do like stir, stir, bring, brain, to rent, the strength. Strength. Strength. Strength. Strength. Strength. Okay. I see. Every time if I met this word, I&#x27;m a little confused. Strategy and some word. So today I&#x27;m practice more. Thank you. Yeah. Strength.
+<span class="tutor">[Tutor]</span> Yeah. Strength. Maybe strong. Strength. Those are related.
+<span class="student">[Student]</span> Okay. Good.
+<span class="tutor">[Tutor]</span> The next chart here. Are there any other questions?
+<span class="student">[Student]</span> No, you go to the next page.
+<span class="tutor">[Tutor]</span> Fear of public speaking, also known as glossophobia. 74% of people suffer from speech anxiety.
+<span class="student">[Student]</span> Okay. Yeah, anxiety. Anxiety. Anxiety. Hmm. Anxiety. That is angry.
+<span class="tutor">[Tutor]</span> It&#x27;s a similar word.
+<span class="student">[Student]</span> Angry. Anxiety.
+<span class="tutor">[Tutor]</span> Anxious.
+<span class="student">[Student]</span> Anxious. Anxious. It&#x27;s nervous, right?
+<span class="tutor">[Tutor]</span> Nervous, yeah.
+<span class="student">[Student]</span> Nervous. Okay. Yeah. So many people. And why that graph? Make some examples. 73 and 75.
+<span class="tutor">[Tutor]</span> It looks like a male and female.
+<span class="student">[Student]</span> Ah, yes, yes. Ah, you&#x27;re right, you&#x27;re right. So totally 74%. Hmm. Understand. Okay. So the average. The average. Okay. Okay.
+<span class="tutor">[Tutor]</span> Yeah, we have time for the one question. Are you somebody who suffers from anxiety over public speaking?
+<span class="student">[Student]</span> Yes, I know. Me. I agree with that. Totally agree with that. Almost people, more than 70% more people have some public speaking, through speech. And so, yeah, in my team, it&#x27;s just one person. Every people feel a little confused when they speak. And that speech, if they have a more big group of speech, that is more hard. Yeah.
+<span class="tutor">[Tutor]</span> Okay. Okay. So how comfortable or any discomfort when you have public speaking? Do you get very nervous? Do you?
+<span class="student">[Student]</span> In my case, I&#x27;m very nervous. I&#x27;m very nervous. So sometimes my speaking is become too fast and fast and my mind wants to finish earlier that presentation. But I relax my mind and I stay, I try to slow speaking and I watch the audience react. Yeah, hmm. So already I tried that, but still I&#x27;m, that is a little hard speech of the group.
+<span class="tutor">[Tutor]</span> Yeah, it can be difficult in front of a big group.
+<span class="student">[Student]</span> Yeah, big group is more difficult to speak.
+<span class="tutor">[Tutor]</span> Well, that is about it for time. I will send you corrections here in just a bit. Do you have any other questions before I go?
+<span class="student">[Student]</span> Oh, no, I don&#x27;t have questions. Thank you for your class, teacher. Have a nice day.
+<span class="tutor">[Tutor]</span> Welcome. Have a great day.
+<span class="student">[Student]</span> You too.
+<span class="tutor">[Tutor]</span> Bye.
+<span class="student">[Student]</span> Bye-bye.</div>
+        </div>
+    </div>
+    <div class="toast" id="toast">✅ 프롬프트가 복사되었습니다!</div>
+    <script>
+        const REVIEW_PROMPT="너는 나의 영어 회화 복습 파트너야. 오늘 내 전화영어 수업 내용을 기반으로 대화하면서 복습을 도와줘.\n\n[오늘 수업 전사 내용]\n[Tutor] Hey, good morning. Good evening.\n[Student] Yeah, good evening. Yeah, how are you doing today?\n[Tutor] I'm doing great. Yes, it's Wednesday, spring day. It's so nice. Yeah, weather is perfect. How was your day?\n[Student] Oh, pretty good. Yeah, a little rainy here today.\n[Tutor] A little rainy, I see. Okay.\n[Student] And do you have any plans for today?\n[Tutor] Today, I will make some application in my office. Usually this season, I made some report, cost audit in the company. And I finished the report and then I will make some application, automation to that audit cost, cost audit. For example, this application, if I press one button, all the information gathering and analysis and makes a report. So yeah, I'm making them and I'm searching and constructing some application. So maybe this month I will do that work in my office. How about you? How about your plans?\n[Student] My plans this evening are teaching, I guess working.\n[Tutor] Yes, yes, it's great work. Yes, you're right.\n[Tutor] I think you were last on page 24 looking through effective presentation skills.\n[Student] Oh no no. On page 23.\n[Tutor] Yeah, you're right. And yesterday I finished the paragraph, the second line. So we will start the creaky voice. Yeah, creaky voice. Yeah, we will start the creaky voice.\n[Tutor] Would you like to read?\n[Student] Oh yeah, no problem. Speaking error, the creaky voice, the effect, unpleasant to listen to and distracting and tearing off the end of sentence. That makes effect, depletes energy and message. Sound boring, uninteresting. Lacks punch and pizzazz.\n[Tutor] Pizzazz.\n[Student] Pizzazz.\n[Tutor] Pizzazz.\n[Student] Pizzazz.\n[Tutor] Punch and pizzazz.\n[Student] Upward intonation at the end of phrase, for example, voice pitch goes higher, it makes a statement sound like a question. That is impact. And monotonous voice, it makes extremely boring and causes for audience to take note. Audience to take a note, causes for audience to take a note. Okay, that is first paragraph. Any questions with these? A lot of questions. I just ask one thing. The pizzazz, what's mean, teacher? Pizzazz. Pizzazz. Yes, what's it mean?\n[Tutor] It just means kind of a punch or a zest or vitality. Yeah.\n[Student] Could you explain explanation? So like it means lively, glamorous, lively.\n[Tutor] Lively, glamorous, yeah, kind of a flair, something energetic.\n[Student] Energetic. I see. Okay, I see. Love of the future. So that is a positive word.\n[Tutor] Having pizzazz is positive.\n[Student] Positive. That is to make energy and more good things. Okay, and second paragraph, can I read that? Yes. Okay. Yes. Speaking practice effect.\n[Tutor] Just a moment.\n[Student] Organization. Each part has its own purpose which supports main idea. Clear connection among ideas. Use metaphor as analogy. A concept that's hard to understand on its own becomes easy to understand. Pacing. Let's draw out words to gain interest. Interest. Audience has time to take in information. Gesture and movement. Limited and controlled movement can grab the audience's attention and emphasize key aspects of the speech. Visual aids. Humans can remember pictures much more easily than abandoned words.\n[Tutor] Hmm. Okay. And so, any of these you agree with or disagree with?\n[Student] Oh, yeah, I totally agree with that. Because that is the importance, strategy, and secret to the presentation.\n[Tutor] So, which of the negative habits above do you think would most ruin a speech?\n[Student] Usually many speakers have a problem speaking too quickly because they want to finish their report or presentation early. So if they, if it's their first time, they feel the urgent and speaking too quickly. That is the same to me.\n[Tutor] So what advice would you give to someone who does that?\n[Student] Just somebody have some problem, I will say just relax. It is finished. So yeah, if you don't hurry up, just catch your speed and speak. Yeah, I will give some advice that to people.\n[Tutor] And have you ever watched a famous speech on YouTube or as part of a class?\n[Student] Oh, yes, um. Yes, yes, in our company, the group CEO has some presentation for the co-worker. At the time he gives some philosophy of his life. So that is so funny because usually that subject is not hard, so soft. And we feel because he compares, he has some example of his life. So that is so soft and enjoyable, his speech. So I love that.\n[Tutor] So what kind of qualities does he use during the speech? What made it remarkable?\n[Student] For example, he has a presentation at that time. He has some example. If he has some philosophy, he cleans up some picture of his travel, during the travel picture. And then he just compares his life and travel and something to do, something to do. So I'm more, I'm in my case, I'm more understanding more easily. So yeah, it's so nice.\n[Tutor] And so what do you think would be harder, giving a speech to your fellow employees or giving a speech to a group of people unknown to you?\n[Student] Okay, pardon, teacher. Sorry, one more, please.\n[Tutor] So the last question, number three. Which do you think would be harder, giving a speech to your fellow employees or giving a speech to a group of people unknown to you?\n[Student] Hmm. Or giving speech to a group of people unknown to you. Giving a speech to your fellow employees. You follow, or giving speech to a group of people unknown to you. Oh, of course, unknown people is more hard because usually we have connections in our company, the relation connections. So usually we know about his information or her information and upset. And then we listen his speech. So that is more understand better than unknown people. Yeah, so it is more hard the reason to unknown people speaking.\n[Tutor] You're right. Well, what about giving a speech? So when you have to give a speech?\n[Student] Hmm, that depends on, but usually it is more easy unknown people because they are only meet only one time and then we don't know we are remit or not. But our group of, group of company people, my co-worker, they are if I finish my speech and then we are remit. So yeah, this is more, that is more hard to speaking.\n[Tutor] Hmm. And the last we have the fun facts. Would you like to read that? Did you know?\n[Student] Fun fact. Did you know? Can I read that?\n[Tutor] Yes.\n[Student] Oh, yes. The first. In a presentation, facts are 20 times more likely to be remembered if they are part of a story. In a presentation, facts are 20 times more likely to be remembered if they are part of a story.\n[Tutor] Okay, and some memorable vivid images added to a presentation will make the audience remember 95% of what they hear and see at the moment.\n[Student] Okay.\n[Tutor] Do you feel you remember more if they're images or if it's part of a story?\n[Student] Oh yes, that is the strong image, strong remember because sometimes our brain remember just a lot of words, just a picture better than a lot of words. So usually if we put on some image or some graph, that is more impact better than some words.\n[Tutor] It definitely has more impact maybe than just a speech.\n[Student] Yes, yes, you're right.\n[Tutor] And would you like to look at the next page?\n[Student] Okay, before we go to the next page, I have one question, teacher. Usually I say the speaking strategies. Strategy. Frankly speaking, I can speak more, I'm a little, I feel more little hard speak strategies. Could you speak the strategies? The penultimate. Yes, strategy. Strategy. Strategy. Strategy. Strategy. Strategy. Strategy. Okay. Is it speaking strategy? Is that the one or speaking strength? That is the strategy. The second graph, second graph, speaking strategy. Is it a strategy? S-strength. Yes, I'm a little confused. Strategy and, one more, please.\n[Tutor] Strength.\n[Student] Strength.\n[Tutor] Strength.\n[Student] Strength.\n[Tutor] Strength.\n[Student] Strength.\n[Tutor] Strength.\n[Student] Strength.\n[Tutor] Strength.\n[Student] Strength.\n[Tutor] Strength.\n[Student] Keep practicing like a string, string, string, string, string. That is really hard. So it's a stress, drag, drag, drag, drag, do, drag, do like stir, stir, bring, brain, to rent, the strength. Strength. Strength. Strength. Strength. Strength. Okay. I see. Every time if I met this word, I'm a little confused. Strategy and some word. So today I'm practice more. Thank you. Yeah. Strength.\n[Tutor] Yeah. Strength. Maybe strong. Strength. Those are related.\n[Student] Okay. Good.\n[Tutor] The next chart here. Are there any other questions?\n[Student] No, you go to the next page.\n[Tutor] Fear of public speaking, also known as glossophobia. 74% of people suffer from speech anxiety.\n[Student] Okay. Yeah, anxiety. Anxiety. Anxiety. Hmm. Anxiety. That is angry.\n[Tutor] It's a similar word.\n[Student] Angry. Anxiety.\n[Tutor] Anxious.\n[Student] Anxious. Anxious. It's nervous, right?\n[Tutor] Nervous, yeah.\n[Student] Nervous. Okay. Yeah. So many people. And why that graph? Make some examples. 73 and 75.\n[Tutor] It looks like a male and female.\n[Student] Ah, yes, yes. Ah, you're right, you're right. So totally 74%. Hmm. Understand. Okay. So the average. The average. Okay. Okay.\n[Tutor] Yeah, we have time for the one question. Are you somebody who suffers from anxiety over public speaking?\n[Student] Yes, I know. Me. I agree with that. Totally agree with that. Almost people, more than 70% more people have some public speaking, through speech. And so, yeah, in my team, it's just one person. Every people feel a little confused when they speak. And that speech, if they have a more big group of speech, that is more hard. Yeah.\n[Tutor] Okay. Okay. So how comfortable or any discomfort when you have public speaking? Do you get very nervous? Do you?\n[Student] In my case, I'm very nervous. I'm very nervous. So sometimes my speaking is become too fast and fast and my mind wants to finish earlier that presentation. But I relax my mind and I stay, I try to slow speaking and I watch the audience react. Yeah, hmm. So already I tried that, but still I'm, that is a little hard speech of the group.\n[Tutor] Yeah, it can be difficult in front of a big group.\n[Student] Yeah, big group is more difficult to speak.\n[Tutor] Well, that is about it for time. I will send you corrections here in just a bit. Do you have any other questions before I go?\n[Student] Oh, no, I don't have questions. Thank you for your class, teacher. Have a nice day.\n[Tutor] Welcome. Have a great day.\n[Student] You too.\n[Tutor] Bye.\n[Student] Bye-bye.\n\n[AI 피드백]\n안녕하세요, 학습자님! 오늘도 열정적으로 영어 실력을 갈고닦는 모습에 저도 긍정적인 에너지를 얻습니다. 비즈니스 환경에서 필요한 유창성과 정확성을 동시에 잡으면서, 입에 착 붙는 자연스러운 표현들을 함께 익혀나가 봐요.\n\n---\n\n**0. 📌 Topic**\nTopic: Discussing effective presentation skills and public speaking anxiety.\n\n**1. 📊 오늘의 대화 요약 (Summary)**\n오늘은 효과적인 프레젠테이션 스킬에 대한 글을 읽고, 크리키 보이스, 단조로운 목소리, 상향 억양 등 발표 시 피해야 할 습관들을 짚어보았습니다. 또한, 발표 구성, 페이싱, 제스처, 시각 자료 등 성공적인 발표를 위한 전략들을 학습하고, 대중 연설 불안감(glossophobia)에 대한 자신의 경험과 극복 방법에 대해 이야기 나누었습니다.\n\n**2. 💬 유창성 업그레이드 (Fluency & Natural Flow)**\n\n*   **❌ 학습자 원문 (As Said):** \"That makes effect, depletes energy and message. Sound boring, uninteresting. Lacks punch and pizzazz.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"This has the effect of depleting energy and making the message sound boring, uninteresting, and lacking punch and pizzazz.\"\n    *   **💎 비즈니스 표현 (Professional):** \"This effect tends to deplete energy, making the message sound monotonous and unengaging, thereby diminishing its impact.\"\n    *   **💡 코칭 포인트:** \"~ing의 효과를 가진다\"는 표현은 결과를 설명할 때 자연스럽습니다. 또한 주어-동사 일치(예: \"sound\" 대신 \"sounds\")를 확인하는 것이 중요합니다.\n\n*   **❌ 학습자 원문 (As Said):** \"Just somebody have some problem, I will say just relax.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"If someone has this problem, I would tell them to just relax.\"\n    *   **💎 비즈니스 표현 (Professional):** \"For individuals experiencing this challenge, my advice would be to prioritize relaxation.\"\n    *   **💡 코칭 포인트:** \"If someone has...\"는 가상의 상황을 설정할 때 흔히 쓰이는 표현입니다. \"I would tell them to...\"는 조언을 표현하는 자연스러운 방식입니다.\n\n*   **❌ 학습자 원문 (As Said):** \"So I'm more, I'm in my case, I'm more understanding more easily.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"In my case, I understand it more easily.\"\n    *   **💎 비즈니스 표현 (Professional):** \"From my perspective, this approach facilitates easier comprehension.\"\n    *   **💡 코칭 포인트:** 무언가를 이해한다고 말할 때는 \"I understand it\"을 직접 사용하세요. \"I'm understanding\"은 주로 진행 중인 과정을 나타낼 때 씁니다. \"More easily\"도 맞지만, \"easier\"만으로도 충분한 경우가 많습니다.\n\n**3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)**\n\n이번 대화에서는 **관사(a/an/the) 사용**에서 혼동이 있었습니다. 특히 'the'와 'a/an'의 차이를 명확히 이해하고 연습하는 것이 중요합니다.\n\n| ❌ 학습자 원문 (As Said)                                                                  | ✅ 교정 예시 (Corrected)                                                                                              |\n| :------------------------------------------------------------------------------------ | :------------------------------------------------------------------------------------------------------------------- |\n| \"At **the** time he gives some philosophy of his life.\"                               | \"At **that** time, he shares **a** philosophy of his life.\" (또는 \"his philosophy\")                                    |\n| \"So it is more hard **the** reason to unknown people speaking.\"                        | \"So **that is the reason why** speaking to unknown people is harder.\" (또는 \"That's why speaking to unknown people is harder.\") |\n| \"But our group of, group of company people, my co-worker, they are if I finish my speech and then we are remit.\" | \"But with **our group of company people**, my co-workers, if I finish my speech, then we will meet again.\"         |\n\n*   **📌 핵심 규칙:** 특정한 것을 지칭할 때는 'the'를, 불특정한 것을 지칭할 때는 'a/an'을 사용하며, 문장 구조에 따라 관사 없이 명사만 쓰는 경우도 있습니다.\n\n*   **🔁 따라 읽기:**\n    🗣️ \"At that time, he shares a philosophy of his life.\"\n    🗣️ \"That is the reason why speaking to unknown people is harder.\"\n    🗣️ \"But with our group of company people, my co-workers, if I finish my speech, then we will meet again.\"\n\n**4. 📗 어휘 확장 (Vocabulary Vault)**\n\n*   **distracting** /dɪˈstræktɪŋ/ (형용사)\n    *   뜻: 주의를 산만하게 하는\n    *   실전 예문: During a presentation, unnecessary gestures can be **distracting** to the audience.\n\n*   **deplete** /dɪˈpliːt/ (동사)\n    *   뜻: 고갈시키다, 격감시키다\n    *   실전 예문: A monotonous voice can **deplete** the audience's energy and interest.\n\n*   **pizzazz** /pɪˈzæz/ (명사)\n    *   뜻: 활기, 매력, 생기; 열정\n    *   실전 예문: Her presentation lacked a certain **pizzazz**, making it less memorable.\n\n*   **monotonous** /məˈnɒtənəs/ (형용사)\n    *   뜻: 단조로운, 지루한\n    *   실전 예문: To avoid a **monotonous** delivery, vary your tone and pace during the speech.\n\n*   **glossophobia** /ˌɡlɒsəˈfoʊbiə/ (명사)\n    *   뜻: 대중 연설 공포증\n    *   실전 예문: Many professionals suffer from **glossophobia**, but it can be managed with practice and techniques.\n\n**5. 📝 실전 복습 챌린지 (Practice)**\n\n1.  **한국어 상황:** \"그의 발표는 너무 단조로워서 청중의 에너지를 고갈시켰다.\"\n    *   **영작 요구:** 'monotonous'와 'deplete'를 사용하여 영작하세요.\n    *   **모범 답안:** His presentation was so monotonous that it depleted the audience's energy.\n\n2.  **한국어 상황:** \"새로운 프로젝트를 시작할 때, 팀원들이 긴장을 풀도록 조언하는 것이 중요합니다.\"\n    *   **영작 요구:** 'If someone has a problem'과 'relax'를 활용하여 조언하는 문장을 만들어 보세요.\n    *   **모범 답안:** If someone has a problem starting a new project, I would tell them to just relax and take a deep breath.\n\n3.  **한국어 상황:** \"그녀는 발표에 활기를 더하기 위해 시각 자료를 활용하는 효과적인 방법을 알고 있습니다.\"\n    *   **영작 요구:** 'pizzazz'와 'has the effect of ~ing' 또는 'knows how to effectively use'를 활용하여 영작하세요.\n    *   **모범 답안:** She knows how to effectively use visual aids to add pizzazz to her presentations.\n\n**6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)**\n\n*   ✨ **Good Job**: \"[Student] Oh, yeah, I totally agree with that. Because that is the importance, strategy, and secret to the presentation.\"\n    *   **코칭 포인트:** 이 문장은 자신의 의견을 명확하게 표현하고, 그 이유를 'because'를 사용하여 논리적으로 뒷받침하는 아주 좋은 예시입니다. 'importance, strategy, and secret'이라는 세 가지 핵심 단어를 나열하여 설득력을 높였습니다. 훌륭합니다!\n\n*   🚀 **내일의 한 문장**: \"I've been practicing how to add more pizzazz to my presentations. Do you have any tips?\"\n    *   (오늘 배운 'pizzazz'를 활용하여 다음 수업 시작 시 튜터에게 던질 수 있는 대화 시작 문장입니다.)\n\n**[성과 지표]**\n*   **유창성 점수:** 7/10점\n*   **근거:** 학습자님은 다양한 주제에 대해 막힘없이 자신의 의견을 표현하고 긴 문장을 구사하는 데 능숙합니다. 대화의 흐름을 주도하고 질문에 즉각적으로 반응하는 모습도 인상 깊습니다. 다만, 특정 구문이나 표현에서 한국어 직역투가 느껴지거나, 문법적 정확성(특히 관사 사용)에서 미흡한 부분이 있어 더 자연스러운 영어 표현으로 다듬을 필요가 있습니다.\n*   **다음 수업 '원포인트 액션 플랜':** 다음 수업에서는 **\"관사(a/an/the) 사용\"**에 집중하여, 명사가 특정 대상인지 불특정 대상인지 구분하는 연습을 더 해보겠습니다. 또한, 오늘 배운 '유창성 업그레이드' 표현들을 실제 대화에서 의식적으로 사용해 보는 시간을 가질 예정입니다.\n\n위 내용을 바탕으로:\n1. 먼저 오늘 수업에서 내가 틀렸거나 어색했던 표현을 하나 골라서, 관련된 상황을 영어로 질문해줘.\n2. 내가 영어로 대답하면, 자연스러운지 확인하고 더 나은 표현이 있으면 알려줘.\n3. 특히 \"반복 실수 패턴\"에서 지적된 부분을 집중적으로 연습시켜줘.\n4. 이런 식으로 오늘 배운 표현들을 하나씩 복습하자.\n5. 한국어 설명은 필요할 때만 간단히, 대화는 최대한 영어로 진행해줘.\n\n그럼 시작하자!";
+        function startReview(){navigator.clipboard.writeText(REVIEW_PROMPT).then(()=>{showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)}).catch(()=>{const t=document.createElement('textarea');t.value=REVIEW_PROMPT;document.body.appendChild(t);t.select();document.execCommand('copy');document.body.removeChild(t);showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)})}
+        function showToast(){const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500)}
+        function switchTab(n){document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',n==='feedback'?i===0:i===1));document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));document.getElementById('tab-'+n).classList.add('active')}
+    </script>
+</body>
+</html>
