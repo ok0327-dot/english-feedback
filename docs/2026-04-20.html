@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전화영어 복습 - 2026년 04월 20일</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Noto Sans KR',sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.75;min-height:100vh}
+        .header{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);border-bottom:1px solid rgba(255,255,255,.06);padding:48px 24px 40px;text-align:center}
+        .header-date{font-size:13px;color:#94a3b8;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+        .header h1{font-size:28px;font-weight:700;color:#f1f5f9;margin-bottom:16px}
+        .header-meta{display:flex;justify-content:center;gap:24px;font-size:14px;color:#64748b}
+        .header-meta span{display:flex;align-items:center;gap:6px}
+        .cta-section{text-align:center;padding:40px 24px}
+        .cta-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:linear-gradient(135deg,#38bdf8,#818cf8);color:#fff;font-size:16px;font-weight:600;font-family:'Noto Sans KR',sans-serif;border:none;border-radius:50px;cursor:pointer;transition:all .3s;text-decoration:none;box-shadow:0 4px 24px rgba(56,189,248,.25)}
+        .cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(56,189,248,.35)}
+        .cta-btn svg{width:20px;height:20px}
+        .cta-sub{margin-top:12px;font-size:13px;color:#64748b}
+        .toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#38bdf8;padding:14px 28px;border-radius:12px;font-size:14px;font-weight:500;border:1px solid rgba(56,189,248,.2);box-shadow:0 8px 32px rgba(0,0,0,.4);opacity:0;transition:all .4s cubic-bezier(.16,1,.3,1);z-index:1000}
+        .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+        .container{max-width:720px;margin:0 auto;padding:0 24px 80px}
+        .tabs{display:flex;gap:4px;background:#1a1a24;padding:4px;border-radius:12px;margin-bottom:32px}
+        .tab{flex:1;padding:12px;text-align:center;font-size:14px;font-weight:500;color:#64748b;background:0 0;border:none;border-radius:8px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all .2s}
+        .tab.active{background:#262636;color:#f1f5f9}
+        .tab-content{display:none}.tab-content.active{display:block}
+        .feedback h2{font-size:18px;font-weight:700;color:#f1f5f9;margin:36px 0 16px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.06)}
+        .feedback h2:first-child{margin-top:0}
+        .feedback p{margin:8px 0;color:#cbd5e1}
+        .feedback .item{padding:6px 0 6px 16px;border-left:2px solid #334155;margin:6px 0;color:#cbd5e1}
+        .feedback .numbered{padding:8px 0 8px 16px;color:#cbd5e1}
+        .feedback .numbered strong{color:#38bdf8}
+        .feedback strong{color:#f1f5f9}
+        .feedback code{background:#1e293b;padding:2px 8px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#38bdf8}
+        .feedback table{width:100%;border-collapse:collapse;margin:12px 0}
+        .feedback th,.feedback td{padding:10px 14px;text-align:left;border-bottom:1px solid #262636}
+        .feedback th{color:#94a3b8;font-weight:500;font-size:13px}
+        .feedback td{color:#cbd5e1}
+        .arrow{color:#38bdf8;font-weight:700}
+        .transcript{background:#1a1a24;border-radius:12px;padding:28px;font-size:14px;line-height:2;color:#94a3b8;white-space:pre-wrap;word-break:break-word;font-family:'JetBrains Mono','Noto Sans KR',monospace}
+        .transcript .tutor{color:#38bdf8}
+        .transcript .student{color:#a78bfa}
+        @media(max-width:640px){.header{padding:32px 16px}.header h1{font-size:22px}.cta-btn{padding:14px 28px;font-size:15px}.container{padding:0 16px 60px}}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-date">2026년 04월 20일</div>
+        <h1>📚 전화영어 복습</h1>
+        <div class="header-meta">
+            <span>⏱ 19분 41초</span>
+            <span>🎙 전화영어_025180304_20260420080115.m4a</span>
+        </div>
+    </div>
+    <div class="cta-section">
+        <button class="cta-btn" onclick="startReview()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Gemini에서 복습 대화 시작하기
+        </button>
+        <div class="cta-sub">클릭하면 프롬프트가 복사되고 Gemini가 열립니다</div>
+    </div>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('feedback')">📋 AI 피드백</button>
+            <button class="tab" onclick="switchTab('transcript')">🎙 수업 전사</button>
+        </div>
+        <div id="tab-feedback" class="tab-content active">
+            <div class="feedback"><p>Joanna님, 안녕하세요! 오늘 수업도 정말 수고 많으셨습니다. 봄의 기운처럼 활기찬 Joanna님의 에너지가 대화 내내 느껴졌어요. 특히 어려운 비즈니스 상황극에서도 침착하게 역할을 소화하시고, 모르는 표현은 적극적으로 질문하며 배우려는 태도가 인상 깊었습니다.</p>
+<br>
+<p>오늘 배운 'confront'와 'fall behind' 같은 비즈니스 표현들을 잘 기억하고 활용하시면, 업무 환경에서 더욱 자신감 있게 소통하실 수 있을 거예요.</p>
+<br>
+<br>
+<p>### <strong>0. 📌 Topic</strong></p>
+<p>Topic: Discussing how to confront a co-worker about falling behind on an important account.</p>
+<br>
+<p>### <strong>1. 📊 오늘의 대화 요약 (Summary)</strong></p>
+<p>오늘 수업에서는 업무에서 동료가 중요한 업무에 뒤처졌을 때 어떻게 상황을 대처하고 대화할지에 대한 시나리오를 읽고 토론했습니다. 'confront'와 'fall behind' 같은 핵심 표현들을 중심으로, 업무 상황에서 도움을 요청하는 것의 어려움과 효과적인 소통 방식에 대해 이야기 나누었습니다.</p>
+<br>
+<p>### <strong>2. 💬 유창성 업그레이드 (Fluency & Natural Flow)</strong></p>
+<br>
+<p>일상 대화에서 더 자연스럽고 유창하게 들릴 수 있도록 다음 표현들을 연습해 보세요.</p>
+<br>
+<div class="numbered"><strong>1.</strong>  <strong>❌ 학습자 원문 (As Said):</strong> "Just pleasure because it's spring. It's a prediction."</div>
+<p>    *   <strong>✅ 자연스러운 표현 (Natural):</strong> "It's just pleasant because it's spring."</p>
+<p>    *   <strong>💎 비즈니스 표현 (Professional):</strong> "I find it quite refreshing, especially with spring in the air."</p>
+<p>    *   <strong>💡 코칭 포인트:</strong> 'Pleasure'는 보통 'It's a pleasure'나 'My pleasure'와 함께 쓰입니다. 전반적인 행복감이나 편안함을 표현할 때는 형용사 'pleasant'가 더 적절합니다. 'Prediction'은 문맥에 맞지 않습니다. 현재의 감정을 예측하는 것이 아니기 때문입니다.</p>
+<br>
+<div class="numbered"><strong>2.</strong>  <strong>❌ 학습자 원문 (As Said):</strong> "I want to do twice. First is Thompson, and second is Smith. Is it possible?"</div>
+<p>    *   <strong>✅ 자연스러운 표현 (Natural):</strong> "I'd like to read both roles. First Thompson, then Smith. Is that okay?"</p>
+<p>    *   <strong>💎 비즈니스 표현 (Professional):</strong> "I'd appreciate the opportunity to play both roles, starting with Thompson and then Smith, if that works for you."</p>
+<p>    *   <strong>💡 코칭 포인트:</strong> "Do twice"는 이해는 되지만, 역할을 연기하는 상황에서는 "read both roles" 또는 "play both parts"가 더 자연스럽습니다. "Is that okay?"를 덧붙이면 허락을 구하는 친근한 표현이 됩니다.</p>
+<br>
+<div class="numbered"><strong>3.</strong>  <strong>❌ 학습자 원문 (As Said):</strong> "So that have so many times, that spend so many times."</div>
+<p>    *   <strong>✅ 자연스러운 표현 (Natural):</strong> "That takes up so much time."</p>
+<p>    *   <strong>💎 비즈니스 표현 (Professional):</strong> "That requires a significant time investment."</p>
+<p>    *   <strong>💡 코칭 포인트:</strong> 어떤 것이 시간을 소비할 때는 일반적으로 "take time" 또는 "take up time"을 사용합니다. "Spend time"은 보통 *자신이* 시간을 보내는 것을 의미합니다. 또한, "so many times"는 빈도(여러 번)를 나타내고, "so much time"은 양(많은 시간)을 나타냅니다.</p>
+<br>
+<p>### <strong>3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)</strong></p>
+<br>
+<p>오늘 대화에서 Joanna님이 반복적으로 사용하신 문법 실수는 <strong>전치사 오류</strong>입니다. 특히 동사 뒤에 오는 전치사를 잘못 사용하거나 불필요하게 추가하는 경향이 있었습니다.</p>
+<br>
+<table>
+<tr><th>❌ 학습자 원문</th><th>✅ 교정 예시</th></tr>
+<tr><td>If I be teacher and I teach <strong>to</strong> something <strong>to</strong> my student, at the time, I confront <strong>to</strong> their student problem.</td><td>If I <strong>were a</strong> teacher and I teach something <strong>to</strong> my student, at that time, I confront their student's problem.</td></tr>
+<tr><td>I'm checked more strongly <strong>to</strong> the work.</td><td>I check the work more strongly/thoroughly.</td></tr>
+<tr><td>It is a little hard to ask <strong>to</strong> help <strong>to</strong> my work.</td><td>It is a little hard to ask <strong>for</strong> help <strong>with</strong> my work.</td></tr>
+</table>
+<br>
+<p>📌 <strong>핵심 규칙:</strong> 동사 뒤에 오는 전치사는 해당 동사와 목적어의 관계에 따라 달라지며, 어떤 동사는 전치사 없이 바로 목적어를 취합니다. (예: confront + 목적어, check + 목적어)</p>
+<br>
+<p>🔁 <strong>따라 읽기:</strong></p>
+<p>🗣️ "If I were a teacher and I teach something to my student, at that time, I confront their student's problem."</p>
+<p>🗣️ "I check the work more strongly/thoroughly."</p>
+<p>🗣️ "It is a little hard to ask for help with my work."</p>
+<br>
+<p>### <strong>4. 📗 어휘 확장 (Vocabulary Vault)</strong></p>
+<br>
+<p>오늘 대화에서 유용하게 쓰였거나, Joanna님의 업무 환경에서 바로 활용하실 수 있는 어휘들을 정리해 보았습니다.</p>
+<br>
+<div class="numbered"><strong>1.</strong>  <strong>confront</strong> /kənˈfrʌnt/ (동사)</div>
+<p>    *   <strong>뜻:</strong> (문제나 어려운 상황에) 직면하다, (사람에게) 맞서다, 따지다</p>
+<p>    *   <strong>실전 예문:</strong> We need to <strong>confront</strong> the declining market share directly to find a solution.</p>
+<br>
+<div class="numbered"><strong>2.</strong>  <strong>fall behind</strong> /fɔːl bɪˈhaɪnd/ (구동사)</div>
+<p>    *   <strong>뜻:</strong> 뒤처지다, 뒤떨어지다 (업무, 일정 등에서)</p>
+<p>    *   <strong>실전 예문:</strong> If we don't accelerate our production, we'll <strong>fall behind</strong> on our delivery schedule.</p>
+<br>
+<div class="numbered"><strong>3.</strong>  <strong>overwhelmed</strong> /ˌoʊvərˈwɛlmd/ (형용사)</div>
+<p>    *   <strong>뜻:</strong> 압도된, 감당하기 어려운</p>
+<p>    *   <strong>실전 예문:</strong> The team felt <strong>overwhelmed</strong> by the sudden increase in project demands.</p>
+<br>
+<div class="numbered"><strong>4.</strong>  <strong>optimistic</strong> /ˌɑːptɪˈmɪstɪk/ (형용사)</div>
+<p>    *   <strong>뜻:</strong> 낙관적인, 긍정적인</p>
+<p>    *   <strong>실전 예문:</strong> Despite the challenges, we remain <strong>optimistic</strong> about achieving our quarterly goals.</p>
+<br>
+<div class="numbered"><strong>5.</strong>  <strong>account</strong> /əˈkaʊnt/ (명사)</div>
+<p>    *   <strong>뜻:</strong> 고객, 거래처, (회계) 계정</p>
+<p>    *   <strong>실전 예문:</strong> We need to focus on retaining our key <strong>accounts</strong> to ensure stable revenue.</p>
+<br>
+<p>### <strong>5. 📝 실전 복습 챌린지 (Practice)</strong></p>
+<br>
+<p>오늘 배운 표현과 문법을 활용하여 다음 상황에 맞게 영작해 보세요.</p>
+<br>
+<div class="numbered"><strong>1.</strong>  <strong>상황:</strong> 동료가 마감 기한에 뒤처지고 있는 것 같아요. 당신은 그에게 이 문제에 대해 직접 이야기해야 합니다.</div>
+<p>    *   <strong>영작:</strong> (fall behind, confront 활용)</p>
+<p>    *   <strong>모범 답안:</strong> I need to <strong>confront</strong> my colleague about <strong>falling behind</strong> on the deadline.</p>
+<br>
+<div class="numbered"><strong>2.</strong>  <strong>상황:</strong> 당신은 새로운 프로젝트의 복잡성에 압도당했지만, 기한 내에 마칠 수 있을 것이라고 낙관하고 있습니다.</div>
+<p>    *   <strong>영작:</strong> (overwhelmed, optimistic 활용)</p>
+<p>    *   <strong>모범 답안:</strong> I feel a bit <strong>overwhelmed</strong> by the complexity of the new project, but I'm <strong>optimistic</strong> I can finish it on time.</p>
+<br>
+<div class="numbered"><strong>3.</strong>  <strong>상황:</strong> 중요한 고객(account)을 잃을 위험에 처해 있어서, 팀원들에게 도움을 요청하는 것이 중요합니다.</div>
+<p>    *   <strong>영작:</strong> (account, ask for help 활용, 전치사 주의)</p>
+<p>    *   <strong>모범 답안:</strong> We are at risk of losing an important <strong>account</strong>, so it's crucial to <strong>ask for help</strong> from team members.</p>
+<br>
+<p>### <strong>6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)</strong></p>
+<br>
+<p>✨ <strong>Good Job:</strong> "I know. And I just want to let you know that everyone thinks that you are doing a great job. Remember that you can always ask for help if you have a problem."</p>
+<p>이 문장은 역할극에서 Blake를 격려하는 Bill의 대사였는데, Joanna님이 아주 자연스럽고 따뜻하게 표현해 주셨어요. 특히 "I just want to let you know that everyone thinks that you are doing a great job" 부분은 원어민처럼 부드럽게 이어졌습니다. 상대방을 배려하고 격려하는 비즈니스 소통의 핵심을 잘 보여주는 문장이었습니다!</p>
+<br>
+<p>🚀 <strong>내일의 한 문장:</strong> "I'm looking forward to learning more business expressions and key patterns tomorrow!"</p>
+<p>(내일 비즈니스 표현과 핵심 패턴을 더 배우는 것이 기대됩니다!)</p>
+<br>
+<br>
+<p><strong>[성과 지표]</strong></p>
+<p><strong>유창성 점수 (Fluency Score): 7/10</strong></p>
+<br>
+<p><strong>근거:</strong></p>
+<p>Joanna님은 대화의 흐름을 끊지 않고 자신의 의견을 적극적으로 표현하려는 의지가 매우 강합니다. 문장과 문장 사이의 연결이 자연스럽고, 모르는 단어나 표현이 나와도 주저하지 않고 질문하며 대화를 이어가는 모습이 인상적입니다. 이는 유창성 향상에 매우 긍정적인 요소입니다. 다만, 몇몇 문장에서 단어 선택이나 구문 구성이 다소 어색하게 들리거나, 전치사 사용에 오류가 있어 원어민이 듣기에 완전히 매끄럽지 않은 부분이 있었습니다. 하지만 의미 전달에는 전혀 문제가 없었으며, 꾸준한 연습으로 충분히 개선될 수 있는 부분입니다.</p>
+<br>
+<p><strong>다음 수업 '원포인트 액션 플랜':</strong></p>
+<p>다음 수업에서는 <strong>"동사와 함께 자주 쓰이는 전치사 짝꿍"</strong>에 집중하여 연습해 볼 예정입니다. 특히 비즈니스 상황에서 자주 사용되는 동사들(예: *deal with, focus on, rely on, contribute to, agree with/on*)과 그에 맞는 전치사를 익히고, 짧은 문장으로 반복해서 말해보는 시간을 가질 것입니다. 이를 통해 보다 정확하고 자연스러운 문장 구사를 돕겠습니다.</p></div>
+        </div>
+        <div id="tab-transcript" class="tab-content">
+            <div class="transcript">```
+<span class="tutor">[Tutor]</span> Hello, Joanna. Good morning. Good evening.
+<span class="student">[Student]</span> Good morning, Joey. How are you today?
+<span class="tutor">[Tutor]</span> Oh, it is so nice. It is a wonderful day.
+<span class="tutor">[Tutor]</span> Okay. Do you mean that weather-wise or why is it a wonderful day?
+<span class="student">[Student]</span> I don&#x27;t know the reason.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="student">[Student]</span> Just pleasure because it&#x27;s spring. It&#x27;s a prediction.
+<span class="student">[Student]</span> Yes, spring and Monday and start something and good weather, fresh air, good sleep, etc.
+<span class="student">[Student]</span> How was your day?
+<span class="tutor">[Tutor]</span> I love it.
+<span class="tutor">[Tutor]</span> My day was good, actually. I got to do a lot of things that I wanted to do. I&#x27;m very excited because my brother will be passing through Colombia for one day and I&#x27;m going to go spend a day with him at the airport with him and his wife, so I&#x27;m very excited about this.
+<span class="student">[Student]</span> Maybe you will meet your brother, right? Your brother.
+<span class="student">[Student]</span> Wow, it&#x27;s a little short, just one day.
+<span class="tutor">[Tutor]</span> Just maybe six hours, but that&#x27;s okay.
+<span class="tutor">[Tutor]</span> Wow, yes, I see. But yes, so I&#x27;m excited to see him because it would have been a year since I last saw him.
+<span class="student">[Student]</span> Last time you, you seen the last month? Just one month ago? One year ago? One year?
+<span class="student">[Student]</span> I see. Understand. I wish you have a good meeting with your brother.
+<span class="tutor">[Tutor]</span> Thank you.
+<span class="tutor">[Tutor]</span> Okay, no problem. All right. Let&#x27;s take a look at where we were in the book here.
+<span class="student">[Student]</span> We are on page 26.
+<span class="tutor">[Tutor]</span> Yeah, you&#x27;re right. Yeah. How would you know that? How would you know that?
+<span class="student">[Student]</span> Secrets.
+<span class="tutor">[Tutor]</span> Wow. That is an amazing secret. Okay. Good. Okay, so we have two fellows.
+<span class="student">[Student]</span> Yes.
+<span class="tutor">[Tutor]</span> What can you tell me about them?
+<span class="student">[Student]</span> Okay. There are two people in this story and one is Bill Thompson and another person is Blake Smith.
+<span class="student">[Student]</span> Bill Thompson is a supervisor in the customer service department and Blake Smith is a member of Mr. Thompson&#x27;s team.
+<span class="student">[Student]</span> And Bill Thompson&#x27;s mission is to confront, to confront a co-worker about being behind on his work on an important account. And Blake Smith&#x27;s mission is to apologize and explain yourself.
+<span class="tutor">[Tutor]</span> I see.
+<span class="student">[Student]</span> Here, I read the section and I find some words. The &quot;confronts&quot;?
+<span class="tutor">[Tutor]</span> Yeah, &quot;confront&quot;.
+<span class="student">[Student]</span> What means the &quot;confront&quot;?
+<span class="tutor">[Tutor]</span> I was going to ask you exactly the same thing. What does &quot;confront&quot; mean?
+<span class="student">[Student]</span> Uh-huh.
+<span class="tutor">[Tutor]</span> Yeah. It means to talk to someone directly, usually about a problem.
+<span class="student">[Student]</span> Ah, &quot;confront&quot;. I see.
+<span class="tutor">[Tutor]</span> Exactly. Usually when you have a conflict with someone or you&#x27;re unhappy with something that they did, you&#x27;re going to talk to them directly and ask them what&#x27;s going on.
+<span class="student">[Student]</span> What&#x27;s going on? Yes, maybe if I be teacher and I teach to something to my student, at the time, I confront to their student problem or student schedule, right? The check.
+<span class="tutor">[Tutor]</span> If I a teacher, I think teachers don&#x27;t usually confront people.
+<span class="student">[Student]</span> Confront people.
+<span class="tutor">[Tutor]</span> They don&#x27;t. Simply because it&#x27;s more common in an office setting.
+<span class="student">[Student]</span> Hmm, it&#x27;s more common in an office setting. Office setting. Hmm.
+<span class="tutor">[Tutor]</span> Okay, so let&#x27;s say you and your co-worker, say your co-worker was supposed to do something, he didn&#x27;t do it, and now you&#x27;re in trouble with a boss. So you&#x27;re going to confront the co-worker and say, &quot;Hey, why...?&quot;
+<span class="student">[Student]</span> Them to do this? I see. It is similar to check to the work or check to the something or find a situation.
+<span class="tutor">[Tutor]</span> Stronger. Yes, stronger because you&#x27;re usually angry when you do that.
+<span class="student">[Student]</span> I see. And I&#x27;m checked more strongly to the work. Yes.
+<span class="tutor">[Tutor]</span> Exactly. You&#x27;re going to talk to them, maybe a little bit angry, asking a lot of questions, maybe blaming them.
+<span class="student">[Student]</span> Okay. And the other words, &quot;important account&quot;, this means the work, the task, right?
+<span class="tutor">[Tutor]</span> An account is another way we can refer to a client, a client account.
+<span class="tutor">[Tutor]</span> A client or a customer.
+<span class="student">[Student]</span> Customer, important customer.
+<span class="tutor">[Tutor]</span> Account.
+<span class="student">[Student]</span> I see, understand.
+<span class="tutor">[Tutor]</span> Bless you.
+<span class="student">[Student]</span> Bless you.
+<span class="tutor">[Tutor]</span> Thanks so much.
+<span class="student">[Student]</span> Yes.
+<span class="tutor">[Tutor]</span> Okay, let&#x27;s go.
+<span class="student">[Student]</span> Okay.
+<span class="tutor">[Tutor]</span> So, who do you want to read? Bill, who&#x27;s angry, or Blake, who&#x27;s apologetic?
+<span class="student">[Student]</span> Oh, I want to do twice. First is Thompson, and second is Smith. Is it possible?
+<span class="tutor">[Tutor]</span> Sure.
+<span class="student">[Student]</span> Okay.
+<span class="tutor">[Tutor]</span> Of course.
+<span class="student">[Student]</span> Okay.
+<span class="tutor">[Tutor]</span> Which one do you want to start with?
+<span class="student">[Student]</span> Start with Thompson. Bill Thompson.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="student">[Student]</span> Hey, Blake. How are your days going?
+<span class="tutor">[Tutor]</span> Not so good. It&#x27;s been a stressful week.
+<span class="student">[Student]</span> Oh, I&#x27;m sorry to hear about your situation. I know it must be difficult to come into work feeling sick.
+<span class="tutor">[Tutor]</span> I&#x27;m feeling much better today, actually, just a little stressed.
+<span class="student">[Student]</span> You look a little overwhelmed today. How are you doing on the Jefferson account?
+<span class="tutor">[Tutor]</span> I&#x27;ve had some problems, but I&#x27;m optimistic that I can catch up soon.
+<span class="student">[Student]</span> I want to talk to you about that. While you were out sick, I had to take a look at your record, and I was surprised to see how far behind you have fallen. I think that it might be better if we let someone else work on account.
+<span class="tutor">[Tutor]</span> I&#x27;m very sorry to hear that. I thought I could fix things by myself.
+<span class="student">[Student]</span> I know. And I just want to let you know that everyone thinks that you are doing a great job. Remember that you can always ask to help if you have a problem.
+<span class="tutor">[Tutor]</span> I understand. I&#x27;m sorry that I didn&#x27;t ask for help sooner.
+<span class="student">[Student]</span> Okay, I see. Could you change the role?
+<span class="tutor">[Tutor]</span> Sure.
+<span class="student">[Student]</span> Okay.
+<span class="tutor">[Tutor]</span> Hey, Blake. How are things going?
+<span class="student">[Student]</span> Not so good. It&#x27;s a bit stressful week.
+<span class="tutor">[Tutor]</span> I&#x27;m sorry to hear about your situation. I know it must be difficult to come into work feeling sick.
+<span class="student">[Student]</span> I&#x27;m feeling much better today. Actually, just a little stressed.
+<span class="tutor">[Tutor]</span> You look a little overwhelmed today. How are you doing on the Jefferson account?
+<span class="student">[Student]</span> I have some problems, but I&#x27;m optimistic that I can catch up soon.
+<span class="tutor">[Tutor]</span> I want to talk to you about that. While you were out sick, I had to take a look at your records and I was surprised to see how far behind you have fallen. I think that it might be better if we let someone else work on that account.
+<span class="student">[Student]</span> I&#x27;m sorry. I&#x27;m very sorry to hear that. I thought I can fix things myself.
+<span class="tutor">[Tutor]</span> I know, and I just want to let you know that everyone thinks that you are doing a great job. Remember that you can always ask for help if you have a problem.
+<span class="student">[Student]</span> I understand. I&#x27;m sorry that I didn&#x27;t ask for help sooner.
+<span class="student">[Student]</span> Hmm, I see. I have a question.
+<span class="tutor">[Tutor]</span> Absolutely.
+<span class="student">[Student]</span> Yes. I read it twice, but I&#x27;m not sure this sentence. &quot;To see how far behind you, Farron, I think that it might be better if we read someone&#x27;s work on that account.&quot; So could you explain that?
+<span class="tutor">[Tutor]</span> Of course. &quot;To fall behind.&quot;
+<span class="student">[Student]</span> To fall behind.
+<span class="tutor">[Tutor]</span> On something. It means to, it&#x27;s the same thing as &quot;get behind&quot;, which means not doing it on time like you&#x27;re supposed to.
+<span class="student">[Student]</span> It is not finished on time.
+<span class="tutor">[Tutor]</span> Exactly.
+<span class="student">[Student]</span> I see. You are late. To fall behind, you are late.
+<span class="tutor">[Tutor]</span> And &quot;I think that it might be better if we let someone else work on that account&quot; means I&#x27;m taking this task from you and giving it to someone else.
+<span class="student">[Student]</span> Account is my task. Account is client. So earlier Bill asks, &quot;How are you doing on the Jefferson account?&quot;
+<span class="tutor">[Tutor]</span> Yes, yes, you&#x27;re right. Okay. So Jefferson is the name of the client. That&#x27;s basically it.
+<span class="student">[Student]</span> Yes, but that is not finished yet.
+<span class="tutor">[Tutor]</span> No, no, because Blake is not doing well.
+<span class="student">[Student]</span> Blake is not doing well. Okay. No.
+<span class="tutor">[Tutor]</span> Okay. Okay. Let&#x27;s take a look at some of these questions.
+<span class="student">[Student]</span> Okay. The first. Is it easy to ask help your workplace? Why or why not?
+<span class="student">[Student]</span> My case, it is not easy. It is more easy for myself to work. Because I know the background, but if I give some tasks to other people, I explain more background to the work. So that have so many times, that spend so many times. So it is a little hard to ask to help to my work. So, it is easier to do it myself.
+<span class="tutor">[Tutor]</span> Easier. Okay.
+<span class="student">[Student]</span> It is easier to do it myself.
+<span class="tutor">[Tutor]</span> It is easier to do it myself. Okay. What about if you&#x27;re in trouble? Falling behind, you can&#x27;t keep up with the pace of work. Are you able to ask for help?
+<span class="student">[Student]</span> If we are a team and if we have some same task, at that time I give some tasks to my co-workers, yeah, team member. Because, yeah, the first time we, we have a plan, make a plan to help us as make a project. At the time I give to some tasks and then the work and try to them. Yeah. Okay. Yes. Okay. Question two. Okay, listen. Question two. Do you think Mr. Thompson handled the situation well? Explain. No.
+<span class="student">[Student]</span> Because the first time Bill Thompson and Blake Smith is meet. But, oh, no, no, no, no, no. So Thompson&#x27;s handle situation is not bad because he checked his team member situation and first time he say just comfort month.
+<span class="student">[Student]</span> He just say some friendly speaking. And then he was, he was check his work, his team work. And before they check that problem, he just say more friendly words to his team member. So I think it is, yes, adoptable situation. Adoptive handler situation.
+<span class="tutor">[Tutor]</span> A good way to say that is he started by asking about Blake&#x27;s personal situation.
+<span class="student">[Student]</span> Yes, yes, you&#x27;re right.
+<span class="tutor">[Tutor]</span> So when you say friendly words, it&#x27;s asking about Blake&#x27;s personal situation. &quot;Are you feeling okay? You look overwhelmed,&quot; right? So started with the human aspect and then talked about his work.
+<span class="student">[Student]</span> Yes, you&#x27;re right. It&#x27;s better.
+<span class="tutor">[Tutor]</span> Okay. And the third question.
+<span class="student">[Student]</span> Okay. Describe a time that you need help at work. Who did you ask? How this make you feel?
+<span class="student">[Student]</span> Usually, I finish so fast, so my boss don&#x27;t say that&#x27;s casual.
+<span class="tutor">[Tutor]</span> Got it.
+<span class="student">[Student]</span> Yeah. I finished earlier. I finished very fast. So I&#x27;m just on schedule, finished. So we don&#x27;t say the work, just we, I transfer the content to the work. Yeah.
+<span class="tutor">[Tutor]</span> Okay. Okay. So you&#x27;re not often asking for help.
+<span class="student">[Student]</span> Yes, yes. Yeah, you&#x27;re right.
+<span class="tutor">[Tutor]</span> Okay. Well, I think that is an excellent place to stop with the book. Because tomorrow we will get into the business expressions.
+<span class="student">[Student]</span> Oh, yes.
+<span class="tutor">[Tutor]</span> And the key patterns.
+<span class="student">[Student]</span> Great. Yes. It&#x27;s a learn.
+<span class="tutor">[Tutor]</span> So I know today we learned two expressions. Do you remember what they are?
+<span class="student">[Student]</span> Mm-hmm. Dedication? Is that okay?
+<span class="tutor">[Tutor]</span> Yes, the two expressions that we learned today. Do you remember them?
+<span class="student">[Student]</span> Oh, behind, far behind, blah, blah, blah.
+<span class="tutor">[Tutor]</span> Falling behind, yes.
+<span class="student">[Student]</span> Falling behind.
+<span class="tutor">[Tutor]</span> And the other one. I forgot. When you are, when you are mad or upset about something that someone did and you talk to them directly about the problem, do you remember what that&#x27;s called?
+<span class="student">[Student]</span> No, teacher, please. No. Again.
+<span class="tutor">[Tutor]</span> Confront. To confront.
+<span class="student">[Student]</span> To confront. I see. Confront. Okay, okay. In front of someone.
+<span class="tutor">[Tutor]</span> Yes, yes. Good. All right. Well, thank you very much for your time this morning. Uh-huh. And I hope that the day is excellent like you predicted.
+<span class="student">[Student]</span> Oh, thank you so much and have a nice Sunday night.
+<span class="tutor">[Tutor]</span> Bye-bye.
+<span class="student">[Student]</span> Thank you. Bye-bye. Bye-bye. Take care.
+```</div>
+        </div>
+    </div>
+    <div class="toast" id="toast">✅ 프롬프트가 복사되었습니다!</div>
+    <script>
+        const REVIEW_PROMPT="너는 나의 영어 회화 복습 파트너야. 오늘 내 전화영어 수업 내용을 기반으로 대화하면서 복습을 도와줘.\n\n[오늘 수업 전사 내용]\n```\n[Tutor] Hello, Joanna. Good morning. Good evening.\n[Student] Good morning, Joey. How are you today?\n[Tutor] Oh, it is so nice. It is a wonderful day.\n[Tutor] Okay. Do you mean that weather-wise or why is it a wonderful day?\n[Student] I don't know the reason.\n[Tutor] Okay.\n[Student] Just pleasure because it's spring. It's a prediction.\n[Student] Yes, spring and Monday and start something and good weather, fresh air, good sleep, etc.\n[Student] How was your day?\n[Tutor] I love it.\n[Tutor] My day was good, actually. I got to do a lot of things that I wanted to do. I'm very excited because my brother will be passing through Colombia for one day and I'm going to go spend a day with him at the airport with him and his wife, so I'm very excited about this.\n[Student] Maybe you will meet your brother, right? Your brother.\n[Student] Wow, it's a little short, just one day.\n[Tutor] Just maybe six hours, but that's okay.\n[Tutor] Wow, yes, I see. But yes, so I'm excited to see him because it would have been a year since I last saw him.\n[Student] Last time you, you seen the last month? Just one month ago? One year ago? One year?\n[Student] I see. Understand. I wish you have a good meeting with your brother.\n[Tutor] Thank you.\n[Tutor] Okay, no problem. All right. Let's take a look at where we were in the book here.\n[Student] We are on page 26.\n[Tutor] Yeah, you're right. Yeah. How would you know that? How would you know that?\n[Student] Secrets.\n[Tutor] Wow. That is an amazing secret. Okay. Good. Okay, so we have two fellows.\n[Student] Yes.\n[Tutor] What can you tell me about them?\n[Student] Okay. There are two people in this story and one is Bill Thompson and another person is Blake Smith.\n[Student] Bill Thompson is a supervisor in the customer service department and Blake Smith is a member of Mr. Thompson's team.\n[Student] And Bill Thompson's mission is to confront, to confront a co-worker about being behind on his work on an important account. And Blake Smith's mission is to apologize and explain yourself.\n[Tutor] I see.\n[Student] Here, I read the section and I find some words. The \"confronts\"?\n[Tutor] Yeah, \"confront\".\n[Student] What means the \"confront\"?\n[Tutor] I was going to ask you exactly the same thing. What does \"confront\" mean?\n[Student] Uh-huh.\n[Tutor] Yeah. It means to talk to someone directly, usually about a problem.\n[Student] Ah, \"confront\". I see.\n[Tutor] Exactly. Usually when you have a conflict with someone or you're unhappy with something that they did, you're going to talk to them directly and ask them what's going on.\n[Student] What's going on? Yes, maybe if I be teacher and I teach to something to my student, at the time, I confront to their student problem or student schedule, right? The check.\n[Tutor] If I a teacher, I think teachers don't usually confront people.\n[Student] Confront people.\n[Tutor] They don't. Simply because it's more common in an office setting.\n[Student] Hmm, it's more common in an office setting. Office setting. Hmm.\n[Tutor] Okay, so let's say you and your co-worker, say your co-worker was supposed to do something, he didn't do it, and now you're in trouble with a boss. So you're going to confront the co-worker and say, \"Hey, why...?\"\n[Student] Them to do this? I see. It is similar to check to the work or check to the something or find a situation.\n[Tutor] Stronger. Yes, stronger because you're usually angry when you do that.\n[Student] I see. And I'm checked more strongly to the work. Yes.\n[Tutor] Exactly. You're going to talk to them, maybe a little bit angry, asking a lot of questions, maybe blaming them.\n[Student] Okay. And the other words, \"important account\", this means the work, the task, right?\n[Tutor] An account is another way we can refer to a client, a client account.\n[Tutor] A client or a customer.\n[Student] Customer, important customer.\n[Tutor] Account.\n[Student] I see, understand.\n[Tutor] Bless you.\n[Student] Bless you.\n[Tutor] Thanks so much.\n[Student] Yes.\n[Tutor] Okay, let's go.\n[Student] Okay.\n[Tutor] So, who do you want to read? Bill, who's angry, or Blake, who's apologetic?\n[Student] Oh, I want to do twice. First is Thompson, and second is Smith. Is it possible?\n[Tutor] Sure.\n[Student] Okay.\n[Tutor] Of course.\n[Student] Okay.\n[Tutor] Which one do you want to start with?\n[Student] Start with Thompson. Bill Thompson.\n[Tutor] Okay.\n[Student] Hey, Blake. How are your days going?\n[Tutor] Not so good. It's been a stressful week.\n[Student] Oh, I'm sorry to hear about your situation. I know it must be difficult to come into work feeling sick.\n[Tutor] I'm feeling much better today, actually, just a little stressed.\n[Student] You look a little overwhelmed today. How are you doing on the Jefferson account?\n[Tutor] I've had some problems, but I'm optimistic that I can catch up soon.\n[Student] I want to talk to you about that. While you were out sick, I had to take a look at your record, and I was surprised to see how far behind you have fallen. I think that it might be better if we let someone else work on account.\n[Tutor] I'm very sorry to hear that. I thought I could fix things by myself.\n[Student] I know. And I just want to let you know that everyone thinks that you are doing a great job. Remember that you can always ask to help if you have a problem.\n[Tutor] I understand. I'm sorry that I didn't ask for help sooner.\n[Student] Okay, I see. Could you change the role?\n[Tutor] Sure.\n[Student] Okay.\n[Tutor] Hey, Blake. How are things going?\n[Student] Not so good. It's a bit stressful week.\n[Tutor] I'm sorry to hear about your situation. I know it must be difficult to come into work feeling sick.\n[Student] I'm feeling much better today. Actually, just a little stressed.\n[Tutor] You look a little overwhelmed today. How are you doing on the Jefferson account?\n[Student] I have some problems, but I'm optimistic that I can catch up soon.\n[Tutor] I want to talk to you about that. While you were out sick, I had to take a look at your records and I was surprised to see how far behind you have fallen. I think that it might be better if we let someone else work on that account.\n[Student] I'm sorry. I'm very sorry to hear that. I thought I can fix things myself.\n[Tutor] I know, and I just want to let you know that everyone thinks that you are doing a great job. Remember that you can always ask for help if you have a problem.\n[Student] I understand. I'm sorry that I didn't ask for help sooner.\n[Student] Hmm, I see. I have a question.\n[Tutor] Absolutely.\n[Student] Yes. I read it twice, but I'm not sure this sentence. \"To see how far behind you, Farron, I think that it might be better if we read someone's work on that account.\" So could you explain that?\n[Tutor] Of course. \"To fall behind.\"\n[Student] To fall behind.\n[Tutor] On something. It means to, it's the same thing as \"get behind\", which means not doing it on time like you're supposed to.\n[Student] It is not finished on time.\n[Tutor] Exactly.\n[Student] I see. You are late. To fall behind, you are late.\n[Tutor] And \"I think that it might be better if we let someone else work on that account\" means I'm taking this task from you and giving it to someone else.\n[Student] Account is my task. Account is client. So earlier Bill asks, \"How are you doing on the Jefferson account?\"\n[Tutor] Yes, yes, you're right. Okay. So Jefferson is the name of the client. That's basically it.\n[Student] Yes, but that is not finished yet.\n[Tutor] No, no, because Blake is not doing well.\n[Student] Blake is not doing well. Okay. No.\n[Tutor] Okay. Okay. Let's take a look at some of these questions.\n[Student] Okay. The first. Is it easy to ask help your workplace? Why or why not?\n[Student] My case, it is not easy. It is more easy for myself to work. Because I know the background, but if I give some tasks to other people, I explain more background to the work. So that have so many times, that spend so many times. So it is a little hard to ask to help to my work. So, it is easier to do it myself.\n[Tutor] Easier. Okay.\n[Student] It is easier to do it myself.\n[Tutor] It is easier to do it myself. Okay. What about if you're in trouble? Falling behind, you can't keep up with the pace of work. Are you able to ask for help?\n[Student] If we are a team and if we have some same task, at that time I give some tasks to my co-workers, yeah, team member. Because, yeah, the first time we, we have a plan, make a plan to help us as make a project. At the time I give to some tasks and then the work and try to them. Yeah. Okay. Yes. Okay. Question two. Okay, listen. Question two. Do you think Mr. Thompson handled the situation well? Explain. No.\n[Student] Because the first time Bill Thompson and Blake Smith is meet. But, oh, no, no, no, no, no. So Thompson's handle situation is not bad because he checked his team member situation and first time he say just comfort month.\n[Student] He just say some friendly speaking. And then he was, he was check his work, his team work. And before they check that problem, he just say more friendly words to his team member. So I think it is, yes, adoptable situation. Adoptive handler situation.\n[Tutor] A good way to say that is he started by asking about Blake's personal situation.\n[Student] Yes, yes, you're right.\n[Tutor] So when you say friendly words, it's asking about Blake's personal situation. \"Are you feeling okay? You look overwhelmed,\" right? So started with the human aspect and then talked about his work.\n[Student] Yes, you're right. It's better.\n[Tutor] Okay. And the third question.\n[Student] Okay. Describe a time that you need help at work. Who did you ask? How this make you feel?\n[Student] Usually, I finish so fast, so my boss don't say that's casual.\n[Tutor] Got it.\n[Student] Yeah. I finished earlier. I finished very fast. So I'm just on schedule, finished. So we don't say the work, just we, I transfer the content to the work. Yeah.\n[Tutor] Okay. Okay. So you're not often asking for help.\n[Student] Yes, yes. Yeah, you're right.\n[Tutor] Okay. Well, I think that is an excellent place to stop with the book. Because tomorrow we will get into the business expressions.\n[Student] Oh, yes.\n[Tutor] And the key patterns.\n[Student] Great. Yes. It's a learn.\n[Tutor] So I know today we learned two expressions. Do you remember what they are?\n[Student] Mm-hmm. Dedication? Is that okay?\n[Tutor] Yes, the two expressions that we learned today. Do you remember them?\n[Student] Oh, behind, far behind, blah, blah, blah.\n[Tutor] Falling behind, yes.\n[Student] Falling behind.\n[Tutor] And the other one. I forgot. When you are, when you are mad or upset about something that someone did and you talk to them directly about the problem, do you remember what that's called?\n[Student] No, teacher, please. No. Again.\n[Tutor] Confront. To confront.\n[Student] To confront. I see. Confront. Okay, okay. In front of someone.\n[Tutor] Yes, yes. Good. All right. Well, thank you very much for your time this morning. Uh-huh. And I hope that the day is excellent like you predicted.\n[Student] Oh, thank you so much and have a nice Sunday night.\n[Tutor] Bye-bye.\n[Student] Thank you. Bye-bye. Bye-bye. Take care.\n```\n\n[AI 피드백]\nJoanna님, 안녕하세요! 오늘 수업도 정말 수고 많으셨습니다. 봄의 기운처럼 활기찬 Joanna님의 에너지가 대화 내내 느껴졌어요. 특히 어려운 비즈니스 상황극에서도 침착하게 역할을 소화하시고, 모르는 표현은 적극적으로 질문하며 배우려는 태도가 인상 깊었습니다.\n\n오늘 배운 'confront'와 'fall behind' 같은 비즈니스 표현들을 잘 기억하고 활용하시면, 업무 환경에서 더욱 자신감 있게 소통하실 수 있을 거예요.\n\n---\n\n### **0. 📌 Topic**\nTopic: Discussing how to confront a co-worker about falling behind on an important account.\n\n### **1. 📊 오늘의 대화 요약 (Summary)**\n오늘 수업에서는 업무에서 동료가 중요한 업무에 뒤처졌을 때 어떻게 상황을 대처하고 대화할지에 대한 시나리오를 읽고 토론했습니다. 'confront'와 'fall behind' 같은 핵심 표현들을 중심으로, 업무 상황에서 도움을 요청하는 것의 어려움과 효과적인 소통 방식에 대해 이야기 나누었습니다.\n\n### **2. 💬 유창성 업그레이드 (Fluency & Natural Flow)**\n\n일상 대화에서 더 자연스럽고 유창하게 들릴 수 있도록 다음 표현들을 연습해 보세요.\n\n1.  **❌ 학습자 원문 (As Said):** \"Just pleasure because it's spring. It's a prediction.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"It's just pleasant because it's spring.\"\n    *   **💎 비즈니스 표현 (Professional):** \"I find it quite refreshing, especially with spring in the air.\"\n    *   **💡 코칭 포인트:** 'Pleasure'는 보통 'It's a pleasure'나 'My pleasure'와 함께 쓰입니다. 전반적인 행복감이나 편안함을 표현할 때는 형용사 'pleasant'가 더 적절합니다. 'Prediction'은 문맥에 맞지 않습니다. 현재의 감정을 예측하는 것이 아니기 때문입니다.\n\n2.  **❌ 학습자 원문 (As Said):** \"I want to do twice. First is Thompson, and second is Smith. Is it possible?\"\n    *   **✅ 자연스러운 표현 (Natural):** \"I'd like to read both roles. First Thompson, then Smith. Is that okay?\"\n    *   **💎 비즈니스 표현 (Professional):** \"I'd appreciate the opportunity to play both roles, starting with Thompson and then Smith, if that works for you.\"\n    *   **💡 코칭 포인트:** \"Do twice\"는 이해는 되지만, 역할을 연기하는 상황에서는 \"read both roles\" 또는 \"play both parts\"가 더 자연스럽습니다. \"Is that okay?\"를 덧붙이면 허락을 구하는 친근한 표현이 됩니다.\n\n3.  **❌ 학습자 원문 (As Said):** \"So that have so many times, that spend so many times.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"That takes up so much time.\"\n    *   **💎 비즈니스 표현 (Professional):** \"That requires a significant time investment.\"\n    *   **💡 코칭 포인트:** 어떤 것이 시간을 소비할 때는 일반적으로 \"take time\" 또는 \"take up time\"을 사용합니다. \"Spend time\"은 보통 *자신이* 시간을 보내는 것을 의미합니다. 또한, \"so many times\"는 빈도(여러 번)를 나타내고, \"so much time\"은 양(많은 시간)을 나타냅니다.\n\n### **3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)**\n\n오늘 대화에서 Joanna님이 반복적으로 사용하신 문법 실수는 **전치사 오류**입니다. 특히 동사 뒤에 오는 전치사를 잘못 사용하거나 불필요하게 추가하는 경향이 있었습니다.\n\n| ❌ 학습자 원문                                                              | ✅ 교정 예시                                                                 |\n| :-------------------------------------------------------------------------- | :--------------------------------------------------------------------------- |\n| If I be teacher and I teach **to** something **to** my student, at the time, I confront **to** their student problem. | If I **were a** teacher and I teach something **to** my student, at that time, I confront their student's problem. |\n| I'm checked more strongly **to** the work.                                  | I check the work more strongly/thoroughly.                                   |\n| It is a little hard to ask **to** help **to** my work.                      | It is a little hard to ask **for** help **with** my work.                    |\n\n📌 **핵심 규칙:** 동사 뒤에 오는 전치사는 해당 동사와 목적어의 관계에 따라 달라지며, 어떤 동사는 전치사 없이 바로 목적어를 취합니다. (예: confront + 목적어, check + 목적어)\n\n🔁 **따라 읽기:**\n🗣️ \"If I were a teacher and I teach something to my student, at that time, I confront their student's problem.\"\n🗣️ \"I check the work more strongly/thoroughly.\"\n🗣️ \"It is a little hard to ask for help with my work.\"\n\n### **4. 📗 어휘 확장 (Vocabulary Vault)**\n\n오늘 대화에서 유용하게 쓰였거나, Joanna님의 업무 환경에서 바로 활용하실 수 있는 어휘들을 정리해 보았습니다.\n\n1.  **confront** /kənˈfrʌnt/ (동사)\n    *   **뜻:** (문제나 어려운 상황에) 직면하다, (사람에게) 맞서다, 따지다\n    *   **실전 예문:** We need to **confront** the declining market share directly to find a solution.\n\n2.  **fall behind** /fɔːl bɪˈhaɪnd/ (구동사)\n    *   **뜻:** 뒤처지다, 뒤떨어지다 (업무, 일정 등에서)\n    *   **실전 예문:** If we don't accelerate our production, we'll **fall behind** on our delivery schedule.\n\n3.  **overwhelmed** /ˌoʊvərˈwɛlmd/ (형용사)\n    *   **뜻:** 압도된, 감당하기 어려운\n    *   **실전 예문:** The team felt **overwhelmed** by the sudden increase in project demands.\n\n4.  **optimistic** /ˌɑːptɪˈmɪstɪk/ (형용사)\n    *   **뜻:** 낙관적인, 긍정적인\n    *   **실전 예문:** Despite the challenges, we remain **optimistic** about achieving our quarterly goals.\n\n5.  **account** /əˈkaʊnt/ (명사)\n    *   **뜻:** 고객, 거래처, (회계) 계정\n    *   **실전 예문:** We need to focus on retaining our key **accounts** to ensure stable revenue.\n\n### **5. 📝 실전 복습 챌린지 (Practice)**\n\n오늘 배운 표현과 문법을 활용하여 다음 상황에 맞게 영작해 보세요.\n\n1.  **상황:** 동료가 마감 기한에 뒤처지고 있는 것 같아요. 당신은 그에게 이 문제에 대해 직접 이야기해야 합니다.\n    *   **영작:** (fall behind, confront 활용)\n    *   **모범 답안:** I need to **confront** my colleague about **falling behind** on the deadline.\n\n2.  **상황:** 당신은 새로운 프로젝트의 복잡성에 압도당했지만, 기한 내에 마칠 수 있을 것이라고 낙관하고 있습니다.\n    *   **영작:** (overwhelmed, optimistic 활용)\n    *   **모범 답안:** I feel a bit **overwhelmed** by the complexity of the new project, but I'm **optimistic** I can finish it on time.\n\n3.  **상황:** 중요한 고객(account)을 잃을 위험에 처해 있어서, 팀원들에게 도움을 요청하는 것이 중요합니다.\n    *   **영작:** (account, ask for help 활용, 전치사 주의)\n    *   **모범 답안:** We are at risk of losing an important **account**, so it's crucial to **ask for help** from team members.\n\n### **6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)**\n\n✨ **Good Job:** \"I know. And I just want to let you know that everyone thinks that you are doing a great job. Remember that you can always ask for help if you have a problem.\"\n이 문장은 역할극에서 Blake를 격려하는 Bill의 대사였는데, Joanna님이 아주 자연스럽고 따뜻하게 표현해 주셨어요. 특히 \"I just want to let you know that everyone thinks that you are doing a great job\" 부분은 원어민처럼 부드럽게 이어졌습니다. 상대방을 배려하고 격려하는 비즈니스 소통의 핵심을 잘 보여주는 문장이었습니다!\n\n🚀 **내일의 한 문장:** \"I'm looking forward to learning more business expressions and key patterns tomorrow!\"\n(내일 비즈니스 표현과 핵심 패턴을 더 배우는 것이 기대됩니다!)\n\n---\n\n**[성과 지표]**\n**유창성 점수 (Fluency Score): 7/10**\n\n**근거:**\nJoanna님은 대화의 흐름을 끊지 않고 자신의 의견을 적극적으로 표현하려는 의지가 매우 강합니다. 문장과 문장 사이의 연결이 자연스럽고, 모르는 단어나 표현이 나와도 주저하지 않고 질문하며 대화를 이어가는 모습이 인상적입니다. 이는 유창성 향상에 매우 긍정적인 요소입니다. 다만, 몇몇 문장에서 단어 선택이나 구문 구성이 다소 어색하게 들리거나, 전치사 사용에 오류가 있어 원어민이 듣기에 완전히 매끄럽지 않은 부분이 있었습니다. 하지만 의미 전달에는 전혀 문제가 없었으며, 꾸준한 연습으로 충분히 개선될 수 있는 부분입니다.\n\n**다음 수업 '원포인트 액션 플랜':**\n다음 수업에서는 **\"동사와 함께 자주 쓰이는 전치사 짝꿍\"**에 집중하여 연습해 볼 예정입니다. 특히 비즈니스 상황에서 자주 사용되는 동사들(예: *deal with, focus on, rely on, contribute to, agree with/on*)과 그에 맞는 전치사를 익히고, 짧은 문장으로 반복해서 말해보는 시간을 가질 것입니다. 이를 통해 보다 정확하고 자연스러운 문장 구사를 돕겠습니다.\n\n위 내용을 바탕으로:\n1. 먼저 오늘 수업에서 내가 틀렸거나 어색했던 표현을 하나 골라서, 관련된 상황을 영어로 질문해줘.\n2. 내가 영어로 대답하면, 자연스러운지 확인하고 더 나은 표현이 있으면 알려줘.\n3. 특히 \"반복 실수 패턴\"에서 지적된 부분을 집중적으로 연습시켜줘.\n4. 이런 식으로 오늘 배운 표현들을 하나씩 복습하자.\n5. 한국어 설명은 필요할 때만 간단히, 대화는 최대한 영어로 진행해줘.\n\n그럼 시작하자!";
+        function startReview(){navigator.clipboard.writeText(REVIEW_PROMPT).then(()=>{showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)}).catch(()=>{const t=document.createElement('textarea');t.value=REVIEW_PROMPT;document.body.appendChild(t);t.select();document.execCommand('copy');document.body.removeChild(t);showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)})}
+        function showToast(){const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500)}
+        function switchTab(n){document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',n==='feedback'?i===0:i===1));document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));document.getElementById('tab-'+n).classList.add('active')}
+    </script>
+</body>
+</html>
