@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전화영어 복습 - 2026년 04월 21일</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Noto Sans KR',sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.75;min-height:100vh}
+        .header{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);border-bottom:1px solid rgba(255,255,255,.06);padding:48px 24px 40px;text-align:center}
+        .header-date{font-size:13px;color:#94a3b8;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+        .header h1{font-size:28px;font-weight:700;color:#f1f5f9;margin-bottom:16px}
+        .header-meta{display:flex;justify-content:center;gap:24px;font-size:14px;color:#64748b}
+        .header-meta span{display:flex;align-items:center;gap:6px}
+        .cta-section{text-align:center;padding:40px 24px}
+        .cta-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:linear-gradient(135deg,#38bdf8,#818cf8);color:#fff;font-size:16px;font-weight:600;font-family:'Noto Sans KR',sans-serif;border:none;border-radius:50px;cursor:pointer;transition:all .3s;text-decoration:none;box-shadow:0 4px 24px rgba(56,189,248,.25)}
+        .cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(56,189,248,.35)}
+        .cta-btn svg{width:20px;height:20px}
+        .cta-sub{margin-top:12px;font-size:13px;color:#64748b}
+        .toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#38bdf8;padding:14px 28px;border-radius:12px;font-size:14px;font-weight:500;border:1px solid rgba(56,189,248,.2);box-shadow:0 8px 32px rgba(0,0,0,.4);opacity:0;transition:all .4s cubic-bezier(.16,1,.3,1);z-index:1000}
+        .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+        .container{max-width:720px;margin:0 auto;padding:0 24px 80px}
+        .tabs{display:flex;gap:4px;background:#1a1a24;padding:4px;border-radius:12px;margin-bottom:32px}
+        .tab{flex:1;padding:12px;text-align:center;font-size:14px;font-weight:500;color:#64748b;background:0 0;border:none;border-radius:8px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all .2s}
+        .tab.active{background:#262636;color:#f1f5f9}
+        .tab-content{display:none}.tab-content.active{display:block}
+        .feedback h2{font-size:18px;font-weight:700;color:#f1f5f9;margin:36px 0 16px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.06)}
+        .feedback h2:first-child{margin-top:0}
+        .feedback p{margin:8px 0;color:#cbd5e1}
+        .feedback .item{padding:6px 0 6px 16px;border-left:2px solid #334155;margin:6px 0;color:#cbd5e1}
+        .feedback .numbered{padding:8px 0 8px 16px;color:#cbd5e1}
+        .feedback .numbered strong{color:#38bdf8}
+        .feedback strong{color:#f1f5f9}
+        .feedback code{background:#1e293b;padding:2px 8px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#38bdf8}
+        .feedback table{width:100%;border-collapse:collapse;margin:12px 0}
+        .feedback th,.feedback td{padding:10px 14px;text-align:left;border-bottom:1px solid #262636}
+        .feedback th{color:#94a3b8;font-weight:500;font-size:13px}
+        .feedback td{color:#cbd5e1}
+        .arrow{color:#38bdf8;font-weight:700}
+        .transcript{background:#1a1a24;border-radius:12px;padding:28px;font-size:14px;line-height:2;color:#94a3b8;white-space:pre-wrap;word-break:break-word;font-family:'JetBrains Mono','Noto Sans KR',monospace}
+        .transcript .tutor{color:#38bdf8}
+        .transcript .student{color:#a78bfa}
+        @media(max-width:640px){.header{padding:32px 16px}.header h1{font-size:22px}.cta-btn{padding:14px 28px;font-size:15px}.container{padding:0 16px 60px}}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-date">2026년 04월 21일</div>
+        <h1>📚 전화영어 복습</h1>
+        <div class="header-meta">
+            <span>⏱ 19분 41초</span>
+            <span>🎙 전화영어_025180304_20260421080019.m4a</span>
+        </div>
+    </div>
+    <div class="cta-section">
+        <button class="cta-btn" onclick="startReview()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Gemini에서 복습 대화 시작하기
+        </button>
+        <div class="cta-sub">클릭하면 프롬프트가 복사되고 Gemini가 열립니다</div>
+    </div>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('feedback')">📋 AI 피드백</button>
+            <button class="tab" onclick="switchTab('transcript')">🎙 수업 전사</button>
+        </div>
+        <div id="tab-feedback" class="tab-content active">
+            <div class="feedback"><p>안녕하세요, Joanna님! 오늘도 활기찬 수업이었습니다. 긍정적인 에너지와 배우려는 열정 덕분에 저도 즐거웠어요. 특히 비즈니스 표현들을 배우고 직접 문장을 만들어보려는 노력이 아주 인상 깊었습니다. 오늘 배운 내용들을 바탕으로 영어 실력이 한 뼘 더 자랄 수 있도록 따뜻하고 실용적인 피드백을 드릴게요!</p>
+<br>
+<br>
+<p><strong>0. 📌 Topic</strong></p>
+<p>Topic: Discussing Business Expressions and Practical Communication Patterns</p>
+<br>
+<p><strong>1. 📊 오늘의 대화 요약 (Summary)</strong></p>
+<p>오늘 수업에서는 최근 날씨 변화에 대한 이야기를 나누며 시작했습니다. 이후 'rule of thumb', 'swamped', 'slack off'와 같은 비즈니스 표현들을 배우고, 'I'm sorry to hear about~', 'You look~', 'I want to talk to you about~'과 같은 실용적인 대화 패턴을 연습하며 다양한 상황에서 활용하는 방법을 익혔습니다.</p>
+<br>
+<p><strong>2. 💬 유창성 업그레이드 (Fluency & Natural Flow)</strong></p>
+<p>Joanna님이 실제 말한 문장 중, 의미는 통하지만 원어민이 들었을 때 더 자연스럽게 들릴 수 있는 표현들을 살펴볼게요.</p>
+<br>
+<p>*   <strong>❌ 학습자 원문 (As Said):</strong> "But yesterday it was a sudden cold, so some people catch a cold."</p>
+<p>    *   <strong>✅ 자연스러운 표현 (Natural):</strong> "But yesterday there was a sudden drop in temperature, so some people caught a cold."</p>
+<p>    *   <strong>💎 비즈니스 표현 (Professional):</strong> "The abrupt temperature change yesterday led to an increase in people catching colds."</p>
+<p>    *   <strong>💡 코칭 포인트:</strong> "Sudden cold"는 이해할 수 있지만, "a sudden drop in temperature"나 "a sudden cold snap"이 급격한 기온 변화를 묘사하는 데 더 자연스럽습니다. 또한 "yesterday"였으므로 과거형 "caught a cold"가 적절합니다.</p>
+<p>        <span class="arrow">→</span> "Sudden cold"는 이해할 수 있지만, "a sudden drop in temperature"나 "a sudden cold snap"이 급격한 기온 변화를 묘사하는 데 더 자연스럽습니다. 또한 "yesterday"였으므로 과거형 "caught a cold"가 적절합니다.</p>
+<br>
+<p>*   <strong>❌ 학습자 원문 (As Said):</strong> "I don't understand but that is my favorite part."</p>
+<p>    *   <strong>✅ 자연스러운 표현 (Natural):</strong> "I find it challenging, but it's actually my favorite part."</p>
+<p>    *   <strong>💎 비즈니스 표현 (Professional):</strong> "While I find this aspect challenging, I genuinely enjoy engaging with it."</p>
+<p>    *   <strong>💡 코칭 포인트:</strong> Saying "I don't understand" can sound like you completely grasp nothing. Using "I find it challenging" or "I struggle with it" more accurately conveys that it's difficult but you're working on it. "Actually" adds a nice touch of surprise or emphasis to "my favorite part."</p>
+<p>        <span class="arrow">→</span> "I don't understand"라고 말하면 전혀 이해하지 못한다는 뉘앙스를 줄 수 있습니다. "I find it challenging" 또는 "I struggle with it"을 사용하면 어렵지만 노력하고 있다는 것을 더 정확하게 전달합니다. "Actually"는 "my favorite part"에 놀라움이나 강조를 더해줍니다.</p>
+<br>
+<p>*   <strong>❌ 학습자 원문 (As Said):</strong> "I can't repeat this sentence, but I understand."</p>
+<p>    *   <strong>✅ 자연스러운 표현 (Natural):</strong> "I can't quite reproduce this sentence on my own yet, but I understand it."</p>
+<p>    *   <strong>💎 비즈니스 표현 (Professional):</strong> "While I comprehend the meaning, I'm still working on formulating such sentences independently."</p>
+<p>    *   <strong>💡 코칭 포인트:</strong> "Repeat"는 보통 들은 것을 즉시 따라 말하는 것을 의미합니다. 기억으로 문장을 직접 *만들거나* 구조를 적용할 수 없다는 것을 표현할 때는 "reproduce" 또는 "formulate on my own"이 더 정확합니다. 이는 학습 과정에 대한 자기 인식을 보여줍니다.</p>
+<p>        <span class="arrow">→</span> "Repeat"는 보통 들은 것을 즉시 따라 말하는 것을 의미합니다. 기억으로 문장을 직접 *만들거나* 구조를 적용할 수 없다는 것을 표현할 때는 "reproduce" 또는 "formulate on my own"이 더 정확합니다. 이는 학습 과정에 대한 자기 인식을 보여줍니다.</p>
+<br>
+<p><strong>3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)</strong></p>
+<p>오늘 대화에서 Joanna님이 반복적으로 사용한 문법 실수 패턴은 <strong>전치사 'about' 뒤에 이어지는 절의 형태</strong>입니다.</p>
+<br>
+<table>
+<tr><th>❌ 원문 (As Said)</th><th>✅ 교정 예시 (Corrected)</th></tr>
+<tr><td>"I'm sorry to hear about lost your job."</td><td>"I'm sorry to hear about <strong>losing</strong> your job."</td></tr>
+<tr><td>"I want to talk to you about you are slacking off."</td><td>"I want to talk to you about <strong>your slacking off</strong>."</td></tr>
+<tr><td>"I want to tell you about you are slacking off this day."</td><td>"I want to tell you about <strong>you slacking off</strong> these days."</td></tr>
+</table>
+<br>
+<p>*   <strong>📌 핵심 규칙:</strong> 전치사 'about' 뒤에는 명사(구)나 동명사(gerund)가 와야 합니다. 주어+동사 형태의 완전한 절이 올 경우, 'that'을 사용하여 "I'm sorry to hear <strong>that you lost</strong> your job"과 같이 연결해야 합니다.</p>
+<p>    *   <strong>about + 명사(구):</strong> I'm sorry to hear about <strong>your problem</strong>.</p>
+<p>    *   <strong>about + 동명사(gerund):</strong> I'm sorry to hear about <strong>losing</strong> your job.</p>
+<p>    *   <strong>about + 소유격 + 동명사:</strong> I want to talk to you about <strong>your slacking off</strong>.</p>
+<p>    *   <strong>that + 주어 + 동사:</strong> I'm sorry to hear <strong>that you lost</strong> your job.</p>
+<br>
+<p>*   <strong>🔁 따라 읽기:</strong></p>
+<p>    🗣️ "I'm sorry to hear about losing your job."</p>
+<p>    🗣️ "I want to talk to you about your slacking off."</p>
+<p>    🗣️ "I want to tell you about you slacking off these days."</p>
+<br>
+<p><strong>4. 📗 어휘 확장 (Vocabulary Vault)</strong></p>
+<p>수업 중 등장했거나 비즈니스 환경에서 유용하게 쓰일 수 있는 단어 5개를 소개합니다.</p>
+<br>
+<p>*   <strong>swamped</strong> /swɒmpt/ (형용사)</p>
+<p>    *   뜻: 일이 너무 많아 정신없이 바쁜, 압도된</p>
+<p>    *   실전 예문: I'm completely <strong>swamped</strong> with client requests this week, so I might need to delegate some tasks.</p>
+<br>
+<p>*   <strong>slack off</strong> /slæk ɒf/ (동사)</p>
+<p>    *   뜻: 게으름을 피우다, 일을 대충 하다, 태만하다</p>
+<p>    *   실전 예문: We can't afford to <strong>slack off</strong> now; the deadline for the Q3 report is approaching fast.</p>
+<br>
+<p>*   <strong>rule of thumb</strong> /ruːl əv θʌm/ (명사)</p>
+<p>    *   뜻: 경험에 바탕을 둔 일반적인 원칙이나 지침 (정확한 규칙은 아니지만 대개 통용되는 방법)</p>
+<p>    *   실전 예문: As a <strong>rule of thumb</strong>, always double-check your data before presenting it to stakeholders.</p>
+<br>
+<p>*   <strong>delegate</strong> /ˈdɛlɪɡeɪt/ (동사)</p>
+<p>    *   뜻: (권한, 업무 등을) 위임하다, 맡기다</p>
+<p>    *   실전 예문: To manage my workload effectively, I often <strong>delegate</strong> smaller tasks to my team members.</p>
+<br>
+<p>*   <strong>stakeholder</strong> /ˈsteɪkˌhoʊldər/ (명사)</p>
+<p>    *   뜻: 이해관계자 (기업, 프로젝트 등에 직간접적으로 영향을 받거나 영향을 미치는 사람이나 집단)</p>
+<p>    *   실전 예문: We need to ensure all <strong>stakeholders</strong> are aligned on the project goals to avoid future conflicts.</p>
+<br>
+<p><strong>5. 📝 실전 복습 챌린지 (Practice)</strong></p>
+<p>오늘 배운 표현과 문법을 활용하여 영작 챌린지에 도전해 보세요!</p>
+<br>
+<div class="numbered"><strong>1.</strong>  <strong>쉬운 문제:</strong> 이번 주에 해야 할 일이 너무 많아서 야근해야 할 것 같아요.</div>
+<p>    *   (힌트: 'swamped' 사용)</p>
+<p>    *   <strong>모범 답안:</strong> I'm so <strong>swamped</strong> with work this week that I'll probably have to work overtime.</p>
+<br>
+<div class="numbered"><strong>2.</strong>  <strong>중간 문제:</strong> 당신이 최근에 업무를 게을리하고 있다는 것에 대해 이야기하고 싶습니다.</div>
+<p>    *   (힌트: 'I want to talk to you about~', 'slack off' 사용, 전치사 'about' 뒤 문법 주의)</p>
+<p>    *   <strong>모범 답안:</strong> I want to talk to you about <strong>your slacking off</strong> lately.</p>
+<br>
+<div class="numbered"><strong>3.</strong>  <strong>어려운 문제:</strong> 중요한 프로젝트 마감일이 다가올 때는 게으름을 피우지 않는 것이 일반적인 원칙입니다.</div>
+<p>    *   (힌트: 'rule of thumb', 'slack off' 사용)</p>
+<p>    *   <strong>모범 답안:</strong> As a <strong>rule of thumb</strong>, it's important not to <strong>slack off</strong> when a major project deadline is approaching.</p>
+<br>
+<p><strong>6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)</strong></p>
+<br>
+<p>*   ✨ <strong>Good Job</strong>: "My rule of thumb is never to give up. When you fail, try again."</p>
+<p>    *   Joanna님, 이 문장은 정말 훌륭했습니다! 'rule of thumb'이라는 새로운 표현을 자신만의 철학과 연결하여 아주 명확하고 힘 있는 문장으로 만들었어요. 특히 "When you fail, try again"이라는 추가 설명은 표현에 대한 완벽한 이해를 보여주면서 Joanna님의 긍정적인 태도까지 엿볼 수 있게 해주었습니다. 최고예요!</p>
+<br>
+<p>*   🚀 <strong>내일의 한 문장</strong>: 다음 수업 시작 시 튜터에게 던질 수 있는 대화 시작 문장</p>
+<p>    "I'm ready to tackle today's lesson, and I won't slack off!"</p>
+<p>    (오늘 배운 'slack off'를 활용하여 수업에 임하는 의지를 보여주는 문장입니다.)</p>
+<br>
+<br>
+<p><strong>[성과 지표]</strong></p>
+<br>
+<p>*   <strong>유창성 점수(10점 만점): 7점</strong></p>
+<p>    *   <strong>근거:</strong> Joanna님은 대화의 흐름을 끊지 않고 자신의 의견을 적극적으로 표현하려는 의지가 매우 강합니다. 어휘력도 풍부하여 다양한 주제에 대해 이야기할 수 있으며, 특히 비즈니스 표현 학습에 대한 열정이 돋보입니다. 다만, 일부 문장 구조나 전치사 사용에서 어색함이 있어 좀 더 자연스러운 표현으로 다듬는 연습이 필요합니다. 생각하는 속도에 비해 영어 표현이 바로 나오지 않아 문장을 구성하는 데 시간이 걸리는 경우가 있습니다.</p>
+<p>    *   <strong>다음 수업 '원포인트 액션 플랜':</strong></p>
+<p>        1.  <strong>전치사 + 동명사/명사구 패턴 집중 연습:</strong> 오늘 다룬 'about' 뒤의 전치사 구문 오류를 줄이기 위해, 다양한 전치사(for, in, on 등) 뒤에 동명사나 명사구가 오는 패턴을 활용한 문장 만들기를 연습해 보세요.</p>
+<p>        2.  <strong>쉬운 문장으로 빠르게 말하기 연습:</strong> 복잡한 문장을 한 번에 완벽하게 만들려고 하기보다, 짧고 간단한 문장으로 핵심 내용을 빠르게 전달하는 연습을 통해 유창성을 높여봅시다.</p>
+<br>
+<p>Joanna님, 오늘도 정말 수고 많으셨습니다! 오늘 배운 내용들을 꾸준히 복습하시면서 다음 수업에서 또 만나요!</p></div>
+        </div>
+        <div id="tab-transcript" class="tab-content">
+            <div class="transcript"><span class="tutor">[Tutor]</span> Hello, hello, Joanna. Good morning.
+<span class="student">[Student]</span> Good morning, Joey. How are you today?
+<span class="tutor">[Tutor]</span> I&#x27;m doing great, yes. It&#x27;s so nice. It&#x27;s a beautiful day.
+<span class="student">[Student]</span> Yes?
+<span class="tutor">[Tutor]</span> Yeah.
+<span class="tutor">[Tutor]</span> Good. I&#x27;m glad to hear it. Was yesterday a good day like you predicted?
+<span class="student">[Student]</span> Yes, every day is good. Every day is perfect. Yesterday it was a little chilly, but people believe this day is a summer day. But yesterday it was a sudden cold, so some people catch a cold.
+<span class="tutor">[Tutor]</span> Yeah, sudden.
+<span class="tutor">[Tutor]</span> Oh, it was suddenly cold.
+<span class="student">[Student]</span> Yeah, suddenly cold.
+<span class="student">[Student]</span> Yeah, so some people feel a little chilly and some people catch a cold.
+<span class="tutor">[Tutor]</span> That&#x27;s the worst when the weather changes so much.
+<span class="student">[Student]</span> Yeah, in the spring, on the spring, in the spring.
+<span class="tutor">[Tutor]</span> In the spring, yeah.
+<span class="student">[Student]</span> In the spring, the weather changes suddenly. So we need some clothes, long-sleeved clothes, yeah, like a jumper, yeah, or a small coat. Yes.
+<span class="tutor">[Tutor]</span> Mm-hmm. It&#x27;s tough to know what to wear. What to wear. Yes, that is. Because in the morning it&#x27;s really chilly, so you wear a coat and then in the evening, in the afternoon, it just gets really warm.
+<span class="student">[Student]</span> Yes, you are right. Yes. These days, some areas, the temperature is in the morning, 5, 7, and afternoon, almost 20 more.
+<span class="tutor">[Tutor]</span> So, you have a gap.
+<span class="student">[Student]</span> It&#x27;s a big gap.
+<span class="tutor">[Tutor]</span> Yeah, big gap. You&#x27;re right.
+<span class="student">[Student]</span> How about you? How about you today?
+<span class="tutor">[Tutor]</span> Everything is good. It was a little bit hot. You know, it&#x27;s funny because it was also a little bit cool this morning. But cool for us means 20?
+<span class="student">[Student]</span> 20 is cool.
+<span class="tutor">[Tutor]</span> Yes, I see.
+<span class="student">[Student]</span> Yes.
+<span class="tutor">[Tutor]</span> 20 was cool. And then it got up to about 27 today.
+<span class="student">[Student]</span> And how about your voice? Yeah, maybe last week you had a little caught a cold and a little sick.
+<span class="tutor">[Tutor]</span> Yes.
+<span class="student">[Student]</span> Yes.
+<span class="tutor">[Tutor]</span> It&#x27;s done now. It&#x27;s gone. Finally.
+<span class="student">[Student]</span> Gone.
+<span class="tutor">[Tutor]</span> Ah, it&#x27;s better. It&#x27;s nice.
+<span class="student">[Student]</span> Yes.
+<span class="tutor">[Tutor]</span> It took a long time. It took me about two weeks to get rid of the cold, but it&#x27;s finally gone.
+<span class="student">[Student]</span> Ah, yes. That is good news in the morning.
+<span class="tutor">[Tutor]</span> Yes.
+<span class="student">[Student]</span> Okay. I see. Okay. Yes.
+<span class="tutor">[Tutor]</span> Let&#x27;s take a look at where we left off. Your favorite part, business expressions.
+<span class="student">[Student]</span> Yeah, you&#x27;re right. My favorite part. I don&#x27;t understand but that is my favorite part.
+<span class="tutor">[Tutor]</span> Yes, because you always say, &quot;I know how much you dislike this part.&quot;
+<span class="student">[Student]</span> I see. Yes. Okay, can I read the expression?
+<span class="tutor">[Tutor]</span> Yes, please. Go ahead. Read the expression and write your own sentence using each expression.
+<span class="student">[Student]</span> Okay, the first is &quot;the rule of thumb.&quot; That means guide or principle based on experience. As a rule of thumb, I avoid talking about controversial topics with business partners. Okay, I see. Does it mean they are a guide or a principle?
+<span class="tutor">[Tutor]</span> Yes, it&#x27;s not a law. It&#x27;s not written anywhere. But it&#x27;s good practice. Another way to say it is a good practice. So as a good practice, I avoid talking about controversial topics with business partners.
+<span class="student">[Student]</span> Yes, I see. Understand. A rule of thumb. Understand directly because it is possible to can imagine about the rule of thumb. Yeah, so yeah, it is more easier. It is easier.
+<span class="tutor">[Tutor]</span> Easier. Yeah, you got it. Okay, my sentence is, &quot;My rule of thumb is don&#x27;t give up.&quot; So, yes, yeah, every time I&#x27;m if I fail, but I&#x27;m the try and finally I&#x27;m success will be success.
+<span class="tutor">[Tutor]</span> Hmm, you&#x27;re right. I love it. That&#x27;s it. Yes, yes.
+<span class="student">[Student]</span> Okay. My rule of thumb is never to give up. When you fail, try again.
+<span class="tutor">[Tutor]</span> Try again. Never give up. Okay. That is nice. You got it.
+<span class="student">[Student]</span> Okay. Nike motto.
+<span class="tutor">[Tutor]</span> Yes. I think Nike is &quot;Just Do It.&quot; No?
+<span class="student">[Student]</span> Yes. You&#x27;re right. You&#x27;re right. Just do it. That is also good.
+<span class="tutor">[Tutor]</span> It&#x27;s a good rule of thumb.
+<span class="student">[Student]</span> Yes. Yeah. Good motto. Yeah. I love that.
+<span class="student">[Student]</span> Just do read. Yes. This sentence.
+<span class="student">[Student]</span> To be swamped. Oh my god. To be swamped. To be formed with work. I&#x27;m sorry that I couldn&#x27;t call back sooner. Ah. I was swamped earlier. I guess that&#x27;s amazing. He&#x27;s a little busy. But I don&#x27;t know. I&#x27;m not sure the &quot;swamped&quot; meaning. That is swear? Swamped. Swamped.
+<span class="tutor">[Tutor]</span> Swamped, it really, really means I am so overwhelmed with work. I have so much work. A ton of work.
+<span class="student">[Student]</span> I see. I have so many tasks. That means the swamped.
+<span class="tutor">[Tutor]</span> Yeah, that means that I was swamped. Exactly. You got it.
+<span class="student">[Student]</span> If I use the one word &quot;swamped,&quot; it is also a lot of work, a lot of tasks, right? So yes, yes, I see. Hmm, okay. Usually I don&#x27;t have a situation to be swamped because I finish earlier everything. Hmm, okay, change.
+<span class="tutor">[Tutor]</span> Let&#x27;s see. It&#x27;s almost there. It&#x27;s almost there. So, I don&#x27;t get swamped. I don&#x27;t get swamped. I don&#x27;t get swamped. Because I finish all my work on time.
+<span class="student">[Student]</span> Ah, I finished my work on time.
+<span class="tutor">[Tutor]</span> You got it.
+<span class="student">[Student]</span> Hmm, I see. And &quot;swamped&quot; is the verb, right?
+<span class="tutor">[Tutor]</span> It is.
+<span class="student">[Student]</span> Ah, yeah. I see. Okay, I can&#x27;t repeat this sentence, but I understand.
+<span class="tutor">[Tutor]</span> Excellent. I wrote it down for you.
+<span class="student">[Student]</span> Oh, thanks so much.
+<span class="tutor">[Tutor]</span> And the last sentence. &quot;Slack off.&quot;
+<span class="student">[Student]</span> Slack off. To waste time or avoid work. Slack off. Slack off. Slack off.
+<span class="tutor">[Tutor]</span> You got it. What does &quot;slack&quot; mean?
+<span class="student">[Student]</span> That&#x27;s a little lazy? Slack.
+<span class="tutor">[Tutor]</span> It pretty much. Pretty much. &quot;Don&#x27;t slack off now. We need to finish this report.&quot;
+<span class="student">[Student]</span> Ah, okay, I see. Sometimes it&#x27;s don&#x27;t... Hmm, okay, go on, teacher. Go ahead.
+<span class="tutor">[Tutor]</span> I was just going to say, it&#x27;s like saying, this sentence is like saying, &quot;Don&#x27;t stop working now,&quot; right?
+<span class="student">[Student]</span> Stop working now.
+<span class="tutor">[Tutor]</span> But it&#x27;s, &quot;We need to finish this report.&quot; But that&#x27;s too long, right? So, &quot;Don&#x27;t slack off now.&quot;
+<span class="student">[Student]</span> Yes, I see. Hmm, okay, okay. I my sentence, &quot;I enjoy slacking off situation because I am couch potato.&quot; I love it.
+<span class="tutor">[Tutor]</span> I enjoy slacking off because I&#x27;m a couch potato.
+<span class="student">[Student]</span> Yeah.
+<span class="tutor">[Tutor]</span> Okay, couch potato. Okay, good. All right. Let&#x27;s take a look at the key patterns on the left-hand side.
+<span class="student">[Student]</span> Okay.
+<span class="tutor">[Tutor]</span> Here are some key patterns that you can use to communicate in various situations. &quot;I&#x27;m sorry to hear about your problem. I&#x27;m sorry to hear about the delay. I&#x27;m sorry to hear about your mother passing.&quot;
+<span class="student">[Student]</span> Oh my god. I&#x27;m sorry to hear about... I&#x27;m sorry to hear about lost your job.
+<span class="tutor">[Tutor]</span> About you losing your job.
+<span class="student">[Student]</span> You losing your job. You losing your job. It is started.
+<span class="tutor">[Tutor]</span> Or, yes. Or, &quot;I&#x27;m sorry to hear that you lost your job.&quot;
+<span class="student">[Student]</span> Hmm? One more please.
+<span class="tutor">[Tutor]</span> &quot;I&#x27;m sorry to hear you lost your job.&quot;
+<span class="student">[Student]</span> Uh-huh. You lost your job. Usually, that&#x27;s parents start the subject and then verb. I&#x27;m sorry to hear about your problem. I&#x27;m sorry to hear about the delay. I see.
+<span class="tutor">[Tutor]</span> Or just nouns.
+<span class="student">[Student]</span> Or just your delay. The delay. The delay. Okay, I see.
+<span class="tutor">[Tutor]</span> &quot;I&#x27;m sorry to hear about your accident. I&#x27;m sorry to hear about the client being unhappy.&quot;
+<span class="student">[Student]</span> Client being happy. Okay, client being happy. Why he say it is sorry? I&#x27;m sorry to hear about the client be happy?
+<span class="tutor">[Tutor]</span> About the client being unhappy.
+<span class="student">[Student]</span> Unhappy.
+<span class="tutor">[Tutor]</span> Being unhappy, mad, angry, upset.
+<span class="student">[Student]</span> Yes, I see, understand.
+<span class="tutor">[Tutor]</span> Yeah. Okay, good. It&#x27;s usually when you say, &quot;I&#x27;m sorry to hear about,&quot; it&#x27;s about something negative that happened.
+<span class="student">[Student]</span> Yes, I understand. And next sentence. You look much better today. You look a little tired today. You look great today. You look beautiful today. Blah, blah, blah. Okay.
+<span class="tutor">[Tutor]</span> Is it something that you would use in a professional setting, do you think?
+<span class="student">[Student]</span> Professional and then?
+<span class="tutor">[Tutor]</span> In a professional setting, like at the office.
+<span class="student">[Student]</span> Setting. Setting, setting. Yes, you look professional today. After, after, after presentation, I will say, &quot;You look professional.&quot; Okay, yes.
+<span class="tutor">[Tutor]</span> Okay. Great job. You look professional today.
+<span class="student">[Student]</span> Yeah, that&#x27;s a good one. Great job. Okay, good. Okay.
+<span class="tutor">[Tutor]</span> And the last sentence. &quot;I want to talk to you about your great work on the project. I want to talk to you about the upcoming presentation. I want to talk to you about the issue your team has been having.&quot;
+<span class="student">[Student]</span> Let&#x27;s see. Maybe this expression, not directly, but he wanted some negative word. So that sentence, that expression made some middleization, the negative end.
+<span class="tutor">[Tutor]</span> It made some?
+<span class="student">[Student]</span> The middle, the meaning is the, for example, if I say some negative word, but if I use this word, &quot;I want to talk about blah blah,&quot; that expression made that negative expression more positive.
+<span class="tutor">[Tutor]</span> Hmm, okay, so it softens up.
+<span class="student">[Student]</span> Softens up.
+<span class="tutor">[Tutor]</span> Softens it up. Exactly. So it&#x27;s not as direct, not as harsh.
+<span class="student">[Student]</span> Yeah. Makes sense. Yeah, that&#x27;s good expression. Okay.
+<span class="tutor">[Tutor]</span> Do you want to try your own? &quot;I want to talk to you about.&quot;
+<span class="student">[Student]</span> You don&#x27;t forgot that. Like the AI, wow. Just I&#x27;m past article book, you check them.
+<span class="tutor">[Tutor]</span> Okay, &quot;I want to talk to you about...&quot;
+<span class="student">[Student]</span> You these days you&#x27;re about your rage work or you&#x27;re slacking off. These days you are slacking off. Yes. I want to talk to you about slacking off these days. Slacking off these days. I want to tell you about you are slacking off this day.
+<span class="tutor">[Tutor]</span> Mm-hmm. You got it.
+<span class="student">[Student]</span> You are slacking off this day. You are slacking off this day. Okay, good.
+<span class="tutor">[Tutor]</span> Excellent. Okay. Any questions about the key patterns?
+<span class="student">[Student]</span> Maybe, maybe &quot;swamped&quot; and &quot;slack off.&quot; Tomorrow I will forget these two sentences. But, but the good news is that we have to study twice this textbook. So it&#x27;s okay.
+<span class="tutor">[Tutor]</span> Okay. And you know, I bet that you&#x27;ll remember &quot;slacking off&quot; when you&#x27;re being a couch potato.
+<span class="student">[Student]</span> Oh, couch potato. Yes, okay. To be swamped. To be swamped. Swamped. I can... I see the first time this word. So maybe anytime more, if I read that sentence or this word, and then I remember memory in my head.
+<span class="tutor">[Tutor]</span> I love it. I love it. I remember.
+<span class="student">[Student]</span> Ten times.
+<span class="tutor">[Tutor]</span> Exactly.
+<span class="student">[Student]</span> Ten times.
+<span class="tutor">[Tutor]</span> It&#x27;s, you know, and it&#x27;s not, these are not super common expressions. So, yes, it&#x27;s tough when you don&#x27;t use them every day, right? It&#x27;s easy to forget them.
+<span class="student">[Student]</span> Yes, yes. When you don&#x27;t use them.
+<span class="tutor">[Tutor]</span> But, yes, so don&#x27;t be too hard on yourself.
+<span class="student">[Student]</span> Oh, yes, of course. Okay. Okay.
+<span class="tutor">[Tutor]</span> So, unfortunately, I don&#x27;t think we have time to get into the scenarios.
+<span class="student">[Student]</span> Yes. Okay.
+<span class="tutor">[Tutor]</span> Good. So, you will pick that up next class. Don&#x27;t slack off, okay?
+<span class="student">[Student]</span> Okay. Okay. Yes. That is the thing. All right. Okay.
+<span class="tutor">[Tutor]</span> Well, thank you very much for your time again this morning. And I hope you have a fabulous day and be careful not to catch a cold.
+<span class="student">[Student]</span> Oh, thank you so much. Yeah, you have a kind word. Yeah, have a nice day, teacher. Bye-bye.
+<span class="tutor">[Tutor]</span> Thank you. Bye-bye.</div>
+        </div>
+    </div>
+    <div class="toast" id="toast">✅ 프롬프트가 복사되었습니다!</div>
+    <script>
+        const REVIEW_PROMPT="너는 나의 영어 회화 복습 파트너야. 오늘 내 전화영어 수업 내용을 기반으로 대화하면서 복습을 도와줘.\n\n[오늘 수업 전사 내용]\n[Tutor] Hello, hello, Joanna. Good morning.\n[Student] Good morning, Joey. How are you today?\n[Tutor] I'm doing great, yes. It's so nice. It's a beautiful day.\n[Student] Yes?\n[Tutor] Yeah.\n[Tutor] Good. I'm glad to hear it. Was yesterday a good day like you predicted?\n[Student] Yes, every day is good. Every day is perfect. Yesterday it was a little chilly, but people believe this day is a summer day. But yesterday it was a sudden cold, so some people catch a cold.\n[Tutor] Yeah, sudden.\n[Tutor] Oh, it was suddenly cold.\n[Student] Yeah, suddenly cold.\n[Student] Yeah, so some people feel a little chilly and some people catch a cold.\n[Tutor] That's the worst when the weather changes so much.\n[Student] Yeah, in the spring, on the spring, in the spring.\n[Tutor] In the spring, yeah.\n[Student] In the spring, the weather changes suddenly. So we need some clothes, long-sleeved clothes, yeah, like a jumper, yeah, or a small coat. Yes.\n[Tutor] Mm-hmm. It's tough to know what to wear. What to wear. Yes, that is. Because in the morning it's really chilly, so you wear a coat and then in the evening, in the afternoon, it just gets really warm.\n[Student] Yes, you are right. Yes. These days, some areas, the temperature is in the morning, 5, 7, and afternoon, almost 20 more.\n[Tutor] So, you have a gap.\n[Student] It's a big gap.\n[Tutor] Yeah, big gap. You're right.\n[Student] How about you? How about you today?\n[Tutor] Everything is good. It was a little bit hot. You know, it's funny because it was also a little bit cool this morning. But cool for us means 20?\n[Student] 20 is cool.\n[Tutor] Yes, I see.\n[Student] Yes.\n[Tutor] 20 was cool. And then it got up to about 27 today.\n[Student] And how about your voice? Yeah, maybe last week you had a little caught a cold and a little sick.\n[Tutor] Yes.\n[Student] Yes.\n[Tutor] It's done now. It's gone. Finally.\n[Student] Gone.\n[Tutor] Ah, it's better. It's nice.\n[Student] Yes.\n[Tutor] It took a long time. It took me about two weeks to get rid of the cold, but it's finally gone.\n[Student] Ah, yes. That is good news in the morning.\n[Tutor] Yes.\n[Student] Okay. I see. Okay. Yes.\n[Tutor] Let's take a look at where we left off. Your favorite part, business expressions.\n[Student] Yeah, you're right. My favorite part. I don't understand but that is my favorite part.\n[Tutor] Yes, because you always say, \"I know how much you dislike this part.\"\n[Student] I see. Yes. Okay, can I read the expression?\n[Tutor] Yes, please. Go ahead. Read the expression and write your own sentence using each expression.\n[Student] Okay, the first is \"the rule of thumb.\" That means guide or principle based on experience. As a rule of thumb, I avoid talking about controversial topics with business partners. Okay, I see. Does it mean they are a guide or a principle?\n[Tutor] Yes, it's not a law. It's not written anywhere. But it's good practice. Another way to say it is a good practice. So as a good practice, I avoid talking about controversial topics with business partners.\n[Student] Yes, I see. Understand. A rule of thumb. Understand directly because it is possible to can imagine about the rule of thumb. Yeah, so yeah, it is more easier. It is easier.\n[Tutor] Easier. Yeah, you got it. Okay, my sentence is, \"My rule of thumb is don't give up.\" So, yes, yeah, every time I'm if I fail, but I'm the try and finally I'm success will be success.\n[Tutor] Hmm, you're right. I love it. That's it. Yes, yes.\n[Student] Okay. My rule of thumb is never to give up. When you fail, try again.\n[Tutor] Try again. Never give up. Okay. That is nice. You got it.\n[Student] Okay. Nike motto.\n[Tutor] Yes. I think Nike is \"Just Do It.\" No?\n[Student] Yes. You're right. You're right. Just do it. That is also good.\n[Tutor] It's a good rule of thumb.\n[Student] Yes. Yeah. Good motto. Yeah. I love that.\n[Student] Just do read. Yes. This sentence.\n[Student] To be swamped. Oh my god. To be swamped. To be formed with work. I'm sorry that I couldn't call back sooner. Ah. I was swamped earlier. I guess that's amazing. He's a little busy. But I don't know. I'm not sure the \"swamped\" meaning. That is swear? Swamped. Swamped.\n[Tutor] Swamped, it really, really means I am so overwhelmed with work. I have so much work. A ton of work.\n[Student] I see. I have so many tasks. That means the swamped.\n[Tutor] Yeah, that means that I was swamped. Exactly. You got it.\n[Student] If I use the one word \"swamped,\" it is also a lot of work, a lot of tasks, right? So yes, yes, I see. Hmm, okay. Usually I don't have a situation to be swamped because I finish earlier everything. Hmm, okay, change.\n[Tutor] Let's see. It's almost there. It's almost there. So, I don't get swamped. I don't get swamped. I don't get swamped. Because I finish all my work on time.\n[Student] Ah, I finished my work on time.\n[Tutor] You got it.\n[Student] Hmm, I see. And \"swamped\" is the verb, right?\n[Tutor] It is.\n[Student] Ah, yeah. I see. Okay, I can't repeat this sentence, but I understand.\n[Tutor] Excellent. I wrote it down for you.\n[Student] Oh, thanks so much.\n[Tutor] And the last sentence. \"Slack off.\"\n[Student] Slack off. To waste time or avoid work. Slack off. Slack off. Slack off.\n[Tutor] You got it. What does \"slack\" mean?\n[Student] That's a little lazy? Slack.\n[Tutor] It pretty much. Pretty much. \"Don't slack off now. We need to finish this report.\"\n[Student] Ah, okay, I see. Sometimes it's don't... Hmm, okay, go on, teacher. Go ahead.\n[Tutor] I was just going to say, it's like saying, this sentence is like saying, \"Don't stop working now,\" right?\n[Student] Stop working now.\n[Tutor] But it's, \"We need to finish this report.\" But that's too long, right? So, \"Don't slack off now.\"\n[Student] Yes, I see. Hmm, okay, okay. I my sentence, \"I enjoy slacking off situation because I am couch potato.\" I love it.\n[Tutor] I enjoy slacking off because I'm a couch potato.\n[Student] Yeah.\n[Tutor] Okay, couch potato. Okay, good. All right. Let's take a look at the key patterns on the left-hand side.\n[Student] Okay.\n[Tutor] Here are some key patterns that you can use to communicate in various situations. \"I'm sorry to hear about your problem. I'm sorry to hear about the delay. I'm sorry to hear about your mother passing.\"\n[Student] Oh my god. I'm sorry to hear about... I'm sorry to hear about lost your job.\n[Tutor] About you losing your job.\n[Student] You losing your job. You losing your job. It is started.\n[Tutor] Or, yes. Or, \"I'm sorry to hear that you lost your job.\"\n[Student] Hmm? One more please.\n[Tutor] \"I'm sorry to hear you lost your job.\"\n[Student] Uh-huh. You lost your job. Usually, that's parents start the subject and then verb. I'm sorry to hear about your problem. I'm sorry to hear about the delay. I see.\n[Tutor] Or just nouns.\n[Student] Or just your delay. The delay. The delay. Okay, I see.\n[Tutor] \"I'm sorry to hear about your accident. I'm sorry to hear about the client being unhappy.\"\n[Student] Client being happy. Okay, client being happy. Why he say it is sorry? I'm sorry to hear about the client be happy?\n[Tutor] About the client being unhappy.\n[Student] Unhappy.\n[Tutor] Being unhappy, mad, angry, upset.\n[Student] Yes, I see, understand.\n[Tutor] Yeah. Okay, good. It's usually when you say, \"I'm sorry to hear about,\" it's about something negative that happened.\n[Student] Yes, I understand. And next sentence. You look much better today. You look a little tired today. You look great today. You look beautiful today. Blah, blah, blah. Okay.\n[Tutor] Is it something that you would use in a professional setting, do you think?\n[Student] Professional and then?\n[Tutor] In a professional setting, like at the office.\n[Student] Setting. Setting, setting. Yes, you look professional today. After, after, after presentation, I will say, \"You look professional.\" Okay, yes.\n[Tutor] Okay. Great job. You look professional today.\n[Student] Yeah, that's a good one. Great job. Okay, good. Okay.\n[Tutor] And the last sentence. \"I want to talk to you about your great work on the project. I want to talk to you about the upcoming presentation. I want to talk to you about the issue your team has been having.\"\n[Student] Let's see. Maybe this expression, not directly, but he wanted some negative word. So that sentence, that expression made some middleization, the negative end.\n[Tutor] It made some?\n[Student] The middle, the meaning is the, for example, if I say some negative word, but if I use this word, \"I want to talk about blah blah,\" that expression made that negative expression more positive.\n[Tutor] Hmm, okay, so it softens up.\n[Student] Softens up.\n[Tutor] Softens it up. Exactly. So it's not as direct, not as harsh.\n[Student] Yeah. Makes sense. Yeah, that's good expression. Okay.\n[Tutor] Do you want to try your own? \"I want to talk to you about.\"\n[Student] You don't forgot that. Like the AI, wow. Just I'm past article book, you check them.\n[Tutor] Okay, \"I want to talk to you about...\"\n[Student] You these days you're about your rage work or you're slacking off. These days you are slacking off. Yes. I want to talk to you about slacking off these days. Slacking off these days. I want to tell you about you are slacking off this day.\n[Tutor] Mm-hmm. You got it.\n[Student] You are slacking off this day. You are slacking off this day. Okay, good.\n[Tutor] Excellent. Okay. Any questions about the key patterns?\n[Student] Maybe, maybe \"swamped\" and \"slack off.\" Tomorrow I will forget these two sentences. But, but the good news is that we have to study twice this textbook. So it's okay.\n[Tutor] Okay. And you know, I bet that you'll remember \"slacking off\" when you're being a couch potato.\n[Student] Oh, couch potato. Yes, okay. To be swamped. To be swamped. Swamped. I can... I see the first time this word. So maybe anytime more, if I read that sentence or this word, and then I remember memory in my head.\n[Tutor] I love it. I love it. I remember.\n[Student] Ten times.\n[Tutor] Exactly.\n[Student] Ten times.\n[Tutor] It's, you know, and it's not, these are not super common expressions. So, yes, it's tough when you don't use them every day, right? It's easy to forget them.\n[Student] Yes, yes. When you don't use them.\n[Tutor] But, yes, so don't be too hard on yourself.\n[Student] Oh, yes, of course. Okay. Okay.\n[Tutor] So, unfortunately, I don't think we have time to get into the scenarios.\n[Student] Yes. Okay.\n[Tutor] Good. So, you will pick that up next class. Don't slack off, okay?\n[Student] Okay. Okay. Yes. That is the thing. All right. Okay.\n[Tutor] Well, thank you very much for your time again this morning. And I hope you have a fabulous day and be careful not to catch a cold.\n[Student] Oh, thank you so much. Yeah, you have a kind word. Yeah, have a nice day, teacher. Bye-bye.\n[Tutor] Thank you. Bye-bye.\n\n[AI 피드백]\n안녕하세요, Joanna님! 오늘도 활기찬 수업이었습니다. 긍정적인 에너지와 배우려는 열정 덕분에 저도 즐거웠어요. 특히 비즈니스 표현들을 배우고 직접 문장을 만들어보려는 노력이 아주 인상 깊었습니다. 오늘 배운 내용들을 바탕으로 영어 실력이 한 뼘 더 자랄 수 있도록 따뜻하고 실용적인 피드백을 드릴게요!\n\n---\n\n**0. 📌 Topic**\nTopic: Discussing Business Expressions and Practical Communication Patterns\n\n**1. 📊 오늘의 대화 요약 (Summary)**\n오늘 수업에서는 최근 날씨 변화에 대한 이야기를 나누며 시작했습니다. 이후 'rule of thumb', 'swamped', 'slack off'와 같은 비즈니스 표현들을 배우고, 'I'm sorry to hear about~', 'You look~', 'I want to talk to you about~'과 같은 실용적인 대화 패턴을 연습하며 다양한 상황에서 활용하는 방법을 익혔습니다.\n\n**2. 💬 유창성 업그레이드 (Fluency & Natural Flow)**\nJoanna님이 실제 말한 문장 중, 의미는 통하지만 원어민이 들었을 때 더 자연스럽게 들릴 수 있는 표현들을 살펴볼게요.\n\n*   **❌ 학습자 원문 (As Said):** \"But yesterday it was a sudden cold, so some people catch a cold.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"But yesterday there was a sudden drop in temperature, so some people caught a cold.\"\n    *   **💎 비즈니스 표현 (Professional):** \"The abrupt temperature change yesterday led to an increase in people catching colds.\"\n    *   **💡 코칭 포인트:** \"Sudden cold\"는 이해할 수 있지만, \"a sudden drop in temperature\"나 \"a sudden cold snap\"이 급격한 기온 변화를 묘사하는 데 더 자연스럽습니다. 또한 \"yesterday\"였으므로 과거형 \"caught a cold\"가 적절합니다.\n        → \"Sudden cold\"는 이해할 수 있지만, \"a sudden drop in temperature\"나 \"a sudden cold snap\"이 급격한 기온 변화를 묘사하는 데 더 자연스럽습니다. 또한 \"yesterday\"였으므로 과거형 \"caught a cold\"가 적절합니다.\n\n*   **❌ 학습자 원문 (As Said):** \"I don't understand but that is my favorite part.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"I find it challenging, but it's actually my favorite part.\"\n    *   **💎 비즈니스 표현 (Professional):** \"While I find this aspect challenging, I genuinely enjoy engaging with it.\"\n    *   **💡 코칭 포인트:** Saying \"I don't understand\" can sound like you completely grasp nothing. Using \"I find it challenging\" or \"I struggle with it\" more accurately conveys that it's difficult but you're working on it. \"Actually\" adds a nice touch of surprise or emphasis to \"my favorite part.\"\n        → \"I don't understand\"라고 말하면 전혀 이해하지 못한다는 뉘앙스를 줄 수 있습니다. \"I find it challenging\" 또는 \"I struggle with it\"을 사용하면 어렵지만 노력하고 있다는 것을 더 정확하게 전달합니다. \"Actually\"는 \"my favorite part\"에 놀라움이나 강조를 더해줍니다.\n\n*   **❌ 학습자 원문 (As Said):** \"I can't repeat this sentence, but I understand.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"I can't quite reproduce this sentence on my own yet, but I understand it.\"\n    *   **💎 비즈니스 표현 (Professional):** \"While I comprehend the meaning, I'm still working on formulating such sentences independently.\"\n    *   **💡 코칭 포인트:** \"Repeat\"는 보통 들은 것을 즉시 따라 말하는 것을 의미합니다. 기억으로 문장을 직접 *만들거나* 구조를 적용할 수 없다는 것을 표현할 때는 \"reproduce\" 또는 \"formulate on my own\"이 더 정확합니다. 이는 학습 과정에 대한 자기 인식을 보여줍니다.\n        → \"Repeat\"는 보통 들은 것을 즉시 따라 말하는 것을 의미합니다. 기억으로 문장을 직접 *만들거나* 구조를 적용할 수 없다는 것을 표현할 때는 \"reproduce\" 또는 \"formulate on my own\"이 더 정확합니다. 이는 학습 과정에 대한 자기 인식을 보여줍니다.\n\n**3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)**\n오늘 대화에서 Joanna님이 반복적으로 사용한 문법 실수 패턴은 **전치사 'about' 뒤에 이어지는 절의 형태**입니다.\n\n| ❌ 원문 (As Said)                                   | ✅ 교정 예시 (Corrected)                                |\n| :-------------------------------------------------- | :----------------------------------------------------- |\n| \"I'm sorry to hear about lost your job.\"            | \"I'm sorry to hear about **losing** your job.\"         |\n| \"I want to talk to you about you are slacking off.\" | \"I want to talk to you about **your slacking off**.\"   |\n| \"I want to tell you about you are slacking off this day.\" | \"I want to tell you about **you slacking off** these days.\" |\n\n*   **📌 핵심 규칙:** 전치사 'about' 뒤에는 명사(구)나 동명사(gerund)가 와야 합니다. 주어+동사 형태의 완전한 절이 올 경우, 'that'을 사용하여 \"I'm sorry to hear **that you lost** your job\"과 같이 연결해야 합니다.\n    *   **about + 명사(구):** I'm sorry to hear about **your problem**.\n    *   **about + 동명사(gerund):** I'm sorry to hear about **losing** your job.\n    *   **about + 소유격 + 동명사:** I want to talk to you about **your slacking off**.\n    *   **that + 주어 + 동사:** I'm sorry to hear **that you lost** your job.\n\n*   **🔁 따라 읽기:**\n    🗣️ \"I'm sorry to hear about losing your job.\"\n    🗣️ \"I want to talk to you about your slacking off.\"\n    🗣️ \"I want to tell you about you slacking off these days.\"\n\n**4. 📗 어휘 확장 (Vocabulary Vault)**\n수업 중 등장했거나 비즈니스 환경에서 유용하게 쓰일 수 있는 단어 5개를 소개합니다.\n\n*   **swamped** /swɒmpt/ (형용사)\n    *   뜻: 일이 너무 많아 정신없이 바쁜, 압도된\n    *   실전 예문: I'm completely **swamped** with client requests this week, so I might need to delegate some tasks.\n\n*   **slack off** /slæk ɒf/ (동사)\n    *   뜻: 게으름을 피우다, 일을 대충 하다, 태만하다\n    *   실전 예문: We can't afford to **slack off** now; the deadline for the Q3 report is approaching fast.\n\n*   **rule of thumb** /ruːl əv θʌm/ (명사)\n    *   뜻: 경험에 바탕을 둔 일반적인 원칙이나 지침 (정확한 규칙은 아니지만 대개 통용되는 방법)\n    *   실전 예문: As a **rule of thumb**, always double-check your data before presenting it to stakeholders.\n\n*   **delegate** /ˈdɛlɪɡeɪt/ (동사)\n    *   뜻: (권한, 업무 등을) 위임하다, 맡기다\n    *   실전 예문: To manage my workload effectively, I often **delegate** smaller tasks to my team members.\n\n*   **stakeholder** /ˈsteɪkˌhoʊldər/ (명사)\n    *   뜻: 이해관계자 (기업, 프로젝트 등에 직간접적으로 영향을 받거나 영향을 미치는 사람이나 집단)\n    *   실전 예문: We need to ensure all **stakeholders** are aligned on the project goals to avoid future conflicts.\n\n**5. 📝 실전 복습 챌린지 (Practice)**\n오늘 배운 표현과 문법을 활용하여 영작 챌린지에 도전해 보세요!\n\n1.  **쉬운 문제:** 이번 주에 해야 할 일이 너무 많아서 야근해야 할 것 같아요.\n    *   (힌트: 'swamped' 사용)\n    *   **모범 답안:** I'm so **swamped** with work this week that I'll probably have to work overtime.\n\n2.  **중간 문제:** 당신이 최근에 업무를 게을리하고 있다는 것에 대해 이야기하고 싶습니다.\n    *   (힌트: 'I want to talk to you about~', 'slack off' 사용, 전치사 'about' 뒤 문법 주의)\n    *   **모범 답안:** I want to talk to you about **your slacking off** lately.\n\n3.  **어려운 문제:** 중요한 프로젝트 마감일이 다가올 때는 게으름을 피우지 않는 것이 일반적인 원칙입니다.\n    *   (힌트: 'rule of thumb', 'slack off' 사용)\n    *   **모범 답안:** As a **rule of thumb**, it's important not to **slack off** when a major project deadline is approaching.\n\n**6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)**\n\n*   ✨ **Good Job**: \"My rule of thumb is never to give up. When you fail, try again.\"\n    *   Joanna님, 이 문장은 정말 훌륭했습니다! 'rule of thumb'이라는 새로운 표현을 자신만의 철학과 연결하여 아주 명확하고 힘 있는 문장으로 만들었어요. 특히 \"When you fail, try again\"이라는 추가 설명은 표현에 대한 완벽한 이해를 보여주면서 Joanna님의 긍정적인 태도까지 엿볼 수 있게 해주었습니다. 최고예요!\n\n*   🚀 **내일의 한 문장**: 다음 수업 시작 시 튜터에게 던질 수 있는 대화 시작 문장\n    \"I'm ready to tackle today's lesson, and I won't slack off!\"\n    (오늘 배운 'slack off'를 활용하여 수업에 임하는 의지를 보여주는 문장입니다.)\n\n---\n\n**[성과 지표]**\n\n*   **유창성 점수(10점 만점): 7점**\n    *   **근거:** Joanna님은 대화의 흐름을 끊지 않고 자신의 의견을 적극적으로 표현하려는 의지가 매우 강합니다. 어휘력도 풍부하여 다양한 주제에 대해 이야기할 수 있으며, 특히 비즈니스 표현 학습에 대한 열정이 돋보입니다. 다만, 일부 문장 구조나 전치사 사용에서 어색함이 있어 좀 더 자연스러운 표현으로 다듬는 연습이 필요합니다. 생각하는 속도에 비해 영어 표현이 바로 나오지 않아 문장을 구성하는 데 시간이 걸리는 경우가 있습니다.\n    *   **다음 수업 '원포인트 액션 플랜':**\n        1.  **전치사 + 동명사/명사구 패턴 집중 연습:** 오늘 다룬 'about' 뒤의 전치사 구문 오류를 줄이기 위해, 다양한 전치사(for, in, on 등) 뒤에 동명사나 명사구가 오는 패턴을 활용한 문장 만들기를 연습해 보세요.\n        2.  **쉬운 문장으로 빠르게 말하기 연습:** 복잡한 문장을 한 번에 완벽하게 만들려고 하기보다, 짧고 간단한 문장으로 핵심 내용을 빠르게 전달하는 연습을 통해 유창성을 높여봅시다.\n\nJoanna님, 오늘도 정말 수고 많으셨습니다! 오늘 배운 내용들을 꾸준히 복습하시면서 다음 수업에서 또 만나요!\n\n위 내용을 바탕으로:\n1. 먼저 오늘 수업에서 내가 틀렸거나 어색했던 표현을 하나 골라서, 관련된 상황을 영어로 질문해줘.\n2. 내가 영어로 대답하면, 자연스러운지 확인하고 더 나은 표현이 있으면 알려줘.\n3. 특히 \"반복 실수 패턴\"에서 지적된 부분을 집중적으로 연습시켜줘.\n4. 이런 식으로 오늘 배운 표현들을 하나씩 복습하자.\n5. 한국어 설명은 필요할 때만 간단히, 대화는 최대한 영어로 진행해줘.\n\n그럼 시작하자!";
+        function startReview(){navigator.clipboard.writeText(REVIEW_PROMPT).then(()=>{showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)}).catch(()=>{const t=document.createElement('textarea');t.value=REVIEW_PROMPT;document.body.appendChild(t);t.select();document.execCommand('copy');document.body.removeChild(t);showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)})}
+        function showToast(){const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500)}
+        function switchTab(n){document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',n==='feedback'?i===0:i===1));document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));document.getElementById('tab-'+n).classList.add('active')}
+    </script>
+</body>
+</html>
