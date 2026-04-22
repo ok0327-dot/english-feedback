@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전화영어 복습 - 2026년 04월 22일</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Noto Sans KR',sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.75;min-height:100vh}
+        .header{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);border-bottom:1px solid rgba(255,255,255,.06);padding:48px 24px 40px;text-align:center}
+        .header-date{font-size:13px;color:#94a3b8;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+        .header h1{font-size:28px;font-weight:700;color:#f1f5f9;margin-bottom:16px}
+        .header-meta{display:flex;justify-content:center;gap:24px;font-size:14px;color:#64748b}
+        .header-meta span{display:flex;align-items:center;gap:6px}
+        .cta-section{text-align:center;padding:40px 24px}
+        .cta-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:linear-gradient(135deg,#38bdf8,#818cf8);color:#fff;font-size:16px;font-weight:600;font-family:'Noto Sans KR',sans-serif;border:none;border-radius:50px;cursor:pointer;transition:all .3s;text-decoration:none;box-shadow:0 4px 24px rgba(56,189,248,.25)}
+        .cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(56,189,248,.35)}
+        .cta-btn svg{width:20px;height:20px}
+        .cta-sub{margin-top:12px;font-size:13px;color:#64748b}
+        .toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#38bdf8;padding:14px 28px;border-radius:12px;font-size:14px;font-weight:500;border:1px solid rgba(56,189,248,.2);box-shadow:0 8px 32px rgba(0,0,0,.4);opacity:0;transition:all .4s cubic-bezier(.16,1,.3,1);z-index:1000}
+        .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+        .container{max-width:720px;margin:0 auto;padding:0 24px 80px}
+        .tabs{display:flex;gap:4px;background:#1a1a24;padding:4px;border-radius:12px;margin-bottom:32px}
+        .tab{flex:1;padding:12px;text-align:center;font-size:14px;font-weight:500;color:#64748b;background:0 0;border:none;border-radius:8px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all .2s}
+        .tab.active{background:#262636;color:#f1f5f9}
+        .tab-content{display:none}.tab-content.active{display:block}
+        .feedback h2{font-size:18px;font-weight:700;color:#f1f5f9;margin:36px 0 16px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.06)}
+        .feedback h2:first-child{margin-top:0}
+        .feedback p{margin:8px 0;color:#cbd5e1}
+        .feedback .item{padding:6px 0 6px 16px;border-left:2px solid #334155;margin:6px 0;color:#cbd5e1}
+        .feedback .numbered{padding:8px 0 8px 16px;color:#cbd5e1}
+        .feedback .numbered strong{color:#38bdf8}
+        .feedback strong{color:#f1f5f9}
+        .feedback code{background:#1e293b;padding:2px 8px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#38bdf8}
+        .feedback table{width:100%;border-collapse:collapse;margin:12px 0}
+        .feedback th,.feedback td{padding:10px 14px;text-align:left;border-bottom:1px solid #262636}
+        .feedback th{color:#94a3b8;font-weight:500;font-size:13px}
+        .feedback td{color:#cbd5e1}
+        .arrow{color:#38bdf8;font-weight:700}
+        .transcript{background:#1a1a24;border-radius:12px;padding:28px;font-size:14px;line-height:2;color:#94a3b8;white-space:pre-wrap;word-break:break-word;font-family:'JetBrains Mono','Noto Sans KR',monospace}
+        .transcript .tutor{color:#38bdf8}
+        .transcript .student{color:#a78bfa}
+        @media(max-width:640px){.header{padding:32px 16px}.header h1{font-size:22px}.cta-btn{padding:14px 28px;font-size:15px}.container{padding:0 16px 60px}}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-date">2026년 04월 22일</div>
+        <h1>📚 전화영어 복습</h1>
+        <div class="header-meta">
+            <span>⏱ 19분 41초</span>
+            <span>🎙 전화영어_025180304_20260422080017.m4a</span>
+        </div>
+    </div>
+    <div class="cta-section">
+        <button class="cta-btn" onclick="startReview()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Gemini에서 복습 대화 시작하기
+        </button>
+        <div class="cta-sub">클릭하면 프롬프트가 복사되고 Gemini가 열립니다</div>
+    </div>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('feedback')">📋 AI 피드백</button>
+            <button class="tab" onclick="switchTab('transcript')">🎙 수업 전사</button>
+        </div>
+        <div id="tab-feedback" class="tab-content active">
+            <div class="feedback"><p>안녕하세요, 학습자님! 😊</p>
+<br>
+<p>오늘도 활기찬 에너지로 수업에 참여해 주셔서 감사합니다. 여름날의 산책 이야기부터 동료와의 공감, 승진 축하, 그리고 갈등 해결 방식까지, 정말 다양한 주제를 깊이 있게 다뤘네요! 특히 시나리오 역할극에서 진심을 담아 표현하려는 모습이 인상 깊었습니다.</p>
+<br>
+<p>오늘 배운 내용들을 다시 한번 복습하면서 유창성과 정확성을 동시에 잡아가 볼까요?</p>
+<br>
+<br>
+<p><strong>0. 📌 Topic</strong></p>
+<p>Topic: Discussing empathetic communication in professional scenarios and conflict resolution styles.</p>
+<br>
+<p><strong>1. 📊 오늘의 대화 요약 (Summary)</strong></p>
+<p>오늘 수업에서는 학습자님의 여름철 일상과 산책 루틴에 대한 가벼운 대화로 시작했습니다. 이어서 직장 동료의 어려운 상황(어머니의 별세)에 공감하고 위로하는 방법, 그리고 동료의 승진을 축하하고 격려하는 시나리오를 통해 비즈니스 환경에서의 감성적 소통 방식을 연습했습니다. 마지막으로는 갈등 해결 스타일(Conflict Mode Instrument)에 대한 글을 읽으며 다양한 상황에 맞는 의사소통의 중요성을 짚어보았습니다.</p>
+<br>
+<p><strong>2. 💬 유창성 업그레이드 (Fluency & Natural Flow)</strong></p>
+<p>의미 전달은 충분히 잘 되었지만, 원어민들이 더 자연스럽게 쓰는 표현으로 다듬어 볼까요?</p>
+<br>
+<div class="numbered"><strong>1.</strong>  <strong>❌ 학습자 원문 (As Said):</strong> "because after lunch every time I go for a walk near park."</div>
+<p>    *   <strong>✅ 자연스러운 표현 (Natural):</strong> "because every time after lunch, I go for a walk near <strong>the</strong> park."</p>
+<p>    *   <strong>💎 비즈니스 표현 (Professional):</strong> "I make it a point to take a walk near the park daily after lunch."</p>
+<p>    *   <strong>💡 코칭 포인트:</strong> "every time"과 같은 부사구는 문장의 앞이나 뒤에 오는 것이 더 자연스럽습니다. 또한, "the park"처럼 특정하거나 일반적으로 알려진 장소를 언급할 때는 정관사 "the"를 사용하는 것을 잊지 마세요.</p>
+<br>
+<div class="numbered"><strong>2.</strong>  <strong>❌ 학습자 원문 (As Said):</strong> "When is the best happiness time, happy time in daily routine?"</div>
+<p>    *   <strong>✅ 자연스러운 표현 (Natural):</strong> "What's your happiest time in your daily routine?"</p>
+<p>    *   <strong>💎 비즈니스 표현 (Professional):</strong> "What part of your daily routine brings you the most satisfaction?"</p>
+<p>    *   <strong>💡 코칭 포인트:</strong> "happiness time"은 잘 쓰지 않는 표현입니다. "happiest time"처럼 최상급 형용사 "happiest"를 명사 "time" 앞에 바로 붙여 사용하는 것이 자연스럽습니다.</p>
+<br>
+<div class="numbered"><strong>3.</strong>  <strong>❌ 학습자 원문 (As Said):</strong> "I'm sorry to hear about your mother passed away" (반복적으로 사용)</div>
+<p>    *   <strong>✅ 자연스러운 표현 (Natural):</strong> "I'm sorry to hear about your mother <strong>passing away</strong>." 또는 "I'm sorry to hear <strong>that</strong> your mother passed away."</p>
+<p>    *   <strong>💎 비즈니스 표현 (Professional):</strong> "Please accept my deepest condolences on the passing of your mother."</p>
+<p>    *   <strong>💡 코칭 포인트:</strong> 전치사 "about" 뒤에는 일반적으로 동명사(-ing 형태)나 명사를 사용합니다. 주어와 동사가 있는 완전한 절을 쓰고 싶다면 "that"으로 연결해야 합니다.</p>
+<br>
+<div class="numbered"><strong>4.</strong>  <strong>❌ 학습자 원문 (As Said):</strong> "I will cheat the lunch or how can I treat the lunch"</div>
+<p>    *   <strong>✅ 자연스러운 표현 (Natural):</strong> "I will <strong>treat</strong> them to lunch." 또는 "How can I <strong>treat</strong> them to lunch?"</p>
+<p>    *   <strong>💎 비즈니스 표현 (Professional):</strong> "I'd like to treat them to lunch to celebrate."</p>
+<p>    *   <strong>💡 코칭 포인트:</strong> "cheat"는 '속이다'라는 뜻으로, '대접하다'는 의미의 "treat"와 혼동하기 쉽습니다. "treat someone to something"은 '~에게 ~을 대접하다'라는 자연스러운 표현입니다.</p>
+<br>
+<p><strong>3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)</strong></p>
+<p>이번 수업에서는 <strong>관사(a/an/the) 사용</strong>에서 실수가 자주 보였습니다. 명사를 사용할 때 관사를 올바르게 사용하는 것은 영어의 정확성을 높이는 데 매우 중요합니다.</p>
+<br>
+<table>
+<tr><th>❌ 학습자 원문 (As Said)</th><th>✅ 교정 예시 (Corrected)</th></tr>
+<tr><td>"near park"</td><td>"near <strong>the</strong> park"</td></tr>
+<tr><td>"manager position"</td><td>"<strong>a</strong> manager position"</td></tr>
+<tr><td>"team leader in marketing departments"</td><td>"team leader in <strong>the</strong> marketing department"</td></tr>
+<tr><td>"the most critical situation which demand most of apt"</td><td>"the most critical situation which demand <strong>the</strong> most apt"</td></tr>
+</table>
+<br>
+<p>*   <strong>📌 핵심 규칙:</strong> 명사를 언급할 때, 그 명사가 특정하거나(the) 불특정한 하나인지(a/an)를 항상 고려하여 적절한 관사를 사용해야 합니다.</p>
+<p>*   <strong>🔁 따라 읽기:</strong></p>
+<p>    *   🗣️ "I go for a walk near <strong>the</strong> park."</p>
+<p>    *   🗣️ "He received <strong>a</strong> manager position."</p>
+<p>    *   🗣️ "She is a team leader in <strong>the</strong> marketing department."</p>
+<br>
+<p><strong>4. 📗 어휘 확장 (Vocabulary Vault)</strong></p>
+<p>오늘 대화에서 유용하게 쓰였거나 맥락상 알아두면 좋을 비즈니스 어휘 5가지입니다.</p>
+<br>
+<div class="numbered"><strong>1.</strong>  <strong>subordinate</strong> /səˈbɔːrdɪnət/ (명사/형용사)</div>
+<p>    *   뜻: 부하 직원; 하위의, 종속적인</p>
+<p>    *   실전 예문: As a manager, it's important to delegate tasks effectively to your <strong>subordinates</strong>.</p>
+<br>
+<div class="numbered"><strong>2.</strong>  <strong>sympathy</strong> /ˈsɪmpəθi/ (명사)</div>
+<p>    *   뜻: 공감, 동정, 위로</p>
+<p>    *   실전 예문: We extend our deepest <strong>sympathy</strong> to the family during this difficult time.</p>
+<br>
+<div class="numbered"><strong>3.</strong>  <strong>condolences</strong> /kənˈdoʊlənsɪz/ (명사)</div>
+<p>    *   뜻: 애도, 조의 (항상 복수형으로 사용)</p>
+<p>    *   실전 예문: Please accept my sincere <strong>condolences</strong> on the passing of your mother.</p>
+<br>
+<div class="numbered"><strong>4.</strong>  <strong>apt</strong> /æpt/ (형용사)</div>
+<p>    *   뜻: 적절한, 적합한</p>
+<p>    *   실전 예문: Your comment about market trends was very <strong>apt</strong> and insightful.</p>
+<br>
+<div class="numbered"><strong>5.</strong>  <strong>suave</strong> /swɑːv/ (형용사)</div>
+<p>    *   뜻: 세련된, 온화한, 멋진 (특히 남성의 태도나 매너가)</p>
+<p>    *   실전 예문: He handled the difficult negotiation with a <strong>suave</strong> and confident demeanor.</p>
+<br>
+<p><strong>5. 📝 실전 복습 챌린지 (Practice)</strong></p>
+<p>오늘 배운 표현과 문법을 활용하여 영작해 보세요.</p>
+<br>
+<div class="numbered"><strong>1.</strong>  <strong>상황:</strong> 점심 식사 후, 저는 보통 회사 근처 공원을 산책합니다.</div>
+<p>    *   <strong>영작:</strong> (힌트: 'every time after lunch', 'near the park' 활용)</p>
+<p>    *   <strong>모범 답안:</strong> Every time after lunch, I usually go for a walk near the park.</p>
+<br>
+<div class="numbered"><strong>2.</strong>  <strong>상황:</strong> 동료의 어머니께서 돌아가셨다는 소식을 듣고 진심으로 위로를 전하고 싶습니다.</div>
+<p>    *   <strong>영작:</strong> (힌트: 'I'm sorry to hear about...', 'passing away' 활용)</p>
+<p>    *   <strong>모범 답안:</strong> I'm truly sorry to hear about your mother passing away.</p>
+<br>
+<div class="numbered"><strong>3.</strong>  <strong>상황:</strong> 저는 마케팅 부서의 팀장으로서, 최근 승진하여 다른 지점으로 발령받은 부하 직원에게 진심으로 축하를 전하고 싶습니다.</div>
+<p>    *   <strong>영작:</strong> (힌트: 'team leader in the marketing department', 'subordinate', 'received a promotion' 활용)</p>
+<p>    *   <strong>모범 답안:</strong> As a team leader in the marketing department, I want to sincerely congratulate my subordinate who recently received a promotion and transferred to another branch.</p>
+<br>
+<p><strong>6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)</strong></p>
+<br>
+<p>*   ✨ <strong>Good Job</strong>: "Oh, this is so quiet but beautiful because it is summertime in our country."</p>
+<p>    *   이 문장은 학습자님의 감정을 자연스럽게 표현하면서, "quiet but beautiful"이라는 대조적인 형용사를 사용하여 문장을 풍부하게 만들었습니다. "because it is summertime in our country"로 이유를 명확하게 설명한 점도 아주 좋았습니다!</p>
+<br>
+<p>*   🚀 <strong>내일의 한 문장</strong>: 다음 수업 시작 시 튜터에게 오늘 배운 표현을 활용하여 대화를 시작해 보세요.</p>
+<p>    *   "I was thinking about our discussion on communication styles, and I found it very apt for my work."</p>
+<br>
+<br>
+<p><strong>[성과 지표]</strong></p>
+<p>*   <strong>유창성 점수(10점 만점): 7점</strong></p>
+<p>    *   <strong>근거:</strong> 학습자님은 다양한 주제에 대해 막힘없이 자신의 의견을 표현하려는 노력이 돋보였습니다. 특히 질문에 대한 답변이나 시나리오 설명 시 주저함 없이 문장을 이어가는 모습이 유창성 측면에서 매우 긍정적입니다. 다만, 일부 표현이 다소 직역투이거나 어색한 부분이 있어 더 자연스러운 흐름을 위한 다듬기가 필요합니다.</p>
+<p>    *   <strong>다음 수업 '원포인트 액션 플랜':</strong> "자주 쓰는 구동사(phrasal verbs) 익히기" - 일상 대화나 비즈니스 상황에서 원어민들이 즐겨 쓰는 구동사를 몇 가지 익혀두면 훨씬 더 자연스럽고 유창하게 들릴 수 있습니다. 다음 수업에서는 몇 가지 핵심 구동사를 활용하는 연습을 해봅시다!</p>
+<br>
+<p>오늘도 수고 많으셨습니다! 다음 수업에서 또 만나요! 😊</p></div>
+        </div>
+        <div id="tab-transcript" class="tab-content">
+            <div class="transcript">Hello, Bear. Good morning. Hi. Good morning. How are you doing today?
+<span class="student">[Student]</span> Yeah, it&#x27;s so nice. Everything is good. How are you today?
+<span class="tutor">[Tutor]</span> Pretty good. Have you had a busy week or a quiet week?
+<span class="student">[Student]</span> Oh, this is so quiet but beautiful because it is summertime in our country.
+<span class="tutor">[Tutor]</span> Oh nice, have you been enjoying the nice weather?
+<span class="student">[Student]</span> Oh yes, because after lunch every time I go for a walk near park. So this day, yeah, it is just a happy time for me, for work.
+<span class="tutor">[Tutor]</span> Oh, nice. Easy to go for a walk and enjoy the weather.
+<span class="student">[Student]</span> Oh, yes. You&#x27;re right. Usually I work with my friends, my co-worker friends. So sometimes we talk about the future or some various subject, various topic. So it is so enjoyable time for me.
+<span class="tutor">[Tutor]</span> Oh, nice. Yeah. Able to chat with your coworker.
+<span class="student">[Student]</span> Yes. Yes. You&#x27;re right. How about you? When is the best happiness time, happy time in daily routine?
+<span class="tutor">[Tutor]</span> Nice during the day when I can enjoy and get outside and take a walk. It&#x27;s similar for me.
+<span class="tutor">[Tutor]</span> Okay. Today we&#x27;re having a look at page 27 here.
+<span class="student">[Student]</span> Yes, you&#x27;re right. The case scenario. Case scenario one.
+<span class="tutor">[Tutor]</span> Would you like to read?
+<span class="student">[Student]</span> Oh, no problem. There are two role people. The A role is team leader. And role B is team member whose mother recently passed away. The scenario one. You are a team leader in marketing departments. One of your subordinates recently took some time off because of that in his or her family. Welcome your coworker back to the office by showing your sympathy and offering help. Listen to your coworker describe his or her situation. Oh, that&#x27;s so bad. Mm-mm-mm.
+<span class="student">[Student]</span> Okay. The stage one is play me toy mission each character. And stage two, role play. Be sure complete the mission of each character and use at least two key patterns.
+<span class="student">[Student]</span> Okay, I see. understand. And teacher, before I explain that scenario, I have a question. The first line, there is a word of subordinated. Yes, subordinate. Subordinated. Is it both? What is that?
+<span class="tutor">[Tutor]</span> So someone who works under you. If you&#x27;re a manager, the people that work underneath you are subordinates.
+<span class="student">[Student]</span> Could you explain more easier?
+<span class="tutor">[Tutor]</span> If somebody works in a lower position than you, they are a subordinate. They are subordinated.
+<span class="student">[Student]</span> For example, if I be CEO, almost people is subordinated, right?
+<span class="tutor">[Tutor]</span> Yeah, almost everyone is subordinate.
+<span class="student">[Student]</span> I see. I understand. I understand. Okay. So in this position what is the mission of each character This character the first character is the team leader and second character is the team member whose mother recently passed away. So, yeah, the team leader asked the recently event, and they give the sympathy to their sub-native co-worker. Yeah. And team member have to explain the situation. Yeah. Yeah, sure. Mm-hmm.
+<span class="tutor">[Tutor]</span> and so how would you show your sympathy to a co-worker
+<span class="student">[Student]</span> just I transfer my mind and I&#x27;m sorry to hear about your mother passed away I&#x27;m sorry so just I transfer sincerely my mind and ask something and just say the kind words to my co-workers.
+<span class="tutor">[Tutor]</span> Okay, does he just try to be kind to them?
+<span class="student">[Student]</span> Yes, most so. For example, I&#x27;m sorry to hear about your mother passed away. I&#x27;m sorry about that and I wish your mother get a peace blah blah blah and and how about your mind just I&#x27;m ask the mind because that is so sad in this world sadness event so just to say something and if I if I the team member a team leader at the time I&#x27;m just give the break time for him just one day or two day because he need to prepare control his mind or something so yeah it&#x27;s all
+<span class="tutor">[Tutor]</span> And what about scenario two?
+<span class="student">[Student]</span> Oh, yes, I see. The scenario two, the rule A in problem one and rule B is co-worker who has recently received promotion. That is a nice event. one of your team member has just received promotion to manager position at another branch manager position at another branch compliment your co-worker and let him or her know what a pleasure it has been working together discuss your co-worker future plan maybe employee one is the work already work branch office right yes I understand and the co-worker recently received a promotion and he moved the office maybe they work together they will work together.
+<span class="tutor">[Tutor]</span> I see. It looks like maybe they&#x27;ll change promotion to another branch so it looks like another branch.
+<span class="student">[Student]</span> Maybe they work originally they work together but the co-worker have a promotion, received the promotion and he will go to another branch and first day he is the manager position at that another branch right
+<span class="tutor">[Tutor]</span> yeah they&#x27;ll be a manager at the other
+<span class="student">[Student]</span> I see understand Okay. So how would you congratulate your coworker?
+<span class="student">[Student]</span> Oh, sometimes say, wow, that is great news. You have received the promotion. It is so earlier and I so happy Receive that news accept that news Yeah congratulations My friend
+<span class="tutor">[Tutor]</span> Oh, nice, yeah. Is there anything you would do to celebrate or to promote you?
+<span class="student">[Student]</span> If I have time, I will have a lunch or dinner with him. and just I I&#x27;m I forgot that expression I will cheat the lunch or how can I treat the lunch
+<span class="tutor">[Tutor]</span> yeah you&#x27;re right I forgot the treat
+<span class="student">[Student]</span> I treat lunch or dinner and with my coworker. Yeah, for my coworker. And teacher, I forgot that also. I will treat the lunch and to or for? To is right? To my coworker.
+<span class="tutor">[Tutor]</span> Yeah, I will treat them to lunch.
+<span class="student">[Student]</span> Treat them to lunch to lunch I see I will treat I will treat I will treat my co-worker to lunch ah yes yes I&#x27;ll pay for lunch pay for lunch okay I see I will treat friend to lunch I will co-worker I treat my co-worker I treat my co-worker to lunch, to dinner. Yeah, I treat my co-worker to lunch.
+<span class="tutor">[Tutor]</span> Okay, I see. Great. So any other questions about these two scenarios?
+<span class="student">[Student]</span> No, I don&#x27;t have a question, teacher.
+<span class="tutor">[Tutor]</span> Okay, did you want to look at the next page, situational communication?
+<span class="student">[Student]</span> Oh, I see. That&#x27;s so wrong sentence. Okay, first I will read that. In life, communication is how we adopt, respond to, and engage with ever-changing situations, relationship, needs, and stress. How we communicate is just as important as the decision we make. Having a ready supply of responsible can make you successful communicator for a variety of a situation. The most critical situation which demand most of apt and oh my god soft response our situation of conflict. Okay. Yeah, I love, yeah. So I guess this paragraph explains about the communication is various, with the various situation, and we have to nice choice. We have to nice better decision to the communication. and and I would wonder the last sentence meaning the most critical situation which demand the most apt and serve response to our situation or conflict demand our most apt and serve serve response What&#x27;s meant to be? Could you explain that more easier?
+<span class="tutor">[Tutor]</span> So apt means appropriate, suitable.
+<span class="student">[Student]</span> Suitable. Appropriate. Appropriate. Okay. And suave is like confident or charming.
+<span class="tutor">[Tutor]</span> Charming.
+<span class="student">[Student]</span> Comfort? More confident.
+<span class="tutor">[Tutor]</span> Confident.
+<span class="student">[Student]</span> Charming and confident. So that means if I have some situation I will adopt and suitable expression to other guy Communicate to other guys
+<span class="tutor">[Tutor]</span> Yes. Yeah. Something that fits.
+<span class="student">[Student]</span> Oh, yes. Okay. I see. Demand. Okay. Situation or conflict. The most critical situation. Hmm. situation or conflict the most critical situation okay so respond appropriately so totally if I if you explain that last sentence could you more explain could you explain more easier the most critical situation which demand our most apt and true response for our situation of conflict?
+<span class="tutor">[Tutor]</span> so various are very difficult situations which need appropriate and charming responses and you need to do those when there is conflict.
+<span class="student">[Student]</span> I see. Understand. Yes. Yes. Conflict are critical situations. Conflict and critical situation. Okay. I read the next category, data section. Original, original, original development researcher Kenny W Thomas and Ralph H Killamage created an instrument that allow people to measure in what manner they are like to resolve conflict However, they are too stressed that no single person has just one style. People use various modes to handle conflict according to their disappointment situation. Where do you fit below? So maybe this sentence explains the research result and transfer about we have to give us some various explain and adopt able communication each situation. maybe they are some... And next, I&#x27;m just read. Thomas Kilmer&#x27;s conflict mode instrument. Title, trailer, date, description. Completing, completing. power-ordinated mode in which you use whatever tracks and power you have to accept, you position and win. Competing. Yeah, competing like competition.
+<span class="tutor">[Tutor]</span> Competing. So do you feel you are usually competing in your workplace?
+<span class="student">[Student]</span> Oh yeah, sometimes. Every December, our company reports promotion member. So sometimes we are competing to other co-workers. And sometimes we have a report or we have a team task. At that time, we also had a coffee team. But our team is the OG team, so they also know a lot of the coffee team. Sometimes we have a meet coffee team.
+<span class="tutor">[Tutor]</span> I was going to say, that&#x27;s getting about it for time, yet time is running out here.
+<span class="student">[Student]</span> Oh yes, you&#x27;re right. I&#x27;m gonna ask any other questions here before I go. Oh, maybe I will ask to another time because the last sentence I don&#x27;t understand some words. So next time I&#x27;m ask to you and thank you for your class teacher. Have a nice day.
+<span class="tutor">[Tutor]</span> Okay, you too. Goodbye. You take care. Bye bye.</div>
+        </div>
+    </div>
+    <div class="toast" id="toast">✅ 프롬프트가 복사되었습니다!</div>
+    <script>
+        const REVIEW_PROMPT="너는 나의 영어 회화 복습 파트너야. 오늘 내 전화영어 수업 내용을 기반으로 대화하면서 복습을 도와줘.\n\n[오늘 수업 전사 내용]\nHello, Bear. Good morning. Hi. Good morning. How are you doing today?\n[Student] Yeah, it's so nice. Everything is good. How are you today?\n[Tutor] Pretty good. Have you had a busy week or a quiet week?\n[Student] Oh, this is so quiet but beautiful because it is summertime in our country.\n[Tutor] Oh nice, have you been enjoying the nice weather?\n[Student] Oh yes, because after lunch every time I go for a walk near park. So this day, yeah, it is just a happy time for me, for work.\n[Tutor] Oh, nice. Easy to go for a walk and enjoy the weather.\n[Student] Oh, yes. You're right. Usually I work with my friends, my co-worker friends. So sometimes we talk about the future or some various subject, various topic. So it is so enjoyable time for me.\n[Tutor] Oh, nice. Yeah. Able to chat with your coworker.\n[Student] Yes. Yes. You're right. How about you? When is the best happiness time, happy time in daily routine?\n[Tutor] Nice during the day when I can enjoy and get outside and take a walk. It's similar for me.\n[Tutor] Okay. Today we're having a look at page 27 here.\n[Student] Yes, you're right. The case scenario. Case scenario one.\n[Tutor] Would you like to read?\n[Student] Oh, no problem. There are two role people. The A role is team leader. And role B is team member whose mother recently passed away. The scenario one. You are a team leader in marketing departments. One of your subordinates recently took some time off because of that in his or her family. Welcome your coworker back to the office by showing your sympathy and offering help. Listen to your coworker describe his or her situation. Oh, that's so bad. Mm-mm-mm.\n[Student] Okay. The stage one is play me toy mission each character. And stage two, role play. Be sure complete the mission of each character and use at least two key patterns.\n[Student] Okay, I see. understand. And teacher, before I explain that scenario, I have a question. The first line, there is a word of subordinated. Yes, subordinate. Subordinated. Is it both? What is that?\n[Tutor] So someone who works under you. If you're a manager, the people that work underneath you are subordinates.\n[Student] Could you explain more easier?\n[Tutor] If somebody works in a lower position than you, they are a subordinate. They are subordinated.\n[Student] For example, if I be CEO, almost people is subordinated, right?\n[Tutor] Yeah, almost everyone is subordinate.\n[Student] I see. I understand. I understand. Okay. So in this position what is the mission of each character This character the first character is the team leader and second character is the team member whose mother recently passed away. So, yeah, the team leader asked the recently event, and they give the sympathy to their sub-native co-worker. Yeah. And team member have to explain the situation. Yeah. Yeah, sure. Mm-hmm.\n[Tutor] and so how would you show your sympathy to a co-worker\n[Student] just I transfer my mind and I'm sorry to hear about your mother passed away I'm sorry so just I transfer sincerely my mind and ask something and just say the kind words to my co-workers.\n[Tutor] Okay, does he just try to be kind to them?\n[Student] Yes, most so. For example, I'm sorry to hear about your mother passed away. I'm sorry about that and I wish your mother get a peace blah blah blah and and how about your mind just I'm ask the mind because that is so sad in this world sadness event so just to say something and if I if I the team member a team leader at the time I'm just give the break time for him just one day or two day because he need to prepare control his mind or something so yeah it's all\n[Tutor] And what about scenario two?\n[Student] Oh, yes, I see. The scenario two, the rule A in problem one and rule B is co-worker who has recently received promotion. That is a nice event. one of your team member has just received promotion to manager position at another branch manager position at another branch compliment your co-worker and let him or her know what a pleasure it has been working together discuss your co-worker future plan maybe employee one is the work already work branch office right yes I understand and the co-worker recently received a promotion and he moved the office maybe they work together they will work together.\n[Tutor] I see. It looks like maybe they'll change promotion to another branch so it looks like another branch.\n[Student] Maybe they work originally they work together but the co-worker have a promotion, received the promotion and he will go to another branch and first day he is the manager position at that another branch right\n[Tutor] yeah they'll be a manager at the other\n[Student] I see understand Okay. So how would you congratulate your coworker?\n[Student] Oh, sometimes say, wow, that is great news. You have received the promotion. It is so earlier and I so happy Receive that news accept that news Yeah congratulations My friend\n[Tutor] Oh, nice, yeah. Is there anything you would do to celebrate or to promote you?\n[Student] If I have time, I will have a lunch or dinner with him. and just I I'm I forgot that expression I will cheat the lunch or how can I treat the lunch\n[Tutor] yeah you're right I forgot the treat\n[Student] I treat lunch or dinner and with my coworker. Yeah, for my coworker. And teacher, I forgot that also. I will treat the lunch and to or for? To is right? To my coworker.\n[Tutor] Yeah, I will treat them to lunch.\n[Student] Treat them to lunch to lunch I see I will treat I will treat I will treat my co-worker to lunch ah yes yes I'll pay for lunch pay for lunch okay I see I will treat friend to lunch I will co-worker I treat my co-worker I treat my co-worker to lunch, to dinner. Yeah, I treat my co-worker to lunch.\n[Tutor] Okay, I see. Great. So any other questions about these two scenarios?\n[Student] No, I don't have a question, teacher.\n[Tutor] Okay, did you want to look at the next page, situational communication?\n[Student] Oh, I see. That's so wrong sentence. Okay, first I will read that. In life, communication is how we adopt, respond to, and engage with ever-changing situations, relationship, needs, and stress. How we communicate is just as important as the decision we make. Having a ready supply of responsible can make you successful communicator for a variety of a situation. The most critical situation which demand most of apt and oh my god soft response our situation of conflict. Okay. Yeah, I love, yeah. So I guess this paragraph explains about the communication is various, with the various situation, and we have to nice choice. We have to nice better decision to the communication. and and I would wonder the last sentence meaning the most critical situation which demand the most apt and serve response to our situation or conflict demand our most apt and serve serve response What's meant to be? Could you explain that more easier?\n[Tutor] So apt means appropriate, suitable.\n[Student] Suitable. Appropriate. Appropriate. Okay. And suave is like confident or charming.\n[Tutor] Charming.\n[Student] Comfort? More confident.\n[Tutor] Confident.\n[Student] Charming and confident. So that means if I have some situation I will adopt and suitable expression to other guy Communicate to other guys\n[Tutor] Yes. Yeah. Something that fits.\n[Student] Oh, yes. Okay. I see. Demand. Okay. Situation or conflict. The most critical situation. Hmm. situation or conflict the most critical situation okay so respond appropriately so totally if I if you explain that last sentence could you more explain could you explain more easier the most critical situation which demand our most apt and true response for our situation of conflict?\n[Tutor] so various are very difficult situations which need appropriate and charming responses and you need to do those when there is conflict.\n[Student] I see. Understand. Yes. Yes. Conflict are critical situations. Conflict and critical situation. Okay. I read the next category, data section. Original, original, original development researcher Kenny W Thomas and Ralph H Killamage created an instrument that allow people to measure in what manner they are like to resolve conflict However, they are too stressed that no single person has just one style. People use various modes to handle conflict according to their disappointment situation. Where do you fit below? So maybe this sentence explains the research result and transfer about we have to give us some various explain and adopt able communication each situation. maybe they are some... And next, I'm just read. Thomas Kilmer's conflict mode instrument. Title, trailer, date, description. Completing, completing. power-ordinated mode in which you use whatever tracks and power you have to accept, you position and win. Competing. Yeah, competing like competition.\n[Tutor] Competing. So do you feel you are usually competing in your workplace?\n[Student] Oh yeah, sometimes. Every December, our company reports promotion member. So sometimes we are competing to other co-workers. And sometimes we have a report or we have a team task. At that time, we also had a coffee team. But our team is the OG team, so they also know a lot of the coffee team. Sometimes we have a meet coffee team.\n[Tutor] I was going to say, that's getting about it for time, yet time is running out here.\n[Student] Oh yes, you're right. I'm gonna ask any other questions here before I go. Oh, maybe I will ask to another time because the last sentence I don't understand some words. So next time I'm ask to you and thank you for your class teacher. Have a nice day.\n[Tutor] Okay, you too. Goodbye. You take care. Bye bye.\n\n[AI 피드백]\n안녕하세요, 학습자님! 😊\n\n오늘도 활기찬 에너지로 수업에 참여해 주셔서 감사합니다. 여름날의 산책 이야기부터 동료와의 공감, 승진 축하, 그리고 갈등 해결 방식까지, 정말 다양한 주제를 깊이 있게 다뤘네요! 특히 시나리오 역할극에서 진심을 담아 표현하려는 모습이 인상 깊었습니다.\n\n오늘 배운 내용들을 다시 한번 복습하면서 유창성과 정확성을 동시에 잡아가 볼까요?\n\n---\n\n**0. 📌 Topic**\nTopic: Discussing empathetic communication in professional scenarios and conflict resolution styles.\n\n**1. 📊 오늘의 대화 요약 (Summary)**\n오늘 수업에서는 학습자님의 여름철 일상과 산책 루틴에 대한 가벼운 대화로 시작했습니다. 이어서 직장 동료의 어려운 상황(어머니의 별세)에 공감하고 위로하는 방법, 그리고 동료의 승진을 축하하고 격려하는 시나리오를 통해 비즈니스 환경에서의 감성적 소통 방식을 연습했습니다. 마지막으로는 갈등 해결 스타일(Conflict Mode Instrument)에 대한 글을 읽으며 다양한 상황에 맞는 의사소통의 중요성을 짚어보았습니다.\n\n**2. 💬 유창성 업그레이드 (Fluency & Natural Flow)**\n의미 전달은 충분히 잘 되었지만, 원어민들이 더 자연스럽게 쓰는 표현으로 다듬어 볼까요?\n\n1.  **❌ 학습자 원문 (As Said):** \"because after lunch every time I go for a walk near park.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"because every time after lunch, I go for a walk near **the** park.\"\n    *   **💎 비즈니스 표현 (Professional):** \"I make it a point to take a walk near the park daily after lunch.\"\n    *   **💡 코칭 포인트:** \"every time\"과 같은 부사구는 문장의 앞이나 뒤에 오는 것이 더 자연스럽습니다. 또한, \"the park\"처럼 특정하거나 일반적으로 알려진 장소를 언급할 때는 정관사 \"the\"를 사용하는 것을 잊지 마세요.\n\n2.  **❌ 학습자 원문 (As Said):** \"When is the best happiness time, happy time in daily routine?\"\n    *   **✅ 자연스러운 표현 (Natural):** \"What's your happiest time in your daily routine?\"\n    *   **💎 비즈니스 표현 (Professional):** \"What part of your daily routine brings you the most satisfaction?\"\n    *   **💡 코칭 포인트:** \"happiness time\"은 잘 쓰지 않는 표현입니다. \"happiest time\"처럼 최상급 형용사 \"happiest\"를 명사 \"time\" 앞에 바로 붙여 사용하는 것이 자연스럽습니다.\n\n3.  **❌ 학습자 원문 (As Said):** \"I'm sorry to hear about your mother passed away\" (반복적으로 사용)\n    *   **✅ 자연스러운 표현 (Natural):** \"I'm sorry to hear about your mother **passing away**.\" 또는 \"I'm sorry to hear **that** your mother passed away.\"\n    *   **💎 비즈니스 표현 (Professional):** \"Please accept my deepest condolences on the passing of your mother.\"\n    *   **💡 코칭 포인트:** 전치사 \"about\" 뒤에는 일반적으로 동명사(-ing 형태)나 명사를 사용합니다. 주어와 동사가 있는 완전한 절을 쓰고 싶다면 \"that\"으로 연결해야 합니다.\n\n4.  **❌ 학습자 원문 (As Said):** \"I will cheat the lunch or how can I treat the lunch\"\n    *   **✅ 자연스러운 표현 (Natural):** \"I will **treat** them to lunch.\" 또는 \"How can I **treat** them to lunch?\"\n    *   **💎 비즈니스 표현 (Professional):** \"I'd like to treat them to lunch to celebrate.\"\n    *   **💡 코칭 포인트:** \"cheat\"는 '속이다'라는 뜻으로, '대접하다'는 의미의 \"treat\"와 혼동하기 쉽습니다. \"treat someone to something\"은 '~에게 ~을 대접하다'라는 자연스러운 표현입니다.\n\n**3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)**\n이번 수업에서는 **관사(a/an/the) 사용**에서 실수가 자주 보였습니다. 명사를 사용할 때 관사를 올바르게 사용하는 것은 영어의 정확성을 높이는 데 매우 중요합니다.\n\n| ❌ 학습자 원문 (As Said)                                   | ✅ 교정 예시 (Corrected)                                         |\n| :------------------------------------------------------ | :------------------------------------------------------------ |\n| \"near park\"                                             | \"near **the** park\"                                           |\n| \"manager position\"                                      | \"**a** manager position\"                                      |\n| \"team leader in marketing departments\"                  | \"team leader in **the** marketing department\"                 |\n| \"the most critical situation which demand most of apt\"  | \"the most critical situation which demand **the** most apt\"   |\n\n*   **📌 핵심 규칙:** 명사를 언급할 때, 그 명사가 특정하거나(the) 불특정한 하나인지(a/an)를 항상 고려하여 적절한 관사를 사용해야 합니다.\n*   **🔁 따라 읽기:**\n    *   🗣️ \"I go for a walk near **the** park.\"\n    *   🗣️ \"He received **a** manager position.\"\n    *   🗣️ \"She is a team leader in **the** marketing department.\"\n\n**4. 📗 어휘 확장 (Vocabulary Vault)**\n오늘 대화에서 유용하게 쓰였거나 맥락상 알아두면 좋을 비즈니스 어휘 5가지입니다.\n\n1.  **subordinate** /səˈbɔːrdɪnət/ (명사/형용사)\n    *   뜻: 부하 직원; 하위의, 종속적인\n    *   실전 예문: As a manager, it's important to delegate tasks effectively to your **subordinates**.\n\n2.  **sympathy** /ˈsɪmpəθi/ (명사)\n    *   뜻: 공감, 동정, 위로\n    *   실전 예문: We extend our deepest **sympathy** to the family during this difficult time.\n\n3.  **condolences** /kənˈdoʊlənsɪz/ (명사)\n    *   뜻: 애도, 조의 (항상 복수형으로 사용)\n    *   실전 예문: Please accept my sincere **condolences** on the passing of your mother.\n\n4.  **apt** /æpt/ (형용사)\n    *   뜻: 적절한, 적합한\n    *   실전 예문: Your comment about market trends was very **apt** and insightful.\n\n5.  **suave** /swɑːv/ (형용사)\n    *   뜻: 세련된, 온화한, 멋진 (특히 남성의 태도나 매너가)\n    *   실전 예문: He handled the difficult negotiation with a **suave** and confident demeanor.\n\n**5. 📝 실전 복습 챌린지 (Practice)**\n오늘 배운 표현과 문법을 활용하여 영작해 보세요.\n\n1.  **상황:** 점심 식사 후, 저는 보통 회사 근처 공원을 산책합니다.\n    *   **영작:** (힌트: 'every time after lunch', 'near the park' 활용)\n    *   **모범 답안:** Every time after lunch, I usually go for a walk near the park.\n\n2.  **상황:** 동료의 어머니께서 돌아가셨다는 소식을 듣고 진심으로 위로를 전하고 싶습니다.\n    *   **영작:** (힌트: 'I'm sorry to hear about...', 'passing away' 활용)\n    *   **모범 답안:** I'm truly sorry to hear about your mother passing away.\n\n3.  **상황:** 저는 마케팅 부서의 팀장으로서, 최근 승진하여 다른 지점으로 발령받은 부하 직원에게 진심으로 축하를 전하고 싶습니다.\n    *   **영작:** (힌트: 'team leader in the marketing department', 'subordinate', 'received a promotion' 활용)\n    *   **모범 답안:** As a team leader in the marketing department, I want to sincerely congratulate my subordinate who recently received a promotion and transferred to another branch.\n\n**6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)**\n\n*   ✨ **Good Job**: \"Oh, this is so quiet but beautiful because it is summertime in our country.\"\n    *   이 문장은 학습자님의 감정을 자연스럽게 표현하면서, \"quiet but beautiful\"이라는 대조적인 형용사를 사용하여 문장을 풍부하게 만들었습니다. \"because it is summertime in our country\"로 이유를 명확하게 설명한 점도 아주 좋았습니다!\n\n*   🚀 **내일의 한 문장**: 다음 수업 시작 시 튜터에게 오늘 배운 표현을 활용하여 대화를 시작해 보세요.\n    *   \"I was thinking about our discussion on communication styles, and I found it very apt for my work.\"\n\n---\n\n**[성과 지표]**\n*   **유창성 점수(10점 만점): 7점**\n    *   **근거:** 학습자님은 다양한 주제에 대해 막힘없이 자신의 의견을 표현하려는 노력이 돋보였습니다. 특히 질문에 대한 답변이나 시나리오 설명 시 주저함 없이 문장을 이어가는 모습이 유창성 측면에서 매우 긍정적입니다. 다만, 일부 표현이 다소 직역투이거나 어색한 부분이 있어 더 자연스러운 흐름을 위한 다듬기가 필요합니다.\n    *   **다음 수업 '원포인트 액션 플랜':** \"자주 쓰는 구동사(phrasal verbs) 익히기\" - 일상 대화나 비즈니스 상황에서 원어민들이 즐겨 쓰는 구동사를 몇 가지 익혀두면 훨씬 더 자연스럽고 유창하게 들릴 수 있습니다. 다음 수업에서는 몇 가지 핵심 구동사를 활용하는 연습을 해봅시다!\n\n오늘도 수고 많으셨습니다! 다음 수업에서 또 만나요! 😊\n\n위 내용을 바탕으로:\n1. 먼저 오늘 수업에서 내가 틀렸거나 어색했던 표현을 하나 골라서, 관련된 상황을 영어로 질문해줘.\n2. 내가 영어로 대답하면, 자연스러운지 확인하고 더 나은 표현이 있으면 알려줘.\n3. 특히 \"반복 실수 패턴\"에서 지적된 부분을 집중적으로 연습시켜줘.\n4. 이런 식으로 오늘 배운 표현들을 하나씩 복습하자.\n5. 한국어 설명은 필요할 때만 간단히, 대화는 최대한 영어로 진행해줘.\n\n그럼 시작하자!";
+        function startReview(){navigator.clipboard.writeText(REVIEW_PROMPT).then(()=>{showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)}).catch(()=>{const t=document.createElement('textarea');t.value=REVIEW_PROMPT;document.body.appendChild(t);t.select();document.execCommand('copy');document.body.removeChild(t);showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)})}
+        function showToast(){const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500)}
+        function switchTab(n){document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',n==='feedback'?i===0:i===1));document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));document.getElementById('tab-'+n).classList.add('active')}
+    </script>
+</body>
+</html>
