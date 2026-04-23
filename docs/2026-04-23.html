@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전화영어 복습 - 2026년 04월 23일</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Noto Sans KR',sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.75;min-height:100vh}
+        .header{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);border-bottom:1px solid rgba(255,255,255,.06);padding:48px 24px 40px;text-align:center}
+        .header-date{font-size:13px;color:#94a3b8;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+        .header h1{font-size:28px;font-weight:700;color:#f1f5f9;margin-bottom:16px}
+        .header-meta{display:flex;justify-content:center;gap:24px;font-size:14px;color:#64748b}
+        .header-meta span{display:flex;align-items:center;gap:6px}
+        .cta-section{text-align:center;padding:40px 24px}
+        .cta-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:linear-gradient(135deg,#38bdf8,#818cf8);color:#fff;font-size:16px;font-weight:600;font-family:'Noto Sans KR',sans-serif;border:none;border-radius:50px;cursor:pointer;transition:all .3s;text-decoration:none;box-shadow:0 4px 24px rgba(56,189,248,.25)}
+        .cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(56,189,248,.35)}
+        .cta-btn svg{width:20px;height:20px}
+        .cta-sub{margin-top:12px;font-size:13px;color:#64748b}
+        .toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#38bdf8;padding:14px 28px;border-radius:12px;font-size:14px;font-weight:500;border:1px solid rgba(56,189,248,.2);box-shadow:0 8px 32px rgba(0,0,0,.4);opacity:0;transition:all .4s cubic-bezier(.16,1,.3,1);z-index:1000}
+        .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+        .container{max-width:720px;margin:0 auto;padding:0 24px 80px}
+        .tabs{display:flex;gap:4px;background:#1a1a24;padding:4px;border-radius:12px;margin-bottom:32px}
+        .tab{flex:1;padding:12px;text-align:center;font-size:14px;font-weight:500;color:#64748b;background:0 0;border:none;border-radius:8px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all .2s}
+        .tab.active{background:#262636;color:#f1f5f9}
+        .tab-content{display:none}.tab-content.active{display:block}
+        .feedback h2{font-size:18px;font-weight:700;color:#f1f5f9;margin:36px 0 16px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.06)}
+        .feedback h2:first-child{margin-top:0}
+        .feedback p{margin:8px 0;color:#cbd5e1}
+        .feedback .item{padding:6px 0 6px 16px;border-left:2px solid #334155;margin:6px 0;color:#cbd5e1}
+        .feedback .numbered{padding:8px 0 8px 16px;color:#cbd5e1}
+        .feedback .numbered strong{color:#38bdf8}
+        .feedback strong{color:#f1f5f9}
+        .feedback code{background:#1e293b;padding:2px 8px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#38bdf8}
+        .feedback table{width:100%;border-collapse:collapse;margin:12px 0}
+        .feedback th,.feedback td{padding:10px 14px;text-align:left;border-bottom:1px solid #262636}
+        .feedback th{color:#94a3b8;font-weight:500;font-size:13px}
+        .feedback td{color:#cbd5e1}
+        .arrow{color:#38bdf8;font-weight:700}
+        .transcript{background:#1a1a24;border-radius:12px;padding:28px;font-size:14px;line-height:2;color:#94a3b8;white-space:pre-wrap;word-break:break-word;font-family:'JetBrains Mono','Noto Sans KR',monospace}
+        .transcript .tutor{color:#38bdf8}
+        .transcript .student{color:#a78bfa}
+        @media(max-width:640px){.header{padding:32px 16px}.header h1{font-size:22px}.cta-btn{padding:14px 28px;font-size:15px}.container{padding:0 16px 60px}}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-date">2026년 04월 23일</div>
+        <h1>📚 전화영어 복습</h1>
+        <div class="header-meta">
+            <span>⏱ 20분 11초</span>
+            <span>🎙 전화영어_025180304_20260423080014.m4a</span>
+        </div>
+    </div>
+    <div class="cta-section">
+        <button class="cta-btn" onclick="startReview()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Gemini에서 복습 대화 시작하기
+        </button>
+        <div class="cta-sub">클릭하면 프롬프트가 복사되고 Gemini가 열립니다</div>
+    </div>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('feedback')">📋 AI 피드백</button>
+            <button class="tab" onclick="switchTab('transcript')">🎙 수업 전사</button>
+        </div>
+        <div id="tab-feedback" class="tab-content active">
+            <div class="feedback"><p>따뜻하고 실용적인 영어 코치 Joey입니다! 오늘 수업 정말 잘하셨어요. 특히 갈등 해결 전략에 대한 개념을 정확히 이해하려고 노력하는 모습이 인상 깊었습니다. 'yield'와 'yell'의 차이를 짚어낸 것도 아주 좋았어요. 비즈니스 상황에서 이러한 미묘한 뉘앙스를 아는 것이 중요하죠.</p>
+<br>
+<p>오늘 배운 내용을 바탕으로 유창성과 정확성을 동시에 잡을 수 있도록 피드백을 준비했습니다. 꾸준히 연습하면 분명 더 자연스럽고 자신감 있는 영어를 구사하실 수 있을 거예요. 화이팅!</p>
+<br>
+<br>
+<p><strong>0. 📌 Topic</strong></p>
+<p>Topic: Discussing conflict resolution strategies and related vocabulary.</p>
+<br>
+<p><strong>1. 📊 오늘의 대화 요약 (Summary)</strong></p>
+<p>오늘 수업에서는 주말 계획에 대한 가벼운 대화로 시작하여, 갈등 해결 전략(회피, 타협, 수용, 협력)에 대한 책 내용을 다루었습니다. 각 전략의 설명을 읽고 올바른 용어를 매칭하는 연습을 통해 개념을 명확히 이해하고, 'yield'와 'yell'처럼 발음이 비슷한 단어의 의미 차이를 짚어보며 어휘력을 확장하는 시간을 가졌습니다.</p>
+<br>
+<p><strong>2. 💬 유창성 업그레이드 (Fluency & Natural Flow)</strong></p>
+<br>
+<table>
+<tr><th>구분</th><th>학습자 원문 (As Said)</th><th>자연스러운 표현 (Natural)</th><th>비즈니스 표현 (Professional)</th><th>💡 코칭 포인트</th></tr>
+<tr><td>1</td><td>❌ "This season is the flower season."</td><td>✅ "It's flower season now."</td><td>💎 "We're currently in the peak of flower season."</td><td>Using "It's [season] now" or "We're in the [season] of..." sounds more natural for describing current seasons. <span class="arrow">→</span> "It's [계절] now" 또는 "We're in the [계절] of..."는 현재 계절을 묘사할 때 더 자연스럽습니다.</td></tr>
+<tr><td>2</td><td>❌ "Maybe I don't understand the compromising meaning."</td><td>✅ "Maybe I don't understand what compromising means."</td><td>💎 "I may not fully grasp the implications of compromising."</td><td>"The meaning of [word]" or "what [word] means" is more common than "[word] meaning." <span class="arrow">→</span> "[단어]의 의미" 또는 "무엇이 [단어]를 의미하는지"가 "[단어] 의미"보다 더 흔한 표현입니다.</td></tr>
+<tr><td>3</td><td>❌ "Yes, I am strong to select."</td><td>✅ "Yes, I'm confident in my choice."</td><td>💎 "I am confident in my selection."</td><td>"Strong to select"는 흔한 숙어가 아닙니다. "Confident in my choice/selection"은 자신의 결정에 확신이 있다는 의미를 더 잘 전달합니다.</td></tr>
+</table>
+<br>
+<p><strong>3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)</strong></p>
+<br>
+<p>이번 대화에서는 <strong>관사 (a/an/the) 사용</strong>에서 실수가 반복되는 경향이 있었습니다. 특히 특정 대상을 지칭하거나 일반적인 개념을 말할 때 관사 사용에 주의가 필요합니다.</p>
+<br>
+<table>
+<tr><th>❌ 학습자 원문</th><th>✅ 교정 예시</th></tr>
+<tr><td>"Then in <strong>the</strong> morning, just work near <strong>the</strong> park and afternoon we go to <strong>the</strong> theater, movie theater."</td><td>"Then in <strong>the</strong> morning, we could just work near <strong>the</strong> park, and in <strong>the</strong> afternoon, we could go to <strong>the</strong> movie theater."</td></tr>
+<tr><td>"So first time I read that sentence, I imagined that situation."</td><td>"<strong>The</strong> first time I read that sentence, I imagined that situation."</td></tr>
+<tr><td>"What are you referring to? <strong>The</strong> words? Yes. For example, some exam is just ask to catch up and writing something."</td><td>"What are you referring to? <strong>The</strong> words? Yes. For example, some exam just asks us to catch up and write something."</td></tr>
+</table>
+<br>
+<p>📌 <strong>핵심 규칙:</strong> 특정 명사나 이전에 언급된 명사를 다시 지칭할 때는 정관사 'the'를 사용합니다. 시간대('in the morning/afternoon')나 유일한 것('the first time') 앞에도 'the'를 사용합니다. 또한, 일반적인 개념을 말할 때는 부정관사 'a/an'을 사용하거나 아예 관사를 생략할 수 있습니다.</p>
+<br>
+<p>🔁 <strong>따라 읽기:</strong></p>
+<p>🗣️ "In the morning, we could just work near the park, and in the afternoon, we could go to the movie theater."</p>
+<p>🗣️ "The first time I read that sentence, I imagined that situation."</p>
+<p>🗣️ "Some exam just asks us to catch up and write something."</p>
+<br>
+<p><strong>4. 📗 어휘 확장 (Vocabulary Vault)</strong></p>
+<br>
+<div class="numbered"><strong>1.</strong>  <strong>postpone</strong> /poʊˈspoʊn/ (동사)</div>
+<p>    *   뜻: 연기하다, 미루다</p>
+<p>    *   실전 예문: We had to <strong>postpone</strong> the project launch due to unexpected technical issues.</p>
+<br>
+<div class="numbered"><strong>2.</strong>  <strong>delegate</strong> /ˈdɛlɪˌɡeɪt/ (동사)</div>
+<p>    *   뜻: (권한·업무 등을) 위임하다, 맡기다</p>
+<p>    *   실전 예문: It's important to <strong>delegate</strong> tasks effectively to optimize team productivity.</p>
+<br>
+<div class="numbered"><strong>3.</strong>  <strong>synergy</strong> /ˈsɪnərˌdʒi/ (명사)</div>
+<p>    *   뜻: 시너지, 협력 작용 (개별적인 부분들이 합쳐져 더 큰 효과를 내는 것)</p>
+<p>    *   실전 예문: Our goal is to create <strong>synergy</strong> between departments to achieve our quarterly targets.</p>
+<br>
+<div class="numbered"><strong>4.</strong>  <strong>procedure</strong> /prəˈsiːdʒər/ (명사)</div>
+<p>    *   뜻: 절차, 과정 (특정 행동을 수행하는 정해진 방식)</p>
+<p>    *   실전 예문: We need to follow the standard <strong>procedure</strong> for reporting any security breaches.</p>
+<br>
+<div class="numbered"><strong>5.</strong>  <strong>accommodate</strong> /əˈkɑːməˌdeɪt/ (동사)</div>
+<p>    *   뜻: (요구 등을) 수용하다, 편의를 제공하다</p>
+<p>    *   실전 예문: We try to <strong>accommodate</strong> our clients' requests whenever possible to ensure satisfaction.</p>
+<br>
+<p><strong>5. 📝 실전 복습 챌린지 (Practice)</strong></p>
+<br>
+<div class="numbered"><strong>1.</strong>  <strong>상황:</strong> 중요한 회의가 갑자기 취소되어 다음 주로 미뤄졌습니다.</div>
+<p>    *   <strong>영작:</strong> (오늘 배운 '연기하다' 동사를 사용하여) "The important meeting was suddenly canceled and had to be postponed until next week."</p>
+<p>    *   <strong>모범 답안:</strong> The important meeting was suddenly canceled and had to be <strong>postponed</strong> until next week.</p>
+<br>
+<div class="numbered"><strong>2.</strong>  <strong>상황:</strong> 팀 내 갈등 상황에서, 모두가 조금씩 양보하여 합의점을 찾는 것이 중요합니다.</div>
+<p>    *   <strong>영작:</strong> (오늘 배운 '타협하다' 개념을 사용하여) "In a team conflict, it's crucial for everyone to compromise a little to find a middle ground."</p>
+<p>    *   <strong>모범 답안:</strong> In a team conflict, it's crucial for everyone to <strong>compromise</strong> a little to find a middle ground.</p>
+<br>
+<div class="numbered"><strong>3.</strong>  <strong>상황:</strong> 새로운 프로젝트를 시작할 때, 명확한 절차를 세우는 것이 성공에 필수적입니다.</div>
+<p>    *   <strong>영작:</strong> (오늘 배운 '절차' 명사를 사용하여) "When starting a new project, establishing clear procedures is essential for success."</p>
+<p>    *   <strong>모범 답안:</strong> When starting a new project, establishing clear <strong>procedures</strong> is essential for success.</p>
+<br>
+<p><strong>6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)</strong></p>
+<br>
+<p>✨ <strong>Good Job</strong>: "I got a lot of work done that I'm very happy with."</p>
+<p>이 문장은 오늘 수업 시작 시 Joanna님이 하신 말씀인데, 완벽한 문법과 자연스러운 흐름으로 자신의 성취감을 잘 표현했습니다. 'get work done'이라는 실용적인 표현을 사용한 것도 아주 좋았어요. 스스로의 만족감을 영어로 표현하는 것은 자신감을 높이는 데 큰 도움이 됩니다!</p>
+<br>
+<p>🚀 <strong>내일의 한 문장</strong>:</p>
+<p>"I've been thinking about our discussion on conflict resolution strategies, especially how we can apply them in our daily work."</p>
+<p>(오늘 배운 'conflict resolution strategies'를 활용하여 다음 수업 시작 시 튜터에게 오늘 대화의 연장선상에서 질문을 던져보세요.)</p>
+<br>
+<br>
+<p><strong>[성과 지표]</strong></p>
+<br>
+<p><strong>유창성 점수:</strong> 7/10</p>
+<br>
+<p><strong>근거:</strong></p>
+<p>Joanna님은 대화의 흐름을 잘 이어가고, 자신의 생각을 표현하는 데 주저함이 없었습니다. 특히 복잡한 개념을 이해하려고 적극적으로 질문하고 예시를 들어 설명하는 모습이 인상 깊었습니다. 다만, 일부 표현에서 단어 선택이나 문장 구조가 원어민에게는 다소 어색하게 들릴 수 있는 부분이 있었고, 관사 사용에 대한 반복적인 실수가 있었습니다. 하지만 이는 중급 학습자에게 자연스러운 과정이며, 꾸준한 연습으로 충분히 개선될 수 있는 부분입니다.</p>
+<br>
+<p><strong>다음 수업 '원포인트 액션 플랜':</strong></p>
+<p>다음 수업에서는 <strong>"관사(a/an/the) 사용"</strong>에 특별히 집중하여 연습해 봅시다. 특히 명사를 처음 언급할 때(a/an)와 특정 명사를 다시 지칭할 때(the), 그리고 시간 표현(in the morning/afternoon)이나 고유한 것(the first time) 앞에 'the'를 사용하는 규칙을 의식적으로 적용하는 연습을 해볼 거예요. 문장을 만들 때마다 '이 명사 앞에는 어떤 관사가 필요할까?'라고 한 번 더 생각하는 습관을 들이는 것이 중요합니다.</p></div>
+        </div>
+        <div id="tab-transcript" class="tab-content">
+            <div class="transcript"><span class="tutor">[Tutor]</span> Good evening, Joanna. Hello.
+<span class="student">[Student]</span> Hi, Joey. Good morning. How are you today?
+<span class="tutor">[Tutor]</span> I&#x27;m doing great. Yes, it&#x27;s Thursday and it&#x27;s spring day. How is your day? How are you today?
+<span class="student">[Student]</span> I am great. I got a lot of work done that I&#x27;m very happy with. So, yes.
+<span class="student">[Student]</span> Okay, I see.
+<span class="student">[Student]</span> You&#x27;ve already done your work.
+<span class="tutor">[Tutor]</span> I did, yes, I did a lot of work.
+<span class="tutor">[Tutor]</span> I have a couple of hours left.
+<span class="tutor">[Tutor]</span> And then I can relax.
+<span class="student">[Student]</span> Oh, it&#x27;s so nice.
+<span class="tutor">[Tutor]</span> Great, yes.
+<span class="tutor">[Tutor]</span> Do you have any plans for this weekend?
+<span class="student">[Student]</span> This weekend?
+<span class="student">[Student]</span> Maybe.
+<span class="student">[Student]</span> This season is the flower season.
+<span class="student">[Student]</span> And the cherry blossom season is over,
+<span class="student">[Student]</span> and the double cherry blossom is coming.
+<span class="tutor">[Tutor]</span> It is similar, but a little different.
+<span class="tutor">[Tutor]</span> We say they&#x27;re...
+<span class="student">[Student]</span> Okay.
+<span class="tutor">[Tutor]</span> Yeah, just the cherry blossom is there.
+<span class="student">[Student]</span> The flower is smaller,
+<span class="student">[Student]</span> but the double cherry blossom is bigger and the shape is rounder.
+<span class="tutor">[Tutor]</span> Interesting. Yeah, that season is just after we finish the cherry blossom day and
+<span class="tutor">[Tutor]</span> then two weeks later we have the double cherry blossom day. Those three
+<span class="tutor">[Tutor]</span> species are a little different but it&#x27;s beautiful so maybe we will go to
+<span class="tutor">[Tutor]</span> another city, Gyeongju, because double cherry blossom is famous in that city so we
+<span class="tutor">[Tutor]</span> will go there and we will go to some exhibition and go for a walk.
+<span class="student">[Student]</span> It&#x27;s a similar routine, but I love that schedule.
+<span class="student">[Student]</span> And it&#x27;s nice to be able to get outside and enjoy nature, right?
+<span class="tutor">[Tutor]</span> Yes, yes. You&#x27;re right.
+<span class="tutor">[Tutor]</span> Well, in the meantime, we are still working on our book.
+<span class="tutor">[Tutor]</span> Yeah, the page on situational, yes, situational communication strategies.
+<span class="student">[Student]</span> Yes, you&#x27;re right.
+<span class="student">[Student]</span> And last class, I finished the competing section, and we will start the second section.
+<span class="tutor">[Tutor]</span> So we are looking at instruments for resolving conflict.
+<span class="tutor">[Tutor]</span> So different types.
+<span class="student">[Student]</span> Yes, you&#x27;re right.
+<span class="student">[Student]</span> Okay.
+<span class="student">[Student]</span> Can I read that?
+<span class="tutor">[Tutor]</span> Absolutely.
+<span class="student">[Student]</span> Okay, description.
+<span class="student">[Student]</span> Not dealing with an issue such as postponing, making excuses, delegating to another department, etc.
+<span class="student">[Student]</span> Maybe that is just
+<span class="student">[Student]</span> work alone
+<span class="student">[Student]</span> and think alone
+<span class="student">[Student]</span> and they don&#x27;t
+<span class="student">[Student]</span> share their idea.
+<span class="student">[Student]</span> They don&#x27;t share some information.
+<span class="student">[Student]</span> But I can make some
+<span class="student">[Student]</span> words, just one word.
+<span class="tutor">[Tutor]</span> You have the choices
+<span class="tutor">[Tutor]</span> in number one.
+<span class="student">[Student]</span> Okay.
+<span class="tutor">[Tutor]</span> Collaborating, accommodating, compromising, and avoiding.
+<span class="student">[Student]</span> Just a moment.
+<span class="student">[Student]</span> I&#x27;m trying.
+<span class="student">[Student]</span> Compromising.
+<span class="student">[Student]</span> Just compromising and...
+<span class="tutor">[Tutor]</span> Avoiding.
+<span class="student">[Student]</span> Avoid.
+<span class="tutor">[Tutor]</span> Avoiding.
+<span class="tutor">[Tutor]</span> They are written in the box under number one.
+<span class="tutor">[Tutor]</span> Share your thoughts.
+<span class="student">[Student]</span> Yes, I see.
+<span class="student">[Student]</span> Yes, yes.
+<span class="student">[Student]</span> That is avoiding, right?
+<span class="tutor">[Tutor]</span> Exactly.
+<span class="student">[Student]</span> Yes, I am strong to select.
+<span class="student">[Student]</span> Yes, but that is difficult without.
+<span class="student">[Student]</span> Yeah.
+<span class="student">[Student]</span> How can I say it?
+<span class="student">[Student]</span> Collaborating, coordinating, blah, blah, blah.
+<span class="student">[Student]</span> What are you referring to? The words? Yes. For example, some exam is just ask to catch up and writing something.
+<span class="student">[Student]</span> But some questions have some... something like this problem of code 18.
+<span class="student">[Student]</span> How can I say that? Divide that word?
+<span class="tutor">[Tutor]</span> You can say that you can choose the option.
+<span class="student">[Student]</span> Yeah, yeah.
+<span class="tutor">[Tutor]</span> Choose the option.
+<span class="tutor">[Tutor]</span> You can choose the option for the answer.
+<span class="student">[Student]</span> Ah, yes.
+<span class="student">[Student]</span> I see.
+<span class="student">[Student]</span> Choose the option.
+<span class="student">[Student]</span> I see.
+<span class="student">[Student]</span> Okay.
+<span class="tutor">[Tutor]</span> Good.
+<span class="tutor">[Tutor]</span> And next, the middle group that satisfied needs the full project.
+<span class="tutor">[Tutor]</span> However, the solution might not be dynamic or long-term.
+<span class="student">[Student]</span> Maybe accommodating?
+<span class="tutor">[Tutor]</span> I don&#x27;t think that&#x27;s quite it.
+<span class="student">[Student]</span> How?
+<span class="student">[Student]</span> Okay, compromising?
+<span class="tutor">[Tutor]</span> It is compromising, yes.
+<span class="student">[Student]</span> Maybe I don&#x27;t
+<span class="student">[Student]</span> understand
+<span class="student">[Student]</span> the compromising meaning.
+<span class="tutor">[Tutor]</span> Compromising
+<span class="tutor">[Tutor]</span> means
+<span class="tutor">[Tutor]</span> that nobody
+<span class="tutor">[Tutor]</span> really wins. Everybody has
+<span class="tutor">[Tutor]</span> everybody has to give up something.
+<span class="student">[Student]</span> Oh.
+<span class="student">[Student]</span> I see.
+<span class="tutor">[Tutor]</span> Right?
+<span class="tutor">[Tutor]</span> Exactly.
+<span class="tutor">[Tutor]</span> We often say that in a marriage, you always have to compromise, right?
+<span class="tutor">[Tutor]</span> So you can&#x27;t always want to win.
+<span class="tutor">[Tutor]</span> Sometimes you have to not do what you want to do.
+<span class="student">[Student]</span> Yes, maybe each part satisfies only things they say.
+<span class="tutor">[Tutor]</span> I&#x27;m sorry, I&#x27;m having a bit of a hard time hearing you.
+<span class="tutor">[Tutor]</span> It&#x27;s very...
+<span class="tutor">[Tutor]</span> Can you try again?
+<span class="tutor">[Tutor]</span> Yes, okay, now that&#x27;s better, go ahead.
+<span class="student">[Student]</span> Okay, okay.
+<span class="student">[Student]</span> If some
+<span class="student">[Student]</span> if some group
+<span class="student">[Student]</span> fights
+<span class="student">[Student]</span> at the time, in the meantime,
+<span class="student">[Student]</span> they only
+<span class="student">[Student]</span> think their
+<span class="student">[Student]</span> profit
+<span class="student">[Student]</span> themselves.
+<span class="student">[Student]</span> Yeah, and
+<span class="student">[Student]</span> just think about
+<span class="student">[Student]</span> themselves.
+<span class="student">[Student]</span> Yeah, is that right?
+<span class="tutor">[Tutor]</span> So the word compromising, there is no winner.
+<span class="tutor">[Tutor]</span> Everybody, yes, everybody has to give something up for the greater good.
+<span class="student">[Student]</span> Yes, they don&#x27;t give up something.
+<span class="student">[Student]</span> Just find the profit.
+<span class="tutor">[Tutor]</span> No, you have to give something up to compromise.
+<span class="tutor">[Tutor]</span> So let&#x27;s say that you and I are deciding what to do today.
+<span class="tutor">[Tutor]</span> You want to go look at the cherry blossoms.
+<span class="tutor">[Tutor]</span> I want to go to the movies.
+<span class="student">[Student]</span> Oh, yes, yes, yes.
+<span class="tutor">[Tutor]</span> So we talk about it, we talk about it, and then we will choose one of the two options.
+<span class="tutor">[Tutor]</span> That&#x27;s a compromise.
+<span class="student">[Student]</span> I see.
+<span class="student">[Student]</span> Okay.
+<span class="student">[Student]</span> Just a moment, teacher.
+<span class="student">[Student]</span> Just catch the
+<span class="student">[Student]</span> concept.
+<span class="student">[Student]</span> Just a moment.
+<span class="student">[Student]</span> Compromise.
+<span class="tutor">[Tutor]</span> Yes, yes, yes, understand. So let&#x27;s say, okay, we will go see the cherry blossoms but only for an hour.
+<span class="student">[Student]</span> Yes, yes, yes, right.
+<span class="tutor">[Tutor]</span> Yeah, so I give up going to the movies and you give up
+<span class="tutor">[Tutor]</span> more time with the cherry blossoms.
+<span class="student">[Student]</span> I see, understand.
+<span class="student">[Student]</span> Then in the morning, just work near the park and afternoon we go to the theater, movie theater.
+<span class="tutor">[Tutor]</span> That might be another one.
+<span class="student">[Student]</span> Are you really?
+<span class="tutor">[Tutor]</span> Yes.
+<span class="student">[Student]</span> Oh, compromising.
+<span class="tutor">[Tutor]</span> And this one will stop at we only picking one thing, we can only do one thing. Let&#x27;s say I&#x27;m in town only for one morning.
+<span class="tutor">[Tutor]</span> Right?
+<span class="tutor">[Tutor]</span> So we have to choose what we&#x27;re going to do.
+<span class="student">[Student]</span> Okay.
+<span class="student">[Student]</span> I understand 70%.
+<span class="student">[Student]</span> Okay.
+<span class="student">[Student]</span> Maybe if we start the next sentence, I can understand more.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="student">[Student]</span> Oh, that is easy.
+<span class="student">[Student]</span> Yeah.
+<span class="student">[Student]</span> Yielding to another
+<span class="student">[Student]</span> might be
+<span class="student">[Student]</span> yielding.
+<span class="student">[Student]</span> Yield.
+<span class="student">[Student]</span> Yielding.
+<span class="student">[Student]</span> Yielding.
+<span class="student">[Student]</span> Yielding.
+<span class="student">[Student]</span> Yielding to another
+<span class="student">[Student]</span> might be a poem.
+<span class="student">[Student]</span> Sacrifice if you
+<span class="student">[Student]</span> with really purpose on off-site choice can cause regret.
+<span class="student">[Student]</span> Okay, I see.
+<span class="student">[Student]</span> Maybe that is accommodating, right?
+<span class="tutor">[Tutor]</span> Exactly.
+<span class="student">[Student]</span> Accommodating.
+<span class="tutor">[Tutor]</span> Exactly.
+<span class="student">[Student]</span> Okay.
+<span class="student">[Student]</span> Accommodating.
+<span class="student">[Student]</span> Maybe that means just, I&#x27;m searching them, just sorry teacher.
+<span class="student">[Student]</span> Oh, accommodating.
+<span class="student">[Student]</span> Oh, accommodating.
+<span class="student">[Student]</span> Hmm?
+<span class="student">[Student]</span> Okay.
+<span class="student">[Student]</span> Just maybe that sacrifice is there for me.
+<span class="student">[Student]</span> Just I sacrifice but another person is getting something, right?
+<span class="tutor">[Tutor]</span> Exactly.
+<span class="tutor">[Tutor]</span> Another person is getting something.
+<span class="student">[Student]</span> Getting something.
+<span class="student">[Student]</span> So at that situation, before we said the situation, just we will go to the movie.
+<span class="student">[Student]</span> Yeah, not go to the...
+<span class="tutor">[Tutor]</span> Exactly.
+<span class="student">[Student]</span> Yes, I see.
+<span class="student">[Student]</span> Hmm.
+<span class="student">[Student]</span> Why yielding to another?
+<span class="tutor">[Tutor]</span> He said because...
+<span class="student">[Student]</span> Yeah.
+<span class="tutor">[Tutor]</span> Go ahead.
+<span class="student">[Student]</span> Oh, yes, because usually I understand the word &quot;yell&quot; is just to say the bigger and fighting words.
+<span class="student">[Student]</span> Is it right?
+<span class="student">[Student]</span> Yelling.
+<span class="tutor">[Tutor]</span> Yield, to yield is, the easiest way to explain it is, it comes from traffic signs.
+<span class="tutor">[Tutor]</span> When
+<span class="tutor">[Tutor]</span> when you
+<span class="tutor">[Tutor]</span> are at an intersection,
+<span class="tutor">[Tutor]</span> when you&#x27;re driving,
+<span class="tutor">[Tutor]</span> you have to let
+<span class="tutor">[Tutor]</span> some cars
+<span class="tutor">[Tutor]</span> pass first.
+<span class="tutor">[Tutor]</span> It&#x27;s a red triangle
+<span class="tutor">[Tutor]</span> upside down.
+<span class="tutor">[Tutor]</span> That&#x27;s a yield sign.
+<span class="student">[Student]</span> Yield sign.
+<span class="student">[Student]</span> And I just think,
+<span class="student">[Student]</span> I just thought,
+<span class="student">[Student]</span> usually if I&#x27;m angry,
+<span class="student">[Student]</span> if I am angry,
+<span class="student">[Student]</span> at that time I yell
+<span class="student">[Student]</span> to other people.
+<span class="student">[Student]</span> So is it a different character?
+<span class="student">[Student]</span> If I yell.
+<span class="tutor">[Tutor]</span> Yell and yield.
+<span class="student">[Student]</span> Yes.
+<span class="tutor">[Tutor]</span> Different words.
+<span class="tutor">[Tutor]</span> Exactly.
+<span class="student">[Student]</span> Can you tell me the spelling?
+<span class="tutor">[Tutor]</span> Yell.
+<span class="tutor">[Tutor]</span> Yell is Y-E-
+<span class="tutor">[Tutor]</span> L-L.
+<span class="student">[Student]</span> Yield.
+<span class="student">[Student]</span> Ah, it&#x27;s a little different.
+<span class="student">[Student]</span> Yield.
+<span class="student">[Student]</span> Right.
+<span class="student">[Student]</span> Maybe that is the elementary school English class.
+<span class="student">[Student]</span> Sorry.
+<span class="tutor">[Tutor]</span> No, they&#x27;re very similar in pronunciation.
+<span class="student">[Student]</span> Ah, yield.
+<span class="student">[Student]</span> I see.
+<span class="tutor">[Tutor]</span> Yield.
+<span class="tutor">[Tutor]</span> Yield and yell.
+<span class="student">[Student]</span> So first time I read that sentence, I imagined that situation.
+<span class="student">[Student]</span> Somebody yelled at one another.
+<span class="student">[Student]</span> Yes, okay.
+<span class="student">[Student]</span> Yeah, so why that is accommodating? They want to fight but yielding is just a different meaning.
+<span class="tutor">[Tutor]</span> Exactly.
+<span class="student">[Student]</span> That is like the yield sign.
+<span class="student">[Student]</span> Yield sign, traffic sign, anyway.
+<span class="tutor">[Tutor]</span> Exactly.
+<span class="tutor">[Tutor]</span> It&#x27;s when you give priority to somebody else.
+<span class="student">[Student]</span> Yes.
+<span class="student">[Student]</span> Yes.
+<span class="student">[Student]</span> Okay.
+<span class="student">[Student]</span> And the last
+<span class="student">[Student]</span> and the last one,
+<span class="student">[Student]</span> finding a deep
+<span class="student">[Student]</span> and creative solution
+<span class="student">[Student]</span> that represents
+<span class="student">[Student]</span> synergy and satisfies
+<span class="student">[Student]</span> both sides in
+<span class="student">[Student]</span> a fairing way.
+<span class="student">[Student]</span> Yeah, of course.
+<span class="student">[Student]</span> Collaborating.
+<span class="student">[Student]</span> Collaborating.
+<span class="student">[Student]</span> Yes.
+<span class="tutor">[Tutor]</span> And that is exactly the example from earlier.
+<span class="tutor">[Tutor]</span> Okay, in the morning we&#x27;ll go to see the cherry blossoms.
+<span class="tutor">[Tutor]</span> In the afternoon we&#x27;ll go to the movie theater.
+<span class="student">[Student]</span> I see.
+<span class="tutor">[Tutor]</span> Everybody wins, right?
+<span class="student">[Student]</span> Yes, you&#x27;re right.
+<span class="tutor">[Tutor]</span> Everybody wins.
+<span class="tutor">[Tutor]</span> Which trait are you most likely to use in conflict situations?
+<span class="student">[Student]</span> Usually I like to compete.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="tutor">[Tutor]</span> That&#x27;s fair.
+<span class="tutor">[Tutor]</span> Yeah.
+<span class="student">[Student]</span> Yeah, because sometimes I&#x27;m accommodating because sometimes accommodating is to win.
+<span class="student">[Student]</span> If there are small things, if I give some to other people, some profit, at that time, totally I can win.
+<span class="tutor">[Tutor]</span> Exactly.
+<span class="student">[Student]</span> I give something to other people, accommodating. But sometimes I&#x27;m competing
+<span class="student">[Student]</span> because that is so important for me. At the time I will fight. I just fight with
+<span class="student">[Student]</span> other people, discuss with other people and then get profit. So yeah, usually
+<span class="student">[Student]</span> 70% is accommodating and 20% competing and 10% collaborating.
+<span class="tutor">[Tutor]</span> Okay, that&#x27;s a good mix. I like that.
+<span class="tutor">[Tutor]</span> Do you think companies should provide a procedure for handling
+<span class="tutor">[Tutor]</span> conflict?
+<span class="student">[Student]</span> Procedure. Wow.
+<span class="student">[Student]</span> These days I have some trouble
+<span class="student">[Student]</span> to read the word or
+<span class="student">[Student]</span> understand the meaning of the word. Procedure.
+<span class="student">[Student]</span> Procedure. What&#x27;s this
+<span class="student">[Student]</span> procedure? Sorry. A procedure?
+<span class="tutor">[Tutor]</span> It is
+<span class="tutor">[Tutor]</span> kind of a rule.
+<span class="student">[Student]</span> Kind of a rule.
+<span class="tutor">[Tutor]</span> It outlines the steps.
+<span class="tutor">[Tutor]</span> If this happens, do this.
+<span class="tutor">[Tutor]</span> Right?
+<span class="tutor">[Tutor]</span> Step one, step two,
+<span class="tutor">[Tutor]</span> step three.
+<span class="student">[Student]</span> I see.
+<span class="student">[Student]</span> Maybe
+<span class="student">[Student]</span> there is no rule,
+<span class="student">[Student]</span> procedure
+<span class="student">[Student]</span> to
+<span class="student">[Student]</span> handle conflict.
+<span class="student">[Student]</span> But we have small rules in our company.
+<span class="student">[Student]</span> So usually we give some rules,
+<span class="student">[Student]</span> but there is no handling conflict procedure.
+<span class="tutor">[Tutor]</span> Got it.
+<span class="student">[Student]</span> Yes, yes.
+<span class="tutor">[Tutor]</span> Okay, well, this wraps up our lesson for today. Yes.
+<span class="tutor">[Tutor]</span> And it was excellent. Some of these concepts were tough and you got them, so good job on that.
+<span class="student">[Student]</span> Thank you so much, teacher. Yes, I&#x27;m sorry today but oh.
+<span class="tutor">[Tutor]</span> Why are you sorry?
+<span class="tutor">[Tutor]</span> No, we have to get through it
+<span class="tutor">[Tutor]</span> and work through these concepts,
+<span class="tutor">[Tutor]</span> right? Okay, you did really well.
+<span class="student">[Student]</span> Thank you so much and have a nice
+<span class="student">[Student]</span> day, teacher.
+<span class="tutor">[Tutor]</span> Thank you and have a nice weekend as
+<span class="tutor">[Tutor]</span> well.
+<span class="student">[Student]</span> Yes, you too.
+<span class="student">[Student]</span> Bye bye.</div>
+        </div>
+    </div>
+    <div class="toast" id="toast">✅ 프롬프트가 복사되었습니다!</div>
+    <script>
+        const REVIEW_PROMPT="너는 나의 영어 회화 복습 파트너야. 오늘 내 전화영어 수업 내용을 기반으로 대화하면서 복습을 도와줘.\n\n[오늘 수업 전사 내용]\n[Tutor] Good evening, Joanna. Hello.\n[Student] Hi, Joey. Good morning. How are you today?\n[Tutor] I'm doing great. Yes, it's Thursday and it's spring day. How is your day? How are you today?\n[Student] I am great. I got a lot of work done that I'm very happy with. So, yes.\n[Student] Okay, I see.\n[Student] You've already done your work.\n[Tutor] I did, yes, I did a lot of work.\n[Tutor] I have a couple of hours left.\n[Tutor] And then I can relax.\n[Student] Oh, it's so nice.\n[Tutor] Great, yes.\n[Tutor] Do you have any plans for this weekend?\n[Student] This weekend?\n[Student] Maybe.\n[Student] This season is the flower season.\n[Student] And the cherry blossom season is over,\n[Student] and the double cherry blossom is coming.\n[Tutor] It is similar, but a little different.\n[Tutor] We say they're...\n[Student] Okay.\n[Tutor] Yeah, just the cherry blossom is there.\n[Student] The flower is smaller,\n[Student] but the double cherry blossom is bigger and the shape is rounder.\n[Tutor] Interesting. Yeah, that season is just after we finish the cherry blossom day and\n[Tutor] then two weeks later we have the double cherry blossom day. Those three\n[Tutor] species are a little different but it's beautiful so maybe we will go to\n[Tutor] another city, Gyeongju, because double cherry blossom is famous in that city so we\n[Tutor] will go there and we will go to some exhibition and go for a walk.\n[Student] It's a similar routine, but I love that schedule.\n[Student] And it's nice to be able to get outside and enjoy nature, right?\n[Tutor] Yes, yes. You're right.\n[Tutor] Well, in the meantime, we are still working on our book.\n[Tutor] Yeah, the page on situational, yes, situational communication strategies.\n[Student] Yes, you're right.\n[Student] And last class, I finished the competing section, and we will start the second section.\n[Tutor] So we are looking at instruments for resolving conflict.\n[Tutor] So different types.\n[Student] Yes, you're right.\n[Student] Okay.\n[Student] Can I read that?\n[Tutor] Absolutely.\n[Student] Okay, description.\n[Student] Not dealing with an issue such as postponing, making excuses, delegating to another department, etc.\n[Student] Maybe that is just\n[Student] work alone\n[Student] and think alone\n[Student] and they don't\n[Student] share their idea.\n[Student] They don't share some information.\n[Student] But I can make some\n[Student] words, just one word.\n[Tutor] You have the choices\n[Tutor] in number one.\n[Student] Okay.\n[Tutor] Collaborating, accommodating, compromising, and avoiding.\n[Student] Just a moment.\n[Student] I'm trying.\n[Student] Compromising.\n[Student] Just compromising and...\n[Tutor] Avoiding.\n[Student] Avoid.\n[Tutor] Avoiding.\n[Tutor] They are written in the box under number one.\n[Tutor] Share your thoughts.\n[Student] Yes, I see.\n[Student] Yes, yes.\n[Student] That is avoiding, right?\n[Tutor] Exactly.\n[Student] Yes, I am strong to select.\n[Student] Yes, but that is difficult without.\n[Student] Yeah.\n[Student] How can I say it?\n[Student] Collaborating, coordinating, blah, blah, blah.\n[Student] What are you referring to? The words? Yes. For example, some exam is just ask to catch up and writing something.\n[Student] But some questions have some... something like this problem of code 18.\n[Student] How can I say that? Divide that word?\n[Tutor] You can say that you can choose the option.\n[Student] Yeah, yeah.\n[Tutor] Choose the option.\n[Tutor] You can choose the option for the answer.\n[Student] Ah, yes.\n[Student] I see.\n[Student] Choose the option.\n[Student] I see.\n[Student] Okay.\n[Tutor] Good.\n[Tutor] And next, the middle group that satisfied needs the full project.\n[Tutor] However, the solution might not be dynamic or long-term.\n[Student] Maybe accommodating?\n[Tutor] I don't think that's quite it.\n[Student] How?\n[Student] Okay, compromising?\n[Tutor] It is compromising, yes.\n[Student] Maybe I don't\n[Student] understand\n[Student] the compromising meaning.\n[Tutor] Compromising\n[Tutor] means\n[Tutor] that nobody\n[Tutor] really wins. Everybody has\n[Tutor] everybody has to give up something.\n[Student] Oh.\n[Student] I see.\n[Tutor] Right?\n[Tutor] Exactly.\n[Tutor] We often say that in a marriage, you always have to compromise, right?\n[Tutor] So you can't always want to win.\n[Tutor] Sometimes you have to not do what you want to do.\n[Student] Yes, maybe each part satisfies only things they say.\n[Tutor] I'm sorry, I'm having a bit of a hard time hearing you.\n[Tutor] It's very...\n[Tutor] Can you try again?\n[Tutor] Yes, okay, now that's better, go ahead.\n[Student] Okay, okay.\n[Student] If some\n[Student] if some group\n[Student] fights\n[Student] at the time, in the meantime,\n[Student] they only\n[Student] think their\n[Student] profit\n[Student] themselves.\n[Student] Yeah, and\n[Student] just think about\n[Student] themselves.\n[Student] Yeah, is that right?\n[Tutor] So the word compromising, there is no winner.\n[Tutor] Everybody, yes, everybody has to give something up for the greater good.\n[Student] Yes, they don't give up something.\n[Student] Just find the profit.\n[Tutor] No, you have to give something up to compromise.\n[Tutor] So let's say that you and I are deciding what to do today.\n[Tutor] You want to go look at the cherry blossoms.\n[Tutor] I want to go to the movies.\n[Student] Oh, yes, yes, yes.\n[Tutor] So we talk about it, we talk about it, and then we will choose one of the two options.\n[Tutor] That's a compromise.\n[Student] I see.\n[Student] Okay.\n[Student] Just a moment, teacher.\n[Student] Just catch the\n[Student] concept.\n[Student] Just a moment.\n[Student] Compromise.\n[Tutor] Yes, yes, yes, understand. So let's say, okay, we will go see the cherry blossoms but only for an hour.\n[Student] Yes, yes, yes, right.\n[Tutor] Yeah, so I give up going to the movies and you give up\n[Tutor] more time with the cherry blossoms.\n[Student] I see, understand.\n[Student] Then in the morning, just work near the park and afternoon we go to the theater, movie theater.\n[Tutor] That might be another one.\n[Student] Are you really?\n[Tutor] Yes.\n[Student] Oh, compromising.\n[Tutor] And this one will stop at we only picking one thing, we can only do one thing. Let's say I'm in town only for one morning.\n[Tutor] Right?\n[Tutor] So we have to choose what we're going to do.\n[Student] Okay.\n[Student] I understand 70%.\n[Student] Okay.\n[Student] Maybe if we start the next sentence, I can understand more.\n[Tutor] Okay.\n[Student] Oh, that is easy.\n[Student] Yeah.\n[Student] Yielding to another\n[Student] might be\n[Student] yielding.\n[Student] Yield.\n[Student] Yielding.\n[Student] Yielding.\n[Student] Yielding.\n[Student] Yielding to another\n[Student] might be a poem.\n[Student] Sacrifice if you\n[Student] with really purpose on off-site choice can cause regret.\n[Student] Okay, I see.\n[Student] Maybe that is accommodating, right?\n[Tutor] Exactly.\n[Student] Accommodating.\n[Tutor] Exactly.\n[Student] Okay.\n[Student] Accommodating.\n[Student] Maybe that means just, I'm searching them, just sorry teacher.\n[Student] Oh, accommodating.\n[Student] Oh, accommodating.\n[Student] Hmm?\n[Student] Okay.\n[Student] Just maybe that sacrifice is there for me.\n[Student] Just I sacrifice but another person is getting something, right?\n[Tutor] Exactly.\n[Tutor] Another person is getting something.\n[Student] Getting something.\n[Student] So at that situation, before we said the situation, just we will go to the movie.\n[Student] Yeah, not go to the...\n[Tutor] Exactly.\n[Student] Yes, I see.\n[Student] Hmm.\n[Student] Why yielding to another?\n[Tutor] He said because...\n[Student] Yeah.\n[Tutor] Go ahead.\n[Student] Oh, yes, because usually I understand the word \"yell\" is just to say the bigger and fighting words.\n[Student] Is it right?\n[Student] Yelling.\n[Tutor] Yield, to yield is, the easiest way to explain it is, it comes from traffic signs.\n[Tutor] When\n[Tutor] when you\n[Tutor] are at an intersection,\n[Tutor] when you're driving,\n[Tutor] you have to let\n[Tutor] some cars\n[Tutor] pass first.\n[Tutor] It's a red triangle\n[Tutor] upside down.\n[Tutor] That's a yield sign.\n[Student] Yield sign.\n[Student] And I just think,\n[Student] I just thought,\n[Student] usually if I'm angry,\n[Student] if I am angry,\n[Student] at that time I yell\n[Student] to other people.\n[Student] So is it a different character?\n[Student] If I yell.\n[Tutor] Yell and yield.\n[Student] Yes.\n[Tutor] Different words.\n[Tutor] Exactly.\n[Student] Can you tell me the spelling?\n[Tutor] Yell.\n[Tutor] Yell is Y-E-\n[Tutor] L-L.\n[Student] Yield.\n[Student] Ah, it's a little different.\n[Student] Yield.\n[Student] Right.\n[Student] Maybe that is the elementary school English class.\n[Student] Sorry.\n[Tutor] No, they're very similar in pronunciation.\n[Student] Ah, yield.\n[Student] I see.\n[Tutor] Yield.\n[Tutor] Yield and yell.\n[Student] So first time I read that sentence, I imagined that situation.\n[Student] Somebody yelled at one another.\n[Student] Yes, okay.\n[Student] Yeah, so why that is accommodating? They want to fight but yielding is just a different meaning.\n[Tutor] Exactly.\n[Student] That is like the yield sign.\n[Student] Yield sign, traffic sign, anyway.\n[Tutor] Exactly.\n[Tutor] It's when you give priority to somebody else.\n[Student] Yes.\n[Student] Yes.\n[Student] Okay.\n[Student] And the last\n[Student] and the last one,\n[Student] finding a deep\n[Student] and creative solution\n[Student] that represents\n[Student] synergy and satisfies\n[Student] both sides in\n[Student] a fairing way.\n[Student] Yeah, of course.\n[Student] Collaborating.\n[Student] Collaborating.\n[Student] Yes.\n[Tutor] And that is exactly the example from earlier.\n[Tutor] Okay, in the morning we'll go to see the cherry blossoms.\n[Tutor] In the afternoon we'll go to the movie theater.\n[Student] I see.\n[Tutor] Everybody wins, right?\n[Student] Yes, you're right.\n[Tutor] Everybody wins.\n[Tutor] Which trait are you most likely to use in conflict situations?\n[Student] Usually I like to compete.\n[Tutor] Okay.\n[Tutor] That's fair.\n[Tutor] Yeah.\n[Student] Yeah, because sometimes I'm accommodating because sometimes accommodating is to win.\n[Student] If there are small things, if I give some to other people, some profit, at that time, totally I can win.\n[Tutor] Exactly.\n[Student] I give something to other people, accommodating. But sometimes I'm competing\n[Student] because that is so important for me. At the time I will fight. I just fight with\n[Student] other people, discuss with other people and then get profit. So yeah, usually\n[Student] 70% is accommodating and 20% competing and 10% collaborating.\n[Tutor] Okay, that's a good mix. I like that.\n[Tutor] Do you think companies should provide a procedure for handling\n[Tutor] conflict?\n[Student] Procedure. Wow.\n[Student] These days I have some trouble\n[Student] to read the word or\n[Student] understand the meaning of the word. Procedure.\n[Student] Procedure. What's this\n[Student] procedure? Sorry. A procedure?\n[Tutor] It is\n[Tutor] kind of a rule.\n[Student] Kind of a rule.\n[Tutor] It outlines the steps.\n[Tutor] If this happens, do this.\n[Tutor] Right?\n[Tutor] Step one, step two,\n[Tutor] step three.\n[Student] I see.\n[Student] Maybe\n[Student] there is no rule,\n[Student] procedure\n[Student] to\n[Student] handle conflict.\n[Student] But we have small rules in our company.\n[Student] So usually we give some rules,\n[Student] but there is no handling conflict procedure.\n[Tutor] Got it.\n[Student] Yes, yes.\n[Tutor] Okay, well, this wraps up our lesson for today. Yes.\n[Tutor] And it was excellent. Some of these concepts were tough and you got them, so good job on that.\n[Student] Thank you so much, teacher. Yes, I'm sorry today but oh.\n[Tutor] Why are you sorry?\n[Tutor] No, we have to get through it\n[Tutor] and work through these concepts,\n[Tutor] right? Okay, you did really well.\n[Student] Thank you so much and have a nice\n[Student] day, teacher.\n[Tutor] Thank you and have a nice weekend as\n[Tutor] well.\n[Student] Yes, you too.\n[Student] Bye bye.\n\n[AI 피드백]\n따뜻하고 실용적인 영어 코치 Joey입니다! 오늘 수업 정말 잘하셨어요. 특히 갈등 해결 전략에 대한 개념을 정확히 이해하려고 노력하는 모습이 인상 깊었습니다. 'yield'와 'yell'의 차이를 짚어낸 것도 아주 좋았어요. 비즈니스 상황에서 이러한 미묘한 뉘앙스를 아는 것이 중요하죠.\n\n오늘 배운 내용을 바탕으로 유창성과 정확성을 동시에 잡을 수 있도록 피드백을 준비했습니다. 꾸준히 연습하면 분명 더 자연스럽고 자신감 있는 영어를 구사하실 수 있을 거예요. 화이팅!\n\n---\n\n**0. 📌 Topic**\nTopic: Discussing conflict resolution strategies and related vocabulary.\n\n**1. 📊 오늘의 대화 요약 (Summary)**\n오늘 수업에서는 주말 계획에 대한 가벼운 대화로 시작하여, 갈등 해결 전략(회피, 타협, 수용, 협력)에 대한 책 내용을 다루었습니다. 각 전략의 설명을 읽고 올바른 용어를 매칭하는 연습을 통해 개념을 명확히 이해하고, 'yield'와 'yell'처럼 발음이 비슷한 단어의 의미 차이를 짚어보며 어휘력을 확장하는 시간을 가졌습니다.\n\n**2. 💬 유창성 업그레이드 (Fluency & Natural Flow)**\n\n| 구분 | 학습자 원문 (As Said) | 자연스러운 표현 (Natural) | 비즈니스 표현 (Professional) | 💡 코칭 포인트 |\n|---|---|---|---|---|\n| 1 | ❌ \"This season is the flower season.\" | ✅ \"It's flower season now.\" | 💎 \"We're currently in the peak of flower season.\" | Using \"It's [season] now\" or \"We're in the [season] of...\" sounds more natural for describing current seasons. → \"It's [계절] now\" 또는 \"We're in the [계절] of...\"는 현재 계절을 묘사할 때 더 자연스럽습니다. |\n| 2 | ❌ \"Maybe I don't understand the compromising meaning.\" | ✅ \"Maybe I don't understand what compromising means.\" | 💎 \"I may not fully grasp the implications of compromising.\" | \"The meaning of [word]\" or \"what [word] means\" is more common than \"[word] meaning.\" → \"[단어]의 의미\" 또는 \"무엇이 [단어]를 의미하는지\"가 \"[단어] 의미\"보다 더 흔한 표현입니다. |\n| 3 | ❌ \"Yes, I am strong to select.\" | ✅ \"Yes, I'm confident in my choice.\" | 💎 \"I am confident in my selection.\" | \"Strong to select\"는 흔한 숙어가 아닙니다. \"Confident in my choice/selection\"은 자신의 결정에 확신이 있다는 의미를 더 잘 전달합니다. |\n\n**3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)**\n\n이번 대화에서는 **관사 (a/an/the) 사용**에서 실수가 반복되는 경향이 있었습니다. 특히 특정 대상을 지칭하거나 일반적인 개념을 말할 때 관사 사용에 주의가 필요합니다.\n\n| ❌ 학습자 원문 | ✅ 교정 예시 |\n|---|---|\n| \"Then in **the** morning, just work near **the** park and afternoon we go to **the** theater, movie theater.\" | \"Then in **the** morning, we could just work near **the** park, and in **the** afternoon, we could go to **the** movie theater.\" |\n| \"So first time I read that sentence, I imagined that situation.\" | \"**The** first time I read that sentence, I imagined that situation.\" |\n| \"What are you referring to? **The** words? Yes. For example, some exam is just ask to catch up and writing something.\" | \"What are you referring to? **The** words? Yes. For example, some exam just asks us to catch up and write something.\" |\n\n📌 **핵심 규칙:** 특정 명사나 이전에 언급된 명사를 다시 지칭할 때는 정관사 'the'를 사용합니다. 시간대('in the morning/afternoon')나 유일한 것('the first time') 앞에도 'the'를 사용합니다. 또한, 일반적인 개념을 말할 때는 부정관사 'a/an'을 사용하거나 아예 관사를 생략할 수 있습니다.\n\n🔁 **따라 읽기:**\n🗣️ \"In the morning, we could just work near the park, and in the afternoon, we could go to the movie theater.\"\n🗣️ \"The first time I read that sentence, I imagined that situation.\"\n🗣️ \"Some exam just asks us to catch up and write something.\"\n\n**4. 📗 어휘 확장 (Vocabulary Vault)**\n\n1.  **postpone** /poʊˈspoʊn/ (동사)\n    *   뜻: 연기하다, 미루다\n    *   실전 예문: We had to **postpone** the project launch due to unexpected technical issues.\n\n2.  **delegate** /ˈdɛlɪˌɡeɪt/ (동사)\n    *   뜻: (권한·업무 등을) 위임하다, 맡기다\n    *   실전 예문: It's important to **delegate** tasks effectively to optimize team productivity.\n\n3.  **synergy** /ˈsɪnərˌdʒi/ (명사)\n    *   뜻: 시너지, 협력 작용 (개별적인 부분들이 합쳐져 더 큰 효과를 내는 것)\n    *   실전 예문: Our goal is to create **synergy** between departments to achieve our quarterly targets.\n\n4.  **procedure** /prəˈsiːdʒər/ (명사)\n    *   뜻: 절차, 과정 (특정 행동을 수행하는 정해진 방식)\n    *   실전 예문: We need to follow the standard **procedure** for reporting any security breaches.\n\n5.  **accommodate** /əˈkɑːməˌdeɪt/ (동사)\n    *   뜻: (요구 등을) 수용하다, 편의를 제공하다\n    *   실전 예문: We try to **accommodate** our clients' requests whenever possible to ensure satisfaction.\n\n**5. 📝 실전 복습 챌린지 (Practice)**\n\n1.  **상황:** 중요한 회의가 갑자기 취소되어 다음 주로 미뤄졌습니다.\n    *   **영작:** (오늘 배운 '연기하다' 동사를 사용하여) \"The important meeting was suddenly canceled and had to be postponed until next week.\"\n    *   **모범 답안:** The important meeting was suddenly canceled and had to be **postponed** until next week.\n\n2.  **상황:** 팀 내 갈등 상황에서, 모두가 조금씩 양보하여 합의점을 찾는 것이 중요합니다.\n    *   **영작:** (오늘 배운 '타협하다' 개념을 사용하여) \"In a team conflict, it's crucial for everyone to compromise a little to find a middle ground.\"\n    *   **모범 답안:** In a team conflict, it's crucial for everyone to **compromise** a little to find a middle ground.\n\n3.  **상황:** 새로운 프로젝트를 시작할 때, 명확한 절차를 세우는 것이 성공에 필수적입니다.\n    *   **영작:** (오늘 배운 '절차' 명사를 사용하여) \"When starting a new project, establishing clear procedures is essential for success.\"\n    *   **모범 답안:** When starting a new project, establishing clear **procedures** is essential for success.\n\n**6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)**\n\n✨ **Good Job**: \"I got a lot of work done that I'm very happy with.\"\n이 문장은 오늘 수업 시작 시 Joanna님이 하신 말씀인데, 완벽한 문법과 자연스러운 흐름으로 자신의 성취감을 잘 표현했습니다. 'get work done'이라는 실용적인 표현을 사용한 것도 아주 좋았어요. 스스로의 만족감을 영어로 표현하는 것은 자신감을 높이는 데 큰 도움이 됩니다!\n\n🚀 **내일의 한 문장**:\n\"I've been thinking about our discussion on conflict resolution strategies, especially how we can apply them in our daily work.\"\n(오늘 배운 'conflict resolution strategies'를 활용하여 다음 수업 시작 시 튜터에게 오늘 대화의 연장선상에서 질문을 던져보세요.)\n\n---\n\n**[성과 지표]**\n\n**유창성 점수:** 7/10\n\n**근거:**\nJoanna님은 대화의 흐름을 잘 이어가고, 자신의 생각을 표현하는 데 주저함이 없었습니다. 특히 복잡한 개념을 이해하려고 적극적으로 질문하고 예시를 들어 설명하는 모습이 인상 깊었습니다. 다만, 일부 표현에서 단어 선택이나 문장 구조가 원어민에게는 다소 어색하게 들릴 수 있는 부분이 있었고, 관사 사용에 대한 반복적인 실수가 있었습니다. 하지만 이는 중급 학습자에게 자연스러운 과정이며, 꾸준한 연습으로 충분히 개선될 수 있는 부분입니다.\n\n**다음 수업 '원포인트 액션 플랜':**\n다음 수업에서는 **\"관사(a/an/the) 사용\"**에 특별히 집중하여 연습해 봅시다. 특히 명사를 처음 언급할 때(a/an)와 특정 명사를 다시 지칭할 때(the), 그리고 시간 표현(in the morning/afternoon)이나 고유한 것(the first time) 앞에 'the'를 사용하는 규칙을 의식적으로 적용하는 연습을 해볼 거예요. 문장을 만들 때마다 '이 명사 앞에는 어떤 관사가 필요할까?'라고 한 번 더 생각하는 습관을 들이는 것이 중요합니다.\n\n위 내용을 바탕으로:\n1. 먼저 오늘 수업에서 내가 틀렸거나 어색했던 표현을 하나 골라서, 관련된 상황을 영어로 질문해줘.\n2. 내가 영어로 대답하면, 자연스러운지 확인하고 더 나은 표현이 있으면 알려줘.\n3. 특히 \"반복 실수 패턴\"에서 지적된 부분을 집중적으로 연습시켜줘.\n4. 이런 식으로 오늘 배운 표현들을 하나씩 복습하자.\n5. 한국어 설명은 필요할 때만 간단히, 대화는 최대한 영어로 진행해줘.\n\n그럼 시작하자!";
+        function startReview(){navigator.clipboard.writeText(REVIEW_PROMPT).then(()=>{showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)}).catch(()=>{const t=document.createElement('textarea');t.value=REVIEW_PROMPT;document.body.appendChild(t);t.select();document.execCommand('copy');document.body.removeChild(t);showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)})}
+        function showToast(){const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500)}
+        function switchTab(n){document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',n==='feedback'?i===0:i===1));document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));document.getElementById('tab-'+n).classList.add('active')}
+    </script>
+</body>
+</html>
