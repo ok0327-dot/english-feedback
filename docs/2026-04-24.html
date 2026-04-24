@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전화영어 복습 - 2026년 04월 24일</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Noto Sans KR',sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.75;min-height:100vh}
+        .header{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);border-bottom:1px solid rgba(255,255,255,.06);padding:48px 24px 40px;text-align:center}
+        .header-date{font-size:13px;color:#94a3b8;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+        .header h1{font-size:28px;font-weight:700;color:#f1f5f9;margin-bottom:16px}
+        .header-meta{display:flex;justify-content:center;gap:24px;font-size:14px;color:#64748b}
+        .header-meta span{display:flex;align-items:center;gap:6px}
+        .cta-section{text-align:center;padding:40px 24px}
+        .cta-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:linear-gradient(135deg,#38bdf8,#818cf8);color:#fff;font-size:16px;font-weight:600;font-family:'Noto Sans KR',sans-serif;border:none;border-radius:50px;cursor:pointer;transition:all .3s;text-decoration:none;box-shadow:0 4px 24px rgba(56,189,248,.25)}
+        .cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(56,189,248,.35)}
+        .cta-btn svg{width:20px;height:20px}
+        .cta-sub{margin-top:12px;font-size:13px;color:#64748b}
+        .toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#38bdf8;padding:14px 28px;border-radius:12px;font-size:14px;font-weight:500;border:1px solid rgba(56,189,248,.2);box-shadow:0 8px 32px rgba(0,0,0,.4);opacity:0;transition:all .4s cubic-bezier(.16,1,.3,1);z-index:1000}
+        .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+        .container{max-width:720px;margin:0 auto;padding:0 24px 80px}
+        .tabs{display:flex;gap:4px;background:#1a1a24;padding:4px;border-radius:12px;margin-bottom:32px}
+        .tab{flex:1;padding:12px;text-align:center;font-size:14px;font-weight:500;color:#64748b;background:0 0;border:none;border-radius:8px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all .2s}
+        .tab.active{background:#262636;color:#f1f5f9}
+        .tab-content{display:none}.tab-content.active{display:block}
+        .feedback h2{font-size:18px;font-weight:700;color:#f1f5f9;margin:36px 0 16px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.06)}
+        .feedback h2:first-child{margin-top:0}
+        .feedback p{margin:8px 0;color:#cbd5e1}
+        .feedback .item{padding:6px 0 6px 16px;border-left:2px solid #334155;margin:6px 0;color:#cbd5e1}
+        .feedback .numbered{padding:8px 0 8px 16px;color:#cbd5e1}
+        .feedback .numbered strong{color:#38bdf8}
+        .feedback strong{color:#f1f5f9}
+        .feedback code{background:#1e293b;padding:2px 8px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#38bdf8}
+        .feedback table{width:100%;border-collapse:collapse;margin:12px 0}
+        .feedback th,.feedback td{padding:10px 14px;text-align:left;border-bottom:1px solid #262636}
+        .feedback th{color:#94a3b8;font-weight:500;font-size:13px}
+        .feedback td{color:#cbd5e1}
+        .arrow{color:#38bdf8;font-weight:700}
+        .transcript{background:#1a1a24;border-radius:12px;padding:28px;font-size:14px;line-height:2;color:#94a3b8;white-space:pre-wrap;word-break:break-word;font-family:'JetBrains Mono','Noto Sans KR',monospace}
+        .transcript .tutor{color:#38bdf8}
+        .transcript .student{color:#a78bfa}
+        @media(max-width:640px){.header{padding:32px 16px}.header h1{font-size:22px}.cta-btn{padding:14px 28px;font-size:15px}.container{padding:0 16px 60px}}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-date">2026년 04월 24일</div>
+        <h1>📚 전화영어 복습</h1>
+        <div class="header-meta">
+            <span>⏱ 19분 37초</span>
+            <span>🎙 전화영어_025180304_20260424080017.m4a</span>
+        </div>
+    </div>
+    <div class="cta-section">
+        <button class="cta-btn" onclick="startReview()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Gemini에서 복습 대화 시작하기
+        </button>
+        <div class="cta-sub">클릭하면 프롬프트가 복사되고 Gemini가 열립니다</div>
+    </div>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('feedback')">📋 AI 피드백</button>
+            <button class="tab" onclick="switchTab('transcript')">🎙 수업 전사</button>
+        </div>
+        <div id="tab-feedback" class="tab-content active">
+            <div class="feedback"><p>안녕하세요! 유창성과 정확성을 동시에 잡는 따뜻하고 실용적인 영어 코치입니다. 오늘 대화에서 보여주신 적극적인 참여와 깊이 있는 생각에 정말 감탄했습니다. 특히 어려운 주제였음에도 불구하고 자신의 경험을 연결하여 설명하려는 노력이 돋보였습니다.</p>
+<br>
+<p>오늘 배운 표현과 문법을 잘 활용하시면 비즈니스 환경에서 더욱 자신감 있게 소통하실 수 있을 거예요. 함께 성장해 나가는 과정, 정말 기대됩니다!</p>
+<br>
+<br>
+<p><strong>0. 📌 Topic</strong></p>
+<p>Topic: Discussing Conflict Resolution and Negotiation Strategies in the Workplace</p>
+<br>
+<p><strong>1. 📊 오늘의 대화 요약 (Summary)</strong></p>
+<p>오늘 수업에서는 주말 계획에 대한 가벼운 대화로 시작하여, 직장 내 갈등 해결(Conflict Resolution)이 업무의 질과 직원의 업무 능력에 미치는 영향에 대해 심도 있게 토론했습니다. 학습자님의 실제 업무 경험과 연결하여 갈등 상황과 협상(Negotiation)에 대한 견해를 나누며 다양한 비즈니스 상황을 영어로 표현하는 연습을 했습니다.</p>
+<br>
+<p><strong>2. 💬 유창성 업그레이드 (Fluency & Natural Flow)</strong></p>
+<p>의미는 통하지만 원어민이 들었을 때 조금 더 자연스럽게 들릴 수 있는 표현들을 살펴볼게요.</p>
+<br>
+<p>*   <strong>❌ 학습자 원문 (As Said):</strong> "the cherry blossom season is the past."</p>
+<p>    *   <strong>✅ 자연스러운 표현 (Natural):</strong> "The cherry blossom season has passed."</p>
+<p>    *   <strong>💎 비즈니스 표현 (Professional):</strong> "The cherry blossom season has concluded."</p>
+<p>    *   <strong>💡 코칭 포인트:</strong> "has passed"나 "has concluded"는 끝난 사건을 묘사할 때 더 자연스럽습니다. "is the past"는 숙어를 문자 그대로 사용하는 것처럼 들릴 수 있습니다.</p>
+<br>
+<p>*   <strong>❌ 학습자 원문 (As Said):</strong> "I'm not making sure why divide one and two."</p>
+<p>    *   <strong>✅ 자연스러운 표현 (Natural):</strong> "I'm not sure why it's divided into two parts."</p>
+<p>    *   <strong>💎 비즈니스 표현 (Professional):</strong> "I'm unclear on the rationale for dividing it into two distinct points."</p>
+<p>    *   <strong>💡 코칭 포인트:</strong> "I'm not sure why"는 혼란을 표현하는 일반적이고 직접적인 방법입니다. "Making sure"는 보통 무언가를 확인하는 것을 의미하며, 불확실성을 표현할 때는 잘 쓰이지 않습니다.</p>
+<br>
+<p>*   <strong>❌ 학습자 원문 (As Said):</strong> "I'm having trouble to make an answer today."</p>
+<p>    *   <strong>✅ 자연스러운 표현 (Natural):</strong> "I'm having trouble answering today."</p>
+<p>    *   <strong>💎 비즈니스 표현 (Professional):</strong> "I'm finding it challenging to formulate a response today."</p>
+<p>    *   <strong>💡 코칭 포인트:</strong> "having trouble" 다음에는 동사의 -ing 형태(동명사)를 사용하는 것이 일반적입니다. "To make an answer"도 문법적으로 틀린 것은 아니지만, "answering"이 더 간결하고 흔하게 쓰입니다.</p>
+<br>
+<p><strong>3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)</strong></p>
+<p>오늘 대화에서는 <strong>관사(a/an/the)</strong> 사용에 대한 오류가 반복적으로 나타났습니다. 명사 앞에 적절한 관사를 붙이는 연습을 해볼게요.</p>
+<br>
+<table>
+<tr><th>❌ 학습자 원문 (As Said)</th><th>✅ 교정 예시 (Corrected)</th></tr>
+<tr><td>"Because <strong>the</strong> big cherry blossom."</td><td>"Because <strong>of the</strong> big cherry blossom." (혹은 "Because <strong>it's a</strong> big cherry blossom.")</td></tr>
+<tr><td>"I need more analysis of this meaning."</td><td>"I need more analysis of this meaning." (혹은 "I need <strong>some</strong> analysis...")</td></tr>
+<tr><td>"if they don't have ability to work"</td><td>"if they don't have <strong>the</strong> ability to work" (혹은 "if they lack <strong>the</strong> ability to work")</td></tr>
+<tr><td>"Maybe that is conflict, two kinds of <strong>the</strong> reason."</td><td>"Maybe that is conflict, two kinds of reason<strong>s</strong>." (혹은 "two reasons for conflict")</td></tr>
+<tr><td>"we are expert to the work."</td><td>"we are <strong>experts at</strong> the work." (혹은 "we are <strong>experts in</strong> this field.")</td></tr>
+</table>
+<br>
+<p>📌 <strong>핵심 규칙:</strong> 명사 앞에 관사(a/an/the)를 적절히 사용하거나, 셀 수 있는 명사는 단수일 때 'a/an'을, 복수일 때 's'를 붙여주세요.</p>
+<br>
+<p>🔁 <strong>따라 읽기:</strong></p>
+<p>🗣️ "Because of the big cherry blossom, we're planning a trip."</p>
+<p>🗣️ "I need more analysis of this meaning to fully understand it."</p>
+<p>🗣️ "If they don't have the ability to work, it can cause problems."</p>
+<br>
+<p><strong>4. 📗 어휘 확장 (Vocabulary Vault)</strong></p>
+<p>수업 중 등장했거나 비즈니스 환경에서 유용하게 쓰일 수 있는 단어들을 익혀볼까요?</p>
+<br>
+<p>*   <strong>resolution</strong> /ˌrezəˈluːʃən/ (명사)</p>
+<p>    *   뜻: 해결, 해법; 결심</p>
+<p>    *   실전 예문: We need to find a swift <strong>resolution</strong> to this budget dispute. (이 예산 분쟁에 대한 신속한 해결책을 찾아야 합니다.)</p>
+<br>
+<p>*   <strong>follow through</strong> /ˈfɑːloʊ θruː/ (동사구)</p>
+<p>    *   뜻: (약속, 계획 등을) 이행하다, 완수하다</p>
+<p>    *   실전 예문: It's crucial that all team members <strong>follow through</strong> on their commitments. (모든 팀원이 약속을 이행하는 것이 중요합니다.)</p>
+<br>
+<p>*   <strong>hostile</strong> /ˈhɑːstl/ (형용사)</p>
+<p>    *   뜻: 적대적인, 비우호적인</p>
+<p>    *   실전 예문: A <strong>hostile</strong> work environment can significantly reduce employee morale and productivity. (적대적인 업무 환경은 직원 사기와 생산성을 크게 저하시킬 수 있습니다.)</p>
+<br>
+<p>*   <strong>criteria</strong> /kraɪˈtɪriə/ (명사)</p>
+<p>    *   뜻: 기준, 척도 (criterion의 복수형)</p>
+<p>    *   실전 예문: What are the key <strong>criteria</strong> for evaluating the success of this project? (이 프로젝트의 성공을 평가하는 주요 기준은 무엇입니까?)</p>
+<br>
+<p>*   <strong>negotiate</strong> /nɪˈɡoʊʃieɪt/ (동사)</p>
+<p>    *   뜻: 협상하다, 교섭하다</p>
+<p>    *   실전 예문: We are currently <strong>negotiating</strong> a new contract with our overseas partners. (우리는 현재 해외 파트너들과 새로운 계약을 협상 중입니다.)</p>
+<br>
+<p><strong>5. 📝 실전 복습 챌린지 (Practice)</strong></p>
+<p>오늘 배운 표현과 문법을 활용하여 영작해 보세요.</p>
+<br>
+<div class="numbered"><strong>1.</strong>  <strong>상황:</strong> 지난주에 시작한 프로젝트가 아직 끝나지 않았습니다.</div>
+<p>    *   <strong>영작:</strong> (The project / last week / not yet / finish)</p>
+<p>    *   <strong>모범 답안:</strong> The project that started last week has not finished yet.</p>
+<br>
+<div class="numbered"><strong>2.</strong>  <strong>상황:</strong> 우리는 팀원들 간의 갈등을 해결하기 위한 명확한 기준이 필요합니다.</div>
+<p>    *   <strong>영작:</strong> (We need / clear criteria / resolve / conflict / among team members)</p>
+<p>    *   <strong>모범 답안:</strong> We need clear criteria to resolve conflicts among team members.</p>
+<br>
+<div class="numbered"><strong>3.</strong>  <strong>상황:</strong> 저는 항상 고객과 협상하는 과정을 즐깁니다. 왜냐하면 그것은 전략적인 사고를 요하는 일이기 때문입니다.</div>
+<p>    *   <strong>영작:</strong> (I always / enjoy / negotiate / with clients / because / it requires / strategic thinking)</p>
+<p>    *   <strong>모범 답안:</strong> I always enjoy negotiating with clients because it requires strategic thinking.</p>
+<br>
+<p><strong>6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)</strong></p>
+<br>
+<p>*   ✨ <strong>Good Job:</strong> "I love to negotiate because that is the kind of strategy."</p>
+<p>    *   이 문장은 학습자님의 강점과 열정을 아주 잘 드러내 주었습니다. 'negotiate'라는 비즈니스 핵심 단어를 정확히 사용했고, 'kind of strategy'라는 표현으로 협상에 대한 본인의 긍정적인 시각을 명확하게 전달했습니다. 이처럼 자신의 의견을 자신감 있게 표현하는 모습이 정말 좋았습니다!</p>
+<br>
+<p>*   🚀 <strong>내일의 한 문장:</strong> 다음 수업 시작 시 튜터에게 오늘 배운 표현을 활용하여 대화를 시작해 보세요.</p>
+<p>    "I've been thinking about the importance of conflict resolution since our last class."</p>
+<p>    (지난 수업 이후로 갈등 해결의 중요성에 대해 계속 생각해 봤어요.)</p>
+<br>
+<br>
+<p><strong>[성과 지표]</strong></p>
+<p><strong>유창성 점수:</strong> 7.5/10점</p>
+<br>
+<p><strong>근거:</strong></p>
+<p>학습자님은 대화의 흐름을 잘 이어가고, 자신의 생각을 구체적인 예시와 함께 설명하려는 노력이 돋보였습니다. 특히 어려운 주제에 대해서도 주저하지 않고 의견을 개진하는 자신감이 매우 긍정적이었습니다. 다만, 일부 문장에서 더 자연스러운 표현이나 정확한 문법(특히 관사 사용)이 보완된다면 유창성과 정확성을 동시에 크게 향상시킬 수 있을 것입니다.</p>
+<br>
+<p><strong>다음 수업 '원포인트 액션 플랜':</strong></p>
+<p>다음 수업에서는 <strong>"관사(a/an/the)를 의식적으로 사용하기"</strong>에 집중해 주세요. 문장을 말하기 전에 명사 앞에 어떤 관사가 필요한지 한 번 더 생각하는 연습을 해보면 좋습니다.</p></div>
+        </div>
+        <div id="tab-transcript" class="tab-content">
+            <div class="transcript"><span class="student">[Student]</span> Hello. Hello, teacher.
+<span class="tutor">[Tutor]</span> Hi. Yeah, how are you doing today?
+<span class="student">[Student]</span> I&#x27;m doing great. Yes, it&#x27;s Friday morning. And if I finish my work, I will go back to my home. So I will meet my family. So it&#x27;s a nice day. How about you?
+<span class="tutor">[Tutor]</span> Good. Yeah, I had a nice day.
+<span class="student">[Student]</span> Have a nice day?
+<span class="tutor">[Tutor]</span> Yeah. Okay. Do you have any plans on the weekend?
+<span class="student">[Student]</span> This weekend, I haven&#x27;t decided, but maybe I will go to the cherry blossom, because the big cherry blossom. Because two weeks ago, the cherry blossom season is the past. But after two weeks later, this season, it&#x27;s a similar flower. We call it the big cherry blossom or double cherry blossom tree. It&#x27;s a little different kind of a species tree. So maybe we will go to the city of Gyeongju. That is the oldest city in Korea. So yeah, we will go there, yeah, and have a small travel, yeah, with my family. Hmm, how about you? How about your plans on the weekend? Hmm.
+<span class="tutor">[Tutor]</span> Uh, probably nothing decided yet, but maybe gardening this weekend.
+<span class="student">[Student]</span> Gardening? Oh, I see. I understand. Okay.
+<span class="tutor">[Tutor]</span> So, yeah, the writing wasn&#x27;t clear here on your last page. Are you on page 29?
+<span class="student">[Student]</span> Oh, yes, you&#x27;re right. This is the, yeah, you have to go 29, 29, page of 29.
+<span class="tutor">[Tutor]</span> So here we have this image. So did you want to read that one and two about conflict resolution?
+<span class="student">[Student]</span> Okay, I see. That&#x27;s okay. In the picture. Make sure to seek conflict resolution if it affects the quality of your work, such as coworkers who don&#x27;t follow through. Nearly 10% of employees say that they have seen conflict lead to project failure. And second, it affects your ability to work, such as a positive work environment. 25% of employees have seen conflict lead to sickness, absence. Okay.
+<span class="tutor">[Tutor]</span> So, this, yeah, any questions about these two facts?
+<span class="student">[Student]</span> I need more analysis of this meaning. Could you explain?
+<span class="tutor">[Tutor]</span> So that&#x27;s the kind of their section. So it says it affects the quality of your work. So if a co-worker doesn&#x27;t finish their work,
+<span class="student">[Student]</span> Yes.
+<span class="tutor">[Tutor]</span> Follow through, doesn&#x27;t finish. That is their first.
+<span class="student">[Student]</span> Right.
+<span class="tutor">[Tutor]</span> Yeah, that is the first one. So a project might fail because of conflict. The co-worker who doesn&#x27;t follow through.
+<span class="student">[Student]</span> Nearby 10% employees say completely the project failed. So what is the difference between one and two? Number one and two.
+<span class="tutor">[Tutor]</span> So two, it says some employees don&#x27;t come to work or take a sick day because of the hostile work environment. So a bad work environment.
+<span class="student">[Student]</span> I see. Okay. Just a moment. I understand more. I need more understanding.
+<span class="tutor">[Tutor]</span> Go ahead.
+<span class="student">[Student]</span> Oh, yes, I&#x27;m just, I understand, but I don&#x27;t understand, I&#x27;m not making sure why divide one and two. Just and read that. It&#x27;s just two points. Like, you know, how they list things.
+<span class="tutor">[Tutor]</span> So this is one point and then number two is a second point. So it affects your quality and it affects your ability.
+<span class="student">[Student]</span> The first thing is to connect to the quality of the work. And second is their ability to work. So first, if we don&#x27;t have finished the work, a low quality, at that time, nearby 10% of employees say their project is failed. And if they don&#x27;t have ability to work, at that time, in the meantime, they have been in conflict, sickness, or upset.
+<span class="tutor">[Tutor]</span> And it&#x27;s saying seek conflict resolution, so seek help if one happens or if two happens. So there are two reasons to seek conflict resolution.
+<span class="student">[Student]</span> I see. I see. Maybe that is conflict, two kinds of the reason. The first is quality, and second is the ability of the employee, and their reaction is the difference, right?
+<span class="tutor">[Tutor]</span> Well, there&#x27;s no difference. There&#x27;s just two reasons to seek conflict. So two reasons to get help.
+<span class="student">[Student]</span> Two reasons. I see. Okay, I see. I almost understand.
+<span class="tutor">[Tutor]</span> It&#x27;s just two things that might happen.
+<span class="student">[Student]</span> Yes. Okay.
+<span class="tutor">[Tutor]</span> So have you ever had a project fail due to conflict?
+<span class="student">[Student]</span> Oh, yes, of course. Yeah. When I work with the sales team, at that time, I... I do not... I&#x27;m not good at golf, but sometimes we have an appointment for a golf game with my client. At that time, I so hate to play the golf because that is the score game, so it is important to score. So maybe that is connected to the second sentence, ability to work, because at that time, I don&#x27;t have our ability to the golf. So it is a little problem, but I just go. I just went because that is my job. So yeah.
+<span class="tutor">[Tutor]</span> So having a project fail due to conflict would mean if you are in an argument with another co-worker.
+<span class="student">[Student]</span> Oh, yes, we are humans, so we have different opinions. So sometimes we have arguments. And when I was more young, at that time, I&#x27;m more a fighter. Yeah, a fighter person. So sometimes we have so many arguments and yeah, sometimes we fight in our office.
+<span class="tutor">[Tutor]</span> Yeah. Yeah. And has the project ever failed because of an argument or a conflict?
+<span class="student">[Student]</span> That&#x27;s not failed, but we understand just the two kinds of opinions, different opinions and then just make... yeah, just finish that work. Yeah. Actually, I don&#x27;t...
+<span class="tutor">[Tutor]</span> So you have not had...
+<span class="student">[Student]</span> Yes, I don&#x27;t have a... I don&#x27;t remember the detail, but just remember just that work of a title.
+<span class="tutor">[Tutor]</span> So you haven&#x27;t had a project fail due to conflict?
+<span class="student">[Student]</span> Yes, yes, sometimes.
+<span class="tutor">[Tutor]</span> So you have had a project fail due to conflict?
+<span class="student">[Student]</span> Not fail, just that is the different opinion. And we adjusted our opinion and then just go to the work and yeah, finish the work, finish the sale. Yeah.
+<span class="tutor">[Tutor]</span> Okay, so this is about like a project failing because of an argument.
+<span class="student">[Student]</span> So yeah, yeah, we don&#x27;t, we have so many arguments and we have so many different opinions, but at that time we don&#x27;t, in every case, we don&#x27;t fail that work. Just we adjust that work and control their opinions, adjust their opinions, and then go ahead. So sometimes that is the good impact to the work, and sometimes it is failed to the work. Yeah, but in my case, I don&#x27;t have a case to fail the different opinion.
+<span class="tutor">[Tutor]</span> So have you or anybody you have known ever missed work due to conflict? Or anybody you have known ever missed work due to conflict?
+<span class="student">[Student]</span> Yes, yes. Usually, we are auditors, and if we make the audit report, we have a due time, a limit time. Because first, if we make our audit report, we report the plan to the CEO, and that report, the plan report, is contained the limit day, so that report always has the limit and due date. So sometimes that is failed because we find some system, but sometimes you can&#x27;t find the system and don&#x27;t give the solution, so it is a little problem and and delay their making a report. Yeah, sometimes you have a death, uh, meet the problem.
+<span class="tutor">[Tutor]</span> So does, do people take time off? Do they take a day off work because of conflict?
+<span class="student">[Student]</span> Yes, yes, you&#x27;re right. Because always the boss wants to just meet the deadline, but the team member always wants to find more and listen more and make more. So usually the boss and the employee fight the deadline. So the employee does not come to work. So they say, &quot;Oh, I&#x27;m sick. I can&#x27;t come to work today.&quot; Oh, no, that is don&#x27;t. They have a responsibility. So we are expert to the work. So yeah. Some, yeah, some newbies, it&#x27;s possible because they are first work and they are so young and they don&#x27;t have experience. So it&#x27;s possible to just say sick or some don&#x27;t go to the office. But usually we are expert and they guys just go and solve that problem in a period.
+<span class="tutor">[Tutor]</span> So maybe newer employees might miss work because of conflict.
+<span class="student">[Student]</span> Yes, because they don&#x27;t have experience. Yes.
+<span class="tutor">[Tutor]</span> And have you ever decided to let go of a conflict? Have you decided just to let go of the conflict? Number three. Have you ever? So that means if we have some conflict together, but just go to the work, right? But it means just to forget the conflict. So to ignore the conflict.
+<span class="student">[Student]</span> Yeah, I think that is the great way because always everybody has a different point and different opinions. Not always, just sometimes. So, yeah, if we have arguments, some problem, and we just forget, forget that problem because we have the same goals of making a report or making a successful business. So sometimes that is a great solution to forget the problem and just go ahead. I don&#x27;t know if that is the right answer to your question. Anyway.
+<span class="tutor">[Tutor]</span> Yeah, so you think you should just let it go or forget the problem.
+<span class="student">[Student]</span> Yeah, just go ahead and forget the problem.
+<span class="tutor">[Tutor]</span> And what is your criteria? How do you decide that a conflict is just not worth it?
+<span class="student">[Student]</span> Not every problem, but some things are not worth it to solve this problem because just we clear our goal, and sometimes we have arguments another goal, just just different issue and just way. So if we, if that goal and and that affects difference. At that time we just forgot and we think that is not worth it, their argument. Yeah. Wow, today is so hard. Answer is hard. Yes. It is a little hard to... I&#x27;m having trouble to make an answer today.
+<span class="tutor">[Tutor]</span> Okay, anyway, go ahead. So we could do the three things. Did you learn any three things from this unit or from this chapter?
+<span class="student">[Student]</span> Yes, maybe that&#x27;s... that section is just divide the question and ask question, but they don&#x27;t say some solution. So I don&#x27;t learn any lesson. Just a section divide the question and just ask my experience. So, yes, I learn. So I don&#x27;t have enough lesson from this section.
+<span class="tutor">[Tutor]</span> Well, these are just, yeah, they are opinion questions.
+<span class="student">[Student]</span> Yeah, yeah, you&#x27;re right. You&#x27;re right. Yes.
+<span class="tutor">[Tutor]</span> Okay, so the sneak peek question. Does negotiating during a business proposal make you nervous?
+<span class="student">[Student]</span> I love to negotiate because that is the kind of strategy. So, and it is the, I love to fight to my employee or my co-worker or my client because they need to set it and find something and just have a find a solution. So I love that process. So, yeah, so I don&#x27;t nervous. Yeah, if I meet their, if I have a negotiation to their people, I enjoy that, the negotiation.
+<span class="tutor">[Tutor]</span> Okay, so you have a negotiation strategy for negotiating.
+<span class="student">[Student]</span> Yeah, so I love the negotiation. So sometimes if I visit the other country, travel other country, usually I love to go the traditional market and I have a negotiation with that people. That is so enjoyable for me. Yeah, so yeah, I love that.
+<span class="tutor">[Tutor]</span> Okay, well, yeah, time is getting to be about time here. Yeah, any other questions you had about this page?
+<span class="student">[Student]</span> Oh, no, thank you so much, teacher. Today&#x27;s subject is a little hard, but your explanation is so good. Yeah, it&#x27;s nice.
+<span class="tutor">[Tutor]</span> Okay, well, I hope you have a great weekend. Goodbye.
+<span class="student">[Student]</span> Have a nice weekend. Bye-bye.</div>
+        </div>
+    </div>
+    <div class="toast" id="toast">✅ 프롬프트가 복사되었습니다!</div>
+    <script>
+        const REVIEW_PROMPT="너는 나의 영어 회화 복습 파트너야. 오늘 내 전화영어 수업 내용을 기반으로 대화하면서 복습을 도와줘.\n\n[오늘 수업 전사 내용]\n[Student] Hello. Hello, teacher.\n[Tutor] Hi. Yeah, how are you doing today?\n[Student] I'm doing great. Yes, it's Friday morning. And if I finish my work, I will go back to my home. So I will meet my family. So it's a nice day. How about you?\n[Tutor] Good. Yeah, I had a nice day.\n[Student] Have a nice day?\n[Tutor] Yeah. Okay. Do you have any plans on the weekend?\n[Student] This weekend, I haven't decided, but maybe I will go to the cherry blossom, because the big cherry blossom. Because two weeks ago, the cherry blossom season is the past. But after two weeks later, this season, it's a similar flower. We call it the big cherry blossom or double cherry blossom tree. It's a little different kind of a species tree. So maybe we will go to the city of Gyeongju. That is the oldest city in Korea. So yeah, we will go there, yeah, and have a small travel, yeah, with my family. Hmm, how about you? How about your plans on the weekend? Hmm.\n[Tutor] Uh, probably nothing decided yet, but maybe gardening this weekend.\n[Student] Gardening? Oh, I see. I understand. Okay.\n[Tutor] So, yeah, the writing wasn't clear here on your last page. Are you on page 29?\n[Student] Oh, yes, you're right. This is the, yeah, you have to go 29, 29, page of 29.\n[Tutor] So here we have this image. So did you want to read that one and two about conflict resolution?\n[Student] Okay, I see. That's okay. In the picture. Make sure to seek conflict resolution if it affects the quality of your work, such as coworkers who don't follow through. Nearly 10% of employees say that they have seen conflict lead to project failure. And second, it affects your ability to work, such as a positive work environment. 25% of employees have seen conflict lead to sickness, absence. Okay.\n[Tutor] So, this, yeah, any questions about these two facts?\n[Student] I need more analysis of this meaning. Could you explain?\n[Tutor] So that's the kind of their section. So it says it affects the quality of your work. So if a co-worker doesn't finish their work,\n[Student] Yes.\n[Tutor] Follow through, doesn't finish. That is their first.\n[Student] Right.\n[Tutor] Yeah, that is the first one. So a project might fail because of conflict. The co-worker who doesn't follow through.\n[Student] Nearby 10% employees say completely the project failed. So what is the difference between one and two? Number one and two.\n[Tutor] So two, it says some employees don't come to work or take a sick day because of the hostile work environment. So a bad work environment.\n[Student] I see. Okay. Just a moment. I understand more. I need more understanding.\n[Tutor] Go ahead.\n[Student] Oh, yes, I'm just, I understand, but I don't understand, I'm not making sure why divide one and two. Just and read that. It's just two points. Like, you know, how they list things.\n[Tutor] So this is one point and then number two is a second point. So it affects your quality and it affects your ability.\n[Student] The first thing is to connect to the quality of the work. And second is their ability to work. So first, if we don't have finished the work, a low quality, at that time, nearby 10% of employees say their project is failed. And if they don't have ability to work, at that time, in the meantime, they have been in conflict, sickness, or upset.\n[Tutor] And it's saying seek conflict resolution, so seek help if one happens or if two happens. So there are two reasons to seek conflict resolution.\n[Student] I see. I see. Maybe that is conflict, two kinds of the reason. The first is quality, and second is the ability of the employee, and their reaction is the difference, right?\n[Tutor] Well, there's no difference. There's just two reasons to seek conflict. So two reasons to get help.\n[Student] Two reasons. I see. Okay, I see. I almost understand.\n[Tutor] It's just two things that might happen.\n[Student] Yes. Okay.\n[Tutor] So have you ever had a project fail due to conflict?\n[Student] Oh, yes, of course. Yeah. When I work with the sales team, at that time, I... I do not... I'm not good at golf, but sometimes we have an appointment for a golf game with my client. At that time, I so hate to play the golf because that is the score game, so it is important to score. So maybe that is connected to the second sentence, ability to work, because at that time, I don't have our ability to the golf. So it is a little problem, but I just go. I just went because that is my job. So yeah.\n[Tutor] So having a project fail due to conflict would mean if you are in an argument with another co-worker.\n[Student] Oh, yes, we are humans, so we have different opinions. So sometimes we have arguments. And when I was more young, at that time, I'm more a fighter. Yeah, a fighter person. So sometimes we have so many arguments and yeah, sometimes we fight in our office.\n[Tutor] Yeah. Yeah. And has the project ever failed because of an argument or a conflict?\n[Student] That's not failed, but we understand just the two kinds of opinions, different opinions and then just make... yeah, just finish that work. Yeah. Actually, I don't...\n[Tutor] So you have not had...\n[Student] Yes, I don't have a... I don't remember the detail, but just remember just that work of a title.\n[Tutor] So you haven't had a project fail due to conflict?\n[Student] Yes, yes, sometimes.\n[Tutor] So you have had a project fail due to conflict?\n[Student] Not fail, just that is the different opinion. And we adjusted our opinion and then just go to the work and yeah, finish the work, finish the sale. Yeah.\n[Tutor] Okay, so this is about like a project failing because of an argument.\n[Student] So yeah, yeah, we don't, we have so many arguments and we have so many different opinions, but at that time we don't, in every case, we don't fail that work. Just we adjust that work and control their opinions, adjust their opinions, and then go ahead. So sometimes that is the good impact to the work, and sometimes it is failed to the work. Yeah, but in my case, I don't have a case to fail the different opinion.\n[Tutor] So have you or anybody you have known ever missed work due to conflict? Or anybody you have known ever missed work due to conflict?\n[Student] Yes, yes. Usually, we are auditors, and if we make the audit report, we have a due time, a limit time. Because first, if we make our audit report, we report the plan to the CEO, and that report, the plan report, is contained the limit day, so that report always has the limit and due date. So sometimes that is failed because we find some system, but sometimes you can't find the system and don't give the solution, so it is a little problem and and delay their making a report. Yeah, sometimes you have a death, uh, meet the problem.\n[Tutor] So does, do people take time off? Do they take a day off work because of conflict?\n[Student] Yes, yes, you're right. Because always the boss wants to just meet the deadline, but the team member always wants to find more and listen more and make more. So usually the boss and the employee fight the deadline. So the employee does not come to work. So they say, \"Oh, I'm sick. I can't come to work today.\" Oh, no, that is don't. They have a responsibility. So we are expert to the work. So yeah. Some, yeah, some newbies, it's possible because they are first work and they are so young and they don't have experience. So it's possible to just say sick or some don't go to the office. But usually we are expert and they guys just go and solve that problem in a period.\n[Tutor] So maybe newer employees might miss work because of conflict.\n[Student] Yes, because they don't have experience. Yes.\n[Tutor] And have you ever decided to let go of a conflict? Have you decided just to let go of the conflict? Number three. Have you ever? So that means if we have some conflict together, but just go to the work, right? But it means just to forget the conflict. So to ignore the conflict.\n[Student] Yeah, I think that is the great way because always everybody has a different point and different opinions. Not always, just sometimes. So, yeah, if we have arguments, some problem, and we just forget, forget that problem because we have the same goals of making a report or making a successful business. So sometimes that is a great solution to forget the problem and just go ahead. I don't know if that is the right answer to your question. Anyway.\n[Tutor] Yeah, so you think you should just let it go or forget the problem.\n[Student] Yeah, just go ahead and forget the problem.\n[Tutor] And what is your criteria? How do you decide that a conflict is just not worth it?\n[Student] Not every problem, but some things are not worth it to solve this problem because just we clear our goal, and sometimes we have arguments another goal, just just different issue and just way. So if we, if that goal and and that affects difference. At that time we just forgot and we think that is not worth it, their argument. Yeah. Wow, today is so hard. Answer is hard. Yes. It is a little hard to... I'm having trouble to make an answer today.\n[Tutor] Okay, anyway, go ahead. So we could do the three things. Did you learn any three things from this unit or from this chapter?\n[Student] Yes, maybe that's... that section is just divide the question and ask question, but they don't say some solution. So I don't learn any lesson. Just a section divide the question and just ask my experience. So, yes, I learn. So I don't have enough lesson from this section.\n[Tutor] Well, these are just, yeah, they are opinion questions.\n[Student] Yeah, yeah, you're right. You're right. Yes.\n[Tutor] Okay, so the sneak peek question. Does negotiating during a business proposal make you nervous?\n[Student] I love to negotiate because that is the kind of strategy. So, and it is the, I love to fight to my employee or my co-worker or my client because they need to set it and find something and just have a find a solution. So I love that process. So, yeah, so I don't nervous. Yeah, if I meet their, if I have a negotiation to their people, I enjoy that, the negotiation.\n[Tutor] Okay, so you have a negotiation strategy for negotiating.\n[Student] Yeah, so I love the negotiation. So sometimes if I visit the other country, travel other country, usually I love to go the traditional market and I have a negotiation with that people. That is so enjoyable for me. Yeah, so yeah, I love that.\n[Tutor] Okay, well, yeah, time is getting to be about time here. Yeah, any other questions you had about this page?\n[Student] Oh, no, thank you so much, teacher. Today's subject is a little hard, but your explanation is so good. Yeah, it's nice.\n[Tutor] Okay, well, I hope you have a great weekend. Goodbye.\n[Student] Have a nice weekend. Bye-bye.\n\n[AI 피드백]\n안녕하세요! 유창성과 정확성을 동시에 잡는 따뜻하고 실용적인 영어 코치입니다. 오늘 대화에서 보여주신 적극적인 참여와 깊이 있는 생각에 정말 감탄했습니다. 특히 어려운 주제였음에도 불구하고 자신의 경험을 연결하여 설명하려는 노력이 돋보였습니다.\n\n오늘 배운 표현과 문법을 잘 활용하시면 비즈니스 환경에서 더욱 자신감 있게 소통하실 수 있을 거예요. 함께 성장해 나가는 과정, 정말 기대됩니다!\n\n---\n\n**0. 📌 Topic**\nTopic: Discussing Conflict Resolution and Negotiation Strategies in the Workplace\n\n**1. 📊 오늘의 대화 요약 (Summary)**\n오늘 수업에서는 주말 계획에 대한 가벼운 대화로 시작하여, 직장 내 갈등 해결(Conflict Resolution)이 업무의 질과 직원의 업무 능력에 미치는 영향에 대해 심도 있게 토론했습니다. 학습자님의 실제 업무 경험과 연결하여 갈등 상황과 협상(Negotiation)에 대한 견해를 나누며 다양한 비즈니스 상황을 영어로 표현하는 연습을 했습니다.\n\n**2. 💬 유창성 업그레이드 (Fluency & Natural Flow)**\n의미는 통하지만 원어민이 들었을 때 조금 더 자연스럽게 들릴 수 있는 표현들을 살펴볼게요.\n\n*   **❌ 학습자 원문 (As Said):** \"the cherry blossom season is the past.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"The cherry blossom season has passed.\"\n    *   **💎 비즈니스 표현 (Professional):** \"The cherry blossom season has concluded.\"\n    *   **💡 코칭 포인트:** \"has passed\"나 \"has concluded\"는 끝난 사건을 묘사할 때 더 자연스럽습니다. \"is the past\"는 숙어를 문자 그대로 사용하는 것처럼 들릴 수 있습니다.\n\n*   **❌ 학습자 원문 (As Said):** \"I'm not making sure why divide one and two.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"I'm not sure why it's divided into two parts.\"\n    *   **💎 비즈니스 표현 (Professional):** \"I'm unclear on the rationale for dividing it into two distinct points.\"\n    *   **💡 코칭 포인트:** \"I'm not sure why\"는 혼란을 표현하는 일반적이고 직접적인 방법입니다. \"Making sure\"는 보통 무언가를 확인하는 것을 의미하며, 불확실성을 표현할 때는 잘 쓰이지 않습니다.\n\n*   **❌ 학습자 원문 (As Said):** \"I'm having trouble to make an answer today.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"I'm having trouble answering today.\"\n    *   **💎 비즈니스 표현 (Professional):** \"I'm finding it challenging to formulate a response today.\"\n    *   **💡 코칭 포인트:** \"having trouble\" 다음에는 동사의 -ing 형태(동명사)를 사용하는 것이 일반적입니다. \"To make an answer\"도 문법적으로 틀린 것은 아니지만, \"answering\"이 더 간결하고 흔하게 쓰입니다.\n\n**3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)**\n오늘 대화에서는 **관사(a/an/the)** 사용에 대한 오류가 반복적으로 나타났습니다. 명사 앞에 적절한 관사를 붙이는 연습을 해볼게요.\n\n| ❌ 학습자 원문 (As Said)                                      | ✅ 교정 예시 (Corrected)                                        |\n| :----------------------------------------------------------- | :------------------------------------------------------------- |\n| \"Because **the** big cherry blossom.\"                         | \"Because **of the** big cherry blossom.\" (혹은 \"Because **it's a** big cherry blossom.\") |\n| \"I need more analysis of this meaning.\"                      | \"I need more analysis of this meaning.\" (혹은 \"I need **some** analysis...\") |\n| \"if they don't have ability to work\"                         | \"if they don't have **the** ability to work\" (혹은 \"if they lack **the** ability to work\") |\n| \"Maybe that is conflict, two kinds of **the** reason.\"       | \"Maybe that is conflict, two kinds of reason**s**.\" (혹은 \"two reasons for conflict\") |\n| \"we are expert to the work.\"                                 | \"we are **experts at** the work.\" (혹은 \"we are **experts in** this field.\") |\n\n📌 **핵심 규칙:** 명사 앞에 관사(a/an/the)를 적절히 사용하거나, 셀 수 있는 명사는 단수일 때 'a/an'을, 복수일 때 's'를 붙여주세요.\n\n🔁 **따라 읽기:**\n🗣️ \"Because of the big cherry blossom, we're planning a trip.\"\n🗣️ \"I need more analysis of this meaning to fully understand it.\"\n🗣️ \"If they don't have the ability to work, it can cause problems.\"\n\n**4. 📗 어휘 확장 (Vocabulary Vault)**\n수업 중 등장했거나 비즈니스 환경에서 유용하게 쓰일 수 있는 단어들을 익혀볼까요?\n\n*   **resolution** /ˌrezəˈluːʃən/ (명사)\n    *   뜻: 해결, 해법; 결심\n    *   실전 예문: We need to find a swift **resolution** to this budget dispute. (이 예산 분쟁에 대한 신속한 해결책을 찾아야 합니다.)\n\n*   **follow through** /ˈfɑːloʊ θruː/ (동사구)\n    *   뜻: (약속, 계획 등을) 이행하다, 완수하다\n    *   실전 예문: It's crucial that all team members **follow through** on their commitments. (모든 팀원이 약속을 이행하는 것이 중요합니다.)\n\n*   **hostile** /ˈhɑːstl/ (형용사)\n    *   뜻: 적대적인, 비우호적인\n    *   실전 예문: A **hostile** work environment can significantly reduce employee morale and productivity. (적대적인 업무 환경은 직원 사기와 생산성을 크게 저하시킬 수 있습니다.)\n\n*   **criteria** /kraɪˈtɪriə/ (명사)\n    *   뜻: 기준, 척도 (criterion의 복수형)\n    *   실전 예문: What are the key **criteria** for evaluating the success of this project? (이 프로젝트의 성공을 평가하는 주요 기준은 무엇입니까?)\n\n*   **negotiate** /nɪˈɡoʊʃieɪt/ (동사)\n    *   뜻: 협상하다, 교섭하다\n    *   실전 예문: We are currently **negotiating** a new contract with our overseas partners. (우리는 현재 해외 파트너들과 새로운 계약을 협상 중입니다.)\n\n**5. 📝 실전 복습 챌린지 (Practice)**\n오늘 배운 표현과 문법을 활용하여 영작해 보세요.\n\n1.  **상황:** 지난주에 시작한 프로젝트가 아직 끝나지 않았습니다.\n    *   **영작:** (The project / last week / not yet / finish)\n    *   **모범 답안:** The project that started last week has not finished yet.\n\n2.  **상황:** 우리는 팀원들 간의 갈등을 해결하기 위한 명확한 기준이 필요합니다.\n    *   **영작:** (We need / clear criteria / resolve / conflict / among team members)\n    *   **모범 답안:** We need clear criteria to resolve conflicts among team members.\n\n3.  **상황:** 저는 항상 고객과 협상하는 과정을 즐깁니다. 왜냐하면 그것은 전략적인 사고를 요하는 일이기 때문입니다.\n    *   **영작:** (I always / enjoy / negotiate / with clients / because / it requires / strategic thinking)\n    *   **모범 답안:** I always enjoy negotiating with clients because it requires strategic thinking.\n\n**6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)**\n\n*   ✨ **Good Job:** \"I love to negotiate because that is the kind of strategy.\"\n    *   이 문장은 학습자님의 강점과 열정을 아주 잘 드러내 주었습니다. 'negotiate'라는 비즈니스 핵심 단어를 정확히 사용했고, 'kind of strategy'라는 표현으로 협상에 대한 본인의 긍정적인 시각을 명확하게 전달했습니다. 이처럼 자신의 의견을 자신감 있게 표현하는 모습이 정말 좋았습니다!\n\n*   🚀 **내일의 한 문장:** 다음 수업 시작 시 튜터에게 오늘 배운 표현을 활용하여 대화를 시작해 보세요.\n    \"I've been thinking about the importance of conflict resolution since our last class.\"\n    (지난 수업 이후로 갈등 해결의 중요성에 대해 계속 생각해 봤어요.)\n\n---\n\n**[성과 지표]**\n**유창성 점수:** 7.5/10점\n\n**근거:**\n학습자님은 대화의 흐름을 잘 이어가고, 자신의 생각을 구체적인 예시와 함께 설명하려는 노력이 돋보였습니다. 특히 어려운 주제에 대해서도 주저하지 않고 의견을 개진하는 자신감이 매우 긍정적이었습니다. 다만, 일부 문장에서 더 자연스러운 표현이나 정확한 문법(특히 관사 사용)이 보완된다면 유창성과 정확성을 동시에 크게 향상시킬 수 있을 것입니다.\n\n**다음 수업 '원포인트 액션 플랜':**\n다음 수업에서는 **\"관사(a/an/the)를 의식적으로 사용하기\"**에 집중해 주세요. 문장을 말하기 전에 명사 앞에 어떤 관사가 필요한지 한 번 더 생각하는 연습을 해보면 좋습니다.\n\n위 내용을 바탕으로:\n1. 먼저 오늘 수업에서 내가 틀렸거나 어색했던 표현을 하나 골라서, 관련된 상황을 영어로 질문해줘.\n2. 내가 영어로 대답하면, 자연스러운지 확인하고 더 나은 표현이 있으면 알려줘.\n3. 특히 \"반복 실수 패턴\"에서 지적된 부분을 집중적으로 연습시켜줘.\n4. 이런 식으로 오늘 배운 표현들을 하나씩 복습하자.\n5. 한국어 설명은 필요할 때만 간단히, 대화는 최대한 영어로 진행해줘.\n\n그럼 시작하자!";
+        function startReview(){navigator.clipboard.writeText(REVIEW_PROMPT).then(()=>{showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)}).catch(()=>{const t=document.createElement('textarea');t.value=REVIEW_PROMPT;document.body.appendChild(t);t.select();document.execCommand('copy');document.body.removeChild(t);showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)})}
+        function showToast(){const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500)}
+        function switchTab(n){document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',n==='feedback'?i===0:i===1));document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));document.getElementById('tab-'+n).classList.add('active')}
+    </script>
+</body>
+</html>
