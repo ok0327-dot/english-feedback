@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전화영어 복습 - 2026년 04월 27일</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Noto Sans KR',sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.75;min-height:100vh}
+        .header{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);border-bottom:1px solid rgba(255,255,255,.06);padding:48px 24px 40px;text-align:center}
+        .header-date{font-size:13px;color:#94a3b8;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+        .header h1{font-size:28px;font-weight:700;color:#f1f5f9;margin-bottom:16px}
+        .header-meta{display:flex;justify-content:center;gap:24px;font-size:14px;color:#64748b}
+        .header-meta span{display:flex;align-items:center;gap:6px}
+        .cta-section{text-align:center;padding:40px 24px}
+        .cta-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:linear-gradient(135deg,#38bdf8,#818cf8);color:#fff;font-size:16px;font-weight:600;font-family:'Noto Sans KR',sans-serif;border:none;border-radius:50px;cursor:pointer;transition:all .3s;text-decoration:none;box-shadow:0 4px 24px rgba(56,189,248,.25)}
+        .cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(56,189,248,.35)}
+        .cta-btn svg{width:20px;height:20px}
+        .cta-sub{margin-top:12px;font-size:13px;color:#64748b}
+        .toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#38bdf8;padding:14px 28px;border-radius:12px;font-size:14px;font-weight:500;border:1px solid rgba(56,189,248,.2);box-shadow:0 8px 32px rgba(0,0,0,.4);opacity:0;transition:all .4s cubic-bezier(.16,1,.3,1);z-index:1000}
+        .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+        .container{max-width:720px;margin:0 auto;padding:0 24px 80px}
+        .tabs{display:flex;gap:4px;background:#1a1a24;padding:4px;border-radius:12px;margin-bottom:32px}
+        .tab{flex:1;padding:12px;text-align:center;font-size:14px;font-weight:500;color:#64748b;background:0 0;border:none;border-radius:8px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all .2s}
+        .tab.active{background:#262636;color:#f1f5f9}
+        .tab-content{display:none}.tab-content.active{display:block}
+        .feedback h2{font-size:18px;font-weight:700;color:#f1f5f9;margin:36px 0 16px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.06)}
+        .feedback h2:first-child{margin-top:0}
+        .feedback p{margin:8px 0;color:#cbd5e1}
+        .feedback .item{padding:6px 0 6px 16px;border-left:2px solid #334155;margin:6px 0;color:#cbd5e1}
+        .feedback .numbered{padding:8px 0 8px 16px;color:#cbd5e1}
+        .feedback .numbered strong{color:#38bdf8}
+        .feedback strong{color:#f1f5f9}
+        .feedback code{background:#1e293b;padding:2px 8px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#38bdf8}
+        .feedback table{width:100%;border-collapse:collapse;margin:12px 0}
+        .feedback th,.feedback td{padding:10px 14px;text-align:left;border-bottom:1px solid #262636}
+        .feedback th{color:#94a3b8;font-weight:500;font-size:13px}
+        .feedback td{color:#cbd5e1}
+        .arrow{color:#38bdf8;font-weight:700}
+        .transcript{background:#1a1a24;border-radius:12px;padding:28px;font-size:14px;line-height:2;color:#94a3b8;white-space:pre-wrap;word-break:break-word;font-family:'JetBrains Mono','Noto Sans KR',monospace}
+        .transcript .tutor{color:#38bdf8}
+        .transcript .student{color:#a78bfa}
+        @media(max-width:640px){.header{padding:32px 16px}.header h1{font-size:22px}.cta-btn{padding:14px 28px;font-size:15px}.container{padding:0 16px 60px}}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-date">2026년 04월 27일</div>
+        <h1>📚 전화영어 복습</h1>
+        <div class="header-meta">
+            <span>⏱ 20분 3초</span>
+            <span>🎙 전화영어_025180304_20260427080024.m4a</span>
+        </div>
+    </div>
+    <div class="cta-section">
+        <button class="cta-btn" onclick="startReview()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Gemini에서 복습 대화 시작하기
+        </button>
+        <div class="cta-sub">클릭하면 프롬프트가 복사되고 Gemini가 열립니다</div>
+    </div>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('feedback')">📋 AI 피드백</button>
+            <button class="tab" onclick="switchTab('transcript')">🎙 수업 전사</button>
+        </div>
+        <div id="tab-feedback" class="tab-content active">
+            <div class="feedback"><p>안녕하세요, Joanna! 오늘도 활기찬 에너지로 대화를 이끌어주셔서 감사합니다. 특히 망고 이야기와 엘리베이터 피치에 대한 깊이 있는 통찰이 인상 깊었어요. 비즈니스 환경에서 필요한 유창성과 정확성을 동시에 잡는 따뜻하고 실용적인 피드백을 드릴게요.</p>
+<br>
+<br>
+<p><strong>0. 📌 Topic</strong></p>
+<p>Topic: Discussing effective communication strategies like elevator pitches and avoiding jargon.</p>
+<br>
+<p><strong>1. 📊 오늘의 대화 요약 (Summary)</strong></p>
+<p>오늘은 주말 일상에 대한 가벼운 대화로 시작하여, 망고와 관련된 흥미로운 문화적 차이를 나눴습니다. 이후 '엘리베이터 피치'의 개념과 효과적인 비즈니스 커뮤니케이션 전략에 대해 심도 있게 토론했으며, 특히 명확하고 간결한 메시지 전달의 중요성에 대해 의견을 교환했습니다.</p>
+<br>
+<p><strong>2. 💬 유창성 업그레이드 (Fluency & Natural Flow)</strong></p>
+<p>의미는 충분히 전달되었지만, 원어민들이 더 자연스럽게 사용하는 표현들을 익혀볼까요?</p>
+<br>
+<p>*   <strong>❌ 학습자 원문 (As Said):</strong> "And your business, your brand, and your business bigger? Better than past, right?"</p>
+<p>    *   <strong>✅ 자연스러운 표현 (Natural):</strong> "Is your business growing?"</p>
+<p>    *   <strong>💎 비즈니스 표현 (Professional):</strong> "Has your brand seen significant growth?"</p>
+<p>    *   <strong>💡 코칭 포인트:</strong> 'Bigger'도 이해는 되지만, 비즈니스의 성장을 표현할 때는 'grow'나 'expand' 같은 동사를 사용하는 것이 더 역동적이고 자연스럽습니다.</p>
+<br>
+<p>*   <strong>❌ 학습자 원문 (As Said):</strong> "Maybe your brand want to grow up."</p>
+<p>    *   <strong>✅ 자연스러운 표현 (Natural):</strong> "Perhaps your brand wants to grow."</p>
+<p>    *   <strong>💎 비즈니스 표현 (Professional):</strong> "It seems your brand is looking to expand."</p>
+<p>    *   <strong>💡 코칭 포인트:</strong> 'Grow up'은 주로 아이들이 성장할 때 사용합니다. 비즈니스에는 'grow'나 'expand'가 더 적절합니다. 또한 주어-동사 일치 규칙에 따라 'brand'(단수) 뒤에는 'wants'를 사용해야 합니다.</p>
+<br>
+<p>*   <strong>❌ 학습자 원문 (As Said):</strong> "And these days in Korea, it is so delicious, the mango."</p>
+<p>    *   <strong>✅ 자연스러운 표현 (Natural):</strong> "Mangoes are so delicious these days in Korea."</p>
+<p>    *   <strong>💎 비즈니스 표현 (Professional):</strong> "The mangoes in Korea are exceptionally delicious these days."</p>
+<p>    *   <strong>💡 코칭 포인트:</strong> 문장의 주어('mangoes')를 처음에 두는 것이 더 자연스럽습니다. 'it is [형용사], the [명사]' 구조는 음식에 대한 일반적인 진술에서는 덜 흔합니다.</p>
+<br>
+<p>*   <strong>❌ 학습자 원문 (As Said):</strong> "I bought a box of the mango and shared it with my friends, my family, and my home."</p>
+<p>    *   <strong>✅ 자연스러운 표현 (Natural):</strong> "I bought a box of mangoes and shared them with my friends and family at home."</p>
+<p>    *   <strong>💡 코칭 포인트:</strong> 'the mango' 대신 'mangoes' (복수형)를 사용하는 것이 더 자연스럽습니다. 또한 'and my home'보다는 'at home'을 사용하여 장소를 명확히 하는 것이 좋습니다.</p>
+<br>
+<p><strong>3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)</strong></p>
+<p>오늘 대화에서 Joanna님이 자주 혼동하는 문법 패턴 중 하나는 바로 <strong>관사(a/an/the)</strong> 사용이었습니다. 명사가 처음 언급되거나 일반적인 개념일 때는 부정관사(a/an)를, 이미 언급되었거나 특정 대상을 가리킬 때는 정관사(the)를 사용해야 합니다.</p>
+<br>
+<table>
+<tr><th>❌ 원문 (As Said)</th><th>✅ 교정 예시 (Corrected)</th></tr>
+<tr><td>I bought a box of <strong>the</strong> mango.</td><td>I bought a box of <strong>mangoes</strong>.</td></tr>
+<tr><td>some countries put in <strong>the</strong> salt.</td><td>some countries put in <strong>salt</strong>.</td></tr>
+<tr><td>get <strong>the</strong> information to travel</td><td>get <strong>information</strong> about travel</td></tr>
+<tr><td>make a plan, <strong>the</strong> travel plans.</td><td>make <strong>travel plans</strong>.</td></tr>
+<tr><td>The main product is <strong>the</strong> yogurt, right?</td><td>The main product is <strong>yogurt</strong>, right?</td></tr>
+<tr><td>The main customer usually is <strong>a</strong> foreigner, <strong>a</strong> traveler.</td><td>The main customers are usually <strong>foreigners</strong> or <strong>travelers</strong>.</td></tr>
+</table>
+<br>
+<p>*   <strong>📌 핵심 규칙:</strong> 일반적인 명사를 처음 언급하거나 셀 수 없는 명사를 지칭할 때는 'a/an' 또는 무관사(no article)를 사용하고, 특정 명사를 지칭할 때만 'the'를 사용합니다.</p>
+<br>
+<p>*   <strong>🔁 따라 읽기:</strong></p>
+<p>    🗣️ "I bought a box of mangoes."</p>
+<p>    🗣️ "Some countries put in salt."</p>
+<p>    🗣️ "We need to get information about travel."</p>
+<br>
+<p><strong>4. 📗 어휘 확장 (Vocabulary Vault)</strong></p>
+<p>오늘 수업에서 나왔거나 비즈니스 환경에서 유용하게 쓸 수 있는 단어들을 익혀볼까요?</p>
+<br>
+<p>*   <strong>vivid</strong> /ˈvɪvɪd/ (형용사)</p>
+<p>    *   뜻: 생생한, 선명한</p>
+<p>    *   실전 예문: The presentation used <strong>vivid</strong> graphics to illustrate the market trends.</p>
+<br>
+<p>*   <strong>concise</strong> /kənˈsaɪs/ (형용사)</p>
+<p>    *   뜻: 간결한, 명확한</p>
+<p>    *   실전 예문: Please keep your report <strong>concise</strong> and to the point.</p>
+<br>
+<p>*   <strong>jargon</strong> /ˈdʒɑːrɡən/ (명사)</p>
+<p>    *   뜻: 전문 용어, 특수 용어</p>
+<p>    *   실전 예문: Avoid using too much industry <strong>jargon</strong> when speaking to a general audience.</p>
+<br>
+<p>*   <strong>gauge</strong> /ɡeɪdʒ/ (동사)</p>
+<p>    *   뜻: 측정하다, 판단하다, 평가하다</p>
+<p>    *   실전 예문: We need to <strong>gauge</strong> the client's interest before proposing the full project.</p>
+<br>
+<p>*   <strong>franchise</strong> /ˈfrænˌtʃaɪz/ (명사)</p>
+<p>    *   뜻: 프랜차이즈, 가맹점</p>
+<p>    *   실전 예문: Investing in a well-established <strong>franchise</strong> can be a safer business venture.</p>
+<br>
+<p><strong>5. 📝 실전 복습 챌린지 (Practice)</strong></p>
+<p>오늘 배운 표현과 문법을 활용하여 영작해 보세요.</p>
+<br>
+<div class="numbered"><strong>1.</strong>  <strong>상황:</strong> 당신의 비즈니스가 최근 크게 성장하고 있는지 궁금합니다.</div>
+<p>    *   <strong>영작:</strong> (자연스러운 표현 활용)</p>
+<p>    *   <strong>모범 답안:</strong> Is your business growing significantly these days?</p>
+<br>
+<div class="numbered"><strong>2.</strong>  <strong>상황:</strong> 엘리베이터 피치는 짧고 간결해야 한다고 배웠습니다.</div>
+<p>    *   <strong>영작:</strong> (어휘 확장 단어 'concise' 활용)</p>
+<p>    *   <strong>모범 답안:</strong> An elevator pitch should be short and concise.</p>
+<br>
+<div class="numbered"><strong>3.</strong>  <strong>상황:</strong> 고객의 반응을 측정하기 위해 질문을 활용하는 것이 중요하다고 생각합니다.</div>
+<p>    *   <strong>영작:</strong> (어휘 확장 단어 'gauge' 활용, 관사 주의)</p>
+<p>    *   <strong>모범 답안:</strong> I think it's important to use a question to gauge customer reaction.</p>
+<br>
+<p><strong>6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)</strong></p>
+<br>
+<p>*   ✨ <strong>Good Job:</strong> "It's springtime, so the tree leaves have a beautiful color, the vivid green."</p>
+<p>    *   'vivid'라는 단어를 사용하여 봄의 생동감 넘치는 초록색을 아주 생생하게 묘사해주셨어요. 마치 눈앞에 펼쳐지는 듯한 아름다운 표현이었습니다!</p>
+<br>
+<p>*   🚀 <strong>내일의 한 문장:</strong> "I've been thinking about what we discussed regarding concise communication and avoiding jargon. It's truly applicable to my work."</p>
+<p>    *   (오늘 배운 'concise'와 'jargon'을 활용하여 다음 수업 시작 시 튜터에게 오늘 배운 내용에 대한 생각을 공유하며 대화를 시작해 보세요!)</p>
+<br>
+<br>
+<p><strong>[성과 지표]</strong></p>
+<p><strong>유창성 점수:</strong> 7/10점</p>
+<p><strong>근거:</strong> Joanna님은 망고 이야기, 엘리베이터 피치에 대한 자신의 경험과 생각을 막힘없이 이야기하며 대화를 풍성하게 이끌어갈 수 있는 능력이 탁월합니다. 어휘력도 풍부하여 'vivid'와 같은 고급 단어를 적절히 사용하기도 합니다. 다만, 몇몇 표현에서 한국어식 직역의 흔적이나 주어-동사 일치, 관사 사용 등 기본적인 문법 오류가 간헐적으로 나타나 유창성의 흐름을 아주 미세하게 방해하는 경우가 있었습니다. 하지만 이는 충분히 개선될 수 있는 부분입니다.</p>
+<br>
+<p><strong>다음 수업 '원포인트 액션 플랜':</strong></p>
+<p>다음 수업에서는 <strong>"관사(a/an/the) 사용"</strong>에 특히 신경 써서 말하는 연습을 해볼까요? 문장을 만들기 전에 이 명사가 특정 명사인지, 일반 명사인지, 셀 수 있는지 없는지를 한 번 더 생각하는 습관을 들이면 좋습니다. 예를 들어, "I bought a box of <strong>the</strong> mango" 대신 "I bought a box of <strong>mangoes</strong>"처럼요!</p></div>
+        </div>
+        <div id="tab-transcript" class="tab-content">
+            <div class="transcript"><span class="tutor">[Tutor]</span> Hello Joanna, good evening, happy Sunday.
+<span class="student">[Student]</span> Good morning Joey, how are you today?
+<span class="tutor">[Tutor]</span> Yeah, everything is good.
+<span class="student">[Student]</span> Yeah, it&#x27;s nice Monday. How was your day?
+<span class="tutor">[Tutor]</span> How was your weekend?
+<span class="student">[Student]</span> Yeah, it&#x27;s a beautiful weekend because these days are beautiful. It&#x27;s springtime, so the tree leaves have a beautiful color, the vivid green.
+<span class="tutor">[Tutor]</span> Oh, excellent use of vivid.
+<span class="student">[Student]</span> Yeah, on Sunday I just went for a walk near the park. It&#x27;s beautiful. Yeah, so everything is good. How was your weekend?
+<span class="tutor">[Tutor]</span> My weekend was very busy. So I worked at the market yesterday from 9:30 to 7 p.m.
+<span class="student">[Student]</span> 9:30, 7 p.m.
+<span class="tutor">[Tutor]</span> Yes.
+<span class="student">[Student]</span> Wow.
+<span class="tutor">[Tutor]</span> Yes.
+<span class="student">[Student]</span> It&#x27;s a long...
+<span class="tutor">[Tutor]</span> It was a very busy day, yes.
+<span class="student">[Student]</span> Yes. And your business, your brand, and your business bigger?
+<span class="student">[Student]</span> Better than past, right?
+<span class="tutor">[Tutor]</span> Yes, yes. It is growing nicely. People have a lot of good things to say about it. And yes, it is a lot of fun.
+<span class="student">[Student]</span> I see. So nice. Maybe your brand want to grow up.
+<span class="tutor">[Tutor]</span> To expand the business.
+<span class="student">[Student]</span> Ah, yes, I see. It&#x27;s so nice.
+<span class="tutor">[Tutor]</span> It is. It&#x27;s a nice project.
+<span class="student">[Student]</span> The main product is the yogurt, right?
+<span class="tutor">[Tutor]</span> You know, that&#x27;s a very hard question. It is one of our best-selling products.
+<span class="student">[Student]</span> Best-selling product. I see. I love yogurt.
+<span class="student">[Student]</span> And me too.
+<span class="student">[Student]</span> And these days in Korea, it is so delicious, the mango. We don&#x27;t produce the mango, but we import from Thailand, the mango. Before the rainy season, the mango is so delicious. So these days, I bought a box of the mango and shared it with my friends, my family, and my home. Yeah, it&#x27;s so nice. It&#x27;s so delicious in mango season.
+<span class="tutor">[Tutor]</span> I love mango.
+<span class="tutor">[Tutor]</span> It&#x27;s always mango season here.
+<span class="student">[Student]</span> Always.
+<span class="tutor">[Tutor]</span> Always, always. Because there are so many different kinds of mangoes, right? So there&#x27;s always one type of mango growing.
+<span class="tutor">[Tutor]</span> Here, a lot of people love green mango.
+<span class="student">[Student]</span> Green mango.
+<span class="tutor">[Tutor]</span> Green, yes. So it&#x27;s not sweet at all.
+<span class="student">[Student]</span> Yes, you&#x27;re right.
+<span class="tutor">[Tutor]</span> It&#x27;s crunchy and we eat it with salt.
+<span class="student">[Student]</span> Yes. And some countries put in the salt.
+<span class="student">[Student]</span> Yeah, in mango, green mango.
+<span class="tutor">[Tutor]</span> Exactly. So there&#x27;s a tree, a mango tree right outside my house, and there&#x27;s people all the time climbing in the mango tree to get the green mangoes.
+<span class="student">[Student]</span> That is a beautiful thing.
+<span class="tutor">[Tutor]</span> Yeah. It&#x27;s pretty funny.
+<span class="student">[Student]</span> Yeah, pretty funny.
+<span class="tutor">[Tutor]</span> Yeah.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="student">[Student]</span> Okay.
+<span class="tutor">[Tutor]</span> Should we take a look at our book?
+<span class="student">[Student]</span> Oh, yeah. No problem. Yeah.
+<span class="tutor">[Tutor]</span> Today we will start a new section.
+<span class="student">[Student]</span> I think so. Yes, yes. I think so. Case study.
+<span class="tutor">[Tutor]</span> And we are looking at a case study.
+<span class="student">[Student]</span> Yes, yes.
+<span class="tutor">[Tutor]</span> An elevator speech or an elevator pitch. Have you ever heard that expression before?
+<span class="student">[Student]</span> Yes, from the AI. The elevator. Okay. Yeah, that is to step up my level and step up the speech skill.
+<span class="tutor">[Tutor]</span> Yes. Have you ever had to do an elevator pitch?
+<span class="student">[Student]</span> I heard the elevator process. For example, some work starts the basic and steps up and steps up and proves the team member, the team, how can I say, the supervisor, and steps up the elevator to CEO, the proof process. So just I heard of that elevator. Is it similar? Elevator pitching.
+<span class="tutor">[Tutor]</span> An elevator pitch. Maybe a little bit different. So an elevator pitch is a presentation that is so short and concise that you are able to give it in the time that it takes you to go up to your office in the elevator.
+<span class="student">[Student]</span> Okay, yeah. Okay.
+<span class="tutor">[Tutor]</span> Right, so basically, how long does it take you in the elevator to get from the ground floor to your office?
+<span class="student">[Student]</span> Just 10 seconds, 20 seconds. It&#x27;s a little short.
+<span class="tutor">[Tutor]</span> Exactly, exactly. So an elevator pitch is supposed to be something that, let&#x27;s say, if you happen to be in the elevator with your boss&#x27;s boss&#x27;s boss, you can tell him what you need in that 30 seconds that it takes you to go up in the elevator.
+<span class="student">[Student]</span> I see. Understand. Yeah. 80%. Okay. Okay.
+<span class="tutor">[Tutor]</span> All right. Let&#x27;s take a look at the background.
+<span class="student">[Student]</span> Okay. I will read that.
+<span class="student">[Student]</span> Communicating while we&#x27;re in business means being able to explain things quickly and clearly. A good way to engage your audience is to start with an elevator speech, a short, engaging summary of your key points. The name comes from the idea that if a short conversation in an elevator is interesting enough, the listener will find a way to continue it after the door opens. This strategy can work well for introductions, presentations, and making small talk.
+<span class="student">[Student]</span> Okay, I see.
+<span class="student">[Student]</span> Maybe I thought the keyword is &quot;engaging summary of your key points.&quot;
+<span class="tutor">[Tutor]</span> Exactly.
+<span class="student">[Student]</span> Okay, I see.
+<span class="tutor">[Tutor]</span> Exactly.
+<span class="student">[Student]</span> I understand your background.
+<span class="tutor">[Tutor]</span> Okay. Yes, let&#x27;s keep going with the tips.
+<span class="student">[Student]</span> Okay.
+<span class="tutor">[Tutor]</span> Or with the second paragraph.
+<span class="student">[Student]</span> Okay, I see.
+<span class="student">[Student]</span> You know how most business people use PowerPoint, but few of them use it well? Well, bad PowerPoint can cause all kinds of problems. Deals that don&#x27;t close, good ideas that get ignored, time that gets wasted making unattractive PowerPoint. My company teaches business to use PowerPoint to their advantage. To close deals, draw attention to great ideas, and use time on more important projects.
+<span class="student">[Student]</span> I see.
+<span class="tutor">[Tutor]</span> Do you agree with the statement that bad PowerPoint can cause problems?
+<span class="student">[Student]</span> Yes, I agree with that. I totally agree with that. I agree with that. I am a business teacher. I agree. I agree with that. I agree with that. I agree with your opinion. Okay. Yeah. These days, I developed an application and used the AI. And I thought that is the first time I developed an application. So first I started with my needs, but during that process, I added everything because that application made that a little not efficient application, just adding every ability. So that is not good. Just that many developers have a problem. It is similar to speech. Sometimes we have to deliver a message through speech, and we clarify that message. But if we made the PPT, PowerPoint, at that time, just we add everything. So our message is not clear.
+<span class="tutor">[Tutor]</span> Right. Yeah.
+<span class="student">[Student]</span> So usually if we made some message, at that time, just we consider to clarify our message, not adding too many things. Just clarified and made it clearly. Yeah, I agree totally.
+<span class="tutor">[Tutor]</span> Okay, excellent explanation. Thank you.
+<span class="student">[Student]</span> Oh, yeah, no problem.
+<span class="tutor">[Tutor]</span> Now let&#x27;s take a look at the tips for a great elevator pitch.
+<span class="student">[Student]</span> Just the next page, right? Just the tips 1, 2, and 3.
+<span class="tutor">[Tutor]</span> 3?
+<span class="student">[Student]</span> Okay. Keep it short. Ah, that is tips. I see. I agree that. The second, make it easy to understand by using everyday language. Make it easy. Make it easy to understand by using everyday language. Don&#x27;t assume the listener understands the industry jargon.
+<span class="student">[Student]</span> Jargon? Okay.
+<span class="tutor">[Tutor]</span> Jargon is the language that we use specifically in your industry and that people might not understand, like abbreviations or words that are very specific to your business.
+<span class="student">[Student]</span> I see. The expert language, right? Expert, some part of the specific language, some specific part. Hmm. I see. Make it easy to understand, use everyday language.
+<span class="student">[Student]</span> Don&#x27;t assume the listener understands the industry jargon.
+<span class="student">[Student]</span> Teacher, could you explain more the second tip?
+<span class="tutor">[Tutor]</span> Don&#x27;t... okay, so make it easy to understand. So instead of using words that are specific to your industry, just say exactly what you mean. So I&#x27;m trying to solve your problem today by making it easier to order the parts that we need.
+<span class="student">[Student]</span> So that means if we use the expert language, at that time, I&#x27;m, meantime, I&#x27;m just explaining that word. For example, if I use the MP, the manufacturer price, at the time, we just use the MP, but if you explain that situation, we give some explanation to the MP, right?
+<span class="tutor">[Tutor]</span> Exactly. So instead of using MP, use the actual words, right? So this way, it&#x27;s easy for the other person to understand what you&#x27;re saying. And exactly what you were saying earlier, to not have your message get lost in all of these words that they don&#x27;t understand.
+<span class="student">[Student]</span> I see. Because they work in another field, so they don&#x27;t understand the detailed language in our field.
+<span class="tutor">[Tutor]</span> Exactly.
+<span class="student">[Student]</span> Okay, good. Good tips.
+<span class="student">[Student]</span> Okay, the third tip, I will read that. Utilize a question to gauge attention. Utilize a question to gauge attention.
+<span class="tutor">[Tutor]</span> See, these are words that are a little bit too difficult. So I would say I would change that into &quot;use a question to get people&#x27;s attention.&quot;
+<span class="student">[Student]</span> Have you ever purchased a computer online? Utilize, gauge, attention. Maybe that is to pull in some information used through Patreon.
+<span class="tutor">[Tutor]</span> Exactly.
+<span class="student">[Student]</span> Yes, I see. Everything is good tips for a nice speech, elevator speech. And these days we talk to the AI. At that time, we clarify the order. Yeah, it is similar. Keeping it short, yes, and utilize the attention. Yeah. Okay. Okay, that&#x27;s good.
+<span class="tutor">[Tutor]</span> Okay. Now let&#x27;s move on to the next page.
+<span class="student">[Student]</span> Okay. The next page. Unit 1, Professional Communicator. Task. I&#x27;ll read that.
+<span class="student">[Student]</span> Imagine you are a representative from a coffee chain attending a conference for prospective franchise investors. You will meet a lot of people and need to be able to explain your company quickly and in an interesting way. Develop an elevator speech to break the ice with the people that you meet and demonstrate why they should invest in your franchise.
+<span class="student">[Student]</span> Okay, I see. So maybe we have time to do the first one about your company.
+<span class="student">[Student]</span> Oh yes, about my company. Oh yes, just explain the imagined situation.
+<span class="tutor">[Tutor]</span> Yes, exactly.
+<span class="student">[Student]</span> My coffee shop model is the library cafe, the language cafe. So that coffee shop, the customer usually, the main customer usually is a foreigner, a traveler. So, if they travel in Korea, they get the information to travel in this coffee shop, and they share, and they have relationships in this coffee shop. So if you come to this coffee shop, you get the information to travel and you make a plan, the travel plans. So that concept is so nice. So if I have time, I give some explanation, but time is only left one minute. So next time.
+<span class="tutor">[Tutor]</span> Exactly. And the whole pitch has to be 60 seconds. But that was an excellent start. And I love the idea for the coffee shop where people get travel information. That&#x27;s wonderful.
+<span class="student">[Student]</span> Yeah, that&#x27;s wonderful. Thanks so much, Teacher.
+<span class="tutor">[Tutor]</span> Thank you for your time this morning.
+<span class="student">[Student]</span> Yes, this morning.
+<span class="tutor">[Tutor]</span> And I will talk to you again tomorrow.
+<span class="student">[Student]</span> Okay. Have a beautiful Sunday night.
+<span class="tutor">[Tutor]</span> Have a beautiful Sunday night. Bye-bye.
+<span class="student">[Student]</span> Bye, Joey.</div>
+        </div>
+    </div>
+    <div class="toast" id="toast">✅ 프롬프트가 복사되었습니다!</div>
+    <script>
+        const REVIEW_PROMPT="너는 나의 영어 회화 복습 파트너야. 오늘 내 전화영어 수업 내용을 기반으로 대화하면서 복습을 도와줘.\n\n[오늘 수업 전사 내용]\n[Tutor] Hello Joanna, good evening, happy Sunday.\n[Student] Good morning Joey, how are you today?\n[Tutor] Yeah, everything is good.\n[Student] Yeah, it's nice Monday. How was your day?\n[Tutor] How was your weekend?\n[Student] Yeah, it's a beautiful weekend because these days are beautiful. It's springtime, so the tree leaves have a beautiful color, the vivid green.\n[Tutor] Oh, excellent use of vivid.\n[Student] Yeah, on Sunday I just went for a walk near the park. It's beautiful. Yeah, so everything is good. How was your weekend?\n[Tutor] My weekend was very busy. So I worked at the market yesterday from 9:30 to 7 p.m.\n[Student] 9:30, 7 p.m.\n[Tutor] Yes.\n[Student] Wow.\n[Tutor] Yes.\n[Student] It's a long...\n[Tutor] It was a very busy day, yes.\n[Student] Yes. And your business, your brand, and your business bigger?\n[Student] Better than past, right?\n[Tutor] Yes, yes. It is growing nicely. People have a lot of good things to say about it. And yes, it is a lot of fun.\n[Student] I see. So nice. Maybe your brand want to grow up.\n[Tutor] To expand the business.\n[Student] Ah, yes, I see. It's so nice.\n[Tutor] It is. It's a nice project.\n[Student] The main product is the yogurt, right?\n[Tutor] You know, that's a very hard question. It is one of our best-selling products.\n[Student] Best-selling product. I see. I love yogurt.\n[Student] And me too.\n[Student] And these days in Korea, it is so delicious, the mango. We don't produce the mango, but we import from Thailand, the mango. Before the rainy season, the mango is so delicious. So these days, I bought a box of the mango and shared it with my friends, my family, and my home. Yeah, it's so nice. It's so delicious in mango season.\n[Tutor] I love mango.\n[Tutor] It's always mango season here.\n[Student] Always.\n[Tutor] Always, always. Because there are so many different kinds of mangoes, right? So there's always one type of mango growing.\n[Tutor] Here, a lot of people love green mango.\n[Student] Green mango.\n[Tutor] Green, yes. So it's not sweet at all.\n[Student] Yes, you're right.\n[Tutor] It's crunchy and we eat it with salt.\n[Student] Yes. And some countries put in the salt.\n[Student] Yeah, in mango, green mango.\n[Tutor] Exactly. So there's a tree, a mango tree right outside my house, and there's people all the time climbing in the mango tree to get the green mangoes.\n[Student] That is a beautiful thing.\n[Tutor] Yeah. It's pretty funny.\n[Student] Yeah, pretty funny.\n[Tutor] Yeah.\n[Tutor] Okay.\n[Student] Okay.\n[Tutor] Should we take a look at our book?\n[Student] Oh, yeah. No problem. Yeah.\n[Tutor] Today we will start a new section.\n[Student] I think so. Yes, yes. I think so. Case study.\n[Tutor] And we are looking at a case study.\n[Student] Yes, yes.\n[Tutor] An elevator speech or an elevator pitch. Have you ever heard that expression before?\n[Student] Yes, from the AI. The elevator. Okay. Yeah, that is to step up my level and step up the speech skill.\n[Tutor] Yes. Have you ever had to do an elevator pitch?\n[Student] I heard the elevator process. For example, some work starts the basic and steps up and steps up and proves the team member, the team, how can I say, the supervisor, and steps up the elevator to CEO, the proof process. So just I heard of that elevator. Is it similar? Elevator pitching.\n[Tutor] An elevator pitch. Maybe a little bit different. So an elevator pitch is a presentation that is so short and concise that you are able to give it in the time that it takes you to go up to your office in the elevator.\n[Student] Okay, yeah. Okay.\n[Tutor] Right, so basically, how long does it take you in the elevator to get from the ground floor to your office?\n[Student] Just 10 seconds, 20 seconds. It's a little short.\n[Tutor] Exactly, exactly. So an elevator pitch is supposed to be something that, let's say, if you happen to be in the elevator with your boss's boss's boss, you can tell him what you need in that 30 seconds that it takes you to go up in the elevator.\n[Student] I see. Understand. Yeah. 80%. Okay. Okay.\n[Tutor] All right. Let's take a look at the background.\n[Student] Okay. I will read that.\n[Student] Communicating while we're in business means being able to explain things quickly and clearly. A good way to engage your audience is to start with an elevator speech, a short, engaging summary of your key points. The name comes from the idea that if a short conversation in an elevator is interesting enough, the listener will find a way to continue it after the door opens. This strategy can work well for introductions, presentations, and making small talk.\n[Student] Okay, I see.\n[Student] Maybe I thought the keyword is \"engaging summary of your key points.\"\n[Tutor] Exactly.\n[Student] Okay, I see.\n[Tutor] Exactly.\n[Student] I understand your background.\n[Tutor] Okay. Yes, let's keep going with the tips.\n[Student] Okay.\n[Tutor] Or with the second paragraph.\n[Student] Okay, I see.\n[Student] You know how most business people use PowerPoint, but few of them use it well? Well, bad PowerPoint can cause all kinds of problems. Deals that don't close, good ideas that get ignored, time that gets wasted making unattractive PowerPoint. My company teaches business to use PowerPoint to their advantage. To close deals, draw attention to great ideas, and use time on more important projects.\n[Student] I see.\n[Tutor] Do you agree with the statement that bad PowerPoint can cause problems?\n[Student] Yes, I agree with that. I totally agree with that. I agree with that. I am a business teacher. I agree. I agree with that. I agree with that. I agree with your opinion. Okay. Yeah. These days, I developed an application and used the AI. And I thought that is the first time I developed an application. So first I started with my needs, but during that process, I added everything because that application made that a little not efficient application, just adding every ability. So that is not good. Just that many developers have a problem. It is similar to speech. Sometimes we have to deliver a message through speech, and we clarify that message. But if we made the PPT, PowerPoint, at that time, just we add everything. So our message is not clear.\n[Tutor] Right. Yeah.\n[Student] So usually if we made some message, at that time, just we consider to clarify our message, not adding too many things. Just clarified and made it clearly. Yeah, I agree totally.\n[Tutor] Okay, excellent explanation. Thank you.\n[Student] Oh, yeah, no problem.\n[Tutor] Now let's take a look at the tips for a great elevator pitch.\n[Student] Just the next page, right? Just the tips 1, 2, and 3.\n[Tutor] 3?\n[Student] Okay. Keep it short. Ah, that is tips. I see. I agree that. The second, make it easy to understand by using everyday language. Make it easy. Make it easy to understand by using everyday language. Don't assume the listener understands the industry jargon.\n[Student] Jargon? Okay.\n[Tutor] Jargon is the language that we use specifically in your industry and that people might not understand, like abbreviations or words that are very specific to your business.\n[Student] I see. The expert language, right? Expert, some part of the specific language, some specific part. Hmm. I see. Make it easy to understand, use everyday language.\n[Student] Don't assume the listener understands the industry jargon.\n[Student] Teacher, could you explain more the second tip?\n[Tutor] Don't... okay, so make it easy to understand. So instead of using words that are specific to your industry, just say exactly what you mean. So I'm trying to solve your problem today by making it easier to order the parts that we need.\n[Student] So that means if we use the expert language, at that time, I'm, meantime, I'm just explaining that word. For example, if I use the MP, the manufacturer price, at the time, we just use the MP, but if you explain that situation, we give some explanation to the MP, right?\n[Tutor] Exactly. So instead of using MP, use the actual words, right? So this way, it's easy for the other person to understand what you're saying. And exactly what you were saying earlier, to not have your message get lost in all of these words that they don't understand.\n[Student] I see. Because they work in another field, so they don't understand the detailed language in our field.\n[Tutor] Exactly.\n[Student] Okay, good. Good tips.\n[Student] Okay, the third tip, I will read that. Utilize a question to gauge attention. Utilize a question to gauge attention.\n[Tutor] See, these are words that are a little bit too difficult. So I would say I would change that into \"use a question to get people's attention.\"\n[Student] Have you ever purchased a computer online? Utilize, gauge, attention. Maybe that is to pull in some information used through Patreon.\n[Tutor] Exactly.\n[Student] Yes, I see. Everything is good tips for a nice speech, elevator speech. And these days we talk to the AI. At that time, we clarify the order. Yeah, it is similar. Keeping it short, yes, and utilize the attention. Yeah. Okay. Okay, that's good.\n[Tutor] Okay. Now let's move on to the next page.\n[Student] Okay. The next page. Unit 1, Professional Communicator. Task. I'll read that.\n[Student] Imagine you are a representative from a coffee chain attending a conference for prospective franchise investors. You will meet a lot of people and need to be able to explain your company quickly and in an interesting way. Develop an elevator speech to break the ice with the people that you meet and demonstrate why they should invest in your franchise.\n[Student] Okay, I see. So maybe we have time to do the first one about your company.\n[Student] Oh yes, about my company. Oh yes, just explain the imagined situation.\n[Tutor] Yes, exactly.\n[Student] My coffee shop model is the library cafe, the language cafe. So that coffee shop, the customer usually, the main customer usually is a foreigner, a traveler. So, if they travel in Korea, they get the information to travel in this coffee shop, and they share, and they have relationships in this coffee shop. So if you come to this coffee shop, you get the information to travel and you make a plan, the travel plans. So that concept is so nice. So if I have time, I give some explanation, but time is only left one minute. So next time.\n[Tutor] Exactly. And the whole pitch has to be 60 seconds. But that was an excellent start. And I love the idea for the coffee shop where people get travel information. That's wonderful.\n[Student] Yeah, that's wonderful. Thanks so much, Teacher.\n[Tutor] Thank you for your time this morning.\n[Student] Yes, this morning.\n[Tutor] And I will talk to you again tomorrow.\n[Student] Okay. Have a beautiful Sunday night.\n[Tutor] Have a beautiful Sunday night. Bye-bye.\n[Student] Bye, Joey.\n\n[AI 피드백]\n안녕하세요, Joanna! 오늘도 활기찬 에너지로 대화를 이끌어주셔서 감사합니다. 특히 망고 이야기와 엘리베이터 피치에 대한 깊이 있는 통찰이 인상 깊었어요. 비즈니스 환경에서 필요한 유창성과 정확성을 동시에 잡는 따뜻하고 실용적인 피드백을 드릴게요.\n\n---\n\n**0. 📌 Topic**\nTopic: Discussing effective communication strategies like elevator pitches and avoiding jargon.\n\n**1. 📊 오늘의 대화 요약 (Summary)**\n오늘은 주말 일상에 대한 가벼운 대화로 시작하여, 망고와 관련된 흥미로운 문화적 차이를 나눴습니다. 이후 '엘리베이터 피치'의 개념과 효과적인 비즈니스 커뮤니케이션 전략에 대해 심도 있게 토론했으며, 특히 명확하고 간결한 메시지 전달의 중요성에 대해 의견을 교환했습니다.\n\n**2. 💬 유창성 업그레이드 (Fluency & Natural Flow)**\n의미는 충분히 전달되었지만, 원어민들이 더 자연스럽게 사용하는 표현들을 익혀볼까요?\n\n*   **❌ 학습자 원문 (As Said):** \"And your business, your brand, and your business bigger? Better than past, right?\"\n    *   **✅ 자연스러운 표현 (Natural):** \"Is your business growing?\"\n    *   **💎 비즈니스 표현 (Professional):** \"Has your brand seen significant growth?\"\n    *   **💡 코칭 포인트:** 'Bigger'도 이해는 되지만, 비즈니스의 성장을 표현할 때는 'grow'나 'expand' 같은 동사를 사용하는 것이 더 역동적이고 자연스럽습니다.\n\n*   **❌ 학습자 원문 (As Said):** \"Maybe your brand want to grow up.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"Perhaps your brand wants to grow.\"\n    *   **💎 비즈니스 표현 (Professional):** \"It seems your brand is looking to expand.\"\n    *   **💡 코칭 포인트:** 'Grow up'은 주로 아이들이 성장할 때 사용합니다. 비즈니스에는 'grow'나 'expand'가 더 적절합니다. 또한 주어-동사 일치 규칙에 따라 'brand'(단수) 뒤에는 'wants'를 사용해야 합니다.\n\n*   **❌ 학습자 원문 (As Said):** \"And these days in Korea, it is so delicious, the mango.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"Mangoes are so delicious these days in Korea.\"\n    *   **💎 비즈니스 표현 (Professional):** \"The mangoes in Korea are exceptionally delicious these days.\"\n    *   **💡 코칭 포인트:** 문장의 주어('mangoes')를 처음에 두는 것이 더 자연스럽습니다. 'it is [형용사], the [명사]' 구조는 음식에 대한 일반적인 진술에서는 덜 흔합니다.\n\n*   **❌ 학습자 원문 (As Said):** \"I bought a box of the mango and shared it with my friends, my family, and my home.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"I bought a box of mangoes and shared them with my friends and family at home.\"\n    *   **💡 코칭 포인트:** 'the mango' 대신 'mangoes' (복수형)를 사용하는 것이 더 자연스럽습니다. 또한 'and my home'보다는 'at home'을 사용하여 장소를 명확히 하는 것이 좋습니다.\n\n**3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)**\n오늘 대화에서 Joanna님이 자주 혼동하는 문법 패턴 중 하나는 바로 **관사(a/an/the)** 사용이었습니다. 명사가 처음 언급되거나 일반적인 개념일 때는 부정관사(a/an)를, 이미 언급되었거나 특정 대상을 가리킬 때는 정관사(the)를 사용해야 합니다.\n\n| ❌ 원문 (As Said)                                   | ✅ 교정 예시 (Corrected)                                |\n| :-------------------------------------------------- | :------------------------------------------------------ |\n| I bought a box of **the** mango.                    | I bought a box of **mangoes**.                          |\n| some countries put in **the** salt.                 | some countries put in **salt**.                         |\n| get **the** information to travel                   | get **information** about travel                        |\n| make a plan, **the** travel plans.                  | make **travel plans**.                                  |\n| The main product is **the** yogurt, right?          | The main product is **yogurt**, right?                  |\n| The main customer usually is **a** foreigner, **a** traveler. | The main customers are usually **foreigners** or **travelers**. |\n\n*   **📌 핵심 규칙:** 일반적인 명사를 처음 언급하거나 셀 수 없는 명사를 지칭할 때는 'a/an' 또는 무관사(no article)를 사용하고, 특정 명사를 지칭할 때만 'the'를 사용합니다.\n\n*   **🔁 따라 읽기:**\n    🗣️ \"I bought a box of mangoes.\"\n    🗣️ \"Some countries put in salt.\"\n    🗣️ \"We need to get information about travel.\"\n\n**4. 📗 어휘 확장 (Vocabulary Vault)**\n오늘 수업에서 나왔거나 비즈니스 환경에서 유용하게 쓸 수 있는 단어들을 익혀볼까요?\n\n*   **vivid** /ˈvɪvɪd/ (형용사)\n    *   뜻: 생생한, 선명한\n    *   실전 예문: The presentation used **vivid** graphics to illustrate the market trends.\n\n*   **concise** /kənˈsaɪs/ (형용사)\n    *   뜻: 간결한, 명확한\n    *   실전 예문: Please keep your report **concise** and to the point.\n\n*   **jargon** /ˈdʒɑːrɡən/ (명사)\n    *   뜻: 전문 용어, 특수 용어\n    *   실전 예문: Avoid using too much industry **jargon** when speaking to a general audience.\n\n*   **gauge** /ɡeɪdʒ/ (동사)\n    *   뜻: 측정하다, 판단하다, 평가하다\n    *   실전 예문: We need to **gauge** the client's interest before proposing the full project.\n\n*   **franchise** /ˈfrænˌtʃaɪz/ (명사)\n    *   뜻: 프랜차이즈, 가맹점\n    *   실전 예문: Investing in a well-established **franchise** can be a safer business venture.\n\n**5. 📝 실전 복습 챌린지 (Practice)**\n오늘 배운 표현과 문법을 활용하여 영작해 보세요.\n\n1.  **상황:** 당신의 비즈니스가 최근 크게 성장하고 있는지 궁금합니다.\n    *   **영작:** (자연스러운 표현 활용)\n    *   **모범 답안:** Is your business growing significantly these days?\n\n2.  **상황:** 엘리베이터 피치는 짧고 간결해야 한다고 배웠습니다.\n    *   **영작:** (어휘 확장 단어 'concise' 활용)\n    *   **모범 답안:** An elevator pitch should be short and concise.\n\n3.  **상황:** 고객의 반응을 측정하기 위해 질문을 활용하는 것이 중요하다고 생각합니다.\n    *   **영작:** (어휘 확장 단어 'gauge' 활용, 관사 주의)\n    *   **모범 답안:** I think it's important to use a question to gauge customer reaction.\n\n**6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)**\n\n*   ✨ **Good Job:** \"It's springtime, so the tree leaves have a beautiful color, the vivid green.\"\n    *   'vivid'라는 단어를 사용하여 봄의 생동감 넘치는 초록색을 아주 생생하게 묘사해주셨어요. 마치 눈앞에 펼쳐지는 듯한 아름다운 표현이었습니다!\n\n*   🚀 **내일의 한 문장:** \"I've been thinking about what we discussed regarding concise communication and avoiding jargon. It's truly applicable to my work.\"\n    *   (오늘 배운 'concise'와 'jargon'을 활용하여 다음 수업 시작 시 튜터에게 오늘 배운 내용에 대한 생각을 공유하며 대화를 시작해 보세요!)\n\n---\n\n**[성과 지표]**\n**유창성 점수:** 7/10점\n**근거:** Joanna님은 망고 이야기, 엘리베이터 피치에 대한 자신의 경험과 생각을 막힘없이 이야기하며 대화를 풍성하게 이끌어갈 수 있는 능력이 탁월합니다. 어휘력도 풍부하여 'vivid'와 같은 고급 단어를 적절히 사용하기도 합니다. 다만, 몇몇 표현에서 한국어식 직역의 흔적이나 주어-동사 일치, 관사 사용 등 기본적인 문법 오류가 간헐적으로 나타나 유창성의 흐름을 아주 미세하게 방해하는 경우가 있었습니다. 하지만 이는 충분히 개선될 수 있는 부분입니다.\n\n**다음 수업 '원포인트 액션 플랜':**\n다음 수업에서는 **\"관사(a/an/the) 사용\"**에 특히 신경 써서 말하는 연습을 해볼까요? 문장을 만들기 전에 이 명사가 특정 명사인지, 일반 명사인지, 셀 수 있는지 없는지를 한 번 더 생각하는 습관을 들이면 좋습니다. 예를 들어, \"I bought a box of **the** mango\" 대신 \"I bought a box of **mangoes**\"처럼요!\n\n위 내용을 바탕으로:\n1. 먼저 오늘 수업에서 내가 틀렸거나 어색했던 표현을 하나 골라서, 관련된 상황을 영어로 질문해줘.\n2. 내가 영어로 대답하면, 자연스러운지 확인하고 더 나은 표현이 있으면 알려줘.\n3. 특히 \"반복 실수 패턴\"에서 지적된 부분을 집중적으로 연습시켜줘.\n4. 이런 식으로 오늘 배운 표현들을 하나씩 복습하자.\n5. 한국어 설명은 필요할 때만 간단히, 대화는 최대한 영어로 진행해줘.\n\n그럼 시작하자!";
+        function startReview(){navigator.clipboard.writeText(REVIEW_PROMPT).then(()=>{showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)}).catch(()=>{const t=document.createElement('textarea');t.value=REVIEW_PROMPT;document.body.appendChild(t);t.select();document.execCommand('copy');document.body.removeChild(t);showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)})}
+        function showToast(){const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500)}
+        function switchTab(n){document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',n==='feedback'?i===0:i===1));document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));document.getElementById('tab-'+n).classList.add('active')}
+    </script>
+</body>
+</html>
