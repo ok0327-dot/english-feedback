@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전화영어 복습 - 2026년 04월 28일</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Noto Sans KR',sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.75;min-height:100vh}
+        .header{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);border-bottom:1px solid rgba(255,255,255,.06);padding:48px 24px 40px;text-align:center}
+        .header-date{font-size:13px;color:#94a3b8;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+        .header h1{font-size:28px;font-weight:700;color:#f1f5f9;margin-bottom:16px}
+        .header-meta{display:flex;justify-content:center;gap:24px;font-size:14px;color:#64748b}
+        .header-meta span{display:flex;align-items:center;gap:6px}
+        .cta-section{text-align:center;padding:40px 24px}
+        .cta-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:linear-gradient(135deg,#38bdf8,#818cf8);color:#fff;font-size:16px;font-weight:600;font-family:'Noto Sans KR',sans-serif;border:none;border-radius:50px;cursor:pointer;transition:all .3s;text-decoration:none;box-shadow:0 4px 24px rgba(56,189,248,.25)}
+        .cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(56,189,248,.35)}
+        .cta-btn svg{width:20px;height:20px}
+        .cta-sub{margin-top:12px;font-size:13px;color:#64748b}
+        .toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#38bdf8;padding:14px 28px;border-radius:12px;font-size:14px;font-weight:500;border:1px solid rgba(56,189,248,.2);box-shadow:0 8px 32px rgba(0,0,0,.4);opacity:0;transition:all .4s cubic-bezier(.16,1,.3,1);z-index:1000}
+        .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+        .container{max-width:720px;margin:0 auto;padding:0 24px 80px}
+        .tabs{display:flex;gap:4px;background:#1a1a24;padding:4px;border-radius:12px;margin-bottom:32px}
+        .tab{flex:1;padding:12px;text-align:center;font-size:14px;font-weight:500;color:#64748b;background:0 0;border:none;border-radius:8px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all .2s}
+        .tab.active{background:#262636;color:#f1f5f9}
+        .tab-content{display:none}.tab-content.active{display:block}
+        .feedback h2{font-size:18px;font-weight:700;color:#f1f5f9;margin:36px 0 16px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.06)}
+        .feedback h2:first-child{margin-top:0}
+        .feedback p{margin:8px 0;color:#cbd5e1}
+        .feedback .item{padding:6px 0 6px 16px;border-left:2px solid #334155;margin:6px 0;color:#cbd5e1}
+        .feedback .numbered{padding:8px 0 8px 16px;color:#cbd5e1}
+        .feedback .numbered strong{color:#38bdf8}
+        .feedback strong{color:#f1f5f9}
+        .feedback code{background:#1e293b;padding:2px 8px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#38bdf8}
+        .feedback table{width:100%;border-collapse:collapse;margin:12px 0}
+        .feedback th,.feedback td{padding:10px 14px;text-align:left;border-bottom:1px solid #262636}
+        .feedback th{color:#94a3b8;font-weight:500;font-size:13px}
+        .feedback td{color:#cbd5e1}
+        .arrow{color:#38bdf8;font-weight:700}
+        .transcript{background:#1a1a24;border-radius:12px;padding:28px;font-size:14px;line-height:2;color:#94a3b8;white-space:pre-wrap;word-break:break-word;font-family:'JetBrains Mono','Noto Sans KR',monospace}
+        .transcript .tutor{color:#38bdf8}
+        .transcript .student{color:#a78bfa}
+        @media(max-width:640px){.header{padding:32px 16px}.header h1{font-size:22px}.cta-btn{padding:14px 28px;font-size:15px}.container{padding:0 16px 60px}}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-date">2026년 04월 28일</div>
+        <h1>📚 전화영어 복습</h1>
+        <div class="header-meta">
+            <span>⏱ 19분 50초</span>
+            <span>🎙 전화영어_025180304_20260428080013.m4a</span>
+        </div>
+    </div>
+    <div class="cta-section">
+        <button class="cta-btn" onclick="startReview()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Gemini에서 복습 대화 시작하기
+        </button>
+        <div class="cta-sub">클릭하면 프롬프트가 복사되고 Gemini가 열립니다</div>
+    </div>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('feedback')">📋 AI 피드백</button>
+            <button class="tab" onclick="switchTab('transcript')">🎙 수업 전사</button>
+        </div>
+        <div id="tab-feedback" class="tab-content active">
+            <div class="feedback"><p>따뜻하고 실용적인 영어 코치 Joey입니다! Joanna님, 안녕하세요!</p>
+<p>오늘 수업에서 Joanna님의 혁신적인 'English Travel Cafe' 아이디어를 듣고 정말 감탄했어요. 투자자들에게 매력적인 엘리베이터 피치를 준비하는 과정에서 보여주신 열정과 창의력은 정말 최고였습니다! 특히 AI 코딩과 연계하여 여행 중 비상 상황까지 고려하는 아이디어는 저도 당장 투자하고 싶을 정도였어요.</p>
+<br>
+<p>오늘 배운 표현들을 실생활과 비즈니스 환경에서 자연스럽게 활용하실 수 있도록 몇 가지 팁을 드릴게요. 유창성과 정확성을 동시에 잡아서 더욱 자신감 있게 소통하실 수 있도록 함께 노력해 봐요!</p>
+<br>
+<br>
+<p>### <strong>0. 📌 Topic</strong></p>
+<p>Topic: Developing an elevator pitch for a unique business concept and discussing negotiation strategies.</p>
+<br>
+<p>### <strong>1. 📊 오늘의 대화 요약 (Summary)</strong></p>
+<p>오늘 수업에서는 Joanna님의 독창적인 'English Travel Cafe' 사업 아이디어를 바탕으로 잠재적 투자자들을 설득할 수 있는 '엘리베이터 피치'를 구성하는 연습을 했습니다. 이어서 협상의 개념과 접근 방식에 대한 토론을 시작하며, 비즈니스 커뮤니케이션의 핵심 요소를 짚어보았습니다.</p>
+<br>
+<p>### <strong>2. 💬 유창성 업그레이드 (Fluency & Natural Flow)</strong></p>
+<br>
+<p>Joanna님이 말씀하신 문장 중, 의미는 충분히 전달되지만 원어민이 들었을 때 좀 더 자연스럽게 들릴 수 있는 표현들을 함께 살펴볼게요.</p>
+<br>
+<div class="numbered"><strong>1.</strong>  <strong>❌ 학습자 원문 (As Said):</strong> "We will page on the 31st."</div>
+<p>    *   <strong>✅ 자연스러운 표현 (Natural):</strong> "Let's turn to page 31."</p>
+<p>    *   <strong>💎 비즈니스 표현 (Professional):</strong> "Please refer to page 31."</p>
+<p>    *   <strong>💡 코칭 포인트:</strong> "turn to"는 책의 특정 페이지를 펼칠 때 가장 흔하고 자연스러운 표현입니다. "refer to"는 비즈니스나 학술적인 환경에서 더 격식 있게 쓰일 수 있습니다.</p>
+<br>
+<div class="numbered"><strong>2.</strong>  <strong>❌ 학습자 원문 (As Said):</strong> "The foreigner customer is free to coffee."</div>
+<p>    *   <strong>✅ 자연스러운 표현 (Natural):</strong> "Foreign customers get free coffee."</p>
+<p>    *   <strong>💎 비즈니스 표현 (Professional):</strong> "Complimentary coffee is provided for foreign patrons."</p>
+<p>    *   <strong>💡 코칭 포인트:</strong> "free to coffee"는 영어에서 흔히 쓰이는 표현이 아닙니다. 어떤 것이 누구에게 무료일 때는 보통 "get free [아이템]" 또는 "[아이템] is free for [사람/그룹]"이라고 말합니다. "Patrons"는 고객을 지칭하는 더 격식 있는 비즈니스 용어입니다.</p>
+<br>
+<div class="numbered"><strong>3.</strong>  <strong>❌ 학습자 원문 (As Said):</strong> "So your request is during the one minute, I just speech about this English Travel Cafe, right?"</div>
+<p>    *   <strong>✅ 자연스러운 표현 (Natural):</strong> "So you're asking me to give a one-minute pitch about this English Travel Cafe, right?"</p>
+<p>    *   <strong>💎 비즈니스 표현 (Professional):</strong> "Am I correct in understanding that you'd like me to present a one-minute pitch on the English Travel Cafe?"</p>
+<p>    *   <strong>💡 코칭 포인트:</strong> "speech about" 대신 "give a speech" 또는 "give a pitch"라고 말합니다. "Pitch"는 특히 "엘리베이터 피치"와 같은 비즈니스 상황에서 매우 유용한 단어입니다.</p>
+<br>
+<p>### <strong>3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)</strong></p>
+<br>
+<p>오늘 대화에서 Joanna님이 <strong>관사 (a/an/the)</strong> 사용에 있어 몇 가지 혼동이 있었어요. 관사는 한국어에는 없는 개념이라 많은 학습자들이 어려워하지만, 정확한 의미 전달을 위해 꼭 필요한 부분입니다.</p>
+<br>
+<table>
+<tr><th>❌ 원문 (As Said)</th><th>✅ 교정 예시 (Corrected)</th></tr>
+<tr><td>"share <strong>the</strong> information about <strong>the</strong> travel in that country."</td><td>"share information about travel in that country."</td></tr>
+<tr><td>"One customer is <strong>the</strong> domestic customer and another customer is <strong>the</strong> foreigner customer."</td><td>"One customer is <strong>a</strong> domestic customer and another customer is <strong>a</strong> foreign customer." (또는 "domestic customers and foreign customers")</td></tr>
+<tr><td>"Jongno is famous in Korea, <strong>the</strong> travel place."</td><td>"Jongno is famous in Korea as <strong>a</strong> travel place." (또는 "Jongno is a famous travel destination in Korea.")</td></tr>
+<tr><td>"The first, I just start <strong>a</strong> small talk because usually negotiation is getting <strong>the</strong> profit."</td><td>"First, I just start with small talk because negotiation is usually about getting profit." (또는 "negotiation usually aims for profit.")</td></tr>
+<tr><td>"So the other people, they need <strong>a</strong> little pride to talk this topic." (여기서 'pride'는 문맥상 'courage'나 'confidence'가 더 적절합니다.)</td><td>"So the other people, they need <strong>a</strong> little courage to talk about this topic."</td></tr>
+</table>
+<br>
+<p><strong>📌 핵심 규칙:</strong></p>
+<p>일반적인 개념이나 셀 수 없는 명사 앞에는 관사를 생략하거나, 처음 언급되는 불특정한 명사 앞에는 'a/an'을 사용하고, 이미 언급되었거나 특정 대상을 지칭할 때는 'the'를 사용합니다.</p>
+<br>
+<p><strong>🔁 따라 읽기:</strong></p>
+<p>🗣️ "We share information about travel in that country."</p>
+<p>🗣️ "One customer is a domestic customer and another customer is a foreign customer."</p>
+<p>🗣️ "Jongno is famous in Korea as a travel place."</p>
+<br>
+<p>### <strong>4. 📗 어휘 확장 (Vocabulary Vault)</strong></p>
+<br>
+<p>오늘 대화에서 나왔거나 비즈니스 환경에서 유용하게 쓰일 수 있는 단어 5개를 정리해 보았습니다.</p>
+<br>
+<div class="numbered"><strong>1.</strong>  <strong>franchise</strong> /frænˈtʃaɪz/ (명사/동사)</div>
+<p>    *   뜻: 프랜차이즈; (사업을) 가맹하다, 프랜차이즈를 주다</p>
+<p>    *   실전 예문: We are exploring options to <strong>franchise</strong> our successful cafe model internationally.</p>
+<br>
+<div class="numbered"><strong>2.</strong>  <strong>potential</strong> /pəˈtɛnʃəl/ (명사/형용사)</div>
+<p>    *   뜻: 잠재력, 가능성; 잠재적인, 가능한</p>
+<p>    *   실전 예문: This new market has significant <strong>potential</strong> for growth and investment.</p>
+<br>
+<div class="numbered"><strong>3.</strong>  <strong>pitch</strong> /pɪtʃ/ (명사/동사)</div>
+<p>    *   뜻: (사업, 아이디어 등을) 설명하다, 제안하다; (사업) 제안, 설명</p>
+<p>    *   실전 예문: I need to prepare a compelling <strong>pitch</strong> to secure funding for our next project.</p>
+<br>
+<div class="numbered"><strong>4.</strong>  <strong>negotiation</strong> /nɪˌɡoʊʃiˈeɪʃən/ (명사)</div>
+<p>    *   뜻: 협상, 교섭</p>
+<p>    *   실전 예문: Successful <strong>negotiation</strong> requires careful preparation and a clear understanding of all parties' interests.</p>
+<br>
+<div class="numbered"><strong>5.</strong>  <strong>asset</strong> /ˈæˌsɛt/ (명사)</div>
+<p>    *   뜻: 자산, 재산; 귀중한 것</p>
+<p>    *   실전 예문: Our highly skilled workforce is our most valuable <strong>asset</strong>.</p>
+<br>
+<p>### <strong>5. 📝 실전 복습 챌린지 (Practice)</strong></p>
+<br>
+<p>오늘 배운 표현과 문법을 활용하여 영작 연습을 해볼까요?</p>
+<br>
+<div class="numbered"><strong>1.</strong>  <strong>상황:</strong> 다음 회의에서 우리 회사의 새로운 사업 아이디어에 대해 5분간 발표해야 합니다.</div>
+<p>    *   <strong>영작:</strong> (나는) 5분짜리 사업 제안을 준비해야 해.</p>
+<p>    *   <strong>모범 답안:</strong> I need to prepare a five-minute business <strong>pitch</strong>.</p>
+<br>
+<div class="numbered"><strong>2.</strong>  <strong>상황:</strong> 이 프로젝트는 많은 잠재력을 가지고 있지만, 초기 투자가 필요합니다.</div>
+<p>    *   <strong>영작:</strong> 이 프로젝트는 상당한 잠재력을 가지고 있지만, 초기 투자가 필요하다.</p>
+<p>    *   <strong>모범 답안:</strong> This project has significant <strong>potential</strong>, but it requires initial investment.</p>
+<br>
+<div class="numbered"><strong>3.</strong>  <strong>상황:</strong> 우리는 다음 주에 공급업체와 가격 협상을 할 예정입니다. 성공적인 협상을 위해 전략을 잘 세워야 합니다.</div>
+<p>    *   <strong>영작:</strong> 우리는 다음 주에 공급업체와 가격 협상을 할 예정입니다. 성공적인 협상을 위해 신중한 준비가 필요합니다.</p>
+<p>    *   <strong>모범 답안:</strong> We are scheduled for price <strong>negotiations</strong> with our supplier next week. Careful preparation is essential for a successful <strong>negotiation</strong>.</p>
+<br>
+<p>### <strong>6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)</strong></p>
+<br>
+<p>✨ <strong>Good Job:</strong></p>
+<p>"I love this concept. So it is there are and their foreigner customer, if they stay there, there are so many people they can submit so many plans and and so many group of tourists. So, this is our concept."</p>
+<p><span class="arrow">→</span> Joanna님, 이 문장은 비록 문법적으로 완벽하진 않지만, 본인의 아이디어에 대한 열정과 확신이 그대로 느껴져서 매우 인상 깊었어요. 특히 "I love this concept"라고 솔직하게 표현하신 점과, 외국인 고객들이 카페에 머물면서 다양한 계획과 관광객 그룹을 만날 수 있다는 구체적인 비전을 제시한 점이 아주 좋았습니다. 아이디어를 설명하는 데 있어 자신감과 열정은 그 어떤 완벽한 문장보다 강력한 힘을 발휘합니다!</p>
+<br>
+<p>🚀 <strong>내일의 한 문장:</strong></p>
+<p>다음 수업 시작 시 튜터에게 이렇게 말해보세요:</p>
+<p>"I've been thinking more about our <strong>negotiation</strong> topic. I'm curious to learn more about effective strategies."</p>
+<p>(오늘 배운 'negotiation'이라는 단어를 활용하여 다음 수업 주제에 대한 관심을 표현하고 부드럽게 대화를 시작할 수 있습니다.)</p>
+<br>
+<br>
+<p><strong>[성과 지표]</strong></p>
+<br>
+<p><strong>유창성 점수: 7/10점</strong></p>
+<br>
+<p><strong>근거:</strong> Joanna님은 자신의 아이디어를 설명하는 데 주저함이 없었고, 상당히 긴 문장들을 구사하며 대화를 능동적으로 이끌어갔습니다. 이는 매우 긍정적인 유창성의 지표입니다. 다만, 몇몇 표현에서 어색함이 있었고, 문장을 구성하는 데 있어 중간에 멈추거나 단어를 찾는 모습이 간헐적으로 보였습니다. 문법적 오류(특히 관사)가 의미 전달에 큰 방해는 되지 않았지만, 유창성의 자연스러움을 약간 저해하는 요인이었습니다. 전반적으로 아이디어 전달력과 참여도는 매우 높았습니다.</p>
+<br>
+<p><strong>다음 수업 '원포인트 액션 플랜':</strong></p>
+<p>다음 수업에서는 <strong>"관사 (a/an/the) 사용"</strong>에 집중하여 연습해 볼까요? 특히 일반적인 명사(예: travel, information, profit)와 특정 명사(예: the main office, the 31st page)를 구분하여 관사를 사용하는 연습을 해보겠습니다. 오늘 배운 어휘들을 활용하여 문장을 만들 때 관사 사용에 조금 더 신경 써서 말하는 것을 목표로 삼아봐요!</p>
+<br>
+<p>오늘도 정말 수고 많으셨습니다, Joanna님! 다음 수업에서 또 만나요!</p></div>
+        </div>
+        <div id="tab-transcript" class="tab-content">
+            <div class="transcript"><span class="tutor">[Tutor]</span> Hello, Joanna. Good evening.
+<span class="student">[Student]</span> Hi, Joey. Good morning. How are you today?
+<span class="tutor">[Tutor]</span> I&#x27;m doing great. It&#x27;s a fresh day.
+<span class="student">[Student]</span> How are you today? It is. I am great also. It&#x27;s been a busy day, but altogether good.
+<span class="tutor">[Tutor]</span> Oh, yes. Everything is good. It&#x27;s so nice. I think so. Okay, should we jump straight into our book today?
+<span class="student">[Student]</span> Oh, yes, no problem. We will page on the 31st.
+<span class="tutor">[Tutor]</span> We are, yes, on page 31. Do you want to read the task again, just as a reminder, or do you remember from yesterday?
+<span class="student">[Student]</span> Oh, yes. I remember a little. Maybe that&#x27;s about the elevator speech.
+<span class="tutor">[Tutor]</span> Yes. And you were preparing one of those based on a coffee franchise.
+<span class="student">[Student]</span> Yes, you&#x27;re right. You&#x27;re right.
+<span class="tutor">[Tutor]</span> And you had come up with a great idea about what makes this coffee shop chain different.
+<span class="student">[Student]</span> Yeah, this is my coffee shop.
+<span class="tutor">[Tutor]</span> Yes. Okay. So you told me a little bit about the company. Now, what can you tell me about the company&#x27;s strengths?
+<span class="student">[Student]</span> Strengths, okay I see. And okay, the first, my company franchise name is the English Travel Cafe. Yes. Yes, Travel Cafe. And that cafe&#x27;s strength is to share the information about the travel in that country. And there are two kinds of customers. One customer is the domestic customer and another customer is the foreigner customer. The foreigner customer is free to coffee. But it&#x27;s possible.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="student">[Student]</span> Yeah, but they teach English to the domestic customer. Domestic customer is paid per month. But they give us some information to the foreigner travelers. So yeah, one group is the teacher and one group is the student. But the student group is paid per month and the traveler teacher group is just for free. Free coffee. I love this concept. So it is there are and their foreigner customer, if they stay there, there are so many people they can submit so many plans and and so many group of tourists. So, this is our concept. So, our company, we give some needs. We enough to... We fulfill the needs.
+<span class="tutor">[Tutor]</span> We? Sorry, can you repeat that?
+<span class="student">[Student]</span> Okay, we give the, fulfill the needs, their desire.
+<span class="tutor">[Tutor]</span> Yes, absolutely.
+<span class="student">[Student]</span> Yes, so that is the tips. And coffee is just the side goods. The main thing is to share the information about the travel. Yes.
+<span class="tutor">[Tutor]</span> Yeah, it&#x27;s your... That is excellent. Okay. Now remember you are presenting this to potential investors. So people who want to invest in this type of cafe. So what can your company do for these potential investors?
+<span class="student">[Student]</span> I see. My company&#x27;s potential is there is no, there is no cafe. It&#x27;s a similar concept. Only our cafe only has that concept in our country. So if you invest our company, actually I don&#x27;t want investors.
+<span class="tutor">[Tutor]</span> Investors. We&#x27;re just keeping it to ourselves. I love it.
+<span class="student">[Student]</span> Yeah, that is possible to our asset, our money. I don&#x27;t need money to you or to investor, but just just I invite, invite to other people.
+<span class="tutor">[Tutor]</span> Exactly, or customers, exactly, potential customers.
+<span class="student">[Student]</span> Yeah, so yeah, it&#x27;s all. But if you invest in our company, our company is possible to make some other country. So the main office is in Korea. But if you live in Hawaii, I give the name to Hawaii Travel Coffee Shop, English Travel Coffee Shop. So just that is the kind of a franchise. Exactly. We borrow our concept and give us some secret way. Yeah, it&#x27;s all.
+<span class="tutor">[Tutor]</span> I like this. I like this. Okay. So now the challenge is to create a 60-second, so one minute, pitch to explain this, but only in one minute.
+<span class="student">[Student]</span> Okay. So your request is during the one minute, I just speech about this English Travel Cafe, right?
+Tutor] Exactly.
+<span class="student">[Student]</span> Everything? Okay.
+<span class="tutor">[Tutor]</span> Whatever you think is most important to get my attention and to get me interested in franchising this in another country.
+<span class="student">[Student]</span> Okay. Okay. Hi, Joanna. This is English Travel Concept Cafe owner. And this cafe is the kind of Travel English Cafe. And that cafe is possible to share the information about travel. So the customer is the two kind of, there are two kinds of group of customer. The one group is the foreigner group, and I mean a foreigner travel group, and other group is the domestic students who teach to English group. So the one group is there, they wanted the information about travel and they need to free coffee. So we give the free to coffee. But if they are stay our coffee shop, they teach to English. But there are various ways to speak in English in this cafe. Another group is domestic students who teach English, who study English in domestic. If they pay month, every month they get in our coffee shop, the free, our coffee shops, yeah, every time. And they can meet the foreign people and they can study the Buddhist style. So my concept is just a space to meet the foreigners and domestic and they have the different needs. One needs is to study English. One needs is getting information to travel and getting free coffee. So I just supplied the space. That coffee shop is similar to Rivalry. And the first, our coffee shop is set up in Jongno in Seoul because Jongno is famous in Korea, the travel place. And second is the maybe Colombia, yes, in your city. And I teach, I give the every information how to manage, how to, yes, interior. So the second store is the free. Just yeah, I give the everything just made. Yes, there is no franchise fee. Yeah, just yeah, we wanted to similar concepts because if we made so many similar concept style coffee shop, at the time our network is developed. So and then I received the franchise fee. Yeah, yeah, it&#x27;s sure. Yeah, that is our company.
+<span class="tutor">[Tutor]</span> Yeah, that was great. Yes, that was an excellent. And it&#x27;s funny because I&#x27;m, I&#x27;m listening to you talk about it, and I&#x27;m thinking, how can I make this happen? I think I can make this happen here. It&#x27;s a fantastic idea.
+<span class="student">[Student]</span> Thank you so much.
+<span class="tutor">[Tutor]</span> Because you&#x27;re right. People want to learn English. Local people want to learn English. And foreigners want information about traveling here. I think it&#x27;s brilliant.
+<span class="student">[Student]</span> Yes. Thank you so much. Yes.
+<span class="tutor">[Tutor]</span> It&#x27;s a great idea. Yeah.
+<span class="student">[Student]</span> Tell me. These days I&#x27;m learning the coding using the AI. I&#x27;m just imagining about if you travel to Colombia, you can meet the internet during travel Colombia. So it is possible to emergency system. For example, if I travel Hawaii, my GPS on Hawaii and in and other traveler also GPS on the Hawaii. And I, my concept is connect there and they can chat directly. So sometimes they talk about their emergency at my hospital or emergency situation, right? Yeah, right. And and drugstore, etc. And sometimes they need some information, supply to information, give us some shared information. So I&#x27;m considering about that system. Yes.
+<span class="tutor">[Tutor]</span> It&#x27;s great. I mean, even this idea what you&#x27;re saying about the cafe, you can have different tables, right? Yeah, one table people can learn about emergency services like you said, where&#x27;s the hospital? Yeah, how do you, where&#x27;s the pharmacy? How do you get medicine? How do you get, how do you call 9-1-1, right? Yeah, you&#x27;re right. And then in another table, it could be, at another table, it could be about what cultural things can you do in the city, what museums to visit, what festivals are happening, right?
+<span class="student">[Student]</span> Yeah, you&#x27;re right. I give the concept of business. I give it to you. It&#x27;s free, I think so. Yes, Joey, I don&#x27;t need another job. I have four jobs already.
+<span class="tutor">[Tutor]</span> My God.
+<span class="student">[Student]</span> Yeah, I need some help.
+<span class="tutor">[Tutor]</span> But that was great. I really like this concept.
+<span class="student">[Student]</span> Okay, good. If I do something with it, I will tell you.
+<span class="tutor">[Tutor]</span> Okay, yes.
+<span class="student">[Student]</span> But it&#x27;s okay. That concept is free.
+<span class="tutor">[Tutor]</span> Okay. Okay. All right. Any questions about this elevator pitch concept?
+<span class="student">[Student]</span> Maybe, I guess, the elevator is the step-by-step, right? The first basic and second is the middle and the last thing is taking the issue, etc., right?
+<span class="tutor">[Tutor]</span> The elevator part is really a question of time, right? So you want to say something that is so effective that people get interested right away.
+<span class="student">[Student]</span> Ah, yes.
+<span class="tutor">[Tutor]</span> That&#x27;s what it is, really.
+<span class="student">[Student]</span> So I&#x27;m just, I was wondering, the elevator speech is the, just divide some subject or that is divide the highlight to end and start the first highlight to end.
+<span class="tutor">[Tutor]</span> Yes. Exactly. Give the highlights. When you first talk to somebody about your idea, start with the highlights. So this way, they are hooked immediately, right? So what problem are you trying to solve? And be very quick about it. Be very quick about it.
+<span class="student">[Student]</span> I agree. Okay, yes. Okay, good.
+<span class="tutor">[Tutor]</span> Okay. Okay. So we are moving to another topic called proposal and negotiation.
+<span class="student">[Student]</span> Negotiation.
+<span class="tutor">[Tutor]</span> Proposal and negotiation. Okay. Let&#x27;s start with some questions. So in part one, getting started. Warm up. Question one. Let&#x27;s open the floor. What&#x27;s your opinion?
+<span class="student">[Student]</span> Okay. The first, describe the experience when you had to negotiate for something. How did you approach the task? First, I just start a small talk because usually negotiation is getting the profit. So the other people, they need a little pride to talk this topic.
+<span class="tutor">[Tutor]</span> I&#x27;m sorry, can you repeat that? They need a little?
+<span class="student">[Student]</span> Nervous because it is more fight, more argue because they want to do their profit in this conversation. So just we start the small talking and then start the main subject. And the other thing is just we pretend we are not enemy. We are same side. But that is a lie. We&#x27;re different side. Yeah, we&#x27;re different side totally. But usually we pretend the plan or yeah, it&#x27;s same side. Yeah. We start first.
+<span class="tutor">[Tutor]</span> Yes. Okay. Well, I am very curious to see what else you&#x27;re going to talk about in negotiation. So we will do that next class. But this is an excellent opening question. I loved it.
+<span class="student">[Student]</span> Okay. Thank you so much, teacher.
+<span class="tutor">[Tutor]</span> Thank you and have a great week. And I think we will talk next time next week.
+<span class="student">[Student]</span> Oh, yeah, you&#x27;re right. Have a nice day, teacher.
+<span class="tutor">[Tutor]</span> Thank you. You as well. Bye-bye.
+<span class="student">[Student]</span> Bye.</div>
+        </div>
+    </div>
+    <div class="toast" id="toast">✅ 프롬프트가 복사되었습니다!</div>
+    <script>
+        const REVIEW_PROMPT="너는 나의 영어 회화 복습 파트너야. 오늘 내 전화영어 수업 내용을 기반으로 대화하면서 복습을 도와줘.\n\n[오늘 수업 전사 내용]\n[Tutor] Hello, Joanna. Good evening.\n[Student] Hi, Joey. Good morning. How are you today?\n[Tutor] I'm doing great. It's a fresh day.\n[Student] How are you today? It is. I am great also. It's been a busy day, but altogether good.\n[Tutor] Oh, yes. Everything is good. It's so nice. I think so. Okay, should we jump straight into our book today?\n[Student] Oh, yes, no problem. We will page on the 31st.\n[Tutor] We are, yes, on page 31. Do you want to read the task again, just as a reminder, or do you remember from yesterday?\n[Student] Oh, yes. I remember a little. Maybe that's about the elevator speech.\n[Tutor] Yes. And you were preparing one of those based on a coffee franchise.\n[Student] Yes, you're right. You're right.\n[Tutor] And you had come up with a great idea about what makes this coffee shop chain different.\n[Student] Yeah, this is my coffee shop.\n[Tutor] Yes. Okay. So you told me a little bit about the company. Now, what can you tell me about the company's strengths?\n[Student] Strengths, okay I see. And okay, the first, my company franchise name is the English Travel Cafe. Yes. Yes, Travel Cafe. And that cafe's strength is to share the information about the travel in that country. And there are two kinds of customers. One customer is the domestic customer and another customer is the foreigner customer. The foreigner customer is free to coffee. But it's possible.\n[Tutor] Okay.\n[Student] Yeah, but they teach English to the domestic customer. Domestic customer is paid per month. But they give us some information to the foreigner travelers. So yeah, one group is the teacher and one group is the student. But the student group is paid per month and the traveler teacher group is just for free. Free coffee. I love this concept. So it is there are and their foreigner customer, if they stay there, there are so many people they can submit so many plans and and so many group of tourists. So, this is our concept. So, our company, we give some needs. We enough to... We fulfill the needs.\n[Tutor] We? Sorry, can you repeat that?\n[Student] Okay, we give the, fulfill the needs, their desire.\n[Tutor] Yes, absolutely.\n[Student] Yes, so that is the tips. And coffee is just the side goods. The main thing is to share the information about the travel. Yes.\n[Tutor] Yeah, it's your... That is excellent. Okay. Now remember you are presenting this to potential investors. So people who want to invest in this type of cafe. So what can your company do for these potential investors?\n[Student] I see. My company's potential is there is no, there is no cafe. It's a similar concept. Only our cafe only has that concept in our country. So if you invest our company, actually I don't want investors.\n[Tutor] Investors. We're just keeping it to ourselves. I love it.\n[Student] Yeah, that is possible to our asset, our money. I don't need money to you or to investor, but just just I invite, invite to other people.\n[Tutor] Exactly, or customers, exactly, potential customers.\n[Student] Yeah, so yeah, it's all. But if you invest in our company, our company is possible to make some other country. So the main office is in Korea. But if you live in Hawaii, I give the name to Hawaii Travel Coffee Shop, English Travel Coffee Shop. So just that is the kind of a franchise. Exactly. We borrow our concept and give us some secret way. Yeah, it's all.\n[Tutor] I like this. I like this. Okay. So now the challenge is to create a 60-second, so one minute, pitch to explain this, but only in one minute.\n[Student] Okay. So your request is during the one minute, I just speech about this English Travel Cafe, right?\nTutor] Exactly.\n[Student] Everything? Okay.\n[Tutor] Whatever you think is most important to get my attention and to get me interested in franchising this in another country.\n[Student] Okay. Okay. Hi, Joanna. This is English Travel Concept Cafe owner. And this cafe is the kind of Travel English Cafe. And that cafe is possible to share the information about travel. So the customer is the two kind of, there are two kinds of group of customer. The one group is the foreigner group, and I mean a foreigner travel group, and other group is the domestic students who teach to English group. So the one group is there, they wanted the information about travel and they need to free coffee. So we give the free to coffee. But if they are stay our coffee shop, they teach to English. But there are various ways to speak in English in this cafe. Another group is domestic students who teach English, who study English in domestic. If they pay month, every month they get in our coffee shop, the free, our coffee shops, yeah, every time. And they can meet the foreign people and they can study the Buddhist style. So my concept is just a space to meet the foreigners and domestic and they have the different needs. One needs is to study English. One needs is getting information to travel and getting free coffee. So I just supplied the space. That coffee shop is similar to Rivalry. And the first, our coffee shop is set up in Jongno in Seoul because Jongno is famous in Korea, the travel place. And second is the maybe Colombia, yes, in your city. And I teach, I give the every information how to manage, how to, yes, interior. So the second store is the free. Just yeah, I give the everything just made. Yes, there is no franchise fee. Yeah, just yeah, we wanted to similar concepts because if we made so many similar concept style coffee shop, at the time our network is developed. So and then I received the franchise fee. Yeah, yeah, it's sure. Yeah, that is our company.\n[Tutor] Yeah, that was great. Yes, that was an excellent. And it's funny because I'm, I'm listening to you talk about it, and I'm thinking, how can I make this happen? I think I can make this happen here. It's a fantastic idea.\n[Student] Thank you so much.\n[Tutor] Because you're right. People want to learn English. Local people want to learn English. And foreigners want information about traveling here. I think it's brilliant.\n[Student] Yes. Thank you so much. Yes.\n[Tutor] It's a great idea. Yeah.\n[Student] Tell me. These days I'm learning the coding using the AI. I'm just imagining about if you travel to Colombia, you can meet the internet during travel Colombia. So it is possible to emergency system. For example, if I travel Hawaii, my GPS on Hawaii and in and other traveler also GPS on the Hawaii. And I, my concept is connect there and they can chat directly. So sometimes they talk about their emergency at my hospital or emergency situation, right? Yeah, right. And and drugstore, etc. And sometimes they need some information, supply to information, give us some shared information. So I'm considering about that system. Yes.\n[Tutor] It's great. I mean, even this idea what you're saying about the cafe, you can have different tables, right? Yeah, one table people can learn about emergency services like you said, where's the hospital? Yeah, how do you, where's the pharmacy? How do you get medicine? How do you get, how do you call 9-1-1, right? Yeah, you're right. And then in another table, it could be, at another table, it could be about what cultural things can you do in the city, what museums to visit, what festivals are happening, right?\n[Student] Yeah, you're right. I give the concept of business. I give it to you. It's free, I think so. Yes, Joey, I don't need another job. I have four jobs already.\n[Tutor] My God.\n[Student] Yeah, I need some help.\n[Tutor] But that was great. I really like this concept.\n[Student] Okay, good. If I do something with it, I will tell you.\n[Tutor] Okay, yes.\n[Student] But it's okay. That concept is free.\n[Tutor] Okay. Okay. All right. Any questions about this elevator pitch concept?\n[Student] Maybe, I guess, the elevator is the step-by-step, right? The first basic and second is the middle and the last thing is taking the issue, etc., right?\n[Tutor] The elevator part is really a question of time, right? So you want to say something that is so effective that people get interested right away.\n[Student] Ah, yes.\n[Tutor] That's what it is, really.\n[Student] So I'm just, I was wondering, the elevator speech is the, just divide some subject or that is divide the highlight to end and start the first highlight to end.\n[Tutor] Yes. Exactly. Give the highlights. When you first talk to somebody about your idea, start with the highlights. So this way, they are hooked immediately, right? So what problem are you trying to solve? And be very quick about it. Be very quick about it.\n[Student] I agree. Okay, yes. Okay, good.\n[Tutor] Okay. Okay. So we are moving to another topic called proposal and negotiation.\n[Student] Negotiation.\n[Tutor] Proposal and negotiation. Okay. Let's start with some questions. So in part one, getting started. Warm up. Question one. Let's open the floor. What's your opinion?\n[Student] Okay. The first, describe the experience when you had to negotiate for something. How did you approach the task? First, I just start a small talk because usually negotiation is getting the profit. So the other people, they need a little pride to talk this topic.\n[Tutor] I'm sorry, can you repeat that? They need a little?\n[Student] Nervous because it is more fight, more argue because they want to do their profit in this conversation. So just we start the small talking and then start the main subject. And the other thing is just we pretend we are not enemy. We are same side. But that is a lie. We're different side. Yeah, we're different side totally. But usually we pretend the plan or yeah, it's same side. Yeah. We start first.\n[Tutor] Yes. Okay. Well, I am very curious to see what else you're going to talk about in negotiation. So we will do that next class. But this is an excellent opening question. I loved it.\n[Student] Okay. Thank you so much, teacher.\n[Tutor] Thank you and have a great week. And I think we will talk next time next week.\n[Student] Oh, yeah, you're right. Have a nice day, teacher.\n[Tutor] Thank you. You as well. Bye-bye.\n[Student] Bye.\n\n[AI 피드백]\n따뜻하고 실용적인 영어 코치 Joey입니다! Joanna님, 안녕하세요!\n오늘 수업에서 Joanna님의 혁신적인 'English Travel Cafe' 아이디어를 듣고 정말 감탄했어요. 투자자들에게 매력적인 엘리베이터 피치를 준비하는 과정에서 보여주신 열정과 창의력은 정말 최고였습니다! 특히 AI 코딩과 연계하여 여행 중 비상 상황까지 고려하는 아이디어는 저도 당장 투자하고 싶을 정도였어요.\n\n오늘 배운 표현들을 실생활과 비즈니스 환경에서 자연스럽게 활용하실 수 있도록 몇 가지 팁을 드릴게요. 유창성과 정확성을 동시에 잡아서 더욱 자신감 있게 소통하실 수 있도록 함께 노력해 봐요!\n\n---\n\n### **0. 📌 Topic**\nTopic: Developing an elevator pitch for a unique business concept and discussing negotiation strategies.\n\n### **1. 📊 오늘의 대화 요약 (Summary)**\n오늘 수업에서는 Joanna님의 독창적인 'English Travel Cafe' 사업 아이디어를 바탕으로 잠재적 투자자들을 설득할 수 있는 '엘리베이터 피치'를 구성하는 연습을 했습니다. 이어서 협상의 개념과 접근 방식에 대한 토론을 시작하며, 비즈니스 커뮤니케이션의 핵심 요소를 짚어보았습니다.\n\n### **2. 💬 유창성 업그레이드 (Fluency & Natural Flow)**\n\nJoanna님이 말씀하신 문장 중, 의미는 충분히 전달되지만 원어민이 들었을 때 좀 더 자연스럽게 들릴 수 있는 표현들을 함께 살펴볼게요.\n\n1.  **❌ 학습자 원문 (As Said):** \"We will page on the 31st.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"Let's turn to page 31.\"\n    *   **💎 비즈니스 표현 (Professional):** \"Please refer to page 31.\"\n    *   **💡 코칭 포인트:** \"turn to\"는 책의 특정 페이지를 펼칠 때 가장 흔하고 자연스러운 표현입니다. \"refer to\"는 비즈니스나 학술적인 환경에서 더 격식 있게 쓰일 수 있습니다.\n\n2.  **❌ 학습자 원문 (As Said):** \"The foreigner customer is free to coffee.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"Foreign customers get free coffee.\"\n    *   **💎 비즈니스 표현 (Professional):** \"Complimentary coffee is provided for foreign patrons.\"\n    *   **💡 코칭 포인트:** \"free to coffee\"는 영어에서 흔히 쓰이는 표현이 아닙니다. 어떤 것이 누구에게 무료일 때는 보통 \"get free [아이템]\" 또는 \"[아이템] is free for [사람/그룹]\"이라고 말합니다. \"Patrons\"는 고객을 지칭하는 더 격식 있는 비즈니스 용어입니다.\n\n3.  **❌ 학습자 원문 (As Said):** \"So your request is during the one minute, I just speech about this English Travel Cafe, right?\"\n    *   **✅ 자연스러운 표현 (Natural):** \"So you're asking me to give a one-minute pitch about this English Travel Cafe, right?\"\n    *   **💎 비즈니스 표현 (Professional):** \"Am I correct in understanding that you'd like me to present a one-minute pitch on the English Travel Cafe?\"\n    *   **💡 코칭 포인트:** \"speech about\" 대신 \"give a speech\" 또는 \"give a pitch\"라고 말합니다. \"Pitch\"는 특히 \"엘리베이터 피치\"와 같은 비즈니스 상황에서 매우 유용한 단어입니다.\n\n### **3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)**\n\n오늘 대화에서 Joanna님이 **관사 (a/an/the)** 사용에 있어 몇 가지 혼동이 있었어요. 관사는 한국어에는 없는 개념이라 많은 학습자들이 어려워하지만, 정확한 의미 전달을 위해 꼭 필요한 부분입니다.\n\n| ❌ 원문 (As Said)                                                                                                              | ✅ 교정 예시 (Corrected)                                                                                                                              |\n| :----------------------------------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------- |\n| \"share **the** information about **the** travel in that country.\"                                                              | \"share information about travel in that country.\"                                                                                                     |\n| \"One customer is **the** domestic customer and another customer is **the** foreigner customer.\"                                 | \"One customer is **a** domestic customer and another customer is **a** foreign customer.\" (또는 \"domestic customers and foreign customers\")           |\n| \"Jongno is famous in Korea, **the** travel place.\"                                                                             | \"Jongno is famous in Korea as **a** travel place.\" (또는 \"Jongno is a famous travel destination in Korea.\")                                            |\n| \"The first, I just start **a** small talk because usually negotiation is getting **the** profit.\"                              | \"First, I just start with small talk because negotiation is usually about getting profit.\" (또는 \"negotiation usually aims for profit.\")               |\n| \"So the other people, they need **a** little pride to talk this topic.\" (여기서 'pride'는 문맥상 'courage'나 'confidence'가 더 적절합니다.) | \"So the other people, they need **a** little courage to talk about this topic.\"                                                                       |\n\n**📌 핵심 규칙:**\n일반적인 개념이나 셀 수 없는 명사 앞에는 관사를 생략하거나, 처음 언급되는 불특정한 명사 앞에는 'a/an'을 사용하고, 이미 언급되었거나 특정 대상을 지칭할 때는 'the'를 사용합니다.\n\n**🔁 따라 읽기:**\n🗣️ \"We share information about travel in that country.\"\n🗣️ \"One customer is a domestic customer and another customer is a foreign customer.\"\n🗣️ \"Jongno is famous in Korea as a travel place.\"\n\n### **4. 📗 어휘 확장 (Vocabulary Vault)**\n\n오늘 대화에서 나왔거나 비즈니스 환경에서 유용하게 쓰일 수 있는 단어 5개를 정리해 보았습니다.\n\n1.  **franchise** /frænˈtʃaɪz/ (명사/동사)\n    *   뜻: 프랜차이즈; (사업을) 가맹하다, 프랜차이즈를 주다\n    *   실전 예문: We are exploring options to **franchise** our successful cafe model internationally.\n\n2.  **potential** /pəˈtɛnʃəl/ (명사/형용사)\n    *   뜻: 잠재력, 가능성; 잠재적인, 가능한\n    *   실전 예문: This new market has significant **potential** for growth and investment.\n\n3.  **pitch** /pɪtʃ/ (명사/동사)\n    *   뜻: (사업, 아이디어 등을) 설명하다, 제안하다; (사업) 제안, 설명\n    *   실전 예문: I need to prepare a compelling **pitch** to secure funding for our next project.\n\n4.  **negotiation** /nɪˌɡoʊʃiˈeɪʃən/ (명사)\n    *   뜻: 협상, 교섭\n    *   실전 예문: Successful **negotiation** requires careful preparation and a clear understanding of all parties' interests.\n\n5.  **asset** /ˈæˌsɛt/ (명사)\n    *   뜻: 자산, 재산; 귀중한 것\n    *   실전 예문: Our highly skilled workforce is our most valuable **asset**.\n\n### **5. 📝 실전 복습 챌린지 (Practice)**\n\n오늘 배운 표현과 문법을 활용하여 영작 연습을 해볼까요?\n\n1.  **상황:** 다음 회의에서 우리 회사의 새로운 사업 아이디어에 대해 5분간 발표해야 합니다.\n    *   **영작:** (나는) 5분짜리 사업 제안을 준비해야 해.\n    *   **모범 답안:** I need to prepare a five-minute business **pitch**.\n\n2.  **상황:** 이 프로젝트는 많은 잠재력을 가지고 있지만, 초기 투자가 필요합니다.\n    *   **영작:** 이 프로젝트는 상당한 잠재력을 가지고 있지만, 초기 투자가 필요하다.\n    *   **모범 답안:** This project has significant **potential**, but it requires initial investment.\n\n3.  **상황:** 우리는 다음 주에 공급업체와 가격 협상을 할 예정입니다. 성공적인 협상을 위해 전략을 잘 세워야 합니다.\n    *   **영작:** 우리는 다음 주에 공급업체와 가격 협상을 할 예정입니다. 성공적인 협상을 위해 신중한 준비가 필요합니다.\n    *   **모범 답안:** We are scheduled for price **negotiations** with our supplier next week. Careful preparation is essential for a successful **negotiation**.\n\n### **6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)**\n\n✨ **Good Job:**\n\"I love this concept. So it is there are and their foreigner customer, if they stay there, there are so many people they can submit so many plans and and so many group of tourists. So, this is our concept.\"\n→ Joanna님, 이 문장은 비록 문법적으로 완벽하진 않지만, 본인의 아이디어에 대한 열정과 확신이 그대로 느껴져서 매우 인상 깊었어요. 특히 \"I love this concept\"라고 솔직하게 표현하신 점과, 외국인 고객들이 카페에 머물면서 다양한 계획과 관광객 그룹을 만날 수 있다는 구체적인 비전을 제시한 점이 아주 좋았습니다. 아이디어를 설명하는 데 있어 자신감과 열정은 그 어떤 완벽한 문장보다 강력한 힘을 발휘합니다!\n\n🚀 **내일의 한 문장:**\n다음 수업 시작 시 튜터에게 이렇게 말해보세요:\n\"I've been thinking more about our **negotiation** topic. I'm curious to learn more about effective strategies.\"\n(오늘 배운 'negotiation'이라는 단어를 활용하여 다음 수업 주제에 대한 관심을 표현하고 부드럽게 대화를 시작할 수 있습니다.)\n\n---\n\n**[성과 지표]**\n\n**유창성 점수: 7/10점**\n\n**근거:** Joanna님은 자신의 아이디어를 설명하는 데 주저함이 없었고, 상당히 긴 문장들을 구사하며 대화를 능동적으로 이끌어갔습니다. 이는 매우 긍정적인 유창성의 지표입니다. 다만, 몇몇 표현에서 어색함이 있었고, 문장을 구성하는 데 있어 중간에 멈추거나 단어를 찾는 모습이 간헐적으로 보였습니다. 문법적 오류(특히 관사)가 의미 전달에 큰 방해는 되지 않았지만, 유창성의 자연스러움을 약간 저해하는 요인이었습니다. 전반적으로 아이디어 전달력과 참여도는 매우 높았습니다.\n\n**다음 수업 '원포인트 액션 플랜':**\n다음 수업에서는 **\"관사 (a/an/the) 사용\"**에 집중하여 연습해 볼까요? 특히 일반적인 명사(예: travel, information, profit)와 특정 명사(예: the main office, the 31st page)를 구분하여 관사를 사용하는 연습을 해보겠습니다. 오늘 배운 어휘들을 활용하여 문장을 만들 때 관사 사용에 조금 더 신경 써서 말하는 것을 목표로 삼아봐요!\n\n오늘도 정말 수고 많으셨습니다, Joanna님! 다음 수업에서 또 만나요!\n\n위 내용을 바탕으로:\n1. 먼저 오늘 수업에서 내가 틀렸거나 어색했던 표현을 하나 골라서, 관련된 상황을 영어로 질문해줘.\n2. 내가 영어로 대답하면, 자연스러운지 확인하고 더 나은 표현이 있으면 알려줘.\n3. 특히 \"반복 실수 패턴\"에서 지적된 부분을 집중적으로 연습시켜줘.\n4. 이런 식으로 오늘 배운 표현들을 하나씩 복습하자.\n5. 한국어 설명은 필요할 때만 간단히, 대화는 최대한 영어로 진행해줘.\n\n그럼 시작하자!";
+        function startReview(){navigator.clipboard.writeText(REVIEW_PROMPT).then(()=>{showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)}).catch(()=>{const t=document.createElement('textarea');t.value=REVIEW_PROMPT;document.body.appendChild(t);t.select();document.execCommand('copy');document.body.removeChild(t);showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)})}
+        function showToast(){const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500)}
+        function switchTab(n){document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',n==='feedback'?i===0:i===1));document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));document.getElementById('tab-'+n).classList.add('active')}
+    </script>
+</body>
+</html>
