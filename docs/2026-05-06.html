@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전화영어 복습 - 2026년 05월 06일</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Noto Sans KR',sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.75;min-height:100vh}
+        .header{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);border-bottom:1px solid rgba(255,255,255,.06);padding:48px 24px 40px;text-align:center}
+        .header-date{font-size:13px;color:#94a3b8;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+        .header h1{font-size:28px;font-weight:700;color:#f1f5f9;margin-bottom:16px}
+        .header-meta{display:flex;justify-content:center;gap:24px;font-size:14px;color:#64748b}
+        .header-meta span{display:flex;align-items:center;gap:6px}
+        .cta-section{text-align:center;padding:40px 24px}
+        .cta-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:linear-gradient(135deg,#38bdf8,#818cf8);color:#fff;font-size:16px;font-weight:600;font-family:'Noto Sans KR',sans-serif;border:none;border-radius:50px;cursor:pointer;transition:all .3s;text-decoration:none;box-shadow:0 4px 24px rgba(56,189,248,.25)}
+        .cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(56,189,248,.35)}
+        .cta-btn svg{width:20px;height:20px}
+        .cta-sub{margin-top:12px;font-size:13px;color:#64748b}
+        .toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#38bdf8;padding:14px 28px;border-radius:12px;font-size:14px;font-weight:500;border:1px solid rgba(56,189,248,.2);box-shadow:0 8px 32px rgba(0,0,0,.4);opacity:0;transition:all .4s cubic-bezier(.16,1,.3,1);z-index:1000}
+        .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+        .container{max-width:720px;margin:0 auto;padding:0 24px 80px}
+        .tabs{display:flex;gap:4px;background:#1a1a24;padding:4px;border-radius:12px;margin-bottom:32px}
+        .tab{flex:1;padding:12px;text-align:center;font-size:14px;font-weight:500;color:#64748b;background:0 0;border:none;border-radius:8px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all .2s}
+        .tab.active{background:#262636;color:#f1f5f9}
+        .tab-content{display:none}.tab-content.active{display:block}
+        .feedback h2{font-size:18px;font-weight:700;color:#f1f5f9;margin:36px 0 16px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.06)}
+        .feedback h2:first-child{margin-top:0}
+        .feedback p{margin:8px 0;color:#cbd5e1}
+        .feedback .item{padding:6px 0 6px 16px;border-left:2px solid #334155;margin:6px 0;color:#cbd5e1}
+        .feedback .numbered{padding:8px 0 8px 16px;color:#cbd5e1}
+        .feedback .numbered strong{color:#38bdf8}
+        .feedback strong{color:#f1f5f9}
+        .feedback code{background:#1e293b;padding:2px 8px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#38bdf8}
+        .feedback table{width:100%;border-collapse:collapse;margin:12px 0}
+        .feedback th,.feedback td{padding:10px 14px;text-align:left;border-bottom:1px solid #262636}
+        .feedback th{color:#94a3b8;font-weight:500;font-size:13px}
+        .feedback td{color:#cbd5e1}
+        .arrow{color:#38bdf8;font-weight:700}
+        .transcript{background:#1a1a24;border-radius:12px;padding:28px;font-size:14px;line-height:2;color:#94a3b8;white-space:pre-wrap;word-break:break-word;font-family:'JetBrains Mono','Noto Sans KR',monospace}
+        .transcript .tutor{color:#38bdf8}
+        .transcript .student{color:#a78bfa}
+        @media(max-width:640px){.header{padding:32px 16px}.header h1{font-size:22px}.cta-btn{padding:14px 28px;font-size:15px}.container{padding:0 16px 60px}}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-date">2026년 05월 06일</div>
+        <h1>📚 전화영어 복습</h1>
+        <div class="header-meta">
+            <span>⏱ 19분 47초</span>
+            <span>🎙 전화영어_025180304_20260506080014.m4a</span>
+        </div>
+    </div>
+    <div class="cta-section">
+        <button class="cta-btn" onclick="startReview()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Gemini에서 복습 대화 시작하기
+        </button>
+        <div class="cta-sub">클릭하면 프롬프트가 복사되고 Gemini가 열립니다</div>
+    </div>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('feedback')">📋 AI 피드백</button>
+            <button class="tab" onclick="switchTab('transcript')">🎙 수업 전사</button>
+        </div>
+        <div id="tab-feedback" class="tab-content active">
+            <div class="feedback"><p>안녕하세요! 오늘 수업도 정말 수고 많으셨습니다. 비즈니스 협상이라는 중요한 주제로 깊이 있는 대화를 나누셨네요. 투자와 자기계발에 대한 선생님의 열정이 대화 곳곳에서 느껴져 저도 참 즐거웠습니다.</p>
+<br>
+<p>오늘 배운 내용들을 바탕으로 유창성과 정확성을 동시에 잡을 수 있도록 따뜻하고 실용적인 피드백을 준비했어요. 함께 살펴볼까요?</p>
+<br>
+<br>
+<p><strong>0. 📌 Topic</strong></p>
+<p>Topic: Discussing Negotiation Skills and Formal/Informal Expressions</p>
+<br>
+<p><strong>1. 📊 오늘의 대화 요약 (Summary)</strong></p>
+<p>오늘 수업에서는 먼저 연휴 계획에 대한 가벼운 대화로 시작하여, 선생님의 투자 경험을 바탕으로 협상(negotiation) 스킬에 대해 깊이 있게 이야기 나누었습니다. 특히, 협상 시 중요한 요소와 연습 방법에 대해 토론했으며, 교재의 formal/informal 표현들을 비교하며 비즈니스 상황에 맞는 어휘를 익히는 시간을 가졌습니다.</p>
+<br>
+<br>
+<p><strong>2. 💬 유창성 업그레이드 (Fluency & Natural Flow)</strong></p>
+<p>의미는 잘 전달되었지만, 원어민들이 더 자연스럽게 쓰는 표현으로 다듬어 볼 세 가지 문장입니다.</p>
+<br>
+<div class="numbered"><strong>1.</strong>  <strong>❌ 학습자 원문 (As Said):</strong> "I have some skill to negotiator."</div>
+<p>    *   <strong>✅ 자연스러운 표현 (Natural):</strong> "I have some negotiation skills."</p>
+<p>    *   <strong>💎 비즈니스 표현 (Professional):</strong> "I possess strong negotiation skills."</p>
+<p>    *   <strong>💡 코칭 포인트:</strong> "Skill to negotiator" is a direct translation that sounds a bit awkward. "Negotiation skills" is the standard collocation. "Possess" is a more formal verb than "have," suitable for professional contexts.</p>
+<p>        <span class="arrow">→</span> "skill to negotiator"는 직역투로 어색하게 들릴 수 있습니다. "negotiation skills"는 표준적인 표현이며, "possess"는 "have"보다 격식 있는 동사로 비즈니스 상황에 적합합니다.</p>
+<br>
+<div class="numbered"><strong>2.</strong>  <strong>❌ 학습자 원문 (As Said):</strong> "I love to the traditional market in some travel place because that is good place try to negotiation"</div>
+<p>    *   <strong>✅ 자연스러운 표현 (Natural):</strong> "I love visiting traditional markets in various travel destinations because they are good places to practice negotiation."</p>
+<p>    *   <strong>💎 비즈니스 표현 (Professional):</strong> "I find traditional markets in different regions to be excellent venues for honing negotiation tactics."</p>
+<p>    *   <strong>💡 코칭 포인트:</strong> "Love to the market" is not idiomatic; "love visiting markets" is more natural. "Some travel place" can be rephrased as "various travel destinations" or "different regions" for better flow. "Good place try to negotiation" needs "to" before "try" and "practice" instead of "try," followed by the noun "negotiation." "Honing negotiation tactics" is a more sophisticated way to say "practicing negotiation skills."</p>
+<p>        <span class="arrow">→</span> "love to the market"은 부자연스러우며, "love visiting markets"가 더 자연스럽습니다. "some travel place"는 "various travel destinations"나 "different regions"로 바꾸면 좋습니다. "good place try to negotiation"은 "to"와 "practice"를 추가하고 "negotiation"을 명사로 써야 합니다. "honing negotiation tactics"는 "협상 기술을 연마하다"라는 고급 표현입니다.</p>
+<br>
+<div class="numbered"><strong>3.</strong>  <strong>❌ 학습자 원문 (As Said):</strong> "always the closest is the miss for me."</div>
+<p>    *   <strong>✅ 자연스러운 표현 (Natural):</strong> "I often get confused by similar options."</p>
+<p>    *   <strong>💎 비즈니스 표현 (Professional):</strong> "I sometimes find it challenging to distinguish between closely related options."</p>
+<p>    *   <strong>💡 코칭 포인트:</strong> "The closest is the miss for me" is a literal translation of a Korean idiom. In English, we would express this as getting confused or having difficulty differentiating. "Challenging to distinguish" is a professional way to describe this difficulty.</p>
+<p>        <span class="arrow">→</span> "the closest is the miss for me"는 한국어 관용구를 직역한 표현입니다. 영어에서는 "혼동된다" 또는 "구분하기 어렵다"는 식으로 표현합니다. "challenging to distinguish"는 이러한 어려움을 전문적으로 설명하는 표현입니다.</p>
+<br>
+<br>
+<p><strong>3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)</strong></p>
+<p>오늘 대화에서 <strong>관사 (a/an/the)</strong> 사용에 대한 패턴이 종종 보였습니다. 관사는 한국어에 없는 개념이라 많은 학습자분들이 어려워하지만, 영어에서는 명사 앞에 필수적으로 붙어 명사의 특정성이나 일반성을 나타내는 중요한 역할을 합니다.</p>
+<br>
+<table>
+<tr><th>❌ 학습자 원문 (As Said)</th><th>✅ 교정 예시 (Corrected)</th></tr>
+<tr><td>I'm <strong>investor</strong> also</td><td>I'm <strong>an investor</strong> also.</td></tr>
+<tr><td>that is <strong>good place</strong> try to negotiation</td><td>That is <strong>a good place</strong> to practice negotiation.</td></tr>
+<tr><td>I'm good at <strong>negotiator</strong>.</td><td>I'm good at <strong>negotiating</strong> (or <strong>a good negotiator</strong>).</td></tr>
+</table>
+<br>
+<p>📌 <strong>핵심 규칙:</strong> 셀 수 있는 명사(countable noun)가 단수일 때는 반드시 앞에 관사(a/an/the)를 붙여주세요.</p>
+<br>
+<p>🔁 <strong>따라 읽기 (Read Aloud):</strong></p>
+<p>🗣️ "I'm an investor also."</p>
+<p>🗣️ "That is a good place to practice negotiation."</p>
+<p>🗣️ "I'm a good negotiator."</p>
+<br>
+<br>
+<p><strong>4. 📗 어휘 확장 (Vocabulary Vault)</strong></p>
+<p>오늘 수업 내용 및 선생님의 관심사와 관련된 유용한 비즈니스 어휘 5가지입니다.</p>
+<br>
+<div class="numbered"><strong>1.</strong>  <strong>negotiation</strong> /nɪˌɡoʊʃiˈeɪʃən/ (명사)</div>
+<p>    *   <strong>뜻:</strong> 협상, 교섭</p>
+<p>    *   <strong>실전 예문:</strong> Successful <strong>negotiation</strong> is key to securing favorable terms in any business deal.</p>
+<br>
+<div class="numbered"><strong>2.</strong>  <strong>leverage</strong> /ˈlɛvərɪdʒ/ (명사/동사)</div>
+<p>    *   <strong>뜻:</strong> (명사) 영향력, 지렛대 효과; (동사) ~을 활용하다, 영향을 미치다</p>
+<p>    *   <strong>실전 예문:</strong> We need to <strong>leverage</strong> our strong market position to gain a better deal.</p>
+<br>
+<div class="numbered"><strong>3.</strong>  <strong>consensus</strong> /kənˈsɛnsəs/ (명사)</div>
+<p>    *   <strong>뜻:</strong> (의견의) 합의, 일치</p>
+<p>    *   <strong>실전 예문:</strong> Achieving <strong>consensus</strong> among all stakeholders is crucial for project success.</p>
+<br>
+<div class="numbered"><strong>4.</strong>  <strong>concession</strong> /kənˈsɛʃən/ (명사)</div>
+<p>    *   <strong>뜻:</strong> 양보, 용인</p>
+<p>    *   <strong>실전 예문:</strong> Both parties had to make <strong>concessions</strong> to reach a mutually beneficial agreement.</p>
+<br>
+<div class="numbered"><strong>5.</strong>  <strong>due diligence</strong> /ˌduː ˈdɪlɪdʒəns/ (명사)</div>
+<p>    *   <strong>뜻:</strong> (계약 전) 실사, 상당한 주의</p>
+<p>    *   <strong>실전 예문:</strong> Thorough <strong>due diligence</strong> is essential before making any major investment decisions.</p>
+<br>
+<br>
+<p><strong>5. 📝 실전 복습 챌린지 (Practice)</strong></p>
+<p>오늘 배운 표현과 문법을 활용하여 영작해 보세요.</p>
+<br>
+<div class="numbered"><strong>1.</strong>  <strong>상황:</strong> 당신은 새로운 투자 기회를 찾고 있는 투자자입니다.</div>
+<p>    *   <strong>영작:</strong> "저는 또한 투자자라서 항상 좋은 투자처를 찾고 있습니다."</p>
+<p>    *   <strong>모범 답안:</strong> "I am also an investor, so I'm always looking for good investment opportunities."</p>
+<br>
+<div class="numbered"><strong>2.</strong>  <strong>상황:</strong> 비즈니스 협상에서 가장 중요한 기술 중 하나는 상대방의 필요를 파악하는 것이라고 생각합니다.</div>
+<p>    *   <strong>영작:</strong> "저는 비즈니스 협상에서 가장 중요한 기술은 상대방의 필요를 파악하는 것이라고 생각합니다."</p>
+<p>    *   <strong>모범 답안:</strong> "I believe that the most important skill in business negotiation is identifying the other side's needs."</p>
+<br>
+<div class="numbered"><strong>3.</strong>  <strong>상황:</strong> 당신은 전통 시장에서 물건값을 흥정하는 것을 좋아하며, 이것이 협상 기술을 연습하는 좋은 방법이라고 생각합니다.</div>
+<p>    *   <strong>영작:</strong> "저는 전통 시장에서 물건값을 흥정하는 것을 좋아하는데, 그것은 협상 기술을 연마하기에 좋은 장소이기 때문입니다."</p>
+<p>    *   <strong>모범 답안:</strong> "I enjoy negotiating prices in traditional markets, as they are excellent places to hone negotiation skills."</p>
+<br>
+<br>
+<p><strong>6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)</strong></p>
+<br>
+<p>✨ <strong>Good Job</strong>: "I think the most important skill is to find the needs usually if we sit the negotiation table usually we find some needs the other side needs my needs and and then start a negotiation that is a good skill because negotiation is getting something to the fight in a field so if people just start negotiations if we find some needs that negotiation more efficiency so first we find we will find what we need and why what is needs what other side needs yeah yeah that is good skill what's good skill what's important skill what's an important skill"</p>
+<br>
+<p>선생님께서 협상에서 가장 중요한 기술에 대해 설명하신 이 부분은 정말 인상 깊었습니다. 비록 중간에 문법적인 미스가 있었지만, <strong>복잡한 아이디어를 논리적으로 연결하고 본인의 생각을 막힘없이 길게 풀어나가는 유창성</strong>이 돋보였습니다. 특히 "find the needs"라는 핵심 포인트를 반복하며 강조하는 모습에서 자신감과 전문성이 느껴졌습니다. 훌륭한 설명이었어요!</p>
+<br>
+<p>🚀 <strong>내일의 한 문장</strong>:</p>
+<p>다음 수업 시작 시 튜터에게 오늘 배운 표현을 활용하여 대화를 시작해 보세요.</p>
+<p>"I've been thinking about what we discussed regarding negotiation skills. Do you have any tips for leveraging our strengths in a negotiation?"</p>
+<p>(저희가 협상 기술에 대해 나눈 이야기에 대해 생각해 봤어요. 협상에서 우리의 강점을 활용하는 팁이 있으신가요?)</p>
+<br>
+<br>
+<p><strong>[성과 지표]</strong></p>
+<p><strong>유창성 점수:</strong> 8/10점</p>
+<p><strong>근거:</strong> 선생님께서는 자신의 생각과 의견을 길고 복잡한 문장으로도 막힘없이 표현하는 뛰어난 유창성을 보여주셨습니다. 특히 비즈니스 관련 주제에 대한 전문 지식을 영어로 자신감 있게 전달하는 모습이 인상 깊었습니다. 다만, 일부 표현이 직역투이거나 어색하게 들리는 부분이 있어 자연스러운 흐름을 조금 더 다듬을 필요가 있습니다.</p>
+<br>
+<p><strong>다음 수업 '원포인트 액션 플랜':</strong></p>
+<p><strong>"관사 (a/an/the)와 복수 명사 사용에 더 신경 쓰기"</strong></p>
+<p>오늘 피드백에서 다룬 관사 사용을 의식적으로 연습해 보세요. 문장을 말하기 전에 명사가 셀 수 있는 단수 명사인지, 아니면 일반적인 복수 명사인지 한 번 더 생각하는 습관을 들이는 것이 좋습니다. 예를 들어, "I'm investor" 대신 "I'm <strong>an</strong> investor"처럼요. 다음 수업에서는 이 부분을 집중적으로 코칭해 드릴게요!</p>
+<br>
+<p>오늘도 정말 수고 많으셨습니다. 다음 수업에서 더 성장한 모습으로 만나요!</p></div>
+        </div>
+        <div id="tab-transcript" class="tab-content">
+            <div class="transcript"><span class="tutor">[Tutor]</span> Hello, hello teacher. Good morning. Yeah, hi. Good morning, this is Belle. 
+<span class="student">[Student]</span> Yeah, Belle, good morning. Good evening. 
+<span class="tutor">[Tutor]</span> Yeah. How are you? 
+<span class="student">[Student]</span> Good. How are you doing today? 
+<span class="tutor">[Tutor]</span> I&#x27;m so good. I&#x27;m a little tired, but it&#x27;s okay. 
+<span class="student">[Student]</span> Yeah. How was your holiday? Did you enjoy the holiday? 
+<span class="tutor">[Tutor]</span> Yes, of course. It is so wonderful holiday for me. I stay with my family. It&#x27;s a long time. 
+<span class="student">[Student]</span> So, yeah, it&#x27;s a good time for me. How was your day? How was your weekend? How was your holiday? 
+<span class="tutor">[Tutor]</span> Well, I only had the one day off. 
+<span class="student">[Student]</span> Oh, I see. Because you have so many classes, right? 
+<span class="tutor">[Tutor]</span> No, they just still had classes. So Carrot English did not take a Monday off. 
+<span class="student">[Student]</span> I see. Just you had a Monday off. 
+<span class="tutor">[Tutor]</span> No, I just had Tuesday off. Only Tuesday. 
+<span class="student">[Student]</span> Oh, only Tuesday off. I see. Children&#x27;s Day. 
+<span class="tutor">[Tutor]</span> Teacher, I was wondering something. Your country have also the Children&#x27;s Day? 
+<span class="student">[Student]</span> No, we have different holidays but not Children&#x27;s Day. 
+<span class="tutor">[Tutor]</span> Ah, it&#x27;s a different day. 
+<span class="student">[Student]</span> I see. Okay. We have like a family day. 
+<span class="tutor">[Tutor]</span> Ah family day. What day? 
+<span class="student">[Student]</span> When is your family day? 
+<span class="tutor">[Tutor]</span> Not sure. In August family day, it&#x27;s always on the third Monday of February. so it&#x27;s always on a on a Monday on a Monday yeah on Monday on Monday so it&#x27;s on the third Monday of February February yeah okay but this month is Victoria Day also which is always on the Monday too 
+<span class="student">[Student]</span> Oh Victoria Day okay I see it&#x27;s always on the last Monday. 
+<span class="tutor">[Tutor]</span> It is always same the Victoria Day and Family Day, right? 
+<span class="student">[Student]</span> The date changes. 
+<span class="tutor">[Tutor]</span> So for example Victoria Day this month it&#x27;s always on the last Monday of the month. 
+<span class="student">[Student]</span> Okay I see. Understand. 
+<span class="tutor">[Tutor]</span> So you always get a long weekend. 
+<span class="student">[Student]</span> Yes. 
+<span class="tutor">[Tutor]</span> Good. Are you able to look at the textbook today? 
+<span class="student">[Student]</span> Oh yes, of course. 
+<span class="tutor">[Tutor]</span> Yeah, today we have to section 5 proposal and negotiation and second question. One more second question. 
+<span class="student">[Student]</span> Yeah, so do you consider yourself a good negotiator. 
+<span class="tutor">[Tutor]</span> Yeah, I&#x27;m good negotiator because I like to negotiation to something in the market or in the page in some area. 
+<span class="student">[Student]</span> So yeah and And I have some skill to negotiator. 
+<span class="tutor">[Tutor]</span> Yeah, negotiation. 
+<span class="student">[Student]</span> So I love that. And I&#x27;m good at negotiator. 
+<span class="tutor">[Tutor]</span> So you&#x27;re a good negotiator? 
+<span class="student">[Student]</span> Oh, yes. Of course. 
+<span class="tutor">[Tutor]</span> And what situations do you negotiate or how often do you negotiate? 
+<span class="student">[Student]</span> I&#x27;m investor also so usually I find some real estate at the time I&#x27;m usually negated the price or some condition of the sell or buy so yeah that is so good negotiation in a period usually in that field when making a deal or buying or selling 
+<span class="tutor">[Tutor]</span> Yeah you right Buy sell something and find a good condition trade condition and yeah 
+<span class="student">[Student]</span> And what skills do you think are most important for business negotiations? 
+<span class="tutor">[Tutor]</span> I think the most important skill is to find the needs usually if we sit the negotiation table usually we find some needs the other side needs my needs and and then start a negotiation that is a good skill because negotiation is getting something to the fight in a field so if people just start negotiations if we find some needs that negotiation more efficiency so first we find we will find what we need and why what is needs what other side needs yeah yeah that is good skill what&#x27;s good skill what&#x27;s important skill what&#x27;s an important skill 
+<span class="student">[Student]</span> and how do you practice your negotiation skills? 
+<span class="tutor">[Tutor]</span> Practice? Just negotiation in a field. Just trade. Just go to trade something in the market. 
+<span class="student">[Student]</span> And I love to the traditional market in some travel place because that is good place try to negotiation so yeah just buy or sell something small that is also good field to practice negotiation skill. 
+<span class="tutor">[Tutor]</span> Which is in the market too, or just go out and practice. 
+<span class="student">[Student]</span> Yeah, you&#x27;re right. 
+<span class="tutor">[Tutor]</span> So we have the next bit, formal versus informal. Did you want to look at this section? 
+<span class="student">[Student]</span> Yeah. 
+<span class="tutor">[Tutor]</span> Wow, so long. 
+<span class="student">[Student]</span> Yeah. First, I find this sounds great. just a moment I think that is R just a moment oh no no 
+<span class="tutor">[Tutor]</span> There&#x27;s something green. Green? A green. A green with something. 
+<span class="student">[Student]</span> Ah, yes. Just a moment. 
+<span class="tutor">[Tutor]</span> I don&#x27;t understand the question, but could you please have a say? 
+<span class="student">[Student]</span> If you think about any of the content, I would recommend just to find your work. 
+<span class="tutor">[Tutor]</span> Teacher, could you give a tip for me? 
+<span class="student">[Student]</span> If you&#x27;re agreeing to something, so that sounds great, or C, I can accept your terms. 
+<span class="tutor">[Tutor]</span> C? Yes, C. 
+<span class="student">[Student]</span> Ah, yes. I will find. I just find the next side, but that is connected to the C, A and C. 
+<span class="tutor">[Tutor]</span> Yeah, it&#x27;s a little closer, a little tricky with this one. 
+<span class="student">[Student]</span> Yes, I can upset your term, your term. 
+<span class="tutor">[Tutor]</span> And teacher, what is term? 
+<span class="student">[Student]</span> That is the Orson Negation terms. 
+<span class="tutor">[Tutor]</span> So usually the terms to the agreement so the points in the agreement so I can accept what you want I can accept your point 
+<span class="student">[Student]</span> Okay I see Okay 
+<span class="tutor">[Tutor]</span> And I recommend this More information 
+<span class="student">[Student]</span> Thank you and more information agree? 
+<span class="tutor">[Tutor]</span> AC? yeah yeah agree yeah 
+<span class="student">[Student]</span> and C is more informal and A is the informal yeah yeah 
+<span class="tutor">[Tutor]</span> and then I have got something for you I have got something for you I I have opportunity to discuss with you. 
+<span class="student">[Student]</span> How about that? 
+<span class="tutor">[Tutor]</span> Yeah, I have an opportunity. 
+<span class="student">[Student]</span> I&#x27;ve got something for you. 
+<span class="tutor">[Tutor]</span> Yeah I have something to you. 
+<span class="student">[Student]</span> Hmm... 
+<span class="tutor">[Tutor]</span> How about the recommending something? or introducing an idea introducing introducing yeah 
+<span class="student">[Student]</span> ah introducing the idea the B O O is the formal and B is the informal okay 
+<span class="tutor">[Tutor]</span> and then next you will be interested this in this you will interest in this 
+<span class="student">[Student]</span> you might be interested yeah yeah you might interesting inviting in interest 
+<span class="tutor">[Tutor]</span> the D is the informer and our our is the former yeah he&#x27;ll be interested in that yeah 
+<span class="student">[Student]</span> yes and no thank no thank 
+<span class="tutor">[Tutor]</span> Just no thanks. 
+<span class="student">[Student]</span> Think of refusing or disagreeing. 
+<span class="tutor">[Tutor]</span> refusing yeah how about the end I would recommend this time you&#x27;re hmm it&#x27;s different it&#x27;s different 
+<span class="student">[Student]</span> I&#x27;m sorry but I can&#x27;t agree and so I thought yeah always the closest is the miss for me. 
+<span class="tutor">[Tutor]</span> Yeah, when it&#x27;s too close. 
+<span class="student">[Student]</span> Yeah. Yeah. 
+<span class="tutor">[Tutor]</span> So, I&#x27;m sorry. Refusing. 
+<span class="student">[Student]</span> Yeah. Yeah, refusing. 
+<span class="tutor">[Tutor]</span> E-H. That is it. 
+<span class="student">[Student]</span> Yes. 
+<span class="tutor">[Tutor]</span> Ah, yes. H is the informal. 
+<span class="student">[Student]</span> Okay. 
+<span class="tutor">[Tutor]</span> what else what else what else I was thinking about asking for more, anything else. 
+<span class="student">[Student]</span> Okay. 
+<span class="tutor">[Tutor]</span> This is Anne. 
+<span class="student">[Student]</span> What do you think about expanding your context? 
+<span class="tutor">[Tutor]</span> What else? 
+<span class="student">[Student]</span> Anne Cahill- What else? 
+<span class="tutor">[Tutor]</span> Or P could you please give me more information 
+<span class="student">[Student]</span> What else Could you give more information 
+<span class="tutor">[Tutor]</span> Yeah so P P Ah, yes, yes, yes. 
+<span class="student">[Student]</span> Could you please give more information? 
+<span class="tutor">[Tutor]</span> P. P. Asking more information. 
+<span class="student">[Student]</span> Yeah. 
+<span class="tutor">[Tutor]</span> Ask PH. 
+<span class="student">[Student]</span> Okay. 
+<span class="tutor">[Tutor]</span> Let me think over. 
+<span class="student">[Student]</span> Let me think it&#x27;s over. 
+<span class="tutor">[Tutor]</span> Let me think it&#x27;s over. 
+<span class="student">[Student]</span> So maybe more time. 
+<span class="tutor">[Tutor]</span> Many more time. 
+<span class="student">[Student]</span> The meeting is over. 
+<span class="tutor">[Tutor]</span> Maybe a day or two. 
+<span class="student">[Student]</span> A day or two? 
+<span class="tutor">[Tutor]</span> So like can I have more time? 
+<span class="student">[Student]</span> Could I please have a day or two to think about it? 
+<span class="tutor">[Tutor]</span> let me think it&#x27;s over oh yes I could I please have a day or two think about it 
+<span class="student">[Student]</span> yeah I asking for more times I former and G is the inform informer okay 
+<span class="tutor">[Tutor]</span> have you consider trying our new model? 
+<span class="student">[Student]</span> Have you considered trying our new model? 
+<span class="tutor">[Tutor]</span> I would recommend new model. 
+<span class="student">[Student]</span> This one doesn&#x27;t quite match. 
+<span class="tutor">[Tutor]</span> It&#x27;s also contract. 
+<span class="student">[Student]</span> Yeah. Yeah, you should try this shark. 
+<span class="tutor">[Tutor]</span> Try shark. 
+<span class="student">[Student]</span> It&#x27;s different. 
+<span class="tutor">[Tutor]</span> Just a moment. 
+<span class="student">[Student]</span> I understand you&#x27;re concerned, but it&#x27;s different. 
+<span class="tutor">[Tutor]</span> What do you think? 
+<span class="student">[Student]</span> Contract. 
+<span class="tutor">[Tutor]</span> I just guess the N is difference. 
+<span class="student">[Student]</span> I would recommend displaying your portfolio. 
+<span class="tutor">[Tutor]</span> With this one, I and M. 
+<span class="student">[Student]</span> I and M. 
+<span class="tutor">[Tutor]</span> Extending your contract. 
+<span class="student">[Student]</span> Yeah, because it&#x27;s talking about hinting. 
+<span class="tutor">[Tutor]</span> So what do you think about it? 
+<span class="student">[Student]</span> And have you considered? 
+<span class="tutor">[Tutor]</span> So those are hinting at a request. 
+<span class="student">[Student]</span> what do you think about how do you consider trying but the first is the model and second is the contract so I&#x27;m really confused but they&#x27;re both hinting at a request yeah 
+<span class="tutor">[Tutor]</span> anything or at the request I that&#x27;s same purpose yeah 
+<span class="student">[Student]</span> I I stir okay and and mr. Palmer and I stir in Palmer you should try this 
+<span class="tutor">[Tutor]</span> oh my god the time is almost over 
+<span class="student">[Student]</span> oh yeah yeah you should try blah blah 
+<span class="tutor">[Tutor]</span> but yeah next time I&#x27;m try to to question okay 
+<span class="student">[Student]</span> well I can also send these to you in the video and the answers are in the back here. 
+<span class="tutor">[Tutor]</span> Uh-huh. 
+<span class="student">[Student]</span> Okay. 
+<span class="tutor">[Tutor]</span> Yeah, well, I&#x27;ll send you corrections in just a bit. 
+<span class="student">[Student]</span> Any other questions before I go? 
+<span class="tutor">[Tutor]</span> Oh, no. 
+<span class="student">[Student]</span> Thank you so much, teacher. 
+<span class="tutor">[Tutor]</span> Yeah. 
+<span class="student">[Student]</span> Have a nice day. 
+<span class="tutor">[Tutor]</span> Have a wonderful day. 
+<span class="student">[Student]</span> Yeah, this was a tricky one because it&#x27;s a lot of hinting here. 
+<span class="tutor">[Tutor]</span> Okay. 
+<span class="student">[Student]</span> Yeah, I tried to more practice. 
+<span class="tutor">[Tutor]</span> Okay. 
+<span class="student">[Student]</span> Thank you so much. 
+<span class="tutor">[Tutor]</span> Have a nice day. 
+<span class="student">[Student]</span> You&#x27;re welcome. 
+<span class="tutor">[Tutor]</span> Goodbye. 
+<span class="student">[Student]</span> Oh, bye-bye. 
+<span class="tutor">[Tutor]</span> Thank you.</div>
+        </div>
+    </div>
+    <div class="toast" id="toast">✅ 프롬프트가 복사되었습니다!</div>
+    <script>
+        const REVIEW_PROMPT="너는 나의 영어 회화 복습 파트너야. 오늘 내 전화영어 수업 내용을 기반으로 대화하면서 복습을 도와줘.\n\n[오늘 수업 전사 내용]\n[Tutor] Hello, hello teacher. Good morning. Yeah, hi. Good morning, this is Belle. \n[Student] Yeah, Belle, good morning. Good evening. \n[Tutor] Yeah. How are you? \n[Student] Good. How are you doing today? \n[Tutor] I'm so good. I'm a little tired, but it's okay. \n[Student] Yeah. How was your holiday? Did you enjoy the holiday? \n[Tutor] Yes, of course. It is so wonderful holiday for me. I stay with my family. It's a long time. \n[Student] So, yeah, it's a good time for me. How was your day? How was your weekend? How was your holiday? \n[Tutor] Well, I only had the one day off. \n[Student] Oh, I see. Because you have so many classes, right? \n[Tutor] No, they just still had classes. So Carrot English did not take a Monday off. \n[Student] I see. Just you had a Monday off. \n[Tutor] No, I just had Tuesday off. Only Tuesday. \n[Student] Oh, only Tuesday off. I see. Children's Day. \n[Tutor] Teacher, I was wondering something. Your country have also the Children's Day? \n[Student] No, we have different holidays but not Children's Day. \n[Tutor] Ah, it's a different day. \n[Student] I see. Okay. We have like a family day. \n[Tutor] Ah family day. What day? \n[Student] When is your family day? \n[Tutor] Not sure. In August family day, it's always on the third Monday of February. so it's always on a on a Monday on a Monday yeah on Monday on Monday so it's on the third Monday of February February yeah okay but this month is Victoria Day also which is always on the Monday too \n[Student] Oh Victoria Day okay I see it's always on the last Monday. \n[Tutor] It is always same the Victoria Day and Family Day, right? \n[Student] The date changes. \n[Tutor] So for example Victoria Day this month it's always on the last Monday of the month. \n[Student] Okay I see. Understand. \n[Tutor] So you always get a long weekend. \n[Student] Yes. \n[Tutor] Good. Are you able to look at the textbook today? \n[Student] Oh yes, of course. \n[Tutor] Yeah, today we have to section 5 proposal and negotiation and second question. One more second question. \n[Student] Yeah, so do you consider yourself a good negotiator. \n[Tutor] Yeah, I'm good negotiator because I like to negotiation to something in the market or in the page in some area. \n[Student] So yeah and And I have some skill to negotiator. \n[Tutor] Yeah, negotiation. \n[Student] So I love that. And I'm good at negotiator. \n[Tutor] So you're a good negotiator? \n[Student] Oh, yes. Of course. \n[Tutor] And what situations do you negotiate or how often do you negotiate? \n[Student] I'm investor also so usually I find some real estate at the time I'm usually negated the price or some condition of the sell or buy so yeah that is so good negotiation in a period usually in that field when making a deal or buying or selling \n[Tutor] Yeah you right Buy sell something and find a good condition trade condition and yeah \n[Student] And what skills do you think are most important for business negotiations? \n[Tutor] I think the most important skill is to find the needs usually if we sit the negotiation table usually we find some needs the other side needs my needs and and then start a negotiation that is a good skill because negotiation is getting something to the fight in a field so if people just start negotiations if we find some needs that negotiation more efficiency so first we find we will find what we need and why what is needs what other side needs yeah yeah that is good skill what's good skill what's important skill what's an important skill \n[Student] and how do you practice your negotiation skills? \n[Tutor] Practice? Just negotiation in a field. Just trade. Just go to trade something in the market. \n[Student] And I love to the traditional market in some travel place because that is good place try to negotiation so yeah just buy or sell something small that is also good field to practice negotiation skill. \n[Tutor] Which is in the market too, or just go out and practice. \n[Student] Yeah, you're right. \n[Tutor] So we have the next bit, formal versus informal. Did you want to look at this section? \n[Student] Yeah. \n[Tutor] Wow, so long. \n[Student] Yeah. First, I find this sounds great. just a moment I think that is R just a moment oh no no \n[Tutor] There's something green. Green? A green. A green with something. \n[Student] Ah, yes. Just a moment. \n[Tutor] I don't understand the question, but could you please have a say? \n[Student] If you think about any of the content, I would recommend just to find your work. \n[Tutor] Teacher, could you give a tip for me? \n[Student] If you're agreeing to something, so that sounds great, or C, I can accept your terms. \n[Tutor] C? Yes, C. \n[Student] Ah, yes. I will find. I just find the next side, but that is connected to the C, A and C. \n[Tutor] Yeah, it's a little closer, a little tricky with this one. \n[Student] Yes, I can upset your term, your term. \n[Tutor] And teacher, what is term? \n[Student] That is the Orson Negation terms. \n[Tutor] So usually the terms to the agreement so the points in the agreement so I can accept what you want I can accept your point \n[Student] Okay I see Okay \n[Tutor] And I recommend this More information \n[Student] Thank you and more information agree? \n[Tutor] AC? yeah yeah agree yeah \n[Student] and C is more informal and A is the informal yeah yeah \n[Tutor] and then I have got something for you I have got something for you I I have opportunity to discuss with you. \n[Student] How about that? \n[Tutor] Yeah, I have an opportunity. \n[Student] I've got something for you. \n[Tutor] Yeah I have something to you. \n[Student] Hmm... \n[Tutor] How about the recommending something? or introducing an idea introducing introducing yeah \n[Student] ah introducing the idea the B O O is the formal and B is the informal okay \n[Tutor] and then next you will be interested this in this you will interest in this \n[Student] you might be interested yeah yeah you might interesting inviting in interest \n[Tutor] the D is the informer and our our is the former yeah he'll be interested in that yeah \n[Student] yes and no thank no thank \n[Tutor] Just no thanks. \n[Student] Think of refusing or disagreeing. \n[Tutor] refusing yeah how about the end I would recommend this time you're hmm it's different it's different \n[Student] I'm sorry but I can't agree and so I thought yeah always the closest is the miss for me. \n[Tutor] Yeah, when it's too close. \n[Student] Yeah. Yeah. \n[Tutor] So, I'm sorry. Refusing. \n[Student] Yeah. Yeah, refusing. \n[Tutor] E-H. That is it. \n[Student] Yes. \n[Tutor] Ah, yes. H is the informal. \n[Student] Okay. \n[Tutor] what else what else what else I was thinking about asking for more, anything else. \n[Student] Okay. \n[Tutor] This is Anne. \n[Student] What do you think about expanding your context? \n[Tutor] What else? \n[Student] Anne Cahill- What else? \n[Tutor] Or P could you please give me more information \n[Student] What else Could you give more information \n[Tutor] Yeah so P P Ah, yes, yes, yes. \n[Student] Could you please give more information? \n[Tutor] P. P. Asking more information. \n[Student] Yeah. \n[Tutor] Ask PH. \n[Student] Okay. \n[Tutor] Let me think over. \n[Student] Let me think it's over. \n[Tutor] Let me think it's over. \n[Student] So maybe more time. \n[Tutor] Many more time. \n[Student] The meeting is over. \n[Tutor] Maybe a day or two. \n[Student] A day or two? \n[Tutor] So like can I have more time? \n[Student] Could I please have a day or two to think about it? \n[Tutor] let me think it's over oh yes I could I please have a day or two think about it \n[Student] yeah I asking for more times I former and G is the inform informer okay \n[Tutor] have you consider trying our new model? \n[Student] Have you considered trying our new model? \n[Tutor] I would recommend new model. \n[Student] This one doesn't quite match. \n[Tutor] It's also contract. \n[Student] Yeah. Yeah, you should try this shark. \n[Tutor] Try shark. \n[Student] It's different. \n[Tutor] Just a moment. \n[Student] I understand you're concerned, but it's different. \n[Tutor] What do you think? \n[Student] Contract. \n[Tutor] I just guess the N is difference. \n[Student] I would recommend displaying your portfolio. \n[Tutor] With this one, I and M. \n[Student] I and M. \n[Tutor] Extending your contract. \n[Student] Yeah, because it's talking about hinting. \n[Tutor] So what do you think about it? \n[Student] And have you considered? \n[Tutor] So those are hinting at a request. \n[Student] what do you think about how do you consider trying but the first is the model and second is the contract so I'm really confused but they're both hinting at a request yeah \n[Tutor] anything or at the request I that's same purpose yeah \n[Student] I I stir okay and and mr. Palmer and I stir in Palmer you should try this \n[Tutor] oh my god the time is almost over \n[Student] oh yeah yeah you should try blah blah \n[Tutor] but yeah next time I'm try to to question okay \n[Student] well I can also send these to you in the video and the answers are in the back here. \n[Tutor] Uh-huh. \n[Student] Okay. \n[Tutor] Yeah, well, I'll send you corrections in just a bit. \n[Student] Any other questions before I go? \n[Tutor] Oh, no. \n[Student] Thank you so much, teacher. \n[Tutor] Yeah. \n[Student] Have a nice day. \n[Tutor] Have a wonderful day. \n[Student] Yeah, this was a tricky one because it's a lot of hinting here. \n[Tutor] Okay. \n[Student] Yeah, I tried to more practice. \n[Tutor] Okay. \n[Student] Thank you so much. \n[Tutor] Have a nice day. \n[Student] You're welcome. \n[Tutor] Goodbye. \n[Student] Oh, bye-bye. \n[Tutor] Thank you.\n\n[AI 피드백]\n안녕하세요! 오늘 수업도 정말 수고 많으셨습니다. 비즈니스 협상이라는 중요한 주제로 깊이 있는 대화를 나누셨네요. 투자와 자기계발에 대한 선생님의 열정이 대화 곳곳에서 느껴져 저도 참 즐거웠습니다.\n\n오늘 배운 내용들을 바탕으로 유창성과 정확성을 동시에 잡을 수 있도록 따뜻하고 실용적인 피드백을 준비했어요. 함께 살펴볼까요?\n\n---\n\n**0. 📌 Topic**\nTopic: Discussing Negotiation Skills and Formal/Informal Expressions\n\n**1. 📊 오늘의 대화 요약 (Summary)**\n오늘 수업에서는 먼저 연휴 계획에 대한 가벼운 대화로 시작하여, 선생님의 투자 경험을 바탕으로 협상(negotiation) 스킬에 대해 깊이 있게 이야기 나누었습니다. 특히, 협상 시 중요한 요소와 연습 방법에 대해 토론했으며, 교재의 formal/informal 표현들을 비교하며 비즈니스 상황에 맞는 어휘를 익히는 시간을 가졌습니다.\n\n---\n\n**2. 💬 유창성 업그레이드 (Fluency & Natural Flow)**\n의미는 잘 전달되었지만, 원어민들이 더 자연스럽게 쓰는 표현으로 다듬어 볼 세 가지 문장입니다.\n\n1.  **❌ 학습자 원문 (As Said):** \"I have some skill to negotiator.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"I have some negotiation skills.\"\n    *   **💎 비즈니스 표현 (Professional):** \"I possess strong negotiation skills.\"\n    *   **💡 코칭 포인트:** \"Skill to negotiator\" is a direct translation that sounds a bit awkward. \"Negotiation skills\" is the standard collocation. \"Possess\" is a more formal verb than \"have,\" suitable for professional contexts.\n        → \"skill to negotiator\"는 직역투로 어색하게 들릴 수 있습니다. \"negotiation skills\"는 표준적인 표현이며, \"possess\"는 \"have\"보다 격식 있는 동사로 비즈니스 상황에 적합합니다.\n\n2.  **❌ 학습자 원문 (As Said):** \"I love to the traditional market in some travel place because that is good place try to negotiation\"\n    *   **✅ 자연스러운 표현 (Natural):** \"I love visiting traditional markets in various travel destinations because they are good places to practice negotiation.\"\n    *   **💎 비즈니스 표현 (Professional):** \"I find traditional markets in different regions to be excellent venues for honing negotiation tactics.\"\n    *   **💡 코칭 포인트:** \"Love to the market\" is not idiomatic; \"love visiting markets\" is more natural. \"Some travel place\" can be rephrased as \"various travel destinations\" or \"different regions\" for better flow. \"Good place try to negotiation\" needs \"to\" before \"try\" and \"practice\" instead of \"try,\" followed by the noun \"negotiation.\" \"Honing negotiation tactics\" is a more sophisticated way to say \"practicing negotiation skills.\"\n        → \"love to the market\"은 부자연스러우며, \"love visiting markets\"가 더 자연스럽습니다. \"some travel place\"는 \"various travel destinations\"나 \"different regions\"로 바꾸면 좋습니다. \"good place try to negotiation\"은 \"to\"와 \"practice\"를 추가하고 \"negotiation\"을 명사로 써야 합니다. \"honing negotiation tactics\"는 \"협상 기술을 연마하다\"라는 고급 표현입니다.\n\n3.  **❌ 학습자 원문 (As Said):** \"always the closest is the miss for me.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"I often get confused by similar options.\"\n    *   **💎 비즈니스 표현 (Professional):** \"I sometimes find it challenging to distinguish between closely related options.\"\n    *   **💡 코칭 포인트:** \"The closest is the miss for me\" is a literal translation of a Korean idiom. In English, we would express this as getting confused or having difficulty differentiating. \"Challenging to distinguish\" is a professional way to describe this difficulty.\n        → \"the closest is the miss for me\"는 한국어 관용구를 직역한 표현입니다. 영어에서는 \"혼동된다\" 또는 \"구분하기 어렵다\"는 식으로 표현합니다. \"challenging to distinguish\"는 이러한 어려움을 전문적으로 설명하는 표현입니다.\n\n---\n\n**3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)**\n오늘 대화에서 **관사 (a/an/the)** 사용에 대한 패턴이 종종 보였습니다. 관사는 한국어에 없는 개념이라 많은 학습자분들이 어려워하지만, 영어에서는 명사 앞에 필수적으로 붙어 명사의 특정성이나 일반성을 나타내는 중요한 역할을 합니다.\n\n| ❌ 학습자 원문 (As Said)             | ✅ 교정 예시 (Corrected)                 |\n| :---------------------------------- | :--------------------------------------- |\n| I'm **investor** also               | I'm **an investor** also.                |\n| that is **good place** try to negotiation | That is **a good place** to practice negotiation. |\n| I'm good at **negotiator**.         | I'm good at **negotiating** (or **a good negotiator**). |\n\n📌 **핵심 규칙:** 셀 수 있는 명사(countable noun)가 단수일 때는 반드시 앞에 관사(a/an/the)를 붙여주세요.\n\n🔁 **따라 읽기 (Read Aloud):**\n🗣️ \"I'm an investor also.\"\n🗣️ \"That is a good place to practice negotiation.\"\n🗣️ \"I'm a good negotiator.\"\n\n---\n\n**4. 📗 어휘 확장 (Vocabulary Vault)**\n오늘 수업 내용 및 선생님의 관심사와 관련된 유용한 비즈니스 어휘 5가지입니다.\n\n1.  **negotiation** /nɪˌɡoʊʃiˈeɪʃən/ (명사)\n    *   **뜻:** 협상, 교섭\n    *   **실전 예문:** Successful **negotiation** is key to securing favorable terms in any business deal.\n\n2.  **leverage** /ˈlɛvərɪdʒ/ (명사/동사)\n    *   **뜻:** (명사) 영향력, 지렛대 효과; (동사) ~을 활용하다, 영향을 미치다\n    *   **실전 예문:** We need to **leverage** our strong market position to gain a better deal.\n\n3.  **consensus** /kənˈsɛnsəs/ (명사)\n    *   **뜻:** (의견의) 합의, 일치\n    *   **실전 예문:** Achieving **consensus** among all stakeholders is crucial for project success.\n\n4.  **concession** /kənˈsɛʃən/ (명사)\n    *   **뜻:** 양보, 용인\n    *   **실전 예문:** Both parties had to make **concessions** to reach a mutually beneficial agreement.\n\n5.  **due diligence** /ˌduː ˈdɪlɪdʒəns/ (명사)\n    *   **뜻:** (계약 전) 실사, 상당한 주의\n    *   **실전 예문:** Thorough **due diligence** is essential before making any major investment decisions.\n\n---\n\n**5. 📝 실전 복습 챌린지 (Practice)**\n오늘 배운 표현과 문법을 활용하여 영작해 보세요.\n\n1.  **상황:** 당신은 새로운 투자 기회를 찾고 있는 투자자입니다.\n    *   **영작:** \"저는 또한 투자자라서 항상 좋은 투자처를 찾고 있습니다.\"\n    *   **모범 답안:** \"I am also an investor, so I'm always looking for good investment opportunities.\"\n\n2.  **상황:** 비즈니스 협상에서 가장 중요한 기술 중 하나는 상대방의 필요를 파악하는 것이라고 생각합니다.\n    *   **영작:** \"저는 비즈니스 협상에서 가장 중요한 기술은 상대방의 필요를 파악하는 것이라고 생각합니다.\"\n    *   **모범 답안:** \"I believe that the most important skill in business negotiation is identifying the other side's needs.\"\n\n3.  **상황:** 당신은 전통 시장에서 물건값을 흥정하는 것을 좋아하며, 이것이 협상 기술을 연습하는 좋은 방법이라고 생각합니다.\n    *   **영작:** \"저는 전통 시장에서 물건값을 흥정하는 것을 좋아하는데, 그것은 협상 기술을 연마하기에 좋은 장소이기 때문입니다.\"\n    *   **모범 답안:** \"I enjoy negotiating prices in traditional markets, as they are excellent places to hone negotiation skills.\"\n\n---\n\n**6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)**\n\n✨ **Good Job**: \"I think the most important skill is to find the needs usually if we sit the negotiation table usually we find some needs the other side needs my needs and and then start a negotiation that is a good skill because negotiation is getting something to the fight in a field so if people just start negotiations if we find some needs that negotiation more efficiency so first we find we will find what we need and why what is needs what other side needs yeah yeah that is good skill what's good skill what's important skill what's an important skill\"\n\n선생님께서 협상에서 가장 중요한 기술에 대해 설명하신 이 부분은 정말 인상 깊었습니다. 비록 중간에 문법적인 미스가 있었지만, **복잡한 아이디어를 논리적으로 연결하고 본인의 생각을 막힘없이 길게 풀어나가는 유창성**이 돋보였습니다. 특히 \"find the needs\"라는 핵심 포인트를 반복하며 강조하는 모습에서 자신감과 전문성이 느껴졌습니다. 훌륭한 설명이었어요!\n\n🚀 **내일의 한 문장**:\n다음 수업 시작 시 튜터에게 오늘 배운 표현을 활용하여 대화를 시작해 보세요.\n\"I've been thinking about what we discussed regarding negotiation skills. Do you have any tips for leveraging our strengths in a negotiation?\"\n(저희가 협상 기술에 대해 나눈 이야기에 대해 생각해 봤어요. 협상에서 우리의 강점을 활용하는 팁이 있으신가요?)\n\n---\n\n**[성과 지표]**\n**유창성 점수:** 8/10점\n**근거:** 선생님께서는 자신의 생각과 의견을 길고 복잡한 문장으로도 막힘없이 표현하는 뛰어난 유창성을 보여주셨습니다. 특히 비즈니스 관련 주제에 대한 전문 지식을 영어로 자신감 있게 전달하는 모습이 인상 깊었습니다. 다만, 일부 표현이 직역투이거나 어색하게 들리는 부분이 있어 자연스러운 흐름을 조금 더 다듬을 필요가 있습니다.\n\n**다음 수업 '원포인트 액션 플랜':**\n**\"관사 (a/an/the)와 복수 명사 사용에 더 신경 쓰기\"**\n오늘 피드백에서 다룬 관사 사용을 의식적으로 연습해 보세요. 문장을 말하기 전에 명사가 셀 수 있는 단수 명사인지, 아니면 일반적인 복수 명사인지 한 번 더 생각하는 습관을 들이는 것이 좋습니다. 예를 들어, \"I'm investor\" 대신 \"I'm **an** investor\"처럼요. 다음 수업에서는 이 부분을 집중적으로 코칭해 드릴게요!\n\n오늘도 정말 수고 많으셨습니다. 다음 수업에서 더 성장한 모습으로 만나요!\n\n위 내용을 바탕으로:\n1. 먼저 오늘 수업에서 내가 틀렸거나 어색했던 표현을 하나 골라서, 관련된 상황을 영어로 질문해줘.\n2. 내가 영어로 대답하면, 자연스러운지 확인하고 더 나은 표현이 있으면 알려줘.\n3. 특히 \"반복 실수 패턴\"에서 지적된 부분을 집중적으로 연습시켜줘.\n4. 이런 식으로 오늘 배운 표현들을 하나씩 복습하자.\n5. 한국어 설명은 필요할 때만 간단히, 대화는 최대한 영어로 진행해줘.\n\n그럼 시작하자!";
+        function startReview(){navigator.clipboard.writeText(REVIEW_PROMPT).then(()=>{showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)}).catch(()=>{const t=document.createElement('textarea');t.value=REVIEW_PROMPT;document.body.appendChild(t);t.select();document.execCommand('copy');document.body.removeChild(t);showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)})}
+        function showToast(){const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500)}
+        function switchTab(n){document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',n==='feedback'?i===0:i===1));document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));document.getElementById('tab-'+n).classList.add('active')}
+    </script>
+</body>
+</html>
