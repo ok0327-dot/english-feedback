@@ -379,34 +379,34 @@ def transcribe_audio(audio_path):
 # ║  왜 필요? 전화 음질 한계 + 한국인 발음 특성 → 오인식 발생              ║
 # ╚══════════════════════════════════════════════════════════════════════════╝
 
-def gemini_request(prompt, max_tokens=4096, temperature=0.3, timeout=120, system_msg=None, thinking_budget=2048, model="gemini-2.5-flash"):
+def gemini_request(prompt, max_tokens=4096, temperature=0.3, timeout=120, system_msg=None, thinking_budget=2048):
     """
-    Google Gemini API 호출. 전사 보정 및 피드백 생성에 사용.
-    429 에러 시 자동 재시도 (최대 3회, 60/180/300s 백오프 — 1분 RPM 윈도우 통과 보장).
-    thinking_budget: 2.5 계열 thinking 모델에서만 사용 (다른 모델은 자동 무시).
+    Google Gemini API 호출 (Gemini 2.5 Flash 모델 사용).
+    전사 보정 및 피드백 생성에 사용.
+    429 에러 시 자동 재시도 (최대 3회).
+    thinking_budget: 추론에 사용할 최대 토큰 수 (maxOutputTokens에 포함됨)
     """
     if not GEMINI_API_KEY:
         raise Exception("GEMINI_API_KEY 미설정")
 
-    url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
+    url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent"
     headers = {
         "x-goog-api-key": GEMINI_API_KEY,
         "Content-Type": "application/json",
     }
 
-    generation_config = {
-        "maxOutputTokens": max_tokens,
-        "temperature": temperature,
-    }
-    # thinking config는 2.5 계열에만 적용 (2.0 flash 등은 미지원)
-    if "2.5" in model and thinking_budget > 0:
-        generation_config["thinkingConfig"] = {"thinkingBudget": thinking_budget}
-
+    # 요청 페이로드 구성
+    # Gemini 2.5 Flash는 thinking 모델이라 추론 토큰도 maxOutputTokens에 포함됨
+    # → 추론 토큰을 제한하여 실제 출력에 충분한 토큰을 확보
     payload = {
         "contents": [
             {"parts": [{"text": prompt}]}
         ],
-        "generationConfig": generation_config,
+        "generationConfig": {
+            "maxOutputTokens": max_tokens,
+            "temperature": temperature,
+            "thinkingConfig": {"thinkingBudget": thinking_budget},
+        },
     }
 
     # system_msg가 있으면 systemInstruction 추가
@@ -415,7 +415,6 @@ def gemini_request(prompt, max_tokens=4096, temperature=0.3, timeout=120, system
             "parts": [{"text": system_msg}]
         }
 
-    waits = [30, 60, 90]  # 두 번째 재시도(60s)에서 1분 RPM 윈도우 통과
     for attempt in range(3):
         response = requests.post(url, json=payload, headers=headers, timeout=timeout)
         if response.status_code == 200:
@@ -436,8 +435,8 @@ def gemini_request(prompt, max_tokens=4096, temperature=0.3, timeout=120, system
                     return part["text"]
             return parts[-1]["text"]  # fallback
         elif response.status_code == 429:
-            wait = waits[attempt]
-            print(f"⏳ Gemini ({model}) 속도 제한 (429). {wait}초 대기 후 재시도... ({attempt+1}/3)")
+            wait = 30 * (attempt + 1)  # 30초, 60초, 90초
+            print(f"⏳ Gemini 속도 제한 (429). {wait}초 대기 후 재시도... ({attempt+1}/3)")
             time.sleep(wait)
         else:
             raise Exception(f"Gemini API 오류 ({response.status_code}): {response.text}")
@@ -482,29 +481,19 @@ def groq_llm_request(prompt, max_tokens=4096, temperature=0.3, timeout=120, syst
 
 def llm_request(prompt, max_tokens=4096, temperature=0.3, timeout=120, system_msg=None, thinking_budget=2048):
     """
-    LLM 호출 캐스케이드: gemini-2.5-flash → gemini-2.0-flash → Groq.
-    Gemini 두 모델은 별도 quota 풀이라 한쪽 429여도 다른 쪽 통과 가능성 높음.
-    Groq은 최후 보루 (TPM 12K 한도로 큰 입력엔 실패할 수 있음).
+    LLM 호출 (Gemini 우선, 실패 시 Groq로 자동 전환).
+    무료 한도 초과, 네트워크 오류 등 Gemini 장애 시에도 파이프라인이 중단되지 않음.
+    thinking_budget: Gemini 추론 토큰 한도 (Groq fallback 시에는 미사용)
     """
-    gemini_models = ["gemini-2.5-flash", "gemini-2.0-flash"]
-    last_error = None
-    for model in gemini_models:
-        try:
-            result = gemini_request(prompt, max_tokens, temperature, timeout, system_msg, thinking_budget, model=model)
-            print(f"  (🟢 Gemini {model})")
-            return result
-        except Exception as e:
-            last_error = e
-            print(f"⚠️ Gemini {model} 실패 ({e})")
-
-    print(f"⚠️ 모든 Gemini 모델 실패, Groq fallback 시도...")
     try:
+        result = gemini_request(prompt, max_tokens, temperature, timeout, system_msg, thinking_budget)
+        print("  (🟢 Gemini)")
+        return result
+    except Exception as e:
+        print(f"⚠️ Gemini 실패 ({e}), Groq로 대체 실행...")
         result = groq_llm_request(prompt, max_tokens, temperature, timeout, system_msg)
         print("  (🟡 Groq fallback)")
         return result
-    except Exception as e:
-        # Gemini 실패가 본질 원인이므로 Gemini 에러를 함께 노출
-        raise Exception(f"Gemini 캐스케이드 실패 ({last_error}); Groq fallback도 실패 ({e})")
 
 
 def _format_segments_with_gaps(segments):
@@ -555,12 +544,6 @@ def clean_transcript(raw_transcript, segments=None):
     prompt = f"""아래는 한국인 학습자와 원어민 튜터 간의 전화영어 수업을 STT(음성→텍스트)로 전사한 원본입니다.
 전화 통화 특성상 음질이 완벽하지 않아 오인식이 포함되어 있을 수 있습니다.
 
-📌 **고정 이름 정보** (반드시 준수):
-- **학생(Student) = "Joey"** — 항상 동일 인물.
-- **튜터(Tutor) = 회차마다 바뀜** — 자주 등장하는 튜터: **Bell**, **Joanna**. 그 외 다른 영어 이름의 튜터가 등장할 수도 있음.
-- STT가 학생 이름을 "Joey/Jowy/Joe" 등으로 다르게 들었다면 모두 "Joey"로 통일.
-- **튜터 이름(Bell, Joanna 등)은 학생과 별개 인물이므로 절대 학생 이름으로 통합하지 말고 그대로 보존**하세요.
-
 다음 작업을 **반드시 아래 순서대로** 수행해주세요:
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -600,9 +583,7 @@ def clean_transcript(raw_transcript, segments=None):
    - 리액션/칭찬("That sounds nice!", "Oh really?", "Good job!") → [Tutor]
    - 교정하거나 되묻는 쪽("You mean...?", "Did you say...?") → [Tutor]
    - 한국 관련 자기 이야기를 하는 쪽 → [Student]
-   - "teacher"라고 부르는 쪽 → [Student]
-   - **"Joey"라고 상대를 호명** → 그 화자는 [Tutor] (학생은 자기 이름을 부르지 않음)
-   - **"Bell" / "Joanna" / 기타 튜터의 영어 이름**으로 상대를 호명 → 그 화자는 [Student] (튜터는 자기 이름을 부르지 않음)
+   - "teacher"라고 부르는 쪽 → [Student], 이름을 부르는 쪽 → [Tutor]
 
 🥉 **3순위 — 타임스탬프 기반 화자 전환**:
    - 세그먼트 사이 **1.5초 이상 침묵**이 있으면 화자가 바뀔 가능성이 높음
@@ -660,19 +641,12 @@ def verify_speaker_labels(transcript):
 
     prompt = f"""아래는 전화영어 수업의 전사 내용입니다. [Tutor]와 [Student] 라벨이 올바른지 검증해주세요.
 
-📌 **고정 이름 정보**:
-- 학생(Student) = **Joey** (항상 동일)
-- 튜터(Tutor) = 회차마다 바뀜. 자주 등장: **Bell**, **Joanna** (다른 튜터 이름도 가능)
-
 ## 검증 기준
 
 1. **영어 실력 일관성**: [Student]로 표시된 발화가 갑자기 완벽한 문법으로 유창해지거나, [Tutor]로 표시된 발화에 문법 실수가 많으면 라벨이 바뀐 것
 2. **대화 흐름**: 질문→대답 쌍에서 같은 화자가 질문과 대답을 모두 하고 있으면 오류
 3. **역할 일관성**: [Tutor]는 수업을 이끌고 교정하는 역할, [Student]는 대답하고 연습하는 역할
 4. **한국 관련 자기 이야기**: 한국 생활/업무를 자기 경험으로 말하는 쪽은 [Student]
-5. **이름 호명 단서**:
-   - 누군가 "Joey"라고 호명 → 그 화자는 [Tutor]
-   - 누군가 "Bell" / "Joanna" / 다른 튜터 영어 이름으로 호명 → 그 화자는 [Student]
 
 ## 작업
 
@@ -701,13 +675,11 @@ def verify_speaker_labels(transcript):
 # ║     예: "비즈니스 영어 특화" / "TOEIC Speaking 기준" 등                 ║
 # ╚══════════════════════════════════════════════════════════════════════════╝
 
-def generate_feedback(transcript, recent_categories=None):
+def generate_feedback(transcript):
     """
     수업 전사 내용 → 상세 학습 피드백 생성.
     포함 항목: 수업 요약, 문법 교정, 반복 실수 패턴, 핵심 표현,
               잘한 점, 개선 포인트, 영작 연습, 유창성 점수(4항목)
-
-    recent_categories: 직전 N회 Target Grammar 카테고리 리스트 (다양성 확보용).
     """
     print("🤖 AI 피드백 생성 중...")
 
@@ -718,29 +690,10 @@ def generate_feedback(transcript, recent_categories=None):
 너무 어려운 표현보다는 '입에 붙는 자연스러운 표현'을 우선합니다.
 학습자는 비즈니스 환경(감사, 에너지 수입 등)에서 일하며 투자와 자기계발에 관심이 많은 중급(Intermediate) 수준의 전문가입니다.
 
-📌 **이름 가이드**:
-- **학생(Student) = "Joey"** — 피드백에서 학생을 호명할 때 반드시 "Joey"로 통일.
-- **튜터(Tutor) = 회차마다 다름** — 자주 등장: **Bell**, **Joanna** (다른 영어 이름도 가능). 인용문/Good Job 등에서 튜터를 언급할 때는 전사에 등장한 튜터 이름을 그대로 보존하세요.
-- ⚠️ **Bell, Joanna는 튜터 이름이지 학생 이름이 아닙니다.** 학생을 절대 "Bell" / "Joanna"라고 부르지 마세요.
-
 ⚠️ 중요 규칙:
 - 전사 내용에 **실제로 있는 [Student] 발화만** 인용하세요. 없는 문장을 만들어내지 마세요.
-- 인용 시 `[Student]` `[Tutor]` 같은 화자 라벨은 인용문에서 **반드시 제거**하세요. 예: `"[Student] Yes, I agree"` → `"Yes, I agree"`
 - 각 섹션은 서로 다른 관점을 다뤄야 합니다. 같은 예문을 여러 섹션에서 반복하지 마세요.
 - 표준 영어만 가르치세요. 비표준 표현(funner 등)은 포함하지 마세요."""
-
-    # 카테고리 다양성 블록 (직전 N회 회피)
-    avoid_block = ""
-    if recent_categories:
-        avoid_list = ", ".join(recent_categories)
-        avoid_block = (
-            f"\n⚠️ **카테고리 다양성 규칙 (중요)**:\n"
-            f"- 최근 다룬 Target Grammar 카테고리: {avoid_list}\n"
-            f"- 이번에는 위 카테고리들을 **제외**하고 다른 문법 패턴을 골라주세요. "
-            f"(같은 카테고리 반복은 학습 효과가 떨어집니다)\n"
-            f"- 단, 위 카테고리 외에 [Student]가 3회 이상 반복한 패턴이 정말 없는 경우에만 예외 허용 — "
-            f"그 경우 본문 첫 줄에 `(예외: 다른 적합한 패턴 없음)` 한 줄을 명시하세요.\n"
-        )
 
     prompt = f"""아래 [전화영어 전사 내용]을 분석하여 7가지 섹션의 피드백을 한국어로 작성해 주세요.
 (영어 예문은 영어로 유지)
@@ -765,16 +718,8 @@ def generate_feedback(transcript, recent_categories=None):
 **3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)**
 ⚠️ 이 섹션은 2번(유창성)과 **완전히 다른 관점**입니다.
 - 2번은 "어색한 표현 → 자연스러운 표현"으로 바꾸는 것
-- 3번은 **문법 규칙 위반**에 집중. 카테고리는 다음 중 **무엇이든** 가능합니다:
-  시제·상(verb tense/aspect), 주어-동사 수일치(subject-verb agreement),
-  전치사 collocation(prepositions), 어순(word order), 셀 수 있는/없는 명사(countable/uncountable),
-  대명사(pronouns), 조건문(conditionals), 비교급·최상급(comparatives), 관계절(relative clauses),
-  관사(articles a/an/the) 등.
-  → 가장 빈번하고 학습 가치가 높은 1개를 고르세요. 특정 카테고리에 편향되지 마세요.{avoid_block}
+- 3번은 **문법 규칙 위반** (관사 a/the 누락, 전치사 오류, 시제 불일치, 주어-동사 수일치 등)에 집중
 이번 대화에서 [Student]가 반복한 문법 실수 **딱 1가지 패턴**만 골라주세요.
-- **귀납적 접근**: 먼저 [Student]의 실제 오류 문장들을 모은 뒤, 그 중 가장 빈번한 패턴을 찾아 카테고리 라벨을 부여하세요. **카테고리를 먼저 정하고 예문을 끼워맞추는 것은 금지**.
-- **첫 줄에 반드시** `Category: <영어 카테고리 라벨>` 형식으로 명시하세요.
-  (예: `Category: subject-verb agreement`, `Category: verb tense`, `Category: prepositions`)
 - 전사 내용에서 해당 문법 오류가 나타난 실제 문장 3개 이상을 인용
 - 각각 ❌ 원문 / ✅ 교정 예시를 표로 정리
 - 📌 핵심 규칙을 한 줄로 정리
@@ -804,7 +749,7 @@ def generate_feedback(transcript, recent_categories=None):
 
     feedback = llm_request(
         prompt,
-        max_tokens=8192,
+        max_tokens=12288,
         temperature=0.5,
         timeout=120,
         system_msg=system_msg,
@@ -831,31 +776,18 @@ def review_feedback(transcript, feedback):
     prompt = f"""당신은 영어 학습 피드백의 품질 검토자입니다.
 아래 [전사 내용]과 [피드백 초안]을 비교하여, 피드백을 개선해주세요.
 
-📌 **이름 가이드**:
-- **학생(Student) = "Joey"** — 피드백에서 학생을 호명할 때 항상 "Joey"로 통일.
-- **튜터(Tutor) = 회차마다 다름** — 자주 등장: **Bell**, **Joanna**. 다른 튜터일 수도 있음.
-- ⚠️ Bell/Joanna는 **튜터 이름**이지 학생 이름이 **아닙니다**. 피드백에서 학생을 "Bell"/"Joanna"라고 호명한 부분이 있으면 "Joey"로 교정. 단, 튜터를 가리키는 경우는 그대로 보존.
-
 ## 검토 기준
 
-0. **섹션 완전성**: 다음 7개 섹션 헤더가 모두 존재하는지 확인. 누락된 섹션이 있으면 전사 내용을 기반으로 보완해서 채워 넣으세요.
-   - `0. 📌 Topic` / `1. 📊 오늘의 대화 요약` / `2. 💬 유창성 업그레이드`
-   - `3. 🔧 고질적 문법 '한 놈만 패기'` / `4. 📗 어휘 확장`
-   - `5. 📝 실전 복습 챌린지` / `6. ✨ 자신감 충전 & 내일의 미션`
 1. **인용 정확성**: 피드백에서 [Student] 발화로 인용한 문장이 전사 내용에 실제로 존재하는가? 없는 문장을 인용했다면 실제 문장으로 교체
-2. **화자 혼동**: [Tutor]의 발화를 [Student]의 발화로 잘못 인용한 부분이 없는가? 문법이 완벽한 문장을 학생 실수로 지적하고 있다면 화자 혼동. 호명 단서:
-   - "Joey"라고 호명하는 발화의 화자는 [Tutor]
-   - "Bell"/"Joanna"/다른 튜터 이름을 호명하는 발화의 화자는 [Student]
+2. **화자 혼동**: [Tutor]의 발화를 [Student]의 발화로 잘못 인용한 부분이 없는가? 문법이 완벽한 문장을 학생 실수로 지적하고 있다면 화자 혼동 가능성이 높음
 3. **내용 누락**: 학생의 주요 실수나 잘한 점 중 빠진 것이 없는가?
 4. **표현 자연스러움**: 한국어 설명이 학습자 입장에서 이해하기 쉬운가?
 5. **섹션 중복**: 같은 예문이 여러 섹션에서 반복되지 않는가?
-6. **인용 위생**: 인용문 안에 `[Student]` `[Tutor]` 같은 화자 라벨이 박혀있으면 제거. 예: `"[Student] Oh, yeah, I agree."` → `"Oh, yeah, I agree."`
 
 ## 작업
 
 - 위 기준에 따라 피드백을 수정·보완하여 **완성본**을 출력
-- 형식과 구조는 원본 피드백의 7개 섹션(0~6)을 그대로 유지
-- 섹션 3의 `Category: ...` 라인은 **반드시 그대로 보존** (메타데이터 추출에 사용됨)
+- 형식과 구조는 원본 피드백의 6개 섹션을 그대로 유지
 - 추가 설명이나 검토 메모 없이, 개선된 피드백 본문만 출력
 
 [전사 내용]
@@ -865,7 +797,7 @@ def review_feedback(transcript, feedback):
 {feedback}"""
 
     try:
-        reviewed = llm_request(prompt, max_tokens=8192, temperature=0.3, thinking_budget=2048)
+        reviewed = llm_request(prompt, max_tokens=12288, temperature=0.3, thinking_budget=2048)
         print(f"✅ 피드백 검토 완료: {len(reviewed)}자")
         return reviewed
     except Exception as e:
@@ -1007,9 +939,8 @@ def _colorize_transcript(escaped_transcript):
 
 
 def extract_metadata(feedback):
-    """피드백 텍스트에서 영어 수업 제목과 Target Grammar 카테고리를 추출."""
+    """피드백 텍스트에서 영어 수업 제목을 추출."""
     topic = ""
-    target_grammar = ""
     lines = feedback.split("\n")
 
     for i, line in enumerate(lines):
@@ -1039,21 +970,7 @@ def extract_metadata(feedback):
             break
         break
 
-    # Target Grammar 카테고리 추출 — `Category: <라벨>` 패턴 (대소문자 무시)
-    # 마크다운 강조(**)와 한국어 콜론(：) 모두 허용
-    cat_match = re.search(r"Category\s*\**\s*[:：]\s*\**\s*([^\n<]+)", feedback, re.IGNORECASE)
-    if cat_match:
-        cat = cat_match.group(1).strip().strip('*').strip().strip('"\'').lower()
-        cat = re.sub(r"\s*\*+\s*$", "", cat).strip()  # 줄 끝 trailing ** 제거
-        target_grammar = cat
-
-    # 섹션 마커 7개 누락 검사 (경고만 — 흐름은 영향 없음)
-    required_markers = ["📌", "📊", "💬", "🔧", "📗", "📝", "✨"]
-    missing = [m for m in required_markers if m not in feedback]
-    if missing:
-        print(f"⚠️ 섹션 마커 누락 감지: {' '.join(missing)} (검토 단계에서 보완되었어야 함)")
-
-    return {"topic": topic[:80], "target_grammar": target_grammar[:60]}
+    return {"topic": topic[:80]}
 
 
 def save_metadata(docs_dir, date_slug, meta):
@@ -1189,10 +1106,8 @@ def _markdown_to_html(md_text):
     html_lines = []
     in_table = False
 
-    for raw_line in lines:
-        line = raw_line.rstrip()  # trailing whitespace 정리 (셀 padding 방어)
-        # 표 separator: 끝 `|` 누락도 허용, dash 1개 이상 필수
-        if re.match(r"^\|[-:\s|]+\|?\s*$", line) and "-" in line:
+    for line in lines:
+        if re.match(r"^\|[-:\s|]+\|$", line):
             continue
         if line.startswith("|") and line.endswith("|"):
             cells = [c.strip() for c in line.strip("|").split("|")]
@@ -1270,10 +1185,8 @@ def send_email(feedback, filename, duration, review_url, date_str=None):
     email_feedback = ""
     in_table = False
 
-    for raw_line in feedback_lines:
-        line = raw_line.rstrip()  # trailing whitespace 정리 (셀 padding 방어)
-        # 표 separator: 끝 `|` 누락도 허용, dash 1개 이상 필수
-        if re.match(r"^\|[-:\s|]+\|?\s*$", line) and "-" in line:
+    for line in feedback_lines:
+        if re.match(r"^\|[-:\s|]+\|$", line):
             continue
         if line.startswith("|") and line.endswith("|"):
             cells = [c.strip() for c in line.strip("|").split("|")]
@@ -1393,14 +1306,7 @@ def main():
             transcript = verify_speaker_labels(transcript)
 
             # ━━ [4단계] AI 피드백 생성 ━━
-            # 직전 5회 Target Grammar 카테고리를 회피 목록으로 전달 (다양성 확보)
-            existing_meta = load_metadata("docs")
-            recent_cats = [
-                existing_meta[d].get("target_grammar")
-                for d in sorted(existing_meta.keys(), reverse=True)[:5]
-                if existing_meta.get(d, {}).get("target_grammar")
-            ]
-            feedback = generate_feedback(transcript, recent_categories=recent_cats)
+            feedback = generate_feedback(transcript)
 
             # ━━ [4.5단계] 피드백 품질 검토 (인용 정확성, 화자 혼동, 누락 보완) ━━
             feedback = review_feedback(transcript, feedback)
