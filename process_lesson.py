@@ -544,6 +544,10 @@ def clean_transcript(raw_transcript, segments=None):
     prompt = f"""아래는 한국인 학습자와 원어민 튜터 간의 전화영어 수업을 STT(음성→텍스트)로 전사한 원본입니다.
 전화 통화 특성상 음질이 완벽하지 않아 오인식이 포함되어 있을 수 있습니다.
 
+📌 **고정 이름 정보** (반드시 준수):
+- **학생(Student) = "Joey"** — 항상 동일 인물. STT가 Joey/Jowy/Joe 등으로 다르게 들었으면 모두 "Joey"로 통일.
+- **튜터(Tutor) = 회차마다 변동** (자주 등장: Bell, Joanna). 튜터 이름은 학생과 별개 인물이므로 그대로 보존하고 학생 이름으로 통합 금지.
+
 다음 작업을 **반드시 아래 순서대로** 수행해주세요:
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -583,7 +587,9 @@ def clean_transcript(raw_transcript, segments=None):
    - 리액션/칭찬("That sounds nice!", "Oh really?", "Good job!") → [Tutor]
    - 교정하거나 되묻는 쪽("You mean...?", "Did you say...?") → [Tutor]
    - 한국 관련 자기 이야기를 하는 쪽 → [Student]
-   - "teacher"라고 부르는 쪽 → [Student], 이름을 부르는 쪽 → [Tutor]
+   - "teacher"라고 부르는 쪽 → [Student]
+   - **"Joey"라고 상대를 호명하는 쪽** → [Tutor] (학생은 자기 이름을 부르지 않음)
+   - **튜터 이름(Bell/Joanna 등)으로 상대를 호명하는 쪽** → [Student]
 
 🥉 **3순위 — 타임스탬프 기반 화자 전환**:
    - 세그먼트 사이 **1.5초 이상 침묵**이 있으면 화자가 바뀔 가능성이 높음
@@ -641,12 +647,15 @@ def verify_speaker_labels(transcript):
 
     prompt = f"""아래는 전화영어 수업의 전사 내용입니다. [Tutor]와 [Student] 라벨이 올바른지 검증해주세요.
 
+📌 **고정 이름**: 학생 = **Joey** (항상). 튜터 = 회차별 변동 (자주: Bell, Joanna).
+
 ## 검증 기준
 
 1. **영어 실력 일관성**: [Student]로 표시된 발화가 갑자기 완벽한 문법으로 유창해지거나, [Tutor]로 표시된 발화에 문법 실수가 많으면 라벨이 바뀐 것
 2. **대화 흐름**: 질문→대답 쌍에서 같은 화자가 질문과 대답을 모두 하고 있으면 오류
 3. **역할 일관성**: [Tutor]는 수업을 이끌고 교정하는 역할, [Student]는 대답하고 연습하는 역할
 4. **한국 관련 자기 이야기**: 한국 생활/업무를 자기 경험으로 말하는 쪽은 [Student]
+5. **이름 호명 단서**: "Joey" 호명 → [Tutor] / 튜터 이름(Bell/Joanna 등) 호명 → [Student]
 
 ## 작업
 
@@ -675,11 +684,13 @@ def verify_speaker_labels(transcript):
 # ║     예: "비즈니스 영어 특화" / "TOEIC Speaking 기준" 등                 ║
 # ╚══════════════════════════════════════════════════════════════════════════╝
 
-def generate_feedback(transcript):
+def generate_feedback(transcript, recent_categories=None):
     """
     수업 전사 내용 → 상세 학습 피드백 생성.
     포함 항목: 수업 요약, 문법 교정, 반복 실수 패턴, 핵심 표현,
               잘한 점, 개선 포인트, 영작 연습, 유창성 점수(4항목)
+
+    recent_categories: 직전 N회 Target Grammar 카테고리 리스트 (다양성 확보용).
     """
     print("🤖 AI 피드백 생성 중...")
 
@@ -690,10 +701,25 @@ def generate_feedback(transcript):
 너무 어려운 표현보다는 '입에 붙는 자연스러운 표현'을 우선합니다.
 학습자는 비즈니스 환경(감사, 에너지 수입 등)에서 일하며 투자와 자기계발에 관심이 많은 중급(Intermediate) 수준의 전문가입니다.
 
+📌 **이름 가이드**:
+- **학생(Student) = "Joey"** — 피드백에서 학생을 호명할 때 항상 "Joey"로 통일.
+- **튜터 이름(Bell/Joanna 등)은 튜터 이름이지 학생 이름이 아닙니다.** 학생을 절대 튜터 이름으로 부르지 마세요.
+
 ⚠️ 중요 규칙:
 - 전사 내용에 **실제로 있는 [Student] 발화만** 인용하세요. 없는 문장을 만들어내지 마세요.
 - 각 섹션은 서로 다른 관점을 다뤄야 합니다. 같은 예문을 여러 섹션에서 반복하지 마세요.
 - 표준 영어만 가르치세요. 비표준 표현(funner 등)은 포함하지 마세요."""
+
+    # 카테고리 다양성 블록 (직전 N회 회피)
+    avoid_block = ""
+    if recent_categories:
+        avoid_list = ", ".join(recent_categories)
+        avoid_block = (
+            f"\n⚠️ **다양성 규칙**: 최근 다룬 Target Grammar = {avoid_list}. "
+            f"이번엔 위 카테고리들을 **제외**하고 다른 패턴을 선택하세요. "
+            f"(예외: 위 카테고리 외에 [Student]가 3회 이상 반복한 패턴이 정말 없을 때만 허용 — "
+            f"그 경우 본문 첫 줄에 `(예외: 다른 적합한 패턴 없음)` 명시)"
+        )
 
     prompt = f"""아래 [전화영어 전사 내용]을 분석하여 7가지 섹션의 피드백을 한국어로 작성해 주세요.
 (영어 예문은 영어로 유지)
@@ -718,8 +744,15 @@ def generate_feedback(transcript):
 **3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)**
 ⚠️ 이 섹션은 2번(유창성)과 **완전히 다른 관점**입니다.
 - 2번은 "어색한 표현 → 자연스러운 표현"으로 바꾸는 것
-- 3번은 **문법 규칙 위반** (관사 a/the 누락, 전치사 오류, 시제 불일치, 주어-동사 수일치 등)에 집중
+- 3번은 **문법 규칙 위반**에 집중. 카테고리는 다음 중 **무엇이든** 가능:
+  시제·상(verb tense/aspect), 주어-동사 수일치(subject-verb agreement),
+  전치사 collocation(prepositions), 어순(word order), 가산/불가산 명사(countable/uncountable),
+  대명사(pronouns), 조건문(conditionals), 비교급·최상급(comparatives), 관계절(relative clauses),
+  관사(articles a/an/the) 등.
+  → 가장 빈번한 1개를 고르세요. **특정 카테고리(특히 '관사')에 편향되지 마세요.**{avoid_block}
 이번 대화에서 [Student]가 반복한 문법 실수 **딱 1가지 패턴**만 골라주세요.
+- **귀납적 접근**: 먼저 [Student]의 실제 오류 문장들을 모은 뒤, 그 중 가장 빈번한 패턴을 찾아 카테고리 라벨을 부여하세요. **카테고리를 먼저 정하고 예문을 끼워맞추는 것은 금지**.
+- **첫 줄에 반드시** `Category: <영어 카테고리 라벨>` 형식으로 명시 (예: `Category: subject-verb agreement`, `Category: verb tense`).
 - 전사 내용에서 해당 문법 오류가 나타난 실제 문장 3개 이상을 인용
 - 각각 ❌ 원문 / ✅ 교정 예시를 표로 정리
 - 📌 핵심 규칙을 한 줄로 정리
@@ -787,7 +820,8 @@ def review_feedback(transcript, feedback):
 ## 작업
 
 - 위 기준에 따라 피드백을 수정·보완하여 **완성본**을 출력
-- 형식과 구조는 원본 피드백의 6개 섹션을 그대로 유지
+- 형식과 구조는 원본 피드백의 섹션을 그대로 유지
+- 섹션 3의 `Category: ...` 라인은 **반드시 그대로 보존** (메타데이터 추출에 사용됨)
 - 추가 설명이나 검토 메모 없이, 개선된 피드백 본문만 출력
 
 [전사 내용]
@@ -939,8 +973,9 @@ def _colorize_transcript(escaped_transcript):
 
 
 def extract_metadata(feedback):
-    """피드백 텍스트에서 영어 수업 제목을 추출."""
+    """피드백 텍스트에서 영어 수업 제목과 Target Grammar 카테고리를 추출."""
     topic = ""
+    target_grammar = ""
     lines = feedback.split("\n")
 
     for i, line in enumerate(lines):
@@ -970,7 +1005,14 @@ def extract_metadata(feedback):
             break
         break
 
-    return {"topic": topic[:80]}
+    # Target Grammar 카테고리 추출 — `Category: <라벨>` 패턴 (대소문자 무시, 마크다운 강조 허용)
+    cat_match = re.search(r"Category\s*\**\s*[:：]\s*\**\s*([^\n<]+)", feedback, re.IGNORECASE)
+    if cat_match:
+        cat = cat_match.group(1).strip().strip('*').strip().strip('"\'').lower()
+        cat = re.sub(r"\s*\*+\s*$", "", cat).strip()  # 줄 끝 trailing ** 제거
+        target_grammar = cat
+
+    return {"topic": topic[:80], "target_grammar": target_grammar[:60]}
 
 
 def save_metadata(docs_dir, date_slug, meta):
@@ -1306,7 +1348,14 @@ def main():
             transcript = verify_speaker_labels(transcript)
 
             # ━━ [4단계] AI 피드백 생성 ━━
-            feedback = generate_feedback(transcript)
+            # 직전 5회 Target Grammar 카테고리를 회피 목록으로 전달 (다양성 확보)
+            existing_meta = load_metadata("docs")
+            recent_cats = [
+                existing_meta[d].get("target_grammar")
+                for d in sorted(existing_meta.keys(), reverse=True)[:5]
+                if existing_meta.get(d, {}).get("target_grammar")
+            ]
+            feedback = generate_feedback(transcript, recent_categories=recent_cats)
 
             # ━━ [4.5단계] 피드백 품질 검토 (인용 정확성, 화자 혼동, 누락 보완) ━━
             feedback = review_feedback(transcript, feedback)
