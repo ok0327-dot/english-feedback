@@ -415,7 +415,7 @@ def gemini_request(prompt, max_tokens=4096, temperature=0.3, timeout=120, system
             "parts": [{"text": system_msg}]
         }
 
-    waits = [60, 180, 300]  # 1분 RPM 윈도우 통과를 위해 첫 대기부터 60초+
+    waits = [30, 60, 90]  # 두 번째 재시도(60s)에서 1분 RPM 윈도우 통과
     for attempt in range(3):
         response = requests.post(url, json=payload, headers=headers, timeout=timeout)
         if response.status_code == 200:
