@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전화영어 복습 - 2026년 05월 11일</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Noto Sans KR',sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.75;min-height:100vh}
+        .header{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);border-bottom:1px solid rgba(255,255,255,.06);padding:48px 24px 40px;text-align:center}
+        .header-date{font-size:13px;color:#94a3b8;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+        .header h1{font-size:28px;font-weight:700;color:#f1f5f9;margin-bottom:16px}
+        .header-meta{display:flex;justify-content:center;gap:24px;font-size:14px;color:#64748b}
+        .header-meta span{display:flex;align-items:center;gap:6px}
+        .cta-section{text-align:center;padding:40px 24px}
+        .cta-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:linear-gradient(135deg,#38bdf8,#818cf8);color:#fff;font-size:16px;font-weight:600;font-family:'Noto Sans KR',sans-serif;border:none;border-radius:50px;cursor:pointer;transition:all .3s;text-decoration:none;box-shadow:0 4px 24px rgba(56,189,248,.25)}
+        .cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(56,189,248,.35)}
+        .cta-btn svg{width:20px;height:20px}
+        .cta-sub{margin-top:12px;font-size:13px;color:#64748b}
+        .toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#38bdf8;padding:14px 28px;border-radius:12px;font-size:14px;font-weight:500;border:1px solid rgba(56,189,248,.2);box-shadow:0 8px 32px rgba(0,0,0,.4);opacity:0;transition:all .4s cubic-bezier(.16,1,.3,1);z-index:1000}
+        .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+        .container{max-width:720px;margin:0 auto;padding:0 24px 80px}
+        .tabs{display:flex;gap:4px;background:#1a1a24;padding:4px;border-radius:12px;margin-bottom:32px}
+        .tab{flex:1;padding:12px;text-align:center;font-size:14px;font-weight:500;color:#64748b;background:0 0;border:none;border-radius:8px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all .2s}
+        .tab.active{background:#262636;color:#f1f5f9}
+        .tab-content{display:none}.tab-content.active{display:block}
+        .feedback h2{font-size:18px;font-weight:700;color:#f1f5f9;margin:36px 0 16px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.06)}
+        .feedback h2:first-child{margin-top:0}
+        .feedback p{margin:8px 0;color:#cbd5e1}
+        .feedback .item{padding:6px 0 6px 16px;border-left:2px solid #334155;margin:6px 0;color:#cbd5e1}
+        .feedback .numbered{padding:8px 0 8px 16px;color:#cbd5e1}
+        .feedback .numbered strong{color:#38bdf8}
+        .feedback strong{color:#f1f5f9}
+        .feedback code{background:#1e293b;padding:2px 8px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#38bdf8}
+        .feedback table{width:100%;border-collapse:collapse;margin:12px 0}
+        .feedback th,.feedback td{padding:10px 14px;text-align:left;border-bottom:1px solid #262636}
+        .feedback th{color:#94a3b8;font-weight:500;font-size:13px}
+        .feedback td{color:#cbd5e1}
+        .arrow{color:#38bdf8;font-weight:700}
+        .transcript{background:#1a1a24;border-radius:12px;padding:28px;font-size:14px;line-height:2;color:#94a3b8;white-space:pre-wrap;word-break:break-word;font-family:'JetBrains Mono','Noto Sans KR',monospace}
+        .transcript .tutor{color:#38bdf8}
+        .transcript .student{color:#a78bfa}
+        @media(max-width:640px){.header{padding:32px 16px}.header h1{font-size:22px}.cta-btn{padding:14px 28px;font-size:15px}.container{padding:0 16px 60px}}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-date">2026년 05월 11일</div>
+        <h1>📚 전화영어 복습</h1>
+        <div class="header-meta">
+            <span>⏱ 19분 57초</span>
+            <span>🎙 전화영어_025180304_20260511080022.m4a</span>
+        </div>
+    </div>
+    <div class="cta-section">
+        <button class="cta-btn" onclick="startReview()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Gemini에서 복습 대화 시작하기
+        </button>
+        <div class="cta-sub">클릭하면 프롬프트가 복사되고 Gemini가 열립니다</div>
+    </div>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('feedback')">📋 AI 피드백</button>
+            <button class="tab" onclick="switchTab('transcript')">🎙 수업 전사</button>
+        </div>
+        <div id="tab-feedback" class="tab-content active">
+            <div class="feedback"><p>Joey, 안녕하세요! 오늘도 즐거운 대화였습니다. 주말에 가족과 함께 소풍을 가고 아이스크림을 드셨다는 이야기는 저까지 마음이 따뜻해지는 루틴이었네요. 콜롬비아 여행과 비즈니스 협상에 대한 이야기도 흥미로웠습니다. 특히, 협상에 대한 Joey의 긍정적인 태도와 'on a roll' 표현을 활용하는 모습에서 자신감이 느껴졌어요!</p>
+<br>
+<br>
+<p><strong>0. 📌 Topic</strong></p>
+<p>Topic: Discussing weekend activities, travel, and key factors in business negotiation.</p>
+<br>
+<br>
+<p><strong>1. 📊 오늘의 대화 요약 (Summary)</strong></p>
+<p>오늘 Joey는 주말에 가족과 함께 소풍을 다녀온 소소하지만 특별한 일상에 대해 이야기했습니다. 이어서 튜터의 콜롬비아 보고타 방문 경험을 듣고, 형제 관계와 여행에 대한 대화를 나눴습니다. 마지막으로는 비즈니스 계약 협상 시 고려해야 할 핵심 요소들("identify our needs", "identify the negotiator")에 대해 토론하며 비즈니스 표현들을 연습했습니다.</p>
+<br>
+<br>
+<p><strong>2. 💬 유창성 업그레이드 (Fluency & Natural Flow)</strong></p>
+<p>Joey가 실제 말한 문장 중, 의미는 통하지만 더 자연스럽게 다듬을 수 있는 표현 3가지를 선정했습니다.</p>
+<br>
+<div class="numbered"><strong>1.</strong>  ❌ <strong>학습자 원문 (As Said):</strong> "I think our life is gathering some routine."</div>
+<p>    ✅ <strong>자연스러운 표현 (Natural):</strong> "I think our life is built around routines."</p>
+<p>    💎 <strong>비즈니스 표현 (Professional):1</strong> "Our lives are often shaped by the routines we establish."</p>
+<p>    💡 <strong>코칭 포인트:</strong> "Gathering some routine" sounds a bit like collecting items. "Built around" or "shaped by" suggests that routines form the foundation or structure of our lives, which is a more natural way to express this idea. <span class="arrow">→</span> "gathering some routine"은 물건을 모으는 듯한 느낌을 줍니다. "built around"나 "shaped by"는 루틴이 우리 삶의 기반이나 구조를 이룬다는 의미를 전달하여 더 자연스럽습니다.</p>
+<br>
+<div class="numbered"><strong>2.</strong>  ❌ <strong>학습자 원문 (As Said):</strong> "your brother come for the travel or he leave the Colombia?"</div>
+<p>    ✅ <strong>자연스러운 표현 (Natural):</strong> "Did your brother come to travel, or is he leaving Colombia?"</p>
+<p>    💎 <strong>비즈니스 표현 (Professional):</strong> "Was your brother visiting for leisure, or was he departing from Colombia?"</p>
+<p>    💡 <strong>코칭 포인트:</strong> When asking about past events, use the past tense ("did he come," "did he leave"). For ongoing or future plans, "is he leaving" is appropriate. Also, "for the travel" is less common than "to travel" or "for leisure" when referring to the purpose of a visit. <span class="arrow">→</span> 과거의 일에 대해 물을 때는 과거 시제("did he come," "did he leave")를 사용하고, 현재 진행 중이거나 미래 계획에 대해서는 "is he leaving"이 적절합니다. 또한, "for the travel"보다는 "to travel" 또는 "for leisure"가 방문 목적을 나타낼 때 더 자연스럽습니다.</p>
+<br>
+<div class="numbered"><strong>3.</strong>  ❌ <strong>학습자 원문 (As Said):</strong> "Just I'm imagining one guy imagine get married just he met the first time with her."</div>
+<p>    ✅ <strong>자연스러운 표현 (Natural):</strong> "I'm just imagining a guy who's already thinking about getting married after meeting her for the first time."</p>
+<p>    💎 <strong>비즈니스 표현 (Professional):</strong> "It's akin to someone contemplating marriage immediately after an initial encounter."</p>
+<p>    💡 <strong>코칭 포인트:</strong> This sentence had a few grammatical points to refine. "Just I'm imagining" should be "I'm just imagining." When describing a hypothetical situation, "thinking about getting married" is more natural than "imagine get married." Also, "after meeting her" is a concise way to express the timing. <span class="arrow">→</span> 이 문장은 몇 가지 문법을 다듬을 필요가 있었습니다. "Just I'm imagining"은 "I'm just imagining"이 되어야 합니다. 가상 상황을 묘사할 때는 "imagine get married"보다 "thinking about getting married"가 더 자연스럽습니다. 또한, "after meeting her"는 시점을 간결하게 표현하는 방법입니다.</p>
+<br>
+<br>
+<p><strong>3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)</strong></p>
+<p>Category: <strong>Verb Forms and Auxiliary Verbs</strong></p>
+<br>
+<p>Joey는 동사의 형태를 사용하거나 조동사를 활용하는 데 있어 종종 실수를 했습니다. 특히 'be' 동사를 불필요하게 사용하거나, 동사원형 대신 다른 형태를 써야 할 때가 있었습니다.</p>
+<br>
+<table>
+<tr><th>❌ <strong>원문</strong></th><th>✅ <strong>교정 예시</strong></th></tr>
+<tr><td>"I'm totally agree that"</td><td>"I <strong>totally agree</strong> that"</td></tr>
+<tr><td>"your brother come for the travel or he leave the Colombia?"</td><td>"<strong>Did</strong> your brother <strong>come</strong> to travel or <strong>is he leaving</strong> Colombia?" (과거 시점 질문)</td></tr>
+<tr><td>"What do you think about finish, we finish our class today?"</td><td>"What do you think about <strong>finishing</strong> our class today?"</td></tr>
+</table>
+<br>
+<p>📌 <strong>핵심 규칙:</strong> 동사를 사용할 때는 시제, 주어와의 관계, 그리고 문맥에 따라 올바른 형태(원형, 과거형, 현재분사 등)를 사용하고, 'be' 동사와 일반 동사를 혼동하지 않도록 주의해야 합니다. 특히 전치사 뒤에는 동명사(gerund) 형태가 옵니다.</p>
+<br>
+<p>🔁 <strong>따라 읽기:</strong></p>
+<p>🗣️ "I totally agree that we need to identify our needs."</p>
+<p>🗣️ "Did your brother come for a visit, or is he leaving Colombia for good?"</p>
+<p>🗣️ "What do you think about finishing our class a few minutes early today?"</p>
+<br>
+<br>
+<p><strong>4. 📗 어휘 확장 (Vocabulary Vault)</strong></p>
+<p>오늘 수업 중 등장했거나 비즈니스 환경에서 유용하게 쓸 수 있는 어휘 5가지입니다.</p>
+<br>
+<div class="numbered"><strong>1.</strong>  <strong>mindful</strong> /마인드풀/ (adj.)</div>
+<p>    뜻: ~을 염두에 두는, 의식하는, 주의 깊은</p>
+<p>    실전 예문: We need to be <strong>mindful</strong> of the budget constraints when planning the new project.</p>
+<br>
+<div class="numbered"><strong>2.</strong>  <strong>layover</strong> /레이오버/ (n.)</div>
+<p>    뜻: (여행 중) 잠시 들르는 곳, 경유</p>
+<p>    실전 예문: Our flight to Frankfurt has a three-hour <strong>layover</strong> in Dubai.</p>
+<br>
+<div class="numbered"><strong>3.</strong>  <strong>negotiate</strong> /니고시에이트/ (v.)</div>
+<p>    뜻: 협상하다, 교섭하다</p>
+<p>    실전 예문: We successfully <strong>negotiated</strong> a better deal with our new supplier.</p>
+<br>
+<div class="numbered"><strong>4.</strong>  <strong>outcome</strong> /아웃컴/ (n.)</div>
+<p>    뜻: 결과, 성과</p>
+<p>    실전 예문: The <strong>outcome</strong> of the meeting was a new strategic partnership.</p>
+<br>
+<div class="numbered"><strong>5.</strong>  <strong>on a roll</strong> /온 어 롤/ (idiom)</div>
+<p>    뜻: 승승장구하는, 잘나가는, 탄력받은</p>
+<p>    실전 예문: Our sales team has been <strong>on a roll</strong> this quarter, exceeding all targets.</p>
+<br>
+<br>
+<p><strong>5. 📝 실전 복습 챌린지 (Practice)</strong></p>
+<p>오늘 배운 표현과 문법을 활용하여 영작해 보세요.</p>
+<br>
+<div class="numbered"><strong>1.</strong>  <strong>[쉬움]</strong> "새로운 프로젝트를 시작하기 전에, 우리는 우리의 필요를 명확히 파악해야 합니다."</div>
+<p>    <span class="arrow">→</span> (힌트: identify our needs)</p>
+<p>    <details></p>
+<p>    <summary>모범 답안</summary></p>
+<p>    Before starting a new project, we need to <strong>identify our needs</strong> clearly.</p>
+<p>    </details></p>
+<br>
+<div class="numbered"><strong>2.</strong>  <strong>[중간]</strong> "우리 팀은 최근 몇 달 동안 정말 승승장구하고 있어서, 다음 분기 목표를 달성할 수 있을 거라고 확신해요."</div>
+<p>    <span class="arrow">→</span> (힌트: on a roll)</p>
+<p>    <details></p>
+<p>    <summary>모범 답안</summary></p>
+<p>    Our team has been <strong>on a roll</strong> for the past few months, so I'm confident we can achieve our next quarter's goals.</p>
+<p>    </details></p>
+<br>
+<div class="numbered"><strong>3.</strong>  <strong>[어려움]</strong> "저는 그들이 제안한 계약 조건에 전적으로 동의하지만, 최종 결과가 우리 회사에 가장 이익이 될지 다시 한번 확인해 봐야 한다고 생각합니다."</div>
+<p>    <span class="arrow">→</span> (힌트: totally agree, double check, outcome)</p>
+<p>    <details></p>
+<p>    <summary>모범 답안</summary></p>
+<p>    I <strong>totally agree</strong> with the contract terms they proposed, but I think we should <strong>double check</strong> if the final <strong>outcome</strong> will be most beneficial for our company.</p>
+<p>    </details></p>
+<br>
+<br>
+<p><strong>6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)</strong></p>
+<br>
+<p>✨ <strong>Good Job</strong>: "These days, Korean investors are on a roll. Because our stock market is fired up."</p>
+<p>Joey는 'on a roll'이라는 표현을 배우자마자 한국 주식 시장 상황에 적용하여 아주 자연스럽게 사용했습니다. 특히 'fired up'이라는 생생한 표현까지 더해져 문장이 더욱 역동적으로 느껴졌습니다. 배운 표현을 바로 자신의 관심사와 연결하여 활용하는 능력이 정말 훌륭합니다!</p>
+<br>
+<p>🚀 <strong>내일의 한 문장</strong>: 다음 수업 시작 시 튜터에게 이 문장을 던져보세요.</p>
+<p>"I'm thinking of using AI for all of our tasks. What do you think about that?"</p>
+<p>(오늘 연습했던 'I'm thinking of~'와 'What do you think about~' 패턴을 활용해 보세요!)</p>
+<br>
+<br>
+<p><strong>[성과 지표]</strong></p>
+<p><strong>유창성 점수: 8/10점</strong></p>
+<br>
+<p><strong>근거:</strong> Joey는 다양한 주제에 대해 막힘없이 자신의 의견을 표현하고, 튜터의 질문에 적극적으로 답하며 대화를 이어나가는 능력이 뛰어납니다. 특히 새로운 표현을 배우면 바로 자신의 경험에 대입하여 활용하려는 시도가 인상적입니다. 다만, 몇몇 문장 구조나 동사 형태에서 한국어식 표현이 섞이거나 어색한 부분이 있어 원어민이 듣기에 조금 더 자연스럽게 다듬을 수 있는 여지가 있습니다.</p>
+<br>
+<p><strong>다음 수업 '원포인트 액션 플랜':</strong></p>
+<p>다음 수업에서는 <strong>"동사 형태의 정확성(Verb Form Accuracy)"</strong>에 집중해 봅시다. 특히 전치사 뒤에 오는 동명사(gerund) 형태와 일반 동사 사용 시 시제 및 주어-동사 일치에 조금 더 신경 써서 말하는 연습을 해보면 좋을 것 같습니다.</p></div>
+        </div>
+        <div id="tab-transcript" class="tab-content">
+            <div class="transcript"><span class="student">[Student]</span> Hello Joanna, good morning.
+<span class="tutor">[Tutor]</span> Hi Joey, how were you today?
+<span class="student">[Student]</span> Of course, everything is good. How was your day?
+<span class="tutor">[Tutor]</span> It was excellent, thank you.
+<span class="student">[Student]</span> Okay, no problem.
+<span class="tutor">[Tutor]</span> How was your weekend?
+<span class="student">[Student]</span> I asked first.
+<span class="student">[Student]</span> Yeah, every weekend is so good. Yeah, this weekend I also met my family and spent time with my family. Especially on Sunday, I went to a small picnic near a park, so we ate ice cream near the park and walked with my son and my wife. Yeah, that is so normal and simple, not special, but that is also special.
+<span class="tutor">[Tutor]</span> Yes, right. Being mindful of the things that seem small but are enjoyable.
+<span class="student">[Student]</span> Yeah, enjoyable. And that is their small routine. I think our life is gathering some routine.
+<span class="student">[Student]</span> Yeah, small routine. Like the point gathering, and then we made some...
+<span class="student">[Student]</span> So, it&#x27;s important. Small routine and small things are important.
+<span class="tutor">[Tutor]</span> I think so. I believe so.
+<span class="student">[Student]</span> Yes.
+<span class="student">[Student]</span> And next, my question? How was your weekend?
+<span class="tutor">[Tutor]</span> It was great. So on Friday, I went to Bogota, which is the capital city of Colombia. I flew in to see my brother.
+<span class="student">[Student]</span> Yes. Bogota, right? Yes, exactly.
+<span class="student">[Student]</span> Maybe your brother... your brother, what can I say? Brother? Yeah. Your brother come for the travel or he leave the Colombia?
+<span class="tutor">[Tutor]</span> No, he was just passing through.
+<span class="student">[Student]</span> Ah, passing through.
+<span class="tutor">[Tutor]</span> His wife and him had a layover in Bogota. They were traveling from Costa Rica to Canada.
+<span class="student">[Student]</span> Costa Rica.
+<span class="student">[Student]</span> Ah, yes, I see.
+<span class="tutor">[Tutor]</span> So they stopped in Bogota for eight hours. So I flew there to see them.
+<span class="student">[Student]</span> Wow. Just that you stopped over to travel, but they stayed eight hours.
+<span class="tutor">[Tutor]</span> Mm-hmm.
+<span class="student">[Student]</span> Oh, I see. That is so nice. So it was so nice to see him, right?
+<span class="tutor">[Tutor]</span> I hadn&#x27;t seen him in almost a year.
+<span class="student">[Student]</span> Almost a year. Maybe old brother or young brother?
+<span class="tutor">[Tutor]</span> He&#x27;s my baby brother.
+<span class="student">[Student]</span> Baby brother.
+<span class="tutor">[Tutor]</span> Yes. He is almost 30, but he&#x27;s always going to be my baby brother.
+<span class="student">[Student]</span> Ah, baby brother. So nice.
+<span class="tutor">[Tutor]</span> Because he&#x27;s the youngest one of us.
+<span class="student">[Student]</span> Ah, yes, I see. That&#x27;s so nice.
+<span class="tutor">[Tutor]</span> It was very nice. It was a very long and tiring day because I flew to Bogota and back the same day. So I spent about 12 hours at the airport.
+<span class="student">[Student]</span> I see. And Bogota, is there a pathway from your city?
+<span class="tutor">[Tutor]</span> It&#x27;s about a one-hour flight. It&#x27;s not too far.
+<span class="student">[Student]</span> One-hour flight. Ah. I see.
+<span class="tutor">[Tutor]</span> So it&#x27;s easy to get there. By bus, it&#x27;s 11 hours.
+<span class="student">[Student]</span> Wow. 11 hours.
+<span class="tutor">[Tutor]</span> 11 hours by bus.
+<span class="student">[Student]</span> Yes. Yes, that&#x27;s impossible.
+<span class="tutor">[Tutor]</span> But I, yes, I don&#x27;t take the bus. It&#x27;s too long.
+<span class="student">[Student]</span> Yes, you&#x27;re right.
+<span class="student">[Student]</span> Okay.
+<span class="tutor">[Tutor]</span> Okay. Let&#x27;s take a look at our book.
+<span class="student">[Student]</span> Okay, good.
+<span class="tutor">[Tutor]</span> We had left off on page 33.
+<span class="student">[Student]</span> Oh, yes, 33. It was Mr. Sterling and Miss Harris, yes.
+<span class="student">[Student]</span> Yeah, I remember. He is to work at another company and he controlled the contract option. Exactly. Exactly.
+<span class="tutor">[Tutor]</span> Okay. Yeah. So if we look at the questions at the bottom of page 33.
+<span class="student">[Student]</span> Okay.
+<span class="tutor">[Tutor]</span> Question two. What are the key factors to consider when negotiating a business contract?
+<span class="student">[Student]</span> I think the key factor, first, the most important is we find the needs. If we have a negotiation, and in the meantime, we will find some of our needs. If some company needs some money or if some company needs the time. And it is also the same personally. Yeah, for example, if I buy some product in the market, our need is to buy other product items and buy them more cheaper in our time. So first, before the negotiation, we will find some needs, our needs.
+<span class="tutor">[Tutor]</span> So, yes, let&#x27;s change that to &quot;identify our needs.&quot;
+<span class="student">[Student]</span> Identify, yeah, you&#x27;re right.
+<span class="tutor">[Tutor]</span> &quot;Identify our needs&quot; is a very common sentence in English.
+<span class="student">[Student]</span> Identify, just a moment. Identify these, right? Identify needs. Exactly. Yeah, it&#x27;s a normal expression.
+<span class="tutor">[Tutor]</span> &quot;Identify our needs.&quot; That is, you&#x27;ve got it.
+<span class="student">[Student]</span> Important process before the negotiation, having negotiation.
+<span class="tutor">[Tutor]</span> Have a negotiation. Anything else? Any other factors that you think are important?
+<span class="student">[Student]</span> And then, and then I think it is also important, we will confirm who our... in front of the hour is the here. It is similar to identify our needs, and then we confirm who is the negotiator to our partner.
+<span class="tutor">[Tutor]</span> Identify the negotiator.
+<span class="student">[Student]</span> Yes, it&#x27;s the same. Identify negotiator.
+<span class="tutor">[Tutor]</span> Hmm, negotiator, okay.
+<span class="student">[Student]</span> The old Chinese saying says, he says, if you know first, and then if you know your negotiator, you will win in your negotiation 100%. So I agree that, I&#x27;m totally agree that, if we identify our needs and negotiator, and then we will better become to win.
+<span class="tutor">[Tutor]</span> We are better prepared.
+<span class="student">[Student]</span> Prepared.
+<span class="tutor">[Tutor]</span> We are better prepared.
+<span class="student">[Student]</span> Prepared. Prepared. Okay. Okay.
+<span class="tutor">[Tutor]</span> And question three. Have you ever participated in a business-to-business negotiation?
+<span class="student">[Student]</span> Hmm, oh yes. I&#x27;m an investor. I&#x27;m a salaryman, but in the meantime, I&#x27;m also an investor. So maybe many times I bought some real estate in the market, real estate market. Yeah, but real estate price is so expensive, so usually we control, we find the contract option during times and price and contact some letter. So yeah, I have so many times to, yeah, negotiation, business-to-business negotiation.
+<span class="tutor">[Tutor]</span> And were you able to achieve your desired outcome? Desired outcome.
+<span class="student">[Student]</span> Oh yes, of course. I love the negotiation because that is so interesting. Yeah, just he and me fight and argue something, and then we have some, made some new way or something. So that&#x27;s so interesting and I love that. Yeah, in every place.
+<span class="tutor">[Tutor]</span> Excellent. Well, thank you for answering these questions.
+<span class="student">[Student]</span> Okay, me too. Thank you for your ask. Your question. Thank you for asking. Thank you for asking. Thank you asking.
+<span class="tutor">[Tutor]</span> You&#x27;ve got it. Okay. Let&#x27;s move on to the business expressions on page 34.
+<span class="student">[Student]</span> 34. Yes. Okay. First I will read that. Yes. Read the expression and write your own sentence using each expression. &quot;To get ahead of oneself&quot; means to plan or do something which is not yet appropriate. &quot;Don&#x27;t get ahead of yourself. You still need to interview for the job, so you shouldn&#x27;t be planning to move yet.&quot;
+<span class="tutor">[Tutor]</span> Exactly, right? So what we&#x27;re saying is the person is so excited about this job interview in another city that they&#x27;re already planning to move to the new city, but they don&#x27;t have the job yet.
+<span class="student">[Student]</span> Yes, yes, I understand. &quot;Don&#x27;t get ahead of yourself&quot; means don&#x27;t go faster than the process. Okay. My sentence?
+<span class="tutor">[Tutor]</span> Yes, please.
+<span class="student">[Student]</span> Okay.
+<span class="student">[Student]</span> My friend, don&#x27;t get ahead of yourself. You still not, you still, you just met her one time, so you shouldn&#x27;t get married yet.
+<span class="tutor">[Tutor]</span> That&#x27;s exactly how you would use it. You got it.
+<span class="student">[Student]</span> Just I&#x27;m imagining one guy imagine get married just he met the first time with her.
+<span class="tutor">[Tutor]</span> Exactly. After one date.
+<span class="student">[Student]</span> One date. Too soon.
+<span class="student">[Student]</span> Yes, and some guys imagine, yeah, his sons, select his sons&#x27; names, just to make them heard.
+<span class="tutor">[Tutor]</span> Right. Sometimes.
+<span class="student">[Student]</span> Okay.
+<span class="student">[Student]</span> Okay.
+<span class="tutor">[Tutor]</span> Okay, second expression. That was great. You got it. &quot;Double check.&quot;
+<span class="student">[Student]</span> &quot;Go over something twice to ensure it is accurate. Let me double check those figures out before we send the report.&quot;
+<span class="student">[Student]</span> If we, if we buy, if we buy our stock, we will have to double check the situation.
+<span class="tutor">[Tutor]</span> Absolutely. Okay. And last one?
+<span class="student">[Student]</span> &quot;On a roll.&quot;
+<span class="student">[Student]</span> Experience ring.
+<span class="tutor">[Tutor]</span> &quot;On a roll.&quot;
+<span class="student">[Student]</span> Experience ring.
+<span class="tutor">[Tutor]</span> Prolonged spell of success or good luck. &quot;On a roll.&quot;
+<span class="student">[Student]</span> &quot;On a roll.&quot; &quot;On a roll.&quot;
+<span class="tutor">[Tutor]</span> &quot;On a roll.&quot; You got it.
+<span class="student">[Student]</span> &quot;On a roll.&quot; And teacher, I have a question. That is a roll. What does roll mean? That is the rhyme? Or not roll?
+<span class="tutor">[Tutor]</span> It comes from &quot;roll of the dice.&quot; Dice. Dice. You know the dice for games?
+<span class="student">[Student]</span> Game? Oh, no.
+<span class="tutor">[Tutor]</span> Dice.
+<span class="student">[Student]</span> Dice. D-I-C-E. Dice. Yes. That is poker game?
+<span class="tutor">[Tutor]</span> Yes. Well, not poker, but other card games.
+<span class="student">[Student]</span> Ah, I see. I understand.
+<span class="tutor">[Tutor]</span> Exactly. So when you roll, you roll the dice, right?
+<span class="student">[Student]</span> I see. It is similar to poker. Because if we made some line on the roll, we will win. So it is similar.
+<span class="tutor">[Tutor]</span> Yes. The dice. It&#x27;s similar. Exactly.
+<span class="student">[Student]</span> I see. Okay, the example. &quot;I can&#x27;t believe you got them to sign the contract. You are really on a roll lately.&quot;
+<span class="student">[Student]</span> I see. Okay. And... These days, Korean investors are on a roll. Because our stock market is fired up.
+<span class="tutor">[Tutor]</span> Okay. &quot;These days, Korean investors are on a roll.&quot; You got it.
+<span class="student">[Student]</span> Okay.
+<span class="tutor">[Tutor]</span> Excellent. These felt easy for you. You got them all.
+<span class="student">[Student]</span> Oh, no, that is too typical for me, but your teaching is still great, so I will do.
+<span class="tutor">[Tutor]</span> Thank you. I appreciate you saying that.
+<span class="student">[Student]</span> Okay.
+<span class="tutor">[Tutor]</span> Okay, let&#x27;s continue with the key patterns on the left-hand side. There are three patterns. &quot;You might be interested in our new product.&quot; &quot;You might be interested in this idea.&quot; &quot;You might be interested in joining us for this project.&quot; Could you make your own sentence?
+<span class="student">[Student]</span> &quot;You might be interested in our travel plan.&quot;
+<span class="tutor">[Tutor]</span> Exactly. Okay. &quot;I&#x27;m thinking of our long-term goals.&quot; &quot;I&#x27;m thinking of the best option for us.&quot; &quot;I&#x27;m thinking of trying to get a little more money.&quot;
+<span class="student">[Student]</span> Ah, yes.
+<span class="student">[Student]</span> I&#x27;m thinking of using AI every hour task.
+<span class="tutor">[Tutor]</span> For each of our tasks or for all of our tasks?
+<span class="student">[Student]</span> Yeah, all of the tasks. Yes.
+<span class="tutor">[Tutor]</span> &quot;Each&quot; is better. &quot;Each of our tasks.&quot;
+<span class="student">[Student]</span> All of our tasks. Each, all of our tasks. Teacher, could you make the full sentence?
+<span class="tutor">[Tutor]</span> &quot;I&#x27;m thinking of using AI.&quot;
+<span class="tutor">[Tutor]</span> &quot;I&#x27;m thinking of using AI for all of our tasks.&quot;
+<span class="student">[Student]</span> All of our tasks. All of our tasks. All of our tasks.
+<span class="tutor">[Tutor]</span> Okay. &quot;I&#x27;m thinking of using AI for all of the tasks.&quot;
+<span class="student">[Student]</span> All of the tasks.
+<span class="student">[Student]</span> I&#x27;m thinking of using AI for... For... All our tasks.
+<span class="tutor">[Tutor]</span> AI for all of the tasks. Okay. The last one.
+<span class="student">[Student]</span> Hmm. &quot;What do you think about giving us a discount?&quot; &quot;What do you think about extending the contract period?&quot; &quot;What do you think about lowering the interest rate?&quot;
+<span class="student">[Student]</span> Okay. What do you think about finish, we finish our class today? Yes.
+<span class="tutor">[Tutor]</span> Okay. Excellent sentence. And you&#x27;re absolutely right. We are wrapping up today&#x27;s class.
+<span class="student">[Student]</span> Okay.
+<span class="tutor">[Tutor]</span> Do you have any questions?
+<span class="student">[Student]</span> Oh, no. Thank you so much, teacher. I don&#x27;t have questions.
+<span class="student">[Student]</span> Have a nice day. Thank you very much for your time.
+<span class="tutor">[Tutor]</span> Thank you, Joey. And we&#x27;ll talk tomorrow.
+<span class="student">[Student]</span> Okay.
+<span class="tutor">[Tutor]</span> You take care. Bye-bye.
+<span class="student">[Student]</span> Bye-bye.</div>
+        </div>
+    </div>
+    <div class="toast" id="toast">✅ 프롬프트가 복사되었습니다!</div>
+    <script>
+        const REVIEW_PROMPT="너는 나의 영어 회화 복습 파트너야. 오늘 내 전화영어 수업 내용을 기반으로 대화하면서 복습을 도와줘.\n\n[오늘 수업 전사 내용]\n[Student] Hello Joanna, good morning.\n[Tutor] Hi Joey, how were you today?\n[Student] Of course, everything is good. How was your day?\n[Tutor] It was excellent, thank you.\n[Student] Okay, no problem.\n[Tutor] How was your weekend?\n[Student] I asked first.\n[Student] Yeah, every weekend is so good. Yeah, this weekend I also met my family and spent time with my family. Especially on Sunday, I went to a small picnic near a park, so we ate ice cream near the park and walked with my son and my wife. Yeah, that is so normal and simple, not special, but that is also special.\n[Tutor] Yes, right. Being mindful of the things that seem small but are enjoyable.\n[Student] Yeah, enjoyable. And that is their small routine. I think our life is gathering some routine.\n[Student] Yeah, small routine. Like the point gathering, and then we made some...\n[Student] So, it's important. Small routine and small things are important.\n[Tutor] I think so. I believe so.\n[Student] Yes.\n[Student] And next, my question? How was your weekend?\n[Tutor] It was great. So on Friday, I went to Bogota, which is the capital city of Colombia. I flew in to see my brother.\n[Student] Yes. Bogota, right? Yes, exactly.\n[Student] Maybe your brother... your brother, what can I say? Brother? Yeah. Your brother come for the travel or he leave the Colombia?\n[Tutor] No, he was just passing through.\n[Student] Ah, passing through.\n[Tutor] His wife and him had a layover in Bogota. They were traveling from Costa Rica to Canada.\n[Student] Costa Rica.\n[Student] Ah, yes, I see.\n[Tutor] So they stopped in Bogota for eight hours. So I flew there to see them.\n[Student] Wow. Just that you stopped over to travel, but they stayed eight hours.\n[Tutor] Mm-hmm.\n[Student] Oh, I see. That is so nice. So it was so nice to see him, right?\n[Tutor] I hadn't seen him in almost a year.\n[Student] Almost a year. Maybe old brother or young brother?\n[Tutor] He's my baby brother.\n[Student] Baby brother.\n[Tutor] Yes. He is almost 30, but he's always going to be my baby brother.\n[Student] Ah, baby brother. So nice.\n[Tutor] Because he's the youngest one of us.\n[Student] Ah, yes, I see. That's so nice.\n[Tutor] It was very nice. It was a very long and tiring day because I flew to Bogota and back the same day. So I spent about 12 hours at the airport.\n[Student] I see. And Bogota, is there a pathway from your city?\n[Tutor] It's about a one-hour flight. It's not too far.\n[Student] One-hour flight. Ah. I see.\n[Tutor] So it's easy to get there. By bus, it's 11 hours.\n[Student] Wow. 11 hours.\n[Tutor] 11 hours by bus.\n[Student] Yes. Yes, that's impossible.\n[Tutor] But I, yes, I don't take the bus. It's too long.\n[Student] Yes, you're right.\n[Student] Okay.\n[Tutor] Okay. Let's take a look at our book.\n[Student] Okay, good.\n[Tutor] We had left off on page 33.\n[Student] Oh, yes, 33. It was Mr. Sterling and Miss Harris, yes.\n[Student] Yeah, I remember. He is to work at another company and he controlled the contract option. Exactly. Exactly.\n[Tutor] Okay. Yeah. So if we look at the questions at the bottom of page 33.\n[Student] Okay.\n[Tutor] Question two. What are the key factors to consider when negotiating a business contract?\n[Student] I think the key factor, first, the most important is we find the needs. If we have a negotiation, and in the meantime, we will find some of our needs. If some company needs some money or if some company needs the time. And it is also the same personally. Yeah, for example, if I buy some product in the market, our need is to buy other product items and buy them more cheaper in our time. So first, before the negotiation, we will find some needs, our needs.\n[Tutor] So, yes, let's change that to \"identify our needs.\"\n[Student] Identify, yeah, you're right.\n[Tutor] \"Identify our needs\" is a very common sentence in English.\n[Student] Identify, just a moment. Identify these, right? Identify needs. Exactly. Yeah, it's a normal expression.\n[Tutor] \"Identify our needs.\" That is, you've got it.\n[Student] Important process before the negotiation, having negotiation.\n[Tutor] Have a negotiation. Anything else? Any other factors that you think are important?\n[Student] And then, and then I think it is also important, we will confirm who our... in front of the hour is the here. It is similar to identify our needs, and then we confirm who is the negotiator to our partner.\n[Tutor] Identify the negotiator.\n[Student] Yes, it's the same. Identify negotiator.\n[Tutor] Hmm, negotiator, okay.\n[Student] The old Chinese saying says, he says, if you know first, and then if you know your negotiator, you will win in your negotiation 100%. So I agree that, I'm totally agree that, if we identify our needs and negotiator, and then we will better become to win.\n[Tutor] We are better prepared.\n[Student] Prepared.\n[Tutor] We are better prepared.\n[Student] Prepared. Prepared. Okay. Okay.\n[Tutor] And question three. Have you ever participated in a business-to-business negotiation?\n[Student] Hmm, oh yes. I'm an investor. I'm a salaryman, but in the meantime, I'm also an investor. So maybe many times I bought some real estate in the market, real estate market. Yeah, but real estate price is so expensive, so usually we control, we find the contract option during times and price and contact some letter. So yeah, I have so many times to, yeah, negotiation, business-to-business negotiation.\n[Tutor] And were you able to achieve your desired outcome? Desired outcome.\n[Student] Oh yes, of course. I love the negotiation because that is so interesting. Yeah, just he and me fight and argue something, and then we have some, made some new way or something. So that's so interesting and I love that. Yeah, in every place.\n[Tutor] Excellent. Well, thank you for answering these questions.\n[Student] Okay, me too. Thank you for your ask. Your question. Thank you for asking. Thank you for asking. Thank you asking.\n[Tutor] You've got it. Okay. Let's move on to the business expressions on page 34.\n[Student] 34. Yes. Okay. First I will read that. Yes. Read the expression and write your own sentence using each expression. \"To get ahead of oneself\" means to plan or do something which is not yet appropriate. \"Don't get ahead of yourself. You still need to interview for the job, so you shouldn't be planning to move yet.\"\n[Tutor] Exactly, right? So what we're saying is the person is so excited about this job interview in another city that they're already planning to move to the new city, but they don't have the job yet.\n[Student] Yes, yes, I understand. \"Don't get ahead of yourself\" means don't go faster than the process. Okay. My sentence?\n[Tutor] Yes, please.\n[Student] Okay.\n[Student] My friend, don't get ahead of yourself. You still not, you still, you just met her one time, so you shouldn't get married yet.\n[Tutor] That's exactly how you would use it. You got it.\n[Student] Just I'm imagining one guy imagine get married just he met the first time with her.\n[Tutor] Exactly. After one date.\n[Student] One date. Too soon.\n[Student] Yes, and some guys imagine, yeah, his sons, select his sons' names, just to make them heard.\n[Tutor] Right. Sometimes.\n[Student] Okay.\n[Student] Okay.\n[Tutor] Okay, second expression. That was great. You got it. \"Double check.\"\n[Student] \"Go over something twice to ensure it is accurate. Let me double check those figures out before we send the report.\"\n[Student] If we, if we buy, if we buy our stock, we will have to double check the situation.\n[Tutor] Absolutely. Okay. And last one?\n[Student] \"On a roll.\"\n[Student] Experience ring.\n[Tutor] \"On a roll.\"\n[Student] Experience ring.\n[Tutor] Prolonged spell of success or good luck. \"On a roll.\"\n[Student] \"On a roll.\" \"On a roll.\"\n[Tutor] \"On a roll.\" You got it.\n[Student] \"On a roll.\" And teacher, I have a question. That is a roll. What does roll mean? That is the rhyme? Or not roll?\n[Tutor] It comes from \"roll of the dice.\" Dice. Dice. You know the dice for games?\n[Student] Game? Oh, no.\n[Tutor] Dice.\n[Student] Dice. D-I-C-E. Dice. Yes. That is poker game?\n[Tutor] Yes. Well, not poker, but other card games.\n[Student] Ah, I see. I understand.\n[Tutor] Exactly. So when you roll, you roll the dice, right?\n[Student] I see. It is similar to poker. Because if we made some line on the roll, we will win. So it is similar.\n[Tutor] Yes. The dice. It's similar. Exactly.\n[Student] I see. Okay, the example. \"I can't believe you got them to sign the contract. You are really on a roll lately.\"\n[Student] I see. Okay. And... These days, Korean investors are on a roll. Because our stock market is fired up.\n[Tutor] Okay. \"These days, Korean investors are on a roll.\" You got it.\n[Student] Okay.\n[Tutor] Excellent. These felt easy for you. You got them all.\n[Student] Oh, no, that is too typical for me, but your teaching is still great, so I will do.\n[Tutor] Thank you. I appreciate you saying that.\n[Student] Okay.\n[Tutor] Okay, let's continue with the key patterns on the left-hand side. There are three patterns. \"You might be interested in our new product.\" \"You might be interested in this idea.\" \"You might be interested in joining us for this project.\" Could you make your own sentence?\n[Student] \"You might be interested in our travel plan.\"\n[Tutor] Exactly. Okay. \"I'm thinking of our long-term goals.\" \"I'm thinking of the best option for us.\" \"I'm thinking of trying to get a little more money.\"\n[Student] Ah, yes.\n[Student] I'm thinking of using AI every hour task.\n[Tutor] For each of our tasks or for all of our tasks?\n[Student] Yeah, all of the tasks. Yes.\n[Tutor] \"Each\" is better. \"Each of our tasks.\"\n[Student] All of our tasks. Each, all of our tasks. Teacher, could you make the full sentence?\n[Tutor] \"I'm thinking of using AI.\"\n[Tutor] \"I'm thinking of using AI for all of our tasks.\"\n[Student] All of our tasks. All of our tasks. All of our tasks.\n[Tutor] Okay. \"I'm thinking of using AI for all of the tasks.\"\n[Student] All of the tasks.\n[Student] I'm thinking of using AI for... For... All our tasks.\n[Tutor] AI for all of the tasks. Okay. The last one.\n[Student] Hmm. \"What do you think about giving us a discount?\" \"What do you think about extending the contract period?\" \"What do you think about lowering the interest rate?\"\n[Student] Okay. What do you think about finish, we finish our class today? Yes.\n[Tutor] Okay. Excellent sentence. And you're absolutely right. We are wrapping up today's class.\n[Student] Okay.\n[Tutor] Do you have any questions?\n[Student] Oh, no. Thank you so much, teacher. I don't have questions.\n[Student] Have a nice day. Thank you very much for your time.\n[Tutor] Thank you, Joey. And we'll talk tomorrow.\n[Student] Okay.\n[Tutor] You take care. Bye-bye.\n[Student] Bye-bye.\n\n[AI 피드백]\nJoey, 안녕하세요! 오늘도 즐거운 대화였습니다. 주말에 가족과 함께 소풍을 가고 아이스크림을 드셨다는 이야기는 저까지 마음이 따뜻해지는 루틴이었네요. 콜롬비아 여행과 비즈니스 협상에 대한 이야기도 흥미로웠습니다. 특히, 협상에 대한 Joey의 긍정적인 태도와 'on a roll' 표현을 활용하는 모습에서 자신감이 느껴졌어요!\n\n---\n\n**0. 📌 Topic**\nTopic: Discussing weekend activities, travel, and key factors in business negotiation.\n\n---\n\n**1. 📊 오늘의 대화 요약 (Summary)**\n오늘 Joey는 주말에 가족과 함께 소풍을 다녀온 소소하지만 특별한 일상에 대해 이야기했습니다. 이어서 튜터의 콜롬비아 보고타 방문 경험을 듣고, 형제 관계와 여행에 대한 대화를 나눴습니다. 마지막으로는 비즈니스 계약 협상 시 고려해야 할 핵심 요소들(\"identify our needs\", \"identify the negotiator\")에 대해 토론하며 비즈니스 표현들을 연습했습니다.\n\n---\n\n**2. 💬 유창성 업그레이드 (Fluency & Natural Flow)**\nJoey가 실제 말한 문장 중, 의미는 통하지만 더 자연스럽게 다듬을 수 있는 표현 3가지를 선정했습니다.\n\n1.  ❌ **학습자 원문 (As Said):** \"I think our life is gathering some routine.\"\n    ✅ **자연스러운 표현 (Natural):** \"I think our life is built around routines.\"\n    💎 **비즈니스 표현 (Professional):1** \"Our lives are often shaped by the routines we establish.\"\n    💡 **코칭 포인트:** \"Gathering some routine\" sounds a bit like collecting items. \"Built around\" or \"shaped by\" suggests that routines form the foundation or structure of our lives, which is a more natural way to express this idea. → \"gathering some routine\"은 물건을 모으는 듯한 느낌을 줍니다. \"built around\"나 \"shaped by\"는 루틴이 우리 삶의 기반이나 구조를 이룬다는 의미를 전달하여 더 자연스럽습니다.\n\n2.  ❌ **학습자 원문 (As Said):** \"your brother come for the travel or he leave the Colombia?\"\n    ✅ **자연스러운 표현 (Natural):** \"Did your brother come to travel, or is he leaving Colombia?\"\n    💎 **비즈니스 표현 (Professional):** \"Was your brother visiting for leisure, or was he departing from Colombia?\"\n    💡 **코칭 포인트:** When asking about past events, use the past tense (\"did he come,\" \"did he leave\"). For ongoing or future plans, \"is he leaving\" is appropriate. Also, \"for the travel\" is less common than \"to travel\" or \"for leisure\" when referring to the purpose of a visit. → 과거의 일에 대해 물을 때는 과거 시제(\"did he come,\" \"did he leave\")를 사용하고, 현재 진행 중이거나 미래 계획에 대해서는 \"is he leaving\"이 적절합니다. 또한, \"for the travel\"보다는 \"to travel\" 또는 \"for leisure\"가 방문 목적을 나타낼 때 더 자연스럽습니다.\n\n3.  ❌ **학습자 원문 (As Said):** \"Just I'm imagining one guy imagine get married just he met the first time with her.\"\n    ✅ **자연스러운 표현 (Natural):** \"I'm just imagining a guy who's already thinking about getting married after meeting her for the first time.\"\n    💎 **비즈니스 표현 (Professional):** \"It's akin to someone contemplating marriage immediately after an initial encounter.\"\n    💡 **코칭 포인트:** This sentence had a few grammatical points to refine. \"Just I'm imagining\" should be \"I'm just imagining.\" When describing a hypothetical situation, \"thinking about getting married\" is more natural than \"imagine get married.\" Also, \"after meeting her\" is a concise way to express the timing. → 이 문장은 몇 가지 문법을 다듬을 필요가 있었습니다. \"Just I'm imagining\"은 \"I'm just imagining\"이 되어야 합니다. 가상 상황을 묘사할 때는 \"imagine get married\"보다 \"thinking about getting married\"가 더 자연스럽습니다. 또한, \"after meeting her\"는 시점을 간결하게 표현하는 방법입니다.\n\n---\n\n**3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)**\nCategory: **Verb Forms and Auxiliary Verbs**\n\nJoey는 동사의 형태를 사용하거나 조동사를 활용하는 데 있어 종종 실수를 했습니다. 특히 'be' 동사를 불필요하게 사용하거나, 동사원형 대신 다른 형태를 써야 할 때가 있었습니다.\n\n| ❌ **원문**                                                               | ✅ **교정 예시**                                                                          |\n| :--------------------------------------------------------------------- | :------------------------------------------------------------------------------------- |\n| \"I'm totally agree that\"                                               | \"I **totally agree** that\"                                                             |\n| \"your brother come for the travel or he leave the Colombia?\"           | \"**Did** your brother **come** to travel or **is he leaving** Colombia?\" (과거 시점 질문) |\n| \"What do you think about finish, we finish our class today?\"           | \"What do you think about **finishing** our class today?\"                               |\n\n📌 **핵심 규칙:** 동사를 사용할 때는 시제, 주어와의 관계, 그리고 문맥에 따라 올바른 형태(원형, 과거형, 현재분사 등)를 사용하고, 'be' 동사와 일반 동사를 혼동하지 않도록 주의해야 합니다. 특히 전치사 뒤에는 동명사(gerund) 형태가 옵니다.\n\n🔁 **따라 읽기:**\n🗣️ \"I totally agree that we need to identify our needs.\"\n🗣️ \"Did your brother come for a visit, or is he leaving Colombia for good?\"\n🗣️ \"What do you think about finishing our class a few minutes early today?\"\n\n---\n\n**4. 📗 어휘 확장 (Vocabulary Vault)**\n오늘 수업 중 등장했거나 비즈니스 환경에서 유용하게 쓸 수 있는 어휘 5가지입니다.\n\n1.  **mindful** /마인드풀/ (adj.)\n    뜻: ~을 염두에 두는, 의식하는, 주의 깊은\n    실전 예문: We need to be **mindful** of the budget constraints when planning the new project.\n\n2.  **layover** /레이오버/ (n.)\n    뜻: (여행 중) 잠시 들르는 곳, 경유\n    실전 예문: Our flight to Frankfurt has a three-hour **layover** in Dubai.\n\n3.  **negotiate** /니고시에이트/ (v.)\n    뜻: 협상하다, 교섭하다\n    실전 예문: We successfully **negotiated** a better deal with our new supplier.\n\n4.  **outcome** /아웃컴/ (n.)\n    뜻: 결과, 성과\n    실전 예문: The **outcome** of the meeting was a new strategic partnership.\n\n5.  **on a roll** /온 어 롤/ (idiom)\n    뜻: 승승장구하는, 잘나가는, 탄력받은\n    실전 예문: Our sales team has been **on a roll** this quarter, exceeding all targets.\n\n---\n\n**5. 📝 실전 복습 챌린지 (Practice)**\n오늘 배운 표현과 문법을 활용하여 영작해 보세요.\n\n1.  **[쉬움]** \"새로운 프로젝트를 시작하기 전에, 우리는 우리의 필요를 명확히 파악해야 합니다.\"\n    → (힌트: identify our needs)\n    <details>\n    <summary>모범 답안</summary>\n    Before starting a new project, we need to **identify our needs** clearly.\n    </details>\n\n2.  **[중간]** \"우리 팀은 최근 몇 달 동안 정말 승승장구하고 있어서, 다음 분기 목표를 달성할 수 있을 거라고 확신해요.\"\n    → (힌트: on a roll)\n    <details>\n    <summary>모범 답안</summary>\n    Our team has been **on a roll** for the past few months, so I'm confident we can achieve our next quarter's goals.\n    </details>\n\n3.  **[어려움]** \"저는 그들이 제안한 계약 조건에 전적으로 동의하지만, 최종 결과가 우리 회사에 가장 이익이 될지 다시 한번 확인해 봐야 한다고 생각합니다.\"\n    → (힌트: totally agree, double check, outcome)\n    <details>\n    <summary>모범 답안</summary>\n    I **totally agree** with the contract terms they proposed, but I think we should **double check** if the final **outcome** will be most beneficial for our company.\n    </details>\n\n---\n\n**6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)**\n\n✨ **Good Job**: \"These days, Korean investors are on a roll. Because our stock market is fired up.\"\nJoey는 'on a roll'이라는 표현을 배우자마자 한국 주식 시장 상황에 적용하여 아주 자연스럽게 사용했습니다. 특히 'fired up'이라는 생생한 표현까지 더해져 문장이 더욱 역동적으로 느껴졌습니다. 배운 표현을 바로 자신의 관심사와 연결하여 활용하는 능력이 정말 훌륭합니다!\n\n🚀 **내일의 한 문장**: 다음 수업 시작 시 튜터에게 이 문장을 던져보세요.\n\"I'm thinking of using AI for all of our tasks. What do you think about that?\"\n(오늘 연습했던 'I'm thinking of~'와 'What do you think about~' 패턴을 활용해 보세요!)\n\n---\n\n**[성과 지표]**\n**유창성 점수: 8/10점**\n\n**근거:** Joey는 다양한 주제에 대해 막힘없이 자신의 의견을 표현하고, 튜터의 질문에 적극적으로 답하며 대화를 이어나가는 능력이 뛰어납니다. 특히 새로운 표현을 배우면 바로 자신의 경험에 대입하여 활용하려는 시도가 인상적입니다. 다만, 몇몇 문장 구조나 동사 형태에서 한국어식 표현이 섞이거나 어색한 부분이 있어 원어민이 듣기에 조금 더 자연스럽게 다듬을 수 있는 여지가 있습니다.\n\n**다음 수업 '원포인트 액션 플랜':**\n다음 수업에서는 **\"동사 형태의 정확성(Verb Form Accuracy)\"**에 집중해 봅시다. 특히 전치사 뒤에 오는 동명사(gerund) 형태와 일반 동사 사용 시 시제 및 주어-동사 일치에 조금 더 신경 써서 말하는 연습을 해보면 좋을 것 같습니다.\n\n위 내용을 바탕으로:\n1. 먼저 오늘 수업에서 내가 틀렸거나 어색했던 표현을 하나 골라서, 관련된 상황을 영어로 질문해줘.\n2. 내가 영어로 대답하면, 자연스러운지 확인하고 더 나은 표현이 있으면 알려줘.\n3. 특히 \"반복 실수 패턴\"에서 지적된 부분을 집중적으로 연습시켜줘.\n4. 이런 식으로 오늘 배운 표현들을 하나씩 복습하자.\n5. 한국어 설명은 필요할 때만 간단히, 대화는 최대한 영어로 진행해줘.\n\n그럼 시작하자!";
+        function startReview(){navigator.clipboard.writeText(REVIEW_PROMPT).then(()=>{showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)}).catch(()=>{const t=document.createElement('textarea');t.value=REVIEW_PROMPT;document.body.appendChild(t);t.select();document.execCommand('copy');document.body.removeChild(t);showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)})}
+        function showToast(){const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500)}
+        function switchTab(n){document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',n==='feedback'?i===0:i===1));document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));document.getElementById('tab-'+n).classList.add('active')}
+    </script>
+</body>
+</html>
