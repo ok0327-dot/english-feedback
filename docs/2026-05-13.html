@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전화영어 복습 - 2026년 05월 13일</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Noto Sans KR',sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.75;min-height:100vh}
+        .header{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);border-bottom:1px solid rgba(255,255,255,.06);padding:48px 24px 40px;text-align:center}
+        .header-date{font-size:13px;color:#94a3b8;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+        .header h1{font-size:28px;font-weight:700;color:#f1f5f9;margin-bottom:16px}
+        .header-meta{display:flex;justify-content:center;gap:24px;font-size:14px;color:#64748b}
+        .header-meta span{display:flex;align-items:center;gap:6px}
+        .cta-section{text-align:center;padding:40px 24px}
+        .cta-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:linear-gradient(135deg,#38bdf8,#818cf8);color:#fff;font-size:16px;font-weight:600;font-family:'Noto Sans KR',sans-serif;border:none;border-radius:50px;cursor:pointer;transition:all .3s;text-decoration:none;box-shadow:0 4px 24px rgba(56,189,248,.25)}
+        .cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(56,189,248,.35)}
+        .cta-btn svg{width:20px;height:20px}
+        .cta-sub{margin-top:12px;font-size:13px;color:#64748b}
+        .toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#38bdf8;padding:14px 28px;border-radius:12px;font-size:14px;font-weight:500;border:1px solid rgba(56,189,248,.2);box-shadow:0 8px 32px rgba(0,0,0,.4);opacity:0;transition:all .4s cubic-bezier(.16,1,.3,1);z-index:1000}
+        .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+        .container{max-width:720px;margin:0 auto;padding:0 24px 80px}
+        .tabs{display:flex;gap:4px;background:#1a1a24;padding:4px;border-radius:12px;margin-bottom:32px}
+        .tab{flex:1;padding:12px;text-align:center;font-size:14px;font-weight:500;color:#64748b;background:0 0;border:none;border-radius:8px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all .2s}
+        .tab.active{background:#262636;color:#f1f5f9}
+        .tab-content{display:none}.tab-content.active{display:block}
+        .feedback h2{font-size:18px;font-weight:700;color:#f1f5f9;margin:36px 0 16px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.06)}
+        .feedback h2:first-child{margin-top:0}
+        .feedback p{margin:8px 0;color:#cbd5e1}
+        .feedback .item{padding:6px 0 6px 16px;border-left:2px solid #334155;margin:6px 0;color:#cbd5e1}
+        .feedback .numbered{padding:8px 0 8px 16px;color:#cbd5e1}
+        .feedback .numbered strong{color:#38bdf8}
+        .feedback strong{color:#f1f5f9}
+        .feedback code{background:#1e293b;padding:2px 8px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#38bdf8}
+        .feedback table{width:100%;border-collapse:collapse;margin:12px 0}
+        .feedback th,.feedback td{padding:10px 14px;text-align:left;border-bottom:1px solid #262636}
+        .feedback th{color:#94a3b8;font-weight:500;font-size:13px}
+        .feedback td{color:#cbd5e1}
+        .arrow{color:#38bdf8;font-weight:700}
+        .transcript{background:#1a1a24;border-radius:12px;padding:28px;font-size:14px;line-height:2;color:#94a3b8;white-space:pre-wrap;word-break:break-word;font-family:'JetBrains Mono','Noto Sans KR',monospace}
+        .transcript .tutor{color:#38bdf8}
+        .transcript .student{color:#a78bfa}
+        @media(max-width:640px){.header{padding:32px 16px}.header h1{font-size:22px}.cta-btn{padding:14px 28px;font-size:15px}.container{padding:0 16px 60px}}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-date">2026년 05월 13일</div>
+        <h1>📚 전화영어 복습</h1>
+        <div class="header-meta">
+            <span>⏱ 19분 53초</span>
+            <span>🎙 전화영어_025180304_20260513080014.m4a</span>
+        </div>
+    </div>
+    <div class="cta-section">
+        <button class="cta-btn" onclick="startReview()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Gemini에서 복습 대화 시작하기
+        </button>
+        <div class="cta-sub">클릭하면 프롬프트가 복사되고 Gemini가 열립니다</div>
+    </div>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('feedback')">📋 AI 피드백</button>
+            <button class="tab" onclick="switchTab('transcript')">🎙 수업 전사</button>
+        </div>
+        <div id="tab-feedback" class="tab-content active">
+            <div class="feedback"><p><strong>0. 📌 Topic</strong></p>
+<p>Topic: Discussing Negotiation Skills and Strategies</p>
+<br>
+<p><strong>1. 📊 오늘의 대화 요약 (Summary)</strong></p>
+<p>Joey는 오늘 수업에서 "Proposal and Negotiation" 지문을 읽고 협상에 필요한 다양한 기술들에 대해 이야기했습니다. 특히 '준비와 조사', '인내심', '양보할 의지' 등의 중요성을 강조하며 각 기술의 순위를 매기고 그 이유를 설명했습니다. 또한 협상 시 정보 공유의 정도와 'aggressive bid'의 의미에 대해서도 토론하며 비즈니스 협상 전략에 대한 이해를 넓혔습니다.</p>
+<br>
+<p><strong>2. 💬 유창성 업그레이드 (Fluency & Natural Flow)</strong></p>
+<br>
+<p>*   <strong>❌ 학습자 원문 (As Said):</strong> "Today, I made some reports, but <strong>this is a little easy</strong> and I have enough time."</p>
+<p>    *   <strong>✅ 자연스러운 표현 (Natural):</strong> "Today, I made some reports, but <strong>the work was relatively easy</strong>, and I had enough time."</p>
+<p>    *   <strong>💎 비즈니스 표현 (Professional)::</strong> "Today, I completed some reports, and <strong>the tasks were quite manageable</strong>, leaving me with sufficient time."</p>
+<p>    *   <strong>💡 코칭 포인트:</strong> Using "the work was easy" or "the tasks were manageable" sounds more natural when referring to the nature of the work itself, rather than "this is easy" which can sound a bit too direct or refer to the report document itself. <span class="arrow">→</span> "this is easy" 대신 "the work was easy"나 "the tasks were manageable"을 사용하면 업무의 성격을 더 자연스럽게 표현할 수 있습니다.</p>
+<br>
+<p>*   <strong>❌ 학습자 원문 (As Said):</strong> "At that time, we don't have some patience that we <strong>come to lose</strong> that negotiation."</p>
+<p>    *   <strong>✅ 자연스러운 표현 (Natural)::</strong> "At that time, if we lack patience, we might <strong>end up losing</strong> that negotiation."</p>
+<p>    *   <strong>💎 비즈니스 표현 (Professional)::</strong> "In such situations, a lack of patience can often <strong>lead to the failure</strong> of negotiations."</p>
+<p>    *   <strong>💡 코칭 포인트:</strong> "Come to lose"는 자연스러운 표현이 아닙니다. "결국 ~하게 되다"라는 의미로는 "end up losing"이 자연스럽고, 격식 있는 표현으로는 "lead to the failure of"를 쓸 수 있습니다.</p>
+<br>
+<p>*   <strong>❌ 학습자 원문 (As Said):</strong> "But the main information just <strong>grab for myself</strong>, not give to him or her."</p>
+<p>    *   <strong>✅ 자연스러운 표현 (Natural)::</strong> "But I <strong>keep the main information to myself</strong>, not sharing it with them."</p>
+<p>    *   <strong>💎 비즈니스 표현 (Professional)::</strong> "However, I <strong>retain critical information</strong>, refraining from disclosing it to the other party."</p>
+<p>    *   <strong>💡 코칭 포인트:</strong> "Grab for myself"는 다소 비격식적이고 정확하지 않습니다. "혼자 간직하다"는 의미로 "keep to myself"가 자연스러우며, 비즈니스에서는 "retain information"을 사용할 수 있습니다.</p>
+<br>
+<p><strong>3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)</strong></p>
+<br>
+<p>Category: <strong>Unnecessary Articles (a/an/the)</strong></p>
+<br>
+<p>Joey는 명사 앞에 관사 'the'를 불필요하게 사용하거나, 특정 상황에서 'a' 또는 'the'를 생략해야 할 때 사용하는 경향이 있었습니다. 특히 추상 명사나 일반적인 개념 앞에서 이러한 실수가 자주 나타났습니다.</p>
+<br>
+<table>
+<tr><th>❌ 원문 (As Said)</th><th>✅ 교정 예시 (Corrected)</th></tr>
+<tr><td>The negotiation is <strong>the giving</strong> something and <strong>take</strong> something.</td><td>Negotiation is about <strong>giving</strong> something and <strong>taking</strong> something.</td></tr>
+<tr><td>So it is possible to good relationship and then make to <strong>the good result</strong>.</td><td>So it is possible to have a good relationship and then lead to <strong>good results</strong>.</td></tr>
+<tr><td>And if they are know about their, my key, our condition is <strong>the fail</strong>.</td><td>And if they know about our key information, our condition is <strong>a failure</strong>.</td></tr>
+<tr><td>But the main information just grab for myself, not give to him or her. I give <strong>the all</strong>.</td><td>But I keep the main information to myself, not giving it to them. I give <strong>it all</strong>.</td></tr>
+</table>
+<br>
+<p>📌 <strong>핵심 규칙:</strong> 추상적인 개념이나 일반적인 행위를 나타낼 때는 관사 'the'를 사용하지 않거나, 문맥에 따라 적절한 관사를 선택해야 합니다. 특히 'give and take'와 같이 관용적으로 사용되는 표현에서는 관사를 생략합니다.</p>
+<br>
+<p>🔁 <strong>따라 읽기:</strong></p>
+<p>🗣️ "Negotiation is about giving something and taking something."</p>
+<p>🗣️ "So it is possible to have a good relationship and then lead to good results."</p>
+<p>🗣️ "And if they know about our key information, our condition is a failure."</p>
+<br>
+<p><strong>4. 📗 어휘 확장 (Vocabulary Vault)</strong></p>
+<br>
+<p>*   <strong>crucial</strong> /kruːʃəl/ (형용사)</p>
+<p>    *   뜻: 결정적인, 매우 중요한</p>
+<p>    *   실전 예문: Effective communication is <strong>crucial</strong> for successful project management.</p>
+<br>
+<p>*   <strong>entanglement</strong> /ɪnˈtæŋɡəlmənt/ (명사)</p>
+<p>    *   뜻: 복잡한 문제, 얽힘, 곤경</p>
+<p>    *   실전 예문: We must avoid any legal <strong>entanglements</strong> that could delay the merger.</p>
+<br>
+<p>*   <strong>proficiency</strong> /prəˈfɪʃənsi/ (명사)</p>
+<p>    *   뜻: 능숙함, 숙달</p>
+<p>    *   실전 예문: Demonstrating <strong>proficiency</strong> in data analysis is essential for this role.</p>
+<br>
+<p>*   <strong>yield</strong> /jiːld/ (동사)</p>
+<p>    *   뜻: 양보하다, 굴복하다; (결과를) 내다</p>
+<p>    *   실전 예문: We may need to <strong>yield</strong> on minor points to secure the overall deal.</p>
+<br>
+<p>*   <strong>portfolio</strong> /pɔːrtˈfoʊli.oʊ/ (명사)</p>
+<p>    *   뜻: 투자 자산 목록, 포트폴리오</p>
+<p>    *   실전 예문: Diversifying your investment <strong>portfolio</strong> can help mitigate risks.</p>
+<br>
+<p><strong>5. 📝 실전 복습 챌린지 (Practice)</strong></p>
+<br>
+<div class="numbered"><strong>1.</strong>  <strong>상황:</strong> 당신은 새로운 프로젝트에 대한 제안서를 준비 중입니다. 이 제안서가 성공적인 협상에 매우 중요하다고 말하고 싶습니다.</div>
+<p>    *   <strong>영작:</strong> (crucial 사용)</p>
+<p>    *   <strong>모범 답안:</strong> This proposal is <strong>crucial</strong> for our upcoming negotiations.</p>
+<br>
+<div class="numbered"><strong>2.</strong>  <strong>상황:</strong> 팀원에게 복잡한 문제에 얽히지 않도록 주의하라고 조언합니다.</div>
+<p>    *   <strong>영작:</strong> (entanglement 사용)</p>
+<p>    *   <strong>모범 답안:</strong> We need to be careful to avoid any <strong>entanglements</strong> during this process.</p>
+<br>
+<div class="numbered"><strong>3.</strong>  <strong>상황:</strong> 당신은 협상에서 작은 부분을 양보함으로써 더 큰 이득을 얻을 수 있다고 생각합니다.</div>
+<p>    *   <strong>영작:</strong> (yield 사용, 'give and take' 자연스러운 표현 활용)</p>
+<p>    *   <strong>모범 답안:</strong> Sometimes, in negotiation, we have to <strong>yield</strong> on small things to gain bigger benefits. It's all about <strong>giving and taking</strong>.</p>
+<br>
+<p><strong>6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)</strong></p>
+<br>
+<p>✨ <strong>Good Job:</strong></p>
+<p>"I think the <strong>gain</strong>. Because I think there's difference, there are so many competition and there are so many gain and kind of game. So usually we want to gain something, but sometimes we will fight to survive. At that time, yeah, we, we control the loss. So I think, yeah, my answer is that is case by case and usually we want to gain and that is our purpose, gain."</p>
+<p>Joey, 이 문장은 조금 길고 복잡했지만, 협상에서 '얻는 것(gain)'과 '잃는 것(loss)'에 대한 본인의 생각을 아주 명확하고 논리적으로 설명해 주셨어요! 특히 "fight to survive"나 "control the loss" 같은 표현을 통해 비즈니스 상황에 대한 깊은 이해를 보여주셨습니다. 복잡한 아이디어를 영어로 풀어내는 능력이 정말 훌륭합니다!</p>
+<br>
+<p>🚀 <strong>내일의 한 문장:</strong></p>
+<p>"I've been thinking about what we discussed regarding negotiation, and I realized that having <strong>proficiency</strong> in active listening is also <strong>crucial</strong>."</p>
+<br>
+<br>
+<p><strong>[성과 지표]</strong></p>
+<p><strong>유창성 점수(10점 만점): 7.5점</strong></p>
+<br>
+<p><strong>근거:</strong> Joey는 다양한 주제에 대해 막힘없이 자신의 의견을 표현하고, 질문에 적극적으로 답하며 대화를 주도하는 능력이 뛰어납니다. 어휘력도 풍부하여 비즈니스 관련 개념들을 잘 설명합니다. 다만, 문장이 길어질 때 문법적 오류나 어색한 표현이 나타나 유창성의 흐름을 미세하게 방해하는 경우가 있었습니다. 특히 관사 사용과 특정 동사 구문의 자연스러움에서 개선의 여지가 보입니다.</p>
+<br>
+<p><strong>다음 수업 '원포인트 액션 플랜':</strong></p>
+<p>다음 수업에서는 <strong>"관사 사용의 정확성"</strong>에 집중하여, 추상 명사나 일반적인 개념을 이야기할 때 'a/an/the'를 언제 생략하고 언제 사용해야 하는지 함께 연습해 봅시다. 특히 오늘 배운 'negotiation', 'patience', 'information' 같은 단어들을 활용하여 문장을 만들어보는 시간을 가질 거예요!</p></div>
+        </div>
+        <div id="tab-transcript" class="tab-content">
+            <div class="transcript">[Joey] Hello, Bell. Good morning. Yeah. Good morning. Good evening.
+<span class="tutor">[Tutor]</span> How are you doing today? Of course. Everything is good. Yes, it&#x27;s a nice weather today. How was your weather? How was your feeling?
+[Joey] How do I feel? I feel good. Yeah. The weather is nice.
+<span class="tutor">[Tutor]</span> Yes, it&#x27;s a good day. Do you have a busy day at work so far or a quiet day?
+[Joey] Today, I made some reports, but this is a little easy and I have enough time. So I&#x27;m not busy, but these days I&#x27;m studying AI personally. So, that makes me a little busy and every night I research and develop some, yeah, my project, personal project. So, a little busy, a little busy, but it&#x27;s okay. That is enjoyable for me.
+<span class="tutor">[Tutor]</span> And how about the textbook? I think you&#x27;re on page 35.
+[Joey] Oh, yes, you&#x27;re right. Today we will start on 35. This is &quot;Proposal and Negotiation.&quot; Yeah, can I read that?
+<span class="tutor">[Tutor]</span> Yeah, would you like to start?
+[Joey] Yes. &quot;Proposal and Negotiation. Negotiation is critical.&quot; Critical. Is it right? Critical.
+<span class="tutor">[Tutor]</span> Crucial.
+[Joey] Crucial.
+<span class="tutor">[Tutor]</span> No, crucial.
+[Joey] Okay. &quot;Crucial aspect of business. Having a skilled negotiator on your team can protect your assets and further your interests. A weak negotiator can lose ground and cause entanglements. In contrast, a skilled negotiator can drive a deal and bargains that position the company for success and contain favorable economic terms. Adapt negotiation requires proficiency in a few skills. Having a developed negotiation toolkit can allow your side to maintain its interest while also adding value to your new partner.&quot; Which skill would you rate most highly for negotiation? We got negotiation. Negotiation, negotiation. Okay, maybe this paragraph is displaying strong points, good points of negotiation, a good negotiator. And maybe the next step we will compare the skills, yeah, or explain the negotiation skill. Yeah, which one? Negotiation skills. Negotiation, negotiation. Yes, five syllables. Negotiation. Okay. I&#x27;ll explain more negotiation. I&#x27;ll practice more negotiation.
+<span class="tutor">[Tutor]</span> Okay. So looking at the skills, how would you rank them or how important would you rank them and what is your reason?
+[Joey] First I have to know about the skill. Can I read that? Sorry, yes. The first skill is &quot;bold opening.&quot; Bold opening. &quot;Start with an aggressive bid.&quot; Why do they use an aggressive bid? Maybe that is not good negotiation, right? So it means aggressive can mean competitive also. Competitive. Ah, that is focus on the competitive, focus on the comparison, focus on the competition, compete, competed. Right. Okay. And the second is &quot;preparation and research.&quot; Oh, yes. &quot;Understanding the other side.&quot; The third, &quot;patience.&quot; Oh, yes. &quot;Avoid rush.&quot; Yes. And then &quot;positive attitude.&quot; Attitude. Focus on goal instead of risk. And and and &quot;eagerness.&quot; Eagerness. Right? Eagerness. Eagerness. &quot;Don&#x27;t want to lose the deal.&quot; Eagerness. Just pretend, right? Pretend to don&#x27;t want to lose. I don&#x27;t want to... Oh, no, no, no, that is not pretend. Just he wants to win. Yeah. And &quot;empathy.&quot; Empathy. Hmm. Okay. &quot;Sympathy with the other side.&quot; Okay, that is connected. Okay, okay. And the last thing, &quot;willing to yield.&quot; &quot;Able to give in on low priority issues.&quot;
+[Joey] Teacher, could you explain the last one?
+<span class="tutor">[Tutor]</span> &quot;Ability to give in on low priority issues.&quot; So willing to agree to something that is low priority that maybe you lose some, willing to give up.
+[Joey] Um, oh, I don&#x27;t understand &quot;priority.&quot; So if you&#x27;re in a negotiation, you might give the other side something that benefits them and not you. Maybe if we have a negotiation, negotiation, something and I give some small thing and take the big one, right?
+<span class="tutor">[Tutor]</span> Yeah, so maybe give them some small things in return for...
+[Joey] I see, I understand. That&#x27;s good. Yeah. Okay.
+<span class="tutor">[Tutor]</span> So looking at these, which ones do you think are more important? Which ones do you think are less important?
+[Joey] I see. The most important, in my opinion, the skill of &quot;preparation and research,&quot; &quot;understanding the other side.&quot; Because that process, that skill is knowing about, we know about, we identify about his needs, their needs, or our needs. So first, before negotiation, we have to know about their needs. So I think the &quot;preparation and research&quot; is the most important negotiation skill. The first ranking.
+<span class="tutor">[Tutor]</span> So that&#x27;s your number one. What about the other ones? Or what are lower?
+[Joey] The second is, I guess, the &quot;patience.&quot; Because that is also important. Usually, our negotiation sometimes is a bit longer. The period is longer. At that time, we don&#x27;t have some patience that we come to lose that negotiation. So that is also important skill, &quot;patience.&quot; And then next, I think negotiation is an important strategy. So I connect to &quot;willingness to yield,&quot; &quot;able to give in on low priority issues.&quot; The negotiation is the giving something and take something. So we give the small thing as we don&#x27;t need thing, to that we don&#x27;t need thing, and we take the big, big value. So I think that is also important. So I&#x27;m checking the third, &quot;willingness to yield.&quot; And then the fourth is the &quot;empathy&quot; because that is the similar game. We respect each other because that is also human or other thing, company. So if we have a great, good negotiation, we, we understand the other side. So it is possible to good relationship and then make to the good result, good negotiation. Okay. And five, the &quot;positive attitude.&quot; Attitude, attitude. That is similar for the &quot;empathy.&quot; That is the like kind of the relationship. If we have a positive attitude and good empathy, that is make a good result. So I&#x27;m selecting five. And, oh, &quot;eagerness&quot; is also important. &quot;Don&#x27;t want to lose the deal.&quot; It is similar. Pretend to the we don&#x27;t, we need, our needs. And that is kind of a strategy. So, I think that is not six. I, I need, I need, I wish I changed my mind. It is list of the three. Yes. And the next level is the up more of step one more. And the last thing is the &quot;bold opening.&quot; I don&#x27;t know why &quot;start with an aggressive bid.&quot; Why are they showing something? Maybe it is also kind of strategy. And if we bold opening, the other side believes he is so angry, so he starts more carefully and more give them more good option to negotiation. So, yeah, there&#x27;s some, some scenario that is also good negotiation skill.
+<span class="tutor">[Tutor]</span> Yeah, it&#x27;s true. In this case, &quot;aggressive&quot; does not mean angry in this sentence.
+[Joey] Ah, really?
+<span class="tutor">[Tutor]</span> It means like a competitive opening.
+[Joey] Competitive opening. Yeah, so it doesn&#x27;t mean anger. It just means like a very competitive bid. For example, if we buy some product in the market, and then just how can I show this competition skill, negotiation skill?
+<span class="tutor">[Tutor]</span> Well, you would use this to describe something like, &quot;This is an aggressive stock,&quot; or maybe &quot;the stock is doing well,&quot; or &quot;it&#x27;s very competitive,&quot; or &quot;they have an aggressive portfolio.&quot;
+[Joey] For example, if I buy some product in the traditional market, at that time I just to say, &quot;I really want this product. Could you discount the product?&quot; Is it similar or different?
+<span class="tutor">[Tutor]</span> It would just be maybe if the product is an aggressive bid would maybe be like, you start there.
+[Joey] You start half more and more competition, more aggressive.
+<span class="tutor">[Tutor]</span> I see.
+[Joey] For example, if you sell some product, you say that is $10, but I say, &quot;Hey, I want to do this product. Just give the $1,&quot; right?
+<span class="tutor">[Tutor]</span> Or if there&#x27;s two people who want to buy something and one person says, &quot;I will pay you five dollars,&quot; and the other person, &quot;I will pay you fifteen dollars,&quot; the fifteen dollars is an aggressive bid.
+[Joey] I see. That is case by case. Understand. Thank you for your explanation. So in this case, it&#x27;s more competitive. Competitive. Okay, understand. That is good. Oh yeah, that is of their negotiation.
+<span class="tutor">[Tutor]</span> And so when you enter a negotiation, are you more focused on what you might gain or what you might lose?
+[Joey] Hmm, I think the gain. Because I think there&#x27;s difference, there are so many competition and there are so many gain and kind of game. So usually we want to gain something, but sometimes we will fight to survive. At that time, yeah, we, we control the loss. So I think, yeah, my answer is that is case by case and usually we want to gain and that is our purpose, gain.
+<span class="tutor">[Tutor]</span> It definitely depends on what kind of negotiation or the situation.
+[Joey] You&#x27;re right. That depends on the negotiation.
+<span class="tutor">[Tutor]</span> And the other question here, some negotiation strategists believe that the less you say, the better. How much information should you share during a negotiation?
+[Joey] Hmm, that is depend on the what kind of information. For example, I give the so many information about my, my information and the environment, etc. But the main information just grab for myself, not give to him or her. Because that is key information. And if they are know about their, my key, our condition is the fail. So my strategy is to grab to my key information and other thing is to give always. Yeah, yeah, it&#x27;s all.
+<span class="tutor">[Tutor]</span> So there&#x27;s definitely some information you want to keep to yourself or keep for your own company.
+[Joey] Yeah, keep in your mind. But this information is the key information, yeah, about the competition. But, but the other side believes they don&#x27;t give the information. Yeah. So at the time our relation is to fail. So if that is not key information, I give the all. But the key information just keep and grab. Yeah.
+<span class="tutor">[Tutor]</span> Okay. Well, that&#x27;s getting about it for time. I will send you corrections in just a moment. Any questions before I go?
+[Joey] Teacher, maybe there are some words I don&#x27;t understand, but I&#x27;m just researching because the time is almost over, so I will just say goodbye.
+<span class="tutor">[Tutor]</span> Okay, we can check them next time.
+[Joey] Okay, check them next time. Have a nice day, teacher.
+<span class="tutor">[Tutor]</span> Goodbye. You too, bye.</div>
+        </div>
+    </div>
+    <div class="toast" id="toast">✅ 프롬프트가 복사되었습니다!</div>
+    <script>
+        const REVIEW_PROMPT="너는 나의 영어 회화 복습 파트너야. 오늘 내 전화영어 수업 내용을 기반으로 대화하면서 복습을 도와줘.\n\n[오늘 수업 전사 내용]\n[Joey] Hello, Bell. Good morning. Yeah. Good morning. Good evening.\n[Tutor] How are you doing today? Of course. Everything is good. Yes, it's a nice weather today. How was your weather? How was your feeling?\n[Joey] How do I feel? I feel good. Yeah. The weather is nice.\n[Tutor] Yes, it's a good day. Do you have a busy day at work so far or a quiet day?\n[Joey] Today, I made some reports, but this is a little easy and I have enough time. So I'm not busy, but these days I'm studying AI personally. So, that makes me a little busy and every night I research and develop some, yeah, my project, personal project. So, a little busy, a little busy, but it's okay. That is enjoyable for me.\n[Tutor] And how about the textbook? I think you're on page 35.\n[Joey] Oh, yes, you're right. Today we will start on 35. This is \"Proposal and Negotiation.\" Yeah, can I read that?\n[Tutor] Yeah, would you like to start?\n[Joey] Yes. \"Proposal and Negotiation. Negotiation is critical.\" Critical. Is it right? Critical.\n[Tutor] Crucial.\n[Joey] Crucial.\n[Tutor] No, crucial.\n[Joey] Okay. \"Crucial aspect of business. Having a skilled negotiator on your team can protect your assets and further your interests. A weak negotiator can lose ground and cause entanglements. In contrast, a skilled negotiator can drive a deal and bargains that position the company for success and contain favorable economic terms. Adapt negotiation requires proficiency in a few skills. Having a developed negotiation toolkit can allow your side to maintain its interest while also adding value to your new partner.\" Which skill would you rate most highly for negotiation? We got negotiation. Negotiation, negotiation. Okay, maybe this paragraph is displaying strong points, good points of negotiation, a good negotiator. And maybe the next step we will compare the skills, yeah, or explain the negotiation skill. Yeah, which one? Negotiation skills. Negotiation, negotiation. Yes, five syllables. Negotiation. Okay. I'll explain more negotiation. I'll practice more negotiation.\n[Tutor] Okay. So looking at the skills, how would you rank them or how important would you rank them and what is your reason?\n[Joey] First I have to know about the skill. Can I read that? Sorry, yes. The first skill is \"bold opening.\" Bold opening. \"Start with an aggressive bid.\" Why do they use an aggressive bid? Maybe that is not good negotiation, right? So it means aggressive can mean competitive also. Competitive. Ah, that is focus on the competitive, focus on the comparison, focus on the competition, compete, competed. Right. Okay. And the second is \"preparation and research.\" Oh, yes. \"Understanding the other side.\" The third, \"patience.\" Oh, yes. \"Avoid rush.\" Yes. And then \"positive attitude.\" Attitude. Focus on goal instead of risk. And and and \"eagerness.\" Eagerness. Right? Eagerness. Eagerness. \"Don't want to lose the deal.\" Eagerness. Just pretend, right? Pretend to don't want to lose. I don't want to... Oh, no, no, no, that is not pretend. Just he wants to win. Yeah. And \"empathy.\" Empathy. Hmm. Okay. \"Sympathy with the other side.\" Okay, that is connected. Okay, okay. And the last thing, \"willing to yield.\" \"Able to give in on low priority issues.\"\n[Joey] Teacher, could you explain the last one?\n[Tutor] \"Ability to give in on low priority issues.\" So willing to agree to something that is low priority that maybe you lose some, willing to give up.\n[Joey] Um, oh, I don't understand \"priority.\" So if you're in a negotiation, you might give the other side something that benefits them and not you. Maybe if we have a negotiation, negotiation, something and I give some small thing and take the big one, right?\n[Tutor] Yeah, so maybe give them some small things in return for...\n[Joey] I see, I understand. That's good. Yeah. Okay.\n[Tutor] So looking at these, which ones do you think are more important? Which ones do you think are less important?\n[Joey] I see. The most important, in my opinion, the skill of \"preparation and research,\" \"understanding the other side.\" Because that process, that skill is knowing about, we know about, we identify about his needs, their needs, or our needs. So first, before negotiation, we have to know about their needs. So I think the \"preparation and research\" is the most important negotiation skill. The first ranking.\n[Tutor] So that's your number one. What about the other ones? Or what are lower?\n[Joey] The second is, I guess, the \"patience.\" Because that is also important. Usually, our negotiation sometimes is a bit longer. The period is longer. At that time, we don't have some patience that we come to lose that negotiation. So that is also important skill, \"patience.\" And then next, I think negotiation is an important strategy. So I connect to \"willingness to yield,\" \"able to give in on low priority issues.\" The negotiation is the giving something and take something. So we give the small thing as we don't need thing, to that we don't need thing, and we take the big, big value. So I think that is also important. So I'm checking the third, \"willingness to yield.\" And then the fourth is the \"empathy\" because that is the similar game. We respect each other because that is also human or other thing, company. So if we have a great, good negotiation, we, we understand the other side. So it is possible to good relationship and then make to the good result, good negotiation. Okay. And five, the \"positive attitude.\" Attitude, attitude. That is similar for the \"empathy.\" That is the like kind of the relationship. If we have a positive attitude and good empathy, that is make a good result. So I'm selecting five. And, oh, \"eagerness\" is also important. \"Don't want to lose the deal.\" It is similar. Pretend to the we don't, we need, our needs. And that is kind of a strategy. So, I think that is not six. I, I need, I need, I wish I changed my mind. It is list of the three. Yes. And the next level is the up more of step one more. And the last thing is the \"bold opening.\" I don't know why \"start with an aggressive bid.\" Why are they showing something? Maybe it is also kind of strategy. And if we bold opening, the other side believes he is so angry, so he starts more carefully and more give them more good option to negotiation. So, yeah, there's some, some scenario that is also good negotiation skill.\n[Tutor] Yeah, it's true. In this case, \"aggressive\" does not mean angry in this sentence.\n[Joey] Ah, really?\n[Tutor] It means like a competitive opening.\n[Joey] Competitive opening. Yeah, so it doesn't mean anger. It just means like a very competitive bid. For example, if we buy some product in the market, and then just how can I show this competition skill, negotiation skill?\n[Tutor] Well, you would use this to describe something like, \"This is an aggressive stock,\" or maybe \"the stock is doing well,\" or \"it's very competitive,\" or \"they have an aggressive portfolio.\"\n[Joey] For example, if I buy some product in the traditional market, at that time I just to say, \"I really want this product. Could you discount the product?\" Is it similar or different?\n[Tutor] It would just be maybe if the product is an aggressive bid would maybe be like, you start there.\n[Joey] You start half more and more competition, more aggressive.\n[Tutor] I see.\n[Joey] For example, if you sell some product, you say that is $10, but I say, \"Hey, I want to do this product. Just give the $1,\" right?\n[Tutor] Or if there's two people who want to buy something and one person says, \"I will pay you five dollars,\" and the other person, \"I will pay you fifteen dollars,\" the fifteen dollars is an aggressive bid.\n[Joey] I see. That is case by case. Understand. Thank you for your explanation. So in this case, it's more competitive. Competitive. Okay, understand. That is good. Oh yeah, that is of their negotiation.\n[Tutor] And so when you enter a negotiation, are you more focused on what you might gain or what you might lose?\n[Joey] Hmm, I think the gain. Because I think there's difference, there are so many competition and there are so many gain and kind of game. So usually we want to gain something, but sometimes we will fight to survive. At that time, yeah, we, we control the loss. So I think, yeah, my answer is that is case by case and usually we want to gain and that is our purpose, gain.\n[Tutor] It definitely depends on what kind of negotiation or the situation.\n[Joey] You're right. That depends on the negotiation.\n[Tutor] And the other question here, some negotiation strategists believe that the less you say, the better. How much information should you share during a negotiation?\n[Joey] Hmm, that is depend on the what kind of information. For example, I give the so many information about my, my information and the environment, etc. But the main information just grab for myself, not give to him or her. Because that is key information. And if they are know about their, my key, our condition is the fail. So my strategy is to grab to my key information and other thing is to give always. Yeah, yeah, it's all.\n[Tutor] So there's definitely some information you want to keep to yourself or keep for your own company.\n[Joey] Yeah, keep in your mind. But this information is the key information, yeah, about the competition. But, but the other side believes they don't give the information. Yeah. So at the time our relation is to fail. So if that is not key information, I give the all. But the key information just keep and grab. Yeah.\n[Tutor] Okay. Well, that's getting about it for time. I will send you corrections in just a moment. Any questions before I go?\n[Joey] Teacher, maybe there are some words I don't understand, but I'm just researching because the time is almost over, so I will just say goodbye.\n[Tutor] Okay, we can check them next time.\n[Joey] Okay, check them next time. Have a nice day, teacher.\n[Tutor] Goodbye. You too, bye.\n\n[AI 피드백]\n**0. 📌 Topic**\nTopic: Discussing Negotiation Skills and Strategies\n\n**1. 📊 오늘의 대화 요약 (Summary)**\nJoey는 오늘 수업에서 \"Proposal and Negotiation\" 지문을 읽고 협상에 필요한 다양한 기술들에 대해 이야기했습니다. 특히 '준비와 조사', '인내심', '양보할 의지' 등의 중요성을 강조하며 각 기술의 순위를 매기고 그 이유를 설명했습니다. 또한 협상 시 정보 공유의 정도와 'aggressive bid'의 의미에 대해서도 토론하며 비즈니스 협상 전략에 대한 이해를 넓혔습니다.\n\n**2. 💬 유창성 업그레이드 (Fluency & Natural Flow)**\n\n*   **❌ 학습자 원문 (As Said):** \"Today, I made some reports, but **this is a little easy** and I have enough time.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"Today, I made some reports, but **the work was relatively easy**, and I had enough time.\"\n    *   **💎 비즈니스 표현 (Professional)::** \"Today, I completed some reports, and **the tasks were quite manageable**, leaving me with sufficient time.\"\n    *   **💡 코칭 포인트:** Using \"the work was easy\" or \"the tasks were manageable\" sounds more natural when referring to the nature of the work itself, rather than \"this is easy\" which can sound a bit too direct or refer to the report document itself. → \"this is easy\" 대신 \"the work was easy\"나 \"the tasks were manageable\"을 사용하면 업무의 성격을 더 자연스럽게 표현할 수 있습니다.\n\n*   **❌ 학습자 원문 (As Said):** \"At that time, we don't have some patience that we **come to lose** that negotiation.\"\n    *   **✅ 자연스러운 표현 (Natural)::** \"At that time, if we lack patience, we might **end up losing** that negotiation.\"\n    *   **💎 비즈니스 표현 (Professional)::** \"In such situations, a lack of patience can often **lead to the failure** of negotiations.\"\n    *   **💡 코칭 포인트:** \"Come to lose\"는 자연스러운 표현이 아닙니다. \"결국 ~하게 되다\"라는 의미로는 \"end up losing\"이 자연스럽고, 격식 있는 표현으로는 \"lead to the failure of\"를 쓸 수 있습니다.\n\n*   **❌ 학습자 원문 (As Said):** \"But the main information just **grab for myself**, not give to him or her.\"\n    *   **✅ 자연스러운 표현 (Natural)::** \"But I **keep the main information to myself**, not sharing it with them.\"\n    *   **💎 비즈니스 표현 (Professional)::** \"However, I **retain critical information**, refraining from disclosing it to the other party.\"\n    *   **💡 코칭 포인트:** \"Grab for myself\"는 다소 비격식적이고 정확하지 않습니다. \"혼자 간직하다\"는 의미로 \"keep to myself\"가 자연스러우며, 비즈니스에서는 \"retain information\"을 사용할 수 있습니다.\n\n**3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)**\n\nCategory: **Unnecessary Articles (a/an/the)**\n\nJoey는 명사 앞에 관사 'the'를 불필요하게 사용하거나, 특정 상황에서 'a' 또는 'the'를 생략해야 할 때 사용하는 경향이 있었습니다. 특히 추상 명사나 일반적인 개념 앞에서 이러한 실수가 자주 나타났습니다.\n\n| ❌ 원문 (As Said)                                                                  | ✅ 교정 예시 (Corrected)                                                              |\n| :--------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------ |\n| The negotiation is **the giving** something and **take** something.                | Negotiation is about **giving** something and **taking** something.                   |\n| So it is possible to good relationship and then make to **the good result**.         | So it is possible to have a good relationship and then lead to **good results**.      |\n| And if they are know about their, my key, our condition is **the fail**.           | And if they know about our key information, our condition is **a failure**.          |\n| But the main information just grab for myself, not give to him or her. I give **the all**. | But I keep the main information to myself, not giving it to them. I give **it all**. |\n\n📌 **핵심 규칙:** 추상적인 개념이나 일반적인 행위를 나타낼 때는 관사 'the'를 사용하지 않거나, 문맥에 따라 적절한 관사를 선택해야 합니다. 특히 'give and take'와 같이 관용적으로 사용되는 표현에서는 관사를 생략합니다.\n\n🔁 **따라 읽기:**\n🗣️ \"Negotiation is about giving something and taking something.\"\n🗣️ \"So it is possible to have a good relationship and then lead to good results.\"\n🗣️ \"And if they know about our key information, our condition is a failure.\"\n\n**4. 📗 어휘 확장 (Vocabulary Vault)**\n\n*   **crucial** /kruːʃəl/ (형용사)\n    *   뜻: 결정적인, 매우 중요한\n    *   실전 예문: Effective communication is **crucial** for successful project management.\n\n*   **entanglement** /ɪnˈtæŋɡəlmənt/ (명사)\n    *   뜻: 복잡한 문제, 얽힘, 곤경\n    *   실전 예문: We must avoid any legal **entanglements** that could delay the merger.\n\n*   **proficiency** /prəˈfɪʃənsi/ (명사)\n    *   뜻: 능숙함, 숙달\n    *   실전 예문: Demonstrating **proficiency** in data analysis is essential for this role.\n\n*   **yield** /jiːld/ (동사)\n    *   뜻: 양보하다, 굴복하다; (결과를) 내다\n    *   실전 예문: We may need to **yield** on minor points to secure the overall deal.\n\n*   **portfolio** /pɔːrtˈfoʊli.oʊ/ (명사)\n    *   뜻: 투자 자산 목록, 포트폴리오\n    *   실전 예문: Diversifying your investment **portfolio** can help mitigate risks.\n\n**5. 📝 실전 복습 챌린지 (Practice)**\n\n1.  **상황:** 당신은 새로운 프로젝트에 대한 제안서를 준비 중입니다. 이 제안서가 성공적인 협상에 매우 중요하다고 말하고 싶습니다.\n    *   **영작:** (crucial 사용)\n    *   **모범 답안:** This proposal is **crucial** for our upcoming negotiations.\n\n2.  **상황:** 팀원에게 복잡한 문제에 얽히지 않도록 주의하라고 조언합니다.\n    *   **영작:** (entanglement 사용)\n    *   **모범 답안:** We need to be careful to avoid any **entanglements** during this process.\n\n3.  **상황:** 당신은 협상에서 작은 부분을 양보함으로써 더 큰 이득을 얻을 수 있다고 생각합니다.\n    *   **영작:** (yield 사용, 'give and take' 자연스러운 표현 활용)\n    *   **모범 답안:** Sometimes, in negotiation, we have to **yield** on small things to gain bigger benefits. It's all about **giving and taking**.\n\n**6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)**\n\n✨ **Good Job:**\n\"I think the **gain**. Because I think there's difference, there are so many competition and there are so many gain and kind of game. So usually we want to gain something, but sometimes we will fight to survive. At that time, yeah, we, we control the loss. So I think, yeah, my answer is that is case by case and usually we want to gain and that is our purpose, gain.\"\nJoey, 이 문장은 조금 길고 복잡했지만, 협상에서 '얻는 것(gain)'과 '잃는 것(loss)'에 대한 본인의 생각을 아주 명확하고 논리적으로 설명해 주셨어요! 특히 \"fight to survive\"나 \"control the loss\" 같은 표현을 통해 비즈니스 상황에 대한 깊은 이해를 보여주셨습니다. 복잡한 아이디어를 영어로 풀어내는 능력이 정말 훌륭합니다!\n\n🚀 **내일의 한 문장:**\n\"I've been thinking about what we discussed regarding negotiation, and I realized that having **proficiency** in active listening is also **crucial**.\"\n\n---\n\n**[성과 지표]**\n**유창성 점수(10점 만점): 7.5점**\n\n**근거:** Joey는 다양한 주제에 대해 막힘없이 자신의 의견을 표현하고, 질문에 적극적으로 답하며 대화를 주도하는 능력이 뛰어납니다. 어휘력도 풍부하여 비즈니스 관련 개념들을 잘 설명합니다. 다만, 문장이 길어질 때 문법적 오류나 어색한 표현이 나타나 유창성의 흐름을 미세하게 방해하는 경우가 있었습니다. 특히 관사 사용과 특정 동사 구문의 자연스러움에서 개선의 여지가 보입니다.\n\n**다음 수업 '원포인트 액션 플랜':**\n다음 수업에서는 **\"관사 사용의 정확성\"**에 집중하여, 추상 명사나 일반적인 개념을 이야기할 때 'a/an/the'를 언제 생략하고 언제 사용해야 하는지 함께 연습해 봅시다. 특히 오늘 배운 'negotiation', 'patience', 'information' 같은 단어들을 활용하여 문장을 만들어보는 시간을 가질 거예요!\n\n위 내용을 바탕으로:\n1. 먼저 오늘 수업에서 내가 틀렸거나 어색했던 표현을 하나 골라서, 관련된 상황을 영어로 질문해줘.\n2. 내가 영어로 대답하면, 자연스러운지 확인하고 더 나은 표현이 있으면 알려줘.\n3. 특히 \"반복 실수 패턴\"에서 지적된 부분을 집중적으로 연습시켜줘.\n4. 이런 식으로 오늘 배운 표현들을 하나씩 복습하자.\n5. 한국어 설명은 필요할 때만 간단히, 대화는 최대한 영어로 진행해줘.\n\n그럼 시작하자!";
+        function startReview(){navigator.clipboard.writeText(REVIEW_PROMPT).then(()=>{showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)}).catch(()=>{const t=document.createElement('textarea');t.value=REVIEW_PROMPT;document.body.appendChild(t);t.select();document.execCommand('copy');document.body.removeChild(t);showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)})}
+        function showToast(){const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500)}
+        function switchTab(n){document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',n==='feedback'?i===0:i===1));document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));document.getElementById('tab-'+n).classList.add('active')}
+    </script>
+</body>
+</html>
