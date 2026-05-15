@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전화영어 복습 - 2026년 05월 15일</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Noto Sans KR',sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.75;min-height:100vh}
+        .header{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);border-bottom:1px solid rgba(255,255,255,.06);padding:48px 24px 40px;text-align:center}
+        .header-date{font-size:13px;color:#94a3b8;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+        .header h1{font-size:28px;font-weight:700;color:#f1f5f9;margin-bottom:16px}
+        .header-meta{display:flex;justify-content:center;gap:24px;font-size:14px;color:#64748b}
+        .header-meta span{display:flex;align-items:center;gap:6px}
+        .cta-section{text-align:center;padding:40px 24px}
+        .cta-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:linear-gradient(135deg,#38bdf8,#818cf8);color:#fff;font-size:16px;font-weight:600;font-family:'Noto Sans KR',sans-serif;border:none;border-radius:50px;cursor:pointer;transition:all .3s;text-decoration:none;box-shadow:0 4px 24px rgba(56,189,248,.25)}
+        .cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(56,189,248,.35)}
+        .cta-btn svg{width:20px;height:20px}
+        .cta-sub{margin-top:12px;font-size:13px;color:#64748b}
+        .toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#38bdf8;padding:14px 28px;border-radius:12px;font-size:14px;font-weight:500;border:1px solid rgba(56,189,248,.2);box-shadow:0 8px 32px rgba(0,0,0,.4);opacity:0;transition:all .4s cubic-bezier(.16,1,.3,1);z-index:1000}
+        .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+        .container{max-width:720px;margin:0 auto;padding:0 24px 80px}
+        .tabs{display:flex;gap:4px;background:#1a1a24;padding:4px;border-radius:12px;margin-bottom:32px}
+        .tab{flex:1;padding:12px;text-align:center;font-size:14px;font-weight:500;color:#64748b;background:0 0;border:none;border-radius:8px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all .2s}
+        .tab.active{background:#262636;color:#f1f5f9}
+        .tab-content{display:none}.tab-content.active{display:block}
+        .feedback h2{font-size:18px;font-weight:700;color:#f1f5f9;margin:36px 0 16px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.06)}
+        .feedback h2:first-child{margin-top:0}
+        .feedback p{margin:8px 0;color:#cbd5e1}
+        .feedback .item{padding:6px 0 6px 16px;border-left:2px solid #334155;margin:6px 0;color:#cbd5e1}
+        .feedback .numbered{padding:8px 0 8px 16px;color:#cbd5e1}
+        .feedback .numbered strong{color:#38bdf8}
+        .feedback strong{color:#f1f5f9}
+        .feedback code{background:#1e293b;padding:2px 8px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#38bdf8}
+        .feedback table{width:100%;border-collapse:collapse;margin:12px 0}
+        .feedback th,.feedback td{padding:10px 14px;text-align:left;border-bottom:1px solid #262636}
+        .feedback th{color:#94a3b8;font-weight:500;font-size:13px}
+        .feedback td{color:#cbd5e1}
+        .arrow{color:#38bdf8;font-weight:700}
+        .transcript{background:#1a1a24;border-radius:12px;padding:28px;font-size:14px;line-height:2;color:#94a3b8;white-space:pre-wrap;word-break:break-word;font-family:'JetBrains Mono','Noto Sans KR',monospace}
+        .transcript .tutor{color:#38bdf8}
+        .transcript .student{color:#a78bfa}
+        @media(max-width:640px){.header{padding:32px 16px}.header h1{font-size:22px}.cta-btn{padding:14px 28px;font-size:15px}.container{padding:0 16px 60px}}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-date">2026년 05월 15일</div>
+        <h1>📚 전화영어 복습</h1>
+        <div class="header-meta">
+            <span>⏱ 19분 50초</span>
+            <span>🎙 전화영어_025180304_20260515080017.m4a</span>
+        </div>
+    </div>
+    <div class="cta-section">
+        <button class="cta-btn" onclick="startReview()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Gemini에서 복습 대화 시작하기
+        </button>
+        <div class="cta-sub">클릭하면 프롬프트가 복사되고 Gemini가 열립니다</div>
+    </div>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('feedback')">📋 AI 피드백</button>
+            <button class="tab" onclick="switchTab('transcript')">🎙 수업 전사</button>
+        </div>
+        <div id="tab-feedback" class="tab-content active">
+            <div class="feedback"><p>Joey, 안녕하세요! 금요일 아침부터 샌드 페스티벌 참가 계획을 들으니 저까지 설레네요. 문화 차이에 대한 깊이 있는 대화도 인상 깊었습니다. 오늘 배운 표현들을 잘 활용해서 주말에 즐거운 추억 많이 만드시길 바랍니다!</p>
+<br>
+<br>
+<p><strong>0. 📌 Topic</strong></p>
+<p>Topic: Discussing cultural differences and communication styles.</p>
+<br>
+<p><strong>1. 📊 오늘의 대화 요약 (Summary)</strong></p>
+<p>오늘은 주말 부산 샌드 페스티벌 참가 계획으로 대화를 시작하여, 'tackling problems'의 의미를 명확히 이해하는 시간을 가졌습니다. 이어서 문화 차이의 중요성과 한국의 소통 방식, 그리고 어른을 대할 때의 제스처(두 손 사용) 등 다양한 문화적 관습에 대해 이야기 나누었습니다.</p>
+<br>
+<p><strong>2. 💬 유창성 업그레이드 (Fluency & Natural Flow)</strong></p>
+<br>
+<p>Joey가 실제 말한 문장 중, 의미는 통하지만 더 자연스럽게 다듬을 수 있는 표현 3가지를 선정했습니다.</p>
+<br>
+<div class="numbered"><strong>1.</strong>  <strong>❌ 학습자 원문 (As Said):</strong> "I will meet my family. So nice."</div>
+<p>    *   <strong>✅ 자연스러운 표현 (Natural):</strong> "I'm going to meet my family. That'll be nice."</p>
+<p>    *   <strong>💎 비즈니스 표현 (Professional):</strong> "I'm looking forward to spending time with my family this weekend."</p>
+<p>    *   <strong>💡 코칭 포인트:</strong> "I will meet" is grammatically correct but "I'm going to meet" sounds more natural for expressing future plans, especially when it's a casual, pre-arranged activity. Adding "That'll be nice" makes the sentence flow better by expressing your feeling about the plan.</p>
+<p>        <span class="arrow">→</span> "I will meet"도 문법적으로 맞지만, "I'm going to meet"는 캐주얼하고 미리 정해진 계획을 말할 때 더 자연스럽습니다. "That'll be nice"를 덧붙이면 계획에 대한 Joey의 감정을 표현하여 문장이 더 유연하게 이어집니다.</p>
+<br>
+<div class="numbered"><strong>2.</strong>  <strong>❌ 학습자 원문 (As Said):</strong> "the festival name is the sand festival near the beach."</div>
+<p>    *   <strong>✅ 자연스러운 표현 (Natural):</strong> "The festival is called the sand festival, and it's near the beach."</p>
+<p>    *   <strong>💎 비즈니스 표현 (Professional):</strong> "The event is officially known as the sand festival, located by the beach."</p>
+<p>    *   <strong>💡 코칭 포인트:</strong> While "the festival name is" is understandable, "is called" is a much more common and natural way to introduce the name of an event or thing.</p>
+<p>        <span class="arrow">→</span> "the festival name is"도 이해는 되지만, "is called"는 행사나 사물의 이름을 소개할 때 훨씬 더 흔하고 자연스러운 표현입니다.</p>
+<br>
+<div class="numbered"><strong>3.</strong>  <strong>❌ 학습자 원문 (As Said):</strong> "I think it is important to the area."</div>
+<p>    *   <strong>✅ 자연스러운 표현 (Natural):</strong> "I think it depends on the area."</p>
+<p>    *   <strong>💎 비즈니스 표현 (Professional):</strong> "The relevance of this point is largely contingent upon the specific region."</p>
+<p>    *   <strong>💡 코칭 포인트:</strong> "Important to the area" doesn't quite convey the meaning of "it varies by area." "Depends on" is the correct and natural phrase to express that something is conditional or variable based on a factor.</p>
+<p>        <span class="arrow">→</span> "Important to the area"는 '지역에 따라 다르다'는 의미를 정확히 전달하지 못합니다. 어떤 것이 특정 요인에 따라 조건적이거나 가변적임을 표현할 때는 "Depends on"이 정확하고 자연스러운 표현입니다.</p>
+<br>
+<p><strong>3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)</strong></p>
+<br>
+<p>Category: <strong>Missing Subjects or Verbs</strong></p>
+<br>
+<p>Joey는 문장을 구성할 때 주어나 동사를 생략하여 문법적으로 불완전하거나 어색하게 들리는 경우가 있었습니다. 특히 감정이나 상태를 표현할 때 주어와 동사를 함께 사용하는 연습이 필요합니다.</p>
+<br>
+<table>
+<tr><th>❌ 원문 (As Said)</th><th>✅ 교정 예시 (Corrected)</th></tr>
+<tr><td>"I will meet my family. <strong>So nice.</strong>"</td><td>"I will meet my family. <strong>It's so nice.</strong>"</td></tr>
+<tr><td>"Oh, <strong>that is first time.</strong> Because every time I lose, I lost my opportunity..."</td><td>"Oh, <strong>that is the first time.</strong> Because every time I lose, I lost my opportunity..."</td></tr>
+<tr><td>"maybe my son likes the sand, so <strong>make a sandcastle.</strong>"</td><td>"maybe my son likes the sand, so <strong>we can make a sandcastle.</strong>"</td></tr>
+<tr><td>"The data is a little <strong>something wrong.</strong>"</td><td>"There is <strong>something wrong with the data.</strong>" (or "The data is a little off.")</td></tr>
+</table>
+<br>
+<p>📌 <strong>핵심 규칙:</strong> 영어 문장에는 일반적으로 주어와 동사가 필수적으로 포함되어야 합니다. 특히 감정이나 상태를 표현할 때는 "It is ~" 또는 "That is ~"와 같이 주어와 동사를 함께 사용해야 합니다.</p>
+<br>
+<p>🔁 <strong>따라 읽기:</strong></p>
+<p>🗣️ "I will meet my family. It's so nice."</p>
+<p>🗣️ "Oh, that is the first time."</p>
+<p>🗣️ "Maybe my son likes the sand, so we can make a sandcastle."</p>
+<br>
+<p><strong>4. 📗 어휘 확장 (Vocabulary Vault)</strong></p>
+<br>
+<div class="numbered"><strong>1.</strong>  <strong>tackle</strong> /ˈtækl/ (동사)</div>
+<p>    *   뜻: (문제 등을) 다루다, 해결하려고 노력하다</p>
+<p>    *   실전 예문: We need to <strong>tackle</strong> this budget deficit before it gets out of hand.</p>
+<br>
+<div class="numbered"><strong>2.</strong>  <strong>contingent upon</strong> /kənˈtɪndʒənt əˈpɒn/ (형용사구)</div>
+<p>    *   뜻: ~에 달려있는, ~을 조건으로 하는</p>
+<p>    *   실전 예문: Our investment decision is <strong>contingent upon</strong> the market's performance next quarter.</p>
+<br>
+<div class="numbered"><strong>3.</strong>  <strong>protocol</strong> /ˈproʊtəkɔːl/ (명사)</div>
+<p>    *   뜻: (외교적) 의례, 의전; (컴퓨터) 통신 규약; (일반적인) 규칙, 절차</p>
+<p>    *   실전 예문: Please follow the established <strong>protocol</strong> for submitting expense reports.</p>
+<br>
+<div class="numbered"><strong>4.</strong>  <strong>nuance</strong> /ˈnjuːɑːns/ (명사)</div>
+<p>    *   뜻: 미묘한 차이, 뉘앙스</p>
+<p>    *   실전 예문: Understanding the cultural <strong>nuances</strong> is crucial for effective international negotiation.</p>
+<br>
+<div class="numbered"><strong>5.</strong>  <strong>facilitate</strong> /fəˈsɪlɪteɪt/ (동사)</div>
+<p>    *   뜻: (과정 등을) 용이하게 하다, 촉진하다</p>
+<p>    *   실전 예문: Our new software aims to <strong>facilitate</strong> data analysis for all team members.</p>
+<br>
+<p><strong>5. 📝 실전 복습 챌린지 (Practice)</strong></p>
+<br>
+<p>오늘 배운 표현과 문법을 활용하여 다음 한국어 상황을 영어로 작문해 보세요.</p>
+<br>
+<div class="numbered"><strong>1.</strong>  <strong>상황:</strong> 주말에 가족과 함께 새 박물관에 갈 계획인데, 정말 좋을 것 같아요.</div>
+<p>    *   <strong>영작:</strong> I'm going to visit the new museum with my family this weekend. (정말 좋을 것 같아요.)</p>
+<p>    *   <strong>모범 답안:</strong> I'm going to visit the new museum with my family this weekend. <strong>It's going to be great.</strong> / <strong>That'll be nice.</strong></p>
+<br>
+<div class="numbered"><strong>2.</strong>  <strong>상황:</strong> 이번 프로젝트의 성공은 우리 팀의 협력에 달려있습니다.</div>
+<p>    *   <strong>영작:</strong> The success of this project is (우리 팀의 협력에 달려있다).</p>
+<p>    *   <strong>모범 답안:</strong> The success of this project is <strong>contingent upon our team's collaboration.</strong></p>
+<br>
+<div class="numbered"><strong>3.</strong>  <strong>상황:</strong> 데이터에 뭔가 문제가 있는 것 같아요. 이 문제를 해결하기 위해 즉시 조치를 취해야 합니다.</div>
+<p>    *   <strong>영작:</strong> (데이터에 뭔가 문제가 있는 것 같아요.) We need to <strong>tackle</strong> this issue immediately.</p>
+<p>    *   <strong>모범 답안:</strong> <strong>There seems to be something wrong with the data.</strong> We need to <strong>tackle</strong> this issue immediately.</p>
+<br>
+<p><strong>6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)</strong></p>
+<br>
+<p>✨ <strong>Good Job:</strong> "Because the culture is their history. The culture is made from their history in their country. So if I break some rules and if I don't keep that rule from the culture, I it's not that's a little rude from their culture, for their culture, their history."</p>
+<p>Joey, 문화 차이의 중요성을 설명할 때, "문화는 그들의 역사이고, 그들의 역사로부터 만들어졌다"고 말하며 깊이 있는 통찰력을 보여주었습니다. 비록 문장 구조가 약간 복잡했지만, 핵심 메시지는 매우 명확하고 설득력 있게 전달되었습니다. 특히 "If I break some rules... that's a little rude" 부분에서 문화 존중의 중요성을 잘 강조했어요. 아주 훌륭한 설명이었습니다!</p>
+<br>
+<p>🚀 <strong>내일의 한 문장:</strong> "I'm looking forward to our next session to tackle more interesting topics!"</p>
+<p>(다음 수업에 더 흥미로운 주제들을 다룰 생각에 기대됩니다!)</p>
+<br>
+<br>
+<p><strong>[성과 지표]</strong></p>
+<p><strong>유창성 점수: 7/10점</strong></p>
+<br>
+<p><strong>근거:</strong> Joey는 다양한 주제에 대해 막힘없이 자신의 의견을 표현하며 대화를 이어나가는 데 큰 어려움이 없었습니다. 특히 문화 차이와 관련된 개인적인 경험과 생각을 자세히 설명하는 부분에서 유창성이 돋보였습니다. 하지만 문장 중간에 주어나 동사가 생략되거나, 좀 더 자연스러운 구어체 표현 대신 직역에 가까운 표현을 사용하는 경향이 있어 유창성의 흐름이 가끔 끊기는 모습도 보였습니다. 'tackling'과 'tracking'의 발음과 의미를 명확히 구분하려는 노력도 매우 좋았습니다.</p>
+<br>
+<p><strong>다음 수업 '원포인트 액션 플랜':</strong></p>
+<p>다음 수업에서는 <strong>주어-동사 일치와 문장 필수 요소(주어/동사)를 빠뜨리지 않고 말하는 연습</strong>에 집중해 봅시다. 특히 감정이나 상태를 표현할 때 "It is ~" 또는 "That is ~"와 같은 기본적인 주어-동사 구조를 의식적으로 활용하는 훈련을 해볼 거예요. 이를 통해 Joey의 문장이 더욱 완전하고 자연스럽게 들릴 수 있도록 돕겠습니다.</p></div>
+        </div>
+        <div id="tab-transcript" class="tab-content">
+            <div class="transcript"><span class="tutor">[Tutor]</span> Hello, well, good morning. Hi.
+<span class="tutor">[Tutor]</span> Good morning. Yeah, how are you doing today?
+[Joey] I&#x27;m good. It&#x27;s Friday. Yeah.
+[Joey] I will meet my family. So nice.
+[Joey] How are you today?
+<span class="tutor">[Tutor]</span> Pretty good. Yeah, thanks.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="tutor">[Tutor]</span> Do you have any plans with your family for the weekend?
+[Joey] This weekend in Busan there is some festival.
+[Joey] Yeah, the festival name is the sand festival near the beach.
+[Joey] So if we go there, I can make some castle, a sandcastle with my family.
+[Joey] So maybe Saturday morning I will go there and join the sand festival and make a sandcastle with my family.
+[Joey] Yeah, that is my plan.
+<span class="tutor">[Tutor]</span> Have you made a sandcastle at the competition before?
+[Joey] Oh, that is first time. Because every time I lose, I lost my opportunity to join that competition. So that competition is for a group. So our family made some nice castle.
+<span class="tutor">[Tutor]</span> Okay, so you haven&#x27;t had the opportunity?
+[Joey] Yes. This season I found, fortunately, I found a reservation and then reservation first, so
+<span class="tutor">[Tutor]</span> So it&#x27;s possible.
+[Joey] Maybe my son likes the sand, so make a sandcastle.
+[Joey] So maybe I guess that is an enjoyable time for our family.
+<span class="tutor">[Tutor]</span> Sounds like a fun time.
+[Joey] Yeah, fun time.
+<span class="tutor">[Tutor]</span> Have a fun time.
+[Joey] Yeah, you&#x27;re right.
+<span class="tutor">[Tutor]</span> So this, are you able to look at page 37 today?
+[Joey] Ah yeah, today we have to study a new section, tracking problems.
+<span class="tutor">[Tutor]</span> Yeah, tackling problems.
+[Joey] Ah, tackling.
+<span class="tutor">[Tutor]</span> Tackling.
+[Joey] Tracking.
+<span class="tutor">[Tutor]</span> Tackling.
+[Joey] Tackling.
+[Joey] Tackling.
+[Joey] I see.
+<span class="tutor">[Tutor]</span> Tackling.
+[Joey] Tackling.
+<span class="tutor">[Tutor]</span> Okay. From like tackle, wrestle, deal with problems.
+[Joey] Okay. I&#x27;m a little confused. The track and tackle is a little different meaning.
+[Joey] So what is that? Tackle problem, tracking problem? Track is to just follow something and tackle is to catch something. So what is that?
+<span class="tutor">[Tutor]</span> Tracking has an R, so tracking is a different word, so following problems versus tackling which means like dealing with or solving problems.
+[Joey] Ah, catch and dealing with problems. Solve the problem. I see, understand. Tackling, tackling, tackling problem. Okay.
+<span class="tutor">[Tutor]</span> Yeah, trying to find solutions to a problem.
+[Joey] Find a solution, the problem, tackling problem, tackle. Okay. Usually some, the sports of the judges or UFC, they are tackling other guys. If they stand up, they tackle other people. You&#x27;re right. Same, same problem, tackle.
+<span class="tutor">[Tutor]</span> Yeah, it&#x27;s kind of fighting the problem or dealing with the problem. Yes, tackle. Okay, good. Um, so
+<span class="tutor">[Tutor]</span> So looking at the warming up, would you like to read the first question?
+[Joey] Warming up.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="tutor">[Tutor]</span> Let&#x27;s open the floor.
+[Joey] What are your opinions?
+[Joey] What are some cultural differences that you have observed when interacting with foreigners?
+[Joey] Okay, I see. That is the different culture, right?
+<span class="tutor">[Tutor]</span> Yeah, so any cultural differences that you&#x27;ve noticed or that you&#x27;ve seen?
+[Joey] I think it is important to the area. If I travel that country, I just respect their culture. But if he comes here and this is their career, I think they they trust our culture, they respect our culture. So that depends on their area or country.
+<span class="tutor">[Tutor]</span> So any things, any different things that you have seen or any cultural differences that you have noticed? Not a foreigner, right?
+<span class="tutor">[Tutor]</span> So what have you seen? So are there any differences between Korean culture and other cultures that you have seen?
+[Joey] Could you explain more?
+<span class="tutor">[Tutor]</span> So what are some differences between Korean culture and other cultures that you have observed? That you have seen?
+[Joey] I see. I think that depends on the country. If I live with Koreans, we follow our culture. And some foreigners don&#x27;t know our culture. In the meantime, I&#x27;m just explaining why this culture is made and why people believe them. So usually I&#x27;m just explaining that culture to other people. And also, if I go someplace, I respect their culture and listen why their culture was made and why I keep that culture.
+[Joey] Yeah.
+<span class="tutor">[Tutor]</span> Is there anything you had to do differently or anything that you had to do to respect other cultures? Anything.
+<span class="tutor">[Tutor]</span> So in Korea, maybe you call people by their titles, but in other countries, did you notice anything different?
+[Joey] So your question means to give an example, right?
+<span class="tutor">[Tutor]</span> So examples that you have seen, if you have seen them. Have you traveled to a different country and have you had to do anything different?
+[Joey] Yes.
+<span class="tutor">[Tutor]</span> I see.
+[Joey] For example, when I traveled to Dubai, at that place, every morning, every early morning, 4 a.m. or 3 a.m., they are prayed so loudly. Yeah, many people pray on the square, on some place, and that is a little noisy, but I respect because we have different religions, but that is also their culture. So I&#x27;m just sleeping and I don&#x27;t like to be awake, but I respect and I believe that is natural. So I don&#x27;t get angry anymore. So I don&#x27;t, I&#x27;m not sure that is the question you&#x27;re asking.
+<span class="tutor">[Tutor]</span> Yes, it is. Yeah. So examples, so cultural difference that you noticed is the prayer time.
+<span class="tutor">[Tutor]</span> Okay.
+[Joey] Yes, you&#x27;re right.
+<span class="tutor">[Tutor]</span> Why do you think it is important to be aware of cultural differences when interacting with people from other cultures?
+[Joey] Hmm. Interaction with other people. Because the culture is their history. The culture is made from their history in their country. So if I break some rules and if I don&#x27;t keep that rule from the culture, I it&#x27;s not that&#x27;s a little rude from their culture, for their culture, their history. But the history made up so long history, the ten thousands, five years, ten years, uh, one thousand years. So I think I believe if I respect their culture, that is also respecting their history.
+[Joey] Yeah, it&#x27;s all.
+<span class="tutor">[Tutor]</span> And how would you explain your country&#x27;s communication style to a foreign visitor?
+[Joey] Our people understand the foreigner. They don&#x27;t know our history and culture. So sometimes our culture has two kinds of language. One is the respect language, one is the freestyle language. So if we speak to a senior member, we speak their respective languages. So usually we use that. But some foreigners don&#x27;t know that. So they use the freestyle speaking. But we understand because they don&#x27;t know about our culture. And if some restaurant, they don&#x27;t use the chopsticks, only use the fork or some some rude action in a restaurant, but that is also understandable. They are visitors and they don&#x27;t have enough knowledge of our culture. So yeah, I understand and we understand that.
+<span class="tutor">[Tutor]</span> This is a little different. Are there any types of body language or gestures that they should be aware of?
+[Joey] Um, ah, okay. Just in a Western style, the bow is just a hello, just a hand, the shaking hand or something, or
+[Joey] grab up their each hand, shake hand. Yeah, but our country, we we have a little different greeting way. Just we, how can I say, hold our body.
+<span class="tutor">[Tutor]</span> So you bow?
+[Joey] Yeah, bow. Yeah, each other bow. So we call the annyeonghaseyo. Annyeong.
+<span class="tutor">[Tutor]</span> When you say hello.
+[Joey] Yeah, say hello. Register to the senior, but usually we just that is a more comfortable way, the handshake or shake the hand, etc. So just think about that, that is a little senior member and yeah, just at the time we run that way. Yeah, it&#x27;s all.
+<span class="tutor">[Tutor]</span> Any other gestures when you&#x27;re maybe handing things to a senior member or passing things to a senior member?
+[Joey] Passing to a senior member. Just we use the respect language. Usually we say &quot;안녕, 잘 지내.&quot; That is the freestyle language. But if we use the add the &quot;세요&quot; or &quot;시어요,&quot; that&#x27;s meaning it&#x27;s more respect language. Usually if we use the respect language, that is better.
+[Joey] Maybe you teach the Korean student and you live in Korea. You know that&#x27;s our culture, right?
+<span class="tutor">[Tutor]</span> Also, if you&#x27;re handing something to a senior member, do you give it to them with one hand or both hands?
+[Joey] Don&#x27;t use one hand. One hand is a little rude, but usually if we give some product, some good, transfer some product, in the meantime, we just use the two hands. The one hand is a little rude, so if I give them some product, we just transfer two hands, move the two hands. Yeah.
+[Joey] For parents or grandparents, if we give some product, we just transfer two hands. And teacher, I said product, but I think that is not an adult word. How can I say? The good?
+<span class="tutor">[Tutor]</span> Good?
+[Joey] Something. Just something. Something transfer.
+<span class="tutor">[Tutor]</span> Yes.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="tutor">[Tutor]</span> Yeah, if you&#x27;re handing them something or you&#x27;re giving them something, you can say giving them a gift, a product, or a document.
+[Joey] Yes, I see. You&#x27;re right. Okay.
+<span class="tutor">[Tutor]</span> So, we have just a short amount of time. Did you want to look at the informal or talk more about cultural differences?
+[Joey] Oh, yes. We have four minutes remaining.
+<span class="tutor">[Tutor]</span> Okay, start.
+[Joey] In the future, you should be more careful.
+[Joey] In the future, you should be more careful.
+[Joey] You should be more careful.
+[Joey] Be more careful.
+[Joey] So maybe be careful, blah, blah.
+[Joey] Next time, double check. Maybe next time, double check your pact. Yes, next time, double check.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="tutor">[Tutor]</span> In the future, A is the formal and Q is the informal.
+[Joey] You shouldn&#x27;t research more and reevaluate the situation. You should research.
+<span class="tutor">[Tutor]</span> So this one is settling on a course of action or deciding a course of action.
+[Joey] Deciding a course of action.
+[Joey] Maybe it&#x27;s in the queue, right?
+<span class="tutor">[Tutor]</span> It&#x27;s different. We could do K. So let&#x27;s try that.
+[Joey] Let&#x27;s try that.
+[Joey] You should research. You try that.
+[Joey] Yes, I understand. B is the formal, K is the informal. Okay, the last thing, maybe there is something wrong with the data. The data is a little something wrong.
+<span class="tutor">[Tutor]</span> I just became aware of an error in our report. H. Yeah, yeah. I just became
+[Joey] Ah, yes. Something wrong. C is the informal.
+[Joey] Oh, there is something wrong with the data. Maybe C is the formal.
+<span class="tutor">[Tutor]</span> I just became aware of an error in our report. H would be more formal. I just became aware.
+[Joey] H is more formal, right? Yeah. I see. There is something wrong with it.
+[Joey] Okay, maybe the time is almost over. So, remind me next time. We study next time.
+<span class="tutor">[Tutor]</span> Okay, I&#x27;ll make a note for where you got to and have a great weekend.
+[Joey] You too. Have a great weekend.
+<span class="tutor">[Tutor]</span> Take care. Bye-bye.</div>
+        </div>
+    </div>
+    <div class="toast" id="toast">✅ 프롬프트가 복사되었습니다!</div>
+    <script>
+        const REVIEW_PROMPT="너는 나의 영어 회화 복습 파트너야. 오늘 내 전화영어 수업 내용을 기반으로 대화하면서 복습을 도와줘.\n\n[오늘 수업 전사 내용]\n[Tutor] Hello, well, good morning. Hi.\n[Tutor] Good morning. Yeah, how are you doing today?\n[Joey] I'm good. It's Friday. Yeah.\n[Joey] I will meet my family. So nice.\n[Joey] How are you today?\n[Tutor] Pretty good. Yeah, thanks.\n[Tutor] Okay.\n[Tutor] Do you have any plans with your family for the weekend?\n[Joey] This weekend in Busan there is some festival.\n[Joey] Yeah, the festival name is the sand festival near the beach.\n[Joey] So if we go there, I can make some castle, a sandcastle with my family.\n[Joey] So maybe Saturday morning I will go there and join the sand festival and make a sandcastle with my family.\n[Joey] Yeah, that is my plan.\n[Tutor] Have you made a sandcastle at the competition before?\n[Joey] Oh, that is first time. Because every time I lose, I lost my opportunity to join that competition. So that competition is for a group. So our family made some nice castle.\n[Tutor] Okay, so you haven't had the opportunity?\n[Joey] Yes. This season I found, fortunately, I found a reservation and then reservation first, so\n[Tutor] So it's possible.\n[Joey] Maybe my son likes the sand, so make a sandcastle.\n[Joey] So maybe I guess that is an enjoyable time for our family.\n[Tutor] Sounds like a fun time.\n[Joey] Yeah, fun time.\n[Tutor] Have a fun time.\n[Joey] Yeah, you're right.\n[Tutor] So this, are you able to look at page 37 today?\n[Joey] Ah yeah, today we have to study a new section, tracking problems.\n[Tutor] Yeah, tackling problems.\n[Joey] Ah, tackling.\n[Tutor] Tackling.\n[Joey] Tracking.\n[Tutor] Tackling.\n[Joey] Tackling.\n[Joey] Tackling.\n[Joey] I see.\n[Tutor] Tackling.\n[Joey] Tackling.\n[Tutor] Okay. From like tackle, wrestle, deal with problems.\n[Joey] Okay. I'm a little confused. The track and tackle is a little different meaning.\n[Joey] So what is that? Tackle problem, tracking problem? Track is to just follow something and tackle is to catch something. So what is that?\n[Tutor] Tracking has an R, so tracking is a different word, so following problems versus tackling which means like dealing with or solving problems.\n[Joey] Ah, catch and dealing with problems. Solve the problem. I see, understand. Tackling, tackling, tackling problem. Okay.\n[Tutor] Yeah, trying to find solutions to a problem.\n[Joey] Find a solution, the problem, tackling problem, tackle. Okay. Usually some, the sports of the judges or UFC, they are tackling other guys. If they stand up, they tackle other people. You're right. Same, same problem, tackle.\n[Tutor] Yeah, it's kind of fighting the problem or dealing with the problem. Yes, tackle. Okay, good. Um, so\n[Tutor] So looking at the warming up, would you like to read the first question?\n[Joey] Warming up.\n[Tutor] Okay.\n[Tutor] Let's open the floor.\n[Joey] What are your opinions?\n[Joey] What are some cultural differences that you have observed when interacting with foreigners?\n[Joey] Okay, I see. That is the different culture, right?\n[Tutor] Yeah, so any cultural differences that you've noticed or that you've seen?\n[Joey] I think it is important to the area. If I travel that country, I just respect their culture. But if he comes here and this is their career, I think they they trust our culture, they respect our culture. So that depends on their area or country.\n[Tutor] So any things, any different things that you have seen or any cultural differences that you have noticed? Not a foreigner, right?\n[Tutor] So what have you seen? So are there any differences between Korean culture and other cultures that you have seen?\n[Joey] Could you explain more?\n[Tutor] So what are some differences between Korean culture and other cultures that you have observed? That you have seen?\n[Joey] I see. I think that depends on the country. If I live with Koreans, we follow our culture. And some foreigners don't know our culture. In the meantime, I'm just explaining why this culture is made and why people believe them. So usually I'm just explaining that culture to other people. And also, if I go someplace, I respect their culture and listen why their culture was made and why I keep that culture.\n[Joey] Yeah.\n[Tutor] Is there anything you had to do differently or anything that you had to do to respect other cultures? Anything.\n[Tutor] So in Korea, maybe you call people by their titles, but in other countries, did you notice anything different?\n[Joey] So your question means to give an example, right?\n[Tutor] So examples that you have seen, if you have seen them. Have you traveled to a different country and have you had to do anything different?\n[Joey] Yes.\n[Tutor] I see.\n[Joey] For example, when I traveled to Dubai, at that place, every morning, every early morning, 4 a.m. or 3 a.m., they are prayed so loudly. Yeah, many people pray on the square, on some place, and that is a little noisy, but I respect because we have different religions, but that is also their culture. So I'm just sleeping and I don't like to be awake, but I respect and I believe that is natural. So I don't get angry anymore. So I don't, I'm not sure that is the question you're asking.\n[Tutor] Yes, it is. Yeah. So examples, so cultural difference that you noticed is the prayer time.\n[Tutor] Okay.\n[Joey] Yes, you're right.\n[Tutor] Why do you think it is important to be aware of cultural differences when interacting with people from other cultures?\n[Joey] Hmm. Interaction with other people. Because the culture is their history. The culture is made from their history in their country. So if I break some rules and if I don't keep that rule from the culture, I it's not that's a little rude from their culture, for their culture, their history. But the history made up so long history, the ten thousands, five years, ten years, uh, one thousand years. So I think I believe if I respect their culture, that is also respecting their history.\n[Joey] Yeah, it's all.\n[Tutor] And how would you explain your country's communication style to a foreign visitor?\n[Joey] Our people understand the foreigner. They don't know our history and culture. So sometimes our culture has two kinds of language. One is the respect language, one is the freestyle language. So if we speak to a senior member, we speak their respective languages. So usually we use that. But some foreigners don't know that. So they use the freestyle speaking. But we understand because they don't know about our culture. And if some restaurant, they don't use the chopsticks, only use the fork or some some rude action in a restaurant, but that is also understandable. They are visitors and they don't have enough knowledge of our culture. So yeah, I understand and we understand that.\n[Tutor] This is a little different. Are there any types of body language or gestures that they should be aware of?\n[Joey] Um, ah, okay. Just in a Western style, the bow is just a hello, just a hand, the shaking hand or something, or\n[Joey] grab up their each hand, shake hand. Yeah, but our country, we we have a little different greeting way. Just we, how can I say, hold our body.\n[Tutor] So you bow?\n[Joey] Yeah, bow. Yeah, each other bow. So we call the annyeonghaseyo. Annyeong.\n[Tutor] When you say hello.\n[Joey] Yeah, say hello. Register to the senior, but usually we just that is a more comfortable way, the handshake or shake the hand, etc. So just think about that, that is a little senior member and yeah, just at the time we run that way. Yeah, it's all.\n[Tutor] Any other gestures when you're maybe handing things to a senior member or passing things to a senior member?\n[Joey] Passing to a senior member. Just we use the respect language. Usually we say \"안녕, 잘 지내.\" That is the freestyle language. But if we use the add the \"세요\" or \"시어요,\" that's meaning it's more respect language. Usually if we use the respect language, that is better.\n[Joey] Maybe you teach the Korean student and you live in Korea. You know that's our culture, right?\n[Tutor] Also, if you're handing something to a senior member, do you give it to them with one hand or both hands?\n[Joey] Don't use one hand. One hand is a little rude, but usually if we give some product, some good, transfer some product, in the meantime, we just use the two hands. The one hand is a little rude, so if I give them some product, we just transfer two hands, move the two hands. Yeah.\n[Joey] For parents or grandparents, if we give some product, we just transfer two hands. And teacher, I said product, but I think that is not an adult word. How can I say? The good?\n[Tutor] Good?\n[Joey] Something. Just something. Something transfer.\n[Tutor] Yes.\n[Tutor] Okay.\n[Tutor] Yeah, if you're handing them something or you're giving them something, you can say giving them a gift, a product, or a document.\n[Joey] Yes, I see. You're right. Okay.\n[Tutor] So, we have just a short amount of time. Did you want to look at the informal or talk more about cultural differences?\n[Joey] Oh, yes. We have four minutes remaining.\n[Tutor] Okay, start.\n[Joey] In the future, you should be more careful.\n[Joey] In the future, you should be more careful.\n[Joey] You should be more careful.\n[Joey] Be more careful.\n[Joey] So maybe be careful, blah, blah.\n[Joey] Next time, double check. Maybe next time, double check your pact. Yes, next time, double check.\n[Tutor] Okay.\n[Tutor] In the future, A is the formal and Q is the informal.\n[Joey] You shouldn't research more and reevaluate the situation. You should research.\n[Tutor] So this one is settling on a course of action or deciding a course of action.\n[Joey] Deciding a course of action.\n[Joey] Maybe it's in the queue, right?\n[Tutor] It's different. We could do K. So let's try that.\n[Joey] Let's try that.\n[Joey] You should research. You try that.\n[Joey] Yes, I understand. B is the formal, K is the informal. Okay, the last thing, maybe there is something wrong with the data. The data is a little something wrong.\n[Tutor] I just became aware of an error in our report. H. Yeah, yeah. I just became\n[Joey] Ah, yes. Something wrong. C is the informal.\n[Joey] Oh, there is something wrong with the data. Maybe C is the formal.\n[Tutor] I just became aware of an error in our report. H would be more formal. I just became aware.\n[Joey] H is more formal, right? Yeah. I see. There is something wrong with it.\n[Joey] Okay, maybe the time is almost over. So, remind me next time. We study next time.\n[Tutor] Okay, I'll make a note for where you got to and have a great weekend.\n[Joey] You too. Have a great weekend.\n[Tutor] Take care. Bye-bye.\n\n[AI 피드백]\nJoey, 안녕하세요! 금요일 아침부터 샌드 페스티벌 참가 계획을 들으니 저까지 설레네요. 문화 차이에 대한 깊이 있는 대화도 인상 깊었습니다. 오늘 배운 표현들을 잘 활용해서 주말에 즐거운 추억 많이 만드시길 바랍니다!\n\n---\n\n**0. 📌 Topic**\nTopic: Discussing cultural differences and communication styles.\n\n**1. 📊 오늘의 대화 요약 (Summary)**\n오늘은 주말 부산 샌드 페스티벌 참가 계획으로 대화를 시작하여, 'tackling problems'의 의미를 명확히 이해하는 시간을 가졌습니다. 이어서 문화 차이의 중요성과 한국의 소통 방식, 그리고 어른을 대할 때의 제스처(두 손 사용) 등 다양한 문화적 관습에 대해 이야기 나누었습니다.\n\n**2. 💬 유창성 업그레이드 (Fluency & Natural Flow)**\n\nJoey가 실제 말한 문장 중, 의미는 통하지만 더 자연스럽게 다듬을 수 있는 표현 3가지를 선정했습니다.\n\n1.  **❌ 학습자 원문 (As Said):** \"I will meet my family. So nice.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"I'm going to meet my family. That'll be nice.\"\n    *   **💎 비즈니스 표현 (Professional):** \"I'm looking forward to spending time with my family this weekend.\"\n    *   **💡 코칭 포인트:** \"I will meet\" is grammatically correct but \"I'm going to meet\" sounds more natural for expressing future plans, especially when it's a casual, pre-arranged activity. Adding \"That'll be nice\" makes the sentence flow better by expressing your feeling about the plan.\n        → \"I will meet\"도 문법적으로 맞지만, \"I'm going to meet\"는 캐주얼하고 미리 정해진 계획을 말할 때 더 자연스럽습니다. \"That'll be nice\"를 덧붙이면 계획에 대한 Joey의 감정을 표현하여 문장이 더 유연하게 이어집니다.\n\n2.  **❌ 학습자 원문 (As Said):** \"the festival name is the sand festival near the beach.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"The festival is called the sand festival, and it's near the beach.\"\n    *   **💎 비즈니스 표현 (Professional):** \"The event is officially known as the sand festival, located by the beach.\"\n    *   **💡 코칭 포인트:** While \"the festival name is\" is understandable, \"is called\" is a much more common and natural way to introduce the name of an event or thing.\n        → \"the festival name is\"도 이해는 되지만, \"is called\"는 행사나 사물의 이름을 소개할 때 훨씬 더 흔하고 자연스러운 표현입니다.\n\n3.  **❌ 학습자 원문 (As Said):** \"I think it is important to the area.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"I think it depends on the area.\"\n    *   **💎 비즈니스 표현 (Professional):** \"The relevance of this point is largely contingent upon the specific region.\"\n    *   **💡 코칭 포인트:** \"Important to the area\" doesn't quite convey the meaning of \"it varies by area.\" \"Depends on\" is the correct and natural phrase to express that something is conditional or variable based on a factor.\n        → \"Important to the area\"는 '지역에 따라 다르다'는 의미를 정확히 전달하지 못합니다. 어떤 것이 특정 요인에 따라 조건적이거나 가변적임을 표현할 때는 \"Depends on\"이 정확하고 자연스러운 표현입니다.\n\n**3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)**\n\nCategory: **Missing Subjects or Verbs**\n\nJoey는 문장을 구성할 때 주어나 동사를 생략하여 문법적으로 불완전하거나 어색하게 들리는 경우가 있었습니다. 특히 감정이나 상태를 표현할 때 주어와 동사를 함께 사용하는 연습이 필요합니다.\n\n| ❌ 원문 (As Said)                                                                  | ✅ 교정 예시 (Corrected)                                                                 |\n| :--------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------- |\n| \"I will meet my family. **So nice.**\"                                              | \"I will meet my family. **It's so nice.**\"                                               |\n| \"Oh, **that is first time.** Because every time I lose, I lost my opportunity...\" | \"Oh, **that is the first time.** Because every time I lose, I lost my opportunity...\" |\n| \"maybe my son likes the sand, so **make a sandcastle.**\"                           | \"maybe my son likes the sand, so **we can make a sandcastle.**\"                          |\n| \"The data is a little **something wrong.**\"                                        | \"There is **something wrong with the data.**\" (or \"The data is a little off.\")          |\n\n📌 **핵심 규칙:** 영어 문장에는 일반적으로 주어와 동사가 필수적으로 포함되어야 합니다. 특히 감정이나 상태를 표현할 때는 \"It is ~\" 또는 \"That is ~\"와 같이 주어와 동사를 함께 사용해야 합니다.\n\n🔁 **따라 읽기:**\n🗣️ \"I will meet my family. It's so nice.\"\n🗣️ \"Oh, that is the first time.\"\n🗣️ \"Maybe my son likes the sand, so we can make a sandcastle.\"\n\n**4. 📗 어휘 확장 (Vocabulary Vault)**\n\n1.  **tackle** /ˈtækl/ (동사)\n    *   뜻: (문제 등을) 다루다, 해결하려고 노력하다\n    *   실전 예문: We need to **tackle** this budget deficit before it gets out of hand.\n\n2.  **contingent upon** /kənˈtɪndʒənt əˈpɒn/ (형용사구)\n    *   뜻: ~에 달려있는, ~을 조건으로 하는\n    *   실전 예문: Our investment decision is **contingent upon** the market's performance next quarter.\n\n3.  **protocol** /ˈproʊtəkɔːl/ (명사)\n    *   뜻: (외교적) 의례, 의전; (컴퓨터) 통신 규약; (일반적인) 규칙, 절차\n    *   실전 예문: Please follow the established **protocol** for submitting expense reports.\n\n4.  **nuance** /ˈnjuːɑːns/ (명사)\n    *   뜻: 미묘한 차이, 뉘앙스\n    *   실전 예문: Understanding the cultural **nuances** is crucial for effective international negotiation.\n\n5.  **facilitate** /fəˈsɪlɪteɪt/ (동사)\n    *   뜻: (과정 등을) 용이하게 하다, 촉진하다\n    *   실전 예문: Our new software aims to **facilitate** data analysis for all team members.\n\n**5. 📝 실전 복습 챌린지 (Practice)**\n\n오늘 배운 표현과 문법을 활용하여 다음 한국어 상황을 영어로 작문해 보세요.\n\n1.  **상황:** 주말에 가족과 함께 새 박물관에 갈 계획인데, 정말 좋을 것 같아요.\n    *   **영작:** I'm going to visit the new museum with my family this weekend. (정말 좋을 것 같아요.)\n    *   **모범 답안:** I'm going to visit the new museum with my family this weekend. **It's going to be great.** / **That'll be nice.**\n\n2.  **상황:** 이번 프로젝트의 성공은 우리 팀의 협력에 달려있습니다.\n    *   **영작:** The success of this project is (우리 팀의 협력에 달려있다).\n    *   **모범 답안:** The success of this project is **contingent upon our team's collaboration.**\n\n3.  **상황:** 데이터에 뭔가 문제가 있는 것 같아요. 이 문제를 해결하기 위해 즉시 조치를 취해야 합니다.\n    *   **영작:** (데이터에 뭔가 문제가 있는 것 같아요.) We need to **tackle** this issue immediately.\n    *   **모범 답안:** **There seems to be something wrong with the data.** We need to **tackle** this issue immediately.\n\n**6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)**\n\n✨ **Good Job:** \"Because the culture is their history. The culture is made from their history in their country. So if I break some rules and if I don't keep that rule from the culture, I it's not that's a little rude from their culture, for their culture, their history.\"\nJoey, 문화 차이의 중요성을 설명할 때, \"문화는 그들의 역사이고, 그들의 역사로부터 만들어졌다\"고 말하며 깊이 있는 통찰력을 보여주었습니다. 비록 문장 구조가 약간 복잡했지만, 핵심 메시지는 매우 명확하고 설득력 있게 전달되었습니다. 특히 \"If I break some rules... that's a little rude\" 부분에서 문화 존중의 중요성을 잘 강조했어요. 아주 훌륭한 설명이었습니다!\n\n🚀 **내일의 한 문장:** \"I'm looking forward to our next session to tackle more interesting topics!\"\n(다음 수업에 더 흥미로운 주제들을 다룰 생각에 기대됩니다!)\n\n---\n\n**[성과 지표]**\n**유창성 점수: 7/10점**\n\n**근거:** Joey는 다양한 주제에 대해 막힘없이 자신의 의견을 표현하며 대화를 이어나가는 데 큰 어려움이 없었습니다. 특히 문화 차이와 관련된 개인적인 경험과 생각을 자세히 설명하는 부분에서 유창성이 돋보였습니다. 하지만 문장 중간에 주어나 동사가 생략되거나, 좀 더 자연스러운 구어체 표현 대신 직역에 가까운 표현을 사용하는 경향이 있어 유창성의 흐름이 가끔 끊기는 모습도 보였습니다. 'tackling'과 'tracking'의 발음과 의미를 명확히 구분하려는 노력도 매우 좋았습니다.\n\n**다음 수업 '원포인트 액션 플랜':**\n다음 수업에서는 **주어-동사 일치와 문장 필수 요소(주어/동사)를 빠뜨리지 않고 말하는 연습**에 집중해 봅시다. 특히 감정이나 상태를 표현할 때 \"It is ~\" 또는 \"That is ~\"와 같은 기본적인 주어-동사 구조를 의식적으로 활용하는 훈련을 해볼 거예요. 이를 통해 Joey의 문장이 더욱 완전하고 자연스럽게 들릴 수 있도록 돕겠습니다.\n\n위 내용을 바탕으로:\n1. 먼저 오늘 수업에서 내가 틀렸거나 어색했던 표현을 하나 골라서, 관련된 상황을 영어로 질문해줘.\n2. 내가 영어로 대답하면, 자연스러운지 확인하고 더 나은 표현이 있으면 알려줘.\n3. 특히 \"반복 실수 패턴\"에서 지적된 부분을 집중적으로 연습시켜줘.\n4. 이런 식으로 오늘 배운 표현들을 하나씩 복습하자.\n5. 한국어 설명은 필요할 때만 간단히, 대화는 최대한 영어로 진행해줘.\n\n그럼 시작하자!";
+        function startReview(){navigator.clipboard.writeText(REVIEW_PROMPT).then(()=>{showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)}).catch(()=>{const t=document.createElement('textarea');t.value=REVIEW_PROMPT;document.body.appendChild(t);t.select();document.execCommand('copy');document.body.removeChild(t);showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)})}
+        function showToast(){const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500)}
+        function switchTab(n){document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',n==='feedback'?i===0:i===1));document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));document.getElementById('tab-'+n).classList.add('active')}
+    </script>
+</body>
+</html>
