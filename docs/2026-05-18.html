@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전화영어 복습 - 2026년 05월 18일</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Noto Sans KR',sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.75;min-height:100vh}
+        .header{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);border-bottom:1px solid rgba(255,255,255,.06);padding:48px 24px 40px;text-align:center}
+        .header-date{font-size:13px;color:#94a3b8;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+        .header h1{font-size:28px;font-weight:700;color:#f1f5f9;margin-bottom:16px}
+        .header-meta{display:flex;justify-content:center;gap:24px;font-size:14px;color:#64748b}
+        .header-meta span{display:flex;align-items:center;gap:6px}
+        .cta-section{text-align:center;padding:40px 24px}
+        .cta-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:linear-gradient(135deg,#38bdf8,#818cf8);color:#fff;font-size:16px;font-weight:600;font-family:'Noto Sans KR',sans-serif;border:none;border-radius:50px;cursor:pointer;transition:all .3s;text-decoration:none;box-shadow:0 4px 24px rgba(56,189,248,.25)}
+        .cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(56,189,248,.35)}
+        .cta-btn svg{width:20px;height:20px}
+        .cta-sub{margin-top:12px;font-size:13px;color:#64748b}
+        .toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#38bdf8;padding:14px 28px;border-radius:12px;font-size:14px;font-weight:500;border:1px solid rgba(56,189,248,.2);box-shadow:0 8px 32px rgba(0,0,0,.4);opacity:0;transition:all .4s cubic-bezier(.16,1,.3,1);z-index:1000}
+        .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+        .container{max-width:720px;margin:0 auto;padding:0 24px 80px}
+        .tabs{display:flex;gap:4px;background:#1a1a24;padding:4px;border-radius:12px;margin-bottom:32px}
+        .tab{flex:1;padding:12px;text-align:center;font-size:14px;font-weight:500;color:#64748b;background:0 0;border:none;border-radius:8px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all .2s}
+        .tab.active{background:#262636;color:#f1f5f9}
+        .tab-content{display:none}.tab-content.active{display:block}
+        .feedback h2{font-size:18px;font-weight:700;color:#f1f5f9;margin:36px 0 16px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.06)}
+        .feedback h2:first-child{margin-top:0}
+        .feedback p{margin:8px 0;color:#cbd5e1}
+        .feedback .item{padding:6px 0 6px 16px;border-left:2px solid #334155;margin:6px 0;color:#cbd5e1}
+        .feedback .numbered{padding:8px 0 8px 16px;color:#cbd5e1}
+        .feedback .numbered strong{color:#38bdf8}
+        .feedback strong{color:#f1f5f9}
+        .feedback code{background:#1e293b;padding:2px 8px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#38bdf8}
+        .feedback table{width:100%;border-collapse:collapse;margin:12px 0}
+        .feedback th,.feedback td{padding:10px 14px;text-align:left;border-bottom:1px solid #262636}
+        .feedback th{color:#94a3b8;font-weight:500;font-size:13px}
+        .feedback td{color:#cbd5e1}
+        .arrow{color:#38bdf8;font-weight:700}
+        .transcript{background:#1a1a24;border-radius:12px;padding:28px;font-size:14px;line-height:2;color:#94a3b8;white-space:pre-wrap;word-break:break-word;font-family:'JetBrains Mono','Noto Sans KR',monospace}
+        .transcript .tutor{color:#38bdf8}
+        .transcript .student{color:#a78bfa}
+        @media(max-width:640px){.header{padding:32px 16px}.header h1{font-size:22px}.cta-btn{padding:14px 28px;font-size:15px}.container{padding:0 16px 60px}}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-date">2026년 05월 18일</div>
+        <h1>📚 전화영어 복습</h1>
+        <div class="header-meta">
+            <span>⏱ 19분 56초</span>
+            <span>🎙 전화영어_025180304_20260518080016.m4a</span>
+        </div>
+    </div>
+    <div class="cta-section">
+        <button class="cta-btn" onclick="startReview()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Gemini에서 복습 대화 시작하기
+        </button>
+        <div class="cta-sub">클릭하면 프롬프트가 복사되고 Gemini가 열립니다</div>
+    </div>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('feedback')">📋 AI 피드백</button>
+            <button class="tab" onclick="switchTab('transcript')">🎙 수업 전사</button>
+        </div>
+        <div id="tab-feedback" class="tab-content active">
+            <div class="feedback"><p>안녕하세요, Joey! 오늘도 활기찬 대화 나눠주셔서 감사합니다. 특히 'rough'의 다양한 의미에 대해 깊이 있게 탐구하려는 모습이 정말 인상 깊었어요. 궁금증을 해결하려는 적극적인 태도 덕분에 수업이 더욱 풍성해졌습니다!</p>
+<br>
+<br>
+<p><strong>0. 📌 Topic</strong></p>
+<p>Topic: Discussing solutions to a supply problem and the importance of compromise in teamwork.</p>
+<br>
+<br>
+<p><strong>1. 📊 오늘의 대화 요약 (Summary)</strong></p>
+<p>오늘은 공급 문제에 직면한 회사의 상황극 대화를 읽고, 고객에게 지연을 알리는 방법과 보상 방안에 대해 논의했습니다. 또한, 'rough draft'와 'rough'의 다양한 의미를 명확히 이해하고, 팀 프로젝트에서 타협(compromise)이 왜 중요한지에 대해 깊이 있는 이야기를 나누었습니다.</p>
+<br>
+<br>
+<p><strong>2. 💬 유창성 업그레이드 (Fluency & Natural Flow)</strong></p>
+<p>Joey가 말한 문장들 중 의미는 통하지만, 원어민이 들었을 때 조금 더 자연스럽게 느껴질 수 있는 표현들을 살펴볼게요.</p>
+<br>
+<div class="numbered"><strong>1.</strong>  <strong>❌ 학습자 원문 (As Said):</strong> "So that's an enjoyable time with my family, with my son."</div>
+<p>    *   <strong>✅ 자연스러운 표현 (Natural):</strong> "That was such an enjoyable time with my family, with my son."</p>
+<p>    *   <strong>💎 비즈니스 표현 (Professional):</strong> "It was a truly delightful experience with my family, particularly with my son."</p>
+<p>    *   <strong>💡 코칭 포인트:</strong> Using "was" clearly indicates a past event, and "such an" adds emphasis naturally.</p>
+<p>        <span class="arrow">→</span> "was"를 사용하면 과거의 일임을 명확히 하고, "such an"은 자연스럽게 강조하는 뉘앙스를 더해줍니다.</p>
+<br>
+<div class="numbered"><strong>2.</strong>  <strong>❌ 학습자 원문 (As Said):</strong> "I loved, I loved, I loved, I understanding the rough meaning."</div>
+<p>    *   <strong>✅ 자연스러운 표현 (Natural):</strong> "I'm so glad I understand the meaning of 'rough' now."</p>
+<p>    *   <strong>💎 비즈니스 표현 (Professional):</strong> "I appreciate the clarification on the meaning of 'rough'; it's much clearer now."</p>
+<p>    *   <strong>💡 코칭 포인트:</strong> Instead of repeating "I loved" and using "understanding" as a noun, "I'm glad I understand" is a more common and natural way to express satisfaction about learning something.</p>
+<p>        <span class="arrow">→</span> "I loved"를 반복하고 "understanding"을 명사처럼 쓰는 대신, "I'm glad I understand"는 무언가를 알게 되어 만족감을 표현하는 더 자연스러운 방식입니다.</p>
+<br>
+<div class="numbered"><strong>3.</strong>  <strong>❌ 학습자 원문 (As Said):</strong> "Oh yes, it is the normal solution to the shopping mall or internet mall."</div>
+<p>    *   <strong>✅ 자연스러운 표현 (Natural):</strong> "Yes, it's a common solution for shopping malls or online stores."</p>
+<p>    *   <strong>💎 비즈니스 표현 (Professional):</strong> "Indeed, this is a standard practice within the retail and e-commerce sectors."</p>
+<p>    *   <strong>💡 코칭 포인트:</strong> "Normal"은 이해할 수 있지만, "common"은 널리 채택된 관행이나 해결책을 언급할 때 더 자주 사용됩니다. 또한, "internet mall"보다는 "online stores"가 더 자연스럽습니다.</p>
+<br>
+<br>
+<p><strong>3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)</strong></p>
+<p>Category: <strong>Subject-Verb Agreement (주어-동사 수일치)</strong></p>
+<br>
+<p>Joey는 주어와 동사의 수일치에서 실수가 반복되는 경향이 있습니다. 특히 주어가 복수일 때 동사를 단수형으로 쓰거나, 주어가 단수일 때 복수 동사를 쓰는 경우가 보입니다.</p>
+<br>
+<table>
+<tr><th>❌ 원문 (As Said)</th><th>✅ 교정 예시 (Corrected)</th></tr>
+<tr><td>"every people identify, every people, every person, every person <strong>give</strong> another problem and solution."</td><td>"Every person <strong>identifies</strong> and <strong>gives</strong> different problems and solutions."</td></tr>
+<tr><td>"So we control that problem and solution and then we decide what <strong>is</strong> problem and what <strong>is</strong> solution in this problem."</td><td>"So we manage those problems and solutions and then we decide what the <strong>problems are</strong> and what the <strong>solutions are</strong> in this situation."</td></tr>
+<tr><td>"we analysis why that problem <strong>is</strong> the cure, etc."</td><td>"we <strong>analyze</strong> why that problem <strong>occurs</strong>, etc."</td></tr>
+</table>
+<br>
+<p>📌 <strong>핵심 규칙:</strong> 주어의 수(단수/복수)에 따라 동사의 형태를 일치시켜야 합니다. (예: 단수 주어 + 동사-s/es, 복수 주어 + 동사 원형)</p>
+<br>
+<p>🔁 <strong>따라 읽기:</strong></p>
+<p>🗣️ "Every person identifies and gives different problems and solutions."</p>
+<p>🗣️ "So we manage those problems and solutions and then we decide what the problems are and what the solutions are in this situation."</p>
+<p>🗣️ "We analyze why that problem occurs, etc."</p>
+<br>
+<br>
+<p><strong>4. 📗 어휘 확장 (Vocabulary Vault)</strong></p>
+<p>오늘 대화에서 유용하게 쓰일 수 있는 어휘들을 정리해 보았습니다.</p>
+<br>
+<div class="numbered"><strong>1.</strong>  <strong>recall</strong> /rɪˈkɔːl/ (명사)</div>
+<p>    *   뜻: (제품의) 리콜, 회수</p>
+<p>    *   실전 예문: Due to a safety concern, the company issued a <strong>recall</strong> for its latest product line.</p>
+<br>
+<div class="numbered"><strong>2.</strong>  <strong>compromise</strong> /ˈkɒmprəmaɪz/ (동사/명사)</div>
+<p>    *   뜻: 타협하다, 절충하다 / 타협, 절충</p>
+<p>    *   실전 예문: We need to find a <strong>compromise</strong> that satisfies both the client's demands and our budget constraints.</p>
+<br>
+<div class="numbered"><strong>3.</strong>  <strong>rough draft</strong> /rʌf drɑːft/ (명사)</div>
+<p>    *   뜻: 초고, 대략적인 원고</p>
+<p>    *   실전 예문: Please submit a <strong>rough draft</strong> of the proposal by Friday so we can review it.</p>
+<br>
+<div class="numbered"><strong>4.</strong>  <strong>constraint</strong> /kənˈstreɪnt/ (명사)</div>
+<p>    *   뜻: 제약, 제한</p>
+<p>    *   실전 예문: We are operating under tight budget <strong>constraints</strong>, so every expenditure must be justified.</p>
+<br>
+<div class="numbered"><strong>5.</strong>  <strong>mitigate</strong> /ˈmɪtɪɡeɪt/ (동사)</div>
+<p>    *   뜻: 완화시키다, 경감하다</p>
+<p>    *   실전 예문: Our goal is to <strong>mitigate</strong> the risks associated with the new market entry.</p>
+<br>
+<br>
+<p><strong>5. 📝 실전 복습 챌린지 (Practice)</strong></p>
+<p>오늘 배운 표현과 문법을 활용하여 영작 연습을 해볼까요?</p>
+<br>
+<div class="numbered"><strong>1.</strong>  <strong>상황:</strong> 회사의 자원이 제한적이기 때문에, 우리는 고객들에게 다음 주문 시 할인을 제공하기로 합의했습니다. (오늘 배운 문법 및 어휘 활용)</div>
+<p>    *   <strong>영작:</strong></p>
+<p>    *   <strong>모범 답안:</strong> Since the company's resources are limited, we agreed to offer customers a discount on their next order.</p>
+<br>
+<div class="numbered"><strong>2.</strong>  <strong>상황:</strong> 제안서 초고를 작성하는 것은 어렵지 않습니다. 우리는 그저 주요 아이디어들을 정리하면 됩니다. (오늘 배운 'rough draft' 활용)</div>
+<p>    *   <strong>영작:</strong></p>
+<p>    *   <strong>모범 답안:</strong> Writing a rough draft of the proposal isn't difficult. We just need to put down the main ideas.</p>
+<br>
+<div class="numbered"><strong>3.</strong>  <strong>상황:</strong> 팀 프로젝트에서는 모든 팀원이 각기 다른 문제점과 해결책을 제시하기 때문에, 모두가 동의하는 최선의 방안을 찾기 위해 항상 타협해야 합니다. (오늘 배운 문법 및 어휘 활용)</div>
+<p>    *   <strong>영작:</strong></p>
+<p>    *   <strong>모범 답안:</strong> In team projects, since every team member identifies different problems and solutions, we always have to compromise to find the best approach that everyone agrees on.</p>
+<br>
+<br>
+<p><strong>6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)</strong></p>
+<br>
+<p>✨ <strong>Good Job:</strong></p>
+<p>"I made a sandcastle with my son."</p>
+<p>Joey가 주말에 아드님과 모래성을 만들었다고 이야기할 때, 이 문장은 간결하면서도 핵심적인 정보를 정확하게 전달했습니다. 과거 시제 사용도 완벽했고, 가족과의 즐거운 시간을 잘 표현했어요!</p>
+<br>
+<p>🚀 <strong>내일의 한 문장:</strong></p>
+<p>다음 수업 시작 시, 튜터에게 이렇게 말하며 대화를 시작해 보세요.</p>
+<p>"I've been thinking about how to mitigate potential delays in our upcoming project."</p>
+<p>(다가오는 프로젝트의 잠재적 지연을 완화하는 방법에 대해 생각해 봤어요.)</p>
+<br>
+<br>
+<p><strong>[성과 지표]</strong></p>
+<p><strong>유창성 점수:</strong> 7/10</p>
+<br>
+<p><strong>근거:</strong> Joey는 자신의 생각을 막힘없이 표현하고 대화의 흐름을 잘 이어갑니다. 어휘력도 준수하여 다양한 주제에 대해 이야기할 수 있습니다. 다만, 때때로 문장 구조가 한국어식 사고방식에 영향을 받아 어색하게 느껴지거나, 주어-동사 수일치와 같은 기본적인 문법 오류가 반복되는 경향이 있어 유창성 점수를 7점으로 평가했습니다. 이러한 부분들을 개선하면 더욱 자연스러운 영어를 구사할 수 있을 것입니다.</p>
+<br>
+<p><strong>다음 수업 '원포인트 액션 플랜':</strong></p>
+<p>다음 수업에서는 <strong>주어-동사 수일치</strong>에 더 집중하여, Joey가 문장을 만들 때 주어와 동사의 관계를 한 번 더 확인하는 습관을 들일 수 있도록 지도하겠습니다. 특히, <code>every + 단수 명사</code> 뒤에는 단수 동사가 온다는 점을 강조할 예정입니다.</p></div>
+        </div>
+        <div id="tab-transcript" class="tab-content">
+            <div class="transcript"><span class="student">[Student]</span> Hello, Joanna. Good evening.
+<span class="tutor">[Tutor]</span> Good morning, Joey. How are you today?
+[Joey] Yeah, I&#x27;m a little tired, but it&#x27;s a fresh morning. Yeah, the morning is so good.
+<span class="tutor">[Tutor]</span> Hey, how was your weekend?
+[Joey] This weekend was so excellent. Yeah. I made a sandcastle with my son.
+<span class="tutor">[Tutor]</span> Yes, you went to the festival.
+[Joey] Yeah, we joined the festival, and first, we made the pyramid, like the Egypt, from Egypt, but we made that shape, so we made the mountains.
+<span class="tutor">[Tutor]</span> Sure, yeah.
+[Joey] Yes, and we had success making the mountain using the sand. So that&#x27;s an enjoyable time with my family, with my son.
+<span class="tutor">[Tutor]</span> That sounds great. How was your weekend? Maybe this is your weekend evening, right?
+<span class="tutor">[Tutor]</span> Exactly. It&#x27;s the last, last day of the weekend. It&#x27;s Sunday evening.
+[Joey] Yeah, Sunday evening.
+<span class="tutor">[Tutor]</span> And it was a little bit busy, but in a good way.
+[Joey] A little bit busy. Okay. I see.
+<span class="tutor">[Tutor]</span> And now a new week is starting.
+[Joey] Yes.
+[Joey] We will start the textbook?
+<span class="tutor">[Tutor]</span> Yes. I think we&#x27;re starting with a fresh page.
+[Joey] Fresh page?
+<span class="tutor">[Tutor]</span> A fresh page. Like new.
+[Joey] Yes. New page.
+<span class="tutor">[Tutor]</span> Fresh page.
+[Joey] Tackling problems.
+<span class="tutor">[Tutor]</span> I think you were finished with tackling problems, no? With formal and informal?
+[Joey] I finished half.
+<span class="tutor">[Tutor]</span> Okay. I thought it is impossible to distinguish how to finish the...
+<span class="tutor">[Tutor]</span> Which ones, exactly. So, I think, yeah, how about the next section?
+[Joey] I think so.
+<span class="tutor">[Tutor]</span> Okay, good.
+<span class="tutor">[Tutor]</span> Today, we will start the situational dialogue.
+[Joey] Exactly.
+<span class="tutor">[Tutor]</span> Okay. There are two... Let&#x27;s read about these characters. Yes.
+<span class="tutor">[Tutor]</span> There are two characters. One is Mr. Northman. He is Mr. Chase&#x27;s supervisor.
+<span class="tutor">[Tutor]</span> And the mission is to discuss potential solutions to a supply problem that your company is having.
+[Joey] Right.
+<span class="tutor">[Tutor]</span> Potential solutions to a supply problem that your company is having.
+[Joey] Okay.
+<span class="tutor">[Tutor]</span> And another character, Mr. Chase, is a member of the public relations department.
+<span class="tutor">[Tutor]</span> And his mission is to partially agree with the Northman&#x27;s suggestion and suggest a compromise.
+<span class="tutor">[Tutor]</span> So he&#x27;s partially, partially agreeing.
+[Joey] Partially agree.
+[Joey] Partially agree.
+<span class="tutor">[Tutor]</span> What do you think they mean by partially agreeing?
+[Joey] I guess that&#x27;s all meaning is just a part of the, not a totally, just a part of it.
+<span class="tutor">[Tutor]</span> Exactly. You got it.
+[Joey] Ah, yes. Okay.
+[Joey] Okay.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="tutor">[Tutor]</span> Should we read the dialogue?
+[Joey] Yes, no problem.
+[Joey] First, I&#x27;m selecting Mr. Northman.
+<span class="tutor">[Tutor]</span> Perfect.
+[Joey] Okay. &quot;How&#x27;s the announcement coming? Did you figure out how to tell the customer about the supply problem?&quot;
+<span class="tutor">[Tutor]</span> &quot;I&#x27;m not sure. With the recall, it seems like we can&#x27;t avoid a delay. I suppose we could just let the consumers know that the shipments are going to be late.&quot;
+[Joey] &quot;It looks like it&#x27;s going to be solved soon. Announcing a delay like this might cause problems. If we seem unsuitable, this could lead to losing clients to our competitors.&quot;
+<span class="tutor">[Tutor]</span> &quot;You&#x27;re right, but what other choice do we have? I think we should just tell them as soon as possible. It would save time to tell them now.&quot;
+[Joey] &quot;Telling them already is a good idea, but we need to have something to offer them for the inconvenience. What were you thinking?&quot;
+<span class="tutor">[Tutor]</span> &quot;How about a discount on their next order? Just to show our appreciation for their understanding. That way they will be more likely to order again.&quot;
+[Joey] &quot;That&#x27;s a great idea. We need to check with Mr. Jones.&quot;
+<span class="tutor">[Tutor]</span> &quot;Sounds good. Why don&#x27;t you write a rough draft to show him?&quot;
+[Joey] &quot;I&#x27;ll start on that now. Thanks for your help.&quot;
+<span class="tutor">[Tutor]</span> &quot;Okay.&quot;
+<span class="tutor">[Tutor]</span> How about I change the role?
+[Joey] Sure, let&#x27;s do it.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="tutor">[Tutor]</span> &quot;How is the announcement coming? Did you figure out how to tell the customers about the supply problem?&quot;
+<span class="student">[Student]</span> &quot;I&#x27;m not sure. With the recall, it seems like we can avoid a delay. I suppose we could just let the customer know that the shipments are going to be late.&quot;
+<span class="tutor">[Tutor]</span> &quot;It looks like it&#x27;s going to be solved soon. Announcing a delay like this might cause problems. If we&#x27;re seen as being unstable, this could lead to losing clients to our competitor.&quot;
+<span class="student">[Student]</span> &quot;You&#x27;re right. But what other choice do we have? I think we should just tell them as soon as possible. It would save time to tell them now.&quot;
+<span class="tutor">[Tutor]</span> &quot;Telling them early is a good idea, but we need to have something to offer them for the inconvenience. What were you thinking?&quot;
+<span class="student">[Student]</span> &quot;How about a discount on their next order? Just to show our appreciation for their understanding. That way they will be more likely to order again.&quot;
+<span class="tutor">[Tutor]</span> &quot;Hmm, that&#x27;s a great idea. We need to check with Mr. Jones.&quot;
+<span class="student">[Student]</span> &quot;Sounds good. Why don&#x27;t you write a rough draft to show him?&quot;
+<span class="tutor">[Tutor]</span> &quot;I&#x27;ll start on that now. Thank you for your help.&quot;
+[Joey] Hmm, okay, I see.
+<span class="tutor">[Tutor]</span> Okay, so what is happening in all of this?
+[Joey] Oh, this company is selling to customers something. And this company has a problem, a supply.
+[Joey] Maybe I guess the shipping problem is the delay so they can&#x27;t send the product to the customer. So, they guess it is a little delay to send the product to customer.
+[Joey] And Mr. Northman suggests if we give some voucher, the discount next time, that next time order discount voucher. At that time, customer re-backed. So Mr. Chase agreed with Mr. Northman&#x27;s opinion and he prepared the report to show Mr. Jones.
+[Joey] Yeah. So yes, Mr. Northman suggests that we give, yeah, that&#x27;s good. That we give, we give, we gift, right?
+<span class="tutor">[Tutor]</span> Mr. Northman suggests that we give.
+[Joey] That we give.
+<span class="tutor">[Tutor]</span> A discount on their next order.
+[Joey] The discount on the next order.
+<span class="tutor">[Tutor]</span> Okay. You got it.
+[Joey] And teacher, I have a question.
+<span class="tutor">[Tutor]</span> Yes, of course.
+[Joey] The rough sentence, Mr. Northman said, &quot;Sounds good. Why don&#x27;t we write a rough draft?&quot;
+[Joey] Yeah, I want to know the meaning of the rough.
+<span class="tutor">[Tutor]</span> Rough? Rough draft?
+[Joey] Ah, rough.
+<span class="tutor">[Tutor]</span> Yes. It means a first draft.
+<span class="tutor">[Tutor]</span> So it doesn&#x27;t have to be a polished, finished report. A rough draft, just put your ideas down and send them. Yeah, it&#x27;s usually your first draft of something, an email, a message, a report.
+[Joey] Maybe it is rough meaning is there the big picture, not a detail, right?
+<span class="tutor">[Tutor]</span> In this context, yes, rough draft, those two words go together. Rough alone as a word means something a little bit different. Yes, so rough means not smooth.
+[Joey] Not smooth?
+<span class="tutor">[Tutor]</span> Right. So imagine a road, but instead of pavement, you have rocks or gravel. And you&#x27;re going in your car over that road with rocks. We will say that the road is rough.
+[Joey] Hmm, I see. That is not a bright and we can see the detail, but just we have to sensitive and drive that road because there is no white light. Right?
+<span class="tutor">[Tutor]</span> It&#x27;s more so, okay, imagine that a road has lots of holes in it. Right? The road is not smooth. There&#x27;s lots of potholes and when you drive through, you&#x27;re just jumping in the car. That&#x27;s the word rough. Rough means not smooth.
+[Joey] Smooth, rough. I see. Maybe I see when I play the golf, I play the rough. That feel is the little... It&#x27;s a little rough. Yeah, yeah, rough. So that is meaning is two kinds. One is the rough skin, rough road, rough paper.
+<span class="tutor">[Tutor]</span> Yes, exactly.
+[Joey] But other thing is just imaging some burst. We don&#x27;t know, but just imaging something, rough estimate, etc.
+<span class="tutor">[Tutor]</span> That&#x27;s exactly right. You got it.
+[Joey] Okay, I see. I loved, I loved, I loved, I understanding the rough meaning.
+<span class="tutor">[Tutor]</span> Excellent.
+[Joey] The rough, yes.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="tutor">[Tutor]</span> So what do you think of their approach to deal with this problem or to communicate this problem?
+[Joey] Oh yes, it is the normal solution to the shopping mall or internet mall. But that is not special, just the normal. But that is good solution to the customer.
+<span class="tutor">[Tutor]</span> Would you do something differently?
+[Joey] I agree that because the company has a resource is the limited. I wanted to give something more, but maybe this company resource is limited to the customer. So yeah, I agree with that. Just inform why that product is delayed and then give some coupon to next time order. Yeah, I agree with that, but I&#x27;m not... I agree with that. I agree with that, but that is not enjoyable for me. No.
+<span class="tutor">[Tutor]</span> Yes. And what do you think if we look at the dialogue, what do you think they compromised on? Where do you think they had different opinions?
+[Joey] First, I don&#x27;t understanding the company the resource. So if I give some solution of this situation and if I give the strategy of this situation, I need more information about this company. Yeah, the situation is, yeah, good way, good choice. Yeah, so yeah, it&#x27;s a good solution, good.
+<span class="tutor">[Tutor]</span> Do you often have to work on team projects?
+[Joey] Yes, I&#x27;m not... I work on the audit team. So usually we have audit, there are two or three months or four months per every month. So usually we had a project four times per year. At every, uh, every audit, we made some group because if we have an interview, we need two members more. So every audit project, we made a group of two or three members. So yeah, that&#x27;s our teamwork way.
+<span class="tutor">[Tutor]</span> Team setup, yeah?
+[Joey] Yeah, team setup, yes.
+<span class="tutor">[Tutor]</span> And when do you think it is necessary to compromise?
+[Joey] Compromise, necessary every time because our result is a report and every people identify, every people, every person, every person give another problem and solution. So we control that problem and solution and then we decide what is problem and what is solution in this problem. So we compromise, yeah, the analytics of the problem and give the solution. So yeah, every time we compromise the problem with the problem.
+<span class="tutor">[Tutor]</span> About the problem?
+[Joey] Yeah, or about the solution. Yeah, about the solution. Yes.
+<span class="tutor">[Tutor]</span> Okay. Do you find it easy to compromise?
+[Joey] No, that is so difficult for me because every problem is there mixed in the fact. So if we find some problem, we think about why that problem is taking our organization. So yeah, that is difficult. And we analysis why that problem is the cure, etc.
+<span class="tutor">[Tutor]</span> Mm-hmm. Mm-hmm. Okay. Okay.
+<span class="tutor">[Tutor]</span> Well, thank you for answering those somewhat tough questions.
+[Joey] Oh, yeah. That&#x27;s so tough.
+<span class="tutor">[Tutor]</span> Do you have any questions as we wrap up today&#x27;s class?
+[Joey] No, thanks for your class. Thank you for your answer, teacher.
+<span class="tutor">[Tutor]</span> Thank you for your time this morning.
+[Joey] Excellent.
+<span class="tutor">[Tutor]</span> And we will talk again tomorrow.
+[Joey] Talk to you tomorrow. Have a nice day.
+<span class="tutor">[Tutor]</span> Okay. You too. Bye, Joey.</div>
+        </div>
+    </div>
+    <div class="toast" id="toast">✅ 프롬프트가 복사되었습니다!</div>
+    <script>
+        const REVIEW_PROMPT="너는 나의 영어 회화 복습 파트너야. 오늘 내 전화영어 수업 내용을 기반으로 대화하면서 복습을 도와줘.\n\n[오늘 수업 전사 내용]\n[Student] Hello, Joanna. Good evening.\n[Tutor] Good morning, Joey. How are you today?\n[Joey] Yeah, I'm a little tired, but it's a fresh morning. Yeah, the morning is so good.\n[Tutor] Hey, how was your weekend?\n[Joey] This weekend was so excellent. Yeah. I made a sandcastle with my son.\n[Tutor] Yes, you went to the festival.\n[Joey] Yeah, we joined the festival, and first, we made the pyramid, like the Egypt, from Egypt, but we made that shape, so we made the mountains.\n[Tutor] Sure, yeah.\n[Joey] Yes, and we had success making the mountain using the sand. So that's an enjoyable time with my family, with my son.\n[Tutor] That sounds great. How was your weekend? Maybe this is your weekend evening, right?\n[Tutor] Exactly. It's the last, last day of the weekend. It's Sunday evening.\n[Joey] Yeah, Sunday evening.\n[Tutor] And it was a little bit busy, but in a good way.\n[Joey] A little bit busy. Okay. I see.\n[Tutor] And now a new week is starting.\n[Joey] Yes.\n[Joey] We will start the textbook?\n[Tutor] Yes. I think we're starting with a fresh page.\n[Joey] Fresh page?\n[Tutor] A fresh page. Like new.\n[Joey] Yes. New page.\n[Tutor] Fresh page.\n[Joey] Tackling problems.\n[Tutor] I think you were finished with tackling problems, no? With formal and informal?\n[Joey] I finished half.\n[Tutor] Okay. I thought it is impossible to distinguish how to finish the...\n[Tutor] Which ones, exactly. So, I think, yeah, how about the next section?\n[Joey] I think so.\n[Tutor] Okay, good.\n[Tutor] Today, we will start the situational dialogue.\n[Joey] Exactly.\n[Tutor] Okay. There are two... Let's read about these characters. Yes.\n[Tutor] There are two characters. One is Mr. Northman. He is Mr. Chase's supervisor.\n[Tutor] And the mission is to discuss potential solutions to a supply problem that your company is having.\n[Joey] Right.\n[Tutor] Potential solutions to a supply problem that your company is having.\n[Joey] Okay.\n[Tutor] And another character, Mr. Chase, is a member of the public relations department.\n[Tutor] And his mission is to partially agree with the Northman's suggestion and suggest a compromise.\n[Tutor] So he's partially, partially agreeing.\n[Joey] Partially agree.\n[Joey] Partially agree.\n[Tutor] What do you think they mean by partially agreeing?\n[Joey] I guess that's all meaning is just a part of the, not a totally, just a part of it.\n[Tutor] Exactly. You got it.\n[Joey] Ah, yes. Okay.\n[Joey] Okay.\n[Tutor] Okay.\n[Tutor] Should we read the dialogue?\n[Joey] Yes, no problem.\n[Joey] First, I'm selecting Mr. Northman.\n[Tutor] Perfect.\n[Joey] Okay. \"How's the announcement coming? Did you figure out how to tell the customer about the supply problem?\"\n[Tutor] \"I'm not sure. With the recall, it seems like we can't avoid a delay. I suppose we could just let the consumers know that the shipments are going to be late.\"\n[Joey] \"It looks like it's going to be solved soon. Announcing a delay like this might cause problems. If we seem unsuitable, this could lead to losing clients to our competitors.\"\n[Tutor] \"You're right, but what other choice do we have? I think we should just tell them as soon as possible. It would save time to tell them now.\"\n[Joey] \"Telling them already is a good idea, but we need to have something to offer them for the inconvenience. What were you thinking?\"\n[Tutor] \"How about a discount on their next order? Just to show our appreciation for their understanding. That way they will be more likely to order again.\"\n[Joey] \"That's a great idea. We need to check with Mr. Jones.\"\n[Tutor] \"Sounds good. Why don't you write a rough draft to show him?\"\n[Joey] \"I'll start on that now. Thanks for your help.\"\n[Tutor] \"Okay.\"\n[Tutor] How about I change the role?\n[Joey] Sure, let's do it.\n[Tutor] Okay.\n[Tutor] \"How is the announcement coming? Did you figure out how to tell the customers about the supply problem?\"\n[Student] \"I'm not sure. With the recall, it seems like we can avoid a delay. I suppose we could just let the customer know that the shipments are going to be late.\"\n[Tutor] \"It looks like it's going to be solved soon. Announcing a delay like this might cause problems. If we're seen as being unstable, this could lead to losing clients to our competitor.\"\n[Student] \"You're right. But what other choice do we have? I think we should just tell them as soon as possible. It would save time to tell them now.\"\n[Tutor] \"Telling them early is a good idea, but we need to have something to offer them for the inconvenience. What were you thinking?\"\n[Student] \"How about a discount on their next order? Just to show our appreciation for their understanding. That way they will be more likely to order again.\"\n[Tutor] \"Hmm, that's a great idea. We need to check with Mr. Jones.\"\n[Student] \"Sounds good. Why don't you write a rough draft to show him?\"\n[Tutor] \"I'll start on that now. Thank you for your help.\"\n[Joey] Hmm, okay, I see.\n[Tutor] Okay, so what is happening in all of this?\n[Joey] Oh, this company is selling to customers something. And this company has a problem, a supply.\n[Joey] Maybe I guess the shipping problem is the delay so they can't send the product to the customer. So, they guess it is a little delay to send the product to customer.\n[Joey] And Mr. Northman suggests if we give some voucher, the discount next time, that next time order discount voucher. At that time, customer re-backed. So Mr. Chase agreed with Mr. Northman's opinion and he prepared the report to show Mr. Jones.\n[Joey] Yeah. So yes, Mr. Northman suggests that we give, yeah, that's good. That we give, we give, we gift, right?\n[Tutor] Mr. Northman suggests that we give.\n[Joey] That we give.\n[Tutor] A discount on their next order.\n[Joey] The discount on the next order.\n[Tutor] Okay. You got it.\n[Joey] And teacher, I have a question.\n[Tutor] Yes, of course.\n[Joey] The rough sentence, Mr. Northman said, \"Sounds good. Why don't we write a rough draft?\"\n[Joey] Yeah, I want to know the meaning of the rough.\n[Tutor] Rough? Rough draft?\n[Joey] Ah, rough.\n[Tutor] Yes. It means a first draft.\n[Tutor] So it doesn't have to be a polished, finished report. A rough draft, just put your ideas down and send them. Yeah, it's usually your first draft of something, an email, a message, a report.\n[Joey] Maybe it is rough meaning is there the big picture, not a detail, right?\n[Tutor] In this context, yes, rough draft, those two words go together. Rough alone as a word means something a little bit different. Yes, so rough means not smooth.\n[Joey] Not smooth?\n[Tutor] Right. So imagine a road, but instead of pavement, you have rocks or gravel. And you're going in your car over that road with rocks. We will say that the road is rough.\n[Joey] Hmm, I see. That is not a bright and we can see the detail, but just we have to sensitive and drive that road because there is no white light. Right?\n[Tutor] It's more so, okay, imagine that a road has lots of holes in it. Right? The road is not smooth. There's lots of potholes and when you drive through, you're just jumping in the car. That's the word rough. Rough means not smooth.\n[Joey] Smooth, rough. I see. Maybe I see when I play the golf, I play the rough. That feel is the little... It's a little rough. Yeah, yeah, rough. So that is meaning is two kinds. One is the rough skin, rough road, rough paper.\n[Tutor] Yes, exactly.\n[Joey] But other thing is just imaging some burst. We don't know, but just imaging something, rough estimate, etc.\n[Tutor] That's exactly right. You got it.\n[Joey] Okay, I see. I loved, I loved, I loved, I understanding the rough meaning.\n[Tutor] Excellent.\n[Joey] The rough, yes.\n[Tutor] Okay.\n[Tutor] So what do you think of their approach to deal with this problem or to communicate this problem?\n[Joey] Oh yes, it is the normal solution to the shopping mall or internet mall. But that is not special, just the normal. But that is good solution to the customer.\n[Tutor] Would you do something differently?\n[Joey] I agree that because the company has a resource is the limited. I wanted to give something more, but maybe this company resource is limited to the customer. So yeah, I agree with that. Just inform why that product is delayed and then give some coupon to next time order. Yeah, I agree with that, but I'm not... I agree with that. I agree with that, but that is not enjoyable for me. No.\n[Tutor] Yes. And what do you think if we look at the dialogue, what do you think they compromised on? Where do you think they had different opinions?\n[Joey] First, I don't understanding the company the resource. So if I give some solution of this situation and if I give the strategy of this situation, I need more information about this company. Yeah, the situation is, yeah, good way, good choice. Yeah, so yeah, it's a good solution, good.\n[Tutor] Do you often have to work on team projects?\n[Joey] Yes, I'm not... I work on the audit team. So usually we have audit, there are two or three months or four months per every month. So usually we had a project four times per year. At every, uh, every audit, we made some group because if we have an interview, we need two members more. So every audit project, we made a group of two or three members. So yeah, that's our teamwork way.\n[Tutor] Team setup, yeah?\n[Joey] Yeah, team setup, yes.\n[Tutor] And when do you think it is necessary to compromise?\n[Joey] Compromise, necessary every time because our result is a report and every people identify, every people, every person, every person give another problem and solution. So we control that problem and solution and then we decide what is problem and what is solution in this problem. So we compromise, yeah, the analytics of the problem and give the solution. So yeah, every time we compromise the problem with the problem.\n[Tutor] About the problem?\n[Joey] Yeah, or about the solution. Yeah, about the solution. Yes.\n[Tutor] Okay. Do you find it easy to compromise?\n[Joey] No, that is so difficult for me because every problem is there mixed in the fact. So if we find some problem, we think about why that problem is taking our organization. So yeah, that is difficult. And we analysis why that problem is the cure, etc.\n[Tutor] Mm-hmm. Mm-hmm. Okay. Okay.\n[Tutor] Well, thank you for answering those somewhat tough questions.\n[Joey] Oh, yeah. That's so tough.\n[Tutor] Do you have any questions as we wrap up today's class?\n[Joey] No, thanks for your class. Thank you for your answer, teacher.\n[Tutor] Thank you for your time this morning.\n[Joey] Excellent.\n[Tutor] And we will talk again tomorrow.\n[Joey] Talk to you tomorrow. Have a nice day.\n[Tutor] Okay. You too. Bye, Joey.\n\n[AI 피드백]\n안녕하세요, Joey! 오늘도 활기찬 대화 나눠주셔서 감사합니다. 특히 'rough'의 다양한 의미에 대해 깊이 있게 탐구하려는 모습이 정말 인상 깊었어요. 궁금증을 해결하려는 적극적인 태도 덕분에 수업이 더욱 풍성해졌습니다!\n\n---\n\n**0. 📌 Topic**\nTopic: Discussing solutions to a supply problem and the importance of compromise in teamwork.\n\n---\n\n**1. 📊 오늘의 대화 요약 (Summary)**\n오늘은 공급 문제에 직면한 회사의 상황극 대화를 읽고, 고객에게 지연을 알리는 방법과 보상 방안에 대해 논의했습니다. 또한, 'rough draft'와 'rough'의 다양한 의미를 명확히 이해하고, 팀 프로젝트에서 타협(compromise)이 왜 중요한지에 대해 깊이 있는 이야기를 나누었습니다.\n\n---\n\n**2. 💬 유창성 업그레이드 (Fluency & Natural Flow)**\nJoey가 말한 문장들 중 의미는 통하지만, 원어민이 들었을 때 조금 더 자연스럽게 느껴질 수 있는 표현들을 살펴볼게요.\n\n1.  **❌ 학습자 원문 (As Said):** \"So that's an enjoyable time with my family, with my son.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"That was such an enjoyable time with my family, with my son.\"\n    *   **💎 비즈니스 표현 (Professional):** \"It was a truly delightful experience with my family, particularly with my son.\"\n    *   **💡 코칭 포인트:** Using \"was\" clearly indicates a past event, and \"such an\" adds emphasis naturally.\n        → \"was\"를 사용하면 과거의 일임을 명확히 하고, \"such an\"은 자연스럽게 강조하는 뉘앙스를 더해줍니다.\n\n2.  **❌ 학습자 원문 (As Said):** \"I loved, I loved, I loved, I understanding the rough meaning.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"I'm so glad I understand the meaning of 'rough' now.\"\n    *   **💎 비즈니스 표현 (Professional):** \"I appreciate the clarification on the meaning of 'rough'; it's much clearer now.\"\n    *   **💡 코칭 포인트:** Instead of repeating \"I loved\" and using \"understanding\" as a noun, \"I'm glad I understand\" is a more common and natural way to express satisfaction about learning something.\n        → \"I loved\"를 반복하고 \"understanding\"을 명사처럼 쓰는 대신, \"I'm glad I understand\"는 무언가를 알게 되어 만족감을 표현하는 더 자연스러운 방식입니다.\n\n3.  **❌ 학습자 원문 (As Said):** \"Oh yes, it is the normal solution to the shopping mall or internet mall.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"Yes, it's a common solution for shopping malls or online stores.\"\n    *   **💎 비즈니스 표현 (Professional):** \"Indeed, this is a standard practice within the retail and e-commerce sectors.\"\n    *   **💡 코칭 포인트:** \"Normal\"은 이해할 수 있지만, \"common\"은 널리 채택된 관행이나 해결책을 언급할 때 더 자주 사용됩니다. 또한, \"internet mall\"보다는 \"online stores\"가 더 자연스럽습니다.\n\n---\n\n**3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)**\nCategory: **Subject-Verb Agreement (주어-동사 수일치)**\n\nJoey는 주어와 동사의 수일치에서 실수가 반복되는 경향이 있습니다. 특히 주어가 복수일 때 동사를 단수형으로 쓰거나, 주어가 단수일 때 복수 동사를 쓰는 경우가 보입니다.\n\n| ❌ 원문 (As Said)                                                                  | ✅ 교정 예시 (Corrected)                                                                 |\n| :---------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------- |\n| \"every people identify, every people, every person, every person **give** another problem and solution.\" | \"Every person **identifies** and **gives** different problems and solutions.\"              |\n| \"So we control that problem and solution and then we decide what **is** problem and what **is** solution in this problem.\" | \"So we manage those problems and solutions and then we decide what the **problems are** and what the **solutions are** in this situation.\" |\n| \"we analysis why that problem **is** the cure, etc.\"                                | \"we **analyze** why that problem **occurs**, etc.\"                                       |\n\n📌 **핵심 규칙:** 주어의 수(단수/복수)에 따라 동사의 형태를 일치시켜야 합니다. (예: 단수 주어 + 동사-s/es, 복수 주어 + 동사 원형)\n\n🔁 **따라 읽기:**\n🗣️ \"Every person identifies and gives different problems and solutions.\"\n🗣️ \"So we manage those problems and solutions and then we decide what the problems are and what the solutions are in this situation.\"\n🗣️ \"We analyze why that problem occurs, etc.\"\n\n---\n\n**4. 📗 어휘 확장 (Vocabulary Vault)**\n오늘 대화에서 유용하게 쓰일 수 있는 어휘들을 정리해 보았습니다.\n\n1.  **recall** /rɪˈkɔːl/ (명사)\n    *   뜻: (제품의) 리콜, 회수\n    *   실전 예문: Due to a safety concern, the company issued a **recall** for its latest product line.\n\n2.  **compromise** /ˈkɒmprəmaɪz/ (동사/명사)\n    *   뜻: 타협하다, 절충하다 / 타협, 절충\n    *   실전 예문: We need to find a **compromise** that satisfies both the client's demands and our budget constraints.\n\n3.  **rough draft** /rʌf drɑːft/ (명사)\n    *   뜻: 초고, 대략적인 원고\n    *   실전 예문: Please submit a **rough draft** of the proposal by Friday so we can review it.\n\n4.  **constraint** /kənˈstreɪnt/ (명사)\n    *   뜻: 제약, 제한\n    *   실전 예문: We are operating under tight budget **constraints**, so every expenditure must be justified.\n\n5.  **mitigate** /ˈmɪtɪɡeɪt/ (동사)\n    *   뜻: 완화시키다, 경감하다\n    *   실전 예문: Our goal is to **mitigate** the risks associated with the new market entry.\n\n---\n\n**5. 📝 실전 복습 챌린지 (Practice)**\n오늘 배운 표현과 문법을 활용하여 영작 연습을 해볼까요?\n\n1.  **상황:** 회사의 자원이 제한적이기 때문에, 우리는 고객들에게 다음 주문 시 할인을 제공하기로 합의했습니다. (오늘 배운 문법 및 어휘 활용)\n    *   **영작:**\n    *   **모범 답안:** Since the company's resources are limited, we agreed to offer customers a discount on their next order.\n\n2.  **상황:** 제안서 초고를 작성하는 것은 어렵지 않습니다. 우리는 그저 주요 아이디어들을 정리하면 됩니다. (오늘 배운 'rough draft' 활용)\n    *   **영작:**\n    *   **모범 답안:** Writing a rough draft of the proposal isn't difficult. We just need to put down the main ideas.\n\n3.  **상황:** 팀 프로젝트에서는 모든 팀원이 각기 다른 문제점과 해결책을 제시하기 때문에, 모두가 동의하는 최선의 방안을 찾기 위해 항상 타협해야 합니다. (오늘 배운 문법 및 어휘 활용)\n    *   **영작:**\n    *   **모범 답안:** In team projects, since every team member identifies different problems and solutions, we always have to compromise to find the best approach that everyone agrees on.\n\n---\n\n**6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)**\n\n✨ **Good Job:**\n\"I made a sandcastle with my son.\"\nJoey가 주말에 아드님과 모래성을 만들었다고 이야기할 때, 이 문장은 간결하면서도 핵심적인 정보를 정확하게 전달했습니다. 과거 시제 사용도 완벽했고, 가족과의 즐거운 시간을 잘 표현했어요!\n\n🚀 **내일의 한 문장:**\n다음 수업 시작 시, 튜터에게 이렇게 말하며 대화를 시작해 보세요.\n\"I've been thinking about how to mitigate potential delays in our upcoming project.\"\n(다가오는 프로젝트의 잠재적 지연을 완화하는 방법에 대해 생각해 봤어요.)\n\n---\n\n**[성과 지표]**\n**유창성 점수:** 7/10\n\n**근거:** Joey는 자신의 생각을 막힘없이 표현하고 대화의 흐름을 잘 이어갑니다. 어휘력도 준수하여 다양한 주제에 대해 이야기할 수 있습니다. 다만, 때때로 문장 구조가 한국어식 사고방식에 영향을 받아 어색하게 느껴지거나, 주어-동사 수일치와 같은 기본적인 문법 오류가 반복되는 경향이 있어 유창성 점수를 7점으로 평가했습니다. 이러한 부분들을 개선하면 더욱 자연스러운 영어를 구사할 수 있을 것입니다.\n\n**다음 수업 '원포인트 액션 플랜':**\n다음 수업에서는 **주어-동사 수일치**에 더 집중하여, Joey가 문장을 만들 때 주어와 동사의 관계를 한 번 더 확인하는 습관을 들일 수 있도록 지도하겠습니다. 특히, `every + 단수 명사` 뒤에는 단수 동사가 온다는 점을 강조할 예정입니다.\n\n위 내용을 바탕으로:\n1. 먼저 오늘 수업에서 내가 틀렸거나 어색했던 표현을 하나 골라서, 관련된 상황을 영어로 질문해줘.\n2. 내가 영어로 대답하면, 자연스러운지 확인하고 더 나은 표현이 있으면 알려줘.\n3. 특히 \"반복 실수 패턴\"에서 지적된 부분을 집중적으로 연습시켜줘.\n4. 이런 식으로 오늘 배운 표현들을 하나씩 복습하자.\n5. 한국어 설명은 필요할 때만 간단히, 대화는 최대한 영어로 진행해줘.\n\n그럼 시작하자!";
+        function startReview(){navigator.clipboard.writeText(REVIEW_PROMPT).then(()=>{showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)}).catch(()=>{const t=document.createElement('textarea');t.value=REVIEW_PROMPT;document.body.appendChild(t);t.select();document.execCommand('copy');document.body.removeChild(t);showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)})}
+        function showToast(){const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500)}
+        function switchTab(n){document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',n==='feedback'?i===0:i===1));document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));document.getElementById('tab-'+n).classList.add('active')}
+    </script>
+</body>
+</html>
