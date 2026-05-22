@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전화영어 복습 - 2026년 05월 22일</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Noto Sans KR',sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.75;min-height:100vh}
+        .header{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);border-bottom:1px solid rgba(255,255,255,.06);padding:48px 24px 40px;text-align:center}
+        .header-date{font-size:13px;color:#94a3b8;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+        .header h1{font-size:28px;font-weight:700;color:#f1f5f9;margin-bottom:16px}
+        .header-meta{display:flex;justify-content:center;gap:24px;font-size:14px;color:#64748b}
+        .header-meta span{display:flex;align-items:center;gap:6px}
+        .cta-section{text-align:center;padding:40px 24px}
+        .cta-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:linear-gradient(135deg,#38bdf8,#818cf8);color:#fff;font-size:16px;font-weight:600;font-family:'Noto Sans KR',sans-serif;border:none;border-radius:50px;cursor:pointer;transition:all .3s;text-decoration:none;box-shadow:0 4px 24px rgba(56,189,248,.25)}
+        .cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(56,189,248,.35)}
+        .cta-btn svg{width:20px;height:20px}
+        .cta-sub{margin-top:12px;font-size:13px;color:#64748b}
+        .toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#38bdf8;padding:14px 28px;border-radius:12px;font-size:14px;font-weight:500;border:1px solid rgba(56,189,248,.2);box-shadow:0 8px 32px rgba(0,0,0,.4);opacity:0;transition:all .4s cubic-bezier(.16,1,.3,1);z-index:1000}
+        .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+        .container{max-width:720px;margin:0 auto;padding:0 24px 80px}
+        .tabs{display:flex;gap:4px;background:#1a1a24;padding:4px;border-radius:12px;margin-bottom:32px}
+        .tab{flex:1;padding:12px;text-align:center;font-size:14px;font-weight:500;color:#64748b;background:0 0;border:none;border-radius:8px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all .2s}
+        .tab.active{background:#262636;color:#f1f5f9}
+        .tab-content{display:none}.tab-content.active{display:block}
+        .feedback h2{font-size:18px;font-weight:700;color:#f1f5f9;margin:36px 0 16px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.06)}
+        .feedback h2:first-child{margin-top:0}
+        .feedback p{margin:8px 0;color:#cbd5e1}
+        .feedback .item{padding:6px 0 6px 16px;border-left:2px solid #334155;margin:6px 0;color:#cbd5e1}
+        .feedback .numbered{padding:8px 0 8px 16px;color:#cbd5e1}
+        .feedback .numbered strong{color:#38bdf8}
+        .feedback strong{color:#f1f5f9}
+        .feedback code{background:#1e293b;padding:2px 8px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#38bdf8}
+        .feedback table{width:100%;border-collapse:collapse;margin:12px 0}
+        .feedback th,.feedback td{padding:10px 14px;text-align:left;border-bottom:1px solid #262636}
+        .feedback th{color:#94a3b8;font-weight:500;font-size:13px}
+        .feedback td{color:#cbd5e1}
+        .arrow{color:#38bdf8;font-weight:700}
+        .transcript{background:#1a1a24;border-radius:12px;padding:28px;font-size:14px;line-height:2;color:#94a3b8;white-space:pre-wrap;word-break:break-word;font-family:'JetBrains Mono','Noto Sans KR',monospace}
+        .transcript .tutor{color:#38bdf8}
+        .transcript .student{color:#a78bfa}
+        @media(max-width:640px){.header{padding:32px 16px}.header h1{font-size:22px}.cta-btn{padding:14px 28px;font-size:15px}.container{padding:0 16px 60px}}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-date">2026년 05월 22일</div>
+        <h1>📚 전화영어 복습</h1>
+        <div class="header-meta">
+            <span>⏱ 20분 7초</span>
+            <span>🎙 전화영어_025180304_20260522080011.m4a</span>
+        </div>
+    </div>
+    <div class="cta-section">
+        <button class="cta-btn" onclick="startReview()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Gemini에서 복습 대화 시작하기
+        </button>
+        <div class="cta-sub">클릭하면 프롬프트가 복사되고 Gemini가 열립니다</div>
+    </div>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('feedback')">📋 AI 피드백</button>
+            <button class="tab" onclick="switchTab('transcript')">🎙 수업 전사</button>
+        </div>
+        <div id="tab-feedback" class="tab-content active">
+            <div class="feedback"><h2>완성본</h2>
+<br>
+<p><strong>0. 📌 Topic</strong></p>
+<p>Topic: Discussing Travel Plans and Experiences</p>
+<br>
+<p><strong>1. 📊 오늘의 대화 요약 (Summary)</strong></p>
+<p>오늘의 대화는 주로 여행 계획과 경험에 관한 주제를 다뤘습니다. Joey는 중국 Xi'an과 스페인으로의 여행 계획을 이야기했고, 튜터는 여행에 대한 질문을 해서 더 많은 정보를 얻어냈습니다. 또한, Joey는 여행 준비와 언어 문제에 대한 걱정도 이야기했습니다.</p>
+<br>
+<p><strong>2. 💬 유창성 업그레이드 (Fluency & Natural Flow)</strong></p>
+<div class="numbered"><strong>1.</strong> ❌ 원문: "I make some plans with my family. What to do, etc."</div>
+<p>✅ 자연스러운 표현: "I'm making plans with my family, like deciding what to do."</p>
+<p>💎 비즈니스 표현: "I'm in the process of finalizing plans with my family, including activities and itineraries."</p>
+<p>💡 코칭 포인트: 'I make' 대신 'I'm making'을 사용하여 현재 진행 중인 계획임을 나타내고, 'like'를 활용하여 자연스럽게 추가 설명을 덧붙일 수 있습니다.</p>
+<br>
+<div class="numbered"><strong>2.</strong> ❌ 원문: "I will go to China and the city name is Xi'an."</div>
+<p>✅ 자연스러운 표현: "I'm planning to visit Xi'an, China."</p>
+<p>💎 비즈니스 표현: "I intend to travel to Xi'an, China, as part of my upcoming trip."</p>
+<p>💡 코칭 포인트: 'I will go to ~ and the city name is ~' 대신 'I'm planning to visit ~'를 사용하여 계획을 더 간결하고 자연스럽게 표현할 수 있습니다.</p>
+<br>
+<div class="numbered"><strong>3.</strong> ❌ 원문: "I heard that many European countries, but that is a more easy and public place to travel."</div>
+<p>✅ 자연스러운 표현: "I've heard that many European countries are easy to travel to, but Spain is particularly accessible."</p>
+<p>💎 비즈니스 표현: "From what I understand, numerous European countries are relatively easy to travel to, with Spain being a notable example."</p>
+<p>💡 코칭 포인트: 'a more easy and public place' 대신 'particularly accessible'과 같이 더 자연스러운 형용사 표현을 사용하고, 문장 구조를 다듬어 유창성을 높일 수 있습니다.</p>
+<br>
+<p><strong>3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)</strong></p>
+<p>Category: Verb Tense Consistency & Natural Phrasing</p>
+<p>❌ 원문: "I make two plans. One is the Chinese Xi'an. The second is Spain in wintertime."</p>
+<p>✅ 교정 예시: "I've made two plans. One is to visit Xi'an, China. The second is to travel to Spain in the winter."</p>
+<p>❌ 원문: "I will go to China, to Xi'an. That city is the oldest city in China. So maybe almost 3,000 years ago, they became the capital and stayed for a long time the capital in the oldest China."</p>
+<p>✅ 교정 예시: "I'm planning to visit Xi'an, China, which is one of the oldest cities in China. It became the capital almost 3,000 years ago and remained so for a long time in ancient China."</p>
+<p>❌ 원문: "So did you hear the... Just a moment, I'm searching. Hmm... Sorry. Qin Shi Huang, that's the first emperor of China."</p>
+<p>✅ 교정 예시: "Have you heard of... (Just a moment, I'm searching)... Qin Shi Huang, the first emperor of China?"</p>
+<p>📌 핵심 규칙: 시제를 일관성 있게 사용하고, 문장을 더 자연스럽고 간결하게 연결하는 연습이 필요합니다. 특히, 과거의 경험이나 사실을 말할 때는 현재완료 시제('I've made', 'I've heard')를, 현재의 계획을 말할 때는 현재 진행형('I'm planning to')을 활용하는 것이 좋습니다. 또한, 불필요한 반복을 줄이고 관계대명사 등을 활용하여 문장을 매끄럽게 연결해 보세요.</p>
+<p>🔁 따라 읽기: </p>
+<p>🗣️ "I've made two plans. One is to visit Xi'an, China. The second is to travel to Spain in the winter."</p>
+<p>🗣️ "I'm planning to visit Xi'an, China, which is one of the oldest cities in China. It became the capital almost 3,000 years ago and remained so for a long time in ancient China."</p>
+<p>🗣️ "Have you heard of Qin Shi Huang, the first emperor of China?"</p>
+<br>
+<p><strong>4. 📗 어휘 확장 (Vocabulary Vault)</strong></p>
+<div class="numbered"><strong>1.</strong> <strong>Terracotta</strong> /ˌtɛrəˈkɒtə/ (명사)</div>
+<p>뜻: 테라코타 (점토를 구워 만든 조각품이나 건축 재료)</p>
+<p>실전 예문: "The Terracotta Warriors are a famous tourist attraction in Xi'an, China."</p>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>Voucher</strong> /ˈvaʊtʃər/ (명사)</div>
+<p>뜻: 상품권, 할인권, 교환권</p>
+<p>실전 예문: "The hotel gave us a voucher for our family to use during our stay."</p>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>Scampi</strong> /ˈskæmpi/ (명사)</div>
+<p>뜻: 새우 스캠피 (마늘, 버터 등으로 요리한 새우 요리)</p>
+<p>실전 예문: "I'd like to try the shrimp scampi at the Italian restaurant."</p>
+<br>
+<div class="numbered"><strong>4.</strong> <strong>Olive oil</strong> /ˌɒlɪv ˈɔɪl/ (명사)</div>
+<p>뜻: 올리브유</p>
+<p>실전 예문: "Olive oil is a key ingredient in Mediterranean cuisine."</p>
+<br>
+<div class="numbered"><strong>5.</strong> <strong>Tapas</strong> /ˈtæpəs/ (명사)</div>
+<p>뜻: 타파스 (스페인에서 식사 전에 술과 곁들여 먹는 소량의 음식)</p>
+<p>실전 예문: "Let's go to a tapas bar and try some small plates."</p>
+<br>
+<p><strong>5. 📝 실전 복습 챌린지 (Practice)</strong></p>
+<div class="numbered"><strong>1.</strong> 한국어 상황 설명: 당신은 스페인 여행을 계획하고 있습니다. 친구에게 여행 계획을 설명해 보세요.</div>
+<p>영작 요구: "I'm planning to visit Spain next month. I've already booked my flights and accommodation."</p>
+<p>모범 답안: "I'm planning to visit Spain next month. I've already booked my flights and accommodation. I'm really looking forward to trying all the delicious food and drinks."</p>
+<br>
+<div class="numbered"><strong>2.</strong> 한국어 상황 설명: 당신은 중국 여행에서 만난 사람에게 여행 경험이 좋았는지 물어보는 질문을 받았습니다. 대답해 보세요.</div>
+<p>영작 요구: "How was your trip to China?"</p>
+<p>모범 답안: "It was amazing! I loved trying all the local foods and visiting the historical sites. The people were also very friendly and helpful."</p>
+<br>
+<div class="numbered"><strong>3.</strong> 한국어 상황 설명: 당신은 스페인 여행에서 올리브 오일을 맛보는 경험을 이야기하고 싶습니다. 이야기해 보세요.</div>
+<p>영작 요구: "I had a great experience trying olive oil in Spain."</p>
+<p>모범 답안: "I had a great experience trying olive oil in Spain. We visited a local farm and learned about the process of making olive oil. We also got to taste some of the freshest olive oil I've ever had."</p>
+<br>
+<p><strong>6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)</strong></p>
+<p>✨ Good Job: "I'm planning to visit Xi'an, China, which is one of the oldest cities in China."</p>
+<p>이 문장은 Joey가 중국 여행 계획을 명확하게 설명하고, 관계대명사 'which'를 사용하여 도시의 역사적인 중요성을 자연스럽게 덧붙여 표현한 점이 훌륭합니다.</p>
+<p>🚀 내일의 한 문장: "I'm excited to try all the delicious food and drinks in Spain, especially the tapas and olive oil."</p>
+<br>
+<p><strong>[성과 지표]</strong></p>
+<p>유창성 점수: 7/10</p>
+<p>근거: Joey는 여행 계획과 경험에 대해 이야기하는 데에 어려움 없이 대화할 수 있었지만, 때때로 시제 불일치, 어색한 문장 구조, 그리고 어휘 선택의 제한이 나타났습니다.</p>
+<p>다음 수업 '원포인트 액션 플랜': Joey는 시제 일관성을 유지하며 문장을 더 자연스럽게 연결하는 연습을 하고, 여행 관련 어휘를 확장하는 데 집중할 것입니다.</p></div>
+        </div>
+        <div id="tab-transcript" class="tab-content">
+            <div class="transcript">[전사 내용]
+<span class="tutor">[Tutor]</span> Hello, Joey. Good morning.
+<span class="student">[Student]</span> Yeah, good morning.
+<span class="tutor">[Tutor]</span> How are you doing today?
+<span class="student">[Student]</span> Good evening. I&#x27;m doing great. It&#x27;s Friday. Saturday to Monday, we have a long holiday. I&#x27;m good. Tonight, I will go back to my home. Everything is good. How are you today?
+<span class="tutor">[Tutor]</span> I&#x27;m good, yeah. Do you have any plans for the long holiday?
+<span class="student">[Student]</span> Not yet. Maybe if I take a train and then I will search the internet and then I will do something. I make some plans with my family. What to do, etc.
+<span class="tutor">[Tutor]</span> So, are you able to look at page 41 here?
+<span class="student">[Student]</span> Oh, teacher, I&#x27;m so sorry. Today, yeah, I had already arrived at my office. So, yeah, I don&#x27;t have a textbook now.
+<span class="tutor">[Tutor]</span> Did you want to do free talking?
+<span class="tutor">[Tutor]</span> Sure. Is there any topic in particular you wanted to discuss?
+<span class="student">[Student]</span> I think it&#x27;s okay. How about an easy subject, travel? Do you have some suggested subjects?
+<span class="tutor">[Tutor]</span> You can talk about travel. So are you making any travel plans soon?
+<span class="student">[Student]</span> This year, I make two plans. One is the Chinese Xi&#x27;an. The second is Spain in wintertime. So maybe in August, I will go to China and the city name is Xi&#x27;an. Just a moment, teacher. I changed my room.
+<span class="student">[Student]</span> Okay, teacher. I&#x27;m done. I&#x27;m moved to another office. And in the summertime, I will go to China, to Xi&#x27;an. That city is the oldest city in China. So maybe almost 3,000 years ago, they became the capital and stayed for a long time the capital in the oldest China. So did you hear the... Just a moment, I&#x27;m searching. Hmm... Sorry. Qin Shi Huang, that&#x27;s the first emperor of China.
+<span class="tutor">[Tutor]</span> First kind of dynasty?
+<span class="student">[Student]</span> Yeah, yeah. So if we go there, we can... Just a moment. Sorry. You can see the Terracotta Warrior. Terracotta Warrior. Did you ever hear that name, Terracotta Warriors?
+<span class="tutor">[Tutor]</span> Yeah, I&#x27;ve heard it.
+<span class="student">[Student]</span> Ah, yes. That is the Qin Shi Huang that after that made some big constructions. And that constructions keep and save the Terracotta Warriors. So yeah, if we go there, we can see that amazing Terracotta Warrior. And last year, I had a plan to visit Spain. But one day before the travel, my son was sick. So we couldn&#x27;t visit that place. The hotel gave us some voucher for our family. So this Christmas season we use that voucher and visit Barcelona and Seville. That&#x27;s our family plan to travel this year. How about you?
+<span class="tutor">[Tutor]</span> Mm-mm. Well, you don&#x27;t have too many plans to travel right now.
+<span class="student">[Student]</span> Not yet, I see.
+<span class="tutor">[Tutor]</span> Mm-mm. So how long are you planning to travel for?
+<span class="student">[Student]</span> For China or Spain?
+<span class="tutor">[Tutor]</span> Yeah, for both trips.
+<span class="student">[Student]</span> The trip to China, usually our basic plan is one week, eight days. Yeah, usually we go from Saturday to Saturday or Sunday to Sunday. And Spain is a far away country, so maybe that country we will travel two weeks. Yeah, so yeah, that is not long, yeah, that is not short. That is enough for me.
+<span class="tutor">[Tutor]</span> Oh, but about two weeks, yeah, that&#x27;s a good amount of time.
+<span class="student">[Student]</span> Yeah, because I&#x27;m a salaryman, so it is a long holiday for me. So, so yeah, yeah, so I&#x27;m excited.
+<span class="tutor">[Tutor]</span> Oh, definitely excited. Why did you want to go to those places?
+<span class="student">[Student]</span> To Spain?
+<span class="tutor">[Tutor]</span> Yeah.
+<span class="student">[Student]</span> Hmm. Actually, many years ago, my son and I promised something. We will travel every place in the world twice per year. And he is nine years old. So, before he was nine years old, he didn&#x27;t tend to take a long plane. So it was hard. So usually we travel to near countries, in Asia, usually Asia, China, Japan, Thailand, Taiwan, Guam, Saipan, some close countries. But he is becoming 10 years old this year and then I think it is possible to travel long distance. So we decided and that is the first place for long distance, Spain. It almost takes 14 hours. Yeah, so that&#x27;s the first travel. And I heard that many European countries, but that is a more easy and public place to travel. So I chose, yeah, that place. I selected, yeah, country and city. Yeah, so...
+<span class="tutor">[Tutor]</span> Definitely a longer plane ride. Yes, yes. Yeah. Do you know how long? Go on. I said, do you know how long it will be?
+<span class="student">[Student]</span> Maybe I heard that that is 14 hours, take a 14-hour one way. And we also included the plan to take a train because we move the city Barcelona and Seville and Madrid. It takes almost four hours, three hours and four hours. So that&#x27;s not easy.
+<span class="tutor">[Tutor]</span> Yeah, definitely, yeah, longer flight. And it&#x27;s your son&#x27;s first long flight?
+<span class="student">[Student]</span> Yeah, that is my son&#x27;s long distance travel, so first time. So I&#x27;m really excited, but a little, how can I say? I think we need to be more careful. Because the language and culture, everything is different. And I heard today that in Barcelona, there are so many thieves in this city. So many people steal their mobile phones and handbags and some cash, etc. So we prepared for that.
+<span class="tutor">[Tutor]</span> Okay, how are you preparing for your trip?
+<span class="student">[Student]</span> That is the winter vacation, so I don&#x27;t prepare now. But actually, if I travel someplace, I just first bought some plane ticket and reserved a hotel. And just reserved some famous places. And other things is that just we decide at that place. So yeah, just I bought plane ticket and had reservations and prepared some tickets for famous places.
+<span class="tutor">[Tutor]</span> And are you watching any travel videos or travel shows about those areas?
+<span class="student">[Student]</span> In Spain&#x27;s case, that is the actual city, that country is the last year&#x27;s plan. So already I had researched that city. So in my head, the important information is gathering in my head. And last year I watched so many videos, but these days, yeah, I don&#x27;t see anymore the video or some blog, etc.
+<span class="tutor">[Tutor]</span> Okay, yeah, so it could be helpful, yeah, watching those blogs or travel videos.
+<span class="student">[Student]</span> And sometimes if I watch so many videos, at that time our travel feels a little bored because our brains are confused. Already we visit there because we watched almost. So just I think it is better to have small knowledge of this city. Yeah, sometimes.
+<span class="tutor">[Tutor]</span> Yeah, it could be helpful for making plans. Have you seen any places in the travel videos that you want to visit?
+<span class="student">[Student]</span> Yeah, sometimes. In Korea, there are so famous programs. Usually the dish program, Baek Jong-won, that is a famous cooker. So that cooker is the chef. That chef travels in the world and he researches their food and dish and eating something and tells the history about that dish. So usually I watch that video because they give us some information about food and sometimes they give us some information about their construction. So yeah, sometimes we watch them.
+<span class="tutor">[Tutor]</span> Is there any food that you wanted to try or any restaurants that you wanted to try?
+<span class="student">[Student]</span> I heard that China is famous for the Biangbiangmian. Have you heard that name?
+<span class="tutor">[Tutor]</span> Biangbiangmian? That is the... Have you heard of that? The kind of noodle?
+<span class="student">[Student]</span> Oh, yes. You&#x27;re right. You&#x27;re right. I know that. I know that. Yes. That is the noodle. But that noodle is the sauce spread and put in the oil. So that noodle has a long history. And that character is a little confusing because I heard that long time ago the teacher, yeah, visited that place restaurant and ate them and made some name. But that name is confusing. So the character is so confused. Did you understand? Yeah, yeah. So maybe they confused the other, ah, the character, how can I say? That is the Chinese language. But usually Chinese characters are a little confusing. But this character is more, more and more difficult and confusing. Yeah. And yeah, so I wanted to eat that place. And if I go to Spain, I will go eat the churros and tapas and olive oil because in Asia, there is no produced olive oil. But Western countries have so much olive oil, produce olive oil and they developed their culture of the olive oil. So if I go there, yeah, I&#x27;ll eat the olive oil dish like the... I forgot that name. Anyway, the shrimp olive oil and boiled and put in their bread. What is that?
+<span class="tutor">[Tutor]</span> Yeah, there&#x27;s maybe the really, yeah, olive oil, kind of olive oil or cold pressed olive oil.
+<span class="student">[Student]</span> Yeah, yeah, the shrimp olive oil boiled and and garlic added the garlic and then put in their bread. Do you know that dish name?
+<span class="tutor">[Tutor]</span> Maybe like a scampi or a shrimp scampi or garlic bread?
+<span class="student">[Student]</span> Yeah. Anyway, I forgot that. Yeah, that&#x27;s our plan.
+<span class="tutor">[Tutor]</span> Okay, yeah, sounds like some good plans. So your winter trip, that&#x27;s a little bit further away. And your trip to China is sooner, is coming up soon?
+<span class="student">[Student]</span> Maybe I will go there in August last week. And my son also has break time in school, the summer vacation. So we will go there in August, the last week. With my son and my wife and me. Yeah, but I&#x27;m a little worried about the language because they don&#x27;t use their Chinese, they don&#x27;t use their English and Koreans, just use their Chinese. So I need to practice Chinese language more before the travel.
+<span class="tutor">[Tutor]</span> Departure. Prior to departure. Okay. Do you know a little bit of Chinese?
+<span class="student">[Student]</span> Oh, no. A little things. A little things. So, but China developed the application, taxi and restaurant. So if I take a taxi, I just put in some destination and then just call the taxi. It&#x27;s all. So it is easy and restaurant is same. There is a famous application used for restaurants. So I just select the menu and then put in the order menu. But sometimes if I lost our way or have some problem, at that time we have a language because we share the information. So I think I learned some important language, &quot;help me&quot; or &quot;I&#x27;m lost here,&quot; blah, blah, blah.
+<span class="tutor">[Tutor]</span> Yeah, it was good. It&#x27;s good that those kinds of travel apps are the same.
+<span class="student">[Student]</span> Yeah, similar.
+<span class="tutor">[Tutor]</span> Yeah.
+<span class="student">[Student]</span> The application. Chinese, these days, the IT technology is developed. So if I just insert my mobile phone at the time, yeah, everything is solved.
+<span class="tutor">[Tutor]</span> Well, that&#x27;s really convenient. That&#x27;s about it for time. I&#x27;ll let you go and enjoy the long weekend.
+<span class="student">[Student]</span> Oh, thank you so much.
+<span class="tutor">[Tutor]</span> You too.
+<span class="student">[Student]</span> Have a nice day, teacher.
+<span class="tutor">[Tutor]</span> You&#x27;re welcome. Bye.
+<span class="student">[Student]</span> Bye-bye.</div>
+        </div>
+    </div>
+    <div class="toast" id="toast">✅ 프롬프트가 복사되었습니다!</div>
+    <script>
+        const REVIEW_PROMPT="너는 나의 영어 회화 복습 파트너야. 오늘 내 전화영어 수업 내용을 기반으로 대화하면서 복습을 도와줘.\n\n[오늘 수업 전사 내용]\n[전사 내용]\n[Tutor] Hello, Joey. Good morning.\n[Student] Yeah, good morning.\n[Tutor] How are you doing today?\n[Student] Good evening. I'm doing great. It's Friday. Saturday to Monday, we have a long holiday. I'm good. Tonight, I will go back to my home. Everything is good. How are you today?\n[Tutor] I'm good, yeah. Do you have any plans for the long holiday?\n[Student] Not yet. Maybe if I take a train and then I will search the internet and then I will do something. I make some plans with my family. What to do, etc.\n[Tutor] So, are you able to look at page 41 here?\n[Student] Oh, teacher, I'm so sorry. Today, yeah, I had already arrived at my office. So, yeah, I don't have a textbook now.\n[Tutor] Did you want to do free talking?\n[Tutor] Sure. Is there any topic in particular you wanted to discuss?\n[Student] I think it's okay. How about an easy subject, travel? Do you have some suggested subjects?\n[Tutor] You can talk about travel. So are you making any travel plans soon?\n[Student] This year, I make two plans. One is the Chinese Xi'an. The second is Spain in wintertime. So maybe in August, I will go to China and the city name is Xi'an. Just a moment, teacher. I changed my room.\n[Student] Okay, teacher. I'm done. I'm moved to another office. And in the summertime, I will go to China, to Xi'an. That city is the oldest city in China. So maybe almost 3,000 years ago, they became the capital and stayed for a long time the capital in the oldest China. So did you hear the... Just a moment, I'm searching. Hmm... Sorry. Qin Shi Huang, that's the first emperor of China.\n[Tutor] First kind of dynasty?\n[Student] Yeah, yeah. So if we go there, we can... Just a moment. Sorry. You can see the Terracotta Warrior. Terracotta Warrior. Did you ever hear that name, Terracotta Warriors?\n[Tutor] Yeah, I've heard it.\n[Student] Ah, yes. That is the Qin Shi Huang that after that made some big constructions. And that constructions keep and save the Terracotta Warriors. So yeah, if we go there, we can see that amazing Terracotta Warrior. And last year, I had a plan to visit Spain. But one day before the travel, my son was sick. So we couldn't visit that place. The hotel gave us some voucher for our family. So this Christmas season we use that voucher and visit Barcelona and Seville. That's our family plan to travel this year. How about you?\n[Tutor] Mm-mm. Well, you don't have too many plans to travel right now.\n[Student] Not yet, I see.\n[Tutor] Mm-mm. So how long are you planning to travel for?\n[Student] For China or Spain?\n[Tutor] Yeah, for both trips.\n[Student] The trip to China, usually our basic plan is one week, eight days. Yeah, usually we go from Saturday to Saturday or Sunday to Sunday. And Spain is a far away country, so maybe that country we will travel two weeks. Yeah, so yeah, that is not long, yeah, that is not short. That is enough for me.\n[Tutor] Oh, but about two weeks, yeah, that's a good amount of time.\n[Student] Yeah, because I'm a salaryman, so it is a long holiday for me. So, so yeah, yeah, so I'm excited.\n[Tutor] Oh, definitely excited. Why did you want to go to those places?\n[Student] To Spain?\n[Tutor] Yeah.\n[Student] Hmm. Actually, many years ago, my son and I promised something. We will travel every place in the world twice per year. And he is nine years old. So, before he was nine years old, he didn't tend to take a long plane. So it was hard. So usually we travel to near countries, in Asia, usually Asia, China, Japan, Thailand, Taiwan, Guam, Saipan, some close countries. But he is becoming 10 years old this year and then I think it is possible to travel long distance. So we decided and that is the first place for long distance, Spain. It almost takes 14 hours. Yeah, so that's the first travel. And I heard that many European countries, but that is a more easy and public place to travel. So I chose, yeah, that place. I selected, yeah, country and city. Yeah, so...\n[Tutor] Definitely a longer plane ride. Yes, yes. Yeah. Do you know how long? Go on. I said, do you know how long it will be?\n[Student] Maybe I heard that that is 14 hours, take a 14-hour one way. And we also included the plan to take a train because we move the city Barcelona and Seville and Madrid. It takes almost four hours, three hours and four hours. So that's not easy.\n[Tutor] Yeah, definitely, yeah, longer flight. And it's your son's first long flight?\n[Student] Yeah, that is my son's long distance travel, so first time. So I'm really excited, but a little, how can I say? I think we need to be more careful. Because the language and culture, everything is different. And I heard today that in Barcelona, there are so many thieves in this city. So many people steal their mobile phones and handbags and some cash, etc. So we prepared for that.\n[Tutor] Okay, how are you preparing for your trip?\n[Student] That is the winter vacation, so I don't prepare now. But actually, if I travel someplace, I just first bought some plane ticket and reserved a hotel. And just reserved some famous places. And other things is that just we decide at that place. So yeah, just I bought plane ticket and had reservations and prepared some tickets for famous places.\n[Tutor] And are you watching any travel videos or travel shows about those areas?\n[Student] In Spain's case, that is the actual city, that country is the last year's plan. So already I had researched that city. So in my head, the important information is gathering in my head. And last year I watched so many videos, but these days, yeah, I don't see anymore the video or some blog, etc.\n[Tutor] Okay, yeah, so it could be helpful, yeah, watching those blogs or travel videos.\n[Student] And sometimes if I watch so many videos, at that time our travel feels a little bored because our brains are confused. Already we visit there because we watched almost. So just I think it is better to have small knowledge of this city. Yeah, sometimes.\n[Tutor] Yeah, it could be helpful for making plans. Have you seen any places in the travel videos that you want to visit?\n[Student] Yeah, sometimes. In Korea, there are so famous programs. Usually the dish program, Baek Jong-won, that is a famous cooker. So that cooker is the chef. That chef travels in the world and he researches their food and dish and eating something and tells the history about that dish. So usually I watch that video because they give us some information about food and sometimes they give us some information about their construction. So yeah, sometimes we watch them.\n[Tutor] Is there any food that you wanted to try or any restaurants that you wanted to try?\n[Student] I heard that China is famous for the Biangbiangmian. Have you heard that name?\n[Tutor] Biangbiangmian? That is the... Have you heard of that? The kind of noodle?\n[Student] Oh, yes. You're right. You're right. I know that. I know that. Yes. That is the noodle. But that noodle is the sauce spread and put in the oil. So that noodle has a long history. And that character is a little confusing because I heard that long time ago the teacher, yeah, visited that place restaurant and ate them and made some name. But that name is confusing. So the character is so confused. Did you understand? Yeah, yeah. So maybe they confused the other, ah, the character, how can I say? That is the Chinese language. But usually Chinese characters are a little confusing. But this character is more, more and more difficult and confusing. Yeah. And yeah, so I wanted to eat that place. And if I go to Spain, I will go eat the churros and tapas and olive oil because in Asia, there is no produced olive oil. But Western countries have so much olive oil, produce olive oil and they developed their culture of the olive oil. So if I go there, yeah, I'll eat the olive oil dish like the... I forgot that name. Anyway, the shrimp olive oil and boiled and put in their bread. What is that?\n[Tutor] Yeah, there's maybe the really, yeah, olive oil, kind of olive oil or cold pressed olive oil.\n[Student] Yeah, yeah, the shrimp olive oil boiled and and garlic added the garlic and then put in their bread. Do you know that dish name?\n[Tutor] Maybe like a scampi or a shrimp scampi or garlic bread?\n[Student] Yeah. Anyway, I forgot that. Yeah, that's our plan.\n[Tutor] Okay, yeah, sounds like some good plans. So your winter trip, that's a little bit further away. And your trip to China is sooner, is coming up soon?\n[Student] Maybe I will go there in August last week. And my son also has break time in school, the summer vacation. So we will go there in August, the last week. With my son and my wife and me. Yeah, but I'm a little worried about the language because they don't use their Chinese, they don't use their English and Koreans, just use their Chinese. So I need to practice Chinese language more before the travel.\n[Tutor] Departure. Prior to departure. Okay. Do you know a little bit of Chinese?\n[Student] Oh, no. A little things. A little things. So, but China developed the application, taxi and restaurant. So if I take a taxi, I just put in some destination and then just call the taxi. It's all. So it is easy and restaurant is same. There is a famous application used for restaurants. So I just select the menu and then put in the order menu. But sometimes if I lost our way or have some problem, at that time we have a language because we share the information. So I think I learned some important language, \"help me\" or \"I'm lost here,\" blah, blah, blah.\n[Tutor] Yeah, it was good. It's good that those kinds of travel apps are the same.\n[Student] Yeah, similar.\n[Tutor] Yeah.\n[Student] The application. Chinese, these days, the IT technology is developed. So if I just insert my mobile phone at the time, yeah, everything is solved.\n[Tutor] Well, that's really convenient. That's about it for time. I'll let you go and enjoy the long weekend.\n[Student] Oh, thank you so much.\n[Tutor] You too.\n[Student] Have a nice day, teacher.\n[Tutor] You're welcome. Bye.\n[Student] Bye-bye.\n\n[AI 피드백]\n## 완성본\n\n**0. 📌 Topic**\nTopic: Discussing Travel Plans and Experiences\n\n**1. 📊 오늘의 대화 요약 (Summary)**\n오늘의 대화는 주로 여행 계획과 경험에 관한 주제를 다뤘습니다. Joey는 중국 Xi'an과 스페인으로의 여행 계획을 이야기했고, 튜터는 여행에 대한 질문을 해서 더 많은 정보를 얻어냈습니다. 또한, Joey는 여행 준비와 언어 문제에 대한 걱정도 이야기했습니다.\n\n**2. 💬 유창성 업그레이드 (Fluency & Natural Flow)**\n1. ❌ 원문: \"I make some plans with my family. What to do, etc.\"\n✅ 자연스러운 표현: \"I'm making plans with my family, like deciding what to do.\"\n💎 비즈니스 표현: \"I'm in the process of finalizing plans with my family, including activities and itineraries.\"\n💡 코칭 포인트: 'I make' 대신 'I'm making'을 사용하여 현재 진행 중인 계획임을 나타내고, 'like'를 활용하여 자연스럽게 추가 설명을 덧붙일 수 있습니다.\n\n2. ❌ 원문: \"I will go to China and the city name is Xi'an.\"\n✅ 자연스러운 표현: \"I'm planning to visit Xi'an, China.\"\n💎 비즈니스 표현: \"I intend to travel to Xi'an, China, as part of my upcoming trip.\"\n💡 코칭 포인트: 'I will go to ~ and the city name is ~' 대신 'I'm planning to visit ~'를 사용하여 계획을 더 간결하고 자연스럽게 표현할 수 있습니다.\n\n3. ❌ 원문: \"I heard that many European countries, but that is a more easy and public place to travel.\"\n✅ 자연스러운 표현: \"I've heard that many European countries are easy to travel to, but Spain is particularly accessible.\"\n💎 비즈니스 표현: \"From what I understand, numerous European countries are relatively easy to travel to, with Spain being a notable example.\"\n💡 코칭 포인트: 'a more easy and public place' 대신 'particularly accessible'과 같이 더 자연스러운 형용사 표현을 사용하고, 문장 구조를 다듬어 유창성을 높일 수 있습니다.\n\n**3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)**\nCategory: Verb Tense Consistency & Natural Phrasing\n❌ 원문: \"I make two plans. One is the Chinese Xi'an. The second is Spain in wintertime.\"\n✅ 교정 예시: \"I've made two plans. One is to visit Xi'an, China. The second is to travel to Spain in the winter.\"\n❌ 원문: \"I will go to China, to Xi'an. That city is the oldest city in China. So maybe almost 3,000 years ago, they became the capital and stayed for a long time the capital in the oldest China.\"\n✅ 교정 예시: \"I'm planning to visit Xi'an, China, which is one of the oldest cities in China. It became the capital almost 3,000 years ago and remained so for a long time in ancient China.\"\n❌ 원문: \"So did you hear the... Just a moment, I'm searching. Hmm... Sorry. Qin Shi Huang, that's the first emperor of China.\"\n✅ 교정 예시: \"Have you heard of... (Just a moment, I'm searching)... Qin Shi Huang, the first emperor of China?\"\n📌 핵심 규칙: 시제를 일관성 있게 사용하고, 문장을 더 자연스럽고 간결하게 연결하는 연습이 필요합니다. 특히, 과거의 경험이나 사실을 말할 때는 현재완료 시제('I've made', 'I've heard')를, 현재의 계획을 말할 때는 현재 진행형('I'm planning to')을 활용하는 것이 좋습니다. 또한, 불필요한 반복을 줄이고 관계대명사 등을 활용하여 문장을 매끄럽게 연결해 보세요.\n🔁 따라 읽기: \n🗣️ \"I've made two plans. One is to visit Xi'an, China. The second is to travel to Spain in the winter.\"\n🗣️ \"I'm planning to visit Xi'an, China, which is one of the oldest cities in China. It became the capital almost 3,000 years ago and remained so for a long time in ancient China.\"\n🗣️ \"Have you heard of Qin Shi Huang, the first emperor of China?\"\n\n**4. 📗 어휘 확장 (Vocabulary Vault)**\n1. **Terracotta** /ˌtɛrəˈkɒtə/ (명사)\n뜻: 테라코타 (점토를 구워 만든 조각품이나 건축 재료)\n실전 예문: \"The Terracotta Warriors are a famous tourist attraction in Xi'an, China.\"\n\n2. **Voucher** /ˈvaʊtʃər/ (명사)\n뜻: 상품권, 할인권, 교환권\n실전 예문: \"The hotel gave us a voucher for our family to use during our stay.\"\n\n3. **Scampi** /ˈskæmpi/ (명사)\n뜻: 새우 스캠피 (마늘, 버터 등으로 요리한 새우 요리)\n실전 예문: \"I'd like to try the shrimp scampi at the Italian restaurant.\"\n\n4. **Olive oil** /ˌɒlɪv ˈɔɪl/ (명사)\n뜻: 올리브유\n실전 예문: \"Olive oil is a key ingredient in Mediterranean cuisine.\"\n\n5. **Tapas** /ˈtæpəs/ (명사)\n뜻: 타파스 (스페인에서 식사 전에 술과 곁들여 먹는 소량의 음식)\n실전 예문: \"Let's go to a tapas bar and try some small plates.\"\n\n**5. 📝 실전 복습 챌린지 (Practice)**\n1. 한국어 상황 설명: 당신은 스페인 여행을 계획하고 있습니다. 친구에게 여행 계획을 설명해 보세요.\n영작 요구: \"I'm planning to visit Spain next month. I've already booked my flights and accommodation.\"\n모범 답안: \"I'm planning to visit Spain next month. I've already booked my flights and accommodation. I'm really looking forward to trying all the delicious food and drinks.\"\n\n2. 한국어 상황 설명: 당신은 중국 여행에서 만난 사람에게 여행 경험이 좋았는지 물어보는 질문을 받았습니다. 대답해 보세요.\n영작 요구: \"How was your trip to China?\"\n모범 답안: \"It was amazing! I loved trying all the local foods and visiting the historical sites. The people were also very friendly and helpful.\"\n\n3. 한국어 상황 설명: 당신은 스페인 여행에서 올리브 오일을 맛보는 경험을 이야기하고 싶습니다. 이야기해 보세요.\n영작 요구: \"I had a great experience trying olive oil in Spain.\"\n모범 답안: \"I had a great experience trying olive oil in Spain. We visited a local farm and learned about the process of making olive oil. We also got to taste some of the freshest olive oil I've ever had.\"\n\n**6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)**\n✨ Good Job: \"I'm planning to visit Xi'an, China, which is one of the oldest cities in China.\"\n이 문장은 Joey가 중국 여행 계획을 명확하게 설명하고, 관계대명사 'which'를 사용하여 도시의 역사적인 중요성을 자연스럽게 덧붙여 표현한 점이 훌륭합니다.\n🚀 내일의 한 문장: \"I'm excited to try all the delicious food and drinks in Spain, especially the tapas and olive oil.\"\n\n**[성과 지표]**\n유창성 점수: 7/10\n근거: Joey는 여행 계획과 경험에 대해 이야기하는 데에 어려움 없이 대화할 수 있었지만, 때때로 시제 불일치, 어색한 문장 구조, 그리고 어휘 선택의 제한이 나타났습니다.\n다음 수업 '원포인트 액션 플랜': Joey는 시제 일관성을 유지하며 문장을 더 자연스럽게 연결하는 연습을 하고, 여행 관련 어휘를 확장하는 데 집중할 것입니다.\n\n위 내용을 바탕으로:\n1. 먼저 오늘 수업에서 내가 틀렸거나 어색했던 표현을 하나 골라서, 관련된 상황을 영어로 질문해줘.\n2. 내가 영어로 대답하면, 자연스러운지 확인하고 더 나은 표현이 있으면 알려줘.\n3. 특히 \"반복 실수 패턴\"에서 지적된 부분을 집중적으로 연습시켜줘.\n4. 이런 식으로 오늘 배운 표현들을 하나씩 복습하자.\n5. 한국어 설명은 필요할 때만 간단히, 대화는 최대한 영어로 진행해줘.\n\n그럼 시작하자!";
+        function startReview(){navigator.clipboard.writeText(REVIEW_PROMPT).then(()=>{showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)}).catch(()=>{const t=document.createElement('textarea');t.value=REVIEW_PROMPT;document.body.appendChild(t);t.select();document.execCommand('copy');document.body.removeChild(t);showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)})}
+        function showToast(){const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500)}
+        function switchTab(n){document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',n==='feedback'?i===0:i===1));document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));document.getElementById('tab-'+n).classList.add('active')}
+    </script>
+</body>
+</html>
