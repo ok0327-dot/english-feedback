@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전화영어 복습 - 2026년 05월 25일</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Noto Sans KR',sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.75;min-height:100vh}
+        .header{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);border-bottom:1px solid rgba(255,255,255,.06);padding:48px 24px 40px;text-align:center}
+        .header-date{font-size:13px;color:#94a3b8;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+        .header h1{font-size:28px;font-weight:700;color:#f1f5f9;margin-bottom:16px}
+        .header-meta{display:flex;justify-content:center;gap:24px;font-size:14px;color:#64748b}
+        .header-meta span{display:flex;align-items:center;gap:6px}
+        .cta-section{text-align:center;padding:40px 24px}
+        .cta-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:linear-gradient(135deg,#38bdf8,#818cf8);color:#fff;font-size:16px;font-weight:600;font-family:'Noto Sans KR',sans-serif;border:none;border-radius:50px;cursor:pointer;transition:all .3s;text-decoration:none;box-shadow:0 4px 24px rgba(56,189,248,.25)}
+        .cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(56,189,248,.35)}
+        .cta-btn svg{width:20px;height:20px}
+        .cta-sub{margin-top:12px;font-size:13px;color:#64748b}
+        .toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#38bdf8;padding:14px 28px;border-radius:12px;font-size:14px;font-weight:500;border:1px solid rgba(56,189,248,.2);box-shadow:0 8px 32px rgba(0,0,0,.4);opacity:0;transition:all .4s cubic-bezier(.16,1,.3,1);z-index:1000}
+        .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+        .container{max-width:720px;margin:0 auto;padding:0 24px 80px}
+        .tabs{display:flex;gap:4px;background:#1a1a24;padding:4px;border-radius:12px;margin-bottom:32px}
+        .tab{flex:1;padding:12px;text-align:center;font-size:14px;font-weight:500;color:#64748b;background:0 0;border:none;border-radius:8px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all .2s}
+        .tab.active{background:#262636;color:#f1f5f9}
+        .tab-content{display:none}.tab-content.active{display:block}
+        .feedback h2{font-size:18px;font-weight:700;color:#f1f5f9;margin:36px 0 16px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.06)}
+        .feedback h2:first-child{margin-top:0}
+        .feedback p{margin:8px 0;color:#cbd5e1}
+        .feedback .item{padding:6px 0 6px 16px;border-left:2px solid #334155;margin:6px 0;color:#cbd5e1}
+        .feedback .numbered{padding:8px 0 8px 16px;color:#cbd5e1}
+        .feedback .numbered strong{color:#38bdf8}
+        .feedback strong{color:#f1f5f9}
+        .feedback code{background:#1e293b;padding:2px 8px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#38bdf8}
+        .feedback table{width:100%;border-collapse:collapse;margin:12px 0}
+        .feedback th,.feedback td{padding:10px 14px;text-align:left;border-bottom:1px solid #262636}
+        .feedback th{color:#94a3b8;font-weight:500;font-size:13px}
+        .feedback td{color:#cbd5e1}
+        .arrow{color:#38bdf8;font-weight:700}
+        .transcript{background:#1a1a24;border-radius:12px;padding:28px;font-size:14px;line-height:2;color:#94a3b8;white-space:pre-wrap;word-break:break-word;font-family:'JetBrains Mono','Noto Sans KR',monospace}
+        .transcript .tutor{color:#38bdf8}
+        .transcript .student{color:#a78bfa}
+        @media(max-width:640px){.header{padding:32px 16px}.header h1{font-size:22px}.cta-btn{padding:14px 28px;font-size:15px}.container{padding:0 16px 60px}}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-date">2026년 05월 25일</div>
+        <h1>📚 전화영어 복습</h1>
+        <div class="header-meta">
+            <span>⏱ 19분 18초</span>
+            <span>🎙 전화영어_025180304_20260525080114.m4a</span>
+        </div>
+    </div>
+    <div class="cta-section">
+        <button class="cta-btn" onclick="startReview()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Gemini에서 복습 대화 시작하기
+        </button>
+        <div class="cta-sub">클릭하면 프롬프트가 복사되고 Gemini가 열립니다</div>
+    </div>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('feedback')">📋 AI 피드백</button>
+            <button class="tab" onclick="switchTab('transcript')">🎙 수업 전사</button>
+        </div>
+        <div id="tab-feedback" class="tab-content active">
+            <div class="feedback"><p>따뜻하고 실용적인 영어 코치 Bell입니다! Joey, 오늘 수업 정말 즐거웠어요. 선생님과의 마지막 수업 소식에 아쉬움이 컸겠지만, 그 와중에도 투자와 자기계발에 대한 깊은 대화를 나눌 수 있어서 매우 인상 깊었습니다. 특히 선생님께서 Joey의 유머 감각을 칭찬하셨을 때, 저도 정말 뿌듯했어요! 다음 수업도 기대됩니다.</p>
+<br>
+<br>
+<p>### 0. 📌 Topic</p>
+<p>Topic: Discussing Investment Strategies and Adapting to Change</p>
+<br>
+<p>### 1. 📊 오늘의 대화 요약 (Summary)</p>
+<p>오늘 Joey는 선생님과의 마지막 수업 소식을 듣고 아쉬움을 표현하며, 투자 목적의 아파트 방문 계획과 아드님의 영어 교육에 대해 이야기했습니다. 또한, AI를 활용한 개인 비즈니스 및 투자 전략을 공유하며, 효율적인 의사결정 과정에 대한 깊이 있는 대화를 나누었습니다.</p>
+<br>
+<p>### 2. 💬 유창성 업그레이드 (Fluency & Natural Flow)</p>
+<p>Joey의 의미 전달은 훌륭했지만, 몇 가지 표현을 다듬으면 더욱 자연스럽고 원어민처럼 들릴 수 있습니다.</p>
+<br>
+<div class="numbered"><strong>1.</strong>  <strong>❌ 학습자 원문 (As Said):</strong> "my throat is a little sick."</div>
+<p>    *   <strong>✅ 자연스러운 표현 (Natural):</strong> "I have a bit of a sore throat."</p>
+<p>    *   <strong>💎 비즈니스 표현 (Professional):</strong> "I'm experiencing a slight throat discomfort."</p>
+<p>    *   <strong>💡 코칭 포인트:</strong> Using "sore throat" is the most common and natural way to describe this condition. "Sick" is generally used for a more overall illness.</p>
+<p>        <span class="arrow">→</span> "sore throat"는 목이 아플 때 가장 흔하고 자연스러운 표현입니다. "sick"은 보통 전반적인 질병에 사용됩니다.</p>
+<br>
+<div class="numbered"><strong>2.</strong>  <strong>❌ 학습자 원문 (As Said):</strong> "that apartment has a great view, the sea view."</div>
+<p>    *   <strong>✅ 자연스러운 표현 (Natural):</strong> "that apartment has a great sea view."</p>
+<p>    *   <strong>💎 비즈니스 표현 (Professional):</strong> "that apartment offers a magnificent ocean vista."</p>
+<p>    *   <strong>💡 코칭 포인트:</strong> Combining "great view" and "sea view" can be redundant. "Great sea view" is more concise and natural.</p>
+<p>        <span class="arrow">→</span> "great view"와 "sea view"를 함께 쓰는 것은 중복될 수 있습니다. "Great sea view"가 더 간결하고 자연스럽습니다.</p>
+<br>
+<div class="numbered"><strong>3.</strong>  <strong>❌ 학습자 원문 (As Said):</strong> "I wish you if you use some new, you work the new way, you will succeed."</div>
+<p>    *   <strong>✅ 자연스러운 표현 (Natural):</strong> "I wish you success in your new endeavor."</p>
+<p>    *   <strong>💎 비즈니스 표현 (Professional):</strong> "I wish you every success in your new venture."</p>
+<p>    *   <strong>💡 코칭 포인트:</strong> This sentence structure is a bit complex. "I wish you success in your new endeavor" is a common and polite way to express good wishes for someone's new plans.</p>
+<p>        <span class="arrow">→</span> 이 문장 구조는 다소 복잡합니다. "I wish you success in your new endeavor"는 누군가의 새로운 계획에 대해 행운을 빌어주는 흔하고 정중한 표현입니다.</p>
+<br>
+<p>### 3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)</p>
+<p>Category: <strong>Missing or Incorrect Prepositions</strong></p>
+<br>
+<p>Joey는 전치사 사용에서 가끔 실수를 보였습니다. 특히 특정 명사나 동사와 함께 쓰이는 전치사(collocation)를 더 정확하게 사용하면 문장의 자연스러움과 정확성을 크게 높일 수 있습니다.</p>
+<br>
+<table>
+<tr><th>❌ 원문 (As Said)</th><th>✅ 교정 예시 (Corrected)</th></tr>
+<tr><td>I'm checking some like Airbnb or mid-period rent <strong>purpose</strong>.</td><td>I'm checking some properties for Airbnb or mid-term rent <strong>purposes</strong>.</td></tr>
+<tr><td>there is no control <strong>our breath</strong> every time.</td><td>there is no control <strong>over our emotions</strong> every time.</td></tr>
+<tr><td>where is the best place to <strong>provide myself</strong>.</td><td>where is the best place to <strong>invest in myself</strong>.</td></tr>
+</table>
+<br>
+<p>📌 <strong>핵심 규칙:</strong> 명사나 동사 뒤에 오는 전치사는 문맥과 함께 정해지는 경우가 많으므로, 새로운 표현을 배울 때 전치사도 함께 익히는 것이 중요합니다.</p>
+<br>
+<p>🔁 <strong>따라 읽기:</strong></p>
+<p>🗣️ "I'm checking some properties for Airbnb or mid-term rent purposes."</p>
+<p>🗣️ "There is no control over our emotions every time."</p>
+<p>🗣️ "Where is the best place to invest in myself?"</p>
+<br>
+<p>### 4. 📗 어휘 확장 (Vocabulary Vault)</p>
+<p>오늘 대화에서 나왔거나 비즈니스 환경에서 유용하게 쓸 수 있는 어휘들을 살펴볼까요?</p>
+<br>
+<div class="numbered"><strong>1.</strong>  <strong>endeavor</strong> /ɪnˈdɛvər/ (n)</div>
+<p>    *   뜻: 노력, 시도, 사업</p>
+<p>    *   실전 예문: Our team's latest <strong>endeavor</strong> is to expand into the Southeast Asian market.</p>
+<br>
+<div class="numbered"><strong>2.</strong>  <strong>vista</strong> /ˈvɪstə/ (n)</div>
+<p>    *   뜻: 경치, 전망 (특히 길게 트인)</p>
+<p>    *   실전 예문: The new office building offers a panoramic <strong>vista</strong> of the city skyline.</p>
+<br>
+<div class="numbered"><strong>3.</strong>  <strong>feasible</strong> /ˈfiːzəbl/ (adj)</div>
+<p>    *   뜻: 실행 가능한, 실현 가능한</p>
+<p>    *   실전 예문: We need to determine if the proposed timeline for the project is <strong>feasible</strong>.</p>
+<br>
+<div class="numbered"><strong>4.</strong>  <strong>self-regulation</strong> /ˌsɛlfˌrɛɡjəˈleɪʃn/ (n)</div>
+<p>    *   뜻: 자기 통제, 자기 규제</p>
+<p>    *   실전 예문: Developing strong <strong>self-regulation</strong> skills is crucial for remote work productivity.</p>
+<br>
+<div class="numbered"><strong>5.</strong>  <strong>fierce</strong> /fɪrs/ (adj)</div>
+<p>    *   뜻: 치열한, 맹렬한</p>
+<p>    *   실전 예문: The competition in the AI software market is incredibly <strong>fierce</strong>.</p>
+<br>
+<p>### 5. 📝 실전 복습 챌린지 (Practice)</p>
+<p>오늘 배운 표현과 문법을 활용하여 다음 문장들을 영작해 보세요.</p>
+<br>
+<div class="numbered"><strong>1.</strong>  <strong>상황:</strong> 저는 목이 좀 아파서 오늘 재택근무를 할 예정입니다.</div>
+<p>    *   <strong>영작:</strong> (I have a bit of a sore throat, so I'll be working from home today.)</p>
+<br>
+<div class="numbered"><strong>2.</strong>  <strong>상황:</strong> 이 아파트는 멋진 바다 전망을 제공하며, 투자 목적으로 매우 매력적입니다.</div>
+<p>    *   <strong>영작:</strong> (This apartment offers a great sea view and is very attractive for investment purposes.)</p>
+<br>
+<div class="numbered"><strong>3.</strong>  <strong>상황:</strong> 새로운 사업을 시작하는 당신의 노력에 성공이 있기를 바랍니다. 시장 경쟁이 매우 치열하다는 것을 알지만, 당신은 분명 해낼 것입니다.</div>
+<p>    *   <strong>영작:</strong> (I wish you success in your new endeavor. I know the market competition is fierce, but I'm sure you'll make it.)</p>
+<br>
+<p>### 6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)</p>
+<br>
+<p>✨ <strong>Good Job:</strong></p>
+<p>"I'm so sad because you're a better teacher."</p>
+<p>Joey, 이 문장은 진심이 담긴 표현이었고, 문법적으로도 완벽했습니다. 감정을 솔직하고 정확하게 전달하는 능력은 영어 유창성에 있어 매우 중요한 부분이에요. 튜터님도 이 말에 감동받으셨을 거예요!</p>
+<br>
+<p>🚀 <strong>내일의 한 문장:</strong></p>
+<p>"I'm excited to share what I found regarding the investment apartment today."</p>
+<p>(오늘 투자용 아파트에 대해 뭘 찾았는지 공유하고 싶어요.)</p>
+<p><span class="arrow">→</span> 오늘 배운 'investment'와 'apartment'라는 단어를 활용하여, 다음 수업 시작 시 튜터에게 오늘 다녀온 아파트에 대한 이야기를 자연스럽게 시작할 수 있을 거예요.</p>
+<br>
+<br>
+<p>### [성과 지표]</p>
+<p><strong>유창성 점수:</strong> 8/10</p>
+<br>
+<p><strong>근거:</strong> Joey는 다양한 주제에 대해 막힘없이 자신의 의견을 표현했으며, 특히 복잡한 비즈니스 및 투자 관련 아이디어를 설명할 때도 주저함이 없었습니다. 유머 감각을 발휘하는 능력은 높은 수준의 유창성을 보여줍니다. 다만, 일부 문장 구조나 전치사 사용에서 원어민이 듣기에 다소 어색하게 느껴질 수 있는 부분이 있어 2점을 감점했습니다.</p>
+<br>
+<p><strong>다음 수업 '원포인트 액션 플랜':</strong></p>
+<p>다음 수업에서는 <strong>"전치사 collocation"</strong>에 집중하여, 특정 동사나 명사 뒤에 오는 전치사를 더 정확하게 사용하는 연습을 해봅시다. 특히 Joey가 비즈니스 상황에서 자주 사용하는 표현들에 대한 전치사 짝꿍을 익히는 데 중점을 둘 거예요.</p></div>
+        </div>
+        <div id="tab-transcript" class="tab-content">
+            <div class="transcript"><span class="tutor">[Tutor]</span> Hello.
+<span class="tutor">[Tutor]</span> Good morning, Joey. How are you today?
+[Joey] I&#x27;m doing great. Yeah, I&#x27;m doing good. How are you today?
+<span class="tutor">[Tutor]</span> I am great. Thank you very much for asking.
+[Joey] Yes, me too.
+<span class="tutor">[Tutor]</span> I know it&#x27;s your day off and it&#x27;s a holiday, so...
+[Joey] Yes, you&#x27;re right.
+<span class="tutor">[Tutor]</span> Are you doing anything special today?
+[Joey] Today? Ah, nothing special. We just relax because my throat is a little sick. So, yeah, I need some break time. Yeah, maybe I can transfer to you my voice. Oh no. No. So it&#x27;s okay. I&#x27;m good and maybe today I will go visit some apartments. That apartment has a great view, the sea view. But that is so cheap because that location is not popular.
+<span class="tutor">[Tutor]</span> In Busan?
+[Joey] Yeah, in Busan, the Yongdo Island. Our purpose is to invest in that apartment.
+<span class="tutor">[Tutor]</span> To invest in real estate.
+[Joey] Yeah, in real estate. These days in Busan, there are so many people gathering in our city. Yeah, so that is a popular travel place. So yeah, I&#x27;m checking some like Airbnb or mid-period rent purpose. So I will check them. So I will visit that place and look around.
+<span class="tutor">[Tutor]</span> And see if it&#x27;s a good investment opportunity.
+[Joey] I like this.
+<span class="tutor">[Tutor]</span> Did you want to take a look at the book today?
+[Joey] Oh, I&#x27;m so sorry. My textbook is in my office in Seoul.
+<span class="tutor">[Tutor]</span> Okay. No textbook. It absolutely is. So did you get a message from Carrot English that this is my last week?
+[Joey] Oh really? No. You did not get the message. Oh, I&#x27;m sorry. Okay. Yeah. Oh my god. No. No way. Do you have some plans?
+<span class="tutor">[Tutor]</span> Yeah, I&#x27;m gonna keep teaching, just not with Carrot.
+[Joey] Maybe I see, I understand.
+<span class="tutor">[Tutor]</span> So, yes, I&#x27;m focusing more on independent students, Colombian students.
+[Joey] Yes.
+[Joey] I&#x27;m so sad because you&#x27;re a better teacher.
+<span class="tutor">[Tutor]</span> Thank you. And I think we&#x27;ve been having classes together. I think you are one of my first students.
+[Joey] Oh, thank you so much.
+<span class="tutor">[Tutor]</span> Yes, since June of last year.
+[Joey] Ah, June of last year.
+<span class="tutor">[Tutor]</span> You are literally, yes, I think my first or one of my first students.
+[Joey] That&#x27;s wild.
+[Joey] Yes, I wish you if you use some new, you work the new way, you will succeed.
+<span class="tutor">[Tutor]</span> Oh, thank you. Thank you so much. And I appreciate, I really appreciated all of our conversations. And I noticed how much, I don&#x27;t know if you noticed, how much humor you bring to class. And I don&#x27;t know if you know this, but it&#x27;s one of the most difficult things to grasp in another language. So making jokes, being funny, it&#x27;s very difficult in another language. So you&#x27;re doing it so well that I am amazed at your progress.
+[Joey] Amazed. Thank you so much. Your word is fine. If I use the Korean, it&#x27;s better. Just a little more.
+<span class="tutor">[Tutor]</span> But see, yes, even it&#x27;s just a lot of people focus just on grammar and speaking fast and speaking correctly. But when you&#x27;re able to make a joke in another language and the person understands the joke, it&#x27;s another level.
+[Joey] I see. It&#x27;s another level. Good, yeah. Yeah, this is important, right? I see. So this is the last class.
+<span class="tutor">[Tutor]</span> We have one more. We have one today and one tomorrow.
+[Joey] Yes. Maybe the Tuesday. Today is Tuesday, the last class.
+<span class="tutor">[Tutor]</span> Yes, because my last day is on Wednesday.
+[Joey] Wednesday, I see. I understand. I still have a few days. Yes, tell me. This month.
+<span class="tutor">[Tutor]</span> This month.
+[Joey] I see.
+<span class="tutor">[Tutor]</span> Yes, exactly.
+[Joey] Exactly.
+<span class="tutor">[Tutor]</span> So, I&#x27;m just wrapping up this month.
+[Joey] So your plan is to teach English in your country? Still, absolutely.
+<span class="tutor">[Tutor]</span> Oh yes, I love teaching. I cannot give it up. I love it.
+[Joey] And this is not online, that&#x27;s offline, right?
+<span class="tutor">[Tutor]</span> No, I&#x27;m teaching online still.
+[Joey] Oh, online in Colombia. Yeah, but how about the students? Are they Korean or Colombian or some Japanese?
+<span class="tutor">[Tutor]</span> Hmm, right now I only have Colombian students. Oh, and I&#x27;m doing, I&#x27;m doing longer classes. So my classes are a minimum of 45 minutes, 45 minutes, an hour. Some of them are an hour and a half where we can really, yes, get into some concepts. And yeah, so a little bit different, a little more of a traditional class.
+[Joey] Traditional class. Yeah. I see. But that is online also, online, right?
+<span class="tutor">[Tutor]</span> Yep, absolutely. I think students and also teachers like the convenience of having classes online.
+[Joey] Yeah, that is more convenient.
+<span class="tutor">[Tutor]</span> Absolutely.
+[Joey] Yeah, because some countries have good transportation. Yes. Yes, and if we meet a good teacher, it is better. It is an efficient way to teach.
+<span class="tutor">[Tutor]</span> Exactly.
+[Joey] Yes. Okay, I see.
+<span class="tutor">[Tutor]</span> Exactly.
+[Joey] I&#x27;m so sad. And you&#x27;re right. Oh, it&#x27;s okay. Every meeting has some, what can I say?
+<span class="tutor">[Tutor]</span> Purpose.
+[Joey] Yeah, time. Yes. So maybe sometimes it is a good way.
+<span class="tutor">[Tutor]</span> There&#x27;s an expression I&#x27;m trying to remember it about, hold on, let me just think for a second, about how some people in our life for a season. Hold on, let me just think about it.
+[Joey] Ah, have a season. Every human relationship has a season. Is it right? Okay. Let me see. I&#x27;m trying to get to the exact expression that is. Hold on a second. Yeah.
+<span class="tutor">[Tutor]</span> So some people come into our lives for a season, which means it&#x27;s not forever. Like you have some people in your life forever, like your son.
+[Joey] Yes. Your family.
+[Joey] Sorry? Could you repeat the expression?
+<span class="tutor">[Tutor]</span> It&#x27;s a saying. Some people come into our lives for a season.
+[Joey] Oh my God. Okay. Okay. Maybe I&#x27;ll try next time. Okay.
+<span class="tutor">[Tutor]</span> Anyway, it&#x27;s just a way of saying that, you know, it can be temporary, but it can have a big impact.
+[Joey] And temporary, but have a big impact. Yeah, my son is the same, similar case. He, these days, he learns English from the language school.
+<span class="tutor">[Tutor]</span> He&#x27;s learning English?
+[Joey] Yeah, learning English from the language school.
+<span class="tutor">[Tutor]</span> I love it!
+[Joey] Yeah, the language school. And he&#x27;s so smart. So he learned English, but the language school called, this one is the last class. So it&#x27;s the same case for me. So maybe yeah, I find some new English class, new English academy.
+<span class="tutor">[Tutor]</span> Teacher, absolutely. Yes, yes. It&#x27;s the same case. We start a new something to the new. Find a new way. Find a new teacher. Find a new class.
+<span class="tutor">[Tutor]</span> And does he enjoy learning English?
+[Joey] He likes English.
+<span class="tutor">[Tutor]</span> He likes it?
+[Joey] Yeah. He learns twice per week. One class is a two-hour class.
+<span class="tutor">[Tutor]</span> Right.
+[Joey] And I think he liked the book, reading a book. But that language school has so many books in the language school. So sometimes he borrows a book and talks about something, yeah, to do in the academy. So he liked the academic, yeah, system. But these days, I will find some new academy, but near my house, near my downtown, there is no good place to learn English. So I&#x27;m a little considering how to find a new way, how to find a new place to learn English. I also consider online or some good something.
+<span class="tutor">[Tutor]</span> Absolutely. And I&#x27;m sure that our AI assistants can help us with that kind of search, right?
+[Joey] I think that is not a good way because maybe the technical level is the highest, but maybe the child, the children usually they don&#x27;t control their time.
+<span class="tutor">[Tutor]</span> Oh, yes. No, I meant for searching for a school, not for learning, but for searching for a school.
+[Joey] Yes, it&#x27;s better because it is the same. I&#x27;m used to AI and I have some IT technical use of AI, but it is difficult to use the AI because there are no emotions and there is no control our breath every time. So the first, I found the new teacher.
+<span class="tutor">[Tutor]</span> Yes, and what I was suggesting is using AI to find the new teacher.
+[Joey] I see. That is a good way. That is a good way.
+<span class="tutor">[Tutor]</span> Right? Let it do all of the search for you.
+[Joey] Ah, yes, you&#x27;re right. I find that and today I&#x27;m considering where is the best place to provide myself.
+<span class="tutor">[Tutor]</span> Okay. And how is it going with the company that you&#x27;re starting, with a new business? Have you worked on that lately? I feel like we haven&#x27;t talked about that lately.
+[Joey] My company doesn&#x27;t use English.
+<span class="tutor">[Tutor]</span> No, your business that you&#x27;re starting, just in general, how it&#x27;s going with that.
+[Joey] My private business, right?
+<span class="tutor">[Tutor]</span> Yes, yes.
+[Joey] I think I need more practice. Yes, because if we make money, there is some... I have some decision about the AI. That is impossible to make money using the AI system. But it is hard for me about the investor advice. So usually gathering information or making a decision, that is efficiency. So I used AI and I can make decisions more quickly. So I changed my way. Just I invested in some real estate and stock market or fund market and gathering information using AI more quickly. But if I make some software and sell them, that is impossible because that is almost a red ocean for me. So I changed my way. Just I invested in something and then make money. But that decision, before that decision, gathering information and some easy solution for me, I find that&#x27;s the way to use the AI. So totally, that&#x27;s the way.
+<span class="tutor">[Tutor]</span> I love it. So AI is helping you, as you said, become more efficient with your decision-making process, right? Which is important.
+[Joey] Yes, you&#x27;re right. People like those. Because people like those, it is possible to make a software or make some advertisement or make something.
+<span class="tutor">[Tutor]</span> Sure.
+[Joey] That&#x27;s not easy. That is not good quality.
+<span class="tutor">[Tutor]</span> No, and the competition is fierce in that field, right?
+[Joey] Yes, you&#x27;re right. Everybody made software.
+<span class="tutor">[Tutor]</span> Everybody made an app, right? So it&#x27;s so hard to compete with that.
+[Joey] Yes, you&#x27;re right. Okay.
+<span class="tutor">[Tutor]</span> Okay, well that was a very nice catch-up. Thank you very much for your time this morning. I know it was your day off and I appreciate it.
+[Joey] Thank you for your class. Yeah, talk to you tomorrow. I hope you find...
+<span class="tutor">[Tutor]</span> Yes, tomorrow we have class again.
+[Joey] Yes, okay. Have a nice day, teacher.
+<span class="tutor">[Tutor]</span> Thank you. You as well. And tomorrow, please tell me if you found any interesting apartments for an investment.
+[Joey] Oh yes. No problem. Thank you so much. Have a nice day.
+<span class="tutor">[Tutor]</span> You take care. Bye bye.
+[Joey] Thank you. Bye bye. Bye bye.</div>
+        </div>
+    </div>
+    <div class="toast" id="toast">✅ 프롬프트가 복사되었습니다!</div>
+    <script>
+        const REVIEW_PROMPT="너는 나의 영어 회화 복습 파트너야. 오늘 내 전화영어 수업 내용을 기반으로 대화하면서 복습을 도와줘.\n\n[오늘 수업 전사 내용]\n[Tutor] Hello.\n[Tutor] Good morning, Joey. How are you today?\n[Joey] I'm doing great. Yeah, I'm doing good. How are you today?\n[Tutor] I am great. Thank you very much for asking.\n[Joey] Yes, me too.\n[Tutor] I know it's your day off and it's a holiday, so...\n[Joey] Yes, you're right.\n[Tutor] Are you doing anything special today?\n[Joey] Today? Ah, nothing special. We just relax because my throat is a little sick. So, yeah, I need some break time. Yeah, maybe I can transfer to you my voice. Oh no. No. So it's okay. I'm good and maybe today I will go visit some apartments. That apartment has a great view, the sea view. But that is so cheap because that location is not popular.\n[Tutor] In Busan?\n[Joey] Yeah, in Busan, the Yongdo Island. Our purpose is to invest in that apartment.\n[Tutor] To invest in real estate.\n[Joey] Yeah, in real estate. These days in Busan, there are so many people gathering in our city. Yeah, so that is a popular travel place. So yeah, I'm checking some like Airbnb or mid-period rent purpose. So I will check them. So I will visit that place and look around.\n[Tutor] And see if it's a good investment opportunity.\n[Joey] I like this.\n[Tutor] Did you want to take a look at the book today?\n[Joey] Oh, I'm so sorry. My textbook is in my office in Seoul.\n[Tutor] Okay. No textbook. It absolutely is. So did you get a message from Carrot English that this is my last week?\n[Joey] Oh really? No. You did not get the message. Oh, I'm sorry. Okay. Yeah. Oh my god. No. No way. Do you have some plans?\n[Tutor] Yeah, I'm gonna keep teaching, just not with Carrot.\n[Joey] Maybe I see, I understand.\n[Tutor] So, yes, I'm focusing more on independent students, Colombian students.\n[Joey] Yes.\n[Joey] I'm so sad because you're a better teacher.\n[Tutor] Thank you. And I think we've been having classes together. I think you are one of my first students.\n[Joey] Oh, thank you so much.\n[Tutor] Yes, since June of last year.\n[Joey] Ah, June of last year.\n[Tutor] You are literally, yes, I think my first or one of my first students.\n[Joey] That's wild.\n[Joey] Yes, I wish you if you use some new, you work the new way, you will succeed.\n[Tutor] Oh, thank you. Thank you so much. And I appreciate, I really appreciated all of our conversations. And I noticed how much, I don't know if you noticed, how much humor you bring to class. And I don't know if you know this, but it's one of the most difficult things to grasp in another language. So making jokes, being funny, it's very difficult in another language. So you're doing it so well that I am amazed at your progress.\n[Joey] Amazed. Thank you so much. Your word is fine. If I use the Korean, it's better. Just a little more.\n[Tutor] But see, yes, even it's just a lot of people focus just on grammar and speaking fast and speaking correctly. But when you're able to make a joke in another language and the person understands the joke, it's another level.\n[Joey] I see. It's another level. Good, yeah. Yeah, this is important, right? I see. So this is the last class.\n[Tutor] We have one more. We have one today and one tomorrow.\n[Joey] Yes. Maybe the Tuesday. Today is Tuesday, the last class.\n[Tutor] Yes, because my last day is on Wednesday.\n[Joey] Wednesday, I see. I understand. I still have a few days. Yes, tell me. This month.\n[Tutor] This month.\n[Joey] I see.\n[Tutor] Yes, exactly.\n[Joey] Exactly.\n[Tutor] So, I'm just wrapping up this month.\n[Joey] So your plan is to teach English in your country? Still, absolutely.\n[Tutor] Oh yes, I love teaching. I cannot give it up. I love it.\n[Joey] And this is not online, that's offline, right?\n[Tutor] No, I'm teaching online still.\n[Joey] Oh, online in Colombia. Yeah, but how about the students? Are they Korean or Colombian or some Japanese?\n[Tutor] Hmm, right now I only have Colombian students. Oh, and I'm doing, I'm doing longer classes. So my classes are a minimum of 45 minutes, 45 minutes, an hour. Some of them are an hour and a half where we can really, yes, get into some concepts. And yeah, so a little bit different, a little more of a traditional class.\n[Joey] Traditional class. Yeah. I see. But that is online also, online, right?\n[Tutor] Yep, absolutely. I think students and also teachers like the convenience of having classes online.\n[Joey] Yeah, that is more convenient.\n[Tutor] Absolutely.\n[Joey] Yeah, because some countries have good transportation. Yes. Yes, and if we meet a good teacher, it is better. It is an efficient way to teach.\n[Tutor] Exactly.\n[Joey] Yes. Okay, I see.\n[Tutor] Exactly.\n[Joey] I'm so sad. And you're right. Oh, it's okay. Every meeting has some, what can I say?\n[Tutor] Purpose.\n[Joey] Yeah, time. Yes. So maybe sometimes it is a good way.\n[Tutor] There's an expression I'm trying to remember it about, hold on, let me just think for a second, about how some people in our life for a season. Hold on, let me just think about it.\n[Joey] Ah, have a season. Every human relationship has a season. Is it right? Okay. Let me see. I'm trying to get to the exact expression that is. Hold on a second. Yeah.\n[Tutor] So some people come into our lives for a season, which means it's not forever. Like you have some people in your life forever, like your son.\n[Joey] Yes. Your family.\n[Joey] Sorry? Could you repeat the expression?\n[Tutor] It's a saying. Some people come into our lives for a season.\n[Joey] Oh my God. Okay. Okay. Maybe I'll try next time. Okay.\n[Tutor] Anyway, it's just a way of saying that, you know, it can be temporary, but it can have a big impact.\n[Joey] And temporary, but have a big impact. Yeah, my son is the same, similar case. He, these days, he learns English from the language school.\n[Tutor] He's learning English?\n[Joey] Yeah, learning English from the language school.\n[Tutor] I love it!\n[Joey] Yeah, the language school. And he's so smart. So he learned English, but the language school called, this one is the last class. So it's the same case for me. So maybe yeah, I find some new English class, new English academy.\n[Tutor] Teacher, absolutely. Yes, yes. It's the same case. We start a new something to the new. Find a new way. Find a new teacher. Find a new class.\n[Tutor] And does he enjoy learning English?\n[Joey] He likes English.\n[Tutor] He likes it?\n[Joey] Yeah. He learns twice per week. One class is a two-hour class.\n[Tutor] Right.\n[Joey] And I think he liked the book, reading a book. But that language school has so many books in the language school. So sometimes he borrows a book and talks about something, yeah, to do in the academy. So he liked the academic, yeah, system. But these days, I will find some new academy, but near my house, near my downtown, there is no good place to learn English. So I'm a little considering how to find a new way, how to find a new place to learn English. I also consider online or some good something.\n[Tutor] Absolutely. And I'm sure that our AI assistants can help us with that kind of search, right?\n[Joey] I think that is not a good way because maybe the technical level is the highest, but maybe the child, the children usually they don't control their time.\n[Tutor] Oh, yes. No, I meant for searching for a school, not for learning, but for searching for a school.\n[Joey] Yes, it's better because it is the same. I'm used to AI and I have some IT technical use of AI, but it is difficult to use the AI because there are no emotions and there is no control our breath every time. So the first, I found the new teacher.\n[Tutor] Yes, and what I was suggesting is using AI to find the new teacher.\n[Joey] I see. That is a good way. That is a good way.\n[Tutor] Right? Let it do all of the search for you.\n[Joey] Ah, yes, you're right. I find that and today I'm considering where is the best place to provide myself.\n[Tutor] Okay. And how is it going with the company that you're starting, with a new business? Have you worked on that lately? I feel like we haven't talked about that lately.\n[Joey] My company doesn't use English.\n[Tutor] No, your business that you're starting, just in general, how it's going with that.\n[Joey] My private business, right?\n[Tutor] Yes, yes.\n[Joey] I think I need more practice. Yes, because if we make money, there is some... I have some decision about the AI. That is impossible to make money using the AI system. But it is hard for me about the investor advice. So usually gathering information or making a decision, that is efficiency. So I used AI and I can make decisions more quickly. So I changed my way. Just I invested in some real estate and stock market or fund market and gathering information using AI more quickly. But if I make some software and sell them, that is impossible because that is almost a red ocean for me. So I changed my way. Just I invested in something and then make money. But that decision, before that decision, gathering information and some easy solution for me, I find that's the way to use the AI. So totally, that's the way.\n[Tutor] I love it. So AI is helping you, as you said, become more efficient with your decision-making process, right? Which is important.\n[Joey] Yes, you're right. People like those. Because people like those, it is possible to make a software or make some advertisement or make something.\n[Tutor] Sure.\n[Joey] That's not easy. That is not good quality.\n[Tutor] No, and the competition is fierce in that field, right?\n[Joey] Yes, you're right. Everybody made software.\n[Tutor] Everybody made an app, right? So it's so hard to compete with that.\n[Joey] Yes, you're right. Okay.\n[Tutor] Okay, well that was a very nice catch-up. Thank you very much for your time this morning. I know it was your day off and I appreciate it.\n[Joey] Thank you for your class. Yeah, talk to you tomorrow. I hope you find...\n[Tutor] Yes, tomorrow we have class again.\n[Joey] Yes, okay. Have a nice day, teacher.\n[Tutor] Thank you. You as well. And tomorrow, please tell me if you found any interesting apartments for an investment.\n[Joey] Oh yes. No problem. Thank you so much. Have a nice day.\n[Tutor] You take care. Bye bye.\n[Joey] Thank you. Bye bye. Bye bye.\n\n[AI 피드백]\n따뜻하고 실용적인 영어 코치 Bell입니다! Joey, 오늘 수업 정말 즐거웠어요. 선생님과의 마지막 수업 소식에 아쉬움이 컸겠지만, 그 와중에도 투자와 자기계발에 대한 깊은 대화를 나눌 수 있어서 매우 인상 깊었습니다. 특히 선생님께서 Joey의 유머 감각을 칭찬하셨을 때, 저도 정말 뿌듯했어요! 다음 수업도 기대됩니다.\n\n---\n\n### 0. 📌 Topic\nTopic: Discussing Investment Strategies and Adapting to Change\n\n### 1. 📊 오늘의 대화 요약 (Summary)\n오늘 Joey는 선생님과의 마지막 수업 소식을 듣고 아쉬움을 표현하며, 투자 목적의 아파트 방문 계획과 아드님의 영어 교육에 대해 이야기했습니다. 또한, AI를 활용한 개인 비즈니스 및 투자 전략을 공유하며, 효율적인 의사결정 과정에 대한 깊이 있는 대화를 나누었습니다.\n\n### 2. 💬 유창성 업그레이드 (Fluency & Natural Flow)\nJoey의 의미 전달은 훌륭했지만, 몇 가지 표현을 다듬으면 더욱 자연스럽고 원어민처럼 들릴 수 있습니다.\n\n1.  **❌ 학습자 원문 (As Said):** \"my throat is a little sick.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"I have a bit of a sore throat.\"\n    *   **💎 비즈니스 표현 (Professional):** \"I'm experiencing a slight throat discomfort.\"\n    *   **💡 코칭 포인트:** Using \"sore throat\" is the most common and natural way to describe this condition. \"Sick\" is generally used for a more overall illness.\n        → \"sore throat\"는 목이 아플 때 가장 흔하고 자연스러운 표현입니다. \"sick\"은 보통 전반적인 질병에 사용됩니다.\n\n2.  **❌ 학습자 원문 (As Said):** \"that apartment has a great view, the sea view.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"that apartment has a great sea view.\"\n    *   **💎 비즈니스 표현 (Professional):** \"that apartment offers a magnificent ocean vista.\"\n    *   **💡 코칭 포인트:** Combining \"great view\" and \"sea view\" can be redundant. \"Great sea view\" is more concise and natural.\n        → \"great view\"와 \"sea view\"를 함께 쓰는 것은 중복될 수 있습니다. \"Great sea view\"가 더 간결하고 자연스럽습니다.\n\n3.  **❌ 학습자 원문 (As Said):** \"I wish you if you use some new, you work the new way, you will succeed.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"I wish you success in your new endeavor.\"\n    *   **💎 비즈니스 표현 (Professional):** \"I wish you every success in your new venture.\"\n    *   **💡 코칭 포인트:** This sentence structure is a bit complex. \"I wish you success in your new endeavor\" is a common and polite way to express good wishes for someone's new plans.\n        → 이 문장 구조는 다소 복잡합니다. \"I wish you success in your new endeavor\"는 누군가의 새로운 계획에 대해 행운을 빌어주는 흔하고 정중한 표현입니다.\n\n### 3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)\nCategory: **Missing or Incorrect Prepositions**\n\nJoey는 전치사 사용에서 가끔 실수를 보였습니다. 특히 특정 명사나 동사와 함께 쓰이는 전치사(collocation)를 더 정확하게 사용하면 문장의 자연스러움과 정확성을 크게 높일 수 있습니다.\n\n| ❌ 원문 (As Said)                                         | ✅ 교정 예시 (Corrected)                                          |\n| :------------------------------------------------------- | :------------------------------------------------------------ |\n| I'm checking some like Airbnb or mid-period rent **purpose**. | I'm checking some properties for Airbnb or mid-term rent **purposes**. |\n| there is no control **our breath** every time.           | there is no control **over our emotions** every time.           |\n| where is the best place to **provide myself**.           | where is the best place to **invest in myself**.              |\n\n📌 **핵심 규칙:** 명사나 동사 뒤에 오는 전치사는 문맥과 함께 정해지는 경우가 많으므로, 새로운 표현을 배울 때 전치사도 함께 익히는 것이 중요합니다.\n\n🔁 **따라 읽기:**\n🗣️ \"I'm checking some properties for Airbnb or mid-term rent purposes.\"\n🗣️ \"There is no control over our emotions every time.\"\n🗣️ \"Where is the best place to invest in myself?\"\n\n### 4. 📗 어휘 확장 (Vocabulary Vault)\n오늘 대화에서 나왔거나 비즈니스 환경에서 유용하게 쓸 수 있는 어휘들을 살펴볼까요?\n\n1.  **endeavor** /ɪnˈdɛvər/ (n)\n    *   뜻: 노력, 시도, 사업\n    *   실전 예문: Our team's latest **endeavor** is to expand into the Southeast Asian market.\n\n2.  **vista** /ˈvɪstə/ (n)\n    *   뜻: 경치, 전망 (특히 길게 트인)\n    *   실전 예문: The new office building offers a panoramic **vista** of the city skyline.\n\n3.  **feasible** /ˈfiːzəbl/ (adj)\n    *   뜻: 실행 가능한, 실현 가능한\n    *   실전 예문: We need to determine if the proposed timeline for the project is **feasible**.\n\n4.  **self-regulation** /ˌsɛlfˌrɛɡjəˈleɪʃn/ (n)\n    *   뜻: 자기 통제, 자기 규제\n    *   실전 예문: Developing strong **self-regulation** skills is crucial for remote work productivity.\n\n5.  **fierce** /fɪrs/ (adj)\n    *   뜻: 치열한, 맹렬한\n    *   실전 예문: The competition in the AI software market is incredibly **fierce**.\n\n### 5. 📝 실전 복습 챌린지 (Practice)\n오늘 배운 표현과 문법을 활용하여 다음 문장들을 영작해 보세요.\n\n1.  **상황:** 저는 목이 좀 아파서 오늘 재택근무를 할 예정입니다.\n    *   **영작:** (I have a bit of a sore throat, so I'll be working from home today.)\n\n2.  **상황:** 이 아파트는 멋진 바다 전망을 제공하며, 투자 목적으로 매우 매력적입니다.\n    *   **영작:** (This apartment offers a great sea view and is very attractive for investment purposes.)\n\n3.  **상황:** 새로운 사업을 시작하는 당신의 노력에 성공이 있기를 바랍니다. 시장 경쟁이 매우 치열하다는 것을 알지만, 당신은 분명 해낼 것입니다.\n    *   **영작:** (I wish you success in your new endeavor. I know the market competition is fierce, but I'm sure you'll make it.)\n\n### 6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)\n\n✨ **Good Job:**\n\"I'm so sad because you're a better teacher.\"\nJoey, 이 문장은 진심이 담긴 표현이었고, 문법적으로도 완벽했습니다. 감정을 솔직하고 정확하게 전달하는 능력은 영어 유창성에 있어 매우 중요한 부분이에요. 튜터님도 이 말에 감동받으셨을 거예요!\n\n🚀 **내일의 한 문장:**\n\"I'm excited to share what I found regarding the investment apartment today.\"\n(오늘 투자용 아파트에 대해 뭘 찾았는지 공유하고 싶어요.)\n→ 오늘 배운 'investment'와 'apartment'라는 단어를 활용하여, 다음 수업 시작 시 튜터에게 오늘 다녀온 아파트에 대한 이야기를 자연스럽게 시작할 수 있을 거예요.\n\n---\n\n### [성과 지표]\n**유창성 점수:** 8/10\n\n**근거:** Joey는 다양한 주제에 대해 막힘없이 자신의 의견을 표현했으며, 특히 복잡한 비즈니스 및 투자 관련 아이디어를 설명할 때도 주저함이 없었습니다. 유머 감각을 발휘하는 능력은 높은 수준의 유창성을 보여줍니다. 다만, 일부 문장 구조나 전치사 사용에서 원어민이 듣기에 다소 어색하게 느껴질 수 있는 부분이 있어 2점을 감점했습니다.\n\n**다음 수업 '원포인트 액션 플랜':**\n다음 수업에서는 **\"전치사 collocation\"**에 집중하여, 특정 동사나 명사 뒤에 오는 전치사를 더 정확하게 사용하는 연습을 해봅시다. 특히 Joey가 비즈니스 상황에서 자주 사용하는 표현들에 대한 전치사 짝꿍을 익히는 데 중점을 둘 거예요.\n\n위 내용을 바탕으로:\n1. 먼저 오늘 수업에서 내가 틀렸거나 어색했던 표현을 하나 골라서, 관련된 상황을 영어로 질문해줘.\n2. 내가 영어로 대답하면, 자연스러운지 확인하고 더 나은 표현이 있으면 알려줘.\n3. 특히 \"반복 실수 패턴\"에서 지적된 부분을 집중적으로 연습시켜줘.\n4. 이런 식으로 오늘 배운 표현들을 하나씩 복습하자.\n5. 한국어 설명은 필요할 때만 간단히, 대화는 최대한 영어로 진행해줘.\n\n그럼 시작하자!";
+        function startReview(){navigator.clipboard.writeText(REVIEW_PROMPT).then(()=>{showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)}).catch(()=>{const t=document.createElement('textarea');t.value=REVIEW_PROMPT;document.body.appendChild(t);t.select();document.execCommand('copy');document.body.removeChild(t);showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)})}
+        function showToast(){const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500)}
+        function switchTab(n){document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',n==='feedback'?i===0:i===1));document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));document.getElementById('tab-'+n).classList.add('active')}
+    </script>
+</body>
+</html>
