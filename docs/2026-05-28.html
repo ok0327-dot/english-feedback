@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전화영어 복습 - 2026년 05월 28일</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Noto Sans KR',sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.75;min-height:100vh}
+        .header{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);border-bottom:1px solid rgba(255,255,255,.06);padding:48px 24px 40px;text-align:center}
+        .header-date{font-size:13px;color:#94a3b8;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+        .header h1{font-size:28px;font-weight:700;color:#f1f5f9;margin-bottom:16px}
+        .header-meta{display:flex;justify-content:center;gap:24px;font-size:14px;color:#64748b}
+        .header-meta span{display:flex;align-items:center;gap:6px}
+        .cta-section{text-align:center;padding:40px 24px}
+        .cta-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:linear-gradient(135deg,#38bdf8,#818cf8);color:#fff;font-size:16px;font-weight:600;font-family:'Noto Sans KR',sans-serif;border:none;border-radius:50px;cursor:pointer;transition:all .3s;text-decoration:none;box-shadow:0 4px 24px rgba(56,189,248,.25)}
+        .cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(56,189,248,.35)}
+        .cta-btn svg{width:20px;height:20px}
+        .cta-sub{margin-top:12px;font-size:13px;color:#64748b}
+        .toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#38bdf8;padding:14px 28px;border-radius:12px;font-size:14px;font-weight:500;border:1px solid rgba(56,189,248,.2);box-shadow:0 8px 32px rgba(0,0,0,.4);opacity:0;transition:all .4s cubic-bezier(.16,1,.3,1);z-index:1000}
+        .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+        .container{max-width:720px;margin:0 auto;padding:0 24px 80px}
+        .tabs{display:flex;gap:4px;background:#1a1a24;padding:4px;border-radius:12px;margin-bottom:32px}
+        .tab{flex:1;padding:12px;text-align:center;font-size:14px;font-weight:500;color:#64748b;background:0 0;border:none;border-radius:8px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all .2s}
+        .tab.active{background:#262636;color:#f1f5f9}
+        .tab-content{display:none}.tab-content.active{display:block}
+        .feedback h2{font-size:18px;font-weight:700;color:#f1f5f9;margin:36px 0 16px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.06)}
+        .feedback h2:first-child{margin-top:0}
+        .feedback p{margin:8px 0;color:#cbd5e1}
+        .feedback .item{padding:6px 0 6px 16px;border-left:2px solid #334155;margin:6px 0;color:#cbd5e1}
+        .feedback .numbered{padding:8px 0 8px 16px;color:#cbd5e1}
+        .feedback .numbered strong{color:#38bdf8}
+        .feedback strong{color:#f1f5f9}
+        .feedback code{background:#1e293b;padding:2px 8px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#38bdf8}
+        .feedback table{width:100%;border-collapse:collapse;margin:12px 0}
+        .feedback th,.feedback td{padding:10px 14px;text-align:left;border-bottom:1px solid #262636}
+        .feedback th{color:#94a3b8;font-weight:500;font-size:13px}
+        .feedback td{color:#cbd5e1}
+        .arrow{color:#38bdf8;font-weight:700}
+        .transcript{background:#1a1a24;border-radius:12px;padding:28px;font-size:14px;line-height:2;color:#94a3b8;white-space:pre-wrap;word-break:break-word;font-family:'JetBrains Mono','Noto Sans KR',monospace}
+        .transcript .tutor{color:#38bdf8}
+        .transcript .student{color:#a78bfa}
+        @media(max-width:640px){.header{padding:32px 16px}.header h1{font-size:22px}.cta-btn{padding:14px 28px;font-size:15px}.container{padding:0 16px 60px}}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-date">2026년 05월 28일</div>
+        <h1>📚 전화영어 복습</h1>
+        <div class="header-meta">
+            <span>⏱ 20분 1초</span>
+            <span>🎙 전화영어_025180304_20260528080046.m4a</span>
+        </div>
+    </div>
+    <div class="cta-section">
+        <button class="cta-btn" onclick="startReview()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Gemini에서 복습 대화 시작하기
+        </button>
+        <div class="cta-sub">클릭하면 프롬프트가 복사되고 Gemini가 열립니다</div>
+    </div>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('feedback')">📋 AI 피드백</button>
+            <button class="tab" onclick="switchTab('transcript')">🎙 수업 전사</button>
+        </div>
+        <div id="tab-feedback" class="tab-content active">
+            <div class="feedback"><p>안녕하세요, Joey! 오늘 Jazz 선생님과의 대화에서 주말 계획부터 취미, 여행 경험까지 다양한 이야기를 나누며 영어 실력을 뽐내주셨어요. 특히 투자와 자기계발에 대한 깊이 있는 생각들을 영어로 자연스럽게 표현하려는 노력이 돋보였습니다.</p>
+<br>
+<p>오늘 배운 표현들을 꾸준히 연습해서 Joey의 영어가 한 단계 더 성장할 수 있도록 제가 따뜻하게 도와드릴게요!</p>
+<br>
+<br>
+<p><strong>0. 📌 Topic</strong></p>
+<p>Topic: Discussing Weekend Plans, Hobbies, and Travel Experiences</p>
+<br>
+<p><strong>1. 📊 오늘의 대화 요약 (Summary)</strong></p>
+<p>오늘 수업에서는 Joey의 주말 계획(이발, 장미 구경 등)과 선생님의 주말 계획에 대해 이야기했습니다. 이어서 Joey의 취미인 투자, 산책, 운동에 대해 깊이 있는 대화를 나누었고, 마지막으로 캐나다와 남아프리카 공화국 등 다양한 국가로의 여행 경험과 선호도에 대해서도 의견을 교환했습니다.</p>
+<br>
+<p><strong>2. 💬 유창성 업그레이드 (Fluency & Natural Flow)</strong></p>
+<p>Joey가 말한 문장 중 의미는 통하지만, 원어민이 들었을 때 더 자연스럽게 들릴 수 있는 표현들을 살펴볼게요.</p>
+<br>
+<div class="numbered"><strong>1.</strong>  ❌ <strong>As Said</strong>: <code>So you question me, is there the plan of the weekend, right?</code></div>
+<p>    ✅ <strong>Natural</strong>: <code>Are you asking about my weekend plans?</code></p>
+<p>    💎 <strong>Professional</strong>: <code>Could you clarify if you're inquiring about my weekend plans?</code></p>
+<p>    💡 <strong>코칭 포인트</strong>: Using "question me" can sound a bit formal or even accusatory in casual conversation. "Are you asking about...?" is a much more common and natural way to ask if someone is inquiring about something. <span class="arrow">→</span> "question me"는 격식적이거나 심지어 비난조로 들릴 수 있습니다. "Are you asking about...?"은 무언가를 묻고 있는지 확인할 때 훨씬 더 자연스러운 표현입니다.</p>
+<br>
+<div class="numbered"><strong>2.</strong>  ❌ <strong>As Said</strong>: <code>I have so long hair nowadays, so I need to cut it.</code></div>
+<p>    ✅ <strong>Natural</strong>: <code>My hair is getting long, so I need to get a haircut.</code></p>
+<p>    💎 <strong>Professional</strong>: <code>My hair requires trimming, so I'll be scheduling a haircut.</code></p>
+<p>    💡 <strong>코칭 포인트</strong>: When you cut your own hair, you say "I cut my hair." But when someone else cuts it for you (like a hairdresser), you use "get a haircut." This is a very common idiomatic expression. <span class="arrow">→</span> 본인이 머리를 자를 때는 "I cut my hair"라고 하지만, 미용사에게 맡길 때는 "get a haircut"이라는 숙어를 사용합니다. 아주 흔한 관용 표현입니다.</p>
+<br>
+<div class="numbered"><strong>3.</strong>  ❌ <strong>As Said</strong>: <code>Every after a time I will go, I will go near park and go for a walk.</code></div>
+<p>    ✅ <strong>Natural</strong>: <code>After a while, I usually go to a nearby park for a walk.</code></p>
+<p>    💎 <strong>Professional</strong>: <code>Periodically, I frequent a local park for a stroll.</code></p>
+<p>    💡 <strong>코칭 포인트</strong>: "Every after a time" is not a standard English phrase. "After a while" or "periodically" (for something that happens from time to time) are more natural. Also, "go near park" should be "go to a nearby park" to specify direction and location. <span class="arrow">→</span> "Every after a time"은 표준 영어 표현이 아닙니다. "After a while" 또는 "periodically"(때때로 일어나는 일에 대해)가 더 자연스럽습니다. 또한 "go near park"는 방향과 위치를 명확히 하기 위해 "go to a nearby park"로 쓰는 것이 좋습니다.</p>
+<br>
+<p><strong>3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)</strong></p>
+<p>Category: <strong>Missing Auxiliary Verbs (be + -ing)</strong></p>
+<p>Joey는 현재 진행형(Present Continuous)이나 현재 분사(Present Participle)를 사용할 때 <code>be</code> 동사를 자주 생략하는 경향이 있습니다. <code>be</code> 동사는 진행형 시제를 만들거나, 주어의 상태를 설명하는 현재 분사 앞에 반드시 필요합니다.</p>
+<br>
+<table>
+<tr><th>❌ <strong>원문 (As Said)</strong></th><th>✅ <strong>교정 예시 (Corrected)</strong></th></tr>
+<tr><td><code>I always thinking, but if I go for a walk, then I looking at the nature and then I stop thinking.</code></td><td><code>I am always thinking, but if I go for a walk, then I am looking at nature and then I stop thinking.</code></td></tr>
+<tr><td><code>Where lived now?</code></td><td><code>Where are you living now?</code> (또는 <code>Where do you live now?</code>)</td></tr>
+<tr><td><code>My head remind only important things.</code></td><td><code>My head is reminded of only important things.</code> (수동태) 또는 <code>My head remembers only important things.</code></td></tr>
+</table>
+<br>
+<p>📌 <strong>핵심 규칙</strong>: 현재 진행형(<code>~ing</code>)으로 동작을 표현하거나, 주어의 상태를 설명할 때 <code>be</code> 동사를 잊지 말고 함께 사용해야 합니다.</p>
+<br>
+<p>🔁 <strong>따라 읽기 (Repeat After Me)</strong></p>
+<p>🗣️ "I <strong>am</strong> always thinking, but if I go for a walk, then I <strong>am</strong> looking at nature and then I stop thinking."</p>
+<p>🗣️ "Where <strong>are</strong> you living now?"</p>
+<p>🗣️ "My head <strong>is</strong> reminded of only important things."</p>
+<br>
+<p><strong>4. 📗 어휘 확장 (Vocabulary Vault)</strong></p>
+<p>오늘 대화에서 나왔거나 Joey의 업무 환경에 유용할 어휘들을 확장해 볼까요?</p>
+<br>
+<div class="numbered"><strong>1.</strong>  <strong>periodically</strong> /ˌpɪriˈɒdɪkli/ (adv.)</div>
+<p>    *   뜻: 주기적으로, 때때로</p>
+<p>    *   실전 예문: We review our investment portfolio <strong>periodically</strong> to adjust to market changes.</p>
+<br>
+<div class="numbered"><strong>2.</strong>  <strong>portfolio</strong> /pɔːrtˈfoʊlioʊ/ (n.)</div>
+<p>    *   뜻: (투자) 포트폴리오, 유가 증권 일람</p>
+<p>    *   실전 예문: Diversifying your <strong>portfolio</strong> across different asset classes can mitigate risk.</p>
+<br>
+<div class="numbered"><strong>3.</strong>  <strong>mitigate</strong> /ˈmɪtɪɡeɪt/ (v.)</div>
+<p>    *   뜻: 완화시키다, 경감시키다</p>
+<p>    *   실전 예문: We need to implement new strategies to <strong>mitigate</strong> potential risks in the energy supply chain.</p>
+<br>
+<div class="numbered"><strong>4.</strong>  <strong>stroll</strong> /stroʊl/ (n., v.)</div>
+<p>    *   뜻: 산책, 한가로이 걷다</p>
+<p>    *   실전 예문: Taking a short <strong>stroll</strong> during lunch break helps clear my head.</p>
+<br>
+<div class="numbered"><strong>5.</strong>  <strong>clarify</strong> /ˈklærəfaɪ/ (v.)</div>
+<p>    *   뜻: 명확하게 하다, 분명히 설명하다</p>
+<p>    *   실전 예문: Could you please <strong>clarify</strong> the key objectives of this project?</p>
+<br>
+<p><strong>5. 📝 실전 복습 챌린지 (Practice)</strong></p>
+<p>오늘 배운 표현과 문법을 활용해서 영작해 보세요.</p>
+<br>
+<div class="numbered"><strong>1.</strong>  <strong>상황</strong>: 주말에 친구와 약속이 있는지 묻고 싶어요.</div>
+<p>    *   <strong>영작</strong>: 친구들과 주말 계획에 대해 묻고 계신가요?</p>
+<p>    *   <strong>모범 답안</strong>: Are you asking about my weekend plans with friends?</p>
+<br>
+<div class="numbered"><strong>2.</strong>  <strong>상황</strong>: 머리가 너무 길어서 이발을 해야겠다고 말하고 싶어요.</div>
+<p>    *   <strong>영작</strong>: 요즘 머리가 많이 길어져서 이발을 해야 해요.</p>
+<p>    *   <strong>모범 답안</strong>: My hair is getting quite long these days, so I need to get a haircut.</p>
+<br>
+<div class="numbered"><strong>3.</strong>  <strong>상황</strong>: 업무 스트레스를 완화하기 위해 주기적으로 산책을 한다고 설명하고 싶어요.</div>
+<p>    *   <strong>영작</strong>: 저는 스트레스를 완화하기 위해 주기적으로 공원에서 산책을 합니다.</p>
+<p>    *   <strong>모범 답안</strong>: I <strong>periodically</strong> take a <strong>stroll</strong> in the park to <strong>mitigate</strong> stress.</p>
+<br>
+<p><strong>6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)</strong></p>
+<br>
+<p>✨ <strong>Good Job</strong>:</p>
+<p><code>"My time is still regularly the same. Every morning, 8 o'clock in Korean time."</code></p>
+<p>Joey, 이 문장은 자신의 스케줄을 명확하게 설명하면서 'regularly'라는 부사를 적절히 사용해 규칙성을 잘 표현했습니다. 비록 문맥상 더 자연스러운 표현이 있을 수 있지만, 자신의 상황을 정확하게 전달하려는 노력이 돋보였습니다!</p>
+<br>
+<p>🚀 <strong>내일의 한 문장</strong>:</p>
+<p>다음 수업 시작 시, 오늘 배운 표현을 활용하여 튜터에게 이렇게 말해보세요.</p>
+<p>"I'm trying to <strong>mitigate</strong> my stress by taking a <strong>stroll</strong> <strong>periodically</strong>."</p>
+<br>
+<br>
+<p><strong>[성과 지표]</strong></p>
+<p><strong>유창성 점수</strong>: 7.5/10</p>
+<p><strong>근거</strong>: Joey는 다양한 주제에 대해 막힘없이 자신의 생각을 표현하려는 의지가 매우 강합니다. 대화의 흐름을 잘 이어가고 질문에 대한 답변도 빠르게 하는 편입니다. 다만, 일부 문장에서 한국어 직역투 표현이나 어색한 구문이 있어 유창성의 자연스러움을 조금 저해하는 경우가 있었습니다. 특히 <code>be</code> 동사 생략과 같은 고질적인 문법 오류가 유창성에도 영향을 미쳤습니다.</p>
+<p><strong>다음 수업 '원포인트 액션 플랜'</strong>: 다음 수업에서는 <code>be</code> 동사를 활용한 진행형 시제와 현재 분사 구문을 의식적으로 더 많이 사용하고, "get a haircut"과 같은 일상적인 관용 표현을 적극적으로 사용해 보는 것에 집중해 봅시다.</p></div>
+        </div>
+        <div id="tab-transcript" class="tab-content">
+            <div class="transcript"><span class="student">[Student]</span> Hello, good morning, good evening, teacher.
+<span class="tutor">[Tutor]</span> Good morning, how are you?
+<span class="student">[Student]</span> Yeah, I&#x27;m doing good. Yes, it&#x27;s fresh Thursday.
+<span class="tutor">[Tutor]</span> Oh, yeah. I&#x27;m good, I&#x27;m good. Thank you for asking. Are you excited for the weekend?
+<span class="student">[Student]</span> This weekend? So you question me, is there the plan of the weekend, right? Yeah, ah, yes. Hmm, nothing special, but maybe I have so long hair nowadays, so I need to cut it. Because these days I was busy, so I don&#x27;t have time. So maybe Saturday morning I will go to the haircut shop and haircut. And yeah, every weekend I meet my family. So yeah, this is the rose season in Korea, so maybe we will go to the picnic. Yeah, and look around the rose. Yes, yeah, that&#x27;s my plan. How about you? What is your plan on the weekend?
+<span class="tutor">[Tutor]</span> So, actually, I&#x27;m working.
+<span class="student">[Student]</span> You&#x27;re working. I see. Understand.
+<span class="tutor">[Tutor]</span> Yeah.
+<span class="student">[Student]</span> Okay. Make money. I&#x27;m going to be a little tired.
+<span class="tutor">[Tutor]</span> Okay. I see. But I&#x27;ll rest on Sunday.
+<span class="student">[Student]</span> On Sunday?
+<span class="tutor">[Tutor]</span> On Sunday, I plan to rest.
+<span class="student">[Student]</span> Oh, take a rest. Good. I see. And on Saturday, I&#x27;ll be working. Is it a temporary class or a regular class? I&#x27;m a little confused.
+<span class="tutor">[Tutor]</span> Sorry, what did you say?
+<span class="student">[Student]</span> Ah, yes. Is this the temporary class or the regular class?
+<span class="tutor">[Tutor]</span> You mean the one I&#x27;m working on Saturday, or today?
+<span class="student">[Student]</span> Today. Because I&#x27;m a little confused. Yes. Is it because I&#x27;m a new teacher?
+<span class="student">[Student]</span> Because these days, my regular teacher quit the job, and remind... yeah, so I don&#x27;t know the Carrot English how to change my schedule and my teacher. So yeah.
+<span class="tutor">[Tutor]</span> Oh! So I think this is a makeup class.
+<span class="student">[Student]</span> Makeup class. I see.
+<span class="tutor">[Tutor]</span> Yeah, like I think you missed the class or your teacher missed the class, so this is your makeup.
+<span class="student">[Student]</span> Ah, makeup class. I see, understand. Good. So maybe you&#x27;re going to have me another day? Or maybe this is the one and only class with me.
+<span class="student">[Student]</span> I see, but my teacher quit the job and I work, I practice English, use the Carrot English. But that is divided. She&#x27;s a kind teacher. So...
+<span class="tutor">[Tutor]</span> Oh, I see. Your teacher quit working.
+<span class="student">[Student]</span> Yes, yes.
+<span class="tutor">[Tutor]</span> Oh, I see. So I think they will...
+<span class="student">[Student]</span> Come. So I have to run their names and their information before the class. So just I ask to you, that is just a makeup class.
+<span class="tutor">[Tutor]</span> Okay. So my name is Jazz. Jazz, Jazz, Jazz. Um, Jazz, like the music.
+<span class="student">[Student]</span> Oh, that is the real name or just the teacher name?
+<span class="tutor">[Tutor]</span> Jazz, it&#x27;s just, it&#x27;s actually just my nickname. So...
+<span class="student">[Student]</span> Your nickname. Everyone calls you Jazz. Maybe your real name is Dr. J, right? Actually, no.
+<span class="tutor">[Tutor]</span> No, actually my first name is Arabic and it&#x27;s hard to say in English.
+<span class="student">[Student]</span> Yes, I see. Yes. Okay, Jazz.
+<span class="tutor">[Tutor]</span> So I think for you too, you will continue with your English classes, but I think your Carrot English manager will contact you about the next step as to choosing a teacher or the time and date you want to study.
+<span class="student">[Student]</span> My time is still regularly the same. Every morning, 8 o&#x27;clock in Korean time. But this time is so busy time for teachers. So my manager in Carrot English, he selects, he divides three sections of my class. Yeah, so every day I change my teacher nowadays. And for example, Monday and Wednesday is the same teacher, and Tuesday and Thursday and Friday, there are three kinds of teachers. So I&#x27;m a little confused. And these days I need more information about the teacher.
+<span class="tutor">[Tutor]</span> Okay. Oh, I understand. That makes sense.
+<span class="student">[Student]</span> Yes. Yes. Okay. But I thought that also has a good point. For example, I can meet various people. Yeah, the English culture. So, that is a good way.
+<span class="tutor">[Tutor]</span> And it&#x27;s good to speak to different accents and different ways of speaking.
+<span class="student">[Student]</span> So that you can listen to English. Yes, you&#x27;re right. That is a good way. Good point.
+<span class="tutor">[Tutor]</span> Okay, nice to meet you, Jo.
+<span class="student">[Student]</span> Oh, it&#x27;s lovely to meet you too. Thank you. Okay, my name is Joey. Yeah, J-O-E-Y.
+<span class="tutor">[Tutor]</span> Joey.
+<span class="student">[Student]</span> Yes, that is also...
+<span class="tutor">[Tutor]</span> Lovely to meet you, Joey.
+<span class="student">[Student]</span> Okay, and where are you from, teacher?
+<span class="tutor">[Tutor]</span> I&#x27;m Canadian, so I&#x27;m from Canada.
+<span class="student">[Student]</span> You are Canadian? I see.
+<span class="tutor">[Tutor]</span> Yeah. Have you met a Canadian teacher before in Carrot English?
+<span class="student">[Student]</span> Oh yes, sometimes. Yeah, I met the Canadian people. I think they are very high-level teachers. So it is difficult to meet a Canadian teacher in this class. Yeah, in this class. So yeah, that&#x27;s personal for me.
+<span class="tutor">[Tutor]</span> Oh, I feel special.
+<span class="student">[Student]</span> Yeah, you&#x27;re a special teacher. Thank you. So what do you like to do for fun? Um, I love to add many things, but usually I love to swimming in a sea or in a pool. Or I love to invest. I love to invest in something: the bond, the stock market, the real estate. Because it is like a game. So yeah, make a system and investing, and gain something, and gain profit, and make money. And I love to walk near the park. Every after a time I will go, I will go near park and go for a walk. That place nice. Yes, yeah, that is my lovely thing.
+<span class="tutor">[Tutor]</span> Really? Yeah, it does. It sounds very peaceful.
+<span class="student">[Student]</span> Yeah, peaceful. And I think our brain is turned on 24 hours, only 16 hours. So in the middle of time, I just turn off my brain switch.
+<span class="tutor">[Tutor]</span> Oh, yeah.
+<span class="student">[Student]</span> I just have a break time, just to see the tree and plant, thinking of the just birds. That&#x27;s peaceful time for me.
+<span class="tutor">[Tutor]</span> You&#x27;re right. Yeah, it&#x27;s a good habit to close your thinking. It&#x27;s very difficult for people to do that.
+<span class="student">[Student]</span> Is it difficult? That&#x27;s so easy.
+<span class="tutor">[Tutor]</span> I think it is difficult.
+<span class="student">[Student]</span> Are you really? I think for me I always thinking, but if I go for a walk, then I looking at the nature and then I stop thinking. Yes. But I think if you make a routine, just that is my routine. That is so easy.
+<span class="tutor">[Tutor]</span> Yeah. Yes, that&#x27;s true. Yeah, that&#x27;s true. Okay.
+<span class="student">[Student]</span> And how about you? What is your favorite thing in your life?
+<span class="tutor">[Tutor]</span> I like going to the gym, I like seeing my friends.
+<span class="student">[Student]</span> Maybe that is the like the motor or just running or how about that? How what kind of exercise?
+<span class="tutor">[Tutor]</span> I do strength training.
+<span class="student">[Student]</span> Oh, training. Weight training?
+<span class="tutor">[Tutor]</span> Yeah. Oh, yes, that&#x27;s nice. Good. And running for my cardio and cycling.
+<span class="student">[Student]</span> Oh, running, cycling, and one more. Running, cycling. How did you know?
+<span class="tutor">[Tutor]</span> Okay, I also play soccer, but I&#x27;m taking a break from playing soccer.
+<span class="student">[Student]</span> Oh, play soccer. Wow.
+<span class="tutor">[Tutor]</span> Yeah, but I&#x27;m stopping now. Stopping now. I have to stop. Because I&#x27;m always hurting myself. Like I fell, hurt myself two weeks ago. So I need to take a break.
+<span class="student">[Student]</span> Oh, yeah, just temporarily stop. So it&#x27;s okay. Yeah. Yeah. You, yeah, exactly. You will recovery and you go back the soccer player. Yeah, I think so. Yes. Yeah. Don&#x27;t worry. Yes. Okay. Thank you.
+<span class="tutor">[Tutor]</span> Nice of you.
+<span class="student">[Student]</span> Okay, I see. And do you like, what do you like the field, the running field, the park or the beach? There are so many places. What kind is your favorite playground?
+<span class="tutor">[Tutor]</span> I would love, I would love to run on the beach. I would love that. But I don&#x27;t live near the beach.
+<span class="student">[Student]</span> One more, please.
+<span class="tutor">[Tutor]</span> I live very far from the beach. So now the places that I run are outside, like the park.
+<span class="student">[Student]</span> Park.
+<span class="tutor">[Tutor]</span> Or a nice neighborhood.
+<span class="student">[Student]</span> With a nice neighborhood. Okay. Yeah. I see. Okay. That is good. Yeah. My routine, the running. In my case, if my head is complex and put into many things, and meantime I&#x27;m just running and reduce my thinking. And if I run 30 minutes, and last time my head remind only important things. So, yeah, that is clearing my head, the running and swimming. Yeah, it is a good way. So how often do you run? Uh, that is not frankly, just, uh, that is so shy, but one time per month. Yeah, but maybe five years ago, I ran every day before go for work. But nowadays, I just run one time per month. That&#x27;s because every morning I take a bicycle go for work. So...
+<span class="tutor">[Tutor]</span> Wow.
+<span class="student">[Student]</span> So these days I don&#x27;t run frequently. Yeah.
+<span class="tutor">[Tutor]</span> But that&#x27;s okay. You do a lot of cycling.
+<span class="student">[Student]</span> But that is the short distance that take only the 10 minutes. That is not exercise. Just convenience. Divide. Yeah, go for a walk. Yeah, so yeah. It is not exercise.
+<span class="tutor">[Tutor]</span> It&#x27;s still something, right? It&#x27;s still something. 10 minutes to go, 10 minutes to come back, that&#x27;s still 20 minutes.
+<span class="student">[Student]</span> Yeah, you&#x27;re right. That is 20 minutes. And one time per week in the gym to train the muscles. And sometimes I play yoga with my son and my wife in my home.
+<span class="tutor">[Tutor]</span> Nice.
+<span class="student">[Student]</span> Yes, and yeah, these days I have to more exercise, but yeah, just that is my routine.
+<span class="tutor">[Tutor]</span> Good routine. I think it&#x27;s great. Okay. Yeah, I see. And I was wondering, your country&#x27;s weather nowadays? Is it hot?
+<span class="tutor">[Tutor]</span> Actually, funny, I&#x27;m Canadian but I don&#x27;t live in Canada.
+<span class="student">[Student]</span> I see. Where from now? Where lived now?
+<span class="tutor">[Tutor]</span> I live in South Africa, Johannesburg.
+<span class="student">[Student]</span> I see, understand. There are so many teachers. I think many English teachers are from living in South Africa.
+<span class="tutor">[Tutor]</span> Oh yes, you&#x27;re right.
+<span class="student">[Student]</span> And there are so many teachers in Carrot English. And some teachers live in other cities. They do it during their travel. And like a nomad, digital nomad. And they, during the travel...
+<span class="tutor">[Tutor]</span> Oh, yeah.
+<span class="student">[Student]</span> Yes, other city, other country, and make money to teach English using the mobile phone. So that is a good skill to speak English.
+<span class="tutor">[Tutor]</span> Yeah, it&#x27;s great. It&#x27;s very convenient, I think. So if you live in South Africa, your country is really cold nowadays, right?
+<span class="tutor">[Tutor]</span> Yes.
+<span class="student">[Student]</span> Ah, yes. Because we are opposite in the world, the Korean to South African. Our country starts the summer, but your country starts the winter, right?
+<span class="tutor">[Tutor]</span> Exactly. Actually, many people don&#x27;t know that.
+<span class="student">[Student]</span> Yes, you&#x27;re right.
+<span class="tutor">[Tutor]</span> So I&#x27;m surprised that you know that.
+<span class="student">[Student]</span> Really? Yes. Because I love to travel, so maybe if I have an opportunity, I will go there. Yeah.
+<span class="tutor">[Tutor]</span> You should, it&#x27;s a beautiful country.
+<span class="student">[Student]</span> Your country is beautiful. Yeah. Canada also beautiful, but I don&#x27;t have experience to visit there. So yeah.
+<span class="tutor">[Tutor]</span> Which would you rather visit, Canada or South Africa, the first time?
+<span class="student">[Student]</span> Maybe first time I visit Canada because that is more easy, friendly culture. But I&#x27;m a little, I was a little need more experience to visit South Africa because that is a totally different culture. So I need more experience, and then I will go there.
+<span class="tutor">[Tutor]</span> Yeah. Will it be, or have you ever traveled outside of Korea?
+<span class="student">[Student]</span> Oh, yes, so many times. But my son is younger, so usually we travel just prior to 6 hours. Yeah, so almost in Asia or some cross-country, cross-island.
+<span class="tutor">[Tutor]</span> I see. No, that makes sense, actually. So whenever you travel with your son, make sure that it&#x27;s six hours or less, basically.
+<span class="student">[Student]</span> Yeah, you&#x27;re right. And I think...
+<span class="tutor">[Tutor]</span> How old is your son?
+<span class="student">[Student]</span> Maybe my son is nine years old, and I enjoyed talking with you, but maybe you prepare the next class, right?
+<span class="tutor">[Tutor]</span> Yes, it&#x27;s time. Thank you so much for today&#x27;s class, Joey.
+<span class="student">[Student]</span> Thank you so much. Have a nice day, teacher. Bye-bye.
+<span class="tutor">[Tutor]</span> Yes. Take care. Bye-bye.</div>
+        </div>
+    </div>
+    <div class="toast" id="toast">✅ 프롬프트가 복사되었습니다!</div>
+    <script>
+        const REVIEW_PROMPT="너는 나의 영어 회화 복습 파트너야. 오늘 내 전화영어 수업 내용을 기반으로 대화하면서 복습을 도와줘.\n\n[오늘 수업 전사 내용]\n[Student] Hello, good morning, good evening, teacher.\n[Tutor] Good morning, how are you?\n[Student] Yeah, I'm doing good. Yes, it's fresh Thursday.\n[Tutor] Oh, yeah. I'm good, I'm good. Thank you for asking. Are you excited for the weekend?\n[Student] This weekend? So you question me, is there the plan of the weekend, right? Yeah, ah, yes. Hmm, nothing special, but maybe I have so long hair nowadays, so I need to cut it. Because these days I was busy, so I don't have time. So maybe Saturday morning I will go to the haircut shop and haircut. And yeah, every weekend I meet my family. So yeah, this is the rose season in Korea, so maybe we will go to the picnic. Yeah, and look around the rose. Yes, yeah, that's my plan. How about you? What is your plan on the weekend?\n[Tutor] So, actually, I'm working.\n[Student] You're working. I see. Understand.\n[Tutor] Yeah.\n[Student] Okay. Make money. I'm going to be a little tired.\n[Tutor] Okay. I see. But I'll rest on Sunday.\n[Student] On Sunday?\n[Tutor] On Sunday, I plan to rest.\n[Student] Oh, take a rest. Good. I see. And on Saturday, I'll be working. Is it a temporary class or a regular class? I'm a little confused.\n[Tutor] Sorry, what did you say?\n[Student] Ah, yes. Is this the temporary class or the regular class?\n[Tutor] You mean the one I'm working on Saturday, or today?\n[Student] Today. Because I'm a little confused. Yes. Is it because I'm a new teacher?\n[Student] Because these days, my regular teacher quit the job, and remind... yeah, so I don't know the Carrot English how to change my schedule and my teacher. So yeah.\n[Tutor] Oh! So I think this is a makeup class.\n[Student] Makeup class. I see.\n[Tutor] Yeah, like I think you missed the class or your teacher missed the class, so this is your makeup.\n[Student] Ah, makeup class. I see, understand. Good. So maybe you're going to have me another day? Or maybe this is the one and only class with me.\n[Student] I see, but my teacher quit the job and I work, I practice English, use the Carrot English. But that is divided. She's a kind teacher. So...\n[Tutor] Oh, I see. Your teacher quit working.\n[Student] Yes, yes.\n[Tutor] Oh, I see. So I think they will...\n[Student] Come. So I have to run their names and their information before the class. So just I ask to you, that is just a makeup class.\n[Tutor] Okay. So my name is Jazz. Jazz, Jazz, Jazz. Um, Jazz, like the music.\n[Student] Oh, that is the real name or just the teacher name?\n[Tutor] Jazz, it's just, it's actually just my nickname. So...\n[Student] Your nickname. Everyone calls you Jazz. Maybe your real name is Dr. J, right? Actually, no.\n[Tutor] No, actually my first name is Arabic and it's hard to say in English.\n[Student] Yes, I see. Yes. Okay, Jazz.\n[Tutor] So I think for you too, you will continue with your English classes, but I think your Carrot English manager will contact you about the next step as to choosing a teacher or the time and date you want to study.\n[Student] My time is still regularly the same. Every morning, 8 o'clock in Korean time. But this time is so busy time for teachers. So my manager in Carrot English, he selects, he divides three sections of my class. Yeah, so every day I change my teacher nowadays. And for example, Monday and Wednesday is the same teacher, and Tuesday and Thursday and Friday, there are three kinds of teachers. So I'm a little confused. And these days I need more information about the teacher.\n[Tutor] Okay. Oh, I understand. That makes sense.\n[Student] Yes. Yes. Okay. But I thought that also has a good point. For example, I can meet various people. Yeah, the English culture. So, that is a good way.\n[Tutor] And it's good to speak to different accents and different ways of speaking.\n[Student] So that you can listen to English. Yes, you're right. That is a good way. Good point.\n[Tutor] Okay, nice to meet you, Jo.\n[Student] Oh, it's lovely to meet you too. Thank you. Okay, my name is Joey. Yeah, J-O-E-Y.\n[Tutor] Joey.\n[Student] Yes, that is also...\n[Tutor] Lovely to meet you, Joey.\n[Student] Okay, and where are you from, teacher?\n[Tutor] I'm Canadian, so I'm from Canada.\n[Student] You are Canadian? I see.\n[Tutor] Yeah. Have you met a Canadian teacher before in Carrot English?\n[Student] Oh yes, sometimes. Yeah, I met the Canadian people. I think they are very high-level teachers. So it is difficult to meet a Canadian teacher in this class. Yeah, in this class. So yeah, that's personal for me.\n[Tutor] Oh, I feel special.\n[Student] Yeah, you're a special teacher. Thank you. So what do you like to do for fun? Um, I love to add many things, but usually I love to swimming in a sea or in a pool. Or I love to invest. I love to invest in something: the bond, the stock market, the real estate. Because it is like a game. So yeah, make a system and investing, and gain something, and gain profit, and make money. And I love to walk near the park. Every after a time I will go, I will go near park and go for a walk. That place nice. Yes, yeah, that is my lovely thing.\n[Tutor] Really? Yeah, it does. It sounds very peaceful.\n[Student] Yeah, peaceful. And I think our brain is turned on 24 hours, only 16 hours. So in the middle of time, I just turn off my brain switch.\n[Tutor] Oh, yeah.\n[Student] I just have a break time, just to see the tree and plant, thinking of the just birds. That's peaceful time for me.\n[Tutor] You're right. Yeah, it's a good habit to close your thinking. It's very difficult for people to do that.\n[Student] Is it difficult? That's so easy.\n[Tutor] I think it is difficult.\n[Student] Are you really? I think for me I always thinking, but if I go for a walk, then I looking at the nature and then I stop thinking. Yes. But I think if you make a routine, just that is my routine. That is so easy.\n[Tutor] Yeah. Yes, that's true. Yeah, that's true. Okay.\n[Student] And how about you? What is your favorite thing in your life?\n[Tutor] I like going to the gym, I like seeing my friends.\n[Student] Maybe that is the like the motor or just running or how about that? How what kind of exercise?\n[Tutor] I do strength training.\n[Student] Oh, training. Weight training?\n[Tutor] Yeah. Oh, yes, that's nice. Good. And running for my cardio and cycling.\n[Student] Oh, running, cycling, and one more. Running, cycling. How did you know?\n[Tutor] Okay, I also play soccer, but I'm taking a break from playing soccer.\n[Student] Oh, play soccer. Wow.\n[Tutor] Yeah, but I'm stopping now. Stopping now. I have to stop. Because I'm always hurting myself. Like I fell, hurt myself two weeks ago. So I need to take a break.\n[Student] Oh, yeah, just temporarily stop. So it's okay. Yeah. Yeah. You, yeah, exactly. You will recovery and you go back the soccer player. Yeah, I think so. Yes. Yeah. Don't worry. Yes. Okay. Thank you.\n[Tutor] Nice of you.\n[Student] Okay, I see. And do you like, what do you like the field, the running field, the park or the beach? There are so many places. What kind is your favorite playground?\n[Tutor] I would love, I would love to run on the beach. I would love that. But I don't live near the beach.\n[Student] One more, please.\n[Tutor] I live very far from the beach. So now the places that I run are outside, like the park.\n[Student] Park.\n[Tutor] Or a nice neighborhood.\n[Student] With a nice neighborhood. Okay. Yeah. I see. Okay. That is good. Yeah. My routine, the running. In my case, if my head is complex and put into many things, and meantime I'm just running and reduce my thinking. And if I run 30 minutes, and last time my head remind only important things. So, yeah, that is clearing my head, the running and swimming. Yeah, it is a good way. So how often do you run? Uh, that is not frankly, just, uh, that is so shy, but one time per month. Yeah, but maybe five years ago, I ran every day before go for work. But nowadays, I just run one time per month. That's because every morning I take a bicycle go for work. So...\n[Tutor] Wow.\n[Student] So these days I don't run frequently. Yeah.\n[Tutor] But that's okay. You do a lot of cycling.\n[Student] But that is the short distance that take only the 10 minutes. That is not exercise. Just convenience. Divide. Yeah, go for a walk. Yeah, so yeah. It is not exercise.\n[Tutor] It's still something, right? It's still something. 10 minutes to go, 10 minutes to come back, that's still 20 minutes.\n[Student] Yeah, you're right. That is 20 minutes. And one time per week in the gym to train the muscles. And sometimes I play yoga with my son and my wife in my home.\n[Tutor] Nice.\n[Student] Yes, and yeah, these days I have to more exercise, but yeah, just that is my routine.\n[Tutor] Good routine. I think it's great. Okay. Yeah, I see. And I was wondering, your country's weather nowadays? Is it hot?\n[Tutor] Actually, funny, I'm Canadian but I don't live in Canada.\n[Student] I see. Where from now? Where lived now?\n[Tutor] I live in South Africa, Johannesburg.\n[Student] I see, understand. There are so many teachers. I think many English teachers are from living in South Africa.\n[Tutor] Oh yes, you're right.\n[Student] And there are so many teachers in Carrot English. And some teachers live in other cities. They do it during their travel. And like a nomad, digital nomad. And they, during the travel...\n[Tutor] Oh, yeah.\n[Student] Yes, other city, other country, and make money to teach English using the mobile phone. So that is a good skill to speak English.\n[Tutor] Yeah, it's great. It's very convenient, I think. So if you live in South Africa, your country is really cold nowadays, right?\n[Tutor] Yes.\n[Student] Ah, yes. Because we are opposite in the world, the Korean to South African. Our country starts the summer, but your country starts the winter, right?\n[Tutor] Exactly. Actually, many people don't know that.\n[Student] Yes, you're right.\n[Tutor] So I'm surprised that you know that.\n[Student] Really? Yes. Because I love to travel, so maybe if I have an opportunity, I will go there. Yeah.\n[Tutor] You should, it's a beautiful country.\n[Student] Your country is beautiful. Yeah. Canada also beautiful, but I don't have experience to visit there. So yeah.\n[Tutor] Which would you rather visit, Canada or South Africa, the first time?\n[Student] Maybe first time I visit Canada because that is more easy, friendly culture. But I'm a little, I was a little need more experience to visit South Africa because that is a totally different culture. So I need more experience, and then I will go there.\n[Tutor] Yeah. Will it be, or have you ever traveled outside of Korea?\n[Student] Oh, yes, so many times. But my son is younger, so usually we travel just prior to 6 hours. Yeah, so almost in Asia or some cross-country, cross-island.\n[Tutor] I see. No, that makes sense, actually. So whenever you travel with your son, make sure that it's six hours or less, basically.\n[Student] Yeah, you're right. And I think...\n[Tutor] How old is your son?\n[Student] Maybe my son is nine years old, and I enjoyed talking with you, but maybe you prepare the next class, right?\n[Tutor] Yes, it's time. Thank you so much for today's class, Joey.\n[Student] Thank you so much. Have a nice day, teacher. Bye-bye.\n[Tutor] Yes. Take care. Bye-bye.\n\n[AI 피드백]\n안녕하세요, Joey! 오늘 Jazz 선생님과의 대화에서 주말 계획부터 취미, 여행 경험까지 다양한 이야기를 나누며 영어 실력을 뽐내주셨어요. 특히 투자와 자기계발에 대한 깊이 있는 생각들을 영어로 자연스럽게 표현하려는 노력이 돋보였습니다.\n\n오늘 배운 표현들을 꾸준히 연습해서 Joey의 영어가 한 단계 더 성장할 수 있도록 제가 따뜻하게 도와드릴게요!\n\n---\n\n**0. 📌 Topic**\nTopic: Discussing Weekend Plans, Hobbies, and Travel Experiences\n\n**1. 📊 오늘의 대화 요약 (Summary)**\n오늘 수업에서는 Joey의 주말 계획(이발, 장미 구경 등)과 선생님의 주말 계획에 대해 이야기했습니다. 이어서 Joey의 취미인 투자, 산책, 운동에 대해 깊이 있는 대화를 나누었고, 마지막으로 캐나다와 남아프리카 공화국 등 다양한 국가로의 여행 경험과 선호도에 대해서도 의견을 교환했습니다.\n\n**2. 💬 유창성 업그레이드 (Fluency & Natural Flow)**\nJoey가 말한 문장 중 의미는 통하지만, 원어민이 들었을 때 더 자연스럽게 들릴 수 있는 표현들을 살펴볼게요.\n\n1.  ❌ **As Said**: `So you question me, is there the plan of the weekend, right?`\n    ✅ **Natural**: `Are you asking about my weekend plans?`\n    💎 **Professional**: `Could you clarify if you're inquiring about my weekend plans?`\n    💡 **코칭 포인트**: Using \"question me\" can sound a bit formal or even accusatory in casual conversation. \"Are you asking about...?\" is a much more common and natural way to ask if someone is inquiring about something. → \"question me\"는 격식적이거나 심지어 비난조로 들릴 수 있습니다. \"Are you asking about...?\"은 무언가를 묻고 있는지 확인할 때 훨씬 더 자연스러운 표현입니다.\n\n2.  ❌ **As Said**: `I have so long hair nowadays, so I need to cut it.`\n    ✅ **Natural**: `My hair is getting long, so I need to get a haircut.`\n    💎 **Professional**: `My hair requires trimming, so I'll be scheduling a haircut.`\n    💡 **코칭 포인트**: When you cut your own hair, you say \"I cut my hair.\" But when someone else cuts it for you (like a hairdresser), you use \"get a haircut.\" This is a very common idiomatic expression. → 본인이 머리를 자를 때는 \"I cut my hair\"라고 하지만, 미용사에게 맡길 때는 \"get a haircut\"이라는 숙어를 사용합니다. 아주 흔한 관용 표현입니다.\n\n3.  ❌ **As Said**: `Every after a time I will go, I will go near park and go for a walk.`\n    ✅ **Natural**: `After a while, I usually go to a nearby park for a walk.`\n    💎 **Professional**: `Periodically, I frequent a local park for a stroll.`\n    💡 **코칭 포인트**: \"Every after a time\" is not a standard English phrase. \"After a while\" or \"periodically\" (for something that happens from time to time) are more natural. Also, \"go near park\" should be \"go to a nearby park\" to specify direction and location. → \"Every after a time\"은 표준 영어 표현이 아닙니다. \"After a while\" 또는 \"periodically\"(때때로 일어나는 일에 대해)가 더 자연스럽습니다. 또한 \"go near park\"는 방향과 위치를 명확히 하기 위해 \"go to a nearby park\"로 쓰는 것이 좋습니다.\n\n**3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)**\nCategory: **Missing Auxiliary Verbs (be + -ing)**\nJoey는 현재 진행형(Present Continuous)이나 현재 분사(Present Participle)를 사용할 때 `be` 동사를 자주 생략하는 경향이 있습니다. `be` 동사는 진행형 시제를 만들거나, 주어의 상태를 설명하는 현재 분사 앞에 반드시 필요합니다.\n\n| ❌ **원문 (As Said)**                                         | ✅ **교정 예시 (Corrected)**                                     |\n| :----------------------------------------------------------- | :------------------------------------------------------------- |\n| `I always thinking, but if I go for a walk, then I looking at the nature and then I stop thinking.` | `I am always thinking, but if I go for a walk, then I am looking at nature and then I stop thinking.` |\n| `Where lived now?`                                           | `Where are you living now?` (또는 `Where do you live now?`)    |\n| `My head remind only important things.`                      | `My head is reminded of only important things.` (수동태) 또는 `My head remembers only important things.` |\n\n📌 **핵심 규칙**: 현재 진행형(`~ing`)으로 동작을 표현하거나, 주어의 상태를 설명할 때 `be` 동사를 잊지 말고 함께 사용해야 합니다.\n\n🔁 **따라 읽기 (Repeat After Me)**\n🗣️ \"I **am** always thinking, but if I go for a walk, then I **am** looking at nature and then I stop thinking.\"\n🗣️ \"Where **are** you living now?\"\n🗣️ \"My head **is** reminded of only important things.\"\n\n**4. 📗 어휘 확장 (Vocabulary Vault)**\n오늘 대화에서 나왔거나 Joey의 업무 환경에 유용할 어휘들을 확장해 볼까요?\n\n1.  **periodically** /ˌpɪriˈɒdɪkli/ (adv.)\n    *   뜻: 주기적으로, 때때로\n    *   실전 예문: We review our investment portfolio **periodically** to adjust to market changes.\n\n2.  **portfolio** /pɔːrtˈfoʊlioʊ/ (n.)\n    *   뜻: (투자) 포트폴리오, 유가 증권 일람\n    *   실전 예문: Diversifying your **portfolio** across different asset classes can mitigate risk.\n\n3.  **mitigate** /ˈmɪtɪɡeɪt/ (v.)\n    *   뜻: 완화시키다, 경감시키다\n    *   실전 예문: We need to implement new strategies to **mitigate** potential risks in the energy supply chain.\n\n4.  **stroll** /stroʊl/ (n., v.)\n    *   뜻: 산책, 한가로이 걷다\n    *   실전 예문: Taking a short **stroll** during lunch break helps clear my head.\n\n5.  **clarify** /ˈklærəfaɪ/ (v.)\n    *   뜻: 명확하게 하다, 분명히 설명하다\n    *   실전 예문: Could you please **clarify** the key objectives of this project?\n\n**5. 📝 실전 복습 챌린지 (Practice)**\n오늘 배운 표현과 문법을 활용해서 영작해 보세요.\n\n1.  **상황**: 주말에 친구와 약속이 있는지 묻고 싶어요.\n    *   **영작**: 친구들과 주말 계획에 대해 묻고 계신가요?\n    *   **모범 답안**: Are you asking about my weekend plans with friends?\n\n2.  **상황**: 머리가 너무 길어서 이발을 해야겠다고 말하고 싶어요.\n    *   **영작**: 요즘 머리가 많이 길어져서 이발을 해야 해요.\n    *   **모범 답안**: My hair is getting quite long these days, so I need to get a haircut.\n\n3.  **상황**: 업무 스트레스를 완화하기 위해 주기적으로 산책을 한다고 설명하고 싶어요.\n    *   **영작**: 저는 스트레스를 완화하기 위해 주기적으로 공원에서 산책을 합니다.\n    *   **모범 답안**: I **periodically** take a **stroll** in the park to **mitigate** stress.\n\n**6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)**\n\n✨ **Good Job**:\n`\"My time is still regularly the same. Every morning, 8 o'clock in Korean time.\"`\nJoey, 이 문장은 자신의 스케줄을 명확하게 설명하면서 'regularly'라는 부사를 적절히 사용해 규칙성을 잘 표현했습니다. 비록 문맥상 더 자연스러운 표현이 있을 수 있지만, 자신의 상황을 정확하게 전달하려는 노력이 돋보였습니다!\n\n🚀 **내일의 한 문장**:\n다음 수업 시작 시, 오늘 배운 표현을 활용하여 튜터에게 이렇게 말해보세요.\n\"I'm trying to **mitigate** my stress by taking a **stroll** **periodically**.\"\n\n---\n\n**[성과 지표]**\n**유창성 점수**: 7.5/10\n**근거**: Joey는 다양한 주제에 대해 막힘없이 자신의 생각을 표현하려는 의지가 매우 강합니다. 대화의 흐름을 잘 이어가고 질문에 대한 답변도 빠르게 하는 편입니다. 다만, 일부 문장에서 한국어 직역투 표현이나 어색한 구문이 있어 유창성의 자연스러움을 조금 저해하는 경우가 있었습니다. 특히 `be` 동사 생략과 같은 고질적인 문법 오류가 유창성에도 영향을 미쳤습니다.\n**다음 수업 '원포인트 액션 플랜'**: 다음 수업에서는 `be` 동사를 활용한 진행형 시제와 현재 분사 구문을 의식적으로 더 많이 사용하고, \"get a haircut\"과 같은 일상적인 관용 표현을 적극적으로 사용해 보는 것에 집중해 봅시다.\n\n위 내용을 바탕으로:\n1. 먼저 오늘 수업에서 내가 틀렸거나 어색했던 표현을 하나 골라서, 관련된 상황을 영어로 질문해줘.\n2. 내가 영어로 대답하면, 자연스러운지 확인하고 더 나은 표현이 있으면 알려줘.\n3. 특히 \"반복 실수 패턴\"에서 지적된 부분을 집중적으로 연습시켜줘.\n4. 이런 식으로 오늘 배운 표현들을 하나씩 복습하자.\n5. 한국어 설명은 필요할 때만 간단히, 대화는 최대한 영어로 진행해줘.\n\n그럼 시작하자!";
+        function startReview(){navigator.clipboard.writeText(REVIEW_PROMPT).then(()=>{showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)}).catch(()=>{const t=document.createElement('textarea');t.value=REVIEW_PROMPT;document.body.appendChild(t);t.select();document.execCommand('copy');document.body.removeChild(t);showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)})}
+        function showToast(){const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500)}
+        function switchTab(n){document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',n==='feedback'?i===0:i===1));document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));document.getElementById('tab-'+n).classList.add('active')}
+    </script>
+</body>
+</html>
