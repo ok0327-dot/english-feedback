@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전화영어 복습 - 2026년 05월 29일</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Noto Sans KR',sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.75;min-height:100vh}
+        .header{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);border-bottom:1px solid rgba(255,255,255,.06);padding:48px 24px 40px;text-align:center}
+        .header-date{font-size:13px;color:#94a3b8;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+        .header h1{font-size:28px;font-weight:700;color:#f1f5f9;margin-bottom:16px}
+        .header-meta{display:flex;justify-content:center;gap:24px;font-size:14px;color:#64748b}
+        .header-meta span{display:flex;align-items:center;gap:6px}
+        .cta-section{text-align:center;padding:40px 24px}
+        .cta-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:linear-gradient(135deg,#38bdf8,#818cf8);color:#fff;font-size:16px;font-weight:600;font-family:'Noto Sans KR',sans-serif;border:none;border-radius:50px;cursor:pointer;transition:all .3s;text-decoration:none;box-shadow:0 4px 24px rgba(56,189,248,.25)}
+        .cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(56,189,248,.35)}
+        .cta-btn svg{width:20px;height:20px}
+        .cta-sub{margin-top:12px;font-size:13px;color:#64748b}
+        .toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#38bdf8;padding:14px 28px;border-radius:12px;font-size:14px;font-weight:500;border:1px solid rgba(56,189,248,.2);box-shadow:0 8px 32px rgba(0,0,0,.4);opacity:0;transition:all .4s cubic-bezier(.16,1,.3,1);z-index:1000}
+        .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+        .container{max-width:720px;margin:0 auto;padding:0 24px 80px}
+        .tabs{display:flex;gap:4px;background:#1a1a24;padding:4px;border-radius:12px;margin-bottom:32px}
+        .tab{flex:1;padding:12px;text-align:center;font-size:14px;font-weight:500;color:#64748b;background:0 0;border:none;border-radius:8px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all .2s}
+        .tab.active{background:#262636;color:#f1f5f9}
+        .tab-content{display:none}.tab-content.active{display:block}
+        .feedback h2{font-size:18px;font-weight:700;color:#f1f5f9;margin:36px 0 16px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.06)}
+        .feedback h2:first-child{margin-top:0}
+        .feedback p{margin:8px 0;color:#cbd5e1}
+        .feedback .item{padding:6px 0 6px 16px;border-left:2px solid #334155;margin:6px 0;color:#cbd5e1}
+        .feedback .numbered{padding:8px 0 8px 16px;color:#cbd5e1}
+        .feedback .numbered strong{color:#38bdf8}
+        .feedback strong{color:#f1f5f9}
+        .feedback code{background:#1e293b;padding:2px 8px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#38bdf8}
+        .feedback table{width:100%;border-collapse:collapse;margin:12px 0}
+        .feedback th,.feedback td{padding:10px 14px;text-align:left;border-bottom:1px solid #262636}
+        .feedback th{color:#94a3b8;font-weight:500;font-size:13px}
+        .feedback td{color:#cbd5e1}
+        .arrow{color:#38bdf8;font-weight:700}
+        .transcript{background:#1a1a24;border-radius:12px;padding:28px;font-size:14px;line-height:2;color:#94a3b8;white-space:pre-wrap;word-break:break-word;font-family:'JetBrains Mono','Noto Sans KR',monospace}
+        .transcript .tutor{color:#38bdf8}
+        .transcript .student{color:#a78bfa}
+        @media(max-width:640px){.header{padding:32px 16px}.header h1{font-size:22px}.cta-btn{padding:14px 28px;font-size:15px}.container{padding:0 16px 60px}}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-date">2026년 05월 29일</div>
+        <h1>📚 전화영어 복습</h1>
+        <div class="header-meta">
+            <span>⏱ 20분 1초</span>
+            <span>🎙 전화영어_025180304_20260529080018.m4a</span>
+        </div>
+    </div>
+    <div class="cta-section">
+        <button class="cta-btn" onclick="startReview()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Gemini에서 복습 대화 시작하기
+        </button>
+        <div class="cta-sub">클릭하면 프롬프트가 복사되고 Gemini가 열립니다</div>
+    </div>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('feedback')">📋 AI 피드백</button>
+            <button class="tab" onclick="switchTab('transcript')">🎙 수업 전사</button>
+        </div>
+        <div id="tab-feedback" class="tab-content active">
+            <div class="feedback"><p>Joey님, 안녕하세요! 따뜻하고 실용적인 영어 코치입니다.</p>
+<p>오늘 Chris 튜터님과의 대화에서 Joey님의 적극적인 참여와 배움에 대한 열정이 정말 인상 깊었어요! 피드백 방식에 대해 먼저 제안하고, 튜터님의 설명을 주의 깊게 듣고 바로 따라 해보는 모습에서 영어 실력 향상에 대한 강한 의지가 느껴졌습니다. 훌륭해요!</p>
+<br>
+<br>
+<p><strong>0. 📌 Topic</strong></p>
+<p>Topic: Discussing current weather, weekend plans, and feedback preferences.</p>
+<br>
+<p><strong>1. 📊 오늘의 대화 요약 (Summary)</strong></p>
+<p>오늘 Joey님은 Chris 튜터님과 한국과 캐나다 토론토의 날씨 변화에 대해 이야기 나누셨습니다. 이어서 다가오는 주말 계획(이발, 가족과의 시간)을 공유하고, 영어 학습 피드백 방식에 대한 Joey님의 선호도를 튜터님과 솔직하게 논의하며 의미 있는 시간을 가졌습니다.</p>
+<br>
+<p><strong>2. 💬 유창성 업그레이드 (Fluency & Natural Flow)</strong></p>
+<p>Joey님이 말씀하신 문장들을 더 자연스럽고 유창하게 다듬어 볼까요?</p>
+<br>
+<div class="numbered"><strong>1.</strong>  <strong>❌ 학습자 원문 (As Said):</strong> "I need to cut hair in a hair shop."</div>
+<p>    *   <strong>✅ 자연스러운 표현 (Natural):</strong> "I need to <strong>get a haircut at a salon.</strong>"</p>
+<p>    *   <strong>💎 비즈니스 표현 (Professional):</strong> "I need to <strong>schedule an appointment for a haircut at a professional salon.</strong>"</p>
+<p>    *   <strong>💡 코칭 포인트:</strong> Using "get a haircut" is the most natural way to express having your hair cut by someone else. "At a salon" or "at a barber shop" are common places. <span class="arrow">→</span> "get a haircut"은 다른 사람에게 머리를 자르는 것을 표현하는 가장 자연스러운 방법입니다. "at a salon" 또는 "at a barber shop"은 일반적인 장소입니다.</p>
+<br>
+<div class="numbered"><strong>2.</strong>  <strong>❌ 학습자 원문 (As Said):</strong> "The tennis is for the rich guys first."</div>
+<p>    *   <strong>✅ 자연스러운 표현 (Natural):</strong> "Tennis is <strong>often seen as a sport for the wealthy.</strong>"</p>
+<p>    *   <strong>💎 비즈니스 표현 (Professional):</strong> "Tennis is <strong>traditionally perceived as an exclusive sport for affluent individuals.</strong>"</p>
+<p>    *   <strong>💡 코칭 포인트:</strong> "Is for the rich guys first" sounds a bit direct and less nuanced. "Often seen as" or "perceived as" are softer ways to express a common perception. <span class="arrow">→</span> "Is for the rich guys first"는 다소 직설적이고 뉘앙스가 부족하게 들릴 수 있습니다. "often seen as" 또는 "perceived as"는 일반적인 인식을 표현하는 더 부드러운 방법입니다.</p>
+<br>
+<div class="numbered"><strong>3.</strong>  <strong>❌ 학습자 원문 (As Said):</strong> "That is so nice for me." (튜터에게 피드백이 좋다는 의미로)</div>
+<p>    *   <strong>✅ 자연스러운 표현 (Natural):</strong> "That's <strong>very helpful for me.</strong>" 또는 "That's <strong>really useful.</strong>"</p>
+<p>    *   <strong>💎 비즈니스 표현 (Professional):</strong> "I <strong>find that particularly beneficial.</strong>"</p>
+<p>    *   <strong>💡 코칭 포인트:</strong> While "nice" isn't wrong, "helpful" or "useful" more accurately convey the idea that the feedback or tip is practical and aids your learning. "Beneficial" is a more formal alternative. <span class="arrow">→</span> "nice"가 틀린 것은 아니지만, "helpful" 또는 "useful"은 피드백이나 팁이 실용적이고 학습에 도움이 된다는 의미를 더 정확하게 전달합니다. "Beneficial"은 더 격식 있는 대안입니다.</p>
+<br>
+<p><strong>3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)</strong></p>
+<p>Category: <strong>Causative Verb "Get"</strong> (사역 동사 "Get")</p>
+<br>
+<p>Joey님은 "머리를 자르다"와 같이 어떤 행동을 남에게 시키거나 맡길 때 쓰는 사역 동사 'get'의 구조를 어려워하는 모습을 보였습니다. 특히 'get + 목적어 + 과거분사' 형태를 익히면 훨씬 자연스러워질 거예요.</p>
+<br>
+<table>
+<tr><th>❌ 원문 (As Said)</th><th>✅ 교정 예시 (Corrected)</th></tr>
+<tr><td>"I have a plan to get a haircut because for almost two months I haven't <strong>cut my hair</strong>."</td><td>"I have a plan to get a haircut because for almost two months I haven't <strong>had my hair cut</strong>."</td></tr>
+<tr><td>"So I need to <strong>cut hair</strong> in a hair shop."</td><td>"So I need to <strong>get my hair cut</strong> at a salon."</td></tr>
+<tr><td>"I have a plan to <strong>get hair</strong>." (튜터의 교정 후 시도)</td><td>"I plan to <strong>get my hair cut</strong>."</td></tr>
+</table>
+<br>
+<p>📌 <strong>핵심 규칙:</strong> 남에게 어떤 행동을 시키거나 맡길 때, <code>get + 목적어 + 과거분사 (p.p.)</code> 구조를 사용합니다. (예: <code>get my hair cut</code> - 머리를 자르도록 시키다/맡기다)</p>
+<br>
+<p>🔁 <strong>따라 읽기:</strong></p>
+<p>🗣️ "I need to <strong>get my hair cut</strong> this weekend."</p>
+<p>🗣️ "I always <strong>get my car washed</strong> on Saturdays."</p>
+<p>🗣️ "She wants to <strong>get her teeth checked</strong> by a dentist."</p>
+<br>
+<p><strong>4. 📗 어휘 확장 (Vocabulary Vault)</strong></p>
+<p>Joey님의 업무 환경에서 바로 활용할 수 있는 유용한 단어들을 알아볼까요?</p>
+<br>
+<div class="numbered"><strong>1.</strong>  <strong>humid</strong> /hjuːmɪd/ (형용사)</div>
+<p>    *   뜻: 습한, 습기가 많은</p>
+<p>    *   실전 예문: The air conditioning helps reduce the <strong>humid</strong>ity in the office.</p>
+<br>
+<div class="numbered"><strong>2.</strong>  <strong>permit</strong> /pərˈmɪt/ (동사)</div>
+<p>    *   뜻: 허락하다, 허용하다</p>
+<p>    *   실전 예문: We can proceed with the project if the budget <strong>permits</strong>.</p>
+<br>
+<div class="numbered"><strong>3.</strong>  <strong>specialize</strong> /ˈspɛʃəlaɪz/ (동사)</div>
+<p>    *   뜻: 전문으로 하다, 특화하다</p>
+<p>    *   실전 예문: Our firm <strong>specializes</strong> in renewable energy investments.</p>
+<br>
+<div class="numbered"><strong>4.</strong>  <strong>affluent</strong> /ˈæfluənt/ (형용사)</div>
+<p>    *   뜻: 부유한, 유복한</p>
+<p>    *   실전 예문: The company targets <strong>affluent</strong> customers with its premium products.</p>
+<br>
+<div class="numbered"><strong>5.</strong>  <strong>perceive</strong> /pərˈsiːv/ (동사)</div>
+<p>    *   뜻: 인식하다, 감지하다</p>
+<p>    *   실전 예문: How customers <strong>perceive</strong> our brand is crucial for our marketing strategy.</p>
+<br>
+<p><strong>5. 📝 실전 복습 챌린지 (Practice)</strong></p>
+<p>오늘 배운 표현과 문법을 활용하여 영작해 보세요!</p>
+<br>
+<div class="numbered"><strong>1.</strong>  <strong>[쉬움]</strong> "저는 이번 주말에 차를 점검받을 계획입니다."</div>
+<p>    *   모범 답안: I plan to <strong>get my car checked</strong> this weekend.</p>
+<br>
+<div class="numbered"><strong>2.</strong>  <strong>[중간]</strong> "우리 회사는 고객 경험을 개선하는 데 특화되어 있습니다."</div>
+<p>    *   모범 답안: Our company <strong>specializes</strong> in enhancing customer experience.</p>
+<br>
+<div class="numbered"><strong>3.</strong>  <strong>[어려움]</strong> "날씨가 허락한다면, 우리는 다음 달에 야외 팀 빌딩 행사를 계획하고 있습니다."</div>
+<p>    *   모범 답안: If the weather <strong>permits</strong>, we are planning an outdoor team-building event next month.</p>
+<br>
+<p><strong>6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)</strong></p>
+<br>
+<p>✨ <strong>Good Job</strong>: "Our season has changed from spring to summer. Nowadays, it's almost 25 degrees or 27 degrees during the day. And it is a little hot, so many people wear short-sleeved shirts and they change their clothes."</p>
+<p>Joey님, 한국의 날씨 변화를 아주 구체적이고 자연스럽게 설명해 주셨어요. 계절 변화와 사람들의 옷차림까지 디테일하게 묘사하는 능력이 돋보였습니다. 특히 "short-sleeved shirts" 같은 표현도 좋았어요!</p>
+<br>
+<p>🚀 <strong>내일의 한 문장</strong>: 다음 수업 시작 시 튜터에게 오늘 배운 표현을 활용하여 대화를 시작해 보세요.</p>
+<p>"I'm glad the weather <strong>permits</strong> us to have this class today. How was your day, Chris?"</p>
+<br>
+<br>
+<p><strong>[성과 지표]</strong></p>
+<p><strong>유창성 점수: 7/10점</strong></p>
+<br>
+<p><strong>근거:</strong> Joey님은 대화에 매우 적극적으로 참여하고, 자신의 의견을 길게 설명하려는 노력이 돋보였습니다. 망설임 없이 말을 이어가며 다양한 주제를 다루는 유창성은 매우 훌륭합니다. 다만, 때때로 문장 구조나 어휘 선택에서 약간의 어색함이 있었고, 튜터의 교정을 통해 바로잡는 과정이 있었습니다. 이는 자연스러운 학습 과정이며, 꾸준히 연습하면 더욱 유창해질 것입니다.</p>
+<br>
+<p><strong>다음 수업 '원포인트 액션 플랜':</strong></p>
+<p>이번 수업에서 배운 <strong>사역 동사 "get + 목적어 + 과거분사" 구문</strong>을 일상생활이나 업무 관련 문장에서 3번 이상 활용해 보세요. 예를 들어, "I need to get this report finalized" (이 보고서를 마무리해야 해요)와 같이 말이죠. 이 구조를 익히면 더 복잡한 상황도 자연스럽게 표현할 수 있게 될 거예요!</p>
+<br>
+<p>Joey님, 오늘 정말 수고 많으셨습니다! 다음 수업에서 또 만나요!</p></div>
+        </div>
+        <div id="tab-transcript" class="tab-content">
+            <div class="transcript"><span class="student">[Student]</span> Hello, teacher. Good morning.
+<span class="tutor">[Tutor]</span> Hello. Good morning.
+<span class="tutor">[Tutor]</span> Hi, my name is Chris. And what&#x27;s your name?
+[Joey] Nice to meet you, Chris. My name is Joey.
+<span class="tutor">[Tutor]</span> Okay, very nice to meet you, Joey.
+<span class="tutor">[Tutor]</span> Yeah, and just to let you know a little bit about myself.
+<span class="tutor">[Tutor]</span> I&#x27;ve been teaching English for four years.
+<span class="tutor">[Tutor]</span> I specialize in conversational English and enjoy making English fun and practical for everyday life.
+[Joey] Wow.
+<span class="tutor">[Tutor]</span> Yeah, that&#x27;s great.
+<span class="tutor">[Tutor]</span> Where are you from?
+<span class="tutor">[Tutor]</span> Yep.
+<span class="tutor">[Tutor]</span> So I&#x27;m currently in Toronto, Canada.
+[Joey] Oh, Canada.
+<span class="tutor">[Tutor]</span> Do you live in Toronto, Canada?
+<span class="tutor">[Tutor]</span> Right.
+<span class="tutor">[Tutor]</span> So yeah, I&#x27;m living in Toronto, Canada.
+[Joey] Yes, I see. I understand. It&#x27;s nice. What&#x27;s the weather now in Canada, in Toronto?
+<span class="tutor">[Tutor]</span> So the last few days actually have been quite hot. So it&#x27;s been about close to 30 degrees, like in the high 20s.
+[Joey] Yes, it&#x27;s so high. I see.
+<span class="tutor">[Tutor]</span> Right. Yes, it&#x27;s quite hot. And how is it in Korea?
+[Joey] It is similar. Our season has changed from spring to summer. Nowadays, it&#x27;s almost 25 degrees or 27 degrees during the day.
+[Joey] And it is a little hot, so many people wear short-sleeved shirts and they change their clothes. And nature also has changed. One or two months ago, the tree leaves were bright green, but nowadays they are a deep green and there are a lot more leaves on the tree. So yeah, it is so nice. Yeah, it is so fresh.
+<span class="tutor">[Tutor]</span> Right. Absolutely. So yeah, definitely sounds quite nice. A little bit on the warm side, similar to us. A small note here. So you mentioned like it&#x27;s almost 25 or 27. And then you mentioned &quot;in day&quot; and then you also mentioned &quot;during&quot;. So I think the most natural way to phrase it, you can say, for example, it&#x27;s almost 27 degrees during the day.
+[Joey] Ah, 27 degrees during the day.
+[Joey] Yeah, thanks so much.
+<span class="tutor">[Tutor]</span> Right.
+<span class="tutor">[Tutor]</span> Yeah, during the day.
+[Joey] 27 degrees during the day.
+<span class="tutor">[Tutor]</span> Good.
+<span class="tutor">[Tutor]</span> Right, exactly.
+<span class="tutor">[Tutor]</span> So, yeah, so that&#x27;s great.
+<span class="tutor">[Tutor]</span> And how about in terms of rain?
+<span class="tutor">[Tutor]</span> Has there been a lot of rain or has it just been relatively dry?
+[Joey] Korea has a rainy season.
+[Joey] So usually summertime is a little humid, but the rainy season is only two or three weeks.
+[Joey] So that season is maybe the last week of June and the first week of July. So that is the rainy season. So during those two weeks, it always rains.
+[Joey] But the other summer season is dry. So it&#x27;s okay.
+<span class="tutor">[Tutor]</span> Right.
+<span class="tutor">[Tutor]</span> Yeah.
+[Joey] Right. How about your country?
+[Joey] Is it the same?
+<span class="tutor">[Tutor]</span> Actually in Toronto, I&#x27;d say we don&#x27;t necessarily have a rainy season.
+<span class="tutor">[Tutor]</span> It&#x27;s kind of evenly spread out throughout the year.
+<span class="tutor">[Tutor]</span> I&#x27;d say maybe like during April, we have a bit more rain.
+<span class="tutor">[Tutor]</span> But for the most part, it&#x27;s just even.
+<span class="tutor">[Tutor]</span> Quite even throughout the year.
+[Joey] I see.
+[Joey] Yes, I understand.
+<span class="tutor">[Tutor]</span> Right. Excellent.
+<span class="tutor">[Tutor]</span> And I just wanted to mention one other thing very quickly.
+<span class="tutor">[Tutor]</span> So regarding the rainy season in Korea,
+<span class="tutor">[Tutor]</span> you mentioned &quot;during the two weeks, they always rainy.&quot;
+<span class="tutor">[Tutor]</span> Yeah.
+<span class="tutor">[Tutor]</span> So let&#x27;s see how we can phrase this idea.
+<span class="tutor">[Tutor]</span> So there&#x27;s a few options.
+<span class="tutor">[Tutor]</span> So if you&#x27;re using &quot;during the two weeks,&quot;
+<span class="tutor">[Tutor]</span> you can say, &quot;during the two weeks, it always rains.&quot;
+[Joey] That one option. During the two weeks, it rains. During the two weeks, it always rains. Right.
+<span class="tutor">[Tutor]</span> So that could be one option. So if you wanted to use this type of expression, &quot;they&quot; or &quot;they are always raining,&quot; so you can even say something like this.
+<span class="tutor">[Tutor]</span> &quot;Those two weeks,&quot; you&#x27;re specifying those weeks now.
+<span class="tutor">[Tutor]</span> So you can say, &quot;those two weeks are always rainy.&quot;
+[Joey] Always rainy.
+[Joey] Rainy. Those two weeks, it... those two weeks, it is always rainy. Okay.
+<span class="tutor">[Tutor]</span> Or even more naturally, you don&#x27;t need to say &quot;it&quot; for that second option. You can simply say,
+<span class="tutor">[Tutor]</span> &quot;Those two weeks are always rainy.&quot;
+[Joey] Those two weeks are always rainy. Okay.
+<span class="tutor">[Tutor]</span> So great.
+<span class="tutor">[Tutor]</span> Right, yes, excellent. Yes. So yeah, so very nice. Um, yeah, so I&#x27;m curious now. So today it&#x27;s Friday, right?
+<span class="tutor">[Tutor]</span> The start of the weekend. That&#x27;s always a good thing. Yeah. And do you have any plans for the weekend?
+[Joey] Ah, this weekend. Okay. I have a plan to get a haircut because for almost two months I haven&#x27;t cut my hair, so it&#x27;s long.
+[Joey] So I need to cut hair in a hair shop.
+[Joey] And the other thing is I always meet my family on Friday night because I work in another city, in Seoul.
+[Joey] And actually, my hometown is Busan.
+[Joey] So that distance is almost 450 kilometers. So after I finish my work on Friday, I go back home and I will meet my family, my son and my wife. Yeah, that is the pleasure. So this week, this week is the rose season in Korea. So everywhere in the park, roses bloom. So we will go there and look around the roses and we will go to some good restaurant and have a dinner or lunch with my family. Yeah, that is so, yeah, normal time, but that is also special for me.
+<span class="tutor">[Tutor]</span> Oh, yeah, absolutely. Getting the opportunity to spend time with family, always a great thing. So yeah, very nice. And a few quick notes. So regarding the haircut, so you mentioned, &quot;I have some plan to haircut&quot; or &quot;or to cut hair.&quot;
+<span class="tutor">[Tutor]</span> So the most natural way to phrase it,
+<span class="tutor">[Tutor]</span> you can say,
+<span class="tutor">[Tutor]</span> &quot;I plan to get my hair cut this weekend.&quot;
+[Joey] I have a plan to get hair.
+[Joey] Is that right?
+[Joey] Get hair, blah, blah, blah?
+<span class="tutor">[Tutor]</span> Close.
+<span class="tutor">[Tutor]</span> So I&#x27;ll mention it again.
+<span class="tutor">[Tutor]</span> So you can start with,
+<span class="tutor">[Tutor]</span> &quot;I plan to get.&quot;
+<span class="tutor">[Tutor]</span> So you don&#x27;t necessarily have to say,
+<span class="tutor">[Tutor]</span> &quot;have a plan.&quot;
+<span class="tutor">[Tutor]</span> And you can simply say, &quot;I plan to get my hair cut.&quot;
+[Joey] I plan to get my hair.
+[Joey] Get my hair.
+<span class="tutor">[Tutor]</span> Right.
+[Joey] Oh, that is so strange.
+[Joey] Get my hair.
+<span class="tutor">[Tutor]</span> Yeah, get my hair.
+[Joey] Oh, so sorry.
+<span class="tutor">[Tutor]</span> Get my hair cut.
+<span class="tutor">[Tutor]</span> So you do want to say &quot;cut&quot; at the end.
+[Joey] Get hair.
+[Joey] Get my hair cut.
+[Joey] Get my hair cut.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="tutor">[Tutor]</span> Right. So the full sentence, it would be, &quot;I plan to get my hair cut.&quot;
+[Joey] I plan to get my hair cut.
+<span class="tutor">[Tutor]</span> Perfect. That sounds great on its own. &quot;I plan to get my hair cut.&quot;
+<span class="tutor">[Tutor]</span> And because it&#x27;s happening this weekend, you can even specify further and add &quot;this weekend&quot; at the end.
+<span class="tutor">[Tutor]</span> You can say, &quot;I plan to get my hair cut this weekend.&quot;
+[Joey] Weekend.
+<span class="tutor">[Tutor]</span> Right.
+[Joey] Okay.
+<span class="tutor">[Tutor]</span> That&#x27;s one note.
+<span class="tutor">[Tutor]</span> Very good.
+[Joey] Oh, yeah.
+<span class="tutor">[Tutor]</span> And another quick note.
+<span class="tutor">[Tutor]</span> So you mentioned this idea, &quot;so I always meet my family in Friday night.&quot;
+<span class="tutor">[Tutor]</span> And you also mentioned, &quot;after I finish my work in Friday.&quot;
+<span class="tutor">[Tutor]</span> So in these instances, when you&#x27;re referring to a day like this or a time like a Friday night, you want to say &quot;on&quot; instead of &quot;in.&quot; &quot;On.&quot; Right. Yeah. So you, for example, you can say, &quot;I always meet my family on Friday night.&quot;
+[Joey] Yeah, Friday night. Okay.
+<span class="tutor">[Tutor]</span> Right, perfect. And then for work, you
+<span class="tutor">[Tutor]</span> you can say, &quot;after I finish my work on Friday.&quot;
+[Joey] On Friday.
+<span class="tutor">[Tutor]</span> Right.
+<span class="tutor">[Tutor]</span> And then, &quot;I will go back home.&quot;
+[Joey] I will go back my home.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="tutor">[Tutor]</span> Right.
+[Joey] That&#x27;s so nice.
+<span class="tutor">[Tutor]</span> And actually, you mentioned, &quot;I will go back my home.&quot;
+<span class="tutor">[Tutor]</span> So more naturally, you don&#x27;t need to say &quot;my.&quot;
+<span class="tutor">[Tutor]</span> You can simply say, &quot;I will go back home.&quot;
+[Joey] Go back home.
+<span class="tutor">[Tutor]</span> Because always home is my home, right?
+<span class="tutor">[Tutor]</span> So I go back home.
+<span class="tutor">[Tutor]</span> So it&#x27;s already kind of understood.
+[Joey] Exactly.
+[Joey] Yes.
+[Joey] Okay.
+[Joey] That&#x27;s good.
+[Joey] Tip for me.
+<span class="tutor">[Tutor]</span> Excellent.
+<span class="tutor">[Tutor]</span> So yeah.
+<span class="tutor">[Tutor]</span> And so when you meet your family
+<span class="tutor">[Tutor]</span> on Friday,
+<span class="tutor">[Tutor]</span> what do you like to do? Like, do you
+<span class="tutor">[Tutor]</span> spend time at home and
+<span class="tutor">[Tutor]</span> talk or do you
+<span class="tutor">[Tutor]</span> go out to a restaurant
+<span class="tutor">[Tutor]</span> or what do you typically like to do?
+[Joey] Usually, there are so many options.
+[Joey] Yeah, so every week we have a different plan to do.
+[Joey] So, yeah, so, but usually we go out.
+[Joey] Just go to a museum, go to the gym,
+[Joey] go to the pool, go to the beach. Usually that is that place that&#x27;s outside and we
+[Joey] play with something. Not inside.
+<span class="tutor">[Tutor]</span> Okay. Right. And here&#x27;s a kind of
+<span class="tutor">[Tutor]</span> interesting note. So you mentioned, &quot;we will go outside,&quot; and this sounds good.
+<span class="tutor">[Tutor]</span> Nothing necessarily wrong with this.
+<span class="tutor">[Tutor]</span> But here, because you&#x27;re emphasizing
+<span class="tutor">[Tutor]</span> it&#x27;s the activities, right?
+<span class="tutor">[Tutor]</span> Going outside and going for a movie
+<span class="tutor">[Tutor]</span> or going to a restaurant or a museum.
+<span class="tutor">[Tutor]</span> So for those activities,
+<span class="tutor">[Tutor]</span> you can say, &quot;we will go out,&quot;
+<span class="tutor">[Tutor]</span> rather than &quot;outside.&quot;
+[Joey] Yeah, go out.
+<span class="tutor">[Tutor]</span> Yeah, so very naturally.
+<span class="tutor">[Tutor]</span> Yeah, you&#x27;re welcome.
+[Joey] We will go out.
+[Joey] Yeah, go out.
+[Joey] Okay.
+[Joey] I think you are a good teacher and your tips and your grammar are so great.
+[Joey] That is so nice for me.
+<span class="tutor">[Tutor]</span> Oh, thanks. I appreciate it.
+[Joey] But I think we are human, so it is better if we talk freestyle.
+[Joey] And then the last time, if you correct my grammar or some expression, that is better.
+<span class="tutor">[Tutor]</span> Oh, sure.
+[Joey] Yeah, because we think our culture in Korea, we have during the relationship, use the communication.
+[Joey] So if you give feedback during the class, I think that is a little disconnect from your conversation.
+[Joey] So yeah,
+[Joey] your thing is still nice and great.
+<span class="tutor">[Tutor]</span> Oh, thanks.
+<span class="tutor">[Tutor]</span> But yeah, we can definitely
+<span class="tutor">[Tutor]</span> save it till the end of the class.
+<span class="tutor">[Tutor]</span> And we&#x27;ll kind of continue.
+<span class="tutor">[Tutor]</span> I&#x27;ll just kind of make notes,
+<span class="tutor">[Tutor]</span> and then in the last few minutes of class,
+<span class="tutor">[Tutor]</span> I&#x27;ll go over those notes.
+[Joey] Yeah, because someday,
+[Joey] or if we made some
+[Joey] student and teacher relationship,
+[Joey] at that time,
+[Joey] I&#x27;m asking you
+[Joey] because you&#x27;re a great teacher
+[Joey] and I have great feedback.
+[Joey] But I just ask to you,
+[Joey] a teacher, I&#x27;m just sorry,
+[Joey] but I want to blah, blah, blah, blah.
+[Joey] So yeah, please tell me.
+[Joey] Yeah, for me.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="tutor">[Tutor]</span> Right. Yeah, not a problem.
+<span class="tutor">[Tutor]</span> We can definitely do that.
+<span class="tutor">[Tutor]</span> And yeah, that&#x27;s the thing.
+<span class="tutor">[Tutor]</span> Like different students prefer different styles, right?
+<span class="tutor">[Tutor]</span> Some students, they want immediate corrections.
+<span class="tutor">[Tutor]</span> Others, they want to save it to the end.
+<span class="tutor">[Tutor]</span> So, yes, not a problem.
+[Joey] How about the students?
+[Joey] Maybe you have so many students.
+[Joey] How about their response, their, yeah, your class way?
+[Joey] How about that?
+<span class="tutor">[Tutor]</span> So I&#x27;d say typically most of them like kind of like those immediate corrections, but there are a few that also specify they want to save it till the end because, like you mentioned, it does kind of break up the conversation, right? Yeah, so that is the one
+[Joey] downside. I see. I understand. Yeah, yeah, people are... every person has a different character, so
+[Joey] I understand. That is good.
+<span class="tutor">[Tutor]</span> Absolutely.
+<span class="tutor">[Tutor]</span> And I was wondering, how about your weekend plans?
+<span class="tutor">[Tutor]</span> Oh, for my plans?
+[Joey] Yeah, your plans.
+<span class="tutor">[Tutor]</span> These days, so, yeah.
+<span class="tutor">[Tutor]</span> So, it&#x27;s kind of interesting.
+<span class="tutor">[Tutor]</span> Like, the days have been quite hot,
+<span class="tutor">[Tutor]</span> but when it comes to the weekend, it starts raining.
+<span class="tutor">[Tutor]</span> Like, last weekend, I was hoping to play some tennis,
+<span class="tutor">[Tutor]</span> but it was raining the entire weekend.
+<span class="tutor">[Tutor]</span> Yes. So it was rather unfortunate. So I&#x27;m hoping this weekend it will be a little bit better and there might be a good day to play some tennis.
+[Joey] Tennis, I see. Usually who do you play tennis with?
+<span class="tutor">[Tutor]</span> So I have a few people I play with.
+<span class="tutor">[Tutor]</span> So I either play with my older brother
+<span class="tutor">[Tutor]</span> or a few of my cousins also enjoy playing tennis.
+[Joey] Ah, yes, I see.
+[Joey] And this is a little, yeah, not a good question.
+[Joey] So could you give feedback for me?
+[Joey] Sorry, I&#x27;m just asking you,
+[Joey] how do you play with your...
+[Joey] Yeah, how can I say this?
+[Joey] Like, how do you play?
+<span class="tutor">[Tutor]</span> So you want to know, like, the question,
+<span class="tutor">[Tutor]</span> like, who is it?
+[Joey] Yeah, who do you play with?
+[Joey] Yeah, who do you play with their tennis?
+[Joey] How can I say?
+<span class="tutor">[Tutor]</span> Okay, so, yeah, so just say it.
+<span class="tutor">[Tutor]</span> So, &quot;who do you play with tennis?&quot;
+<span class="tutor">[Tutor]</span> So the most natural way to ask the question,
+<span class="tutor">[Tutor]</span> you can ask, &quot;who do you play tennis with?&quot;
+[Joey] Who do you play tennis with?
+[Joey] Ah, it&#x27;s better.
+<span class="tutor">[Tutor]</span> Excellent.
+[Joey] Who do you play tennis with?
+[Joey] Who do you play tennis with?
+[Joey] Okay.
+<span class="tutor">[Tutor]</span> Excellent.
+[Joey] Actually, I found some teacher because last month,
+[Joey] my English teacher quit her job.
+[Joey] So, the Carol English says that is the regular teacher.
+[Joey] So, teachers are spread into three kinds of teachers.
+[Joey] So, if I have an opportunity to class with you, I&#x27;ll ask Carol English.
+[Joey] Yes, the regular teacher.
+<span class="tutor">[Tutor]</span> Oh, okay.
+[Joey] Yes.
+<span class="tutor">[Tutor]</span> Oh, sounds good.
+<span class="tutor">[Tutor]</span> Yeah, depending like, so they&#x27;re kind of responsible for like creating the schedule.
+<span class="tutor">[Tutor]</span> So if there&#x27;s a free slot in the schedule that works for you and there&#x27;s the space available, then yeah, we can definitely make it happen then.
+[Joey] Yes.
+[Joey] Okay.
+[Joey] Anyway.
+<span class="tutor">[Tutor]</span> Sounds good.
+<span class="tutor">[Tutor]</span> All right.
+<span class="tutor">[Tutor]</span> Very nice.
+<span class="tutor">[Tutor]</span> So yeah, so tennis is the hope, but I&#x27;m not sure if the weather will permit it.
+<span class="tutor">[Tutor]</span> We&#x27;ll have to wait and see.
+[Joey] The tennis in Korea,
+[Joey] the tennis is for the
+[Joey] rich guys first.
+[Joey] So,
+[Joey] some special rich guys
+[Joey] play tennis in a hotel.
+[Joey] The tennis
+[Joey] court
+[Joey] is so luxury.
+[Joey] So,
+[Joey] someday...
+<span class="tutor">[Tutor]</span> Yeah, yeah, and for me, I don&#x27;t play the fancy tennis. Like I play on the public court, so
+<span class="tutor">[Tutor]</span> anyone is free to play and there&#x27;s no cost there. So I don&#x27;t play the luxury tennis.
+[Joey] Luxury. Yes, I see. Yes.
+<span class="tutor">[Tutor]</span> Yeah, and actually we should probably pause here. So we&#x27;re almost out of
+<span class="tutor">[Tutor]</span> time. So just to quickly recap, um, you also mentioned this idea like with the lessons,
+<span class="tutor">[Tutor]</span> &quot;every people have different character,&quot; right?
+[Joey] Yeah.
+<span class="tutor">[Tutor]</span> So because you&#x27;re using &quot;every,&quot; you want to say &quot;every person.&quot;
+[Joey] Every person.
+<span class="tutor">[Tutor]</span> Instead of &quot;people.&quot;
+[Joey] Right.
+<span class="tutor">[Tutor]</span> &quot;Every person has a different character.&quot;
+[Joey] Every person.
+[Joey] I see.
+[Joey] Every person has a different character.
+[Joey] Every person has a different character.
+[Joey] Okay.
+<span class="tutor">[Tutor]</span> All right.
+<span class="tutor">[Tutor]</span> Very nice.
+<span class="tutor">[Tutor]</span> So, yeah.
+<span class="tutor">[Tutor]</span> So great talking with you today.
+<span class="tutor">[Tutor]</span> So I&#x27;ll send you the feedback we discussed after class.
+<span class="tutor">[Tutor]</span> And yeah, we can end here and have yourself a great weekend.
+[Joey] Okay.
+[Joey] Thank you so much, teacher.
+[Joey] Have a nice day and have a nice weekend.
+<span class="tutor">[Tutor]</span> You&#x27;re welcome.
+<span class="tutor">[Tutor]</span> Take care.
+<span class="tutor">[Tutor]</span> Bye.
+[Joey] Bye-bye.</div>
+        </div>
+    </div>
+    <div class="toast" id="toast">✅ 프롬프트가 복사되었습니다!</div>
+    <script>
+        const REVIEW_PROMPT="너는 나의 영어 회화 복습 파트너야. 오늘 내 전화영어 수업 내용을 기반으로 대화하면서 복습을 도와줘.\n\n[오늘 수업 전사 내용]\n[Student] Hello, teacher. Good morning.\n[Tutor] Hello. Good morning.\n[Tutor] Hi, my name is Chris. And what's your name?\n[Joey] Nice to meet you, Chris. My name is Joey.\n[Tutor] Okay, very nice to meet you, Joey.\n[Tutor] Yeah, and just to let you know a little bit about myself.\n[Tutor] I've been teaching English for four years.\n[Tutor] I specialize in conversational English and enjoy making English fun and practical for everyday life.\n[Joey] Wow.\n[Tutor] Yeah, that's great.\n[Tutor] Where are you from?\n[Tutor] Yep.\n[Tutor] So I'm currently in Toronto, Canada.\n[Joey] Oh, Canada.\n[Tutor] Do you live in Toronto, Canada?\n[Tutor] Right.\n[Tutor] So yeah, I'm living in Toronto, Canada.\n[Joey] Yes, I see. I understand. It's nice. What's the weather now in Canada, in Toronto?\n[Tutor] So the last few days actually have been quite hot. So it's been about close to 30 degrees, like in the high 20s.\n[Joey] Yes, it's so high. I see.\n[Tutor] Right. Yes, it's quite hot. And how is it in Korea?\n[Joey] It is similar. Our season has changed from spring to summer. Nowadays, it's almost 25 degrees or 27 degrees during the day.\n[Joey] And it is a little hot, so many people wear short-sleeved shirts and they change their clothes. And nature also has changed. One or two months ago, the tree leaves were bright green, but nowadays they are a deep green and there are a lot more leaves on the tree. So yeah, it is so nice. Yeah, it is so fresh.\n[Tutor] Right. Absolutely. So yeah, definitely sounds quite nice. A little bit on the warm side, similar to us. A small note here. So you mentioned like it's almost 25 or 27. And then you mentioned \"in day\" and then you also mentioned \"during\". So I think the most natural way to phrase it, you can say, for example, it's almost 27 degrees during the day.\n[Joey] Ah, 27 degrees during the day.\n[Joey] Yeah, thanks so much.\n[Tutor] Right.\n[Tutor] Yeah, during the day.\n[Joey] 27 degrees during the day.\n[Tutor] Good.\n[Tutor] Right, exactly.\n[Tutor] So, yeah, so that's great.\n[Tutor] And how about in terms of rain?\n[Tutor] Has there been a lot of rain or has it just been relatively dry?\n[Joey] Korea has a rainy season.\n[Joey] So usually summertime is a little humid, but the rainy season is only two or three weeks.\n[Joey] So that season is maybe the last week of June and the first week of July. So that is the rainy season. So during those two weeks, it always rains.\n[Joey] But the other summer season is dry. So it's okay.\n[Tutor] Right.\n[Tutor] Yeah.\n[Joey] Right. How about your country?\n[Joey] Is it the same?\n[Tutor] Actually in Toronto, I'd say we don't necessarily have a rainy season.\n[Tutor] It's kind of evenly spread out throughout the year.\n[Tutor] I'd say maybe like during April, we have a bit more rain.\n[Tutor] But for the most part, it's just even.\n[Tutor] Quite even throughout the year.\n[Joey] I see.\n[Joey] Yes, I understand.\n[Tutor] Right. Excellent.\n[Tutor] And I just wanted to mention one other thing very quickly.\n[Tutor] So regarding the rainy season in Korea,\n[Tutor] you mentioned \"during the two weeks, they always rainy.\"\n[Tutor] Yeah.\n[Tutor] So let's see how we can phrase this idea.\n[Tutor] So there's a few options.\n[Tutor] So if you're using \"during the two weeks,\"\n[Tutor] you can say, \"during the two weeks, it always rains.\"\n[Joey] That one option. During the two weeks, it rains. During the two weeks, it always rains. Right.\n[Tutor] So that could be one option. So if you wanted to use this type of expression, \"they\" or \"they are always raining,\" so you can even say something like this.\n[Tutor] \"Those two weeks,\" you're specifying those weeks now.\n[Tutor] So you can say, \"those two weeks are always rainy.\"\n[Joey] Always rainy.\n[Joey] Rainy. Those two weeks, it... those two weeks, it is always rainy. Okay.\n[Tutor] Or even more naturally, you don't need to say \"it\" for that second option. You can simply say,\n[Tutor] \"Those two weeks are always rainy.\"\n[Joey] Those two weeks are always rainy. Okay.\n[Tutor] So great.\n[Tutor] Right, yes, excellent. Yes. So yeah, so very nice. Um, yeah, so I'm curious now. So today it's Friday, right?\n[Tutor] The start of the weekend. That's always a good thing. Yeah. And do you have any plans for the weekend?\n[Joey] Ah, this weekend. Okay. I have a plan to get a haircut because for almost two months I haven't cut my hair, so it's long.\n[Joey] So I need to cut hair in a hair shop.\n[Joey] And the other thing is I always meet my family on Friday night because I work in another city, in Seoul.\n[Joey] And actually, my hometown is Busan.\n[Joey] So that distance is almost 450 kilometers. So after I finish my work on Friday, I go back home and I will meet my family, my son and my wife. Yeah, that is the pleasure. So this week, this week is the rose season in Korea. So everywhere in the park, roses bloom. So we will go there and look around the roses and we will go to some good restaurant and have a dinner or lunch with my family. Yeah, that is so, yeah, normal time, but that is also special for me.\n[Tutor] Oh, yeah, absolutely. Getting the opportunity to spend time with family, always a great thing. So yeah, very nice. And a few quick notes. So regarding the haircut, so you mentioned, \"I have some plan to haircut\" or \"or to cut hair.\"\n[Tutor] So the most natural way to phrase it,\n[Tutor] you can say,\n[Tutor] \"I plan to get my hair cut this weekend.\"\n[Joey] I have a plan to get hair.\n[Joey] Is that right?\n[Joey] Get hair, blah, blah, blah?\n[Tutor] Close.\n[Tutor] So I'll mention it again.\n[Tutor] So you can start with,\n[Tutor] \"I plan to get.\"\n[Tutor] So you don't necessarily have to say,\n[Tutor] \"have a plan.\"\n[Tutor] And you can simply say, \"I plan to get my hair cut.\"\n[Joey] I plan to get my hair.\n[Joey] Get my hair.\n[Tutor] Right.\n[Joey] Oh, that is so strange.\n[Joey] Get my hair.\n[Tutor] Yeah, get my hair.\n[Joey] Oh, so sorry.\n[Tutor] Get my hair cut.\n[Tutor] So you do want to say \"cut\" at the end.\n[Joey] Get hair.\n[Joey] Get my hair cut.\n[Joey] Get my hair cut.\n[Tutor] Okay.\n[Tutor] Right. So the full sentence, it would be, \"I plan to get my hair cut.\"\n[Joey] I plan to get my hair cut.\n[Tutor] Perfect. That sounds great on its own. \"I plan to get my hair cut.\"\n[Tutor] And because it's happening this weekend, you can even specify further and add \"this weekend\" at the end.\n[Tutor] You can say, \"I plan to get my hair cut this weekend.\"\n[Joey] Weekend.\n[Tutor] Right.\n[Joey] Okay.\n[Tutor] That's one note.\n[Tutor] Very good.\n[Joey] Oh, yeah.\n[Tutor] And another quick note.\n[Tutor] So you mentioned this idea, \"so I always meet my family in Friday night.\"\n[Tutor] And you also mentioned, \"after I finish my work in Friday.\"\n[Tutor] So in these instances, when you're referring to a day like this or a time like a Friday night, you want to say \"on\" instead of \"in.\" \"On.\" Right. Yeah. So you, for example, you can say, \"I always meet my family on Friday night.\"\n[Joey] Yeah, Friday night. Okay.\n[Tutor] Right, perfect. And then for work, you\n[Tutor] you can say, \"after I finish my work on Friday.\"\n[Joey] On Friday.\n[Tutor] Right.\n[Tutor] And then, \"I will go back home.\"\n[Joey] I will go back my home.\n[Tutor] Okay.\n[Tutor] Right.\n[Joey] That's so nice.\n[Tutor] And actually, you mentioned, \"I will go back my home.\"\n[Tutor] So more naturally, you don't need to say \"my.\"\n[Tutor] You can simply say, \"I will go back home.\"\n[Joey] Go back home.\n[Tutor] Because always home is my home, right?\n[Tutor] So I go back home.\n[Tutor] So it's already kind of understood.\n[Joey] Exactly.\n[Joey] Yes.\n[Joey] Okay.\n[Joey] That's good.\n[Joey] Tip for me.\n[Tutor] Excellent.\n[Tutor] So yeah.\n[Tutor] And so when you meet your family\n[Tutor] on Friday,\n[Tutor] what do you like to do? Like, do you\n[Tutor] spend time at home and\n[Tutor] talk or do you\n[Tutor] go out to a restaurant\n[Tutor] or what do you typically like to do?\n[Joey] Usually, there are so many options.\n[Joey] Yeah, so every week we have a different plan to do.\n[Joey] So, yeah, so, but usually we go out.\n[Joey] Just go to a museum, go to the gym,\n[Joey] go to the pool, go to the beach. Usually that is that place that's outside and we\n[Joey] play with something. Not inside.\n[Tutor] Okay. Right. And here's a kind of\n[Tutor] interesting note. So you mentioned, \"we will go outside,\" and this sounds good.\n[Tutor] Nothing necessarily wrong with this.\n[Tutor] But here, because you're emphasizing\n[Tutor] it's the activities, right?\n[Tutor] Going outside and going for a movie\n[Tutor] or going to a restaurant or a museum.\n[Tutor] So for those activities,\n[Tutor] you can say, \"we will go out,\"\n[Tutor] rather than \"outside.\"\n[Joey] Yeah, go out.\n[Tutor] Yeah, so very naturally.\n[Tutor] Yeah, you're welcome.\n[Joey] We will go out.\n[Joey] Yeah, go out.\n[Joey] Okay.\n[Joey] I think you are a good teacher and your tips and your grammar are so great.\n[Joey] That is so nice for me.\n[Tutor] Oh, thanks. I appreciate it.\n[Joey] But I think we are human, so it is better if we talk freestyle.\n[Joey] And then the last time, if you correct my grammar or some expression, that is better.\n[Tutor] Oh, sure.\n[Joey] Yeah, because we think our culture in Korea, we have during the relationship, use the communication.\n[Joey] So if you give feedback during the class, I think that is a little disconnect from your conversation.\n[Joey] So yeah,\n[Joey] your thing is still nice and great.\n[Tutor] Oh, thanks.\n[Tutor] But yeah, we can definitely\n[Tutor] save it till the end of the class.\n[Tutor] And we'll kind of continue.\n[Tutor] I'll just kind of make notes,\n[Tutor] and then in the last few minutes of class,\n[Tutor] I'll go over those notes.\n[Joey] Yeah, because someday,\n[Joey] or if we made some\n[Joey] student and teacher relationship,\n[Joey] at that time,\n[Joey] I'm asking you\n[Joey] because you're a great teacher\n[Joey] and I have great feedback.\n[Joey] But I just ask to you,\n[Joey] a teacher, I'm just sorry,\n[Joey] but I want to blah, blah, blah, blah.\n[Joey] So yeah, please tell me.\n[Joey] Yeah, for me.\n[Tutor] Okay.\n[Tutor] Right. Yeah, not a problem.\n[Tutor] We can definitely do that.\n[Tutor] And yeah, that's the thing.\n[Tutor] Like different students prefer different styles, right?\n[Tutor] Some students, they want immediate corrections.\n[Tutor] Others, they want to save it to the end.\n[Tutor] So, yes, not a problem.\n[Joey] How about the students?\n[Joey] Maybe you have so many students.\n[Joey] How about their response, their, yeah, your class way?\n[Joey] How about that?\n[Tutor] So I'd say typically most of them like kind of like those immediate corrections, but there are a few that also specify they want to save it till the end because, like you mentioned, it does kind of break up the conversation, right? Yeah, so that is the one\n[Joey] downside. I see. I understand. Yeah, yeah, people are... every person has a different character, so\n[Joey] I understand. That is good.\n[Tutor] Absolutely.\n[Tutor] And I was wondering, how about your weekend plans?\n[Tutor] Oh, for my plans?\n[Joey] Yeah, your plans.\n[Tutor] These days, so, yeah.\n[Tutor] So, it's kind of interesting.\n[Tutor] Like, the days have been quite hot,\n[Tutor] but when it comes to the weekend, it starts raining.\n[Tutor] Like, last weekend, I was hoping to play some tennis,\n[Tutor] but it was raining the entire weekend.\n[Tutor] Yes. So it was rather unfortunate. So I'm hoping this weekend it will be a little bit better and there might be a good day to play some tennis.\n[Joey] Tennis, I see. Usually who do you play tennis with?\n[Tutor] So I have a few people I play with.\n[Tutor] So I either play with my older brother\n[Tutor] or a few of my cousins also enjoy playing tennis.\n[Joey] Ah, yes, I see.\n[Joey] And this is a little, yeah, not a good question.\n[Joey] So could you give feedback for me?\n[Joey] Sorry, I'm just asking you,\n[Joey] how do you play with your...\n[Joey] Yeah, how can I say this?\n[Joey] Like, how do you play?\n[Tutor] So you want to know, like, the question,\n[Tutor] like, who is it?\n[Joey] Yeah, who do you play with?\n[Joey] Yeah, who do you play with their tennis?\n[Joey] How can I say?\n[Tutor] Okay, so, yeah, so just say it.\n[Tutor] So, \"who do you play with tennis?\"\n[Tutor] So the most natural way to ask the question,\n[Tutor] you can ask, \"who do you play tennis with?\"\n[Joey] Who do you play tennis with?\n[Joey] Ah, it's better.\n[Tutor] Excellent.\n[Joey] Who do you play tennis with?\n[Joey] Who do you play tennis with?\n[Joey] Okay.\n[Tutor] Excellent.\n[Joey] Actually, I found some teacher because last month,\n[Joey] my English teacher quit her job.\n[Joey] So, the Carol English says that is the regular teacher.\n[Joey] So, teachers are spread into three kinds of teachers.\n[Joey] So, if I have an opportunity to class with you, I'll ask Carol English.\n[Joey] Yes, the regular teacher.\n[Tutor] Oh, okay.\n[Joey] Yes.\n[Tutor] Oh, sounds good.\n[Tutor] Yeah, depending like, so they're kind of responsible for like creating the schedule.\n[Tutor] So if there's a free slot in the schedule that works for you and there's the space available, then yeah, we can definitely make it happen then.\n[Joey] Yes.\n[Joey] Okay.\n[Joey] Anyway.\n[Tutor] Sounds good.\n[Tutor] All right.\n[Tutor] Very nice.\n[Tutor] So yeah, so tennis is the hope, but I'm not sure if the weather will permit it.\n[Tutor] We'll have to wait and see.\n[Joey] The tennis in Korea,\n[Joey] the tennis is for the\n[Joey] rich guys first.\n[Joey] So,\n[Joey] some special rich guys\n[Joey] play tennis in a hotel.\n[Joey] The tennis\n[Joey] court\n[Joey] is so luxury.\n[Joey] So,\n[Joey] someday...\n[Tutor] Yeah, yeah, and for me, I don't play the fancy tennis. Like I play on the public court, so\n[Tutor] anyone is free to play and there's no cost there. So I don't play the luxury tennis.\n[Joey] Luxury. Yes, I see. Yes.\n[Tutor] Yeah, and actually we should probably pause here. So we're almost out of\n[Tutor] time. So just to quickly recap, um, you also mentioned this idea like with the lessons,\n[Tutor] \"every people have different character,\" right?\n[Joey] Yeah.\n[Tutor] So because you're using \"every,\" you want to say \"every person.\"\n[Joey] Every person.\n[Tutor] Instead of \"people.\"\n[Joey] Right.\n[Tutor] \"Every person has a different character.\"\n[Joey] Every person.\n[Joey] I see.\n[Joey] Every person has a different character.\n[Joey] Every person has a different character.\n[Joey] Okay.\n[Tutor] All right.\n[Tutor] Very nice.\n[Tutor] So, yeah.\n[Tutor] So great talking with you today.\n[Tutor] So I'll send you the feedback we discussed after class.\n[Tutor] And yeah, we can end here and have yourself a great weekend.\n[Joey] Okay.\n[Joey] Thank you so much, teacher.\n[Joey] Have a nice day and have a nice weekend.\n[Tutor] You're welcome.\n[Tutor] Take care.\n[Tutor] Bye.\n[Joey] Bye-bye.\n\n[AI 피드백]\nJoey님, 안녕하세요! 따뜻하고 실용적인 영어 코치입니다.\n오늘 Chris 튜터님과의 대화에서 Joey님의 적극적인 참여와 배움에 대한 열정이 정말 인상 깊었어요! 피드백 방식에 대해 먼저 제안하고, 튜터님의 설명을 주의 깊게 듣고 바로 따라 해보는 모습에서 영어 실력 향상에 대한 강한 의지가 느껴졌습니다. 훌륭해요!\n\n---\n\n**0. 📌 Topic**\nTopic: Discussing current weather, weekend plans, and feedback preferences.\n\n**1. 📊 오늘의 대화 요약 (Summary)**\n오늘 Joey님은 Chris 튜터님과 한국과 캐나다 토론토의 날씨 변화에 대해 이야기 나누셨습니다. 이어서 다가오는 주말 계획(이발, 가족과의 시간)을 공유하고, 영어 학습 피드백 방식에 대한 Joey님의 선호도를 튜터님과 솔직하게 논의하며 의미 있는 시간을 가졌습니다.\n\n**2. 💬 유창성 업그레이드 (Fluency & Natural Flow)**\nJoey님이 말씀하신 문장들을 더 자연스럽고 유창하게 다듬어 볼까요?\n\n1.  **❌ 학습자 원문 (As Said):** \"I need to cut hair in a hair shop.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"I need to **get a haircut at a salon.**\"\n    *   **💎 비즈니스 표현 (Professional):** \"I need to **schedule an appointment for a haircut at a professional salon.**\"\n    *   **💡 코칭 포인트:** Using \"get a haircut\" is the most natural way to express having your hair cut by someone else. \"At a salon\" or \"at a barber shop\" are common places. → \"get a haircut\"은 다른 사람에게 머리를 자르는 것을 표현하는 가장 자연스러운 방법입니다. \"at a salon\" 또는 \"at a barber shop\"은 일반적인 장소입니다.\n\n2.  **❌ 학습자 원문 (As Said):** \"The tennis is for the rich guys first.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"Tennis is **often seen as a sport for the wealthy.**\"\n    *   **💎 비즈니스 표현 (Professional):** \"Tennis is **traditionally perceived as an exclusive sport for affluent individuals.**\"\n    *   **💡 코칭 포인트:** \"Is for the rich guys first\" sounds a bit direct and less nuanced. \"Often seen as\" or \"perceived as\" are softer ways to express a common perception. → \"Is for the rich guys first\"는 다소 직설적이고 뉘앙스가 부족하게 들릴 수 있습니다. \"often seen as\" 또는 \"perceived as\"는 일반적인 인식을 표현하는 더 부드러운 방법입니다.\n\n3.  **❌ 학습자 원문 (As Said):** \"That is so nice for me.\" (튜터에게 피드백이 좋다는 의미로)\n    *   **✅ 자연스러운 표현 (Natural):** \"That's **very helpful for me.**\" 또는 \"That's **really useful.**\"\n    *   **💎 비즈니스 표현 (Professional):** \"I **find that particularly beneficial.**\"\n    *   **💡 코칭 포인트:** While \"nice\" isn't wrong, \"helpful\" or \"useful\" more accurately convey the idea that the feedback or tip is practical and aids your learning. \"Beneficial\" is a more formal alternative. → \"nice\"가 틀린 것은 아니지만, \"helpful\" 또는 \"useful\"은 피드백이나 팁이 실용적이고 학습에 도움이 된다는 의미를 더 정확하게 전달합니다. \"Beneficial\"은 더 격식 있는 대안입니다.\n\n**3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)**\nCategory: **Causative Verb \"Get\"** (사역 동사 \"Get\")\n\nJoey님은 \"머리를 자르다\"와 같이 어떤 행동을 남에게 시키거나 맡길 때 쓰는 사역 동사 'get'의 구조를 어려워하는 모습을 보였습니다. 특히 'get + 목적어 + 과거분사' 형태를 익히면 훨씬 자연스러워질 거예요.\n\n| ❌ 원문 (As Said)                                   | ✅ 교정 예시 (Corrected)                                   |\n| :-------------------------------------------------- | :--------------------------------------------------------- |\n| \"I have a plan to get a haircut because for almost two months I haven't **cut my hair**.\" | \"I have a plan to get a haircut because for almost two months I haven't **had my hair cut**.\" |\n| \"So I need to **cut hair** in a hair shop.\"         | \"So I need to **get my hair cut** at a salon.\"             |\n| \"I have a plan to **get hair**.\" (튜터의 교정 후 시도) | \"I plan to **get my hair cut**.\"                          |\n\n📌 **핵심 규칙:** 남에게 어떤 행동을 시키거나 맡길 때, `get + 목적어 + 과거분사 (p.p.)` 구조를 사용합니다. (예: `get my hair cut` - 머리를 자르도록 시키다/맡기다)\n\n🔁 **따라 읽기:**\n🗣️ \"I need to **get my hair cut** this weekend.\"\n🗣️ \"I always **get my car washed** on Saturdays.\"\n🗣️ \"She wants to **get her teeth checked** by a dentist.\"\n\n**4. 📗 어휘 확장 (Vocabulary Vault)**\nJoey님의 업무 환경에서 바로 활용할 수 있는 유용한 단어들을 알아볼까요?\n\n1.  **humid** /hjuːmɪd/ (형용사)\n    *   뜻: 습한, 습기가 많은\n    *   실전 예문: The air conditioning helps reduce the **humid**ity in the office.\n\n2.  **permit** /pərˈmɪt/ (동사)\n    *   뜻: 허락하다, 허용하다\n    *   실전 예문: We can proceed with the project if the budget **permits**.\n\n3.  **specialize** /ˈspɛʃəlaɪz/ (동사)\n    *   뜻: 전문으로 하다, 특화하다\n    *   실전 예문: Our firm **specializes** in renewable energy investments.\n\n4.  **affluent** /ˈæfluənt/ (형용사)\n    *   뜻: 부유한, 유복한\n    *   실전 예문: The company targets **affluent** customers with its premium products.\n\n5.  **perceive** /pərˈsiːv/ (동사)\n    *   뜻: 인식하다, 감지하다\n    *   실전 예문: How customers **perceive** our brand is crucial for our marketing strategy.\n\n**5. 📝 실전 복습 챌린지 (Practice)**\n오늘 배운 표현과 문법을 활용하여 영작해 보세요!\n\n1.  **[쉬움]** \"저는 이번 주말에 차를 점검받을 계획입니다.\"\n    *   모범 답안: I plan to **get my car checked** this weekend.\n\n2.  **[중간]** \"우리 회사는 고객 경험을 개선하는 데 특화되어 있습니다.\"\n    *   모범 답안: Our company **specializes** in enhancing customer experience.\n\n3.  **[어려움]** \"날씨가 허락한다면, 우리는 다음 달에 야외 팀 빌딩 행사를 계획하고 있습니다.\"\n    *   모범 답안: If the weather **permits**, we are planning an outdoor team-building event next month.\n\n**6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)**\n\n✨ **Good Job**: \"Our season has changed from spring to summer. Nowadays, it's almost 25 degrees or 27 degrees during the day. And it is a little hot, so many people wear short-sleeved shirts and they change their clothes.\"\nJoey님, 한국의 날씨 변화를 아주 구체적이고 자연스럽게 설명해 주셨어요. 계절 변화와 사람들의 옷차림까지 디테일하게 묘사하는 능력이 돋보였습니다. 특히 \"short-sleeved shirts\" 같은 표현도 좋았어요!\n\n🚀 **내일의 한 문장**: 다음 수업 시작 시 튜터에게 오늘 배운 표현을 활용하여 대화를 시작해 보세요.\n\"I'm glad the weather **permits** us to have this class today. How was your day, Chris?\"\n\n---\n\n**[성과 지표]**\n**유창성 점수: 7/10점**\n\n**근거:** Joey님은 대화에 매우 적극적으로 참여하고, 자신의 의견을 길게 설명하려는 노력이 돋보였습니다. 망설임 없이 말을 이어가며 다양한 주제를 다루는 유창성은 매우 훌륭합니다. 다만, 때때로 문장 구조나 어휘 선택에서 약간의 어색함이 있었고, 튜터의 교정을 통해 바로잡는 과정이 있었습니다. 이는 자연스러운 학습 과정이며, 꾸준히 연습하면 더욱 유창해질 것입니다.\n\n**다음 수업 '원포인트 액션 플랜':**\n이번 수업에서 배운 **사역 동사 \"get + 목적어 + 과거분사\" 구문**을 일상생활이나 업무 관련 문장에서 3번 이상 활용해 보세요. 예를 들어, \"I need to get this report finalized\" (이 보고서를 마무리해야 해요)와 같이 말이죠. 이 구조를 익히면 더 복잡한 상황도 자연스럽게 표현할 수 있게 될 거예요!\n\nJoey님, 오늘 정말 수고 많으셨습니다! 다음 수업에서 또 만나요!\n\n위 내용을 바탕으로:\n1. 먼저 오늘 수업에서 내가 틀렸거나 어색했던 표현을 하나 골라서, 관련된 상황을 영어로 질문해줘.\n2. 내가 영어로 대답하면, 자연스러운지 확인하고 더 나은 표현이 있으면 알려줘.\n3. 특히 \"반복 실수 패턴\"에서 지적된 부분을 집중적으로 연습시켜줘.\n4. 이런 식으로 오늘 배운 표현들을 하나씩 복습하자.\n5. 한국어 설명은 필요할 때만 간단히, 대화는 최대한 영어로 진행해줘.\n\n그럼 시작하자!";
+        function startReview(){navigator.clipboard.writeText(REVIEW_PROMPT).then(()=>{showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)}).catch(()=>{const t=document.createElement('textarea');t.value=REVIEW_PROMPT;document.body.appendChild(t);t.select();document.execCommand('copy');document.body.removeChild(t);showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)})}
+        function showToast(){const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500)}
+        function switchTab(n){document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',n==='feedback'?i===0:i===1));document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));document.getElementById('tab-'+n).classList.add('active')}
+    </script>
+</body>
+</html>
