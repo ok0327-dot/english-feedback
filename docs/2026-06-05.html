@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전화영어 복습 - 2026년 06월 05일</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Noto Sans KR',sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.75;min-height:100vh}
+        .header{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);border-bottom:1px solid rgba(255,255,255,.06);padding:48px 24px 40px;text-align:center}
+        .header-date{font-size:13px;color:#94a3b8;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+        .header h1{font-size:28px;font-weight:700;color:#f1f5f9;margin-bottom:16px}
+        .header-meta{display:flex;justify-content:center;gap:24px;font-size:14px;color:#64748b}
+        .header-meta span{display:flex;align-items:center;gap:6px}
+        .cta-section{text-align:center;padding:40px 24px}
+        .cta-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:linear-gradient(135deg,#38bdf8,#818cf8);color:#fff;font-size:16px;font-weight:600;font-family:'Noto Sans KR',sans-serif;border:none;border-radius:50px;cursor:pointer;transition:all .3s;text-decoration:none;box-shadow:0 4px 24px rgba(56,189,248,.25)}
+        .cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(56,189,248,.35)}
+        .cta-btn svg{width:20px;height:20px}
+        .cta-sub{margin-top:12px;font-size:13px;color:#64748b}
+        .toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#38bdf8;padding:14px 28px;border-radius:12px;font-size:14px;font-weight:500;border:1px solid rgba(56,189,248,.2);box-shadow:0 8px 32px rgba(0,0,0,.4);opacity:0;transition:all .4s cubic-bezier(.16,1,.3,1);z-index:1000}
+        .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+        .container{max-width:720px;margin:0 auto;padding:0 24px 80px}
+        .tabs{display:flex;gap:4px;background:#1a1a24;padding:4px;border-radius:12px;margin-bottom:32px}
+        .tab{flex:1;padding:12px;text-align:center;font-size:14px;font-weight:500;color:#64748b;background:0 0;border:none;border-radius:8px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all .2s}
+        .tab.active{background:#262636;color:#f1f5f9}
+        .tab-content{display:none}.tab-content.active{display:block}
+        .feedback h2{font-size:18px;font-weight:700;color:#f1f5f9;margin:36px 0 16px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.06)}
+        .feedback h2:first-child{margin-top:0}
+        .feedback p{margin:8px 0;color:#cbd5e1}
+        .feedback .item{padding:6px 0 6px 16px;border-left:2px solid #334155;margin:6px 0;color:#cbd5e1}
+        .feedback .numbered{padding:8px 0 8px 16px;color:#cbd5e1}
+        .feedback .numbered strong{color:#38bdf8}
+        .feedback strong{color:#f1f5f9}
+        .feedback code{background:#1e293b;padding:2px 8px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#38bdf8}
+        .feedback table{width:100%;border-collapse:collapse;margin:12px 0}
+        .feedback th,.feedback td{padding:10px 14px;text-align:left;border-bottom:1px solid #262636}
+        .feedback th{color:#94a3b8;font-weight:500;font-size:13px}
+        .feedback td{color:#cbd5e1}
+        .arrow{color:#38bdf8;font-weight:700}
+        .transcript{background:#1a1a24;border-radius:12px;padding:28px;font-size:14px;line-height:2;color:#94a3b8;white-space:pre-wrap;word-break:break-word;font-family:'JetBrains Mono','Noto Sans KR',monospace}
+        .transcript .tutor{color:#38bdf8}
+        .transcript .student{color:#a78bfa}
+        @media(max-width:640px){.header{padding:32px 16px}.header h1{font-size:22px}.cta-btn{padding:14px 28px;font-size:15px}.container{padding:0 16px 60px}}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-date">2026년 06월 05일</div>
+        <h1>📚 전화영어 복습</h1>
+        <div class="header-meta">
+            <span>⏱ 19분 41초</span>
+            <span>🎙 전화영어_025180304_20260605080028.m4a</span>
+        </div>
+    </div>
+    <div class="cta-section">
+        <button class="cta-btn" onclick="startReview()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Gemini에서 복습 대화 시작하기
+        </button>
+        <div class="cta-sub">클릭하면 프롬프트가 복사되고 Gemini가 열립니다</div>
+    </div>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('feedback')">📋 AI 피드백</button>
+            <button class="tab" onclick="switchTab('transcript')">🎙 수업 전사</button>
+        </div>
+        <div id="tab-feedback" class="tab-content active">
+            <div class="feedback"><p>안녕하세요, Joey! 오늘도 활기찬 금요일 아침 전화영어 수업, 정말 즐거웠습니다. 새로운 교재에 대한 호기심부터 팀 빌딩 활동, 그리고 커리어와 삶의 균형에 대한 깊이 있는 이야기까지, Joey의 다양한 생각들을 들을 수 있어서 좋았어요. 특히, 적극적으로 질문하고 자신의 의견을 솔직하게 표현하는 모습이 인상 깊었습니다.</p>
+<br>
+<p><strong>0. 📌 Topic</strong></p>
+<p>Topic: Discussing team building activities and career development.</p>
+<br>
+<p><strong>1. 📊 오늘의 대화 요약 (Summary)</strong></p>
+<p>오늘은 팀 빌딩 활동의 중요성과 회사 내 팀 이동 문화에 대해 깊이 있는 대화를 나누었습니다. Joey의 회사에서 진행하는 캠프 미팅 경험을 공유하고, 팀워크가 업무 성과에 미치는 영향, 그리고 신규 팀원 환영 방식에 대해서도 이야기했습니다. 또한, Joey의 커리어 계획과 워라밸에 대한 고민도 함께 나눴습니다.</p>
+<br>
+<p><strong>2. 💬 유창성 업그레이드 (Fluency & Natural Flow)</strong></p>
+<p>Joey가 말한 문장 중 의미는 잘 전달되었지만, 원어민들이 더 자연스럽게 쓰는 표현들을 함께 살펴볼까요?</p>
+<br>
+<div class="numbered"><strong>1.</strong>  ❌ <strong>As Said</strong>: "I don't set up a plan. I don't make a plan, but maybe I will make a plan after discussing with my wife."</div>
+<p>    ✅ <strong>Natural</strong>: "I don't have any specific plans yet. I'll probably make some after discussing with my wife."</p>
+<p>    💎 <strong>Professional</strong>: "I haven't finalized my plans for the weekend. I'll likely coordinate with my wife to make arrangements."</p>
+<p>    💡 <strong>코칭 포인트</strong>: Using "have plans" is more common and natural than repeatedly saying "make a plan" in this context. "Finalize plans" and "coordinate" are excellent for business settings.</p>
+<p>    'make a plan'을 반복하기보다 'have plans'를 쓰는 것이 더 자연스럽습니다. 비즈니스 환경에서는 'finalize plans'나 'coordinate' 같은 표현을 활용하여 더욱 격식 있게 말할 수 있습니다.</p>
+<br>
+<div class="numbered"><strong>2.</strong>  ❌ <strong>As Said</strong>: "What is opinion this textbook, about this textbook?"</div>
+<p>    ✅ <strong>Natural</strong>: "What's your opinion of this textbook?" or "What do you think about this textbook?"</p>
+<p>    💎 <strong>Professional</strong>: "What are your thoughts on this textbook?"</p>
+<p>    💡 <strong>코칭 포인트</strong>: The phrase "What is opinion" is not a standard English structure. "What's your opinion of/on X?" is the correct and natural way to ask for someone's view. "What are your thoughts on X?" is a slightly more formal alternative.</p>
+<p>    "What is opinion"은 올바른 문장 구조가 아닙니다. 의견을 물을 때는 "What's your opinion of/on X?"가 표준적인 표현이며, "What do you think about X?"도 아주 자연스럽습니다. 비즈니스에서는 "What are your thoughts on X?"가 좀 더 격식 있는 표현입니다.</p>
+<br>
+<div class="numbered"><strong>3.</strong>  ❌ <strong>As Said</strong>: "it is feel about nice teamwork." (그림을 묘사하며)</div>
+<p>    ✅ <strong>Natural</strong>: "It gives a nice feeling of teamwork." or "It feels like good teamwork."</p>
+<p>    💎 <strong>Professional</strong>: "It conveys a strong sense of teamwork."</p>
+<p>    💡 <strong>코칭 포인트</strong>: "It is feel" is grammatically incorrect. To express how something feels, you can use "It feels..." or "It gives a feeling of...". "Conveys" is a sophisticated verb often used in business to describe how something communicates an idea or impression.</p>
+<p>    "it is feel"은 문법적으로 틀린 표현입니다. 어떤 느낌을 전달할 때는 "It feels..." 또는 "It gives a feeling of..."와 같이 표현하는 것이 자연스럽습니다. 비즈니스에서는 어떤 아이디어나 인상을 '전달하다'는 의미로 "conveys"를 사용하면 좋습니다.</p>
+<br>
+<p><strong>3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)</strong></p>
+<p>Category: <strong>Missing or Incorrect Articles (a/an/the)</strong></p>
+<br>
+<p>Joey는 대화에서 관사(a/an/the)를 빠뜨리거나 잘못 사용하는 경우가 종종 있었습니다. 관사는 영어에서 명사를 특정하거나 일반화하는 데 중요한 역할을 하므로, 의미 전달의 정확성을 높이기 위해 꾸준히 연습하는 것이 좋습니다.</p>
+<br>
+<table>
+<tr><th>❌ 원문 (As Said)</th><th>✅ 교정 예시 (Corrected)</th></tr>
+<tr><td>"Wednesday is <strong>the</strong> off day"</td><td>"Wednesday is <strong>an</strong> off day" 또는 "Wednesday was <strong>my</strong> day off"</td></tr>
+<tr><td>"our work is consist of <strong>the</strong> basic on <strong>the</strong> team."</td><td>"our work is fundamentally based on <strong>teamwork</strong>." 또는 "our work is based on <strong>a</strong> team."</td></tr>
+<tr><td>"every people has <strong>a</strong> special technical but that team effect is not good"</td><td>"everyone has special technical <strong>skills</strong>, but <strong>the</strong> team's overall performance is not good"</td></tr>
+<tr><td>"that team activity lead to team relationship. Team of relationship lead to good achievement."</td><td>"that team activity leads to <strong>better</strong> team relationships. <strong>Strong</strong> team relationships lead to good achievement."</td></tr>
+<tr><td>"our newbie come <strong>this</strong> team, <strong>the</strong> OD team."</td><td>"our newbie joined <strong>the</strong> OD team."</td></tr>
+<tr><td>"I want to do some atmosphere. Is it possible to move to atmosphere?"</td><td>"I want to create <strong>a certain</strong> atmosphere. Is it possible to move <strong>an</strong> atmosphere?"</td></tr>
+</table>
+<br>
+<p>📌 <strong>핵심 규칙</strong>: 명사를 사용할 때, 그 명사가 특정하고 유일한 것인지(the), 아니면 불특정하고 일반적인 것인지(a/an)를 항상 고려해야 합니다. 특히 추상 명사나 복수 명사 앞에서는 관사가 필요 없을 수도 있습니다.</p>
+<br>
+<p>🔁 <strong>따라 읽기</strong>:</p>
+<p>🗣️ "Wednesday was my day off."</p>
+<p>🗣️ "Our work is fundamentally based on teamwork."</p>
+<p>🗣️ "Everyone has special technical skills, but the team's overall performance is not good."</p>
+<br>
+<p><strong>4. 📗 어휘 확장 (Vocabulary Vault)</strong></p>
+<p>오늘 대화에서 유용하게 쓰일 수 있는 어휘들을 정리해 보았습니다.</p>
+<br>
+<div class="numbered"><strong>1.</strong>  <strong>finalize</strong> /fáinəlàiz/ (동사)</div>
+<p>    뜻: 마무리 짓다, 확정하다</p>
+<p>    실전 예문: We need to <strong>finalize</strong> the project proposal by next Friday.</p>
+<br>
+<div class="numbered"><strong>2.</strong>  <strong>convey</strong> /kənvéi/ (동사)</div>
+<p>    뜻: (생각, 감정 등을) 전달하다, 표현하다</p>
+<p>    실전 예문: This report successfully <strong>conveys</strong> the urgency of the market shift.</p>
+<br>
+<div class="numbered"><strong>3.</strong>  <strong>fundamentally</strong> /fʌ̀ndəméntəli/ (부사)</div>
+<p>    뜻: 근본적으로, 기본적으로</p>
+<p>    실전 예문: Our new strategy is <strong>fundamentally</strong> different from the previous one.</p>
+<br>
+<div class="numbered"><strong>4.</strong>  <strong>foster</strong> /fɔ́ːstər/ (동사)</div>
+<p>    뜻: 조성하다, 육성하다, 발전시키다 (특히 관계나 성장)</p>
+<p>    실전 예문: Team building activities are crucial to <strong>foster</strong> a collaborative environment.</p>
+<br>
+<div class="numbered"><strong>5.</strong>  <strong>work-life balance</strong> /wəːrk-laif bǽləns/ (명사)</div>
+<p>    뜻: 일과 삶의 균형</p>
+<p>    실전 예문: Many employees are seeking better <strong>work-life balance</strong> in their careers.</p>
+<br>
+<p><strong>5. 📝 실전 복습 챌린지 (Practice)</strong></p>
+<p>오늘 배운 표현과 문법을 활용하여 다음 문장들을 영작해 보세요.</p>
+<br>
+<div class="numbered"><strong>1.</strong>  <strong>상황</strong>: 주말 계획을 아직 확정하지 못해서 아내와 상의해야 합니다.</div>
+<p>    <strong>영작</strong>: 저는 아직 주말 계획을 확정하지 못했습니다. 아내와 상의한 후에 결정할 것 같습니다.</p>
+<p>    ✅ <strong>모범 답안</strong>: I haven't finalized my weekend plans yet. I'll probably decide after discussing it with my wife.</p>
+<br>
+<div class="numbered"><strong>2.</strong>  <strong>상황</strong>: 이 새로운 프로젝트는 우리 팀의 협업 능력을 근본적으로 향상시킬 것입니다.</div>
+<p>    <strong>영작</strong>: 이 새로운 프로젝트는 우리 팀의 협업 능력을 근본적으로 향상시킬 것입니다.</p>
+<p>    ✅ <strong>모범 답안</strong>: This new project will fundamentally improve our team's collaboration skills.</p>
+<br>
+<div class="numbered"><strong>3.</strong>  <strong>상황</strong>: 저는 이 보고서가 우리 회사의 새로운 비전을 효과적으로 전달한다고 생각합니다.</div>
+<p>    <strong>영작</strong>: 저는 이 보고서가 우리 회사의 새로운 비전을 효과적으로 전달한다고 생각합니다.</p>
+<p>    ✅ <strong>모범 답안</strong>: I believe this report effectively conveys our company's new vision.</p>
+<br>
+<p><strong>6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)</strong></p>
+<br>
+<p>✨ <strong>Good Job</strong>: "I love this team because it is similar to a university student. I take a bicycle and go to the power walk, and then make a report and study more and analysis the industry. It is similar student. So I like that learning and analysis."</p>
+<p>Joey가 현재 팀에 대한 애정을 표현하며 자신의 업무를 '대학생'에 비유한 부분이 정말 좋았습니다. 비록 문법적으로 다듬을 부분은 있지만, 자신의 경험과 감정을 구체적인 비유를 들어 설명하려는 시도와 솔직함이 돋보였습니다. "I like that learning and analysis"처럼 자신의 강점과 흥미를 분명히 표현하는 것도 훌륭했습니다!</p>
+<br>
+<p>🚀 <strong>내일의 한 문장</strong>: 다음 수업 시작 시, 튜터에게 오늘 배운 표현을 활용하여 이렇게 말해보세요.</p>
+<p>"I've been thinking about what we discussed regarding <strong>work-life balance</strong> and how to <strong>foster</strong> a positive team atmosphere."</p>
+<br>
+<p><strong>[성과 지표]</strong></p>
+<p><strong>유창성 점수</strong>: 7.5/10</p>
+<br>
+<p><strong>근거</strong>: Joey는 대화에 적극적으로 참여하고, 자신의 생각을 막힘없이 표현하는 능력이 뛰어납니다. 새로운 교재에 대한 의견, 팀 빌딩 경험, 커리어 고민 등 다양한 주제에 대해 충분히 길게 말할 수 있으며, 주저함이 적습니다. 이는 유창성 측면에서 매우 긍정적인 신호입니다. 다만, 문장 구조가 다소 반복적이거나 어색한 표현이 있어 원어민처럼 자연스러운 흐름을 방해하는 경우가 간혹 보였습니다. 특히 관사 사용의 오류가 꾸준히 나타나 의미 전달의 정확성을 저해하기도 했습니다.</p>
+<br>
+<p><strong>다음 수업 '원포인트 액션 플랜'</strong>:</p>
+<p>다음 수업에서는 <strong>관사(a/an/the) 사용</strong>에 조금 더 집중하여 연습해 보면 좋겠습니다. 특히 명사를 사용할 때, 그 명사가 특정 명사인지(the) 아니면 일반 명사인지(a/an)를 의식적으로 생각하고 말하는 습관을 들이는 것을 목표로 해봅시다.</p></div>
+        </div>
+        <div id="tab-transcript" class="tab-content">
+            <div class="transcript"><span class="student">[Student]</span> Hello, teacher. Good morning. Happy Friday.
+<span class="tutor">[Tutor]</span> Yeah, good morning. It&#x27;s Bell calling.
+<span class="student">[Student]</span> Yes, Bell. Good morning. Yes.
+<span class="tutor">[Tutor]</span> Yeah, how are you doing today?
+<span class="student">[Student]</span> Yeah, everything is good. It&#x27;s Friday. So, I&#x27;m a little tired, but it&#x27;s a pleasure day. I love that. How was your day?
+<span class="tutor">[Tutor]</span> Oh, it&#x27;s good. Thank you.
+<span class="student">[Student]</span> Yes.
+<span class="tutor">[Tutor]</span> Did you have any plans for the weekend?
+<span class="student">[Student]</span> This weekend? Actually, Wednesday is the off day, so I took a rest and had a picnic with my family. So this weekend, I don&#x27;t set up a plan. I don&#x27;t make a plan, but maybe I will make a plan after discussing with my wife.
+<span class="tutor">[Tutor]</span> Okay, so you don&#x27;t really have anything planned for this weekend.
+<span class="student">[Student]</span> Yeah, nothing. Not yet, yes.
+<span class="student">[Student]</span> How about you? Do you have some plans for the weekend?
+<span class="tutor">[Tutor]</span> Yeah, for the weekend. Maybe some gardening on the weekend.
+<span class="student">[Student]</span> Gardening. Oh, do you have a garden? So nice.
+<span class="tutor">[Tutor]</span> Oh, I have a balcony, so I can do it on the balcony.
+<span class="student">[Student]</span> Yes, it&#x27;s so nice.
+<span class="tutor">[Tutor]</span> Okay. So it looks like you&#x27;re looking at the daily topic.
+<span class="student">[Student]</span> Yeah, teacher, I changed my textbook. Yeah, twice. Yeah, it is the daily topic and it is more simple. Yeah, so we just, we have to test this textbook. So today&#x27;s topic, what is opinion this textbook, about this textbook? Daily topic. It&#x27;s just a different topic every day to discuss. Did you had this textbook? Did you use this textbook?
+<span class="tutor">[Tutor]</span> Yeah, it&#x27;s a very common textbook.
+<span class="student">[Student]</span> Ah, common textbook. Yes. And it&#x27;s a different topic every day, too. Ah, yes. Okay, I see. Good. Yes.
+<span class="tutor">[Tutor]</span> So today we&#x27;re looking at team building activities.
+<span class="student">[Student]</span> Team building activities. Okay.
+<span class="tutor">[Tutor]</span> Okay, so what is happening in the picture?
+<span class="student">[Student]</span> Oh, it is a little difficult to explain. In this picture, I can see some of the four people, two people gathering their hands because they are cheering up something. And they gathering hands and then they made some cheer ups and every people wear the white shirt and I guess in this picture, it&#x27;s taken in the office and they are cheered up something and this team is, the team, this situation is team building activity and I think I like this picture because it is feel about nice teamwork. Yeah.
+<span class="tutor">[Tutor]</span> Yeah, so maybe they are cheering for something or they are going to do a team cheer, cheering team or cheering for something. So do you ever do team building activities at your workplace?
+<span class="student">[Student]</span> Hmm, yeah, in my group, the SK group, it has some culture. That culture name is team building activity culture. This team building activity name is the camp meeting. So it is so casual meeting, camp meeting. So last year I visited Jeju Island with my team and in the morning 9 to 12 o&#x27;clock, we worked at the hotel in Jeju Island and afternoon we will have team building activity like fishing, swimming, playing basketball, etc. Because our group believes team building activity is so important. So usually one time per year, two times per year, we have team building activities, camp meetings.
+<span class="tutor">[Tutor]</span> And are they usually trips or do you travel to somewhere else?
+<span class="student">[Student]</span> Usually, sometimes that is the travel to abroad or in domestic. Or sometimes we work at another place, just to work at another place, Gyeongju, Jeju Island, etc. That is a popular city in travel. So we visit there and half work and half do some team building activity.
+<span class="tutor">[Tutor]</span> Okay. Do you get a choice of activities? Do people vote on or decide what activities they want to do?
+<span class="student">[Student]</span> The big basic is to give some HR department, PNC, People and Culture Department, give their basic plan. And small thing like their place or some activity, or kind of activity, we will decide to use the vote, etc.
+<span class="tutor">[Tutor]</span> Do you have any upcoming activities in the future?
+<span class="student">[Student]</span> Not yet. Maybe the autumn season, the People and Culture Department gives some announcement to other departments. Month, yeah, so maybe in autumn season we will go to travel another place or work there another place. Yes, and this day it is popular to work there another place. I, I forgot that name. Yeah, I forgot that name. But it is the work in another city and the beautiful city. Like, for example, you make a report in Hawaii or you make a report in Jeju Island. That city has a great, beautiful beach. So we had an experience. So something new.
+<span class="student">[Student]</span> Do you know that name? I forgot that. To work in another city. Work in the travel city.
+<span class="tutor">[Tutor]</span> Just working in another city?
+<span class="student">[Student]</span> Yes. Maybe they had a name but I forgot them.
+<span class="tutor">[Tutor]</span> But anyway.
+<span class="tutor">[Tutor]</span> So why do you think team building activities are important?
+<span class="student">[Student]</span> Because our work is consist of the basic on the team. So usually just the departments based on the team, the gathering people. So if we work something, it is important to team building activity. For example, some teams, their relationship is so bad, so every people has a special technical but that team effect is not good and they do work not good well. So I think it is some problem, has a problem. So team building activity lead to good achievement. Take a good achievement. Month.
+<span class="tutor">[Tutor]</span> Oh, so it might impact their work or the team might have poor results?
+<span class="student">[Student]</span> Yes, you&#x27;re right. A good result and poor result, that team activity lead to team relationship. Team of relationship lead to good achievement. Wow, this textbook is really hard. The question is through, yes, or follow me. It is good, yes.
+<span class="tutor">[Tutor]</span> Okay. So what are some ways that you can welcome a new member to your team?
+<span class="student">[Student]</span> Oh, in general, our newbie come this team, the OD team. She worked another team and another company, but generally he joins our team. So we set up her, used her small party, or we put on some welcome message. Her desk put on some message, welcome to OD team, welcome to SK Corporation, etc. So that is a small thing, but I think that is also a good way to welcome a message.
+<span class="tutor">[Tutor]</span> How were you welcomed to the team?
+<span class="student">[Student]</span> In my case, I joined three years ago. I joined this team and when I, when I enter my office, it is similar. They put on some message and welcome message and maybe I think they give some power after party, but I&#x27;m a guy so that&#x27;s not useful, but my feeling is good. So it is pleasure to join this team.
+<span class="tutor">[Tutor]</span> So what are the characteristics of a good team member?
+<span class="student">[Student]</span> What are the characteristics of a good team member? What is the character or attitude of a good team member? I think the positive person, positive character is the good because that&#x27;s the atmosphere connect to other people, other employee. So some people believe that some day character is so negative that affect the team&#x27;s the atmosphere. So I think the positive guys, positive people affect to good relationship in the team. So for example, he always feeling the positive things. Yeah, we can do or I can do something and it&#x27;s possible. Always he say, yeah, that&#x27;s affect to other teams&#x27; mood or team atmosphere. And teacher, I have a question. I want to do some atmosphere. Is it possible to move to atmosphere? How can I select that word? Yes.
+<span class="tutor">[Tutor]</span> Both are okay.
+<span class="student">[Student]</span> Yes. Okay. I see. And today I take this textbook. I have a little problem. It is good textbook and so nice, but I don&#x27;t want to, I can learn the new word or new expression. So it is a little bad, right?
+<span class="tutor">[Tutor]</span> Well, it&#x27;s for practicing your speaking skills.
+<span class="student">[Student]</span> Ah, practice the speaking skills.
+<span class="tutor">[Tutor]</span> So they&#x27;re open questions so you can practice speaking and conversation skills.
+<span class="student">[Student]</span> I see. Yes, I like that. How about your opinion? Is it better than people&#x27;s textbooks?
+<span class="tutor">[Tutor]</span> Well, it depends on what you want. So this one is better for practicing your conversation skills and the answers are your own. The other textbooks are focused on learning some vocabulary.
+<span class="student">[Student]</span> I see. Yes, okay, I see.
+<span class="tutor">[Tutor]</span> So it looks like you were looking at the Real Talk one. So that is a good textbook if you want to learn vocabulary.
+<span class="student">[Student]</span> Yes, yes. Okay. I think it is a good textbook and I try more many times.
+<span class="tutor">[Tutor]</span> So the one before you were looking at, Real Talk, that one has more vocabulary.
+<span class="student">[Student]</span> I see. Maybe if I pre-study, at that time I study the new word or new expression. So, just if I study before, yes, it&#x27;s possible.
+<span class="tutor">[Tutor]</span> Okay. Did you want to try the textbook you had last class?
+<span class="student">[Student]</span> Oh, no, no. You just go ahead and study more. That&#x27;s a nice textbook and it&#x27;s simple. So I love that.
+<span class="tutor">[Tutor]</span> So the last question here, how often do you change teams at work?
+<span class="student">[Student]</span> In my case, I worked nine years in the sales team and three years in the OD team. So usually we don&#x27;t have a rule, the same team work the period. But usually we move on the three or five years because our employee want to more experience. So maybe I agree that, yeah, I agree with that and maybe two years later I moved to the business department or work on the some different experience. Yeah. So usually you don&#x27;t have to change teams? Usually three or five year after then the employee wanted to move and in my case I moved nine years later, I moved the teams and this team worked on the three years. So maybe two years later, I moved to another team. That&#x27;s a plan, but I don&#x27;t know.
+<span class="tutor">[Tutor]</span> Yeah. So do you want to move on to another team, or are you happy with your team right now?
+<span class="student">[Student]</span> I love this team because it is similar to a university student. I take a bicycle and go to the power walk, and then make a report and study more and analysis the industry. It is similar student. So I like that learning and analysis. But one problem is a part of my family. So if I move the local sales team, it&#x27;s possible to live with my family. So I consider my career and family. Yes, I need more balance, work and life balance.
+<span class="tutor">[Tutor]</span> Okay, maybe more balance in the future.
+<span class="student">[Student]</span> Yes, you&#x27;re right.
+<span class="tutor">[Tutor]</span> Okay, well, that&#x27;s about it for time. So if you want to change textbooks in the future, we can do that.
+<span class="student">[Student]</span> Yes, I see. Yeah, but yeah, I love that. That&#x27;s good.
+<span class="tutor">[Tutor]</span> Okay, well, have a great weekend. Goodbye.
+<span class="student">[Student]</span> You too. Have a nice weekend. Bye bye.</div>
+        </div>
+    </div>
+    <div class="toast" id="toast">✅ 프롬프트가 복사되었습니다!</div>
+    <script>
+        const REVIEW_PROMPT="너는 나의 영어 회화 복습 파트너야. 오늘 내 전화영어 수업 내용을 기반으로 대화하면서 복습을 도와줘.\n\n[오늘 수업 전사 내용]\n[Student] Hello, teacher. Good morning. Happy Friday.\n[Tutor] Yeah, good morning. It's Bell calling.\n[Student] Yes, Bell. Good morning. Yes.\n[Tutor] Yeah, how are you doing today?\n[Student] Yeah, everything is good. It's Friday. So, I'm a little tired, but it's a pleasure day. I love that. How was your day?\n[Tutor] Oh, it's good. Thank you.\n[Student] Yes.\n[Tutor] Did you have any plans for the weekend?\n[Student] This weekend? Actually, Wednesday is the off day, so I took a rest and had a picnic with my family. So this weekend, I don't set up a plan. I don't make a plan, but maybe I will make a plan after discussing with my wife.\n[Tutor] Okay, so you don't really have anything planned for this weekend.\n[Student] Yeah, nothing. Not yet, yes.\n[Student] How about you? Do you have some plans for the weekend?\n[Tutor] Yeah, for the weekend. Maybe some gardening on the weekend.\n[Student] Gardening. Oh, do you have a garden? So nice.\n[Tutor] Oh, I have a balcony, so I can do it on the balcony.\n[Student] Yes, it's so nice.\n[Tutor] Okay. So it looks like you're looking at the daily topic.\n[Student] Yeah, teacher, I changed my textbook. Yeah, twice. Yeah, it is the daily topic and it is more simple. Yeah, so we just, we have to test this textbook. So today's topic, what is opinion this textbook, about this textbook? Daily topic. It's just a different topic every day to discuss. Did you had this textbook? Did you use this textbook?\n[Tutor] Yeah, it's a very common textbook.\n[Student] Ah, common textbook. Yes. And it's a different topic every day, too. Ah, yes. Okay, I see. Good. Yes.\n[Tutor] So today we're looking at team building activities.\n[Student] Team building activities. Okay.\n[Tutor] Okay, so what is happening in the picture?\n[Student] Oh, it is a little difficult to explain. In this picture, I can see some of the four people, two people gathering their hands because they are cheering up something. And they gathering hands and then they made some cheer ups and every people wear the white shirt and I guess in this picture, it's taken in the office and they are cheered up something and this team is, the team, this situation is team building activity and I think I like this picture because it is feel about nice teamwork. Yeah.\n[Tutor] Yeah, so maybe they are cheering for something or they are going to do a team cheer, cheering team or cheering for something. So do you ever do team building activities at your workplace?\n[Student] Hmm, yeah, in my group, the SK group, it has some culture. That culture name is team building activity culture. This team building activity name is the camp meeting. So it is so casual meeting, camp meeting. So last year I visited Jeju Island with my team and in the morning 9 to 12 o'clock, we worked at the hotel in Jeju Island and afternoon we will have team building activity like fishing, swimming, playing basketball, etc. Because our group believes team building activity is so important. So usually one time per year, two times per year, we have team building activities, camp meetings.\n[Tutor] And are they usually trips or do you travel to somewhere else?\n[Student] Usually, sometimes that is the travel to abroad or in domestic. Or sometimes we work at another place, just to work at another place, Gyeongju, Jeju Island, etc. That is a popular city in travel. So we visit there and half work and half do some team building activity.\n[Tutor] Okay. Do you get a choice of activities? Do people vote on or decide what activities they want to do?\n[Student] The big basic is to give some HR department, PNC, People and Culture Department, give their basic plan. And small thing like their place or some activity, or kind of activity, we will decide to use the vote, etc.\n[Tutor] Do you have any upcoming activities in the future?\n[Student] Not yet. Maybe the autumn season, the People and Culture Department gives some announcement to other departments. Month, yeah, so maybe in autumn season we will go to travel another place or work there another place. Yes, and this day it is popular to work there another place. I, I forgot that name. Yeah, I forgot that name. But it is the work in another city and the beautiful city. Like, for example, you make a report in Hawaii or you make a report in Jeju Island. That city has a great, beautiful beach. So we had an experience. So something new.\n[Student] Do you know that name? I forgot that. To work in another city. Work in the travel city.\n[Tutor] Just working in another city?\n[Student] Yes. Maybe they had a name but I forgot them.\n[Tutor] But anyway.\n[Tutor] So why do you think team building activities are important?\n[Student] Because our work is consist of the basic on the team. So usually just the departments based on the team, the gathering people. So if we work something, it is important to team building activity. For example, some teams, their relationship is so bad, so every people has a special technical but that team effect is not good and they do work not good well. So I think it is some problem, has a problem. So team building activity lead to good achievement. Take a good achievement. Month.\n[Tutor] Oh, so it might impact their work or the team might have poor results?\n[Student] Yes, you're right. A good result and poor result, that team activity lead to team relationship. Team of relationship lead to good achievement. Wow, this textbook is really hard. The question is through, yes, or follow me. It is good, yes.\n[Tutor] Okay. So what are some ways that you can welcome a new member to your team?\n[Student] Oh, in general, our newbie come this team, the OD team. She worked another team and another company, but generally he joins our team. So we set up her, used her small party, or we put on some welcome message. Her desk put on some message, welcome to OD team, welcome to SK Corporation, etc. So that is a small thing, but I think that is also a good way to welcome a message.\n[Tutor] How were you welcomed to the team?\n[Student] In my case, I joined three years ago. I joined this team and when I, when I enter my office, it is similar. They put on some message and welcome message and maybe I think they give some power after party, but I'm a guy so that's not useful, but my feeling is good. So it is pleasure to join this team.\n[Tutor] So what are the characteristics of a good team member?\n[Student] What are the characteristics of a good team member? What is the character or attitude of a good team member? I think the positive person, positive character is the good because that's the atmosphere connect to other people, other employee. So some people believe that some day character is so negative that affect the team's the atmosphere. So I think the positive guys, positive people affect to good relationship in the team. So for example, he always feeling the positive things. Yeah, we can do or I can do something and it's possible. Always he say, yeah, that's affect to other teams' mood or team atmosphere. And teacher, I have a question. I want to do some atmosphere. Is it possible to move to atmosphere? How can I select that word? Yes.\n[Tutor] Both are okay.\n[Student] Yes. Okay. I see. And today I take this textbook. I have a little problem. It is good textbook and so nice, but I don't want to, I can learn the new word or new expression. So it is a little bad, right?\n[Tutor] Well, it's for practicing your speaking skills.\n[Student] Ah, practice the speaking skills.\n[Tutor] So they're open questions so you can practice speaking and conversation skills.\n[Student] I see. Yes, I like that. How about your opinion? Is it better than people's textbooks?\n[Tutor] Well, it depends on what you want. So this one is better for practicing your conversation skills and the answers are your own. The other textbooks are focused on learning some vocabulary.\n[Student] I see. Yes, okay, I see.\n[Tutor] So it looks like you were looking at the Real Talk one. So that is a good textbook if you want to learn vocabulary.\n[Student] Yes, yes. Okay. I think it is a good textbook and I try more many times.\n[Tutor] So the one before you were looking at, Real Talk, that one has more vocabulary.\n[Student] I see. Maybe if I pre-study, at that time I study the new word or new expression. So, just if I study before, yes, it's possible.\n[Tutor] Okay. Did you want to try the textbook you had last class?\n[Student] Oh, no, no. You just go ahead and study more. That's a nice textbook and it's simple. So I love that.\n[Tutor] So the last question here, how often do you change teams at work?\n[Student] In my case, I worked nine years in the sales team and three years in the OD team. So usually we don't have a rule, the same team work the period. But usually we move on the three or five years because our employee want to more experience. So maybe I agree that, yeah, I agree with that and maybe two years later I moved to the business department or work on the some different experience. Yeah. So usually you don't have to change teams? Usually three or five year after then the employee wanted to move and in my case I moved nine years later, I moved the teams and this team worked on the three years. So maybe two years later, I moved to another team. That's a plan, but I don't know.\n[Tutor] Yeah. So do you want to move on to another team, or are you happy with your team right now?\n[Student] I love this team because it is similar to a university student. I take a bicycle and go to the power walk, and then make a report and study more and analysis the industry. It is similar student. So I like that learning and analysis. But one problem is a part of my family. So if I move the local sales team, it's possible to live with my family. So I consider my career and family. Yes, I need more balance, work and life balance.\n[Tutor] Okay, maybe more balance in the future.\n[Student] Yes, you're right.\n[Tutor] Okay, well, that's about it for time. So if you want to change textbooks in the future, we can do that.\n[Student] Yes, I see. Yeah, but yeah, I love that. That's good.\n[Tutor] Okay, well, have a great weekend. Goodbye.\n[Student] You too. Have a nice weekend. Bye bye.\n\n[AI 피드백]\n안녕하세요, Joey! 오늘도 활기찬 금요일 아침 전화영어 수업, 정말 즐거웠습니다. 새로운 교재에 대한 호기심부터 팀 빌딩 활동, 그리고 커리어와 삶의 균형에 대한 깊이 있는 이야기까지, Joey의 다양한 생각들을 들을 수 있어서 좋았어요. 특히, 적극적으로 질문하고 자신의 의견을 솔직하게 표현하는 모습이 인상 깊었습니다.\n\n**0. 📌 Topic**\nTopic: Discussing team building activities and career development.\n\n**1. 📊 오늘의 대화 요약 (Summary)**\n오늘은 팀 빌딩 활동의 중요성과 회사 내 팀 이동 문화에 대해 깊이 있는 대화를 나누었습니다. Joey의 회사에서 진행하는 캠프 미팅 경험을 공유하고, 팀워크가 업무 성과에 미치는 영향, 그리고 신규 팀원 환영 방식에 대해서도 이야기했습니다. 또한, Joey의 커리어 계획과 워라밸에 대한 고민도 함께 나눴습니다.\n\n**2. 💬 유창성 업그레이드 (Fluency & Natural Flow)**\nJoey가 말한 문장 중 의미는 잘 전달되었지만, 원어민들이 더 자연스럽게 쓰는 표현들을 함께 살펴볼까요?\n\n1.  ❌ **As Said**: \"I don't set up a plan. I don't make a plan, but maybe I will make a plan after discussing with my wife.\"\n    ✅ **Natural**: \"I don't have any specific plans yet. I'll probably make some after discussing with my wife.\"\n    💎 **Professional**: \"I haven't finalized my plans for the weekend. I'll likely coordinate with my wife to make arrangements.\"\n    💡 **코칭 포인트**: Using \"have plans\" is more common and natural than repeatedly saying \"make a plan\" in this context. \"Finalize plans\" and \"coordinate\" are excellent for business settings.\n    'make a plan'을 반복하기보다 'have plans'를 쓰는 것이 더 자연스럽습니다. 비즈니스 환경에서는 'finalize plans'나 'coordinate' 같은 표현을 활용하여 더욱 격식 있게 말할 수 있습니다.\n\n2.  ❌ **As Said**: \"What is opinion this textbook, about this textbook?\"\n    ✅ **Natural**: \"What's your opinion of this textbook?\" or \"What do you think about this textbook?\"\n    💎 **Professional**: \"What are your thoughts on this textbook?\"\n    💡 **코칭 포인트**: The phrase \"What is opinion\" is not a standard English structure. \"What's your opinion of/on X?\" is the correct and natural way to ask for someone's view. \"What are your thoughts on X?\" is a slightly more formal alternative.\n    \"What is opinion\"은 올바른 문장 구조가 아닙니다. 의견을 물을 때는 \"What's your opinion of/on X?\"가 표준적인 표현이며, \"What do you think about X?\"도 아주 자연스럽습니다. 비즈니스에서는 \"What are your thoughts on X?\"가 좀 더 격식 있는 표현입니다.\n\n3.  ❌ **As Said**: \"it is feel about nice teamwork.\" (그림을 묘사하며)\n    ✅ **Natural**: \"It gives a nice feeling of teamwork.\" or \"It feels like good teamwork.\"\n    💎 **Professional**: \"It conveys a strong sense of teamwork.\"\n    💡 **코칭 포인트**: \"It is feel\" is grammatically incorrect. To express how something feels, you can use \"It feels...\" or \"It gives a feeling of...\". \"Conveys\" is a sophisticated verb often used in business to describe how something communicates an idea or impression.\n    \"it is feel\"은 문법적으로 틀린 표현입니다. 어떤 느낌을 전달할 때는 \"It feels...\" 또는 \"It gives a feeling of...\"와 같이 표현하는 것이 자연스럽습니다. 비즈니스에서는 어떤 아이디어나 인상을 '전달하다'는 의미로 \"conveys\"를 사용하면 좋습니다.\n\n**3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)**\nCategory: **Missing or Incorrect Articles (a/an/the)**\n\nJoey는 대화에서 관사(a/an/the)를 빠뜨리거나 잘못 사용하는 경우가 종종 있었습니다. 관사는 영어에서 명사를 특정하거나 일반화하는 데 중요한 역할을 하므로, 의미 전달의 정확성을 높이기 위해 꾸준히 연습하는 것이 좋습니다.\n\n| ❌ 원문 (As Said)                                                                  | ✅ 교정 예시 (Corrected)                                                                    |\n| :--------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------ |\n| \"Wednesday is **the** off day\"                                                     | \"Wednesday is **an** off day\" 또는 \"Wednesday was **my** day off\"                           |\n| \"our work is consist of **the** basic on **the** team.\"                            | \"our work is fundamentally based on **teamwork**.\" 또는 \"our work is based on **a** team.\" |\n| \"every people has **a** special technical but that team effect is not good\"        | \"everyone has special technical **skills**, but **the** team's overall performance is not good\" |\n| \"that team activity lead to team relationship. Team of relationship lead to good achievement.\" | \"that team activity leads to **better** team relationships. **Strong** team relationships lead to good achievement.\" |\n| \"our newbie come **this** team, **the** OD team.\"                                  | \"our newbie joined **the** OD team.\"                                                        |\n| \"I want to do some atmosphere. Is it possible to move to atmosphere?\"              | \"I want to create **a certain** atmosphere. Is it possible to move **an** atmosphere?\"      |\n\n📌 **핵심 규칙**: 명사를 사용할 때, 그 명사가 특정하고 유일한 것인지(the), 아니면 불특정하고 일반적인 것인지(a/an)를 항상 고려해야 합니다. 특히 추상 명사나 복수 명사 앞에서는 관사가 필요 없을 수도 있습니다.\n\n🔁 **따라 읽기**:\n🗣️ \"Wednesday was my day off.\"\n🗣️ \"Our work is fundamentally based on teamwork.\"\n🗣️ \"Everyone has special technical skills, but the team's overall performance is not good.\"\n\n**4. 📗 어휘 확장 (Vocabulary Vault)**\n오늘 대화에서 유용하게 쓰일 수 있는 어휘들을 정리해 보았습니다.\n\n1.  **finalize** /fáinəlàiz/ (동사)\n    뜻: 마무리 짓다, 확정하다\n    실전 예문: We need to **finalize** the project proposal by next Friday.\n\n2.  **convey** /kənvéi/ (동사)\n    뜻: (생각, 감정 등을) 전달하다, 표현하다\n    실전 예문: This report successfully **conveys** the urgency of the market shift.\n\n3.  **fundamentally** /fʌ̀ndəméntəli/ (부사)\n    뜻: 근본적으로, 기본적으로\n    실전 예문: Our new strategy is **fundamentally** different from the previous one.\n\n4.  **foster** /fɔ́ːstər/ (동사)\n    뜻: 조성하다, 육성하다, 발전시키다 (특히 관계나 성장)\n    실전 예문: Team building activities are crucial to **foster** a collaborative environment.\n\n5.  **work-life balance** /wəːrk-laif bǽləns/ (명사)\n    뜻: 일과 삶의 균형\n    실전 예문: Many employees are seeking better **work-life balance** in their careers.\n\n**5. 📝 실전 복습 챌린지 (Practice)**\n오늘 배운 표현과 문법을 활용하여 다음 문장들을 영작해 보세요.\n\n1.  **상황**: 주말 계획을 아직 확정하지 못해서 아내와 상의해야 합니다.\n    **영작**: 저는 아직 주말 계획을 확정하지 못했습니다. 아내와 상의한 후에 결정할 것 같습니다.\n    ✅ **모범 답안**: I haven't finalized my weekend plans yet. I'll probably decide after discussing it with my wife.\n\n2.  **상황**: 이 새로운 프로젝트는 우리 팀의 협업 능력을 근본적으로 향상시킬 것입니다.\n    **영작**: 이 새로운 프로젝트는 우리 팀의 협업 능력을 근본적으로 향상시킬 것입니다.\n    ✅ **모범 답안**: This new project will fundamentally improve our team's collaboration skills.\n\n3.  **상황**: 저는 이 보고서가 우리 회사의 새로운 비전을 효과적으로 전달한다고 생각합니다.\n    **영작**: 저는 이 보고서가 우리 회사의 새로운 비전을 효과적으로 전달한다고 생각합니다.\n    ✅ **모범 답안**: I believe this report effectively conveys our company's new vision.\n\n**6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)**\n\n✨ **Good Job**: \"I love this team because it is similar to a university student. I take a bicycle and go to the power walk, and then make a report and study more and analysis the industry. It is similar student. So I like that learning and analysis.\"\nJoey가 현재 팀에 대한 애정을 표현하며 자신의 업무를 '대학생'에 비유한 부분이 정말 좋았습니다. 비록 문법적으로 다듬을 부분은 있지만, 자신의 경험과 감정을 구체적인 비유를 들어 설명하려는 시도와 솔직함이 돋보였습니다. \"I like that learning and analysis\"처럼 자신의 강점과 흥미를 분명히 표현하는 것도 훌륭했습니다!\n\n🚀 **내일의 한 문장**: 다음 수업 시작 시, 튜터에게 오늘 배운 표현을 활용하여 이렇게 말해보세요.\n\"I've been thinking about what we discussed regarding **work-life balance** and how to **foster** a positive team atmosphere.\"\n\n---\n**[성과 지표]**\n**유창성 점수**: 7.5/10\n\n**근거**: Joey는 대화에 적극적으로 참여하고, 자신의 생각을 막힘없이 표현하는 능력이 뛰어납니다. 새로운 교재에 대한 의견, 팀 빌딩 경험, 커리어 고민 등 다양한 주제에 대해 충분히 길게 말할 수 있으며, 주저함이 적습니다. 이는 유창성 측면에서 매우 긍정적인 신호입니다. 다만, 문장 구조가 다소 반복적이거나 어색한 표현이 있어 원어민처럼 자연스러운 흐름을 방해하는 경우가 간혹 보였습니다. 특히 관사 사용의 오류가 꾸준히 나타나 의미 전달의 정확성을 저해하기도 했습니다.\n\n**다음 수업 '원포인트 액션 플랜'**:\n다음 수업에서는 **관사(a/an/the) 사용**에 조금 더 집중하여 연습해 보면 좋겠습니다. 특히 명사를 사용할 때, 그 명사가 특정 명사인지(the) 아니면 일반 명사인지(a/an)를 의식적으로 생각하고 말하는 습관을 들이는 것을 목표로 해봅시다.\n\n위 내용을 바탕으로:\n1. 먼저 오늘 수업에서 내가 틀렸거나 어색했던 표현을 하나 골라서, 관련된 상황을 영어로 질문해줘.\n2. 내가 영어로 대답하면, 자연스러운지 확인하고 더 나은 표현이 있으면 알려줘.\n3. 특히 \"반복 실수 패턴\"에서 지적된 부분을 집중적으로 연습시켜줘.\n4. 이런 식으로 오늘 배운 표현들을 하나씩 복습하자.\n5. 한국어 설명은 필요할 때만 간단히, 대화는 최대한 영어로 진행해줘.\n\n그럼 시작하자!";
+        function startReview(){navigator.clipboard.writeText(REVIEW_PROMPT).then(()=>{showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)}).catch(()=>{const t=document.createElement('textarea');t.value=REVIEW_PROMPT;document.body.appendChild(t);t.select();document.execCommand('copy');document.body.removeChild(t);showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)})}
+        function showToast(){const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500)}
+        function switchTab(n){document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',n==='feedback'?i===0:i===1));document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));document.getElementById('tab-'+n).classList.add('active')}
+    </script>
+</body>
+</html>
