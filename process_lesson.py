@@ -121,6 +121,13 @@ DRIVE_DONE_FOLDER_ID = os.environ.get("DRIVE_DONE_FOLDER_ID", "")
 # → 예: "https://myusername.github.io/english-feedback"
 GITHUB_PAGES_URL = os.environ.get("GITHUB_PAGES_URL", "")
 
+# kakao-notify-hub (카카오 알림 허브) — 피드백 완료 시 카카오로 링크 발송 (옵션, best-effort)
+# → 미설정/실패해도 이메일 등 본 흐름엔 전혀 영향 없음.
+# → KNH_SEND_SECRET 만 GitHub Secret 에 넣으면 동작. 채널 기본=카카오워크(자동화 업무 공간).
+KNH_URL = os.environ.get("KNH_URL", "https://kakao-notify-hub.dk0327.workers.dev").rstrip("/")
+KNH_SEND_SECRET = os.environ.get("KNH_SEND_SECRET", "")
+KNH_CHANNEL = os.environ.get("KNH_CHANNEL", "kakaowork")
+
 # 한국 표준시(KST) 설정. GitHub 서버는 영국 시간(UTC)이므로 +9시간 보정 필요
 KST = timezone(timedelta(hours=9))
 
@@ -1193,6 +1200,30 @@ def _markdown_to_html(md_text):
     return result
 
 
+def notify_kakao(text, link=None):
+    """kakao-notify-hub 경유로 카카오 알림 발송 (best-effort).
+    미설정/실패해도 예외를 던지지 않음 — 이메일 등 본 흐름을 절대 막지 않는다."""
+    if not KNH_SEND_SECRET:
+        print("ℹ️ KNH_SEND_SECRET 미설정 — 카카오 알림 건너뜀")
+        return
+    try:
+        payload = {"channel": KNH_CHANNEL, "text": text[:200]}
+        if link:
+            payload["link"] = link
+        r = requests.post(
+            f"{KNH_URL}/send",
+            json=payload,
+            headers={"X-Notify-Secret": KNH_SEND_SECRET},
+            timeout=15,
+        )
+        if r.ok:
+            print(f"📨 카카오 알림 발송 완료 ({KNH_CHANNEL})")
+        else:
+            print(f"⚠️ 카카오 알림 실패 (HTTP {r.status_code}): {r.text[:200]}")
+    except Exception as e:
+        print(f"⚠️ 카카오 알림 예외(무시): {e}")
+
+
 def send_email(feedback, filename, duration, review_url, date_str=None):
     """Gmail SMTP로 피드백 이메일 발송. 텍스트+HTML 두 버전 포함."""
     print(f"📧 이메일 발송 중... → {RECIPIENT_EMAIL}")
@@ -1371,6 +1402,13 @@ def main():
 
             # ━━ [6단계] 이메일 발송 ━━
             send_email(feedback, filename, duration, review_url, date_str)
+
+            # ━━ [6.5단계] 카카오 알림 (옵션, best-effort) ━━
+            cat = meta.get("target_grammar")
+            teaser = f"📚 오늘의 전화영어 피드백 도착! ({date_str})"
+            if cat:
+                teaser += f"\n🎯 포인트: {cat}"
+            notify_kakao(teaser, review_url)
 
             # ━━ [7단계] 완료 파일 이동 ━━
             move_to_done_folder(file_id)
