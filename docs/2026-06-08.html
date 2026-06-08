@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전화영어 복습 - 2026년 06월 08일</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Noto Sans KR',sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.75;min-height:100vh}
+        .header{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);border-bottom:1px solid rgba(255,255,255,.06);padding:48px 24px 40px;text-align:center}
+        .header-date{font-size:13px;color:#94a3b8;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+        .header h1{font-size:28px;font-weight:700;color:#f1f5f9;margin-bottom:16px}
+        .header-meta{display:flex;justify-content:center;gap:24px;font-size:14px;color:#64748b}
+        .header-meta span{display:flex;align-items:center;gap:6px}
+        .cta-section{text-align:center;padding:40px 24px}
+        .cta-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:linear-gradient(135deg,#38bdf8,#818cf8);color:#fff;font-size:16px;font-weight:600;font-family:'Noto Sans KR',sans-serif;border:none;border-radius:50px;cursor:pointer;transition:all .3s;text-decoration:none;box-shadow:0 4px 24px rgba(56,189,248,.25)}
+        .cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(56,189,248,.35)}
+        .cta-btn svg{width:20px;height:20px}
+        .cta-sub{margin-top:12px;font-size:13px;color:#64748b}
+        .toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#38bdf8;padding:14px 28px;border-radius:12px;font-size:14px;font-weight:500;border:1px solid rgba(56,189,248,.2);box-shadow:0 8px 32px rgba(0,0,0,.4);opacity:0;transition:all .4s cubic-bezier(.16,1,.3,1);z-index:1000}
+        .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+        .container{max-width:720px;margin:0 auto;padding:0 24px 80px}
+        .tabs{display:flex;gap:4px;background:#1a1a24;padding:4px;border-radius:12px;margin-bottom:32px}
+        .tab{flex:1;padding:12px;text-align:center;font-size:14px;font-weight:500;color:#64748b;background:0 0;border:none;border-radius:8px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all .2s}
+        .tab.active{background:#262636;color:#f1f5f9}
+        .tab-content{display:none}.tab-content.active{display:block}
+        .feedback h2{font-size:18px;font-weight:700;color:#f1f5f9;margin:36px 0 16px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.06)}
+        .feedback h2:first-child{margin-top:0}
+        .feedback p{margin:8px 0;color:#cbd5e1}
+        .feedback .item{padding:6px 0 6px 16px;border-left:2px solid #334155;margin:6px 0;color:#cbd5e1}
+        .feedback .numbered{padding:8px 0 8px 16px;color:#cbd5e1}
+        .feedback .numbered strong{color:#38bdf8}
+        .feedback strong{color:#f1f5f9}
+        .feedback code{background:#1e293b;padding:2px 8px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#38bdf8}
+        .feedback table{width:100%;border-collapse:collapse;margin:12px 0}
+        .feedback th,.feedback td{padding:10px 14px;text-align:left;border-bottom:1px solid #262636}
+        .feedback th{color:#94a3b8;font-weight:500;font-size:13px}
+        .feedback td{color:#cbd5e1}
+        .arrow{color:#38bdf8;font-weight:700}
+        .transcript{background:#1a1a24;border-radius:12px;padding:28px;font-size:14px;line-height:2;color:#94a3b8;white-space:pre-wrap;word-break:break-word;font-family:'JetBrains Mono','Noto Sans KR',monospace}
+        .transcript .tutor{color:#38bdf8}
+        .transcript .student{color:#a78bfa}
+        @media(max-width:640px){.header{padding:32px 16px}.header h1{font-size:22px}.cta-btn{padding:14px 28px;font-size:15px}.container{padding:0 16px 60px}}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-date">2026년 06월 08일</div>
+        <h1>📚 전화영어 복습</h1>
+        <div class="header-meta">
+            <span>⏱ 20분 20초</span>
+            <span>🎙 전화영어_025180304_20260608080010.m4a</span>
+        </div>
+    </div>
+    <div class="cta-section">
+        <button class="cta-btn" onclick="startReview()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Gemini에서 복습 대화 시작하기
+        </button>
+        <div class="cta-sub">클릭하면 프롬프트가 복사되고 Gemini가 열립니다</div>
+    </div>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('feedback')">📋 AI 피드백</button>
+            <button class="tab" onclick="switchTab('transcript')">🎙 수업 전사</button>
+        </div>
+        <div id="tab-feedback" class="tab-content active">
+            <div class="feedback"><p>Joey, 안녕하세요! 오늘도 따뜻하고 실용적인 영어 코치 Bella입니다. 쌀쌀한 날씨에도 활기찬 월요일을 보내신 Joey의 에너지에 저도 기운을 얻었네요. 요양원에 대한 깊이 있는 대화를 나누면서 Joey의 진솔한 생각과 가치관을 엿볼 수 있어 정말 좋았습니다. 오늘 배운 표현들로 영어 실력이 한 뼘 더 성장하셨기를 바랍니다!</p>
+<br>
+<br>
+<p><strong>0. 📌 Topic</strong></p>
+<p>Topic: Discussing personal views on nursing homes and retirement in Korea.</p>
+<br>
+<p><strong>1. 📊 오늘의 대화 요약 (Summary)</strong></p>
+<p>오늘 Joey는 주말 해운대 방문 경험을 나누며 대화를 시작했습니다. 이후 새로운 교재의 주제인 '요양원 방문'에 대해 심도 있게 이야기를 나눴습니다. 요양원에 대한 개인적인 경험과 미래에 대한 희망, 그리고 한국 사회의 요양원 문화와 은퇴 연령에 대한 솔직한 의견을 공유했습니다.</p>
+<br>
+<p><strong>2. 💬 유창성 업그레이드 (Fluency & Natural Flow)</strong></p>
+<p>Joey의 표현은 의미 전달에 전혀 문제가 없었지만, 원어민이 더 자연스럽게 쓰는 표현으로 다듬으면 유창성이 더욱 높아질 거예요.</p>
+<br>
+<div class="numbered"><strong>1.</strong>  ❌ <strong>학습자 원문 (As Said):</strong> "This weekend, it is normal and special."</div>
+<p>    ✅ <strong>자연스러운 표현 (Natural):</strong> "This weekend was both normal and special."</p>
+<p>    💎 <strong>비즈니스 표현 (Professional):</strong> "This weekend offered a blend of routine and unique experiences."</p>
+<p>    💡 <strong>코칭 포인트:</strong> Using "was" correctly indicates a past event, and "both A and B" is a natural way to express two qualities simultaneously. "This weekend offered a blend of routine and unique experiences" sounds more sophisticated and can be used in formal contexts.</p>
+<p>    <span class="arrow">→</span> 'was'를 사용하여 과거 사건임을 명확히 하고, 'both A and B'는 두 가지 특징을 동시에 나타낼 때 자연스러운 표현입니다. 비즈니스 환경에서는 'offered a blend of routine and unique experiences'처럼 좀 더 세련된 어조를 사용할 수 있습니다.</p>
+<br>
+<div class="numbered"><strong>2.</strong>  ❌ <strong>학습자 원문 (As Said):</strong> "The art museum is about the picture."</div>
+<p>    ✅ <strong>자연스러운 표현 (Natural):</strong> "The art museum features paintings/art."</p>
+<p>    💎 <strong>비즈니스 표현 (Professional):</strong> "The art museum primarily showcases various forms of visual art."</p>
+<p>    💡 <strong>코칭 포인트:</strong> While "about the picture" is understandable, "features" or "showcases" are more common and precise verbs when describing what a museum exhibits.</p>
+<p>    <span class="arrow">→</span> 'about the picture'도 의미는 통하지만, 박물관이 무엇을 전시하는지 말할 때는 'features'나 'showcases'와 같은 동사를 쓰는 것이 더 일반적이고 정확합니다.</p>
+<br>
+<div class="numbered"><strong>3.</strong>  ❌ <strong>학습자 원문 (As Said):</strong> "Even you older, where are you going? Do you want to stay home or stay at your home?"</div>
+<p>    ✅ <strong>자연스러운 표현 (Natural):</strong> "When you get older, where would you want to live? At home or in a nursing home?"</p>
+<p>    💎 <strong>비즈니스 표현 (Professional):</strong> "As you age, where do you envision yourself residing – at home or in a care facility?"</p>
+<p>    💡 <strong>코칭 포인트:</strong> Restructuring the sentence with a conditional clause ("When you get older") and using "would you want to live" creates a more natural and polite question about future preferences. "Envision yourself residing" and "care facility" are more formal alternatives.</p>
+<p>    <span class="arrow">→</span> 'When you get older'와 같은 조건절을 사용하고 'would you want to live'로 질문하면 미래의 선호도를 묻는 더 자연스럽고 정중한 질문이 됩니다. 'Envision yourself residing'와 'care facility'는 격식 있는 표현입니다.</p>
+<br>
+<p><strong>3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)</strong></p>
+<p>Category: Determiners/Quantifiers (almost vs. most)</p>
+<p>Joey는 '대부분의 사람들'을 의미할 때 'almost people'이라는 표현을 여러 번 사용했습니다. 'almost'는 부사로 쓰여 동사나 형용사를 수식하며 '거의 ~할 뻔'과 같은 뉘앙스를 가집니다. 명사를 수식하여 '대부분의'라는 의미를 나타낼 때는 'most'를 사용하는 것이 자연스럽습니다.</p>
+<br>
+<table>
+<tr><th>❌ 원문 (As Said)</th><th>✅ 교정 예시 (Corrected)</th></tr>
+<tr><td>"almost people retire at 60 years old."</td><td>"Most people retire at 60 years old."</td></tr>
+<tr><td>"they live in their house almost 10 or 20 years."</td><td>"They live in their house for almost 10 or 20 years."</td></tr>
+<tr><td>"almost people in our country, almost people live in their home until 70 or 80."</td><td>"In our country, most people live in their home until 70 or 80 years old."</td></tr>
+</table>
+<br>
+<p>📌 <strong>핵심 규칙:</strong> 'Almost'는 부사로 동사나 형용사를 수식하며, '거의 ~할 뻔'의 의미를 가집니다. 명사를 수식하여 '대부분의 사람들'을 의미할 때는 'most'를 사용합니다.</p>
+<br>
+<p>🔁 <strong>따라 읽기:</strong></p>
+<p>🗣️ "Most people retire at 60 years old."</p>
+<p>🗣️ "Most people live in their home for almost 10 or 20 years."</p>
+<p>🗣️ "In our country, most people live in their home until 70 or 80 years old."</p>
+<br>
+<p><strong>4. 📗 어휘 확장 (Vocabulary Vault)</strong></p>
+<p>오늘 대화에서 유용하게 쓰일 만한 어휘들을 정리해 보았습니다.</p>
+<br>
+<div class="numbered"><strong>1.</strong>  <strong>productive</strong> /prəˈdʌktɪv/ (형용사)</div>
+<p>    *   뜻: 생산적인, 유익한</p>
+<p>    *   실전 예문: I had a very <strong>productive</strong> meeting with the client this morning.</p>
+<br>
+<div class="numbered"><strong>2.</strong>  <strong>peaceful</strong> /ˈpiːsfəl/ (형용사)</div>
+<p>    *   뜻: 평화로운, 고요한</p>
+<p>    *   실전 예문: After a busy week, I just want a <strong>peaceful</strong> weekend at home.</p>
+<br>
+<div class="numbered"><strong>3.</strong>  <strong>envision</strong> /ɪnˈvɪʒən/ (동사)</div>
+<p>    *   뜻: 마음속에 그리다, 상상하다</p>
+<p>    *   실전 예문: I <strong>envision</strong> our company expanding into new markets next year.</p>
+<br>
+<div class="numbered"><strong>4.</strong>  <strong>reside</strong> /rɪˈzaɪd/ (동사)</div>
+<p>    *   뜻: 거주하다, 살다 (live보다 격식 있는 표현)</p>
+<p>    *   실전 예문: Our CEO currently <strong>resides</strong> in New York, but frequently travels to Asia.</p>
+<br>
+<div class="numbered"><strong>5.</strong>  <strong>flexibility</strong> /ˌflɛksəˈbɪləti/ (명사)</div>
+<p>    *   뜻: 유연성, 융통성</p>
+<p>    *   실전 예문: We need to offer more <strong>flexibility</strong> in our work arrangements to attract top talent.</p>
+<br>
+<p><strong>5. 📝 실전 복습 챌린지 (Practice)</strong></p>
+<p>오늘 배운 표현과 문법을 활용하여 다음 문장들을 영작해 보세요.</p>
+<br>
+<div class="numbered"><strong>1.</strong>  <strong>상황:</strong> 저는 이 프로젝트가 성공적으로 마무리될 것이라고 확신합니다.</div>
+<p>    *   <strong>영작 요구:</strong> 'envision'을 사용하여 영작하세요.</p>
+<p>    *   <strong>모범 답안:</strong> I <strong>envision</strong> this project concluding successfully.</p>
+<br>
+<div class="numbered"><strong>2.</strong>  <strong>상황:</strong> 대부분의 직원들은 유연근무제를 선호합니다.</div>
+<p>    *   <strong>영작 요구:</strong> 'most'와 'flexibility'를 사용하여 영작하세요.</p>
+<p>    *   <strong>모범 답안:</strong> <strong>Most</strong> employees prefer work arrangements with more <strong>flexibility</strong>.</p>
+<br>
+<div class="numbered"><strong>3.</strong>  <strong>상황:</strong> 저는 지난 주말에 가족과 함께 생산적이고 평화로운 시간을 보냈습니다.</div>
+<p>    *   <strong>영작 요구:</strong> 'productive'와 'peaceful'을 사용하여 자연스럽게 영작하세요.</p>
+<p>    *   <strong>모범 답안:</strong> Last weekend, I had a <strong>productive</strong> and <strong>peaceful</strong> time with my family.</p>
+<br>
+<p><strong>6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)</strong></p>
+<br>
+<p>✨ <strong>Good Job:</strong></p>
+<p>Joey, 요양원 사진을 묘사할 때 사용한 이 문장이 정말 좋았습니다!</p>
+<p>"They are focused on their puzzle."</p>
+<p><span class="arrow">→</span> 'focused on'이라는 표현을 정확하게 사용하여 사람들의 집중된 모습을 아주 잘 묘사했습니다. 간결하면서도 핵심을 잘 전달하는 좋은 문장이었어요!</p>
+<br>
+<p>🚀 <strong>내일의 한 문장:</strong></p>
+<p>다음 수업 시작 시 튜터에게 오늘 배운 표현을 활용하여 이렇게 말해보세요.</p>
+<p>"I had a <strong>productive</strong> day yesterday, and I'm ready for another one!"</p>
+<p>(어제 하루가 생산적이었고, 오늘도 또 다른 생산적인 하루를 보낼 준비가 되었어요!)</p>
+<br>
+<br>
+<p><strong>[성과 지표]</strong></p>
+<p><strong>유창성 점수:</strong> 7/10점</p>
+<p><strong>근거:</strong> Joey는 다양한 주제에 대해 자신의 의견을 솔직하고 적극적으로 표현하려는 의지가 매우 강합니다. 대화의 흐름을 끊지 않고 이어가는 능력도 좋습니다. 다만, 특정 문법 패턴(예: almost vs. most, 시제, 전치사)에서 반복적인 오류가 나타나고, 때로는 문장 구조가 다소 어색하여 의미를 한 번 더 생각하게 만드는 경우가 있었습니다. 이러한 부분들을 개선하면 유창성과 정확성이 동시에 향상될 것입니다.</p>
+<br>
+<p><strong>다음 수업 '원포인트 액션 플랜':</strong></p>
+<p>다음 수업에서는 <strong>'most'와 'almost'의 정확한 사용법</strong>을 의식하며 대화에 참여해 보세요. '대부분의'라는 의미를 말할 때는 'most'를, '거의 ~할 뻔'이나 부사적 의미일 때는 'almost'를 떠올리는 연습을 해봅시다.</p></div>
+        </div>
+        <div id="tab-transcript" class="tab-content">
+            <div class="transcript"><span class="student">[Student]</span> Hello, teacher. Good morning. Good evening.
+<span class="tutor">[Tutor]</span> Good morning. How are you?
+<span class="student">[Student]</span> I&#x27;m doing great, yes. I&#x27;m doing great.
+<span class="tutor">[Tutor]</span> Oh, that&#x27;s good.
+<span class="student">[Student]</span> It&#x27;s Monday, so I&#x27;m really tired, but it&#x27;s pretty good.
+<span class="tutor">[Tutor]</span> Ah, yes. How was your day? How was your Sunday afternoon?
+<span class="tutor">[Tutor]</span> Not too bad, actually. I got a lot of stuff done, so I had a productive morning.
+<span class="student">[Student]</span> Productive morning.
+<span class="tutor">[Tutor]</span> Yes. So I had a lot of things to do and I completed everything.
+<span class="student">[Student]</span> Oh, yes. It&#x27;s so nice.
+<span class="tutor">[Tutor]</span> Yes. It&#x27;s a nice morning.
+<span class="student">[Student]</span> Maybe Sunday night, right?
+<span class="tutor">[Tutor]</span> Yes, Sunday evening, yes.
+<span class="student">[Student]</span> Sunday evening.
+<span class="tutor">[Tutor]</span> Okay. Yes. Only 5 p.m.
+<span class="tutor">[Tutor]</span> Yeah, how was your weekend, Joey?
+<span class="student">[Student]</span> This weekend, it is normal and special. Yeah, I share my time with my family. So maybe on Saturday I visited Haeundae, that is the beach name in Busan. So, I visited the art museum. That art museum is about the picture. I forgot the exact name, but I watched some pictures and walked near the beach.
+<span class="tutor">[Tutor]</span> That sounds very peaceful and relaxing.
+<span class="student">[Student]</span> Oh, yes, you&#x27;re right.
+<span class="tutor">[Tutor]</span> Do you do this all the time? You said it&#x27;s nothing special.
+<span class="student">[Student]</span> Yeah, that is still peaceful time and nothing special, but that&#x27;s special for me. Uh, yeah.
+<span class="tutor">[Tutor]</span> It sounds special to me too. Okay. Uh, uh, so, uh, sorry, do you want to continue free talking for today or do the daily topic?
+<span class="student">[Student]</span> Ah, yes. I want to talk about the textbook because I changed the textbook.
+<span class="tutor">[Tutor]</span> Oh, okay.
+<span class="student">[Student]</span> Yeah, we have to test if it is an appropriate textbook or not.
+<span class="tutor">[Tutor]</span> Oh, okay. I see, I see. Okay. Okay, so let&#x27;s continue.
+<span class="student">[Student]</span> Okay.
+<span class="tutor">[Tutor]</span> So you said you like going to the art museum.
+<span class="student">[Student]</span> Uh-huh.
+<span class="tutor">[Tutor]</span> Do you go to any types of any other types of museums like science museums or modern?
+<span class="student">[Student]</span> Teacher, maybe you understand my sentence. Yes, I, I wanted to talk about the textbook because last week, yeah, we changed the textbook, so we, we test if it is a good textbook or not.
+<span class="tutor">[Tutor]</span> Oh, okay. Okay. So let me see. Okay. Yes. Okay. Yes. So the daily free textbook. Yeah. Daily topic. Yes. It is similar. Okay. Yes. Yes. There&#x27;s a topic. Yes. Yes. Okay. Could you read out the title for me?
+<span class="student">[Student]</span> Oh, yes, no problem. The topic is visiting a nursing home.
+<span class="tutor">[Tutor]</span> Could you describe what&#x27;s happening in the picture?
+<span class="student">[Student]</span> Oh, yes. There is an elderly person and another woman putting a puzzle on the table. They are focused on their puzzle. And I think the elderly person, the young woman cares about the elderly person. And the young woman wears the white expert nursing clothes. So that is the, they look like, she looks like more expert. Yes, I think this is in a nursing home.
+<span class="student">[Student]</span> Yeah, it&#x27;s all I&#x27;m done, teacher.
+<span class="tutor">[Tutor]</span> Exactly. Good explanation, just a few corrections. So other women, so women is, yeah, just women. That&#x27;s plural for many women, or many women. Yes. So you don&#x27;t need to say &quot;women.&quot; Just &quot;women.&quot; And if you mean just one, so &quot;woman,&quot; &quot;woman,&quot; M-A-N, that&#x27;s one. And then &quot;women,&quot; M-E-N, that&#x27;s plural. So you say &quot;the woman,&quot; not &quot;woman.&quot; &quot;Woman.&quot; Yes. Yes, exactly.
+<span class="student">[Student]</span> Yeah, that&#x27;s good feedback. Woman.
+<span class="tutor">[Tutor]</span> Yes. Yeah, woman. Or man. Yeah. Yeah. Woman, women. Woman. Or men. Yes, exactly. And you said the woman with the white shirt, white nurse expert clothing. You could say just a white nursing uniform.
+<span class="student">[Student]</span> Ah, nursing uniform. She wears a nursing uniform.
+<span class="tutor">[Tutor]</span> Yes, exactly. Good. Exactly. And they&#x27;re doing a puzzle, not puzzling.
+<span class="student">[Student]</span> Doing a puzzle. Okay. Yes. Exactly.
+<span class="student">[Student]</span> Thank you.
+<span class="tutor">[Tutor]</span> Of course. I understand what you mean, though.
+<span class="tutor">[Tutor]</span> Okay. So, so you said the elderly woman and the nurse. So, in your experience, have you ever visited a nursing home before?
+<span class="student">[Student]</span> Yes, yes, I have experience. Maybe a couple of years ago, I visited my wife&#x27;s grandma. And my wife&#x27;s grandmother lived in a nursing home. Yes, and maybe I visited her before she died, because she had some serious disease. So I visited that place and just, yeah, visited that place and just talked with my, yeah, my wife&#x27;s grandma.
+<span class="tutor">[Tutor]</span> Okay. Was it a busy nursing home or quiet?
+<span class="student">[Student]</span> That is so quite quiet. But her situation is a little serious, so maybe many nurses prepared something. Yes, I think that is a silent and a little lonely place, I think. Yes.
+<span class="tutor">[Tutor]</span> Yes, I agree with you. Okay. Share your thoughts in detail. So, okay, since you have been to a nursing home before, you know what it&#x27;s like. Would you want to live in a nursing home when you grow older, or would you rather stay with family? How about you? How about your opinion first? Okay, I haven&#x27;t, I don&#x27;t know anyone who has been in a nursing home, but I have volunteered in a nursing home. Oh, yeah, great. Yes, so I know what it&#x27;s like and it depends on the person&#x27;s choice. If they are happy to be there, then they do better in the nursing home. But if they, maybe it&#x27;s not by choice, they don&#x27;t want to be there or they don&#x27;t have a lot of visitors, then it&#x27;s quite sad.
+<span class="student">[Student]</span> Even you older, where are you going? Do you want to stay home or stay at your home?
+<span class="tutor">[Tutor]</span> You know, I think I&#x27;m a positive person. So I think nursing home doesn&#x27;t sound too bad because they take care of you. And they give you, they support you. And they give you your freedom. Not me, not me, Joey.
+<span class="student">[Student]</span> Oh, okay, okay, okay, you&#x27;re opposites.
+<span class="tutor">[Tutor]</span> Okay, what do you think?
+<span class="student">[Student]</span> Yes, in my case, I love freedom, so I&#x27;d live with my family. But it is a little difficult to care for my health, to take care of myself. Yeah, to take care of myself. So I think just if I get older, I&#x27;m just to leave the city and gatherings and live near the hospital. And sometime I visit there and just stay, live with my family, it&#x27;s better. Because when I visit nursing home, I feel that it&#x27;s so lonely, so I don&#x27;t want to live alone. So that is my wish. I live my home with my family. But I don&#x27;t know, we don&#x27;t know our future.
+<span class="tutor">[Tutor]</span> That&#x27;s true. I think it&#x27;s a fair, fair opinion. It&#x27;s a good, it means you have a good opinion. So it&#x27;s fair, like it&#x27;s not, it&#x27;s not too positive or not too negative because it&#x27;s lonely, but also you want to live with family.
+<span class="student">[Student]</span> Yes, exactly.
+<span class="tutor">[Tutor]</span> Okay, I see. Yeah, so it&#x27;s realistic.
+<span class="student">[Student]</span> Yes. But I hope that these days, some nursing homes are for the rich, rich people. Then nursing homes prepare the swimming pools or hospital experts and the sports club and dance club. Yeah, they are so expensive and offer nice flexibility. So, yes, we don&#x27;t know. Yeah, if we, if we have, so that is there. So if I visit there and it&#x27;s comfortable, maybe it is possible to change my opinion. I don&#x27;t know.
+<span class="tutor">[Tutor]</span> Exactly. That&#x27;s, that&#x27;s what I was thinking when I, yeah, when I said my opinion, something like that. It&#x27;s big, in a big place where it&#x27;s very beautiful and you get nice nursing, nurses and support. Yeah, the support. But you&#x27;re also right. You don&#x27;t know in the future what will happen. So it&#x27;s, again, very fair and neutral. Okay. Okay.
+<span class="tutor">[Tutor]</span> So, moving on. Okay. Is nursing homes something common in Korean culture or not too much?
+<span class="student">[Student]</span> Our older generation, there was no nursing home. But nowadays, it is some elder people, older and have some disease. At that time, they enter the nursing home. And some places are similar to hospitals. So if they enter their nursing home, just stay in their bed because they can&#x27;t move, they can&#x27;t walk. So some serious patient, elderly patient, they go there. And our country, yeah, it is possible to, yeah, understand. So yeah, that&#x27;s normal.
+<span class="tutor">[Tutor]</span> Okay, okay, okay, I see. Okay. Um, so going on to the next question. Okay. So, so some nursing homes offer their residents social life and around-the-clock medical care. What are some other benefits that we didn&#x27;t talk about about nursing homes? Actually, I wanted to focus on their social life. So maybe our society of nursing homes, society, yeah, society of nursing homes is changed their focus on their, focus on their connection, the relationship of the human. So I think that is a good way to change. But these days, many nursing homes focus on the medical care. So it is just a hospital, the elderly hospital. So I think if our generation is more developed, at that time we will meet, we will meet the social life, focus on social life nursing home. Yeah.
+<span class="tutor">[Tutor]</span> Okay, makes sense. What type of social life do you think is beneficial? Beneficial. Yeah, okay.
+<span class="student">[Student]</span> Just I will say society. I don&#x27;t know. Just go on the next.
+<span class="tutor">[Tutor]</span> Okay, that&#x27;s okay. So where do people usually live when they retire in your country?
+<span class="student">[Student]</span> My country, today&#x27;s subject is so sad. That is so sad issue. But in our country, almost people retire at 60 years old. And then they live in their house almost 10 or 20 years. And then just for the remaining one or two years or five years, they live in their nursing home and go to death.
+<span class="tutor">[Tutor]</span> Yeah, they die after. Yeah, they die.
+<span class="student">[Student]</span> So, yes, almost 70 or 80 years, until the 70th or 80th year, they live in their house with their family. But if they have some serious disease, and teacher, I have a question. I said, and I want to say, &quot;have a disease.&quot; Is that the right expression? Just &quot;have some,&quot; are you right?
+<span class="tutor">[Tutor]</span> Yes, yes. If they have a disease, or if you want to say the type of disease, you can. So if they have, I don&#x27;t know, arthritis or diabetes, it&#x27;s the same thing. But you&#x27;re correct.
+<span class="student">[Student]</span> I see, yeah. So almost people in our country, almost people live in their home until 70 or 80. And the remaining five years or remaining one or two years, they live in the nursing home or hospital.
+<span class="tutor">[Tutor]</span> It&#x27;s sad. Yes, I agree with you. It is sad. What&#x27;s the typical age for retirement again?
+<span class="student">[Student]</span> It&#x27;s the time again? What&#x27;s the age of retirement? Age of retirement. Almost 70 years old.
+<span class="tutor">[Tutor]</span> Ah, yeah, that&#x27;s pretty...
+<span class="student">[Student]</span> Yeah, 70 years old. Or some big company, big enterprise. They employ retirement.
+<span class="tutor">[Tutor]</span> 55? Yeah.
+<span class="student">[Student]</span> Okay. 50? 55? 50? Yeah.
+<span class="tutor">[Tutor]</span> What&#x27;s your, what&#x27;s your, the age that you would like to retire?
+<span class="student">[Student]</span> I don&#x27;t know, but maybe just I will plan 55 because when I&#x27;m 55, my son becomes 25.
+<span class="tutor">[Tutor]</span> Oh, your son will be 25?
+<span class="student">[Student]</span> Yeah, yeah, be 25.
+<span class="tutor">[Tutor]</span> Ah, just 20. Oh, okay.
+<span class="student">[Student]</span> Yeah, I have some problems with my son. So next time I will say that.
+<span class="tutor">[Tutor]</span> Ah, okay. Okay. Okay, that&#x27;s not bad. Okay. So that concludes our discussion for today. Great work on your English. There&#x27;s just some minor corrections and I&#x27;ll send it to you in the feedback form.
+<span class="student">[Student]</span> Okay, thank you so much, teacher. Have a nice day.
+<span class="tutor">[Tutor]</span> No problem, have a, thank you, you too. Bye.</div>
+        </div>
+    </div>
+    <div class="toast" id="toast">✅ 프롬프트가 복사되었습니다!</div>
+    <script>
+        const REVIEW_PROMPT="너는 나의 영어 회화 복습 파트너야. 오늘 내 전화영어 수업 내용을 기반으로 대화하면서 복습을 도와줘.\n\n[오늘 수업 전사 내용]\n[Student] Hello, teacher. Good morning. Good evening.\n[Tutor] Good morning. How are you?\n[Student] I'm doing great, yes. I'm doing great.\n[Tutor] Oh, that's good.\n[Student] It's Monday, so I'm really tired, but it's pretty good.\n[Tutor] Ah, yes. How was your day? How was your Sunday afternoon?\n[Tutor] Not too bad, actually. I got a lot of stuff done, so I had a productive morning.\n[Student] Productive morning.\n[Tutor] Yes. So I had a lot of things to do and I completed everything.\n[Student] Oh, yes. It's so nice.\n[Tutor] Yes. It's a nice morning.\n[Student] Maybe Sunday night, right?\n[Tutor] Yes, Sunday evening, yes.\n[Student] Sunday evening.\n[Tutor] Okay. Yes. Only 5 p.m.\n[Tutor] Yeah, how was your weekend, Joey?\n[Student] This weekend, it is normal and special. Yeah, I share my time with my family. So maybe on Saturday I visited Haeundae, that is the beach name in Busan. So, I visited the art museum. That art museum is about the picture. I forgot the exact name, but I watched some pictures and walked near the beach.\n[Tutor] That sounds very peaceful and relaxing.\n[Student] Oh, yes, you're right.\n[Tutor] Do you do this all the time? You said it's nothing special.\n[Student] Yeah, that is still peaceful time and nothing special, but that's special for me. Uh, yeah.\n[Tutor] It sounds special to me too. Okay. Uh, uh, so, uh, sorry, do you want to continue free talking for today or do the daily topic?\n[Student] Ah, yes. I want to talk about the textbook because I changed the textbook.\n[Tutor] Oh, okay.\n[Student] Yeah, we have to test if it is an appropriate textbook or not.\n[Tutor] Oh, okay. I see, I see. Okay. Okay, so let's continue.\n[Student] Okay.\n[Tutor] So you said you like going to the art museum.\n[Student] Uh-huh.\n[Tutor] Do you go to any types of any other types of museums like science museums or modern?\n[Student] Teacher, maybe you understand my sentence. Yes, I, I wanted to talk about the textbook because last week, yeah, we changed the textbook, so we, we test if it is a good textbook or not.\n[Tutor] Oh, okay. Okay. So let me see. Okay. Yes. Okay. Yes. So the daily free textbook. Yeah. Daily topic. Yes. It is similar. Okay. Yes. Yes. There's a topic. Yes. Yes. Okay. Could you read out the title for me?\n[Student] Oh, yes, no problem. The topic is visiting a nursing home.\n[Tutor] Could you describe what's happening in the picture?\n[Student] Oh, yes. There is an elderly person and another woman putting a puzzle on the table. They are focused on their puzzle. And I think the elderly person, the young woman cares about the elderly person. And the young woman wears the white expert nursing clothes. So that is the, they look like, she looks like more expert. Yes, I think this is in a nursing home.\n[Student] Yeah, it's all I'm done, teacher.\n[Tutor] Exactly. Good explanation, just a few corrections. So other women, so women is, yeah, just women. That's plural for many women, or many women. Yes. So you don't need to say \"women.\" Just \"women.\" And if you mean just one, so \"woman,\" \"woman,\" M-A-N, that's one. And then \"women,\" M-E-N, that's plural. So you say \"the woman,\" not \"woman.\" \"Woman.\" Yes. Yes, exactly.\n[Student] Yeah, that's good feedback. Woman.\n[Tutor] Yes. Yeah, woman. Or man. Yeah. Yeah. Woman, women. Woman. Or men. Yes, exactly. And you said the woman with the white shirt, white nurse expert clothing. You could say just a white nursing uniform.\n[Student] Ah, nursing uniform. She wears a nursing uniform.\n[Tutor] Yes, exactly. Good. Exactly. And they're doing a puzzle, not puzzling.\n[Student] Doing a puzzle. Okay. Yes. Exactly.\n[Student] Thank you.\n[Tutor] Of course. I understand what you mean, though.\n[Tutor] Okay. So, so you said the elderly woman and the nurse. So, in your experience, have you ever visited a nursing home before?\n[Student] Yes, yes, I have experience. Maybe a couple of years ago, I visited my wife's grandma. And my wife's grandmother lived in a nursing home. Yes, and maybe I visited her before she died, because she had some serious disease. So I visited that place and just, yeah, visited that place and just talked with my, yeah, my wife's grandma.\n[Tutor] Okay. Was it a busy nursing home or quiet?\n[Student] That is so quite quiet. But her situation is a little serious, so maybe many nurses prepared something. Yes, I think that is a silent and a little lonely place, I think. Yes.\n[Tutor] Yes, I agree with you. Okay. Share your thoughts in detail. So, okay, since you have been to a nursing home before, you know what it's like. Would you want to live in a nursing home when you grow older, or would you rather stay with family? How about you? How about your opinion first? Okay, I haven't, I don't know anyone who has been in a nursing home, but I have volunteered in a nursing home. Oh, yeah, great. Yes, so I know what it's like and it depends on the person's choice. If they are happy to be there, then they do better in the nursing home. But if they, maybe it's not by choice, they don't want to be there or they don't have a lot of visitors, then it's quite sad.\n[Student] Even you older, where are you going? Do you want to stay home or stay at your home?\n[Tutor] You know, I think I'm a positive person. So I think nursing home doesn't sound too bad because they take care of you. And they give you, they support you. And they give you your freedom. Not me, not me, Joey.\n[Student] Oh, okay, okay, okay, you're opposites.\n[Tutor] Okay, what do you think?\n[Student] Yes, in my case, I love freedom, so I'd live with my family. But it is a little difficult to care for my health, to take care of myself. Yeah, to take care of myself. So I think just if I get older, I'm just to leave the city and gatherings and live near the hospital. And sometime I visit there and just stay, live with my family, it's better. Because when I visit nursing home, I feel that it's so lonely, so I don't want to live alone. So that is my wish. I live my home with my family. But I don't know, we don't know our future.\n[Tutor] That's true. I think it's a fair, fair opinion. It's a good, it means you have a good opinion. So it's fair, like it's not, it's not too positive or not too negative because it's lonely, but also you want to live with family.\n[Student] Yes, exactly.\n[Tutor] Okay, I see. Yeah, so it's realistic.\n[Student] Yes. But I hope that these days, some nursing homes are for the rich, rich people. Then nursing homes prepare the swimming pools or hospital experts and the sports club and dance club. Yeah, they are so expensive and offer nice flexibility. So, yes, we don't know. Yeah, if we, if we have, so that is there. So if I visit there and it's comfortable, maybe it is possible to change my opinion. I don't know.\n[Tutor] Exactly. That's, that's what I was thinking when I, yeah, when I said my opinion, something like that. It's big, in a big place where it's very beautiful and you get nice nursing, nurses and support. Yeah, the support. But you're also right. You don't know in the future what will happen. So it's, again, very fair and neutral. Okay. Okay.\n[Tutor] So, moving on. Okay. Is nursing homes something common in Korean culture or not too much?\n[Student] Our older generation, there was no nursing home. But nowadays, it is some elder people, older and have some disease. At that time, they enter the nursing home. And some places are similar to hospitals. So if they enter their nursing home, just stay in their bed because they can't move, they can't walk. So some serious patient, elderly patient, they go there. And our country, yeah, it is possible to, yeah, understand. So yeah, that's normal.\n[Tutor] Okay, okay, okay, I see. Okay. Um, so going on to the next question. Okay. So, so some nursing homes offer their residents social life and around-the-clock medical care. What are some other benefits that we didn't talk about about nursing homes? Actually, I wanted to focus on their social life. So maybe our society of nursing homes, society, yeah, society of nursing homes is changed their focus on their, focus on their connection, the relationship of the human. So I think that is a good way to change. But these days, many nursing homes focus on the medical care. So it is just a hospital, the elderly hospital. So I think if our generation is more developed, at that time we will meet, we will meet the social life, focus on social life nursing home. Yeah.\n[Tutor] Okay, makes sense. What type of social life do you think is beneficial? Beneficial. Yeah, okay.\n[Student] Just I will say society. I don't know. Just go on the next.\n[Tutor] Okay, that's okay. So where do people usually live when they retire in your country?\n[Student] My country, today's subject is so sad. That is so sad issue. But in our country, almost people retire at 60 years old. And then they live in their house almost 10 or 20 years. And then just for the remaining one or two years or five years, they live in their nursing home and go to death.\n[Tutor] Yeah, they die after. Yeah, they die.\n[Student] So, yes, almost 70 or 80 years, until the 70th or 80th year, they live in their house with their family. But if they have some serious disease, and teacher, I have a question. I said, and I want to say, \"have a disease.\" Is that the right expression? Just \"have some,\" are you right?\n[Tutor] Yes, yes. If they have a disease, or if you want to say the type of disease, you can. So if they have, I don't know, arthritis or diabetes, it's the same thing. But you're correct.\n[Student] I see, yeah. So almost people in our country, almost people live in their home until 70 or 80. And the remaining five years or remaining one or two years, they live in the nursing home or hospital.\n[Tutor] It's sad. Yes, I agree with you. It is sad. What's the typical age for retirement again?\n[Student] It's the time again? What's the age of retirement? Age of retirement. Almost 70 years old.\n[Tutor] Ah, yeah, that's pretty...\n[Student] Yeah, 70 years old. Or some big company, big enterprise. They employ retirement.\n[Tutor] 55? Yeah.\n[Student] Okay. 50? 55? 50? Yeah.\n[Tutor] What's your, what's your, the age that you would like to retire?\n[Student] I don't know, but maybe just I will plan 55 because when I'm 55, my son becomes 25.\n[Tutor] Oh, your son will be 25?\n[Student] Yeah, yeah, be 25.\n[Tutor] Ah, just 20. Oh, okay.\n[Student] Yeah, I have some problems with my son. So next time I will say that.\n[Tutor] Ah, okay. Okay. Okay, that's not bad. Okay. So that concludes our discussion for today. Great work on your English. There's just some minor corrections and I'll send it to you in the feedback form.\n[Student] Okay, thank you so much, teacher. Have a nice day.\n[Tutor] No problem, have a, thank you, you too. Bye.\n\n[AI 피드백]\nJoey, 안녕하세요! 오늘도 따뜻하고 실용적인 영어 코치 Bella입니다. 쌀쌀한 날씨에도 활기찬 월요일을 보내신 Joey의 에너지에 저도 기운을 얻었네요. 요양원에 대한 깊이 있는 대화를 나누면서 Joey의 진솔한 생각과 가치관을 엿볼 수 있어 정말 좋았습니다. 오늘 배운 표현들로 영어 실력이 한 뼘 더 성장하셨기를 바랍니다!\n\n---\n\n**0. 📌 Topic**\nTopic: Discussing personal views on nursing homes and retirement in Korea.\n\n**1. 📊 오늘의 대화 요약 (Summary)**\n오늘 Joey는 주말 해운대 방문 경험을 나누며 대화를 시작했습니다. 이후 새로운 교재의 주제인 '요양원 방문'에 대해 심도 있게 이야기를 나눴습니다. 요양원에 대한 개인적인 경험과 미래에 대한 희망, 그리고 한국 사회의 요양원 문화와 은퇴 연령에 대한 솔직한 의견을 공유했습니다.\n\n**2. 💬 유창성 업그레이드 (Fluency & Natural Flow)**\nJoey의 표현은 의미 전달에 전혀 문제가 없었지만, 원어민이 더 자연스럽게 쓰는 표현으로 다듬으면 유창성이 더욱 높아질 거예요.\n\n1.  ❌ **학습자 원문 (As Said):** \"This weekend, it is normal and special.\"\n    ✅ **자연스러운 표현 (Natural):** \"This weekend was both normal and special.\"\n    💎 **비즈니스 표현 (Professional):** \"This weekend offered a blend of routine and unique experiences.\"\n    💡 **코칭 포인트:** Using \"was\" correctly indicates a past event, and \"both A and B\" is a natural way to express two qualities simultaneously. \"This weekend offered a blend of routine and unique experiences\" sounds more sophisticated and can be used in formal contexts.\n    → 'was'를 사용하여 과거 사건임을 명확히 하고, 'both A and B'는 두 가지 특징을 동시에 나타낼 때 자연스러운 표현입니다. 비즈니스 환경에서는 'offered a blend of routine and unique experiences'처럼 좀 더 세련된 어조를 사용할 수 있습니다.\n\n2.  ❌ **학습자 원문 (As Said):** \"The art museum is about the picture.\"\n    ✅ **자연스러운 표현 (Natural):** \"The art museum features paintings/art.\"\n    💎 **비즈니스 표현 (Professional):** \"The art museum primarily showcases various forms of visual art.\"\n    💡 **코칭 포인트:** While \"about the picture\" is understandable, \"features\" or \"showcases\" are more common and precise verbs when describing what a museum exhibits.\n    → 'about the picture'도 의미는 통하지만, 박물관이 무엇을 전시하는지 말할 때는 'features'나 'showcases'와 같은 동사를 쓰는 것이 더 일반적이고 정확합니다.\n\n3.  ❌ **학습자 원문 (As Said):** \"Even you older, where are you going? Do you want to stay home or stay at your home?\"\n    ✅ **자연스러운 표현 (Natural):** \"When you get older, where would you want to live? At home or in a nursing home?\"\n    💎 **비즈니스 표현 (Professional):** \"As you age, where do you envision yourself residing – at home or in a care facility?\"\n    💡 **코칭 포인트:** Restructuring the sentence with a conditional clause (\"When you get older\") and using \"would you want to live\" creates a more natural and polite question about future preferences. \"Envision yourself residing\" and \"care facility\" are more formal alternatives.\n    → 'When you get older'와 같은 조건절을 사용하고 'would you want to live'로 질문하면 미래의 선호도를 묻는 더 자연스럽고 정중한 질문이 됩니다. 'Envision yourself residing'와 'care facility'는 격식 있는 표현입니다.\n\n**3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)**\nCategory: Determiners/Quantifiers (almost vs. most)\nJoey는 '대부분의 사람들'을 의미할 때 'almost people'이라는 표현을 여러 번 사용했습니다. 'almost'는 부사로 쓰여 동사나 형용사를 수식하며 '거의 ~할 뻔'과 같은 뉘앙스를 가집니다. 명사를 수식하여 '대부분의'라는 의미를 나타낼 때는 'most'를 사용하는 것이 자연스럽습니다.\n\n| ❌ 원문 (As Said)                                                                 | ✅ 교정 예시 (Corrected)                                                                 |\n| :--------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------- |\n| \"almost people retire at 60 years old.\"                                            | \"Most people retire at 60 years old.\"                                                    |\n| \"they live in their house almost 10 or 20 years.\"                                  | \"They live in their house for almost 10 or 20 years.\"                                    |\n| \"almost people in our country, almost people live in their home until 70 or 80.\" | \"In our country, most people live in their home until 70 or 80 years old.\" |\n\n📌 **핵심 규칙:** 'Almost'는 부사로 동사나 형용사를 수식하며, '거의 ~할 뻔'의 의미를 가집니다. 명사를 수식하여 '대부분의 사람들'을 의미할 때는 'most'를 사용합니다.\n\n🔁 **따라 읽기:**\n🗣️ \"Most people retire at 60 years old.\"\n🗣️ \"Most people live in their home for almost 10 or 20 years.\"\n🗣️ \"In our country, most people live in their home until 70 or 80 years old.\"\n\n**4. 📗 어휘 확장 (Vocabulary Vault)**\n오늘 대화에서 유용하게 쓰일 만한 어휘들을 정리해 보았습니다.\n\n1.  **productive** /prəˈdʌktɪv/ (형용사)\n    *   뜻: 생산적인, 유익한\n    *   실전 예문: I had a very **productive** meeting with the client this morning.\n\n2.  **peaceful** /ˈpiːsfəl/ (형용사)\n    *   뜻: 평화로운, 고요한\n    *   실전 예문: After a busy week, I just want a **peaceful** weekend at home.\n\n3.  **envision** /ɪnˈvɪʒən/ (동사)\n    *   뜻: 마음속에 그리다, 상상하다\n    *   실전 예문: I **envision** our company expanding into new markets next year.\n\n4.  **reside** /rɪˈzaɪd/ (동사)\n    *   뜻: 거주하다, 살다 (live보다 격식 있는 표현)\n    *   실전 예문: Our CEO currently **resides** in New York, but frequently travels to Asia.\n\n5.  **flexibility** /ˌflɛksəˈbɪləti/ (명사)\n    *   뜻: 유연성, 융통성\n    *   실전 예문: We need to offer more **flexibility** in our work arrangements to attract top talent.\n\n**5. 📝 실전 복습 챌린지 (Practice)**\n오늘 배운 표현과 문법을 활용하여 다음 문장들을 영작해 보세요.\n\n1.  **상황:** 저는 이 프로젝트가 성공적으로 마무리될 것이라고 확신합니다.\n    *   **영작 요구:** 'envision'을 사용하여 영작하세요.\n    *   **모범 답안:** I **envision** this project concluding successfully.\n\n2.  **상황:** 대부분의 직원들은 유연근무제를 선호합니다.\n    *   **영작 요구:** 'most'와 'flexibility'를 사용하여 영작하세요.\n    *   **모범 답안:** **Most** employees prefer work arrangements with more **flexibility**.\n\n3.  **상황:** 저는 지난 주말에 가족과 함께 생산적이고 평화로운 시간을 보냈습니다.\n    *   **영작 요구:** 'productive'와 'peaceful'을 사용하여 자연스럽게 영작하세요.\n    *   **모범 답안:** Last weekend, I had a **productive** and **peaceful** time with my family.\n\n**6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)**\n\n✨ **Good Job:**\nJoey, 요양원 사진을 묘사할 때 사용한 이 문장이 정말 좋았습니다!\n\"They are focused on their puzzle.\"\n→ 'focused on'이라는 표현을 정확하게 사용하여 사람들의 집중된 모습을 아주 잘 묘사했습니다. 간결하면서도 핵심을 잘 전달하는 좋은 문장이었어요!\n\n🚀 **내일의 한 문장:**\n다음 수업 시작 시 튜터에게 오늘 배운 표현을 활용하여 이렇게 말해보세요.\n\"I had a **productive** day yesterday, and I'm ready for another one!\"\n(어제 하루가 생산적이었고, 오늘도 또 다른 생산적인 하루를 보낼 준비가 되었어요!)\n\n---\n\n**[성과 지표]**\n**유창성 점수:** 7/10점\n**근거:** Joey는 다양한 주제에 대해 자신의 의견을 솔직하고 적극적으로 표현하려는 의지가 매우 강합니다. 대화의 흐름을 끊지 않고 이어가는 능력도 좋습니다. 다만, 특정 문법 패턴(예: almost vs. most, 시제, 전치사)에서 반복적인 오류가 나타나고, 때로는 문장 구조가 다소 어색하여 의미를 한 번 더 생각하게 만드는 경우가 있었습니다. 이러한 부분들을 개선하면 유창성과 정확성이 동시에 향상될 것입니다.\n\n**다음 수업 '원포인트 액션 플랜':**\n다음 수업에서는 **'most'와 'almost'의 정확한 사용법**을 의식하며 대화에 참여해 보세요. '대부분의'라는 의미를 말할 때는 'most'를, '거의 ~할 뻔'이나 부사적 의미일 때는 'almost'를 떠올리는 연습을 해봅시다.\n\n위 내용을 바탕으로:\n1. 먼저 오늘 수업에서 내가 틀렸거나 어색했던 표현을 하나 골라서, 관련된 상황을 영어로 질문해줘.\n2. 내가 영어로 대답하면, 자연스러운지 확인하고 더 나은 표현이 있으면 알려줘.\n3. 특히 \"반복 실수 패턴\"에서 지적된 부분을 집중적으로 연습시켜줘.\n4. 이런 식으로 오늘 배운 표현들을 하나씩 복습하자.\n5. 한국어 설명은 필요할 때만 간단히, 대화는 최대한 영어로 진행해줘.\n\n그럼 시작하자!";
+        function startReview(){navigator.clipboard.writeText(REVIEW_PROMPT).then(()=>{showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)}).catch(()=>{const t=document.createElement('textarea');t.value=REVIEW_PROMPT;document.body.appendChild(t);t.select();document.execCommand('copy');document.body.removeChild(t);showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)})}
+        function showToast(){const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500)}
+        function switchTab(n){document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',n==='feedback'?i===0:i===1));document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));document.getElementById('tab-'+n).classList.add('active')}
+    </script>
+</body>
+</html>
