@@ -121,12 +121,12 @@ DRIVE_DONE_FOLDER_ID = os.environ.get("DRIVE_DONE_FOLDER_ID", "")
 # → 예: "https://myusername.github.io/english-feedback"
 GITHUB_PAGES_URL = os.environ.get("GITHUB_PAGES_URL", "")
 
-# kakao-notify-hub (카카오 알림 허브) — 피드백 완료 시 카카오로 링크 발송 (옵션, best-effort)
+# telegram-notify-hub (알림 허브) — 피드백 완료 시 텔레그램으로 링크 발송 (옵션, best-effort)
 # → 미설정/실패해도 이메일 등 본 흐름엔 전혀 영향 없음.
-# → KNH_SEND_SECRET 만 GitHub Secret 에 넣으면 동작. 채널 기본=카카오워크(자동화 업무 공간).
-KNH_URL = os.environ.get("KNH_URL", "https://kakao-notify-hub.dk0327.workers.dev").rstrip("/")
+# → KNH_SEND_SECRET 만 GitHub Secret 에 넣으면 동작. 채널 기본=텔레그램 알림방.
+KNH_URL = os.environ.get("KNH_URL", "https://telegram-notify-hub.dk0327.workers.dev").rstrip("/")
 KNH_SEND_SECRET = os.environ.get("KNH_SEND_SECRET", "")
-KNH_CHANNEL = os.environ.get("KNH_CHANNEL", "kakaowork")
+KNH_CHANNEL = os.environ.get("KNH_CHANNEL", "telegram")
 
 # 한국 표준시(KST) 설정. GitHub 서버는 영국 시간(UTC)이므로 +9시간 보정 필요
 KST = timezone(timedelta(hours=9))
