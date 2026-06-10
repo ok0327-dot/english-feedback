@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전화영어 복습 - 2026년 06월 10일</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Noto Sans KR',sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.75;min-height:100vh}
+        .header{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);border-bottom:1px solid rgba(255,255,255,.06);padding:48px 24px 40px;text-align:center}
+        .header-date{font-size:13px;color:#94a3b8;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+        .header h1{font-size:28px;font-weight:700;color:#f1f5f9;margin-bottom:16px}
+        .header-meta{display:flex;justify-content:center;gap:24px;font-size:14px;color:#64748b}
+        .header-meta span{display:flex;align-items:center;gap:6px}
+        .cta-section{text-align:center;padding:40px 24px}
+        .cta-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:linear-gradient(135deg,#38bdf8,#818cf8);color:#fff;font-size:16px;font-weight:600;font-family:'Noto Sans KR',sans-serif;border:none;border-radius:50px;cursor:pointer;transition:all .3s;text-decoration:none;box-shadow:0 4px 24px rgba(56,189,248,.25)}
+        .cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(56,189,248,.35)}
+        .cta-btn svg{width:20px;height:20px}
+        .cta-sub{margin-top:12px;font-size:13px;color:#64748b}
+        .toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#38bdf8;padding:14px 28px;border-radius:12px;font-size:14px;font-weight:500;border:1px solid rgba(56,189,248,.2);box-shadow:0 8px 32px rgba(0,0,0,.4);opacity:0;transition:all .4s cubic-bezier(.16,1,.3,1);z-index:1000}
+        .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+        .container{max-width:720px;margin:0 auto;padding:0 24px 80px}
+        .tabs{display:flex;gap:4px;background:#1a1a24;padding:4px;border-radius:12px;margin-bottom:32px}
+        .tab{flex:1;padding:12px;text-align:center;font-size:14px;font-weight:500;color:#64748b;background:0 0;border:none;border-radius:8px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all .2s}
+        .tab.active{background:#262636;color:#f1f5f9}
+        .tab-content{display:none}.tab-content.active{display:block}
+        .feedback h2{font-size:18px;font-weight:700;color:#f1f5f9;margin:36px 0 16px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.06)}
+        .feedback h2:first-child{margin-top:0}
+        .feedback p{margin:8px 0;color:#cbd5e1}
+        .feedback .item{padding:6px 0 6px 16px;border-left:2px solid #334155;margin:6px 0;color:#cbd5e1}
+        .feedback .numbered{padding:8px 0 8px 16px;color:#cbd5e1}
+        .feedback .numbered strong{color:#38bdf8}
+        .feedback strong{color:#f1f5f9}
+        .feedback code{background:#1e293b;padding:2px 8px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#38bdf8}
+        .feedback table{width:100%;border-collapse:collapse;margin:12px 0}
+        .feedback th,.feedback td{padding:10px 14px;text-align:left;border-bottom:1px solid #262636}
+        .feedback th{color:#94a3b8;font-weight:500;font-size:13px}
+        .feedback td{color:#cbd5e1}
+        .arrow{color:#38bdf8;font-weight:700}
+        .transcript{background:#1a1a24;border-radius:12px;padding:28px;font-size:14px;line-height:2;color:#94a3b8;white-space:pre-wrap;word-break:break-word;font-family:'JetBrains Mono','Noto Sans KR',monospace}
+        .transcript .tutor{color:#38bdf8}
+        .transcript .student{color:#a78bfa}
+        @media(max-width:640px){.header{padding:32px 16px}.header h1{font-size:22px}.cta-btn{padding:14px 28px;font-size:15px}.container{padding:0 16px 60px}}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-date">2026년 06월 10일</div>
+        <h1>📚 전화영어 복습</h1>
+        <div class="header-meta">
+            <span>⏱ 20분 18초</span>
+            <span>🎙 전화영어_025180304_20260610080010.m4a</span>
+        </div>
+    </div>
+    <div class="cta-section">
+        <button class="cta-btn" onclick="startReview()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Gemini에서 복습 대화 시작하기
+        </button>
+        <div class="cta-sub">클릭하면 프롬프트가 복사되고 Gemini가 열립니다</div>
+    </div>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('feedback')">📋 AI 피드백</button>
+            <button class="tab" onclick="switchTab('transcript')">🎙 수업 전사</button>
+        </div>
+        <div id="tab-feedback" class="tab-content active">
+            <div class="feedback"><p>따뜻하고 실용적인 영어 코치 Bell입니다! Joey, 안녕하세요. 오늘도 활기찬 목소리로 수업에 참여해 주셔서 감사합니다. 식료품 쇼핑이라는 일상적인 주제로 재미있고 깊이 있는 대화를 나눌 수 있었어요. 온라인 쇼핑의 편리함과 오프라인 쇼핑의 즐거움 사이에서 Joey가 어떤 선택을 하는지, 그리고 그 이유까지 자세히 들을 수 있어서 저도 즐거웠습니다.</p>
+<br>
+<p>오늘 대화에서 Joey가 보여준 유창함과 더불어, 몇 가지 포인트를 함께 살펴보면서 더욱 자연스럽고 정확한 표현을 익혀볼게요!</p>
+<br>
+<br>
+<p><strong>0. 📌 Topic</strong></p>
+<p>Topic: Discussing grocery shopping habits and preferences.</p>
+<br>
+<br>
+<p><strong>1. 📊 오늘의 대화 요약 (Summary)</strong></p>
+<p>오늘은 식료품 쇼핑을 주제로 온라인 쇼핑과 오프라인 쇼핑의 장단점, 각자의 쇼핑 습관과 선호하는 매장(이마트, 코스트코 등)에 대해 이야기 나누었습니다. 쇼핑 빈도, 시간대, 그리고 쇼핑을 통해 새로운 트렌드를 발견하는 즐거움 등 다양한 관점에서 깊이 있는 대화를 이어갔습니다.</p>
+<br>
+<br>
+<p><strong>2. 💬 유창성 업그레이드 (Fluency & Natural Flow)</strong></p>
+<p>Joey가 말한 문장 중 의미는 잘 전달되었지만, 원어민이 들었을 때 좀 더 자연스럽게 들릴 수 있는 표현들을 살펴볼게요.</p>
+<br>
+<p>*   <strong>❌ 학습자 원문 (As Said):</strong> "just go for work and make some projects on my computer, use the AI, and have a little exercise in a gym."</p>
+<p>    *   <strong>✅ 자연스러운 표현 (Natural):</strong> "I'll just <strong>go to work</strong>, <strong>work on</strong> some projects on my computer, use AI, and <strong>get some exercise</strong> at the gym."</p>
+<p>    *   <strong>💎 비즈니스 표현 (Professional):</strong> "My agenda includes <strong>heading to the office</strong>, <strong>engaging in project work</strong> on my computer leveraging AI, and <strong>fitting in a workout</strong> at the gym."</p>
+<p>    *   <strong>💡 코칭 포인트:</strong></p>
+<p>        *   Using "go to work" is the standard phrase for going to your workplace. "Go for work" sounds like you're going out *in order to* work, which is slightly different. <span class="arrow">→</span> "go to work"은 직장으로 가는 표준적인 표현입니다. "go for work"는 일하기 위해 나간다는 뉘앙스로 약간 다릅니다.</p>
+<p>        *   "Work on a project" is the idiomatic expression for dedicating time and effort to a project. "Make a project" sounds like you're creating the project from scratch. <span class="arrow">→</span> "work on a project"은 프로젝트에 시간과 노력을 쏟는다는 관용적인 표현입니다. "make a project"는 프로젝트를 처음부터 만든다는 느낌을 줍니다.</p>
+<p>        *   "Get some exercise" or "do some exercise" are common ways to say you're doing physical activity. "Have exercise" is less common. <span class="arrow">→</span> "get some exercise" 또는 "do some exercise"는 운동을 한다는 것을 표현하는 일반적인 방법입니다. "have exercise"는 덜 흔합니다.</p>
+<br>
+<p>*   <strong>❌ 학습자 원문 (As Said):</strong> "it is more far."</p>
+<p>    *   <strong>✅ 자연스러운 표현 (Natural):</strong> "It is <strong>farther</strong>." 또는 "It is <strong>further</strong>."</p>
+<p>    *   <strong>💎 비즈니스 표현 (Professional):</strong> "The distance is <strong>considerably greater</strong>."</p>
+<p>    *   <strong>💡 코칭 포인트:</strong></p>
+<p>        *   For comparative adjectives, we use "-er" for short adjectives (e.g., "farther," "bigger," "taller") or "more" for longer adjectives (e.g., "more beautiful," "more difficult"). "Far" is a short adjective, so its comparative form is "farther" or "further." <span class="arrow">→</span> 비교급 형용사의 경우, 짧은 형용사에는 "-er"을 붙이고 (예: "farther," "bigger," "taller"), 긴 형용사에는 "more"를 사용합니다 (예: "more beautiful," "more difficult"). "Far"는 짧은 형용사이므로 비교급은 "farther" 또는 "further"입니다.</p>
+<br>
+<p>*   <strong>❌ 학습자 원문 (As Said):</strong> "I don't like the online because it is not fun, but that is possible to survive every week because we don't have time, but we need grocery products."</p>
+<p>    *   <strong>✅ 자연스러운 표현 (Natural):</strong> "I don't really enjoy <strong>online shopping</strong> because it's not fun, but <strong>it's how we manage</strong> every week because we're short on time and need groceries."</p>
+<p>    *   <strong>💎 비즈니스 표현 (Professional):</strong> "While I find <strong>e-commerce grocery platforms</strong> less engaging, they are a <strong>practical necessity</strong> for our weekly provisions due to time constraints."</p>
+<p>    *   <strong>💡 코칭 포인트:</strong></p>
+<p>        *   "Online shopping" is the full and natural term. "The online" sounds a bit incomplete. <span class="arrow">→</span> "online shopping"이 완전하고 자연스러운 표현입니다. "the online"은 약간 불완전하게 들립니다.</p>
+<p>        *   "That is possible to survive every week" is understandable but a bit clunky. Phrases like "it's how we manage," "it's a necessary evil," or "it's a practical solution" are more natural ways to express that something is done out of necessity. <span class="arrow">→</span> "That is possible to survive every week"는 이해는 되지만 다소 어색합니다. "it's how we manage," "it's a necessary evil," 또는 "it's a practical solution"과 같은 표현들이 어떤 일이 필요에 의해 행해진다는 것을 더 자연스럽게 나타냅니다.</p>
+<br>
+<br>
+<p><strong>3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)</strong></p>
+<p>이번 수업에서 Joey가 반복적으로 사용한 문법 패턴 중 하나는 <strong>동명사 또는 명사형 표현의 오류</strong>입니다. 특히 동사 뒤에 목적어로 쓰이는 동명사 또는 명사구 형태에서 어색함이 있었습니다.</p>
+<br>
+<p>Category: Gerunds and Noun Phrases as Objects</p>
+<br>
+<table>
+<tr><th>❌ 원문 (As Said)</th><th>✅ 교정 예시 (Corrected)</th></tr>
+<tr><td>"there are so many people <strong>having a shopping</strong> in grocery store."</td><td>"There are so many people <strong>shopping</strong> at the grocery store."</td></tr>
+<tr><td>"our family is only three persons, three members, so <strong>it is small</strong>."</td><td>"Our family is only three persons, three members, so <strong>it's a small family</strong>."</td></tr>
+<tr><td>"we can find, we can learn the trends or <strong>trending product grocery products</strong>."</td><td>"We can find, we can learn the trends or <strong>trending grocery products</strong>."</td></tr>
+<tr><td>"try on the new, uh, <strong>eating new items</strong> of the grocery store."</td><td>"Try <strong>new food items</strong> from the grocery store."</td></tr>
+</table>
+<br>
+<p>📌 <strong>핵심 규칙:</strong> 동사 뒤에 목적어로 오는 동명사나 명사구는 자연스러운 원어민 표현을 익히는 것이 중요합니다. 특히 'shopping'은 그 자체로 명사 또는 동명사로 쓰여 '쇼핑하다'는 의미를 포함할 수 있습니다. 또한, 명사를 수식하는 형용사나 다른 명사의 순서에도 주의해야 합니다.</p>
+<br>
+<p>🔁 <strong>따라 읽기:</strong></p>
+<p>🗣️ "There are so many people shopping at the grocery store."</p>
+<p>🗣️ "Our family is only three members, so it's a small family."</p>
+<p>🗣️ "We can find, we can learn the trends or trending grocery products."</p>
+<br>
+<br>
+<p><strong>4. 📗 어휘 확장 (Vocabulary Vault)</strong></p>
+<p>오늘 대화에서 유용하게 쓰였거나 맥락상 알아두면 좋은 어휘들을 정리해 보았습니다.</p>
+<br>
+<div class="numbered"><strong>1.</strong>  <strong>refrigerated</strong> /rɪˈfrɪdʒəˌreɪtɪd/ (adj)</div>
+<p>    *   뜻: 냉장된, 냉동된</p>
+<p>    *   실전 예문: We need to ensure all <strong>refrigerated</strong> items are stored at the correct temperature to maintain quality.</p>
+<br>
+<div class="numbered"><strong>2.</strong>  <strong>dairy section</strong> /ˈdɛəri ˈsɛkʃən/ (n)</div>
+<p>    *   뜻: 유제품 코너</p>
+<p>    *   실전 예문: The new organic milk brand is performing exceptionally well in the <strong>dairy section</strong>.</p>
+<br>
+<div class="numbered"><strong>3.</strong>  <strong>bulk size</strong> /bʌlk saɪz/ (n)</div>
+<p>    *   뜻: 대용량 (포장)</p>
+<p>    *   실전 예문: Purchasing office supplies in <strong>bulk size</strong> significantly reduces our annual costs.</p>
+<br>
+<div class="numbered"><strong>4.</strong>  <strong>provisions</strong> /prəˈvɪʒənz/ (n)</div>
+<p>    *   뜻: 식량, 비상식량 (특히 많은 양의 식료품)</p>
+<p>    *   실전 예문: We need to stock up on <strong>provisions</strong> for the upcoming company retreat.</p>
+<br>
+<div class="numbered"><strong>5.</strong>  <strong>time constraints</strong> /taɪm kənˈstreɪnts/ (n)</div>
+<p>    *   뜻: 시간 제약</p>
+<p>    *   실전 예문: Due to <strong>time constraints</strong>, we had to prioritize the most critical tasks for the project.</p>
+<br>
+<br>
+<p><strong>5. 📝 실전 복습 챌린지 (Practice)</strong></p>
+<p>오늘 배운 표현과 문법을 활용하여 영작 챌린지를 해볼까요?</p>
+<br>
+<div class="numbered"><strong>1.</strong>  <strong>[쉬움]</strong> 저는 오늘 퇴근 후에 헬스장에서 운동할 계획이에요.</div>
+<p>    *   (힌트: 'go to work', 'get some exercise' 활용)</p>
+<p>    *   <strong>모범 답안:</strong> I plan to <strong>get some exercise</strong> at the gym after I <strong>go to work</strong> today.</p>
+<br>
+<div class="numbered"><strong>2.</strong>  <strong>[중간]</strong> 우리 회사는 예산 제약 때문에 대용량으로 사무용품을 구매하는 것을 선호합니다.</div>
+<p>    *   (힌트: 'time constraints' 대신 'budget constraints', 'bulk size' 활용)</p>
+<p>    *   <strong>모범 답안:</strong> Our company prefers to purchase office supplies in <strong>bulk size</strong> due to <strong>budget constraints</strong>.</p>
+<br>
+<div class="numbered"><strong>3.</strong>  <strong>[어려움]</strong> 저는 온라인 쇼핑이 재미는 없지만, 바쁜 일정 때문에 매주 식료품을 조달하는 실용적인 방법이라고 생각합니다.</div>
+<p>    *   (힌트: 'online shopping', 'not fun', 'manage every week', 'time constraints' 또는 'busy schedule' 활용)</p>
+<p>    *   <strong>모범 답안:</strong> While I don't find <strong>online shopping</strong> particularly fun, it's a practical way to <strong>manage</strong> our weekly <strong>provisions</strong> because of our <strong>busy schedule/time constraints</strong>.</p>
+<br>
+<br>
+<p><strong>6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)</strong></p>
+<br>
+<p>✨ <strong>Good Job:</strong></p>
+<p>Joey, 오늘 대화에서 특히 좋았던 문장은 바로 이 부분입니다:</p>
+<p>"<strong>Actually, I don't have a strategy. To shorten time. To reduce the time. Because I'm enjoying my time at the grocery store, because if I go there, I can find the new style item or what is their trend at the grocery store.</strong>"</p>
+<p>이 문장은 Joey의 생각과 감정을 매우 솔직하고 상세하게 잘 전달했습니다. 'strategy to shorten/reduce time'이라는 표현을 스스로 교정하며 정확하게 사용하려는 노력이 돋보였고, 식료품 쇼핑을 단순한 구매 행위가 아닌 '새로운 트렌드를 배우는 시간'으로 즐긴다는 Joey만의 철학을 잘 표현해주었어요. 아주 훌륭합니다!</p>
+<br>
+<p>🚀 <strong>내일의 한 문장:</strong></p>
+<p>다음 수업 시작 시, 튜터에게 오늘 배운 표현을 활용하여 이렇게 말해보세요.</p>
+<p>"I've been thinking about our discussion on grocery shopping. I realized that for me, it's not just about getting provisions, but also about discovering new trends."</p>
+<p>(식료품 쇼핑에 대한 우리의 대화를 생각해 봤어요. 저에게는 단순히 식료품을 조달하는 것뿐만 아니라 새로운 트렌드를 발견하는 것이기도 하다는 걸 깨달았어요.)</p>
+<br>
+<br>
+<p><strong>[성과 지표]</strong></p>
+<p><strong>유창성 점수: 7.5/10</strong></p>
+<p><strong>근거:</strong> Joey는 다양한 주제에 대해 막힘없이 자신의 생각을 표현할 수 있는 좋은 유창성을 가지고 있습니다. 질문에 대한 답변이 길고 상세하며, 대화의 흐름을 주도하려는 모습도 인상적입니다. 다만, 일부 문장에서 어색한 표현이나 반복적인 문장 구조가 나타나 더 자연스러운 흐름을 만들 수 있는 여지가 있습니다.</p>
+<br>
+<p><strong>다음 수업 '원포인트 액션 플랜':</strong></p>
+<p><strong>"다양한 연결어구(Transition Words) 활용 연습"</strong></p>
+<p>Joey의 대화는 "so"를 사용하여 문장을 연결하는 경향이 있습니다. 다음 수업에서는 "However," "Therefore," "In addition," "On the other hand," "For instance," "Consequently" 등 다양한 연결어구를 의식적으로 사용하여 문장 간의 논리적 관계를 더욱 명확하고 풍부하게 표현하는 연습을 해보면 좋을 것 같아요. 이는 유창성을 높이고 더 세련된 대화 스타일을 만드는 데 큰 도움이 될 것입니다.</p></div>
+        </div>
+        <div id="tab-transcript" class="tab-content">
+            <div class="transcript"><span class="student">[Student]</span> Hello, teacher. Good evening.
+<span class="tutor">[Tutor]</span> Yeah, good morning. How are you doing today?
+<span class="student">[Student]</span> Hi there. I&#x27;m doing great. Yes, it&#x27;s Wednesday and it is the middle of the week.
+<span class="tutor">[Tutor]</span> Yes, it&#x27;s a nice day. How are you today?
+<span class="student">[Student]</span> Oh, pretty good. Yeah, it&#x27;s a nice day today too.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="tutor">[Tutor]</span> Did you have any big plans today or is it a regular day?
+<span class="student">[Student]</span> A big plan? No, I don&#x27;t have a big plan, but I have some small plans. Yes, just go for work and make some projects on my computer, use the AI, and have a little exercise in a gym. Yeah, those are my plans. My plans. Nothing special.
+<span class="tutor">[Tutor]</span> Oh, you just shared your plans for this evening.
+<span class="student">[Student]</span> Ah, yes. Okay.
+<span class="tutor">[Tutor]</span> And did you want to look at today&#x27;s topic?
+<span class="student">[Student]</span> Oh, yes. Today&#x27;s topic is grocery shopping, right? It is a more comfortable subject for me.
+<span class="tutor">[Tutor]</span> Okay, and so what is happening in the picture?
+<span class="student">[Student]</span> Ah, yes.
+<span class="student">[Student]</span> I can see in the picture a middle-aged man checking the grocery product item in a grocery store. And he checked the product&#x27;s expiry date or some information on the product. And I guess this section is the refrigerated display shelf because this section is so bright and this is refrigerated. And I can see there&#x27;s some cheese or milk, more, etc. And the guy wears a blue sweater and inside a white shirt. And his hair is half black and half white, so I guess he&#x27;s 50 or 60 years old. Yeah, that&#x27;s all. I&#x27;m done.
+<span class="tutor">[Tutor]</span> So the next question is what section of the grocery store is he shopping in?
+<span class="student">[Student]</span> Oh, yes. I guess it is the dairy section, the refrigerated display, because I guess this product looks like cheese or yogurt or dairy food. So yeah, this is the refrigerated display and this is the refrigerated section, dairy section.
+<span class="tutor">[Tutor]</span> Probably dairy for maybe cheese, yogurt.
+<span class="student">[Student]</span> Yogurt, you&#x27;re right.
+<span class="tutor">[Tutor]</span> So how often do you visit the grocery store?
+<span class="student">[Student]</span> Actually, I usually order online service, the grocery store online service. But sometimes I visit that place with my family, maybe once per month, because it is so fun. Yeah, maybe we usually use the online service, so our product items are similar every month, every week. But if I visit the grocery store with my family, at that time I will find some new products or some interesting products. So that is so interesting. Yeah, to visit there. So yeah, so I visit once per month. How about you? How often do you visit the grocery store?
+<span class="tutor">[Tutor]</span> Hmm, I&#x27;m pretty very often. I live very close to the grocery store.
+<span class="student">[Student]</span> Yes.
+<span class="tutor">[Tutor]</span> Or a few grocery stores. So it is many times per month. Yeah, it&#x27;s easy to walk and pick something up.
+<span class="student">[Student]</span> Yes, it&#x27;s good.
+<span class="tutor">[Tutor]</span> Do you live near a grocery store or is it far away?
+<span class="student">[Student]</span> I have a middle-sized grocery store near my home, so it is possible to just walk 30 minutes, 30 minutes. But if we go to a larger grocery store like the warehouse E-mart or Costco, it is possible to take a car that takes 10 minutes, 15 minutes. Yeah, so it is more far. So usually we shop, we do shopping at the nearby small-sized, middle-sized grocery store near my home.
+<span class="tutor">[Tutor]</span> Okay, so the one that&#x27;s closer to you is easier to go to.
+<span class="student">[Student]</span> Yeah, you&#x27;re right.
+<span class="tutor">[Tutor]</span> What about online shopping? What online shopping do you prefer?
+<span class="student">[Student]</span> I prefer to use the E-mart online shopping mall because maybe you don&#x27;t know that because it is a Korean grocery store chain market. So yes, so usually that is connected to the department grocery store and etc. So usually we order that way, the online shopping mall. And maybe there is one time per week we order, yeah, for some grocery items. Milk, cheese, etc.
+<span class="tutor">[Tutor]</span> Yes. And when you say you go one time per month, which store do you prefer to go to when you do go to the grocery store?
+<span class="student">[Student]</span> So your question means why I visit that grocery store, not use the online service?
+<span class="tutor">[Tutor]</span> Which store do you like to visit when you do go in person? Which do you like the most?
+<span class="student">[Student]</span> Yes. So your question means, sorry teacher, your question means why I visit the offline grocery store, right?
+<span class="tutor">[Tutor]</span> So no, when you go in person, which store do you like to visit? So what is your favorite grocery store to visit in person?
+<span class="student">[Student]</span> Ah, in person. I see. So I&#x27;m a little confused because your question, I listened to &quot;in person&quot;. So your question means which grocery store do you like personally, right?
+<span class="tutor">[Tutor]</span> Yeah. So you said, you mentioned, oh, you only go once a month. Which one do you prefer when you go to the grocery store?
+<span class="student">[Student]</span> I understand. Yes. Sometimes that depends on the time because we don&#x27;t have a regular grocery store. But if we go there, we usually visit Costco. That is a warehouse-style grocery store. That is big and large, and we can find some new products, the imported U.S. or Canada products or some European products. We can find new products. But our family is only three persons, three members, so it is small. So if we go there, every product is large. For example, if we pick up some pork or beef, that size is so big. So usually we visit the more small-sized E-mart or Homeplus. That is the Korean grocery store. So we visit there because it is possible to find a small packaging size grocery product. Yes.
+<span class="tutor">[Tutor]</span> Oh, yes. Yeah, Costco has much bigger sizes or bulk sizes.
+<span class="student">[Student]</span> Yeah, bulk size. You&#x27;re right. Okay.
+<span class="tutor">[Tutor]</span> So in general, do you prefer online or in person?
+<span class="student">[Student]</span> Actually, I don&#x27;t like the online because it is not fun, but that is possible to survive every week because we don&#x27;t have time, but we need grocery products. So we order the regularly the items, the milk, cheese, yogurt, the vegetable foods, etc. But usually we can sometimes we will find the new items, we want to do interesting items. So at that time we visit there and we check the new items or try on the new, uh, eating new items of the grocery store. So, yeah, so I love to visit the offline service, offline grocery store, but we usually use the online grocery store because of time problem. Because if we go to a grocery store, it takes one or two hours more. So that takes a long time. So, yeah, I use the online service of grocery store.
+<span class="tutor">[Tutor]</span> Okay, yeah, because going in person might take much longer than online shopping.
+<span class="student">[Student]</span> Yeah, longer. Yeah, you&#x27;re right.
+<span class="tutor">[Tutor]</span> And when do you usually go grocery shopping? Do you prefer the morning, evenings, weekends?
+<span class="student">[Student]</span> Yes, I understand.
+<span class="student">[Student]</span> Usually the evening. Because usually we visit on the weekend, Sunday or Saturday, and usually we visit in the evening because Monday morning and afternoon, morning and afternoon, we visit other, we find more interesting like the park, near travel place or some picnic place. And then the last destination is the grocery store because we will prepare the dinner or just go there to the without sun, the darkness. There&#x27;s no, okay, I just, your last time. Oh, yes, there is no reason. Just, just casual.
+<span class="tutor">[Tutor]</span> Is it usually really busy during the day compared to the evening?
+<span class="student">[Student]</span> Yes, if we visit in the evening, the grocery store, that is crowded. There are so many people having a shopping in grocery store. But I know that if I visit in the morning or afternoon, that is more, there is no person, so it is more convenient to use the grocery store. But our time is also similar, so in the morning and afternoon we enjoy our day and then last destination we usually visit the grocery store.
+<span class="tutor">[Tutor]</span> Okay, so maybe something last minute on the weekends.
+<span class="student">[Student]</span> Yes, yes.
+<span class="tutor">[Tutor]</span> And when do you get your groceries delivered? When? Do you get them delivered while you&#x27;re at work or when you come home?
+<span class="student">[Student]</span> I see. Usually Friday night we order the grocery store online service and then we pick up at our homes. But yeah, so usually if I order on Friday and we can check, we can find, we can receive the grocery item on Saturday morning or Saturday afternoon because Korea is small, so it is possible to deliver service next day. If I order today night, we can receive the next day morning, so it is so convenient.
+<span class="tutor">[Tutor]</span> Okay, pretty easy to order and get it next day.
+<span class="student">[Student]</span> Yes, yes. Because it&#x27;s possible in a small country.
+<span class="tutor">[Tutor]</span> And so the last question here, do you have a strategy for getting in and out of the grocery store quickly? Or do you prefer to take your time?
+<span class="student">[Student]</span> Actually, I don&#x27;t have a strategy.
+<span class="student">[Student]</span> To shorten time.
+<span class="student">[Student]</span> To reduce the time. Because I&#x27;m enjoying my time at the grocery store, because if I go there, I can find the new style item or what is their trend at the grocery store. For example, sometimes that is their popular honey. So the product always contains the honey. And made honey, so we can find, we can learn the trends or trending product grocery products. So that is, it&#x27;s possible to learn what is popular or not, what people like that or not. So that is good time for learning. So usually I take time in the grocery store. Yeah, teacher.
+<span class="tutor">[Tutor]</span> Okay, so you like to wander around, see what&#x27;s maybe on special or what kind of new products they have.
+<span class="student">[Student]</span> Yes, yes, you&#x27;re right.
+<span class="student">[Student]</span> And if you go to a grocery store, what is your favorite product and product section?
+<span class="tutor">[Tutor]</span> Grocery store. Or for me? Oh yeah, it just depends on what I need.
+<span class="student">[Student]</span> Yes, yes, I understand. Yeah, that is the best answer. Yeah, that is dependent on my need.
+<span class="tutor">[Tutor]</span> I need. Okay. Depend on what I&#x27;m hungry for, what I&#x27;m in the mood for. So if I&#x27;m there to get something for dinner, I&#x27;m gonna probably go to the meat section.
+<span class="student">[Student]</span> Yes, yes, I understand. And do you like to use the online service or offline service?
+<span class="tutor">[Tutor]</span> I rarely use online service. I usually just go to the store because that&#x27;s close and it&#x27;s possible to immediately take them.
+<span class="student">[Student]</span> Okay, I see.
+<span class="tutor">[Tutor]</span> Yeah, there&#x27;s two big ones, two big grocery stores and two very small like family markets. Pretty nice.
+<span class="student">[Student]</span> And your home and your grocery store is so close, so you don&#x27;t take your car, right? Just walk there and just take them, right?
+<span class="tutor">[Tutor]</span> Yeah, so usually I make a few trips if I&#x27;m walking. Because that&#x27;s so close. It&#x27;s so nice. I guess also right now fruit is on sale. It&#x27;s fruit season.
+<span class="student">[Student]</span> Yeah.
+<span class="tutor">[Tutor]</span> Maybe right now.
+<span class="student">[Student]</span> Yes, if we visit at 9 p.m. or at a late time, we can find some discount products. Yeah, that is also a good strategy to visit, yeah, a grocery store.
+<span class="tutor">[Tutor]</span> In summertime, yeah, a lot of fruit is in season, so maybe that&#x27;s my favorite section in the summer. Yeah, I appreciate that section.
+<span class="student">[Student]</span> Okay, I see. And did you, have you recently gone to the grocery store?
+<span class="student">[Student]</span> Oh, maybe one month ago or two months ago I visited there and maybe I remember I bought my son shoes. So yeah, because this is the summer season, but he doesn&#x27;t have the shoes for the summer, so we bought two kinds of shoes used in summer. And some... ah, that&#x27;s not a grocery store. But maybe and we visited their other place, grocery section, and just bought some, yeah, products. Nothing special.
+<span class="tutor">[Tutor]</span> Yeah, well, a lot of them, yeah, like Costco has shoes and everything you need.
+<span class="student">[Student]</span> Yeah, you&#x27;re right.
+<span class="tutor">[Tutor]</span> Well, that is about time. I&#x27;ll let you go today and I&#x27;ll send you the corrections in just a bit.
+<span class="student">[Student]</span> Yes, thank you so much.
+<span class="tutor">[Tutor]</span> You&#x27;re welcome. Have a great day.
+<span class="student">[Student]</span> Goodbye. You too. Have a nice day.
+<span class="tutor">[Tutor]</span> Bye-bye. Thank you.</div>
+        </div>
+    </div>
+    <div class="toast" id="toast">✅ 프롬프트가 복사되었습니다!</div>
+    <script>
+        const REVIEW_PROMPT="너는 나의 영어 회화 복습 파트너야. 오늘 내 전화영어 수업 내용을 기반으로 대화하면서 복습을 도와줘.\n\n[오늘 수업 전사 내용]\n[Student] Hello, teacher. Good evening.\n[Tutor] Yeah, good morning. How are you doing today?\n[Student] Hi there. I'm doing great. Yes, it's Wednesday and it is the middle of the week.\n[Tutor] Yes, it's a nice day. How are you today?\n[Student] Oh, pretty good. Yeah, it's a nice day today too.\n[Tutor] Okay.\n[Tutor] Did you have any big plans today or is it a regular day?\n[Student] A big plan? No, I don't have a big plan, but I have some small plans. Yes, just go for work and make some projects on my computer, use the AI, and have a little exercise in a gym. Yeah, those are my plans. My plans. Nothing special.\n[Tutor] Oh, you just shared your plans for this evening.\n[Student] Ah, yes. Okay.\n[Tutor] And did you want to look at today's topic?\n[Student] Oh, yes. Today's topic is grocery shopping, right? It is a more comfortable subject for me.\n[Tutor] Okay, and so what is happening in the picture?\n[Student] Ah, yes.\n[Student] I can see in the picture a middle-aged man checking the grocery product item in a grocery store. And he checked the product's expiry date or some information on the product. And I guess this section is the refrigerated display shelf because this section is so bright and this is refrigerated. And I can see there's some cheese or milk, more, etc. And the guy wears a blue sweater and inside a white shirt. And his hair is half black and half white, so I guess he's 50 or 60 years old. Yeah, that's all. I'm done.\n[Tutor] So the next question is what section of the grocery store is he shopping in?\n[Student] Oh, yes. I guess it is the dairy section, the refrigerated display, because I guess this product looks like cheese or yogurt or dairy food. So yeah, this is the refrigerated display and this is the refrigerated section, dairy section.\n[Tutor] Probably dairy for maybe cheese, yogurt.\n[Student] Yogurt, you're right.\n[Tutor] So how often do you visit the grocery store?\n[Student] Actually, I usually order online service, the grocery store online service. But sometimes I visit that place with my family, maybe once per month, because it is so fun. Yeah, maybe we usually use the online service, so our product items are similar every month, every week. But if I visit the grocery store with my family, at that time I will find some new products or some interesting products. So that is so interesting. Yeah, to visit there. So yeah, so I visit once per month. How about you? How often do you visit the grocery store?\n[Tutor] Hmm, I'm pretty very often. I live very close to the grocery store.\n[Student] Yes.\n[Tutor] Or a few grocery stores. So it is many times per month. Yeah, it's easy to walk and pick something up.\n[Student] Yes, it's good.\n[Tutor] Do you live near a grocery store or is it far away?\n[Student] I have a middle-sized grocery store near my home, so it is possible to just walk 30 minutes, 30 minutes. But if we go to a larger grocery store like the warehouse E-mart or Costco, it is possible to take a car that takes 10 minutes, 15 minutes. Yeah, so it is more far. So usually we shop, we do shopping at the nearby small-sized, middle-sized grocery store near my home.\n[Tutor] Okay, so the one that's closer to you is easier to go to.\n[Student] Yeah, you're right.\n[Tutor] What about online shopping? What online shopping do you prefer?\n[Student] I prefer to use the E-mart online shopping mall because maybe you don't know that because it is a Korean grocery store chain market. So yes, so usually that is connected to the department grocery store and etc. So usually we order that way, the online shopping mall. And maybe there is one time per week we order, yeah, for some grocery items. Milk, cheese, etc.\n[Tutor] Yes. And when you say you go one time per month, which store do you prefer to go to when you do go to the grocery store?\n[Student] So your question means why I visit that grocery store, not use the online service?\n[Tutor] Which store do you like to visit when you do go in person? Which do you like the most?\n[Student] Yes. So your question means, sorry teacher, your question means why I visit the offline grocery store, right?\n[Tutor] So no, when you go in person, which store do you like to visit? So what is your favorite grocery store to visit in person?\n[Student] Ah, in person. I see. So I'm a little confused because your question, I listened to \"in person\". So your question means which grocery store do you like personally, right?\n[Tutor] Yeah. So you said, you mentioned, oh, you only go once a month. Which one do you prefer when you go to the grocery store?\n[Student] I understand. Yes. Sometimes that depends on the time because we don't have a regular grocery store. But if we go there, we usually visit Costco. That is a warehouse-style grocery store. That is big and large, and we can find some new products, the imported U.S. or Canada products or some European products. We can find new products. But our family is only three persons, three members, so it is small. So if we go there, every product is large. For example, if we pick up some pork or beef, that size is so big. So usually we visit the more small-sized E-mart or Homeplus. That is the Korean grocery store. So we visit there because it is possible to find a small packaging size grocery product. Yes.\n[Tutor] Oh, yes. Yeah, Costco has much bigger sizes or bulk sizes.\n[Student] Yeah, bulk size. You're right. Okay.\n[Tutor] So in general, do you prefer online or in person?\n[Student] Actually, I don't like the online because it is not fun, but that is possible to survive every week because we don't have time, but we need grocery products. So we order the regularly the items, the milk, cheese, yogurt, the vegetable foods, etc. But usually we can sometimes we will find the new items, we want to do interesting items. So at that time we visit there and we check the new items or try on the new, uh, eating new items of the grocery store. So, yeah, so I love to visit the offline service, offline grocery store, but we usually use the online grocery store because of time problem. Because if we go to a grocery store, it takes one or two hours more. So that takes a long time. So, yeah, I use the online service of grocery store.\n[Tutor] Okay, yeah, because going in person might take much longer than online shopping.\n[Student] Yeah, longer. Yeah, you're right.\n[Tutor] And when do you usually go grocery shopping? Do you prefer the morning, evenings, weekends?\n[Student] Yes, I understand.\n[Student] Usually the evening. Because usually we visit on the weekend, Sunday or Saturday, and usually we visit in the evening because Monday morning and afternoon, morning and afternoon, we visit other, we find more interesting like the park, near travel place or some picnic place. And then the last destination is the grocery store because we will prepare the dinner or just go there to the without sun, the darkness. There's no, okay, I just, your last time. Oh, yes, there is no reason. Just, just casual.\n[Tutor] Is it usually really busy during the day compared to the evening?\n[Student] Yes, if we visit in the evening, the grocery store, that is crowded. There are so many people having a shopping in grocery store. But I know that if I visit in the morning or afternoon, that is more, there is no person, so it is more convenient to use the grocery store. But our time is also similar, so in the morning and afternoon we enjoy our day and then last destination we usually visit the grocery store.\n[Tutor] Okay, so maybe something last minute on the weekends.\n[Student] Yes, yes.\n[Tutor] And when do you get your groceries delivered? When? Do you get them delivered while you're at work or when you come home?\n[Student] I see. Usually Friday night we order the grocery store online service and then we pick up at our homes. But yeah, so usually if I order on Friday and we can check, we can find, we can receive the grocery item on Saturday morning or Saturday afternoon because Korea is small, so it is possible to deliver service next day. If I order today night, we can receive the next day morning, so it is so convenient.\n[Tutor] Okay, pretty easy to order and get it next day.\n[Student] Yes, yes. Because it's possible in a small country.\n[Tutor] And so the last question here, do you have a strategy for getting in and out of the grocery store quickly? Or do you prefer to take your time?\n[Student] Actually, I don't have a strategy.\n[Student] To shorten time.\n[Student] To reduce the time. Because I'm enjoying my time at the grocery store, because if I go there, I can find the new style item or what is their trend at the grocery store. For example, sometimes that is their popular honey. So the product always contains the honey. And made honey, so we can find, we can learn the trends or trending product grocery products. So that is, it's possible to learn what is popular or not, what people like that or not. So that is good time for learning. So usually I take time in the grocery store. Yeah, teacher.\n[Tutor] Okay, so you like to wander around, see what's maybe on special or what kind of new products they have.\n[Student] Yes, yes, you're right.\n[Student] And if you go to a grocery store, what is your favorite product and product section?\n[Tutor] Grocery store. Or for me? Oh yeah, it just depends on what I need.\n[Student] Yes, yes, I understand. Yeah, that is the best answer. Yeah, that is dependent on my need.\n[Tutor] I need. Okay. Depend on what I'm hungry for, what I'm in the mood for. So if I'm there to get something for dinner, I'm gonna probably go to the meat section.\n[Student] Yes, yes, I understand. And do you like to use the online service or offline service?\n[Tutor] I rarely use online service. I usually just go to the store because that's close and it's possible to immediately take them.\n[Student] Okay, I see.\n[Tutor] Yeah, there's two big ones, two big grocery stores and two very small like family markets. Pretty nice.\n[Student] And your home and your grocery store is so close, so you don't take your car, right? Just walk there and just take them, right?\n[Tutor] Yeah, so usually I make a few trips if I'm walking. Because that's so close. It's so nice. I guess also right now fruit is on sale. It's fruit season.\n[Student] Yeah.\n[Tutor] Maybe right now.\n[Student] Yes, if we visit at 9 p.m. or at a late time, we can find some discount products. Yeah, that is also a good strategy to visit, yeah, a grocery store.\n[Tutor] In summertime, yeah, a lot of fruit is in season, so maybe that's my favorite section in the summer. Yeah, I appreciate that section.\n[Student] Okay, I see. And did you, have you recently gone to the grocery store?\n[Student] Oh, maybe one month ago or two months ago I visited there and maybe I remember I bought my son shoes. So yeah, because this is the summer season, but he doesn't have the shoes for the summer, so we bought two kinds of shoes used in summer. And some... ah, that's not a grocery store. But maybe and we visited their other place, grocery section, and just bought some, yeah, products. Nothing special.\n[Tutor] Yeah, well, a lot of them, yeah, like Costco has shoes and everything you need.\n[Student] Yeah, you're right.\n[Tutor] Well, that is about time. I'll let you go today and I'll send you the corrections in just a bit.\n[Student] Yes, thank you so much.\n[Tutor] You're welcome. Have a great day.\n[Student] Goodbye. You too. Have a nice day.\n[Tutor] Bye-bye. Thank you.\n\n[AI 피드백]\n따뜻하고 실용적인 영어 코치 Bell입니다! Joey, 안녕하세요. 오늘도 활기찬 목소리로 수업에 참여해 주셔서 감사합니다. 식료품 쇼핑이라는 일상적인 주제로 재미있고 깊이 있는 대화를 나눌 수 있었어요. 온라인 쇼핑의 편리함과 오프라인 쇼핑의 즐거움 사이에서 Joey가 어떤 선택을 하는지, 그리고 그 이유까지 자세히 들을 수 있어서 저도 즐거웠습니다.\n\n오늘 대화에서 Joey가 보여준 유창함과 더불어, 몇 가지 포인트를 함께 살펴보면서 더욱 자연스럽고 정확한 표현을 익혀볼게요!\n\n---\n\n**0. 📌 Topic**\nTopic: Discussing grocery shopping habits and preferences.\n\n---\n\n**1. 📊 오늘의 대화 요약 (Summary)**\n오늘은 식료품 쇼핑을 주제로 온라인 쇼핑과 오프라인 쇼핑의 장단점, 각자의 쇼핑 습관과 선호하는 매장(이마트, 코스트코 등)에 대해 이야기 나누었습니다. 쇼핑 빈도, 시간대, 그리고 쇼핑을 통해 새로운 트렌드를 발견하는 즐거움 등 다양한 관점에서 깊이 있는 대화를 이어갔습니다.\n\n---\n\n**2. 💬 유창성 업그레이드 (Fluency & Natural Flow)**\nJoey가 말한 문장 중 의미는 잘 전달되었지만, 원어민이 들었을 때 좀 더 자연스럽게 들릴 수 있는 표현들을 살펴볼게요.\n\n*   **❌ 학습자 원문 (As Said):** \"just go for work and make some projects on my computer, use the AI, and have a little exercise in a gym.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"I'll just **go to work**, **work on** some projects on my computer, use AI, and **get some exercise** at the gym.\"\n    *   **💎 비즈니스 표현 (Professional):** \"My agenda includes **heading to the office**, **engaging in project work** on my computer leveraging AI, and **fitting in a workout** at the gym.\"\n    *   **💡 코칭 포인트:**\n        *   Using \"go to work\" is the standard phrase for going to your workplace. \"Go for work\" sounds like you're going out *in order to* work, which is slightly different. → \"go to work\"은 직장으로 가는 표준적인 표현입니다. \"go for work\"는 일하기 위해 나간다는 뉘앙스로 약간 다릅니다.\n        *   \"Work on a project\" is the idiomatic expression for dedicating time and effort to a project. \"Make a project\" sounds like you're creating the project from scratch. → \"work on a project\"은 프로젝트에 시간과 노력을 쏟는다는 관용적인 표현입니다. \"make a project\"는 프로젝트를 처음부터 만든다는 느낌을 줍니다.\n        *   \"Get some exercise\" or \"do some exercise\" are common ways to say you're doing physical activity. \"Have exercise\" is less common. → \"get some exercise\" 또는 \"do some exercise\"는 운동을 한다는 것을 표현하는 일반적인 방법입니다. \"have exercise\"는 덜 흔합니다.\n\n*   **❌ 학습자 원문 (As Said):** \"it is more far.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"It is **farther**.\" 또는 \"It is **further**.\"\n    *   **💎 비즈니스 표현 (Professional):** \"The distance is **considerably greater**.\"\n    *   **💡 코칭 포인트:**\n        *   For comparative adjectives, we use \"-er\" for short adjectives (e.g., \"farther,\" \"bigger,\" \"taller\") or \"more\" for longer adjectives (e.g., \"more beautiful,\" \"more difficult\"). \"Far\" is a short adjective, so its comparative form is \"farther\" or \"further.\" → 비교급 형용사의 경우, 짧은 형용사에는 \"-er\"을 붙이고 (예: \"farther,\" \"bigger,\" \"taller\"), 긴 형용사에는 \"more\"를 사용합니다 (예: \"more beautiful,\" \"more difficult\"). \"Far\"는 짧은 형용사이므로 비교급은 \"farther\" 또는 \"further\"입니다.\n\n*   **❌ 학습자 원문 (As Said):** \"I don't like the online because it is not fun, but that is possible to survive every week because we don't have time, but we need grocery products.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"I don't really enjoy **online shopping** because it's not fun, but **it's how we manage** every week because we're short on time and need groceries.\"\n    *   **💎 비즈니스 표현 (Professional):** \"While I find **e-commerce grocery platforms** less engaging, they are a **practical necessity** for our weekly provisions due to time constraints.\"\n    *   **💡 코칭 포인트:**\n        *   \"Online shopping\" is the full and natural term. \"The online\" sounds a bit incomplete. → \"online shopping\"이 완전하고 자연스러운 표현입니다. \"the online\"은 약간 불완전하게 들립니다.\n        *   \"That is possible to survive every week\" is understandable but a bit clunky. Phrases like \"it's how we manage,\" \"it's a necessary evil,\" or \"it's a practical solution\" are more natural ways to express that something is done out of necessity. → \"That is possible to survive every week\"는 이해는 되지만 다소 어색합니다. \"it's how we manage,\" \"it's a necessary evil,\" 또는 \"it's a practical solution\"과 같은 표현들이 어떤 일이 필요에 의해 행해진다는 것을 더 자연스럽게 나타냅니다.\n\n---\n\n**3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)**\n이번 수업에서 Joey가 반복적으로 사용한 문법 패턴 중 하나는 **동명사 또는 명사형 표현의 오류**입니다. 특히 동사 뒤에 목적어로 쓰이는 동명사 또는 명사구 형태에서 어색함이 있었습니다.\n\nCategory: Gerunds and Noun Phrases as Objects\n\n| ❌ 원문 (As Said)                                                                  | ✅ 교정 예시 (Corrected)                                                              |\n| :-------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------ |\n| \"there are so many people **having a shopping** in grocery store.\"                 | \"There are so many people **shopping** at the grocery store.\"                         |\n| \"our family is only three persons, three members, so **it is small**.\"             | \"Our family is only three persons, three members, so **it's a small family**.\"        |\n| \"we can find, we can learn the trends or **trending product grocery products**.\" | \"We can find, we can learn the trends or **trending grocery products**.\"              |\n| \"try on the new, uh, **eating new items** of the grocery store.\"                   | \"Try **new food items** from the grocery store.\"                                      |\n\n📌 **핵심 규칙:** 동사 뒤에 목적어로 오는 동명사나 명사구는 자연스러운 원어민 표현을 익히는 것이 중요합니다. 특히 'shopping'은 그 자체로 명사 또는 동명사로 쓰여 '쇼핑하다'는 의미를 포함할 수 있습니다. 또한, 명사를 수식하는 형용사나 다른 명사의 순서에도 주의해야 합니다.\n\n🔁 **따라 읽기:**\n🗣️ \"There are so many people shopping at the grocery store.\"\n🗣️ \"Our family is only three members, so it's a small family.\"\n🗣️ \"We can find, we can learn the trends or trending grocery products.\"\n\n---\n\n**4. 📗 어휘 확장 (Vocabulary Vault)**\n오늘 대화에서 유용하게 쓰였거나 맥락상 알아두면 좋은 어휘들을 정리해 보았습니다.\n\n1.  **refrigerated** /rɪˈfrɪdʒəˌreɪtɪd/ (adj)\n    *   뜻: 냉장된, 냉동된\n    *   실전 예문: We need to ensure all **refrigerated** items are stored at the correct temperature to maintain quality.\n\n2.  **dairy section** /ˈdɛəri ˈsɛkʃən/ (n)\n    *   뜻: 유제품 코너\n    *   실전 예문: The new organic milk brand is performing exceptionally well in the **dairy section**.\n\n3.  **bulk size** /bʌlk saɪz/ (n)\n    *   뜻: 대용량 (포장)\n    *   실전 예문: Purchasing office supplies in **bulk size** significantly reduces our annual costs.\n\n4.  **provisions** /prəˈvɪʒənz/ (n)\n    *   뜻: 식량, 비상식량 (특히 많은 양의 식료품)\n    *   실전 예문: We need to stock up on **provisions** for the upcoming company retreat.\n\n5.  **time constraints** /taɪm kənˈstreɪnts/ (n)\n    *   뜻: 시간 제약\n    *   실전 예문: Due to **time constraints**, we had to prioritize the most critical tasks for the project.\n\n---\n\n**5. 📝 실전 복습 챌린지 (Practice)**\n오늘 배운 표현과 문법을 활용하여 영작 챌린지를 해볼까요?\n\n1.  **[쉬움]** 저는 오늘 퇴근 후에 헬스장에서 운동할 계획이에요.\n    *   (힌트: 'go to work', 'get some exercise' 활용)\n    *   **모범 답안:** I plan to **get some exercise** at the gym after I **go to work** today.\n\n2.  **[중간]** 우리 회사는 예산 제약 때문에 대용량으로 사무용품을 구매하는 것을 선호합니다.\n    *   (힌트: 'time constraints' 대신 'budget constraints', 'bulk size' 활용)\n    *   **모범 답안:** Our company prefers to purchase office supplies in **bulk size** due to **budget constraints**.\n\n3.  **[어려움]** 저는 온라인 쇼핑이 재미는 없지만, 바쁜 일정 때문에 매주 식료품을 조달하는 실용적인 방법이라고 생각합니다.\n    *   (힌트: 'online shopping', 'not fun', 'manage every week', 'time constraints' 또는 'busy schedule' 활용)\n    *   **모범 답안:** While I don't find **online shopping** particularly fun, it's a practical way to **manage** our weekly **provisions** because of our **busy schedule/time constraints**.\n\n---\n\n**6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)**\n\n✨ **Good Job:**\nJoey, 오늘 대화에서 특히 좋았던 문장은 바로 이 부분입니다:\n\"**Actually, I don't have a strategy. To shorten time. To reduce the time. Because I'm enjoying my time at the grocery store, because if I go there, I can find the new style item or what is their trend at the grocery store.**\"\n이 문장은 Joey의 생각과 감정을 매우 솔직하고 상세하게 잘 전달했습니다. 'strategy to shorten/reduce time'이라는 표현을 스스로 교정하며 정확하게 사용하려는 노력이 돋보였고, 식료품 쇼핑을 단순한 구매 행위가 아닌 '새로운 트렌드를 배우는 시간'으로 즐긴다는 Joey만의 철학을 잘 표현해주었어요. 아주 훌륭합니다!\n\n🚀 **내일의 한 문장:**\n다음 수업 시작 시, 튜터에게 오늘 배운 표현을 활용하여 이렇게 말해보세요.\n\"I've been thinking about our discussion on grocery shopping. I realized that for me, it's not just about getting provisions, but also about discovering new trends.\"\n(식료품 쇼핑에 대한 우리의 대화를 생각해 봤어요. 저에게는 단순히 식료품을 조달하는 것뿐만 아니라 새로운 트렌드를 발견하는 것이기도 하다는 걸 깨달았어요.)\n\n---\n\n**[성과 지표]**\n**유창성 점수: 7.5/10**\n**근거:** Joey는 다양한 주제에 대해 막힘없이 자신의 생각을 표현할 수 있는 좋은 유창성을 가지고 있습니다. 질문에 대한 답변이 길고 상세하며, 대화의 흐름을 주도하려는 모습도 인상적입니다. 다만, 일부 문장에서 어색한 표현이나 반복적인 문장 구조가 나타나 더 자연스러운 흐름을 만들 수 있는 여지가 있습니다.\n\n**다음 수업 '원포인트 액션 플랜':**\n**\"다양한 연결어구(Transition Words) 활용 연습\"**\nJoey의 대화는 \"so\"를 사용하여 문장을 연결하는 경향이 있습니다. 다음 수업에서는 \"However,\" \"Therefore,\" \"In addition,\" \"On the other hand,\" \"For instance,\" \"Consequently\" 등 다양한 연결어구를 의식적으로 사용하여 문장 간의 논리적 관계를 더욱 명확하고 풍부하게 표현하는 연습을 해보면 좋을 것 같아요. 이는 유창성을 높이고 더 세련된 대화 스타일을 만드는 데 큰 도움이 될 것입니다.\n\n위 내용을 바탕으로:\n1. 먼저 오늘 수업에서 내가 틀렸거나 어색했던 표현을 하나 골라서, 관련된 상황을 영어로 질문해줘.\n2. 내가 영어로 대답하면, 자연스러운지 확인하고 더 나은 표현이 있으면 알려줘.\n3. 특히 \"반복 실수 패턴\"에서 지적된 부분을 집중적으로 연습시켜줘.\n4. 이런 식으로 오늘 배운 표현들을 하나씩 복습하자.\n5. 한국어 설명은 필요할 때만 간단히, 대화는 최대한 영어로 진행해줘.\n\n그럼 시작하자!";
+        function startReview(){navigator.clipboard.writeText(REVIEW_PROMPT).then(()=>{showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)}).catch(()=>{const t=document.createElement('textarea');t.value=REVIEW_PROMPT;document.body.appendChild(t);t.select();document.execCommand('copy');document.body.removeChild(t);showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)})}
+        function showToast(){const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500)}
+        function switchTab(n){document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',n==='feedback'?i===0:i===1));document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));document.getElementById('tab-'+n).classList.add('active')}
+    </script>
+</body>
+</html>
