@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전화영어 복습 - 2026년 06월 09일</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Noto Sans KR',sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.75;min-height:100vh}
+        .header{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);border-bottom:1px solid rgba(255,255,255,.06);padding:48px 24px 40px;text-align:center}
+        .header-date{font-size:13px;color:#94a3b8;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+        .header h1{font-size:28px;font-weight:700;color:#f1f5f9;margin-bottom:16px}
+        .header-meta{display:flex;justify-content:center;gap:24px;font-size:14px;color:#64748b}
+        .header-meta span{display:flex;align-items:center;gap:6px}
+        .cta-section{text-align:center;padding:40px 24px}
+        .cta-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:linear-gradient(135deg,#38bdf8,#818cf8);color:#fff;font-size:16px;font-weight:600;font-family:'Noto Sans KR',sans-serif;border:none;border-radius:50px;cursor:pointer;transition:all .3s;text-decoration:none;box-shadow:0 4px 24px rgba(56,189,248,.25)}
+        .cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(56,189,248,.35)}
+        .cta-btn svg{width:20px;height:20px}
+        .cta-sub{margin-top:12px;font-size:13px;color:#64748b}
+        .toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#38bdf8;padding:14px 28px;border-radius:12px;font-size:14px;font-weight:500;border:1px solid rgba(56,189,248,.2);box-shadow:0 8px 32px rgba(0,0,0,.4);opacity:0;transition:all .4s cubic-bezier(.16,1,.3,1);z-index:1000}
+        .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+        .container{max-width:720px;margin:0 auto;padding:0 24px 80px}
+        .tabs{display:flex;gap:4px;background:#1a1a24;padding:4px;border-radius:12px;margin-bottom:32px}
+        .tab{flex:1;padding:12px;text-align:center;font-size:14px;font-weight:500;color:#64748b;background:0 0;border:none;border-radius:8px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all .2s}
+        .tab.active{background:#262636;color:#f1f5f9}
+        .tab-content{display:none}.tab-content.active{display:block}
+        .feedback h2{font-size:18px;font-weight:700;color:#f1f5f9;margin:36px 0 16px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.06)}
+        .feedback h2:first-child{margin-top:0}
+        .feedback p{margin:8px 0;color:#cbd5e1}
+        .feedback .item{padding:6px 0 6px 16px;border-left:2px solid #334155;margin:6px 0;color:#cbd5e1}
+        .feedback .numbered{padding:8px 0 8px 16px;color:#cbd5e1}
+        .feedback .numbered strong{color:#38bdf8}
+        .feedback strong{color:#f1f5f9}
+        .feedback code{background:#1e293b;padding:2px 8px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#38bdf8}
+        .feedback table{width:100%;border-collapse:collapse;margin:12px 0}
+        .feedback th,.feedback td{padding:10px 14px;text-align:left;border-bottom:1px solid #262636}
+        .feedback th{color:#94a3b8;font-weight:500;font-size:13px}
+        .feedback td{color:#cbd5e1}
+        .arrow{color:#38bdf8;font-weight:700}
+        .transcript{background:#1a1a24;border-radius:12px;padding:28px;font-size:14px;line-height:2;color:#94a3b8;white-space:pre-wrap;word-break:break-word;font-family:'JetBrains Mono','Noto Sans KR',monospace}
+        .transcript .tutor{color:#38bdf8}
+        .transcript .student{color:#a78bfa}
+        @media(max-width:640px){.header{padding:32px 16px}.header h1{font-size:22px}.cta-btn{padding:14px 28px;font-size:15px}.container{padding:0 16px 60px}}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-date">2026년 06월 09일</div>
+        <h1>📚 전화영어 복습</h1>
+        <div class="header-meta">
+            <span>⏱ 19분 13초</span>
+            <span>🎙 전화영어_025180304_20260609080157.m4a</span>
+        </div>
+    </div>
+    <div class="cta-section">
+        <button class="cta-btn" onclick="startReview()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Gemini에서 복습 대화 시작하기
+        </button>
+        <div class="cta-sub">클릭하면 프롬프트가 복사되고 Gemini가 열립니다</div>
+    </div>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('feedback')">📋 AI 피드백</button>
+            <button class="tab" onclick="switchTab('transcript')">🎙 수업 전사</button>
+        </div>
+        <div id="tab-feedback" class="tab-content active">
+            <div class="feedback"><p>안녕하세요, Joey! 오늘도 활기찬 목소리로 수업에 참여해주셔서 감사합니다. 스트레스 관리라는 중요한 주제에 대해 깊이 있는 대화를 나눌 수 있어서 좋았어요. Joey가 생각하는 스트레스 해소법과 직업에 대한 철학을 엿볼 수 있는 시간이었네요.</p>
+<br>
+<br>
+<p>### <strong>0. 📌 Topic</strong></p>
+<p>Topic: Discussing stress management and work-related stress.</p>
+<br>
+<p>### <strong>1. 📊 오늘의 대화 요약 (Summary)</strong></p>
+<p>오늘 Joey는 주말에 아들과 함께 공원에서 산책하며 보낸 특별한 경험을 공유했습니다. 이어서 스트레스 관리라는 오늘의 주제에 맞춰, 직업에서 스트레스를 받는 순간(특히 감사 업무 중 어려운 판단을 내려야 할 때)과 자신만의 스트레스 해소법(점심시간 산책, 달리기, 수영, 명상)에 대해 이야기했습니다. 스트레스 없는 직업은 없지만, 마음을 긍정적으로 관리하는 것이 중요하다고 강조했죠.</p>
+<br>
+<p>### <strong>2. 💬 유창성 업그레이드 (Fluency & Natural Flow)</strong></p>
+<p>Joey가 의미는 잘 전달했지만, 원어민들이 더 자연스럽게 쓰는 표현으로 다듬으면 좋을 문장들을 함께 살펴볼까요?</p>
+<br>
+<div class="numbered"><strong>1.</strong>  <strong>❌ 학습자 원문 (As Said):</strong> "This day is the front of summer."</div>
+<p>    *   <strong>✅ 자연스러운 표현 (Natural):</strong> "This day marks the beginning of summer."</p>
+<p>    *   <strong>💎 비즈니스 표현 (Professional):</strong> "This day signifies the onset of summer."</p>
+<p>    *   <strong>💡 코칭 포인트:</strong> Using "marks the beginning of" is a common and natural way to express that a specific day or event indicates the start of a new season or period. "Front of summer" is understandable but not idiomatic.</p>
+<p>        <span class="arrow">→</span> "'marks the beginning of'를 사용하면 특정 날이나 사건이 새로운 계절이나 기간의 시작을 나타낸다는 것을 자연스럽게 표현할 수 있습니다. 'front of summer'도 의미는 통하지만 관용적인 표현은 아닙니다."</p>
+<br>
+<div class="numbered"><strong>2.</strong>  <strong>❌ 학습자 원문 (As Said):</strong> "So if you come in Korea, every tree leaves a vivid green color and bright."</div>
+<p>    *   <strong>✅ 자연스러운 표현 (Natural):</strong> "If you come to Korea, you'll see that all the trees have vivid green leaves and look bright."</p>
+<p>    *   <strong>💎 비즈니스 표현 (Professional):</strong> "Upon visiting Korea, one would observe the trees adorned with vibrant green foliage, appearing remarkably bright."</p>
+<p>    *   <strong>💡 코칭 포인트:</strong> "Come to Korea" is the correct preposition. "Every tree leaves a vivid green color" is a bit clunky; it's more natural to say "all the trees have vivid green leaves" or "the trees are a vivid green." Adding "look bright" makes the description more complete.</p>
+<p>        <span class="arrow">→</span> "'come to Korea'가 올바른 전치사 사용입니다. 'every tree leaves a vivid green color'는 다소 어색하며, 'all the trees have vivid green leaves' 또는 'the trees are a vivid green'이 더 자연스럽습니다. 'look bright'를 추가하면 묘사가 더 완전해집니다."</p>
+<br>
+<div class="numbered"><strong>3.</strong>  <strong>❌ 학습자 원문 (As Said):</strong> "And his eyes closed and his nose with the cover hand."</div>
+<p>    *   <strong>✅ 자연스러운 표현 (Natural):</strong> "His eyes are closed, and he's covering his nose with his hand."</p>
+<p>    *   <strong>💎 비즈니스 표현 (Professional):</strong> "His eyes are shut, and he is concealing his nose with his hand."</p>
+<p>    *   <strong>💡 코칭 포인트:</strong> When describing a state or action, we often use "be + past participle" (e.g., "eyes are closed"). For an ongoing action, "be + -ing" is appropriate (e.g., "he's covering"). "With the cover hand" is not a standard phrase.</p>
+<p>        <span class="arrow">→</span> "상태나 행동을 묘사할 때 'be + 과거 분사' (예: 'eyes are closed')를 자주 사용합니다. 진행 중인 행동에는 'be + -ing' (예: 'he's covering')가 적절합니다. 'with the cover hand'는 표준적인 표현이 아닙니다."</p>
+<br>
+<p>### <strong>3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)</strong></p>
+<p>Category: Missing or incorrect auxiliary verbs (be, have, do) and verb forms</p>
+<br>
+<p>Joey는 문장을 만들 때 동사 시제나 형태를 정확히 연결해주는 조동사(be, have, do)를 빠뜨리거나, 동사 자체의 형태를 올바르게 사용하지 않는 경향이 있습니다. 특히 수동태나 현재진행형, 그리고 명사를 꾸며주는 과거분사 형태에서 이러한 패턴이 보였어요.</p>
+<br>
+<table>
+<tr><th>❌ 원문 (As Said)</th><th>✅ 교정 예시 (Corrected)</th></tr>
+<tr><td>"every tree leaves a vivid green color and bright."</td><td>"every tree's leaves <strong>are</strong> a vivid green color and bright."</td></tr>
+<tr><td>"And his eyes closed and his nose with the cover hand."</td><td>"His eyes <strong>are</strong> closed and his nose <strong>is covered</strong> with his hand."</td></tr>
+<tr><td>"And it is not, how can I say, prepare well, not prepare well."</td><td>"And it is not <strong>well-prepared</strong>."</td></tr>
+<tr><td>"So usually whole day my brain take the information."</td><td>"So usually whole day my brain <strong>takes</strong> the information."</td></tr>
+<tr><td>"and felt the nature."</td><td>"and <strong>feel</strong> the nature."</td></tr>
+</table>
+<br>
+<p>📌 <strong>핵심 규칙:</strong> 문장의 주어와 동사를 연결할 때, 시제, 태(능동/수동), 그리고 주어의 수에 맞춰 적절한 조동사(be, have, do)를 사용하고 동사 형태를 일치시켜야 합니다.</p>
+<br>
+<p>🔁 <strong>따라 읽기:</strong></p>
+<p>🗣️ "Every tree's leaves are a vivid green color and bright."</p>
+<p>🗣️ "His eyes are closed and his nose is covered with his hand."</p>
+<p>🗣️ "And it is not well-prepared."</p>
+<br>
+<p>### <strong>4. 📗 어휘 확장 (Vocabulary Vault)</strong></p>
+<p>오늘 대화에서 유용하게 쓰일 수 있는 어휘들을 살펴볼까요?</p>
+<br>
+<div class="numbered"><strong>1.</strong>  <strong>signify</strong> /ˈsɪɡnɪˌfaɪ/ (동사)</div>
+<p>    *   뜻: 의미하다, 나타내다, 중요하다</p>
+<p>    *   실전 예문: "This quarter's sales figures <strong>signify</strong> a positive trend in market recovery."</p>
+<div class="numbered"><strong>2.</strong>  <strong>foster</strong> /ˈfɔːstər/ (동사)</div>
+<p>    *   뜻: 조성하다, 발전시키다, 기르다</p>
+<p>    *   실전 예문: "We aim to <strong>foster</strong> a culture of innovation within our team."</p>
+<div class="numbered"><strong>3.</strong>  <strong>mitigate</strong> /ˈmɪtɪˌɡeɪt/ (동사)</div>
+<p>    *   뜻: 완화하다, 경감시키다</p>
+<p>    *   실전 예문: "Our new strategy is designed to <strong>mitigate</strong> potential risks associated with the project."</p>
+<div class="numbered"><strong>4.</strong>  <strong>discern</strong> /dɪˈsɜːrn/ (동사)</div>
+<p>    *   뜻: 파악하다, 알아보다, 분별하다</p>
+<p>    *   실전 예문: "It's crucial to <strong>discern</strong> reliable data from misleading information in market analysis."</p>
+<div class="numbered"><strong>5.</strong>  <strong>rejuvenate</strong> /rɪˈdʒuːvəˌneɪt/ (동사)</div>
+<p>    *   뜻: 활력을 되찾게 하다, 원기를 회복시키다</p>
+<p>    *   실전 예문: "A short break can often <strong>rejuvenate</strong> our minds and improve productivity."</p>
+<br>
+<p>### <strong>5. 📝 실전 복습 챌린지 (Practice)</strong></p>
+<p>오늘 배운 표현과 문법을 활용해서 영작 연습을 해볼까요?</p>
+<br>
+<div class="numbered"><strong>1.</strong>  <strong>상황:</strong> "이 새로운 프로젝트는 우리 회사의 미래 성장을 나타냅니다."</div>
+<p>    *   <strong>영작:</strong> (오늘 배운 'signify'를 활용하여)</p>
+<p>    *   <strong>모범 답안:</strong> This new project <strong>signifies</strong> the future growth of our company.</p>
+<div class="numbered"><strong>2.</strong>  <strong>상황:</strong> "우리는 팀원들 간의 협력을 조성하기 위해 노력하고 있습니다."</div>
+<p>    *   <strong>영작:</strong> (오늘 배운 'foster'를 활용하여)</p>
+<p>    *   <strong>모범 답안:</strong> We are striving to <strong>foster</strong> collaboration among team members.</p>
+<div class="numbered"><strong>3.</strong>  <strong>상황:</strong> "그의 눈은 감겨 있었고, 그는 손으로 얼굴을 가리고 있었다. (과거 시제로)"</div>
+<p>    *   <strong>영작:</strong> (오늘 배운 'eyes are closed'와 'covering his nose' 패턴을 활용하여)</p>
+<p>    *   <strong>모범 답안:</strong> His eyes were closed, and he was covering his face with his hand.</p>
+<br>
+<p>### <strong>6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)</strong></p>
+<br>
+<p>✨ <strong>Good Job</strong>: Joey, 이 문장은 정말 좋았어요!</p>
+<p>"<strong>It depends on the project. I work on the audit team. So, usually we make some report and we find some problem and correct and respond and give the solution.</strong>"</p>
+<p>이 문장은 Joey의 직무와 업무 프로세스를 아주 명확하고 논리적으로 설명해주었어요. 특히 "depends on the project"로 시작하여 유연하게 설명을 이어가는 방식이 좋았고, "find some problem and correct and respond and give the solution"처럼 핵심적인 업무 과정을 간결하게 나열한 점이 인상 깊었습니다. 👍</p>
+<br>
+<p>🚀 <strong>내일의 한 문장</strong>: 다음 수업 시작 시, 튜터에게 오늘 배운 내용을 활용하여 이렇게 말해보세요.</p>
+<p>"I've been thinking about how to <strong>foster</strong> a more positive mindset to <strong>mitigate</strong> daily stress."</p>
+<p>(매일의 스트레스를 완화하기 위해 어떻게 더 긍정적인 사고방식을 조성할지 생각해봤어요.)</p>
+<br>
+<br>
+<p>### <strong>[성과 지표]</strong></p>
+<p><strong>유창성 점수</strong>: 7/10점</p>
+<br>
+<p><strong>근거</strong>: Joey는 자신의 생각을 비교적 막힘없이 표현하고, 다양한 주제에 대해 대화에 적극적으로 참여합니다. 어휘력도 중급 수준으로 충분히 의사소통이 가능하지만, 문법적인 정확성(특히 동사 형태 및 조동사 사용)과 더 자연스러운 표현으로 다듬는 연습이 꾸준히 필요합니다. 몇몇 표현에서 한국어 직역투가 느껴지지만, 이는 꾸준한 연습으로 충분히 개선될 수 있습니다.</p>
+<br>
+<p><strong>다음 수업 '원포인트 액션 플랜'</strong>:</p>
+<p>다음 수업에서는 <strong>"동사 형태와 조동사(be, have, do)의 올바른 사용"</strong>에 집중하여 연습해볼까요? 특히 수동태 문장이나 현재진행형 문장을 만들 때, 그리고 명사를 꾸며주는 분사 형태를 사용할 때 정확성을 높이는 데 초점을 맞춰보겠습니다. Joey가 말하고 싶은 내용을 더 명확하고 자연스럽게 전달하는 데 큰 도움이 될 거예요!</p></div>
+        </div>
+        <div id="tab-transcript" class="tab-content">
+            <div class="transcript"><span class="tutor">[Tutor]</span> Hello, hi Joey, it&#x27;s Karen calling. I&#x27;m sorry I&#x27;m late. Do you have time for your class today?
+<span class="student">[Student]</span> Oh yes, yes, it&#x27;s okay. Nice to meet you.
+<span class="tutor">[Tutor]</span> Great. So nice to be chatting with you as well. Did you have a nice weekend?
+<span class="student">[Student]</span> Oh, I&#x27;m sorry. Yes, this is the second time we&#x27;ve met.
+<span class="student">[Student]</span> Sorry, teacher, because I&#x27;m separated from the class.
+<span class="tutor">[Tutor]</span> I&#x27;m so sorry.
+<span class="student">[Student]</span> I&#x27;m good, I&#x27;m good.
+<span class="student">[Student]</span> How was your day?
+<span class="tutor">[Tutor]</span> Okay.
+<span class="tutor">[Tutor]</span> Well, it&#x27;s going along swimmingly.
+<span class="tutor">[Tutor]</span> It&#x27;s actually 5 o&#x27;clock in the afternoon on a Monday here.
+<span class="student">[Student]</span> Oh.
+<span class="tutor">[Tutor]</span> Yeah, because I&#x27;m 14 hours behind you.
+<span class="tutor">[Tutor]</span> Did you have a nice weekend?
+<span class="student">[Student]</span> Oh, of course, yes.
+<span class="tutor">[Tutor]</span> Oh, really?
+<span class="student">[Student]</span> This is a normal weekend, but it&#x27;s special because this day is the front of summer.
+<span class="student">[Student]</span> So if you come in Korea, every tree leaves a vivid green color and bright.
+<span class="tutor">[Tutor]</span> Yeah, I hear it&#x27;s getting pretty warm there.
+<span class="student">[Student]</span> Yeah, it&#x27;s fresh.
+<span class="student">[Student]</span> So in the weekends, I work on the park, near the park, UN Park, with my son.
+<span class="student">[Student]</span> So it&#x27;s so nice because I felt some breeze of the windy and touched my son&#x27;s hand.
+<span class="student">[Student]</span> And everything&#x27;s good.
+<span class="student">[Student]</span> Yeah.
+<span class="student">[Student]</span> It&#x27;s so special.
+<span class="tutor">[Tutor]</span> That&#x27;s wonderful.
+<span class="tutor">[Tutor]</span> How old is your son?
+<span class="tutor">[Tutor]</span> How old is your son?
+<span class="tutor">[Tutor]</span> How old is your son?
+<span class="student">[Student]</span> My son.
+<span class="student">[Student]</span> My son is nine years old and he studied in elementary school.
+<span class="student">[Student]</span> Yeah, he&#x27;s so cute.
+<span class="tutor">[Tutor]</span> Yeah, they&#x27;re at an age where you can really interact with them and help them build skills and that sort of thing.
+<span class="tutor">[Tutor]</span> Yeah.
+<span class="tutor">[Tutor]</span> Is he learning English in school?
+<span class="student">[Student]</span> Yeah, a little, a little.
+<span class="tutor">[Tutor]</span> A little.
+<span class="student">[Student]</span> A little, yeah.
+<span class="student">[Student]</span> Because in Korea, we study English from the elementary school.
+<span class="student">[Student]</span> So maybe...
+<span class="student">[Student]</span> The hag ones.
+<span class="student">[Student]</span> Yeah, he just studied a simple sentence or a simple word, simple grammar.
+<span class="tutor">[Tutor]</span> Oh, yeah.
+<span class="student">[Student]</span> Yeah, we considered another study to another language school because it is a good opportunity to my son.
+<span class="student">[Student]</span> So we checked them, the language school near our hometown.
+<span class="tutor">[Tutor]</span> Yes, it&#x27;s my understanding that Korea has a lot of physical English schools,
+<span class="tutor">[Tutor]</span> but they also have companies that offer online such as we&#x27;re doing today.
+<span class="student">[Student]</span> Yeah.
+<span class="tutor">[Tutor]</span> So I&#x27;m sure that if you decide to go forth with your plans,
+<span class="tutor">[Tutor]</span> you will find a good program.
+<span class="tutor">[Tutor]</span> You know, of course, Carrot offers children&#x27;s classes.
+<span class="student">[Student]</span> Oh, yeah.
+<span class="tutor">[Tutor]</span> Yes, they offer children&#x27;s classes.
+<span class="tutor">[Tutor]</span> So that might be something to look at because you&#x27;re doing it.
+<span class="tutor">[Tutor]</span> Who knows?
+<span class="tutor">[Tutor]</span> Maybe there&#x27;s an incentive for a deal.
+<span class="tutor">[Tutor]</span> You know, they love the business.
+<span class="tutor">[Tutor]</span> All right, sir.
+<span class="tutor">[Tutor]</span> So I have us on Daily Topic English.
+<span class="tutor">[Tutor]</span> Did you bring up today&#x27;s topic or did you need a moment?
+<span class="student">[Student]</span> Oh, yes.
+<span class="student">[Student]</span> This day I changed the textbook, today&#x27;s topic, the textbook name.
+<span class="tutor">[Tutor]</span> Excellent.
+<span class="student">[Student]</span> Yeah.
+<span class="student">[Student]</span> We have better to study today&#x27;s topic.
+<span class="tutor">[Tutor]</span> All right.
+<span class="tutor">[Tutor]</span> How about that?
+<span class="student">[Student]</span> Okay.
+<span class="tutor">[Tutor]</span> So would you like to do today&#x27;s topic or would you like to do free talk?
+<span class="student">[Student]</span> Today&#x27;s topic is better.
+<span class="tutor">[Tutor]</span> Yes.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="tutor">[Tutor]</span> All right.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="tutor">[Tutor]</span> All right.
+<span class="tutor">[Tutor]</span> If you&#x27;re ready to go, I&#x27;m going to get you to read the title of today&#x27;s topic to me.
+<span class="student">[Student]</span> Oh, yes.
+<span class="student">[Student]</span> Today&#x27;s topic is trust management.
+<span class="student">[Student]</span> That is a little serious subject.
+<span class="tutor">[Tutor]</span> Okay. Sorry, could you tell me that again? You spoke quite quickly.
+<span class="student">[Student]</span> Stress management.
+<span class="tutor">[Tutor]</span> Stress management. Okay. Yep, we&#x27;re on the same page. All right, very good. All right, so as this program goes, we always start with a photo and the first question is always
+<span class="tutor">[Tutor]</span> what is happening in the picture? I&#x27;m going to get you to take your time. It&#x27;s a
+<span class="tutor">[Tutor]</span> 20-minute class. I see. I understand. Good. Okay.
+<span class="student">[Student]</span> In this picture, I can see a businessman
+<span class="student">[Student]</span> looks very stressed. And his eyes closed and his nose with the cover hand.
+<span class="student">[Student]</span> This is a very difficult situation.
+<span class="student">[Student]</span> And difficult meeting.
+<span class="student">[Student]</span> And on the table, there are so many papers.
+<span class="student">[Student]</span> And it is not, how can I say, prepare well, not prepare well.
+<span class="student">[Student]</span> So I think that is the, you know, office is meeting is so difficult.
+<span class="student">[Student]</span> Maybe.
+<span class="student">[Student]</span> Yeah.
+<span class="student">[Student]</span> Maybe.
+<span class="student">[Student]</span> Yeah.
+<span class="student">[Student]</span> And maybe if I guess, he&#x27;s the rooster promote or he&#x27;s the rooster job.
+<span class="student">[Student]</span> Yeah.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="student">[Student]</span> That meeting.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="tutor">[Tutor]</span> All right.
+<span class="tutor">[Tutor]</span> Very good.
+<span class="tutor">[Tutor]</span> You give me a lot of information.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="tutor">[Tutor]</span> The first, just a couple of things I want to help you with.
+<span class="tutor">[Tutor]</span> As you know, in English, we have nouns that are singular and plural.
+<span class="tutor">[Tutor]</span> Singular means one.
+<span class="tutor">[Tutor]</span> Plural means two or more.
+<span class="tutor">[Tutor]</span> You said, I see businessman&#x27;s.
+<span class="tutor">[Tutor]</span> Let&#x27;s try the plural form of that word.
+<span class="student">[Student]</span> Men.
+<span class="tutor">[Tutor]</span> Men.
+<span class="student">[Student]</span> Okay.
+<span class="tutor">[Tutor]</span> Men.
+<span class="tutor">[Tutor]</span> M-E-N.
+<span class="student">[Student]</span> Okay.
+<span class="student">[Student]</span> Okay.
+<span class="tutor">[Tutor]</span> All right.
+<span class="tutor">[Tutor]</span> Then you said, there are so many paper.
+<span class="tutor">[Tutor]</span> Paper is singular.
+<span class="tutor">[Tutor]</span> Let&#x27;s try adding an S.
+<span class="student">[Student]</span> Okay.
+<span class="tutor">[Tutor]</span> Papers.
+<span class="student">[Student]</span> Papers.
+<span class="tutor">[Tutor]</span> Very good.
+<span class="tutor">[Tutor]</span> Very good.
+<span class="tutor">[Tutor]</span> All right.
+<span class="tutor">[Tutor]</span> We&#x27;re going to go on to number two.
+<span class="tutor">[Tutor]</span> Could you read it to me, please?
+<span class="student">[Student]</span> Oh, yeah.
+<span class="student">[Student]</span> Of course.
+<span class="student">[Student]</span> Yes.
+<span class="student">[Student]</span> Do you consider your job to be stressful?
+<span class="student">[Student]</span> In what way, be specific?
+<span class="tutor">[Tutor]</span> Very good.
+<span class="student">[Student]</span> Yeah.
+<span class="student">[Student]</span> It depends on the project.
+<span class="student">[Student]</span> I work on the audit team.
+<span class="student">[Student]</span> So, usually we make some report and we find some problem and correct and respond and give the solution.
+<span class="student">[Student]</span> But sometimes, some employee act illegal, like the, how can I say?
+<span class="student">[Student]</span> They make a mistake.
+<span class="student">[Student]</span> Yeah, big mistake.
+<span class="student">[Student]</span> Hit their other guys or some big mistake.
+<span class="student">[Student]</span> At that time, I have to interview at that guy.
+<span class="student">[Student]</span> So, it is so very stressful.
+<span class="student">[Student]</span> Because I am just a human, so it is difficult to make a result or difficult to solve problems.
+<span class="tutor">[Tutor]</span> So you said to make a result.
+<span class="tutor">[Tutor]</span> Let&#x27;s try this word, result.
+<span class="student">[Student]</span> Result.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="tutor">[Tutor]</span> Yeah.
+<span class="tutor">[Tutor]</span> Yeah, this has got UL in it, so it&#x27;s kind of difficult, but I understand what you&#x27;re saying.
+<span class="tutor">[Tutor]</span> I think what you&#x27;re meaning to say is because you are a human being, it is hard to make a judgment or an assessment.
+<span class="student">[Student]</span> Yeah, you&#x27;re right.
+<span class="student">[Student]</span> Yeah, I want to make a judgment.
+<span class="student">[Student]</span> I&#x27;m just a human, so I don&#x27;t know if it&#x27;s right or not.
+<span class="student">[Student]</span> Because we have to judgment something to work, something to act.
+<span class="student">[Student]</span> Yeah, that is so difficult for me.
+<span class="tutor">[Tutor]</span> Yes.
+<span class="tutor">[Tutor]</span> I can appreciate that in many companies, there is what we call a code of ethics.
+<span class="tutor">[Tutor]</span> Yeah, code of ethics. You&#x27;re right. And that&#x27;s probably something that you are involved in as part of the auditing department. You have to ensure that what the company is doing is right and is legal. Yes.
+<span class="student">[Student]</span> Yes, yes. You&#x27;re right.
+<span class="tutor">[Tutor]</span> All right. You&#x27;re doing fantastic.
+<span class="tutor">[Tutor]</span> Okay. So let&#x27;s go to number three. Can you read number three to me?
+<span class="student">[Student]</span> No problem. How do you manage your stress? Give examples.
+<span class="student">[Student]</span> That is more right question.
+<span class="tutor">[Tutor]</span> Yeah, I like that.
+<span class="student">[Student]</span> In my case, I love to running, swimming, walking.
+<span class="student">[Student]</span> So usually I work near park in the lunchtime.
+<span class="student">[Student]</span> Because I turn off my brain every lunchtime.
+<span class="student">[Student]</span> Because it is similar to computer.
+<span class="student">[Student]</span> So usually whole day my brain take the information.
+<span class="student">[Student]</span> But at the lunchtime, I just work near park and turn off brain, just breathe the nature
+<span class="student">[Student]</span> and felt the nature.
+<span class="student">[Student]</span> So that is so un-stressful.
+<span class="student">[Student]</span> I don&#x27;t bat.
+<span class="tutor">[Tutor]</span> That&#x27;s good.
+<span class="student">[Student]</span> Usually on the monthly or weekly, I&#x27;m running or swimming.
+<span class="tutor">[Tutor]</span> Yeah, that&#x27;s also a good way.
+<span class="tutor">[Tutor]</span> Good for you.
+<span class="student">[Student]</span> Yeah.
+<span class="student">[Student]</span> Relax.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="tutor">[Tutor]</span> I have a question about you working in the park.
+<span class="student">[Student]</span> Okay.
+<span class="tutor">[Tutor]</span> Are you working in a garden that you have or are you working in a community park, a community garden where all people help to take care of the park?
+<span class="student">[Student]</span> Yeah, that is not personal park. That is community park. And that is near my company. And that park is nearby company. So just after lunch, I&#x27;m just eating lunch.
+<span class="student">[Student]</span> Just first I go for work almost 40 minutes or 50 minutes and then come back our company and have a lunch. That is my routine.
+<span class="tutor">[Tutor]</span> That sounds lovely.
+<span class="tutor">[Tutor]</span> Here in Canada, most people have their own personal garden or park in their yard.
+<span class="tutor">[Tutor]</span> But I know that many people in Korea, many, many people live in apartments.
+<span class="student">[Student]</span> You&#x27;re right.
+<span class="student">[Student]</span> You&#x27;re right.
+<span class="tutor">[Tutor]</span> So working in gardening is lovely.
+<span class="tutor">[Tutor]</span> Yes. Well, good for you. Gardening and working in the park is very good.
+<span class="tutor">[Tutor]</span> All right, Joey. Let&#x27;s go on to part two. And I will read question number one.
+<span class="tutor">[Tutor]</span> Do you think there is a stress-free job out there? What might it be?
+<span class="student">[Student]</span> Okay, in my opinion, I don&#x27;t think there is complete no stress job.
+<span class="student">[Student]</span> So every job has some stress because job is just working some field and that is to have
+<span class="student">[Student]</span> some responsibility.
+<span class="student">[Student]</span> So if we take responsibility, that takes also stress.
+<span class="student">[Student]</span> But it&#x27;s possible to reduce the stress,
+<span class="student">[Student]</span> control their mind more positively,
+<span class="student">[Student]</span> and more rest the mind,
+<span class="student">[Student]</span> care their mind.
+<span class="student">[Student]</span> It is possible.
+<span class="student">[Student]</span> But I think there&#x27;s no job.
+<span class="student">[Student]</span> Yeah, no stress job.
+<span class="student">[Student]</span> Is your right this question?
+<span class="tutor">[Tutor]</span> Well, I think that many jobs have responsibilities.
+<span class="tutor">[Tutor]</span> But when I think of jobs that have less stress, I think of jobs when you are working on your own. For instance, some people have a job where they pick up litter on the street.
+<span class="tutor">[Tutor]</span> That&#x27;s their job. They clean the streets.
+<span class="tutor">[Tutor]</span> They work on their own. They work at their own
+<span class="tutor">[Tutor]</span> pace and they don&#x27;t have to
+<span class="tutor">[Tutor]</span> interact really with the public or other employees
+<span class="tutor">[Tutor]</span> because they&#x27;re just picking up trash.
+<span class="tutor">[Tutor]</span> Another job that I think could be stress-free is gardening.
+<span class="tutor">[Tutor]</span> Plants do not argue or complain.
+<span class="student">[Student]</span> Yeah.
+<span class="student">[Student]</span> So maybe your sentence means about self-management
+<span class="student">[Student]</span> because if we move something to do,
+<span class="student">[Student]</span> just my control or for myself,
+<span class="student">[Student]</span> at the time there is a rest or stress so I agree with you yeah that opinion
+<span class="tutor">[Tutor]</span> And we have a saying in English where we say if you love what you do then it is
+<span class="tutor">[Tutor]</span> not a job. So for some people their job can be quite a task, but for other people
+<span class="tutor">[Tutor]</span> it makes them happy and makes them feel good so it doesn&#x27;t feel so heavy on their shoulders.
+<span class="student">[Student]</span> Yeah, you&#x27;re right.
+<span class="student">[Student]</span> You know the stress?
+<span class="tutor">[Tutor]</span> People do.
+<span class="tutor">[Tutor]</span> All right.
+<span class="student">[Student]</span> Okay, go on, teacher.
+<span class="tutor">[Tutor]</span> All right.
+<span class="tutor">[Tutor]</span> You&#x27;re doing great, Joey.
+<span class="student">[Student]</span> Thank you.
+<span class="tutor">[Tutor]</span> All right.
+<span class="tutor">[Tutor]</span> Question two says, what are the best ways to manage work-related stress?
+<span class="tutor">[Tutor]</span> You&#x27;ve talked about running, swimming, and gardening.
+<span class="tutor">[Tutor]</span> Can you think of anything else that helps with work-related stress?
+<span class="student">[Student]</span> Maybe you misunderstand.
+<span class="student">[Student]</span> I&#x27;m not gardening.
+<span class="student">[Student]</span> I&#x27;m just a worker near the park.
+<span class="tutor">[Tutor]</span> But you enjoy it.
+<span class="tutor">[Tutor]</span> You enjoy being in the park and by the flowers and the trees.
+<span class="student">[Student]</span> Yes, you&#x27;re right.
+<span class="student">[Student]</span> And in my case, yes, education.
+<span class="tutor">[Tutor]</span> Or
+<span class="tutor">[Tutor]</span> the question is
+<span class="tutor">[Tutor]</span> what other ways
+<span class="tutor">[Tutor]</span> besides running
+<span class="tutor">[Tutor]</span> swimming and working in the park
+<span class="tutor">[Tutor]</span> can people manage
+<span class="tutor">[Tutor]</span> work related stress?
+<span class="tutor">[Tutor]</span> It&#x27;s question number two, part two.
+<span class="student">[Student]</span> Meditation.
+<span class="student">[Student]</span> That is my answer.
+<span class="student">[Student]</span> Usually,
+<span class="student">[Student]</span> if we focus on our breath
+<span class="student">[Student]</span> and feel the nature,
+<span class="student">[Student]</span> it is
+<span class="student">[Student]</span> yeah,
+<span class="student">[Student]</span> un-stress. It is the relief of our mind and our body. So that&#x27;s a good way.
+<span class="tutor">[Tutor]</span> I would agree with you. Unfortunately, for some people it is very hard to be still
+<span class="tutor">[Tutor]</span> and be present, but I agree with you. It&#x27;s a very good idea. I do
+<span class="tutor">[Tutor]</span> something similar to meditation. I knit and crochet with wool. So when I am
+<span class="tutor">[Tutor]</span> doing this repetitive activity, I am totally focused on the task that I am
+<span class="tutor">[Tutor]</span> doing. And it allows me to almost be in a meditative state because I do not
+<span class="tutor">[Tutor]</span> think about anything else around me. I think about my crochet hook or my knitting needles.
+<span class="student">[Student]</span> Yeah, you understand. Yeah, very good way. Yeah. Yeah.
+<span class="tutor">[Tutor]</span> And then I&#x27;ve got something beautiful to
+<span class="tutor">[Tutor]</span> show for it. Okay. Let me just check. All right. My friend, we&#x27;ve run out of time. So the only
+<span class="tutor">[Tutor]</span> words that I&#x27;ve heard today is we worked, you said businessmen, and we said men. You said so
+<span class="tutor">[Tutor]</span> many paper and I said papers. Okay. You made a sentence, it depends on the project. We would
+<span class="tutor">[Tutor]</span> say it depends on the project. Okay. And you said you have to make research judgments or assessments.
+<span class="tutor">[Tutor]</span> We want to do result. Result. Yeah. So what I&#x27;m going to do is I&#x27;m going to send you some
+<span class="tutor">[Tutor]</span> pronunciation practice videos.
+<span class="tutor">[Tutor]</span> And if you could, sir, please watch them and try to get
+<span class="tutor">[Tutor]</span> some practice. It will help you, okay?
+<span class="student">[Student]</span> Thank you so much, teacher. Have a nice day.
+<span class="tutor">[Tutor]</span> You&#x27;re very welcome. Bye-bye. Bye-bye. You take care.</div>
+        </div>
+    </div>
+    <div class="toast" id="toast">✅ 프롬프트가 복사되었습니다!</div>
+    <script>
+        const REVIEW_PROMPT="너는 나의 영어 회화 복습 파트너야. 오늘 내 전화영어 수업 내용을 기반으로 대화하면서 복습을 도와줘.\n\n[오늘 수업 전사 내용]\n[Tutor] Hello, hi Joey, it's Karen calling. I'm sorry I'm late. Do you have time for your class today?\n[Student] Oh yes, yes, it's okay. Nice to meet you.\n[Tutor] Great. So nice to be chatting with you as well. Did you have a nice weekend?\n[Student] Oh, I'm sorry. Yes, this is the second time we've met.\n[Student] Sorry, teacher, because I'm separated from the class.\n[Tutor] I'm so sorry.\n[Student] I'm good, I'm good.\n[Student] How was your day?\n[Tutor] Okay.\n[Tutor] Well, it's going along swimmingly.\n[Tutor] It's actually 5 o'clock in the afternoon on a Monday here.\n[Student] Oh.\n[Tutor] Yeah, because I'm 14 hours behind you.\n[Tutor] Did you have a nice weekend?\n[Student] Oh, of course, yes.\n[Tutor] Oh, really?\n[Student] This is a normal weekend, but it's special because this day is the front of summer.\n[Student] So if you come in Korea, every tree leaves a vivid green color and bright.\n[Tutor] Yeah, I hear it's getting pretty warm there.\n[Student] Yeah, it's fresh.\n[Student] So in the weekends, I work on the park, near the park, UN Park, with my son.\n[Student] So it's so nice because I felt some breeze of the windy and touched my son's hand.\n[Student] And everything's good.\n[Student] Yeah.\n[Student] It's so special.\n[Tutor] That's wonderful.\n[Tutor] How old is your son?\n[Tutor] How old is your son?\n[Tutor] How old is your son?\n[Student] My son.\n[Student] My son is nine years old and he studied in elementary school.\n[Student] Yeah, he's so cute.\n[Tutor] Yeah, they're at an age where you can really interact with them and help them build skills and that sort of thing.\n[Tutor] Yeah.\n[Tutor] Is he learning English in school?\n[Student] Yeah, a little, a little.\n[Tutor] A little.\n[Student] A little, yeah.\n[Student] Because in Korea, we study English from the elementary school.\n[Student] So maybe...\n[Student] The hag ones.\n[Student] Yeah, he just studied a simple sentence or a simple word, simple grammar.\n[Tutor] Oh, yeah.\n[Student] Yeah, we considered another study to another language school because it is a good opportunity to my son.\n[Student] So we checked them, the language school near our hometown.\n[Tutor] Yes, it's my understanding that Korea has a lot of physical English schools,\n[Tutor] but they also have companies that offer online such as we're doing today.\n[Student] Yeah.\n[Tutor] So I'm sure that if you decide to go forth with your plans,\n[Tutor] you will find a good program.\n[Tutor] You know, of course, Carrot offers children's classes.\n[Student] Oh, yeah.\n[Tutor] Yes, they offer children's classes.\n[Tutor] So that might be something to look at because you're doing it.\n[Tutor] Who knows?\n[Tutor] Maybe there's an incentive for a deal.\n[Tutor] You know, they love the business.\n[Tutor] All right, sir.\n[Tutor] So I have us on Daily Topic English.\n[Tutor] Did you bring up today's topic or did you need a moment?\n[Student] Oh, yes.\n[Student] This day I changed the textbook, today's topic, the textbook name.\n[Tutor] Excellent.\n[Student] Yeah.\n[Student] We have better to study today's topic.\n[Tutor] All right.\n[Tutor] How about that?\n[Student] Okay.\n[Tutor] So would you like to do today's topic or would you like to do free talk?\n[Student] Today's topic is better.\n[Tutor] Yes.\n[Tutor] Okay.\n[Tutor] All right.\n[Tutor] Okay.\n[Tutor] All right.\n[Tutor] If you're ready to go, I'm going to get you to read the title of today's topic to me.\n[Student] Oh, yes.\n[Student] Today's topic is trust management.\n[Student] That is a little serious subject.\n[Tutor] Okay. Sorry, could you tell me that again? You spoke quite quickly.\n[Student] Stress management.\n[Tutor] Stress management. Okay. Yep, we're on the same page. All right, very good. All right, so as this program goes, we always start with a photo and the first question is always\n[Tutor] what is happening in the picture? I'm going to get you to take your time. It's a\n[Tutor] 20-minute class. I see. I understand. Good. Okay.\n[Student] In this picture, I can see a businessman\n[Student] looks very stressed. And his eyes closed and his nose with the cover hand.\n[Student] This is a very difficult situation.\n[Student] And difficult meeting.\n[Student] And on the table, there are so many papers.\n[Student] And it is not, how can I say, prepare well, not prepare well.\n[Student] So I think that is the, you know, office is meeting is so difficult.\n[Student] Maybe.\n[Student] Yeah.\n[Student] Maybe.\n[Student] Yeah.\n[Student] And maybe if I guess, he's the rooster promote or he's the rooster job.\n[Student] Yeah.\n[Tutor] Okay.\n[Student] That meeting.\n[Tutor] Okay.\n[Tutor] All right.\n[Tutor] Very good.\n[Tutor] You give me a lot of information.\n[Tutor] Okay.\n[Tutor] The first, just a couple of things I want to help you with.\n[Tutor] As you know, in English, we have nouns that are singular and plural.\n[Tutor] Singular means one.\n[Tutor] Plural means two or more.\n[Tutor] You said, I see businessman's.\n[Tutor] Let's try the plural form of that word.\n[Student] Men.\n[Tutor] Men.\n[Student] Okay.\n[Tutor] Men.\n[Tutor] M-E-N.\n[Student] Okay.\n[Student] Okay.\n[Tutor] All right.\n[Tutor] Then you said, there are so many paper.\n[Tutor] Paper is singular.\n[Tutor] Let's try adding an S.\n[Student] Okay.\n[Tutor] Papers.\n[Student] Papers.\n[Tutor] Very good.\n[Tutor] Very good.\n[Tutor] All right.\n[Tutor] We're going to go on to number two.\n[Tutor] Could you read it to me, please?\n[Student] Oh, yeah.\n[Student] Of course.\n[Student] Yes.\n[Student] Do you consider your job to be stressful?\n[Student] In what way, be specific?\n[Tutor] Very good.\n[Student] Yeah.\n[Student] It depends on the project.\n[Student] I work on the audit team.\n[Student] So, usually we make some report and we find some problem and correct and respond and give the solution.\n[Student] But sometimes, some employee act illegal, like the, how can I say?\n[Student] They make a mistake.\n[Student] Yeah, big mistake.\n[Student] Hit their other guys or some big mistake.\n[Student] At that time, I have to interview at that guy.\n[Student] So, it is so very stressful.\n[Student] Because I am just a human, so it is difficult to make a result or difficult to solve problems.\n[Tutor] So you said to make a result.\n[Tutor] Let's try this word, result.\n[Student] Result.\n[Tutor] Okay.\n[Tutor] Yeah.\n[Tutor] Yeah, this has got UL in it, so it's kind of difficult, but I understand what you're saying.\n[Tutor] I think what you're meaning to say is because you are a human being, it is hard to make a judgment or an assessment.\n[Student] Yeah, you're right.\n[Student] Yeah, I want to make a judgment.\n[Student] I'm just a human, so I don't know if it's right or not.\n[Student] Because we have to judgment something to work, something to act.\n[Student] Yeah, that is so difficult for me.\n[Tutor] Yes.\n[Tutor] I can appreciate that in many companies, there is what we call a code of ethics.\n[Tutor] Yeah, code of ethics. You're right. And that's probably something that you are involved in as part of the auditing department. You have to ensure that what the company is doing is right and is legal. Yes.\n[Student] Yes, yes. You're right.\n[Tutor] All right. You're doing fantastic.\n[Tutor] Okay. So let's go to number three. Can you read number three to me?\n[Student] No problem. How do you manage your stress? Give examples.\n[Student] That is more right question.\n[Tutor] Yeah, I like that.\n[Student] In my case, I love to running, swimming, walking.\n[Student] So usually I work near park in the lunchtime.\n[Student] Because I turn off my brain every lunchtime.\n[Student] Because it is similar to computer.\n[Student] So usually whole day my brain take the information.\n[Student] But at the lunchtime, I just work near park and turn off brain, just breathe the nature\n[Student] and felt the nature.\n[Student] So that is so un-stressful.\n[Student] I don't bat.\n[Tutor] That's good.\n[Student] Usually on the monthly or weekly, I'm running or swimming.\n[Tutor] Yeah, that's also a good way.\n[Tutor] Good for you.\n[Student] Yeah.\n[Student] Relax.\n[Tutor] Okay.\n[Tutor] I have a question about you working in the park.\n[Student] Okay.\n[Tutor] Are you working in a garden that you have or are you working in a community park, a community garden where all people help to take care of the park?\n[Student] Yeah, that is not personal park. That is community park. And that is near my company. And that park is nearby company. So just after lunch, I'm just eating lunch.\n[Student] Just first I go for work almost 40 minutes or 50 minutes and then come back our company and have a lunch. That is my routine.\n[Tutor] That sounds lovely.\n[Tutor] Here in Canada, most people have their own personal garden or park in their yard.\n[Tutor] But I know that many people in Korea, many, many people live in apartments.\n[Student] You're right.\n[Student] You're right.\n[Tutor] So working in gardening is lovely.\n[Tutor] Yes. Well, good for you. Gardening and working in the park is very good.\n[Tutor] All right, Joey. Let's go on to part two. And I will read question number one.\n[Tutor] Do you think there is a stress-free job out there? What might it be?\n[Student] Okay, in my opinion, I don't think there is complete no stress job.\n[Student] So every job has some stress because job is just working some field and that is to have\n[Student] some responsibility.\n[Student] So if we take responsibility, that takes also stress.\n[Student] But it's possible to reduce the stress,\n[Student] control their mind more positively,\n[Student] and more rest the mind,\n[Student] care their mind.\n[Student] It is possible.\n[Student] But I think there's no job.\n[Student] Yeah, no stress job.\n[Student] Is your right this question?\n[Tutor] Well, I think that many jobs have responsibilities.\n[Tutor] But when I think of jobs that have less stress, I think of jobs when you are working on your own. For instance, some people have a job where they pick up litter on the street.\n[Tutor] That's their job. They clean the streets.\n[Tutor] They work on their own. They work at their own\n[Tutor] pace and they don't have to\n[Tutor] interact really with the public or other employees\n[Tutor] because they're just picking up trash.\n[Tutor] Another job that I think could be stress-free is gardening.\n[Tutor] Plants do not argue or complain.\n[Student] Yeah.\n[Student] So maybe your sentence means about self-management\n[Student] because if we move something to do,\n[Student] just my control or for myself,\n[Student] at the time there is a rest or stress so I agree with you yeah that opinion\n[Tutor] And we have a saying in English where we say if you love what you do then it is\n[Tutor] not a job. So for some people their job can be quite a task, but for other people\n[Tutor] it makes them happy and makes them feel good so it doesn't feel so heavy on their shoulders.\n[Student] Yeah, you're right.\n[Student] You know the stress?\n[Tutor] People do.\n[Tutor] All right.\n[Student] Okay, go on, teacher.\n[Tutor] All right.\n[Tutor] You're doing great, Joey.\n[Student] Thank you.\n[Tutor] All right.\n[Tutor] Question two says, what are the best ways to manage work-related stress?\n[Tutor] You've talked about running, swimming, and gardening.\n[Tutor] Can you think of anything else that helps with work-related stress?\n[Student] Maybe you misunderstand.\n[Student] I'm not gardening.\n[Student] I'm just a worker near the park.\n[Tutor] But you enjoy it.\n[Tutor] You enjoy being in the park and by the flowers and the trees.\n[Student] Yes, you're right.\n[Student] And in my case, yes, education.\n[Tutor] Or\n[Tutor] the question is\n[Tutor] what other ways\n[Tutor] besides running\n[Tutor] swimming and working in the park\n[Tutor] can people manage\n[Tutor] work related stress?\n[Tutor] It's question number two, part two.\n[Student] Meditation.\n[Student] That is my answer.\n[Student] Usually,\n[Student] if we focus on our breath\n[Student] and feel the nature,\n[Student] it is\n[Student] yeah,\n[Student] un-stress. It is the relief of our mind and our body. So that's a good way.\n[Tutor] I would agree with you. Unfortunately, for some people it is very hard to be still\n[Tutor] and be present, but I agree with you. It's a very good idea. I do\n[Tutor] something similar to meditation. I knit and crochet with wool. So when I am\n[Tutor] doing this repetitive activity, I am totally focused on the task that I am\n[Tutor] doing. And it allows me to almost be in a meditative state because I do not\n[Tutor] think about anything else around me. I think about my crochet hook or my knitting needles.\n[Student] Yeah, you understand. Yeah, very good way. Yeah. Yeah.\n[Tutor] And then I've got something beautiful to\n[Tutor] show for it. Okay. Let me just check. All right. My friend, we've run out of time. So the only\n[Tutor] words that I've heard today is we worked, you said businessmen, and we said men. You said so\n[Tutor] many paper and I said papers. Okay. You made a sentence, it depends on the project. We would\n[Tutor] say it depends on the project. Okay. And you said you have to make research judgments or assessments.\n[Tutor] We want to do result. Result. Yeah. So what I'm going to do is I'm going to send you some\n[Tutor] pronunciation practice videos.\n[Tutor] And if you could, sir, please watch them and try to get\n[Tutor] some practice. It will help you, okay?\n[Student] Thank you so much, teacher. Have a nice day.\n[Tutor] You're very welcome. Bye-bye. Bye-bye. You take care.\n\n[AI 피드백]\n안녕하세요, Joey! 오늘도 활기찬 목소리로 수업에 참여해주셔서 감사합니다. 스트레스 관리라는 중요한 주제에 대해 깊이 있는 대화를 나눌 수 있어서 좋았어요. Joey가 생각하는 스트레스 해소법과 직업에 대한 철학을 엿볼 수 있는 시간이었네요.\n\n---\n\n### **0. 📌 Topic**\nTopic: Discussing stress management and work-related stress.\n\n### **1. 📊 오늘의 대화 요약 (Summary)**\n오늘 Joey는 주말에 아들과 함께 공원에서 산책하며 보낸 특별한 경험을 공유했습니다. 이어서 스트레스 관리라는 오늘의 주제에 맞춰, 직업에서 스트레스를 받는 순간(특히 감사 업무 중 어려운 판단을 내려야 할 때)과 자신만의 스트레스 해소법(점심시간 산책, 달리기, 수영, 명상)에 대해 이야기했습니다. 스트레스 없는 직업은 없지만, 마음을 긍정적으로 관리하는 것이 중요하다고 강조했죠.\n\n### **2. 💬 유창성 업그레이드 (Fluency & Natural Flow)**\nJoey가 의미는 잘 전달했지만, 원어민들이 더 자연스럽게 쓰는 표현으로 다듬으면 좋을 문장들을 함께 살펴볼까요?\n\n1.  **❌ 학습자 원문 (As Said):** \"This day is the front of summer.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"This day marks the beginning of summer.\"\n    *   **💎 비즈니스 표현 (Professional):** \"This day signifies the onset of summer.\"\n    *   **💡 코칭 포인트:** Using \"marks the beginning of\" is a common and natural way to express that a specific day or event indicates the start of a new season or period. \"Front of summer\" is understandable but not idiomatic.\n        → \"'marks the beginning of'를 사용하면 특정 날이나 사건이 새로운 계절이나 기간의 시작을 나타낸다는 것을 자연스럽게 표현할 수 있습니다. 'front of summer'도 의미는 통하지만 관용적인 표현은 아닙니다.\"\n\n2.  **❌ 학습자 원문 (As Said):** \"So if you come in Korea, every tree leaves a vivid green color and bright.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"If you come to Korea, you'll see that all the trees have vivid green leaves and look bright.\"\n    *   **💎 비즈니스 표현 (Professional):** \"Upon visiting Korea, one would observe the trees adorned with vibrant green foliage, appearing remarkably bright.\"\n    *   **💡 코칭 포인트:** \"Come to Korea\" is the correct preposition. \"Every tree leaves a vivid green color\" is a bit clunky; it's more natural to say \"all the trees have vivid green leaves\" or \"the trees are a vivid green.\" Adding \"look bright\" makes the description more complete.\n        → \"'come to Korea'가 올바른 전치사 사용입니다. 'every tree leaves a vivid green color'는 다소 어색하며, 'all the trees have vivid green leaves' 또는 'the trees are a vivid green'이 더 자연스럽습니다. 'look bright'를 추가하면 묘사가 더 완전해집니다.\"\n\n3.  **❌ 학습자 원문 (As Said):** \"And his eyes closed and his nose with the cover hand.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"His eyes are closed, and he's covering his nose with his hand.\"\n    *   **💎 비즈니스 표현 (Professional):** \"His eyes are shut, and he is concealing his nose with his hand.\"\n    *   **💡 코칭 포인트:** When describing a state or action, we often use \"be + past participle\" (e.g., \"eyes are closed\"). For an ongoing action, \"be + -ing\" is appropriate (e.g., \"he's covering\"). \"With the cover hand\" is not a standard phrase.\n        → \"상태나 행동을 묘사할 때 'be + 과거 분사' (예: 'eyes are closed')를 자주 사용합니다. 진행 중인 행동에는 'be + -ing' (예: 'he's covering')가 적절합니다. 'with the cover hand'는 표준적인 표현이 아닙니다.\"\n\n### **3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)**\nCategory: Missing or incorrect auxiliary verbs (be, have, do) and verb forms\n\nJoey는 문장을 만들 때 동사 시제나 형태를 정확히 연결해주는 조동사(be, have, do)를 빠뜨리거나, 동사 자체의 형태를 올바르게 사용하지 않는 경향이 있습니다. 특히 수동태나 현재진행형, 그리고 명사를 꾸며주는 과거분사 형태에서 이러한 패턴이 보였어요.\n\n| ❌ 원문 (As Said)                                         | ✅ 교정 예시 (Corrected)                                            |\n| :------------------------------------------------------- | :---------------------------------------------------------------- |\n| \"every tree leaves a vivid green color and bright.\"      | \"every tree's leaves **are** a vivid green color and bright.\"     |\n| \"And his eyes closed and his nose with the cover hand.\"  | \"His eyes **are** closed and his nose **is covered** with his hand.\" |\n| \"And it is not, how can I say, prepare well, not prepare well.\" | \"And it is not **well-prepared**.\"                                |\n| \"So usually whole day my brain take the information.\"    | \"So usually whole day my brain **takes** the information.\"         |\n| \"and felt the nature.\"                                   | \"and **feel** the nature.\"                                        |\n\n📌 **핵심 규칙:** 문장의 주어와 동사를 연결할 때, 시제, 태(능동/수동), 그리고 주어의 수에 맞춰 적절한 조동사(be, have, do)를 사용하고 동사 형태를 일치시켜야 합니다.\n\n🔁 **따라 읽기:**\n🗣️ \"Every tree's leaves are a vivid green color and bright.\"\n🗣️ \"His eyes are closed and his nose is covered with his hand.\"\n🗣️ \"And it is not well-prepared.\"\n\n### **4. 📗 어휘 확장 (Vocabulary Vault)**\n오늘 대화에서 유용하게 쓰일 수 있는 어휘들을 살펴볼까요?\n\n1.  **signify** /ˈsɪɡnɪˌfaɪ/ (동사)\n    *   뜻: 의미하다, 나타내다, 중요하다\n    *   실전 예문: \"This quarter's sales figures **signify** a positive trend in market recovery.\"\n2.  **foster** /ˈfɔːstər/ (동사)\n    *   뜻: 조성하다, 발전시키다, 기르다\n    *   실전 예문: \"We aim to **foster** a culture of innovation within our team.\"\n3.  **mitigate** /ˈmɪtɪˌɡeɪt/ (동사)\n    *   뜻: 완화하다, 경감시키다\n    *   실전 예문: \"Our new strategy is designed to **mitigate** potential risks associated with the project.\"\n4.  **discern** /dɪˈsɜːrn/ (동사)\n    *   뜻: 파악하다, 알아보다, 분별하다\n    *   실전 예문: \"It's crucial to **discern** reliable data from misleading information in market analysis.\"\n5.  **rejuvenate** /rɪˈdʒuːvəˌneɪt/ (동사)\n    *   뜻: 활력을 되찾게 하다, 원기를 회복시키다\n    *   실전 예문: \"A short break can often **rejuvenate** our minds and improve productivity.\"\n\n### **5. 📝 실전 복습 챌린지 (Practice)**\n오늘 배운 표현과 문법을 활용해서 영작 연습을 해볼까요?\n\n1.  **상황:** \"이 새로운 프로젝트는 우리 회사의 미래 성장을 나타냅니다.\"\n    *   **영작:** (오늘 배운 'signify'를 활용하여)\n    *   **모범 답안:** This new project **signifies** the future growth of our company.\n2.  **상황:** \"우리는 팀원들 간의 협력을 조성하기 위해 노력하고 있습니다.\"\n    *   **영작:** (오늘 배운 'foster'를 활용하여)\n    *   **모범 답안:** We are striving to **foster** collaboration among team members.\n3.  **상황:** \"그의 눈은 감겨 있었고, 그는 손으로 얼굴을 가리고 있었다. (과거 시제로)\"\n    *   **영작:** (오늘 배운 'eyes are closed'와 'covering his nose' 패턴을 활용하여)\n    *   **모범 답안:** His eyes were closed, and he was covering his face with his hand.\n\n### **6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)**\n\n✨ **Good Job**: Joey, 이 문장은 정말 좋았어요!\n\"**It depends on the project. I work on the audit team. So, usually we make some report and we find some problem and correct and respond and give the solution.**\"\n이 문장은 Joey의 직무와 업무 프로세스를 아주 명확하고 논리적으로 설명해주었어요. 특히 \"depends on the project\"로 시작하여 유연하게 설명을 이어가는 방식이 좋았고, \"find some problem and correct and respond and give the solution\"처럼 핵심적인 업무 과정을 간결하게 나열한 점이 인상 깊었습니다. 👍\n\n🚀 **내일의 한 문장**: 다음 수업 시작 시, 튜터에게 오늘 배운 내용을 활용하여 이렇게 말해보세요.\n\"I've been thinking about how to **foster** a more positive mindset to **mitigate** daily stress.\"\n(매일의 스트레스를 완화하기 위해 어떻게 더 긍정적인 사고방식을 조성할지 생각해봤어요.)\n\n---\n\n### **[성과 지표]**\n**유창성 점수**: 7/10점\n\n**근거**: Joey는 자신의 생각을 비교적 막힘없이 표현하고, 다양한 주제에 대해 대화에 적극적으로 참여합니다. 어휘력도 중급 수준으로 충분히 의사소통이 가능하지만, 문법적인 정확성(특히 동사 형태 및 조동사 사용)과 더 자연스러운 표현으로 다듬는 연습이 꾸준히 필요합니다. 몇몇 표현에서 한국어 직역투가 느껴지지만, 이는 꾸준한 연습으로 충분히 개선될 수 있습니다.\n\n**다음 수업 '원포인트 액션 플랜'**:\n다음 수업에서는 **\"동사 형태와 조동사(be, have, do)의 올바른 사용\"**에 집중하여 연습해볼까요? 특히 수동태 문장이나 현재진행형 문장을 만들 때, 그리고 명사를 꾸며주는 분사 형태를 사용할 때 정확성을 높이는 데 초점을 맞춰보겠습니다. Joey가 말하고 싶은 내용을 더 명확하고 자연스럽게 전달하는 데 큰 도움이 될 거예요!\n\n위 내용을 바탕으로:\n1. 먼저 오늘 수업에서 내가 틀렸거나 어색했던 표현을 하나 골라서, 관련된 상황을 영어로 질문해줘.\n2. 내가 영어로 대답하면, 자연스러운지 확인하고 더 나은 표현이 있으면 알려줘.\n3. 특히 \"반복 실수 패턴\"에서 지적된 부분을 집중적으로 연습시켜줘.\n4. 이런 식으로 오늘 배운 표현들을 하나씩 복습하자.\n5. 한국어 설명은 필요할 때만 간단히, 대화는 최대한 영어로 진행해줘.\n\n그럼 시작하자!";
+        function startReview(){navigator.clipboard.writeText(REVIEW_PROMPT).then(()=>{showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)}).catch(()=>{const t=document.createElement('textarea');t.value=REVIEW_PROMPT;document.body.appendChild(t);t.select();document.execCommand('copy');document.body.removeChild(t);showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)})}
+        function showToast(){const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500)}
+        function switchTab(n){document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',n==='feedback'?i===0:i===1));document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));document.getElementById('tab-'+n).classList.add('active')}
+    </script>
+</body>
+</html>
