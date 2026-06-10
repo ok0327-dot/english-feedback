@@ -131,7 +131,9 @@ DRIVE_DONE_FOLDER_ID = os.environ.get("DRIVE_DONE_FOLDER_ID", "")
 
 # GitHub Pages 복습 페이지의 기본 URL
 # → 예: "https://myusername.github.io/english-feedback"
-GITHUB_PAGES_URL = os.environ.get("GITHUB_PAGES_URL", "")
+# ⚠️ 시크릿명은 PAGES_URL(‘GITHUB_’ 접두사 시크릿은 GitHub이 금지) → 워크플로우가
+#    환경변수 GITHUB_PAGES_URL 로 매핑해 전달. 끝의 '/'는 제거해 '//' 중복 방지.
+GITHUB_PAGES_URL = os.environ.get("GITHUB_PAGES_URL", "").rstrip("/")
 
 # telegram-notify-hub (알림 허브) — 피드백 완료 시 텔레그램으로 링크 발송 (옵션, best-effort)
 # → 미설정/실패해도 이메일 등 본 흐름엔 전혀 영향 없음.
