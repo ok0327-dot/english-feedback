@@ -23,7 +23,8 @@ jobs:
       - name: 🗑️ 복습 페이지 삭제 및 인덱스 갱신
         env:
           DELETE_DATE: ${{ github.event.inputs.date }}
-          GITHUB_PAGES_URL: ${{ secrets.GITHUB_PAGES_URL }}
+          # 시크릿명은 PAGES_URL(‘GITHUB_’ 접두사 금지) → 환경변수 GITHUB_PAGES_URL 로 매핑
+          GITHUB_PAGES_URL: ${{ secrets.PAGES_URL }}
         run: |
           FILE="docs/${DELETE_DATE}.html"
 
