@@ -197,13 +197,27 @@ def find_todays_recordings(service):
     Google Drive에서 "오늘"에 올라온 녹음 파일 목록을 검색.
     파일이 없으면 빈 리스트 반환 → 프로그램이 조용히 종료됨.
     비유: 창고에서 오늘 도착한 택배 목록을 확인하는 것 (아직 꺼내진 않음).
-    """
-    today = datetime.now(KST).strftime("%Y-%m-%d")
-    today_start = f"{today}T00:00:00+09:00"
 
-    # 검색 조건: 오늘 생성 + 휴지통 아님 + 오디오 파일
+    🔁 backfill 지원: 환경변수 TARGET_DATE(YYYY-MM-DD)가 지정되면 그 날짜에
+       업로드된 녹음만 검색한다. 일시 장애로 놓친 과거 수업을 수동 재처리할 때 사용.
+       (수업 날짜 자체는 파일명에서 추출되므로 결과 HTML 날짜는 항상 정확하다.)
+    """
+    target = os.environ.get("TARGET_DATE", "").strip()
+    if target:
+        # 지정 날짜 하루 범위 [target 00:00, 다음날 00:00)
+        start_dt = datetime.strptime(target, "%Y-%m-%d").replace(tzinfo=KST)
+        end_dt = start_dt + timedelta(days=1)
+        day_start = start_dt.strftime("%Y-%m-%dT00:00:00+09:00")
+        day_end = end_dt.strftime("%Y-%m-%dT00:00:00+09:00")
+        print(f"🔁 backfill 모드: {target} 업로드분만 검색")
+        time_filter = [f"createdTime >= '{day_start}'", f"createdTime < '{day_end}'"]
+    else:
+        today = datetime.now(KST).strftime("%Y-%m-%d")
+        time_filter = [f"createdTime >= '{today}T00:00:00+09:00'"]
+
+    # 검색 조건: (오늘 또는 지정일) 생성 + 휴지통 아님 + 오디오 파일
     query_parts = [
-        f"createdTime >= '{today_start}'",
+        *time_filter,
         "trashed = false",
         "(mimeType contains 'audio/' or mimeType contains 'video/mp4')",
     ]
