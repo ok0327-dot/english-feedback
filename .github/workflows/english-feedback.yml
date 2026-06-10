@@ -11,6 +11,10 @@ on:
         description: '디버그 모드'
         required: false
         default: 'false'
+      target_date:
+        description: '특정 날짜 녹음 재처리 (YYYY-MM-DD, backfill용 / 비우면 오늘)'
+        required: false
+        default: ''
 permissions:
   contents: write
 # 🛡️ 중복 실행 방지: 버튼을 여러 번 눌러도 마지막 1개만 실행
@@ -44,6 +48,8 @@ jobs:
           DRIVE_FOLDER_ID: ${{ secrets.DRIVE_FOLDER_ID }}
           DRIVE_DONE_FOLDER_ID: ${{ secrets.DRIVE_DONE_FOLDER_ID }}
           GITHUB_PAGES_URL: ${{ secrets.GITHUB_PAGES_URL }}
+          # backfill: 특정 날짜 녹음 재처리 (비어 있으면 오늘 자동 처리)
+          TARGET_DATE: ${{ github.event.inputs.target_date }}
           # telegram-notify-hub: 피드백 완료 시 텔레그램 알림방으로 알림 (옵션)
           KNH_SEND_SECRET: ${{ secrets.KNH_SEND_SECRET }}
           KNH_CHANNEL: telegram
