@@ -98,6 +98,18 @@ GROQ_API_KEY = os.environ["GROQ_API_KEY"]
 # → aistudio.google.com/apikey 에서 발급 (AI... 로 시작)
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
 
+# Gemini 모델 폴백 사다리 (앞에서부터 순서대로 시도; 모두 무료 티어 Flash 계열)
+# - 주력: gemini-2.5-flash (무료 티어 1,500 RPD / 1M TPM)
+# - 대체: gemini-2.5-flash-lite — 주력이 'high demand 503'으로 과부하일 때
+#         혼잡이 덜한 형제 모델로 자동 전환 (둘 다 thinking 지원 → thinkingConfig 호환)
+#   ※ 2.0-flash / 2.0-flash-lite 는 2026-06-01 deprecated 되어 폴백에서 제외.
+#   ※ 환경변수 GEMINI_MODELS(쉼표구분)로 재정의 가능 (예: 신규 3.x 모델 추가 시).
+GEMINI_MODELS = [
+    m.strip() for m in os.environ.get(
+        "GEMINI_MODELS", "gemini-2.5-flash,gemini-2.5-flash-lite"
+    ).split(",") if m.strip()
+]
+
 # 이메일을 보내는 데 사용할 Gmail 주소 (예: "myname@gmail.com")
 GMAIL_ADDRESS = os.environ["GMAIL_ADDRESS"].strip()
 
@@ -386,17 +398,22 @@ def transcribe_audio(audio_path):
 # ║  왜 필요? 전화 음질 한계 + 한국인 발음 특성 → 오인식 발생              ║
 # ╚══════════════════════════════════════════════════════════════════════════╝
 
-def gemini_request(prompt, max_tokens=4096, temperature=0.3, timeout=120, system_msg=None, thinking_budget=2048):
+def gemini_request(prompt, max_tokens=4096, temperature=0.3, timeout=120, system_msg=None, thinking_budget=2048, model=None):
     """
-    Google Gemini API 호출 (Gemini 2.5 Flash 모델 사용).
+    Google Gemini API 호출 (기본 Gemini 2.5 Flash 모델).
     전사 보정 및 피드백 생성에 사용.
-    429 에러 시 자동 재시도 (최대 3회).
+    429(속도 제한) + 5xx(서버 과부하·일시 장애) 시 지수 백오프 재시도.
+      ※ Gemini 503 "high demand"는 무료/유료 무관한 일시적 과부하이며
+        공식 권장 대응이 "exponential backoff retry 또는 다른 모델로 전환"이므로
+        429만이 아니라 5xx도 재시도 대상에 포함한다.
     thinking_budget: 추론에 사용할 최대 토큰 수 (maxOutputTokens에 포함됨)
+    model: 사용할 Gemini 모델 ID (미지정 시 GEMINI_MODELS[0]).
     """
     if not GEMINI_API_KEY:
         raise Exception("GEMINI_API_KEY 미설정")
 
-    url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent"
+    model = model or GEMINI_MODELS[0]
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
     headers = {
         "x-goog-api-key": GEMINI_API_KEY,
         "Content-Type": "application/json",
@@ -405,6 +422,9 @@ def gemini_request(prompt, max_tokens=4096, temperature=0.3, timeout=120, system
     # 요청 페이로드 구성
     # Gemini 2.5 Flash는 thinking 모델이라 추론 토큰도 maxOutputTokens에 포함됨
     # → 추론 토큰을 제한하여 실제 출력에 충분한 토큰을 확보
+    # ⚠️ flash-lite는 thinkingBudget을 512~24576 범위로만 허용(0=비활성).
+    #    폴백 모델 호환을 위해 0이 아닌 값은 512 이상으로 클램프.
+    safe_budget = thinking_budget if thinking_budget == 0 else max(512, min(24576, thinking_budget))
     payload = {
         "contents": [
             {"parts": [{"text": prompt}]}
@@ -412,7 +432,7 @@ def gemini_request(prompt, max_tokens=4096, temperature=0.3, timeout=120, system
         "generationConfig": {
             "maxOutputTokens": max_tokens,
             "temperature": temperature,
-            "thinkingConfig": {"thinkingBudget": thinking_budget},
+            "thinkingConfig": {"thinkingBudget": safe_budget},
         },
     }
 
@@ -422,8 +442,19 @@ def gemini_request(prompt, max_tokens=4096, temperature=0.3, timeout=120, system
             "parts": [{"text": system_msg}]
         }
 
-    for attempt in range(3):
-        response = requests.post(url, json=payload, headers=headers, timeout=timeout)
+    MAX_ATTEMPTS = 4
+    for attempt in range(MAX_ATTEMPTS):
+        try:
+            response = requests.post(url, json=payload, headers=headers, timeout=timeout)
+        except requests.exceptions.RequestException as e:
+            # 네트워크 일시 장애도 재시도 대상
+            if attempt < MAX_ATTEMPTS - 1:
+                wait = min(60, 10 * (2 ** attempt))  # 10s, 20s, 40s
+                print(f"⏳ Gemini 네트워크 오류({e}). {wait}초 후 재시도... ({attempt+1}/{MAX_ATTEMPTS}) [{model}]")
+                time.sleep(wait)
+                continue
+            raise Exception(f"Gemini 네트워크 오류: {e}")
+
         if response.status_code == 200:
             result = response.json()
             candidates = result.get("candidates", [])
@@ -441,13 +472,20 @@ def gemini_request(prompt, max_tokens=4096, temperature=0.3, timeout=120, system
                 if not part.get("thought", False):
                     return part["text"]
             return parts[-1]["text"]  # fallback
-        elif response.status_code == 429:
-            wait = 30 * (attempt + 1)  # 30초, 60초, 90초
-            print(f"⏳ Gemini 속도 제한 (429). {wait}초 대기 후 재시도... ({attempt+1}/3)")
-            time.sleep(wait)
+        # 429(속도 제한) 또는 5xx(서버 과부하·일시 장애) → 지수 백오프 재시도
+        elif response.status_code == 429 or response.status_code >= 500:
+            if attempt < MAX_ATTEMPTS - 1:
+                # 503(과부하)은 짧게, 429(속도 제한)는 길게 대기
+                base = 30 if response.status_code == 429 else 10
+                wait = min(90, base * (2 ** attempt))
+                kind = "속도 제한(429)" if response.status_code == 429 else f"서버 과부하/장애({response.status_code})"
+                print(f"⏳ Gemini {kind}. {wait}초 대기 후 재시도... ({attempt+1}/{MAX_ATTEMPTS}) [{model}]")
+                time.sleep(wait)
+            else:
+                raise Exception(f"Gemini API 오류 ({response.status_code}) 재시도 초과 [{model}]: {response.text[:200]}")
         else:
-            raise Exception(f"Gemini API 오류 ({response.status_code}): {response.text}")
-    raise Exception(f"Gemini API 재시도 초과 (429 에러 지속)")
+            raise Exception(f"Gemini API 오류 ({response.status_code}) [{model}]: {response.text}")
+    raise Exception(f"Gemini API 재시도 초과 [{model}]")
 
 
 def groq_llm_request(prompt, max_tokens=4096, temperature=0.3, timeout=120, system_msg=None):
@@ -477,30 +515,55 @@ def groq_llm_request(prompt, max_tokens=4096, temperature=0.3, timeout=120, syst
         response = requests.post(url, json=payload, headers=headers, timeout=timeout)
         if response.status_code == 200:
             return response.json()["choices"][0]["message"]["content"]
-        elif response.status_code == 429:
+        elif response.status_code == 413:
+            # 413 = 프롬프트가 무료 티어 TPM(12,000) 초과 → 재시도해도 동일 실패.
+            # 즉시 명확한 메시지로 중단 (Gemini 사다리가 1차 방어선이어야 함을 시사).
+            raise Exception(
+                f"Groq 프롬프트 크기 초과(413): 무료 티어 TPM 한도(12k)보다 큰 전사라 "
+                f"Groq로는 처리 불가. Gemini 복구가 정답. 상세: {response.text[:200]}"
+            )
+        elif response.status_code == 429 or response.status_code >= 500:
             wait = 30 * (attempt + 1)
-            print(f"⏳ Groq 속도 제한 (429). {wait}초 대기 후 재시도... ({attempt+1}/3)")
+            kind = "속도 제한(429)" if response.status_code == 429 else f"서버 오류({response.status_code})"
+            print(f"⏳ Groq {kind}. {wait}초 대기 후 재시도... ({attempt+1}/3)")
             time.sleep(wait)
         else:
             raise Exception(f"Groq LLM 오류 ({response.status_code}): {response.text}")
-    raise Exception(f"Groq LLM 재시도 초과 (429 에러 지속)")
+    raise Exception(f"Groq LLM 재시도 초과")
 
 
 def llm_request(prompt, max_tokens=4096, temperature=0.3, timeout=120, system_msg=None, thinking_budget=2048):
     """
-    LLM 호출 (Gemini 우선, 실패 시 Groq로 자동 전환).
-    무료 한도 초과, 네트워크 오류 등 Gemini 장애 시에도 파이프라인이 중단되지 않음.
+    LLM 호출 (Gemini 모델 사다리 우선 → 최후에 Groq).
+    무료 한도 초과, 503 과부하, 네트워크 오류 등 장애 시에도 파이프라인이 중단되지 않음.
+
+    동작:
+      1) GEMINI_MODELS를 순서대로 시도. 각 모델은 자체적으로 429/5xx 백오프 재시도.
+         → 주력 모델(2.5-flash)이 'high demand 503'으로 과부하여도, 혼잡이 덜한
+           형제 모델(2.5-flash-lite 등)로 자동 전환되어 무료 범위 내에서 복구.
+      2) 모든 Gemini 모델 실패 시에만 Groq(Llama)로 최종 폴백.
+         ※ Groq 무료 티어는 TPM 12,000 한도라 긴 전사(>~12k토큰)는 413으로 거절될 수 있음 →
+           어디까지나 마지막 안전망. Gemini 사다리가 1차 방어선.
     thinking_budget: Gemini 추론 토큰 한도 (Groq fallback 시에는 미사용)
     """
+    last_err = None
+    for i, model in enumerate(GEMINI_MODELS):
+        try:
+            result = gemini_request(prompt, max_tokens, temperature, timeout, system_msg, thinking_budget, model=model)
+            print(f"  (🟢 Gemini: {model})")
+            return result
+        except Exception as e:
+            last_err = e
+            nxt = GEMINI_MODELS[i + 1] if i + 1 < len(GEMINI_MODELS) else "Groq"
+            print(f"⚠️ Gemini[{model}] 실패 ({e}) → {nxt}로 전환...")
+
     try:
-        result = gemini_request(prompt, max_tokens, temperature, timeout, system_msg, thinking_budget)
-        print("  (🟢 Gemini)")
-        return result
-    except Exception as e:
-        print(f"⚠️ Gemini 실패 ({e}), Groq로 대체 실행...")
         result = groq_llm_request(prompt, max_tokens, temperature, timeout, system_msg)
         print("  (🟡 Groq fallback)")
         return result
+    except Exception as e:
+        # Groq까지 실패하면 마지막 Gemini 오류도 함께 노출 (진단 편의)
+        raise Exception(f"전체 LLM 실패 — Gemini: {last_err} | Groq: {e}")
 
 
 def _format_segments_with_gaps(segments):
