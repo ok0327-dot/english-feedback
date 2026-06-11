@@ -1,0 +1,62 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>📚 주간 복습 기록</title><style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Noto Sans KR',-apple-system,sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.7}
+.header{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);padding:42px 24px 30px;text-align:center;border-bottom:1px solid rgba(255,255,255,.06)}
+.header h1{font-size:24px;color:#f1f5f9;margin-bottom:8px}
+.header .range{font-size:13px;color:#94a3b8;letter-spacing:2px}
+.nav{max-width:760px;margin:0 auto;padding:14px 20px 0;display:flex;justify-content:space-between;font-size:13px}
+.nav a{color:#64748b;text-decoration:none;padding:6px 10px;border-radius:8px}
+.nav a:hover{color:#38bdf8;background:#16161d}
+.container{max-width:760px;margin:0 auto;padding:18px 20px 80px}
+.card{background:#16161d;border:1px solid rgba(255,255,255,.06);border-radius:16px;padding:22px;margin-bottom:20px}
+.card h2{font-size:16px;color:#f1f5f9;margin-bottom:14px;display:flex;align-items:center;gap:8px}
+.card h2 .sub{font-size:12px;color:#64748b;font-weight:400;margin-left:auto}
+.muted{color:#64748b;font-size:12px}.syn{color:#cbd5e1;font-size:14px}.syn b{color:#f1f5f9}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:20px}
+.stat{background:#16161d;border:1px solid rgba(255,255,255,.06);border-radius:14px;padding:16px 10px;text-align:center}
+.stat .n{font-size:22px;font-weight:700;color:#38bdf8}.stat .l{font-size:11px;color:#94a3b8;margin-top:4px}
+.bar-row{display:flex;align-items:center;gap:10px;margin:8px 0}
+.bar-label{width:160px;font-size:12.5px;color:#cbd5e1;text-align:right;flex-shrink:0}
+.bar-track{flex:1;background:#0f0f13;border-radius:6px;height:20px;overflow:hidden}
+.bar-fill{height:100%;background:linear-gradient(90deg,#3b82f6,#818cf8);border-radius:6px}
+.bar-fill.hot{background:linear-gradient(90deg,#f43f5e,#fb7185)}
+.bar-val{width:34px;font-size:12px;color:#94a3b8;flex-shrink:0}
+.lesson{border-left:2px solid #334155;padding:6px 0 6px 14px;margin:10px 0}
+.lesson .d{font-size:12px;color:#7dd3fc;font-weight:600}
+.lesson .g{font-size:12px;color:#fbbf24;margin:2px 0}
+.lesson .t{font-size:12.5px;color:#94a3b8}
+.pair{border-left:2px solid #334155;padding:7px 0 7px 14px;margin:9px 0}
+.said{color:#fca5a5;font-size:13px;margin-bottom:3px}.nat{color:#86efac;font-size:13px}
+.deck{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:9px}
+.vcard{background:#0f0f13;border:1px solid rgba(255,255,255,.07);border-radius:11px;height:80px;cursor:pointer;position:relative}
+.vfront,.vback{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:8px;text-align:center;backface-visibility:hidden;transition:transform .4s;border-radius:11px}
+.vfront{gap:3px}.vword{font-size:14px;font-weight:600;color:#f1f5f9}.vpos{font-size:10px;color:#64748b}
+.vback{transform:rotateY(180deg);background:#1e293b;color:#7dd3fc;font-size:12.5px}
+.vcard.flipped .vfront{transform:rotateY(180deg)}.vcard.flipped .vback{transform:rotateY(360deg)}
+.spark{width:100%;height:70px;display:block}
+.weeklist{display:flex;flex-direction:column;gap:8px}
+.weekrow{display:flex;align-items:center;gap:12px;padding:14px 16px;background:#0f0f13;border:1px solid rgba(255,255,255,.06);border-radius:12px;text-decoration:none;transition:all .2s}
+.weekrow:hover{border-color:rgba(56,189,248,.3);background:#16161d}
+.weekrow .wk{font-size:15px;font-weight:700;color:#f1f5f9;width:90px}
+.weekrow .wr{font-size:12px;color:#64748b;width:80px}
+.weekrow .wf{flex:1;font-size:12.5px;color:#94a3b8}
+.weekrow .wc{font-size:12px;color:#38bdf8}
+.foot{text-align:center;font-size:11px;color:#475569;margin-top:26px;line-height:1.8}
+</style></head><body>
+<div class="header"><h1>📚 주간 복습 기록</h1>
+<div class="range">2026-05-08 ~ 누적 15 LESSONS</div></div>
+<div class="container">
+  <div class="stats">
+    <div class="stat"><div class="n">6</div><div class="l">주차</div></div>
+    <div class="stat"><div class="n">15</div><div class="l">누적 수업</div></div>
+    <div class="stat"><div class="n">7.3</div><div class="l">평균 유창성</div></div>
+    <div class="stat"><div class="n">57</div><div class="l">누적 어휘</div></div>
+  </div>
+  <div class="card"><h2>🔧 누적 약점 문법 <span class="sub">최다: Verb Forms / Auxiliaries</span></h2>
+    <div class="bar-row"><div class="bar-label">Verb Forms / Auxiliaries</div><div class="bar-track"><div class="bar-fill hot" style="width:100%"></div></div><div class="bar-val">3회</div></div><div class="bar-row"><div class="bar-label">Articles (a/an/the)</div><div class="bar-track"><div class="bar-fill " style="width:100%"></div></div><div class="bar-val">3회</div></div><div class="bar-row"><div class="bar-label">Subject–Verb Agreement</div><div class="bar-track"><div class="bar-fill " style="width:66%"></div></div><div class="bar-val">2회</div></div><div class="bar-row"><div class="bar-label">Prepositions</div><div class="bar-track"><div class="bar-fill " style="width:66%"></div></div><div class="bar-val">2회</div></div><div class="bar-row"><div class="bar-label">Missing Subjects / Verbs</div><div class="bar-track"><div class="bar-fill " style="width:33%"></div></div><div class="bar-val">1회</div></div><div class="bar-row"><div class="bar-label">Verb Tense</div><div class="bar-track"><div class="bar-fill " style="width:33%"></div></div><div class="bar-val">1회</div></div><div class="bar-row"><div class="bar-label">Causative &quot;get&quot;</div><div class="bar-track"><div class="bar-fill " style="width:33%"></div></div><div class="bar-val">1회</div></div><div class="bar-row"><div class="bar-label">Determiners / Quantifiers</div><div class="bar-track"><div class="bar-fill " style="width:33%"></div></div><div class="bar-val">1회</div></div><div class="bar-row"><div class="bar-label">Gerunds / Noun Phrases</div><div class="bar-track"><div class="bar-fill " style="width:33%"></div></div><div class="bar-val">1회</div></div></div>
+  <div class="card"><h2>🗓 주간 리포트 <span class="sub">최신순</span></h2>
+    <div class="weeklist"><a class="weekrow" href="review-2026-W24.html"><span class="wk">2026-W24</span><span class="wr">6/8~6/12</span><span class="wf">Determiners / Quantifiers, Gerunds / Noun Phrases,</span><span class="wc">3회</span></a><a class="weekrow" href="review-2026-W23.html"><span class="wk">2026-W23</span><span class="wr">6/1~6/5</span><span class="wf">Articles (a/an/the)</span><span class="wc">1회</span></a><a class="weekrow" href="review-2026-W22.html"><span class="wk">2026-W22</span><span class="wr">5/25~5/29</span><span class="wf">Causative &quot;get&quot;, Prepositions, Verb Forms / Auxili</span><span class="wc">3회</span></a><a class="weekrow" href="review-2026-W21.html"><span class="wk">2026-W21</span><span class="wr">5/18~5/22</span><span class="wf">Prepositions, Subject–Verb Agreement, Verb Tense</span><span class="wc">3회</span></a><a class="weekrow" href="review-2026-W20.html"><span class="wk">2026-W20</span><span class="wr">5/11~5/15</span><span class="wf">Articles (a/an/the), Missing Subjects / Verbs, Ver</span><span class="wc">4회</span></a><a class="weekrow" href="review-2026-W19.html"><span class="wk">2026-W19</span><span class="wr">5/4~5/8</span><span class="wf">Subject–Verb Agreement</span><span class="wc">1회</span></a></div></div>
+  <div class="foot">생성: scripts/build_weekly_review.py · 매주 금요일 자동 갱신 예정 · Claude $0</div>
+</div></body></html>

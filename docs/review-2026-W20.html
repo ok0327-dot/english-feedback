@@ -1,0 +1,83 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>📊 주간 복습 2026-W20</title><style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Noto Sans KR',-apple-system,sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.7}
+.header{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);padding:42px 24px 30px;text-align:center;border-bottom:1px solid rgba(255,255,255,.06)}
+.header h1{font-size:24px;color:#f1f5f9;margin-bottom:8px}
+.header .range{font-size:13px;color:#94a3b8;letter-spacing:2px}
+.nav{max-width:760px;margin:0 auto;padding:14px 20px 0;display:flex;justify-content:space-between;font-size:13px}
+.nav a{color:#64748b;text-decoration:none;padding:6px 10px;border-radius:8px}
+.nav a:hover{color:#38bdf8;background:#16161d}
+.container{max-width:760px;margin:0 auto;padding:18px 20px 80px}
+.card{background:#16161d;border:1px solid rgba(255,255,255,.06);border-radius:16px;padding:22px;margin-bottom:20px}
+.card h2{font-size:16px;color:#f1f5f9;margin-bottom:14px;display:flex;align-items:center;gap:8px}
+.card h2 .sub{font-size:12px;color:#64748b;font-weight:400;margin-left:auto}
+.muted{color:#64748b;font-size:12px}.syn{color:#cbd5e1;font-size:14px}.syn b{color:#f1f5f9}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:20px}
+.stat{background:#16161d;border:1px solid rgba(255,255,255,.06);border-radius:14px;padding:16px 10px;text-align:center}
+.stat .n{font-size:22px;font-weight:700;color:#38bdf8}.stat .l{font-size:11px;color:#94a3b8;margin-top:4px}
+.bar-row{display:flex;align-items:center;gap:10px;margin:8px 0}
+.bar-label{width:160px;font-size:12.5px;color:#cbd5e1;text-align:right;flex-shrink:0}
+.bar-track{flex:1;background:#0f0f13;border-radius:6px;height:20px;overflow:hidden}
+.bar-fill{height:100%;background:linear-gradient(90deg,#3b82f6,#818cf8);border-radius:6px}
+.bar-fill.hot{background:linear-gradient(90deg,#f43f5e,#fb7185)}
+.bar-val{width:34px;font-size:12px;color:#94a3b8;flex-shrink:0}
+.lesson{border-left:2px solid #334155;padding:6px 0 6px 14px;margin:10px 0}
+.lesson .d{font-size:12px;color:#7dd3fc;font-weight:600}
+.lesson .g{font-size:12px;color:#fbbf24;margin:2px 0}
+.lesson .t{font-size:12.5px;color:#94a3b8}
+.pair{border-left:2px solid #334155;padding:7px 0 7px 14px;margin:9px 0}
+.said{color:#fca5a5;font-size:13px;margin-bottom:3px}.nat{color:#86efac;font-size:13px}
+.deck{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:9px}
+.vcard{background:#0f0f13;border:1px solid rgba(255,255,255,.07);border-radius:11px;height:80px;cursor:pointer;position:relative}
+.vfront,.vback{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:8px;text-align:center;backface-visibility:hidden;transition:transform .4s;border-radius:11px}
+.vfront{gap:3px}.vword{font-size:14px;font-weight:600;color:#f1f5f9}.vpos{font-size:10px;color:#64748b}
+.vback{transform:rotateY(180deg);background:#1e293b;color:#7dd3fc;font-size:12.5px}
+.vcard.flipped .vfront{transform:rotateY(180deg)}.vcard.flipped .vback{transform:rotateY(360deg)}
+.spark{width:100%;height:70px;display:block}
+.weeklist{display:flex;flex-direction:column;gap:8px}
+.weekrow{display:flex;align-items:center;gap:12px;padding:14px 16px;background:#0f0f13;border:1px solid rgba(255,255,255,.06);border-radius:12px;text-decoration:none;transition:all .2s}
+.weekrow:hover{border-color:rgba(56,189,248,.3);background:#16161d}
+.weekrow .wk{font-size:15px;font-weight:700;color:#f1f5f9;width:90px}
+.weekrow .wr{font-size:12px;color:#64748b;width:80px}
+.weekrow .wf{flex:1;font-size:12.5px;color:#94a3b8}
+.weekrow .wc{font-size:12px;color:#38bdf8}
+.foot{text-align:center;font-size:11px;color:#475569;margin-top:26px;line-height:1.8}
+</style></head><body>
+<div class="header"><h1>📊 주간 복습 · 2026-W20</h1>
+<div class="range">5/11~5/15</div></div>
+<div class="nav"><a href="review-2026-W19.html">← 2026-W19</a><a href="review-index.html">📚 전체 목록</a><a href="review-2026-W21.html">2026-W21 →</a></div>
+<div class="container">
+
+  <div class="stats">
+    <div class="stat"><div class="n">4</div><div class="l">이번 주 수업</div></div>
+    <div class="stat"><div class="n">5</div><div class="l">누적 수업</div></div>
+    <div class="stat"><div class="n">7.5</div><div class="l">누적 평균</div></div>
+    <div class="stat"><div class="n">15</div><div class="l">누적 어휘</div></div>
+  </div>
+
+  <div class="card"><h2>🧭 이번 주 종합 <span class="sub">Claude 작성 · $0</span></h2>
+    <div class="syn" id="synthesis">이번 주 <b>4회</b> 수업에서 다룬 문법은 <b>Articles (a/an/the), Missing Subjects / Verbs, Verb Forms / Auxiliaries</b>입니다. 컷오프(2026-05-08) 이후 누적 <b>5회</b> 기준, 가장 끈질긴 약점은 <b>Articles (a/an/the)</b>(누적 2회)이고 유창성 평균은 <b>7.5/10</b>입니다. 다음 주는 이 약점을 의식해 말해 보세요.</div></div>
+
+  <div class="card"><h2>📅 이번 주 수업 <span class="sub">4회</span></h2>
+    <div class="lesson"><div class="d">05-11 · Verb Forms / Auxiliaries</div><div class="t">Discussing weekend activities, travel, and key factors in business neg</div></div><div class="lesson"><div class="d">05-12 · Articles (a/an/the)</div><div class="t">Role-playing Business Scenarios: Requesting a Raise and Pitching an In</div></div><div class="lesson"><div class="d">05-13 · Articles (a/an/the)</div><div class="t">Discussing Negotiation Skills and Strategies</div></div><div class="lesson"><div class="d">05-15 · Missing Subjects / Verbs</div><div class="t">Discussing cultural differences and communication styles.</div></div></div>
+
+  <div class="card"><h2>💬 이번 주 교정 표현 <span class="sub">12개</span></h2>
+    <div class="pair"><div class="said">❌ I think our life is gathering some routine.</div><div class="nat">✅ I think our life is built around routines.</div></div><div class="pair"><div class="said">❌ your brother come for the travel or he leave the Colombia?</div><div class="nat">✅ Did your brother come to travel, or is he leaving Colombia?</div></div><div class="pair"><div class="said">❌ Just I&#x27;m imagining one guy imagine get married just he met the first time with her.</div><div class="nat">✅ I&#x27;m just imagining a guy who&#x27;s already thinking about getting married after meeting her for the first time.</div></div><div class="pair"><div class="said">❌ His ability is so great.</div><div class="nat">✅ He&#x27;s very capable.</div></div><div class="pair"><div class="said">❌ I&#x27;m always welcome to your meeting.</div><div class="nat">✅ I&#x27;m always happy to meet with you.</div></div><div class="pair"><div class="said">❌ This software is, usually the investor always gathering information, the stock market, real estate, and bond, etc.</div><div class="nat">✅ This software helps investors gather information from the stock market, real estate, and bond markets.</div></div><div class="pair"><div class="said">❌ Today, I made some reports, but this is a little easy and I have enough time.</div><div class="nat">✅ Today, I made some reports, but the work was relatively easy , and I had enough time.</div></div><div class="pair"><div class="said">❌ At that time, we don&#x27;t have some patience that we come to lose that negotiation.</div><div class="nat">✅ At that time, if we lack patience, we might end up losing that negotiation.</div></div><div class="pair"><div class="said">❌ But the main information just grab for myself , not give to him or her.</div><div class="nat">✅ But I keep the main information to myself , not sharing it with them.</div></div><div class="pair"><div class="said">❌ I will meet my family. So nice.</div><div class="nat">✅ I&#x27;m going to meet my family. That&#x27;ll be nice.</div></div><div class="pair"><div class="said">❌ the festival name is the sand festival near the beach.</div><div class="nat">✅ The festival is called the sand festival, and it&#x27;s near the beach.</div></div><div class="pair"><div class="said">❌ I think it is important to the area.</div><div class="nat">✅ I think it depends on the area.</div></div></div>
+
+  <div class="card"><h2>📗 이번 주 어휘 <span class="sub">클릭하면 뜻</span></h2>
+    <div class="deck"><div class="vcard" onclick="this.classList.toggle('flipped')"><div class="vfront"><span class="vword">mindful</span><span class="vpos">adj.</span></div><div class="vback">~을 염두에 두는, 의식하는, 주의 깊은</div></div><div class="vcard" onclick="this.classList.toggle('flipped')"><div class="vfront"><span class="vword">layover</span><span class="vpos">n.</span></div><div class="vback">(여행 중) 잠시 들르는 곳, 경유</div></div><div class="vcard" onclick="this.classList.toggle('flipped')"><div class="vfront"><span class="vword">negotiate</span><span class="vpos">v.</span></div><div class="vback">협상하다, 교섭하다</div></div><div class="vcard" onclick="this.classList.toggle('flipped')"><div class="vfront"><span class="vword">outcome</span><span class="vpos">n.</span></div><div class="vback">결과, 성과</div></div><div class="vcard" onclick="this.classList.toggle('flipped')"><div class="vfront"><span class="vword">on a roll</span><span class="vpos">idiom</span></div><div class="vback">승승장구하는, 잘나가는, 탄력받은</div></div><div class="vcard" onclick="this.classList.toggle('flipped')"><div class="vfront"><span class="vword">tackle</span><span class="vpos">동사</span></div><div class="vback">(문제 등을) 다루다, 해결하려고 노력하다</div></div><div class="vcard" onclick="this.classList.toggle('flipped')"><div class="vfront"><span class="vword">contingent upon</span><span class="vpos">형용사구</span></div><div class="vback">~에 달려있는, ~을 조건으로 하는</div></div><div class="vcard" onclick="this.classList.toggle('flipped')"><div class="vfront"><span class="vword">protocol</span><span class="vpos">명사</span></div><div class="vback">(외교적) 의례, 의전; (컴퓨터) 통신 규약; (일반적인) 규칙, 절차</div></div><div class="vcard" onclick="this.classList.toggle('flipped')"><div class="vfront"><span class="vword">nuance</span><span class="vpos">명사</span></div><div class="vback">미묘한 차이, 뉘앙스</div></div><div class="vcard" onclick="this.classList.toggle('flipped')"><div class="vfront"><span class="vword">facilitate</span><span class="vpos">동사</span></div><div class="vback">(과정 등을) 용이하게 하다, 촉진하다</div></div></div></div>
+
+  <div class="card"><h2>📈 누적 약점 문법 <span class="sub">컷오프~2026-W20</span></h2>
+    <div class="bar-row"><div class="bar-label">Articles (a/an/the)</div><div class="bar-track"><div class="bar-fill hot" style="width:100%"></div></div><div class="bar-val">2회</div></div><div class="bar-row"><div class="bar-label">Subject–Verb Agreement</div><div class="bar-track"><div class="bar-fill " style="width:50%"></div></div><div class="bar-val">1회</div></div><div class="bar-row"><div class="bar-label">Verb Forms / Auxiliaries</div><div class="bar-track"><div class="bar-fill " style="width:50%"></div></div><div class="bar-val">1회</div></div><div class="bar-row"><div class="bar-label">Missing Subjects / Verbs</div><div class="bar-track"><div class="bar-fill " style="width:50%"></div></div><div class="bar-val">1회</div></div></div>
+
+  <div class="card"><h2>📉 누적 유창성 추이 <span class="sub">평균 7.5/10</span></h2>
+    <svg viewBox="0 0 700 70" class="spark" preserveAspectRatio="none"><polyline points="8.0,38.0 350.0,26.0 692.0,50.0" fill="none" stroke="#38bdf8" stroke-width="2"/><circle cx="8.0" cy="38.0" r="2.5" fill="#38bdf8"/><circle cx="350.0" cy="26.0" r="2.5" fill="#38bdf8"/><circle cx="692.0" cy="50.0" r="2.5" fill="#38bdf8"/></svg>
+    <div class="muted" style="margin-top:8px">점수보다 <b style="color:#94a3b8">위 약점 2~3개</b>를 고치는 게 천장을 깨는 길.</div></div>
+
+  <div class="foot">데이터: docs/ 일일 피드백 2026-05-08 이후 · 깨진 대용량 파일 자동 제외<br>
+  생성: scripts/build_weekly_review.py · Gemini 쿼터 0 · Claude $0</div>
+</div>
+<script>document.querySelectorAll('.vcard').forEach(c=>c.addEventListener('click',()=>c.classList.toggle('flipped')));</script>
+</body></html>
