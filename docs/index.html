@@ -8,7 +8,9 @@
     <style>
         *{margin:0;padding:0;box-sizing:border-box}
         body{font-family:'Noto Sans KR',sans-serif;background:#0f0f13;color:#e4e4e7;min-height:100vh;padding:48px 24px}
-        h1{text-align:center;font-size:28px;margin-bottom:40px;color:#f1f5f9}
+        h1{text-align:center;font-size:28px;margin-bottom:24px;color:#f1f5f9}
+        .weekly-btn{display:flex;align-items:center;justify-content:center;gap:8px;max-width:580px;margin:0 auto 28px;padding:16px;background:linear-gradient(135deg,#38bdf8,#818cf8);border-radius:12px;color:#fff;text-decoration:none;font-size:15px;font-weight:600;transition:all .2s;box-shadow:0 4px 20px rgba(56,189,248,.25)}
+        .weekly-btn:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(56,189,248,.35)}
         .list{max-width:580px;margin:0 auto;display:flex;flex-direction:column;gap:8px}
         .item{display:flex;align-items:center;gap:8px}
         .link{flex:1;display:flex;flex-direction:column;gap:4px;padding:16px 20px;background:#1a1a24;border-radius:10px;color:#cbd5e1;text-decoration:none;font-size:15px;transition:all .2s;border:1px solid transparent}
@@ -27,6 +29,7 @@
 </head>
 <body>
     <h1>📚 전화영어 복습 기록</h1>
+    <a class="weekly-btn" href="review-index.html">📊 주간 복습 리포트 보기 →</a>
     <div class="list" id="list">
         <div class="item" data-date="2026-06-11"><a href="2026-06-11.html" class="link"><span class="date">2026-06-11</span><span class="topic">Discussing high-stress jobs and coping mechanisms.</span></a><button class="del-btn" onclick="hideReview('2026-06-11',this)" title="숨기기">✕</button></div>
         <div class="item" data-date="2026-06-10"><a href="2026-06-10.html" class="link"><span class="date">2026-06-10</span><span class="topic">Discussing grocery shopping habits and preferences.</span></a><button class="del-btn" onclick="hideReview('2026-06-10',this)" title="숨기기">✕</button></div>
