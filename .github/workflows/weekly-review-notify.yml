@@ -1,0 +1,43 @@
+name: 📢 Weekly Review Notify
+
+# 주간 복습 스냅샷이 main에 푸시되면(=클라우드 루틴이 갱신하면) 텔레그램으로 알림.
+# 시크릿(KNH_SEND_SECRET)은 GitHub Secret 저장소에만 있고 클라우드 루틴은 만지지 않는다.
+# review-20*-W*.html 만 트리거 → 데일리(2026-MM-DD.html)나 review-index 단독 변경엔 안 울림.
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'docs/review-20*-W*.html'
+  workflow_dispatch:   # 수동 테스트용
+
+# 동시 푸시가 와도 알림 1번만
+concurrency:
+  group: weekly-review-notify
+  cancel-in-progress: false
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: 📥 체크아웃
+        uses: actions/checkout@v4
+
+      - name: 📲 텔레그램 알림 발송
+        env:
+          KNH_SEND_SECRET: ${{ secrets.KNH_SEND_SECRET }}
+        run: |
+          # 최신 주차 파일 찾기 (review-2026-W24.html 형식, 제로패딩이라 사전순=최신순)
+          LATEST=$(ls docs/review-20*-W*.html 2>/dev/null | sort | tail -1 | xargs -r basename)
+          WEEK=$(echo "$LATEST" | sed -E 's/review-[0-9]+-(W[0-9]+)\.html/\1/')
+          URL="https://ok0327-dot.github.io/english-feedback/${LATEST:-review-index.html}"
+
+          TEXT=$(printf '📊 영어 주간 복습 리포트 (%s) 나왔어요!\n눌러서 이번 주 약점·교정·어휘 확인 →\n%s' "${WEEK:-신규}" "$URL")
+
+          RESP=$(curl -s -w $'\nHTTP %{http_code}' --max-time 20 \
+            -X POST "https://telegram-notify-hub.dk0327.workers.dev/send" \
+            -H "X-Notify-Secret: $KNH_SEND_SECRET" \
+            -H "Content-Type: application/json" \
+            -d "$(jq -nc --arg t "$TEXT" '{channel:"telegram",text:$t}')")
+          echo "hub 응답: $RESP"
+          echo "$RESP" | grep -q "HTTP 200" || { echo "::error::텔레그램 핑 실패"; exit 1; }
