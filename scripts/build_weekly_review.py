@@ -269,6 +269,7 @@ def render_index(weeks, all_ls):
 <title>📚 주간 복습 기록</title><style>{CSS}</style></head><body>
 <div class="header"><h1>📚 주간 복습 기록</h1>
 <div class="range">{CUTOFF} ~ 누적 {len(all_ls)} LESSONS</div></div>
+<div class="nav"><a href="index.html">← 일일 복습 목록</a><span></span></div>
 <div class="container">
   <div class="stats">
     <div class="stat"><div class="n">{len(weeks)}</div><div class="l">주차</div></div>
