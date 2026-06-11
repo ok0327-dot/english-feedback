@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전화영어 복습 - 2026년 06월 11일</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Noto Sans KR',sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.75;min-height:100vh}
+        .header{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);border-bottom:1px solid rgba(255,255,255,.06);padding:48px 24px 40px;text-align:center}
+        .header-date{font-size:13px;color:#94a3b8;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+        .header h1{font-size:28px;font-weight:700;color:#f1f5f9;margin-bottom:16px}
+        .header-meta{display:flex;justify-content:center;gap:24px;font-size:14px;color:#64748b}
+        .header-meta span{display:flex;align-items:center;gap:6px}
+        .cta-section{text-align:center;padding:40px 24px}
+        .cta-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:linear-gradient(135deg,#38bdf8,#818cf8);color:#fff;font-size:16px;font-weight:600;font-family:'Noto Sans KR',sans-serif;border:none;border-radius:50px;cursor:pointer;transition:all .3s;text-decoration:none;box-shadow:0 4px 24px rgba(56,189,248,.25)}
+        .cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(56,189,248,.35)}
+        .cta-btn svg{width:20px;height:20px}
+        .cta-sub{margin-top:12px;font-size:13px;color:#64748b}
+        .toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#38bdf8;padding:14px 28px;border-radius:12px;font-size:14px;font-weight:500;border:1px solid rgba(56,189,248,.2);box-shadow:0 8px 32px rgba(0,0,0,.4);opacity:0;transition:all .4s cubic-bezier(.16,1,.3,1);z-index:1000}
+        .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+        .container{max-width:720px;margin:0 auto;padding:0 24px 80px}
+        .tabs{display:flex;gap:4px;background:#1a1a24;padding:4px;border-radius:12px;margin-bottom:32px}
+        .tab{flex:1;padding:12px;text-align:center;font-size:14px;font-weight:500;color:#64748b;background:0 0;border:none;border-radius:8px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all .2s}
+        .tab.active{background:#262636;color:#f1f5f9}
+        .tab-content{display:none}.tab-content.active{display:block}
+        .feedback h2{font-size:18px;font-weight:700;color:#f1f5f9;margin:36px 0 16px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.06)}
+        .feedback h2:first-child{margin-top:0}
+        .feedback p{margin:8px 0;color:#cbd5e1}
+        .feedback .item{padding:6px 0 6px 16px;border-left:2px solid #334155;margin:6px 0;color:#cbd5e1}
+        .feedback .numbered{padding:8px 0 8px 16px;color:#cbd5e1}
+        .feedback .numbered strong{color:#38bdf8}
+        .feedback strong{color:#f1f5f9}
+        .feedback code{background:#1e293b;padding:2px 8px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#38bdf8}
+        .feedback table{width:100%;border-collapse:collapse;margin:12px 0}
+        .feedback th,.feedback td{padding:10px 14px;text-align:left;border-bottom:1px solid #262636}
+        .feedback th{color:#94a3b8;font-weight:500;font-size:13px}
+        .feedback td{color:#cbd5e1}
+        .arrow{color:#38bdf8;font-weight:700}
+        .transcript{background:#1a1a24;border-radius:12px;padding:28px;font-size:14px;line-height:2;color:#94a3b8;white-space:pre-wrap;word-break:break-word;font-family:'JetBrains Mono','Noto Sans KR',monospace}
+        .transcript .tutor{color:#38bdf8}
+        .transcript .student{color:#a78bfa}
+        @media(max-width:640px){.header{padding:32px 16px}.header h1{font-size:22px}.cta-btn{padding:14px 28px;font-size:15px}.container{padding:0 16px 60px}}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-date">2026년 06월 11일</div>
+        <h1>📚 전화영어 복습</h1>
+        <div class="header-meta">
+            <span>⏱ 18분 31초</span>
+            <span>🎙 전화영어_025180304_20260611080135.m4a</span>
+        </div>
+    </div>
+    <div class="cta-section">
+        <button class="cta-btn" onclick="startReview()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Gemini에서 복습 대화 시작하기
+        </button>
+        <div class="cta-sub">클릭하면 프롬프트가 복사되고 Gemini가 열립니다</div>
+    </div>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('feedback')">📋 AI 피드백</button>
+            <button class="tab" onclick="switchTab('transcript')">🎙 수업 전사</button>
+        </div>
+        <div id="tab-feedback" class="tab-content active">
+            <div class="feedback"><h2>완성본</h2>
+<br>
+<p>안녕하세요, Joey! 오늘 수업도 정말 즐거웠습니다. 스트레스가 많은 직업에 대해 이야기하면서 Joey의 직업에 대한 깊은 통찰과 스트레스 관리법까지 들을 수 있어서 아주 유익한 시간이었어요. 특히 명상에 대한 Joey의 설명은 정말 인상 깊었습니다!</p>
+<br>
+<br>
+<p><strong>0. 📌 Topic</strong></p>
+<p>Topic: Discussing high-stress jobs and coping mechanisms.</p>
+<br>
+<br>
+<p><strong>1. 📊 오늘의 대화 요약 (Summary)</strong></p>
+<p>오늘은 스트레스가 많은 직업이라는 주제로 대화를 나눴습니다. 그림 속 스트레스받은 직장인의 모습에 대해 이야기하며 업무 마감 기한, 많은 업무량, 그리고 한국 젊은 세대의 직업 선호도 변화에 대해 토론했습니다. Joey 본인의 감사 업무에서 오는 스트레스 요인과 이를 명상으로 극복하는 방법에 대해서도 깊이 있는 대화를 나누었습니다.</p>
+<br>
+<br>
+<p><strong>2. 💬 유창성 업그레이드 (Fluency & Natural Flow)</strong></p>
+<br>
+<p>Joey가 말한 문장 중 의미는 통하지만, 원어민들이 더 자연스럽게 쓰는 표현으로 다듬어 볼 세 가지를 골라봤어요.</p>
+<br>
+<div class="numbered"><strong>1.</strong>  <strong>❌ 학습자 원문 (As Said):</strong> "I was wondering, in your country, do you have the season of the rain season?"</div>
+<p>    *   <strong>✅ 자연스러운 표현 (Natural):</strong> "I was wondering, do you have a rainy season in your country?"</p>
+<p>    *   <strong>💎 비즈니스 표현 (Professional):</strong> "I was wondering if your country experiences a distinct rainy season."</p>
+<p>    *   <strong>💡 코칭 포인트:</strong> "The season of the rain season"은 다소 중복되는 표현입니다. "Rainy season"이 표준 용어이며, "a"를 사용하면 일반적인 질문이 됩니다. "Experiences a distinct"는 격식 있는 뉘앙스를 더합니다.</p>
+<br>
+<div class="numbered"><strong>2.</strong>  <strong>❌ 학습자 원문 (As Said):</strong> "So just I was wondering that fact."</div>
+<p>    *   <strong>✅ 자연스러운 표현 (Natural):</strong> "I was just wondering about that."</p>
+<p>    *   <strong>💎 비즈니스 표현 (Professional):</strong> "I was merely curious about that aspect."</p>
+<p>    *   <strong>💡 코칭 포인트:</strong> "궁금하다"는 의미일 때는 "wondering about"이 올바른 전치사입니다. "That fact"는 너무 직접적이므로 "that"이나 "that point"가 더 자연스럽습니다. "Merely curious about that aspect"는 비슷한 의미를 격식 있는 맥락에서 전달합니다.</p>
+<br>
+<div class="numbered"><strong>3.</strong>  <strong>❌ 학습자 원문 (As Said):</strong> "if the government gives more money to the older outside working job people, at that time it is more recovery than the situation."</div>
+<p>    *   <strong>✅ 자연스러운 표현 (Natural):</strong> "If the government provides more incentives for people in outdoor jobs, the situation could improve."</p>
+<p>    *   <strong>💎 비즈니스 표현 (Professional):</strong> "Should the government implement greater financial incentives for individuals in outdoor professions, the recovery of the situation would be more pronounced."</p>
+<p>    *   <strong>💡 코칭 포인트:</strong> "Older outside working job people"은 너무 직역한 표현으로, "people in outdoor jobs"로 간단히 표현할 수 있습니다. "More recovery than the situation"은 개선을 표현하는 자연스러운 방식이 아닙니다. "Could improve" 또는 "would be more pronounced"가 긍정적인 변화를 더 잘 나타냅니다.</p>
+<br>
+<br>
+<p><strong>3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)</strong></p>
+<br>
+<p>Category: <strong>Subject-Verb Agreement</strong> (주어-동사 수일치)</p>
+<br>
+<p>Joey는 문장에서 주어와 동사의 수를 일치시키는 데 가끔 어려움을 겪는 경향이 있습니다. 특히 주어가 3인칭 단수일 때 동사에 '-s'를 붙이거나, 집합 명사(예: generation)를 단수 주어로 쓸 때 동사를 복수형으로 쓰는 경우가 있었습니다.</p>
+<br>
+<table>
+<tr><th>❌ 원문 (As Said)</th><th>✅ 교정 예시 (Corrected)</th></tr>
+<tr><td>"he stare at that document."</td><td>"He <strong>stares</strong> at that document."</td></tr>
+<tr><td>"the young generation want to work only inside"</td><td>"The young generation <strong>wants</strong> to work only indoors."</td></tr>
+<tr><td>"Because some, some systems don't have the problem, and that is healthy and clean. But we will find that problem."</td><td>"Even if some systems <strong>don't</strong> have problems and <strong>are</strong> healthy and clean, we still need to find potential issues." (systems - don't, that - is)</td></tr>
+</table>
+<br>
+<p>📌 <strong>핵심 규칙:</strong> 주어가 3인칭 단수(he, she, it, 또는 단수 명사)일 때는 현재 시제 동사에 '-s' 또는 '-es'를 붙여야 하며, 주어의 수에 따라 동사의 형태를 일치시켜야 합니다.</p>
+<br>
+<p>🔁 <strong>따라 읽기:</strong></p>
+<p>🗣️ "He stares at that document."</p>
+<p>🗣️ "The young generation wants to work only indoors."</p>
+<p>🗣️ "Even if some systems don't have problems and are healthy and clean, we still need to find potential issues."</p>
+<br>
+<br>
+<p><strong>4. 📗 어휘 확장 (Vocabulary Vault)</strong></p>
+<br>
+<p>오늘 수업에서 나왔거나 맥락상 유용한 어휘들을 살펴볼까요?</p>
+<br>
+<div class="numbered"><strong>1.</strong>  <strong>typhoon</strong> /taɪˈfuːn/ (명사)</div>
+<p>    *   뜻: 태풍</p>
+<p>    *   실전 예문: The company has a contingency plan in place for potential disruptions caused by <strong>typhoons</strong>.</p>
+<br>
+<div class="numbered"><strong>2.</strong>  <strong>proximity</strong> /prɑːkˈsɪm.ə.t̬i/ (명사)</div>
+<p>    *   뜻: 근접성, 가까움</p>
+<p>    *   실전 예문: Our office's <strong>proximity</strong> to the subway station is a major advantage for employees.</p>
+<br>
+<div class="numbered"><strong>3.</strong>  <strong>dynamic</strong> /daɪˈnæm.ɪk/ (형용사)</div>
+<p>    *   뜻: 역동적인, 활발한</p>
+<p>    *   실전 예문: Our market is very <strong>dynamic</strong>, so we need to adapt quickly to new trends.</p>
+<br>
+<div class="numbered"><strong>4.</strong>  <strong>incentive</strong> /ɪnˈsen.tɪv/ (명사)</div>
+<p>    *   뜻: 장려책, 동기 부여</p>
+<p>    *   실전 예문: The government offers tax <strong>incentives</strong> to companies that invest in renewable energy.</p>
+<br>
+<div class="numbered"><strong>5.</strong>  <strong>meditation</strong> /ˌmed.ɪˈteɪ.ʃən/ (명사)</div>
+<p>    *   뜻: 명상</p>
+<p>    *   실전 예문: Many professionals use <strong>meditation</strong> as a way to cope with work-related stress.</p>
+<br>
+<br>
+<p><strong>5. 📝 실전 복습 챌린지 (Practice)</strong></p>
+<br>
+<p>오늘 배운 표현과 문법을 활용해서 영작 연습을 해볼까요?</p>
+<br>
+<div class="numbered"><strong>1.</strong>  <strong>상황:</strong> 당신은 캐나다에 사는 친구에게 한국의 날씨에 대해 설명하고 싶습니다. 한국에는 여름에 장마철이 있다고 말해보세요.</div>
+<p>    *   <strong>영작:</strong> (힌트: 'rainy season' 활용)</p>
+<p>    *   <strong>모범 답안:</strong> In Korea, we have a cold season, but in the summertime, we also have a rainy season.</p>
+<br>
+<div class="numbered"><strong>2.</strong>  <strong>상황:</strong> 당신은 직장 동료에게 업무 마감 기한을 맞추는 것이 어렵다고 이야기하고 싶습니다.</div>
+<p>    *   <strong>영작:</strong> (힌트: 'meet deadlines' 활용)</p>
+<p>    *   <strong>모범 답안:</strong> It's often challenging to meet deadlines with such a heavy workload.</p>
+<br>
+<div class="numbered"><strong>3.</strong>  <strong>상황:</strong> 당신의 회사는 직원들의 스트레스 관리를 위해 새로운 프로그램을 도입했습니다. 이 프로그램이 직원들의 사기를 높이는 데 도움이 될 것이라고 생각합니다.</div>
+<p>    *   <strong>영작:</strong> (힌트: 'incentive', 'cope with stress' 활용)</p>
+<p>    *   <strong>모범 답안:</strong> The new stress management program serves as a great incentive for employees to cope with stress, and I believe it will significantly boost morale.</p>
+<br>
+<br>
+<p><strong>6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)</strong></p>
+<br>
+<p>✨ <strong>Good Job:</strong></p>
+<p>Joey, 오늘 이 문장은 정말 좋았어요!</p>
+<p><strong>"So usually I just focus on my breath and just... Focus on my breath and think about the present moment now."</strong></p>
+<p>명상에 대한 Joey의 설명은 매우 명확하고 구체적이었습니다. 특히 "focus on my breath"와 "think about the present moment now"라는 표현을 반복하며 핵심 내용을 강조한 점이 인상 깊었어요. 이처럼 자신의 경험을 바탕으로 구체적인 설명을 할 때 Joey의 유창함이 더욱 빛을 발합니다!</p>
+<br>
+<p>🚀 <strong>내일의 한 문장:</strong></p>
+<p>다음 수업 시작할 때 튜터에게 이렇게 말하며 대화를 시작해 보세요.</p>
+<p>"I was wondering about the weather in your country this week, specifically if you've had any significant rain." (오늘 배운 'wondering about'과 날씨 관련 주제를 활용)</p>
+<br>
+<br>
+<p><strong>[성과 지표]</strong></p>
+<br>
+<p><strong>유창성 점수: 7.5/10</strong></p>
+<br>
+<p><strong>근거:</strong> Joey는 오늘 다양한 주제에 대해 막힘없이 자신의 의견을 표현했습니다. 특히 명상에 대한 설명처럼 익숙한 주제에서는 아주 유창하게 대화를 이끌어갔습니다. 문장 구조가 복잡해지거나 추상적인 개념을 설명할 때 약간의 주저함이나 어색한 표현이 있었지만, 이는 의미 전달에 큰 지장을 주지 않는 수준이었습니다. 전반적으로 대화의 흐름을 잘 유지하며 적극적으로 참여하는 모습이 인상 깊었습니다.</p>
+<br>
+<p><strong>다음 수업 '원포인트 액션 플랜':</strong></p>
+<p>다음 수업에서는 <strong>주어-동사 수일치(Subject-Verb Agreement)</strong>에 특히 신경 써서 말하는 연습을 해볼까요? 문장을 만들 때 주어가 단수인지 복수인지 한 번 더 확인하고 동사 형태를 결정하는 습관을 들이면 정확성이 훨씬 더 향상될 거예요!</p></div>
+        </div>
+        <div id="tab-transcript" class="tab-content">
+            <div class="transcript">전사 내용은 올바르게 라벨링되어 있습니다. 수정할 부분이 없습니다.
+
+<span class="student">[Student]</span> Hello teacher.
+<span class="tutor">[Tutor]</span> Hi, Joey. How are you today?
+[Joey] Yeah, of course. Everything&#x27;s good. How are you today?
+<span class="tutor">[Tutor]</span> Very nice. I&#x27;m doing all right. Here in Canada, we&#x27;re getting some much-needed rain, so it&#x27;s all good.
+[Joey] It&#x27;s all good.
+<span class="tutor">[Tutor]</span> We haven&#x27;t gotten into a heatwave yet.
+[Joey] I&#x27;m happy. Maybe it is really dry, right?
+<span class="tutor">[Tutor]</span> Yes, that is a problem here in Canada. Many parts of our country are extremely dry, and we suffer from wildfires or forest fires, so the more moisture we get, the safer we feel.
+[Joey] I was wondering, in your country, do you have the season of the rain season?
+<span class="tutor">[Tutor]</span> Instead of having two seasons, like some countries do in Asia, they have a wet and a dry season. We have all four seasons. We get rain through the summer, we get snow through the winter, and then the rest of the time, often the weather calms down a little bit and we get more sunshine. It just depends on the time of year. So yeah, we don&#x27;t have designated wet seasons.
+[Joey] In Korea, there is a cold season, but in the summertime, we have also the rain season. That&#x27;s right. Yeah, June the last week and July first week. So just I was wondering that fact.
+<span class="tutor">[Tutor]</span> Yeah, yeah. Your country, because of its proximity to the equator, you&#x27;re definitely in that airstream or jet stream or whatever it&#x27;s called there where moisture comes into your country. Yeah, absolutely. And you get the typhoons and the big storms. Here we have more thunderstorms. In the last 50 years, we started to have tornadoes. Totally different. Yeah, it&#x27;s like a hurricane on land.
+[Joey] I think we have a little problem of the connection. Connections, the line.
+<span class="tutor">[Tutor]</span> Yes. Oh, okay. Yeah, fortunately, it&#x27;s clear. Is it better now?
+[Joey] Yeah, thank you for your patience. I could... Thank you so much.
+<span class="tutor">[Tutor]</span> All right. Hmm. Did you have or did you need a minute to bring up today&#x27;s daily topic? Or are you ready?
+[Joey] I&#x27;m ready. Today&#x27;s topic is the high-stress jobs.
+<span class="tutor">[Tutor]</span> Very good. Thank you for reading the title. All right. So, as they ask you, number one, what is happening in the picture? Please take your time.
+[Joey] Okay. I see. In this picture, I can see a guy, a man who looks like a stressed person. He rested his body on the desk, and there are so many piles of documents, and he stares at that document. I think, I guess he has a lot of stress, and he wears a suit. So I guess he has stress about the deadline of the work or a lot of work on the desk. That is a problem. So, yeah. So it is a good fit for today&#x27;s subject.
+<span class="tutor">[Tutor]</span> Yeah. Yeah. He&#x27;s not looking happy, is he?
+[Joey] Yeah, you&#x27;re right.
+<span class="tutor">[Tutor]</span> He looks rather serious, maybe a little down, depressed. Because you&#x27;re right, he&#x27;s got a lot of work. A lot of work to deal with. That was very good, Joey. Just a couple of words I&#x27;d like to help you with. You said there is a pile of document. You used the singular form. Let&#x27;s add an S to that. Documents. Documents. Pile of documents. Very good. Okay. Yeah. And then you said he stare at the pile. When we have the pronoun he, she, or it, we have to add an S to the verb. So try he stares.
+[Joey] He stares.
+<span class="tutor">[Tutor]</span> Very good. Yeah. You got it. Very good.
+[Joey] Okay. Good.
+<span class="tutor">[Tutor]</span> Excellent. Good for you. You&#x27;re doing great. Okay. So I&#x27;ll get you to read question number two and respond.
+<span class="tutor">[Tutor]</span> What kind of stress might the man be facing? Be specific.
+[Joey] Maybe he&#x27;s an office worker, so it is similar like me: the deadline, a lot of work, and making small money, and a plan of the future, etc. So, but this picture, there are piles on the desk, so I think he feels a threat of a lot of work and can&#x27;t keep their deadlines. Yeah, that&#x27;s my guess.
+<span class="tutor">[Tutor]</span> Yeah, deadlines are big. Yeah, deadlines. I would agree with you. When you get to work and you see all this work on your desk waiting for you, most people are not going, &quot;Oh, goody, goody, goody, I get to do all this work.&quot; They look at it and go, &quot;Oh, my goodness. Am I going to go home tonight?&quot; All right. Very nice. Okay. Let&#x27;s get you to read question three, and we&#x27;ll talk about it.
+[Joey] Okay. What do you consider to be a high-stress job in your country? Explain.
+[Joey] These days in Korea, the young generation want to work only inside, like the office, because they are afraid to work outside, maybe the delivery or working on farms or some field of the factory. But I think it is a great job in my case because this is a more healthy job. But nowadays, many young generations want more convenient work. And they think they have high stress if they work outside because many people look like that. Yeah, they work outside and clean the street or farming on the garden.
+<span class="tutor">[Tutor]</span> Farming?
+[Joey] Yeah.
+<span class="tutor">[Tutor]</span> Yeah, farming. Farming is, it can be stressful like anything. Yeah. Yeah. Um, I see. Okay.
+[Joey] So, I think, uh, that is dependent on the generation and its people. But the young generation, they think about how other people think of them. Yes, they consider that. And they label high-stress jobs.
+<span class="tutor">[Tutor]</span> Yes, yes, I can appreciate that. It seems to be an important aspect of Korean culture that you get a good job with a good business. That&#x27;s why you go to university. And that&#x27;s why you study. Some other jobs though that I&#x27;ve come across as being high stress, sometimes I think that the Korean government is quite dynamic, and maybe being a politician can be stressful. Another, another job that is considered very high stress is being an air traffic controller, like at Incheon Airport. Yeah, yeah. Because you control the movement of airplanes.
+[Joey] Yeah.
+<span class="tutor">[Tutor]</span> I just want to ask, I know that for many years, as you mentioned, people want to get a job in an office. But does the Korean government do anything to encourage people to do things like construction, farming, or self-employment? Does the government encourage those types of things at all?
+[Joey] Maybe that is a big problem because it is possible to change our culture, because our culture is a little conservative.
+<span class="tutor">[Tutor]</span> Conservative, yeah.
+[Joey] Yeah, conservative. Is it right, this expression? Conservative.
+<span class="tutor">[Tutor]</span> Yeah, you&#x27;re saying long A, try A. Conservative.
+[Joey] Conservate.
+<span class="tutor">[Tutor]</span> Conservate.
+[Joey] Conservate.
+<span class="tutor">[Tutor]</span> Yeah, you&#x27;re saying A, try A. Conservative.
+[Joey] B, B, conservative.
+<span class="tutor">[Tutor]</span> Yes, you got it. Conservative. I will send you a pronunciation video.
+[Joey] I&#x27;m so sorry, teacher. Yes, I will watch that. Anyway.
+<span class="tutor">[Tutor]</span> You&#x27;re fine. That&#x27;s okay.
+[Joey] So I will try to change our culture. But that is difficult because the history or culture was made a long time ago. So it is a little problem. But if the government gives more money to the older outside working job people, at that time it is more recovery than the situation.
+<span class="tutor">[Tutor]</span> Yes. For many, many decades, your country was in recovery. I agree. I totally understand. Okay. All right. Let&#x27;s go on to part two. Do you consider your job to be high stress?
+[Joey] Yeah. I see. Usually, we have two kinds of stress because I&#x27;m working at the audit team. So, always I&#x27;m checking the problem. So we have a little task: find the problem. Because some, some systems don&#x27;t have the problem, and that is healthy and clean. But we will find that problem. So it is similar to a deadline. So always we are checking and finding problems. Because in DO or C-lab, where employees don&#x27;t like, there are no problems. Just they want to find and need the solution, give the solution. So that is a little stress. And another thing is the relation of the human, relation of the employee. Because we are also human, and we also have emotion. But if we have an interview because that guy, that employee has some problem, made some problem in a company. At that time, we just speak, we just have an interview for a long time. Yeah. But that is a negative thing. So that is also stressful for our work. Yeah.
+<span class="tutor">[Tutor]</span> Yeah, that&#x27;s a problem. Yeah, I could appreciate that. But I bet there are times when you do an audit and everything is okay, yes?
+[Joey] Yeah, but everything is good. That doesn&#x27;t happen very often. And the positive thing is that we always learn something because that is so fresh. Because every period we have to study, it is like a university student. So I love that because I like to learn some period. So I like that.
+<span class="tutor">[Tutor]</span> Okay. That&#x27;s good. All right. So, to wrap up your class, let&#x27;s get you to read question number three.
+[Joey] Okay, no problem. What are some ways to improve a stressful working situation? Can you think of anything that would help you cope with stress?
+[Joey] Yeah, I guess I understand that question. My answer is through meditation. Maybe before I said in the last class, I love meditation. That is the control or taking care of our mind. So, if our mind always pulls the negative things, negative way, so we become weak in handling our mind because always our mind pulls out the negative way. So usually I just focus on my breath and just...
+<span class="tutor">[Tutor]</span> Your breath.
+[Joey] Yeah, breath. Focus on my breath and think about the present moment now. So that is the meditation. So it is possible anywhere. Just go for work near the park. Or if I&#x27;m eating some lunch, at that time, I&#x27;m just focused on the taste and chewing, feeling, and smell. Just focused on that situation, eating, acting. So that is the same as meditation. So it is possible anywhere.
+<span class="tutor">[Tutor]</span> It is. Isn&#x27;t that wonderful?
+[Joey] Yeah, it is a wonderful way, meditation.
+<span class="tutor">[Tutor]</span> Because you&#x27;re basically here, if you&#x27;re in a situation where you feel out of control, meditation lets you bring yourself back to your center. You can recover your control. Yeah, one of the best. It&#x27;s great. Yeah, great explanation. So nice.
+[Joey] Yeah, you&#x27;re right. You&#x27;re right. Yeah, we don&#x27;t control the outside. There are some, how can I say, yeah, we can&#x27;t control the outside environment. So we just control ourselves, myself.
+<span class="tutor">[Tutor]</span> Yes. Yep, yep. That is all that you can do is just work with what you can do versus what you can&#x27;t. This was something I used a lot when I worked in public education. Children would go, &quot;I can&#x27;t do this, I can&#x27;t do that.&quot; And I&#x27;d say, &quot;Focus on what you can do, what you can control, and what skills you have.&quot; And in a high-stress job, again, that&#x27;s all you can do is focus on the &quot;I can&quot; versus the &quot;I can&#x27;t.&quot;
+[Joey] Yeah. All right. Yeah. I like that explanation. Thank you so much.
+<span class="tutor">[Tutor]</span> Oh, you&#x27;re very welcome. Very welcome. Okay. So we&#x27;re pretty much done the questions. Today is Thursday where you are. Are you starting to make any plans for the weekend?
+[Joey] Maybe I will make a plan. Yeah, I set a plan tomorrow, tomorrow afternoon. Because this week I don&#x27;t have enough time, so I don&#x27;t set up the plan. Maybe I will discuss the plan, about the plan with my wife and my son.
+<span class="tutor">[Tutor]</span> That sounds lovely. I bet you really value your family time. Yeah. You work so hard. Okay. So I think anything you do will work out very nicely. All right. Well, Joey, I&#x27;m going to let you go. You did really good today. Thank you for joining me. And I will talk to you next time. Take care.
+[Joey] Okay. You take care. Bye-bye, teacher. Have a nice day.
+<span class="tutor">[Tutor]</span> Bye.</div>
+        </div>
+    </div>
+    <div class="toast" id="toast">✅ 프롬프트가 복사되었습니다!</div>
+    <script>
+        const REVIEW_PROMPT="너는 나의 영어 회화 복습 파트너야. 오늘 내 전화영어 수업 내용을 기반으로 대화하면서 복습을 도와줘.\n\n[오늘 수업 전사 내용]\n전사 내용은 올바르게 라벨링되어 있습니다. 수정할 부분이 없습니다.\n\n[Student] Hello teacher.\n[Tutor] Hi, Joey. How are you today?\n[Joey] Yeah, of course. Everything's good. How are you today?\n[Tutor] Very nice. I'm doing all right. Here in Canada, we're getting some much-needed rain, so it's all good.\n[Joey] It's all good.\n[Tutor] We haven't gotten into a heatwave yet.\n[Joey] I'm happy. Maybe it is really dry, right?\n[Tutor] Yes, that is a problem here in Canada. Many parts of our country are extremely dry, and we suffer from wildfires or forest fires, so the more moisture we get, the safer we feel.\n[Joey] I was wondering, in your country, do you have the season of the rain season?\n[Tutor] Instead of having two seasons, like some countries do in Asia, they have a wet and a dry season. We have all four seasons. We get rain through the summer, we get snow through the winter, and then the rest of the time, often the weather calms down a little bit and we get more sunshine. It just depends on the time of year. So yeah, we don't have designated wet seasons.\n[Joey] In Korea, there is a cold season, but in the summertime, we have also the rain season. That's right. Yeah, June the last week and July first week. So just I was wondering that fact.\n[Tutor] Yeah, yeah. Your country, because of its proximity to the equator, you're definitely in that airstream or jet stream or whatever it's called there where moisture comes into your country. Yeah, absolutely. And you get the typhoons and the big storms. Here we have more thunderstorms. In the last 50 years, we started to have tornadoes. Totally different. Yeah, it's like a hurricane on land.\n[Joey] I think we have a little problem of the connection. Connections, the line.\n[Tutor] Yes. Oh, okay. Yeah, fortunately, it's clear. Is it better now?\n[Joey] Yeah, thank you for your patience. I could... Thank you so much.\n[Tutor] All right. Hmm. Did you have or did you need a minute to bring up today's daily topic? Or are you ready?\n[Joey] I'm ready. Today's topic is the high-stress jobs.\n[Tutor] Very good. Thank you for reading the title. All right. So, as they ask you, number one, what is happening in the picture? Please take your time.\n[Joey] Okay. I see. In this picture, I can see a guy, a man who looks like a stressed person. He rested his body on the desk, and there are so many piles of documents, and he stares at that document. I think, I guess he has a lot of stress, and he wears a suit. So I guess he has stress about the deadline of the work or a lot of work on the desk. That is a problem. So, yeah. So it is a good fit for today's subject.\n[Tutor] Yeah. Yeah. He's not looking happy, is he?\n[Joey] Yeah, you're right.\n[Tutor] He looks rather serious, maybe a little down, depressed. Because you're right, he's got a lot of work. A lot of work to deal with. That was very good, Joey. Just a couple of words I'd like to help you with. You said there is a pile of document. You used the singular form. Let's add an S to that. Documents. Documents. Pile of documents. Very good. Okay. Yeah. And then you said he stare at the pile. When we have the pronoun he, she, or it, we have to add an S to the verb. So try he stares.\n[Joey] He stares.\n[Tutor] Very good. Yeah. You got it. Very good.\n[Joey] Okay. Good.\n[Tutor] Excellent. Good for you. You're doing great. Okay. So I'll get you to read question number two and respond.\n[Tutor] What kind of stress might the man be facing? Be specific.\n[Joey] Maybe he's an office worker, so it is similar like me: the deadline, a lot of work, and making small money, and a plan of the future, etc. So, but this picture, there are piles on the desk, so I think he feels a threat of a lot of work and can't keep their deadlines. Yeah, that's my guess.\n[Tutor] Yeah, deadlines are big. Yeah, deadlines. I would agree with you. When you get to work and you see all this work on your desk waiting for you, most people are not going, \"Oh, goody, goody, goody, I get to do all this work.\" They look at it and go, \"Oh, my goodness. Am I going to go home tonight?\" All right. Very nice. Okay. Let's get you to read question three, and we'll talk about it.\n[Joey] Okay. What do you consider to be a high-stress job in your country? Explain.\n[Joey] These days in Korea, the young generation want to work only inside, like the office, because they are afraid to work outside, maybe the delivery or working on farms or some field of the factory. But I think it is a great job in my case because this is a more healthy job. But nowadays, many young generations want more convenient work. And they think they have high stress if they work outside because many people look like that. Yeah, they work outside and clean the street or farming on the garden.\n[Tutor] Farming?\n[Joey] Yeah.\n[Tutor] Yeah, farming. Farming is, it can be stressful like anything. Yeah. Yeah. Um, I see. Okay.\n[Joey] So, I think, uh, that is dependent on the generation and its people. But the young generation, they think about how other people think of them. Yes, they consider that. And they label high-stress jobs.\n[Tutor] Yes, yes, I can appreciate that. It seems to be an important aspect of Korean culture that you get a good job with a good business. That's why you go to university. And that's why you study. Some other jobs though that I've come across as being high stress, sometimes I think that the Korean government is quite dynamic, and maybe being a politician can be stressful. Another, another job that is considered very high stress is being an air traffic controller, like at Incheon Airport. Yeah, yeah. Because you control the movement of airplanes.\n[Joey] Yeah.\n[Tutor] I just want to ask, I know that for many years, as you mentioned, people want to get a job in an office. But does the Korean government do anything to encourage people to do things like construction, farming, or self-employment? Does the government encourage those types of things at all?\n[Joey] Maybe that is a big problem because it is possible to change our culture, because our culture is a little conservative.\n[Tutor] Conservative, yeah.\n[Joey] Yeah, conservative. Is it right, this expression? Conservative.\n[Tutor] Yeah, you're saying long A, try A. Conservative.\n[Joey] Conservate.\n[Tutor] Conservate.\n[Joey] Conservate.\n[Tutor] Yeah, you're saying A, try A. Conservative.\n[Joey] B, B, conservative.\n[Tutor] Yes, you got it. Conservative. I will send you a pronunciation video.\n[Joey] I'm so sorry, teacher. Yes, I will watch that. Anyway.\n[Tutor] You're fine. That's okay.\n[Joey] So I will try to change our culture. But that is difficult because the history or culture was made a long time ago. So it is a little problem. But if the government gives more money to the older outside working job people, at that time it is more recovery than the situation.\n[Tutor] Yes. For many, many decades, your country was in recovery. I agree. I totally understand. Okay. All right. Let's go on to part two. Do you consider your job to be high stress?\n[Joey] Yeah. I see. Usually, we have two kinds of stress because I'm working at the audit team. So, always I'm checking the problem. So we have a little task: find the problem. Because some, some systems don't have the problem, and that is healthy and clean. But we will find that problem. So it is similar to a deadline. So always we are checking and finding problems. Because in DO or C-lab, where employees don't like, there are no problems. Just they want to find and need the solution, give the solution. So that is a little stress. And another thing is the relation of the human, relation of the employee. Because we are also human, and we also have emotion. But if we have an interview because that guy, that employee has some problem, made some problem in a company. At that time, we just speak, we just have an interview for a long time. Yeah. But that is a negative thing. So that is also stressful for our work. Yeah.\n[Tutor] Yeah, that's a problem. Yeah, I could appreciate that. But I bet there are times when you do an audit and everything is okay, yes?\n[Joey] Yeah, but everything is good. That doesn't happen very often. And the positive thing is that we always learn something because that is so fresh. Because every period we have to study, it is like a university student. So I love that because I like to learn some period. So I like that.\n[Tutor] Okay. That's good. All right. So, to wrap up your class, let's get you to read question number three.\n[Joey] Okay, no problem. What are some ways to improve a stressful working situation? Can you think of anything that would help you cope with stress?\n[Joey] Yeah, I guess I understand that question. My answer is through meditation. Maybe before I said in the last class, I love meditation. That is the control or taking care of our mind. So, if our mind always pulls the negative things, negative way, so we become weak in handling our mind because always our mind pulls out the negative way. So usually I just focus on my breath and just...\n[Tutor] Your breath.\n[Joey] Yeah, breath. Focus on my breath and think about the present moment now. So that is the meditation. So it is possible anywhere. Just go for work near the park. Or if I'm eating some lunch, at that time, I'm just focused on the taste and chewing, feeling, and smell. Just focused on that situation, eating, acting. So that is the same as meditation. So it is possible anywhere.\n[Tutor] It is. Isn't that wonderful?\n[Joey] Yeah, it is a wonderful way, meditation.\n[Tutor] Because you're basically here, if you're in a situation where you feel out of control, meditation lets you bring yourself back to your center. You can recover your control. Yeah, one of the best. It's great. Yeah, great explanation. So nice.\n[Joey] Yeah, you're right. You're right. Yeah, we don't control the outside. There are some, how can I say, yeah, we can't control the outside environment. So we just control ourselves, myself.\n[Tutor] Yes. Yep, yep. That is all that you can do is just work with what you can do versus what you can't. This was something I used a lot when I worked in public education. Children would go, \"I can't do this, I can't do that.\" And I'd say, \"Focus on what you can do, what you can control, and what skills you have.\" And in a high-stress job, again, that's all you can do is focus on the \"I can\" versus the \"I can't.\"\n[Joey] Yeah. All right. Yeah. I like that explanation. Thank you so much.\n[Tutor] Oh, you're very welcome. Very welcome. Okay. So we're pretty much done the questions. Today is Thursday where you are. Are you starting to make any plans for the weekend?\n[Joey] Maybe I will make a plan. Yeah, I set a plan tomorrow, tomorrow afternoon. Because this week I don't have enough time, so I don't set up the plan. Maybe I will discuss the plan, about the plan with my wife and my son.\n[Tutor] That sounds lovely. I bet you really value your family time. Yeah. You work so hard. Okay. So I think anything you do will work out very nicely. All right. Well, Joey, I'm going to let you go. You did really good today. Thank you for joining me. And I will talk to you next time. Take care.\n[Joey] Okay. You take care. Bye-bye, teacher. Have a nice day.\n[Tutor] Bye.\n\n[AI 피드백]\n## 완성본\n\n안녕하세요, Joey! 오늘 수업도 정말 즐거웠습니다. 스트레스가 많은 직업에 대해 이야기하면서 Joey의 직업에 대한 깊은 통찰과 스트레스 관리법까지 들을 수 있어서 아주 유익한 시간이었어요. 특히 명상에 대한 Joey의 설명은 정말 인상 깊었습니다!\n\n---\n\n**0. 📌 Topic**\nTopic: Discussing high-stress jobs and coping mechanisms.\n\n---\n\n**1. 📊 오늘의 대화 요약 (Summary)**\n오늘은 스트레스가 많은 직업이라는 주제로 대화를 나눴습니다. 그림 속 스트레스받은 직장인의 모습에 대해 이야기하며 업무 마감 기한, 많은 업무량, 그리고 한국 젊은 세대의 직업 선호도 변화에 대해 토론했습니다. Joey 본인의 감사 업무에서 오는 스트레스 요인과 이를 명상으로 극복하는 방법에 대해서도 깊이 있는 대화를 나누었습니다.\n\n---\n\n**2. 💬 유창성 업그레이드 (Fluency & Natural Flow)**\n\nJoey가 말한 문장 중 의미는 통하지만, 원어민들이 더 자연스럽게 쓰는 표현으로 다듬어 볼 세 가지를 골라봤어요.\n\n1.  **❌ 학습자 원문 (As Said):** \"I was wondering, in your country, do you have the season of the rain season?\"\n    *   **✅ 자연스러운 표현 (Natural):** \"I was wondering, do you have a rainy season in your country?\"\n    *   **💎 비즈니스 표현 (Professional):** \"I was wondering if your country experiences a distinct rainy season.\"\n    *   **💡 코칭 포인트:** \"The season of the rain season\"은 다소 중복되는 표현입니다. \"Rainy season\"이 표준 용어이며, \"a\"를 사용하면 일반적인 질문이 됩니다. \"Experiences a distinct\"는 격식 있는 뉘앙스를 더합니다.\n\n2.  **❌ 학습자 원문 (As Said):** \"So just I was wondering that fact.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"I was just wondering about that.\"\n    *   **💎 비즈니스 표현 (Professional):** \"I was merely curious about that aspect.\"\n    *   **💡 코칭 포인트:** \"궁금하다\"는 의미일 때는 \"wondering about\"이 올바른 전치사입니다. \"That fact\"는 너무 직접적이므로 \"that\"이나 \"that point\"가 더 자연스럽습니다. \"Merely curious about that aspect\"는 비슷한 의미를 격식 있는 맥락에서 전달합니다.\n\n3.  **❌ 학습자 원문 (As Said):** \"if the government gives more money to the older outside working job people, at that time it is more recovery than the situation.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"If the government provides more incentives for people in outdoor jobs, the situation could improve.\"\n    *   **💎 비즈니스 표현 (Professional):** \"Should the government implement greater financial incentives for individuals in outdoor professions, the recovery of the situation would be more pronounced.\"\n    *   **💡 코칭 포인트:** \"Older outside working job people\"은 너무 직역한 표현으로, \"people in outdoor jobs\"로 간단히 표현할 수 있습니다. \"More recovery than the situation\"은 개선을 표현하는 자연스러운 방식이 아닙니다. \"Could improve\" 또는 \"would be more pronounced\"가 긍정적인 변화를 더 잘 나타냅니다.\n\n---\n\n**3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)**\n\nCategory: **Subject-Verb Agreement** (주어-동사 수일치)\n\nJoey는 문장에서 주어와 동사의 수를 일치시키는 데 가끔 어려움을 겪는 경향이 있습니다. 특히 주어가 3인칭 단수일 때 동사에 '-s'를 붙이거나, 집합 명사(예: generation)를 단수 주어로 쓸 때 동사를 복수형으로 쓰는 경우가 있었습니다.\n\n| ❌ 원문 (As Said)                                                                                              | ✅ 교정 예시 (Corrected)                                                                                                              |\n| :------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------ |\n| \"he stare at that document.\"                                                                                   | \"He **stares** at that document.\"                                                                                                     |\n| \"the young generation want to work only inside\"                                                                | \"The young generation **wants** to work only indoors.\"                                                                                |\n| \"Because some, some systems don't have the problem, and that is healthy and clean. But we will find that problem.\" | \"Even if some systems **don't** have problems and **are** healthy and clean, we still need to find potential issues.\" (systems - don't, that - is) |\n\n📌 **핵심 규칙:** 주어가 3인칭 단수(he, she, it, 또는 단수 명사)일 때는 현재 시제 동사에 '-s' 또는 '-es'를 붙여야 하며, 주어의 수에 따라 동사의 형태를 일치시켜야 합니다.\n\n🔁 **따라 읽기:**\n🗣️ \"He stares at that document.\"\n🗣️ \"The young generation wants to work only indoors.\"\n🗣️ \"Even if some systems don't have problems and are healthy and clean, we still need to find potential issues.\"\n\n---\n\n**4. 📗 어휘 확장 (Vocabulary Vault)**\n\n오늘 수업에서 나왔거나 맥락상 유용한 어휘들을 살펴볼까요?\n\n1.  **typhoon** /taɪˈfuːn/ (명사)\n    *   뜻: 태풍\n    *   실전 예문: The company has a contingency plan in place for potential disruptions caused by **typhoons**.\n\n2.  **proximity** /prɑːkˈsɪm.ə.t̬i/ (명사)\n    *   뜻: 근접성, 가까움\n    *   실전 예문: Our office's **proximity** to the subway station is a major advantage for employees.\n\n3.  **dynamic** /daɪˈnæm.ɪk/ (형용사)\n    *   뜻: 역동적인, 활발한\n    *   실전 예문: Our market is very **dynamic**, so we need to adapt quickly to new trends.\n\n4.  **incentive** /ɪnˈsen.tɪv/ (명사)\n    *   뜻: 장려책, 동기 부여\n    *   실전 예문: The government offers tax **incentives** to companies that invest in renewable energy.\n\n5.  **meditation** /ˌmed.ɪˈteɪ.ʃən/ (명사)\n    *   뜻: 명상\n    *   실전 예문: Many professionals use **meditation** as a way to cope with work-related stress.\n\n---\n\n**5. 📝 실전 복습 챌린지 (Practice)**\n\n오늘 배운 표현과 문법을 활용해서 영작 연습을 해볼까요?\n\n1.  **상황:** 당신은 캐나다에 사는 친구에게 한국의 날씨에 대해 설명하고 싶습니다. 한국에는 여름에 장마철이 있다고 말해보세요.\n    *   **영작:** (힌트: 'rainy season' 활용)\n    *   **모범 답안:** In Korea, we have a cold season, but in the summertime, we also have a rainy season.\n\n2.  **상황:** 당신은 직장 동료에게 업무 마감 기한을 맞추는 것이 어렵다고 이야기하고 싶습니다.\n    *   **영작:** (힌트: 'meet deadlines' 활용)\n    *   **모범 답안:** It's often challenging to meet deadlines with such a heavy workload.\n\n3.  **상황:** 당신의 회사는 직원들의 스트레스 관리를 위해 새로운 프로그램을 도입했습니다. 이 프로그램이 직원들의 사기를 높이는 데 도움이 될 것이라고 생각합니다.\n    *   **영작:** (힌트: 'incentive', 'cope with stress' 활용)\n    *   **모범 답안:** The new stress management program serves as a great incentive for employees to cope with stress, and I believe it will significantly boost morale.\n\n---\n\n**6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)**\n\n✨ **Good Job:**\nJoey, 오늘 이 문장은 정말 좋았어요!\n**\"So usually I just focus on my breath and just... Focus on my breath and think about the present moment now.\"**\n명상에 대한 Joey의 설명은 매우 명확하고 구체적이었습니다. 특히 \"focus on my breath\"와 \"think about the present moment now\"라는 표현을 반복하며 핵심 내용을 강조한 점이 인상 깊었어요. 이처럼 자신의 경험을 바탕으로 구체적인 설명을 할 때 Joey의 유창함이 더욱 빛을 발합니다!\n\n🚀 **내일의 한 문장:**\n다음 수업 시작할 때 튜터에게 이렇게 말하며 대화를 시작해 보세요.\n\"I was wondering about the weather in your country this week, specifically if you've had any significant rain.\" (오늘 배운 'wondering about'과 날씨 관련 주제를 활용)\n\n---\n\n**[성과 지표]**\n\n**유창성 점수: 7.5/10**\n\n**근거:** Joey는 오늘 다양한 주제에 대해 막힘없이 자신의 의견을 표현했습니다. 특히 명상에 대한 설명처럼 익숙한 주제에서는 아주 유창하게 대화를 이끌어갔습니다. 문장 구조가 복잡해지거나 추상적인 개념을 설명할 때 약간의 주저함이나 어색한 표현이 있었지만, 이는 의미 전달에 큰 지장을 주지 않는 수준이었습니다. 전반적으로 대화의 흐름을 잘 유지하며 적극적으로 참여하는 모습이 인상 깊었습니다.\n\n**다음 수업 '원포인트 액션 플랜':**\n다음 수업에서는 **주어-동사 수일치(Subject-Verb Agreement)**에 특히 신경 써서 말하는 연습을 해볼까요? 문장을 만들 때 주어가 단수인지 복수인지 한 번 더 확인하고 동사 형태를 결정하는 습관을 들이면 정확성이 훨씬 더 향상될 거예요!\n\n위 내용을 바탕으로:\n1. 먼저 오늘 수업에서 내가 틀렸거나 어색했던 표현을 하나 골라서, 관련된 상황을 영어로 질문해줘.\n2. 내가 영어로 대답하면, 자연스러운지 확인하고 더 나은 표현이 있으면 알려줘.\n3. 특히 \"반복 실수 패턴\"에서 지적된 부분을 집중적으로 연습시켜줘.\n4. 이런 식으로 오늘 배운 표현들을 하나씩 복습하자.\n5. 한국어 설명은 필요할 때만 간단히, 대화는 최대한 영어로 진행해줘.\n\n그럼 시작하자!";
+        function startReview(){navigator.clipboard.writeText(REVIEW_PROMPT).then(()=>{showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)}).catch(()=>{const t=document.createElement('textarea');t.value=REVIEW_PROMPT;document.body.appendChild(t);t.select();document.execCommand('copy');document.body.removeChild(t);showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)})}
+        function showToast(){const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500)}
+        function switchTab(n){document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',n==='feedback'?i===0:i===1));document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));document.getElementById('tab-'+n).classList.add('active')}
+    </script>
+</body>
+</html>
