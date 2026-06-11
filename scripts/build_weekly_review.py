@@ -1,0 +1,318 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+주간 복습 스냅샷 생성기 (모델 B) / Weekly review snapshot generator.
+
+docs/ 의 일일 피드백을 ISO 주차로 묶어, 주마다 자기완결형 스냅샷을 만든다.
+  docs/review-2026-Www.html  ← 주마다 1개 ("이번 주" + "누적 추세" + "종합")
+  docs/review-index.html      ← 허브 (전체 누적 요약 + 주간 목록)
+
+설계 / Design:
+  - 각 주간 파일은 그 주 수업 + (CUTOFF~그 주말까지) 누적을 함께 담아 자기완결적.
+  - 종합문(synthesis)은 규칙기반으로 항상 채워져 파일이 절대 깨지지 않는다.
+    → 클라우드 /schedule 루틴의 Claude가 <div id="synthesis"> 내용을 더 좋은
+      통찰로 교체하도록 설계됨(없어도 동작, 있으면 품질↑).
+  - Gemini 미사용(순수 집계). Gemini 무료 쿼터 0 소모.
+
+CLI:
+  python3 scripts/build_weekly_review.py            # 전체 주차 생성
+  실행 시 stdout 마지막 줄에 CURRENT_WEEK_FILE=... 출력 (루틴이 현재 주를 식별).
+"""
+import glob, re, os, html, json, datetime
+from collections import Counter, OrderedDict
+
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+DOCS = os.path.join(ROOT, "docs")
+CUTOFF = "2026-05-08"   # 개선된 프롬프트 시작점 (이전은 문법 진단이 '관사' 고정)
+
+# ───────────────────────── 파싱 / parsing ─────────────────────────
+def clean(s):
+    return re.sub(r"\s+", " ", html.unescape(s)).strip()
+
+def grammar_label(seg):
+    s = clean(seg)
+    s = re.sub(r"\(Target Grammar\)", "", s)
+    s = re.sub(r"Category\s*[:：]", "", s)
+    s = re.sub(r"^[^A-Za-z가-힣]+", "", s)
+    m = re.search(r'([A-Z][A-Za-z0-9\-\'"/&,\.\s]{2,55}?\s*\([^)]*\))', s)
+    if m: return clean(m.group(1))
+    m = re.search(r'([A-Z][A-Za-z0-9\-\'"/&,\. ]{4,55}?)(?=\s*(?:Joey|학습자|이번|오늘|님|[가-힣]))', s)
+    if m: return clean(m.group(1))
+    return clean(s[:45])
+
+def norm_grammar(g):
+    g = re.sub(r"\([^)]*\)", "", g).strip().lower()
+    if "article" in g: return "Articles (a/an/the)"
+    if "preposition" in g: return "Prepositions"
+    if "subject-verb" in g or "agreement" in g: return "Subject–Verb Agreement"
+    if "auxiliary" in g or "verb form" in g: return "Verb Forms / Auxiliaries"
+    if "tense" in g: return "Verb Tense"
+    if "missing subject" in g: return "Missing Subjects / Verbs"
+    if "gerund" in g or "noun phrase" in g or "동명사" in g: return "Gerunds / Noun Phrases"
+    if "determiner" in g or "quantifier" in g: return "Determiners / Quantifiers"
+    if "causative" in g: return 'Causative "get"'
+    return g.title() or "기타"
+
+def parse_lesson(f):
+    t = re.sub(r"<style.*?</style>", " ", open(f, encoding="utf-8").read(), flags=re.S)
+    t = re.sub(r"<script.*?</script>", " ", t, flags=re.S)
+    t = re.sub(r"<[^>]+>", " ", t); t = html.unescape(t); t = re.sub(r"[ \t]+", " ", t)
+    date = os.path.basename(f)[:10]
+    if "한 놈만 패기" not in t or "유창성 업그레이드" not in t:
+        return None  # 깨진 대용량 파일 자동 제외
+    mt = re.search(r"Topic[:：]\s*([^\n]{3,90})", t)
+    topic = clean(mt.group(1)) if mt else ""
+    mg = re.search(r"한 놈만 패기(.{0,300})", t, re.S)
+    grammar = grammar_label(mg.group(1)) if mg else ""
+    ms = re.search(r"유창성 점수[^0-9]{0,12}([0-9]+(?:\.[0-9])?)\s*/\s*10", t)
+    score = float(ms.group(1)) if ms else None
+    fl = re.search(r"유창성 업그레이드(.*?)(?:한 놈만 패기|어휘 확장)", t, re.S)
+    fseg = fl.group(1) if fl else ""
+    said = re.findall(r'❌[^"]*"([^"]+)"', fseg)
+    nat  = re.findall(r'✅[^"]*"([^"]+)"', fseg)
+    pairs = [{"said": clean(said[i]), "natural": clean(nat[i] if i < len(nat) else "")}
+             for i in range(len(said)) if said[i].strip() and (nat[i] if i < len(nat) else "")]
+    vb = re.search(r"어휘 확장(.*?)(?:실전 복습|자신감 충전|성과 지표|$)", t, re.S)
+    vseg = vb.group(1) if vb else ""
+    vocab = [{"word": clean(m.group(1)), "pos": clean(m.group(3)), "meaning": clean(m.group(4))}
+             for m in re.finditer(
+                 r"\d+\.\s+([A-Za-z][A-Za-z\-]+(?:\s[A-Za-z\-]+){0,2})\s*/([^/]*)/\s*\(([^)]+)\)\s*\*?\s*뜻[:：]\s*([^*\n]+)",
+                 vseg)]
+    y, m_, d_ = map(int, date.split("-"))
+    iso = datetime.date(y, m_, d_).isocalendar()
+    return {"date": date, "iso": (iso[0], iso[1]), "topic": topic, "grammar": grammar,
+            "grammar_norm": norm_grammar(grammar), "score": score, "pairs": pairs, "vocab": vocab}
+
+def load_all():
+    files = sorted(f for f in glob.glob(os.path.join(DOCS, "2026-*.html"))
+                   if os.path.basename(f)[:10] >= CUTOFF)
+    out = [parse_lesson(f) for f in files]
+    return [l for l in out if l]
+
+# ───────────────────────── 집계 헬퍼 / helpers ─────────────────────────
+def week_label(iso): return f"{iso[0]}-W{iso[1]:02d}"
+def week_file(iso):  return f"review-{week_label(iso)}.html"
+def week_range(iso):
+    mon = datetime.date.fromisocalendar(iso[0], iso[1], 1)
+    fri = datetime.date.fromisocalendar(iso[0], iso[1], 5)
+    return f"{mon.month}/{mon.day}~{fri.month}/{fri.day}"
+def avg_score(ls):
+    s = [l["score"] for l in ls if l["score"] is not None]
+    return (sum(s) / len(s)) if s else 0
+def dedup_vocab(ls):
+    seen, out = set(), []
+    for l in ls:
+        for v in l["vocab"]:
+            k = v["word"].lower()
+            if k not in seen: seen.add(k); out.append(v)
+    return out
+
+def rule_synthesis(week_ls, cum_ls):
+    """규칙기반 종합문 (루틴의 Claude가 더 나은 통찰로 교체 가능)."""
+    gfreq = Counter(l["grammar_norm"] for l in cum_ls).most_common()
+    top = gfreq[0] if gfreq else ("", 0)
+    wk_focus = ", ".join(sorted({l["grammar_norm"] for l in week_ls})) or "—"
+    avg = avg_score(cum_ls)
+    return (f"이번 주 <b>{len(week_ls)}회</b> 수업에서 다룬 문법은 <b>{esc(wk_focus)}</b>입니다. "
+            f"컷오프({CUTOFF}) 이후 누적 <b>{len(cum_ls)}회</b> 기준, 가장 끈질긴 약점은 "
+            f"<b>{esc(top[0])}</b>(누적 {top[1]}회)이고 유창성 평균은 <b>{avg:.1f}/10</b>입니다. "
+            f"다음 주는 이 약점을 의식해 말해 보세요.")
+
+# ───────────────────────── HTML ─────────────────────────
+def esc(s): return html.escape(str(s), quote=True)
+
+CSS = """
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Noto Sans KR',-apple-system,sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.7}
+.header{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);padding:42px 24px 30px;text-align:center;border-bottom:1px solid rgba(255,255,255,.06)}
+.header h1{font-size:24px;color:#f1f5f9;margin-bottom:8px}
+.header .range{font-size:13px;color:#94a3b8;letter-spacing:2px}
+.nav{max-width:760px;margin:0 auto;padding:14px 20px 0;display:flex;justify-content:space-between;font-size:13px}
+.nav a{color:#64748b;text-decoration:none;padding:6px 10px;border-radius:8px}
+.nav a:hover{color:#38bdf8;background:#16161d}
+.container{max-width:760px;margin:0 auto;padding:18px 20px 80px}
+.card{background:#16161d;border:1px solid rgba(255,255,255,.06);border-radius:16px;padding:22px;margin-bottom:20px}
+.card h2{font-size:16px;color:#f1f5f9;margin-bottom:14px;display:flex;align-items:center;gap:8px}
+.card h2 .sub{font-size:12px;color:#64748b;font-weight:400;margin-left:auto}
+.muted{color:#64748b;font-size:12px}.syn{color:#cbd5e1;font-size:14px}.syn b{color:#f1f5f9}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:20px}
+.stat{background:#16161d;border:1px solid rgba(255,255,255,.06);border-radius:14px;padding:16px 10px;text-align:center}
+.stat .n{font-size:22px;font-weight:700;color:#38bdf8}.stat .l{font-size:11px;color:#94a3b8;margin-top:4px}
+.bar-row{display:flex;align-items:center;gap:10px;margin:8px 0}
+.bar-label{width:160px;font-size:12.5px;color:#cbd5e1;text-align:right;flex-shrink:0}
+.bar-track{flex:1;background:#0f0f13;border-radius:6px;height:20px;overflow:hidden}
+.bar-fill{height:100%;background:linear-gradient(90deg,#3b82f6,#818cf8);border-radius:6px}
+.bar-fill.hot{background:linear-gradient(90deg,#f43f5e,#fb7185)}
+.bar-val{width:34px;font-size:12px;color:#94a3b8;flex-shrink:0}
+.lesson{border-left:2px solid #334155;padding:6px 0 6px 14px;margin:10px 0}
+.lesson .d{font-size:12px;color:#7dd3fc;font-weight:600}
+.lesson .g{font-size:12px;color:#fbbf24;margin:2px 0}
+.lesson .t{font-size:12.5px;color:#94a3b8}
+.pair{border-left:2px solid #334155;padding:7px 0 7px 14px;margin:9px 0}
+.said{color:#fca5a5;font-size:13px;margin-bottom:3px}.nat{color:#86efac;font-size:13px}
+.deck{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:9px}
+.vcard{background:#0f0f13;border:1px solid rgba(255,255,255,.07);border-radius:11px;height:80px;cursor:pointer;position:relative}
+.vfront,.vback{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:8px;text-align:center;backface-visibility:hidden;transition:transform .4s;border-radius:11px}
+.vfront{gap:3px}.vword{font-size:14px;font-weight:600;color:#f1f5f9}.vpos{font-size:10px;color:#64748b}
+.vback{transform:rotateY(180deg);background:#1e293b;color:#7dd3fc;font-size:12.5px}
+.vcard.flipped .vfront{transform:rotateY(180deg)}.vcard.flipped .vback{transform:rotateY(360deg)}
+.spark{width:100%;height:70px;display:block}
+.weeklist{display:flex;flex-direction:column;gap:8px}
+.weekrow{display:flex;align-items:center;gap:12px;padding:14px 16px;background:#0f0f13;border:1px solid rgba(255,255,255,.06);border-radius:12px;text-decoration:none;transition:all .2s}
+.weekrow:hover{border-color:rgba(56,189,248,.3);background:#16161d}
+.weekrow .wk{font-size:15px;font-weight:700;color:#f1f5f9;width:90px}
+.weekrow .wr{font-size:12px;color:#64748b;width:80px}
+.weekrow .wf{flex:1;font-size:12.5px;color:#94a3b8}
+.weekrow .wc{font-size:12px;color:#38bdf8}
+.foot{text-align:center;font-size:11px;color:#475569;margin-top:26px;line-height:1.8}
+"""
+
+def render_bars(cum_ls):
+    gfreq = Counter(l["grammar_norm"] for l in cum_ls).most_common()
+    gmax = max((v for _, v in gfreq), default=1)
+    rows = ""
+    for i, (k, v) in enumerate(gfreq):
+        pct = int(v / gmax * 100); hot = "hot" if i == 0 else ""
+        rows += (f'<div class="bar-row"><div class="bar-label">{esc(k)}</div>'
+                 f'<div class="bar-track"><div class="bar-fill {hot}" style="width:{pct}%"></div></div>'
+                 f'<div class="bar-val">{v}회</div></div>')
+    return rows
+
+def render_spark(cum_ls):
+    scores = [l["score"] for l in cum_ls if l["score"] is not None]
+    if not scores: return ""
+    n = len(scores); pts = []
+    for i, s in enumerate(scores):
+        x = 8 + i * (684 / max(n - 1, 1)); y = 62 - (s - 6.5) / 2.0 * 48
+        pts.append(f"{x:.1f},{y:.1f}")
+    dots = "".join(f'<circle cx="{p.split(",")[0]}" cy="{p.split(",")[1]}" r="2.5" fill="#38bdf8"/>' for p in pts)
+    return (f'<svg viewBox="0 0 700 70" class="spark" preserveAspectRatio="none">'
+            f'<polyline points="{" ".join(pts)}" fill="none" stroke="#38bdf8" stroke-width="2"/>{dots}</svg>')
+
+def render_week(iso, week_ls, cum_ls, prev_iso, next_iso, is_current):
+    week_ls = sorted(week_ls, key=lambda l: l["date"])
+    deck = dedup_vocab(cum_ls)
+    wk_vocab = [v for l in week_ls for v in l["vocab"]]
+    wk_pairs = [p for l in week_ls for p in l["pairs"]]
+    avg = avg_score(cum_ls)
+
+    lessons_html = "".join(
+        f'<div class="lesson"><div class="d">{l["date"][5:]} · {esc(l["grammar_norm"])}</div>'
+        f'<div class="t">{esc(l["topic"][:70])}</div></div>' for l in week_ls)
+    pairs_html = "".join(
+        f'<div class="pair"><div class="said">❌ {esc(p["said"])}</div>'
+        f'<div class="nat">✅ {esc(p["natural"])}</div></div>' for p in wk_pairs) or '<div class="muted">이번 주 교정 표현 없음</div>'
+    wkvocab_html = "".join(
+        f'<div class="vcard" onclick="this.classList.toggle(\'flipped\')">'
+        f'<div class="vfront"><span class="vword">{esc(v["word"])}</span><span class="vpos">{esc(v["pos"])}</span></div>'
+        f'<div class="vback">{esc(v["meaning"])}</div></div>' for v in wk_vocab) or '<div class="muted">이번 주 신규 어휘 없음</div>'
+
+    cur_badge = ' · <span style="color:#fbbf24">진행중</span>' if is_current else ""
+    nav_prev = f'<a href="{week_file(prev_iso)}">← {week_label(prev_iso)}</a>' if prev_iso else "<span></span>"
+    nav_next = f'<a href="{week_file(next_iso)}">{week_label(next_iso)} →</a>' if next_iso else "<span></span>"
+    syn = rule_synthesis(week_ls, cum_ls)
+
+    return f"""<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>📊 주간 복습 {week_label(iso)}</title><style>{CSS}</style></head><body>
+<div class="header"><h1>📊 주간 복습 · {week_label(iso)}</h1>
+<div class="range">{week_range(iso)}{cur_badge}</div></div>
+<div class="nav">{nav_prev}<a href="review-index.html">📚 전체 목록</a>{nav_next}</div>
+<div class="container">
+
+  <div class="stats">
+    <div class="stat"><div class="n">{len(week_ls)}</div><div class="l">이번 주 수업</div></div>
+    <div class="stat"><div class="n">{len(cum_ls)}</div><div class="l">누적 수업</div></div>
+    <div class="stat"><div class="n">{avg:.1f}</div><div class="l">누적 평균</div></div>
+    <div class="stat"><div class="n">{len(deck)}</div><div class="l">누적 어휘</div></div>
+  </div>
+
+  <div class="card"><h2>🧭 이번 주 종합 <span class="sub">Claude 작성 · $0</span></h2>
+    <div class="syn" id="synthesis">{syn}</div></div>
+
+  <div class="card"><h2>📅 이번 주 수업 <span class="sub">{len(week_ls)}회</span></h2>
+    {lessons_html or '<div class="muted">이번 주 분석 가능한 수업 없음</div>'}</div>
+
+  <div class="card"><h2>💬 이번 주 교정 표현 <span class="sub">{len(wk_pairs)}개</span></h2>
+    {pairs_html}</div>
+
+  <div class="card"><h2>📗 이번 주 어휘 <span class="sub">클릭하면 뜻</span></h2>
+    <div class="deck">{wkvocab_html}</div></div>
+
+  <div class="card"><h2>📈 누적 약점 문법 <span class="sub">컷오프~{week_label(iso)}</span></h2>
+    {render_bars(cum_ls)}</div>
+
+  <div class="card"><h2>📉 누적 유창성 추이 <span class="sub">평균 {avg:.1f}/10</span></h2>
+    {render_spark(cum_ls)}
+    <div class="muted" style="margin-top:8px">점수보다 <b style="color:#94a3b8">위 약점 2~3개</b>를 고치는 게 천장을 깨는 길.</div></div>
+
+  <div class="foot">데이터: docs/ 일일 피드백 {CUTOFF} 이후 · 깨진 대용량 파일 자동 제외<br>
+  생성: scripts/build_weekly_review.py · Gemini 쿼터 0 · Claude $0</div>
+</div>
+<script>document.querySelectorAll('.vcard').forEach(c=>c.addEventListener('click',()=>c.classList.toggle('flipped')));</script>
+</body></html>"""
+
+def render_index(weeks, all_ls):
+    deck = dedup_vocab(all_ls); avg = avg_score(all_ls)
+    gtop = Counter(l["grammar_norm"] for l in all_ls).most_common(1)
+    top = gtop[0][0] if gtop else "—"
+    rows = ""
+    for iso, wls in sorted(weeks.items(), reverse=True):
+        focus = ", ".join(sorted({l["grammar_norm"] for l in wls}))[:50]
+        rows += (f'<a class="weekrow" href="{week_file(iso)}">'
+                 f'<span class="wk">{week_label(iso)}</span>'
+                 f'<span class="wr">{week_range(iso)}</span>'
+                 f'<span class="wf">{esc(focus)}</span>'
+                 f'<span class="wc">{len(wls)}회</span></a>')
+    return f"""<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>📚 주간 복습 기록</title><style>{CSS}</style></head><body>
+<div class="header"><h1>📚 주간 복습 기록</h1>
+<div class="range">{CUTOFF} ~ 누적 {len(all_ls)} LESSONS</div></div>
+<div class="container">
+  <div class="stats">
+    <div class="stat"><div class="n">{len(weeks)}</div><div class="l">주차</div></div>
+    <div class="stat"><div class="n">{len(all_ls)}</div><div class="l">누적 수업</div></div>
+    <div class="stat"><div class="n">{avg:.1f}</div><div class="l">평균 유창성</div></div>
+    <div class="stat"><div class="n">{len(deck)}</div><div class="l">누적 어휘</div></div>
+  </div>
+  <div class="card"><h2>🔧 누적 약점 문법 <span class="sub">최다: {esc(top)}</span></h2>
+    {render_bars(all_ls)}</div>
+  <div class="card"><h2>🗓 주간 리포트 <span class="sub">최신순</span></h2>
+    <div class="weeklist">{rows}</div></div>
+  <div class="foot">생성: scripts/build_weekly_review.py · 매주 금요일 자동 갱신 예정 · Claude $0</div>
+</div></body></html>"""
+
+# ───────────────────────── main ─────────────────────────
+def build():
+    allL = load_all()
+    weeks = OrderedDict()
+    for l in allL:
+        weeks.setdefault(l["iso"], []).append(l)
+    ordered = sorted(weeks.keys())
+    today_iso = datetime.date.today().isocalendar()
+    current = (today_iso[0], today_iso[1])
+    current_file = None
+
+    for i, iso in enumerate(ordered):
+        week_ls = weeks[iso]
+        cum_ls = [l for l in allL if l["iso"] <= iso]   # 그 주말까지 누적
+        prev_iso = ordered[i-1] if i > 0 else None
+        next_iso = ordered[i+1] if i < len(ordered)-1 else None
+        is_current = (iso == current)
+        page = render_week(iso, week_ls, cum_ls, prev_iso, next_iso, is_current)
+        path = os.path.join(DOCS, week_file(iso))
+        open(path, "w", encoding="utf-8").write(page)
+        if is_current: current_file = week_file(iso)
+
+    open(os.path.join(DOCS, "review-index.html"), "w", encoding="utf-8").write(render_index(weeks, allL))
+
+    print(f"✅ {len(weeks)} weekly files + review-index.html")
+    for iso in ordered:
+        tag = " (current)" if iso == current else ""
+        print(f"   {week_file(iso)}  {len(weeks[iso])} lessons{tag}")
+    # 루틴이 현재 주 파일을 식별할 수 있도록 마지막 줄에 출력
+    print(f"CURRENT_WEEK_FILE={current_file or (week_file(ordered[-1]) if ordered else '')}")
+
+if __name__ == "__main__":
+    build()
