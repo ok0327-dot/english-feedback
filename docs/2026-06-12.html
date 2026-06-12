@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전화영어 복습 - 2026년 06월 12일</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Noto Sans KR',sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.75;min-height:100vh}
+        .header{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);border-bottom:1px solid rgba(255,255,255,.06);padding:48px 24px 40px;text-align:center}
+        .header-date{font-size:13px;color:#94a3b8;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+        .header h1{font-size:28px;font-weight:700;color:#f1f5f9;margin-bottom:16px}
+        .header-meta{display:flex;justify-content:center;gap:24px;font-size:14px;color:#64748b}
+        .header-meta span{display:flex;align-items:center;gap:6px}
+        .cta-section{text-align:center;padding:40px 24px}
+        .cta-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:linear-gradient(135deg,#38bdf8,#818cf8);color:#fff;font-size:16px;font-weight:600;font-family:'Noto Sans KR',sans-serif;border:none;border-radius:50px;cursor:pointer;transition:all .3s;text-decoration:none;box-shadow:0 4px 24px rgba(56,189,248,.25)}
+        .cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(56,189,248,.35)}
+        .cta-btn svg{width:20px;height:20px}
+        .cta-sub{margin-top:12px;font-size:13px;color:#64748b}
+        .toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#38bdf8;padding:14px 28px;border-radius:12px;font-size:14px;font-weight:500;border:1px solid rgba(56,189,248,.2);box-shadow:0 8px 32px rgba(0,0,0,.4);opacity:0;transition:all .4s cubic-bezier(.16,1,.3,1);z-index:1000}
+        .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+        .container{max-width:720px;margin:0 auto;padding:0 24px 80px}
+        .tabs{display:flex;gap:4px;background:#1a1a24;padding:4px;border-radius:12px;margin-bottom:32px}
+        .tab{flex:1;padding:12px;text-align:center;font-size:14px;font-weight:500;color:#64748b;background:0 0;border:none;border-radius:8px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all .2s}
+        .tab.active{background:#262636;color:#f1f5f9}
+        .tab-content{display:none}.tab-content.active{display:block}
+        .feedback h2{font-size:18px;font-weight:700;color:#f1f5f9;margin:36px 0 16px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.06)}
+        .feedback h2:first-child{margin-top:0}
+        .feedback p{margin:8px 0;color:#cbd5e1}
+        .feedback .item{padding:6px 0 6px 16px;border-left:2px solid #334155;margin:6px 0;color:#cbd5e1}
+        .feedback .numbered{padding:8px 0 8px 16px;color:#cbd5e1}
+        .feedback .numbered strong{color:#38bdf8}
+        .feedback strong{color:#f1f5f9}
+        .feedback code{background:#1e293b;padding:2px 8px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#38bdf8}
+        .feedback table{width:100%;border-collapse:collapse;margin:12px 0}
+        .feedback th,.feedback td{padding:10px 14px;text-align:left;border-bottom:1px solid #262636}
+        .feedback th{color:#94a3b8;font-weight:500;font-size:13px}
+        .feedback td{color:#cbd5e1}
+        .arrow{color:#38bdf8;font-weight:700}
+        .transcript{background:#1a1a24;border-radius:12px;padding:28px;font-size:14px;line-height:2;color:#94a3b8;white-space:pre-wrap;word-break:break-word;font-family:'JetBrains Mono','Noto Sans KR',monospace}
+        .transcript .tutor{color:#38bdf8}
+        .transcript .student{color:#a78bfa}
+        @media(max-width:640px){.header{padding:32px 16px}.header h1{font-size:22px}.cta-btn{padding:14px 28px;font-size:15px}.container{padding:0 16px 60px}}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-date">2026년 06월 12일</div>
+        <h1>📚 전화영어 복습</h1>
+        <div class="header-meta">
+            <span>⏱ 19분 40초</span>
+            <span>🎙 전화영어_025180304_20260612080010.m4a</span>
+        </div>
+    </div>
+    <div class="cta-section">
+        <button class="cta-btn" onclick="startReview()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Gemini에서 복습 대화 시작하기
+        </button>
+        <div class="cta-sub">클릭하면 프롬프트가 복사되고 Gemini가 열립니다</div>
+    </div>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('feedback')">📋 AI 피드백</button>
+            <button class="tab" onclick="switchTab('transcript')">🎙 수업 전사</button>
+        </div>
+        <div id="tab-feedback" class="tab-content active">
+            <div class="feedback"><p>안녕하세요, Joey! 따뜻하고 실용적인 영어 코치입니다. 오늘 수업 내용 잘 분석해서 피드백 드릴게요. 비즈니스 환경에서도 자신 있게 쓸 수 있도록, 자연스럽고 정확한 영어 표현을 함께 다듬어 봅시다!</p>
+<br>
+<br>
+<p><strong>0. 📌 Topic</strong></p>
+<p>Topic: Discussing Habits and Preferences in Buying Clothes</p>
+<br>
+<p><strong>1. 📊 오늘의 대화 요약 (Summary)</strong></p>
+<p>오늘 수업에서는 옷 구매 습관과 선호도에 대해 이야기 나누었습니다. Joey는 옷 쇼핑을 즐기지 않아 주로 계절별로 또는 필요할 때 온라인으로 구매한다고 설명했습니다. 또한, 직장 내 복장 규정과 옷을 구매할 때 가격, 편안함, 스타일 중 무엇을 중요하게 생각하는지에 대한 자신의 관점을 공유했습니다.</p>
+<br>
+<p><strong>2. 💬 유창성 업그레이드 (Fluency & Natural Flow)</strong></p>
+<br>
+<p>*   <strong>1/3</strong></p>
+<p>    *   ❌ As Said: "And I'm not sure it is the right answer to your question."</p>
+<p>    *   ✅ Natural: "And I'm not sure if that's the right answer to your question."</p>
+<p>    *   💎 Professional: "I'm uncertain whether that directly addresses your query."</p>
+<p>    *   💡 Coaching Point: Adding "if" makes the sentence structure more natural when expressing uncertainty about a statement. <span class="arrow">→</span> "if"를 추가하면 어떤 진술에 대한 불확실성을 표현할 때 문장 구조가 더 자연스러워집니다.</p>
+<br>
+<p>*   <strong>2/3</strong></p>
+<p>    *   ❌ As Said: "Usually, I don't like, I don't enjoy the shopping, the clothes shopping."</p>
+<p>    *   ✅ Natural: "Usually, I don't really enjoy shopping for clothes."</p>
+<p>    *   💎 Professional: "Generally, I do not find clothes shopping particularly enjoyable."</p>
+<p>    *   💡 Coaching Point: Using "shopping for clothes" is a more common and direct way to refer to the activity. Adding "really" softens the statement naturally. <span class="arrow">→</span> "shopping for clothes"는 옷 쇼핑이라는 활동을 지칭할 때 더 흔하고 직접적인 표현입니다. "really"를 추가하면 자연스럽게 표현을 부드럽게 만들 수 있습니다.</p>
+<br>
+<p>*   <strong>3/3</strong></p>
+<p>    *   ❌ As Said: "And the other time, usually I will buy a coat and a jumper, more jeans, fashionable jeans and yeah, and almost clothes I buy, divided twice per year."</p>
+<p>    *   ✅ Natural: "The other time, I usually buy a coat, a jumper, and more fashionable jeans. I buy almost all my clothes twice a year."</p>
+<p>    *   💎 Professional: "On the other occasion, I typically purchase a coat, a jumper, and more stylish jeans. My clothing purchases are generally made twice annually."</p>
+<p>    *   💡 Coaching Point: Breaking down the long sentence into two clearer parts improves readability and flow. "I buy almost all my clothes" is a more direct way to express the frequency. <span class="arrow">→</span> 긴 문장을 두 개의 더 명확한 부분으로 나누면 가독성과 흐름이 향상됩니다. "I buy almost all my clothes"는 빈도를 표현하는 더 직접적인 방법입니다.</p>
+<br>
+<p><strong>3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)</strong></p>
+<br>
+<p>*   Category: <strong>Verb Tense Consistency (Past vs. Present)</strong></p>
+<p>    *   Joey often mixes past tense verbs when describing current habits or states, or future intentions. This can make the meaning unclear.</p>
+<br>
+<p>    | ❌ 학습자 원문 (As Said)                                                                                                                              | ✅ 교정 예시 (Correction)                                                                                                                                  |</p>
+<p>    | :---------------------------------------------------------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------- |</p>
+<p>    | "I have a reservation. I reserved to take a train at 6 o'clock, 6 p.m."                                                                               | "I have a reservation. I've reserved a train ticket for 6 p.m." (현재 가지고 있는 예약이므로 현재완료 또는 현재 시제가 더 자연스럽습니다.)                                                                                                                 |</p>
+<p>    | "So after work, I go to the train station and then take a train. I will take a train."                                                                 | "So after work, I go to the train station and then take a train." (미래 계획을 현재 시제로 표현하는 것이 일반적이며, 'I will take a train'은 반복되어 어색합니다.) |</p>
+<p>    | "And almost clothes I buy, divided twice per year."                                                                                                   | "And almost all the clothes I buy are divided into two purchases per year." (수동태를 사용하여 옷이 구매되는 행위를 더 명확하게 표현합니다.)                                                                                                                 |</p>
+<p>    | "But if I meet the customer, it is also I don't have a tie. Just wear the shirt and shirt."                                                           | "But if I meet a customer, I also don't wear a tie. I just wear a shirt." (현재의 습관이나 상황을 설명하므로 현재 시제가 적절합니다.)            |</p>
+<p>    | "Sometimes, I thought these days, I thought that is divided into some kinds of clothes."                                                              | "Sometimes, I think these days that clothes are divided into different kinds." (현재의 생각을 말하므로 'I think'가 적절하며, 수동태 'are divided'가 더 자연스럽습니다.) |</p>
+<p>    | "I consider the price, comfortable, style."                                                                                                           | "I consider the price, comfort, and style." (명사형 'comfort'를 사용하여 다른 명사들과 일관성을 유지합니다.)                                                                                                                 |</p>
+<br>
+<p>    *   📌 핵심 규칙: 현재의 습관이나 사실을 말할 때는 항상 현재 시제(present tense)를 사용하고, 과거의 경험이나 특정 시점의 사건을 말할 때는 과거 시제(past tense)를 사용하세요. 미래에 대한 계획은 'will'이나 'be going to'를 사용합니다.</p>
+<p>    *   🔁 따라 읽기:</p>
+<p>        *   🗣️ "I have a reservation. I've reserved a train ticket for 6 p.m."</p>
+<p>        *   🗣️ "So after work, I go to the train station and then take a train."</p>
+<p>        *   🗣️ "But if I meet a customer, I also don't wear a tie. I just wear a shirt."</p>
+<br>
+<p><strong>4. 📗 어휘 확장 (Vocabulary Vault)</strong></p>
+<br>
+<p>*   <strong>mannequin</strong> /'mænɪkɪn/ (noun)</p>
+<p>    *   뜻: 마네킹</p>
+<p>    *   실전 예문: "The new display features clothes on a stylish mannequin in the store window." (매장 창문에 스타일리시한 마네킹에 옷이 전시되어 있어요.)</p>
+<br>
+<p>*   <strong>reflect</strong> /rɪˈflekt/ (verb)</p>
+<p>    *   뜻: 반사하다, 비추다</p>
+<p>    *   실전 예문: "The large windows of the building reflect the surrounding cityscape." (건물의 큰 창문들이 주변 도시 풍경을 비춥니다.)</p>
+<br>
+<p>*   <strong>business casual</strong> /'bɪznəs 'kæʒuəl/ (noun phrase)</p>
+<p>    *   뜻: 비즈니스 캐주얼 (격식과 편안함의 중간 정도 복장)</p>
+<p>    *   실전 예문: "Our company allows business casual attire on Fridays." (우리 회사는 금요일에 비즈니스 캐주얼 복장을 허용합니다.)</p>
+<br>
+<p>*   <strong>prohibited</strong> /proʊˈhɪbɪtɪd/ (adjective)</p>
+<p>    *   뜻: 금지된</p>
+<p>    *   실전 예문: "Wearing shorts is prohibited in our office during business hours." (업무 시간에는 사무실에서 반바지 착용이 금지되어 있습니다.)</p>
+<br>
+<p>*   <strong>texture</strong> /ˈtekstʃər/ (noun)</p>
+<p>    *   뜻: 질감, 재질</p>
+<p>    *   실전 예문: "When buying a sweater, I always check the texture of the wool." (스웨터를 살 때 저는 항상 양모의 질감을 확인합니다.)</p>
+<br>
+<p><strong>5. 📝 실전 복습 챌린지 (Practice)</strong></p>
+<br>
+<div class="numbered"><strong>1.</strong>  <strong>상황</strong>: Joey가 옷 쇼핑을 별로 좋아하지 않는다고 말할 때, 더 자연스럽게 표현해 보세요.</div>
+<p>    *   <strong>영작</strong>: "I don't really enjoy shopping for clothes."</p>
+<div class="numbered"><strong>2.</strong>  <strong>상황</strong>: Joey가 옷을 구매할 때 가격, 편안함, 스타일을 모두 고려한다고 말할 때, 더 간결하고 명확하게 표현해 보세요.</div>
+<p>    *   <strong>영작</strong>: "I consider price, comfort, and style when buying clothes."</p>
+<div class="numbered"><strong>3.</strong>  <strong>상황</strong>: Joey가 직장에서 반바지나 후드티 착용이 금지된다고 설명할 때, 더 정확한 단어와 표현을 사용해 보세요.</div>
+<p>    *   <strong>영작</strong>: "Wearing shorts or hoodies is prohibited in our company."</p>
+<br>
+<p><strong>6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)</strong></p>
+<br>
+<p>*   ✨ <strong>Good Job</strong>: "It depends on what I need. That expression is so nice."</p>
+<p>    *   Joey가 "It depends on what I need."라는 표현을 듣고 "That expression is so nice."라고 반응한 것은 매우 훌륭했습니다! 이는 단순히 영어를 배우는 것을 넘어, 언어의 뉘앙스와 표현 자체의 아름다움을 느끼고 있다는 증거입니다. 또한, 튜터의 표현을 칭찬하며 적극적으로 배우려는 자세를 보여준 점이 인상 깊었습니다.</p>
+<br>
+<p>*   🚀 <strong>내일의 한 문장</strong>: 다음 수업 시작 시 튜터에게 던져보세요!</p>
+<p>    *   "Good morning! I was thinking about our last conversation regarding clothes, and I wanted to ask if you have any favorite brands for business casual wear."</p>
+<p>    *   (해석: 안녕하세요! 지난번 옷에 관한 대화를 생각하다가, 비즈니스 캐주얼 의류로 특별히 좋아하시는 브랜드가 있는지 여쭤보고 싶었어요.)</p>
+<br>
+<p><strong>[성과 지표]</strong></p>
+<br>
+<p>*   <strong>유창성 점수</strong>: 7/10</p>
+<p>*   <strong>근거</strong>: Joey는 전반적으로 자신의 생각을 잘 전달했으며, 특히 옷 구매 습관에 대한 설명을 구체적으로 풀어냈습니다. 다만, 일부 문장 구조나 표현에서 원어민이 자주 사용하는 자연스러운 표현으로 다듬을 여지가 있었습니다. 문법적으로는 시제 일관성 부분에서 약간의 개선이 필요해 보입니다.</p>
+<p>*   <strong>다음 수업 '원포인트 액션 플랜'</strong>: 현재의 습관이나 사실을 설명할 때 현재 시제를 일관성 있게 사용하고, 명사를 나열할 때 품사를 통일하는 연습을 해봅니다.</p></div>
+        </div>
+        <div id="tab-transcript" class="tab-content">
+            <div class="transcript"><span class="student">[Student]</span> Hello, Bell. Good evening. Good morning. Yeah, how are you doing today? Last night, I went to bed at the right time, so I am a little bit tired, but it&#x27;s okay. It&#x27;s Friday. Yeah, it&#x27;s a fresh morning. How are you?
+<span class="tutor">[Tutor]</span> Okay, pretty good. Yeah, doing well today.
+<span class="tutor">[Tutor]</span> Okay, yeah, good.
+<span class="tutor">[Tutor]</span> And are you going home during the weekend?
+<span class="student">[Student]</span> Oh, yes, of course. I have a reservation. I reserved to take a train at 6 o&#x27;clock, 6 p.m. So after work, I go to the train station and then take a train. I will take a train.
+<span class="tutor">[Tutor]</span> Is it usually busier during the summertime than the wintertime?
+<span class="student">[Student]</span> Oh, it&#x27;s the same. Yeah. So maybe these days, the daylight is longer than wintertime. So when I take a train, it&#x27;s bright outside. So it&#x27;s nice. And I&#x27;m not sure it is the right answer to your question.
+<span class="tutor">[Tutor]</span> I&#x27;m not sure either. Is it more busy? Do more people travel during the summer?
+<span class="student">[Student]</span> Ah, yes, yes. And I heard that this week, this weekend, in Busan, there are so many crowded people because this week we have a BTS performance in Busan. So maybe this Saturday and Friday, there are many people coming to Korea, coming to Busan. So I&#x27;m a little afraid of that situation.
+<span class="tutor">[Tutor]</span> Oh, big summer festival or big concert?
+<span class="student">[Student]</span> Yeah, BTS is the famous, yeah, famous group of Korea. So that is a big concert, the BTS concert.
+<span class="tutor">[Tutor]</span> Oh, yeah, a BTS performance is probably going to be crowded.
+<span class="student">[Student]</span> Yeah, yeah. So I&#x27;m not sure it is possible to move. Yeah.
+<span class="tutor">[Tutor]</span> Maybe it&#x27;s possible.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="tutor">[Tutor]</span> Yes, did you want to look at the topic today?
+<span class="student">[Student]</span> Oh yes, no problem. Just a moment.
+<span class="tutor">[Tutor]</span> Today&#x27;s topic is buying new clothes.
+<span class="tutor">[Tutor]</span> So the first one, what is happening in the picture?
+<span class="student">[Student]</span> In this picture, I can see a woman who is shopping in a clothes store. Maybe she is window shopping and she checks the mannequin, clothes of the mannequin, clothes on the mannequin, and she checks the quality and color and and this this this This photo is the outside of the window view. So that is the... How can I say? This picture was taken on the outside of the window. So yeah. This store has a big window and the light reflects the window. So this atmosphere is so modern and fashionable. Yeah.
+<span class="tutor">[Tutor]</span> Yeah, so maybe the window is very bright.
+<span class="student">[Student]</span> Yeah, the city is reflected in the window.
+<span class="tutor">[Tutor]</span> Yes, you&#x27;re right.
+<span class="student">[Student]</span> Reflected window.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="tutor">[Tutor]</span> And how often do you purchase new clothes?
+<span class="student">[Student]</span> Just a moment.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="student">[Student]</span> I moved my position.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="student">[Student]</span> Usually, I don&#x27;t like, I don&#x27;t enjoy the shopping, the clothes shopping. So usually before the winter season, before the summer season, I buy some clothes, new clothes. So usually two times per year I purchase clothes. And sometimes my wife purchases for me because she knows that I don&#x27;t like shopping for clothes. So, yeah.
+<span class="tutor">[Tutor]</span> Yeah, sure.
+<span class="tutor">[Tutor]</span> So when you&#x27;re purchasing, what kind of things do you usually buy? Sweaters, T-shirts, pants?
+<span class="student">[Student]</span> Before I said, I usually buy twice per year. So one time I buy so many clothes. In summer, in summertime, I purchase a shirt and short pants, short pants and T-shirts and more comfortable clothes. Casual, like casual pants and clothes. Yeah. And the other time, usually I will buy a coat and a jumper, more jeans, fashionable jeans and yeah, and almost clothes I buy, divided twice per year.
+<span class="tutor">[Tutor]</span> And where do you usually buy your clothing?
+<span class="student">[Student]</span> Hmm, that depends on my schedule or yeah, I don&#x27;t have a regular store. Yeah. Just sometimes I buy online because these days the online is developed, so there are so many stores online. Usually I order clothes online and buy them. Or sometimes I&#x27;m I I needed some clothes at the time, I visit a department store or some store like the super brand or Zara or I I forgot that&#x27;s another name. Anyway, so, yeah, I buy some clothes. Actually, today, that is not an enjoyable subject. So, it is a little hard to speak about the subject because I don&#x27;t know about the clothes. Anyway.
+<span class="tutor">[Tutor]</span> It&#x27;s about your habits and what you usually do.
+<span class="student">[Student]</span> Yeah. How about you? How often do you purchase your clothes and where do you usually buy your clothes?
+<span class="tutor">[Tutor]</span> I usually look online or maybe some local stores.
+<span class="student">[Student]</span> Local stores.
+<span class="tutor">[Tutor]</span> Maybe once or twice a month, or I might buy one thing, maybe like a shirt or shorts.
+<span class="student">[Student]</span> Shorts. Oh, one or two times per month. I see. Yeah.
+<span class="tutor">[Tutor]</span> Maybe depending on what I need.
+<span class="student">[Student]</span> Yeah. It depends on what I need. That expression is so nice. It depends on what I need. Okay.
+<span class="tutor">[Tutor]</span> And do you need formal clothing for your work or do you need special work clothes?
+<span class="student">[Student]</span> Usually I wear business casual, business casual. So yeah, usually I wear the shirt and the uh and a black black suit, but there is no tie because that is business casual. So not not hard to wear the suit. So yeah, usually I just wear just a shirt and And if that season is winter, just a cardigan or some shirt. Yeah, sure. But there&#x27;s no tie because it is a little uncomfortable to work. But if I meet the customer, it is also I don&#x27;t have a tie. Just wear the shirt and shirt. Yeah, it&#x27;s just...
+<span class="tutor">[Tutor]</span> Is there a dress code in your workplace or rules for how you can and can&#x27;t dress?
+<span class="student">[Student]</span> Yeah, maybe 20 years ago we had a dress code. Almost people wore business casual, but nowadays there is no rule in work clothes. So, but we have a little small rule. It is impossible to wear half pants, short pants in company. And it is impossible to wear a hoodie, hoodie shirt.
+<span class="tutor">[Tutor]</span> Hoodie?
+<span class="student">[Student]</span> Yeah, hoodie.
+<span class="tutor">[Tutor]</span> Ah, yeah, hoodie.
+<span class="student">[Student]</span> Hoodie, T-shirt. Because we are not an IT company, so many people come to our company, so those kinds of clothes are prohibited in our company.
+<span class="tutor">[Tutor]</span> Okay, so not too casual like shorts or a hoodie, hoodie, or hooded sweater. Yeah, usually...
+<span class="student">[Student]</span> Usually we say the hoodie, right?
+<span class="tutor">[Tutor]</span> Hoodie.
+<span class="student">[Student]</span> Hoodie.
+<span class="tutor">[Tutor]</span> Hoodie.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="tutor">[Tutor]</span> We&#x27;re like a hooded sweater.
+<span class="student">[Student]</span> Hoodie sweater. Yeah, when I watch the media movie in Canada or some USA movie, the high-teen movie, and students of the university, they are always high school, high school students in USA or Canada, they usually wear hoodies. Is it right or not?
+<span class="tutor">[Tutor]</span> It depends. If it&#x27;s cold, it might be cold out.
+<span class="student">[Student]</span> How about you? When you are a student, high school student, what kind of clothes do you wear?
+<span class="tutor">[Tutor]</span> Just depending on the weather, so if it&#x27;s cold I might wear a sweater or a hoodie.
+<span class="student">[Student]</span> I see. Okay.
+<span class="tutor">[Tutor]</span> So do you buy your work clothes and everyday clothes at the same place?
+<span class="student">[Student]</span> Oh no. That depends on what I need. Sometimes, I thought these days, I thought that is divided into some kinds of clothes. For example, if I need a shirt, I have some shopping online because that store is already the same. Because that clothes is specialized in shirts, so I forgot that brand, but anyway, I usually buy my shirt at that online store. And but the other things, it depends on what I need. Sometimes I buy from some store, a department store, or some street store. Sometimes I buy online. That&#x27;s not regularly. Just what I need, depending on what I need.
+<span class="tutor">[Tutor]</span> Okay. Okay. Yeah. If it&#x27;s a work shirt, it might be like a button-up. It might be easier.
+<span class="student">[Student]</span> Button-up? Button-up.
+<span class="tutor">[Tutor]</span> Uh-huh. Okay, button. So you button, button.
+<span class="student">[Student]</span> Oh, today is a little difficult class because I don&#x27;t interest, I&#x27;m not interested in the clothes, but I have to explain about the clothes, but that is such a nice opportunity for me. Okay. Um, so which do you consider most important when buying clothes? The price, comfort, or style?
+<span class="student">[Student]</span> Oh, the first is style. And I think it is a same triangle. Yeah, price, comfort, style. But, yeah, I consider three kinds. Yeah, the balance. Because I&#x27;m a consumer, so and always I wear the clothes, so I consider the price, comfortable, style.
+<span class="tutor">[Tutor]</span> Yeah, so it might depend, like for your at-home clothing, maybe comfort, maybe workplace clothing, more style.
+<span class="student">[Student]</span> Yes, yes, yes. Okay, what is the answer about this question? I want to listen about the discussion because...
+<span class="tutor">[Tutor]</span> Well, it depends on your opinion. It&#x27;s just about what do you think? And how do you justify your preferences?
+<span class="student">[Student]</span> Okay. Are you asking me? Oh yes, yes. Because I wanted to answer of the nice answer about this question.
+<span class="tutor">[Tutor]</span> Yeah, your answer was fine. You can say I prefer a balance of this or when I&#x27;m looking for clothing at home, I prefer comfort.
+<span class="student">[Student]</span> Okay. And do you have a favorite online store, or you mentioned, can you remember what it is?
+<span class="student">[Student]</span> In my case, the basic item of the clothes, shirt, pants, or some basic clothes, I usually buy online because that is convenient and I know about that information, that clothes. So usually I buy online. But if I buy some specialized clothes, coat, shoes, tie, my etcetera, it needs some more information, the fashion of the clothes, comfortable and style. I can see them in store, so usually if I buy a coat, I go to some store, yeah, and then buy them.
+<span class="tutor">[Tutor]</span> Yeah, so maybe if it&#x27;s a bigger purchase or more expensive purchase, like maybe shoes or a winter coat.
+<span class="student">[Student]</span> Yes, because it is a little different to put on clothes. Sometimes the same size, but the clothes style is different and the texture of clothes and the fit on my body, that&#x27;s a little different. So usually I go to the offline store, yeah.
+<span class="tutor">[Tutor]</span> Okay, yeah, because sometimes you might order it online and the fabric or material...
+<span class="student">[Student]</span> Material. Okay.
+<span class="tutor">[Tutor]</span> Um, so did you have any questions about the topic?
+<span class="student">[Student]</span> Oh no, thank for your class, teacher.
+<span class="tutor">[Tutor]</span> Yeah, I will send you corrections in a bit. Have a great day. Goodbye.
+<span class="student">[Student]</span> Have a nice weekend. Bye-bye, teacher.</div>
+        </div>
+    </div>
+    <div class="toast" id="toast">✅ 프롬프트가 복사되었습니다!</div>
+    <script>
+        const REVIEW_PROMPT="너는 나의 영어 회화 복습 파트너야. 오늘 내 전화영어 수업 내용을 기반으로 대화하면서 복습을 도와줘.\n\n[오늘 수업 전사 내용]\n[Student] Hello, Bell. Good evening. Good morning. Yeah, how are you doing today? Last night, I went to bed at the right time, so I am a little bit tired, but it's okay. It's Friday. Yeah, it's a fresh morning. How are you?\n[Tutor] Okay, pretty good. Yeah, doing well today.\n[Tutor] Okay, yeah, good.\n[Tutor] And are you going home during the weekend?\n[Student] Oh, yes, of course. I have a reservation. I reserved to take a train at 6 o'clock, 6 p.m. So after work, I go to the train station and then take a train. I will take a train.\n[Tutor] Is it usually busier during the summertime than the wintertime?\n[Student] Oh, it's the same. Yeah. So maybe these days, the daylight is longer than wintertime. So when I take a train, it's bright outside. So it's nice. And I'm not sure it is the right answer to your question.\n[Tutor] I'm not sure either. Is it more busy? Do more people travel during the summer?\n[Student] Ah, yes, yes. And I heard that this week, this weekend, in Busan, there are so many crowded people because this week we have a BTS performance in Busan. So maybe this Saturday and Friday, there are many people coming to Korea, coming to Busan. So I'm a little afraid of that situation.\n[Tutor] Oh, big summer festival or big concert?\n[Student] Yeah, BTS is the famous, yeah, famous group of Korea. So that is a big concert, the BTS concert.\n[Tutor] Oh, yeah, a BTS performance is probably going to be crowded.\n[Student] Yeah, yeah. So I'm not sure it is possible to move. Yeah.\n[Tutor] Maybe it's possible.\n[Tutor] Okay.\n[Tutor] Yes, did you want to look at the topic today?\n[Student] Oh yes, no problem. Just a moment.\n[Tutor] Today's topic is buying new clothes.\n[Tutor] So the first one, what is happening in the picture?\n[Student] In this picture, I can see a woman who is shopping in a clothes store. Maybe she is window shopping and she checks the mannequin, clothes of the mannequin, clothes on the mannequin, and she checks the quality and color and and this this this This photo is the outside of the window view. So that is the... How can I say? This picture was taken on the outside of the window. So yeah. This store has a big window and the light reflects the window. So this atmosphere is so modern and fashionable. Yeah.\n[Tutor] Yeah, so maybe the window is very bright.\n[Student] Yeah, the city is reflected in the window.\n[Tutor] Yes, you're right.\n[Student] Reflected window.\n[Tutor] Okay.\n[Tutor] And how often do you purchase new clothes?\n[Student] Just a moment.\n[Tutor] Okay.\n[Student] I moved my position.\n[Tutor] Okay.\n[Student] Usually, I don't like, I don't enjoy the shopping, the clothes shopping. So usually before the winter season, before the summer season, I buy some clothes, new clothes. So usually two times per year I purchase clothes. And sometimes my wife purchases for me because she knows that I don't like shopping for clothes. So, yeah.\n[Tutor] Yeah, sure.\n[Tutor] So when you're purchasing, what kind of things do you usually buy? Sweaters, T-shirts, pants?\n[Student] Before I said, I usually buy twice per year. So one time I buy so many clothes. In summer, in summertime, I purchase a shirt and short pants, short pants and T-shirts and more comfortable clothes. Casual, like casual pants and clothes. Yeah. And the other time, usually I will buy a coat and a jumper, more jeans, fashionable jeans and yeah, and almost clothes I buy, divided twice per year.\n[Tutor] And where do you usually buy your clothing?\n[Student] Hmm, that depends on my schedule or yeah, I don't have a regular store. Yeah. Just sometimes I buy online because these days the online is developed, so there are so many stores online. Usually I order clothes online and buy them. Or sometimes I'm I I needed some clothes at the time, I visit a department store or some store like the super brand or Zara or I I forgot that's another name. Anyway, so, yeah, I buy some clothes. Actually, today, that is not an enjoyable subject. So, it is a little hard to speak about the subject because I don't know about the clothes. Anyway.\n[Tutor] It's about your habits and what you usually do.\n[Student] Yeah. How about you? How often do you purchase your clothes and where do you usually buy your clothes?\n[Tutor] I usually look online or maybe some local stores.\n[Student] Local stores.\n[Tutor] Maybe once or twice a month, or I might buy one thing, maybe like a shirt or shorts.\n[Student] Shorts. Oh, one or two times per month. I see. Yeah.\n[Tutor] Maybe depending on what I need.\n[Student] Yeah. It depends on what I need. That expression is so nice. It depends on what I need. Okay.\n[Tutor] And do you need formal clothing for your work or do you need special work clothes?\n[Student] Usually I wear business casual, business casual. So yeah, usually I wear the shirt and the uh and a black black suit, but there is no tie because that is business casual. So not not hard to wear the suit. So yeah, usually I just wear just a shirt and And if that season is winter, just a cardigan or some shirt. Yeah, sure. But there's no tie because it is a little uncomfortable to work. But if I meet the customer, it is also I don't have a tie. Just wear the shirt and shirt. Yeah, it's just...\n[Tutor] Is there a dress code in your workplace or rules for how you can and can't dress?\n[Student] Yeah, maybe 20 years ago we had a dress code. Almost people wore business casual, but nowadays there is no rule in work clothes. So, but we have a little small rule. It is impossible to wear half pants, short pants in company. And it is impossible to wear a hoodie, hoodie shirt.\n[Tutor] Hoodie?\n[Student] Yeah, hoodie.\n[Tutor] Ah, yeah, hoodie.\n[Student] Hoodie, T-shirt. Because we are not an IT company, so many people come to our company, so those kinds of clothes are prohibited in our company.\n[Tutor] Okay, so not too casual like shorts or a hoodie, hoodie, or hooded sweater. Yeah, usually...\n[Student] Usually we say the hoodie, right?\n[Tutor] Hoodie.\n[Student] Hoodie.\n[Tutor] Hoodie.\n[Tutor] Okay.\n[Tutor] We're like a hooded sweater.\n[Student] Hoodie sweater. Yeah, when I watch the media movie in Canada or some USA movie, the high-teen movie, and students of the university, they are always high school, high school students in USA or Canada, they usually wear hoodies. Is it right or not?\n[Tutor] It depends. If it's cold, it might be cold out.\n[Student] How about you? When you are a student, high school student, what kind of clothes do you wear?\n[Tutor] Just depending on the weather, so if it's cold I might wear a sweater or a hoodie.\n[Student] I see. Okay.\n[Tutor] So do you buy your work clothes and everyday clothes at the same place?\n[Student] Oh no. That depends on what I need. Sometimes, I thought these days, I thought that is divided into some kinds of clothes. For example, if I need a shirt, I have some shopping online because that store is already the same. Because that clothes is specialized in shirts, so I forgot that brand, but anyway, I usually buy my shirt at that online store. And but the other things, it depends on what I need. Sometimes I buy from some store, a department store, or some street store. Sometimes I buy online. That's not regularly. Just what I need, depending on what I need.\n[Tutor] Okay. Okay. Yeah. If it's a work shirt, it might be like a button-up. It might be easier.\n[Student] Button-up? Button-up.\n[Tutor] Uh-huh. Okay, button. So you button, button.\n[Student] Oh, today is a little difficult class because I don't interest, I'm not interested in the clothes, but I have to explain about the clothes, but that is such a nice opportunity for me. Okay. Um, so which do you consider most important when buying clothes? The price, comfort, or style?\n[Student] Oh, the first is style. And I think it is a same triangle. Yeah, price, comfort, style. But, yeah, I consider three kinds. Yeah, the balance. Because I'm a consumer, so and always I wear the clothes, so I consider the price, comfortable, style.\n[Tutor] Yeah, so it might depend, like for your at-home clothing, maybe comfort, maybe workplace clothing, more style.\n[Student] Yes, yes, yes. Okay, what is the answer about this question? I want to listen about the discussion because...\n[Tutor] Well, it depends on your opinion. It's just about what do you think? And how do you justify your preferences?\n[Student] Okay. Are you asking me? Oh yes, yes. Because I wanted to answer of the nice answer about this question.\n[Tutor] Yeah, your answer was fine. You can say I prefer a balance of this or when I'm looking for clothing at home, I prefer comfort.\n[Student] Okay. And do you have a favorite online store, or you mentioned, can you remember what it is?\n[Student] In my case, the basic item of the clothes, shirt, pants, or some basic clothes, I usually buy online because that is convenient and I know about that information, that clothes. So usually I buy online. But if I buy some specialized clothes, coat, shoes, tie, my etcetera, it needs some more information, the fashion of the clothes, comfortable and style. I can see them in store, so usually if I buy a coat, I go to some store, yeah, and then buy them.\n[Tutor] Yeah, so maybe if it's a bigger purchase or more expensive purchase, like maybe shoes or a winter coat.\n[Student] Yes, because it is a little different to put on clothes. Sometimes the same size, but the clothes style is different and the texture of clothes and the fit on my body, that's a little different. So usually I go to the offline store, yeah.\n[Tutor] Okay, yeah, because sometimes you might order it online and the fabric or material...\n[Student] Material. Okay.\n[Tutor] Um, so did you have any questions about the topic?\n[Student] Oh no, thank for your class, teacher.\n[Tutor] Yeah, I will send you corrections in a bit. Have a great day. Goodbye.\n[Student] Have a nice weekend. Bye-bye, teacher.\n\n[AI 피드백]\n안녕하세요, Joey! 따뜻하고 실용적인 영어 코치입니다. 오늘 수업 내용 잘 분석해서 피드백 드릴게요. 비즈니스 환경에서도 자신 있게 쓸 수 있도록, 자연스럽고 정확한 영어 표현을 함께 다듬어 봅시다!\n\n---\n\n**0. 📌 Topic**\nTopic: Discussing Habits and Preferences in Buying Clothes\n\n**1. 📊 오늘의 대화 요약 (Summary)**\n오늘 수업에서는 옷 구매 습관과 선호도에 대해 이야기 나누었습니다. Joey는 옷 쇼핑을 즐기지 않아 주로 계절별로 또는 필요할 때 온라인으로 구매한다고 설명했습니다. 또한, 직장 내 복장 규정과 옷을 구매할 때 가격, 편안함, 스타일 중 무엇을 중요하게 생각하는지에 대한 자신의 관점을 공유했습니다.\n\n**2. 💬 유창성 업그레이드 (Fluency & Natural Flow)**\n\n*   **1/3**\n    *   ❌ As Said: \"And I'm not sure it is the right answer to your question.\"\n    *   ✅ Natural: \"And I'm not sure if that's the right answer to your question.\"\n    *   💎 Professional: \"I'm uncertain whether that directly addresses your query.\"\n    *   💡 Coaching Point: Adding \"if\" makes the sentence structure more natural when expressing uncertainty about a statement. → \"if\"를 추가하면 어떤 진술에 대한 불확실성을 표현할 때 문장 구조가 더 자연스러워집니다.\n\n*   **2/3**\n    *   ❌ As Said: \"Usually, I don't like, I don't enjoy the shopping, the clothes shopping.\"\n    *   ✅ Natural: \"Usually, I don't really enjoy shopping for clothes.\"\n    *   💎 Professional: \"Generally, I do not find clothes shopping particularly enjoyable.\"\n    *   💡 Coaching Point: Using \"shopping for clothes\" is a more common and direct way to refer to the activity. Adding \"really\" softens the statement naturally. → \"shopping for clothes\"는 옷 쇼핑이라는 활동을 지칭할 때 더 흔하고 직접적인 표현입니다. \"really\"를 추가하면 자연스럽게 표현을 부드럽게 만들 수 있습니다.\n\n*   **3/3**\n    *   ❌ As Said: \"And the other time, usually I will buy a coat and a jumper, more jeans, fashionable jeans and yeah, and almost clothes I buy, divided twice per year.\"\n    *   ✅ Natural: \"The other time, I usually buy a coat, a jumper, and more fashionable jeans. I buy almost all my clothes twice a year.\"\n    *   💎 Professional: \"On the other occasion, I typically purchase a coat, a jumper, and more stylish jeans. My clothing purchases are generally made twice annually.\"\n    *   💡 Coaching Point: Breaking down the long sentence into two clearer parts improves readability and flow. \"I buy almost all my clothes\" is a more direct way to express the frequency. → 긴 문장을 두 개의 더 명확한 부분으로 나누면 가독성과 흐름이 향상됩니다. \"I buy almost all my clothes\"는 빈도를 표현하는 더 직접적인 방법입니다.\n\n**3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)**\n\n*   Category: **Verb Tense Consistency (Past vs. Present)**\n    *   Joey often mixes past tense verbs when describing current habits or states, or future intentions. This can make the meaning unclear.\n\n    | ❌ 학습자 원문 (As Said)                                                                                                                              | ✅ 교정 예시 (Correction)                                                                                                                                  |\n    | :---------------------------------------------------------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------- |\n    | \"I have a reservation. I reserved to take a train at 6 o'clock, 6 p.m.\"                                                                               | \"I have a reservation. I've reserved a train ticket for 6 p.m.\" (현재 가지고 있는 예약이므로 현재완료 또는 현재 시제가 더 자연스럽습니다.)                                                                                                                 |\n    | \"So after work, I go to the train station and then take a train. I will take a train.\"                                                                 | \"So after work, I go to the train station and then take a train.\" (미래 계획을 현재 시제로 표현하는 것이 일반적이며, 'I will take a train'은 반복되어 어색합니다.) |\n    | \"And almost clothes I buy, divided twice per year.\"                                                                                                   | \"And almost all the clothes I buy are divided into two purchases per year.\" (수동태를 사용하여 옷이 구매되는 행위를 더 명확하게 표현합니다.)                                                                                                                 |\n    | \"But if I meet the customer, it is also I don't have a tie. Just wear the shirt and shirt.\"                                                           | \"But if I meet a customer, I also don't wear a tie. I just wear a shirt.\" (현재의 습관이나 상황을 설명하므로 현재 시제가 적절합니다.)            |\n    | \"Sometimes, I thought these days, I thought that is divided into some kinds of clothes.\"                                                              | \"Sometimes, I think these days that clothes are divided into different kinds.\" (현재의 생각을 말하므로 'I think'가 적절하며, 수동태 'are divided'가 더 자연스럽습니다.) |\n    | \"I consider the price, comfortable, style.\"                                                                                                           | \"I consider the price, comfort, and style.\" (명사형 'comfort'를 사용하여 다른 명사들과 일관성을 유지합니다.)                                                                                                                 |\n\n    *   📌 핵심 규칙: 현재의 습관이나 사실을 말할 때는 항상 현재 시제(present tense)를 사용하고, 과거의 경험이나 특정 시점의 사건을 말할 때는 과거 시제(past tense)를 사용하세요. 미래에 대한 계획은 'will'이나 'be going to'를 사용합니다.\n    *   🔁 따라 읽기:\n        *   🗣️ \"I have a reservation. I've reserved a train ticket for 6 p.m.\"\n        *   🗣️ \"So after work, I go to the train station and then take a train.\"\n        *   🗣️ \"But if I meet a customer, I also don't wear a tie. I just wear a shirt.\"\n\n**4. 📗 어휘 확장 (Vocabulary Vault)**\n\n*   **mannequin** /'mænɪkɪn/ (noun)\n    *   뜻: 마네킹\n    *   실전 예문: \"The new display features clothes on a stylish mannequin in the store window.\" (매장 창문에 스타일리시한 마네킹에 옷이 전시되어 있어요.)\n\n*   **reflect** /rɪˈflekt/ (verb)\n    *   뜻: 반사하다, 비추다\n    *   실전 예문: \"The large windows of the building reflect the surrounding cityscape.\" (건물의 큰 창문들이 주변 도시 풍경을 비춥니다.)\n\n*   **business casual** /'bɪznəs 'kæʒuəl/ (noun phrase)\n    *   뜻: 비즈니스 캐주얼 (격식과 편안함의 중간 정도 복장)\n    *   실전 예문: \"Our company allows business casual attire on Fridays.\" (우리 회사는 금요일에 비즈니스 캐주얼 복장을 허용합니다.)\n\n*   **prohibited** /proʊˈhɪbɪtɪd/ (adjective)\n    *   뜻: 금지된\n    *   실전 예문: \"Wearing shorts is prohibited in our office during business hours.\" (업무 시간에는 사무실에서 반바지 착용이 금지되어 있습니다.)\n\n*   **texture** /ˈtekstʃər/ (noun)\n    *   뜻: 질감, 재질\n    *   실전 예문: \"When buying a sweater, I always check the texture of the wool.\" (스웨터를 살 때 저는 항상 양모의 질감을 확인합니다.)\n\n**5. 📝 실전 복습 챌린지 (Practice)**\n\n1.  **상황**: Joey가 옷 쇼핑을 별로 좋아하지 않는다고 말할 때, 더 자연스럽게 표현해 보세요.\n    *   **영작**: \"I don't really enjoy shopping for clothes.\"\n2.  **상황**: Joey가 옷을 구매할 때 가격, 편안함, 스타일을 모두 고려한다고 말할 때, 더 간결하고 명확하게 표현해 보세요.\n    *   **영작**: \"I consider price, comfort, and style when buying clothes.\"\n3.  **상황**: Joey가 직장에서 반바지나 후드티 착용이 금지된다고 설명할 때, 더 정확한 단어와 표현을 사용해 보세요.\n    *   **영작**: \"Wearing shorts or hoodies is prohibited in our company.\"\n\n**6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)**\n\n*   ✨ **Good Job**: \"It depends on what I need. That expression is so nice.\"\n    *   Joey가 \"It depends on what I need.\"라는 표현을 듣고 \"That expression is so nice.\"라고 반응한 것은 매우 훌륭했습니다! 이는 단순히 영어를 배우는 것을 넘어, 언어의 뉘앙스와 표현 자체의 아름다움을 느끼고 있다는 증거입니다. 또한, 튜터의 표현을 칭찬하며 적극적으로 배우려는 자세를 보여준 점이 인상 깊었습니다.\n\n*   🚀 **내일의 한 문장**: 다음 수업 시작 시 튜터에게 던져보세요!\n    *   \"Good morning! I was thinking about our last conversation regarding clothes, and I wanted to ask if you have any favorite brands for business casual wear.\"\n    *   (해석: 안녕하세요! 지난번 옷에 관한 대화를 생각하다가, 비즈니스 캐주얼 의류로 특별히 좋아하시는 브랜드가 있는지 여쭤보고 싶었어요.)\n\n**[성과 지표]**\n\n*   **유창성 점수**: 7/10\n*   **근거**: Joey는 전반적으로 자신의 생각을 잘 전달했으며, 특히 옷 구매 습관에 대한 설명을 구체적으로 풀어냈습니다. 다만, 일부 문장 구조나 표현에서 원어민이 자주 사용하는 자연스러운 표현으로 다듬을 여지가 있었습니다. 문법적으로는 시제 일관성 부분에서 약간의 개선이 필요해 보입니다.\n*   **다음 수업 '원포인트 액션 플랜'**: 현재의 습관이나 사실을 설명할 때 현재 시제를 일관성 있게 사용하고, 명사를 나열할 때 품사를 통일하는 연습을 해봅니다.\n\n위 내용을 바탕으로:\n1. 먼저 오늘 수업에서 내가 틀렸거나 어색했던 표현을 하나 골라서, 관련된 상황을 영어로 질문해줘.\n2. 내가 영어로 대답하면, 자연스러운지 확인하고 더 나은 표현이 있으면 알려줘.\n3. 특히 \"반복 실수 패턴\"에서 지적된 부분을 집중적으로 연습시켜줘.\n4. 이런 식으로 오늘 배운 표현들을 하나씩 복습하자.\n5. 한국어 설명은 필요할 때만 간단히, 대화는 최대한 영어로 진행해줘.\n\n그럼 시작하자!";
+        function startReview(){navigator.clipboard.writeText(REVIEW_PROMPT).then(()=>{showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)}).catch(()=>{const t=document.createElement('textarea');t.value=REVIEW_PROMPT;document.body.appendChild(t);t.select();document.execCommand('copy');document.body.removeChild(t);showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)})}
+        function showToast(){const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500)}
+        function switchTab(n){document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',n==='feedback'?i===0:i===1));document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));document.getElementById('tab-'+n).classList.add('active')}
+    </script>
+</body>
+</html>
