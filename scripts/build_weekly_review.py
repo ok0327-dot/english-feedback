@@ -107,6 +107,22 @@ def dedup_vocab(ls):
             if k not in seen: seen.add(k); out.append(v)
     return out
 
+def iso_ordinal(iso): return iso[0] * 53 + iso[1]   # (year,week) → 비교용 정수
+
+def vocab_index(ls):
+    """누적 단어를 dedup하되 등장횟수(count)·최근 주차(last_iso) 보존."""
+    idx = OrderedDict()
+    for l in ls:                                    # ls 는 날짜 오름차순
+        for v in l["vocab"]:
+            k = v["word"].lower()
+            if k not in idx:
+                idx[k] = {**v, "count": 0, "last_iso": l["iso"]}
+            idx[k]["count"] += 1
+            idx[k]["last_iso"] = l["iso"]            # 마지막 할당 = 가장 최근
+    return list(idx.values())
+
+VBUCKET = {0: "🔥 이번 주 신규", 1: "📅 최근 3주", 2: "🗂 그 이전"}
+
 def rule_synthesis(week_ls, cum_ls):
     """규칙기반 종합문 (루틴의 Claude가 더 나은 통찰로 교체 가능)."""
     gfreq = Counter(l["grammar_norm"] for l in cum_ls).most_common()
@@ -151,11 +167,13 @@ body{font-family:'Noto Sans KR',-apple-system,sans-serif;background:#0f0f13;colo
 .pair{border-left:2px solid #334155;padding:7px 0 7px 14px;margin:9px 0}
 .said{color:#fca5a5;font-size:13px;margin-bottom:3px}.nat{color:#86efac;font-size:13px}
 .deck{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:9px}
-.vcard{background:#0f0f13;border:1px solid rgba(255,255,255,.07);border-radius:11px;height:80px;cursor:pointer;position:relative}
-.vfront,.vback{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:8px;text-align:center;backface-visibility:hidden;transition:transform .4s;border-radius:11px}
-.vfront{gap:3px}.vword{font-size:14px;font-weight:600;color:#f1f5f9}.vpos{font-size:10px;color:#64748b}
-.vback{transform:rotateY(180deg);background:#1e293b;color:#7dd3fc;font-size:12.5px}
-.vcard.flipped .vfront{transform:rotateY(180deg)}.vcard.flipped .vback{transform:rotateY(360deg)}
+/* 표준 3D 플립: .vinner 래퍼만 회전(모바일 안정) / robust 3D flip via inner wrapper */
+.vcard{height:80px;cursor:pointer;perspective:700px;-webkit-tap-highlight-color:transparent}
+.vinner{position:relative;width:100%;height:100%;transition:transform .45s;transform-style:preserve-3d;-webkit-transform-style:preserve-3d}
+.vcard.flipped .vinner{transform:rotateY(180deg);-webkit-transform:rotateY(180deg)}
+.vfront,.vback{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:8px;text-align:center;border-radius:11px;border:1px solid rgba(255,255,255,.07);-webkit-backface-visibility:hidden;backface-visibility:hidden}
+.vfront{background:#0f0f13;gap:3px}.vword{font-size:14px;font-weight:600;color:#f1f5f9}.vpos{font-size:10px;color:#64748b}
+.vback{background:#1e293b;color:#7dd3fc;font-size:12.5px;transform:rotateY(180deg);-webkit-transform:rotateY(180deg)}
 .spark{width:100%;height:70px;display:block}
 .weeklist{display:flex;flex-direction:column;gap:8px}
 .weekrow{display:flex;align-items:center;gap:12px;padding:14px 16px;background:#0f0f13;border:1px solid rgba(255,255,255,.06);border-radius:12px;text-decoration:none;transition:all .2s}
@@ -165,6 +183,12 @@ body{font-family:'Noto Sans KR',-apple-system,sans-serif;background:#0f0f13;colo
 .weekrow .wf{flex:1;font-size:12.5px;color:#94a3b8}
 .weekrow .wc{font-size:12px;color:#38bdf8}
 .foot{text-align:center;font-size:11px;color:#475569;margin-top:26px;line-height:1.8}
+/* 누적 단어·표현 페이지 전용 / cumulative vocab page only */
+.wkgroup{margin-bottom:18px}.wkhd{font-size:13px;color:#7dd3fc;font-weight:700;margin:6px 0 8px;border-bottom:1px solid rgba(255,255,255,.06);padding-bottom:6px}
+.bgroup{margin-bottom:20px}.bhd{font-size:13px;color:#fbbf24;font-weight:700;margin:6px 0 10px}
+.rep{font-size:9px;color:#0f0f13;background:#fbbf24;border-radius:6px;padding:1px 5px;margin-left:6px;vertical-align:middle;font-weight:700}
+.vlink{display:block;text-align:center;background:linear-gradient(135deg,#1e293b,#16213e);border:1px solid rgba(56,189,248,.25);border-radius:12px;padding:14px;color:#7dd3fc;text-decoration:none;font-size:14px;font-weight:600;margin-bottom:20px}
+.vlink:hover{border-color:rgba(56,189,248,.5)}
 """
 
 def render_bars(cum_ls):
@@ -203,9 +227,9 @@ def render_week(iso, week_ls, cum_ls, prev_iso, next_iso, is_current):
         f'<div class="pair"><div class="said">❌ {esc(p["said"])}</div>'
         f'<div class="nat">✅ {esc(p["natural"])}</div></div>' for p in wk_pairs) or '<div class="muted">이번 주 교정 표현 없음</div>'
     wkvocab_html = "".join(
-        f'<div class="vcard" onclick="this.classList.toggle(\'flipped\')">'
+        f'<div class="vcard" onclick="this.classList.toggle(\'flipped\')"><div class="vinner">'
         f'<div class="vfront"><span class="vword">{esc(v["word"])}</span><span class="vpos">{esc(v["pos"])}</span></div>'
-        f'<div class="vback">{esc(v["meaning"])}</div></div>' for v in wk_vocab) or '<div class="muted">이번 주 신규 어휘 없음</div>'
+        f'<div class="vback">{esc(v["meaning"])}</div></div></div>' for v in wk_vocab) or '<div class="muted">이번 주 신규 어휘 없음</div>'
 
     cur_badge = ' · <span style="color:#fbbf24">진행중</span>' if is_current else ""
     nav_prev = f'<a href="{week_file(prev_iso)}">← {week_label(prev_iso)}</a>' if prev_iso else "<span></span>"
@@ -249,7 +273,86 @@ def render_week(iso, week_ls, cum_ls, prev_iso, next_iso, is_current):
   <div class="foot">데이터: docs/ 일일 피드백 {CUTOFF} 이후 · 깨진 대용량 파일 자동 제외<br>
   생성: scripts/build_weekly_review.py · Gemini 쿼터 0 · Claude $0</div>
 </div>
-<script>document.querySelectorAll('.vcard').forEach(c=>c.addEventListener('click',()=>c.classList.toggle('flipped')));</script>
+</body></html>"""
+
+def render_vocab(all_ls):
+    """누적 단어 & 주요 표현 정리 페이지 (자기완결형, 규칙기반 = Layer 1).
+    <div id="curation"> 은 금요일 루틴의 Claude가 더 나은 통찰로 교체 가능(Layer 2, 없어도 동작)."""
+    today_ord = iso_ordinal(datetime.date.today().isocalendar()[:2])
+
+    # 💬 주요 표현: ❌→✅ 교정쌍을 주차별 최신순 / corrections by week, newest first
+    weeks = OrderedDict()
+    for l in all_ls:
+        weeks.setdefault(l["iso"], []).extend(l["pairs"])
+    total_pairs = sum(len(v) for v in weeks.values())
+    expr_html = ""
+    for iso in sorted(weeks.keys(), reverse=True):
+        prs = weeks[iso]
+        if not prs: continue
+        rows = "".join(
+            f'<div class="pair"><div class="said">❌ {esc(p["said"])}</div>'
+            f'<div class="nat">✅ {esc(p["natural"])}</div></div>' for p in prs)
+        expr_html += (f'<div class="wkgroup"><div class="wkhd">{week_label(iso)} '
+                      f'<span class="muted">· {week_range(iso)} · {len(prs)}개</span></div>{rows}</div>')
+
+    # 📗 누적 단어: 최근성 버킷 + 2회↑ 강조 / vocab by recency bucket
+    vi = vocab_index(all_ls)
+    buckets = {0: [], 1: [], 2: []}
+    for v in vi:
+        d = today_ord - iso_ordinal(v["last_iso"])
+        buckets[0 if d <= 0 else (1 if d <= 3 else 2)].append(v)
+    repeat_n = sum(1 for v in vi if v["count"] >= 2)
+
+    def vcard(v):
+        badge = '<span class="rep">2회↑</span>' if v["count"] >= 2 else ""
+        return ('<div class="vcard" onclick="this.classList.toggle(\'flipped\')"><div class="vinner">'
+                f'<div class="vfront"><span class="vword">{esc(v["word"])}{badge}</span>'
+                f'<span class="vpos">{esc(v["pos"])}</span></div>'
+                f'<div class="vback">{esc(v["meaning"])}</div></div></div>')
+
+    vocab_html = ""
+    for b in (0, 1, 2):
+        items = buckets[b]
+        if not items: continue
+        cards = "".join(vcard(v) for v in items)
+        vocab_html += (f'<div class="bgroup"><div class="bhd">{VBUCKET[b]} '
+                       f'<span class="muted">· {len(items)}개</span></div>'
+                       f'<div class="deck">{cards}</div></div>')
+
+    curation = (
+        f"컷오프({CUTOFF}) 이후 누적 <b>단어 {len(vi)}개</b>, "
+        f"<b>주요 표현 {total_pairs}개</b>를 모았습니다. "
+        f"이 중 <b>{repeat_n}개</b> 단어는 2회 이상 반복 등장해 우선 암기 대상입니다. "
+        f"위 <b>🔥 이번 주 신규</b>부터 거꾸로 훑고, "
+        f"❌→✅ 교정 표현은 소리 내어 한 번씩 말해 보세요.")
+
+    return f"""<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>📚 누적 단어 &amp; 주요 표현</title><style>{CSS}</style></head><body>
+<div class="header"><h1>📚 누적 단어 &amp; 주요 표현</h1>
+<div class="range">{CUTOFF} ~ 누적 정리 · 매주 금요일 갱신</div></div>
+<div class="nav"><a href="review-index.html">← 주간 복습 목록</a><a href="index.html">일일 복습 →</a></div>
+<div class="container">
+
+  <div class="stats">
+    <div class="stat"><div class="n">{len(vi)}</div><div class="l">누적 단어</div></div>
+    <div class="stat"><div class="n">{total_pairs}</div><div class="l">주요 표현</div></div>
+    <div class="stat"><div class="n">{len(weeks)}</div><div class="l">분석 주차</div></div>
+    <div class="stat"><div class="n">{repeat_n}</div><div class="l">2회↑ 단어</div></div>
+  </div>
+
+  <div class="card"><h2>🧭 누적 학습 큐레이션 <span class="sub">Claude 작성 · $0</span></h2>
+    <div class="syn" id="curation">{curation}</div></div>
+
+  <div class="card"><h2>💬 주요 표현 <span class="sub">❌→✅ · 주차별 최신순 · {total_pairs}개</span></h2>
+    {expr_html or '<div class="muted">교정 표현 없음</div>'}</div>
+
+  <div class="card"><h2>📗 누적 단어 <span class="sub">클릭하면 뜻 · 최근순</span></h2>
+    {vocab_html or '<div class="muted">단어 없음</div>'}</div>
+
+  <div class="foot">데이터: docs/ 일일 피드백 {CUTOFF} 이후 · 깨진 대용량 파일 자동 제외<br>
+  생성: scripts/build_weekly_review.py · Gemini 쿼터 0 · Claude $0</div>
+</div>
 </body></html>"""
 
 def render_index(weeks, all_ls):
@@ -269,7 +372,7 @@ def render_index(weeks, all_ls):
 <title>📚 주간 복습 기록</title><style>{CSS}</style></head><body>
 <div class="header"><h1>📚 주간 복습 기록</h1>
 <div class="range">{CUTOFF} ~ 누적 {len(all_ls)} LESSONS</div></div>
-<div class="nav"><a href="index.html">← 일일 복습 목록</a><span></span></div>
+<div class="nav"><a href="index.html">← 일일 복습 목록</a><a href="review-vocab.html">📚 누적 단어·표현 →</a></div>
 <div class="container">
   <div class="stats">
     <div class="stat"><div class="n">{len(weeks)}</div><div class="l">주차</div></div>
@@ -277,6 +380,7 @@ def render_index(weeks, all_ls):
     <div class="stat"><div class="n">{avg:.1f}</div><div class="l">평균 유창성</div></div>
     <div class="stat"><div class="n">{len(deck)}</div><div class="l">누적 어휘</div></div>
   </div>
+  <a class="vlink" href="review-vocab.html">📚 누적 단어 &amp; 주요 표현 모아보기 →</a>
   <div class="card"><h2>🔧 누적 약점 문법 <span class="sub">최다: {esc(top)}</span></h2>
     {render_bars(all_ls)}</div>
   <div class="card"><h2>🗓 주간 리포트 <span class="sub">최신순</span></h2>
@@ -307,8 +411,9 @@ def build():
         if is_current: current_file = week_file(iso)
 
     open(os.path.join(DOCS, "review-index.html"), "w", encoding="utf-8").write(render_index(weeks, allL))
+    open(os.path.join(DOCS, "review-vocab.html"), "w", encoding="utf-8").write(render_vocab(allL))
 
-    print(f"✅ {len(weeks)} weekly files + review-index.html")
+    print(f"✅ {len(weeks)} weekly files + review-index.html + review-vocab.html")
     for iso in ordered:
         tag = " (current)" if iso == current else ""
         print(f"   {week_file(iso)}  {len(weeks[iso])} lessons{tag}")
