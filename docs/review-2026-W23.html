@@ -30,11 +30,13 @@ body{font-family:'Noto Sans KR',-apple-system,sans-serif;background:#0f0f13;colo
 .pair{border-left:2px solid #334155;padding:7px 0 7px 14px;margin:9px 0}
 .said{color:#fca5a5;font-size:13px;margin-bottom:3px}.nat{color:#86efac;font-size:13px}
 .deck{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:9px}
-.vcard{background:#0f0f13;border:1px solid rgba(255,255,255,.07);border-radius:11px;height:80px;cursor:pointer;position:relative}
-.vfront,.vback{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:8px;text-align:center;backface-visibility:hidden;transition:transform .4s;border-radius:11px}
-.vfront{gap:3px}.vword{font-size:14px;font-weight:600;color:#f1f5f9}.vpos{font-size:10px;color:#64748b}
-.vback{transform:rotateY(180deg);background:#1e293b;color:#7dd3fc;font-size:12.5px}
-.vcard.flipped .vfront{transform:rotateY(180deg)}.vcard.flipped .vback{transform:rotateY(360deg)}
+/* 표준 3D 플립: .vinner 래퍼만 회전(모바일 안정) / robust 3D flip via inner wrapper */
+.vcard{height:80px;cursor:pointer;perspective:700px;-webkit-tap-highlight-color:transparent}
+.vinner{position:relative;width:100%;height:100%;transition:transform .45s;transform-style:preserve-3d;-webkit-transform-style:preserve-3d}
+.vcard.flipped .vinner{transform:rotateY(180deg);-webkit-transform:rotateY(180deg)}
+.vfront,.vback{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:8px;text-align:center;border-radius:11px;border:1px solid rgba(255,255,255,.07);-webkit-backface-visibility:hidden;backface-visibility:hidden}
+.vfront{background:#0f0f13;gap:3px}.vword{font-size:14px;font-weight:600;color:#f1f5f9}.vpos{font-size:10px;color:#64748b}
+.vback{background:#1e293b;color:#7dd3fc;font-size:12.5px;transform:rotateY(180deg);-webkit-transform:rotateY(180deg)}
 .spark{width:100%;height:70px;display:block}
 .weeklist{display:flex;flex-direction:column;gap:8px}
 .weekrow{display:flex;align-items:center;gap:12px;padding:14px 16px;background:#0f0f13;border:1px solid rgba(255,255,255,.06);border-radius:12px;text-decoration:none;transition:all .2s}
@@ -44,6 +46,12 @@ body{font-family:'Noto Sans KR',-apple-system,sans-serif;background:#0f0f13;colo
 .weekrow .wf{flex:1;font-size:12.5px;color:#94a3b8}
 .weekrow .wc{font-size:12px;color:#38bdf8}
 .foot{text-align:center;font-size:11px;color:#475569;margin-top:26px;line-height:1.8}
+/* 누적 단어·표현 페이지 전용 / cumulative vocab page only */
+.wkgroup{margin-bottom:18px}.wkhd{font-size:13px;color:#7dd3fc;font-weight:700;margin:6px 0 8px;border-bottom:1px solid rgba(255,255,255,.06);padding-bottom:6px}
+.bgroup{margin-bottom:20px}.bhd{font-size:13px;color:#fbbf24;font-weight:700;margin:6px 0 10px}
+.rep{font-size:9px;color:#0f0f13;background:#fbbf24;border-radius:6px;padding:1px 5px;margin-left:6px;vertical-align:middle;font-weight:700}
+.vlink{display:block;text-align:center;background:linear-gradient(135deg,#1e293b,#16213e);border:1px solid rgba(56,189,248,.25);border-radius:12px;padding:14px;color:#7dd3fc;text-decoration:none;font-size:14px;font-weight:600;margin-bottom:20px}
+.vlink:hover{border-color:rgba(56,189,248,.5)}
 </style></head><body>
 <div class="header"><h1>📊 주간 복습 · 2026-W23</h1>
 <div class="range">6/1~6/5</div></div>
@@ -67,7 +75,7 @@ body{font-family:'Noto Sans KR',-apple-system,sans-serif;background:#0f0f13;colo
     <div class="pair"><div class="said">❌ I don&#x27;t set up a plan. I don&#x27;t make a plan, but maybe I will make a plan after discussing with my wife.</div><div class="nat">✅ I don&#x27;t have any specific plans yet. I&#x27;ll probably make some after discussing with my wife.</div></div><div class="pair"><div class="said">❌ What is opinion this textbook, about this textbook?</div><div class="nat">✅ What&#x27;s your opinion of this textbook?</div></div><div class="pair"><div class="said">❌ it is feel about nice teamwork.</div><div class="nat">✅ It gives a nice feeling of teamwork.</div></div></div>
 
   <div class="card"><h2>📗 이번 주 어휘 <span class="sub">클릭하면 뜻</span></h2>
-    <div class="deck"><div class="vcard" onclick="this.classList.toggle('flipped')"><div class="vfront"><span class="vword">finalize</span><span class="vpos">동사</span></div><div class="vback">마무리 짓다, 확정하다</div></div><div class="vcard" onclick="this.classList.toggle('flipped')"><div class="vfront"><span class="vword">convey</span><span class="vpos">동사</span></div><div class="vback">(생각, 감정 등을) 전달하다, 표현하다</div></div><div class="vcard" onclick="this.classList.toggle('flipped')"><div class="vfront"><span class="vword">fundamentally</span><span class="vpos">부사</span></div><div class="vback">근본적으로, 기본적으로</div></div><div class="vcard" onclick="this.classList.toggle('flipped')"><div class="vfront"><span class="vword">foster</span><span class="vpos">동사</span></div><div class="vback">조성하다, 육성하다, 발전시키다 (특히 관계나 성장)</div></div><div class="vcard" onclick="this.classList.toggle('flipped')"><div class="vfront"><span class="vword">work-life balance</span><span class="vpos">명사</span></div><div class="vback">일과 삶의 균형</div></div></div></div>
+    <div class="deck"><div class="vcard" onclick="this.classList.toggle('flipped')"><div class="vinner"><div class="vfront"><span class="vword">finalize</span><span class="vpos">동사</span></div><div class="vback">마무리 짓다, 확정하다</div></div></div><div class="vcard" onclick="this.classList.toggle('flipped')"><div class="vinner"><div class="vfront"><span class="vword">convey</span><span class="vpos">동사</span></div><div class="vback">(생각, 감정 등을) 전달하다, 표현하다</div></div></div><div class="vcard" onclick="this.classList.toggle('flipped')"><div class="vinner"><div class="vfront"><span class="vword">fundamentally</span><span class="vpos">부사</span></div><div class="vback">근본적으로, 기본적으로</div></div></div><div class="vcard" onclick="this.classList.toggle('flipped')"><div class="vinner"><div class="vfront"><span class="vword">foster</span><span class="vpos">동사</span></div><div class="vback">조성하다, 육성하다, 발전시키다 (특히 관계나 성장)</div></div></div><div class="vcard" onclick="this.classList.toggle('flipped')"><div class="vinner"><div class="vfront"><span class="vword">work-life balance</span><span class="vpos">명사</span></div><div class="vback">일과 삶의 균형</div></div></div></div></div>
 
   <div class="card"><h2>📈 누적 약점 문법 <span class="sub">컷오프~2026-W23</span></h2>
     <div class="bar-row"><div class="bar-label">Articles (a/an/the)</div><div class="bar-track"><div class="bar-fill hot" style="width:100%"></div></div><div class="bar-val">3회</div></div><div class="bar-row"><div class="bar-label">Subject–Verb Agreement</div><div class="bar-track"><div class="bar-fill " style="width:66%"></div></div><div class="bar-val">2회</div></div><div class="bar-row"><div class="bar-label">Verb Forms / Auxiliaries</div><div class="bar-track"><div class="bar-fill " style="width:66%"></div></div><div class="bar-val">2회</div></div><div class="bar-row"><div class="bar-label">Prepositions</div><div class="bar-track"><div class="bar-fill " style="width:66%"></div></div><div class="bar-val">2회</div></div><div class="bar-row"><div class="bar-label">Missing Subjects / Verbs</div><div class="bar-track"><div class="bar-fill " style="width:33%"></div></div><div class="bar-val">1회</div></div><div class="bar-row"><div class="bar-label">Verb Tense</div><div class="bar-track"><div class="bar-fill " style="width:33%"></div></div><div class="bar-val">1회</div></div><div class="bar-row"><div class="bar-label">Causative &quot;get&quot;</div><div class="bar-track"><div class="bar-fill " style="width:33%"></div></div><div class="bar-val">1회</div></div></div>
@@ -79,5 +87,4 @@ body{font-family:'Noto Sans KR',-apple-system,sans-serif;background:#0f0f13;colo
   <div class="foot">데이터: docs/ 일일 피드백 2026-05-08 이후 · 깨진 대용량 파일 자동 제외<br>
   생성: scripts/build_weekly_review.py · Gemini 쿼터 0 · Claude $0</div>
 </div>
-<script>document.querySelectorAll('.vcard').forEach(c=>c.addEventListener('click',()=>c.classList.toggle('flipped')));</script>
 </body></html>
