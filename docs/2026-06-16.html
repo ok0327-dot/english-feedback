@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전화영어 복습 - 2026년 06월 16일</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Noto Sans KR',sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.75;min-height:100vh}
+        .header{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);border-bottom:1px solid rgba(255,255,255,.06);padding:48px 24px 40px;text-align:center}
+        .header-date{font-size:13px;color:#94a3b8;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+        .header h1{font-size:28px;font-weight:700;color:#f1f5f9;margin-bottom:16px}
+        .header-meta{display:flex;justify-content:center;gap:24px;font-size:14px;color:#64748b}
+        .header-meta span{display:flex;align-items:center;gap:6px}
+        .cta-section{text-align:center;padding:40px 24px}
+        .cta-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:linear-gradient(135deg,#38bdf8,#818cf8);color:#fff;font-size:16px;font-weight:600;font-family:'Noto Sans KR',sans-serif;border:none;border-radius:50px;cursor:pointer;transition:all .3s;text-decoration:none;box-shadow:0 4px 24px rgba(56,189,248,.25)}
+        .cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(56,189,248,.35)}
+        .cta-btn svg{width:20px;height:20px}
+        .cta-sub{margin-top:12px;font-size:13px;color:#64748b}
+        .toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#38bdf8;padding:14px 28px;border-radius:12px;font-size:14px;font-weight:500;border:1px solid rgba(56,189,248,.2);box-shadow:0 8px 32px rgba(0,0,0,.4);opacity:0;transition:all .4s cubic-bezier(.16,1,.3,1);z-index:1000}
+        .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+        .container{max-width:720px;margin:0 auto;padding:0 24px 80px}
+        .tabs{display:flex;gap:4px;background:#1a1a24;padding:4px;border-radius:12px;margin-bottom:32px}
+        .tab{flex:1;padding:12px;text-align:center;font-size:14px;font-weight:500;color:#64748b;background:0 0;border:none;border-radius:8px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all .2s}
+        .tab.active{background:#262636;color:#f1f5f9}
+        .tab-content{display:none}.tab-content.active{display:block}
+        .feedback h2{font-size:18px;font-weight:700;color:#f1f5f9;margin:36px 0 16px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.06)}
+        .feedback h2:first-child{margin-top:0}
+        .feedback p{margin:8px 0;color:#cbd5e1}
+        .feedback .item{padding:6px 0 6px 16px;border-left:2px solid #334155;margin:6px 0;color:#cbd5e1}
+        .feedback .numbered{padding:8px 0 8px 16px;color:#cbd5e1}
+        .feedback .numbered strong{color:#38bdf8}
+        .feedback strong{color:#f1f5f9}
+        .feedback code{background:#1e293b;padding:2px 8px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#38bdf8}
+        .feedback table{width:100%;border-collapse:collapse;margin:12px 0}
+        .feedback th,.feedback td{padding:10px 14px;text-align:left;border-bottom:1px solid #262636}
+        .feedback th{color:#94a3b8;font-weight:500;font-size:13px}
+        .feedback td{color:#cbd5e1}
+        .arrow{color:#38bdf8;font-weight:700}
+        .transcript{background:#1a1a24;border-radius:12px;padding:28px;font-size:14px;line-height:2;color:#94a3b8;white-space:pre-wrap;word-break:break-word;font-family:'JetBrains Mono','Noto Sans KR',monospace}
+        .transcript .tutor{color:#38bdf8}
+        .transcript .student{color:#a78bfa}
+        @media(max-width:640px){.header{padding:32px 16px}.header h1{font-size:22px}.cta-btn{padding:14px 28px;font-size:15px}.container{padding:0 16px 60px}}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-date">2026년 06월 16일</div>
+        <h1>📚 전화영어 복습</h1>
+        <div class="header-meta">
+            <span>⏱ 19분 35초</span>
+            <span>🎙 전화영어_025180304_20260616080105.m4a</span>
+        </div>
+    </div>
+    <div class="cta-section">
+        <button class="cta-btn" onclick="startReview()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Gemini에서 복습 대화 시작하기
+        </button>
+        <div class="cta-sub">클릭하면 프롬프트가 복사되고 Gemini가 열립니다</div>
+    </div>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('feedback')">📋 AI 피드백</button>
+            <button class="tab" onclick="switchTab('transcript')">🎙 수업 전사</button>
+        </div>
+        <div id="tab-feedback" class="tab-content active">
+            <div class="feedback"><h2>완성본</h2>
+<br>
+<p>Joey, 안녕하세요! 오늘 전자제품에 대한 대화 즐거웠습니다. 익숙한 가전제품에 대해 이야기하면서 자연스럽게 다양한 표현들을 연습할 수 있었던 시간이었어요. 특히 한국 가정의 독특한 가전제품 문화(로봇 청소기, 식기세척기, 건조기)에 대해 설명해 주실 때 Joey의 문화적 배경이 잘 드러나서 좋았습니다.</p>
+<br>
+<br>
+<p>### <strong>0. 📌 Topic</strong></p>
+<p>Topic: Discussing home electronics, their functions, and purchasing considerations.</p>
+<br>
+<p>### <strong>1. 📊 오늘의 대화 요약 (Summary)</strong></p>
+<p>오늘은 집에서 사용하는 다양한 전자제품과 가전제품에 대해 이야기 나누었습니다. 냉장고, TV, 세탁기, 청소기 등 여러 제품을 묘사하고, 구매 시 고려하는 요소(기능, 디자인)에 대해 토론했습니다. 또한, 한국 가정에서 인기 있는 로봇 청소기, 식기세척기, 건조기 등에 대해서도 자세히 설명해 주셨습니다.</p>
+<br>
+<p>### <strong>2. 💬 유창성 업그레이드 (Fluency & Natural Flow)</strong></p>
+<p>Joey가 사용하신 표현 중 의미는 잘 전달되었지만, 원어민들이 더 자연스럽게 쓰는 표현으로 다듬으면 좋을 문장들을 골라봤어요.</p>
+<br>
+<div class="numbered"><strong>1.</strong>  ❌ <strong>학습자 원문 (As Said):</strong> "And also I can see the flat of the TV."</div>
+<p>    *   ✅ <strong>자연스러운 표현 (Natural):</strong> "I can also see a flat-screen TV."</p>
+<p>    *   💎 <strong>비즈니스 표현 (Professional):</strong> "Additionally, a flat-screen television is visible."</p>
+<p>    *   💡 <strong>코칭 포인트:</strong> "flat-screen TV"는 해당 TV 유형을 지칭하는 가장 표준적이고 자연스러운 표현입니다. "The flat of the TV"도 이해는 되지만, 원어민이 잘 사용하지 않는 표현입니다.</p>
+<br>
+<div class="numbered"><strong>2.</strong>  ❌ <strong>학습자 원문 (As Said):</strong> "But usually in family they have two both kind of vacuum cleaner."</div>
+<p>    *   ✅ <strong>자연스러운 표현 (Natural):</strong> "But usually, families have both kinds of vacuum cleaners."</p>
+<p>    *   💎 <strong>비즈니스 표현 (Professional):</strong> "Typically, households possess both types of vacuum cleaners."</p>
+<p>    *   💡 <strong>코칭 포인트:</strong> "family"와 같은 일반적인 그룹에 대해 이야기할 때는 복수형 "families" 또는 일반적인 단수형 "a family"를 사용하는 것이 더 자연스럽습니다. 또한, "two both kind of"보다는 "both kinds of"가 더 흔한 표현입니다.</p>
+<br>
+<div class="numbered"><strong>3.</strong>  ❌ <strong>학습자 원문 (As Said):</strong> "So it is time to change all my electronic machines."</div>
+<p>    *   ✅ <strong>자연스러운 표현 (Natural):</strong> "So it's time to replace all my electronic appliances."</p>
+<p>    *   💎 <strong>비즈니스 표현 (Professional):</strong> "Therefore, it is opportune to upgrade all my electronic devices."</p>
+<p>    *   💡 <strong>코칭 포인트:</strong> "Change"는 단순히 무언가를 바꾸는 것을 의미할 수 있지만, "replace"는 낡거나 고장 난 것을 새것으로 교체한다는 의미를 더 명확히 전달합니다. "Electronic machines"도 괜찮지만, 가정용 전자제품을 지칭할 때는 "electronic appliances" 또는 "devices"가 더 흔하게 사용됩니다.</p>
+<br>
+<p>### <strong>3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)</strong></p>
+<p>Category: <strong>Singular/Plural Noun and Verb Agreement</strong></p>
+<br>
+<p>Joey는 단수 명사와 복수 명사를 혼동하거나, 이에 따른 동사 수일치를 놓치는 경향이 있었습니다. 특히 'kind of'와 함께 명사를 사용할 때 이 패턴이 자주 나타났습니다.</p>
+<br>
+<table>
+<tr><th>❌ 원문 (As Said)</th><th>✅ 교정 예시 (Corrected)</th></tr>
+<tr><td>"there are so many <strong>kinds of the electric machine</strong>."</td><td>"There are so many <strong>kinds of electric machines</strong>."</td></tr>
+<tr><td>"Every family <strong>have</strong> that machine..."</td><td>"Every family <strong>has</strong> that machine..."</td></tr>
+<tr><td>"But these days that <strong>machine have</strong> some problem..."</td><td>"But these days that <strong>machine has</strong> some problems..."</td></tr>
+<tr><td>"that device divides two <strong>kinds of possibilities</strong>."</td><td>"That device has two <strong>kinds of components</strong> (or possibilities)."</td></tr>
+<tr><td>"every bride prepare three <strong>kinds of the device</strong>..."</td><td>"Every bride prepares three <strong>kinds of devices</strong>..."</td></tr>
+</table>
+<br>
+<p>📌 <strong>핵심 규칙:</strong></p>
+<p>'kind of' 뒤에는 일반적으로 복수 명사가 오며, 주어가 단수일 때는 동사도 단수형(예: have <span class="arrow">→</span> has)으로 일치시켜야 합니다.</p>
+<br>
+<p>🔁 <strong>따라 읽기:</strong></p>
+<p>🗣️ "There are so many kinds of electric machines."</p>
+<p>🗣️ "Every family has that machine."</p>
+<p>🗣️ "But these days that machine has some problems."</p>
+<br>
+<p>### <strong>4. 📗 어휘 확장 (Vocabulary Vault)</strong></p>
+<p>오늘 대화에서 유용하게 쓰일 수 있는 어휘들을 정리해 보았습니다.</p>
+<br>
+<div class="numbered"><strong>1.</strong>  <strong>appliance</strong> /əˈplaɪ.əns/ (명사)</div>
+<p>    *   뜻: (가정용) 기기, 가전제품 (특히 전기 제품)</p>
+<p>    *   실전 예문: We are looking to invest in energy-efficient <strong>appliances</strong> for our new office kitchen.</p>
+<br>
+<div class="numbered"><strong>2.</strong>  <strong>promotional</strong> /prəˈmoʊ.ʃən.əl/ (형용사)</div>
+<p>    *   뜻: 홍보의, 판촉의</p>
+<p>    *   실전 예문: The company launched a new <strong>promotional</strong> campaign to boost sales of its latest smartphone.</p>
+<br>
+<div class="numbered"><strong>3.</strong>  <strong>maintenance</strong> /ˈmeɪn.tən.əns/ (명사)</div>
+<p>    *   뜻: 유지, 보수, 관리</p>
+<p>    *   실전 예문: Regular <strong>maintenance</strong> of our factory equipment is crucial to prevent unexpected breakdowns.</p>
+<br>
+<div class="numbered"><strong>4.</strong>  <strong>handy</strong> /ˈhæn.di/ (형용사)</div>
+<p>    *   뜻: (사람이) 솜씨 좋은, 손재주 있는; (물건이) 유용한, 편리한</p>
+<p>    *   실전 예문: My colleague is quite <strong>handy</strong> with IT issues, so he often helps us troubleshoot technical problems.</p>
+<br>
+<div class="numbered"><strong>5.</strong>  <strong>troubleshoot</strong> /ˈtrʌb.əl.ʃuːt/ (동사)</div>
+<p>    *   뜻: (문제의 원인을) 찾아내 해결하다</p>
+<p>    *   실전 예문: Our engineering team is working to <strong>troubleshoot</strong> the intermittent network connectivity issues.</p>
+<br>
+<p>### <strong>5. 📝 실전 복습 챌린지 (Practice)</strong></p>
+<p>오늘 배운 표현과 문법을 활용하여 영작 연습을 해볼까요?</p>
+<br>
+<div class="numbered"><strong>1.</strong>  <strong>상황:</strong> 우리 회사는 최근 사무실의 낡은 가전제품들을 모두 새것으로 교체했습니다.</div>
+<p>    *   <strong>영작:</strong> (힌트: 'replace', 'appliance')</p>
+<p>    *   <strong>모범 답안:</strong> Our company recently replaced all the old appliances in the office.</p>
+<br>
+<div class="numbered"><strong>2.</strong>  <strong>상황:</strong> 이 새로운 스마트폰은 다양한 기능을 가지고 있어서 매우 편리합니다.</div>
+<p>    *   <strong>영작:</strong> (힌트: 'kinds of', 'handy')</p>
+<p>    *   <strong>모범 답안:</strong> This new smartphone has many kinds of features, making it very handy.</p>
+<br>
+<div class="numbered"><strong>3.</strong>  <strong>상황:</strong> 우리는 고객 만족도를 높이기 위해 제품의 정기적인 유지 보수가 얼마나 중요한지 강조하는 홍보 캠페인을 시작할 계획입니다.</div>
+<p>    *   <strong>영작:</strong> (힌트: 'promotional campaign', 'maintenance', 'crucial')</p>
+<p>    *   <strong>모범 답안:</strong> We plan to launch a promotional campaign emphasizing how crucial regular maintenance of our products is to enhance customer satisfaction.</p>
+<br>
+<p>### <strong>6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)</strong></p>
+<br>
+<p>✨ <strong>Good Job:</strong> "Every family have that machine because we usually eat the rice every meal. So it's a rice cooker."</p>
+<p>Joey, 이 문장은 문법적으로 약간의 수정이 필요했지만, 한국 문화에서 밥솥이 얼마나 중요한지, 그리고 그 이유를 아주 명확하게 설명해 주셨습니다. 특히 "we usually eat the rice every meal"이라는 표현은 한국인의 식습관을 외국인에게 이해시키기에 매우 효과적이었어요. 문화적 배경을 영어로 잘 설명하는 능력은 비즈니스 환경에서도 큰 강점이 될 것입니다!</p>
+<br>
+<p>🚀 <strong>내일의 한 문장:</strong></p>
+<p>다음 수업 시작 시 튜터에게 이렇게 말해보세요:</p>
+<p>"I've been thinking about the <strong>appliances</strong> we discussed. I realized how <strong>handy</strong> a good dishwasher can be!"</p>
+<br>
+<br>
+<p>### <strong>[성과 지표]</strong></p>
+<br>
+<p><strong>유창성 점수:</strong> 7/10</p>
+<br>
+<p><strong>근거:</strong> Joey는 주어진 주제에 대해 막힘없이 자신의 의견을 표현하고, 다양한 아이디어를 연결하여 설명하는 능력이 뛰어납니다. 대화의 흐름이 끊기지 않고 자연스럽게 이어지며, 새로운 어휘(예: blender, fridge)를 빠르게 습득하고 활용하려는 노력이 돋보였습니다. 다만, 일부 표현에서 더 자연스러운 어순이나 구문을 선택하거나, 단수/복수 명사 및 동사 수일치와 같은 문법적 정확성을 높인다면 유창성이 더욱 향상될 것입니다.</p>
+<br>
+<p><strong>다음 수업 '원포인트 액션 플랜':</strong></p>
+<p>다음 수업에서는 <strong>명사의 단수/복수 형태와 이에 따른 동사 수일치</strong>에 조금 더 집중해 볼까요? 특히 'many kinds of'나 'every'와 같은 표현 뒤에 오는 명사와 동사의 형태에 주의하며 말하는 연습을 해보면 좋을 것 같습니다.</p></div>
+        </div>
+        <div id="tab-transcript" class="tab-content">
+            <div class="transcript"><span class="student">[Student]</span> Hello, teacher. Good evening. Hi.
+<span class="tutor">[Tutor]</span> Hi, Joey. How are you today?
+<span class="student">[Student]</span> Of course. Everything is good. How are you today?
+<span class="tutor">[Tutor]</span> All right. I&#x27;m doing okay. I trust you had a nice weekend with your family.
+<span class="student">[Student]</span> Oh, yeah. Of course.
+<span class="tutor">[Tutor]</span> Wonderful.
+<span class="student">[Student]</span> I had my time with my family. It&#x27;s great.
+<span class="tutor">[Tutor]</span> Yeah, I know how hard you work during the week, so I know family time is very important.
+<span class="student">[Student]</span> Yeah, you&#x27;re right. That is special time for me.
+<span class="tutor">[Tutor]</span> Sure. Do you have time for your class this morning?
+<span class="student">[Student]</span> Oh, yes.
+<span class="tutor">[Tutor]</span> Wonderful.
+<span class="student">[Student]</span> Okay, I prepared the textbook.
+<span class="tutor">[Tutor]</span> Oh, you&#x27;re ready to go. Okay. So, today&#x27;s topic that we&#x27;re going to discuss is buying electronics. This is something a lot of people like to do.
+<span class="student">[Student]</span> Okay.
+<span class="tutor">[Tutor]</span> All right, friend. The first question says, what is happening in the picture?
+<span class="student">[Student]</span> Nothing&#x27;s happening in the picture.
+<span class="tutor">[Tutor]</span> But can you tell me what appliances you see?
+<span class="student">[Student]</span> Okay, I see. I can see this picture and it looks like the promotional page, the electronic page. I can see a big refrigerator, a steel refrigerator.
+<span class="tutor">[Tutor]</span> Refrigerator?
+<span class="student">[Student]</span> Yeah, refrigerator.
+<span class="tutor">[Tutor]</span> Refrigerator.
+<span class="student">[Student]</span> The refrigerator. And also I can see the flat of the TV.
+<span class="tutor">[Tutor]</span> Yes, a flat screen TV. Very good.
+<span class="student">[Student]</span> Yeah, flat screen TV and washing machine.
+<span class="tutor">[Tutor]</span> Machine. Yeah, washing machine.
+<span class="student">[Student]</span> Washing machine and vacuum cleaner and micro ovens and the ovens and food mixer machine. Yeah, there are so many kinds of the electric machine.
+<span class="tutor">[Tutor]</span> Okay. Yeah. No, but you&#x27;re doing very well.
+<span class="student">[Student]</span> Okay.
+<span class="tutor">[Tutor]</span> So you said a washer machine. You can say washing machine or washer.
+<span class="student">[Student]</span> Washer.
+<span class="tutor">[Tutor]</span> Washing machine or washer.
+<span class="student">[Student]</span> All right. Okay.
+<span class="tutor">[Tutor]</span> And then you said you see a mixing machine. We call that a blender.
+<span class="student">[Student]</span> Blender.
+<span class="tutor">[Tutor]</span> Yeah.
+<span class="student">[Student]</span> Blender.
+<span class="tutor">[Tutor]</span> Yes.
+<span class="student">[Student]</span> Blender.
+<span class="tutor">[Tutor]</span> And I&#x27;m just going to get you to practice this word.
+<span class="student">[Student]</span> Refrigerator.
+<span class="tutor">[Tutor]</span> Refrigerator.
+<span class="student">[Student]</span> Refrigerator.
+<span class="tutor">[Tutor]</span> Refrigerator, refrigerator, refrigerator. Okay, yeah, but I&#x27;m going to teach you a short form. Instead of saying refrigerator, try this: fridge. Fridge. Uh, very good. Fridge. Yeah, we need that &quot;j&quot; in there. Fridge. I&#x27;m going to send you a visual sound bite so you can call it as a refrigerator or a fridge. You&#x27;re doing great. Okay. Question. What is that red appliance on the floor?
+<span class="student">[Student]</span> On the floor, yes. It is the vacuum cleaner.
+<span class="tutor">[Tutor]</span> Very good. Very good. Yes.
+<span class="student">[Student]</span> Or vacuum cleaner machine.
+<span class="tutor">[Tutor]</span> Yes, you&#x27;re right. You did it. Very good. And of course, you recognize the microwave.
+<span class="student">[Student]</span> Microwave.
+<span class="tutor">[Tutor]</span> Very good. Yes. So, how is this vacuum cleaner different from one that many Korean people like to buy? Do you know?
+<span class="student">[Student]</span> No. What&#x27;s this?
+<span class="tutor">[Tutor]</span> Okay. This vacuum cleaner needs human interaction to clean the floors and carpets. In Korea, many people like robot vacuum cleaners. Yes?
+<span class="student">[Student]</span> Yeah, you&#x27;re right. You&#x27;re right. It is. But usually in family they have two both kind of vacuum cleaner. One is robot and another is connected vacuum cleaner. One is the robot and another is the connected vacuum cleaner because sometimes we have to power clean in our house. At that time, we use the vacuum connector, electronic vacuum cleaner. But usually, the daily routine, we clean the house every day, use their vacuum cleaner, robot vacuum cleaner.
+<span class="tutor">[Tutor]</span> Yes, I hear you. Yes. I live in a house that is so small that I am faster than the robot. I sweep and clean faster, so I do not have a robot cleaner, but I have a human vacuum cleaner. It is my husband.
+<span class="student">[Student]</span> Very nice.
+<span class="tutor">[Tutor]</span> Yes, he&#x27;s a very good cleaner.
+<span class="student">[Student]</span> Yeah, very.
+<span class="tutor">[Tutor]</span> All right, please, please, you read questions for number two.
+<span class="student">[Student]</span> Okay, no problem. What was the last electronic item that you purchased? Why did you buy it? Okay, I see. Last month I bought a steam rice machine, electronic steam rice machine. Every family have that machine because we usually eat the rice every meal. So it&#x27;s a rice cooker.
+<span class="tutor">[Tutor]</span> Yeah, rice cooker.
+<span class="student">[Student]</span> Electronic rice cooker. So I got married 10 years ago and my rice cooker is broken. So last month, last month, I bought new rice cooker and we used them. And these days I got married 10 years ago and at that time and meantime I bought so many kind of electronic machine, electronic. But these days that machine have some problem and we have to change. So it is time to change all my electronic machines.
+<span class="tutor">[Tutor]</span> Yes. Electronics.
+<span class="student">[Student]</span> Okay.
+<span class="tutor">[Tutor]</span> I have a question for you.
+<span class="student">[Student]</span> Okay.
+<span class="tutor">[Tutor]</span> How many years should your rice steamer operate for you? How many years should your rice steamer work? 10 years, 12, or 15?
+<span class="student">[Student]</span> Almost 10 years. And usually that device divides two kinds of possibilities. One is the electronic device. And inside, I can see the plate, the cooker plate.
+<span class="tutor">[Tutor]</span> The element.
+<span class="student">[Student]</span> Yeah, we used to change one year. Every year, we change that inner element.
+<span class="tutor">[Tutor]</span> Interesting.
+<span class="student">[Student]</span> Yeah, and totally, we change the whole machine for 10 years or 5 years.
+<span class="tutor">[Tutor]</span> Of course. Okay. Yes. I have a rice cooker as well.
+<span class="student">[Student]</span> Oh.
+<span class="tutor">[Tutor]</span> Mine is almost 15 years old. But in Canada, some people make rice on the stovetop.
+<span class="student">[Student]</span> Ah, yes, I see.
+<span class="tutor">[Tutor]</span> Yes, and that is something that I do. When my husband and daughter make rice, they use a rice cooker. When I make it, I make it on the stove. So there are different ways to make rice, yes?
+<span class="student">[Student]</span> Yeah, you&#x27;re right.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="student">[Student]</span> It is similar in Korea.
+<span class="tutor">[Tutor]</span> Yes. Okay. Can you please read question number three?
+<span class="student">[Student]</span> Okay, no problem. What are some factors that should be considered when purchasing electronics?
+<span class="tutor">[Tutor]</span> So this means electronic devices and big appliances.
+<span class="student">[Student]</span> Big appliances. Okay, I see. When I buy electronics, I consider the function of the device, but these days I add more, consider the design because it is also affect the interior in our house. So usually I consider the function of the device and function of the electronic machine and also consider design. It is because that stands up or that stands up in our house every day. So it is also important for me, for our family.
+<span class="tutor">[Tutor]</span> Of course. Have you lived in your house or apartment for a long time?
+<span class="student">[Student]</span> No, because I usually leave my office in Seoul on normal days and only stay Friday to Sunday, but the weekends are very travel. So I&#x27;m just staying just 24 hours.
+<span class="tutor">[Tutor]</span> Yes, 24 to 48 hours. So, in your family home, have you had to replace appliances or electronics?
+<span class="student">[Student]</span> Replace.
+<span class="tutor">[Tutor]</span> Yes, buy new.
+<span class="student">[Student]</span> Buy new. Oh, yes, of course. Yes.
+<span class="tutor">[Tutor]</span> Mm-hmm.
+<span class="student">[Student]</span> Before I said, I got married 10 years ago, and the machine had some problem and sometimes it broke. So these days I&#x27;m changing them. Air conditioner or TV and refrigerator. Yeah, I&#x27;m changing them. But maybe one or two years later, I have to change because almost, yeah, there are electric machines that contain, that last only 10 years. So I prepare and I make money more. Yeah.
+<span class="tutor">[Tutor]</span> Prepare to change. Okay. I understand. Okay. Let me tell you, let me tell you a short story. I bought my house in 1991. I moved in. One week later, stove died. Oven died. So I had to get new stove, new oven. Then two months after buying the house, my furnace, my heating died.
+<span class="student">[Student]</span> Oh, I see.
+<span class="tutor">[Tutor]</span> In three months, I had to get new oven and new furnace. Much money.
+<span class="student">[Student]</span> I see. Oh, my God.
+<span class="tutor">[Tutor]</span> And since then, I have lived in this house now almost 40 years. We have replaced fridge, oven, freezer, washer, and dryer. Most last 10 to 15 years.
+<span class="student">[Student]</span> Pretty good. Yeah, it&#x27;s so nice. I think you have a human repair robot.
+<span class="tutor">[Tutor]</span> Yeah, I am very lucky. My husband is a repairman. My husband does maintenance on appliances. He is very handy.
+<span class="student">[Student]</span> Yeah, that&#x27;s nice. I don&#x27;t...
+<span class="tutor">[Tutor]</span> Yeah, he does it himself. I am so lucky.
+<span class="student">[Student]</span> You&#x27;re lucky.
+<span class="tutor">[Tutor]</span> And you said before, you said handy. Handy. It&#x27;s a nice, nice, right? Yes, it is. He is a handyman, which means he is able to fix things. Yeah. I will send you a sentence along with synonyms so you understand. Yeah. Okay. Good. All right. Okay. Very good. Okay. Now, let&#x27;s go to part two. Please, you read question one.
+<span class="student">[Student]</span> Okay. What do you think is the most useful electronic item in your home? Why do you think so? I see. The Korean people said we have a special kind of the machine. The first is the robot vacuum cleaner. It is possible to clean our house everywhere. If we outside, we control our clean our house. And second machine is the clean dish machine. It is dishwasher.
+<span class="tutor">[Tutor]</span> Yeah, dishwasher.
+<span class="student">[Student]</span> Yeah, you are right. Dishwasher. It is help to clean the dish every dinner, after dinner, lunch. So it is so nice. And the last thing, and the last thing is the dry cleaner.
+<span class="tutor">[Tutor]</span> Dry cleaner?
+<span class="student">[Student]</span> Yeah. If we use the washer, and then we hang on under the sun shining, and it dries our clothes 10 hours later. If we use that machine, that machine only cleans and dries, just one hour. So every bride prepare three kinds of the device before they get married. So it is nice.
+<span class="tutor">[Tutor]</span> Absolutely. Okay. Please, I&#x27;ll help you. Dry cleaner means you take your clothing to special laundry. They clean your clothes with chemicals. I think at home you use a clothes dryer. Forced air.
+<span class="student">[Student]</span> Clothes dryer. Yeah, clothes dryer.
+<span class="tutor">[Tutor]</span> Dryer.
+<span class="student">[Student]</span> Yeah, forced air. Yeah.
+<span class="tutor">[Tutor]</span> I will make a sentence for you.
+<span class="student">[Student]</span> Yes.
+<span class="tutor">[Tutor]</span> Clothes dryer. Dishwasher, very popular. My dishwasher is my husband. He is 164 centimeters and has no hair.
+<span class="student">[Student]</span> He is a very, very good dishwasher. No batteries needed. But maybe you have your human eating some lunch and dinner, right?
+<span class="tutor">[Tutor]</span> Oh, yes. I have to feed. I have to feed the dishwasher.
+<span class="student">[Student]</span> You are right. You are right. Okay.
+<span class="tutor">[Tutor]</span> All right. Joey, I&#x27;m going to have us stop there. You did a very good job today. Do you have any questions?
+<span class="student">[Student]</span> Oh, yes. I have a question. Okay. Teacher, two weeks ago, I changed my textbook. How about this textbook? How about your opinion?
+<span class="tutor">[Tutor]</span> Okay. Okay. Well, I see that your textbook is Daily Topic English. Uh-huh. And I see you have had, let&#x27;s see, two, four, six, seven classes with this textbook. Uh-huh. My question is, what do you think? Do you like the textbook or do you want a change?
+<span class="student">[Student]</span> I like that. But it is so nice. But sometimes I think it&#x27;s a little difficult to new expressions in this textbook. So that&#x27;s the problem. But except that, everything is good.
+<span class="tutor">[Tutor]</span> Okay. If you would like, I will look for another textbook that is more structured, more assistance. And we will add it to your textbook program. So you have classes two times a week, one class, new textbook, second class, Daily Topic English.
+<span class="student">[Student]</span> Oh, my God.
+<span class="tutor">[Tutor]</span> Yes?
+<span class="student">[Student]</span> Yeah, that is a little complex. So I think more. Thanks so much, teacher. Maybe you prepare the next class.
+<span class="tutor">[Tutor]</span> Yes, I will contact Carrot and recommend a second textbook. We take turns.
+<span class="student">[Student]</span> It&#x27;s okay. It&#x27;s okay. Yeah, no. Thanks so much.
+<span class="tutor">[Tutor]</span> You want to stay with one?
+<span class="student">[Student]</span> No, just stay now, but I consider more.
+<span class="tutor">[Tutor]</span> Okay. Okay. You stay one textbook. Okay. Good job, Joey. Have a good day. Bye-bye.
+<span class="student">[Student]</span> You too. Have a nice day. Bye-bye, teacher.</div>
+        </div>
+    </div>
+    <div class="toast" id="toast">✅ 프롬프트가 복사되었습니다!</div>
+    <script>
+        const REVIEW_PROMPT="너는 나의 영어 회화 복습 파트너야. 오늘 내 전화영어 수업 내용을 기반으로 대화하면서 복습을 도와줘.\n\n[오늘 수업 전사 내용]\n[Student] Hello, teacher. Good evening. Hi.\n[Tutor] Hi, Joey. How are you today?\n[Student] Of course. Everything is good. How are you today?\n[Tutor] All right. I'm doing okay. I trust you had a nice weekend with your family.\n[Student] Oh, yeah. Of course.\n[Tutor] Wonderful.\n[Student] I had my time with my family. It's great.\n[Tutor] Yeah, I know how hard you work during the week, so I know family time is very important.\n[Student] Yeah, you're right. That is special time for me.\n[Tutor] Sure. Do you have time for your class this morning?\n[Student] Oh, yes.\n[Tutor] Wonderful.\n[Student] Okay, I prepared the textbook.\n[Tutor] Oh, you're ready to go. Okay. So, today's topic that we're going to discuss is buying electronics. This is something a lot of people like to do.\n[Student] Okay.\n[Tutor] All right, friend. The first question says, what is happening in the picture?\n[Student] Nothing's happening in the picture.\n[Tutor] But can you tell me what appliances you see?\n[Student] Okay, I see. I can see this picture and it looks like the promotional page, the electronic page. I can see a big refrigerator, a steel refrigerator.\n[Tutor] Refrigerator?\n[Student] Yeah, refrigerator.\n[Tutor] Refrigerator.\n[Student] The refrigerator. And also I can see the flat of the TV.\n[Tutor] Yes, a flat screen TV. Very good.\n[Student] Yeah, flat screen TV and washing machine.\n[Tutor] Machine. Yeah, washing machine.\n[Student] Washing machine and vacuum cleaner and micro ovens and the ovens and food mixer machine. Yeah, there are so many kinds of the electric machine.\n[Tutor] Okay. Yeah. No, but you're doing very well.\n[Student] Okay.\n[Tutor] So you said a washer machine. You can say washing machine or washer.\n[Student] Washer.\n[Tutor] Washing machine or washer.\n[Student] All right. Okay.\n[Tutor] And then you said you see a mixing machine. We call that a blender.\n[Student] Blender.\n[Tutor] Yeah.\n[Student] Blender.\n[Tutor] Yes.\n[Student] Blender.\n[Tutor] And I'm just going to get you to practice this word.\n[Student] Refrigerator.\n[Tutor] Refrigerator.\n[Student] Refrigerator.\n[Tutor] Refrigerator, refrigerator, refrigerator. Okay, yeah, but I'm going to teach you a short form. Instead of saying refrigerator, try this: fridge. Fridge. Uh, very good. Fridge. Yeah, we need that \"j\" in there. Fridge. I'm going to send you a visual sound bite so you can call it as a refrigerator or a fridge. You're doing great. Okay. Question. What is that red appliance on the floor?\n[Student] On the floor, yes. It is the vacuum cleaner.\n[Tutor] Very good. Very good. Yes.\n[Student] Or vacuum cleaner machine.\n[Tutor] Yes, you're right. You did it. Very good. And of course, you recognize the microwave.\n[Student] Microwave.\n[Tutor] Very good. Yes. So, how is this vacuum cleaner different from one that many Korean people like to buy? Do you know?\n[Student] No. What's this?\n[Tutor] Okay. This vacuum cleaner needs human interaction to clean the floors and carpets. In Korea, many people like robot vacuum cleaners. Yes?\n[Student] Yeah, you're right. You're right. It is. But usually in family they have two both kind of vacuum cleaner. One is robot and another is connected vacuum cleaner. One is the robot and another is the connected vacuum cleaner because sometimes we have to power clean in our house. At that time, we use the vacuum connector, electronic vacuum cleaner. But usually, the daily routine, we clean the house every day, use their vacuum cleaner, robot vacuum cleaner.\n[Tutor] Yes, I hear you. Yes. I live in a house that is so small that I am faster than the robot. I sweep and clean faster, so I do not have a robot cleaner, but I have a human vacuum cleaner. It is my husband.\n[Student] Very nice.\n[Tutor] Yes, he's a very good cleaner.\n[Student] Yeah, very.\n[Tutor] All right, please, please, you read questions for number two.\n[Student] Okay, no problem. What was the last electronic item that you purchased? Why did you buy it? Okay, I see. Last month I bought a steam rice machine, electronic steam rice machine. Every family have that machine because we usually eat the rice every meal. So it's a rice cooker.\n[Tutor] Yeah, rice cooker.\n[Student] Electronic rice cooker. So I got married 10 years ago and my rice cooker is broken. So last month, last month, I bought new rice cooker and we used them. And these days I got married 10 years ago and at that time and meantime I bought so many kind of electronic machine, electronic. But these days that machine have some problem and we have to change. So it is time to change all my electronic machines.\n[Tutor] Yes. Electronics.\n[Student] Okay.\n[Tutor] I have a question for you.\n[Student] Okay.\n[Tutor] How many years should your rice steamer operate for you? How many years should your rice steamer work? 10 years, 12, or 15?\n[Student] Almost 10 years. And usually that device divides two kinds of possibilities. One is the electronic device. And inside, I can see the plate, the cooker plate.\n[Tutor] The element.\n[Student] Yeah, we used to change one year. Every year, we change that inner element.\n[Tutor] Interesting.\n[Student] Yeah, and totally, we change the whole machine for 10 years or 5 years.\n[Tutor] Of course. Okay. Yes. I have a rice cooker as well.\n[Student] Oh.\n[Tutor] Mine is almost 15 years old. But in Canada, some people make rice on the stovetop.\n[Student] Ah, yes, I see.\n[Tutor] Yes, and that is something that I do. When my husband and daughter make rice, they use a rice cooker. When I make it, I make it on the stove. So there are different ways to make rice, yes?\n[Student] Yeah, you're right.\n[Tutor] Okay.\n[Student] It is similar in Korea.\n[Tutor] Yes. Okay. Can you please read question number three?\n[Student] Okay, no problem. What are some factors that should be considered when purchasing electronics?\n[Tutor] So this means electronic devices and big appliances.\n[Student] Big appliances. Okay, I see. When I buy electronics, I consider the function of the device, but these days I add more, consider the design because it is also affect the interior in our house. So usually I consider the function of the device and function of the electronic machine and also consider design. It is because that stands up or that stands up in our house every day. So it is also important for me, for our family.\n[Tutor] Of course. Have you lived in your house or apartment for a long time?\n[Student] No, because I usually leave my office in Seoul on normal days and only stay Friday to Sunday, but the weekends are very travel. So I'm just staying just 24 hours.\n[Tutor] Yes, 24 to 48 hours. So, in your family home, have you had to replace appliances or electronics?\n[Student] Replace.\n[Tutor] Yes, buy new.\n[Student] Buy new. Oh, yes, of course. Yes.\n[Tutor] Mm-hmm.\n[Student] Before I said, I got married 10 years ago, and the machine had some problem and sometimes it broke. So these days I'm changing them. Air conditioner or TV and refrigerator. Yeah, I'm changing them. But maybe one or two years later, I have to change because almost, yeah, there are electric machines that contain, that last only 10 years. So I prepare and I make money more. Yeah.\n[Tutor] Prepare to change. Okay. I understand. Okay. Let me tell you, let me tell you a short story. I bought my house in 1991. I moved in. One week later, stove died. Oven died. So I had to get new stove, new oven. Then two months after buying the house, my furnace, my heating died.\n[Student] Oh, I see.\n[Tutor] In three months, I had to get new oven and new furnace. Much money.\n[Student] I see. Oh, my God.\n[Tutor] And since then, I have lived in this house now almost 40 years. We have replaced fridge, oven, freezer, washer, and dryer. Most last 10 to 15 years.\n[Student] Pretty good. Yeah, it's so nice. I think you have a human repair robot.\n[Tutor] Yeah, I am very lucky. My husband is a repairman. My husband does maintenance on appliances. He is very handy.\n[Student] Yeah, that's nice. I don't...\n[Tutor] Yeah, he does it himself. I am so lucky.\n[Student] You're lucky.\n[Tutor] And you said before, you said handy. Handy. It's a nice, nice, right? Yes, it is. He is a handyman, which means he is able to fix things. Yeah. I will send you a sentence along with synonyms so you understand. Yeah. Okay. Good. All right. Okay. Very good. Okay. Now, let's go to part two. Please, you read question one.\n[Student] Okay. What do you think is the most useful electronic item in your home? Why do you think so? I see. The Korean people said we have a special kind of the machine. The first is the robot vacuum cleaner. It is possible to clean our house everywhere. If we outside, we control our clean our house. And second machine is the clean dish machine. It is dishwasher.\n[Tutor] Yeah, dishwasher.\n[Student] Yeah, you are right. Dishwasher. It is help to clean the dish every dinner, after dinner, lunch. So it is so nice. And the last thing, and the last thing is the dry cleaner.\n[Tutor] Dry cleaner?\n[Student] Yeah. If we use the washer, and then we hang on under the sun shining, and it dries our clothes 10 hours later. If we use that machine, that machine only cleans and dries, just one hour. So every bride prepare three kinds of the device before they get married. So it is nice.\n[Tutor] Absolutely. Okay. Please, I'll help you. Dry cleaner means you take your clothing to special laundry. They clean your clothes with chemicals. I think at home you use a clothes dryer. Forced air.\n[Student] Clothes dryer. Yeah, clothes dryer.\n[Tutor] Dryer.\n[Student] Yeah, forced air. Yeah.\n[Tutor] I will make a sentence for you.\n[Student] Yes.\n[Tutor] Clothes dryer. Dishwasher, very popular. My dishwasher is my husband. He is 164 centimeters and has no hair.\n[Student] He is a very, very good dishwasher. No batteries needed. But maybe you have your human eating some lunch and dinner, right?\n[Tutor] Oh, yes. I have to feed. I have to feed the dishwasher.\n[Student] You are right. You are right. Okay.\n[Tutor] All right. Joey, I'm going to have us stop there. You did a very good job today. Do you have any questions?\n[Student] Oh, yes. I have a question. Okay. Teacher, two weeks ago, I changed my textbook. How about this textbook? How about your opinion?\n[Tutor] Okay. Okay. Well, I see that your textbook is Daily Topic English. Uh-huh. And I see you have had, let's see, two, four, six, seven classes with this textbook. Uh-huh. My question is, what do you think? Do you like the textbook or do you want a change?\n[Student] I like that. But it is so nice. But sometimes I think it's a little difficult to new expressions in this textbook. So that's the problem. But except that, everything is good.\n[Tutor] Okay. If you would like, I will look for another textbook that is more structured, more assistance. And we will add it to your textbook program. So you have classes two times a week, one class, new textbook, second class, Daily Topic English.\n[Student] Oh, my God.\n[Tutor] Yes?\n[Student] Yeah, that is a little complex. So I think more. Thanks so much, teacher. Maybe you prepare the next class.\n[Tutor] Yes, I will contact Carrot and recommend a second textbook. We take turns.\n[Student] It's okay. It's okay. Yeah, no. Thanks so much.\n[Tutor] You want to stay with one?\n[Student] No, just stay now, but I consider more.\n[Tutor] Okay. Okay. You stay one textbook. Okay. Good job, Joey. Have a good day. Bye-bye.\n[Student] You too. Have a nice day. Bye-bye, teacher.\n\n[AI 피드백]\n## 완성본\n\nJoey, 안녕하세요! 오늘 전자제품에 대한 대화 즐거웠습니다. 익숙한 가전제품에 대해 이야기하면서 자연스럽게 다양한 표현들을 연습할 수 있었던 시간이었어요. 특히 한국 가정의 독특한 가전제품 문화(로봇 청소기, 식기세척기, 건조기)에 대해 설명해 주실 때 Joey의 문화적 배경이 잘 드러나서 좋았습니다.\n\n---\n\n### **0. 📌 Topic**\nTopic: Discussing home electronics, their functions, and purchasing considerations.\n\n### **1. 📊 오늘의 대화 요약 (Summary)**\n오늘은 집에서 사용하는 다양한 전자제품과 가전제품에 대해 이야기 나누었습니다. 냉장고, TV, 세탁기, 청소기 등 여러 제품을 묘사하고, 구매 시 고려하는 요소(기능, 디자인)에 대해 토론했습니다. 또한, 한국 가정에서 인기 있는 로봇 청소기, 식기세척기, 건조기 등에 대해서도 자세히 설명해 주셨습니다.\n\n### **2. 💬 유창성 업그레이드 (Fluency & Natural Flow)**\nJoey가 사용하신 표현 중 의미는 잘 전달되었지만, 원어민들이 더 자연스럽게 쓰는 표현으로 다듬으면 좋을 문장들을 골라봤어요.\n\n1.  ❌ **학습자 원문 (As Said):** \"And also I can see the flat of the TV.\"\n    *   ✅ **자연스러운 표현 (Natural):** \"I can also see a flat-screen TV.\"\n    *   💎 **비즈니스 표현 (Professional):** \"Additionally, a flat-screen television is visible.\"\n    *   💡 **코칭 포인트:** \"flat-screen TV\"는 해당 TV 유형을 지칭하는 가장 표준적이고 자연스러운 표현입니다. \"The flat of the TV\"도 이해는 되지만, 원어민이 잘 사용하지 않는 표현입니다.\n\n2.  ❌ **학습자 원문 (As Said):** \"But usually in family they have two both kind of vacuum cleaner.\"\n    *   ✅ **자연스러운 표현 (Natural):** \"But usually, families have both kinds of vacuum cleaners.\"\n    *   💎 **비즈니스 표현 (Professional):** \"Typically, households possess both types of vacuum cleaners.\"\n    *   💡 **코칭 포인트:** \"family\"와 같은 일반적인 그룹에 대해 이야기할 때는 복수형 \"families\" 또는 일반적인 단수형 \"a family\"를 사용하는 것이 더 자연스럽습니다. 또한, \"two both kind of\"보다는 \"both kinds of\"가 더 흔한 표현입니다.\n\n3.  ❌ **학습자 원문 (As Said):** \"So it is time to change all my electronic machines.\"\n    *   ✅ **자연스러운 표현 (Natural):** \"So it's time to replace all my electronic appliances.\"\n    *   💎 **비즈니스 표현 (Professional):** \"Therefore, it is opportune to upgrade all my electronic devices.\"\n    *   💡 **코칭 포인트:** \"Change\"는 단순히 무언가를 바꾸는 것을 의미할 수 있지만, \"replace\"는 낡거나 고장 난 것을 새것으로 교체한다는 의미를 더 명확히 전달합니다. \"Electronic machines\"도 괜찮지만, 가정용 전자제품을 지칭할 때는 \"electronic appliances\" 또는 \"devices\"가 더 흔하게 사용됩니다.\n\n### **3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)**\nCategory: **Singular/Plural Noun and Verb Agreement**\n\nJoey는 단수 명사와 복수 명사를 혼동하거나, 이에 따른 동사 수일치를 놓치는 경향이 있었습니다. 특히 'kind of'와 함께 명사를 사용할 때 이 패턴이 자주 나타났습니다.\n\n| ❌ 원문 (As Said)                                         | ✅ 교정 예시 (Corrected)                                         |\n| :--------------------------------------------------------- | :--------------------------------------------------------------- |\n| \"there are so many **kinds of the electric machine**.\"    | \"There are so many **kinds of electric machines**.\"              |\n| \"Every family **have** that machine...\"                    | \"Every family **has** that machine...\"                           |\n| \"But these days that **machine have** some problem...\"     | \"But these days that **machine has** some problems...\"           |\n| \"that device divides two **kinds of possibilities**.\"      | \"That device has two **kinds of components** (or possibilities).\" |\n| \"every bride prepare three **kinds of the device**...\"     | \"Every bride prepares three **kinds of devices**...\"             |\n\n📌 **핵심 규칙:**\n'kind of' 뒤에는 일반적으로 복수 명사가 오며, 주어가 단수일 때는 동사도 단수형(예: have → has)으로 일치시켜야 합니다.\n\n🔁 **따라 읽기:**\n🗣️ \"There are so many kinds of electric machines.\"\n🗣️ \"Every family has that machine.\"\n🗣️ \"But these days that machine has some problems.\"\n\n### **4. 📗 어휘 확장 (Vocabulary Vault)**\n오늘 대화에서 유용하게 쓰일 수 있는 어휘들을 정리해 보았습니다.\n\n1.  **appliance** /əˈplaɪ.əns/ (명사)\n    *   뜻: (가정용) 기기, 가전제품 (특히 전기 제품)\n    *   실전 예문: We are looking to invest in energy-efficient **appliances** for our new office kitchen.\n\n2.  **promotional** /prəˈmoʊ.ʃən.əl/ (형용사)\n    *   뜻: 홍보의, 판촉의\n    *   실전 예문: The company launched a new **promotional** campaign to boost sales of its latest smartphone.\n\n3.  **maintenance** /ˈmeɪn.tən.əns/ (명사)\n    *   뜻: 유지, 보수, 관리\n    *   실전 예문: Regular **maintenance** of our factory equipment is crucial to prevent unexpected breakdowns.\n\n4.  **handy** /ˈhæn.di/ (형용사)\n    *   뜻: (사람이) 솜씨 좋은, 손재주 있는; (물건이) 유용한, 편리한\n    *   실전 예문: My colleague is quite **handy** with IT issues, so he often helps us troubleshoot technical problems.\n\n5.  **troubleshoot** /ˈtrʌb.əl.ʃuːt/ (동사)\n    *   뜻: (문제의 원인을) 찾아내 해결하다\n    *   실전 예문: Our engineering team is working to **troubleshoot** the intermittent network connectivity issues.\n\n### **5. 📝 실전 복습 챌린지 (Practice)**\n오늘 배운 표현과 문법을 활용하여 영작 연습을 해볼까요?\n\n1.  **상황:** 우리 회사는 최근 사무실의 낡은 가전제품들을 모두 새것으로 교체했습니다.\n    *   **영작:** (힌트: 'replace', 'appliance')\n    *   **모범 답안:** Our company recently replaced all the old appliances in the office.\n\n2.  **상황:** 이 새로운 스마트폰은 다양한 기능을 가지고 있어서 매우 편리합니다.\n    *   **영작:** (힌트: 'kinds of', 'handy')\n    *   **모범 답안:** This new smartphone has many kinds of features, making it very handy.\n\n3.  **상황:** 우리는 고객 만족도를 높이기 위해 제품의 정기적인 유지 보수가 얼마나 중요한지 강조하는 홍보 캠페인을 시작할 계획입니다.\n    *   **영작:** (힌트: 'promotional campaign', 'maintenance', 'crucial')\n    *   **모범 답안:** We plan to launch a promotional campaign emphasizing how crucial regular maintenance of our products is to enhance customer satisfaction.\n\n### **6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)**\n\n✨ **Good Job:** \"Every family have that machine because we usually eat the rice every meal. So it's a rice cooker.\"\nJoey, 이 문장은 문법적으로 약간의 수정이 필요했지만, 한국 문화에서 밥솥이 얼마나 중요한지, 그리고 그 이유를 아주 명확하게 설명해 주셨습니다. 특히 \"we usually eat the rice every meal\"이라는 표현은 한국인의 식습관을 외국인에게 이해시키기에 매우 효과적이었어요. 문화적 배경을 영어로 잘 설명하는 능력은 비즈니스 환경에서도 큰 강점이 될 것입니다!\n\n🚀 **내일의 한 문장:**\n다음 수업 시작 시 튜터에게 이렇게 말해보세요:\n\"I've been thinking about the **appliances** we discussed. I realized how **handy** a good dishwasher can be!\"\n\n---\n\n### **[성과 지표]**\n\n**유창성 점수:** 7/10\n\n**근거:** Joey는 주어진 주제에 대해 막힘없이 자신의 의견을 표현하고, 다양한 아이디어를 연결하여 설명하는 능력이 뛰어납니다. 대화의 흐름이 끊기지 않고 자연스럽게 이어지며, 새로운 어휘(예: blender, fridge)를 빠르게 습득하고 활용하려는 노력이 돋보였습니다. 다만, 일부 표현에서 더 자연스러운 어순이나 구문을 선택하거나, 단수/복수 명사 및 동사 수일치와 같은 문법적 정확성을 높인다면 유창성이 더욱 향상될 것입니다.\n\n**다음 수업 '원포인트 액션 플랜':**\n다음 수업에서는 **명사의 단수/복수 형태와 이에 따른 동사 수일치**에 조금 더 집중해 볼까요? 특히 'many kinds of'나 'every'와 같은 표현 뒤에 오는 명사와 동사의 형태에 주의하며 말하는 연습을 해보면 좋을 것 같습니다.\n\n위 내용을 바탕으로:\n1. 먼저 오늘 수업에서 내가 틀렸거나 어색했던 표현을 하나 골라서, 관련된 상황을 영어로 질문해줘.\n2. 내가 영어로 대답하면, 자연스러운지 확인하고 더 나은 표현이 있으면 알려줘.\n3. 특히 \"반복 실수 패턴\"에서 지적된 부분을 집중적으로 연습시켜줘.\n4. 이런 식으로 오늘 배운 표현들을 하나씩 복습하자.\n5. 한국어 설명은 필요할 때만 간단히, 대화는 최대한 영어로 진행해줘.\n\n그럼 시작하자!";
+        function startReview(){navigator.clipboard.writeText(REVIEW_PROMPT).then(()=>{showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)}).catch(()=>{const t=document.createElement('textarea');t.value=REVIEW_PROMPT;document.body.appendChild(t);t.select();document.execCommand('copy');document.body.removeChild(t);showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)})}
+        function showToast(){const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500)}
+        function switchTab(n){document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',n==='feedback'?i===0:i===1));document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));document.getElementById('tab-'+n).classList.add('active')}
+    </script>
+</body>
+</html>
