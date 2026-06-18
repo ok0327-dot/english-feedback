@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전화영어 복습 - 2026년 06월 18일</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Noto Sans KR',sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.75;min-height:100vh}
+        .header{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);border-bottom:1px solid rgba(255,255,255,.06);padding:48px 24px 40px;text-align:center}
+        .header-date{font-size:13px;color:#94a3b8;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+        .header h1{font-size:28px;font-weight:700;color:#f1f5f9;margin-bottom:16px}
+        .header-meta{display:flex;justify-content:center;gap:24px;font-size:14px;color:#64748b}
+        .header-meta span{display:flex;align-items:center;gap:6px}
+        .cta-section{text-align:center;padding:40px 24px}
+        .cta-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:linear-gradient(135deg,#38bdf8,#818cf8);color:#fff;font-size:16px;font-weight:600;font-family:'Noto Sans KR',sans-serif;border:none;border-radius:50px;cursor:pointer;transition:all .3s;text-decoration:none;box-shadow:0 4px 24px rgba(56,189,248,.25)}
+        .cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(56,189,248,.35)}
+        .cta-btn svg{width:20px;height:20px}
+        .cta-sub{margin-top:12px;font-size:13px;color:#64748b}
+        .toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#38bdf8;padding:14px 28px;border-radius:12px;font-size:14px;font-weight:500;border:1px solid rgba(56,189,248,.2);box-shadow:0 8px 32px rgba(0,0,0,.4);opacity:0;transition:all .4s cubic-bezier(.16,1,.3,1);z-index:1000}
+        .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+        .container{max-width:720px;margin:0 auto;padding:0 24px 80px}
+        .tabs{display:flex;gap:4px;background:#1a1a24;padding:4px;border-radius:12px;margin-bottom:32px}
+        .tab{flex:1;padding:12px;text-align:center;font-size:14px;font-weight:500;color:#64748b;background:0 0;border:none;border-radius:8px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all .2s}
+        .tab.active{background:#262636;color:#f1f5f9}
+        .tab-content{display:none}.tab-content.active{display:block}
+        .feedback h2{font-size:18px;font-weight:700;color:#f1f5f9;margin:36px 0 16px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.06)}
+        .feedback h2:first-child{margin-top:0}
+        .feedback p{margin:8px 0;color:#cbd5e1}
+        .feedback .item{padding:6px 0 6px 16px;border-left:2px solid #334155;margin:6px 0;color:#cbd5e1}
+        .feedback .numbered{padding:8px 0 8px 16px;color:#cbd5e1}
+        .feedback .numbered strong{color:#38bdf8}
+        .feedback strong{color:#f1f5f9}
+        .feedback code{background:#1e293b;padding:2px 8px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#38bdf8}
+        .feedback table{width:100%;border-collapse:collapse;margin:12px 0}
+        .feedback th,.feedback td{padding:10px 14px;text-align:left;border-bottom:1px solid #262636}
+        .feedback th{color:#94a3b8;font-weight:500;font-size:13px}
+        .feedback td{color:#cbd5e1}
+        .arrow{color:#38bdf8;font-weight:700}
+        .transcript{background:#1a1a24;border-radius:12px;padding:28px;font-size:14px;line-height:2;color:#94a3b8;white-space:pre-wrap;word-break:break-word;font-family:'JetBrains Mono','Noto Sans KR',monospace}
+        .transcript .tutor{color:#38bdf8}
+        .transcript .student{color:#a78bfa}
+        @media(max-width:640px){.header{padding:32px 16px}.header h1{font-size:22px}.cta-btn{padding:14px 28px;font-size:15px}.container{padding:0 16px 60px}}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-date">2026년 06월 18일</div>
+        <h1>📚 전화영어 복습</h1>
+        <div class="header-meta">
+            <span>⏱ 20분 12초</span>
+            <span>🎙 전화영어_025180304_20260618080037.m4a</span>
+        </div>
+    </div>
+    <div class="cta-section">
+        <button class="cta-btn" onclick="startReview()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Gemini에서 복습 대화 시작하기
+        </button>
+        <div class="cta-sub">클릭하면 프롬프트가 복사되고 Gemini가 열립니다</div>
+    </div>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('feedback')">📋 AI 피드백</button>
+            <button class="tab" onclick="switchTab('transcript')">🎙 수업 전사</button>
+        </div>
+        <div id="tab-feedback" class="tab-content active">
+            <div class="feedback"><p>안녕하세요, Joey! 오늘 수업도 정말 즐거웠습니다. 첫 차 구매 경험과 한국의 주택 시장에 대한 이야기는 저에게도 흥미로운 주제였어요. Joey의 의견을 명확하게 전달하려는 노력이 돋보였습니다. 특히, 새로운 교재에 대한 유연한 태도와 적극적인 참여는 정말 인상 깊었어요!</p>
+<br>
+<br>
+<p>### <strong>0. 📌 Topic</strong></p>
+<p>Topic: Discussing first car purchase experiences and car buying considerations.</p>
+<br>
+<p>### <strong>1. 📊 오늘의 대화 요약 (Summary)</strong></p>
+<p>오늘은 첫 차 구매 경험에 대한 이야기를 나누며, 중고차 구매 시 고려해야 할 점들과 캐나다와 한국의 자동차 및 주택 시장 상황을 비교해 보았습니다. 특히 전기차 보급과 주택 가격에 대한 흥미로운 대화가 오갔습니다.</p>
+<br>
+<p>### <strong>2. 💬 유창성 업그레이드 (Fluency & Natural Flow)</strong></p>
+<p>Joey가 말한 문장들을 더 자연스럽고 유창하게 다듬어 볼까요?</p>
+<br>
+<div class="numbered"><strong>1.</strong>  ❌ <strong>As Said</strong>: "he suggested I want to do other textbooks, and she added other textbooks."</div>
+<p>    ✅ <strong>Natural</strong>: "He suggested I try other textbooks, and she made them available."</p>
+<p>    💎 <strong>Professional</strong>: "He recommended exploring additional textbook options, which she subsequently provisioned."</p>
+<p>    💡 <strong>코칭 포인트</strong>: Using "try" or "explore" sounds more natural than "want to do" when referring to new options. "Made them available" or "provisioned" is more concise than "added other textbooks."</p>
+<p>    <span class="arrow">→</span> "try"나 "explore"는 새로운 옵션을 시도할 때 "want to do"보다 더 자연스럽습니다. "Made them available" 또는 "provisioned"는 "added other textbooks"보다 간결합니다.</p>
+<br>
+<div class="numbered"><strong>2.</strong>  ❌ <strong>As Said</strong>: "So your question means to share the textbook the week."</div>
+<p>    ✅ <strong>Natural</strong>: "So your question is about alternating the textbooks weekly."</p>
+<p>    💎 <strong>Professional</strong>: "So, if I understand correctly, your inquiry pertains to alternating the textbooks on a weekly basis."</p>
+<p>    💡 <strong>코칭 포인트</strong>: "Alternating" clearly conveys the idea of switching between two options. Adding "on a weekly basis" specifies the frequency.</p>
+<p>    <span class="arrow">→</span> "Alternating"은 두 옵션을 번갈아 사용하는 아이디어를 명확하게 전달합니다. "on a weekly basis"를 추가하면 빈도를 명확히 할 수 있습니다.</p>
+<br>
+<div class="numbered"><strong>3.</strong>  ❌ <strong>As Said</strong>: "I guess they are mixed of many feelings."</div>
+<p>    ✅ <strong>Natural</strong>: "I guess they have a mix of many feelings."</p>
+<p>    💎 <strong>Professional</strong>: "I assume they are experiencing a range of mixed emotions."</p>
+<p>    💡 <strong>코칭 포인트</strong>: "Be mixed of" is not a standard phrase. "Have a mix of feelings" or "experience mixed emotions" are common and natural ways to express this idea.</p>
+<p>    <span class="arrow">→</span> "Be mixed of"는 표준적인 표현이 아닙니다. "Have a mix of feelings" 또는 "experience mixed emotions"는 이러한 생각을 표현하는 일반적이고 자연스러운 방법입니다.</p>
+<br>
+<p>### <strong>3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)</strong></p>
+<p>Category: <strong>Missing Articles (a/an/the)</strong></p>
+<br>
+<p>Joey는 명사 앞에 필요한 관사(a/an/the)를 빠뜨리는 경향이 있었습니다. 관사는 영어에서 명사의 특정성이나 일반성을 나타내는 중요한 요소입니다.</p>
+<br>
+<table>
+<tr><th>❌ 원문 (As Said)</th><th>✅ 교정 예시 (Corrected)</th></tr>
+<tr><td>"maybe husband will look at the brochure"</td><td>"maybe <strong>the</strong> husband will look at the brochure"</td></tr>
+<tr><td>"I bought used car."</td><td>"I bought <strong>a</strong> used car."</td></tr>
+<tr><td>"That kind of so oldest car."</td><td>"That kind of <strong>a</strong> very old car."</td></tr>
+<tr><td>"the sales car, the bought car is the big cost"</td><td>"<strong>buying a</strong> car is <strong>a</strong> big cost"</td></tr>
+<tr><td>"I don't have a mechanic knowledge of the car."</td><td>"I don't have <strong>any</strong> mechanic knowledge of the car."</td></tr>
+<tr><td>"there are so many times chain owner"</td><td>"there are so many times <strong>a</strong> chain owner"</td></tr>
+<tr><td>"we lived 8 hours more in our home."</td><td>"we <strong>spend</strong> 8 hours more in our home." (관사보다는 동사 사용이 더 자연스러움)</td></tr>
+<tr><td>"the home is more important. Yeah, because that is the, it spends so big budget in my life."</td><td>"the home is more important. Yeah, because that is <strong>the biggest expense</strong> in my life."</td></tr>
+</table>
+<br>
+<p>📌 <strong>핵심 규칙</strong>: 특정 명사(the)나 불특정 명사(a/an) 앞에는 적절한 관사를 사용해야 합니다. 특히 처음 언급되는 단수 가산 명사 앞에는 'a'나 'an'을, 특정 명사 앞에는 'the'를 붙이는 것을 잊지 마세요.</p>
+<br>
+<p>🔁 <strong>따라 읽기</strong>:</p>
+<p>🗣️ "Maybe <strong>the</strong> husband will look at the brochure."</p>
+<p>🗣️ "I bought <strong>a</strong> used car."</p>
+<p>🗣️ "Buying <strong>a</strong> car is <strong>a</strong> big cost."</p>
+<br>
+<p>### <strong>4. 📗 어휘 확장 (Vocabulary Vault)</strong></p>
+<p>오늘 대화에서 유용하게 쓰일 수 있는 어휘들을 정리해 보았습니다.</p>
+<br>
+<div class="numbered"><strong>1.</strong>  <strong>alternate</strong> /ɔ́ːltərnèit/ (v.)</div>
+<p>    *   뜻: 번갈아 하다, 교대로 하다</p>
+<p>    *   실전 예문: We could <strong>alternate</strong> between the Daily Topic and Snack Chat textbooks for variety.</p>
+<br>
+<div class="numbered"><strong>2.</strong>  <strong>provision</strong> /prəvíʒən/ (v.)</div>
+<p>    *   뜻: 제공하다, 공급하다 (특히 필요한 것을)</p>
+<p>    *   실전 예문: Our IT department will <strong>provision</strong> the necessary software licenses for the new project members.</p>
+<br>
+<div class="numbered"><strong>3.</strong>  <strong>commute</strong> /kəmjúːt/ (v.)</div>
+<p>    *   뜻: 통근하다</p>
+<p>    *   실전 예문: Many employees choose to live in the suburbs and <strong>commute</strong> to the city for work to save on housing costs.</p>
+<br>
+<div class="numbered"><strong>4.</strong>  <strong>fuel-efficient</strong> /fjúːəl-ifíʃənt/ (adj.)</div>
+<p>    *   뜻: 연비가 좋은, 연료 효율적인</p>
+<p>    *   실전 예문: In today's market, customers are increasingly looking for <strong>fuel-efficient</strong> vehicles to reduce operating expenses.</p>
+<br>
+<div class="numbered"><strong>5.</strong>  <strong>upkeep</strong> /ʌ́pkiːp/ (n.)</div>
+<p>    *   뜻: 유지, 보수, 관리</p>
+<p>    *   실전 예문: Regular <strong>upkeep</strong> of our machinery is crucial to prevent unexpected breakdowns and ensure smooth operations.</p>
+<br>
+<p>### <strong>5. 📝 실전 복습 챌린지 (Practice)</strong></p>
+<p>오늘 배운 표현과 문법을 활용하여 영작 챌린지에 도전해 보세요!</p>
+<br>
+<div class="numbered"><strong>1.</strong>  <strong>상황</strong>: 다음 주부터는 주간 보고서와 월간 보고서를 번갈아 가며 제출할 예정입니다.</div>
+<p>    *   <strong>영작</strong>: (alternate를 사용하여)</p>
+<p>    *   <strong>모범 답안</strong>: Starting next week, we will <strong>alternate</strong> between submitting weekly and monthly reports.</p>
+<br>
+<div class="numbered"><strong>2.</strong>  <strong>상황</strong>: 새 프로젝트를 위해 필요한 장비들을 회사에서 제공할 것입니다.</div>
+<p>    *   <strong>영작</strong>: (provision을 사용하여)</p>
+<p>    *   <strong>모범 답안</strong>: The company will <strong>provision</strong> all the necessary equipment for the new project.</p>
+<br>
+<div class="numbered"><strong>3.</strong>  <strong>상황</strong>: 저는 출퇴근 시간이 길더라도 집값이 저렴한 교외에 사는 것을 선호합니다. 왜냐하면 주택 구매는 제 인생에서 가장 큰 지출 중 하나이기 때문입니다.</div>
+<p>    *   <strong>영작</strong>: (commute, biggest expense, a house를 사용하여)</p>
+<p>    *   <strong>모범 답안</strong>: I prefer living in the suburbs where housing prices are more reasonable, even if it means a longer <strong>commute</strong>, because buying <strong>a house</strong> is one of the <strong>biggest expenses</strong> in my life.</p>
+<br>
+<p>### <strong>6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)</strong></p>
+<br>
+<p>✨ <strong>Good Job</strong>:</p>
+<p>Joey, 오늘 대화에서 특히 좋았던 문장은 바로 이겁니다:</p>
+<p>"<strong>Oh, that's a lovely subject.</strong>"</p>
+<p>이 문장은 대화의 흐름을 부드럽게 이어가고, 긍정적인 분위기를 조성하는 데 아주 효과적이었습니다. 짧지만 감탄사를 사용하여 감정을 잘 표현했고, 'lovely'라는 단어 선택도 훌륭했어요. 튜터의 말에 대한 자연스러운 반응이 돋보였습니다!</p>
+<br>
+<p>🚀 <strong>내일의 한 문장</strong>:</p>
+<p>다음 수업 시작 시, 튜터에게 이렇게 말하며 대화를 시작해 보세요. 오늘 배운 'alternate'를 활용하는 겁니다.</p>
+<p>"<strong>I've been thinking about alternating our textbooks. What do you think about starting with Snack Chat next time?</strong>"</p>
+<br>
+<br>
+<p>### <strong>[성과 지표]</strong></p>
+<p><strong>유창성 점수</strong>: 7.5/10</p>
+<br>
+<p><strong>근거</strong>: Joey는 다양한 주제에 대해 자신의 생각을 명확하게 표현하려는 노력이 돋보였습니다. 대화의 흐름을 잘 따라가고, 질문에 대한 답변도 막힘없이 이어갔습니다. 특히, 새로운 교재에 대한 유연한 태도와 적극적인 참여는 훌륭했습니다. 다만, 문장이 다소 길어지거나 복잡해질 때 단어 선택이나 문법 구조에서 약간의 어색함이 나타나 유창성의 자연스러움을 저해하는 경우가 있었습니다. 관사 누락과 같은 고질적인 문법 오류가 반복되는 점은 개선이 필요합니다.</p>
+<br>
+<p><strong>다음 수업 '원포인트 액션 플랜'</strong>:</p>
+<p>다음 수업에서는 <strong>"관사(a/an/the) 사용에 더욱 주의하기"</strong>에 집중해 봅시다. 특히 단수 가산 명사 앞에 'a'나 'an'을 붙이는 습관을 들이고, 특정 대상을 지칭할 때는 'the'를 사용하는 연습을 해볼 거예요. 문장을 말하기 전에 잠시 멈춰서 관사가 필요한지 생각해 보는 시간을 가져보면 좋습니다.</p></div>
+        </div>
+        <div id="tab-transcript" class="tab-content">
+            <div class="transcript"><span class="student">[Student]</span> Hello, teacher. Good morning. Good evening.
+<span class="tutor">[Tutor]</span> Joey, how are you today?
+<span class="student">[Student]</span> Oh, why is your voice a little serious?
+<span class="tutor">[Tutor]</span> Oh, no. It&#x27;s just getting a little late in the day. I&#x27;m a little bit tired. Sorry. I can&#x27;t drink coffee. Right now, it&#x27;s 5 o&#x27;clock here, so I can&#x27;t drink any more coffee.
+<span class="student">[Student]</span> Ah, yes. I understand. I&#x27;m good. How are you today?
+<span class="tutor">[Tutor]</span> I&#x27;m glad to hear that. I&#x27;m doing pretty good.
+<span class="student">[Student]</span> Thank you.
+<span class="tutor">[Tutor]</span> Joey, I wanted to ask you, if you don&#x27;t mind, before we start your lesson, I&#x27;d like to ask you about your textbook program.
+<span class="student">[Student]</span> Oh, yes.
+<span class="tutor">[Tutor]</span> Okay. So I see that you have two options. You have Daily Topic English, which you&#x27;ve been doing for quite a while. And then you have a second textbook called Snack Chat.
+<span class="student">[Student]</span> Yes, I see.
+<span class="tutor">[Tutor]</span> I&#x27;m wondering if that&#x27;s something you would like to work on or alternate with Daily Topic? Do you have access to it?
+<span class="student">[Student]</span> Yes. Yesterday, I called the Callan English manager, and he suggested I want to do other textbooks, and she added other textbooks. So it is possible to learn more. So today just want to talk about Daily Topics. That&#x27;s fine. I don&#x27;t know how to use that textbook.
+<span class="tutor">[Tutor]</span> Okay, well I was going to talk to you about that. Okay, we&#x27;ll definitely do Daily Topic today. No worries. The nice thing about Snack Chat is that it encourages you to respond in a conversational way, and it helps to expand your vocabulary.
+<span class="student">[Student]</span> I see. So nice.
+<span class="tutor">[Tutor]</span> And so it&#x27;s quite a bit like Daily Topic. It&#x27;s just a little more involved. It starts out with a warm-up question, a preference question. Then there&#x27;s a problem solving, a warm-down. And then they share with you useful vocabulary and expressions. Yeah, and what I&#x27;d like to ask you to do, I&#x27;ll ask you to humor me, please, take a look at lesson one and give it, you know, take a look at it, see what you think. And then the next time we talk, if you have any questions, I&#x27;ll be glad to answer them, okay? Ideally, what I&#x27;d like to do, because I have you, yes, I have you twice a week. If you&#x27;re interested and comfortable, I&#x27;d like to alternate between Daily Topic English and Snack Chat. But I will leave that decision with you. We could talk about it next week. Would that be all right?
+<span class="student">[Student]</span> Okay. So your question means to share the textbook the week. For example, the Tuesday, the Snack Chat, and the Thursday&#x27;s Daily Topic, isn&#x27;t it? Right?
+<span class="tutor">[Tutor]</span> Yes, yes, that is correct.
+<span class="student">[Student]</span> Oh, yes, it&#x27;s a nice way, and I&#x27;m good, I&#x27;m good. But I&#x27;m sorry about that, because you always check the two textbooks. That is a little bad. I&#x27;m so sorry about that. If you like that, yes, I love that.
+<span class="tutor">[Tutor]</span> Okay. Now, like any other program, Joey, when you&#x27;re starting a new textbook, we&#x27;re going to take things very slow. We&#x27;re going to just do one question at a time. I&#x27;m not going to throw you in the deep end, as we say in English. We&#x27;re going to ease you into the water. We would do it very slowly, very gently, because the last thing I want you to do is feel pressured.
+<span class="student">[Student]</span> I see. Yes, good, good.
+<span class="tutor">[Tutor]</span> All right. All right. Let&#x27;s go on to today&#x27;s lesson. This might take you down memory lane. The title is Buying My First Car.
+<span class="student">[Student]</span> Oh, that&#x27;s a lovely subject.
+<span class="tutor">[Tutor]</span> Isn&#x27;t it, though? I had a lot of people today going, oh, I remember. All right. If you have the lesson ready, first thing I&#x27;m going to ask you to do is look at the picture and tell me about it.
+<span class="student">[Student]</span> Okay. I can see a picture of family. A family member is the husband and wife and a little daughter. They look at the voucher sheet or brochure, brochure. Yeah. They look at the brochure in the showroom, the car showroom.
+<span class="tutor">[Tutor]</span> Yes. And they&#x27;re sitting around at the table. They look like they&#x27;re a little happy.
+<span class="student">[Student]</span> Yes. And the salesman explains about the car. And maybe husband will look at the brochure and maybe, I guess, they will decide to buy or not the car.
+<span class="tutor">[Tutor]</span> Yes. Yes, is it the right model for their needs?
+<span class="student">[Student]</span> Yeah.
+<span class="tutor">[Tutor]</span> Okay. Joey, I&#x27;d like to help you with one word. You said P as in you said &quot;pamily&quot; with a P. Let&#x27;s try F. Family.
+<span class="student">[Student]</span> Family.
+<span class="tutor">[Tutor]</span> Very good. Very good. Okay, you did it. Can I get you to read the questions for number two, please, to me?
+<span class="student">[Student]</span> Oh, no problem. How might the family in the picture feel now? Why do you think so? I guess they are mixed of many feelings. The pleasures and a little anxious, a little stressed because the sales car, the bought car is the big cost so they decide more carefully and they check any problem. And but the buying a new car is so exciting because it is time for the travel to anywhere in domestic. So, yeah, so they, I guess they are have a mixed their they feeling. Yeah, pleasure, exciting and afraid, etc.
+<span class="tutor">[Tutor]</span> Yeah, that was very good. Very good. All right. And do they look happy like, you know, how you think they&#x27;re feeling? Do you think they&#x27;re feeling good?
+<span class="student">[Student]</span> Oh, yes, of course. And a little daughter feeling happy. Oh, yeah. She&#x27;s excited. Yeah, exciting and smiling at the pace. Yeah, it&#x27;s a nice. Yes, mm-hmm.
+<span class="tutor">[Tutor]</span> Yeah, it is. It can be very exciting. Okay, I&#x27;ll read number three. When did you buy your first car? Describe the car and why you bought it.
+<span class="student">[Student]</span> Wow, that is so long time ago. I bet. And maybe almost 20 years ago I bought used car. That kind of so oldest car. So and that used almost 15 years more. So my really old, yeah, very old. My my friends, my old friends give that car, the used car. So yeah, so I&#x27;m take then I use that car almost three years. And it is possible to travel in the domestic because at that time I was working on the gas corporation and that gas corporation supplied the free gas.
+<span class="tutor">[Tutor]</span> So nice, good for you.
+<span class="student">[Student]</span> Yeah, so it&#x27;s possible to travel anywhere. So every weekend, every I will travel in domestic. It&#x27;s so nice. Yeah, yeah, memory.
+<span class="tutor">[Tutor]</span> You travel around your country. Yeah, absolutely. That&#x27;s the big, the road trip, very, very important. Yes, I understand.
+<span class="student">[Student]</span> Yes, but it is not, it is a little different to Canada because your country is so huge, it&#x27;s possible to long travel. But in our country, it&#x27;s possible only short travel.
+<span class="tutor">[Tutor]</span> Well, still four hours in any direction.
+<span class="student">[Student]</span> Yes, you&#x27;re right. If I take the four hours, almost five hours it possible to go anywhere.
+<span class="tutor">[Tutor]</span> Yes, but I&#x27;ve seen maps of your highway system in Korea. It&#x27;s incredible. Your highways and your secondary roads. You know, there&#x27;s not many places that are isolated.
+<span class="student">[Student]</span> Excuse me.
+<span class="tutor">[Tutor]</span> You can get anywhere by car or train or bus. All right. You&#x27;re doing a lovely job, sir. Let us go on to part two. And let&#x27;s get you to read part two and the questions for number one.
+<span class="student">[Student]</span> Okay. How do you examine a car before buying it? What question do you ask? Do you have any mechanic check the car first? Yeah.
+<span class="tutor">[Tutor]</span> Do you understand the word mechanic?
+<span class="student">[Student]</span> Oh, yeah, of course.
+<span class="tutor">[Tutor]</span> Okay, wonderful.
+<span class="student">[Student]</span> That is the word about the system of the...
+<span class="tutor">[Tutor]</span> Yeah, it&#x27;s a person who specializes in repairing cars.
+<span class="student">[Student]</span> Yeah, repairing cars and physical cars. Yes, the system of the physical. Okay, anyway. Okay, my answer is... Usually if I buy a used car, I check the exterior first because it is important. Just I check the exterior and dent the car. Sometimes, the used car had a history of the accident.
+<span class="tutor">[Tutor]</span> Yes.
+<span class="student">[Student]</span> Yes, the exterior has a problem. And then I checked the mechanic. I opened the bonnet, and then I checked the engine sound. And actually just listened to the engine sound or the movement of the car.
+<span class="tutor">[Tutor]</span> Yes.
+<span class="student">[Student]</span> And sometimes I pull out my safety belt. Do you know that? If the...
+<span class="tutor">[Tutor]</span> Safety belt, you want to make sure it works.
+<span class="student">[Student]</span> Ah, yes. If you pull in the water that comes, the seat belt pull out, the seat belt is a little dirty, the outlines. So, yeah, so we check them. But, which are, I don&#x27;t have a mechanic knowledge of the car. So, just normal and check them and ask them if I bought their car, their guarantee of their car, or how long time to produce that car and their fuel efficiency.
+<span class="tutor">[Tutor]</span> Uh-huh. Yep. And how…
+<span class="student">[Student]</span> I can see gas mileage.
+<span class="tutor">[Tutor]</span> Yes.
+<span class="student">[Student]</span> And how many times the owner… because…
+<span class="tutor">[Tutor]</span> Uh-huh. Yes.
+<span class="student">[Student]</span> …there are so many times chain owner, that is some problem. So…
+<span class="tutor">[Tutor]</span> Yes. Yeah.
+<span class="student">[Student]</span> I like to… I prefer just one owner.
+<span class="tutor">[Tutor]</span> Oh, car. Yeah. It&#x27;s good.
+<span class="student">[Student]</span> Uh-huh. Uh-huh.
+<span class="tutor">[Tutor]</span> Yes. Yes. Very often, if a car is owned by one owner, chances are it&#x27;s been taken care of and they&#x27;ve been more diligent in its upkeep.
+<span class="student">[Student]</span> Yeah.
+<span class="tutor">[Tutor]</span> If a car goes through many owners, that&#x27;s sometimes an indication of an accident or problems with the vehicle. So I can appreciate what you&#x27;re saying. Okay, so here in Canada, the first thing we&#x27;ll often do is we will almost always ask, if you fill the gas tank, how many kilometers do you get? Because with our great distances, we need to know whether a car is fuel efficient.
+<span class="student">[Student]</span> I see.
+<span class="tutor">[Tutor]</span> And yeah, then we do, as you said, we look at the exterior. We look at the seats and the room. You know, can you hold things? Is it purely passenger? After that, if you haven&#x27;t already considered gas versus EV versus hybrid, we start looking into the features of the cars. When I started driving, oh gosh, about 40 years ago, the biggest thing we were thrilled with is we had air conditioning. Now in Canada, it&#x27;s a given. You want air conditioning for the summer and you want heated seats for the winter. You want to have really good tires. And you want a car that can handle the cold weather. So these are things that people now ask. And sometimes you get some really reliable types or models. And some of them that are just horrible. So you have to be careful. You&#x27;ve got to ask questions.
+<span class="student">[Student]</span> Yeah, I see. All right. I was wondering about your car, your country&#x27;s electric car. If you go outside, there are so many electric cars these days in the road.
+<span class="tutor">[Tutor]</span> Smart cars are becoming popular. EV vehicles are becoming popular. But what we&#x27;re struggling with in Canada is that we don&#x27;t always have enough recharging stations away from our home. Or if an EV car cannot handle the severe cold temperatures, you know, like minus 35, then you&#x27;ve got this lovely hunk of metal in front of your home.
+<span class="student">[Student]</span> Yeah.
+<span class="tutor">[Tutor]</span> But we do have smart cars. We do have Priuses. And Canada has just signed a deal with China to bring in 49,000 of the BYD EV vehicles from China.
+<span class="student">[Student]</span> I see.
+<span class="tutor">[Tutor]</span> So we&#x27;re hoping, because China&#x27;s climate is like ours in the north, that these cars will be weather-worthy.
+<span class="student">[Student]</span> I see. Yeah.
+<span class="tutor">[Tutor]</span> A lot of us are very excited about the BYD cars from China because they are much more, they&#x27;re priced cheaper than some of the American models. I&#x27;d have to ask that. Right now. Stock drive. Yeah. Or BYD. Okay. Yeah. They look good. Okay. All right. Let&#x27;s go on to part two, question two. What do you consider the most important purchase you have ever made? Was it your car or was it your home?
+<span class="student">[Student]</span> Yeah, in my case, the home is more important. Yeah, because that is the, it spends so big budget in my life. So, and we lived 8 hours more in our home. Yes, my family. Yeah, so it is more big decision to the cost. Yeah, so buying home. So usually, before to get married, the bride and the new couple of their marriage, they are checking the house and they look around so many place, so many apartment or house and then they will decide.
+<span class="tutor">[Tutor]</span> It&#x27;s my understanding that the housing market in Korea is very, very tight, shall we say. There are more people looking to buy homes than are available for sale, yes?
+<span class="student">[Student]</span> Yes, you&#x27;re right. But this is only for living Seoul citizens. If we live in other local places, that is more easy.
+<span class="tutor">[Tutor]</span> Yeah, to supply. Okay, yeah. So, yeah, so what I hear you saying is that if you want to live in a big city like uh Busan or Seoul or Gwangju, you&#x27;re looking at premium prices. Yeah. And if you go to other smaller communities, the price is more reasonable. You have to just commute. Yeah, you&#x27;re right. Uh-huh. Very much the same here in in my community. Um, the housing like we have what we call bedroom communities around the big city. People live in these smaller communities and then they commute into the big city like you do. All right. All right, Joey, as usual, you&#x27;ve done a great job. Thanks for chatting with me about your program. I&#x27;ll get everything typed up and sent to you later today. Have a lovely weekend.
+<span class="student">[Student]</span> Thank you so much, teacher. Have a nice day. Bye-bye.</div>
+        </div>
+    </div>
+    <div class="toast" id="toast">✅ 프롬프트가 복사되었습니다!</div>
+    <script>
+        const REVIEW_PROMPT="너는 나의 영어 회화 복습 파트너야. 오늘 내 전화영어 수업 내용을 기반으로 대화하면서 복습을 도와줘.\n\n[오늘 수업 전사 내용]\n[Student] Hello, teacher. Good morning. Good evening.\n[Tutor] Joey, how are you today?\n[Student] Oh, why is your voice a little serious?\n[Tutor] Oh, no. It's just getting a little late in the day. I'm a little bit tired. Sorry. I can't drink coffee. Right now, it's 5 o'clock here, so I can't drink any more coffee.\n[Student] Ah, yes. I understand. I'm good. How are you today?\n[Tutor] I'm glad to hear that. I'm doing pretty good.\n[Student] Thank you.\n[Tutor] Joey, I wanted to ask you, if you don't mind, before we start your lesson, I'd like to ask you about your textbook program.\n[Student] Oh, yes.\n[Tutor] Okay. So I see that you have two options. You have Daily Topic English, which you've been doing for quite a while. And then you have a second textbook called Snack Chat.\n[Student] Yes, I see.\n[Tutor] I'm wondering if that's something you would like to work on or alternate with Daily Topic? Do you have access to it?\n[Student] Yes. Yesterday, I called the Callan English manager, and he suggested I want to do other textbooks, and she added other textbooks. So it is possible to learn more. So today just want to talk about Daily Topics. That's fine. I don't know how to use that textbook.\n[Tutor] Okay, well I was going to talk to you about that. Okay, we'll definitely do Daily Topic today. No worries. The nice thing about Snack Chat is that it encourages you to respond in a conversational way, and it helps to expand your vocabulary.\n[Student] I see. So nice.\n[Tutor] And so it's quite a bit like Daily Topic. It's just a little more involved. It starts out with a warm-up question, a preference question. Then there's a problem solving, a warm-down. And then they share with you useful vocabulary and expressions. Yeah, and what I'd like to ask you to do, I'll ask you to humor me, please, take a look at lesson one and give it, you know, take a look at it, see what you think. And then the next time we talk, if you have any questions, I'll be glad to answer them, okay? Ideally, what I'd like to do, because I have you, yes, I have you twice a week. If you're interested and comfortable, I'd like to alternate between Daily Topic English and Snack Chat. But I will leave that decision with you. We could talk about it next week. Would that be all right?\n[Student] Okay. So your question means to share the textbook the week. For example, the Tuesday, the Snack Chat, and the Thursday's Daily Topic, isn't it? Right?\n[Tutor] Yes, yes, that is correct.\n[Student] Oh, yes, it's a nice way, and I'm good, I'm good. But I'm sorry about that, because you always check the two textbooks. That is a little bad. I'm so sorry about that. If you like that, yes, I love that.\n[Tutor] Okay. Now, like any other program, Joey, when you're starting a new textbook, we're going to take things very slow. We're going to just do one question at a time. I'm not going to throw you in the deep end, as we say in English. We're going to ease you into the water. We would do it very slowly, very gently, because the last thing I want you to do is feel pressured.\n[Student] I see. Yes, good, good.\n[Tutor] All right. All right. Let's go on to today's lesson. This might take you down memory lane. The title is Buying My First Car.\n[Student] Oh, that's a lovely subject.\n[Tutor] Isn't it, though? I had a lot of people today going, oh, I remember. All right. If you have the lesson ready, first thing I'm going to ask you to do is look at the picture and tell me about it.\n[Student] Okay. I can see a picture of family. A family member is the husband and wife and a little daughter. They look at the voucher sheet or brochure, brochure. Yeah. They look at the brochure in the showroom, the car showroom.\n[Tutor] Yes. And they're sitting around at the table. They look like they're a little happy.\n[Student] Yes. And the salesman explains about the car. And maybe husband will look at the brochure and maybe, I guess, they will decide to buy or not the car.\n[Tutor] Yes. Yes, is it the right model for their needs?\n[Student] Yeah.\n[Tutor] Okay. Joey, I'd like to help you with one word. You said P as in you said \"pamily\" with a P. Let's try F. Family.\n[Student] Family.\n[Tutor] Very good. Very good. Okay, you did it. Can I get you to read the questions for number two, please, to me?\n[Student] Oh, no problem. How might the family in the picture feel now? Why do you think so? I guess they are mixed of many feelings. The pleasures and a little anxious, a little stressed because the sales car, the bought car is the big cost so they decide more carefully and they check any problem. And but the buying a new car is so exciting because it is time for the travel to anywhere in domestic. So, yeah, so they, I guess they are have a mixed their they feeling. Yeah, pleasure, exciting and afraid, etc.\n[Tutor] Yeah, that was very good. Very good. All right. And do they look happy like, you know, how you think they're feeling? Do you think they're feeling good?\n[Student] Oh, yes, of course. And a little daughter feeling happy. Oh, yeah. She's excited. Yeah, exciting and smiling at the pace. Yeah, it's a nice. Yes, mm-hmm.\n[Tutor] Yeah, it is. It can be very exciting. Okay, I'll read number three. When did you buy your first car? Describe the car and why you bought it.\n[Student] Wow, that is so long time ago. I bet. And maybe almost 20 years ago I bought used car. That kind of so oldest car. So and that used almost 15 years more. So my really old, yeah, very old. My my friends, my old friends give that car, the used car. So yeah, so I'm take then I use that car almost three years. And it is possible to travel in the domestic because at that time I was working on the gas corporation and that gas corporation supplied the free gas.\n[Tutor] So nice, good for you.\n[Student] Yeah, so it's possible to travel anywhere. So every weekend, every I will travel in domestic. It's so nice. Yeah, yeah, memory.\n[Tutor] You travel around your country. Yeah, absolutely. That's the big, the road trip, very, very important. Yes, I understand.\n[Student] Yes, but it is not, it is a little different to Canada because your country is so huge, it's possible to long travel. But in our country, it's possible only short travel.\n[Tutor] Well, still four hours in any direction.\n[Student] Yes, you're right. If I take the four hours, almost five hours it possible to go anywhere.\n[Tutor] Yes, but I've seen maps of your highway system in Korea. It's incredible. Your highways and your secondary roads. You know, there's not many places that are isolated.\n[Student] Excuse me.\n[Tutor] You can get anywhere by car or train or bus. All right. You're doing a lovely job, sir. Let us go on to part two. And let's get you to read part two and the questions for number one.\n[Student] Okay. How do you examine a car before buying it? What question do you ask? Do you have any mechanic check the car first? Yeah.\n[Tutor] Do you understand the word mechanic?\n[Student] Oh, yeah, of course.\n[Tutor] Okay, wonderful.\n[Student] That is the word about the system of the...\n[Tutor] Yeah, it's a person who specializes in repairing cars.\n[Student] Yeah, repairing cars and physical cars. Yes, the system of the physical. Okay, anyway. Okay, my answer is... Usually if I buy a used car, I check the exterior first because it is important. Just I check the exterior and dent the car. Sometimes, the used car had a history of the accident.\n[Tutor] Yes.\n[Student] Yes, the exterior has a problem. And then I checked the mechanic. I opened the bonnet, and then I checked the engine sound. And actually just listened to the engine sound or the movement of the car.\n[Tutor] Yes.\n[Student] And sometimes I pull out my safety belt. Do you know that? If the...\n[Tutor] Safety belt, you want to make sure it works.\n[Student] Ah, yes. If you pull in the water that comes, the seat belt pull out, the seat belt is a little dirty, the outlines. So, yeah, so we check them. But, which are, I don't have a mechanic knowledge of the car. So, just normal and check them and ask them if I bought their car, their guarantee of their car, or how long time to produce that car and their fuel efficiency.\n[Tutor] Uh-huh. Yep. And how…\n[Student] I can see gas mileage.\n[Tutor] Yes.\n[Student] And how many times the owner… because…\n[Tutor] Uh-huh. Yes.\n[Student] …there are so many times chain owner, that is some problem. So…\n[Tutor] Yes. Yeah.\n[Student] I like to… I prefer just one owner.\n[Tutor] Oh, car. Yeah. It's good.\n[Student] Uh-huh. Uh-huh.\n[Tutor] Yes. Yes. Very often, if a car is owned by one owner, chances are it's been taken care of and they've been more diligent in its upkeep.\n[Student] Yeah.\n[Tutor] If a car goes through many owners, that's sometimes an indication of an accident or problems with the vehicle. So I can appreciate what you're saying. Okay, so here in Canada, the first thing we'll often do is we will almost always ask, if you fill the gas tank, how many kilometers do you get? Because with our great distances, we need to know whether a car is fuel efficient.\n[Student] I see.\n[Tutor] And yeah, then we do, as you said, we look at the exterior. We look at the seats and the room. You know, can you hold things? Is it purely passenger? After that, if you haven't already considered gas versus EV versus hybrid, we start looking into the features of the cars. When I started driving, oh gosh, about 40 years ago, the biggest thing we were thrilled with is we had air conditioning. Now in Canada, it's a given. You want air conditioning for the summer and you want heated seats for the winter. You want to have really good tires. And you want a car that can handle the cold weather. So these are things that people now ask. And sometimes you get some really reliable types or models. And some of them that are just horrible. So you have to be careful. You've got to ask questions.\n[Student] Yeah, I see. All right. I was wondering about your car, your country's electric car. If you go outside, there are so many electric cars these days in the road.\n[Tutor] Smart cars are becoming popular. EV vehicles are becoming popular. But what we're struggling with in Canada is that we don't always have enough recharging stations away from our home. Or if an EV car cannot handle the severe cold temperatures, you know, like minus 35, then you've got this lovely hunk of metal in front of your home.\n[Student] Yeah.\n[Tutor] But we do have smart cars. We do have Priuses. And Canada has just signed a deal with China to bring in 49,000 of the BYD EV vehicles from China.\n[Student] I see.\n[Tutor] So we're hoping, because China's climate is like ours in the north, that these cars will be weather-worthy.\n[Student] I see. Yeah.\n[Tutor] A lot of us are very excited about the BYD cars from China because they are much more, they're priced cheaper than some of the American models. I'd have to ask that. Right now. Stock drive. Yeah. Or BYD. Okay. Yeah. They look good. Okay. All right. Let's go on to part two, question two. What do you consider the most important purchase you have ever made? Was it your car or was it your home?\n[Student] Yeah, in my case, the home is more important. Yeah, because that is the, it spends so big budget in my life. So, and we lived 8 hours more in our home. Yes, my family. Yeah, so it is more big decision to the cost. Yeah, so buying home. So usually, before to get married, the bride and the new couple of their marriage, they are checking the house and they look around so many place, so many apartment or house and then they will decide.\n[Tutor] It's my understanding that the housing market in Korea is very, very tight, shall we say. There are more people looking to buy homes than are available for sale, yes?\n[Student] Yes, you're right. But this is only for living Seoul citizens. If we live in other local places, that is more easy.\n[Tutor] Yeah, to supply. Okay, yeah. So, yeah, so what I hear you saying is that if you want to live in a big city like uh Busan or Seoul or Gwangju, you're looking at premium prices. Yeah. And if you go to other smaller communities, the price is more reasonable. You have to just commute. Yeah, you're right. Uh-huh. Very much the same here in in my community. Um, the housing like we have what we call bedroom communities around the big city. People live in these smaller communities and then they commute into the big city like you do. All right. All right, Joey, as usual, you've done a great job. Thanks for chatting with me about your program. I'll get everything typed up and sent to you later today. Have a lovely weekend.\n[Student] Thank you so much, teacher. Have a nice day. Bye-bye.\n\n[AI 피드백]\n안녕하세요, Joey! 오늘 수업도 정말 즐거웠습니다. 첫 차 구매 경험과 한국의 주택 시장에 대한 이야기는 저에게도 흥미로운 주제였어요. Joey의 의견을 명확하게 전달하려는 노력이 돋보였습니다. 특히, 새로운 교재에 대한 유연한 태도와 적극적인 참여는 정말 인상 깊었어요!\n\n---\n\n### **0. 📌 Topic**\nTopic: Discussing first car purchase experiences and car buying considerations.\n\n### **1. 📊 오늘의 대화 요약 (Summary)**\n오늘은 첫 차 구매 경험에 대한 이야기를 나누며, 중고차 구매 시 고려해야 할 점들과 캐나다와 한국의 자동차 및 주택 시장 상황을 비교해 보았습니다. 특히 전기차 보급과 주택 가격에 대한 흥미로운 대화가 오갔습니다.\n\n### **2. 💬 유창성 업그레이드 (Fluency & Natural Flow)**\nJoey가 말한 문장들을 더 자연스럽고 유창하게 다듬어 볼까요?\n\n1.  ❌ **As Said**: \"he suggested I want to do other textbooks, and she added other textbooks.\"\n    ✅ **Natural**: \"He suggested I try other textbooks, and she made them available.\"\n    💎 **Professional**: \"He recommended exploring additional textbook options, which she subsequently provisioned.\"\n    💡 **코칭 포인트**: Using \"try\" or \"explore\" sounds more natural than \"want to do\" when referring to new options. \"Made them available\" or \"provisioned\" is more concise than \"added other textbooks.\"\n    → \"try\"나 \"explore\"는 새로운 옵션을 시도할 때 \"want to do\"보다 더 자연스럽습니다. \"Made them available\" 또는 \"provisioned\"는 \"added other textbooks\"보다 간결합니다.\n\n2.  ❌ **As Said**: \"So your question means to share the textbook the week.\"\n    ✅ **Natural**: \"So your question is about alternating the textbooks weekly.\"\n    💎 **Professional**: \"So, if I understand correctly, your inquiry pertains to alternating the textbooks on a weekly basis.\"\n    💡 **코칭 포인트**: \"Alternating\" clearly conveys the idea of switching between two options. Adding \"on a weekly basis\" specifies the frequency.\n    → \"Alternating\"은 두 옵션을 번갈아 사용하는 아이디어를 명확하게 전달합니다. \"on a weekly basis\"를 추가하면 빈도를 명확히 할 수 있습니다.\n\n3.  ❌ **As Said**: \"I guess they are mixed of many feelings.\"\n    ✅ **Natural**: \"I guess they have a mix of many feelings.\"\n    💎 **Professional**: \"I assume they are experiencing a range of mixed emotions.\"\n    💡 **코칭 포인트**: \"Be mixed of\" is not a standard phrase. \"Have a mix of feelings\" or \"experience mixed emotions\" are common and natural ways to express this idea.\n    → \"Be mixed of\"는 표준적인 표현이 아닙니다. \"Have a mix of feelings\" 또는 \"experience mixed emotions\"는 이러한 생각을 표현하는 일반적이고 자연스러운 방법입니다.\n\n### **3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)**\nCategory: **Missing Articles (a/an/the)**\n\nJoey는 명사 앞에 필요한 관사(a/an/the)를 빠뜨리는 경향이 있었습니다. 관사는 영어에서 명사의 특정성이나 일반성을 나타내는 중요한 요소입니다.\n\n| ❌ 원문 (As Said)                                   | ✅ 교정 예시 (Corrected)                                |\n| :------------------------------------------------- | :----------------------------------------------------- |\n| \"maybe husband will look at the brochure\"          | \"maybe **the** husband will look at the brochure\"       |\n| \"I bought used car.\"                               | \"I bought **a** used car.\"                             |\n| \"That kind of so oldest car.\"                      | \"That kind of **a** very old car.\"                     |\n| \"the sales car, the bought car is the big cost\"    | \"**buying a** car is **a** big cost\"                   |\n| \"I don't have a mechanic knowledge of the car.\"    | \"I don't have **any** mechanic knowledge of the car.\"  |\n| \"there are so many times chain owner\"              | \"there are so many times **a** chain owner\"            |\n| \"we lived 8 hours more in our home.\"               | \"we **spend** 8 hours more in our home.\" (관사보다는 동사 사용이 더 자연스러움) |\n| \"the home is more important. Yeah, because that is the, it spends so big budget in my life.\" | \"the home is more important. Yeah, because that is **the biggest expense** in my life.\" |\n\n📌 **핵심 규칙**: 특정 명사(the)나 불특정 명사(a/an) 앞에는 적절한 관사를 사용해야 합니다. 특히 처음 언급되는 단수 가산 명사 앞에는 'a'나 'an'을, 특정 명사 앞에는 'the'를 붙이는 것을 잊지 마세요.\n\n🔁 **따라 읽기**:\n🗣️ \"Maybe **the** husband will look at the brochure.\"\n🗣️ \"I bought **a** used car.\"\n🗣️ \"Buying **a** car is **a** big cost.\"\n\n### **4. 📗 어휘 확장 (Vocabulary Vault)**\n오늘 대화에서 유용하게 쓰일 수 있는 어휘들을 정리해 보았습니다.\n\n1.  **alternate** /ɔ́ːltərnèit/ (v.)\n    *   뜻: 번갈아 하다, 교대로 하다\n    *   실전 예문: We could **alternate** between the Daily Topic and Snack Chat textbooks for variety.\n\n2.  **provision** /prəvíʒən/ (v.)\n    *   뜻: 제공하다, 공급하다 (특히 필요한 것을)\n    *   실전 예문: Our IT department will **provision** the necessary software licenses for the new project members.\n\n3.  **commute** /kəmjúːt/ (v.)\n    *   뜻: 통근하다\n    *   실전 예문: Many employees choose to live in the suburbs and **commute** to the city for work to save on housing costs.\n\n4.  **fuel-efficient** /fjúːəl-ifíʃənt/ (adj.)\n    *   뜻: 연비가 좋은, 연료 효율적인\n    *   실전 예문: In today's market, customers are increasingly looking for **fuel-efficient** vehicles to reduce operating expenses.\n\n5.  **upkeep** /ʌ́pkiːp/ (n.)\n    *   뜻: 유지, 보수, 관리\n    *   실전 예문: Regular **upkeep** of our machinery is crucial to prevent unexpected breakdowns and ensure smooth operations.\n\n### **5. 📝 실전 복습 챌린지 (Practice)**\n오늘 배운 표현과 문법을 활용하여 영작 챌린지에 도전해 보세요!\n\n1.  **상황**: 다음 주부터는 주간 보고서와 월간 보고서를 번갈아 가며 제출할 예정입니다.\n    *   **영작**: (alternate를 사용하여)\n    *   **모범 답안**: Starting next week, we will **alternate** between submitting weekly and monthly reports.\n\n2.  **상황**: 새 프로젝트를 위해 필요한 장비들을 회사에서 제공할 것입니다.\n    *   **영작**: (provision을 사용하여)\n    *   **모범 답안**: The company will **provision** all the necessary equipment for the new project.\n\n3.  **상황**: 저는 출퇴근 시간이 길더라도 집값이 저렴한 교외에 사는 것을 선호합니다. 왜냐하면 주택 구매는 제 인생에서 가장 큰 지출 중 하나이기 때문입니다.\n    *   **영작**: (commute, biggest expense, a house를 사용하여)\n    *   **모범 답안**: I prefer living in the suburbs where housing prices are more reasonable, even if it means a longer **commute**, because buying **a house** is one of the **biggest expenses** in my life.\n\n### **6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)**\n\n✨ **Good Job**:\nJoey, 오늘 대화에서 특히 좋았던 문장은 바로 이겁니다:\n\"**Oh, that's a lovely subject.**\"\n이 문장은 대화의 흐름을 부드럽게 이어가고, 긍정적인 분위기를 조성하는 데 아주 효과적이었습니다. 짧지만 감탄사를 사용하여 감정을 잘 표현했고, 'lovely'라는 단어 선택도 훌륭했어요. 튜터의 말에 대한 자연스러운 반응이 돋보였습니다!\n\n🚀 **내일의 한 문장**:\n다음 수업 시작 시, 튜터에게 이렇게 말하며 대화를 시작해 보세요. 오늘 배운 'alternate'를 활용하는 겁니다.\n\"**I've been thinking about alternating our textbooks. What do you think about starting with Snack Chat next time?**\"\n\n---\n\n### **[성과 지표]**\n**유창성 점수**: 7.5/10\n\n**근거**: Joey는 다양한 주제에 대해 자신의 생각을 명확하게 표현하려는 노력이 돋보였습니다. 대화의 흐름을 잘 따라가고, 질문에 대한 답변도 막힘없이 이어갔습니다. 특히, 새로운 교재에 대한 유연한 태도와 적극적인 참여는 훌륭했습니다. 다만, 문장이 다소 길어지거나 복잡해질 때 단어 선택이나 문법 구조에서 약간의 어색함이 나타나 유창성의 자연스러움을 저해하는 경우가 있었습니다. 관사 누락과 같은 고질적인 문법 오류가 반복되는 점은 개선이 필요합니다.\n\n**다음 수업 '원포인트 액션 플랜'**:\n다음 수업에서는 **\"관사(a/an/the) 사용에 더욱 주의하기\"**에 집중해 봅시다. 특히 단수 가산 명사 앞에 'a'나 'an'을 붙이는 습관을 들이고, 특정 대상을 지칭할 때는 'the'를 사용하는 연습을 해볼 거예요. 문장을 말하기 전에 잠시 멈춰서 관사가 필요한지 생각해 보는 시간을 가져보면 좋습니다.\n\n위 내용을 바탕으로:\n1. 먼저 오늘 수업에서 내가 틀렸거나 어색했던 표현을 하나 골라서, 관련된 상황을 영어로 질문해줘.\n2. 내가 영어로 대답하면, 자연스러운지 확인하고 더 나은 표현이 있으면 알려줘.\n3. 특히 \"반복 실수 패턴\"에서 지적된 부분을 집중적으로 연습시켜줘.\n4. 이런 식으로 오늘 배운 표현들을 하나씩 복습하자.\n5. 한국어 설명은 필요할 때만 간단히, 대화는 최대한 영어로 진행해줘.\n\n그럼 시작하자!";
+        function startReview(){navigator.clipboard.writeText(REVIEW_PROMPT).then(()=>{showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)}).catch(()=>{const t=document.createElement('textarea');t.value=REVIEW_PROMPT;document.body.appendChild(t);t.select();document.execCommand('copy');document.body.removeChild(t);showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)})}
+        function showToast(){const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500)}
+        function switchTab(n){document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',n==='feedback'?i===0:i===1));document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));document.getElementById('tab-'+n).classList.add('active')}
+    </script>
+</body>
+</html>
