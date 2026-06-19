@@ -1232,15 +1232,30 @@ def _update_index_page(docs_dir):
 # ╚══════════════════════════════════════════════════════════════════════════╝
 
 def _markdown_to_html(md_text):
-    """마크다운(## 제목, - 목록 등) → HTML 변환 도우미."""
-    lines = md_text.split("\n")
+    """마크다운 → HTML 변환 도우미.
+
+    LLM(Gemini) 출력은 날마다 문법이 흔들린다(### 헤더 vs ** 굵게, * vs - 불릿,
+    줄 양끝 공백 패딩, 표의 닫는 | 누락 등). 과거에는 `## `/`- `/완벽한 표만 인식해
+    나머지가 원문 그대로 노출되는 '반반 렌더링' 버그가 있었다. 아래는 그 흔들림을
+    흡수하도록 견고화한 버전. 인라인 처리(**굵게**, `코드`, →)는 줄 변환 후 일괄 적용.
+    """
+    # CSS는 .feedback h2만 스타일링 → ATX 헤더(#~######)는 모두 h2로 통일
+    header_re = re.compile(r"^#{1,6}\s+(.*\S)\s*$")
+    numbered_re = re.compile(r"^(\d+)\.\s+(.*)$")
+    bullet_re = re.compile(r"^[-*+]\s+(.*)$")
+    table_sep_re = re.compile(r"^[\s|:\-]+$")          # |---|:--| 같은 구분선
+    hr_re = re.compile(r"^([-*_])\1{2,}$")             # ---, ***, ___ 수평선
+
     html_lines = []
     in_table = False
 
-    for line in lines:
-        if re.match(r"^\|[-:\s|]+\|$", line):
-            continue
-        if line.startswith("|") and line.endswith("|"):
+    for raw in md_text.split("\n"):
+        line = raw.strip()  # 양끝 공백 패딩·불릿 들여쓰기 흡수
+
+        # ── 표(table): | 로 시작하면 닫는 | 가 없어도 행으로 취급 ──
+        if line.startswith("|"):
+            if "-" in line and table_sep_re.match(line):
+                continue  # 구분선은 건너뜀
             cells = [c.strip() for c in line.strip("|").split("|")]
             if not in_table:
                 html_lines.append("<table>")
@@ -1255,19 +1270,30 @@ def _markdown_to_html(md_text):
             html_lines.append("</table>")
             in_table = False
 
-        if line.startswith("## "):
-            html_lines.append(f"<h2>{line[3:]}</h2>")
-        elif line.startswith("# "):
-            html_lines.append(f"<h1>{line[2:]}</h1>")
-        elif line.startswith("- "):
-            html_lines.append(f'<div class="item">{line[2:]}</div>')
-        elif re.match(r"^\d+\.\s", line):
-            content = re.sub(r"^\d+\.\s", "", line)
-            num = re.match(r"^(\d+)\.", line).group(1)
-            html_lines.append(f'<div class="numbered"><strong>{num}.</strong> {content}</div>')
-        elif line.startswith("---"):
+        # ── 헤더: #, ##, ### … 모두 h2 ──
+        m = header_re.match(line)
+        if m:
+            html_lines.append(f"<h2>{m.group(1)}</h2>")
             continue
-        elif line.strip() == "":
+
+        # ── 번호 목록: 1. 2. … (불릿보다 먼저 검사) ──
+        m = numbered_re.match(line)
+        if m:
+            html_lines.append(
+                f'<div class="numbered"><strong>{m.group(1)}.</strong> {m.group(2)}</div>'
+            )
+            continue
+
+        # ── 불릿: -, *, + 모두 ──
+        m = bullet_re.match(line)
+        if m:
+            html_lines.append(f'<div class="item">{m.group(1)}</div>')
+            continue
+
+        # ── 수평선 / 빈 줄 / 일반 문단 ──
+        if hr_re.match(line):
+            continue
+        if line == "":
             html_lines.append("<br>")
         else:
             html_lines.append(f"<p>{line}</p>")
