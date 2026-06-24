@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전화영어 복습 - 2026년 06월 24일</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Noto Sans KR',sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.75;min-height:100vh}
+        .header{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);border-bottom:1px solid rgba(255,255,255,.06);padding:48px 24px 40px;text-align:center}
+        .header-date{font-size:13px;color:#94a3b8;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+        .header h1{font-size:28px;font-weight:700;color:#f1f5f9;margin-bottom:16px}
+        .header-meta{display:flex;justify-content:center;gap:24px;font-size:14px;color:#64748b}
+        .header-meta span{display:flex;align-items:center;gap:6px}
+        .cta-section{text-align:center;padding:40px 24px}
+        .cta-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:linear-gradient(135deg,#38bdf8,#818cf8);color:#fff;font-size:16px;font-weight:600;font-family:'Noto Sans KR',sans-serif;border:none;border-radius:50px;cursor:pointer;transition:all .3s;text-decoration:none;box-shadow:0 4px 24px rgba(56,189,248,.25)}
+        .cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(56,189,248,.35)}
+        .cta-btn svg{width:20px;height:20px}
+        .cta-sub{margin-top:12px;font-size:13px;color:#64748b}
+        .toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#38bdf8;padding:14px 28px;border-radius:12px;font-size:14px;font-weight:500;border:1px solid rgba(56,189,248,.2);box-shadow:0 8px 32px rgba(0,0,0,.4);opacity:0;transition:all .4s cubic-bezier(.16,1,.3,1);z-index:1000}
+        .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+        .container{max-width:720px;margin:0 auto;padding:0 24px 80px}
+        .tabs{display:flex;gap:4px;background:#1a1a24;padding:4px;border-radius:12px;margin-bottom:32px}
+        .tab{flex:1;padding:12px;text-align:center;font-size:14px;font-weight:500;color:#64748b;background:0 0;border:none;border-radius:8px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all .2s}
+        .tab.active{background:#262636;color:#f1f5f9}
+        .tab-content{display:none}.tab-content.active{display:block}
+        .feedback h2{font-size:18px;font-weight:700;color:#f1f5f9;margin:36px 0 16px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.06)}
+        .feedback h2:first-child{margin-top:0}
+        .feedback p{margin:8px 0;color:#cbd5e1}
+        .feedback .item{padding:6px 0 6px 16px;border-left:2px solid #334155;margin:6px 0;color:#cbd5e1}
+        .feedback .numbered{padding:8px 0 8px 16px;color:#cbd5e1}
+        .feedback .numbered strong{color:#38bdf8}
+        .feedback strong{color:#f1f5f9}
+        .feedback code{background:#1e293b;padding:2px 8px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#38bdf8}
+        .feedback table{width:100%;border-collapse:collapse;margin:12px 0}
+        .feedback th,.feedback td{padding:10px 14px;text-align:left;border-bottom:1px solid #262636}
+        .feedback th{color:#94a3b8;font-weight:500;font-size:13px}
+        .feedback td{color:#cbd5e1}
+        .arrow{color:#38bdf8;font-weight:700}
+        .transcript{background:#1a1a24;border-radius:12px;padding:28px;font-size:14px;line-height:2;color:#94a3b8;white-space:pre-wrap;word-break:break-word;font-family:'JetBrains Mono','Noto Sans KR',monospace}
+        .transcript .tutor{color:#38bdf8}
+        .transcript .student{color:#a78bfa}
+        @media(max-width:640px){.header{padding:32px 16px}.header h1{font-size:22px}.cta-btn{padding:14px 28px;font-size:15px}.container{padding:0 16px 60px}}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-date">2026년 06월 24일</div>
+        <h1>📚 전화영어 복습</h1>
+        <div class="header-meta">
+            <span>⏱ 19분 45초</span>
+            <span>🎙 전화영어_025180304_20260624080014.m4a</span>
+        </div>
+    </div>
+    <div class="cta-section">
+        <button class="cta-btn" onclick="startReview()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Gemini에서 복습 대화 시작하기
+        </button>
+        <div class="cta-sub">클릭하면 프롬프트가 복사되고 Gemini가 열립니다</div>
+    </div>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('feedback')">📋 AI 피드백</button>
+            <button class="tab" onclick="switchTab('transcript')">🎙 수업 전사</button>
+        </div>
+        <div id="tab-feedback" class="tab-content active">
+            <div class="feedback"><p>Joey, 안녕하세요! 오늘도 즐거운 수요일 아침입니다. 활기찬 목소리로 수업에 임해주시는 모습이 정말 좋았어요. 비즈니스 환경에서 필요한 실용적인 표현들을 익히는 데 집중하면서, 자연스러운 영어 표현을 함께 연습해 보아요!</p>
+<br>
+<br>
+<h2><strong>0. 📌 Topic</strong></h2>
+<p>Topic: Discussing office supplies and stationery.</p>
+<br>
+<h2><strong>1. 📊 오늘의 대화 요약 (Summary)</strong></h2>
+<p>오늘은 사무용품(office supplies)과 문구류(stationery)에 대해 이야기 나누었습니다. 어떤 사무용품을 주로 사용하는지, 'stationery'와 'office supplies'의 차이점은 무엇인지, 그리고 사무용품을 어디서 구매하는지에 대해 구체적으로 대화하며 관련 어휘를 익혔습니다.</p>
+<br>
+<h2><strong>2. 💬 유창성 업그레이드 (Fluency & Natural Flow)</strong></h2>
+<p>Joey가 말한 문장 중 의미는 잘 전달되었지만, 원어민들이 더 자연스럽게 쓰는 표현으로 다듬으면 좋을 문장들을 함께 살펴볼게요.</p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>❌ 학습자 원문 (As Said):</strong> "It is similar. Yeah, the salaryman. So maybe it's same. I work through. I go for work."</div>
+<div class="item"><strong>✅ 자연스러운 표현 (Natural):</strong> "It's pretty much the same every day for a salaryman. I just go to work."</div>
+<div class="item"><strong>💎 비즈니스 표현 (Professional):</strong> "It's a typical workday for me; I simply head to the office."</div>
+<div class="item"><strong>💡 코칭 포인트:</strong> "pretty much the same every day"는 일상적인 루틴을 설명할 때 더 자연스럽습니다. "go for work"보다는 "go to work"나 "head to the office"가 더 흔한 표현입니다.</div>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>❌ 학습자 원문 (As Said):</strong> "Oh yes, this picture I can see the focus on the hand, the zoom in the hand."</div>
+<div class="item"><strong>✅ 자연스러운 표현 (Natural):</strong> "In this picture, I can see a close-up of the hand."</div>
+<div class="item"><strong>💎 비즈니스 표현 (Professional):</strong> "The image highlights a hand, zoomed in for detail."</div>
+<div class="item"><strong>💡 코칭 포인트:</strong> "A close-up of something"은 확대된 장면을 설명하는 자연스러운 표현입니다. "focus on"도 좋지만, 이미지에서는 "a close-up"이 더 구체적입니다.</div>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>❌ 학습자 원문 (As Said):</strong> "But sometimes I need to some writing because it is more convenient for me."</div>
+<div class="item"><strong>✅ 자연스러운 표현 (Natural):</strong> "But sometimes I need to do some writing because it's more convenient for me."</div>
+<div class="item"><strong>💎 비즈니스 표현 (Professional):</strong> "I occasionally find it more convenient to jot down notes."</div>
+<div class="item"><strong>💡 코칭 포인트:</strong> "writing"이 글쓰기 행위를 뜻하는 명사로 쓰일 때, "do some writing"이라고 표현하는 경우가 많습니다. "Jot down notes"는 무언가를 빠르게 적는다는 의미의 훌륭한 숙어입니다.</div>
+<br>
+<h2><strong>3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)</strong></h2>
+<p>Category: Subject-Verb Agreement</p>
+<br>
+<p>Joey는 주어와 동사의 수 일치에서 실수가 반복되는 경향이 있었습니다. 특히 주어가 3인칭 단수일 때 동사 형태를 놓치거나, 복수 주어에 단수 동사를 사용하는 경우가 보였습니다.</p>
+<br>
+<table>
+<tr><th>❌ 원문 (As Said)</th><th>✅ 교정 예시 (Corrected)</th></tr>
+<tr><td>"Our employee <strong>have</strong> a some corporation card."</td><td>"Our employee <strong>has</strong> a corporate card."</td></tr>
+<tr><td>"Every, every employee <strong>have</strong> a corporation card."</td><td>"Every employee <strong>has</strong> a corporate card."</td></tr>
+<tr><td>"the essential supplier <strong>is</strong> the pen and pencil, a pencil and paper."</td><td>"The essential <strong>supplies are</strong> a pen, pencil, and paper."</td></tr>
+</table>
+<br>
+<p>📌 <strong>핵심 규칙:</strong> 주어가 단수이면 동사도 단수 형태로, 주어가 복수이면 동사도 복수 형태로 일치시켜야 합니다. (예: He *has*, They *have*).</p>
+<br>
+<p>🔁 <strong>따라 읽기:</strong></p>
+<p>🗣️ "Our employee <strong>has</strong> a corporate card."</p>
+<p>🗣️ "Every employee <strong>has</strong> a corporate card."</p>
+<p>🗣️ "The essential <strong>supplies are</strong> a pen, pencil, and paper."</p>
+<br>
+<h2><strong>4. 📗 어휘 확장 (Vocabulary Vault)</strong></h2>
+<p>오늘 대화에서 유용하게 쓰일 수 있는 어휘들을 정리해 보았습니다.</p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>stationery</strong> /steɪʃəˌnɛri/ (명사)</div>
+<div class="item">뜻: 문구류 (종이, 펜, 봉투 등 글쓰기 관련 용품)</div>
+<div class="item">실전 예문: We need to order more <strong>stationery</strong> for the marketing department.</div>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>office supplies</strong> /ˈɔfɪs səˌplaɪz/ (명사)</div>
+<div class="item">뜻: 사무용품 (사무실에서 사용하는 모든 소모품, 문구류 포함 더 넓은 개념)</div>
+<div class="item">실전 예문: Our company provides all necessary <strong>office supplies</strong>, including IT devices.</div>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>clipboard</strong> /ˈklɪpbɔːrd/ (명사)</div>
+<div class="item">뜻: 클립보드 (서류를 고정하는 판)</div>
+<div class="item">실전 예문: Please bring your <strong>clipboard</strong> and pen to the meeting.</div>
+<br>
+<div class="numbered"><strong>4.</strong> <strong>jot down</strong> /dʒɑːt daʊn/ (동사구)</div>
+<div class="item">뜻: (간단히) 적다, 메모하다</div>
+<div class="item">실전 예문: I always <strong>jot down</strong> important points during client calls.</div>
+<br>
+<div class="numbered"><strong>5.</strong> <strong>corporate card</strong> /ˈkɔːrpərət kɑːrd/ (명사)</div>
+<div class="item">뜻: 법인 카드 (회사 경비를 지불하는 데 사용되는 카드)</div>
+<div class="item">실전 예문: Employees can use their <strong>corporate card</strong> for business expenses.</div>
+<br>
+<h2><strong>5. 📝 실전 복습 챌린지 (Practice)</strong></h2>
+<p>오늘 배운 표현과 문법을 활용하여 다음 문장들을 영작해 보세요.</p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>상황:</strong> 회의 중에 중요한 내용을 빠르게 메모해야 합니다.</div>
+<div class="item"><strong>영작:</strong> (나는) 회의 중에 중요한 정보를 빠르게 메모하는 것이 필요해요.</div>
+<div class="item"><strong>모범 답안:</strong> I need to <strong>jot down</strong> important information quickly during the meeting.</div>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>상황:</strong> 우리 회사는 모든 직원에게 법인 카드를 제공합니다.</div>
+<div class="item"><strong>영작:</strong> 우리 회사는 모든 직원에게 법인 카드를 제공합니다.</div>
+<div class="item"><strong>모범 답안:</strong> Our company provides every employee with a <strong>corporate card</strong>. (또는 Every employee <strong>has</strong> a corporate card provided by our company.)</div>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>상황:</strong> 사무실에서 사용하는 필수 사무용품은 펜, 종이, 그리고 스티키 노트입니다.</div>
+<div class="item"><strong>영작:</strong> 사무실에서 사용하는 필수 사무용품은 펜, 종이, 그리고 스티키 노트입니다.</div>
+<div class="item"><strong>모범 답안:</strong> The essential <strong>office supplies</strong> for our office <strong>are</strong> pens, paper, and sticky notes.</div>
+<br>
+<h2><strong>6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)</strong></h2>
+<br>
+<p>✨ <strong>Good Job:</strong></p>
+<p>"Yes. Understand the pencil, eraser, or sticky note, sticky paper, etc. Right?"</p>
+<p>이 문장은 Joey가 'stationery'의 개념을 정확히 이해하고, 관련 예시들을 자신감 있게 나열하며 확인하는 모습이 아주 좋았습니다. 배운 내용을 바로 활용하고 확인하는 적극적인 학습 태도가 돋보였어요!</p>
+<br>
+<p>🚀 <strong>내일의 한 문장:</strong></p>
+<p>다음 수업 시작 시 튜터에게 오늘 배운 표현을 활용하여 이렇게 말해보세요.</p>
+<p>"I <strong>jotted down</strong> some new vocabulary from our last class." (지난 수업에서 새 어휘들을 좀 메모해 뒀어요.)</p>
+<br>
+<br>
+<h2><strong>[성과 지표]</strong></h2>
+<p><strong>유창성 점수:</strong> 7/10</p>
+<p><strong>근거:</strong> Joey는 다양한 주제에 대해 막힘없이 자신의 의견을 표현하려는 노력이 돋보였습니다. 생각하는 바를 영어로 전환하는 속도가 빠르고, 대화의 흐름을 잘 이어갔습니다. 다만, 문장을 구성할 때 전치사, 관사, 그리고 주어-동사 수 일치 등 기본적인 문법 오류가 간헐적으로 나타나 유창성을 저해하는 요소로 작용했습니다. 특히, 특정 어휘(예: stationery)의 정확한 의미를 적극적으로 질문하며 학습하려는 태도가 매우 긍정적이었습니다.</p>
+<br>
+<p><strong>다음 수업 '원포인트 액션 플랜':</strong></p>
+<p>다음 수업에서는 <strong>주어-동사 수 일치</strong>에 좀 더 집중하여 연습해 봅시다. 특히 'every', 'each'와 같은 단수 취급 주어 뒤에 오는 동사 형태를 정확히 사용하는 연습을 해볼 거예요. 문장을 말하기 전에 주어가 단수인지 복수인지 한 번 더 생각하는 습관을 들이는 데 집중해 봅시다.</p></div>
+        </div>
+        <div id="tab-transcript" class="tab-content">
+            <div class="transcript"><span class="tutor">[Tutor]</span> Hello, Joey. Good morning. Happy Wednesday.
+[Joey] Hi.
+<span class="tutor">[Tutor]</span> Good morning.
+[Joey] Yes. Hi.
+<span class="tutor">[Tutor]</span> Yeah. Hi. How are you doing today?
+[Joey] Of course. Everything&#x27;s good. I&#x27;m doing great. Yeah. How are you today?
+<span class="tutor">[Tutor]</span> Oh, pretty good. Any big plans for Wednesday?
+[Joey] Ah, not yet. It is similar. Yeah, the salaryman. So maybe it&#x27;s same. I work through. I go for work. And just, yeah, it&#x27;s similar. Yeah, nothing special. But it&#x27;s special. How about you? You have some plan today? Today?
+<span class="tutor">[Tutor]</span> Well, I&#x27;m teaching. That&#x27;s my plan.
+[Joey] Yes, it&#x27;s nice.
+<span class="tutor">[Tutor]</span> And did you want to look at the topic today?
+[Joey] Yes, yes. I selected two textbooks, but &quot;Snapshot&quot; is not printed yet. So today I want to talk about today&#x27;s topic. And then tomorrow I will prepare the textbook, print out the &quot;Snapshot&quot;, and then start to practice. But today, just we talk about today&#x27;s topic. How about that?
+<span class="tutor">[Tutor]</span> Sure, yeah. So today&#x27;s topic is office supplies.
+[Joey] Yeah, you&#x27;re right. Office supplies.
+<span class="tutor">[Tutor]</span> Looking at the picture, what is happening in the picture?
+[Joey] Oh yes, this picture I can see the focus on the hand, the zoom in the hand. And this hand is holding the pen, and some woman is writing something on the note. And this document attached the blue pad, and she&#x27;s writing something. I guess this hand owner is the woman because her nail is painted red. And this is the modern office, and on this picture background there is the laptop and some device. Yes. Totally, I can see the modern office as a woman working on the desk. She&#x27;s writing something on the paper.
+<span class="tutor">[Tutor]</span> Yeah, it&#x27;s your... Yeah, it looks like she&#x27;s going to write something down on the notepad.
+[Joey] Down on the notepad?
+<span class="tutor">[Tutor]</span> Yes.
+<span class="tutor">[Tutor]</span> And so what are some office supplies or stationery do you use the most?
+[Joey] Hmm. Before the answer, I have a question. I see the stationery. It is the place, right?
+<span class="tutor">[Tutor]</span> No, stationery are supplies for like the office. Supplies for the office? Supplies, things you need for the office. Paper, pencils, stamps.
+[Joey] Yes, I understand. In my case, these days, I use the... I only use the pen and note. Just because sometimes, if I usually I use the computer for work, but sometimes I need to some writing because it is more convenient for me. Because sometimes, almost I use the computer, but this memory is not directly. So sometimes I use the pencil and note. I note, I write some memo. And the other thing is almost IT device. I use the screen monitor and the keyboard and mouse and smart pad. But that is almost IT device. So usually my office device is the only pencil and note. Yeah, that is simple but powerful.
+<span class="tutor">[Tutor]</span> So, usually the computer, so, are your most common supplies.
+[Joey] Ah, it just includes the monitor. That&#x27;s the supply?
+<span class="tutor">[Tutor]</span> Well, stationery is like writing materials and office supplies.
+[Joey] Ah, and teacher, could you explain more detail the stationery? Because I&#x27;m...
+<span class="tutor">[Tutor]</span> Stationery?
+[Joey] Yeah, I&#x27;m not sure what it means.
+[Joey] Yeah, that word&#x27;s meaning.
+<span class="tutor">[Tutor]</span> Yes.
+[Joey] The details.
+<span class="tutor">[Tutor]</span> So it means writing materials and office supplies.
+[Joey] Office supplies. So that includes IT devices, laptops, and monitor, and keyboard, mouse, and printer.
+<span class="tutor">[Tutor]</span> Not really. That&#x27;s more office supplies.
+[Joey] Office supplies.
+<span class="tutor">[Tutor]</span> So stationery is more writing paper, envelopes, pen, ink.
+[Joey] I see.
+<span class="tutor">[Tutor]</span> Notepad.
+[Joey] Yes. Understand the pencil, eraser, or sticky note, sticky paper, etc. Right?
+<span class="tutor">[Tutor]</span> Yeah. So kind of writing material.
+[Joey] I see. What is favorite? Your favorite supplier or stationery in your office, in your home, or in your workplace?
+<span class="tutor">[Tutor]</span> I don&#x27;t think I have a favorite, but I use notepads a lot.
+<span class="tutor">[Tutor]</span> I use notepads a lot.
+[Joey] Pad a lot.
+<span class="tutor">[Tutor]</span> Notepads?
+<span class="tutor">[Tutor]</span> I use notepads a lot.
+[Joey] Yes, I see. So that pad meaning that&#x27;s not smart pad.
+[Joey] Just a pad.
+<span class="tutor">[Tutor]</span> Yeah, pad of paper.
+[Joey] Paper, I see. So it came before iPad.
+<span class="tutor">[Tutor]</span> iPad.
+[Joey] iPad.
+<span class="tutor">[Tutor]</span> Okay.
+[Joey] iPad.
+<span class="tutor">[Tutor]</span> Okay. So, no, different from an iPad. So it&#x27;s before an iPad, you say a notepad.
+[Joey] Ah, notepad. Yes. I see. Okay. Good.
+<span class="tutor">[Tutor]</span> So where do you usually purchase your office supplies from?
+[Joey] Usually, our office supply is prepared in our office. Our purchase team is to prepare the stationery. But sometimes if I need urgently like the battery, small battery, AA or AAA, or some pencil, the special pencil or some special pen, at that time there is no prepared. So I visit the offline shop, the road shop, the road shop to, yeah, I don&#x27;t know. I&#x27;m not sure that shop names, but anyway, I visit there and purchase them. And teacher, I have one more question. Sorry. Yeah, there are so many shops, like the barbershop and supermarket, CVS, etc. And I forgot their name. Some shop is the sell, the pencil, note, eraser, and small battery. What&#x27;s their name?
+<span class="tutor">[Tutor]</span> It&#x27;s a shop name, Stationery store.
+[Joey] Ah, that is a stationery store. Stationery. Yes. Stationery. Stationery store.
+<span class="tutor">[Tutor]</span> Or office supply store?
+[Joey] Office supply. Ah, yes, I see. Okay.
+<span class="tutor">[Tutor]</span> Okay, and um, so your company usually provides you with everything or if you request it.
+[Joey] Yeah, almost, but sometimes that is not prepared or it is the shortage, the supply. At the time, I just go directly to the stationery store or office supply store.
+Tutor] Okay. And does your company give you the money back or do you keep the receipt?
+[Joey] Our employee have a some corporation card. Every, every employee have a corporation card. So if I use the the work some cost in the restaurant or or on stationery store or visit the coffee shop with the client, we just use the corporation card. So it is more easy.
+<span class="tutor">[Tutor]</span> Easier. It is easier. Okay. Yeah, it&#x27;s easy. And what are your essential office supplies?
+[Joey] Just I think the best and basic is the pencil and note. I use the A4 paper and pencil. Yeah, that is the basic and classic but essential, essential office supply. The other things, there are so many supply products. I forgot their name, but anyway, the essential supplier is the pen and pencil, a pencil and paper.
+<span class="tutor">[Tutor]</span> Yeah, it&#x27;s your...
+[Joey] And teacher, I want to some example the product because I don&#x27;t know name, their name. For example, some... If I attach something to the paper, we use the something and clipper. And sometimes we gather the paper and use the stamp, press the stamp. But I&#x27;m not sure there&#x27;s many kind of the name, the supply product. Could you explain for me?
+<span class="tutor">[Tutor]</span> So the stapler?
+[Joey] Stapler, yeah, you&#x27;re right.
+<span class="tutor">[Tutor]</span> Staple, stapler.
+[Joey] Stapler. Stapler. Stapler. And could you explain more? Stapler and the sticky note. Sticky paper.
+<span class="tutor">[Tutor]</span> Yeah, the sticky note. Yeah. And tape. Scissors.
+[Joey] Scissors. Tape. Yeah, tape. Scissors, tape. Stapler.
+<span class="tutor">[Tutor]</span> Okay. Yeah, so stapler, scissors, and tape?
+[Joey] Stapler, yeah. Stapler, tape, sticky note, etc.
+<span class="tutor">[Tutor]</span> Okay, I see.
+[Joey] Scissor.
+<span class="tutor">[Tutor]</span> Okay. Yeah, sticky note or notepad.
+[Joey] Notepad. And teacher, what is notepad? Notepad is the pad?
+<span class="tutor">[Tutor]</span> It&#x27;s in the picture. Is a notepad. So it&#x27;s a pad of paper.
+[Joey] The blue pad. That is notepad. The paper.
+<span class="tutor">[Tutor]</span> So a bunch of paper together is a notepad.
+[Joey] Oh, that notepad is the N-O-P-A-D. Notepad. N-O-T-E. Notepad. Ah, notepad. P-A-D. Ah, yes. I just understand N-O-P-A-D. Why use the notepad? But that is the notepad. I see. I understand. And that notepad meaning is just the blue pad or include the paper?
+<span class="tutor">[Tutor]</span> So it&#x27;s only the paper.
+[Joey] Only the paper. Notepad. Notepad. And how can I say the blue pad?
+<span class="tutor">[Tutor]</span> Like a clipboard.
+[Joey] Clipboard. Ah, yes.
+<span class="tutor">[Tutor]</span> Clipboard, not pad.
+[Joey] Okay, I see. I understand.
+<span class="tutor">[Tutor]</span> Okay, good. You can say a pad of paper, yeah.
+[Joey] Pad of paper.
+<span class="tutor">[Tutor]</span> It&#x27;s the paper all together.
+[Joey] Clipboard, yes. Good. Clipboard, notepad, and pencil. Okay.
+[Joey] Okay. And does it include the stationery? Usually includes the keyboard and mouse or not?
+<span class="tutor">[Tutor]</span> So that could be an office supplies.
+[Joey] That is the office supply includes keyboard and mouse. But that does not include the stationery. Stationery is only about a small thing, not an IT device, the pencil, notepad, clipboard.
+<span class="tutor">[Tutor]</span> Well, they&#x27;re generally separate, generally separate, but stationery is for things to help you for writing.
+[Joey] Writing. I see. That is more classic, and that is helpful to writing. Okay. I see. Understand.
+[Joey] I understand.
+<span class="tutor">[Tutor]</span> How do you store your office supplies? So where do you keep them?
+[Joey] My home or my office?
+<span class="tutor">[Tutor]</span> Do you have a desk or a place where you can keep your material?
+[Joey] Yes, before I said the purchase team prepared the stationery for items. Yeah, so they purchased one or two times per month and they prepared some place. And each place, they prepared but sometimes that supply is the shortage. At that time we visit the road shop, the stationery shop and buy them. But that is funny because there are so many funny items, like the animal shape of a sticky note. So interesting. There are so many interesting items. So I like that. Visit the stationery price, stationery shop.
+<span class="tutor">[Tutor]</span> Yes. And do you prefer to write things down on paper or to record them digitally?
+[Joey] I use, yeah, always use the laptop. So usually I recording, record my, yeah, my information. But sometimes that is I need more directly and and more classic record a memo. At the time I&#x27;m used to just writing my my paper. That is more and classic but it is more directly and I can find anywhere. So yeah, that is good. Like the to-do list on today. That is the, yeah, I&#x27;m writing the starter. I start the morning, in the morning, I&#x27;m writing to-do list and then start to work. That is more directly, more easier. That is easier for me. So maybe quicker, yeah, more immediate.
+<span class="tutor">[Tutor]</span> Yeah, quickly and immediately. Yeah, you&#x27;re right. So that&#x27;s it for time. I will send you corrections and notes. Do you have any questions before I go?
+[Joey] Oh, no. Thanks so much. Yeah, to your track every day.
+<span class="tutor">[Tutor]</span> Oh, you&#x27;re welcome. Have a great day. Goodbye.
+[Joey] You too. Have a nice day. Bye-bye.</div>
+        </div>
+    </div>
+    <div class="toast" id="toast">✅ 프롬프트가 복사되었습니다!</div>
+    <script>
+        const REVIEW_PROMPT="너는 나의 영어 회화 복습 파트너야. 오늘 내 전화영어 수업 내용을 기반으로 대화하면서 복습을 도와줘.\n\n[오늘 수업 전사 내용]\n[Tutor] Hello, Joey. Good morning. Happy Wednesday.\n[Joey] Hi.\n[Tutor] Good morning.\n[Joey] Yes. Hi.\n[Tutor] Yeah. Hi. How are you doing today?\n[Joey] Of course. Everything's good. I'm doing great. Yeah. How are you today?\n[Tutor] Oh, pretty good. Any big plans for Wednesday?\n[Joey] Ah, not yet. It is similar. Yeah, the salaryman. So maybe it's same. I work through. I go for work. And just, yeah, it's similar. Yeah, nothing special. But it's special. How about you? You have some plan today? Today?\n[Tutor] Well, I'm teaching. That's my plan.\n[Joey] Yes, it's nice.\n[Tutor] And did you want to look at the topic today?\n[Joey] Yes, yes. I selected two textbooks, but \"Snapshot\" is not printed yet. So today I want to talk about today's topic. And then tomorrow I will prepare the textbook, print out the \"Snapshot\", and then start to practice. But today, just we talk about today's topic. How about that?\n[Tutor] Sure, yeah. So today's topic is office supplies.\n[Joey] Yeah, you're right. Office supplies.\n[Tutor] Looking at the picture, what is happening in the picture?\n[Joey] Oh yes, this picture I can see the focus on the hand, the zoom in the hand. And this hand is holding the pen, and some woman is writing something on the note. And this document attached the blue pad, and she's writing something. I guess this hand owner is the woman because her nail is painted red. And this is the modern office, and on this picture background there is the laptop and some device. Yes. Totally, I can see the modern office as a woman working on the desk. She's writing something on the paper.\n[Tutor] Yeah, it's your... Yeah, it looks like she's going to write something down on the notepad.\n[Joey] Down on the notepad?\n[Tutor] Yes.\n[Tutor] And so what are some office supplies or stationery do you use the most?\n[Joey] Hmm. Before the answer, I have a question. I see the stationery. It is the place, right?\n[Tutor] No, stationery are supplies for like the office. Supplies for the office? Supplies, things you need for the office. Paper, pencils, stamps.\n[Joey] Yes, I understand. In my case, these days, I use the... I only use the pen and note. Just because sometimes, if I usually I use the computer for work, but sometimes I need to some writing because it is more convenient for me. Because sometimes, almost I use the computer, but this memory is not directly. So sometimes I use the pencil and note. I note, I write some memo. And the other thing is almost IT device. I use the screen monitor and the keyboard and mouse and smart pad. But that is almost IT device. So usually my office device is the only pencil and note. Yeah, that is simple but powerful.\n[Tutor] So, usually the computer, so, are your most common supplies.\n[Joey] Ah, it just includes the monitor. That's the supply?\n[Tutor] Well, stationery is like writing materials and office supplies.\n[Joey] Ah, and teacher, could you explain more detail the stationery? Because I'm...\n[Tutor] Stationery?\n[Joey] Yeah, I'm not sure what it means.\n[Joey] Yeah, that word's meaning.\n[Tutor] Yes.\n[Joey] The details.\n[Tutor] So it means writing materials and office supplies.\n[Joey] Office supplies. So that includes IT devices, laptops, and monitor, and keyboard, mouse, and printer.\n[Tutor] Not really. That's more office supplies.\n[Joey] Office supplies.\n[Tutor] So stationery is more writing paper, envelopes, pen, ink.\n[Joey] I see.\n[Tutor] Notepad.\n[Joey] Yes. Understand the pencil, eraser, or sticky note, sticky paper, etc. Right?\n[Tutor] Yeah. So kind of writing material.\n[Joey] I see. What is favorite? Your favorite supplier or stationery in your office, in your home, or in your workplace?\n[Tutor] I don't think I have a favorite, but I use notepads a lot.\n[Tutor] I use notepads a lot.\n[Joey] Pad a lot.\n[Tutor] Notepads?\n[Tutor] I use notepads a lot.\n[Joey] Yes, I see. So that pad meaning that's not smart pad.\n[Joey] Just a pad.\n[Tutor] Yeah, pad of paper.\n[Joey] Paper, I see. So it came before iPad.\n[Tutor] iPad.\n[Joey] iPad.\n[Tutor] Okay.\n[Joey] iPad.\n[Tutor] Okay. So, no, different from an iPad. So it's before an iPad, you say a notepad.\n[Joey] Ah, notepad. Yes. I see. Okay. Good.\n[Tutor] So where do you usually purchase your office supplies from?\n[Joey] Usually, our office supply is prepared in our office. Our purchase team is to prepare the stationery. But sometimes if I need urgently like the battery, small battery, AA or AAA, or some pencil, the special pencil or some special pen, at that time there is no prepared. So I visit the offline shop, the road shop, the road shop to, yeah, I don't know. I'm not sure that shop names, but anyway, I visit there and purchase them. And teacher, I have one more question. Sorry. Yeah, there are so many shops, like the barbershop and supermarket, CVS, etc. And I forgot their name. Some shop is the sell, the pencil, note, eraser, and small battery. What's their name?\n[Tutor] It's a shop name, Stationery store.\n[Joey] Ah, that is a stationery store. Stationery. Yes. Stationery. Stationery store.\n[Tutor] Or office supply store?\n[Joey] Office supply. Ah, yes, I see. Okay.\n[Tutor] Okay, and um, so your company usually provides you with everything or if you request it.\n[Joey] Yeah, almost, but sometimes that is not prepared or it is the shortage, the supply. At the time, I just go directly to the stationery store or office supply store.\nTutor] Okay. And does your company give you the money back or do you keep the receipt?\n[Joey] Our employee have a some corporation card. Every, every employee have a corporation card. So if I use the the work some cost in the restaurant or or on stationery store or visit the coffee shop with the client, we just use the corporation card. So it is more easy.\n[Tutor] Easier. It is easier. Okay. Yeah, it's easy. And what are your essential office supplies?\n[Joey] Just I think the best and basic is the pencil and note. I use the A4 paper and pencil. Yeah, that is the basic and classic but essential, essential office supply. The other things, there are so many supply products. I forgot their name, but anyway, the essential supplier is the pen and pencil, a pencil and paper.\n[Tutor] Yeah, it's your...\n[Joey] And teacher, I want to some example the product because I don't know name, their name. For example, some... If I attach something to the paper, we use the something and clipper. And sometimes we gather the paper and use the stamp, press the stamp. But I'm not sure there's many kind of the name, the supply product. Could you explain for me?\n[Tutor] So the stapler?\n[Joey] Stapler, yeah, you're right.\n[Tutor] Staple, stapler.\n[Joey] Stapler. Stapler. Stapler. And could you explain more? Stapler and the sticky note. Sticky paper.\n[Tutor] Yeah, the sticky note. Yeah. And tape. Scissors.\n[Joey] Scissors. Tape. Yeah, tape. Scissors, tape. Stapler.\n[Tutor] Okay. Yeah, so stapler, scissors, and tape?\n[Joey] Stapler, yeah. Stapler, tape, sticky note, etc.\n[Tutor] Okay, I see.\n[Joey] Scissor.\n[Tutor] Okay. Yeah, sticky note or notepad.\n[Joey] Notepad. And teacher, what is notepad? Notepad is the pad?\n[Tutor] It's in the picture. Is a notepad. So it's a pad of paper.\n[Joey] The blue pad. That is notepad. The paper.\n[Tutor] So a bunch of paper together is a notepad.\n[Joey] Oh, that notepad is the N-O-P-A-D. Notepad. N-O-T-E. Notepad. Ah, notepad. P-A-D. Ah, yes. I just understand N-O-P-A-D. Why use the notepad? But that is the notepad. I see. I understand. And that notepad meaning is just the blue pad or include the paper?\n[Tutor] So it's only the paper.\n[Joey] Only the paper. Notepad. Notepad. And how can I say the blue pad?\n[Tutor] Like a clipboard.\n[Joey] Clipboard. Ah, yes.\n[Tutor] Clipboard, not pad.\n[Joey] Okay, I see. I understand.\n[Tutor] Okay, good. You can say a pad of paper, yeah.\n[Joey] Pad of paper.\n[Tutor] It's the paper all together.\n[Joey] Clipboard, yes. Good. Clipboard, notepad, and pencil. Okay.\n[Joey] Okay. And does it include the stationery? Usually includes the keyboard and mouse or not?\n[Tutor] So that could be an office supplies.\n[Joey] That is the office supply includes keyboard and mouse. But that does not include the stationery. Stationery is only about a small thing, not an IT device, the pencil, notepad, clipboard.\n[Tutor] Well, they're generally separate, generally separate, but stationery is for things to help you for writing.\n[Joey] Writing. I see. That is more classic, and that is helpful to writing. Okay. I see. Understand.\n[Joey] I understand.\n[Tutor] How do you store your office supplies? So where do you keep them?\n[Joey] My home or my office?\n[Tutor] Do you have a desk or a place where you can keep your material?\n[Joey] Yes, before I said the purchase team prepared the stationery for items. Yeah, so they purchased one or two times per month and they prepared some place. And each place, they prepared but sometimes that supply is the shortage. At that time we visit the road shop, the stationery shop and buy them. But that is funny because there are so many funny items, like the animal shape of a sticky note. So interesting. There are so many interesting items. So I like that. Visit the stationery price, stationery shop.\n[Tutor] Yes. And do you prefer to write things down on paper or to record them digitally?\n[Joey] I use, yeah, always use the laptop. So usually I recording, record my, yeah, my information. But sometimes that is I need more directly and and more classic record a memo. At the time I'm used to just writing my my paper. That is more and classic but it is more directly and I can find anywhere. So yeah, that is good. Like the to-do list on today. That is the, yeah, I'm writing the starter. I start the morning, in the morning, I'm writing to-do list and then start to work. That is more directly, more easier. That is easier for me. So maybe quicker, yeah, more immediate.\n[Tutor] Yeah, quickly and immediately. Yeah, you're right. So that's it for time. I will send you corrections and notes. Do you have any questions before I go?\n[Joey] Oh, no. Thanks so much. Yeah, to your track every day.\n[Tutor] Oh, you're welcome. Have a great day. Goodbye.\n[Joey] You too. Have a nice day. Bye-bye.\n\n[AI 피드백]\nJoey, 안녕하세요! 오늘도 즐거운 수요일 아침입니다. 활기찬 목소리로 수업에 임해주시는 모습이 정말 좋았어요. 비즈니스 환경에서 필요한 실용적인 표현들을 익히는 데 집중하면서, 자연스러운 영어 표현을 함께 연습해 보아요!\n\n---\n\n### **0. 📌 Topic**\nTopic: Discussing office supplies and stationery.\n\n### **1. 📊 오늘의 대화 요약 (Summary)**\n오늘은 사무용품(office supplies)과 문구류(stationery)에 대해 이야기 나누었습니다. 어떤 사무용품을 주로 사용하는지, 'stationery'와 'office supplies'의 차이점은 무엇인지, 그리고 사무용품을 어디서 구매하는지에 대해 구체적으로 대화하며 관련 어휘를 익혔습니다.\n\n### **2. 💬 유창성 업그레이드 (Fluency & Natural Flow)**\nJoey가 말한 문장 중 의미는 잘 전달되었지만, 원어민들이 더 자연스럽게 쓰는 표현으로 다듬으면 좋을 문장들을 함께 살펴볼게요.\n\n1.  **❌ 학습자 원문 (As Said):** \"It is similar. Yeah, the salaryman. So maybe it's same. I work through. I go for work.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"It's pretty much the same every day for a salaryman. I just go to work.\"\n    *   **💎 비즈니스 표현 (Professional):** \"It's a typical workday for me; I simply head to the office.\"\n    *   **💡 코칭 포인트:** \"pretty much the same every day\"는 일상적인 루틴을 설명할 때 더 자연스럽습니다. \"go for work\"보다는 \"go to work\"나 \"head to the office\"가 더 흔한 표현입니다.\n\n2.  **❌ 학습자 원문 (As Said):** \"Oh yes, this picture I can see the focus on the hand, the zoom in the hand.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"In this picture, I can see a close-up of the hand.\"\n    *   **💎 비즈니스 표현 (Professional):** \"The image highlights a hand, zoomed in for detail.\"\n    *   **💡 코칭 포인트:** \"A close-up of something\"은 확대된 장면을 설명하는 자연스러운 표현입니다. \"focus on\"도 좋지만, 이미지에서는 \"a close-up\"이 더 구체적입니다.\n\n3.  **❌ 학습자 원문 (As Said):** \"But sometimes I need to some writing because it is more convenient for me.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"But sometimes I need to do some writing because it's more convenient for me.\"\n    *   **💎 비즈니스 표현 (Professional):** \"I occasionally find it more convenient to jot down notes.\"\n    *   **💡 코칭 포인트:** \"writing\"이 글쓰기 행위를 뜻하는 명사로 쓰일 때, \"do some writing\"이라고 표현하는 경우가 많습니다. \"Jot down notes\"는 무언가를 빠르게 적는다는 의미의 훌륭한 숙어입니다.\n\n### **3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)**\nCategory: Subject-Verb Agreement\n\nJoey는 주어와 동사의 수 일치에서 실수가 반복되는 경향이 있었습니다. 특히 주어가 3인칭 단수일 때 동사 형태를 놓치거나, 복수 주어에 단수 동사를 사용하는 경우가 보였습니다.\n\n| ❌ 원문 (As Said)                                   | ✅ 교정 예시 (Corrected)                                    |\n| :------------------------------------------------ | :------------------------------------------------------- |\n| \"Our employee **have** a some corporation card.\" | \"Our employee **has** a corporate card.\"                 |\n| \"Every, every employee **have** a corporation card.\" | \"Every employee **has** a corporate card.\"               |\n| \"the essential supplier **is** the pen and pencil, a pencil and paper.\" | \"The essential **supplies are** a pen, pencil, and paper.\" |\n\n📌 **핵심 규칙:** 주어가 단수이면 동사도 단수 형태로, 주어가 복수이면 동사도 복수 형태로 일치시켜야 합니다. (예: He *has*, They *have*).\n\n🔁 **따라 읽기:**\n🗣️ \"Our employee **has** a corporate card.\"\n🗣️ \"Every employee **has** a corporate card.\"\n🗣️ \"The essential **supplies are** a pen, pencil, and paper.\"\n\n### **4. 📗 어휘 확장 (Vocabulary Vault)**\n오늘 대화에서 유용하게 쓰일 수 있는 어휘들을 정리해 보았습니다.\n\n1.  **stationery** /steɪʃəˌnɛri/ (명사)\n    *   뜻: 문구류 (종이, 펜, 봉투 등 글쓰기 관련 용품)\n    *   실전 예문: We need to order more **stationery** for the marketing department.\n\n2.  **office supplies** /ˈɔfɪs səˌplaɪz/ (명사)\n    *   뜻: 사무용품 (사무실에서 사용하는 모든 소모품, 문구류 포함 더 넓은 개념)\n    *   실전 예문: Our company provides all necessary **office supplies**, including IT devices.\n\n3.  **clipboard** /ˈklɪpbɔːrd/ (명사)\n    *   뜻: 클립보드 (서류를 고정하는 판)\n    *   실전 예문: Please bring your **clipboard** and pen to the meeting.\n\n4.  **jot down** /dʒɑːt daʊn/ (동사구)\n    *   뜻: (간단히) 적다, 메모하다\n    *   실전 예문: I always **jot down** important points during client calls.\n\n5.  **corporate card** /ˈkɔːrpərət kɑːrd/ (명사)\n    *   뜻: 법인 카드 (회사 경비를 지불하는 데 사용되는 카드)\n    *   실전 예문: Employees can use their **corporate card** for business expenses.\n\n### **5. 📝 실전 복습 챌린지 (Practice)**\n오늘 배운 표현과 문법을 활용하여 다음 문장들을 영작해 보세요.\n\n1.  **상황:** 회의 중에 중요한 내용을 빠르게 메모해야 합니다.\n    *   **영작:** (나는) 회의 중에 중요한 정보를 빠르게 메모하는 것이 필요해요.\n    *   **모범 답안:** I need to **jot down** important information quickly during the meeting.\n\n2.  **상황:** 우리 회사는 모든 직원에게 법인 카드를 제공합니다.\n    *   **영작:** 우리 회사는 모든 직원에게 법인 카드를 제공합니다.\n    *   **모범 답안:** Our company provides every employee with a **corporate card**. (또는 Every employee **has** a corporate card provided by our company.)\n\n3.  **상황:** 사무실에서 사용하는 필수 사무용품은 펜, 종이, 그리고 스티키 노트입니다.\n    *   **영작:** 사무실에서 사용하는 필수 사무용품은 펜, 종이, 그리고 스티키 노트입니다.\n    *   **모범 답안:** The essential **office supplies** for our office **are** pens, paper, and sticky notes.\n\n### **6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)**\n\n✨ **Good Job:**\n\"Yes. Understand the pencil, eraser, or sticky note, sticky paper, etc. Right?\"\n이 문장은 Joey가 'stationery'의 개념을 정확히 이해하고, 관련 예시들을 자신감 있게 나열하며 확인하는 모습이 아주 좋았습니다. 배운 내용을 바로 활용하고 확인하는 적극적인 학습 태도가 돋보였어요!\n\n🚀 **내일의 한 문장:**\n다음 수업 시작 시 튜터에게 오늘 배운 표현을 활용하여 이렇게 말해보세요.\n\"I **jotted down** some new vocabulary from our last class.\" (지난 수업에서 새 어휘들을 좀 메모해 뒀어요.)\n\n---\n\n### **[성과 지표]**\n**유창성 점수:** 7/10\n**근거:** Joey는 다양한 주제에 대해 막힘없이 자신의 의견을 표현하려는 노력이 돋보였습니다. 생각하는 바를 영어로 전환하는 속도가 빠르고, 대화의 흐름을 잘 이어갔습니다. 다만, 문장을 구성할 때 전치사, 관사, 그리고 주어-동사 수 일치 등 기본적인 문법 오류가 간헐적으로 나타나 유창성을 저해하는 요소로 작용했습니다. 특히, 특정 어휘(예: stationery)의 정확한 의미를 적극적으로 질문하며 학습하려는 태도가 매우 긍정적이었습니다.\n\n**다음 수업 '원포인트 액션 플랜':**\n다음 수업에서는 **주어-동사 수 일치**에 좀 더 집중하여 연습해 봅시다. 특히 'every', 'each'와 같은 단수 취급 주어 뒤에 오는 동사 형태를 정확히 사용하는 연습을 해볼 거예요. 문장을 말하기 전에 주어가 단수인지 복수인지 한 번 더 생각하는 습관을 들이는 데 집중해 봅시다.\n\n위 내용을 바탕으로:\n1. 먼저 오늘 수업에서 내가 틀렸거나 어색했던 표현을 하나 골라서, 관련된 상황을 영어로 질문해줘.\n2. 내가 영어로 대답하면, 자연스러운지 확인하고 더 나은 표현이 있으면 알려줘.\n3. 특히 \"반복 실수 패턴\"에서 지적된 부분을 집중적으로 연습시켜줘.\n4. 이런 식으로 오늘 배운 표현들을 하나씩 복습하자.\n5. 한국어 설명은 필요할 때만 간단히, 대화는 최대한 영어로 진행해줘.\n\n그럼 시작하자!";
+        function startReview(){navigator.clipboard.writeText(REVIEW_PROMPT).then(()=>{showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)}).catch(()=>{const t=document.createElement('textarea');t.value=REVIEW_PROMPT;document.body.appendChild(t);t.select();document.execCommand('copy');document.body.removeChild(t);showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)})}
+        function showToast(){const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500)}
+        function switchTab(n){document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',n==='feedback'?i===0:i===1));document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));document.getElementById('tab-'+n).classList.add('active')}
+    </script>
+</body>
+</html>
