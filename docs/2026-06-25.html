@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전화영어 복습 - 2026년 06월 25일</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Noto Sans KR',sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.75;min-height:100vh}
+        .header{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);border-bottom:1px solid rgba(255,255,255,.06);padding:48px 24px 40px;text-align:center}
+        .header-date{font-size:13px;color:#94a3b8;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+        .header h1{font-size:28px;font-weight:700;color:#f1f5f9;margin-bottom:16px}
+        .header-meta{display:flex;justify-content:center;gap:24px;font-size:14px;color:#64748b}
+        .header-meta span{display:flex;align-items:center;gap:6px}
+        .cta-section{text-align:center;padding:40px 24px}
+        .cta-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:linear-gradient(135deg,#38bdf8,#818cf8);color:#fff;font-size:16px;font-weight:600;font-family:'Noto Sans KR',sans-serif;border:none;border-radius:50px;cursor:pointer;transition:all .3s;text-decoration:none;box-shadow:0 4px 24px rgba(56,189,248,.25)}
+        .cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(56,189,248,.35)}
+        .cta-btn svg{width:20px;height:20px}
+        .cta-sub{margin-top:12px;font-size:13px;color:#64748b}
+        .toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#38bdf8;padding:14px 28px;border-radius:12px;font-size:14px;font-weight:500;border:1px solid rgba(56,189,248,.2);box-shadow:0 8px 32px rgba(0,0,0,.4);opacity:0;transition:all .4s cubic-bezier(.16,1,.3,1);z-index:1000}
+        .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+        .container{max-width:720px;margin:0 auto;padding:0 24px 80px}
+        .tabs{display:flex;gap:4px;background:#1a1a24;padding:4px;border-radius:12px;margin-bottom:32px}
+        .tab{flex:1;padding:12px;text-align:center;font-size:14px;font-weight:500;color:#64748b;background:0 0;border:none;border-radius:8px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all .2s}
+        .tab.active{background:#262636;color:#f1f5f9}
+        .tab-content{display:none}.tab-content.active{display:block}
+        .feedback h2{font-size:18px;font-weight:700;color:#f1f5f9;margin:36px 0 16px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.06)}
+        .feedback h2:first-child{margin-top:0}
+        .feedback p{margin:8px 0;color:#cbd5e1}
+        .feedback .item{padding:6px 0 6px 16px;border-left:2px solid #334155;margin:6px 0;color:#cbd5e1}
+        .feedback .numbered{padding:8px 0 8px 16px;color:#cbd5e1}
+        .feedback .numbered strong{color:#38bdf8}
+        .feedback strong{color:#f1f5f9}
+        .feedback code{background:#1e293b;padding:2px 8px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#38bdf8}
+        .feedback table{width:100%;border-collapse:collapse;margin:12px 0}
+        .feedback th,.feedback td{padding:10px 14px;text-align:left;border-bottom:1px solid #262636}
+        .feedback th{color:#94a3b8;font-weight:500;font-size:13px}
+        .feedback td{color:#cbd5e1}
+        .arrow{color:#38bdf8;font-weight:700}
+        .transcript{background:#1a1a24;border-radius:12px;padding:28px;font-size:14px;line-height:2;color:#94a3b8;white-space:pre-wrap;word-break:break-word;font-family:'JetBrains Mono','Noto Sans KR',monospace}
+        .transcript .tutor{color:#38bdf8}
+        .transcript .student{color:#a78bfa}
+        @media(max-width:640px){.header{padding:32px 16px}.header h1{font-size:22px}.cta-btn{padding:14px 28px;font-size:15px}.container{padding:0 16px 60px}}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-date">2026년 06월 25일</div>
+        <h1>📚 전화영어 복습</h1>
+        <div class="header-meta">
+            <span>⏱ 20분 26초</span>
+            <span>🎙 전화영어_025180304_20260625080011.m4a</span>
+        </div>
+    </div>
+    <div class="cta-section">
+        <button class="cta-btn" onclick="startReview()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Gemini에서 복습 대화 시작하기
+        </button>
+        <div class="cta-sub">클릭하면 프롬프트가 복사되고 Gemini가 열립니다</div>
+    </div>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('feedback')">📋 AI 피드백</button>
+            <button class="tab" onclick="switchTab('transcript')">🎙 수업 전사</button>
+        </div>
+        <div id="tab-feedback" class="tab-content active">
+            <div class="feedback"><p>Joey, 안녕하세요! 오늘 수업도 정말 열심히 참여해 주셔서 감사해요. 'Strategic Planning'이라는 다소 어려운 주제였음에도 불구하고, 적극적으로 질문하고 본인의 생각을 표현하려는 모습이 인상 깊었습니다. 특히 'strategic' 발음 연습을 통해 자신감을 얻는 모습이 보기 좋았어요.</p>
+<br>
+<br>
+<h2>0. 📌 Topic</h2>
+<p>Topic: Discussing the purpose and tasks involved in strategic planning.</p>
+<br>
+<h2>1. 📊 오늘의 대화 요약 (Summary)</h2>
+<p>오늘 Joey는 '전략 기획(strategic planning)'의 목적과 과정, 그리고 관련 업무에 대해 튜터와 심도 깊은 대화를 나눴습니다. 특히 일반적인 '기획팀(planning team)'과 '전략 기획팀(strategic planning team)'의 차이점을 명확히 이해하려 노력했고, 튜터의 영어 발음에 대한 개인적인 질문도 나누며 유익한 시간을 가졌습니다.</p>
+<br>
+<h2>2. 💬 유창성 업그레이드 (Fluency & Natural Flow)</h2>
+<p>Joey가 말한 문장 중 의미는 통하지만, 원어민이 들었을 때 좀 더 자연스럽게 들릴 수 있는 표현들을 살펴볼게요.</p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>❌ 학습자 원문 (As Said):</strong> "I guess they look like they're brainstorming or strategic planning <strong>in office</strong>."</div>
+<div class="item"><strong>✅ 자연스러운 표현 (Natural):</strong> "I guess they look like they're brainstorming or <strong>doing strategic planning in an office</strong>."</div>
+<div class="item"><strong>💎 비즈니스 표현 (Professional):</strong> "It appears they are engaged in a brainstorming session or <strong>strategic planning within an office setting</strong>."</div>
+<div class="item"><strong>💡 코칭 포인트:</strong> 'strategic planning' 앞에 'doing'을 붙이면 더 능동적이고 자연스러운 느낌을 줍니다. 또한, 일반적인 사무실 환경을 이야기할 때는 'in an office'가 'in office'보다 더 흔하게 사용됩니다.</div>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>❌ 학습자 원문 (As Said):</strong> "The purpose is to meet the goal, the efficiency for <strong>more best</strong> and more strategic."</div>
+<div class="item"><strong>✅ 자연스러운 표현 (Natural):</strong> "The purpose is to meet the goal and <strong>improve efficiency, making it more strategic</strong>."</div>
+<div class="item"><strong>💎 비즈니스 표현 (Professional):</strong> "The primary objective is to achieve the set goal and <strong>enhance operational efficiency through strategic initiatives</strong>."</div>
+<div class="item"><strong>💡 코칭 포인트:</strong> 'more best'는 'best' 자체가 최상급이므로 문법적으로 틀린 표현입니다. 'improve efficiency'는 효율성을 높인다는 의미를 자연스럽게 전달하며, 'making it more strategic'은 아이디어를 매끄럽게 연결해 줍니다.</div>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>❌ 학습자 원문 (As Said):</strong> "Your explanation means that the plan is <strong>more big and huge</strong>. Yeah, <strong>more dreamy</strong>."</div>
+<div class="item"><strong>✅ 자연스러운 표현 (Natural):</strong> "Your explanation means the plan is <strong>much bigger and more encompassing</strong>. Yeah, <strong>more visionary</strong>."</div>
+<div class="item"><strong>💎 비즈니스 표현 (Professional):</strong> "Your explanation suggests that the strategic plan is <strong>broader in scope and more visionary in its outlook</strong>."</div>
+<div class="item"><strong>💡 코칭 포인트:</strong> 'more big'은 어색하며, 비교급은 'bigger'가 맞습니다. 'dreamy'는 비즈니스 맥락에서 'visionary' 또는 'ambitious'와 같이 더 전문적이고 영향력 있는 단어로 대체할 수 있습니다. 'encompassing'은 더 넓은 범위를 포괄한다는 의미를 줍니다.</div>
+<br>
+<div class="numbered"><strong>4.</strong> <strong>❌ 학습자 원문 (As Said):</strong> "The enterprise will <strong>die easier</strong>."</div>
+<div class="item"><strong>✅ 자연스러운 표현 (Natural):</strong> "The enterprise will <strong>fail more easily</strong>."</div>
+<div class="item"><strong>💎 비즈니스 표현 (Professional):</strong> "The enterprise will <strong>be more susceptible to failure</strong>."</div>
+<div class="item"><strong>💡 코칭 포인트:</strong> 'die easier'는 문법적으로 'die more easily'가 맞지만, 비즈니스 맥락에서는 'fail'이나 'be susceptible to failure'와 같은 표현이 더 자연스럽습니다.</div>
+<br>
+<h2>3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)</h2>
+<p>Joey의 대화에서 <strong>전치사(Prepositions)</strong> 사용에 있어 몇 가지 개선할 점이 보였습니다. 전치사는 영어에서 의미를 정확하게 전달하는 데 매우 중요하며, 특정 동사나 명사와 함께 쓰일 때 정해진 형태(collocation)가 많습니다.</p>
+<br>
+<p><strong>Category: Prepositions</strong></p>
+<br>
+<table>
+<tr><th>❌ 원문 (As Said)</th><th>✅ 교정 예시 (Corrected)</th></tr>
+<tr><td>"this picture shows some professional group of members gathered <strong>on</strong> the table."</td><td>"this picture shows some professional group of members gathered <strong>at</strong> the table."</td></tr>
+<tr><td>"that arrow divides <strong>two points</strong>."</td><td>"that arrow divides <strong>into two points</strong>."</td></tr>
+<tr><td>"First, we know <strong>about me</strong>."</td><td>"First, we know <strong>ourselves</strong>." (또는 "know about ourselves"도 가능하지만 'know'만으로 충분)</td></tr>
+</table>
+<br>
+<p>📌 <strong>핵심 규칙:</strong> 전치사는 동사, 명사, 형용사와 함께 특정 의미를 형성하는 경우가 많습니다. 'gather at a table', 'divide into', 'know oneself'와 같이 자주 쓰이는 짝을 익히는 것이 중요합니다.</p>
+<br>
+<p>🔁 <strong>따라 읽기:</strong></p>
+<p>🗣️ "This picture shows some professional group of members gathered <strong>at</strong> the table."</p>
+<p>🗣️ "That arrow divides <strong>into</strong> two points."</p>
+<p>🗣️ "First, we know <strong>ourselves</strong>."</p>
+<br>
+<h2>4. 📗 어휘 확장 (Vocabulary Vault)</h2>
+<p>오늘 대화에서 유용하게 쓰였거나, 비즈니스 환경에서 Joey가 활용할 수 있는 어휘들을 정리해 보았습니다.</p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>strategic</strong> /strəˈtiːdʒɪk/ (형용사)</div>
+<div class="item"><strong>뜻:</strong> 전략적인, 중요한 계획과 관련된</div>
+<div class="item"><strong>실전 예문:</strong> Our <strong>strategic</strong> goals for the next quarter focus on market expansion.</div>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>brainstorming</strong> /ˈbreɪnstɔːrmɪŋ/ (명사)</div>
+<div class="item"><strong>뜻:</strong> 브레인스토밍 (새로운 아이디어를 얻기 위한 토론)</div>
+<div class="item"><strong>실전 예문:</strong> We held a <strong>brainstorming</strong> session to come up with innovative solutions for the project.</div>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>oversight</strong> /ˈoʊvərsait/ (명사)</div>
+<div class="item"><strong>뜻:</strong> 감독, 관리, 감시</div>
+<div class="item"><strong>실전 예문:</strong> The board provides <strong>oversight</strong> for all major company decisions.</div>
+<br>
+<div class="numbered"><strong>4.</strong> <strong>delegate</strong> /ˈdɛlɪɡeɪt/ (동사)</div>
+<div class="item"><strong>뜻:</strong> (권한·업무 등을) 위임하다</div>
+<div class="item"><strong>실전 예문:</strong> It's important to <strong>delegate</strong> tasks effectively to maximize team productivity.</div>
+<br>
+<div class="numbered"><strong>5.</strong> <strong>visionary</strong> /ˈvɪʒəneri/ (형용사)</div>
+<div class="item"><strong>뜻:</strong> 선견지명이 있는, 비전이 있는</div>
+<div class="item"><strong>실전 예문:</strong> Our CEO is a <strong>visionary</strong> leader who always looks ahead to future trends.</div>
+<br>
+<h2>5. 📝 실전 복습 챌린지 (Practice)</h2>
+<p>오늘 배운 표현과 문법을 활용하여 다음 문장들을 영작해 보세요.</p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>상황:</strong> 회의실에서 팀원들이 모여 다음 분기 목표에 대해 논의하고 있습니다.</div>
+<div class="item"><strong>영작:</strong> 팀원들이 회의실 테이블에 모여 다음 분기 목표를 브레인스토밍하고 있습니다.</div>
+<div class="item"><strong>모범 답안:</strong> The team members are gathered <strong>at</strong> the conference table, <strong>brainstorming</strong> next quarter's goals.</div>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>상황:</strong> 저희 부서는 새로운 프로젝트의 전반적인 감독을 담당합니다.</div>
+<div class="item"><strong>영작:</strong> 저희 부서는 새로운 프로젝트의 전반적인 감독을 담당합니다.</div>
+<div class="item"><strong>모범 답안:</strong> Our department is responsible for the overall <strong>oversight</strong> of the new project.</div>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>상황:</strong> 장기적인 관점에서, 우리는 시장 점유율을 늘리기 위한 전략적인 계획을 세워야 합니다. 이를 위해 각 팀에 업무를 위임해야 합니다.</div>
+<div class="item"><strong>영작:</strong> 장기적인 관점에서, 우리는 시장 점유율을 늘리기 위한 전략적인 계획을 세워야 합니다. 이를 위해 각 팀에 업무를 위임해야 합니다.</div>
+<div class="item"><strong>모범 답안:</strong> From a <strong>visionary</strong> perspective, we need to develop a <strong>strategic</strong> plan to increase market share. To do this, we must <strong>delegate</strong> tasks to each team.</div>
+<br>
+<h2>6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)</h2>
+<br>
+<p>✨ <strong>Good Job:</strong></p>
+<p>"<strong>Your explanation means that the plan is more big and huge. Yeah, more dreamy.</strong>"</p>
+<p>이 문장은 Joey가 튜터의 설명을 정확히 이해하고 본인의 언어로 요약하려는 노력이 돋보였습니다. 비록 'more big'이나 'dreamy'와 같은 표현은 다듬을 수 있지만, 의미 전달력과 적극적인 참여 태도는 훌륭했습니다. 어려운 개념을 본인의 생각과 연결하려는 시도가 정말 좋았어요!</p>
+<br>
+<p>🚀 <strong>내일의 한 문장:</strong></p>
+<p>다음 수업 시작 시 튜터에게 오늘 배운 표현을 활용하여 이렇게 말해보세요.</p>
+<p>"I've been thinking about what we discussed regarding <strong>strategic</strong> planning and how important <strong>oversight</strong> is."</p>
+<p>(전략 기획과 감독의 중요성에 대해 우리가 나눴던 이야기에 대해 계속 생각해 봤어요.)</p>
+<br>
+<br>
+<h2>[성과 지표]</h2>
+<p><strong>유창성 점수(10점 만점): 7점</strong></p>
+<br>
+<p><strong>근거:</strong> Joey는 오늘 수업에서 적극적으로 질문하고 본인의 생각을 표현하려 노력했습니다. 특히 'strategic' 발음 교정에도 적극적으로 참여하며 자신감을 보여주었고, 어려운 비즈니스 개념을 설명하려는 시도도 좋았습니다. 다만, 문장을 구성할 때 전치사 사용이나 비교급, 그리고 좀 더 자연스러운 동사 선택에서 다듬을 부분이 있어 유창성 점수를 7점으로 책정했습니다. 의미 전달에는 큰 문제가 없었지만, 더 자연스러운 흐름을 위한 연습이 필요합니다.</p>
+<br>
+<p><strong>다음 수업 '원포인트 액션 플랜':</strong></p>
+<p>다음 수업에서는 오늘 다룬 <strong>전치사 사용</strong>에 좀 더 집중하여 연습해 보면 좋겠습니다. 특히 동사나 명사와 함께 자주 쓰이는 전치사 짝(collocation)을 익히는 데 중점을 둘 예정입니다. 예를 들어, 'focus on', 'responsible for', 'divide into'와 같은 표현들을 실제 문장에서 활용하는 연습을 해볼 거예요.</p></div>
+        </div>
+        <div id="tab-transcript" class="tab-content">
+            <div class="transcript"><span class="student">[Student]</span> Hello, teacher. Good morning.
+<span class="tutor">[Tutor]</span> Hi, Joey. How are you today?
+<span class="student">[Student]</span> Yeah, of course. It&#x27;s a good day. I&#x27;m good. Thank you for asking. How are you?
+<span class="tutor">[Tutor]</span> Oh, I&#x27;m doing well. Thank you. Do you have time for your class this morning?
+<span class="student">[Student]</span> Oh, yes, of course. But today I didn&#x27;t prepare the snapshot. I&#x27;m so sorry. Maybe it is possible next week.
+<span class="tutor">[Tutor]</span> Okay, that&#x27;s fine.
+<span class="student">[Student]</span> Yes.
+<span class="tutor">[Tutor]</span> Let&#x27;s just make it easy for you. I&#x27;m not going to browbeat you here. Yeah, let&#x27;s just do, can you access Daily Topic English? We could do that.
+<span class="student">[Student]</span> Yes, no problem.
+<span class="tutor">[Tutor]</span> Today&#x27;s topic is strategic planning.
+<span class="student">[Student]</span> Okay.
+<span class="tutor">[Tutor]</span> May I help you with that one word? It&#x27;s a tongue twister for Korean people. Try it after me. Strategic.
+<span class="student">[Student]</span> Okay.
+<span class="tutor">[Tutor]</span> Strategic.
+<span class="student">[Student]</span> Strategic.
+<span class="tutor">[Tutor]</span> You got it.
+<span class="student">[Student]</span> Strategic.
+<span class="tutor">[Tutor]</span> You got it. Very good.
+<span class="student">[Student]</span> Yeah.
+<span class="tutor">[Tutor]</span> Strategic.
+<span class="student">[Student]</span> Strategic.
+<span class="tutor">[Tutor]</span> Very good. Excellent.
+<span class="student">[Student]</span> Okay. Okay.
+<span class="tutor">[Tutor]</span> Let&#x27;s get started. As usual, we have a photograph.
+<span class="student">[Student]</span> Uh-huh.
+<span class="tutor">[Tutor]</span> And number one asks you what is happening in the picture. So please take your time, but tell me what do you see going on in the photo?
+<span class="student">[Student]</span> I can see a photo and this picture shows some professional group of members gathered on the table. And they look at a monitor and maybe they focus on some script of information. I guess they look like they&#x27;re brainstorming or strategic planning in office. This office looks like it&#x27;s modern and bright. So I like this atmosphere. And the professional group is five members: two women and three men. And men, they wear the business look, and women wear, the women are wearing the business wear. It could be blouses or T-shirts or something. Yeah, so how can I say that? It&#x27;s more freestyle, not business suit. How can I say?
+<span class="tutor">[Tutor]</span> Business casual.
+<span class="student">[Student]</span> Yeah, you&#x27;re right. I forgot that name.
+<span class="tutor">[Tutor]</span> That&#x27;s okay. Business casual.
+<span class="student">[Student]</span> Yeah, business casual. Yeah, so yeah, totally. I like the strategic planning situation in the office.
+<span class="tutor">[Tutor]</span> Very good. All right. Now, number two, the question reads, what do you think is the purpose of strategic planning? So we&#x27;re not speaking about what the people are doing in the photo. So, rather, they&#x27;re asking you to give me some examples of the purpose for strategic planning. Why do we have strategic planning meetings?
+<span class="student">[Student]</span> I see. I understand. There are so many reasons.
+<span class="tutor">[Tutor]</span> We&#x27;ll try for two.
+<span class="student">[Student]</span> Okay. Okay. What do you think is the purpose of strategic planning, right?
+<span class="tutor">[Tutor]</span> Good reading.
+<span class="student">[Student]</span> If you shoot the arrow, the arrow has to fly the correct way and correct point. But if you look at the arrow, the last section, that is the small point, that is the flight of winding. It is possible to flight winding. I think the strategic part is similar. If we have some goal, meet the goal, the strategic part possible is that point and more efficiency. So, yeah, so usually the strategic part is the steady part. The purpose is to meet the goal, the efficiency for more best and more strategic. I don&#x27;t know, I&#x27;m not sure.
+<span class="tutor">[Tutor]</span> You&#x27;re working very hard. I appreciate your effort. Okay, so what I think I&#x27;m hearing you say is that the purpose of strategic planning is the idea that the team, the department, or the company identify things that need to be changed or improved. And they identify the objective or the goal. The strategic planning is the activities. What are you going to do to reach those objectives or goals? As you said, it&#x27;s like shooting an arrow. You want the arrow to hit the target, but you have to figure out how to make it work, how to get accuracy, you know, how to meet that target. Yes?
+<span class="student">[Student]</span> Yes. And teacher, how can I describe the part of the arrow last section? For example, if you look at the arrow, that is divided into two points. One is the hit the target point, and the other is the small part, like an arrow&#x27;s fletching. How can I say that part?
+<span class="tutor">[Tutor]</span> Okay, let me see. All right, the objective is that the arrow hits the target. The planning is the way and means of getting that arrow to its target. A term that has been shared with me is the W5 approach. What are you wanting? How are you going to get there? What do you have to do? Why and when? So W5 in English. And that&#x27;s where you figure out every aspect of getting from one point to the final point, the final objective. So I would say it&#x27;s called the W5 formula. I will see if I can find a video or some information for you more on strategic planning. Okay?
+<span class="student">[Student]</span> Okay, I see. But my case is a little different.
+<span class="tutor">[Tutor]</span> Okay, go ahead.
+<span class="student">[Student]</span> I was wondering the part of the arrow, the specific name. So if you look at the arrows, that arrow divides two points. One is the hitting target point. I don&#x27;t know that name.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="student">[Student]</span> The other part.
+<span class="tutor">[Tutor]</span> The other part. Try this. The other part is the flight plan.
+<span class="student">[Student]</span> I know that&#x27;s the image, but I wanted to know about the near-range arrows, the small things.
+<span class="tutor">[Tutor]</span> Well, the whole idea is that if you want to reach an objective, you have to find the flight plan or the best plans to get that arrow to its target. And that involves figuring out who, what, where, when, how, and why. So that&#x27;s why I call it the flight plan. When a pilot is flying an airplane, they have to know what to do, how to do it, when to do it, and why. Their goal is to take the plane from takeoff to landing. Is this helping?
+<span class="student">[Student]</span> I see. But we have two kinds of planning teams. One is just the planning team. The second is the strategic planning team. So what is the difference between two kinds of teams?
+<span class="tutor">[Tutor]</span> Okay. I&#x27;m finally understanding you. Thank you for your patience. Okay. The strategic planning team is the oversight committee.
+<span class="student">[Student]</span> Oversight committee.
+<span class="tutor">[Tutor]</span> They are the supervisory committee. They identify what needs to be done and then they figure out who needs to do what. They delegate different aspects of the planning to different departments or different people. For example, if you are a company and you&#x27;re selling car parts, automotive parts, you have someone who&#x27;s in charge of manufacturing. You have someone who&#x27;s in charge of quality control. And then you have a different person or department that is in charge of the logistics. How do you get the auto parts from the factory to the customer?
+<span class="student">[Student]</span> I see. Thank you for your explanation.
+<span class="tutor">[Tutor]</span> Okay. Oh, hey, thank you for your patience. Yeah, so the strategic planning is like the big boss. And then under the big boss, you have all these different people or departments.
+<span class="student">[Student]</span> Okay, I see. Your explanation means that the plan is more big and huge. Yeah, more dreamy. Okay, I see. I understand.
+<span class="tutor">[Tutor]</span> Oh, I&#x27;m so glad. Okay, so that takes us to number three. And we kind of answered number three. It says, what kind of tasks does strategic planning involve? And we just talked about allocation, delegation.
+<span class="student">[Student]</span> Uh-huh.
+<span class="tutor">[Tutor]</span> And so these are the type of tasks, yeah?
+<span class="student">[Student]</span> Yeah, you&#x27;re right. Usually, the strategic planning team has to reserve and budget allocation or environment scanning, or they find the current situation in the company. And then they make some strategy for their future 10 years, 30 years later. And they choose planning. And then they make a plan and the company goes the way. Yeah. The strategic planning organizes and supervises the execution of the strategy steps.
+<span class="tutor">[Tutor]</span> Okay. Yeah. You&#x27;re doing great. You&#x27;re very welcome. Let&#x27;s go on to part two. I&#x27;ll get you to read question one and we&#x27;ll talk about it.
+<span class="student">[Student]</span> Okay. What thing must be known before starting the strategic planning process? Explain. I see. But first, if we make some big, huge, big plan, first we define who is me, who is our company. Because that is so important. Because we know about where is our company and how about the situation and environment. We are planning that situation. That is first. It is similar in personal statistics. First, we know about me. We define about, we define ourselves. And then we make some strategies. Yeah, that&#x27;s the first process. Starting process.
+<span class="tutor">[Tutor]</span> You have to know where the company is in terms of its business journey.
+<span class="student">[Student]</span> Yeah, you&#x27;re right.
+<span class="tutor">[Tutor]</span> Then part of identifying where the company is at, then you need to identify areas of change or improvement. So this has to do with gathering information.
+<span class="student">[Student]</span> Gathering information. Okay.
+<span class="tutor">[Tutor]</span> You cannot make strategic planning ideas if you don&#x27;t know where to begin. So this is why companies do financial analysis, business or sales speculation. They look at the stock market. They look at the demand for their product. And then they try to figure out what can we do to get or be better.
+<span class="student">[Student]</span> I see. I understand. And teacher, I have one question personally.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="student">[Student]</span> Okay. Your pronunciation is similar to England. So is it Canada used to speak English, the UK English, British?
+<span class="tutor">[Tutor]</span> Well, here&#x27;s the thing, here&#x27;s the thing, Joey. Canada originally started as a British colony. And so we have a lot of influence of British pronunciation. Not so much vocabulary. Canadian English is kind of between British English, which is quite formal, and American English, which is more informal. Yeah. Canadians, Canadians, how to describe it? In Canada, we have specific areas of the country where you definitely hear a British or United Kingdom dialect. But in the rest of Canada, most of the time, it&#x27;s quite neutral, leaning towards American. So we&#x27;re kind of like the filling of a sandwich.
+<span class="student">[Student]</span> I still understand. Yeah, you pronounce the word British. Your pronunciation is so nice.
+<span class="tutor">[Tutor]</span> Okay. Oh, I&#x27;m so glad. I&#x27;m glad it&#x27;s helping you. One of the things that we learn as English teachers is that we try to enunciate clearly. We try to show pronunciation in the best way we can because part of fluency and pronunciation is clarity.
+<span class="student">[Student]</span> I see. And when you are a student, at that time, many students learned British English, right?
+<span class="tutor">[Tutor]</span> Oh, certainly.
+<span class="student">[Student]</span> I see. I understand. Yeah. You&#x27;re from France. Or England.
+<span class="tutor">[Tutor]</span> Yeah. It&#x27;s my understanding that Korean English leans more towards a neutral accent like Canada or an American accent. But I have seen in your news programs, I&#x27;ve heard Korean announcers, they have a British accent. They have an Australian accent or possibly Canadian. I make a game of it. When I listen to the TV announcers, I try to figure out where did they learn their English.
+<span class="student">[Student]</span> Oh, I see. I understand. Yeah, it&#x27;s personal, right? Yeah, from you. Yeah. Okay. Oh, I&#x27;m glad. I&#x27;m glad I&#x27;m helping you.
+<span class="tutor">[Tutor]</span> All right, let&#x27;s finish your class by looking at question three, part two. Can you read it to me?
+<span class="student">[Student]</span> Okay. Strategic planning can help focus on company goals. What are some other benefits? Be specific. Hmm, yeah, that&#x27;s the first benefit, to meet the goal. But second is to survive the company, the enterprise. Because if we don&#x27;t have a dream or if we don&#x27;t have a future, the enterprise will die easier. Because if we don&#x27;t have a dream, if we don&#x27;t have a long mission, at that time the company stops the shuttering. So, the strategic planning team always gives their dream to dream and gives their goal to the company. So, I think that is another benefit.
+<span class="tutor">[Tutor]</span> Yeah, sure. A company needs to know where it is going. Whether it is just starting out, whether it has been in business for decades, or if there is a transition in the executive branch, you have to have a mission. We call it the long game. Where do you want to be in five years, 10 years, 15 years?
+<span class="student">[Student]</span> You&#x27;re right.
+<span class="tutor">[Tutor]</span> What is the mission statement for the company? All right. Joey, you&#x27;ve worked incredibly hard today. You&#x27;ve asked some very good questions. Did you have any other questions or concerns?
+<span class="student">[Student]</span> Oh, no, I don&#x27;t have questions. Thank you for your class, teacher.
+<span class="tutor">[Tutor]</span> Oh, thank you for joining me. Enjoy the rest of your week and have a lovely weekend. Take care.
+<span class="student">[Student]</span> Have a nice weekend. Bye-bye.</div>
+        </div>
+    </div>
+    <div class="toast" id="toast">✅ 프롬프트가 복사되었습니다!</div>
+    <script>
+        const REVIEW_PROMPT="너는 나의 영어 회화 복습 파트너야. 오늘 내 전화영어 수업 내용을 기반으로 대화하면서 복습을 도와줘.\n\n[오늘 수업 전사 내용]\n[Student] Hello, teacher. Good morning.\n[Tutor] Hi, Joey. How are you today?\n[Student] Yeah, of course. It's a good day. I'm good. Thank you for asking. How are you?\n[Tutor] Oh, I'm doing well. Thank you. Do you have time for your class this morning?\n[Student] Oh, yes, of course. But today I didn't prepare the snapshot. I'm so sorry. Maybe it is possible next week.\n[Tutor] Okay, that's fine.\n[Student] Yes.\n[Tutor] Let's just make it easy for you. I'm not going to browbeat you here. Yeah, let's just do, can you access Daily Topic English? We could do that.\n[Student] Yes, no problem.\n[Tutor] Today's topic is strategic planning.\n[Student] Okay.\n[Tutor] May I help you with that one word? It's a tongue twister for Korean people. Try it after me. Strategic.\n[Student] Okay.\n[Tutor] Strategic.\n[Student] Strategic.\n[Tutor] You got it.\n[Student] Strategic.\n[Tutor] You got it. Very good.\n[Student] Yeah.\n[Tutor] Strategic.\n[Student] Strategic.\n[Tutor] Very good. Excellent.\n[Student] Okay. Okay.\n[Tutor] Let's get started. As usual, we have a photograph.\n[Student] Uh-huh.\n[Tutor] And number one asks you what is happening in the picture. So please take your time, but tell me what do you see going on in the photo?\n[Student] I can see a photo and this picture shows some professional group of members gathered on the table. And they look at a monitor and maybe they focus on some script of information. I guess they look like they're brainstorming or strategic planning in office. This office looks like it's modern and bright. So I like this atmosphere. And the professional group is five members: two women and three men. And men, they wear the business look, and women wear, the women are wearing the business wear. It could be blouses or T-shirts or something. Yeah, so how can I say that? It's more freestyle, not business suit. How can I say?\n[Tutor] Business casual.\n[Student] Yeah, you're right. I forgot that name.\n[Tutor] That's okay. Business casual.\n[Student] Yeah, business casual. Yeah, so yeah, totally. I like the strategic planning situation in the office.\n[Tutor] Very good. All right. Now, number two, the question reads, what do you think is the purpose of strategic planning? So we're not speaking about what the people are doing in the photo. So, rather, they're asking you to give me some examples of the purpose for strategic planning. Why do we have strategic planning meetings?\n[Student] I see. I understand. There are so many reasons.\n[Tutor] We'll try for two.\n[Student] Okay. Okay. What do you think is the purpose of strategic planning, right?\n[Tutor] Good reading.\n[Student] If you shoot the arrow, the arrow has to fly the correct way and correct point. But if you look at the arrow, the last section, that is the small point, that is the flight of winding. It is possible to flight winding. I think the strategic part is similar. If we have some goal, meet the goal, the strategic part possible is that point and more efficiency. So, yeah, so usually the strategic part is the steady part. The purpose is to meet the goal, the efficiency for more best and more strategic. I don't know, I'm not sure.\n[Tutor] You're working very hard. I appreciate your effort. Okay, so what I think I'm hearing you say is that the purpose of strategic planning is the idea that the team, the department, or the company identify things that need to be changed or improved. And they identify the objective or the goal. The strategic planning is the activities. What are you going to do to reach those objectives or goals? As you said, it's like shooting an arrow. You want the arrow to hit the target, but you have to figure out how to make it work, how to get accuracy, you know, how to meet that target. Yes?\n[Student] Yes. And teacher, how can I describe the part of the arrow last section? For example, if you look at the arrow, that is divided into two points. One is the hit the target point, and the other is the small part, like an arrow's fletching. How can I say that part?\n[Tutor] Okay, let me see. All right, the objective is that the arrow hits the target. The planning is the way and means of getting that arrow to its target. A term that has been shared with me is the W5 approach. What are you wanting? How are you going to get there? What do you have to do? Why and when? So W5 in English. And that's where you figure out every aspect of getting from one point to the final point, the final objective. So I would say it's called the W5 formula. I will see if I can find a video or some information for you more on strategic planning. Okay?\n[Student] Okay, I see. But my case is a little different.\n[Tutor] Okay, go ahead.\n[Student] I was wondering the part of the arrow, the specific name. So if you look at the arrows, that arrow divides two points. One is the hitting target point. I don't know that name.\n[Tutor] Okay.\n[Student] The other part.\n[Tutor] The other part. Try this. The other part is the flight plan.\n[Student] I know that's the image, but I wanted to know about the near-range arrows, the small things.\n[Tutor] Well, the whole idea is that if you want to reach an objective, you have to find the flight plan or the best plans to get that arrow to its target. And that involves figuring out who, what, where, when, how, and why. So that's why I call it the flight plan. When a pilot is flying an airplane, they have to know what to do, how to do it, when to do it, and why. Their goal is to take the plane from takeoff to landing. Is this helping?\n[Student] I see. But we have two kinds of planning teams. One is just the planning team. The second is the strategic planning team. So what is the difference between two kinds of teams?\n[Tutor] Okay. I'm finally understanding you. Thank you for your patience. Okay. The strategic planning team is the oversight committee.\n[Student] Oversight committee.\n[Tutor] They are the supervisory committee. They identify what needs to be done and then they figure out who needs to do what. They delegate different aspects of the planning to different departments or different people. For example, if you are a company and you're selling car parts, automotive parts, you have someone who's in charge of manufacturing. You have someone who's in charge of quality control. And then you have a different person or department that is in charge of the logistics. How do you get the auto parts from the factory to the customer?\n[Student] I see. Thank you for your explanation.\n[Tutor] Okay. Oh, hey, thank you for your patience. Yeah, so the strategic planning is like the big boss. And then under the big boss, you have all these different people or departments.\n[Student] Okay, I see. Your explanation means that the plan is more big and huge. Yeah, more dreamy. Okay, I see. I understand.\n[Tutor] Oh, I'm so glad. Okay, so that takes us to number three. And we kind of answered number three. It says, what kind of tasks does strategic planning involve? And we just talked about allocation, delegation.\n[Student] Uh-huh.\n[Tutor] And so these are the type of tasks, yeah?\n[Student] Yeah, you're right. Usually, the strategic planning team has to reserve and budget allocation or environment scanning, or they find the current situation in the company. And then they make some strategy for their future 10 years, 30 years later. And they choose planning. And then they make a plan and the company goes the way. Yeah. The strategic planning organizes and supervises the execution of the strategy steps.\n[Tutor] Okay. Yeah. You're doing great. You're very welcome. Let's go on to part two. I'll get you to read question one and we'll talk about it.\n[Student] Okay. What thing must be known before starting the strategic planning process? Explain. I see. But first, if we make some big, huge, big plan, first we define who is me, who is our company. Because that is so important. Because we know about where is our company and how about the situation and environment. We are planning that situation. That is first. It is similar in personal statistics. First, we know about me. We define about, we define ourselves. And then we make some strategies. Yeah, that's the first process. Starting process.\n[Tutor] You have to know where the company is in terms of its business journey.\n[Student] Yeah, you're right.\n[Tutor] Then part of identifying where the company is at, then you need to identify areas of change or improvement. So this has to do with gathering information.\n[Student] Gathering information. Okay.\n[Tutor] You cannot make strategic planning ideas if you don't know where to begin. So this is why companies do financial analysis, business or sales speculation. They look at the stock market. They look at the demand for their product. And then they try to figure out what can we do to get or be better.\n[Student] I see. I understand. And teacher, I have one question personally.\n[Tutor] Okay.\n[Student] Okay. Your pronunciation is similar to England. So is it Canada used to speak English, the UK English, British?\n[Tutor] Well, here's the thing, here's the thing, Joey. Canada originally started as a British colony. And so we have a lot of influence of British pronunciation. Not so much vocabulary. Canadian English is kind of between British English, which is quite formal, and American English, which is more informal. Yeah. Canadians, Canadians, how to describe it? In Canada, we have specific areas of the country where you definitely hear a British or United Kingdom dialect. But in the rest of Canada, most of the time, it's quite neutral, leaning towards American. So we're kind of like the filling of a sandwich.\n[Student] I still understand. Yeah, you pronounce the word British. Your pronunciation is so nice.\n[Tutor] Okay. Oh, I'm so glad. I'm glad it's helping you. One of the things that we learn as English teachers is that we try to enunciate clearly. We try to show pronunciation in the best way we can because part of fluency and pronunciation is clarity.\n[Student] I see. And when you are a student, at that time, many students learned British English, right?\n[Tutor] Oh, certainly.\n[Student] I see. I understand. Yeah. You're from France. Or England.\n[Tutor] Yeah. It's my understanding that Korean English leans more towards a neutral accent like Canada or an American accent. But I have seen in your news programs, I've heard Korean announcers, they have a British accent. They have an Australian accent or possibly Canadian. I make a game of it. When I listen to the TV announcers, I try to figure out where did they learn their English.\n[Student] Oh, I see. I understand. Yeah, it's personal, right? Yeah, from you. Yeah. Okay. Oh, I'm glad. I'm glad I'm helping you.\n[Tutor] All right, let's finish your class by looking at question three, part two. Can you read it to me?\n[Student] Okay. Strategic planning can help focus on company goals. What are some other benefits? Be specific. Hmm, yeah, that's the first benefit, to meet the goal. But second is to survive the company, the enterprise. Because if we don't have a dream or if we don't have a future, the enterprise will die easier. Because if we don't have a dream, if we don't have a long mission, at that time the company stops the shuttering. So, the strategic planning team always gives their dream to dream and gives their goal to the company. So, I think that is another benefit.\n[Tutor] Yeah, sure. A company needs to know where it is going. Whether it is just starting out, whether it has been in business for decades, or if there is a transition in the executive branch, you have to have a mission. We call it the long game. Where do you want to be in five years, 10 years, 15 years?\n[Student] You're right.\n[Tutor] What is the mission statement for the company? All right. Joey, you've worked incredibly hard today. You've asked some very good questions. Did you have any other questions or concerns?\n[Student] Oh, no, I don't have questions. Thank you for your class, teacher.\n[Tutor] Oh, thank you for joining me. Enjoy the rest of your week and have a lovely weekend. Take care.\n[Student] Have a nice weekend. Bye-bye.\n\n[AI 피드백]\nJoey, 안녕하세요! 오늘 수업도 정말 열심히 참여해 주셔서 감사해요. 'Strategic Planning'이라는 다소 어려운 주제였음에도 불구하고, 적극적으로 질문하고 본인의 생각을 표현하려는 모습이 인상 깊었습니다. 특히 'strategic' 발음 연습을 통해 자신감을 얻는 모습이 보기 좋았어요.\n\n---\n\n### 0. 📌 Topic\nTopic: Discussing the purpose and tasks involved in strategic planning.\n\n### 1. 📊 오늘의 대화 요약 (Summary)\n오늘 Joey는 '전략 기획(strategic planning)'의 목적과 과정, 그리고 관련 업무에 대해 튜터와 심도 깊은 대화를 나눴습니다. 특히 일반적인 '기획팀(planning team)'과 '전략 기획팀(strategic planning team)'의 차이점을 명확히 이해하려 노력했고, 튜터의 영어 발음에 대한 개인적인 질문도 나누며 유익한 시간을 가졌습니다.\n\n### 2. 💬 유창성 업그레이드 (Fluency & Natural Flow)\nJoey가 말한 문장 중 의미는 통하지만, 원어민이 들었을 때 좀 더 자연스럽게 들릴 수 있는 표현들을 살펴볼게요.\n\n1.  **❌ 학습자 원문 (As Said):** \"I guess they look like they're brainstorming or strategic planning **in office**.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"I guess they look like they're brainstorming or **doing strategic planning in an office**.\"\n    *   **💎 비즈니스 표현 (Professional):** \"It appears they are engaged in a brainstorming session or **strategic planning within an office setting**.\"\n    *   **💡 코칭 포인트:** 'strategic planning' 앞에 'doing'을 붙이면 더 능동적이고 자연스러운 느낌을 줍니다. 또한, 일반적인 사무실 환경을 이야기할 때는 'in an office'가 'in office'보다 더 흔하게 사용됩니다.\n\n2.  **❌ 학습자 원문 (As Said):** \"The purpose is to meet the goal, the efficiency for **more best** and more strategic.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"The purpose is to meet the goal and **improve efficiency, making it more strategic**.\"\n    *   **💎 비즈니스 표현 (Professional):** \"The primary objective is to achieve the set goal and **enhance operational efficiency through strategic initiatives**.\"\n    *   **💡 코칭 포인트:** 'more best'는 'best' 자체가 최상급이므로 문법적으로 틀린 표현입니다. 'improve efficiency'는 효율성을 높인다는 의미를 자연스럽게 전달하며, 'making it more strategic'은 아이디어를 매끄럽게 연결해 줍니다.\n\n3.  **❌ 학습자 원문 (As Said):** \"Your explanation means that the plan is **more big and huge**. Yeah, **more dreamy**.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"Your explanation means the plan is **much bigger and more encompassing**. Yeah, **more visionary**.\"\n    *   **💎 비즈니스 표현 (Professional):** \"Your explanation suggests that the strategic plan is **broader in scope and more visionary in its outlook**.\"\n    *   **💡 코칭 포인트:** 'more big'은 어색하며, 비교급은 'bigger'가 맞습니다. 'dreamy'는 비즈니스 맥락에서 'visionary' 또는 'ambitious'와 같이 더 전문적이고 영향력 있는 단어로 대체할 수 있습니다. 'encompassing'은 더 넓은 범위를 포괄한다는 의미를 줍니다.\n\n4.  **❌ 학습자 원문 (As Said):** \"The enterprise will **die easier**.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"The enterprise will **fail more easily**.\"\n    *   **💎 비즈니스 표현 (Professional):** \"The enterprise will **be more susceptible to failure**.\"\n    *   **💡 코칭 포인트:** 'die easier'는 문법적으로 'die more easily'가 맞지만, 비즈니스 맥락에서는 'fail'이나 'be susceptible to failure'와 같은 표현이 더 자연스럽습니다.\n\n### 3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)\nJoey의 대화에서 **전치사(Prepositions)** 사용에 있어 몇 가지 개선할 점이 보였습니다. 전치사는 영어에서 의미를 정확하게 전달하는 데 매우 중요하며, 특정 동사나 명사와 함께 쓰일 때 정해진 형태(collocation)가 많습니다.\n\n**Category: Prepositions**\n\n| ❌ 원문 (As Said)                                                                  | ✅ 교정 예시 (Corrected)                                                              |\n| :-------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------ |\n| \"this picture shows some professional group of members gathered **on** the table.\" | \"this picture shows some professional group of members gathered **at** the table.\"    |\n| \"that arrow divides **two points**.\"                                              | \"that arrow divides **into two points**.\"                                             |\n| \"First, we know **about me**.\"                                                    | \"First, we know **ourselves**.\" (또는 \"know about ourselves\"도 가능하지만 'know'만으로 충분) |\n\n📌 **핵심 규칙:** 전치사는 동사, 명사, 형용사와 함께 특정 의미를 형성하는 경우가 많습니다. 'gather at a table', 'divide into', 'know oneself'와 같이 자주 쓰이는 짝을 익히는 것이 중요합니다.\n\n🔁 **따라 읽기:**\n🗣️ \"This picture shows some professional group of members gathered **at** the table.\"\n🗣️ \"That arrow divides **into** two points.\"\n🗣️ \"First, we know **ourselves**.\"\n\n### 4. 📗 어휘 확장 (Vocabulary Vault)\n오늘 대화에서 유용하게 쓰였거나, 비즈니스 환경에서 Joey가 활용할 수 있는 어휘들을 정리해 보았습니다.\n\n1.  **strategic** /strəˈtiːdʒɪk/ (형용사)\n    *   **뜻:** 전략적인, 중요한 계획과 관련된\n    *   **실전 예문:** Our **strategic** goals for the next quarter focus on market expansion.\n\n2.  **brainstorming** /ˈbreɪnstɔːrmɪŋ/ (명사)\n    *   **뜻:** 브레인스토밍 (새로운 아이디어를 얻기 위한 토론)\n    *   **실전 예문:** We held a **brainstorming** session to come up with innovative solutions for the project.\n\n3.  **oversight** /ˈoʊvərsait/ (명사)\n    *   **뜻:** 감독, 관리, 감시\n    *   **실전 예문:** The board provides **oversight** for all major company decisions.\n\n4.  **delegate** /ˈdɛlɪɡeɪt/ (동사)\n    *   **뜻:** (권한·업무 등을) 위임하다\n    *   **실전 예문:** It's important to **delegate** tasks effectively to maximize team productivity.\n\n5.  **visionary** /ˈvɪʒəneri/ (형용사)\n    *   **뜻:** 선견지명이 있는, 비전이 있는\n    *   **실전 예문:** Our CEO is a **visionary** leader who always looks ahead to future trends.\n\n### 5. 📝 실전 복습 챌린지 (Practice)\n오늘 배운 표현과 문법을 활용하여 다음 문장들을 영작해 보세요.\n\n1.  **상황:** 회의실에서 팀원들이 모여 다음 분기 목표에 대해 논의하고 있습니다.\n    *   **영작:** 팀원들이 회의실 테이블에 모여 다음 분기 목표를 브레인스토밍하고 있습니다.\n    *   **모범 답안:** The team members are gathered **at** the conference table, **brainstorming** next quarter's goals.\n\n2.  **상황:** 저희 부서는 새로운 프로젝트의 전반적인 감독을 담당합니다.\n    *   **영작:** 저희 부서는 새로운 프로젝트의 전반적인 감독을 담당합니다.\n    *   **모범 답안:** Our department is responsible for the overall **oversight** of the new project.\n\n3.  **상황:** 장기적인 관점에서, 우리는 시장 점유율을 늘리기 위한 전략적인 계획을 세워야 합니다. 이를 위해 각 팀에 업무를 위임해야 합니다.\n    *   **영작:** 장기적인 관점에서, 우리는 시장 점유율을 늘리기 위한 전략적인 계획을 세워야 합니다. 이를 위해 각 팀에 업무를 위임해야 합니다.\n    *   **모범 답안:** From a **visionary** perspective, we need to develop a **strategic** plan to increase market share. To do this, we must **delegate** tasks to each team.\n\n### 6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)\n\n✨ **Good Job:**\n\"**Your explanation means that the plan is more big and huge. Yeah, more dreamy.**\"\n이 문장은 Joey가 튜터의 설명을 정확히 이해하고 본인의 언어로 요약하려는 노력이 돋보였습니다. 비록 'more big'이나 'dreamy'와 같은 표현은 다듬을 수 있지만, 의미 전달력과 적극적인 참여 태도는 훌륭했습니다. 어려운 개념을 본인의 생각과 연결하려는 시도가 정말 좋았어요!\n\n🚀 **내일의 한 문장:**\n다음 수업 시작 시 튜터에게 오늘 배운 표현을 활용하여 이렇게 말해보세요.\n\"I've been thinking about what we discussed regarding **strategic** planning and how important **oversight** is.\"\n(전략 기획과 감독의 중요성에 대해 우리가 나눴던 이야기에 대해 계속 생각해 봤어요.)\n\n---\n\n### [성과 지표]\n**유창성 점수(10점 만점): 7점**\n\n**근거:** Joey는 오늘 수업에서 적극적으로 질문하고 본인의 생각을 표현하려 노력했습니다. 특히 'strategic' 발음 교정에도 적극적으로 참여하며 자신감을 보여주었고, 어려운 비즈니스 개념을 설명하려는 시도도 좋았습니다. 다만, 문장을 구성할 때 전치사 사용이나 비교급, 그리고 좀 더 자연스러운 동사 선택에서 다듬을 부분이 있어 유창성 점수를 7점으로 책정했습니다. 의미 전달에는 큰 문제가 없었지만, 더 자연스러운 흐름을 위한 연습이 필요합니다.\n\n**다음 수업 '원포인트 액션 플랜':**\n다음 수업에서는 오늘 다룬 **전치사 사용**에 좀 더 집중하여 연습해 보면 좋겠습니다. 특히 동사나 명사와 함께 자주 쓰이는 전치사 짝(collocation)을 익히는 데 중점을 둘 예정입니다. 예를 들어, 'focus on', 'responsible for', 'divide into'와 같은 표현들을 실제 문장에서 활용하는 연습을 해볼 거예요.\n\n위 내용을 바탕으로:\n1. 먼저 오늘 수업에서 내가 틀렸거나 어색했던 표현을 하나 골라서, 관련된 상황을 영어로 질문해줘.\n2. 내가 영어로 대답하면, 자연스러운지 확인하고 더 나은 표현이 있으면 알려줘.\n3. 특히 \"반복 실수 패턴\"에서 지적된 부분을 집중적으로 연습시켜줘.\n4. 이런 식으로 오늘 배운 표현들을 하나씩 복습하자.\n5. 한국어 설명은 필요할 때만 간단히, 대화는 최대한 영어로 진행해줘.\n\n그럼 시작하자!";
+        function startReview(){navigator.clipboard.writeText(REVIEW_PROMPT).then(()=>{showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)}).catch(()=>{const t=document.createElement('textarea');t.value=REVIEW_PROMPT;document.body.appendChild(t);t.select();document.execCommand('copy');document.body.removeChild(t);showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)})}
+        function showToast(){const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500)}
+        function switchTab(n){document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',n==='feedback'?i===0:i===1));document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));document.getElementById('tab-'+n).classList.add('active')}
+    </script>
+</body>
+</html>
