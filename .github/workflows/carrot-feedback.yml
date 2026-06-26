@@ -1,0 +1,59 @@
+name: 🎓 Carrot 강사 피드백 주간 수집
+on:
+  schedule:
+    # UTC 21:00 일 = KST 06:00 월. 매주 1회 강사 공식 피드백 스냅샷 갱신.
+    - cron: '0 21 * * 0'
+  workflow_dispatch:
+    inputs:
+      months:
+        description: '특정 월 수집 (예: "2026-06 2026-05", 비우면 이번달+지난달)'
+        required: false
+        default: ''
+permissions:
+  contents: write
+concurrency:
+  group: carrot-feedback
+  cancel-in-progress: true
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - name: 📥 체크아웃
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: 🐍 Python 설정
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: 📦 의존성 설치
+        run: |
+          pip install requests playwright
+          python -m playwright install --with-deps chromium
+      - name: 🥕 강사 피드백 수집
+        run: python scripts/fetch_carrot_feedback.py ${{ github.event.inputs.months }}
+        env:
+          CARROT_EMAIL: ${{ secrets.CARROT_EMAIL }}
+          CARROT_PASSWORD: ${{ secrets.CARROT_PASSWORD }}
+      - name: 🎨 강사 피드백 페이지 생성
+        run: python scripts/build_carrot_page.py
+      - name: 💾 변경분 커밋·푸시
+        run: |
+          git config user.email "actions@github.com"
+          git config user.name "GitHub Actions"
+          git add -f docs/carrot/ docs/carrot.html
+          if git diff --cached --quiet; then
+            echo "변경 없음 — 커밋 생략"
+          else
+            git commit -m "chore(carrot): 강사 공식 피드백 주간 갱신"
+            git push origin HEAD:main
+          fi
+      - name: 🔔 실패 시 텔레그램 알림
+        if: failure()
+        run: |
+          curl -s -X POST "https://telegram-notify-hub.dk0327.workers.dev/send" \
+            -H "X-Notify-Secret: $KNH_SEND_SECRET" -H "Content-Type: application/json" \
+            -d '{"channel":"telegram","text":"❌ Carrot 강사 피드백 수집 실패 — Actions 로그 확인"}' || true
+        env:
+          KNH_SEND_SECRET: ${{ secrets.KNH_SEND_SECRET }}

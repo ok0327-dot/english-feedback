@@ -2,6 +2,8 @@ __pycache__/
 *.pyc
 .env
 *.json
+# 강사 공식 피드백 데이터는 추적(주간 워크플로우가 갱신·커밋)
+!docs/carrot/*.json
 *.m4a
 *.mp3
 *.wav
