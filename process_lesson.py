@@ -1223,6 +1223,7 @@ def _update_index_page(docs_dir):
 <body>
     <h1>📚 전화영어 복습 기록</h1>
     <a class="weekly-btn" href="review-index.html">📊 주간 복습 리포트 보기 →</a>
+    <a class="weekly-btn" style="background:linear-gradient(135deg,#fb923c,#f59e0b);box-shadow:0 4px 20px rgba(251,146,60,.25)" href="carrot.html">🎓 강사 공식 피드백 보기 →</a>
     <div class="list" id="list">
 {items_html if items_html else '        <p style="text-align:center;color:#64748b">아직 복습 기록이 없습니다.</p>'}
     </div>
