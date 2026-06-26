@@ -228,7 +228,64 @@ def render_spark(cum_ls):
     return (f'<svg viewBox="0 0 700 70" class="spark" preserveAspectRatio="none">'
             f'<polyline points="{" ".join(pts)}" fill="none" stroke="#38bdf8" stroke-width="2"/>{dots}</svg>')
 
-def render_week(iso, week_ls, cum_ls, prev_iso, next_iso, is_current):
+def load_carrot():
+    """docs/carrot/*.json(강사 공식 피드백) → {date: [{'original','better'}]}."""
+    out = {}
+    for f in sorted(glob.glob(os.path.join(DOCS, "carrot", "*.json"))):
+        try:
+            j = json.load(open(f, encoding="utf-8"))
+        except Exception:
+            continue
+        for it in (j.get("data") or {}).get("list") or []:
+            d = (it.get("createDate") or "").strip()
+            if not d:
+                continue
+            ps = []
+            for s in it.get("subList") or []:
+                o = (s.get("original") or "").strip()
+                b = (s.get("better") or "").strip()
+                if o or b:
+                    ps.append({"original": o, "better": b})
+            if ps:
+                out.setdefault(d, []).extend(ps)
+    return out
+
+def carrot_for_week(carrot_map, iso):
+    """그 ISO 주차에 속하는 (날짜, 강사교정쌍들) 리스트 (최신순)."""
+    res = []
+    for d, ps in (carrot_map or {}).items():
+        try:
+            y, m, dd = map(int, d.split("-"))
+            wi = datetime.date(y, m, dd).isocalendar()
+        except Exception:
+            continue
+        if (wi[0], wi[1]) == iso:
+            res.append((d, ps))
+    return sorted(res, reverse=True)
+
+def render_carrot_card(iso, carrot_map, ai_pair_count):
+    """🎓 강사 vs AI 카드. 그 주 강사 교정이 있을 때만 렌더.
+    <div id="carrot_compare"> 는 금요일 루틴 Claude가 비교 통찰로 교체(없어도 동작)."""
+    wk = carrot_for_week(carrot_map, iso)
+    if not wk:
+        return ""
+    n = sum(len(ps) for _, ps in wk)
+    rows = ""
+    for d, ps in wk:
+        items = "".join(
+            f'<div class="pair"><div class="said">❌ {esc(p["original"])}</div>'
+            f'<div class="nat">✅ {esc(p["better"])}</div></div>' for p in ps)
+        rows += (f'<div class="lesson"><div class="d">{esc(d[5:])} '
+                 f'<span style="color:#64748b">· 강사 교정 {len(ps)}개</span></div>{items}</div>')
+    default = (f"이번 주 <b>강사 교정 {n}개</b> · <b>AI 교정 {ai_pair_count}개</b>를 함께 보세요. "
+               f"강사가 직접 짚은 교정과 AI가 잡은 약점이 겹치는 부분이 진짜 우선순위입니다.")
+    return (f'<div class="card"><h2>🎓 강사 vs AI <span class="sub">강사 직접 작성 · 이번 주 {n}개</span></h2>'
+            f'<div class="syn" id="carrot_compare">{default}</div>'
+            f'<div style="margin-top:12px">{rows}</div>'
+            f'<div class="muted" style="margin-top:8px">전체 강사 피드백 → '
+            f'<a href="carrot.html" style="color:#fb923c">🎓 강사 공식 피드백</a></div></div>')
+
+def render_week(iso, week_ls, cum_ls, prev_iso, next_iso, is_current, carrot_map=None):
     week_ls = sorted(week_ls, key=lambda l: l["date"])
     deck = dedup_vocab(cum_ls)
     wk_vocab = [v for l in week_ls for v in l["vocab"]]
@@ -274,6 +331,7 @@ def render_week(iso, week_ls, cum_ls, prev_iso, next_iso, is_current):
 
   <div class="card"><h2>💬 이번 주 교정 표현 <span class="sub">{len(wk_pairs)}개</span></h2>
     {pairs_html}</div>
+  {render_carrot_card(iso, carrot_map, len(wk_pairs))}
 
   <div class="card"><h2>📗 이번 주 어휘 <span class="sub">클릭하면 뜻</span></h2>
     <div class="deck">{wkvocab_html}</div></div>
@@ -416,6 +474,7 @@ def build():
     today_iso = datetime.date.today().isocalendar()
     current = (today_iso[0], today_iso[1])
     current_file = None
+    carrot_map = load_carrot()   # 🎓 강사 공식 피드백 (docs/carrot/*.json)
 
     for i, iso in enumerate(ordered):
         week_ls = weeks[iso]
@@ -423,7 +482,7 @@ def build():
         prev_iso = ordered[i-1] if i > 0 else None
         next_iso = ordered[i+1] if i < len(ordered)-1 else None
         is_current = (iso == current)
-        page = render_week(iso, week_ls, cum_ls, prev_iso, next_iso, is_current)
+        page = render_week(iso, week_ls, cum_ls, prev_iso, next_iso, is_current, carrot_map)
         path = os.path.join(DOCS, week_file(iso))
         open(path, "w", encoding="utf-8").write(page)
         if is_current: current_file = week_file(iso)
