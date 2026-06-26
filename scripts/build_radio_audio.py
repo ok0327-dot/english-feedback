@@ -48,19 +48,13 @@ def parse_radio_html():
     return week, lines
 
 
-def gemini_tts(lines):
-    """Gemini 멀티스피커 TTS → (pcm_bytes, sample_rate)."""
-    if not GEMINI_KEY:
-        raise RuntimeError("GEMINI_API_KEY 미설정")
-    order, seen = [], set()
-    for sp, _, _ in lines:
-        if sp not in seen:
-            seen.add(sp); order.append(sp)
-    transcript = ("TTS the following Korean-English radio dialogue naturally:\n" +
-                  "\n".join(f"{SPEAKERS.get(sp, (sp, 'Kore'))[0]}: {txt}" for sp, _, txt in lines))
-    cfgs = [{"speaker": SPEAKERS.get(sp, (sp, "Kore"))[0],
-             "voiceConfig": {"prebuiltVoiceConfig": {"voiceName": SPEAKERS.get(sp, (sp, "Kore"))[1]}}}
-            for sp in order[:2]]
+CHUNK_LINES = 12   # 한 TTS 호출당 대사 줄 수(단일 호출 길이 한도 회피 → 긴 에피소드 가능)
+
+
+def _tts_chunk(chunk, cfgs):
+    """대사 청크 하나 → (pcm_bytes, rate). Gemini 멀티스피커 TTS 단일 호출."""
+    transcript = ("TTS the following English radio dialogue naturally and expressively:\n" +
+                  "\n".join(f"{SPEAKERS.get(sp, (sp, 'Kore'))[0]}: {txt}" for sp, _, txt in chunk))
     body = {
         "contents": [{"parts": [{"text": transcript}]}],
         "generationConfig": {
@@ -78,23 +72,41 @@ def gemini_tts(lines):
     for part in parts:
         inl = part.get("inlineData") or part.get("inline_data")
         if inl and inl.get("data"):
-            pcm = base64.b64decode(inl["data"])
             rate = 24000
-            mt = inl.get("mimeType") or inl.get("mime_type") or ""
-            mm = re.search(r"rate=(\d+)", mt)
+            mm = re.search(r"rate=(\d+)", inl.get("mimeType") or inl.get("mime_type") or "")
             if mm:
                 rate = int(mm.group(1))
-            return pcm, rate
+            return base64.b64decode(inl["data"]), rate
     raise RuntimeError("Gemini TTS 응답에 오디오(inlineData) 없음")
 
 
+def gemini_tts(lines):
+    """긴 대본을 청크로 나눠 TTS 후 PCM 이어붙임 → (pcm_bytes, rate)."""
+    if not GEMINI_KEY:
+        raise RuntimeError("GEMINI_API_KEY 미설정")
+    order, seen = [], set()
+    for sp, _, _ in lines:
+        if sp not in seen:
+            seen.add(sp); order.append(sp)
+    cfgs = [{"speaker": SPEAKERS.get(sp, (sp, "Kore"))[0],
+             "voiceConfig": {"prebuiltVoiceConfig": {"voiceName": SPEAKERS.get(sp, (sp, "Kore"))[1]}}}
+            for sp in order[:2]]
+    pcm_all, rate = b"", 24000
+    n = (len(lines) + CHUNK_LINES - 1) // CHUNK_LINES
+    for i in range(0, len(lines), CHUNK_LINES):
+        pcm, rate = _tts_chunk(lines[i:i + CHUNK_LINES], cfgs)
+        pcm_all += pcm
+        print(f"  …TTS 청크 {i // CHUNK_LINES + 1}/{n} ({len(pcm)//1024}KB)")
+    return pcm_all, rate
+
+
 def pcm_to_mp3(pcm, rate, out):
-    """PCM(16-bit mono) → WAV(stdlib) → ffmpeg → MP3."""
+    """PCM(16-bit mono) → WAV(stdlib) → ffmpeg → MP3(48k mono, 음성용 저용량)."""
     with tempfile.NamedTemporaryFile(suffix=".wav", delete=False) as tf:
         w = wave.open(tf, "wb")
         w.setnchannels(1); w.setsampwidth(2); w.setframerate(rate); w.writeframes(pcm); w.close()
         wavpath = tf.name
-    subprocess.run(["ffmpeg", "-y", "-i", wavpath, "-codec:a", "libmp3lame", "-q:a", "4", out],
+    subprocess.run(["ffmpeg", "-y", "-i", wavpath, "-ac", "1", "-codec:a", "libmp3lame", "-b:a", "48k", out],
                    check=True, capture_output=True)
     os.remove(wavpath)
 
@@ -112,7 +124,7 @@ def gtts_fallback(lines, out):
             seg = AudioSegment.from_mp3(tf.name)
         combined += seg + AudioSegment.silent(duration=250)
         os.remove(tf.name)
-    combined.export(out, format="mp3")
+    combined.export(out, format="mp3", bitrate="48k")
 
 
 def main():
@@ -142,6 +154,18 @@ def main():
     eps.append({"week": week, "date": datetime.datetime.now(KST).strftime("%Y-%m-%d"),
                 "file": f"ep-{week}.mp3", "engine": engine, "lines": len(lines)})
     eps.sort(key=lambda e: e.get("week", ""), reverse=True)
+
+    # 용량 관리: 최신 KEEP개만 보관, 오래된 mp3 삭제
+    KEEP = int(os.environ.get("RADIO_KEEP", "8"))
+    keep_files = {e["file"] for e in eps[:KEEP]}
+    eps = eps[:KEEP]
+    for fn in os.listdir(RADIO_DIR):
+        if fn.endswith(".mp3") and fn not in keep_files:
+            try:
+                os.remove(os.path.join(RADIO_DIR, fn))
+                print(f"  🗑 오래된 에피소드 정리: {fn}")
+            except OSError:
+                pass
     json.dump(eps, open(epf, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 
     size_kb = os.path.getsize(out) // 1024
