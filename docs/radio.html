@@ -29,6 +29,11 @@ body{font-family:'Noto Sans KR',-apple-system,sans-serif;background:#0f0f13;colo
 .muted{color:#64748b;font-size:12px}
 .toast{position:fixed;bottom:28px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#a78bfa;padding:13px 26px;border-radius:12px;font-size:14px;border:1px solid rgba(167,139,250,.25);opacity:0;transition:all .4s;z-index:99}
 .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+.epweek{font-size:13px;color:#a78bfa;font-weight:700;margin-bottom:6px}
+audio{width:100%;margin-top:4px}
+.archive{display:flex;flex-direction:column;gap:6px;margin-top:10px}
+.archive a{font-size:12.5px;color:#94a3b8;text-decoration:none;padding:8px 12px;background:#0f0f13;border:1px solid rgba(255,255,255,.06);border-radius:8px}
+.archive a:hover{color:#a78bfa;border-color:rgba(167,139,250,.3)}
 .foot{text-align:center;font-size:11px;color:#475569;margin-top:26px;line-height:1.8}
 </style></head><body>
 <div class="header"><h1>🎙️ 영어 주간 라디오</h1>
@@ -36,7 +41,11 @@ body{font-family:'Noto Sans KR',-apple-system,sans-serif;background:#0f0f13;colo
 <div class="nav"><a href="index.html">← 일일 복습</a><a href="review-vocab.html">📚 누적 표현 →</a></div>
 <div class="container">
 
-  <div class="card"><h2>▶ 이번 주 라디오 <span class="muted" style="font-weight:400">· 브라우저 음성으로 재생</span></h2>
+  <div class="card"><h2>🎧 오디오 에피소드 <span class="muted" style="font-weight:400">· 진짜 음성 · 매주 자동</span></h2>
+    <div id="audio-latest" class="muted">에피소드 불러오는 중…</div>
+    <div class="archive" id="audio-archive"></div></div>
+
+  <div class="card"><h2>▶ 바로 듣기 <span class="muted" style="font-weight:400">· 브라우저 음성(즉시·폴백)</span></h2>
     <div class="player">
       <button class="pbtn" id="play">▶ 재생</button>
       <button class="pbtn alt" id="pause">⏸ 일시정지</button>
@@ -102,5 +111,14 @@ document.getElementById('resume').onclick=()=>{if(synth)synth.resume();};
 document.getElementById('stop').onclick=()=>{playing=false;if(synth)synth.cancel();idx=0;highlight(-1);};
 const rE=document.getElementById('rate');rE.oninput=()=>{rate=parseFloat(rE.value);document.getElementById('rv').textContent=rate.toFixed(1)+'x';};
 if(!synth)document.getElementById('ttswarn').textContent='⚠️ 이 브라우저는 음성 합성을 지원하지 않아 대본만 표시됩니다.';
+
+// ── 오디오 에피소드 (radio/episodes.json 클라이언트 fetch) ──
+fetch('radio/episodes.json',{cache:'no-store'}).then(r=>r.ok?r.json():[]).then(eps=>{
+  const L=document.getElementById('audio-latest'),A=document.getElementById('audio-archive');
+  if(!Array.isArray(eps)||!eps.length){L.textContent='아직 오디오 에피소드가 없어요. 아래 ▶ 바로 듣기(브라우저 음성)로 들어보세요.';return;}
+  const top=eps[0];
+  L.innerHTML='<div class="epweek">'+top.week+' · '+(top.date||'')+'</div><audio controls preload="none" src="radio/'+top.file+'"></audio>';
+  A.innerHTML=eps.slice(1).map(e=>'<a href="radio/'+e.file+'">🎧 '+e.week+' ('+(e.date||'')+')</a>').join('');
+}).catch(()=>{document.getElementById('audio-latest').textContent='오디오 목록을 불러오지 못했어요.';});
 </script>
 </body></html>

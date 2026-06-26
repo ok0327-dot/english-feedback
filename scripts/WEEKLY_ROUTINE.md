@@ -11,6 +11,10 @@
 4. **주간 라디오 대본 생성·업그레이드**(`build_radio.py` + `#radio-src` 담화 교체).
 5. main 푸시 → GitHub Pages 게시 + 텔레그램 알림(GitHub Action).
 
+> 🎧 **오디오(MP3)는 루틴이 만들지 않는다.** 별도 GitHub Actions `radio-audio.yml`(금 17:00 KST,
+> 루틴 직후)이 루틴이 갱신한 `#radio-src` 대본을 읽어 Gemini TTS(폴백 gTTS)로 MP3를 만들고
+> `docs/radio/`에 커밋 + 텔레그램 발송한다. 루틴은 대본까지만 책임진다.
+
 ---
 
 ## 붙여넣을 프롬프트 (정본)
