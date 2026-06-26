@@ -8,7 +8,8 @@
 1. **짤린 일일 페이지 자가복구**. Claude가 직접 보강.
 2. 주간 복습 스냅샷 재생성(`build_weekly_review.py`).
 3. 현재 주 종합문(`#synthesis`) + 누적 큐레이션(`#curation`) + **강사vsAI 비교(`#carrot_compare`)**를 Claude 통찰로 교체.
-4. main 푸시 → GitHub Pages 게시 + 텔레그램 알림(GitHub Action).
+4. **주간 라디오 대본 생성·업그레이드**(`build_radio.py` + `#radio-src` 담화 교체).
+5. main 푸시 → GitHub Pages 게시 + 텔레그램 알림(GitHub Action).
 
 ---
 
@@ -29,15 +30,17 @@
 - 목록이 비어 있으면(짤린 것 없음) 이 단계는 건너뛴다.
 - ⚠️ `apply` 는 metadata.json 을 갱신하므로 **한 번에 하나씩 순차** 실행(동시 실행 금지).
 
-### 2단계 — 주간 스냅샷 재생성
+### 2단계 — 주간 스냅샷 + 라디오 재생성
 - `python3 scripts/build_weekly_review.py` 실행. (1단계 복구로 데이터가 온전해진 상태에서 집계됨.)
+- `python3 scripts/build_radio.py` 실행. 가장 최근 주의 누적 피드백으로 `docs/radio.html`(주간 라디오)을 재생성한다.
 - stdout 마지막 줄 `CURRENT_WEEK_FILE=review-2026-Www.html` 로 **현재 주 파일**을 식별.
 
 ### 3단계 — 종합문 + 큐레이션을 네 통찰로 교체
 - **현재 주 파일**(`docs/<CURRENT_WEEK_FILE>`)의 `<div class="syn" id="synthesis">...</div>` 안 내용을, 그 주 교정·약점·어휘를 실제로 읽고 쓴 **구체적이고 실행가능한 한국어 종합 2~4문장**으로 교체해라. (규칙기반 폴백보다 나아야 의미가 있음. `<b>` 강조 사용 가능, 다른 HTML 구조는 건드리지 말 것.)
 - `docs/review-vocab.html`의 `<div class="syn" id="curation">...</div>` 안 내용도, 누적 단어·표현을 읽고 **무엇을 우선 암기/연습할지 짚어주는 한국어 큐레이션 2~3문장**으로 교체해라.
 - **현재 주 파일에 `<div class="syn" id="carrot_compare">...</div>` 가 있으면**(그 주 강사 데이터 존재), `docs/carrot/*.json`의 이번 주 날짜 **강사 교정**과 현재 주 페이지의 **AI 교정 표현**을 비교해 **강사·AI가 공통으로 짚은 약점(=진짜 우선순위)과 한쪽만 짚은 사각지대**를 한국어 2~3문장으로 써 교체해라. 끝에 `<span class="muted">— Claude 비교 ($0)</span>`. (carrot_compare div가 없으면 그 주는 강사 데이터가 없는 것이니 건너뛴다.)
-- 위 `id` 컨테이너들의 **여는/닫는 태그와 class 는 보존**하고 내부 텍스트만 교체(렌더링 깨짐 방지).
+- `docs/radio.html`의 `<pre id="radio-src">...</pre>` 안 **라디오 대본**도, 그 주 약점·교정·어휘를 담은 더 자연스럽고 생생한 담화로 교체해라. 형식은 반드시 **한 줄에 `진행자|lang|문장`** (진행자=민지 또는 알렉스, lang=ko 또는 en, 구분자 `|` 는 문장 안에 쓰지 말 것). 한국어 담화 사이사이 영어 예문(en 줄)을 섞고 12~18줄. **이 형식이 깨지면 음성 재생이 안 되니 엄수.**
+- 위 `id` 컨테이너들(`#synthesis`/`#curation`/`#carrot_compare`/`#radio-src`)의 **여는/닫는 태그와 속성은 보존**하고 내부 텍스트만 교체(렌더링·재생 깨짐 방지).
 
 ### 4단계 — 커밋 & 푸시
 - 변경(복구된 일일 페이지 + 주간 스냅샷 + 종합/큐레이션)을 한 커밋으로 main 에 푸시.

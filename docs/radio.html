@@ -1,0 +1,101 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>🎙️ 영어 주간 라디오</title><style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Noto Sans KR',-apple-system,sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.7}
+.header{background:linear-gradient(135deg,#241a3a,#3a2410,#0f3460);padding:42px 24px 30px;text-align:center;border-bottom:1px solid rgba(255,255,255,.06)}
+.header h1{font-size:24px;color:#f5f0ff;margin-bottom:8px}
+.header .range{font-size:13px;color:#c4b5fd;letter-spacing:1px}
+.nav{max-width:760px;margin:0 auto;padding:14px 20px 0;display:flex;justify-content:space-between;font-size:13px}
+.nav a{color:#64748b;text-decoration:none;padding:6px 10px;border-radius:8px}.nav a:hover{color:#a78bfa;background:#16161d}
+.container{max-width:760px;margin:0 auto;padding:18px 20px 80px}
+.card{background:#16161d;border:1px solid rgba(255,255,255,.06);border-radius:16px;padding:20px;margin-bottom:18px}
+.card h2{font-size:16px;color:#f1f5f9;margin-bottom:12px}
+.player{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-bottom:14px}
+.pbtn{border:none;border-radius:10px;padding:12px 18px;font-size:14px;font-weight:700;cursor:pointer;font-family:inherit;color:#0f0f13;background:linear-gradient(135deg,#a78bfa,#818cf8)}
+.pbtn.alt{background:#1e293b;color:#cbd5e1}
+.pbtn:active{transform:translateY(1px)}
+.speed{display:flex;align-items:center;gap:6px;font-size:12px;color:#94a3b8;margin-left:auto}
+.speed input{accent-color:#a78bfa}
+.stage{display:flex;flex-direction:column;gap:10px;margin-top:6px}
+.bubble{max-width:88%;padding:11px 14px;border-radius:14px;font-size:14px;border:1px solid transparent;transition:all .2s}
+.bubble .who{display:block;font-size:11px;font-weight:700;margin-bottom:3px;opacity:.8}
+.bubble.mc{align-self:flex-start;background:#1e1b2e;border-color:rgba(167,139,250,.25)}.bubble.mc .who{color:#a78bfa}
+.bubble.coach{align-self:flex-end;background:#1a2433;border-color:rgba(56,189,248,.22)}.bubble.coach .who{color:#38bdf8}
+.bubble.on{border-color:#fbbf24;box-shadow:0 0 0 1px #fbbf24}
+.modes{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.mode{display:flex;flex-direction:column;gap:4px;align-items:center;padding:16px 10px;background:#0f0f13;border:1px solid rgba(255,255,255,.08);border-radius:12px;color:#cbd5e1;cursor:pointer;font-size:13px;text-align:center}
+.mode:hover{border-color:rgba(167,139,250,.4);color:#a78bfa}.mode .ico{font-size:22px}.mode .sub{font-size:11px;color:#64748b}
+.muted{color:#64748b;font-size:12px}
+.toast{position:fixed;bottom:28px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#a78bfa;padding:13px 26px;border-radius:12px;font-size:14px;border:1px solid rgba(167,139,250,.25);opacity:0;transition:all .4s;z-index:99}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+.foot{text-align:center;font-size:11px;color:#475569;margin-top:26px;line-height:1.8}
+</style></head><body>
+<div class="header"><h1>🎙️ 영어 주간 라디오</h1>
+<div class="range">2026-W26 · 6/22~6/26 · 매주 자동 갱신</div></div>
+<div class="nav"><a href="index.html">← 일일 복습</a><a href="review-vocab.html">📚 누적 표현 →</a></div>
+<div class="container">
+
+  <div class="card"><h2>▶ 이번 주 라디오 <span class="muted" style="font-weight:400">· 브라우저 음성으로 재생</span></h2>
+    <div class="player">
+      <button class="pbtn" id="play">▶ 재생</button>
+      <button class="pbtn alt" id="pause">⏸ 일시정지</button>
+      <button class="pbtn alt" id="resume">▶ 이어듣기</button>
+      <button class="pbtn alt" id="stop">⏹ 처음부터</button>
+      <label class="speed">속도 <input type="range" id="rate" min="0.7" max="1.3" step="0.1" value="1"> <span id="rv">1.0x</span></label>
+    </div>
+    <div class="muted" id="ttswarn" style="margin-bottom:8px"></div>
+    <div class="stage" id="stage"></div>
+  </div>
+
+  <div class="card"><h2>💬 이 내용으로 AI와 이야기하기</h2>
+    <div class="muted" style="margin-bottom:10px">클릭하면 이번 주 요약 프롬프트가 복사되고 Gemini가 열립니다. 붙여넣고 대화하세요.</div>
+    <div class="modes">
+      <div class="mode" onclick="copyOpen('chat')"><span class="ico">💬</span>튜터 대화<span class="sub">약점 집중 연습</span></div>
+      <div class="mode" onclick="copyOpen('lecture')"><span class="ico">🎓</span>강의식 설명<span class="sub">규칙+예문+퀴즈</span></div>
+      <div class="mode" onclick="copyOpen('radio')"><span class="ico">🎙</span>라디오 인터뷰<span class="sub">게스트 롤플레이</span></div>
+    </div>
+  </div>
+
+  <div class="foot">대본: scripts/build_radio.py · 음성: 브라우저 Web Speech(무료) · 매주 금요일 Claude 갱신</div>
+</div>
+
+<pre id="radio-src" hidden>민지|ko|안녕하세요! 매주 당신의 영어를 복습하는 〈영어 주간 라디오〉, 진행을 맡은 민지입니다.
+알렉스|ko|코치 알렉스예요. 2026-W26 한 주, 5번의 수업을 함께 돌아볼게요.
+민지|ko|이번 주에도 가장 끈질긴 약점은 Subject–Verb Agreement였어요. 누적으로 6번이나 등장했죠.
+알렉스|ko|백 마디 설명보다 예문이죠. 바로 느껴볼까요?
+알렉스|en|You said, On the weekend, I gave the time to my wife..
+민지|en|A more natural way is, Over the weekend, I gave my wife some time to herself..
+알렉스|en|You said, I have some worry about that movement because my wife doesn&#x27;t like the wind..
+민지|en|A more natural way is, I have some concerns about the move because my wife doesn&#x27;t like the wind..
+알렉스|ko|강사님이 직접 짚어주신 교정도 하나 볼게요.
+알렉스|en|I do not yet, becomes, I have not yet.
+민지|ko|오늘의 표현 하나. assess, 뜻은 평가하다, 사정하다.
+알렉스|ko|이번 주 유창성 평균은 7.2점이에요. 점수보다, 방금 약점 하나만 잡아도 천장이 뚫립니다.
+민지|ko|다음 주엔 Subject–Verb Agreement만 의식하면서 한 문장씩 또박또박 말해보세요. 〈영어 주간 라디오〉, 다음 주에 또 만나요!</pre>
+<div class="toast" id="toast">✅ 복사됐어요! Gemini에 붙여넣으세요</div>
+<script>
+const PROMPTS={chat:"아래는 이번 주 내 전화영어 학습 요약이야.\n\n[이번 주: 2026-W26 · 5회 수업]\n누적 약점 Top: Subject–Verb Agreement(6회), Articles (a/an/the)(5회), Verb Tense(4회)\nAI 교정(❌→✅):\n  - On the weekend, I gave the time to my wife. → Over the weekend, I gave my wife some time to herself.\n  - I have some worry about that movement because my wife doesn't like the wind. → I have some concerns about the move because my wife doesn't like the wind.\n  - My dream is to live in a house, but the reality is to live in an apartment. → My dream is to live in a house, but realistically we'll end up in an apartment.\n  - I think we have the risk management teams. Our team name is the audit team, auditing department. → I think we have a risk management team. It's called the audit team, or the auditing department.\n  - It is possible to understand going to the work or the path to the work. → It's about understanding the process or the workflow.\n  - So I think in our team is only think about the internal process, internal teams. → So I think our team only focuses on internal processes and internal teams.\n강사 교정(❌→✅):\n  - I do not yet → I have not yet\n  - I see a man who working on the desk → I see a man who is working at the desk. I see a man whose work is on the desk.\n  - These days Korea government they offer some tax → These days the Korean government offers some tax\n  - Which is prefer → Which do you prefer\n  - I'm little conservation person → I'm a little conservative. I'm a little bit of a conservative people.\n  - Five years ago almost people like the invest → Five years ago [almost all/most] people like to invest in real estate\n핵심 어휘: assess(평가하다, 사정하다), contingency plan(비상 계획, 만일의 사태에 대비한 계획), insulate((영향으로부터) 보호하다, 고립시키다), rigorous(철저한, 엄격한, 정밀한), redundancy(불필요한 중복, 여분), stationery(문구류 (종이, 펜, 봉투 등 글쓰기 관련 용품))\n\n위 약점·교정을 주제로 나와 영어로 대화하면서 복습시켜줘. 먼저 약점 1개와 관련된 상황을 영어로 질문하고, 내 대답이 자연스러운지 교정해줘. 한국어 설명은 필요할 때만 짧게.",lecture:"아래는 이번 주 내 전화영어 학습 요약이야.\n\n[이번 주: 2026-W26 · 5회 수업]\n누적 약점 Top: Subject–Verb Agreement(6회), Articles (a/an/the)(5회), Verb Tense(4회)\nAI 교정(❌→✅):\n  - On the weekend, I gave the time to my wife. → Over the weekend, I gave my wife some time to herself.\n  - I have some worry about that movement because my wife doesn't like the wind. → I have some concerns about the move because my wife doesn't like the wind.\n  - My dream is to live in a house, but the reality is to live in an apartment. → My dream is to live in a house, but realistically we'll end up in an apartment.\n  - I think we have the risk management teams. Our team name is the audit team, auditing department. → I think we have a risk management team. It's called the audit team, or the auditing department.\n  - It is possible to understand going to the work or the path to the work. → It's about understanding the process or the workflow.\n  - So I think in our team is only think about the internal process, internal teams. → So I think our team only focuses on internal processes and internal teams.\n강사 교정(❌→✅):\n  - I do not yet → I have not yet\n  - I see a man who working on the desk → I see a man who is working at the desk. I see a man whose work is on the desk.\n  - These days Korea government they offer some tax → These days the Korean government offers some tax\n  - Which is prefer → Which do you prefer\n  - I'm little conservation person → I'm a little conservative. I'm a little bit of a conservative people.\n  - Five years ago almost people like the invest → Five years ago [almost all/most] people like to invest in real estate\n핵심 어휘: assess(평가하다, 사정하다), contingency plan(비상 계획, 만일의 사태에 대비한 계획), insulate((영향으로부터) 보호하다, 고립시키다), rigorous(철저한, 엄격한, 정밀한), redundancy(불필요한 중복, 여분), stationery(문구류 (종이, 펜, 봉투 등 글쓰기 관련 용품))\n\n위 내용을 강의식으로 차근차근 설명해줘. 각 약점이 왜 틀렸는지 규칙을 짚고, 쉬운 예문 2~3개씩 더 들어주고, 마지막에 1분 요약과 연습문제 3개를 줘.",radio:"아래는 이번 주 내 전화영어 학습 요약이야.\n\n[이번 주: 2026-W26 · 5회 수업]\n누적 약점 Top: Subject–Verb Agreement(6회), Articles (a/an/the)(5회), Verb Tense(4회)\nAI 교정(❌→✅):\n  - On the weekend, I gave the time to my wife. → Over the weekend, I gave my wife some time to herself.\n  - I have some worry about that movement because my wife doesn't like the wind. → I have some concerns about the move because my wife doesn't like the wind.\n  - My dream is to live in a house, but the reality is to live in an apartment. → My dream is to live in a house, but realistically we'll end up in an apartment.\n  - I think we have the risk management teams. Our team name is the audit team, auditing department. → I think we have a risk management team. It's called the audit team, or the auditing department.\n  - It is possible to understand going to the work or the path to the work. → It's about understanding the process or the workflow.\n  - So I think in our team is only think about the internal process, internal teams. → So I think our team only focuses on internal processes and internal teams.\n강사 교정(❌→✅):\n  - I do not yet → I have not yet\n  - I see a man who working on the desk → I see a man who is working at the desk. I see a man whose work is on the desk.\n  - These days Korea government they offer some tax → These days the Korean government offers some tax\n  - Which is prefer → Which do you prefer\n  - I'm little conservation person → I'm a little conservative. I'm a little bit of a conservative people.\n  - Five years ago almost people like the invest → Five years ago [almost all/most] people like to invest in real estate\n핵심 어휘: assess(평가하다, 사정하다), contingency plan(비상 계획, 만일의 사태에 대비한 계획), insulate((영향으로부터) 보호하다, 고립시키다), rigorous(철저한, 엄격한, 정밀한), redundancy(불필요한 중복, 여분), stationery(문구류 (종이, 펜, 봉투 등 글쓰기 관련 용품))\n\n너는 라디오 진행자, 나는 오늘의 게스트야. 내 이번 주 영어 학습 여정을 주제로 인터뷰하듯 대화해줘. 가볍고 격려하는 톤으로, 중간중간 위 교정 표현을 자연스럽게 연습시켜줘. 영어 위주, 한국어는 가끔."};
+function showToast(m){const t=document.getElementById('toast');t.textContent=m;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500);}
+function copyOpen(mode){const txt=PROMPTS[mode]||'';const go=()=>{showToast('✅ 복사됐어요! Gemini에 붙여넣으세요');setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600);};navigator.clipboard.writeText(txt).then(go).catch(()=>{const a=document.createElement('textarea');a.value=txt;document.body.appendChild(a);a.select();document.execCommand('copy');a.remove();go();});}
+
+// ── 라디오 플레이어 (Web Speech API) ──
+const RAW=document.getElementById('radio-src').textContent.trim();
+const LINES=RAW.split('\n').map(l=>l.trim()).filter(Boolean).map(l=>{const i1=l.indexOf('|'),i2=l.indexOf('|',i1+1);return{sp:l.slice(0,i1),lang:l.slice(i1+1,i2),text:l.slice(i2+1)};});
+const stage=document.getElementById('stage');
+LINES.forEach((ln,i)=>{const d=document.createElement('div');d.className='bubble '+(ln.sp==='민지'?'mc':'coach');d.dataset.idx=i;d.innerHTML='<span class="who">'+ln.sp+'</span>'+ln.text;stage.appendChild(d);});
+const synth=window.speechSynthesis;
+let voices=[],koV=null,enV=null;
+function pickVoices(){voices=synth?synth.getVoices():[];koV=voices.find(v=>v.lang&&v.lang.toLowerCase().startsWith('ko'))||null;enV=voices.find(v=>v.lang&&v.lang.toLowerCase().startsWith('en'))||null;}
+if(synth){pickVoices();synth.onvoiceschanged=pickVoices;}
+let idx=0,playing=false,rate=1;
+function highlight(i){document.querySelectorAll('.bubble').forEach(b=>b.classList.toggle('on',(+b.dataset.idx)===i));const el=document.querySelector('.bubble.on');if(el)el.scrollIntoView({block:'center',behavior:'smooth'});}
+function speakAt(i){if(!synth||i>=LINES.length){playing=false;highlight(-1);idx=0;return;}idx=i;highlight(i);const ln=LINES[i];const u=new SpeechSynthesisUtterance(ln.text);u.lang=ln.lang==='ko'?'ko-KR':'en-US';const v=ln.lang==='ko'?koV:enV;if(v)u.voice=v;u.rate=rate;u.pitch=ln.sp==='민지'?1.15:0.85;u.onend=()=>{if(playing)speakAt(i+1);};synth.speak(u);}
+document.getElementById('play').onclick=()=>{if(!synth){document.getElementById('ttswarn').textContent='이 브라우저는 음성 재생을 지원하지 않아요. 대본을 읽어주세요.';return;}if(playing)return;playing=true;synth.cancel();speakAt(idx>=LINES.length?0:idx);};
+document.getElementById('pause').onclick=()=>{if(synth&&synth.speaking)synth.pause();};
+document.getElementById('resume').onclick=()=>{if(synth)synth.resume();};
+document.getElementById('stop').onclick=()=>{playing=false;if(synth)synth.cancel();idx=0;highlight(-1);};
+const rE=document.getElementById('rate');rE.oninput=()=>{rate=parseFloat(rE.value);document.getElementById('rv').textContent=rate.toFixed(1)+'x';};
+if(!synth)document.getElementById('ttswarn').textContent='⚠️ 이 브라우저는 음성 합성을 지원하지 않아 대본만 표시됩니다.';
+</script>
+</body></html>
