@@ -124,15 +124,30 @@ def vocab_index(ls):
 VBUCKET = {0: "🔥 이번 주 신규", 1: "📅 최근 3주", 2: "🗂 그 이전"}
 
 def rule_synthesis(week_ls, cum_ls):
-    """규칙기반 종합문 (루틴의 Claude가 더 나은 통찰로 교체 가능)."""
+    """규칙기반 종합문 (루틴의 Claude가 더 나은 통찰로 교체 가능).
+    누적 약점 Top2 + 이번 주 유창성 추세(상승/정체/하락) + 다음 주 액션을 담는다."""
     gfreq = Counter(l["grammar_norm"] for l in cum_ls).most_common()
-    top = gfreq[0] if gfreq else ("", 0)
+    top2 = gfreq[:2]
+    top_str = ", ".join(f"{esc(k)}({v}회)" for k, v in top2) or "—"
+    top1 = top2[0][0] if top2 else "—"
     wk_focus = ", ".join(sorted({l["grammar_norm"] for l in week_ls})) or "—"
     avg = avg_score(cum_ls)
-    return (f"이번 주 <b>{len(week_ls)}회</b> 수업에서 다룬 문법은 <b>{esc(wk_focus)}</b>입니다. "
-            f"컷오프({CUTOFF}) 이후 누적 <b>{len(cum_ls)}회</b> 기준, 가장 끈질긴 약점은 "
-            f"<b>{esc(top[0])}</b>(누적 {top[1]}회)이고 유창성 평균은 <b>{avg:.1f}/10</b>입니다. "
-            f"다음 주는 이 약점을 의식해 말해 보세요.")
+    wk_avg = avg_score(week_ls)
+    # 이번 주 평균 vs 누적 평균으로 추세 방향 판정 (±0.3 이내는 정체)
+    if wk_avg and avg:
+        diff = wk_avg - avg
+        if diff >= 0.3:
+            trend = f"이번 주 평균 <b>{wk_avg:.1f}</b>로 누적({avg:.1f}) 대비 <b>상승 📈</b>"
+        elif diff <= -0.3:
+            trend = f"이번 주 평균 <b>{wk_avg:.1f}</b>로 누적({avg:.1f}) 대비 <b>하락 📉 — 점검 필요</b>"
+        else:
+            trend = f"이번 주 평균 <b>{wk_avg:.1f}</b>로 누적({avg:.1f})과 <b>비슷한 정체</b>"
+    else:
+        trend = f"누적 유창성 평균 <b>{avg:.1f}/10</b>"
+    return (f"이번 주 <b>{len(week_ls)}회</b> 수업의 문법 초점은 <b>{esc(wk_focus)}</b>입니다. "
+            f"컷오프({CUTOFF}) 이후 누적 <b>{len(cum_ls)}회</b> 기준 가장 끈질긴 약점은 "
+            f"<b>{top_str}</b>이고, {trend}입니다. "
+            f"다음 주는 특히 <b>{esc(top1)}</b>를 의식하며 한 문장씩 또박또박 말해 보세요.")
 
 # ───────────────────────── HTML ─────────────────────────
 def esc(s): return html.escape(str(s), quote=True)
@@ -319,10 +334,13 @@ def render_vocab(all_ls):
                        f'<span class="muted">· {len(items)}개</span></div>'
                        f'<div class="deck">{cards}</div></div>')
 
+    repeat_words = [v["word"] for v in vi if v["count"] >= 2][:6]
+    rep_phrase = (f"(특히 <b>{', '.join(esc(w) for w in repeat_words)}</b>) "
+                  if repeat_words else "")
     curation = (
         f"컷오프({CUTOFF}) 이후 누적 <b>단어 {len(vi)}개</b>, "
         f"<b>주요 표현 {total_pairs}개</b>를 모았습니다. "
-        f"이 중 <b>{repeat_n}개</b> 단어는 2회 이상 반복 등장해 우선 암기 대상입니다. "
+        f"이 중 <b>{repeat_n}개</b> 단어는 2회 이상 반복 등장해 {rep_phrase}우선 암기 대상입니다. "
         f"위 <b>🔥 이번 주 신규</b>부터 거꾸로 훑고, "
         f"❌→✅ 교정 표현은 소리 내어 한 번씩 말해 보세요.")
 
