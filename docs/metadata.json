@@ -6,13 +6,15 @@
     "topic": "Discussing presentation strategies and distinguishing between formal and informa"
   },
   "2026-04-08": {
-    "topic": "Discussing an upcoming business trip for ISO certification and compliance audits"
+    "topic": "A two-day business trip to Ulsan and Busan for ISO 37001 compliance interviews",
+    "target_grammar": "verb tense (present simple used for future plans)"
   },
   "2026-04-09": {
     "topic": "Discussing an AI-powered automation project for affiliate blogging and the futur"
   },
   "2026-04-13": {
-    "topic": "Presenting a company's business and future outlook to an investor."
+    "topic": "Pitching your energy company to a potential investor using business idioms (\"see",
+    "target_grammar": "verb tense"
   },
   "2026-04-14": {
     "topic": "Discussing effective presentation strategies and common speaking errors."
@@ -69,8 +71,8 @@
     "target_grammar": "subject-verb agreement (주어-동사 수일치)"
   },
   "2026-05-20": {
-    "topic": "Discussing investment pros and cons in the electric vehicle market and decision-",
-    "target_grammar": "missing or incorrect prepositions"
+    "topic": "Discussing the pros and cons of investing in electric vehicles (Scenario 2 + dec",
+    "target_grammar": "missing main verb"
   },
   "2026-05-22": {
     "topic": "Discussing Travel Plans and Experiences",
@@ -121,20 +123,20 @@
     "target_grammar": "singular/plural noun and verb agreement"
   },
   "2026-06-17": {
-    "topic": "Discussing Project Management and Supervision Skills",
-    "target_grammar": "omission or misuse of indefinite articles (a/an)"
+    "topic": "Project management and monitoring — supervising tasks, keeping teams on schedule",
+    "target_grammar": "subject-verb agreement"
   },
   "2026-06-18": {
     "topic": "Discussing first car purchase experiences and car buying considerations.",
     "target_grammar": "missing articles (a/an/the)"
   },
   "2026-06-19": {
-    "topic": "Discussing weekend plans, FIFA World Cup, and workplace feedback culture.",
-    "target_grammar": "missing subjects and parallel structure in lists"
+    "topic": "Giving and receiving feedback at work (written vs. verbal, one-on-one vs. group)",
+    "target_grammar": "articles (unnecessary \"the\" with uncountable / general nouns"
   },
   "2026-06-22": {
-    "topic": "Discussing Real Estate Investment and Housing Preferences",
-    "target_grammar": "pronoun case (subject vs. object)`"
+    "topic": "Buying my first home — real estate, neighborhoods, and where to live in Korea",
+    "target_grammar": "verb tense (past vs. present consistency in narration)"
   },
   "2026-06-23": {
     "topic": "Discussing risk management in a corporate setting.",
@@ -149,7 +151,15 @@
     "target_grammar": "prepositions"
   },
   "2026-06-26": {
-    "topic": "Discussing Investment Strategies and Market Trends",
-    "target_grammar": "verb tense"
+    "topic": "Investment — types, risk vs. stability, and the shift from real estate to stocks",
+    "target_grammar": "phrasal verbs (\"grow up\" vs. grow / rise / increase)"
+  },
+  "2026-03-16": {
+    "topic": "Writing a follow-up business report and showing hospitality to visiting clients",
+    "target_grammar": "noun number (count/uncountable & plurals)"
+  },
+  "2026-03-17": {
+    "topic": "Matching customer profiles to restaurants and writing a polite dinner invitation",
+    "target_grammar": "prepositions (place/venue \"at\" vs. \"on\"/\"for\"/\"in\")"
   }
 }
