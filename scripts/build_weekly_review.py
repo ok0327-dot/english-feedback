@@ -202,6 +202,8 @@ body{font-family:'Noto Sans KR',-apple-system,sans-serif;background:#0f0f13;colo
 .wkgroup{margin-bottom:18px}.wkhd{font-size:13px;color:#7dd3fc;font-weight:700;margin:6px 0 8px;border-bottom:1px solid rgba(255,255,255,.06);padding-bottom:6px}
 .bgroup{margin-bottom:20px}.bhd{font-size:13px;color:#fbbf24;font-weight:700;margin:6px 0 10px}
 .rep{font-size:9px;color:#0f0f13;background:#fbbf24;border-radius:6px;padding:1px 5px;margin-left:6px;vertical-align:middle;font-weight:700}
+.src{font-size:9px;border-radius:5px;padding:1px 5px;margin-left:6px;vertical-align:middle;font-weight:700}
+.src-t{background:#fb923c;color:#0f0f13}.src-a{background:#38bdf8;color:#0f0f13}
 .vlink{display:block;text-align:center;background:linear-gradient(135deg,#1e293b,#16213e);border:1px solid rgba(56,189,248,.25);border-radius:12px;padding:14px;color:#7dd3fc;text-decoration:none;font-size:14px;font-weight:600;margin-bottom:20px}
 .vlink:hover{border-color:rgba(56,189,248,.5)}
 """
@@ -348,22 +350,42 @@ def render_week(iso, week_ls, cum_ls, prev_iso, next_iso, is_current, carrot_map
 </div>
 </body></html>"""
 
-def render_vocab(all_ls):
+def render_vocab(all_ls, carrot_map=None):
     """누적 단어 & 주요 표현 정리 페이지 (자기완결형, 규칙기반 = Layer 1).
+    주요 표현 = AI 일일 교정 + 강사 공식 교정(docs/carrot)을 출처 표시해 병합.
     <div id="curation"> 은 금요일 루틴의 Claude가 더 나은 통찰로 교체 가능(Layer 2, 없어도 동작)."""
     today_ord = iso_ordinal(datetime.date.today().isocalendar()[:2])
 
-    # 💬 주요 표현: ❌→✅ 교정쌍을 주차별 최신순 / corrections by week, newest first
+    # 💬 주요 표현: AI 교정 + 강사 교정을 주차별 최신순 / merge AI + tutor corrections by week
     weeks = OrderedDict()
     for l in all_ls:
-        weeks.setdefault(l["iso"], []).extend(l["pairs"])
-    total_pairs = sum(len(v) for v in weeks.values())
+        weeks.setdefault(l["iso"], []).extend(
+            {"said": p["said"], "natural": p["natural"], "src": "AI"} for p in l["pairs"])
+    ai_pairs = sum(len(v) for v in weeks.values())
+    carrot_pairs = 0
+    for d, ps in (carrot_map or {}).items():
+        if d < CUTOFF:
+            continue
+        try:
+            y, m, dd = map(int, d.split("-"))
+            iso = datetime.date(y, m, dd).isocalendar()[:2]
+        except Exception:
+            continue
+        for p in ps:
+            weeks.setdefault(iso, []).append(
+                {"said": p["original"], "natural": p["better"], "src": "강사"})
+            carrot_pairs += 1
+    total_pairs = ai_pairs + carrot_pairs
+
+    def _srcbadge(src):
+        return ('<span class="src src-t">강사</span>' if src == "강사"
+                else '<span class="src src-a">AI</span>')
     expr_html = ""
     for iso in sorted(weeks.keys(), reverse=True):
-        prs = weeks[iso]
+        prs = sorted(weeks[iso], key=lambda p: p.get("src") != "강사")  # 강사 먼저
         if not prs: continue
         rows = "".join(
-            f'<div class="pair"><div class="said">❌ {esc(p["said"])}</div>'
+            f'<div class="pair"><div class="said">❌ {esc(p["said"])}{_srcbadge(p.get("src"))}</div>'
             f'<div class="nat">✅ {esc(p["natural"])}</div></div>' for p in prs)
         expr_html += (f'<div class="wkgroup"><div class="wkhd">{week_label(iso)} '
                       f'<span class="muted">· {week_range(iso)} · {len(prs)}개</span></div>{rows}</div>')
@@ -395,11 +417,12 @@ def render_vocab(all_ls):
     repeat_words = [v["word"] for v in vi if v["count"] >= 2][:6]
     rep_phrase = (f"(특히 <b>{', '.join(esc(w) for w in repeat_words)}</b>) "
                   if repeat_words else "")
+    carrot_note = f"(AI {ai_pairs} + 강사 {carrot_pairs})" if carrot_pairs else ""
     curation = (
         f"컷오프({CUTOFF}) 이후 누적 <b>단어 {len(vi)}개</b>, "
-        f"<b>주요 표현 {total_pairs}개</b>를 모았습니다. "
+        f"<b>주요 표현 {total_pairs}개</b>{carrot_note}를 모았습니다. "
         f"이 중 <b>{repeat_n}개</b> 단어는 2회 이상 반복 등장해 {rep_phrase}우선 암기 대상입니다. "
-        f"위 <b>🔥 이번 주 신규</b>부터 거꾸로 훑고, "
+        f"<b>강사 교정(🟠)</b>과 AI 교정을 함께 훑고, "
         f"❌→✅ 교정 표현은 소리 내어 한 번씩 말해 보세요.")
 
     return f"""<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8">
@@ -420,7 +443,7 @@ def render_vocab(all_ls):
   <div class="card"><h2>🧭 누적 학습 큐레이션 <span class="sub">Claude 작성 · $0</span></h2>
     <div class="syn" id="curation">{curation}</div></div>
 
-  <div class="card"><h2>💬 주요 표현 <span class="sub">❌→✅ · 주차별 최신순 · {total_pairs}개</span></h2>
+  <div class="card"><h2>💬 주요 표현 <span class="sub">❌→✅ · <span class="src src-a">AI</span>{ai_pairs}+<span class="src src-t">강사</span>{carrot_pairs} · 최신순</span></h2>
     {expr_html or '<div class="muted">교정 표현 없음</div>'}</div>
 
   <div class="card"><h2>📗 누적 단어 <span class="sub">클릭하면 뜻 · 최근순</span></h2>
@@ -488,7 +511,7 @@ def build():
         if is_current: current_file = week_file(iso)
 
     open(os.path.join(DOCS, "review-index.html"), "w", encoding="utf-8").write(render_index(weeks, allL))
-    open(os.path.join(DOCS, "review-vocab.html"), "w", encoding="utf-8").write(render_vocab(allL))
+    open(os.path.join(DOCS, "review-vocab.html"), "w", encoding="utf-8").write(render_vocab(allL, carrot_map))
 
     print(f"✅ {len(weeks)} weekly files + review-index.html + review-vocab.html")
     for iso in ordered:
