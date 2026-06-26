@@ -1,0 +1,82 @@
+name: 🎧 주간 라디오 오디오(TTS) + 텔레그램
+on:
+  schedule:
+    # UTC 08:00 금 = KST 17:00 금. 주간 복습 루틴(15:30 KST)이 대본을 갱신한 뒤 실행.
+    - cron: '0 8 * * 5'
+  workflow_dispatch:
+    inputs:
+      model:
+        description: 'Gemini TTS 모델 override (비우면 기본 2.5-flash-preview-tts)'
+        required: false
+        default: ''
+permissions:
+  contents: write
+concurrency:
+  group: radio-audio
+  cancel-in-progress: true
+jobs:
+  audio:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: 📥 체크아웃
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: 🐍 Python 설정
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: 📦 의존성 설치 (ffmpeg + TTS)
+        run: |
+          sudo apt-get update && sudo apt-get install -y ffmpeg
+          pip install requests gTTS pydub
+      - name: 🎙️ 라디오 오디오 생성 (Gemini TTS → MP3, 실패 시 gTTS)
+        run: |
+          python scripts/build_radio_audio.py | tee /tmp/radio_out.txt
+          grep '^EPISODE_FILE=' /tmp/radio_out.txt >> "$GITHUB_ENV"
+          grep '^EPISODE_WEEK=' /tmp/radio_out.txt >> "$GITHUB_ENV"
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_TTS_MODEL: ${{ github.event.inputs.model }}
+      - name: 💾 커밋·푸시
+        run: |
+          git config user.email "actions@github.com"
+          git config user.name "GitHub Actions"
+          git add -f docs/radio/*.mp3 docs/radio/episodes.json
+          if git diff --cached --quiet; then
+            echo "변경 없음"
+          else
+            git commit -m "chore(radio): 주간 라디오 오디오 갱신 ($EPISODE_WEEK)"
+            git push origin HEAD:main
+          fi
+      - name: 📲 텔레그램 발송 (네이티브 음성 우선, 없으면 링크)
+        run: |
+          BASE="https://ok0327-dot.github.io/english-feedback"
+          PAGE="$BASE/radio.html"
+          MP3="$BASE/${EPISODE_FILE}"
+          if [ -n "$TG_TOKEN" ] && [ -n "$TG_CHAT" ]; then
+            curl -s "https://api.telegram.org/bot${TG_TOKEN}/sendAudio" \
+              --data-urlencode "chat_id=${TG_CHAT}" \
+              --data-urlencode "audio=${MP3}" \
+              --data-urlencode "title=영어 주간 라디오 ${EPISODE_WEEK}" \
+              --data-urlencode "caption=🎙️ 이번 주 영어 라디오 (${EPISODE_WEEK}) 나왔어요! 사이트: ${PAGE}" >/dev/null && echo "네이티브 음성 발송"
+          elif [ -n "$KNH" ]; then
+            curl -s -X POST "https://telegram-notify-hub.dk0327.workers.dev/send" \
+              -H "X-Notify-Secret: ${KNH}" -H "Content-Type: application/json" \
+              --data "$(jq -nc --arg t "🎙️ 이번 주 영어 라디오 (${EPISODE_WEEK}) 나왔어요! 듣기 → ${PAGE}" '{channel:"telegram",text:$t}')" >/dev/null && echo "허브 링크 발송"
+          else
+            echo "텔레그램 시크릿 없음 — 발송 생략 (사이트엔 게시됨: $PAGE)"
+          fi
+        env:
+          TG_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TG_CHAT: ${{ secrets.TELEGRAM_CHAT_ID }}
+          KNH: ${{ secrets.KNH_SEND_SECRET }}
+      - name: 🔔 실패 시 알림
+        if: failure()
+        run: |
+          curl -s -X POST "https://telegram-notify-hub.dk0327.workers.dev/send" \
+            -H "X-Notify-Secret: $KNH" -H "Content-Type: application/json" \
+            -d '{"channel":"telegram","text":"❌ 주간 라디오 오디오 생성 실패 — Actions 로그 확인"}' || true
+        env:
+          KNH: ${{ secrets.KNH_SEND_SECRET }}
