@@ -441,12 +441,16 @@ def gemini_request(prompt, max_tokens=4096, temperature=0.3, timeout=120, system
     # ⚠️ flash-lite는 thinkingBudget을 512~24576 범위로만 허용(0=비활성).
     #    폴백 모델 호환을 위해 0이 아닌 값은 512 이상으로 클램프.
     safe_budget = thinking_budget if thinking_budget == 0 else max(512, min(24576, thinking_budget))
+    # Gemini 2.5 Flash 출력 상한(thinking 토큰 포함). 출력이 MAX_TOKENS로 잘리면
+    # 이 한도까지 점진적으로 늘려 재생성하여 긴 수업의 '꼬리 섹션 소실'을 막는다.
+    OUTPUT_TOKEN_CAP = 65536
+    current_max = min(max_tokens, OUTPUT_TOKEN_CAP)
     payload = {
         "contents": [
             {"parts": [{"text": prompt}]}
         ],
         "generationConfig": {
-            "maxOutputTokens": max_tokens,
+            "maxOutputTokens": current_max,
             "temperature": temperature,
             "thinkingConfig": {"thinkingBudget": safe_budget},
         },
@@ -458,8 +462,10 @@ def gemini_request(prompt, max_tokens=4096, temperature=0.3, timeout=120, system
             "parts": [{"text": system_msg}]
         }
 
-    MAX_ATTEMPTS = 4
+    MAX_ATTEMPTS = 5
     for attempt in range(MAX_ATTEMPTS):
+        # 매 시도마다 현재 출력 한도를 반영(잘림 자가복구 시 증액됨)
+        payload["generationConfig"]["maxOutputTokens"] = current_max
         try:
             response = requests.post(url, json=payload, headers=headers, timeout=timeout)
         except requests.exceptions.RequestException as e:
@@ -480,10 +486,23 @@ def gemini_request(prompt, max_tokens=4096, temperature=0.3, timeout=120, system
             if candidates[0].get("finishReason") == "SAFETY":
                 raise Exception("Gemini 안전 필터에 의해 응답 차단됨")
             if candidates[0].get("finishReason") == "MAX_TOKENS":
-                print("⚠️ Gemini 출력이 토큰 한도에 도달하여 잘렸을 수 있습니다.")
+                # 출력이 한도에 걸려 잘림 → 한도를 2배로 늘려 재생성(가능할 때).
+                # 긴 수업의 '실전 복습·성과 지표' 등 꼬리 섹션 소실을 막는 자가복구.
+                if current_max < OUTPUT_TOKEN_CAP and attempt < MAX_ATTEMPTS - 1:
+                    current_max = min(OUTPUT_TOKEN_CAP, current_max * 2)
+                    print(f"⚠️ Gemini 출력이 토큰 한도에 도달 — maxOutputTokens {current_max}로 늘려 재생성... ({attempt+1}/{MAX_ATTEMPTS}) [{model}]")
+                    continue
+                print(f"⚠️ Gemini 출력이 최대 한도({OUTPUT_TOKEN_CAP})에도 도달하여 잘렸을 수 있습니다 [{model}].")
             # thinking 모델은 parts에 사고 과정(thought=True)과 실제 응답이 분리됨
             # → 실제 응답(non-thought) 파트만 추출
-            parts = candidates[0]["content"]["parts"]
+            # ⚠️ thinking이 예산을 모두 소진하면 content.parts가 비어 올 수 있음 → 방어
+            parts = candidates[0].get("content", {}).get("parts", [])
+            if not parts:
+                if current_max < OUTPUT_TOKEN_CAP and attempt < MAX_ATTEMPTS - 1:
+                    current_max = min(OUTPUT_TOKEN_CAP, current_max * 2)
+                    print(f"⚠️ Gemini 응답 파트 없음(추론이 예산 소진 추정) — maxOutputTokens {current_max}로 재생성... ({attempt+1}/{MAX_ATTEMPTS}) [{model}]")
+                    continue
+                raise Exception(f"Gemini 응답 파트 비어있음 [{model}]")
             for part in reversed(parts):
                 if not part.get("thought", False):
                     return part["text"]
@@ -707,7 +726,7 @@ def clean_transcript(raw_transcript, segments=None):
 보정된 전사 결과만 출력해주세요. 추가 설명은 필요 없습니다."""
 
     try:
-        cleaned = llm_request(prompt, max_tokens=8192, temperature=0.3, thinking_budget=2048)
+        cleaned = llm_request(prompt, max_tokens=24576, temperature=0.3, thinking_budget=2048)
         print(f"✅ 전사 보정 완료: {len(cleaned)}자")
         return cleaned
     except Exception as e:
@@ -754,7 +773,7 @@ def verify_speaker_labels(transcript):
 {transcript}"""
 
     try:
-        verified = llm_request(prompt, max_tokens=8192, temperature=0.2, thinking_budget=2048)
+        verified = llm_request(prompt, max_tokens=24576, temperature=0.2, thinking_budget=2048)
         print(f"✅ 화자 검증 완료: {len(verified)}자")
         return verified
     except Exception as e:
@@ -868,7 +887,7 @@ def generate_feedback(transcript, recent_categories=None):
 
     feedback = llm_request(
         prompt,
-        max_tokens=12288,
+        max_tokens=32768,
         temperature=0.5,
         timeout=120,
         system_msg=system_msg,
@@ -917,7 +936,7 @@ def review_feedback(transcript, feedback):
 {feedback}"""
 
     try:
-        reviewed = llm_request(prompt, max_tokens=12288, temperature=0.3, thinking_budget=2048)
+        reviewed = llm_request(prompt, max_tokens=32768, temperature=0.3, thinking_budget=2048)
         print(f"✅ 피드백 검토 완료: {len(reviewed)}자")
         return reviewed
     except Exception as e:
