@@ -54,25 +54,34 @@ def build_script(wk_iso, wk, lessons, carrot_map):
     topn = weak[0][1] if weak else 0
     avg = W.avg_score(lessons)
 
+    # 규칙기반 폴백: 전부 영어 + 한 주 교정·어휘를 통째로 망라(길게).
+    # (금요일 루틴의 Claude가 #radio-src 를 더 풍성한 담화로 교체.)
     L = []
     add = lambda s, lang, t: L.append((s, lang, _clean1(t)))
-    add("민지", "ko", "안녕하세요! 매주 당신의 영어를 복습하는 〈영어 주간 라디오〉, 진행을 맡은 민지입니다.")
-    add("알렉스", "ko", f"코치 알렉스예요. {W.week_label(wk_iso)} 한 주, {len(wk)}번의 수업을 함께 돌아볼게요.")
-    add("민지", "ko", f"이번 주에도 가장 끈질긴 약점은 {top}였어요. 누적으로 {topn}번이나 등장했죠.")
-    add("알렉스", "ko", "백 마디 설명보다 예문이죠. 바로 느껴볼까요?")
-    for p in ai_pairs[:2]:
+    wl = W.week_label(wk_iso)
+    add("민지", "en", "Hello and welcome to your Weekly English Radio! I'm Minji, your host.")
+    add("알렉스", "en", f"And I'm Alex, your coach. This is {wl}, with {len(wk)} lessons this week. Let's review the whole week together.")
+    add("민지", "en", f"The pattern to watch is {top}. It has come up {topn} times so far, so let's keep an eye on it.")
+    add("알렉스", "en", "First up, the Correction Clinic. Here are sentences you said, made to sound natural.")
+    for p in ai_pairs[:18]:
         if p.get("said") and p.get("natural"):
-            add("알렉스", "en", f"You said, {p['said']}.")
-            add("민지", "en", f"A more natural way is, {p['natural']}.")
+            add("알렉스", "en", f"You said: {p['said']}")
+            add("민지", "en", f"More naturally: {p['natural']}")
     if cpairs:
-        add("알렉스", "ko", "강사님이 직접 짚어주신 교정도 하나 볼게요.")
-        cp = cpairs[0]
-        add("알렉스", "en", f"{cp.get('original','')}, becomes, {cp.get('better','')}.")
+        add("알렉스", "en", "Your tutor also marked several corrections this week. Listen closely.")
+        for cp in cpairs[:18]:
+            if cp.get("original") and cp.get("better"):
+                add("민지", "en", f"Instead of: {cp['original']}")
+                add("알렉스", "en", f"Say: {cp['better']}")
     if vocab:
-        v = vocab[0]
-        add("민지", "ko", f"오늘의 표현 하나. {v.get('word','')}, 뜻은 {v.get('meaning','')}.")
-    add("알렉스", "ko", f"이번 주 유창성 평균은 {avg:.1f}점이에요. 점수보다, 방금 약점 하나만 잡아도 천장이 뚫립니다.")
-    add("민지", "ko", f"다음 주엔 {top}만 의식하면서 한 문장씩 또박또박 말해보세요. 〈영어 주간 라디오〉, 다음 주에 또 만나요!")
+        add("민지", "en", "Now the Vocabulary Builder. Here are this week's useful words to practice.")
+        for v in vocab[:10]:
+            if v.get("word"):
+                add("알렉스", "en", f"Word of the day: {v['word']}. Try using it in a sentence this week.")
+    add("민지", "en", f"Quick recap. Your fluency average this week was {avg:.1f} out of ten. Nicely done.")
+    add("알렉스", "en", f"Your mission for next week: slow down and check {top} every time you speak.")
+    add("민지", "en", "That's all for this week's English Radio. Have a wonderful week, and see you next Friday!")
+    add("알렉스", "en", "Bye for now, and keep up the great work!")
     return L
 
 

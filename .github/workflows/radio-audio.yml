@@ -17,7 +17,7 @@ concurrency:
 jobs:
   audio:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 25
     steps:
       - name: 📥 체크아웃
         uses: actions/checkout@v4
@@ -43,7 +43,7 @@ jobs:
         run: |
           git config user.email "actions@github.com"
           git config user.name "GitHub Actions"
-          git add -f docs/radio/*.mp3 docs/radio/episodes.json
+          git add -f -A docs/radio/
           if git diff --cached --quiet; then
             echo "변경 없음"
           else
