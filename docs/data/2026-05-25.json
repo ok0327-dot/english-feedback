@@ -1,0 +1,53 @@
+{
+ "date": "2026-05-25",
+ "iso": [
+  2026,
+  22
+ ],
+ "topic": "Discussing Investment Strategies and Adapting to Change",
+ "grammar": "Missing or Incorrect Prepositions",
+ "grammar_norm": "Prepositions",
+ "score": 8.0,
+ "pairs": [
+  {
+   "said": "my throat is a little sick.",
+   "natural": "I have a bit of a sore throat."
+  },
+  {
+   "said": "that apartment has a great view, the sea view.",
+   "natural": "that apartment has a great sea view."
+  },
+  {
+   "said": "I wish you if you use some new, you work the new way, you will succeed.",
+   "natural": "I wish you success in your new endeavor."
+  }
+ ],
+ "vocab": [
+  {
+   "word": "endeavor",
+   "pos": "n",
+   "meaning": "노력, 시도, 사업"
+  },
+  {
+   "word": "vista",
+   "pos": "n",
+   "meaning": "경치, 전망 (특히 길게 트인)"
+  },
+  {
+   "word": "feasible",
+   "pos": "adj",
+   "meaning": "실행 가능한, 실현 가능한"
+  },
+  {
+   "word": "self-regulation",
+   "pos": "n",
+   "meaning": "자기 통제, 자기 규제"
+  },
+  {
+   "word": "fierce",
+   "pos": "adj",
+   "meaning": "치열한, 맹렬한"
+  }
+ ],
+ "_html_md5": "c80c5f00853eae9422241f8ae7e3a1c4"
+}

@@ -1,0 +1,53 @@
+{
+ "date": "2026-05-18",
+ "iso": [
+  2026,
+  21
+ ],
+ "topic": "Discussing solutions to a supply problem and the importance of compromise in teamwork.",
+ "grammar": "Subject-Verb Agreement (주어-동사 수일치)",
+ "grammar_norm": "Subject–Verb Agreement",
+ "score": 7.0,
+ "pairs": [
+  {
+   "said": "So that's an enjoyable time with my family, with my son.",
+   "natural": "That was such an enjoyable time with my family, with my son."
+  },
+  {
+   "said": "I loved, I loved, I loved, I understanding the rough meaning.",
+   "natural": "I'm so glad I understand the meaning of 'rough' now."
+  },
+  {
+   "said": "Oh yes, it is the normal solution to the shopping mall or internet mall.",
+   "natural": "Yes, it's a common solution for shopping malls or online stores."
+  }
+ ],
+ "vocab": [
+  {
+   "word": "recall",
+   "pos": "명사",
+   "meaning": "(제품의) 리콜, 회수"
+  },
+  {
+   "word": "compromise",
+   "pos": "동사/명사",
+   "meaning": "타협하다, 절충하다 / 타협, 절충"
+  },
+  {
+   "word": "rough draft",
+   "pos": "명사",
+   "meaning": "초고, 대략적인 원고"
+  },
+  {
+   "word": "constraint",
+   "pos": "명사",
+   "meaning": "제약, 제한"
+  },
+  {
+   "word": "mitigate",
+   "pos": "동사",
+   "meaning": "완화시키다, 경감하다"
+  }
+ ],
+ "_html_md5": "1f4fbdd58926dbd02afc96ad5844a654"
+}

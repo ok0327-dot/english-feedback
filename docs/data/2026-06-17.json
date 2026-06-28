@@ -1,0 +1,27 @@
+{
+ "date": "2026-06-17",
+ "iso": [
+  2026,
+  25
+ ],
+ "topic": "Project management and monitoring — supervising tasks, keeping teams on schedule, and prio",
+ "grammar": "subject-verb agreement Joey의 발화를 모아 보면, 복수 주어",
+ "grammar_norm": "Subject–Verb Agreement",
+ "score": 7.0,
+ "pairs": [
+  {
+   "said": "Sometimes I'm tasked as the platform leader or project management, the PM.",
+   "natural": "Sometimes I get assigned as the project lead, the PM."
+  },
+  {
+   "said": "We make an audit for three months.",
+   "natural": "We run an audit over three months."
+  },
+  {
+   "said": "Today is a little difficult to explain.",
+   "natural": "This is a bit hard to put into words."
+  }
+ ],
+ "vocab": [],
+ "_html_md5": "a7a181ca7dabf367f924cf80e0a77372"
+}

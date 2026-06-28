@@ -1,0 +1,53 @@
+{
+ "date": "2026-05-28",
+ "iso": [
+  2026,
+  22
+ ],
+ "topic": "Discussing Weekend Plans, Hobbies, and Travel Experiences",
+ "grammar": "Missing Auxiliary Verbs (be + -ing)",
+ "grammar_norm": "Verb Forms / Auxiliaries",
+ "score": 7.5,
+ "pairs": [
+  {
+   "said": "question me",
+   "natural": "question me"
+  },
+  {
+   "said": "I cut my hair.",
+   "natural": "I cut my hair."
+  },
+  {
+   "said": "Every after a time",
+   "natural": "Every after a time"
+  }
+ ],
+ "vocab": [
+  {
+   "word": "periodically",
+   "pos": "adv.",
+   "meaning": "주기적으로, 때때로"
+  },
+  {
+   "word": "portfolio",
+   "pos": "n.",
+   "meaning": "(투자) 포트폴리오, 유가 증권 일람"
+  },
+  {
+   "word": "mitigate",
+   "pos": "v.",
+   "meaning": "완화시키다, 경감시키다"
+  },
+  {
+   "word": "stroll",
+   "pos": "n., v.",
+   "meaning": "산책, 한가로이 걷다"
+  },
+  {
+   "word": "clarify",
+   "pos": "v.",
+   "meaning": "명확하게 하다, 분명히 설명하다"
+  }
+ ],
+ "_html_md5": "83e534067c08dbdbd988662e0fa33627"
+}

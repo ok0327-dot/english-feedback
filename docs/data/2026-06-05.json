@@ -1,0 +1,53 @@
+{
+ "date": "2026-06-05",
+ "iso": [
+  2026,
+  23
+ ],
+ "topic": "Discussing team building activities and career development.",
+ "grammar": "Missing or Incorrect Articles (a/an/the)",
+ "grammar_norm": "Articles (a/an/the)",
+ "score": 7.5,
+ "pairs": [
+  {
+   "said": "I don't set up a plan. I don't make a plan, but maybe I will make a plan after discussing with my wife.",
+   "natural": "I don't have any specific plans yet. I'll probably make some after discussing with my wife."
+  },
+  {
+   "said": "What is opinion this textbook, about this textbook?",
+   "natural": "What's your opinion of this textbook?"
+  },
+  {
+   "said": "it is feel about nice teamwork.",
+   "natural": "It gives a nice feeling of teamwork."
+  }
+ ],
+ "vocab": [
+  {
+   "word": "finalize",
+   "pos": "동사",
+   "meaning": "마무리 짓다, 확정하다"
+  },
+  {
+   "word": "convey",
+   "pos": "동사",
+   "meaning": "(생각, 감정 등을) 전달하다, 표현하다"
+  },
+  {
+   "word": "fundamentally",
+   "pos": "부사",
+   "meaning": "근본적으로, 기본적으로"
+  },
+  {
+   "word": "foster",
+   "pos": "동사",
+   "meaning": "조성하다, 육성하다, 발전시키다 (특히 관계나 성장)"
+  },
+  {
+   "word": "work-life balance",
+   "pos": "명사",
+   "meaning": "일과 삶의 균형"
+  }
+ ],
+ "_html_md5": "b6e8464101e93d88a4c535832ad6aa24"
+}

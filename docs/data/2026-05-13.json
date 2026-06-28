@@ -1,0 +1,27 @@
+{
+ "date": "2026-05-13",
+ "iso": [
+  2026,
+  20
+ ],
+ "topic": "Discussing Negotiation Skills and Strategies",
+ "grammar": "Unnecessary Articles (a/an/the)",
+ "grammar_norm": "Articles (a/an/the)",
+ "score": null,
+ "pairs": [
+  {
+   "said": "Today, I made some reports, but this is a little easy and I have enough time.",
+   "natural": "Today, I made some reports, but the work was relatively easy , and I had enough time."
+  },
+  {
+   "said": "At that time, we don't have some patience that we come to lose that negotiation.",
+   "natural": "At that time, if we lack patience, we might end up losing that negotiation."
+  },
+  {
+   "said": "But the main information just grab for myself , not give to him or her.",
+   "natural": "But I keep the main information to myself , not sharing it with them."
+  }
+ ],
+ "vocab": [],
+ "_html_md5": "d41e1e88c44d3d2f32ab74508dcdc0c0"
+}

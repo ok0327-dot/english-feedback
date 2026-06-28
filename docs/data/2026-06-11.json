@@ -1,0 +1,53 @@
+{
+ "date": "2026-06-11",
+ "iso": [
+  2026,
+  24
+ ],
+ "topic": "Discussing high-stress jobs and coping mechanisms.",
+ "grammar": "Subject-Verb Agreement (주어-동사 수일치)",
+ "grammar_norm": "Subject–Verb Agreement",
+ "score": 7.5,
+ "pairs": [
+  {
+   "said": "I was wondering, in your country, do you have the season of the rain season?",
+   "natural": "I was wondering, do you have a rainy season in your country?"
+  },
+  {
+   "said": "So just I was wondering that fact.",
+   "natural": "I was just wondering about that."
+  },
+  {
+   "said": "if the government gives more money to the older outside working job people, at that time it is more recovery than the situation.",
+   "natural": "If the government provides more incentives for people in outdoor jobs, the situation could improve."
+  }
+ ],
+ "vocab": [
+  {
+   "word": "typhoon",
+   "pos": "명사",
+   "meaning": "태풍"
+  },
+  {
+   "word": "proximity",
+   "pos": "명사",
+   "meaning": "근접성, 가까움"
+  },
+  {
+   "word": "dynamic",
+   "pos": "형용사",
+   "meaning": "역동적인, 활발한"
+  },
+  {
+   "word": "incentive",
+   "pos": "명사",
+   "meaning": "장려책, 동기 부여"
+  },
+  {
+   "word": "meditation",
+   "pos": "명사",
+   "meaning": "명상"
+  }
+ ],
+ "_html_md5": "f547412e1756a485dcf257ed79e867e1"
+}

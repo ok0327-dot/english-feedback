@@ -1,0 +1,27 @@
+{
+ "date": "2026-06-26",
+ "iso": [
+  2026,
+  26
+ ],
+ "topic": "Investment — types, risk vs. stability, and the shift from real estate to stocks in Korea",
+ "grammar": "phrasal verbs (\"grow up\" vs. grow / rise / in",
+ "grammar_norm": "Phrasal Verbs (\"Grow Up\" Vs. Grow / Rise / In",
+ "score": 7.0,
+ "pairs": [
+  {
+   "said": "I can see a man who is working on the desk. ... Yeah, sure. I'm done, teacher.",
+   "natural": "That's all I can see in the picture."
+  },
+  {
+   "said": "my favorite part is bonds and real estate.",
+   "natural": "My favorite types of investment are bonds and real estate."
+  },
+  {
+   "said": "our cash flow is limited because I'm a salaryman.",
+   "natural": "My cash flow is limited because I'm an office worker on a fixed salary."
+  }
+ ],
+ "vocab": [],
+ "_html_md5": "64cbb61a2f71eb0c0cf0b4b76a344524"
+}

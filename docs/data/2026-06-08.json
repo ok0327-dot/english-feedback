@@ -1,0 +1,53 @@
+{
+ "date": "2026-06-08",
+ "iso": [
+  2026,
+  24
+ ],
+ "topic": "Discussing personal views on nursing homes and retirement in Korea.",
+ "grammar": "Determiners/Quantifiers (almost vs. most)",
+ "grammar_norm": "Determiners / Quantifiers",
+ "score": 7.0,
+ "pairs": [
+  {
+   "said": "This weekend, it is normal and special.",
+   "natural": "This weekend was both normal and special."
+  },
+  {
+   "said": "The art museum is about the picture.",
+   "natural": "The art museum features paintings/art."
+  },
+  {
+   "said": "Even you older, where are you going? Do you want to stay home or stay at your home?",
+   "natural": "When you get older, where would you want to live? At home or in a nursing home?"
+  }
+ ],
+ "vocab": [
+  {
+   "word": "productive",
+   "pos": "형용사",
+   "meaning": "생산적인, 유익한"
+  },
+  {
+   "word": "peaceful",
+   "pos": "형용사",
+   "meaning": "평화로운, 고요한"
+  },
+  {
+   "word": "envision",
+   "pos": "동사",
+   "meaning": "마음속에 그리다, 상상하다"
+  },
+  {
+   "word": "reside",
+   "pos": "동사",
+   "meaning": "거주하다, 살다 (live보다 격식 있는 표현)"
+  },
+  {
+   "word": "flexibility",
+   "pos": "명사",
+   "meaning": "유연성, 융통성"
+  }
+ ],
+ "_html_md5": "8aae2dc09251b13e36329ac8b62a76fe"
+}

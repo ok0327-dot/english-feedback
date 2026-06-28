@@ -1,0 +1,53 @@
+{
+ "date": "2026-06-23",
+ "iso": [
+  2026,
+  26
+ ],
+ "topic": "Discussing risk management in a corporate setting.",
+ "grammar": "Verb Tense (Simple Present vs. Present Continuous for description)",
+ "grammar_norm": "Verb Tense",
+ "score": 7.5,
+ "pairs": [
+  {
+   "said": "I think we have the risk management teams. Our team name is the audit team, auditing department.",
+   "natural": "I think we have a risk management team. It's called the audit team, or the auditing department."
+  },
+  {
+   "said": "It is possible to understand going to the work or the path to the work.",
+   "natural": "It's about understanding the process or the workflow."
+  },
+  {
+   "said": "So I think in our team is only think about the internal process, internal teams.",
+   "natural": "So I think our team only focuses on internal processes and internal teams."
+  }
+ ],
+ "vocab": [
+  {
+   "word": "assess",
+   "pos": "동사",
+   "meaning": "평가하다, 사정하다"
+  },
+  {
+   "word": "contingency plan",
+   "pos": "명사",
+   "meaning": "비상 계획, 만일의 사태에 대비한 계획"
+  },
+  {
+   "word": "insulate",
+   "pos": "동사",
+   "meaning": "(영향으로부터) 보호하다, 고립시키다"
+  },
+  {
+   "word": "rigorous",
+   "pos": "형용사",
+   "meaning": "철저한, 엄격한, 정밀한"
+  },
+  {
+   "word": "redundancy",
+   "pos": "명사",
+   "meaning": "불필요한 중복, 여분"
+  }
+ ],
+ "_html_md5": "51f77ddbbbcbbb021f66e97eee0b4824"
+}

@@ -1,0 +1,57 @@
+{
+ "date": "2026-06-25",
+ "iso": [
+  2026,
+  26
+ ],
+ "topic": "Discussing the purpose and tasks involved in strategic planning.",
+ "grammar": "Joey의 대화에서 전치사(Prepositions) 사용에 있어 몇 가지 개선할",
+ "grammar_norm": "Joey의 대화에서 전치사 사용에 있어 몇 가지 개선할",
+ "score": null,
+ "pairs": [
+  {
+   "said": "I guess they look like they're brainstorming or strategic planning in office .",
+   "natural": "I guess they look like they're brainstorming or doing strategic planning in an office ."
+  },
+  {
+   "said": "The purpose is to meet the goal, the efficiency for more best and more strategic.",
+   "natural": "The purpose is to meet the goal and improve efficiency, making it more strategic ."
+  },
+  {
+   "said": "Your explanation means that the plan is more big and huge . Yeah, more dreamy .",
+   "natural": "Your explanation means the plan is much bigger and more encompassing . Yeah, more visionary ."
+  },
+  {
+   "said": "The enterprise will die easier .",
+   "natural": "The enterprise will fail more easily ."
+  }
+ ],
+ "vocab": [
+  {
+   "word": "strategic",
+   "pos": "형용사",
+   "meaning": "전략적인, 중요한 계획과 관련된"
+  },
+  {
+   "word": "brainstorming",
+   "pos": "명사",
+   "meaning": "브레인스토밍 (새로운 아이디어를 얻기 위한 토론)"
+  },
+  {
+   "word": "oversight",
+   "pos": "명사",
+   "meaning": "감독, 관리, 감시"
+  },
+  {
+   "word": "delegate",
+   "pos": "동사",
+   "meaning": "(권한·업무 등을) 위임하다"
+  },
+  {
+   "word": "visionary",
+   "pos": "형용사",
+   "meaning": "선견지명이 있는, 비전이 있는"
+  }
+ ],
+ "_html_md5": "346984288264ce3da26ef408c68e9c50"
+}

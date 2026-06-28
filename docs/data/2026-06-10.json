@@ -1,0 +1,53 @@
+{
+ "date": "2026-06-10",
+ "iso": [
+  2026,
+  24
+ ],
+ "topic": "Discussing grocery shopping habits and preferences.",
+ "grammar": "이번 수업에서 Joey가 반복적으로 사용한 문법 패턴 중 하나는 동명사 또는 명사",
+ "grammar_norm": "Gerunds / Noun Phrases",
+ "score": 7.5,
+ "pairs": [
+  {
+   "said": "just go for work and make some projects on my computer, use the AI, and have a little exercise in a gym.",
+   "natural": "I'll just go to work , work on some projects on my computer, use AI, and get some exercise at the gym."
+  },
+  {
+   "said": "it is more far.",
+   "natural": "It is farther ."
+  },
+  {
+   "said": "I don't like the online because it is not fun, but that is possible to survive every week because we don't have time, but we need grocery products.",
+   "natural": "I don't really enjoy online shopping because it's not fun, but it's how we manage every week because we're short on time and need groceries."
+  }
+ ],
+ "vocab": [
+  {
+   "word": "refrigerated",
+   "pos": "adj",
+   "meaning": "냉장된, 냉동된"
+  },
+  {
+   "word": "dairy section",
+   "pos": "n",
+   "meaning": "유제품 코너"
+  },
+  {
+   "word": "bulk size",
+   "pos": "n",
+   "meaning": "대용량 (포장)"
+  },
+  {
+   "word": "provisions",
+   "pos": "n",
+   "meaning": "식량, 비상식량 (특히 많은 양의 식료품)"
+  },
+  {
+   "word": "time constraints",
+   "pos": "n",
+   "meaning": "시간 제약"
+  }
+ ],
+ "_html_md5": "228f974091a2e9a42d31d9816290ea44"
+}

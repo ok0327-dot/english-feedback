@@ -1,0 +1,53 @@
+{
+ "date": "2026-06-15",
+ "iso": [
+  2026,
+  25
+ ],
+ "topic": "Discussing budget management in an audit team and personal spending philosophy.",
+ "grammar": "Missing or Incorrect Prepositions",
+ "grammar_norm": "Prepositions",
+ "score": 7.0,
+ "pairs": [
+  {
+   "said": "This weekend is also nice because I shared my time with my family.",
+   "natural": "I had a nice weekend because I spent time with my family."
+  },
+  {
+   "said": "But this time is the lunch time.",
+   "natural": "But it was during lunchtime."
+  },
+  {
+   "said": "So I'm not sure if it is right to understand or not.",
+   "natural": "So I'm not sure if I'm understanding it correctly."
+  }
+ ],
+ "vocab": [
+  {
+   "word": "discrepancy",
+   "pos": "명사",
+   "meaning": "불일치, 차이"
+  },
+  {
+   "word": "audit",
+   "pos": "명사/동사",
+   "meaning": "(회계) 감사; 감사를 하다"
+  },
+  {
+   "word": "coincide",
+   "pos": "동사",
+   "meaning": "동시에 일어나다, 일치하다"
+  },
+  {
+   "word": "allocate",
+   "pos": "동사",
+   "meaning": "할당하다, 배분하다"
+  },
+  {
+   "word": "prudent",
+   "pos": "형용사",
+   "meaning": "신중한, 현명한"
+  }
+ ],
+ "_html_md5": "9718cbcf0dd0d6dc4f29082c157af993"
+}

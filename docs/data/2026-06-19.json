@@ -1,0 +1,27 @@
+{
+ "date": "2026-06-19",
+ "iso": [
+  2026,
+  25
+ ],
+ "topic": "Giving and receiving feedback at work (written vs. verbal, one-on-one vs. group)",
+ "grammar": "articles (unnecessary \"the\" with uncountable",
+ "grammar_norm": "Articles (a/an/the)",
+ "score": 7.0,
+ "pairs": [
+  {
+   "said": "This weekend, I give time to my wife because my wife is a housewife.",
+   "natural": "This weekend, I'm giving my wife some time to herself because she's a stay-at-home mom."
+  },
+  {
+   "said": "That is case by case, but usually I prefer verbal feedback.",
+   "natural": "It depends on the situation, but I usually prefer verbal feedback."
+  },
+  {
+   "said": "It is similar to your answer.",
+   "natural": "I feel the same way as you do."
+  }
+ ],
+ "vocab": [],
+ "_html_md5": "4f8064a4de5a386db9bce93386c7d06a"
+}

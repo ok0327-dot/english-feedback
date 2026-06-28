@@ -1,0 +1,53 @@
+{
+ "date": "2026-05-22",
+ "iso": [
+  2026,
+  21
+ ],
+ "topic": "Discussing Travel Plans and Experiences",
+ "grammar": "Verb Tense Consistency & Natural Phrasing ❌ 원",
+ "grammar_norm": "Verb Tense",
+ "score": 7.0,
+ "pairs": [
+  {
+   "said": "I make some plans with my family. What to do, etc.",
+   "natural": "I'm making plans with my family, like deciding what to do."
+  },
+  {
+   "said": "I will go to China and the city name is Xi'an.",
+   "natural": "I'm planning to visit Xi'an, China."
+  },
+  {
+   "said": "I heard that many European countries, but that is a more easy and public place to travel.",
+   "natural": "I've heard that many European countries are easy to travel to, but Spain is particularly accessible."
+  }
+ ],
+ "vocab": [
+  {
+   "word": "Terracotta",
+   "pos": "명사",
+   "meaning": "테라코타 (점토를 구워 만든 조각품이나 건축 재료)"
+  },
+  {
+   "word": "Voucher",
+   "pos": "명사",
+   "meaning": "상품권, 할인권, 교환권"
+  },
+  {
+   "word": "Scampi",
+   "pos": "명사",
+   "meaning": "새우 스캠피 (마늘, 버터 등으로 요리한 새우 요리)"
+  },
+  {
+   "word": "Olive oil",
+   "pos": "명사",
+   "meaning": "올리브유"
+  },
+  {
+   "word": "Tapas",
+   "pos": "명사",
+   "meaning": "타파스 (스페인에서 식사 전에 술과 곁들여 먹는 소량의 음식)"
+  }
+ ],
+ "_html_md5": "21a9b93961e359cbfabbc295bc72dc72"
+}

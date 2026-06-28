@@ -1,0 +1,53 @@
+{
+ "date": "2026-05-11",
+ "iso": [
+  2026,
+  20
+ ],
+ "topic": "Discussing weekend activities, travel, and key factors in business negotiation.",
+ "grammar": "Verb Forms and Auxiliary Verbs",
+ "grammar_norm": "Verb Forms / Auxiliaries",
+ "score": 8.0,
+ "pairs": [
+  {
+   "said": "I think our life is gathering some routine.",
+   "natural": "I think our life is built around routines."
+  },
+  {
+   "said": "your brother come for the travel or he leave the Colombia?",
+   "natural": "Did your brother come to travel, or is he leaving Colombia?"
+  },
+  {
+   "said": "Just I'm imagining one guy imagine get married just he met the first time with her.",
+   "natural": "I'm just imagining a guy who's already thinking about getting married after meeting her for the first time."
+  }
+ ],
+ "vocab": [
+  {
+   "word": "mindful",
+   "pos": "adj.",
+   "meaning": "~을 염두에 두는, 의식하는, 주의 깊은"
+  },
+  {
+   "word": "layover",
+   "pos": "n.",
+   "meaning": "(여행 중) 잠시 들르는 곳, 경유"
+  },
+  {
+   "word": "negotiate",
+   "pos": "v.",
+   "meaning": "협상하다, 교섭하다"
+  },
+  {
+   "word": "outcome",
+   "pos": "n.",
+   "meaning": "결과, 성과"
+  },
+  {
+   "word": "on a roll",
+   "pos": "idiom",
+   "meaning": "승승장구하는, 잘나가는, 탄력받은"
+  }
+ ],
+ "_html_md5": "64c42ae766dd6fea7e4044fac9407873"
+}
