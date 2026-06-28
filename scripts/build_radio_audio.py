@@ -53,7 +53,7 @@ CHUNK_LINES = 12   # 한 TTS 호출당 대사 줄 수(단일 호출 길이 한�
 
 def _tts_chunk(chunk, cfgs):
     """대사 청크 하나 → (pcm_bytes, rate). Gemini 멀티스피커 TTS 단일 호출."""
-    transcript = ("TTS the following English radio dialogue naturally and expressively:\n" +
+    transcript = ("TTS the following mostly-English radio dialogue (with occasional Korean lines) naturally and expressively:\n" +
                   "\n".join(f"{SPEAKERS.get(sp, (sp, 'Kore'))[0]}: {txt}" for sp, _, txt in chunk))
     body = {
         "contents": [{"parts": [{"text": transcript}]}],
@@ -156,7 +156,7 @@ def main():
     eps.sort(key=lambda e: e.get("week", ""), reverse=True)
 
     # 용량 관리: 최신 KEEP개만 보관, 오래된 mp3 삭제
-    KEEP = int(os.environ.get("RADIO_KEEP", "8"))
+    KEEP = int(os.environ.get("RADIO_KEEP", "16"))
     keep_files = {e["file"] for e in eps[:KEEP]}
     eps = eps[:KEEP]
     for fn in os.listdir(RADIO_DIR):

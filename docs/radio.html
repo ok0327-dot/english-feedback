@@ -1,5 +1,5 @@
 <!DOCTYPE html><html lang="ko"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1"><link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#0f0f13"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="당근영어"><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="icon" type="image/png" sizes="192x192" href="icon-192.png"><script src="install-banner.js" defer></script>
+<meta name="viewport" content="width=device-width,initial-scale=1"><link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#0f0f13"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="당근영어"><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="icon" type="image/png" sizes="192x192" href="icon-192.png"><script src="install-banner.js" defer></script><script src="sw-reg.js" defer></script>
 <title>🎙️ 영어 주간 라디오</title><style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:'Noto Sans KR',-apple-system,sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.7}
@@ -34,6 +34,13 @@ audio{width:100%;margin-top:4px}
 .archive{display:flex;flex-direction:column;gap:6px;margin-top:10px}
 .archive a{font-size:12.5px;color:#94a3b8;text-decoration:none;padding:8px 12px;background:#0f0f13;border:1px solid rgba(255,255,255,.06);border-radius:8px}
 .archive a:hover{color:#a78bfa;border-color:rgba(167,139,250,.3)}
+.weeklist{display:flex;flex-direction:column;gap:6px;margin-top:4px}
+.weekrow{display:flex;align-items:center;gap:10px;font-size:13px;color:#cbd5e1;text-decoration:none;padding:11px 13px;background:#0f0f13;border:1px solid rgba(255,255,255,.06);border-radius:10px}
+.weekrow:hover{border-color:rgba(167,139,250,.4);color:#a78bfa}
+.weekrow.active{border-color:rgba(167,139,250,.5);background:#1e1b2e}
+.weekrow .wk{font-weight:700;color:#a78bfa;white-space:nowrap}
+.weekrow .wr{color:#64748b}
+.weekrow .wk-audio{margin-left:auto;font-size:14px;min-width:18px;text-align:right}
 .foot{text-align:center;font-size:11px;color:#475569;margin-top:26px;line-height:1.8}
 </style></head><body>
 <div class="header"><h1>🎙️ 영어 주간 라디오</h1>
@@ -41,9 +48,11 @@ audio{width:100%;margin-top:4px}
 <div class="nav"><a href="index.html">← 일일 복습</a><a href="review-vocab.html">📚 누적 표현 →</a></div>
 <div class="container">
 
-  <div class="card"><h2>🎧 오디오 에피소드 <span class="muted" style="font-weight:400">· 진짜 음성 · 매주 자동</span></h2>
-    <div id="audio-latest" class="muted">에피소드 불러오는 중…</div>
-    <div class="archive" id="audio-archive"></div></div>
+  <div class="card"><h2>🎧 오디오 에피소드 <span class="muted" style="font-weight:400">· 진짜 음성 · 이 주차</span></h2>
+    <div id="audio-latest" class="muted">에피소드 불러오는 중…</div></div>
+
+  <div class="card"><h2>🗂 주차별 라디오 기록 <span class="muted" style="font-weight:400">· 최신순 · 누적</span></h2>
+    <div class="weeklist"><a class="weekrow active" data-wk="2026-W26" href="radio.html"><span class="wk">2026-W26 · 현재</span><span class="wr">6/22~6/26 · 5회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W25" href="radio-2026-W25.html"><span class="wk">2026-W25</span><span class="wr">6/15~6/19 · 5회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W24" href="radio-2026-W24.html"><span class="wk">2026-W24</span><span class="wr">6/8~6/12 · 5회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W23" href="radio-2026-W23.html"><span class="wk">2026-W23</span><span class="wr">6/1~6/5 · 1회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W22" href="radio-2026-W22.html"><span class="wk">2026-W22</span><span class="wr">5/25~5/29 · 3회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W21" href="radio-2026-W21.html"><span class="wk">2026-W21</span><span class="wr">5/18~5/22 · 3회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W20" href="radio-2026-W20.html"><span class="wk">2026-W20</span><span class="wr">5/11~5/15 · 4회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W19" href="radio-2026-W19.html"><span class="wk">2026-W19</span><span class="wr">5/4~5/8 · 1회</span><span class="wk-audio"></span></a></div></div>
 
   <div class="card"><h2>▶ 바로 듣기 <span class="muted" style="font-weight:400">· 브라우저 음성(즉시·폴백)</span></h2>
     <div class="player">
@@ -54,11 +63,12 @@ audio{width:100%;margin-top:4px}
       <label class="speed">속도 <input type="range" id="rate" min="0.7" max="1.3" step="0.1" value="1"> <span id="rv">1.0x</span></label>
     </div>
     <div class="muted" id="ttswarn" style="margin-bottom:8px"></div>
+    <div class="muted" style="margin:2px 0 10px;font-size:11.5px;line-height:1.7">💡 재생 중에는 화면이 자동으로 꺼지지 않게 막아요(Wake&nbsp;Lock). 다만 직접 화면을 끄면 브라우저 음성은 멈출 수 있어요 — <b>화면을 끈 채 듣고 싶다면 맨 위 🎧 오디오 에피소드(MP3)</b>를 쓰세요. 잠금화면에서도 재생됩니다.</div>
     <div class="stage" id="stage"></div>
   </div>
 
   <div class="card"><h2>💬 이 내용으로 AI와 이야기하기</h2>
-    <div class="muted" style="margin-bottom:10px">클릭하면 이번 주 요약 프롬프트가 복사되고 Gemini가 열립니다. 붙여넣고 대화하세요.</div>
+    <div class="muted" style="margin-bottom:10px">클릭하면 이 주차 요약 프롬프트가 복사되고 Gemini가 열립니다. 붙여넣고 대화하세요.</div>
     <div class="modes">
       <div class="mode" onclick="copyOpen('chat')"><span class="ico">💬</span>튜터 대화<span class="sub">약점 집중 연습</span></div>
       <div class="mode" onclick="copyOpen('lecture')"><span class="ico">🎓</span>강의식 설명<span class="sub">규칙+예문+퀴즈</span></div>
@@ -66,201 +76,76 @@ audio{width:100%;margin-top:4px}
     </div>
   </div>
 
-  <div class="foot">대본: scripts/build_radio.py · 음성: 브라우저 Web Speech(무료) · 매주 금요일 Claude 갱신</div>
+  <div class="foot">대본: scripts/build_radio.py · 음성: 브라우저 Web Speech(무료) · 주차별 누적 · 매주 금요일 Claude 갱신</div>
 </div>
 
-<pre id="radio-src" hidden>민지|en|Hi everyone, and welcome back to The English Lab, your weekly radio show for English learners!
-알렉스|en|Hello, hello! I&#x27;m Alex, your friendly English coach, and I&#x27;m so happy you&#x27;re here today.
-민지|en|And I&#x27;m Minji, your host. Yes, Alex is always happy, but today he has a good reason.
-알렉스|en|I do! This is our weekly review for our star student, Joey.
-민지|en|Joey, if you&#x27;re listening, this whole show is for you. So grab a coffee and relax.
-알렉스|en|This week was busy, Minji. Joey finished five lessons.
-민지|en|Tell us the topics! What did Joey study this week?
-알렉스|en|We talked about investing and real estate, his audit and risk team, office supplies, strategic planning, and describing pictures.
-민지|en|That&#x27;s a nice mix of work English and daily talk.
-알렉스|en|And here&#x27;s the big number. Joey&#x27;s fluency score this week was a strong 7.2 out of 10.
-민지|en|7.2! That&#x27;s really good for an intermediate learner. Nice job, Joey!
-알렉스|en|Today we will do two things. We will fix some mistakes, and we will learn new useful English.
-민지|en|I love that. So let&#x27;s start with our first segment, the Pattern of the Week!
-알렉스|en|This week, two patterns came up again and again for Joey.
-민지|en|Pattern one is subject-verb agreement. Alex, keep it simple for us.
-알렉스|en|Okay. The rule is easy. Your verb must match your subject.
-알렉스|en|If the subject is one thing, like she or the market, the verb often gets an s.
-알렉스|en|For example, we say the market grows, not the market grow.
-민지|en|So one thing gets an s, but many things do not?
-알렉스|en|Right. We say she works hard, but they work hard, with no s.
-알렉스|en|Here&#x27;s one more. We say the team meets on Monday, but the teams meet on Monday.
-민지|en|That little s is small, but it really matters.
-알렉스|en|Pattern two is articles, the small words a, an, and the.
-민지|en|These small words are hard for many learners.
-알렉스|en|Use a or an the first time you talk about something. For example, I bought a book yesterday.
-알렉스|en|Use the when both people know the thing. For example, the book on the table is mine.
-민지|en|And when do we use an?
-알렉스|en|Use an before a vowel sound, like an apple or an hour. Use a before a consonant sound, like a house.
-민지|en|Great. Keep these two ideas in your pocket, Joey. We will use them again.
-알렉스|en|Now, before we fix mistakes, let&#x27;s learn some new words. It&#x27;s time for Topic Talk!
-민지|en|Our first topic is investing and real estate, one of Joey&#x27;s favorite subjects.
-알렉스|en|Here are some handy phrases you can use when you talk about money and homes.
-알렉스|en|First, save up for. It means to keep money over time to buy something big.
-알렉스|en|For example, I&#x27;m saving up for a new apartment.
-알렉스|en|Next, a down payment. It&#x27;s the first big payment when you buy a home.
-알렉스|en|For example, we need a big down payment for the house.
-알렉스|en|Next, pay off a loan. It means to finish paying all the money you borrowed.
-알렉스|en|For example, I want to pay off my loan in ten years.
-알렉스|en|Next, the interest rate. It&#x27;s the extra money the bank charges you.
-알렉스|en|For example, the interest rate is low this year, so it&#x27;s a good time to buy.
-알렉스|en|And last, in the long run. It means after a long time.
-알렉스|en|For example, in the long run, real estate can be a good choice.
-민지|en|Those are so useful, Joey. Now let&#x27;s see how Joey talked about this topic.
-알렉스|en|It&#x27;s time for our Correction Clinic! We read what Joey said, give the natural version, and explain why.
-알렉스|en|Joey said, my favorite part is bonds and real estate.
-알렉스|en|Naturally: My favorite types of investment are bonds and real estate. Types are, so the verb is plural too.
-민지|en|That&#x27;s our pattern again!
-알렉스|en|It is. Joey also said, our cash flow is limited because I&#x27;m a salaryman.
-알렉스|en|Naturally: My cash flow is limited because I&#x27;m an office worker on a fixed salary. That phrase sounds more natural than salaryman.
-알렉스|en|Joey said, if you buy the house in the Seoul.
-알렉스|en|Naturally: if you buy a house in Seoul. We don&#x27;t use the before a city name.
-알렉스|en|Joey said, These days Korea government they offer some tax.
-알렉스|en|Naturally: These days the Korean government offers some tax. One government, so the verb gets an s.
-알렉스|en|Joey said, The stock market grows ups. Naturally: The stock market grows. We need just one verb, grows.
-알렉스|en|Joey said, I&#x27;m little conservation person. Naturally: I&#x27;m a little conservative. That&#x27;s the right word, plus the article a.
-민지|en|Nice fixes! Now let&#x27;s move to Joey&#x27;s job. Time for more Topic Talk!
-알렉스|en|Joey works on an audit and risk team. Here are handy words for office and team work.
-알렉스|en|First, double-check. It means to check again to be sure.
-알렉스|en|For example, I always double-check the numbers before I send them.
-알렉스|en|Next, keep track of. It means to follow and remember information.
-알렉스|en|For example, we keep track of every risk on a list.
-알렉스|en|Next, report to. It means to tell your boss what you did.
-알렉스|en|For example, I report to my manager every Friday.
-알렉스|en|Next, a deadline. It&#x27;s the last day to finish your work.
-알렉스|en|For example, the deadline for this report is next Monday.
-알렉스|en|And last, a workflow. It&#x27;s the steps of how work gets done.
-알렉스|en|For example, our team has a clear workflow for every check.
-민지|en|Great words for the office, Joey. Now back to the clinic.
-알렉스|en|Joey said, I think we have the risk management teams. Our team name is the audit team.
-알렉스|en|Naturally: I think we have a risk management team. It&#x27;s called the audit team. It&#x27;s one team, so we say a.
-알렉스|en|Joey said, So I think in our team is only think about the internal process.
-알렉스|en|Naturally: So I think our team only focuses on internal processes. One verb, focuses, and processes is plural.
-민지|en|A quick mini-example?
-알렉스|en|Sure. Our department only handles customer complaints.
-알렉스|en|Joey also said, On the weekend, I gave the time to my wife.
-알렉스|en|Naturally: Over the weekend, I gave my wife some time to herself. We say over the weekend, and some time.
-알렉스|en|Joey said, I have some worry about that movement because my wife doesn&#x27;t like the wind.
-알렉스|en|Naturally: I have some concerns about the move because my wife doesn&#x27;t like the wind. When you move home, the word is the move.
-민지|en|Good ones. Now let&#x27;s talk about office supplies. Time for Topic Talk!
-알렉스|en|Here are some handy phrases for pens, paper, and other office things.
-알렉스|en|First, run out of. It means to have no more of something.
-알렉스|en|For example, we ran out of paper this morning.
-알렉스|en|Next, stock up on. It means to buy a lot so you don&#x27;t run out.
-알렉스|en|For example, let&#x27;s stock up on pens before the big meeting.
-알렉스|en|Next, a notepad. It&#x27;s a small book of paper for quick notes.
-알렉스|en|For example, I write my ideas in a notepad.
-알렉스|en|And last, a sticky note. It&#x27;s a small paper that sticks to things.
-알렉스|en|For example, I left a sticky note on my boss&#x27;s desk.
-민지|en|So useful for daily office life! Now let&#x27;s keep going with planning.
-알렉스|en|Our next Topic Talk is about strategic planning and meetings.
-알렉스|en|Here are handy phrases you can use in a meeting.
-알렉스|en|First, set a goal. It means to decide what you want to reach.
-알렉스|en|For example, let&#x27;s set a goal for this month.
-알렉스|en|Next, come up with a plan. It means to think of a plan.
-알렉스|en|For example, we came up with a new plan together.
-알렉스|en|Next, in charge of. It means to be the leader of something.
-알렉스|en|For example, she is in charge of the new project.
-알렉스|en|Next, the big picture. It means the whole situation, not the small details.
-알렉스|en|For example, let&#x27;s look at the big picture first.
-알렉스|en|And last, on the same page. It means everyone agrees and understands the same thing.
-알렉스|en|For example, after the meeting, we were all on the same page.
-민지|en|Wonderful! Now let&#x27;s see Joey&#x27;s planning sentences in the clinic.
-알렉스|en|Joey said, I guess they look like they&#x27;re brainstorming or strategic planning in office.
-알렉스|en|Naturally: I guess they look like they&#x27;re brainstorming or doing strategic planning in an office. We add doing, and we say in an office.
-알렉스|en|Joey said, The purpose is to meet the goal, the efficiency for more best and more strategic.
-알렉스|en|Naturally: The purpose is to meet the goal and improve efficiency, making it more strategic. We can&#x27;t say more best, so we say improve.
-알렉스|en|Joey said, Your explanation means that the plan is more big and huge.
-알렉스|en|Naturally: Your explanation means the plan is much bigger and more encompassing. We say bigger, not more big.
-알렉스|en|Joey said, The enterprise will die easier.
-알렉스|en|Naturally: The enterprise will fail more easily. Companies fail, they don&#x27;t die, and we say more easily.
-민지|en|Now our last topic. Joey practiced describing pictures. Time for Topic Talk!
-알렉스|en|Here are handy phrases you can use when you describe a photo.
-알렉스|en|First, it looks like. We use it to guess what we see.
-알렉스|en|For example, it looks like a busy office.
-알렉스|en|Next, in the foreground. It means the part close to you, in front.
-알렉스|en|For example, in the foreground, there is a desk.
-알렉스|en|Next, in the background. It means the part far away, behind.
-알렉스|en|For example, in the background, you can see a window.
-알렉스|en|Next, a close-up. It&#x27;s a photo taken very near to something.
-알렉스|en|For example, this is a close-up of a hand.
-알렉스|en|And last, on the left and on the right. We use them for the sides.
-알렉스|en|For example, on the left, a man is talking, and on the right, a woman is writing.
-민지|en|Perfect timing, because Joey described some pictures too.
-알렉스|en|Joey said, this picture I can see the focus on the hand, the zoom in the hand.
-알렉스|en|Naturally: In this picture, I can see a close-up of the hand. A close-up is the natural word for a zoomed-in shot.
-알렉스|en|Joey said, But sometimes I need to some writing because it is more convenient.
-알렉스|en|Naturally: But sometimes I need to do some writing because it&#x27;s more convenient. We need the verb do.
-민지|en|Let&#x27;s add a few more quick fixes from Joey&#x27;s tutor.
-알렉스|en|Joey asked, Which is prefer? The natural question is, Which do you prefer?
-알렉스|en|Joey said, Saturday will went to hotel pool. Naturally: Saturday we went to the hotel pool. Past tense went, plus the.
-알렉스|en|And Joey said, we swimming almost 4 hours more. Naturally: we swam for almost 4 hours. Past tense swam, plus for.
-민지|en|Wonderful work, Joey. That was a big clinic, and you did great.
-알렉스|en|These are exactly the fixes that make you better.
-민지|en|Now let&#x27;s switch gears. It&#x27;s time for the Pronunciation Corner!
-알렉스|en|Our first word is focus. Joey sometimes says POH-kus, but it&#x27;s FOH-kus, with a clean F sound.
-민지|en|Say it with me, Joey. FOH-kus, FOH-kus.
-알렉스|en|Next, the word strategic. It has three parts, and the stress is in the middle. Stra-TE-gic.
-민지|en|Now here&#x27;s a tricky pair.
-알렉스|en|Yes, lead and read. Joey said, can read to needless risks, but the word is lead, as in can lead to needless risks.
-알렉스|en|Now the t-h sound. Joey asked, What are dey? The word is they, with a soft t-h.
-민지|en|Put your tongue gently between your teeth. They, they, they. Not dey.
-알렉스|en|And one more, the word suit. Joey said shoot with an s-h, but it&#x27;s a clean soot.
-알렉스|en|So the full sentence is, He is wearing a suit and tie.
-민지|en|Good sounds make you clear and confident.
-알렉스|en|Now it&#x27;s time for the Vocabulary Builder!
-알렉스|en|I&#x27;ll say the word, give a simple meaning, and an example from Joey&#x27;s world.
-알렉스|en|First, assess. It means to look at something carefully and judge it.
-알렉스|en|Example: the risk team must assess every new investment first.
-알렉스|en|Next, contingency plan. It&#x27;s a backup plan for when something goes wrong.
-알렉스|en|Example: we need a contingency plan if the market drops.
-알렉스|en|Next, insulate. It means to protect something from harm or risk.
-알렉스|en|Example: bonds can help insulate your money from big losses.
-알렉스|en|Next, stationery. It means paper, pens, and other writing things.
-알렉스|en|Example: Joey ordered new stationery for the team.
-알렉스|en|Next, office supplies. These are the everyday things a workplace needs.
-알렉스|en|Example: pens, folders, and paper are all office supplies.
-알렉스|en|Next, strategic. It means well planned to reach an important goal.
-알렉스|en|Example: their strategic plan looks at long-term growth.
-알렉스|en|Next, brainstorming. It means sharing many ideas as a group.
-알렉스|en|Example: the team spent an hour brainstorming new ideas.
-알렉스|en|Next, oversight. It means watching over and checking a process.
-알렉스|en|Example: the audit team gives oversight to stop mistakes.
-알렉스|en|And last, clipboard. It&#x27;s a flat board with a clip that holds paper while you write.
-알렉스|en|Example: the inspector carried a clipboard around the office.
-민지|en|So many strong words for your work and your money, Joey.
-알렉스|en|Use just one of them today, and it becomes yours.
-민지|en|Alright, time to open our mouths. It&#x27;s time for Quick Practice and Shadowing!
-알렉스|en|Here&#x27;s how it works. I say a sentence, you repeat it out loud, and Minji says it again.
-알렉스|en|Sentence one. The market grows every year.
-민지|en|Model: the market grows every year.
-알렉스|en|Sentence two. If you buy a house in Seoul, prices may rise.
-민지|en|Model: if you buy a house in Seoul, prices may rise.
-알렉스|en|Sentence three. Our team only focuses on internal processes.
-민지|en|Model: our team only focuses on internal processes.
-알렉스|en|Sentence four. In the long run, real estate can be a good choice.
-민지|en|Model: in the long run, real estate can be a good choice.
-알렉스|en|Great shadowing, Joey. Saying it out loud builds real memory.
-민지|en|We&#x27;re almost done, so let&#x27;s recap our two key points.
-알렉스|en|Key point one, subject-verb agreement. Match a singular subject with that little s on the verb.
-알렉스|en|Key point two, articles. Use a or an for something new, and the for something we both know.
-민지|en|Master those two, and your English goes up a level.
-알렉스|en|And remember, Joey&#x27;s fluency score this week was a strong 7.2 out of 10.
-알렉스|en|So here&#x27;s your mission for next week. Write five sentences about investing, and check every article and every verb ending.
-민지|en|Just five sentences, slow and careful. You can do it.
-알렉스|en|And read them out loud, so your mouth learns what your brain knows.
-민지|en|You worked hard this week, Joey, and it really shows. That&#x27;s the end of today&#x27;s show.
-알렉스|en|Thank you for learning with us on The English Lab.
-민지|en|Keep listening, keep speaking, and never be afraid of mistakes.
-알렉스|en|Mistakes just mean you&#x27;re growing. We&#x27;ll see you next week!
-민지|en|Until then, this is Minji and Alex saying, take care and keep talking. Bye, everyone!</pre>
+<pre id="radio-src" hidden>민지|en|Hello and welcome back to your Weekly English Radio. I&#x27;m Minji, your host.
+알렉스|en|And I&#x27;m Alex, your coach. This is 2026-W26, and you spoke in 5 lessons this week. Let&#x27;s not just list your mistakes today, let&#x27;s understand them.
+민지|en|Our headline pattern is Subject–Verb Agreement. It has shown up 6 times so far. Alex, why does this one keep coming back?
+알렉스|en|Great question. Korean verbs don&#x27;t change for he, she, or it, and Korean often drops the subject entirely. English keeps the subject and adds an s for he, she, it.
+민지|ko|한국어 동사는 그, 그녀, 그것이어도 형태가 안 변하고 주어를 자주 생략하죠. 영어는 주어를 꼭 두고 3인칭 단수엔 s를 붙여요.
+알렉스|en|He, she, it — add an s. Say it like a reflex every single time.
+민지|en|Let&#x27;s hear that in your own words. Here are a few sentences you actually said, and the natural version.
+알렉스|en|You said: On the weekend, I gave the time to my wife.
+민지|en|More naturally: Over the weekend, I gave my wife some time to herself.
+알렉스|en|You said: I have some worry about that movement because my wife doesn&#x27;t like the wind.
+민지|en|More naturally: I have some concerns about the move because my wife doesn&#x27;t like the wind.
+알렉스|en|You said: My dream is to live in a house, but the reality is to live in an apartment.
+민지|en|More naturally: My dream is to live in a house, but realistically we&#x27;ll end up in an apartment.
+알렉스|en|You said: I think we have the risk management teams. Our team name is the audit team, auditing department.
+민지|en|More naturally: I think we have a risk management team. It&#x27;s called the audit team, or the auditing department.
+알렉스|en|Hear the small shifts? Same idea, just the English habit on top.
+민지|en|Time for the Correction Clinic. Quick-fire, repeat after us if you can.
+알렉스|en|You said: It is possible to understand going to the work or the path to the work.
+민지|en|Better: It&#x27;s about understanding the process or the workflow.
+알렉스|en|You said: So I think in our team is only think about the internal process, internal teams.
+민지|en|Better: So I think our team only focuses on internal processes and internal teams.
+알렉스|en|You said: It is similar. Yeah, the salaryman. So maybe it&#x27;s same. I work through. I go for work.
+민지|en|Better: It&#x27;s pretty much the same every day for a salaryman. I just go to work.
+알렉스|en|You said: Oh yes, this picture I can see the focus on the hand, the zoom in the hand.
+민지|en|Better: In this picture, I can see a close-up of the hand.
+알렉스|en|You said: But sometimes I need to some writing because it is more convenient for me.
+민지|en|Better: But sometimes I need to do some writing because it&#x27;s more convenient for me.
+알렉스|en|You said: I guess they look like they&#x27;re brainstorming or strategic planning in office .
+민지|en|Better: I guess they look like they&#x27;re brainstorming or doing strategic planning in an office .
+알렉스|en|You said: The purpose is to meet the goal, the efficiency for more best and more strategic.
+민지|en|Better: The purpose is to meet the goal and improve efficiency, making it more strategic .
+알렉스|en|You said: Your explanation means that the plan is more big and huge . Yeah, more dreamy .
+민지|en|Better: Your explanation means the plan is much bigger and more encompassing . Yeah, more visionary .
+알렉스|en|You said: The enterprise will die easier .
+민지|en|Better: The enterprise will fail more easily .
+알렉스|en|You said: I can see a man who is working on the desk. ... Yeah, sure. I&#x27;m done, teacher.
+민지|en|Better: That&#x27;s all I can see in the picture.
+알렉스|en|Your tutor also marked a few this week. These came straight from your live lessons.
+민지|en|Instead of: I do not yet
+알렉스|en|Say: I have not yet
+민지|en|Instead of: I see a man who working on the desk
+알렉스|en|Say: I see a man who is working at the desk. I see a man whose work is on the desk.
+민지|en|Instead of: These days Korea government they offer some tax
+알렉스|en|Say: These days the Korean government offers some tax
+민지|en|Instead of: Which is prefer
+알렉스|en|Say: Which do you prefer
+민지|en|Instead of: I&#x27;m little conservation person
+알렉스|en|Say: I&#x27;m a little conservative. I&#x27;m a little bit of a conservative people.
+민지|en|Instead of: Five years ago almost people like the invest
+알렉스|en|Say: Five years ago [almost all/most] people like to invest in real estate
+민지|en|Now, Vocabulary in Context. Not just the word, but how it lives in a sentence.
+알렉스|en|Word to keep: assess. It means 평가하다, 사정하다. Try saying one real sentence with it today.
+알렉스|en|Word to keep: contingency plan. It means 비상 계획, 만일의 사태에 대비한 계획. Try saying one real sentence with it today.
+알렉스|en|Word to keep: insulate. It means (영향으로부터) 보호하다, 고립시키다. Try saying one real sentence with it today.
+알렉스|en|Word to keep: rigorous. It means 철저한, 엄격한, 정밀한. Try saying one real sentence with it today.
+알렉스|en|Word to keep: redundancy. It means 불필요한 중복, 여분. Try saying one real sentence with it today.
+알렉스|en|Word to keep: stationery. It means 문구류 (종이, 펜, 봉투 등 글쓰기 관련 용품). Try saying one real sentence with it today.
+민지|en|Before we wrap, let&#x27;s stretch a little beyond the corrections.
+알렉스|en|Quick culture note. Koreans cheer fighting, but native speakers don&#x27;t use it that way. Instead they say you&#x27;ve got this, or go for it, or you can do it.
+민지|ko|문화 한 가지. 한국에선 &#x27;화이팅&#x27;이라고 외치지만, 원어민은 그렇게 안 써요. 대신 you&#x27;ve got this, go for it, you can do it 라고 해요.
+알렉스|en|Quick recap. Your fluency average is 7.2 out of ten, and it&#x27;s steady. That&#x27;s real progress.
+민지|en|This week, hunt for Subject–Verb Agreement every time you speak, and keep half an eye on Articles (a/an/the). Awareness first, perfection later.
+알렉스|en|That&#x27;s all for this episode. Have a wonderful week, keep talking, and don&#x27;t fear mistakes.
+민지|en|They&#x27;re just English habits waiting to click. See you next Friday. Bye for now!</pre>
 <div class="toast" id="toast">✅ 복사됐어요! Gemini에 붙여넣으세요</div>
 <script>
+const PAGE_WEEK="2026-W26";
 const PROMPTS={chat:"아래는 이번 주 내 전화영어 학습 요약이야.\n\n[이번 주: 2026-W26 · 5회 수업]\n누적 약점 Top: Subject–Verb Agreement(6회), Articles (a/an/the)(5회), Verb Tense(4회)\nAI 교정(❌→✅):\n  - On the weekend, I gave the time to my wife. → Over the weekend, I gave my wife some time to herself.\n  - I have some worry about that movement because my wife doesn't like the wind. → I have some concerns about the move because my wife doesn't like the wind.\n  - My dream is to live in a house, but the reality is to live in an apartment. → My dream is to live in a house, but realistically we'll end up in an apartment.\n  - I think we have the risk management teams. Our team name is the audit team, auditing department. → I think we have a risk management team. It's called the audit team, or the auditing department.\n  - It is possible to understand going to the work or the path to the work. → It's about understanding the process or the workflow.\n  - So I think in our team is only think about the internal process, internal teams. → So I think our team only focuses on internal processes and internal teams.\n강사 교정(❌→✅):\n  - I do not yet → I have not yet\n  - I see a man who working on the desk → I see a man who is working at the desk. I see a man whose work is on the desk.\n  - These days Korea government they offer some tax → These days the Korean government offers some tax\n  - Which is prefer → Which do you prefer\n  - I'm little conservation person → I'm a little conservative. I'm a little bit of a conservative people.\n  - Five years ago almost people like the invest → Five years ago [almost all/most] people like to invest in real estate\n핵심 어휘: assess(평가하다, 사정하다), contingency plan(비상 계획, 만일의 사태에 대비한 계획), insulate((영향으로부터) 보호하다, 고립시키다), rigorous(철저한, 엄격한, 정밀한), redundancy(불필요한 중복, 여분), stationery(문구류 (종이, 펜, 봉투 등 글쓰기 관련 용품))\n\n위 약점·교정을 주제로 나와 영어로 대화하면서 복습시켜줘. 먼저 약점 1개와 관련된 상황을 영어로 질문하고, 내 대답이 자연스러운지 교정해줘. 한국어 설명은 필요할 때만 짧게.",lecture:"아래는 이번 주 내 전화영어 학습 요약이야.\n\n[이번 주: 2026-W26 · 5회 수업]\n누적 약점 Top: Subject–Verb Agreement(6회), Articles (a/an/the)(5회), Verb Tense(4회)\nAI 교정(❌→✅):\n  - On the weekend, I gave the time to my wife. → Over the weekend, I gave my wife some time to herself.\n  - I have some worry about that movement because my wife doesn't like the wind. → I have some concerns about the move because my wife doesn't like the wind.\n  - My dream is to live in a house, but the reality is to live in an apartment. → My dream is to live in a house, but realistically we'll end up in an apartment.\n  - I think we have the risk management teams. Our team name is the audit team, auditing department. → I think we have a risk management team. It's called the audit team, or the auditing department.\n  - It is possible to understand going to the work or the path to the work. → It's about understanding the process or the workflow.\n  - So I think in our team is only think about the internal process, internal teams. → So I think our team only focuses on internal processes and internal teams.\n강사 교정(❌→✅):\n  - I do not yet → I have not yet\n  - I see a man who working on the desk → I see a man who is working at the desk. I see a man whose work is on the desk.\n  - These days Korea government they offer some tax → These days the Korean government offers some tax\n  - Which is prefer → Which do you prefer\n  - I'm little conservation person → I'm a little conservative. I'm a little bit of a conservative people.\n  - Five years ago almost people like the invest → Five years ago [almost all/most] people like to invest in real estate\n핵심 어휘: assess(평가하다, 사정하다), contingency plan(비상 계획, 만일의 사태에 대비한 계획), insulate((영향으로부터) 보호하다, 고립시키다), rigorous(철저한, 엄격한, 정밀한), redundancy(불필요한 중복, 여분), stationery(문구류 (종이, 펜, 봉투 등 글쓰기 관련 용품))\n\n위 내용을 강의식으로 차근차근 설명해줘. 각 약점이 왜 틀렸는지 규칙을 짚고, 쉬운 예문 2~3개씩 더 들어주고, 마지막에 1분 요약과 연습문제 3개를 줘.",radio:"아래는 이번 주 내 전화영어 학습 요약이야.\n\n[이번 주: 2026-W26 · 5회 수업]\n누적 약점 Top: Subject–Verb Agreement(6회), Articles (a/an/the)(5회), Verb Tense(4회)\nAI 교정(❌→✅):\n  - On the weekend, I gave the time to my wife. → Over the weekend, I gave my wife some time to herself.\n  - I have some worry about that movement because my wife doesn't like the wind. → I have some concerns about the move because my wife doesn't like the wind.\n  - My dream is to live in a house, but the reality is to live in an apartment. → My dream is to live in a house, but realistically we'll end up in an apartment.\n  - I think we have the risk management teams. Our team name is the audit team, auditing department. → I think we have a risk management team. It's called the audit team, or the auditing department.\n  - It is possible to understand going to the work or the path to the work. → It's about understanding the process or the workflow.\n  - So I think in our team is only think about the internal process, internal teams. → So I think our team only focuses on internal processes and internal teams.\n강사 교정(❌→✅):\n  - I do not yet → I have not yet\n  - I see a man who working on the desk → I see a man who is working at the desk. I see a man whose work is on the desk.\n  - These days Korea government they offer some tax → These days the Korean government offers some tax\n  - Which is prefer → Which do you prefer\n  - I'm little conservation person → I'm a little conservative. I'm a little bit of a conservative people.\n  - Five years ago almost people like the invest → Five years ago [almost all/most] people like to invest in real estate\n핵심 어휘: assess(평가하다, 사정하다), contingency plan(비상 계획, 만일의 사태에 대비한 계획), insulate((영향으로부터) 보호하다, 고립시키다), rigorous(철저한, 엄격한, 정밀한), redundancy(불필요한 중복, 여분), stationery(문구류 (종이, 펜, 봉투 등 글쓰기 관련 용품))\n\n너는 라디오 진행자, 나는 오늘의 게스트야. 내 이번 주 영어 학습 여정을 주제로 인터뷰하듯 대화해줘. 가볍고 격려하는 톤으로, 중간중간 위 교정 표현을 자연스럽게 연습시켜줘. 영어 위주, 한국어는 가끔."};
 function showToast(m){const t=document.getElementById('toast');t.textContent=m;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500);}
 function copyOpen(mode){const txt=PROMPTS[mode]||'';const go=()=>{showToast('✅ 복사됐어요! Gemini에 붙여넣으세요');setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600);};navigator.clipboard.writeText(txt).then(go).catch(()=>{const a=document.createElement('textarea');a.value=txt;document.body.appendChild(a);a.select();document.execCommand('copy');a.remove();go();});}
@@ -274,23 +159,35 @@ const synth=window.speechSynthesis;
 let voices=[],koV=null,enV=null;
 function pickVoices(){voices=synth?synth.getVoices():[];koV=voices.find(v=>v.lang&&v.lang.toLowerCase().startsWith('ko'))||null;enV=voices.find(v=>v.lang&&v.lang.toLowerCase().startsWith('en'))||null;}
 if(synth){pickVoices();synth.onvoiceschanged=pickVoices;}
-let idx=0,playing=false,rate=1;
+let idx=0,playing=false,rate=1,wakeLock=null;
+async function acquireWake(){try{if('wakeLock' in navigator){wakeLock=await navigator.wakeLock.request('screen');wakeLock.addEventListener('release',()=>{wakeLock=null;});}}catch(e){}}
+function releaseWake(){try{if(wakeLock){wakeLock.release();wakeLock=null;}}catch(e){}}
 function highlight(i){document.querySelectorAll('.bubble').forEach(b=>b.classList.toggle('on',(+b.dataset.idx)===i));const el=document.querySelector('.bubble.on');if(el)el.scrollIntoView({block:'center',behavior:'smooth'});}
-function speakAt(i){if(!synth||i>=LINES.length){playing=false;highlight(-1);idx=0;return;}idx=i;highlight(i);const ln=LINES[i];const u=new SpeechSynthesisUtterance(ln.text);u.lang=ln.lang==='ko'?'ko-KR':'en-US';const v=ln.lang==='ko'?koV:enV;if(v)u.voice=v;u.rate=rate;u.pitch=ln.sp==='민지'?1.15:0.85;u.onend=()=>{if(playing)speakAt(i+1);};synth.speak(u);}
-document.getElementById('play').onclick=()=>{if(!synth){document.getElementById('ttswarn').textContent='이 브라우저는 음성 재생을 지원하지 않아요. 대본을 읽어주세요.';return;}if(playing)return;playing=true;synth.cancel();speakAt(idx>=LINES.length?0:idx);};
+function speakAt(i){if(!synth||i>=LINES.length){playing=false;releaseWake();highlight(-1);idx=0;return;}idx=i;highlight(i);const ln=LINES[i];const u=new SpeechSynthesisUtterance(ln.text);u.lang=ln.lang==='ko'?'ko-KR':'en-US';const v=ln.lang==='ko'?koV:enV;if(v)u.voice=v;u.rate=rate;u.pitch=ln.sp==='민지'?1.15:0.85;u.onend=()=>{if(playing)speakAt(i+1);};u.onerror=()=>{if(playing)setTimeout(()=>speakAt(i+1),250);};synth.speak(u);}
+document.getElementById('play').onclick=()=>{if(!synth){document.getElementById('ttswarn').textContent='이 브라우저는 음성 재생을 지원하지 않아요. 대본을 읽어주세요.';return;}if(playing)return;playing=true;acquireWake();synth.cancel();speakAt(idx>=LINES.length?0:idx);};
 document.getElementById('pause').onclick=()=>{if(synth&&synth.speaking)synth.pause();};
-document.getElementById('resume').onclick=()=>{if(synth)synth.resume();};
-document.getElementById('stop').onclick=()=>{playing=false;if(synth)synth.cancel();idx=0;highlight(-1);};
+document.getElementById('resume').onclick=()=>{if(synth){synth.resume();if(playing)acquireWake();}};
+document.getElementById('stop').onclick=()=>{playing=false;releaseWake();if(synth)synth.cancel();idx=0;highlight(-1);};
+document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='visible'&&playing){if(synth)synth.resume();acquireWake();}});
 const rE=document.getElementById('rate');rE.oninput=()=>{rate=parseFloat(rE.value);document.getElementById('rv').textContent=rate.toFixed(1)+'x';};
 if(!synth)document.getElementById('ttswarn').textContent='⚠️ 이 브라우저는 음성 합성을 지원하지 않아 대본만 표시됩니다.';
 
-// ── 오디오 에피소드 (radio/episodes.json 클라이언트 fetch) ──
+// ── 오디오 에피소드: 이 페이지의 주차(PAGE_WEEK) MP3 표시 + 목록에 🎧 뱃지 ──
 fetch('radio/episodes.json',{cache:'no-store'}).then(r=>r.ok?r.json():[]).then(eps=>{
-  const L=document.getElementById('audio-latest'),A=document.getElementById('audio-archive');
-  if(!Array.isArray(eps)||!eps.length){L.textContent='아직 오디오 에피소드가 없어요. 아래 ▶ 바로 듣기(브라우저 음성)로 들어보세요.';return;}
-  const top=eps[0];
-  L.innerHTML='<div class="epweek">'+top.week+' · '+(top.date||'')+'</div><audio controls preload="none" src="radio/'+top.file+'"></audio>';
-  A.innerHTML=eps.slice(1).map(e=>'<a href="radio/'+e.file+'">🎧 '+e.week+' ('+(e.date||'')+')</a>').join('');
-}).catch(()=>{document.getElementById('audio-latest').textContent='오디오 목록을 불러오지 못했어요.';});
+  if(!Array.isArray(eps))eps=[];
+  eps.forEach(e=>{const row=document.querySelector('.weekrow[data-wk="'+e.week+'"] .wk-audio');if(row)row.textContent='🎧';});
+  const L=document.getElementById('audio-latest');
+  const mine=eps.find(e=>e.week===PAGE_WEEK);
+  if(mine){
+    L.innerHTML='<div class="epweek">'+mine.week+' · '+(mine.date||'')+'</div><audio id="ep-audio" controls preload="none" src="radio/'+mine.file+'"></audio>';
+    const au=document.getElementById('ep-audio');
+    // 잠금화면/화면 꺼짐에서도 재생 + 컨트롤 노출(MediaSession). 진짜 음성 파일이라 백그라운드 OK.
+    if(au&&'mediaSession' in navigator){
+      try{navigator.mediaSession.metadata=new MediaMetadata({title:'영어 주간 라디오 '+mine.week,artist:'민지 & 알렉스 · 당근영어',album:'Weekly English Radio'});}catch(e){}
+      try{navigator.mediaSession.setActionHandler('play',()=>au.play());navigator.mediaSession.setActionHandler('pause',()=>au.pause());}catch(e){}
+    }
+  }
+  else{L.textContent='이 주차 오디오(MP3)는 아직 없어요. 아래 ▶ 바로 듣기(브라우저 음성)로 들어보세요.';}
+}).catch(()=>{document.getElementById('audio-latest').textContent='오디오 목록을 불러오지 못했어요. 아래 ▶ 바로 듣기로 들어보세요.';});
 </script>
-<script>if("serviceWorker" in navigator){addEventListener("load",function(){navigator.serviceWorker.register("sw.js").catch(function(){})})}</script></body></html>
+</body></html>
