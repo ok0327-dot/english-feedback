@@ -311,7 +311,7 @@ def render_week(iso, week_ls, cum_ls, prev_iso, next_iso, is_current, carrot_map
     syn = rule_synthesis(week_ls, cum_ls)
 
     return f"""<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1"><link rel="manifest" href="/manifest.webmanifest"><meta name="theme-color" content="#0f0f13"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="당근영어"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png"><script src="/sw-reg.js" defer></script>
 <title>📊 주간 복습 {week_label(iso)}</title><style>{CSS}</style></head><body>
 <div class="header"><h1>📊 주간 복습 · {week_label(iso)}</h1>
 <div class="range">{week_range(iso)}{cur_badge}</div></div>
@@ -426,7 +426,7 @@ def render_vocab(all_ls, carrot_map=None):
         f"❌→✅ 교정 표현은 소리 내어 한 번씩 말해 보세요.")
 
     return f"""<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1"><link rel="manifest" href="/manifest.webmanifest"><meta name="theme-color" content="#0f0f13"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="당근영어"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png"><script src="/sw-reg.js" defer></script>
 <title>📚 누적 단어 &amp; 주요 표현</title><style>{CSS}</style></head><body>
 <div class="header"><h1>📚 누적 단어 &amp; 주요 표현</h1>
 <div class="range">{CUTOFF} ~ 누적 정리 · 매주 금요일 갱신</div></div>
@@ -467,7 +467,7 @@ def render_index(weeks, all_ls):
                  f'<span class="wf">{esc(focus)}</span>'
                  f'<span class="wc">{len(wls)}회</span></a>')
     return f"""<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1"><link rel="manifest" href="/manifest.webmanifest"><meta name="theme-color" content="#0f0f13"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="당근영어"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png"><script src="/sw-reg.js" defer></script>
 <title>📚 주간 복습 기록</title><style>{CSS}</style></head><body>
 <div class="header"><h1>📚 주간 복습 기록</h1>
 <div class="range">{CUTOFF} ~ 누적 {len(all_ls)} LESSONS</div></div>
