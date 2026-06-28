@@ -1,0 +1,193 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#0f0f13"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="당근영어"><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="icon" type="image/png" sizes="192x192" href="icon-192.png"><script src="install-banner.js" defer></script><script src="sw-reg.js" defer></script>
+<title>🎙️ 라디오 2026-W24</title><style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Noto Sans KR',-apple-system,sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.7}
+.header{background:linear-gradient(135deg,#241a3a,#3a2410,#0f3460);padding:42px 24px 30px;text-align:center;border-bottom:1px solid rgba(255,255,255,.06)}
+.header h1{font-size:24px;color:#f5f0ff;margin-bottom:8px}
+.header .range{font-size:13px;color:#c4b5fd;letter-spacing:1px}
+.nav{max-width:760px;margin:0 auto;padding:14px 20px 0;display:flex;justify-content:space-between;font-size:13px}
+.nav a{color:#64748b;text-decoration:none;padding:6px 10px;border-radius:8px}.nav a:hover{color:#a78bfa;background:#16161d}
+.container{max-width:760px;margin:0 auto;padding:18px 20px 80px}
+.card{background:#16161d;border:1px solid rgba(255,255,255,.06);border-radius:16px;padding:20px;margin-bottom:18px}
+.card h2{font-size:16px;color:#f1f5f9;margin-bottom:12px}
+.player{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-bottom:14px}
+.pbtn{border:none;border-radius:10px;padding:12px 18px;font-size:14px;font-weight:700;cursor:pointer;font-family:inherit;color:#0f0f13;background:linear-gradient(135deg,#a78bfa,#818cf8)}
+.pbtn.alt{background:#1e293b;color:#cbd5e1}
+.pbtn:active{transform:translateY(1px)}
+.speed{display:flex;align-items:center;gap:6px;font-size:12px;color:#94a3b8;margin-left:auto}
+.speed input{accent-color:#a78bfa}
+.stage{display:flex;flex-direction:column;gap:10px;margin-top:6px}
+.bubble{max-width:88%;padding:11px 14px;border-radius:14px;font-size:14px;border:1px solid transparent;transition:all .2s}
+.bubble .who{display:block;font-size:11px;font-weight:700;margin-bottom:3px;opacity:.8}
+.bubble.mc{align-self:flex-start;background:#1e1b2e;border-color:rgba(167,139,250,.25)}.bubble.mc .who{color:#a78bfa}
+.bubble.coach{align-self:flex-end;background:#1a2433;border-color:rgba(56,189,248,.22)}.bubble.coach .who{color:#38bdf8}
+.bubble.on{border-color:#fbbf24;box-shadow:0 0 0 1px #fbbf24}
+.modes{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.mode{display:flex;flex-direction:column;gap:4px;align-items:center;padding:16px 10px;background:#0f0f13;border:1px solid rgba(255,255,255,.08);border-radius:12px;color:#cbd5e1;cursor:pointer;font-size:13px;text-align:center}
+.mode:hover{border-color:rgba(167,139,250,.4);color:#a78bfa}.mode .ico{font-size:22px}.mode .sub{font-size:11px;color:#64748b}
+.muted{color:#64748b;font-size:12px}
+.toast{position:fixed;bottom:28px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#a78bfa;padding:13px 26px;border-radius:12px;font-size:14px;border:1px solid rgba(167,139,250,.25);opacity:0;transition:all .4s;z-index:99}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+.epweek{font-size:13px;color:#a78bfa;font-weight:700;margin-bottom:6px}
+audio{width:100%;margin-top:4px}
+.archive{display:flex;flex-direction:column;gap:6px;margin-top:10px}
+.archive a{font-size:12.5px;color:#94a3b8;text-decoration:none;padding:8px 12px;background:#0f0f13;border:1px solid rgba(255,255,255,.06);border-radius:8px}
+.archive a:hover{color:#a78bfa;border-color:rgba(167,139,250,.3)}
+.weeklist{display:flex;flex-direction:column;gap:6px;margin-top:4px}
+.weekrow{display:flex;align-items:center;gap:10px;font-size:13px;color:#cbd5e1;text-decoration:none;padding:11px 13px;background:#0f0f13;border:1px solid rgba(255,255,255,.06);border-radius:10px}
+.weekrow:hover{border-color:rgba(167,139,250,.4);color:#a78bfa}
+.weekrow.active{border-color:rgba(167,139,250,.5);background:#1e1b2e}
+.weekrow .wk{font-weight:700;color:#a78bfa;white-space:nowrap}
+.weekrow .wr{color:#64748b}
+.weekrow .wk-audio{margin-left:auto;font-size:14px;min-width:18px;text-align:right}
+.foot{text-align:center;font-size:11px;color:#475569;margin-top:26px;line-height:1.8}
+</style></head><body>
+<div class="header"><h1>🎙️ 라디오 · 2026-W24</h1>
+<div class="range">6/8~6/12 · 주차 기록 · 브라우저 음성으로 청취</div></div>
+<div class="nav"><a href="radio.html">← 최신 라디오</a><a href="review-index.html">📚 복습 목록 →</a></div>
+<div class="container">
+
+  <div class="card"><h2>🎧 오디오 에피소드 <span class="muted" style="font-weight:400">· 진짜 음성 · 이 주차</span></h2>
+    <div id="audio-latest" class="muted">에피소드 불러오는 중…</div></div>
+
+  <div class="card"><h2>🗂 주차별 라디오 기록 <span class="muted" style="font-weight:400">· 최신순 · 누적</span></h2>
+    <div class="weeklist"><a class="weekrow" data-wk="2026-W26" href="radio.html"><span class="wk">2026-W26</span><span class="wr">6/22~6/26 · 5회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W25" href="radio-2026-W25.html"><span class="wk">2026-W25</span><span class="wr">6/15~6/19 · 5회</span><span class="wk-audio"></span></a><a class="weekrow active" data-wk="2026-W24" href="radio-2026-W24.html"><span class="wk">2026-W24 · 현재</span><span class="wr">6/8~6/12 · 5회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W23" href="radio-2026-W23.html"><span class="wk">2026-W23</span><span class="wr">6/1~6/5 · 1회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W22" href="radio-2026-W22.html"><span class="wk">2026-W22</span><span class="wr">5/25~5/29 · 3회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W21" href="radio-2026-W21.html"><span class="wk">2026-W21</span><span class="wr">5/18~5/22 · 3회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W20" href="radio-2026-W20.html"><span class="wk">2026-W20</span><span class="wr">5/11~5/15 · 4회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W19" href="radio-2026-W19.html"><span class="wk">2026-W19</span><span class="wr">5/4~5/8 · 1회</span><span class="wk-audio"></span></a></div></div>
+
+  <div class="card"><h2>▶ 바로 듣기 <span class="muted" style="font-weight:400">· 브라우저 음성(즉시·폴백)</span></h2>
+    <div class="player">
+      <button class="pbtn" id="play">▶ 재생</button>
+      <button class="pbtn alt" id="pause">⏸ 일시정지</button>
+      <button class="pbtn alt" id="resume">▶ 이어듣기</button>
+      <button class="pbtn alt" id="stop">⏹ 처음부터</button>
+      <label class="speed">속도 <input type="range" id="rate" min="0.7" max="1.3" step="0.1" value="1"> <span id="rv">1.0x</span></label>
+    </div>
+    <div class="muted" id="ttswarn" style="margin-bottom:8px"></div>
+    <div class="muted" style="margin:2px 0 10px;font-size:11.5px;line-height:1.7">💡 재생 중에는 화면이 자동으로 꺼지지 않게 막아요(Wake&nbsp;Lock). 다만 직접 화면을 끄면 브라우저 음성은 멈출 수 있어요 — <b>화면을 끈 채 듣고 싶다면 맨 위 🎧 오디오 에피소드(MP3)</b>를 쓰세요. 잠금화면에서도 재생됩니다.</div>
+    <div class="stage" id="stage"></div>
+  </div>
+
+  <div class="card"><h2>💬 이 내용으로 AI와 이야기하기</h2>
+    <div class="muted" style="margin-bottom:10px">클릭하면 이 주차 요약 프롬프트가 복사되고 Gemini가 열립니다. 붙여넣고 대화하세요.</div>
+    <div class="modes">
+      <div class="mode" onclick="copyOpen('chat')"><span class="ico">💬</span>튜터 대화<span class="sub">약점 집중 연습</span></div>
+      <div class="mode" onclick="copyOpen('lecture')"><span class="ico">🎓</span>강의식 설명<span class="sub">규칙+예문+퀴즈</span></div>
+      <div class="mode" onclick="copyOpen('radio')"><span class="ico">🎙</span>라디오 인터뷰<span class="sub">게스트 롤플레이</span></div>
+    </div>
+  </div>
+
+  <div class="foot">대본: scripts/build_radio.py · 음성: 브라우저 Web Speech(무료) · 주차별 누적 · 매주 금요일 Claude 갱신</div>
+</div>
+
+<pre id="radio-src" hidden>민지|en|Hello and welcome back to your Weekly English Radio. I&#x27;m Minji, your host.
+알렉스|en|And I&#x27;m Alex, your coach. This is 2026-W24, and you spoke in 5 lessons this week. Let&#x27;s not just list your mistakes today, let&#x27;s understand them.
+민지|en|Our headline pattern is Subject–Verb Agreement. It has shown up 3 times so far. Alex, why does this one keep coming back?
+알렉스|en|Great question. Korean verbs don&#x27;t change for he, she, or it, and Korean often drops the subject entirely. English keeps the subject and adds an s for he, she, it.
+민지|ko|한국어 동사는 그, 그녀, 그것이어도 형태가 안 변하고 주어를 자주 생략하죠. 영어는 주어를 꼭 두고 3인칭 단수엔 s를 붙여요.
+알렉스|en|He, she, it — add an s. Say it like a reflex every single time.
+민지|en|Let&#x27;s hear that in your own words. Here are a few sentences you actually said, and the natural version.
+알렉스|en|You said: This weekend, it is normal and special.
+민지|en|More naturally: This weekend was both normal and special.
+알렉스|en|You said: The art museum is about the picture.
+민지|en|More naturally: The art museum features paintings/art.
+알렉스|en|You said: Even you older, where are you going? Do you want to stay home or stay at your home?
+민지|en|More naturally: When you get older, where would you want to live? At home or in a nursing home?
+알렉스|en|You said: This day is the front of summer.
+민지|en|More naturally: This day marks the beginning of summer.
+알렉스|en|Hear the small shifts? Same idea, just the English habit on top.
+민지|en|Time for the Correction Clinic. Quick-fire, repeat after us if you can.
+알렉스|en|You said: So if you come in Korea, every tree leaves a vivid green color and bright.
+민지|en|Better: If you come to Korea, you&#x27;ll see that all the trees have vivid green leaves and look bright.
+알렉스|en|You said: And his eyes closed and his nose with the cover hand.
+민지|en|Better: His eyes are closed, and he&#x27;s covering his nose with his hand.
+알렉스|en|You said: just go for work and make some projects on my computer, use the AI, and have a little exercise in a gym.
+민지|en|Better: I&#x27;ll just go to work , work on some projects on my computer, use AI, and get some exercise at the gym.
+알렉스|en|You said: it is more far.
+민지|en|Better: It is farther .
+알렉스|en|You said: I don&#x27;t like the online because it is not fun, but that is possible to survive every week because we don&#x27;t have time, but we need grocery products.
+민지|en|Better: I don&#x27;t really enjoy online shopping because it&#x27;s not fun, but it&#x27;s how we manage every week because we&#x27;re short on time and need groceries.
+알렉스|en|You said: I was wondering, in your country, do you have the season of the rain season?
+민지|en|Better: I was wondering, do you have a rainy season in your country?
+알렉스|en|You said: So just I was wondering that fact.
+민지|en|Better: I was just wondering about that.
+알렉스|en|You said: if the government gives more money to the older outside working job people, at that time it is more recovery than the situation.
+민지|en|Better: If the government provides more incentives for people in outdoor jobs, the situation could improve.
+알렉스|en|You said: And I&#x27;m not sure it is the right answer to your question.
+민지|en|Better: And I&#x27;m not sure if that&#x27;s the right answer to your question.
+알렉스|en|You said: Usually, I don&#x27;t like, I don&#x27;t enjoy the shopping, the clothes shopping.
+민지|en|Better: Usually, I don&#x27;t really enjoy shopping for clothes.
+알렉스|en|Your tutor also marked a few this week. These came straight from your live lessons.
+민지|en|Instead of: I went to bed late so it is tired
+알렉스|en|Say: I went to bed late so I am tired
+민지|en|Instead of: Maybe this Saturday and Friday there are many people come to Busan
+알렉스|en|Say: Maybe this Saturday and Friday there are many people coming to Busan
+민지|en|Instead of: The bright is reflect the window
+알렉스|en|Say: The [bright light is/street is brightly] reflected in the window
+민지|en|Instead of: Usually two time per years I purchase clothes
+알렉스|en|Say: Usually two times per year I purchase clothes
+민지|en|Instead of: It is impossible to wear the short pants and hood-t
+알렉스|en|Say: It is impossible to wear short or a hoodie
+민지|en|Instead of: Sometimes I buy some store, sometimes I buy online
+알렉스|en|Say: Sometimes I buy (clothes) from some store, sometimes I buy online
+민지|en|Now, Vocabulary in Context. Not just the word, but how it lives in a sentence.
+알렉스|en|Word to keep: productive. It means 생산적인, 유익한. Try saying one real sentence with it today.
+알렉스|en|Word to keep: peaceful. It means 평화로운, 고요한. Try saying one real sentence with it today.
+알렉스|en|Word to keep: envision. It means 마음속에 그리다, 상상하다. Try saying one real sentence with it today.
+알렉스|en|Word to keep: reside. It means 거주하다, 살다 (live보다 격식 있는 표현). Try saying one real sentence with it today.
+알렉스|en|Word to keep: flexibility. It means 유연성, 융통성. Try saying one real sentence with it today.
+알렉스|en|Word to keep: signify. It means 의미하다, 나타내다, 중요하다. Try saying one real sentence with it today.
+민지|en|Before we wrap, let&#x27;s stretch a little beyond the corrections.
+알렉스|en|Here&#x27;s a fun one. The word OK might be the most spoken word on Earth, and it began as a silly joke abbreviation in 1830s Boston newspapers for all correct, spelled wrong on purpose.
+민지|ko|오늘의 흥미 코너예요. OK는 지구에서 가장 많이 쓰이는 말일 수도 있는데, 1830년대 보스턴 신문에서 일부러 틀리게 쓴 농담 줄임말에서 시작됐대요.
+알렉스|en|Quick recap. Your fluency average is 7.2 out of ten, and it&#x27;s steady. That&#x27;s real progress.
+민지|en|This week, hunt for Subject–Verb Agreement every time you speak, and keep half an eye on Verb Forms / Auxiliaries. Awareness first, perfection later.
+알렉스|en|That&#x27;s all for this episode. Have a wonderful week, keep talking, and don&#x27;t fear mistakes.
+민지|en|They&#x27;re just English habits waiting to click. See you next Friday. Bye for now!</pre>
+<div class="toast" id="toast">✅ 복사됐어요! Gemini에 붙여넣으세요</div>
+<script>
+const PAGE_WEEK="2026-W24";
+const PROMPTS={chat:"아래는 이번 주 내 전화영어 학습 요약이야.\n\n[이번 주: 2026-W24 · 5회 수업]\n누적 약점 Top: Subject–Verb Agreement(3회), Verb Forms / Auxiliaries(3회), Articles (a/an/the)(3회)\nAI 교정(❌→✅):\n  - This weekend, it is normal and special. → This weekend was both normal and special.\n  - The art museum is about the picture. → The art museum features paintings/art.\n  - Even you older, where are you going? Do you want to stay home or stay at your home? → When you get older, where would you want to live? At home or in a nursing home?\n  - This day is the front of summer. → This day marks the beginning of summer.\n  - So if you come in Korea, every tree leaves a vivid green color and bright. → If you come to Korea, you'll see that all the trees have vivid green leaves and look bright.\n  - And his eyes closed and his nose with the cover hand. → His eyes are closed, and he's covering his nose with his hand.\n강사 교정(❌→✅):\n  - I went to bed late so it is tired → I went to bed late so I am tired\n  - Maybe this Saturday and Friday there are many people come to Busan → Maybe this Saturday and Friday there are many people coming to Busan\n  - The bright is reflect the window → The [bright light is/street is brightly] reflected in the window\n  - Usually two time per years I purchase clothes → Usually two times per year I purchase clothes\n  - It is impossible to wear the short pants and hood-t → It is impossible to wear short or a hoodie\n  - Sometimes I buy some store, sometimes I buy online → Sometimes I buy (clothes) from some store, sometimes I buy online\n핵심 어휘: productive(생산적인, 유익한), peaceful(평화로운, 고요한), envision(마음속에 그리다, 상상하다), reside(거주하다, 살다 (live보다 격식 있는 표현)), flexibility(유연성, 융통성), signify(의미하다, 나타내다, 중요하다)\n\n위 약점·교정을 주제로 나와 영어로 대화하면서 복습시켜줘. 먼저 약점 1개와 관련된 상황을 영어로 질문하고, 내 대답이 자연스러운지 교정해줘. 한국어 설명은 필요할 때만 짧게.",lecture:"아래는 이번 주 내 전화영어 학습 요약이야.\n\n[이번 주: 2026-W24 · 5회 수업]\n누적 약점 Top: Subject–Verb Agreement(3회), Verb Forms / Auxiliaries(3회), Articles (a/an/the)(3회)\nAI 교정(❌→✅):\n  - This weekend, it is normal and special. → This weekend was both normal and special.\n  - The art museum is about the picture. → The art museum features paintings/art.\n  - Even you older, where are you going? Do you want to stay home or stay at your home? → When you get older, where would you want to live? At home or in a nursing home?\n  - This day is the front of summer. → This day marks the beginning of summer.\n  - So if you come in Korea, every tree leaves a vivid green color and bright. → If you come to Korea, you'll see that all the trees have vivid green leaves and look bright.\n  - And his eyes closed and his nose with the cover hand. → His eyes are closed, and he's covering his nose with his hand.\n강사 교정(❌→✅):\n  - I went to bed late so it is tired → I went to bed late so I am tired\n  - Maybe this Saturday and Friday there are many people come to Busan → Maybe this Saturday and Friday there are many people coming to Busan\n  - The bright is reflect the window → The [bright light is/street is brightly] reflected in the window\n  - Usually two time per years I purchase clothes → Usually two times per year I purchase clothes\n  - It is impossible to wear the short pants and hood-t → It is impossible to wear short or a hoodie\n  - Sometimes I buy some store, sometimes I buy online → Sometimes I buy (clothes) from some store, sometimes I buy online\n핵심 어휘: productive(생산적인, 유익한), peaceful(평화로운, 고요한), envision(마음속에 그리다, 상상하다), reside(거주하다, 살다 (live보다 격식 있는 표현)), flexibility(유연성, 융통성), signify(의미하다, 나타내다, 중요하다)\n\n위 내용을 강의식으로 차근차근 설명해줘. 각 약점이 왜 틀렸는지 규칙을 짚고, 쉬운 예문 2~3개씩 더 들어주고, 마지막에 1분 요약과 연습문제 3개를 줘.",radio:"아래는 이번 주 내 전화영어 학습 요약이야.\n\n[이번 주: 2026-W24 · 5회 수업]\n누적 약점 Top: Subject–Verb Agreement(3회), Verb Forms / Auxiliaries(3회), Articles (a/an/the)(3회)\nAI 교정(❌→✅):\n  - This weekend, it is normal and special. → This weekend was both normal and special.\n  - The art museum is about the picture. → The art museum features paintings/art.\n  - Even you older, where are you going? Do you want to stay home or stay at your home? → When you get older, where would you want to live? At home or in a nursing home?\n  - This day is the front of summer. → This day marks the beginning of summer.\n  - So if you come in Korea, every tree leaves a vivid green color and bright. → If you come to Korea, you'll see that all the trees have vivid green leaves and look bright.\n  - And his eyes closed and his nose with the cover hand. → His eyes are closed, and he's covering his nose with his hand.\n강사 교정(❌→✅):\n  - I went to bed late so it is tired → I went to bed late so I am tired\n  - Maybe this Saturday and Friday there are many people come to Busan → Maybe this Saturday and Friday there are many people coming to Busan\n  - The bright is reflect the window → The [bright light is/street is brightly] reflected in the window\n  - Usually two time per years I purchase clothes → Usually two times per year I purchase clothes\n  - It is impossible to wear the short pants and hood-t → It is impossible to wear short or a hoodie\n  - Sometimes I buy some store, sometimes I buy online → Sometimes I buy (clothes) from some store, sometimes I buy online\n핵심 어휘: productive(생산적인, 유익한), peaceful(평화로운, 고요한), envision(마음속에 그리다, 상상하다), reside(거주하다, 살다 (live보다 격식 있는 표현)), flexibility(유연성, 융통성), signify(의미하다, 나타내다, 중요하다)\n\n너는 라디오 진행자, 나는 오늘의 게스트야. 내 이번 주 영어 학습 여정을 주제로 인터뷰하듯 대화해줘. 가볍고 격려하는 톤으로, 중간중간 위 교정 표현을 자연스럽게 연습시켜줘. 영어 위주, 한국어는 가끔."};
+function showToast(m){const t=document.getElementById('toast');t.textContent=m;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500);}
+function copyOpen(mode){const txt=PROMPTS[mode]||'';const go=()=>{showToast('✅ 복사됐어요! Gemini에 붙여넣으세요');setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600);};navigator.clipboard.writeText(txt).then(go).catch(()=>{const a=document.createElement('textarea');a.value=txt;document.body.appendChild(a);a.select();document.execCommand('copy');a.remove();go();});}
+
+// ── 라디오 플레이어 (Web Speech API) ──
+const RAW=document.getElementById('radio-src').textContent.trim();
+const LINES=RAW.split('\n').map(l=>l.trim()).filter(Boolean).map(l=>{const i1=l.indexOf('|'),i2=l.indexOf('|',i1+1);return{sp:l.slice(0,i1),lang:l.slice(i1+1,i2),text:l.slice(i2+1)};});
+const stage=document.getElementById('stage');
+LINES.forEach((ln,i)=>{const d=document.createElement('div');d.className='bubble '+(ln.sp==='민지'?'mc':'coach');d.dataset.idx=i;d.innerHTML='<span class="who">'+ln.sp+'</span>'+ln.text;stage.appendChild(d);});
+const synth=window.speechSynthesis;
+let voices=[],koV=null,enV=null;
+function pickVoices(){voices=synth?synth.getVoices():[];koV=voices.find(v=>v.lang&&v.lang.toLowerCase().startsWith('ko'))||null;enV=voices.find(v=>v.lang&&v.lang.toLowerCase().startsWith('en'))||null;}
+if(synth){pickVoices();synth.onvoiceschanged=pickVoices;}
+let idx=0,playing=false,rate=1,wakeLock=null;
+async function acquireWake(){try{if('wakeLock' in navigator){wakeLock=await navigator.wakeLock.request('screen');wakeLock.addEventListener('release',()=>{wakeLock=null;});}}catch(e){}}
+function releaseWake(){try{if(wakeLock){wakeLock.release();wakeLock=null;}}catch(e){}}
+function highlight(i){document.querySelectorAll('.bubble').forEach(b=>b.classList.toggle('on',(+b.dataset.idx)===i));const el=document.querySelector('.bubble.on');if(el)el.scrollIntoView({block:'center',behavior:'smooth'});}
+function speakAt(i){if(!synth||i>=LINES.length){playing=false;releaseWake();highlight(-1);idx=0;return;}idx=i;highlight(i);const ln=LINES[i];const u=new SpeechSynthesisUtterance(ln.text);u.lang=ln.lang==='ko'?'ko-KR':'en-US';const v=ln.lang==='ko'?koV:enV;if(v)u.voice=v;u.rate=rate;u.pitch=ln.sp==='민지'?1.15:0.85;u.onend=()=>{if(playing)speakAt(i+1);};u.onerror=()=>{if(playing)setTimeout(()=>speakAt(i+1),250);};synth.speak(u);}
+document.getElementById('play').onclick=()=>{if(!synth){document.getElementById('ttswarn').textContent='이 브라우저는 음성 재생을 지원하지 않아요. 대본을 읽어주세요.';return;}if(playing)return;playing=true;acquireWake();synth.cancel();speakAt(idx>=LINES.length?0:idx);};
+document.getElementById('pause').onclick=()=>{if(synth&&synth.speaking)synth.pause();};
+document.getElementById('resume').onclick=()=>{if(synth){synth.resume();if(playing)acquireWake();}};
+document.getElementById('stop').onclick=()=>{playing=false;releaseWake();if(synth)synth.cancel();idx=0;highlight(-1);};
+document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='visible'&&playing){if(synth)synth.resume();acquireWake();}});
+const rE=document.getElementById('rate');rE.oninput=()=>{rate=parseFloat(rE.value);document.getElementById('rv').textContent=rate.toFixed(1)+'x';};
+if(!synth)document.getElementById('ttswarn').textContent='⚠️ 이 브라우저는 음성 합성을 지원하지 않아 대본만 표시됩니다.';
+
+// ── 오디오 에피소드: 이 페이지의 주차(PAGE_WEEK) MP3 표시 + 목록에 🎧 뱃지 ──
+fetch('radio/episodes.json',{cache:'no-store'}).then(r=>r.ok?r.json():[]).then(eps=>{
+  if(!Array.isArray(eps))eps=[];
+  eps.forEach(e=>{const row=document.querySelector('.weekrow[data-wk="'+e.week+'"] .wk-audio');if(row)row.textContent='🎧';});
+  const L=document.getElementById('audio-latest');
+  const mine=eps.find(e=>e.week===PAGE_WEEK);
+  if(mine){
+    L.innerHTML='<div class="epweek">'+mine.week+' · '+(mine.date||'')+'</div><audio id="ep-audio" controls preload="none" src="radio/'+mine.file+'"></audio>';
+    const au=document.getElementById('ep-audio');
+    // 잠금화면/화면 꺼짐에서도 재생 + 컨트롤 노출(MediaSession). 진짜 음성 파일이라 백그라운드 OK.
+    if(au&&'mediaSession' in navigator){
+      try{navigator.mediaSession.metadata=new MediaMetadata({title:'영어 주간 라디오 '+mine.week,artist:'민지 & 알렉스 · 당근영어',album:'Weekly English Radio'});}catch(e){}
+      try{navigator.mediaSession.setActionHandler('play',()=>au.play());navigator.mediaSession.setActionHandler('pause',()=>au.pause());}catch(e){}
+    }
+  }
+  else{L.textContent='이 주차 오디오(MP3)는 아직 없어요. 아래 ▶ 바로 듣기(브라우저 음성)로 들어보세요.';}
+}).catch(()=>{document.getElementById('audio-latest').textContent='오디오 목록을 불러오지 못했어요. 아래 ▶ 바로 듣기로 들어보세요.';});
+</script>
+</body></html>
