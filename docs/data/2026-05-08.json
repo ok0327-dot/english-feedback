@@ -1,0 +1,53 @@
+{
+ "date": "2026-05-08",
+ "iso": [
+  2026,
+  19
+ ],
+ "topic": "Discussing Business Travel, Weekend Plans, and Food Economics",
+ "grammar": "Subject-Verb Agreement (주어-동사 수일치)",
+ "grammar_norm": "Subject–Verb Agreement",
+ "score": 7.5,
+ "pairs": [
+  {
+   "said": "today I'm having a business travel now.",
+   "natural": "I'm on a business trip today."
+  },
+  {
+   "said": "I don't set up the plan, not yet.",
+   "natural": "I haven't made any plans yet."
+  },
+  {
+   "said": "Our company is the LPG and LNG gas corporation. We import gas and sell the domestic and sell the abroad.",
+   "natural": "Our company is an LPG and LNG gas corporation. We import and sell gas both domestically and abroad."
+  }
+ ],
+ "vocab": [
+  {
+   "word": "corporation",
+   "pos": "명사",
+   "meaning": "기업, 법인"
+  },
+  {
+   "word": "domestically",
+   "pos": "부사",
+   "meaning": "국내에서, 국내적으로"
+  },
+  {
+   "word": "abroad",
+   "pos": "부사",
+   "meaning": "해외로, 해외에서"
+  },
+  {
+   "word": "produce",
+   "pos": "명사",
+   "meaning": "농산물 (과일, 채소 등)"
+  },
+  {
+   "word": "seasonal",
+   "pos": "형용사",
+   "meaning": "계절적인, 제철의"
+  }
+ ],
+ "_html_md5": "6f799c577cc9015131dea9ad8f48ed5a"
+}

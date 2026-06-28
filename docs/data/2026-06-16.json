@@ -1,0 +1,53 @@
+{
+ "date": "2026-06-16",
+ "iso": [
+  2026,
+  25
+ ],
+ "topic": "Discussing home electronics, their functions, and purchasing considerations.",
+ "grammar": "Singular/Plural Noun and Verb Agreement",
+ "grammar_norm": "Subject–Verb Agreement",
+ "score": 7.0,
+ "pairs": [
+  {
+   "said": "And also I can see the flat of the TV.",
+   "natural": "I can also see a flat-screen TV."
+  },
+  {
+   "said": "But usually in family they have two both kind of vacuum cleaner.",
+   "natural": "But usually, families have both kinds of vacuum cleaners."
+  },
+  {
+   "said": "So it is time to change all my electronic machines.",
+   "natural": "So it's time to replace all my electronic appliances."
+  }
+ ],
+ "vocab": [
+  {
+   "word": "appliance",
+   "pos": "명사",
+   "meaning": "(가정용) 기기, 가전제품 (특히 전기 제품)"
+  },
+  {
+   "word": "promotional",
+   "pos": "형용사",
+   "meaning": "홍보의, 판촉의"
+  },
+  {
+   "word": "maintenance",
+   "pos": "명사",
+   "meaning": "유지, 보수, 관리"
+  },
+  {
+   "word": "handy",
+   "pos": "형용사",
+   "meaning": "(사람이) 솜씨 좋은, 손재주 있는; (물건이) 유용한, 편리한"
+  },
+  {
+   "word": "troubleshoot",
+   "pos": "동사",
+   "meaning": "(문제의 원인을) 찾아내 해결하다"
+  }
+ ],
+ "_html_md5": "0eea35cc40e0a599c7a34e7278b1fcc4"
+}

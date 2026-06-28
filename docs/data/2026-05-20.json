@@ -1,0 +1,27 @@
+{
+ "date": "2026-05-20",
+ "iso": [
+  2026,
+  21
+ ],
+ "topic": "Discussing the pros and cons of investing in electric vehicles (Scenario 2 + decision-maki",
+ "grammar": "missing main verb 오늘 Joey의 발화에서 가장 반복된 패턴은 문장",
+ "grammar_norm": "Missing Main Verb 오늘 Joey의 발화에서 가장 반복된 패턴은 문장",
+ "score": 6.0,
+ "pairs": [
+  {
+   "said": "I envy you.",
+   "natural": "Aw, I'm so jealous! It's been cloudy and rainy here."
+  },
+  {
+   "said": "Today, nothing special, but today is just a normal Wednesday, so I will make a report in my office.",
+   "natural": "Nothing special today — just a regular Wednesday, so I'll be writing up a report at the office."
+  },
+  {
+   "said": "So before they decide, I will listen about the technical information.",
+   "natural": "Before deciding, I'd want to hear more about the technical details first."
+  }
+ ],
+ "vocab": [],
+ "_html_md5": "f12731a4e4724ed26191b0986fc2792e"
+}

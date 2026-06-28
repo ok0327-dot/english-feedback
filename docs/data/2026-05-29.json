@@ -1,0 +1,53 @@
+{
+ "date": "2026-05-29",
+ "iso": [
+  2026,
+  22
+ ],
+ "topic": "Discussing current weather, weekend plans, and feedback preferences.",
+ "grammar": "Causative Verb \"Get\" (사역 동사 \"Get\")",
+ "grammar_norm": "Causative \"get\"",
+ "score": 7.0,
+ "pairs": [
+  {
+   "said": "I need to cut hair in a hair shop.",
+   "natural": "I need to get a haircut at a salon."
+  },
+  {
+   "said": "The tennis is for the rich guys first.",
+   "natural": "Tennis is often seen as a sport for the wealthy."
+  },
+  {
+   "said": "That is so nice for me.",
+   "natural": "That's very helpful for me."
+  }
+ ],
+ "vocab": [
+  {
+   "word": "humid",
+   "pos": "형용사",
+   "meaning": "습한, 습기가 많은"
+  },
+  {
+   "word": "permit",
+   "pos": "동사",
+   "meaning": "허락하다, 허용하다"
+  },
+  {
+   "word": "specialize",
+   "pos": "동사",
+   "meaning": "전문으로 하다, 특화하다"
+  },
+  {
+   "word": "affluent",
+   "pos": "형용사",
+   "meaning": "부유한, 유복한"
+  },
+  {
+   "word": "perceive",
+   "pos": "동사",
+   "meaning": "인식하다, 감지하다"
+  }
+ ],
+ "_html_md5": "c7ebd7431cb8f006f1f6bd53b6ee0094"
+}

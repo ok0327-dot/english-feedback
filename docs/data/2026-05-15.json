@@ -1,0 +1,53 @@
+{
+ "date": "2026-05-15",
+ "iso": [
+  2026,
+  20
+ ],
+ "topic": "Discussing cultural differences and communication styles.",
+ "grammar": "Missing Subjects or Verbs",
+ "grammar_norm": "Missing Subjects / Verbs",
+ "score": 7.0,
+ "pairs": [
+  {
+   "said": "I will meet my family. So nice.",
+   "natural": "I'm going to meet my family. That'll be nice."
+  },
+  {
+   "said": "the festival name is the sand festival near the beach.",
+   "natural": "The festival is called the sand festival, and it's near the beach."
+  },
+  {
+   "said": "I think it is important to the area.",
+   "natural": "I think it depends on the area."
+  }
+ ],
+ "vocab": [
+  {
+   "word": "tackle",
+   "pos": "동사",
+   "meaning": "(문제 등을) 다루다, 해결하려고 노력하다"
+  },
+  {
+   "word": "contingent upon",
+   "pos": "형용사구",
+   "meaning": "~에 달려있는, ~을 조건으로 하는"
+  },
+  {
+   "word": "protocol",
+   "pos": "명사",
+   "meaning": "(외교적) 의례, 의전; (컴퓨터) 통신 규약; (일반적인) 규칙, 절차"
+  },
+  {
+   "word": "nuance",
+   "pos": "명사",
+   "meaning": "미묘한 차이, 뉘앙스"
+  },
+  {
+   "word": "facilitate",
+   "pos": "동사",
+   "meaning": "(과정 등을) 용이하게 하다, 촉진하다"
+  }
+ ],
+ "_html_md5": "c6d4b353c87c7ccfed43f5ac237100f2"
+}

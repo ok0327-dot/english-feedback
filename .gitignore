@@ -4,6 +4,8 @@ __pycache__/
 *.json
 # 강사 공식 피드백 데이터는 추적(주간 워크플로우가 갱신·커밋)
 !docs/carrot/*.json
+# 수업별 구조화 데이터(집계 1차 소스)는 추적
+!docs/data/*.json
 *.m4a
 *.mp3
 *.wav

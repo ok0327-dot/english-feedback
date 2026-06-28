@@ -1,0 +1,53 @@
+{
+ "date": "2026-06-24",
+ "iso": [
+  2026,
+  26
+ ],
+ "topic": "Discussing office supplies and stationery.",
+ "grammar": "Subject-Verb Agreement",
+ "grammar_norm": "Subject–Verb Agreement",
+ "score": 7.0,
+ "pairs": [
+  {
+   "said": "It is similar. Yeah, the salaryman. So maybe it's same. I work through. I go for work.",
+   "natural": "It's pretty much the same every day for a salaryman. I just go to work."
+  },
+  {
+   "said": "Oh yes, this picture I can see the focus on the hand, the zoom in the hand.",
+   "natural": "In this picture, I can see a close-up of the hand."
+  },
+  {
+   "said": "But sometimes I need to some writing because it is more convenient for me.",
+   "natural": "But sometimes I need to do some writing because it's more convenient for me."
+  }
+ ],
+ "vocab": [
+  {
+   "word": "stationery",
+   "pos": "명사",
+   "meaning": "문구류 (종이, 펜, 봉투 등 글쓰기 관련 용품)"
+  },
+  {
+   "word": "office supplies",
+   "pos": "명사",
+   "meaning": "사무용품 (사무실에서 사용하는 모든 소모품, 문구류 포함 더 넓은 개념)"
+  },
+  {
+   "word": "clipboard",
+   "pos": "명사",
+   "meaning": "클립보드 (서류를 고정하는 판)"
+  },
+  {
+   "word": "jot down",
+   "pos": "동사구",
+   "meaning": "(간단히) 적다, 메모하다"
+  },
+  {
+   "word": "corporate card",
+   "pos": "명사",
+   "meaning": "법인 카드 (회사 경비를 지불하는 데 사용되는 카드)"
+  }
+ ],
+ "_html_md5": "472ada49adb5990e11e4f43685685942"
+}

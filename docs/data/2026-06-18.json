@@ -1,0 +1,53 @@
+{
+ "date": "2026-06-18",
+ "iso": [
+  2026,
+  25
+ ],
+ "topic": "Discussing first car purchase experiences and car buying considerations.",
+ "grammar": "Missing Articles (a/an/the)",
+ "grammar_norm": "Articles (a/an/the)",
+ "score": 7.5,
+ "pairs": [
+  {
+   "said": "he suggested I want to do other textbooks, and she added other textbooks.",
+   "natural": "He suggested I try other textbooks, and she made them available."
+  },
+  {
+   "said": "So your question means to share the textbook the week.",
+   "natural": "So your question is about alternating the textbooks weekly."
+  },
+  {
+   "said": "I guess they are mixed of many feelings.",
+   "natural": "I guess they have a mix of many feelings."
+  }
+ ],
+ "vocab": [
+  {
+   "word": "alternate",
+   "pos": "v.",
+   "meaning": "번갈아 하다, 교대로 하다"
+  },
+  {
+   "word": "provision",
+   "pos": "v.",
+   "meaning": "제공하다, 공급하다 (특히 필요한 것을)"
+  },
+  {
+   "word": "commute",
+   "pos": "v.",
+   "meaning": "통근하다"
+  },
+  {
+   "word": "fuel-efficient",
+   "pos": "adj.",
+   "meaning": "연비가 좋은, 연료 효율적인"
+  },
+  {
+   "word": "upkeep",
+   "pos": "n.",
+   "meaning": "유지, 보수, 관리"
+  }
+ ],
+ "_html_md5": "13fe54516b0f95c30e1b7444dcf5c555"
+}

@@ -1,0 +1,27 @@
+{
+ "date": "2026-05-12",
+ "iso": [
+  2026,
+  20
+ ],
+ "topic": "Role-playing Business Scenarios: Requesting a Raise and Pitching an Investment",
+ "grammar": "Articles (a/an/the)",
+ "grammar_norm": "Articles (a/an/the)",
+ "score": null,
+ "pairs": [
+  {
+   "said": "His ability is so great.",
+   "natural": "He's very capable."
+  },
+  {
+   "said": "I'm always welcome to your meeting.",
+   "natural": "I'm always happy to meet with you."
+  },
+  {
+   "said": "This software is, usually the investor always gathering information, the stock market, real estate, and bond, etc.",
+   "natural": "This software helps investors gather information from the stock market, real estate, and bond markets."
+  }
+ ],
+ "vocab": [],
+ "_html_md5": "4836bcea572cd2b6fa1e36f69669c26c"
+}

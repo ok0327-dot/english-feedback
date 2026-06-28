@@ -1,0 +1,53 @@
+{
+ "date": "2026-06-09",
+ "iso": [
+  2026,
+  24
+ ],
+ "topic": "Discussing stress management and work-related stress.",
+ "grammar": "Missing or incorrect auxiliary verbs (be, have, do)",
+ "grammar_norm": "Verb Forms / Auxiliaries",
+ "score": 7.0,
+ "pairs": [
+  {
+   "said": "This day is the front of summer.",
+   "natural": "This day marks the beginning of summer."
+  },
+  {
+   "said": "So if you come in Korea, every tree leaves a vivid green color and bright.",
+   "natural": "If you come to Korea, you'll see that all the trees have vivid green leaves and look bright."
+  },
+  {
+   "said": "And his eyes closed and his nose with the cover hand.",
+   "natural": "His eyes are closed, and he's covering his nose with his hand."
+  }
+ ],
+ "vocab": [
+  {
+   "word": "signify",
+   "pos": "동사",
+   "meaning": "의미하다, 나타내다, 중요하다"
+  },
+  {
+   "word": "foster",
+   "pos": "동사",
+   "meaning": "조성하다, 발전시키다, 기르다"
+  },
+  {
+   "word": "mitigate",
+   "pos": "동사",
+   "meaning": "완화하다, 경감시키다"
+  },
+  {
+   "word": "discern",
+   "pos": "동사",
+   "meaning": "파악하다, 알아보다, 분별하다"
+  },
+  {
+   "word": "rejuvenate",
+   "pos": "동사",
+   "meaning": "활력을 되찾게 하다, 원기를 회복시키다"
+  }
+ ],
+ "_html_md5": "ab8926156f9001ed6f513526ad093f78"
+}

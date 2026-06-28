@@ -1,0 +1,27 @@
+{
+ "date": "2026-06-22",
+ "iso": [
+  2026,
+  26
+ ],
+ "topic": "Buying my first home — real estate, neighborhoods, and where to live in Korea",
+ "grammar": "verb tense (past vs. present consistency in n",
+ "grammar_norm": "Verb Tense",
+ "score": 7.0,
+ "pairs": [
+  {
+   "said": "On the weekend, I gave the time to my wife.",
+   "natural": "Over the weekend, I gave my wife some time to herself."
+  },
+  {
+   "said": "I have some worry about that movement because my wife doesn't like the wind.",
+   "natural": "I have some concerns about the move because my wife doesn't like the wind."
+  },
+  {
+   "said": "My dream is to live in a house, but the reality is to live in an apartment.",
+   "natural": "My dream is to live in a house, but realistically we'll end up in an apartment."
+  }
+ ],
+ "vocab": [],
+ "_html_md5": "6239e387fd04fc9827dcbf23eb61f436"
+}

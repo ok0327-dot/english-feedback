@@ -1,0 +1,27 @@
+{
+ "date": "2026-06-12",
+ "iso": [
+  2026,
+  24
+ ],
+ "topic": "Discussing Habits and Preferences in Buying Clothes",
+ "grammar": "Verb Tense Consistency (Past vs. Present)",
+ "grammar_norm": "Verb Tense",
+ "score": 7.0,
+ "pairs": [
+  {
+   "said": "And I'm not sure it is the right answer to your question.",
+   "natural": "And I'm not sure if that's the right answer to your question."
+  },
+  {
+   "said": "Usually, I don't like, I don't enjoy the shopping, the clothes shopping.",
+   "natural": "Usually, I don't really enjoy shopping for clothes."
+  },
+  {
+   "said": "And the other time, usually I will buy a coat and a jumper, more jeans, fashionable jeans and yeah, and almost clothes I buy, divided twice per year.",
+   "natural": "The other time, I usually buy a coat, a jumper, and more fashionable jeans. I buy almost all my clothes twice a year."
+  }
+ ],
+ "vocab": [],
+ "_html_md5": "9bfce4ca5beb3b761ee4b8e44f3f5280"
+}
