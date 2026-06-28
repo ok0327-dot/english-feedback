@@ -18,12 +18,13 @@ CLI:
   python3 scripts/build_weekly_review.py            # 전체 주차 생성
   실행 시 stdout 마지막 줄에 CURRENT_WEEK_FILE=... 출력 (루틴이 현재 주를 식별).
 """
-import glob, re, os, html, json, datetime
+import glob, re, os, html, json, datetime, hashlib
 from collections import Counter, OrderedDict
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DOCS = os.path.join(ROOT, "docs")
 CUTOFF = "2026-05-08"   # 개선된 프롬프트 시작점 (이전은 문법 진단이 '관사' 고정)
+DATA_DIR = os.path.join(DOCS, "data")   # 구조화 데이터(JSON) = 집계 1차 소스
 
 # ───────────────────────── 파싱 / parsing ─────────────────────────
 def clean(s):
@@ -83,10 +84,50 @@ def parse_lesson(f):
     return {"date": date, "iso": (iso[0], iso[1]), "topic": topic, "grammar": grammar,
             "grammar_norm": norm_grammar(grammar), "score": score, "pairs": pairs, "vocab": vocab}
 
+def _html_md5(path):
+    try:
+        return hashlib.md5(open(path, "rb").read()).hexdigest()
+    except OSError:
+        return ""
+
+def _to_record(j):
+    if not j or not j.get("date"):
+        return None
+    if isinstance(j.get("iso"), list):
+        j["iso"] = tuple(j["iso"])
+    j.pop("_html_md5", None)
+    return j
+
+def cached_lesson(path):
+    """수업 1건 → 구조화 dict. docs/data/<date>.json 을 1차 소스로 읽고,
+    HTML이 바뀌면(md5 불일치) 재파싱 후 캐시 갱신.
+    → 집계기는 매번 HTML 정규식 재스크랩 대신 JSON을 읽는다(presentation=HTML, data=JSON 분리).
+      대용량/짤린 페이지도 생성 시점에 쓴 JSON이 있으면 누락되지 않는다."""
+    date = os.path.basename(path)[:10]
+    jpath = os.path.join(DATA_DIR, date + ".json")
+    cur = _html_md5(path)
+    if os.path.exists(jpath):
+        try:
+            j = json.load(open(jpath, encoding="utf-8"))
+            if j.get("_html_md5") == cur:
+                return _to_record(j)
+        except Exception:
+            pass
+    rec = parse_lesson(path)
+    if rec is None:
+        return None
+    os.makedirs(DATA_DIR, exist_ok=True)
+    out = dict(rec); out["iso"] = list(rec["iso"]); out["_html_md5"] = cur
+    try:
+        json.dump(out, open(jpath, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+    except OSError:
+        pass
+    return rec
+
 def load_all():
     files = sorted(f for f in glob.glob(os.path.join(DOCS, "2026-*.html"))
                    if os.path.basename(f)[:10] >= CUTOFF)
-    out = [parse_lesson(f) for f in files]
+    out = [cached_lesson(f) for f in files]
     return [l for l in out if l]
 
 # ───────────────────────── 집계 헬퍼 / helpers ─────────────────────────

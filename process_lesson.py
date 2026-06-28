@@ -1147,6 +1147,25 @@ def load_metadata(docs_dir):
     return {}
 
 
+def _write_lesson_json(filepath):
+    """방금 만든 완전한 HTML에서 구조화 데이터를 뽑아 docs/data/<date>.json 으로 저장.
+    집계기(주간복습/단어/라디오)가 HTML 정규식 재스크랩 대신 이 JSON을 1차 소스로 읽는다.
+    HTML md5를 함께 저장해 페이지가 바뀌면 다음 빌드에서 자동 갱신. 실패해도 비치명."""
+    try:
+        import sys as _sys
+        sdir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "scripts")
+        if sdir not in _sys.path:
+            _sys.path.insert(0, sdir)
+        import build_weekly_review as _W
+        rec = _W.cached_lesson(filepath)
+        if rec:
+            print(f"📦 구조화 데이터 저장: docs/data/{os.path.basename(filepath)[:10]}.json")
+        else:
+            print("⚠️ 구조화 데이터 추출 실패(페이지 파싱 불가) — 집계기가 폴백 처리")
+    except Exception as e:
+        print(f"⚠️ lesson JSON 저장 실패(비치명): {e}")
+
+
 def deploy_review_page(page_html, date_str, lesson_date=None):
     """
     HTML을 docs/ 폴더에 저장 → 인덱스 갱신 → git push → GitHub Pages에 자동 배포.
@@ -1165,6 +1184,9 @@ def deploy_review_page(page_html, date_str, lesson_date=None):
         f.write(page_html)
 
     _update_index_page(docs_dir)
+
+    # 구조화 데이터(JSON)도 함께 커밋되도록 게시 직전에 생성
+    _write_lesson_json(filepath)
 
     # Git으로 GitHub에 업로드 (변경 기록 → 업로드)
     subprocess.run(["git", "config", "user.name", "github-actions"], check=True)
