@@ -22,7 +22,7 @@ radio/episodes.json 으로 주차별 누적되며, 각 페이지는 '자기 주�
 
 CLI:  python3 scripts/build_radio.py   # 전체 주차 생성(백필) + 허브
 """
-import os, sys, html, datetime
+import os, sys, html, datetime, re
 import json as _json
 from collections import Counter, OrderedDict
 
@@ -285,10 +285,9 @@ def _archive_rows(archive, wk_iso):
     return "".join(out)
 
 
-def render(wk_iso, script_lines, prompts, archive, is_hub):
+def render(wk_iso, src, prompts, archive, is_hub):
     label = W.week_label(wk_iso)
     rng = W.week_range(wk_iso)
-    src = "\n".join(f"{s}|{lang}|{t}" for s, lang, t in script_lines)
     P = {k: _json.dumps(v, ensure_ascii=False) for k, v in prompts.items()}
     pw = _json.dumps(label, ensure_ascii=False)
     arc_rows = _archive_rows(archive, wk_iso)
@@ -394,6 +393,42 @@ fetch('radio/episodes.json',{{cache:'no-store'}}).then(r=>r.ok?r.json():[]).then
 </body></html>"""
 
 
+def _lines_to_src(lines):
+    return "\n".join(f"{s}|{lang}|{t}" for s, lang, t in lines)
+
+
+def _extract_src_and_week(path):
+    """기존 페이지에서 (#radio-src 내부 원문, PAGE_WEEK) 추출. 없으면 (None, None)."""
+    if not os.path.exists(path):
+        return None, None
+    try:
+        t = open(path, encoding="utf-8").read()
+    except OSError:
+        return None, None
+    m = re.search(r'<pre id="radio-src"[^>]*>(.*?)</pre>', t, re.S)
+    src = html.unescape(m.group(1)).strip() if m else None
+    mw = re.search(r'const PAGE_WEEK="([^"]+)"', t)
+    return (src or None), (mw.group(1) if mw else None)
+
+
+def resolve_src(iso, is_hub, default_src):
+    """대본 보존 정책 — '주차별 기록'이 규칙기반 재생성에 덮이지 않게:
+      1) 대상 파일이 이미 같은 주(label) 대본을 갖고 있으면 그대로 보존(=Claude 심층본 freeze).
+      2) 과거주 페이지인데 허브(radio.html)가 마침 이 주였다면(롤오버) 허브 대본을 승격.
+      3) 그 외에는 규칙기반 default 사용.
+    → 호출 시점에 과거주 루프가 허브보다 먼저 돌아야 승격이 성립(아래 build 순서 보장)."""
+    label = W.week_label(iso)
+    target = os.path.join(DOCS, "radio.html" if is_hub else radio_week_file(iso))
+    src, wk = _extract_src_and_week(target)
+    if src and wk == label:
+        return src
+    if not is_hub:
+        hub_src, hub_wk = _extract_src_and_week(os.path.join(DOCS, "radio.html"))
+        if hub_src and hub_wk == label:
+            return hub_src
+    return default_src
+
+
 def build():
     lessons = W.load_all()
     if not lessons:
@@ -416,27 +451,29 @@ def build():
             "href": "radio.html" if iso == latest else radio_week_file(iso),
         })
 
-    # 과거 주차 스냅샷 페이지(영구 누적)
+    # 과거 주차 스냅샷 페이지(영구 누적). 허브보다 먼저 돌려 롤오버 승격을 보장.
     n_week = 0
     for iso in ordered:
         if iso == latest:
             continue
         wk = weeks[iso]
         cum = [l for l in lessons if l["iso"] <= iso]      # 그 주말까지 누적
-        script_lines = build_script(iso, wk, cum, carrot_map)
+        default_src = _lines_to_src(build_script(iso, wk, cum, carrot_map))
+        src = resolve_src(iso, False, default_src)
         prompts = build_chat_prompts(iso, wk, cum, carrot_map)
-        page = render(iso, script_lines, prompts, archive, is_hub=False)
+        page = render(iso, src, prompts, archive, is_hub=False)
         open(os.path.join(DOCS, radio_week_file(iso)), "w", encoding="utf-8").write(page)
         n_week += 1
 
     # 허브 = 가장 최근 주(라이브·Claude 갱신 대상·오디오 소스)
     wk = weeks[latest]
-    script_lines = build_script(latest, wk, lessons, carrot_map)
+    default_src = _lines_to_src(build_script(latest, wk, lessons, carrot_map))
+    src = resolve_src(latest, True, default_src)
     prompts = build_chat_prompts(latest, wk, lessons, carrot_map)
-    page = render(latest, script_lines, prompts, archive, is_hub=True)
+    page = render(latest, src, prompts, archive, is_hub=True)
     open(os.path.join(DOCS, "radio.html"), "w", encoding="utf-8").write(page)
 
-    print(f"✅ radio.html(허브={W.week_label(latest)}) + 주차 스냅샷 {n_week}개 · 대본 {len(script_lines)}줄")
+    print(f"✅ radio.html(허브={W.week_label(latest)}) + 주차 스냅샷 {n_week}개 · 허브 대본 {len(src.splitlines())}줄")
     for a in archive:
         tag = " (허브/현재)" if a["iso"] == latest else ""
         print(f"   {a['href']}  {a['lessons']}회{tag}")
