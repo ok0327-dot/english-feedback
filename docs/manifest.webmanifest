@@ -2,22 +2,22 @@
   "name": "당근영어 복습",
   "short_name": "당근영어",
   "description": "전화영어 피드백 · 주간 복습 · 강사 피드백 · 영어 주간 라디오",
-  "start_url": "/",
-  "scope": "/",
+  "start_url": ".",
+  "scope": ".",
   "display": "standalone",
   "orientation": "portrait",
   "lang": "ko",
   "background_color": "#0f0f13",
   "theme_color": "#0f0f13",
   "icons": [
-    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
-    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
-    { "src": "/icon-maskable-192.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable" },
-    { "src": "/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icon-maskable-192.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable" },
+    { "src": "icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
   ],
   "shortcuts": [
-    { "name": "주간 복습", "url": "/review-index.html" },
-    { "name": "강사 피드백", "url": "/carrot.html" },
-    { "name": "영어 라디오", "url": "/radio.html" }
+    { "name": "주간 복습", "url": "review-index.html" },
+    { "name": "강사 피드백", "url": "carrot.html" },
+    { "name": "영어 라디오", "url": "radio.html" }
   ]
 }
