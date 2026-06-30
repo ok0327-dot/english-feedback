@@ -5,7 +5,7 @@
   20
  ],
  "topic": "Discussing Negotiation Skills and Strategies",
- "grammar": "Unnecessary Articles (a/an/the)",
+ "grammar": "Unnecessary Articles",
  "grammar_norm": "Articles (a/an/the)",
  "score": null,
  "pairs": [
@@ -22,6 +22,32 @@
    "natural": "But I keep the main information to myself , not sharing it with them."
   }
  ],
- "vocab": [],
+ "vocab": [
+  {
+   "word": "crucial",
+   "pos": "형용사",
+   "meaning": "결정적인, 매우 중요한"
+  },
+  {
+   "word": "entanglement",
+   "pos": "명사",
+   "meaning": "복잡한 문제, 얽힘, 곤경"
+  },
+  {
+   "word": "proficiency",
+   "pos": "명사",
+   "meaning": "능숙함, 숙달"
+  },
+  {
+   "word": "yield",
+   "pos": "동사",
+   "meaning": "양보하다, 굴복하다; (결과를) 내다"
+  },
+  {
+   "word": "portfolio",
+   "pos": "명사",
+   "meaning": "투자 자산 목록, 포트폴리오"
+  }
+ ],
  "_html_md5": "d41e1e88c44d3d2f32ab74508dcdc0c0"
 }

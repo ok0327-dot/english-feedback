@@ -5,7 +5,7 @@
   25
  ],
  "topic": "Giving and receiving feedback at work (written vs. verbal, one-on-one vs. group)",
- "grammar": "articles (unnecessary \"the\" with uncountable",
+ "grammar": "articles",
  "grammar_norm": "Articles (a/an/the)",
  "score": 7.0,
  "pairs": [
@@ -22,6 +22,32 @@
    "natural": "I feel the same way as you do."
   }
  ],
- "vocab": [],
+ "vocab": [
+  {
+   "word": "constructive",
+   "pos": "adj.",
+   "meaning": "건설적인, 발전에 도움이 되는"
+  },
+  {
+   "word": "audit",
+   "pos": "noun / verb",
+   "meaning": "감사(監査), 회계·업무 점검"
+  },
+  {
+   "word": "verbal",
+   "pos": "adj.",
+   "meaning": "말로 하는, 구두의"
+  },
+  {
+   "word": "praise",
+   "pos": "noun / verb",
+   "meaning": "칭찬"
+  },
+  {
+   "word": "current",
+   "pos": "noun",
+   "meaning": "(물·공기의) 흐름, 해류"
+  }
+ ],
  "_html_md5": "4f8064a4de5a386db9bce93386c7d06a"
 }

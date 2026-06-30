@@ -31,6 +31,11 @@ def clean(s):
     return re.sub(r"\s+", " ", html.unescape(s)).strip()
 
 def grammar_label(seg):
+    # 1순위: 피드백이 명시한 `Category: ...` 줄을 그대로 사용(줄 끝까지, 한국어 설명문 혼입 방지).
+    #   clean()은 줄바꿈을 공백으로 합치므로, 줄 경계가 살아있는 raw seg 에서 먼저 추출한다.
+    mc = re.search(r"Category\s*[:：]\s*([A-Za-z][A-Za-z0-9\-'\"/&,\. ]{1,55})", seg)
+    if mc:
+        return clean(mc.group(1))
     s = clean(seg)
     s = re.sub(r"\(Target Grammar\)", "", s)
     s = re.sub(r"Category\s*[:：]", "", s)
@@ -42,13 +47,16 @@ def grammar_label(seg):
     return clean(s[:45])
 
 def norm_grammar(g):
+    # 영어/한국어 키워드를 표준 카테고리로 정규화(한국어가 그대로 새는 것 방지).
     g = re.sub(r"\([^)]*\)", "", g).strip().lower()
-    if "article" in g: return "Articles (a/an/the)"
-    if "preposition" in g: return "Prepositions"
-    if "subject-verb" in g or "agreement" in g: return "Subject–Verb Agreement"
-    if "auxiliary" in g or "verb form" in g: return "Verb Forms / Auxiliaries"
-    if "tense" in g: return "Verb Tense"
-    if "missing subject" in g: return "Missing Subjects / Verbs"
+    if "article" in g or "관사" in g: return "Articles (a/an/the)"
+    if "preposition" in g or "전치사" in g: return "Prepositions"
+    if "subject-verb" in g or "subject–verb" in g or "agreement" in g or "일치" in g or "plural" in g:
+        return "Subject–Verb Agreement"
+    if "auxiliary" in g or "verb form" in g or "조동사" in g: return "Verb Forms / Auxiliaries"
+    if "tense" in g or "시제" in g: return "Verb Tense"
+    if ("missing" in g and "verb" in g) or "missing subject" in g: return "Missing Subjects / Verbs"
+    if "phrasal" in g or "구동사" in g: return "Phrasal Verbs"
     if "gerund" in g or "noun phrase" in g or "동명사" in g: return "Gerunds / Noun Phrases"
     if "determiner" in g or "quantifier" in g: return "Determiners / Quantifiers"
     if "causative" in g: return 'Causative "get"'
@@ -75,9 +83,16 @@ def parse_lesson(f):
              for i in range(len(said)) if said[i].strip() and (nat[i] if i < len(nat) else "")]
     vb = re.search(r"어휘 확장(.*?)(?:실전 복습|자신감 충전|성과 지표|$)", t, re.S)
     vseg = vb.group(1) if vb else ""
-    vocab = [{"word": clean(m.group(1)), "pos": clean(m.group(3)), "meaning": clean(m.group(4))}
+    # 어휘 항목: `[번호/불릿]? word /발음/ (품사) [*]? 뜻: 의미`.
+    #   번호(1.)·불릿(*,-)·무접두 모두 허용(피드백 형식이 시기별로 달라짐). 의미는 줄 끝까지.
+    vocab = [{"word": clean(m.group(1)), "pos": clean(m.group(2)), "meaning": clean(m.group(3))}
              for m in re.finditer(
-                 r"\d+\.\s+([A-Za-z][A-Za-z\-]+(?:\s[A-Za-z\-]+){0,2})\s*/([^/]*)/\s*\(([^)]+)\)\s*\*?\s*뜻[:：]\s*([^*\n]+)",
+                 r"(?:\d+\.\s*|\*\s*|[-•]\s*)?"
+                 r"([A-Za-z][A-Za-z\-']*(?:\s+[A-Za-z\-']+){0,2})"
+                 r"\s*/[^/\n]*/\s*"
+                 r"\(([^)\n]+)\)"
+                 r"\s*\*?\s*뜻\s*[:：]\s*"
+                 r"([^\n]+)",
                  vseg)]
     y, m_, d_ = map(int, date.split("-"))
     iso = datetime.date(y, m_, d_).isocalendar()
