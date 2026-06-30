@@ -5,13 +5,23 @@
 
 ---
 
+## ✅ 완료 (2026-06-30)
+
+### A. 📈 진척 대시보드 + 🎯 능동복습 퀴즈 — **완료**
+- `scripts/build_progress.py` → `docs/progress.html`. 탭 2개: **진척**(유창성 추세선·약점 Top6·주차별 평균·통계) + **복습 퀴즈**(❌→✅/어휘 인출 카드 269장, 모드 필터, localStorage 진도). 홈에 버튼 추가.
+- 매일 일일 파이프라인에서 자동 갱신($0). 금요일 루틴은 `#coach` 코칭 한마디만 통찰로 교체(보존 패턴).
+
+### B. 📓 NotebookLM 다이제스트 — **완료**
+- `scripts/build_digest.py` → `docs/digest-<주>.txt` + `docs/digest-latest.txt`. 라디오 페이지에 **"📓 다이제스트 복사" + "NotebookLM 열기"** 버튼.
+- **왜**: 사용자 **Google AI Pro(NotebookLM)** 보유 → Audio Overview로 2-MC 영어 팟캐스트 무료 생성(현재 TTS보다 품질↑). 다이제스트 붙여넣기만 하면 됨.
+
+---
+
 ## 🟢 추천 다음 단계
 
-### 1. 📓 NotebookLM 다이제스트 (구독 활용 · 추천)
-- **무엇**: 매주 "그 주 교정·표현·문법·주제·어휘"를 한 장 텍스트/파일(`docs/digest-YYYY-Www.txt` 등)로 자동 생성하고, 라디오 페이지에 **"📓 NotebookLM용 복사" 버튼** 추가.
-- **왜**: 사용자가 **Gemini 유료 구독(Google AI Pro)** 보유. 구독은 API엔 도움 안 되지만 **NotebookLM Audio Overview**(2-MC 팟캐스트 자동 생성, 매우 자연스러움, 비용 0)엔 강력. 다이제스트를 NotebookLM에 붙여넣으면 고품질 영어 팟캐스트를 직접 뽑을 수 있음 → 현재 TTS보다 품질↑.
-- **상태**: 미착수(제안만).
-- **방법**: 내가 구현. `scripts/build_digest.py`(build_weekly_review 파싱 재사용) + radio.html 버튼. 금요일 루틴에 한 줄 추가. 무료 TTS/MP3 경로는 폴백으로 유지.
+### 1. 데이터 품질 보강 (퀴즈/다이제스트/약점 랭킹 정밀도↑)
+- **무엇**: `vocab` 누락(27건 중 8건) 보강 + `grammar_norm`에 간혹 섞이는 한국어 문장 정규화.
+- **왜**: 위 A·B 기능의 입력 품질을 한 단계 올림.
 
 ---
 

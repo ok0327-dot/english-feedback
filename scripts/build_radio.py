@@ -339,7 +339,15 @@ def render(wk_iso, src, prompts, archive, is_hub):
     </div>
   </div>
 
-  <div class="foot">대본: scripts/build_radio.py · 음성: 브라우저 Web Speech(무료) · 주차별 누적 · 매주 금요일 Claude 갱신</div>
+  <div class="card"><h2>📓 NotebookLM 팟캐스트로 듣기 <span class="sub">고품질·무료</span></h2>
+    <div class="muted" style="margin-bottom:12px">이번 주 학습 다이제스트(교정·강사 피드백·어휘 전부)를 복사해 <b>NotebookLM</b>에 붙여넣고 <b>Audio Overview</b>를 만들면, 2인 진행 영어 팟캐스트가 무료로 생성됩니다(현재 TTS보다 자연스러움).</div>
+    <div class="modes">
+      <div class="mode" onclick="copyDigest()"><span class="ico">📓</span>다이제스트 복사<span class="sub">붙여넣기용 텍스트</span></div>
+      <div class="mode" onclick="window.open('https://notebooklm.google.com/','_blank')"><span class="ico">🎧</span>NotebookLM 열기<span class="sub">새 노트 → 붙여넣기</span></div>
+    </div>
+  </div>
+
+  <div class="foot">대본: scripts/build_radio.py · 다이제스트: scripts/build_digest.py · 음성: 브라우저 Web Speech(무료) · 주차별 누적 · 매주 금요일 Claude 갱신</div>
 </div>
 
 <pre id="radio-src" hidden>{esc(src)}</pre>
@@ -349,6 +357,8 @@ const PAGE_WEEK={pw};
 const PROMPTS={{chat:{P['chat']},lecture:{P['lecture']},radio:{P['radio']}}};
 function showToast(m){{const t=document.getElementById('toast');t.textContent=m;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500);}}
 function copyOpen(mode){{const txt=PROMPTS[mode]||'';const go=()=>{{showToast('✅ 복사됐어요! Gemini에 붙여넣으세요');setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600);}};navigator.clipboard.writeText(txt).then(go).catch(()=>{{const a=document.createElement('textarea');a.value=txt;document.body.appendChild(a);a.select();document.execCommand('copy');a.remove();go();}});}}
+function clip(txt,msg){{const go=()=>showToast(msg);navigator.clipboard.writeText(txt).then(go).catch(()=>{{const a=document.createElement('textarea');a.value=txt;document.body.appendChild(a);a.select();document.execCommand('copy');a.remove();go();}});}}
+function copyDigest(){{fetch('digest-latest.txt',{{cache:'no-store'}}).then(r=>{{if(!r.ok)throw 0;return r.text();}}).then(t=>clip(t,'📓 다이제스트 복사됨! NotebookLM에 붙여넣으세요')).catch(()=>showToast('⚠️ 다이제스트가 아직 없어요 (금요일 생성)'));}}
 
 // ── 라디오 플레이어 (Web Speech API) ──
 const RAW=document.getElementById('radio-src').textContent.trim();

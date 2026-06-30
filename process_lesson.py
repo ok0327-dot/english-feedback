@@ -1166,6 +1166,23 @@ def _write_lesson_json(filepath):
         print(f"⚠️ lesson JSON 저장 실패(비치명): {e}")
 
 
+def _rebuild_derived_pages():
+    """진척 대시보드/퀴즈(progress.html) + NotebookLM 다이제스트(digest-*.txt)를 재생성.
+    순수 stdlib·docs/data 기반이라 비용 0. 실패해도 일일 배포를 막지 않는다(비치명적)."""
+    import sys as _sys
+    sdir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "scripts")
+    if sdir not in _sys.path:
+        _sys.path.insert(0, sdir)
+    for modname in ("build_progress", "build_digest"):
+        try:
+            import importlib
+            mod = importlib.import_module(modname)
+            importlib.reload(mod)
+            mod.main()
+        except Exception as e:
+            print(f"⚠️ {modname} 재생성 실패(비치명): {e}")
+
+
 def deploy_review_page(page_html, date_str, lesson_date=None):
     """
     HTML을 docs/ 폴더에 저장 → 인덱스 갱신 → git push → GitHub Pages에 자동 배포.
@@ -1187,6 +1204,11 @@ def deploy_review_page(page_html, date_str, lesson_date=None):
 
     # 구조화 데이터(JSON)도 함께 커밋되도록 게시 직전에 생성
     _write_lesson_json(filepath)
+
+    # 📈 진척 대시보드/퀴즈 + 📓 NotebookLM 다이제스트도 매일 갱신(비용 0·비치명적).
+    #   차트/퀴즈/다이제스트는 기계적이라 매일 최신화하고, 진척 페이지의 코칭(#coach)
+    #   한마디만 금요일 루틴의 Claude가 보존·교체한다.
+    _rebuild_derived_pages()
 
     # Git으로 GitHub에 업로드 (변경 기록 → 업로드)
     subprocess.run(["git", "config", "user.name", "github-actions"], check=True)
@@ -1244,6 +1266,7 @@ def _update_index_page(docs_dir):
 </head>
 <body>
     <h1>📚 전화영어 복습 기록</h1>
+    <a class="weekly-btn" style="background:linear-gradient(135deg,#22d3ee,#3b82f6);box-shadow:0 4px 20px rgba(34,211,238,.25)" href="progress.html">📈 진척 대시보드 & 복습 퀴즈 →</a>
     <a class="weekly-btn" href="review-index.html">📊 주간 복습 리포트 보기 →</a>
     <a class="weekly-btn" style="background:linear-gradient(135deg,#fb923c,#f59e0b);box-shadow:0 4px 20px rgba(251,146,60,.25)" href="carrot.html">🎓 강사 공식 피드백 보기 →</a>
     <a class="weekly-btn" style="background:linear-gradient(135deg,#a78bfa,#818cf8);box-shadow:0 4px 20px rgba(167,139,250,.25)" href="radio.html">🎙️ 영어 주간 라디오 듣기 →</a>
