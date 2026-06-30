@@ -5,7 +5,7 @@
   26
  ],
  "topic": "Buying my first home — real estate, neighborhoods, and where to live in Korea",
- "grammar": "verb tense (past vs. present consistency in n",
+ "grammar": "verb tense",
  "grammar_norm": "Verb Tense",
  "score": 7.0,
  "pairs": [
@@ -22,6 +22,32 @@
    "natural": "My dream is to live in a house, but realistically we'll end up in an apartment."
   }
  ],
- "vocab": [],
+ "vocab": [
+  {
+   "word": "voucher",
+   "pos": "noun",
+   "meaning": "(할인·교환용) 상품권, 이용권"
+  },
+  {
+   "word": "affordable",
+   "pos": "adjective",
+   "meaning": "(가격이) 감당할 만한, 합리적인"
+  },
+  {
+   "word": "profitable",
+   "pos": "adjective",
+   "meaning": "수익성이 좋은, 이익이 나는"
+  },
+  {
+   "word": "relocate",
+   "pos": "verb",
+   "meaning": "이주하다, 이전하다"
+  },
+  {
+   "word": "reservation",
+   "pos": "noun",
+   "meaning": "(마음속의) 우려, 거리낌"
+  }
+ ],
  "_html_md5": "6239e387fd04fc9827dcbf23eb61f436"
 }

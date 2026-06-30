@@ -5,7 +5,7 @@
   24
  ],
  "topic": "Discussing Habits and Preferences in Buying Clothes",
- "grammar": "Verb Tense Consistency (Past vs. Present)",
+ "grammar": "Verb Tense Consistency",
  "grammar_norm": "Verb Tense",
  "score": 7.0,
  "pairs": [
@@ -22,6 +22,32 @@
    "natural": "The other time, I usually buy a coat, a jumper, and more fashionable jeans. I buy almost all my clothes twice a year."
   }
  ],
- "vocab": [],
+ "vocab": [
+  {
+   "word": "mannequin",
+   "pos": "noun",
+   "meaning": "마네킹"
+  },
+  {
+   "word": "reflect",
+   "pos": "verb",
+   "meaning": "반사하다, 비추다"
+  },
+  {
+   "word": "business casual",
+   "pos": "noun phrase",
+   "meaning": "비즈니스 캐주얼 (격식과 편안함의 중간 정도 복장)"
+  },
+  {
+   "word": "prohibited",
+   "pos": "adjective",
+   "meaning": "금지된"
+  },
+  {
+   "word": "texture",
+   "pos": "noun",
+   "meaning": "질감, 재질"
+  }
+ ],
  "_html_md5": "9bfce4ca5beb3b761ee4b8e44f3f5280"
 }

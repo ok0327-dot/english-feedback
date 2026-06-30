@@ -5,7 +5,7 @@
   25
  ],
  "topic": "Project management and monitoring — supervising tasks, keeping teams on schedule, and prio",
- "grammar": "subject-verb agreement Joey의 발화를 모아 보면, 복수 주어",
+ "grammar": "subject-verb agreement",
  "grammar_norm": "Subject–Verb Agreement",
  "score": 7.0,
  "pairs": [
@@ -22,6 +22,32 @@
    "natural": "This is a bit hard to put into words."
   }
  ],
- "vocab": [],
+ "vocab": [
+  {
+   "word": "supervise",
+   "pos": "v.",
+   "meaning": "(업무·사람을) 감독하다, 관리하다"
+  },
+  {
+   "word": "prioritize",
+   "pos": "v.",
+   "meaning": "우선순위를 정하다"
+  },
+  {
+   "word": "allocate",
+   "pos": "v.",
+   "meaning": "(자원·역할을) 배분하다, 할당하다"
+  },
+  {
+   "word": "audit",
+   "pos": "n./v.",
+   "meaning": "감사(監査), 회계 감사하다"
+  },
+  {
+   "word": "conservative",
+   "pos": "adj.",
+   "meaning": "보수적인, 변화를 꺼리는"
+  }
+ ],
  "_html_md5": "a7a181ca7dabf367f924cf80e0a77372"
 }

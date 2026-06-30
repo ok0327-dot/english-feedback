@@ -5,8 +5,8 @@
   26
  ],
  "topic": "Investment — types, risk vs. stability, and the shift from real estate to stocks in Korea",
- "grammar": "phrasal verbs (\"grow up\" vs. grow / rise / in",
- "grammar_norm": "Phrasal Verbs (\"Grow Up\" Vs. Grow / Rise / In",
+ "grammar": "phrasal verbs",
+ "grammar_norm": "Phrasal Verbs",
  "score": 7.0,
  "pairs": [
   {
@@ -22,6 +22,32 @@
    "natural": "My cash flow is limited because I'm an office worker on a fixed salary."
   }
  ],
- "vocab": [],
+ "vocab": [
+  {
+   "word": "appreciate",
+   "pos": "verb",
+   "meaning": "(자산 등이) 가치가 상승하다"
+  },
+  {
+   "word": "conservative",
+   "pos": "adjective",
+   "meaning": "보수적인, 신중한 (투자 성향)"
+  },
+  {
+   "word": "stable",
+   "pos": "adjective",
+   "meaning": "안정적인, 변동이 적은"
+  },
+  {
+   "word": "outweigh",
+   "pos": "verb",
+   "meaning": "~보다 더 크다/중요하다 (수익이 위험보다 크다)"
+  },
+  {
+   "word": "cash flow",
+   "pos": "noun",
+   "meaning": "현금 흐름"
+  }
+ ],
  "_html_md5": "64cbb61a2f71eb0c0cf0b4b76a344524"
 }
