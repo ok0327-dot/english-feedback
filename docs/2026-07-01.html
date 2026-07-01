@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#0f0f13"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="당근영어"><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="icon" type="image/png" sizes="192x192" href="icon-192.png"><script src="install-banner.js" defer></script><script src="sw-reg.js" defer></script>
+    <title>전화영어 복습 - 2026년 07월 01일</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Noto Sans KR',sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.75;min-height:100vh}
+        .header{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);border-bottom:1px solid rgba(255,255,255,.06);padding:48px 24px 40px;text-align:center}
+        .header-date{font-size:13px;color:#94a3b8;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+        .header h1{font-size:28px;font-weight:700;color:#f1f5f9;margin-bottom:16px}
+        .header-meta{display:flex;justify-content:center;gap:24px;font-size:14px;color:#64748b}
+        .header-meta span{display:flex;align-items:center;gap:6px}
+        .cta-section{text-align:center;padding:40px 24px}
+        .cta-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:linear-gradient(135deg,#38bdf8,#818cf8);color:#fff;font-size:16px;font-weight:600;font-family:'Noto Sans KR',sans-serif;border:none;border-radius:50px;cursor:pointer;transition:all .3s;text-decoration:none;box-shadow:0 4px 24px rgba(56,189,248,.25)}
+        .cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(56,189,248,.35)}
+        .cta-btn svg{width:20px;height:20px}
+        .cta-sub{margin-top:12px;font-size:13px;color:#64748b}
+        .toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#38bdf8;padding:14px 28px;border-radius:12px;font-size:14px;font-weight:500;border:1px solid rgba(56,189,248,.2);box-shadow:0 8px 32px rgba(0,0,0,.4);opacity:0;transition:all .4s cubic-bezier(.16,1,.3,1);z-index:1000}
+        .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+        .container{max-width:720px;margin:0 auto;padding:0 24px 80px}
+        .tabs{display:flex;gap:4px;background:#1a1a24;padding:4px;border-radius:12px;margin-bottom:32px}
+        .tab{flex:1;padding:12px;text-align:center;font-size:14px;font-weight:500;color:#64748b;background:0 0;border:none;border-radius:8px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all .2s}
+        .tab.active{background:#262636;color:#f1f5f9}
+        .tab-content{display:none}.tab-content.active{display:block}
+        .feedback h2{font-size:18px;font-weight:700;color:#f1f5f9;margin:36px 0 16px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.06)}
+        .feedback h2:first-child{margin-top:0}
+        .feedback p{margin:8px 0;color:#cbd5e1}
+        .feedback .item{padding:6px 0 6px 16px;border-left:2px solid #334155;margin:6px 0;color:#cbd5e1}
+        .feedback .numbered{padding:8px 0 8px 16px;color:#cbd5e1}
+        .feedback .numbered strong{color:#38bdf8}
+        .feedback strong{color:#f1f5f9}
+        .feedback code{background:#1e293b;padding:2px 8px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#38bdf8}
+        .feedback table{width:100%;border-collapse:collapse;margin:12px 0}
+        .feedback th,.feedback td{padding:10px 14px;text-align:left;border-bottom:1px solid #262636}
+        .feedback th{color:#94a3b8;font-weight:500;font-size:13px}
+        .feedback td{color:#cbd5e1}
+        .arrow{color:#38bdf8;font-weight:700}
+        .transcript{background:#1a1a24;border-radius:12px;padding:28px;font-size:14px;line-height:2;color:#94a3b8;white-space:pre-wrap;word-break:break-word;font-family:'JetBrains Mono','Noto Sans KR',monospace}
+        .transcript .tutor{color:#38bdf8}
+        .transcript .student{color:#a78bfa}
+        @media(max-width:640px){.header{padding:32px 16px}.header h1{font-size:22px}.cta-btn{padding:14px 28px;font-size:15px}.container{padding:0 16px 60px}}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-date">2026년 07월 01일</div>
+        <h1>📚 전화영어 복습</h1>
+        <div class="header-meta">
+            <span>⏱ 19분 39초</span>
+            <span>🎙 전화영어_025180304_20260701080017.m4a</span>
+        </div>
+    </div>
+    <div class="cta-section">
+        <button class="cta-btn" onclick="startReview()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Gemini에서 복습 대화 시작하기
+        </button>
+        <div class="cta-sub">클릭하면 프롬프트가 복사되고 Gemini가 열립니다</div>
+    </div>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('feedback')">📋 AI 피드백</button>
+            <button class="tab" onclick="switchTab('transcript')">🎙 수업 전사</button>
+        </div>
+        <div id="tab-feedback" class="tab-content active">
+            <div class="feedback"><p>안녕하세요, Joey! 따뜻하고 실용적인 영어 코치입니다. 오늘 전화영어 수업 내용을 바탕으로 Joey의 영어 실력 향상을 위한 피드백을 준비했어요. 유창성과 정확성을 동시에 잡고, 입에 착 붙는 자연스러운 표현들을 익혀나가도록 도와드릴게요.</p>
+<br>
+<br>
+<p><strong>0. 📌 Topic</strong></p>
+<p>Topic: Discussing Public Transportation and Travel Choices</p>
+<br>
+<br>
+<p><strong>1. 📊 오늘의 대화 요약 (Summary)</strong></p>
+<p>오늘은 여름철 개인적인 계획(해변, 호텔 수영장 이용 등)에 대해 이야기하며 대화를 시작했습니다. 이어서 한국(서울, 부산) 및 해외(방콕)의 대중교통 시스템에 대해 깊이 있게 논의했습니다. 특히, 지역별 교통수단의 차이점, 개인적인 선호도(버스 vs. 지하철), 그리고 특정 상황(중요한 약속, 친구와의 만남)에 따른 최적의 이동 수단 선택에 대해 구체적으로 이야기 나누었습니다.</p>
+<br>
+<br>
+<p><strong>2. 💬 유창성 업그레이드 (Fluency & Natural Flow)</strong></p>
+<br>
+<p>Joey가 말한 내용 중 의미는 통하지만, 조금 더 자연스럽거나 격식 있게 다듬을 수 있는 표현 3가지를 골라봤어요.</p>
+<br>
+<div class="item"><strong>항목 1</strong></div>
+<div class="item">❌ As Said: "But usually in Seoul, the common transportation is subway because it is connected like a web, a spider web."</div>
+<div class="item">✅ Natural: "But in Seoul, the most common transportation is the subway, as it's interconnected like a spider web."</div>
+<div class="item">💎 Professional: "In Seoul, the subway is the predominant mode of transport, given its extensive, web-like network."</div>
+<div class="item">💡 Coaching Point: Using "most common" or "predominant mode of transport" sounds more natural and professional than "common transportation." Also, "as it's interconnected" or "given its extensive network" provides a smoother connection than "because it is connected."</div>
+<p><span class="arrow">→</span> "most common" 또는 "predominant mode of transport"를 사용하면 "common transportation"보다 더 자연스럽고 전문적으로 들립니다. 또한, "as it's interconnected" 또는 "given its extensive network"와 같은 표현은 "because it is connected"보다 더 부드러운 연결을 제공합니다.</p>
+<br>
+<div class="item"><strong>항목 2</strong></div>
+<div class="item">❌ As Said: "So usually I love to take the bus better than the subway."</div>
+<div class="item">✅ Natural: "So I usually prefer taking the bus over the subway."</div>
+<div class="item">💎 Professional: "Consequently, I generally opt for the bus rather than the subway."</div>
+<div class="item">💡 Coaching Point: "Prefer X over Y" is a more idiomatic and common way to express preference than "like X better than Y." "Opt for" is a more formal verb suitable for professional contexts.</div>
+<p><span class="arrow">→</span> "Prefer X over Y"는 "like X better than Y"보다 선호도를 표현하는 더 관용적이고 일반적인 방식입니다. "Opt for"는 전문적인 맥락에 적합한 더 격식 있는 동사입니다.</p>
+<br>
+<div class="item"><strong>항목 3</strong></div>
+<div class="item">❌ As Said: "I think the first I consider that work is about company or my work. I divide first."</div>
+<div class="item">✅ Natural: "I first consider whether the appointment is for the company or for myself. I'll divide them first."</div>
+<div class="item">💎 Professional: "My initial consideration is whether the appointment pertains to company matters or personal affairs; I categorize them accordingly."</div>
+<div class="item">💡 Coaching Point: The original phrasing is a bit indirect. "Consider whether X is for A or B" is clearer. Adding "I'll divide them first" or "I categorize them accordingly" makes the action of separating the tasks more explicit and natural.</div>
+<p><span class="arrow">→</span> 원래 표현은 다소 간접적입니다. "Consider whether X is for A or B"가 더 명확합니다. "I'll divide them first" 또는 "I categorize them accordingly"를 추가하면 업무를 구분하는 행동을 더 명확하고 자연스럽게 만듭니다.</p>
+<br>
+<br>
+<p><strong>3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)</strong></p>
+<br>
+<p>이번 수업에서 Joey가 반복적으로 보인 문법 패턴 중 하나는 <strong>'불규칙 동사 과거형 및 과거분사형 오류'</strong>였습니다. 특히 'forget'과 같이 불규칙 동사의 과거형이나 과거분사형을 잘못 사용하는 경향이 있었습니다.</p>
+<br>
+<div class="item"><code>Category: Irregular Verb Forms (Past Tense & Past Participle)</code></div>
+<br>
+<table>
+<tr><th>❌ 원문 (As Said)</th><th>✅ 교정 예시 (Correction)</th></tr>
+<tr><td>"But sometimes I missed."</td><td>"But sometimes I <strong>missed</strong>." (이 문장 자체는 문법적으로 맞습니다. 다만, 뒤에 이어지는 'forgot' 오류와 함께 불규칙 동사 사용 전반에 대한 주의가 필요합니다.)</td></tr>
+<tr><td>"So if I forgot about it and then I discovered that I missed my reservation."</td><td>"So if I <strong>forgot</strong> about it and then I discovered that I had missed my reservation."</td></tr>
+<tr><td>"So if I forgot about it and then I discovered that I missed my reservation." (두 번째 등장)</td><td>"So if I <strong>forgot</strong> about it and then I discovered that I had missed my reservation."</td></tr>
+<tr><td>"But sometimes I missed." (세 번째 등장, 'missed' 자체는 맞지만, 'forgot' 오류와 함께 불규칙 동사 사용 패턴으로 묶어봄)</td><td>"But sometimes I <strong>missed</strong>." (이 문장 자체는 문법적으로 맞습니다. 다만, 뒤에 이어지는 'forgot' 오류와 함께 불규칙 동사 사용 전반에 대한 주의가 필요합니다.)</td></tr>
+</table>
+<br>
+<p>📌 <strong>핵심 규칙</strong>: 불규칙 동사의 과거형(Past Tense)과 과거분사형(Past Participle)은 따로 암기해야 하며, 문맥에 맞게 정확히 사용해야 합니다. 'forget'의 과거형은 'forgot', 과거분사형은 'forgotten'입니다.</p>
+<br>
+<p>🔁 <strong>따라 읽기 (Practice)</strong>:</p>
+<p>🗣️ "So if I <strong>forgot</strong> about it and then I discovered that I had missed my reservation."</p>
+<p>🗣️ "I <strong>forgot</strong> to check my schedule, so I missed my train."</p>
+<p>🗣️ "The train tickets were <strong>forgotten</strong> at home."</p>
+<br>
+<br>
+<p><strong>4. 📗 어휘 확장 (Vocabulary Vault)</strong></p>
+<br>
+<p>오늘 대화에서 나왔거나 맥락상 유용했던 단어 5가지입니다.</p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>interconnected</strong> /ˌɪntərkəˈnektɪd/ (adjective)</div>
+<div class="item">뜻: 서로 연결된, 상호 관련된</div>
+<div class="item">실전 예문: "Our company's departments need to be more interconnected for better collaboration."</div>
+<div class="numbered"><strong>2.</strong> <strong>predominant</strong> /prɪˈdɑːmənənt/ (adjective)</div>
+<div class="item">뜻: 우세한, 지배적인, 주요한</div>
+<div class="item">실전 예문: "The predominant color in this design is blue."</div>
+<div class="numbered"><strong>3.</strong> <strong>idiomatic</strong> /ˌɪdiəˈmætɪk/ (adjective)</div>
+<div class="item">뜻: 관용적인, 숙어의</div>
+<div class="item">실전 예문: "To sound more natural, it's important to learn idiomatic expressions."</div>
+<div class="numbered"><strong>4.</strong> <strong>pertains to</strong> /pərˈteɪnz tuː/ (verb phrase)</div>
+<div class="item">뜻: ~에 관한 것이다, ~에 속하다</div>
+<div class="item">실전 예문: "Please only ask questions that pertain to the project scope."</div>
+<div class="numbered"><strong>5.</strong> <strong>consequently</strong> /ˌkɑːnsəˈkwentli/ (adverb)</div>
+<div class="item">뜻: 결과적으로, 따라서</div>
+<div class="item">실전 예문: "The market demand increased significantly; consequently, production had to be ramped up."</div>
+<br>
+<br>
+<p><strong>5. 📝 실전 복습 챌린지 (Practice)</strong></p>
+<br>
+<p>오늘 배운 표현과 문법을 활용하여 영어로 말해보는 연습입니다.</p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>상황</strong>: 서울의 대중교통 시스템이 얼마나 잘 연결되어 있는지 설명하고 싶습니다.</div>
+<div class="item"><strong>영작</strong>: Describe how the public transportation system in Seoul is interconnected.</div>
+<div class="item"><strong>모범 답안</strong>: "The public transportation system in Seoul is highly interconnected, with subways and buses forming a comprehensive network that makes it easy to travel anywhere."</div>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>상황</strong>: 중요한 회사 약속이 있는데, 회사 카드를 사용할 수 있다면 택시를 타는 것이 가장 편리하고 빠를 것이라고 말하고 싶습니다.</div>
+<div class="item"><strong>영작</strong>: If you have an important company appointment and can use the company card, explain why taking a taxi is the best option.</div>
+<div class="item"><strong>모범 답안</strong>: "If I have an important company appointment and can use the company card, I would choose a taxi because it's the most convenient and fastest way to get there, and I can even work in the backseat."</div>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>상황</strong>: 친구와 저녁 약속이 있는데, 술을 마실 계획이라 대중교통을 이용하는 것이 더 낫다고 말하고 싶습니다. (오늘 배운 'prefer X over Y'와 'pertain to' 또는 'consequently'를 활용해 보세요.)</div>
+<div class="item"><strong>영작</strong>: You have plans to meet a friend for dinner and plan to drink. Explain why you prefer taking public transport.</div>
+<div class="item"><strong>모범 답안</strong>: "Since we plan to drink some alcohol tonight, I prefer taking the subway over driving. This decision pertains to safety, and consequently, it's the most responsible choice."</div>
+<br>
+<br>
+<p><strong>6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)</strong></p>
+<br>
+<div class="item">✨ <strong>Good Job</strong>:</div>
+<p>Joey가 "But if that work is about my work, and then I divide, I consider if it is important or not, and urgent or not." 라고 말했을 때, 상황을 명확히 구분하려는 노력이 돋보였습니다. 비록 표현을 조금 더 다듬으면 좋겠지만, 복잡한 상황을 논리적으로 나누어 설명하려는 시도 자체가 훌륭했습니다. 특히 'important or not, and urgent or not' 과 같이 두 가지 기준을 제시하며 생각하는 과정을 보여준 점이 좋았습니다.</p>
+<br>
+<div class="item">🚀 <strong>내일의 한 문장</strong>:</div>
+<p>다음 수업 시작 시, 오늘 배운 내용을 활용하여 튜터에게 이렇게 질문해보세요.</p>
+<p>"Teacher, I usually prefer taking the bus over the subway because I like watching the scenery. However, if I'm in a hurry, I'll take the subway. What do you usually prefer?"</p>
+<br>
+<br>
+<p><strong>[성과 지표]</strong></p>
+<br>
+<div class="item"><strong>유창성 점수</strong>: 7/10</div>
+<div class="item"><strong>근거</strong>: Joey는 자신의 생각을 명확하게 전달하기 위해 노력했으며, 다양한 상황과 경험을 예시로 들어 대화를 풍성하게 만들었습니다. 특히 교통수단 선택에 대한 이유를 구체적으로 설명하는 부분에서 유창성이 돋보였습니다. 다만, 일부 표현이 조금 더 자연스럽거나 간결하게 다듬어질 여지가 있어 7점으로 평가했습니다.</div>
+<div class="item"><strong>다음 수업 '원포인트 액션 플랜'</strong>:</div>
+<p>불규칙 동사 'forget'의 과거형('forgot')과 과거분사형('forgotten')을 정확히 구분하여 사용하는 연습을 집중적으로 진행합니다. 또한, 'prefer X over Y'와 같은 관용적인 표현을 활용하여 자신의 선호도를 더 자연스럽게 표현하는 연습을 할 것입니다.</p></div>
+        </div>
+        <div id="tab-transcript" class="tab-content">
+            <div class="transcript"><span class="tutor">[Tutor]</span> Hello, well, good morning.
+<span class="student">[Student]</span> Yeah, good morning.
+<span class="tutor">[Tutor]</span> How are you doing today?
+[Joey] Yeah, just good.
+<span class="tutor">[Tutor]</span> Yeah, it&#x27;s July, our first day.
+[Joey] So it is...
+<span class="tutor">[Tutor]</span> Yeah, new month.
+[Joey] Yeah, new month.
+<span class="tutor">[Tutor]</span> You&#x27;re right. The fresh month. So it is a little humid and a little hot.
+[Joey] Yeah.
+<span class="tutor">[Tutor]</span> And it&#x27;s a new day of a new month, so it&#x27;s nice. How are you today, Joey?
+[Joey] Oh, good. Yeah, it&#x27;s pretty nice. Yeah, it&#x27;s still June, so yeah, but yeah, pretty good weather. Pretty nice weather.
+<span class="tutor">[Tutor]</span> Okay, very nice weather. Do you have any big plans for July? Any big plans this month?
+[Joey] Usually no, I don&#x27;t have a big appointment or big plans, but maybe this... I live in Busan, so the beach is open. So maybe it is possible to swim near the beach, in the beach. And so maybe I will go to the beach in July and August with my son and go swimming. Yeah, that is our plan. And we have so many vouchers to use the swimming pool in a hotel. So also we will go swimming in the pool, in the pool, yeah, in a hotel. So yeah, this is a summer plan, not a big...
+<span class="tutor">[Tutor]</span> Oh, that&#x27;s nice. Yeah, you live near the beach, that&#x27;s nice. You can enjoy going to the beach or having those pool vouchers.
+[Joey] Yeah, you&#x27;re right. Yeah, I have so many vouchers, and if the weather is nice at that time, I will go to the beach to play, make a sandcastle, or swim in the sea, etc. Yeah, nothing special.
+<span class="tutor">[Tutor]</span> Okay. So did you want to take a look at the SnapChat?
+[Joey] Oh, yes. I prepared the SnapChat.
+<span class="tutor">[Tutor]</span> How was your first time studying the SnapChat?
+[Joey] Okay, so it starts with page three, public transport.
+<span class="tutor">[Tutor]</span> Oh, public transport. Yes, okay. I see.
+<span class="tutor">[Tutor]</span> What is the most common transport in Korea?
+[Joey] My country? That depends on the area. But usually in Seoul, the common transportation is subway because it is connected like a web, a spider web. So, if you go somewhere, it is easier to take a subway. And it connects to the bus. If you use one card, you tap it in the subway and that is also possible to use the bus. So in Seoul, that is the common transportation, the subway and bus.
+<span class="tutor">[Tutor]</span> Okay, how about in different areas? In different parts of Korea?
+[Joey] In my hometown, Busan, that is not developed like Seoul. So it is more developed, both in ferries. Busan is a port, so it is connected by some bridges. Or if they don&#x27;t develop the bridge, we use the ferry because we can go there directly. So in my hometown, Busan, the most common transportation is bus and ferry. And our country is small, so if we move to a local area, that is more convenient to use the train. For example, every Friday I will visit my home and that distance is almost 500 km. So I use the train every Friday night because over 100 km, it is easier to use a train. So yeah, there are also developed trains.
+<span class="tutor">[Tutor]</span> Is the coach bus popular? So the big bus or city-to-city bus? Are they popular in Korea?
+[Joey] That is divided into two kinds of bus. One is the small downtown bus that moves through downtowns and every area. But the other thing is the bigger one that moves longer distances. So we call that the &quot;gong-gong bus&quot; because that bus number is blah blah &quot;gong-gong&quot;. For example, 5600, 900. So we call that &quot;gong-gong bus&quot; because &quot;gong-gong&quot; means &quot;public&quot; in Korean. So yeah, so we call it &quot;gong-gong bus&quot;.
+<span class="tutor">[Tutor]</span> Gong-gong bus. Okay, okay.
+[Joey] Tell the difference. Yeah, the other one. Yeah, different seating. Yeah, the stops are longer in between.
+<span class="tutor">[Tutor]</span> Oh, yes.
+[Joey] When I visited Bangkok in Thailand, that city developed ferries because in the middle of Bangkok, a big river flows through the city. But Bangkok&#x27;s transportation, Bangkok is so complex to move because there are so many people. So usually if we move to other famous sites, we use the ferry. That is so convenient and cheap and easy. So when I visited Bangkok, I stayed in a hotel nearby the river. And that hotel has a ferry. So if I visit the shopping mall, I use the hotel&#x27;s ferries. That&#x27;s so nice and convenient.
+<span class="tutor">[Tutor]</span> Oh, that&#x27;s nice. You have the hotel... that&#x27;s a good extra amenity, a good bonus for the hotel.
+[Joey] Yes, there are so many hotels nearby a river, and many hotels have their own ferries because the tourists want that ferry and movement for transportation. So yeah.
+<span class="tutor">[Tutor]</span> That&#x27;s totally similar.
+<span class="tutor">[Tutor]</span> The second question, which do you prefer for commuting, a bus or subway?
+[Joey] That depends on where we move. But usually I like the bus because I love to... I love watching the view from the window, seeing the window. Yeah, because you know, outside of the bus there are so many beautiful things like the street, people, and cars, and roads, and nice construction, and fresh air. So usually I love to take the bus better than the subway. But at night, or if I want to move faster, at that time I use the subway. Because subways come every five minutes or three minutes between stops. And that is faster. So that depends on where I move in the city.
+<span class="tutor">[Tutor]</span> Yeah, it&#x27;s true. Yeah, in Vancouver, our train is above ground. So it&#x27;s nice. You can have a view.
+[Joey] One more please, teacher.
+<span class="tutor">[Tutor]</span> In Vancouver, the subway is above ground.
+[Joey] Above ground.
+<span class="tutor">[Tutor]</span> So you can look outside and see buildings.
+[Joey] I see. So you mean the subway moves outside of the city, so we can see the outside scene, right?
+<span class="tutor">[Tutor]</span> No, in the city, it&#x27;s above ground.
+[Joey] Above ground.
+<span class="tutor">[Tutor]</span> So it&#x27;s like on a bridge. So it&#x27;s above the ground.
+[Joey] I see. Some areas. It is possible to see the outside in the subway, right?
+<span class="tutor">[Tutor]</span> Yeah, it&#x27;s called the Skytrain.
+[Joey] Skytrain. Ah, it&#x27;s so nice.
+<span class="tutor">[Tutor]</span> So it&#x27;s like a subway, but you have a view.
+[Joey] Have a view. Okay, yeah. It is similar in Seoul. I heard today some lines have moved outside, not underground, but above ground. So we can see the beautiful scene. For example, the Hangang Bridge, etc. Yeah, it&#x27;s similar.
+<span class="tutor">[Tutor]</span> Okay, you can see outside in some areas when it&#x27;s crossing the bridge.
+[Joey] Yes, yes, you&#x27;re right.
+<span class="tutor">[Tutor]</span> So part C, we have the problem solving. Would you like to read the situation?
+[Joey] Oh, yes. No problem. &quot;You are late for an important appointment. Your leg hurts and you still have some paperwork to do.&quot; Hmm. &quot;You need to choose the fastest way to get there. If you could take a bus, subway, or taxi, which one would you choose and why?&quot; I think the first I consider that work is about company or my work. I divide first. And then if that work is about the corporation, I can use the corporation card, so I will take the taxi because it is more convenient and fast, and also I can do some work in the backseat. So yeah, first I divide my work, and if that work is about the company work, I use a credit card and take a taxi. Yeah. But if that is my work, and then I divide, I consider if it is important or not, and urgent or not. If that is emergency, I take the taxi. But if not important and not urgent, not emergency and not important, at that time I just take a bus or a subway.
+<span class="tutor">[Tutor]</span> Yeah, it all depends on how urgent it is or if the company is paying. You&#x27;re right. What about a situation with meeting friends?
+[Joey] Situation meeting friends?
+<span class="tutor">[Tutor]</span> Yeah, if you&#x27;re meeting a friend.
+[Joey] Meeting friends. Not for work, but for a friend or family. I consider if I meet my friend and drink beer or some alcohol, so it is more convenient to take the subway. But my hometown is not developed with a subway, so usually it is easier to take a bus. Yeah, to meet my friends. Yeah. But usually, I don&#x27;t use public transport in my hometown because my hometown is not developed with public transport and it is easier to drive my car. So, when I lived in Seoul, I used many transportation, transport. But when I visit my hometown, it is easier to drive myself in my car.
+<span class="tutor">[Tutor]</span> Yeah, it&#x27;s much easier to just drive yourself.
+[Joey] Yeah, yeah.
+<span class="tutor">[Tutor]</span> It&#x27;s not a big system.
+[Joey] Yeah, you&#x27;re right.
+<span class="tutor">[Tutor]</span> So the next question, when was the last time you used public transport?
+[Joey] Okay, I see. Before I said I travel to my hometown every Friday and Sunday. So last time I used public transport is the train and bus because I took the bus two times and the train one time. First, I moved to the train station, and then took a train and traveled for two hours, 30 minutes, and then one more time I took a bus. So totally, it spent four hours or five hours. Such a long journey for me. So last time, I arrived on Sunday.
+<span class="tutor">[Tutor]</span> Okay. Yeah, changing buses. Yeah.
+[Joey] Yeah, changing to the bus.
+<span class="tutor">[Tutor]</span> Okay, you&#x27;re right. And have you ever missed the last train or bus of the day?
+[Joey] Not usually, but I have so many train reservations. It started one month ago. I can reserve the train on the website. But sometimes I missed. So if I forgot about it and then I discovered that I missed my reservation. Yeah, I have some problem taking a train. At that time, I just find direct train booking. But sometimes I miss, so it is a little problem. Yeah, but usually I check my schedule so I don&#x27;t miss the train. Yeah, and sometimes I have miscalculated the time. Or in Seoul, there are so many transportations, so it is a mess. The travel time for transportation. Yeah. Or difficult. Yeah.
+<span class="tutor">[Tutor]</span> Well, that is about it for time. And at the bottom here are some questions or some words for you to review with your free time.
+[Joey] Okay. Thank you so much.
+<span class="tutor">[Tutor]</span> You&#x27;re welcome. Yeah, I&#x27;ll send you corrections. Have a great day. Bye-bye.
+[Joey] Take care.</div>
+        </div>
+    </div>
+    <div class="toast" id="toast">✅ 프롬프트가 복사되었습니다!</div>
+    <script>
+        const REVIEW_PROMPT="너는 나의 영어 회화 복습 파트너야. 오늘 내 전화영어 수업 내용을 기반으로 대화하면서 복습을 도와줘.\n\n[오늘 수업 전사 내용]\n[Tutor] Hello, well, good morning.\n[Student] Yeah, good morning.\n[Tutor] How are you doing today?\n[Joey] Yeah, just good.\n[Tutor] Yeah, it's July, our first day.\n[Joey] So it is...\n[Tutor] Yeah, new month.\n[Joey] Yeah, new month.\n[Tutor] You're right. The fresh month. So it is a little humid and a little hot.\n[Joey] Yeah.\n[Tutor] And it's a new day of a new month, so it's nice. How are you today, Joey?\n[Joey] Oh, good. Yeah, it's pretty nice. Yeah, it's still June, so yeah, but yeah, pretty good weather. Pretty nice weather.\n[Tutor] Okay, very nice weather. Do you have any big plans for July? Any big plans this month?\n[Joey] Usually no, I don't have a big appointment or big plans, but maybe this... I live in Busan, so the beach is open. So maybe it is possible to swim near the beach, in the beach. And so maybe I will go to the beach in July and August with my son and go swimming. Yeah, that is our plan. And we have so many vouchers to use the swimming pool in a hotel. So also we will go swimming in the pool, in the pool, yeah, in a hotel. So yeah, this is a summer plan, not a big...\n[Tutor] Oh, that's nice. Yeah, you live near the beach, that's nice. You can enjoy going to the beach or having those pool vouchers.\n[Joey] Yeah, you're right. Yeah, I have so many vouchers, and if the weather is nice at that time, I will go to the beach to play, make a sandcastle, or swim in the sea, etc. Yeah, nothing special.\n[Tutor] Okay. So did you want to take a look at the SnapChat?\n[Joey] Oh, yes. I prepared the SnapChat.\n[Tutor] How was your first time studying the SnapChat?\n[Joey] Okay, so it starts with page three, public transport.\n[Tutor] Oh, public transport. Yes, okay. I see.\n[Tutor] What is the most common transport in Korea?\n[Joey] My country? That depends on the area. But usually in Seoul, the common transportation is subway because it is connected like a web, a spider web. So, if you go somewhere, it is easier to take a subway. And it connects to the bus. If you use one card, you tap it in the subway and that is also possible to use the bus. So in Seoul, that is the common transportation, the subway and bus.\n[Tutor] Okay, how about in different areas? In different parts of Korea?\n[Joey] In my hometown, Busan, that is not developed like Seoul. So it is more developed, both in ferries. Busan is a port, so it is connected by some bridges. Or if they don't develop the bridge, we use the ferry because we can go there directly. So in my hometown, Busan, the most common transportation is bus and ferry. And our country is small, so if we move to a local area, that is more convenient to use the train. For example, every Friday I will visit my home and that distance is almost 500 km. So I use the train every Friday night because over 100 km, it is easier to use a train. So yeah, there are also developed trains.\n[Tutor] Is the coach bus popular? So the big bus or city-to-city bus? Are they popular in Korea?\n[Joey] That is divided into two kinds of bus. One is the small downtown bus that moves through downtowns and every area. But the other thing is the bigger one that moves longer distances. So we call that the \"gong-gong bus\" because that bus number is blah blah \"gong-gong\". For example, 5600, 900. So we call that \"gong-gong bus\" because \"gong-gong\" means \"public\" in Korean. So yeah, so we call it \"gong-gong bus\".\n[Tutor] Gong-gong bus. Okay, okay.\n[Joey] Tell the difference. Yeah, the other one. Yeah, different seating. Yeah, the stops are longer in between.\n[Tutor] Oh, yes.\n[Joey] When I visited Bangkok in Thailand, that city developed ferries because in the middle of Bangkok, a big river flows through the city. But Bangkok's transportation, Bangkok is so complex to move because there are so many people. So usually if we move to other famous sites, we use the ferry. That is so convenient and cheap and easy. So when I visited Bangkok, I stayed in a hotel nearby the river. And that hotel has a ferry. So if I visit the shopping mall, I use the hotel's ferries. That's so nice and convenient.\n[Tutor] Oh, that's nice. You have the hotel... that's a good extra amenity, a good bonus for the hotel.\n[Joey] Yes, there are so many hotels nearby a river, and many hotels have their own ferries because the tourists want that ferry and movement for transportation. So yeah.\n[Tutor] That's totally similar.\n[Tutor] The second question, which do you prefer for commuting, a bus or subway?\n[Joey] That depends on where we move. But usually I like the bus because I love to... I love watching the view from the window, seeing the window. Yeah, because you know, outside of the bus there are so many beautiful things like the street, people, and cars, and roads, and nice construction, and fresh air. So usually I love to take the bus better than the subway. But at night, or if I want to move faster, at that time I use the subway. Because subways come every five minutes or three minutes between stops. And that is faster. So that depends on where I move in the city.\n[Tutor] Yeah, it's true. Yeah, in Vancouver, our train is above ground. So it's nice. You can have a view.\n[Joey] One more please, teacher.\n[Tutor] In Vancouver, the subway is above ground.\n[Joey] Above ground.\n[Tutor] So you can look outside and see buildings.\n[Joey] I see. So you mean the subway moves outside of the city, so we can see the outside scene, right?\n[Tutor] No, in the city, it's above ground.\n[Joey] Above ground.\n[Tutor] So it's like on a bridge. So it's above the ground.\n[Joey] I see. Some areas. It is possible to see the outside in the subway, right?\n[Tutor] Yeah, it's called the Skytrain.\n[Joey] Skytrain. Ah, it's so nice.\n[Tutor] So it's like a subway, but you have a view.\n[Joey] Have a view. Okay, yeah. It is similar in Seoul. I heard today some lines have moved outside, not underground, but above ground. So we can see the beautiful scene. For example, the Hangang Bridge, etc. Yeah, it's similar.\n[Tutor] Okay, you can see outside in some areas when it's crossing the bridge.\n[Joey] Yes, yes, you're right.\n[Tutor] So part C, we have the problem solving. Would you like to read the situation?\n[Joey] Oh, yes. No problem. \"You are late for an important appointment. Your leg hurts and you still have some paperwork to do.\" Hmm. \"You need to choose the fastest way to get there. If you could take a bus, subway, or taxi, which one would you choose and why?\" I think the first I consider that work is about company or my work. I divide first. And then if that work is about the corporation, I can use the corporation card, so I will take the taxi because it is more convenient and fast, and also I can do some work in the backseat. So yeah, first I divide my work, and if that work is about the company work, I use a credit card and take a taxi. Yeah. But if that is my work, and then I divide, I consider if it is important or not, and urgent or not. If that is emergency, I take the taxi. But if not important and not urgent, not emergency and not important, at that time I just take a bus or a subway.\n[Tutor] Yeah, it all depends on how urgent it is or if the company is paying. You're right. What about a situation with meeting friends?\n[Joey] Situation meeting friends?\n[Tutor] Yeah, if you're meeting a friend.\n[Joey] Meeting friends. Not for work, but for a friend or family. I consider if I meet my friend and drink beer or some alcohol, so it is more convenient to take the subway. But my hometown is not developed with a subway, so usually it is easier to take a bus. Yeah, to meet my friends. Yeah. But usually, I don't use public transport in my hometown because my hometown is not developed with public transport and it is easier to drive my car. So, when I lived in Seoul, I used many transportation, transport. But when I visit my hometown, it is easier to drive myself in my car.\n[Tutor] Yeah, it's much easier to just drive yourself.\n[Joey] Yeah, yeah.\n[Tutor] It's not a big system.\n[Joey] Yeah, you're right.\n[Tutor] So the next question, when was the last time you used public transport?\n[Joey] Okay, I see. Before I said I travel to my hometown every Friday and Sunday. So last time I used public transport is the train and bus because I took the bus two times and the train one time. First, I moved to the train station, and then took a train and traveled for two hours, 30 minutes, and then one more time I took a bus. So totally, it spent four hours or five hours. Such a long journey for me. So last time, I arrived on Sunday.\n[Tutor] Okay. Yeah, changing buses. Yeah.\n[Joey] Yeah, changing to the bus.\n[Tutor] Okay, you're right. And have you ever missed the last train or bus of the day?\n[Joey] Not usually, but I have so many train reservations. It started one month ago. I can reserve the train on the website. But sometimes I missed. So if I forgot about it and then I discovered that I missed my reservation. Yeah, I have some problem taking a train. At that time, I just find direct train booking. But sometimes I miss, so it is a little problem. Yeah, but usually I check my schedule so I don't miss the train. Yeah, and sometimes I have miscalculated the time. Or in Seoul, there are so many transportations, so it is a mess. The travel time for transportation. Yeah. Or difficult. Yeah.\n[Tutor] Well, that is about it for time. And at the bottom here are some questions or some words for you to review with your free time.\n[Joey] Okay. Thank you so much.\n[Tutor] You're welcome. Yeah, I'll send you corrections. Have a great day. Bye-bye.\n[Joey] Take care.\n\n[AI 피드백]\n안녕하세요, Joey! 따뜻하고 실용적인 영어 코치입니다. 오늘 전화영어 수업 내용을 바탕으로 Joey의 영어 실력 향상을 위한 피드백을 준비했어요. 유창성과 정확성을 동시에 잡고, 입에 착 붙는 자연스러운 표현들을 익혀나가도록 도와드릴게요.\n\n---\n\n**0. 📌 Topic**\nTopic: Discussing Public Transportation and Travel Choices\n\n---\n\n**1. 📊 오늘의 대화 요약 (Summary)**\n오늘은 여름철 개인적인 계획(해변, 호텔 수영장 이용 등)에 대해 이야기하며 대화를 시작했습니다. 이어서 한국(서울, 부산) 및 해외(방콕)의 대중교통 시스템에 대해 깊이 있게 논의했습니다. 특히, 지역별 교통수단의 차이점, 개인적인 선호도(버스 vs. 지하철), 그리고 특정 상황(중요한 약속, 친구와의 만남)에 따른 최적의 이동 수단 선택에 대해 구체적으로 이야기 나누었습니다.\n\n---\n\n**2. 💬 유창성 업그레이드 (Fluency & Natural Flow)**\n\nJoey가 말한 내용 중 의미는 통하지만, 조금 더 자연스럽거나 격식 있게 다듬을 수 있는 표현 3가지를 골라봤어요.\n\n*   **항목 1**\n    *   ❌ As Said: \"But usually in Seoul, the common transportation is subway because it is connected like a web, a spider web.\"\n    *   ✅ Natural: \"But in Seoul, the most common transportation is the subway, as it's interconnected like a spider web.\"\n    *   💎 Professional: \"In Seoul, the subway is the predominant mode of transport, given its extensive, web-like network.\"\n    *   💡 Coaching Point: Using \"most common\" or \"predominant mode of transport\" sounds more natural and professional than \"common transportation.\" Also, \"as it's interconnected\" or \"given its extensive network\" provides a smoother connection than \"because it is connected.\"\n        → \"most common\" 또는 \"predominant mode of transport\"를 사용하면 \"common transportation\"보다 더 자연스럽고 전문적으로 들립니다. 또한, \"as it's interconnected\" 또는 \"given its extensive network\"와 같은 표현은 \"because it is connected\"보다 더 부드러운 연결을 제공합니다.\n\n*   **항목 2**\n    *   ❌ As Said: \"So usually I love to take the bus better than the subway.\"\n    *   ✅ Natural: \"So I usually prefer taking the bus over the subway.\"\n    *   💎 Professional: \"Consequently, I generally opt for the bus rather than the subway.\"\n    *   💡 Coaching Point: \"Prefer X over Y\" is a more idiomatic and common way to express preference than \"like X better than Y.\" \"Opt for\" is a more formal verb suitable for professional contexts.\n        → \"Prefer X over Y\"는 \"like X better than Y\"보다 선호도를 표현하는 더 관용적이고 일반적인 방식입니다. \"Opt for\"는 전문적인 맥락에 적합한 더 격식 있는 동사입니다.\n\n*   **항목 3**\n    *   ❌ As Said: \"I think the first I consider that work is about company or my work. I divide first.\"\n    *   ✅ Natural: \"I first consider whether the appointment is for the company or for myself. I'll divide them first.\"\n    *   💎 Professional: \"My initial consideration is whether the appointment pertains to company matters or personal affairs; I categorize them accordingly.\"\n    *   💡 Coaching Point: The original phrasing is a bit indirect. \"Consider whether X is for A or B\" is clearer. Adding \"I'll divide them first\" or \"I categorize them accordingly\" makes the action of separating the tasks more explicit and natural.\n        → 원래 표현은 다소 간접적입니다. \"Consider whether X is for A or B\"가 더 명확합니다. \"I'll divide them first\" 또는 \"I categorize them accordingly\"를 추가하면 업무를 구분하는 행동을 더 명확하고 자연스럽게 만듭니다.\n\n---\n\n**3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)**\n\n이번 수업에서 Joey가 반복적으로 보인 문법 패턴 중 하나는 **'불규칙 동사 과거형 및 과거분사형 오류'**였습니다. 특히 'forget'과 같이 불규칙 동사의 과거형이나 과거분사형을 잘못 사용하는 경향이 있었습니다.\n\n*   `Category: Irregular Verb Forms (Past Tense & Past Participle)`\n\n| ❌ 원문 (As Said)                                                                                                | ✅ 교정 예시 (Correction)                                                                                             |\n| :--------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------- |\n| \"But sometimes I missed.\"                                                                                        | \"But sometimes I **missed**.\" (이 문장 자체는 문법적으로 맞습니다. 다만, 뒤에 이어지는 'forgot' 오류와 함께 불규칙 동사 사용 전반에 대한 주의가 필요합니다.) |\n| \"So if I forgot about it and then I discovered that I missed my reservation.\"                                    | \"So if I **forgot** about it and then I discovered that I had missed my reservation.\"                                 |\n| \"So if I forgot about it and then I discovered that I missed my reservation.\" (두 번째 등장)                                | \"So if I **forgot** about it and then I discovered that I had missed my reservation.\"                                 |\n| \"But sometimes I missed.\" (세 번째 등장, 'missed' 자체는 맞지만, 'forgot' 오류와 함께 불규칙 동사 사용 패턴으로 묶어봄) | \"But sometimes I **missed**.\" (이 문장 자체는 문법적으로 맞습니다. 다만, 뒤에 이어지는 'forgot' 오류와 함께 불규칙 동사 사용 전반에 대한 주의가 필요합니다.) |\n\n📌 **핵심 규칙**: 불규칙 동사의 과거형(Past Tense)과 과거분사형(Past Participle)은 따로 암기해야 하며, 문맥에 맞게 정확히 사용해야 합니다. 'forget'의 과거형은 'forgot', 과거분사형은 'forgotten'입니다.\n\n🔁 **따라 읽기 (Practice)**:\n🗣️ \"So if I **forgot** about it and then I discovered that I had missed my reservation.\"\n🗣️ \"I **forgot** to check my schedule, so I missed my train.\"\n🗣️ \"The train tickets were **forgotten** at home.\"\n\n---\n\n**4. 📗 어휘 확장 (Vocabulary Vault)**\n\n오늘 대화에서 나왔거나 맥락상 유용했던 단어 5가지입니다.\n\n1.  **interconnected** /ˌɪntərkəˈnektɪd/ (adjective)\n    *   뜻: 서로 연결된, 상호 관련된\n    *   실전 예문: \"Our company's departments need to be more interconnected for better collaboration.\"\n2.  **predominant** /prɪˈdɑːmənənt/ (adjective)\n    *   뜻: 우세한, 지배적인, 주요한\n    *   실전 예문: \"The predominant color in this design is blue.\"\n3.  **idiomatic** /ˌɪdiəˈmætɪk/ (adjective)\n    *   뜻: 관용적인, 숙어의\n    *   실전 예문: \"To sound more natural, it's important to learn idiomatic expressions.\"\n4.  **pertains to** /pərˈteɪnz tuː/ (verb phrase)\n    *   뜻: ~에 관한 것이다, ~에 속하다\n    *   실전 예문: \"Please only ask questions that pertain to the project scope.\"\n5.  **consequently** /ˌkɑːnsəˈkwentli/ (adverb)\n    *   뜻: 결과적으로, 따라서\n    *   실전 예문: \"The market demand increased significantly; consequently, production had to be ramped up.\"\n\n---\n\n**5. 📝 실전 복습 챌린지 (Practice)**\n\n오늘 배운 표현과 문법을 활용하여 영어로 말해보는 연습입니다.\n\n1.  **상황**: 서울의 대중교통 시스템이 얼마나 잘 연결되어 있는지 설명하고 싶습니다.\n    *   **영작**: Describe how the public transportation system in Seoul is interconnected.\n    *   **모범 답안**: \"The public transportation system in Seoul is highly interconnected, with subways and buses forming a comprehensive network that makes it easy to travel anywhere.\"\n\n2.  **상황**: 중요한 회사 약속이 있는데, 회사 카드를 사용할 수 있다면 택시를 타는 것이 가장 편리하고 빠를 것이라고 말하고 싶습니다.\n    *   **영작**: If you have an important company appointment and can use the company card, explain why taking a taxi is the best option.\n    *   **모범 답안**: \"If I have an important company appointment and can use the company card, I would choose a taxi because it's the most convenient and fastest way to get there, and I can even work in the backseat.\"\n\n3.  **상황**: 친구와 저녁 약속이 있는데, 술을 마실 계획이라 대중교통을 이용하는 것이 더 낫다고 말하고 싶습니다. (오늘 배운 'prefer X over Y'와 'pertain to' 또는 'consequently'를 활용해 보세요.)\n    *   **영작**: You have plans to meet a friend for dinner and plan to drink. Explain why you prefer taking public transport.\n    *   **모범 답안**: \"Since we plan to drink some alcohol tonight, I prefer taking the subway over driving. This decision pertains to safety, and consequently, it's the most responsible choice.\"\n\n---\n\n**6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)**\n\n*   ✨ **Good Job**:\n    Joey가 \"But if that work is about my work, and then I divide, I consider if it is important or not, and urgent or not.\" 라고 말했을 때, 상황을 명확히 구분하려는 노력이 돋보였습니다. 비록 표현을 조금 더 다듬으면 좋겠지만, 복잡한 상황을 논리적으로 나누어 설명하려는 시도 자체가 훌륭했습니다. 특히 'important or not, and urgent or not' 과 같이 두 가지 기준을 제시하며 생각하는 과정을 보여준 점이 좋았습니다.\n\n*   🚀 **내일의 한 문장**:\n    다음 수업 시작 시, 오늘 배운 내용을 활용하여 튜터에게 이렇게 질문해보세요.\n    \"Teacher, I usually prefer taking the bus over the subway because I like watching the scenery. However, if I'm in a hurry, I'll take the subway. What do you usually prefer?\"\n\n---\n\n**[성과 지표]**\n\n*   **유창성 점수**: 7/10\n    *   **근거**: Joey는 자신의 생각을 명확하게 전달하기 위해 노력했으며, 다양한 상황과 경험을 예시로 들어 대화를 풍성하게 만들었습니다. 특히 교통수단 선택에 대한 이유를 구체적으로 설명하는 부분에서 유창성이 돋보였습니다. 다만, 일부 표현이 조금 더 자연스럽거나 간결하게 다듬어질 여지가 있어 7점으로 평가했습니다.\n*   **다음 수업 '원포인트 액션 플랜'**:\n    불규칙 동사 'forget'의 과거형('forgot')과 과거분사형('forgotten')을 정확히 구분하여 사용하는 연습을 집중적으로 진행합니다. 또한, 'prefer X over Y'와 같은 관용적인 표현을 활용하여 자신의 선호도를 더 자연스럽게 표현하는 연습을 할 것입니다.\n\n위 내용을 바탕으로:\n1. 먼저 오늘 수업에서 내가 틀렸거나 어색했던 표현을 하나 골라서, 관련된 상황을 영어로 질문해줘.\n2. 내가 영어로 대답하면, 자연스러운지 확인하고 더 나은 표현이 있으면 알려줘.\n3. 특히 \"반복 실수 패턴\"에서 지적된 부분을 집중적으로 연습시켜줘.\n4. 이런 식으로 오늘 배운 표현들을 하나씩 복습하자.\n5. 한국어 설명은 필요할 때만 간단히, 대화는 최대한 영어로 진행해줘.\n\n그럼 시작하자!";
+        function startReview(){navigator.clipboard.writeText(REVIEW_PROMPT).then(()=>{showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)}).catch(()=>{const t=document.createElement('textarea');t.value=REVIEW_PROMPT;document.body.appendChild(t);t.select();document.execCommand('copy');document.body.removeChild(t);showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)})}
+        function showToast(){const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500)}
+        function switchTab(n){document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',n==='feedback'?i===0:i===1));document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));document.getElementById('tab-'+n).classList.add('active')}
+    </script>
+</body>
+</html>

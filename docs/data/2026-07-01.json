@@ -1,0 +1,53 @@
+{
+ "date": "2026-07-01",
+ "iso": [
+  2026,
+  27
+ ],
+ "topic": "Discussing Public Transportation and Travel Choices",
+ "grammar": "Irregular Verb Forms",
+ "grammar_norm": "Verb Forms / Auxiliaries",
+ "score": 7.0,
+ "pairs": [
+  {
+   "said": "But usually in Seoul, the common transportation is subway because it is connected like a web, a spider web.",
+   "natural": "But in Seoul, the most common transportation is the subway, as it's interconnected like a spider web."
+  },
+  {
+   "said": "So usually I love to take the bus better than the subway.",
+   "natural": "So I usually prefer taking the bus over the subway."
+  },
+  {
+   "said": "I think the first I consider that work is about company or my work. I divide first.",
+   "natural": "I first consider whether the appointment is for the company or for myself. I'll divide them first."
+  }
+ ],
+ "vocab": [
+  {
+   "word": "interconnected",
+   "pos": "adjective",
+   "meaning": "서로 연결된, 상호 관련된"
+  },
+  {
+   "word": "predominant",
+   "pos": "adjective",
+   "meaning": "우세한, 지배적인, 주요한"
+  },
+  {
+   "word": "idiomatic",
+   "pos": "adjective",
+   "meaning": "관용적인, 숙어의"
+  },
+  {
+   "word": "pertains to",
+   "pos": "verb phrase",
+   "meaning": "~에 관한 것이다, ~에 속하다"
+  },
+  {
+   "word": "consequently",
+   "pos": "adverb",
+   "meaning": "결과적으로, 따라서"
+  }
+ ],
+ "_html_md5": "76c3083314aae5926f297f09eaee535f"
+}
