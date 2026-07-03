@@ -3,7 +3,7 @@
   "week": "2026-W27",
   "date": "2026-07-03",
   "file": "ep-2026-W27.mp3",
-  "engine": "gtts",
+  "engine": "gemini",
   "lines": 120
  }
 ]
