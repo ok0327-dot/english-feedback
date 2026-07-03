@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#0f0f13"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="당근영어"><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="icon" type="image/png" sizes="192x192" href="icon-192.png"><script src="install-banner.js" defer></script><script src="sw-reg.js" defer></script>
+    <title>전화영어 복습 - 2026년 07월 03일</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Noto Sans KR',sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.75;min-height:100vh}
+        .header{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);border-bottom:1px solid rgba(255,255,255,.06);padding:48px 24px 40px;text-align:center}
+        .header-date{font-size:13px;color:#94a3b8;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+        .header h1{font-size:28px;font-weight:700;color:#f1f5f9;margin-bottom:16px}
+        .header-meta{display:flex;justify-content:center;gap:24px;font-size:14px;color:#64748b}
+        .header-meta span{display:flex;align-items:center;gap:6px}
+        .cta-section{text-align:center;padding:40px 24px}
+        .cta-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:linear-gradient(135deg,#38bdf8,#818cf8);color:#fff;font-size:16px;font-weight:600;font-family:'Noto Sans KR',sans-serif;border:none;border-radius:50px;cursor:pointer;transition:all .3s;text-decoration:none;box-shadow:0 4px 24px rgba(56,189,248,.25)}
+        .cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(56,189,248,.35)}
+        .cta-btn svg{width:20px;height:20px}
+        .cta-sub{margin-top:12px;font-size:13px;color:#64748b}
+        .toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#38bdf8;padding:14px 28px;border-radius:12px;font-size:14px;font-weight:500;border:1px solid rgba(56,189,248,.2);box-shadow:0 8px 32px rgba(0,0,0,.4);opacity:0;transition:all .4s cubic-bezier(.16,1,.3,1);z-index:1000}
+        .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+        .container{max-width:720px;margin:0 auto;padding:0 24px 80px}
+        .tabs{display:flex;gap:4px;background:#1a1a24;padding:4px;border-radius:12px;margin-bottom:32px}
+        .tab{flex:1;padding:12px;text-align:center;font-size:14px;font-weight:500;color:#64748b;background:0 0;border:none;border-radius:8px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all .2s}
+        .tab.active{background:#262636;color:#f1f5f9}
+        .tab-content{display:none}.tab-content.active{display:block}
+        .feedback h2{font-size:18px;font-weight:700;color:#f1f5f9;margin:36px 0 16px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.06)}
+        .feedback h2:first-child{margin-top:0}
+        .feedback p{margin:8px 0;color:#cbd5e1}
+        .feedback .item{padding:6px 0 6px 16px;border-left:2px solid #334155;margin:6px 0;color:#cbd5e1}
+        .feedback .numbered{padding:8px 0 8px 16px;color:#cbd5e1}
+        .feedback .numbered strong{color:#38bdf8}
+        .feedback strong{color:#f1f5f9}
+        .feedback code{background:#1e293b;padding:2px 8px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#38bdf8}
+        .feedback table{width:100%;border-collapse:collapse;margin:12px 0}
+        .feedback th,.feedback td{padding:10px 14px;text-align:left;border-bottom:1px solid #262636}
+        .feedback th{color:#94a3b8;font-weight:500;font-size:13px}
+        .feedback td{color:#cbd5e1}
+        .arrow{color:#38bdf8;font-weight:700}
+        .transcript{background:#1a1a24;border-radius:12px;padding:28px;font-size:14px;line-height:2;color:#94a3b8;white-space:pre-wrap;word-break:break-word;font-family:'JetBrains Mono','Noto Sans KR',monospace}
+        .transcript .tutor{color:#38bdf8}
+        .transcript .student{color:#a78bfa}
+        @media(max-width:640px){.header{padding:32px 16px}.header h1{font-size:22px}.cta-btn{padding:14px 28px;font-size:15px}.container{padding:0 16px 60px}}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-date">2026년 07월 03일</div>
+        <h1>📚 전화영어 복습</h1>
+        <div class="header-meta">
+            <span>⏱ 19분 47초</span>
+            <span>🎙 전화영어_025180304_20260703080023.m4a</span>
+        </div>
+    </div>
+    <div class="cta-section">
+        <button class="cta-btn" onclick="startReview()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Gemini에서 복습 대화 시작하기
+        </button>
+        <div class="cta-sub">클릭하면 프롬프트가 복사되고 Gemini가 열립니다</div>
+    </div>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('feedback')">📋 AI 피드백</button>
+            <button class="tab" onclick="switchTab('transcript')">🎙 수업 전사</button>
+        </div>
+        <div id="tab-feedback" class="tab-content active">
+            <div class="feedback"><p>따뜻하고 실용적인 영어 코치 Bell입니다. Joey님, 오늘 대화 정말 즐거웠어요! 주말 계획부터 운전면허, 사고 대처, 해외 운전 경험까지 다양한 이야기를 나눌 수 있어서 좋았습니다. 특히 월드컵 'round of 16' 표현을 시도하고 튜터와 함께 정확한 용어를 익혀가는 과정이 인상 깊었어요!</p>
+<br>
+<br>
+<p><strong>0. 📌 Topic</strong></p>
+<p>Topic: Discussing weekend plans, driver's license experiences, and road safety.</p>
+<br>
+<p><strong>1. 📊 오늘의 대화 요약 (Summary)</strong></p>
+<p>오늘 Joey님과 주말 월드컵 시청 계획에 대해 이야기하며 대화를 시작했습니다. 이후 한국의 운전면허 취득 과정, 운전 및 주차 경험, 그리고 좋은 운전자가 되기 위한 요소(경험 vs. 규칙)에 대해 깊이 있게 다뤘습니다. 또한, 경미한 사고 발생 시 대처 방안과 터키, 일본 등 다른 나라에서의 운전 경험을 공유하며 다양한 상황에서의 영어 표현들을 연습했습니다.</p>
+<br>
+<p><strong>2. 💬 유창성 업그레이드 (Fluency & Natural Flow)</strong></p>
+<p>Joey님이 실제 말한 문장 중, 의미는 통하지만 더 자연스럽게 다듬을 수 있는 표현 3가지를 선정했습니다.</p>
+<br>
+<div class="item"><strong>❌ 학습자 원문 (As Said)</strong>: "And your country also listed up the strong of 16 or 15, 16?"</div>
+<div class="item"><strong>✅ 자연스러운 표현 (Natural)</strong>: "Did your country make it to the 'round of 16'?"</div>
+<div class="item"><strong>💎 비즈니스 표현 (Professional)</strong>: "Has your country advanced to the 'round of 16'?"</div>
+<div class="item"><strong>💡 코칭 포인트</strong>: "listed up" 대신 "make it to"나 "advance to"를 사용하면 토너먼트 진출을 훨씬 자연스럽게 표현할 수 있습니다. "round of 16"은 해당 단계의 표준 용어입니다.</div>
+<br>
+<div class="item"><strong>❌ 학습자 원문 (As Said)</strong>: "I'm sorry, my question is a little ugly."</div>
+<div class="item"><strong>✅ 자연스러운 표현 (Natural)</strong>: "I'm sorry, my question is a bit unclear/awkward."</div>
+<div class="item"><strong>💎 비즈니스 표현 (Professional)</strong>: "I apologize if my question was unclear."</div>
+<div class="item"><strong>💡 코칭 포인트</strong>: "ugly"는 너무 직역적인 표현입니다. 질문이 잘 정리되지 않았을 때는 "unclear" 또는 "awkward"가 훨씬 적절합니다.</div>
+<br>
+<div class="item"><strong>❌ 학습자 원문 (As Said)</strong>: "But basic, the foundation is knowing the rule because that is the basic rule."</div>
+<div class="item"><strong>✅ 자연스러운 표현 (Natural)</strong>: "But the basic foundation is knowing the rules."</div>
+<div class="item"><strong>💎 비즈니스 표현 (Professional)</strong>: "However, the fundamental principle lies in understanding the regulations."</div>
+<div class="item"><strong>💡 코칭 포인트</strong>: "basic rule"을 두 번 반복하는 것은 불필요합니다. "the basic foundation"으로 합치거나 "knowing the rules is fundamental"이라고 표현하면 더 간결하고 자연스러워집니다.</div>
+<br>
+<p><strong>3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)</strong></p>
+<p>Category: <strong>Missing Noun/Pronoun in Comparison/Ellipsis</strong></p>
+<br>
+<p>Joey님은 비교 구문이나 생략된 문장에서 명사나 대명사를 누락하는 경향이 있었습니다. 이로 인해 문장의 의미가 모호해지거나 어색하게 들릴 수 있습니다.</p>
+<br>
+<table>
+<tr><th>❌ 원문 (As Said)</th><th>✅ 교정 예시 (Corrected)</th></tr>
+<tr><td>"the right turn is more complicated than left."</td><td>"The right turn is more complicated than <strong>the left turn</strong>."</td></tr>
+<tr><td>"So usually 18 years old, that adult can get a license..."</td><td>"So usually 18 years old, <strong>an adult</strong> can get a license..."</td></tr>
+<tr><td>"Because if we are front parking, it's really difficult."</td><td>"Because if we are <strong>parking head-in</strong> (or <strong>front-in</strong>), it's really difficult."</td></tr>
+</table>
+<br>
+<p>📌 <strong>핵심 규칙</strong>: 비교 구문이나 생략된 문장에서 대상을 명확히 하려면 명사나 대명사를 생략하지 않고 명시적으로 언급해야 합니다. 특히 "than" 뒤에는 비교 대상이 명확히 와야 합니다.</p>
+<br>
+<p>🔁 <strong>따라 읽기 (Read Aloud)</strong>:</p>
+<p>🗣️ "The right turn is more complicated than the left turn."</p>
+<p>🗣️ "So usually 18 years old, an adult can get a license..."</p>
+<p>🗣️ "Because if we are parking head-in, it's really difficult."</p>
+<br>
+<p><strong>4. 📗 어휘 확장 (Vocabulary Vault)</strong></p>
+<p>오늘 대화에서 유용했거나 업무 환경에서 활용할 수 있는 어휘 5가지입니다.</p>
+<br>
+<div class="item"><strong>dent</strong> /dɛnt/ (명사)</div>
+<div class="item">뜻: 찌그러진 곳, 움푹 들어간 곳</div>
+<div class="item">실전 예문: We need to assess the damage to the vehicle, especially the large <strong>dent</strong> on the side.</div>
+<br>
+<div class="item"><strong>file a report</strong> /faɪl ə rɪˈpɔːrt/ (동사구)</div>
+<div class="item">뜻: (보고서 등을) 제출하다, 신고하다</div>
+<div class="item">실전 예문: It's crucial to <strong>file a report</strong> with the insurance company immediately after an incident.</div>
+<br>
+<div class="item"><strong>embarrassed</strong> /ɪmˈbærəst/ (형용사)</div>
+<div class="item">뜻: 당황한, 쑥스러운</div>
+<div class="item">실전 예문: I felt a little <strong>embarrassed</strong> when I realized I had made a mistake in front of the clients.</div>
+<br>
+<div class="item"><strong>adjust</strong> /əˈdʒʌst/ (동사)</div>
+<div class="item">뜻: 적응하다, 조절하다</div>
+<div class="item">실전 예문: We need to <strong>adjust</strong> our strategy to the changing market conditions.</div>
+<br>
+<div class="item"><strong>economic</strong> /ˌiːkəˈnɒmɪk/ (형용사)</div>
+<div class="item">뜻: 경제적인, 비용 효율적인</div>
+<div class="item">실전 예문: Renting a car for business trips is often more <strong>economic</strong> than taking taxis for long distances.</div>
+<br>
+<p><strong>5. 📝 실전 복습 챌린지 (Practice)</strong></p>
+<p>오늘 배운 표현과 문법을 활용하여 영작 챌린지에 도전해 보세요!</p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>상황</strong>: 주말에 월드컵 8강전이 열릴 예정입니다.</div>
+<div class="item"><strong>영작</strong>: "이번 주말에 우리나라는 월드컵 8강에 진출할 수 있을까요?"</div>
+<div class="item"><strong>모범 답안</strong>: "Do you think our country can make it to the quarter-finals of the World Cup this weekend?"</div>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>상황</strong>: 고객에게 보낸 보고서가 명확하지 않아 사과해야 합니다.</div>
+<div class="item"><strong>영작</strong>: "보고서가 명확하지 않았다면 사과드립니다."</div>
+<div class="item"><strong>모범 답안</strong>: "I apologize if the report was unclear."</div>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>상황</strong>: 새로운 시장에 진출하기 위해서는 현지 문화에 적응하는 것이 매우 중요합니다.</div>
+<div class="item"><strong>영작</strong>: "새로운 시장에 진출할 때는 현지 문화에 적응하는 것이 매우 중요합니다. 이는 성공적인 비즈니스를 위한 기본적인 토대입니다."</div>
+<div class="item"><strong>모범 답안</strong>: "When entering a new market, it's crucial to adjust to the local culture. This is the basic foundation for a successful business."</div>
+<br>
+<p><strong>6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)</strong></p>
+<br>
+<p>✨ <strong>Good Job</strong>: "Usually I drive on the weekends. It is easy to park in my lane because five years ago I worked on the sales team. Every sales member received our company car and we drove for our work. So it is really easy because I have so many experiences driving for work. So, yeah, that is not difficult for me."</p>
+<p>Joey님, 이 문장들은 본인의 경험을 바탕으로 주차에 대한 자신감을 아주 구체적이고 논리적으로 설명해 주셨어요. 'sales team', 'company car', 'experiences driving for work' 등 비즈니스 환경과 관련된 단어들을 자연스럽게 활용하여 본인의 강점을 잘 어필했습니다. 유창하고 자신감 있는 설명이 정말 좋았습니다!</p>
+<br>
+<p>🚀 <strong>내일의 한 문장</strong>: 다음 수업 시작 시 튜터에게 오늘 배운 표현을 활용하여 이렇게 말해보세요!</p>
+<p>"I've been thinking about what we discussed today. I realize that understanding the basic rules is the foundation, but adjusting to real-life situations on the road requires a lot of experience."</p>
+<br>
+<br>
+<p><strong>[성과 지표]</strong></p>
+<p><strong>유창성 점수</strong>: 7.5/10</p>
+<br>
+<p><strong>근거</strong>: Joey님은 다양한 주제에 대해 막힘없이 자신의 의견을 표현하는 데 능숙합니다. 대화의 흐름이 자연스럽고, 적절한 속도로 말하며, 주저함이 적습니다. 하지만 일부 구어체 표현이나 고정 표현(idiomatic expressions) 사용에 있어서 원어민이 듣기에 다소 어색하게 들릴 수 있는 부분이 있었습니다. 또한, 문법적 정확성보다는 의미 전달에 중점을 두는 경향이 있어, 특정 문법 패턴에서 반복적인 오류가 발견되었습니다. 전반적으로 의미 전달에는 전혀 문제가 없으며, 자신감 있는 발화가 돋보입니다.</p>
+<br>
+<p><strong>다음 수업 '원포인트 액션 플랜'</strong>:</p>
+<p>다음 수업에서는 오늘 배운 <strong>'비교 구문이나 생략된 문장에서 명사/대명사 명확히 언급하기'</strong>에 집중하여 연습해 봅시다. 특히 "than" 뒤에 오는 비교 대상을 명확히 하는 연습을 통해 문장의 정확성을 높이는 데 도움을 드릴게요.</p></div>
+        </div>
+        <div id="tab-transcript" class="tab-content">
+            <div class="transcript"><span class="student">[Student]</span> Hello, Bell. Good morning. Happy Friday. Hi.
+<span class="tutor">[Tutor]</span> Yeah, happy Friday. How are you doing?
+<span class="student">[Student]</span> Of course. Everything is good. It&#x27;s Friday. Yeah, I&#x27;m good. How are you today?
+<span class="tutor">[Tutor]</span> Oh, pretty good. Yeah. Did you have any plans for this Friday?
+<span class="student">[Student]</span> Not yet.
+<span class="tutor">[Tutor]</span> For the weekend?
+<span class="student">[Student]</span> Not yet. Maybe I will make some appointments or have some plans in the future. But I don&#x27;t know. Maybe I&#x27;ll take time with my family, but I don&#x27;t have a specific plan yet. How about you? Do you have some plans, special plans on the weekend?
+<span class="tutor">[Tutor]</span> Yeah, on the weekend.
+<span class="tutor">[Tutor]</span> Yeah, probably watching the World Cup game.
+<span class="student">[Student]</span> Oh, yes.
+<span class="tutor">[Tutor]</span> Not finished.
+<span class="student">[Student]</span> And your country also listed up the strong of 16 or 15, 16?
+<span class="tutor">[Tutor]</span> Yeah, they&#x27;re in the, they have a game this weekend.
+<span class="student">[Student]</span> Your country won the tournament, right?
+<span class="tutor">[Tutor]</span> So far, they&#x27;ve been winning.
+<span class="tutor">[Tutor]</span> So they have another game this weekend.
+<span class="student">[Student]</span> Which country is your...
+<span class="tutor">[Tutor]</span> Canada.
+<span class="student">[Student]</span> Canada.
+<span class="student">[Student]</span> Oh, no, no, no.
+<span class="student">[Student]</span> Just I mean your opposing teams.
+<span class="tutor">[Tutor]</span> Which country?
+<span class="tutor">[Tutor]</span> Morocco.
+<span class="student">[Student]</span> Morocco.
+<span class="student">[Student]</span> Wow, that is a strong team.
+<span class="student">[Student]</span> I see.
+<span class="student">[Student]</span> Okay.
+<span class="tutor">[Tutor]</span> Good.
+<span class="student">[Student]</span> Mm-mm-mm.
+<span class="tutor">[Tutor]</span> Yes, I&#x27;ll probably be watching the game.
+<span class="student">[Student]</span> Yes, I see.
+<span class="student">[Student]</span> That is the 16th, 16th, round of the 16th list of, or...
+<span class="student">[Student]</span> I&#x27;m sorry, my question is a little ugly.
+<span class="tutor">[Tutor]</span> Yes.
+<span class="tutor">[Tutor]</span> Yeah, I&#x27;m not sure.
+<span class="tutor">[Tutor]</span> So do you mean like the brackets?
+<span class="student">[Student]</span> Yeah, maybe they are gathering their tournament to the 16th country, and they compete country to country, and your country competes with Morocco. So it is the round of the 16th. That&#x27;s my impression.
+<span class="tutor">[Tutor]</span> So the 16th round, round of 16.
+<span class="student">[Student]</span> Round of 16. I see.
+<span class="student">[Student]</span> Okay. Okay. I&#x27;ll check them. Okay.
+<span class="tutor">[Tutor]</span> Yeah. Yeah. So in the 16th round. Yeah.
+<span class="student">[Student]</span> Ah, yeah. Okay. I see.
+<span class="tutor">[Tutor]</span> So today&#x27;s textbook, are you able to look at page five?
+<span class="student">[Student]</span> Oh, yeah. Today we will talk about rules of the road.
+<span class="tutor">[Tutor]</span> The section three.
+<span class="student">[Student]</span> Okay.
+<span class="tutor">[Tutor]</span> Yeah, so what is the hardest part of getting a driver&#x27;s license in Korea?
+<span class="student">[Student]</span> I see. In South Korea, the driver&#x27;s license exam is divided into three kinds of exams. First, we have to take a written test, and then if we pass the test, and then we will go to the function test. That test means just a test of a function, like the parking and direct road and curved road. And then if we pass them, the last test is to go to the real road test. There&#x27;s some tester, examiner in the real road. In the test seat, there is the tester examining the road.
+<span class="tutor">[Tutor]</span> Tester, examiner.
+<span class="student">[Student]</span> Yeah, examiner. So I wanted to talk about we are testers and some people are there checking our points on the road. So in a backseat or the opposite, so you have to see kind of the test. Yes, and all passes is done, we have to get a license, a driver&#x27;s license. But the hardest part, right? So I think the very difficult function part is the function test. That is a little difficult in Korea, in South Korea.
+<span class="tutor">[Tutor]</span> Okay. So at what age are you able to get a license?
+<span class="student">[Student]</span> What age? What age?
+<span class="student">[Student]</span> Ah, maybe it&#x27;s possible to test over 18 years old. Yeah. So usually in South Korea, many people had a test to enter a college. And then in that period, the break time, they get the license. So usually 18 years old, that adult can get a license in our country.
+<span class="tutor">[Tutor]</span> And at what age did you get your license?
+<span class="student">[Student]</span> When I got a license, maybe 2020? Yeah, 2021? 2022? I forgot that. But maybe 2022, 2021, I got a license, a car driver&#x27;s license.
+<span class="tutor">[Tutor]</span> After car driver&#x27;s license.
+<span class="student">[Student]</span> Okay.
+<span class="tutor">[Tutor]</span> How are you at parking versus driving? Are you good at parking your car?
+<span class="student">[Student]</span> Usually I drive on the weekends. It is easy to park in my lane because five years ago I worked on the sales team. Every sales member received our company car and we drove for our work. So it is really easy because I have so many experiences driving for work. So, yeah, that is not difficult for me. Yeah, the parking, the road.
+<span class="tutor">[Tutor]</span> Yeah. Parking, like parallel parking or backing in.
+<span class="student">[Student]</span> Yeah, it is a little easy, but my best, it is really easy to back into the parking. Because if we are front parking, it&#x27;s really difficult. But usually we use the meter of our car, so it is easy to park in my road. The back parking is more easy. Yeah. And I guess, yeah, I guess, uh, today&#x27;s issue is a little easy and a little comfortable, but, uh, really at the, at the test and speaking something a little difficult to something the life of the, yeah, I don&#x27;t know why it is a little difficult to explain that drive and license and all the rules. But anyway, I need to practice more. Okay.
+<span class="tutor">[Tutor]</span> Yeah, you&#x27;re doing well so far. Yeah, there&#x27;s a lot of prepositions.
+<span class="student">[Student]</span> Yes, okay.
+<span class="tutor">[Tutor]</span> So which do you think makes someone a good driver and why? Experience or knowing the rules or something else?
+<span class="student">[Student]</span> I think both are important. But basic, the foundation is knowing the rule because that is the basic rule. So you can use blinkers and how to go direct and cross the road, etc. But more important is experience. Because the rule is just the foundation and basic. But if we go outside, if we go on the road, at that time we have some experience because on the road there are so many people and the people&#x27;s character is really different. Some people have some patience and some people are urgent, and some people are more, some person is more relaxed. So we have to adjust on the road. And so I think experience is more important on the road. Yeah, that&#x27;s my opinion.
+<span class="tutor">[Tutor]</span> So kind of knowing how to handle different situations.
+<span class="student">[Student]</span> Yeah, how to get on the highway, how to move the lane on the road, how to stay there, take a signal, right signal, etc. Yeah, how to signal. Yeah, how to read the signal is better. Yeah, how to read the signal, how to signal. How to signal. How to signal.
+<span class="student">[Student]</span> To the road. To the run. To the stop.
+<span class="tutor">[Tutor]</span> Okay. And next we have the situation. Would you like to read?
+<span class="student">[Student]</span> Oh yeah, no problem.
+<span class="student">[Student]</span> You got into a small accident. And it was your fault. No one was hurt, but your new car has a large dent. The other driver says it&#x27;s fine and doesn&#x27;t want to wait around to file a police report. Hmm. Would you just let it go or contact your insurance company? Why?
+<span class="student">[Student]</span> Hmm. I see. That is a little problem. But first, I&#x27;m recording his comment because some people change their mind. On the road, he said, yeah, it&#x27;s fine. Go away. Thank you so much. But one or two days later, he or she called the police and filed the report. So I think the best way is to inform the insurance company. It&#x27;s better. But if I don&#x27;t have enough money and if I don&#x27;t have a record of the history of the accident, at that time I&#x27;m just recording his comment and just fix my car on my cash. It&#x27;s possible to pay myself, but it&#x27;s more important to record his comment or receive his direct contact, etc.
+<span class="tutor">[Tutor]</span> Strong. And have you ever had an accident or experienced an accident?
+<span class="student">[Student]</span> Oh yeah, so many times, but maybe this situation is a little small accident, but maybe five, five years ago, I had some little big accident, you know, entering the highway, highway, yeah, hit the dump truck. That is so big car, and that road is getting smaller, smaller. So we hit the side, but this dump truck, dump car is so big, dump truck is so big, so my car is broken a lot. So and I was a little embarrassed, embarrassed in this situation. So I called the police and insurance company. Yeah. So I have a sort of that situation.
+<span class="tutor">[Tutor]</span> Okay. Okay. So you had to, you know, you did call the police in that situation.
+<span class="student">[Student]</span> Yeah, you&#x27;re right. Yeah. I called the police.
+<span class="tutor">[Tutor]</span> So what advice would you give to someone learning to drive?
+<span class="student">[Student]</span> Hmm. I see. Okay. My advice is to take a relax and take your time on the road. Because in Korea, in South Korea, driving is so urgent. They are fast on the road and they don&#x27;t avoid their road. So I think if some newbie or if some driver takes their time and takes a rest, it is more easy, not urgent. Just take your time. That&#x27;s my advice to new drivers.
+<span class="tutor">[Tutor]</span> Kind of relax, take your time, stay calm.
+<span class="student">[Student]</span> You&#x27;re right.
+<span class="tutor">[Tutor]</span> And have you ever driven in another country?
+<span class="student">[Student]</span> I see. I have experience driving in Turkey and Japan. Turkey is a little easy because their roadway, the car roadway is the right way, right side. It&#x27;s the same in Korea. But the Japanese is really difficult. Their roadway is the left. It is the opposite way in Korea. So, it is really difficult. For example, in Korea, the right side, right turn is so easy because we don&#x27;t have a signal on the right side turn right because we&#x27;re on the right side. But when I drive in Japan, the right side is the big, have a big signal because they are left side drive. So always we consider the right side, left side. So it is really difficult to drive in Japan.
+<span class="tutor">[Tutor]</span> Yeah, definitely the turns are different.
+<span class="student">[Student]</span> Yeah, the right turn is more complicated than left.
+<span class="student">[Student]</span> Yeah, and Canada is drive right side, right? Same as Korea.
+<span class="tutor">[Tutor]</span> Ah, yes, I see.
+<span class="student">[Student]</span> Good.
+<span class="tutor">[Tutor]</span> Yeah. Did you rent a car when you were there or did you use a different vehicle when you traveled to another country?
+<span class="student">[Student]</span> Another country? Yeah, usually I use the rental car service because that is a little short and it is more economic. Yeah. Hey, because we use that rental car for a limited period. So that&#x27;s the best way. Yeah, rental car. Use the rental car.
+<span class="tutor">[Tutor]</span> Okay. Yeah, renting a car is a lot easier.
+<span class="student">[Student]</span> Hmm, more easier. You&#x27;re right.
+<span class="tutor">[Tutor]</span> Do you prefer to rent a car or do you like to hire a taxi or take public transportation?
+<span class="student">[Student]</span> That depends on the country, but usually I like to use the rental car because taxi and public transportation is limited to places to visit and the taxi is a little expensive. But if I use the rental car, I can go anywhere in every country and it is too easy to move freely. So yeah, it is good to travel by rental car. Yeah, some places are really dangerous. Like Thailand or some countries have so many motorbikes. So we&#x27;re careful about the motorbike and the road situation. So, yeah, that depends on the country.
+<span class="tutor">[Tutor]</span> Yeah, you have to watch out for other motorbikes. That is about it for time. I will send you corrections in a bit.
+<span class="student">[Student]</span> Yeah, have a great weekend.
+<span class="tutor">[Tutor]</span> Okay, you too. Have a nice weekend.
+<span class="student">[Student]</span> Bye-bye, teacher.
+<span class="tutor">[Tutor]</span> Bye.</div>
+        </div>
+    </div>
+    <div class="toast" id="toast">✅ 프롬프트가 복사되었습니다!</div>
+    <script>
+        const REVIEW_PROMPT="너는 나의 영어 회화 복습 파트너야. 오늘 내 전화영어 수업 내용을 기반으로 대화하면서 복습을 도와줘.\n\n[오늘 수업 전사 내용]\n[Student] Hello, Bell. Good morning. Happy Friday. Hi.\n[Tutor] Yeah, happy Friday. How are you doing?\n[Student] Of course. Everything is good. It's Friday. Yeah, I'm good. How are you today?\n[Tutor] Oh, pretty good. Yeah. Did you have any plans for this Friday?\n[Student] Not yet.\n[Tutor] For the weekend?\n[Student] Not yet. Maybe I will make some appointments or have some plans in the future. But I don't know. Maybe I'll take time with my family, but I don't have a specific plan yet. How about you? Do you have some plans, special plans on the weekend?\n[Tutor] Yeah, on the weekend.\n[Tutor] Yeah, probably watching the World Cup game.\n[Student] Oh, yes.\n[Tutor] Not finished.\n[Student] And your country also listed up the strong of 16 or 15, 16?\n[Tutor] Yeah, they're in the, they have a game this weekend.\n[Student] Your country won the tournament, right?\n[Tutor] So far, they've been winning.\n[Tutor] So they have another game this weekend.\n[Student] Which country is your...\n[Tutor] Canada.\n[Student] Canada.\n[Student] Oh, no, no, no.\n[Student] Just I mean your opposing teams.\n[Tutor] Which country?\n[Tutor] Morocco.\n[Student] Morocco.\n[Student] Wow, that is a strong team.\n[Student] I see.\n[Student] Okay.\n[Tutor] Good.\n[Student] Mm-mm-mm.\n[Tutor] Yes, I'll probably be watching the game.\n[Student] Yes, I see.\n[Student] That is the 16th, 16th, round of the 16th list of, or...\n[Student] I'm sorry, my question is a little ugly.\n[Tutor] Yes.\n[Tutor] Yeah, I'm not sure.\n[Tutor] So do you mean like the brackets?\n[Student] Yeah, maybe they are gathering their tournament to the 16th country, and they compete country to country, and your country competes with Morocco. So it is the round of the 16th. That's my impression.\n[Tutor] So the 16th round, round of 16.\n[Student] Round of 16. I see.\n[Student] Okay. Okay. I'll check them. Okay.\n[Tutor] Yeah. Yeah. So in the 16th round. Yeah.\n[Student] Ah, yeah. Okay. I see.\n[Tutor] So today's textbook, are you able to look at page five?\n[Student] Oh, yeah. Today we will talk about rules of the road.\n[Tutor] The section three.\n[Student] Okay.\n[Tutor] Yeah, so what is the hardest part of getting a driver's license in Korea?\n[Student] I see. In South Korea, the driver's license exam is divided into three kinds of exams. First, we have to take a written test, and then if we pass the test, and then we will go to the function test. That test means just a test of a function, like the parking and direct road and curved road. And then if we pass them, the last test is to go to the real road test. There's some tester, examiner in the real road. In the test seat, there is the tester examining the road.\n[Tutor] Tester, examiner.\n[Student] Yeah, examiner. So I wanted to talk about we are testers and some people are there checking our points on the road. So in a backseat or the opposite, so you have to see kind of the test. Yes, and all passes is done, we have to get a license, a driver's license. But the hardest part, right? So I think the very difficult function part is the function test. That is a little difficult in Korea, in South Korea.\n[Tutor] Okay. So at what age are you able to get a license?\n[Student] What age? What age?\n[Student] Ah, maybe it's possible to test over 18 years old. Yeah. So usually in South Korea, many people had a test to enter a college. And then in that period, the break time, they get the license. So usually 18 years old, that adult can get a license in our country.\n[Tutor] And at what age did you get your license?\n[Student] When I got a license, maybe 2020? Yeah, 2021? 2022? I forgot that. But maybe 2022, 2021, I got a license, a car driver's license.\n[Tutor] After car driver's license.\n[Student] Okay.\n[Tutor] How are you at parking versus driving? Are you good at parking your car?\n[Student] Usually I drive on the weekends. It is easy to park in my lane because five years ago I worked on the sales team. Every sales member received our company car and we drove for our work. So it is really easy because I have so many experiences driving for work. So, yeah, that is not difficult for me. Yeah, the parking, the road.\n[Tutor] Yeah. Parking, like parallel parking or backing in.\n[Student] Yeah, it is a little easy, but my best, it is really easy to back into the parking. Because if we are front parking, it's really difficult. But usually we use the meter of our car, so it is easy to park in my road. The back parking is more easy. Yeah. And I guess, yeah, I guess, uh, today's issue is a little easy and a little comfortable, but, uh, really at the, at the test and speaking something a little difficult to something the life of the, yeah, I don't know why it is a little difficult to explain that drive and license and all the rules. But anyway, I need to practice more. Okay.\n[Tutor] Yeah, you're doing well so far. Yeah, there's a lot of prepositions.\n[Student] Yes, okay.\n[Tutor] So which do you think makes someone a good driver and why? Experience or knowing the rules or something else?\n[Student] I think both are important. But basic, the foundation is knowing the rule because that is the basic rule. So you can use blinkers and how to go direct and cross the road, etc. But more important is experience. Because the rule is just the foundation and basic. But if we go outside, if we go on the road, at that time we have some experience because on the road there are so many people and the people's character is really different. Some people have some patience and some people are urgent, and some people are more, some person is more relaxed. So we have to adjust on the road. And so I think experience is more important on the road. Yeah, that's my opinion.\n[Tutor] So kind of knowing how to handle different situations.\n[Student] Yeah, how to get on the highway, how to move the lane on the road, how to stay there, take a signal, right signal, etc. Yeah, how to signal. Yeah, how to read the signal is better. Yeah, how to read the signal, how to signal. How to signal. How to signal.\n[Student] To the road. To the run. To the stop.\n[Tutor] Okay. And next we have the situation. Would you like to read?\n[Student] Oh yeah, no problem.\n[Student] You got into a small accident. And it was your fault. No one was hurt, but your new car has a large dent. The other driver says it's fine and doesn't want to wait around to file a police report. Hmm. Would you just let it go or contact your insurance company? Why?\n[Student] Hmm. I see. That is a little problem. But first, I'm recording his comment because some people change their mind. On the road, he said, yeah, it's fine. Go away. Thank you so much. But one or two days later, he or she called the police and filed the report. So I think the best way is to inform the insurance company. It's better. But if I don't have enough money and if I don't have a record of the history of the accident, at that time I'm just recording his comment and just fix my car on my cash. It's possible to pay myself, but it's more important to record his comment or receive his direct contact, etc.\n[Tutor] Strong. And have you ever had an accident or experienced an accident?\n[Student] Oh yeah, so many times, but maybe this situation is a little small accident, but maybe five, five years ago, I had some little big accident, you know, entering the highway, highway, yeah, hit the dump truck. That is so big car, and that road is getting smaller, smaller. So we hit the side, but this dump truck, dump car is so big, dump truck is so big, so my car is broken a lot. So and I was a little embarrassed, embarrassed in this situation. So I called the police and insurance company. Yeah. So I have a sort of that situation.\n[Tutor] Okay. Okay. So you had to, you know, you did call the police in that situation.\n[Student] Yeah, you're right. Yeah. I called the police.\n[Tutor] So what advice would you give to someone learning to drive?\n[Student] Hmm. I see. Okay. My advice is to take a relax and take your time on the road. Because in Korea, in South Korea, driving is so urgent. They are fast on the road and they don't avoid their road. So I think if some newbie or if some driver takes their time and takes a rest, it is more easy, not urgent. Just take your time. That's my advice to new drivers.\n[Tutor] Kind of relax, take your time, stay calm.\n[Student] You're right.\n[Tutor] And have you ever driven in another country?\n[Student] I see. I have experience driving in Turkey and Japan. Turkey is a little easy because their roadway, the car roadway is the right way, right side. It's the same in Korea. But the Japanese is really difficult. Their roadway is the left. It is the opposite way in Korea. So, it is really difficult. For example, in Korea, the right side, right turn is so easy because we don't have a signal on the right side turn right because we're on the right side. But when I drive in Japan, the right side is the big, have a big signal because they are left side drive. So always we consider the right side, left side. So it is really difficult to drive in Japan.\n[Tutor] Yeah, definitely the turns are different.\n[Student] Yeah, the right turn is more complicated than left.\n[Student] Yeah, and Canada is drive right side, right? Same as Korea.\n[Tutor] Ah, yes, I see.\n[Student] Good.\n[Tutor] Yeah. Did you rent a car when you were there or did you use a different vehicle when you traveled to another country?\n[Student] Another country? Yeah, usually I use the rental car service because that is a little short and it is more economic. Yeah. Hey, because we use that rental car for a limited period. So that's the best way. Yeah, rental car. Use the rental car.\n[Tutor] Okay. Yeah, renting a car is a lot easier.\n[Student] Hmm, more easier. You're right.\n[Tutor] Do you prefer to rent a car or do you like to hire a taxi or take public transportation?\n[Student] That depends on the country, but usually I like to use the rental car because taxi and public transportation is limited to places to visit and the taxi is a little expensive. But if I use the rental car, I can go anywhere in every country and it is too easy to move freely. So yeah, it is good to travel by rental car. Yeah, some places are really dangerous. Like Thailand or some countries have so many motorbikes. So we're careful about the motorbike and the road situation. So, yeah, that depends on the country.\n[Tutor] Yeah, you have to watch out for other motorbikes. That is about it for time. I will send you corrections in a bit.\n[Student] Yeah, have a great weekend.\n[Tutor] Okay, you too. Have a nice weekend.\n[Student] Bye-bye, teacher.\n[Tutor] Bye.\n\n[AI 피드백]\n따뜻하고 실용적인 영어 코치 Bell입니다. Joey님, 오늘 대화 정말 즐거웠어요! 주말 계획부터 운전면허, 사고 대처, 해외 운전 경험까지 다양한 이야기를 나눌 수 있어서 좋았습니다. 특히 월드컵 'round of 16' 표현을 시도하고 튜터와 함께 정확한 용어를 익혀가는 과정이 인상 깊었어요!\n\n---\n\n**0. 📌 Topic**\nTopic: Discussing weekend plans, driver's license experiences, and road safety.\n\n**1. 📊 오늘의 대화 요약 (Summary)**\n오늘 Joey님과 주말 월드컵 시청 계획에 대해 이야기하며 대화를 시작했습니다. 이후 한국의 운전면허 취득 과정, 운전 및 주차 경험, 그리고 좋은 운전자가 되기 위한 요소(경험 vs. 규칙)에 대해 깊이 있게 다뤘습니다. 또한, 경미한 사고 발생 시 대처 방안과 터키, 일본 등 다른 나라에서의 운전 경험을 공유하며 다양한 상황에서의 영어 표현들을 연습했습니다.\n\n**2. 💬 유창성 업그레이드 (Fluency & Natural Flow)**\nJoey님이 실제 말한 문장 중, 의미는 통하지만 더 자연스럽게 다듬을 수 있는 표현 3가지를 선정했습니다.\n\n*   **❌ 학습자 원문 (As Said)**: \"And your country also listed up the strong of 16 or 15, 16?\"\n    *   **✅ 자연스러운 표현 (Natural)**: \"Did your country make it to the 'round of 16'?\"\n    *   **💎 비즈니스 표현 (Professional)**: \"Has your country advanced to the 'round of 16'?\"\n    *   **💡 코칭 포인트**: \"listed up\" 대신 \"make it to\"나 \"advance to\"를 사용하면 토너먼트 진출을 훨씬 자연스럽게 표현할 수 있습니다. \"round of 16\"은 해당 단계의 표준 용어입니다.\n\n*   **❌ 학습자 원문 (As Said)**: \"I'm sorry, my question is a little ugly.\"\n    *   **✅ 자연스러운 표현 (Natural)**: \"I'm sorry, my question is a bit unclear/awkward.\"\n    *   **💎 비즈니스 표현 (Professional)**: \"I apologize if my question was unclear.\"\n    *   **💡 코칭 포인트**: \"ugly\"는 너무 직역적인 표현입니다. 질문이 잘 정리되지 않았을 때는 \"unclear\" 또는 \"awkward\"가 훨씬 적절합니다.\n\n*   **❌ 학습자 원문 (As Said)**: \"But basic, the foundation is knowing the rule because that is the basic rule.\"\n    *   **✅ 자연스러운 표현 (Natural)**: \"But the basic foundation is knowing the rules.\"\n    *   **💎 비즈니스 표현 (Professional)**: \"However, the fundamental principle lies in understanding the regulations.\"\n    *   **💡 코칭 포인트**: \"basic rule\"을 두 번 반복하는 것은 불필요합니다. \"the basic foundation\"으로 합치거나 \"knowing the rules is fundamental\"이라고 표현하면 더 간결하고 자연스러워집니다.\n\n**3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)**\nCategory: **Missing Noun/Pronoun in Comparison/Ellipsis**\n\nJoey님은 비교 구문이나 생략된 문장에서 명사나 대명사를 누락하는 경향이 있었습니다. 이로 인해 문장의 의미가 모호해지거나 어색하게 들릴 수 있습니다.\n\n| ❌ 원문 (As Said)                                         | ✅ 교정 예시 (Corrected)                                         |\n| :------------------------------------------------------- | :--------------------------------------------------------------- |\n| \"the right turn is more complicated than left.\"          | \"The right turn is more complicated than **the left turn**.\"     |\n| \"So usually 18 years old, that adult can get a license...\" | \"So usually 18 years old, **an adult** can get a license...\"     |\n| \"Because if we are front parking, it's really difficult.\" | \"Because if we are **parking head-in** (or **front-in**), it's really difficult.\" |\n\n📌 **핵심 규칙**: 비교 구문이나 생략된 문장에서 대상을 명확히 하려면 명사나 대명사를 생략하지 않고 명시적으로 언급해야 합니다. 특히 \"than\" 뒤에는 비교 대상이 명확히 와야 합니다.\n\n🔁 **따라 읽기 (Read Aloud)**:\n🗣️ \"The right turn is more complicated than the left turn.\"\n🗣️ \"So usually 18 years old, an adult can get a license...\"\n🗣️ \"Because if we are parking head-in, it's really difficult.\"\n\n**4. 📗 어휘 확장 (Vocabulary Vault)**\n오늘 대화에서 유용했거나 업무 환경에서 활용할 수 있는 어휘 5가지입니다.\n\n*   **dent** /dɛnt/ (명사)\n    *   뜻: 찌그러진 곳, 움푹 들어간 곳\n    *   실전 예문: We need to assess the damage to the vehicle, especially the large **dent** on the side.\n\n*   **file a report** /faɪl ə rɪˈpɔːrt/ (동사구)\n    *   뜻: (보고서 등을) 제출하다, 신고하다\n    *   실전 예문: It's crucial to **file a report** with the insurance company immediately after an incident.\n\n*   **embarrassed** /ɪmˈbærəst/ (형용사)\n    *   뜻: 당황한, 쑥스러운\n    *   실전 예문: I felt a little **embarrassed** when I realized I had made a mistake in front of the clients.\n\n*   **adjust** /əˈdʒʌst/ (동사)\n    *   뜻: 적응하다, 조절하다\n    *   실전 예문: We need to **adjust** our strategy to the changing market conditions.\n\n*   **economic** /ˌiːkəˈnɒmɪk/ (형용사)\n    *   뜻: 경제적인, 비용 효율적인\n    *   실전 예문: Renting a car for business trips is often more **economic** than taking taxis for long distances.\n\n**5. 📝 실전 복습 챌린지 (Practice)**\n오늘 배운 표현과 문법을 활용하여 영작 챌린지에 도전해 보세요!\n\n1.  **상황**: 주말에 월드컵 8강전이 열릴 예정입니다.\n    *   **영작**: \"이번 주말에 우리나라는 월드컵 8강에 진출할 수 있을까요?\"\n    *   **모범 답안**: \"Do you think our country can make it to the quarter-finals of the World Cup this weekend?\"\n\n2.  **상황**: 고객에게 보낸 보고서가 명확하지 않아 사과해야 합니다.\n    *   **영작**: \"보고서가 명확하지 않았다면 사과드립니다.\"\n    *   **모범 답안**: \"I apologize if the report was unclear.\"\n\n3.  **상황**: 새로운 시장에 진출하기 위해서는 현지 문화에 적응하는 것이 매우 중요합니다.\n    *   **영작**: \"새로운 시장에 진출할 때는 현지 문화에 적응하는 것이 매우 중요합니다. 이는 성공적인 비즈니스를 위한 기본적인 토대입니다.\"\n    *   **모범 답안**: \"When entering a new market, it's crucial to adjust to the local culture. This is the basic foundation for a successful business.\"\n\n**6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)**\n\n✨ **Good Job**: \"Usually I drive on the weekends. It is easy to park in my lane because five years ago I worked on the sales team. Every sales member received our company car and we drove for our work. So it is really easy because I have so many experiences driving for work. So, yeah, that is not difficult for me.\"\nJoey님, 이 문장들은 본인의 경험을 바탕으로 주차에 대한 자신감을 아주 구체적이고 논리적으로 설명해 주셨어요. 'sales team', 'company car', 'experiences driving for work' 등 비즈니스 환경과 관련된 단어들을 자연스럽게 활용하여 본인의 강점을 잘 어필했습니다. 유창하고 자신감 있는 설명이 정말 좋았습니다!\n\n🚀 **내일의 한 문장**: 다음 수업 시작 시 튜터에게 오늘 배운 표현을 활용하여 이렇게 말해보세요!\n\"I've been thinking about what we discussed today. I realize that understanding the basic rules is the foundation, but adjusting to real-life situations on the road requires a lot of experience.\"\n\n---\n\n**[성과 지표]**\n**유창성 점수**: 7.5/10\n\n**근거**: Joey님은 다양한 주제에 대해 막힘없이 자신의 의견을 표현하는 데 능숙합니다. 대화의 흐름이 자연스럽고, 적절한 속도로 말하며, 주저함이 적습니다. 하지만 일부 구어체 표현이나 고정 표현(idiomatic expressions) 사용에 있어서 원어민이 듣기에 다소 어색하게 들릴 수 있는 부분이 있었습니다. 또한, 문법적 정확성보다는 의미 전달에 중점을 두는 경향이 있어, 특정 문법 패턴에서 반복적인 오류가 발견되었습니다. 전반적으로 의미 전달에는 전혀 문제가 없으며, 자신감 있는 발화가 돋보입니다.\n\n**다음 수업 '원포인트 액션 플랜'**:\n다음 수업에서는 오늘 배운 **'비교 구문이나 생략된 문장에서 명사/대명사 명확히 언급하기'**에 집중하여 연습해 봅시다. 특히 \"than\" 뒤에 오는 비교 대상을 명확히 하는 연습을 통해 문장의 정확성을 높이는 데 도움을 드릴게요.\n\n위 내용을 바탕으로:\n1. 먼저 오늘 수업에서 내가 틀렸거나 어색했던 표현을 하나 골라서, 관련된 상황을 영어로 질문해줘.\n2. 내가 영어로 대답하면, 자연스러운지 확인하고 더 나은 표현이 있으면 알려줘.\n3. 특히 \"반복 실수 패턴\"에서 지적된 부분을 집중적으로 연습시켜줘.\n4. 이런 식으로 오늘 배운 표현들을 하나씩 복습하자.\n5. 한국어 설명은 필요할 때만 간단히, 대화는 최대한 영어로 진행해줘.\n\n그럼 시작하자!";
+        function startReview(){navigator.clipboard.writeText(REVIEW_PROMPT).then(()=>{showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)}).catch(()=>{const t=document.createElement('textarea');t.value=REVIEW_PROMPT;document.body.appendChild(t);t.select();document.execCommand('copy');document.body.removeChild(t);showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)})}
+        function showToast(){const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500)}
+        function switchTab(n){document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',n==='feedback'?i===0:i===1));document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));document.getElementById('tab-'+n).classList.add('active')}
+    </script>
+</body>
+</html>
