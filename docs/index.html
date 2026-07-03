@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#0f0f13"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="당근영어"><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="icon" type="image/png" sizes="192x192" href="icon-192.png"><script src="install-banner.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#0f0f13"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="당근영어"><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="icon" type="image/png" sizes="192x192" href="icon-192.png"><script src="install-banner.js" defer></script><script src="sw-reg.js" defer></script>
     <title>전화영어 복습 기록</title>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
@@ -34,6 +34,9 @@
     <a class="weekly-btn" style="background:linear-gradient(135deg,#fb923c,#f59e0b);box-shadow:0 4px 20px rgba(251,146,60,.25)" href="carrot.html">🎓 강사 공식 피드백 보기 →</a>
     <a class="weekly-btn" style="background:linear-gradient(135deg,#a78bfa,#818cf8);box-shadow:0 4px 20px rgba(167,139,250,.25)" href="radio.html">🎙️ 영어 주간 라디오 듣기 →</a>
     <div class="list" id="list">
+        <div class="item" data-date="2026-07-03"><a href="2026-07-03.html" class="link"><span class="date">2026-07-03</span><span class="topic">Discussing weekend plans, driver&#x27;s license experiences, and road safety.</span></a><button class="del-btn" onclick="hideReview('2026-07-03',this)" title="숨기기">✕</button></div>
+        <div class="item" data-date="2026-07-02"><a href="2026-07-02.html" class="link"><span class="date">2026-07-02</span><span class="topic">Exploring transportation preferences and travel experiences.</span></a><button class="del-btn" onclick="hideReview('2026-07-02',this)" title="숨기기">✕</button></div>
+        <div class="item" data-date="2026-07-01"><a href="2026-07-01.html" class="link"><span class="date">2026-07-01</span><span class="topic">Discussing Public Transportation and Travel Choices</span></a><button class="del-btn" onclick="hideReview('2026-07-01',this)" title="숨기기">✕</button></div>
         <div class="item" data-date="2026-06-26"><a href="2026-06-26.html" class="link"><span class="date">2026-06-26</span><span class="topic">Investment — types, risk vs. stability, and the shift from real estate to stocks</span></a><button class="del-btn" onclick="hideReview('2026-06-26',this)" title="숨기기">✕</button></div>
         <div class="item" data-date="2026-06-25"><a href="2026-06-25.html" class="link"><span class="date">2026-06-25</span><span class="topic">Discussing the purpose and tasks involved in strategic planning.</span></a><button class="del-btn" onclick="hideReview('2026-06-25',this)" title="숨기기">✕</button></div>
         <div class="item" data-date="2026-06-24"><a href="2026-06-24.html" class="link"><span class="date">2026-06-24</span><span class="topic">Discussing office supplies and stationery.</span></a><button class="del-btn" onclick="hideReview('2026-06-24',this)" title="숨기기">✕</button></div>
@@ -111,5 +114,5 @@
     function showToast(msg){const t=document.getElementById('toast');t.textContent=msg;t.className='toast show';setTimeout(()=>t.classList.remove('show'),3000)}
     applyHidden();
     </script>
-<script>if("serviceWorker" in navigator){addEventListener("load",function(){navigator.serviceWorker.register("sw.js").catch(function(){})})}</script></body>
+</body>
 </html>

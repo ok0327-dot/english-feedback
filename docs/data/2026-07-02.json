@@ -1,0 +1,53 @@
+{
+ "date": "2026-07-02",
+ "iso": [
+  2026,
+  27
+ ],
+ "topic": "Exploring transportation preferences and travel experiences.",
+ "grammar": "Missing or Incorrect Articles",
+ "grammar_norm": "Articles (a/an/the)",
+ "score": 7.0,
+ "pairs": [
+  {
+   "said": "There are four kinds of transportation or walk and divide the country.",
+   "natural": "There are four kinds of transportation, or people just walk, depending on the area."
+  },
+  {
+   "said": "So if you travel, first you take the transportation like the bus, subway, etc. And then we arrive at the endpoint, the popular place. We just walk.",
+   "natural": "So when you travel, you usually take public transportation like a bus or subway, and then once you arrive at your destination, you often walk."
+  },
+  {
+   "said": "almost driving is the error and that is my mistake because some busy area is so it is impossible to find the parking area.",
+   "natural": "Almost every time I've driven in a busy area, it's been a mistake because finding parking is impossible."
+  }
+ ],
+ "vocab": [
+  {
+   "word": "utilize",
+   "pos": "동사",
+   "meaning": "활용하다, 이용하다 (use보다 격식 있는 표현)"
+  },
+  {
+   "word": "congested",
+   "pos": "형용사",
+   "meaning": "혼잡한, 붐비는"
+  },
+  {
+   "word": "impracticality",
+   "pos": "명사",
+   "meaning": "비실용성, 비현실성"
+  },
+  {
+   "word": "oversight",
+   "pos": "명사",
+   "meaning": "간과, 실수, 부주의"
+  },
+  {
+   "word": "hidden gem",
+   "pos": "명사",
+   "meaning": "숨겨진 보석, 잘 알려지지 않은 좋은 곳/것"
+  }
+ ],
+ "_html_md5": "52a8db62542f58b47c850991be11e43c"
+}

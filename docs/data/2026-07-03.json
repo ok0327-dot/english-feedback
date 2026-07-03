@@ -1,0 +1,53 @@
+{
+ "date": "2026-07-03",
+ "iso": [
+  2026,
+  27
+ ],
+ "topic": "Discussing weekend plans, driver's license experiences, and road safety.",
+ "grammar": "Missing Noun/Pronoun in Comparison/Ellipsis",
+ "grammar_norm": "Missing Noun/Pronoun In Comparison/Ellipsis",
+ "score": 7.5,
+ "pairs": [
+  {
+   "said": "And your country also listed up the strong of 16 or 15, 16?",
+   "natural": "Did your country make it to the 'round of 16'?"
+  },
+  {
+   "said": "I'm sorry, my question is a little ugly.",
+   "natural": "I'm sorry, my question is a bit unclear/awkward."
+  },
+  {
+   "said": "But basic, the foundation is knowing the rule because that is the basic rule.",
+   "natural": "But the basic foundation is knowing the rules."
+  }
+ ],
+ "vocab": [
+  {
+   "word": "dent",
+   "pos": "명사",
+   "meaning": "찌그러진 곳, 움푹 들어간 곳"
+  },
+  {
+   "word": "file a report",
+   "pos": "동사구",
+   "meaning": "(보고서 등을) 제출하다, 신고하다"
+  },
+  {
+   "word": "embarrassed",
+   "pos": "형용사",
+   "meaning": "당황한, 쑥스러운"
+  },
+  {
+   "word": "adjust",
+   "pos": "동사",
+   "meaning": "적응하다, 조절하다"
+  },
+  {
+   "word": "economic",
+   "pos": "형용사",
+   "meaning": "경제적인, 비용 효율적인"
+  }
+ ],
+ "_html_md5": "9200da94157d2f984db34ee74569eb19"
+}

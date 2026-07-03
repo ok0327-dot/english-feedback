@@ -161,5 +161,17 @@
   "2026-03-17": {
     "topic": "Matching customer profiles to restaurants and writing a polite dinner invitation",
     "target_grammar": "prepositions (place/venue \"at\" vs. \"on\"/\"for\"/\"in\")"
+  },
+  "2026-07-01": {
+    "topic": "Discussing Public Transportation and Travel Choices",
+    "target_grammar": "irregular verb forms (past tense & past participle)`"
+  },
+  "2026-07-02": {
+    "topic": "Exploring transportation preferences and travel experiences.",
+    "target_grammar": "missing or incorrect articles (a/an/the)"
+  },
+  "2026-07-03": {
+    "topic": "Discussing weekend plans, driver's license experiences, and road safety.",
+    "target_grammar": "missing noun/pronoun in comparison/ellipsis"
   }
 }
