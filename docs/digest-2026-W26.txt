@@ -1,6 +1,6 @@
 # Weekly English Study Digest — 2026-W26 (6/22~6/26)
 
-This is a study digest from my one-on-one English phone lessons this week. Please turn it into a friendly, encouraging two-host English podcast (Audio Overview) that reviews my mistakes, explains WHY the natural version is better, teaches the key vocabulary with example sentences, and ends with quick practice. Keep the level around A2–B1 and speak slowly and clearly.
+This is a study digest from my one-on-one English phone lessons this week. Please turn it into a friendly, encouraging two-host English podcast (Audio Overview) that reviews my mistakes, explains WHY the natural version is better, teaches the key vocabulary with example sentences, and ends with quick practice. Keep the level around A2–B1 and speak slowly and clearly. The digest also includes my all-time weak-point ranking and recurring mistakes from earlier weeks — please use them to focus on my long-term habits, not just this week.
 
 ## Topics covered this week
 - Buying my first home — real estate, neighborhoods, and where to live in Korea
@@ -9,11 +9,30 @@ This is a study digest from my one-on-one English phone lessons this week. Pleas
 - Discussing the purpose and tasks involved in strategic planning.
 - Investment — types, risk vs. stability, and the shift from real estate to stocks in Korea
 
-## Grammar focus (most frequent weak points)
+## Grammar focus this week
 - Verb Tense (2x)
 - Subject–Verb Agreement (1x)
 - Prepositions (1x)
 - Phrasal Verbs (1x)
+
+## My all-time weak-point ranking (27 lessons since 2026-05-08)
+- Subject–Verb Agreement — 6 lessons
+- Articles (a/an/the) — 5 lessons
+- Verb Tense — 4 lessons
+- Verb Forms / Auxiliaries — 3 lessons
+- Prepositions — 3 lessons
+- Missing Subjects / Verbs — 2 lessons
+
+## Fluency trend (tutor score out of 10, weekly average)
+- 2026-W19: 7.5
+- 2026-W20: 7.5
+- 2026-W21: 6.7
+- 2026-W22: 7.5
+- 2026-W23: 7.5
+- 2026-W24: 7.2
+- 2026-W25: 7.1
+- 2026-W26: 7.1
+- Overall average: 7.2
 
 ## Corrections — what I said vs. the natural version
 1. I said: "On the weekend, I gave the time to my wife."
@@ -48,6 +67,29 @@ This is a study digest from my one-on-one English phone lessons this week. Pleas
    Natural: "My favorite types of investment are bonds and real estate."
 16. I said: "our cash flow is limited because I'm a salaryman."
    Natural: "My cash flow is limited because I'm an office worker on a fixed salary."
+
+## Recurring mistakes from earlier weeks — my long-term habits
+My most repeated weak categories overall: Subject–Verb Agreement, Articles (a/an/the). These corrections are from earlier lessons in those categories. Please weave a few into the review so I revisit old mistakes.
+1. (2026-06-19, Articles (a/an/the)) I said: "This weekend, I give time to my wife because my wife is a housewife."
+   Natural: "This weekend, I'm giving my wife some time to herself because she's a stay-at-home mom."
+2. (2026-06-19, Articles (a/an/the)) I said: "That is case by case, but usually I prefer verbal feedback."
+   Natural: "It depends on the situation, but I usually prefer verbal feedback."
+3. (2026-06-19, Articles (a/an/the)) I said: "It is similar to your answer."
+   Natural: "I feel the same way as you do."
+4. (2026-06-18, Articles (a/an/the)) I said: "he suggested I want to do other textbooks, and she added other textbooks."
+   Natural: "He suggested I try other textbooks, and she made them available."
+5. (2026-06-18, Articles (a/an/the)) I said: "So your question means to share the textbook the week."
+   Natural: "So your question is about alternating the textbooks weekly."
+6. (2026-06-18, Articles (a/an/the)) I said: "I guess they are mixed of many feelings."
+   Natural: "I guess they have a mix of many feelings."
+7. (2026-06-17, Subject–Verb Agreement) I said: "Sometimes I'm tasked as the platform leader or project management, the PM."
+   Natural: "Sometimes I get assigned as the project lead, the PM."
+8. (2026-06-17, Subject–Verb Agreement) I said: "We make an audit for three months."
+   Natural: "We run an audit over three months."
+9. (2026-06-17, Subject–Verb Agreement) I said: "Today is a little difficult to explain."
+   Natural: "This is a bit hard to put into words."
+10. (2026-06-16, Subject–Verb Agreement) I said: "And also I can see the flat of the TV."
+   Natural: "I can also see a flat-screen TV."
 
 ## Tutor's official corrections
 1. "I do not yet"  ->  "I have not yet"
@@ -107,7 +149,9 @@ can LEAD (pronounced REED) to needless risks"
 - cash flow (noun) — 현금 흐름
 
 ## Please cover in the podcast
-- Pick my 1–2 most repeated mistakes and explain the rule with a memorable rule of thumb.
+- Pick my 1–2 most repeated mistakes (see the all-time ranking) and explain the rule with a memorable rule of thumb.
+- Revisit 2–3 recurring mistakes from earlier weeks and connect them to this week's errors.
 - Explain why Korean-influenced phrasing sounds unnatural and how English expresses it.
 - Teach the vocabulary in real example sentences I could use at work.
+- Mention my fluency trend briefly and encourage me.
 - End with 3 quick recall questions.

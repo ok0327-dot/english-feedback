@@ -55,16 +55,18 @@ jobs:
           BASE="https://ok0327-dot.github.io/english-feedback"
           PAGE="$BASE/radio.html"
           MP3="$BASE/${EPISODE_FILE}"
+          # 📓 반자동 NotebookLM 담화: 다이제스트 URL + NotebookLM 링크를 함께 실어 폰에서 바로 진행
+          NLM=$'\n\n📓 NotebookLM 고품질 담화 만들기(반자동):\n① 다이제스트: '"$BASE"$'/digest-latest.txt\n② https://notebooklm.google.com 에서 소스로 추가(URL 붙여넣기) → Audio Overview 생성'
           if [ -n "$TG_TOKEN" ] && [ -n "$TG_CHAT" ]; then
             curl -s "https://api.telegram.org/bot${TG_TOKEN}/sendAudio" \
               --data-urlencode "chat_id=${TG_CHAT}" \
               --data-urlencode "audio=${MP3}" \
               --data-urlencode "title=영어 주간 라디오 ${EPISODE_WEEK}" \
-              --data-urlencode "caption=🎙️ 이번 주 영어 라디오 (${EPISODE_WEEK}) 나왔어요! 사이트: ${PAGE}" >/dev/null && echo "네이티브 음성 발송"
+              --data-urlencode "caption=🎙️ 이번 주 영어 라디오 (${EPISODE_WEEK}) 나왔어요! 사이트: ${PAGE}${NLM}" >/dev/null && echo "네이티브 음성 발송"
           elif [ -n "$KNH" ]; then
             curl -s -X POST "https://telegram-notify-hub.dk0327.workers.dev/send" \
               -H "X-Notify-Secret: ${KNH}" -H "Content-Type: application/json" \
-              --data "$(jq -nc --arg t "🎙️ 이번 주 영어 라디오 (${EPISODE_WEEK}) 나왔어요! 듣기 → ${PAGE}" '{channel:"telegram",text:$t}')" >/dev/null && echo "허브 링크 발송"
+              --data "$(jq -nc --arg t "🎙️ 이번 주 영어 라디오 (${EPISODE_WEEK}) 나왔어요! 듣기 → ${PAGE}${NLM}" '{channel:"telegram",text:$t}')" >/dev/null && echo "허브 링크 발송"
           else
             echo "텔레그램 시크릿 없음 — 발송 생략 (사이트엔 게시됨: $PAGE)"
           fi
