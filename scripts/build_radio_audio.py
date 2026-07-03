@@ -73,7 +73,7 @@ def _tts_chunk(chunk, cfgs):
     r = requests.post(url, headers={"x-goog-api-key": GEMINI_KEY, "Content-Type": "application/json"},
                       json=body, timeout=240)
     if r.status_code != 200:
-        raise RuntimeError(f"Gemini TTS {r.status_code}: {r.text[:200]}")
+        raise RuntimeError(f"Gemini TTS {r.status_code}: {re.sub(chr(10), ' ', r.text)[:300]}")
     j = r.json()
     parts = (j.get("candidates") or [{}])[0].get("content", {}).get("parts", [])
     for part in parts:
@@ -87,16 +87,19 @@ def _tts_chunk(chunk, cfgs):
     raise RuntimeError("Gemini TTS 응답에 오디오(inlineData) 없음")
 
 
-def _tts_chunk_retry(chunk, cfgs, tries=3):
-    """청크 TTS + 재시도(429 쿼터·일시 오류에 지수 backoff). 실패 시 마지막 예외 전파."""
+TTS_PACE_SEC = float(os.environ.get("TTS_PACE_SEC", "12"))  # 청크 사이 최소 간격(RPM 한도 회피)
+
+
+def _tts_chunk_retry(chunk, cfgs, tries=4):
+    """청크 TTS + 재시도(429 속도제한·일시 오류에 backoff). 실패 시 마지막 예외 전파."""
     for attempt in range(tries):
         try:
             return _tts_chunk(chunk, cfgs)
         except Exception as e:
             if attempt == tries - 1:
                 raise
-            wait = 20 * (attempt + 1)
-            print(f"  ⚠️ TTS 재시도 {attempt + 1}/{tries - 1} ({str(e)[:80]}) — {wait}s 대기")
+            wait = 30 * (attempt + 1)
+            print(f"  ⚠️ TTS 재시도 {attempt + 1}/{tries - 1} ({str(e)[:160]}) — {wait}s 대기")
             time.sleep(wait)
 
 
@@ -115,6 +118,8 @@ def gemini_tts(lines):
     pcm_parts, rate = [], 24000
     n = (len(lines) + CHUNK_LINES - 1) // CHUNK_LINES
     for i in range(0, len(lines), CHUNK_LINES):
+        if i:
+            time.sleep(TTS_PACE_SEC)  # 속도 제한(RPM) 회피용 페이싱
         pcm, rate = _tts_chunk_retry(lines[i:i + CHUNK_LINES], cfgs)
         pcm_parts.append(pcm)
         print(f"  …TTS 청크 {i // CHUNK_LINES + 1}/{n} ({len(pcm)//1024}KB)")
