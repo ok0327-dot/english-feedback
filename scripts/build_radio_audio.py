@@ -52,7 +52,9 @@ def parse_radio_html(path=None):
     return week, lines
 
 
-CHUNK_LINES = 12   # 한 TTS 호출당 대사 줄 수(단일 호출 길이 한도 회피 → 긴 에피소드 가능)
+# 한 TTS 호출당 대사 줄 수. 무료 티어 일일 한도(10회/일/모델) 안에 에피소드 하나(≤200줄)가
+# 들어가도록 20줄(=6~10청크/에피소드). 청크가 줄면 이음새도 줄어 품질에도 유리.
+CHUNK_LINES = int(os.environ.get("TTS_CHUNK_LINES", "20"))
 
 
 def _tts_chunk(chunk, cfgs):
@@ -224,6 +226,8 @@ def main():
                 targets.append((p, False))
         if not targets:
             print("백필 대상 없음 — 모든 아카이브에 MP3 존재"); return
+        if "--limit" in args:  # 일일 무료 쿼터(10회/모델)에 맞춰 하루 N개 주차만
+            targets = targets[:int(args[args.index("--limit") + 1])]
     elif "--week" in args:
         wk = args[args.index("--week") + 1]
         p = os.path.join(DOCS, f"radio-{wk}.html")

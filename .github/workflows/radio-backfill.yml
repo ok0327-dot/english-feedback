@@ -1,0 +1,56 @@
+name: 🎧 라디오 아카이브 백필 (하루 1주차)
+# 과거 주차(radio-YYYY-Www.html) 대본을 Gemini 멀티스피커 MP3로 매일 1개씩 전환.
+# 무료 티어 일일 한도(10회/일/모델) 안에서 동작. 전부 전환되면 스스로 비활성화.
+# 금요일(UTC)은 주간 라디오(radio-audio.yml)가 같은 모델 쿼터를 쓰므로 건너뜀.
+on:
+  schedule:
+    - cron: '0 20 * * 0-4,6'   # 매일 20:00 UTC(= KST 05:00), 금요일 제외
+  workflow_dispatch:
+permissions:
+  contents: write
+  actions: write
+concurrency:
+  group: radio-audio
+  cancel-in-progress: false
+jobs:
+  backfill:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - name: 📥 체크아웃
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: 🐍 Python 설정
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: 📦 의존성 설치
+        run: |
+          sudo apt-get update && sudo apt-get install -y ffmpeg
+          pip install requests
+      - name: 🎙️ 아카이브 1주차 백필 (Gemini 전용, 폴백 없음)
+        id: backfill
+        run: |
+          python -u scripts/build_radio_audio.py --backfill --limit 1 | tee /tmp/backfill_out.txt
+          if grep -q "백필 대상 없음" /tmp/backfill_out.txt; then
+            echo "done=true" >> "$GITHUB_OUTPUT"
+          fi
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      - name: 💾 커밋·푸시
+        run: |
+          git config user.email "actions@github.com"
+          git config user.name "GitHub Actions"
+          git add -f -A docs/radio/
+          if git diff --cached --quiet; then
+            echo "변경 없음 (쿼터 소진 등 — 다음 날 재시도)"
+          else
+            git commit -m "chore(radio): 아카이브 라디오 오디오 백필"
+            git push origin HEAD:main
+          fi
+      - name: 🏁 전량 완료 시 워크플로우 자체 비활성화
+        if: steps.backfill.outputs.done == 'true'
+        run: gh workflow disable radio-backfill.yml -R "$GITHUB_REPOSITORY"
+        env:
+          GH_TOKEN: ${{ github.token }}
