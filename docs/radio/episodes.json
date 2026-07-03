@@ -5,5 +5,12 @@
   "file": "ep-2026-W27.mp3",
   "engine": "gemini",
   "lines": 120
+ },
+ {
+  "week": "2026-W19",
+  "date": "2026-07-03",
+  "file": "ep-2026-W19.mp3",
+  "engine": "gemini",
+  "lines": 139
  }
 ]
