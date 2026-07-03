@@ -23,7 +23,8 @@ RADIO_DIR = os.path.join(DOCS, "radio")
 KST = datetime.timezone(datetime.timedelta(hours=9))
 
 GEMINI_KEY = os.environ.get("GEMINI_API_KEY", "").strip()
-TTS_MODEL = os.environ.get("GEMINI_TTS_MODEL", "gemini-2.5-flash-preview-tts").strip()
+# 빈 문자열(env는 설정됐지만 값이 없음 — 워크플로우 dispatch 기본값)도 기본 모델로 처리
+TTS_MODEL = (os.environ.get("GEMINI_TTS_MODEL") or "").strip() or "gemini-3.1-flash-tts-preview"
 # 진행자 → (TTS용 ASCII 라벨, Gemini 프리빌트 보이스)
 SPEAKERS = {"민지": ("Minji", "Kore"), "알렉스": ("Alex", "Puck")}
 
