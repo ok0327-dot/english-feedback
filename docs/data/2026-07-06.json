@@ -1,0 +1,53 @@
+{
+ "date": "2026-07-06",
+ "iso": [
+  2026,
+  28
+ ],
+ "topic": "Discussing Car Problems and Roadside Assistance",
+ "grammar": "Missing or Incorrect Articles",
+ "grammar_norm": "Articles (a/an/the)",
+ "score": 7.0,
+ "pairs": [
+  {
+   "said": "In my case, I eat some medicine and eat the fruit enough.",
+   "natural": "In my case, I take some medicine and eat plenty of fruit."
+  },
+  {
+   "said": "long time, during the long time, China don't make some great car, but nowadays, they started to make some new cars.",
+   "natural": "For a long time, China didn't make great cars, but nowadays, they've started producing new ones."
+  },
+  {
+   "said": "But if some electric car has some fire accident, it spread the other car and the building problem.",
+   "natural": "But if an electric car has a fire accident, it could spread to other cars and cause problems for the building."
+  }
+ ],
+ "vocab": [
+  {
+   "word": "humid",
+   "pos": "형용사",
+   "meaning": "습한, 눅눅한"
+  },
+  {
+   "word": "exhibition",
+   "pos": "명사",
+   "meaning": "전시회, 박람회"
+  },
+  {
+   "word": "roadside assistance",
+   "pos": "명사",
+   "meaning": "긴급출동 서비스 (차량 고장 시)"
+  },
+  {
+   "word": "mechanic shop",
+   "pos": "명사",
+   "meaning": "정비소, 카센터"
+  },
+  {
+   "word": "warning light",
+   "pos": "명사",
+   "meaning": "경고등 (자동차 계기판 등)"
+  }
+ ],
+ "_html_md5": "08a2d80441114015f0add154130ef637"
+}
