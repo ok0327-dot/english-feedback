@@ -1,0 +1,57 @@
+{
+ "date": "2026-07-07",
+ "iso": [
+  2026,
+  28
+ ],
+ "topic": "Discussing seasons, weather preferences, and problem-solving in unexpected rain.",
+ "grammar": "Adjective vs. Noun / Missing Noun after Adjective",
+ "grammar_norm": "Adjective Vs. Noun / Missing Noun After Adjective",
+ "score": 7.0,
+ "pairs": [
+  {
+   "said": "I'd like to put down the textbook and just go to Snapchat.",
+   "natural": "I'd like to skip the textbook and just go with Snapchat."
+  },
+  {
+   "said": "the rain is so long. If the one time long rainy, it is the one day or two days stay.",
+   "natural": "The rain lasts so long. If we have a long rainy spell, it can last for one or two days."
+  },
+  {
+   "said": "my purpose is different season.",
+   "natural": "I have different preferences for each season."
+  },
+  {
+   "said": "We have people in... Your clothes that pull in your clothes, everything. Things because you have a cold season and these dreams have a hot and cold weather. So it is similar.",
+   "natural": "We have people who wear many layers of clothes because you have a cold season, and we also have hot and cold weather. So it is similar."
+  }
+ ],
+ "vocab": [
+  {
+   "word": "balmy",
+   "pos": "형용사",
+   "meaning": "(날씨가) 온화한, 쾌적한"
+  },
+  {
+   "word": "humid",
+   "pos": "형용사",
+   "meaning": "습한, 습기 많은"
+  },
+  {
+   "word": "heatwave",
+   "pos": "명사",
+   "meaning": "폭염, 열파"
+  },
+  {
+   "word": "cold snap",
+   "pos": "명사",
+   "meaning": "갑작스러운 한파"
+  },
+  {
+   "word": "poncho",
+   "pos": "명사",
+   "meaning": "판초 (우비처럼 입는 망토 형태의 옷)"
+  }
+ ],
+ "_html_md5": "f1b78a386560afacdb7abb833e45b533"
+}

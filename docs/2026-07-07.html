@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#0f0f13"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="당근영어"><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="icon" type="image/png" sizes="192x192" href="icon-192.png"><script src="install-banner.js" defer></script><script src="sw-reg.js" defer></script>
+    <title>전화영어 복습 - 2026년 07월 07일</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Noto Sans KR',sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.75;min-height:100vh}
+        .header{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);border-bottom:1px solid rgba(255,255,255,.06);padding:48px 24px 40px;text-align:center}
+        .header-date{font-size:13px;color:#94a3b8;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+        .header h1{font-size:28px;font-weight:700;color:#f1f5f9;margin-bottom:16px}
+        .header-meta{display:flex;justify-content:center;gap:24px;font-size:14px;color:#64748b}
+        .header-meta span{display:flex;align-items:center;gap:6px}
+        .cta-section{text-align:center;padding:40px 24px}
+        .cta-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:linear-gradient(135deg,#38bdf8,#818cf8);color:#fff;font-size:16px;font-weight:600;font-family:'Noto Sans KR',sans-serif;border:none;border-radius:50px;cursor:pointer;transition:all .3s;text-decoration:none;box-shadow:0 4px 24px rgba(56,189,248,.25)}
+        .cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(56,189,248,.35)}
+        .cta-btn svg{width:20px;height:20px}
+        .cta-sub{margin-top:12px;font-size:13px;color:#64748b}
+        .toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#38bdf8;padding:14px 28px;border-radius:12px;font-size:14px;font-weight:500;border:1px solid rgba(56,189,248,.2);box-shadow:0 8px 32px rgba(0,0,0,.4);opacity:0;transition:all .4s cubic-bezier(.16,1,.3,1);z-index:1000}
+        .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+        .container{max-width:720px;margin:0 auto;padding:0 24px 80px}
+        .tabs{display:flex;gap:4px;background:#1a1a24;padding:4px;border-radius:12px;margin-bottom:32px}
+        .tab{flex:1;padding:12px;text-align:center;font-size:14px;font-weight:500;color:#64748b;background:0 0;border:none;border-radius:8px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all .2s}
+        .tab.active{background:#262636;color:#f1f5f9}
+        .tab-content{display:none}.tab-content.active{display:block}
+        .feedback h2{font-size:18px;font-weight:700;color:#f1f5f9;margin:36px 0 16px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.06)}
+        .feedback h2:first-child{margin-top:0}
+        .feedback p{margin:8px 0;color:#cbd5e1}
+        .feedback .item{padding:6px 0 6px 16px;border-left:2px solid #334155;margin:6px 0;color:#cbd5e1}
+        .feedback .numbered{padding:8px 0 8px 16px;color:#cbd5e1}
+        .feedback .numbered strong{color:#38bdf8}
+        .feedback strong{color:#f1f5f9}
+        .feedback code{background:#1e293b;padding:2px 8px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#38bdf8}
+        .feedback table{width:100%;border-collapse:collapse;margin:12px 0}
+        .feedback th,.feedback td{padding:10px 14px;text-align:left;border-bottom:1px solid #262636}
+        .feedback th{color:#94a3b8;font-weight:500;font-size:13px}
+        .feedback td{color:#cbd5e1}
+        .arrow{color:#38bdf8;font-weight:700}
+        .transcript{background:#1a1a24;border-radius:12px;padding:28px;font-size:14px;line-height:2;color:#94a3b8;white-space:pre-wrap;word-break:break-word;font-family:'JetBrains Mono','Noto Sans KR',monospace}
+        .transcript .tutor{color:#38bdf8}
+        .transcript .student{color:#a78bfa}
+        @media(max-width:640px){.header{padding:32px 16px}.header h1{font-size:22px}.cta-btn{padding:14px 28px;font-size:15px}.container{padding:0 16px 60px}}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-date">2026년 07월 07일</div>
+        <h1>📚 전화영어 복습</h1>
+        <div class="header-meta">
+            <span>⏱ 19분 22초</span>
+            <span>🎙 전화영어_025180304_20260707080051.m4a</span>
+        </div>
+    </div>
+    <div class="cta-section">
+        <button class="cta-btn" onclick="startReview()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Gemini에서 복습 대화 시작하기
+        </button>
+        <div class="cta-sub">클릭하면 프롬프트가 복사되고 Gemini가 열립니다</div>
+    </div>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('feedback')">📋 AI 피드백</button>
+            <button class="tab" onclick="switchTab('transcript')">🎙 수업 전사</button>
+        </div>
+        <div id="tab-feedback" class="tab-content active">
+            <div class="feedback"><p>Joey, 안녕하세요! 오늘도 활기찬 수업 잘 마치셨습니다. 날씨와 계절에 대한 이야기는 언제나 흥미롭죠. 특히 비즈니스 환경에서 날씨 이야기는 스몰 토크로도 유용하게 활용될 수 있으니 오늘 배운 표현들을 잘 기억해두시면 좋겠습니다.</p>
+<br>
+<br>
+<p><strong>0. 📌 Topic</strong></p>
+<p>Topic: Discussing seasons, weather preferences, and problem-solving in unexpected rain.</p>
+<br>
+<p><strong>1. 📊 오늘의 대화 요약 (Summary)</strong></p>
+<p>오늘은 계절별 날씨의 특징과 개인적인 선호도에 대해 이야기 나누었습니다. 특히 한국과 캐나다의 날씨를 비교하며 흥미로운 문화적 차이점도 발견했고, 갑작스러운 비 상황에 대한 문제 해결 아이디어를 공유하며 실용적인 대화도 이어갔습니다.</p>
+<br>
+<p><strong>2. 💬 유창성 업그레이드 (Fluency & Natural Flow)</strong></p>
+<br>
+<p>Joey가 말한 문장 중 의미는 통하지만, 더 자연스럽게 들릴 수 있는 표현들을 살펴볼게요.</p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>❌ 학습자 원문 (As Said):</strong> "I'd like to put down the textbook and just go to Snapchat."</div>
+<div class="item"><strong>✅ 자연스러운 표현 (Natural):</strong> "I'd like to skip the textbook and just go with Snapchat."</div>
+<div class="item"><strong>💎 비즈니스 표현 (Professional):</strong> "I'd prefer to focus on the Snapchat topic rather than the textbook today."</div>
+<div class="item"><strong>💡 코칭 포인트:</strong> Using "skip" or "go with" sounds more natural when choosing one option over another. "Put down" usually means literally placing something down.</div>
+<p><span class="arrow">→</span> "skip" 또는 "go with"를 사용하면 여러 선택지 중 하나를 고를 때 더 자연스럽습니다. "Put down"은 물리적으로 물건을 내려놓을 때 주로 사용합니다.</p>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>❌ 학습자 원문 (As Said):</strong> "the rain is so long. If the one time long rainy, it is the one day or two days stay."</div>
+<div class="item"><strong>✅ 자연스러운 표현 (Natural):</strong> "The rain lasts so long. If we have a long rainy spell, it can last for one or two days."</div>
+<div class="item"><strong>💎 비즈니스 표현 (Professional):</strong> "The duration of the rain is quite extended. A prolonged rainy period can persist for one or two days."</div>
+<div class="item"><strong>💡 코칭 포인트:</strong> "Lasts" is a more appropriate verb for describing the duration of rain. "Rainy spell" is a natural way to refer to a period of rain.</div>
+<p><span class="arrow">→</span> 비의 '지속 기간'을 설명할 때는 "lasts"가 더 적절한 동사입니다. "Rainy spell"은 비가 오는 기간을 자연스럽게 표현하는 방법입니다.</p>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>❌ 학습자 원문 (As Said):</strong> "my purpose is different season."</div>
+<div class="item"><strong>✅ 자연스러운 표현 (Natural):</strong> "I have different preferences for each season."</div>
+<div class="item"><strong>💎 비즈니스 표현 (Professional):</strong> "My preferences vary depending on the season."</div>
+<div class="item"><strong>💡 코칭 포인트:</strong> "Purpose" refers to a goal or intention. When talking about what you like, "preference" is a better fit.</div>
+<p><span class="arrow">→</span> "Purpose"는 목표나 의도를 의미합니다. 무엇을 좋아하는지에 대해 말할 때는 "preference"가 더 적절합니다.</p>
+<br>
+<div class="numbered"><strong>4.</strong> <strong>❌ 학습자 원문 (As Said):</strong> "We have people in... Your clothes that pull in your clothes, everything. Things because you have a cold season and these dreams have a hot and cold weather. So it is similar."</div>
+<div class="item"><strong>✅ 자연스러운 표현 (Natural):</strong> "We have people who wear many layers of clothes because you have a cold season, and we also have hot and cold weather. So it is similar."</div>
+<div class="item"><strong>💎 비즈니스 표현 (Professional):</strong> "Our clothing habits involve layering due to the distinct cold season, and we also experience both hot and cold weather, which presents a similarity."</div>
+<div class="item"><strong>💡 코칭 포인트:</strong> 문장이 다소 복잡하게 얽혀 있어 의미 전달이 어려웠습니다. '옷을 여러 겹 입는다'는 의미를 "wear many layers of clothes"로 표현하고, 문장 구조를 더 명확하게 정리하면 좋습니다.</div>
+<p><span class="arrow">→</span> 문장이 다소 복잡하게 얽혀 있어 의미 전달이 어려웠습니다. '옷을 여러 겹 입는다'는 의미를 "wear many layers of clothes"로 표현하고, 문장 구조를 더 명확하게 정리하면 좋습니다.</p>
+<br>
+<p><strong>3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)</strong></p>
+<br>
+<p>Category: <strong>Adjective vs. Noun / Missing Noun after Adjective</strong></p>
+<br>
+<p>Joey는 형용사를 명사처럼 사용하거나, 형용사 뒤에 필요한 명사를 생략하여 의미가 다소 어색해지는 경향이 있었습니다. 날씨나 계절을 묘사할 때 특히 자주 나타나는 패턴입니다.</p>
+<br>
+<table>
+<tr><th>❌ 원문 (As Said)</th><th>✅ 교정 예시 (Corrected)</th></tr>
+<tr><td>"I love the cold." / "I love hot."</td><td>"I love <strong>cold weather</strong>." / "I love <strong>hot weather</strong>."</td></tr>
+<tr><td>"Which country is the beautiful?"</td><td>"Which country is the <strong>most beautiful</strong>?"</td></tr>
+<tr><td>"the wet, almost tropical."</td><td>"the <strong>wet</strong>, almost <strong>tropical weather</strong>."</td></tr>
+<tr><td>"It is so gentle." (옷차림에 대해)</td><td>"It looks so <strong>elegant</strong>." 또는 "It's so <strong>chic</strong>."</td></tr>
+<tr><td>"the rain is so long. If the one time long rainy..."</td><td>"the rain lasts so long. If we have a long <strong>rainy spell</strong>..."</td></tr>
+</table>
+<br>
+<p>📌 <strong>핵심 규칙:</strong> 형용사는 명사를 수식하거나 보어로 사용됩니다. 명사 없이 형용사만으로 문장을 끝내거나 명사처럼 사용하려면, 그 형용사가 이미 명사로 굳어진 경우(예: *the poor*, *the rich*)를 제외하고는 뒤에 적절한 명사를 붙여주거나 다른 표현을 사용해야 합니다.</p>
+<br>
+<p>🔁 <strong>따라 읽기:</strong></p>
+<p>🗣️ "I love cold weather."</p>
+<p>🗣️ "Which country is the most beautiful?"</p>
+<p>🗣️ "The wet, almost tropical weather."</p>
+<br>
+<p><strong>4. 📗 어휘 확장 (Vocabulary Vault)</strong></p>
+<br>
+<p>오늘 대화에서 유용하게 쓰일 수 있는 어휘들을 정리해 보았습니다.</p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>balmy</strong> /ˈbɑːmi/ (형용사)</div>
+<div class="item">뜻: (날씨가) 온화한, 쾌적한</div>
+<div class="item">실전 예문: The <strong>balmy</strong> weather is perfect for an outdoor team-building event.</div>
+<div class="numbered"><strong>2.</strong> <strong>humid</strong> /ˈhjuːmɪd/ (형용사)</div>
+<div class="item">뜻: 습한, 습기 많은</div>
+<div class="item">실전 예문: Our products need to be stored in a controlled environment to avoid damage from <strong>humid</strong> conditions.</div>
+<div class="numbered"><strong>3.</strong> <strong>heatwave</strong> /ˈhiːtweɪv/ (명사)</div>
+<div class="item">뜻: 폭염, 열파</div>
+<div class="item">실전 예문: The recent <strong>heatwave</strong> led to a significant increase in energy consumption.</div>
+<div class="numbered"><strong>4.</strong> <strong>cold snap</strong> /kəʊld snæp/ (명사)</div>
+<div class="item">뜻: 갑작스러운 한파</div>
+<div class="item">실전 예문: The unexpected <strong>cold snap</strong> caused delays in our outdoor construction project.</div>
+<div class="numbered"><strong>5.</strong> <strong>poncho</strong> /ˈpɒntʃoʊ/ (명사)</div>
+<div class="item">뜻: 판초 (우비처럼 입는 망토 형태의 옷)</div>
+<div class="item">실전 예문: We provide disposable <strong>ponchos</strong> to visitors during unexpected rain showers at our outdoor events.</div>
+<br>
+<p><strong>5. 📝 실전 복습 챌린지 (Practice)</strong></p>
+<br>
+<p>오늘 배운 표현과 문법을 활용하여 영작 챌린지에 도전해 보세요!</p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>상황:</strong> "저는 습한 날씨보다는 건조하고 쾌적한 날씨를 선호합니다."</div>
+<div class="item"><strong>영작:</strong> I prefer dry and <strong>balmy</strong> weather over <strong>humid</strong> conditions.</div>
+<div class="numbered"><strong>2.</strong> <strong>상황:</strong> "이번 여름에는 기록적인 폭염이 예상됩니다. 모두 대비해야 해요."</div>
+<div class="item"><strong>영작:</strong> A record-breaking <strong>heatwave</strong> is expected this summer, so everyone should prepare.</div>
+<div class="numbered"><strong>3.</strong> <strong>상황:</strong> "갑작스러운 한파 때문에 난방비가 평소보다 훨씬 많이 나왔어요."</div>
+<div class="item"><strong>영작:</strong> Due to the sudden <strong>cold snap</strong>, our heating bill was much higher than usual.</div>
+<br>
+<p><strong>6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)</strong></p>
+<br>
+<p>✨ <strong>Good Job:</strong></p>
+<p>Joey가 아주 잘 표현한 문장입니다!</p>
+<p>"The climate has changed."</p>
+<p><span class="arrow">→</span> 이 문장은 간결하면서도 정확하게 의미를 전달했습니다. '기후 변화'라는 중요한 주제를 명확하게 표현해 주셨어요.</p>
+<br>
+<p>🚀 <strong>내일의 한 문장:</strong></p>
+<p>다음 수업 시작 시, 오늘 배운 표현을 활용하여 튜터에게 이렇게 말해보세요.</p>
+<p>"I hope the weather is <strong>balmy</strong> wherever you are today!"</p>
+<br>
+<br>
+<p><strong>[성과 지표]</strong></p>
+<br>
+<p><strong>유창성 점수:</strong> 7/10</p>
+<br>
+<p><strong>근거:</strong></p>
+<p>Joey는 다양한 주제에 대해 자신의 의견을 비교적 막힘없이 표현할 수 있는 좋은 유창성을 보여주었습니다. 특히 날씨나 개인적인 선호도에 대한 질문에 빠르게 반응하고 대화를 이어가는 능력이 뛰어났습니다. 하지만 문장 구조가 다소 반복적이거나, 특정 단어 선택에서 더 자연스러운 표현을 사용할 기회가 있었습니다. 또한, 형용사와 명사의 혼동, 전치사 사용 등에서 정확성을 높이면 훨씬 더 유창하게 느껴질 것입니다.</p>
+<br>
+<p><strong>다음 수업 '원포인트 액션 플랜':</strong></p>
+<p>다음 수업에서는 <strong>"형용사와 명사 구별 및 올바른 사용"</strong>에 집중하여 연습해 봅시다. 특히 날씨나 사물을 묘사할 때 형용사 뒤에 적절한 명사를 붙이거나, 명사형 표현을 사용하는 연습을 해볼 거예요.</p></div>
+        </div>
+        <div id="tab-transcript" class="tab-content">
+            <div class="transcript"><span class="student">[Student]</span> Hello, teacher. Good morning.
+<span class="tutor">[Tutor]</span> Hi there, Joey. How are you today?
+<span class="student">[Student]</span> Of course. It&#x27;s good. Yeah, everything is good.
+<span class="tutor">[Tutor]</span> Wonderful. Wonderful. Very good to hear. Hope you had a good weekend.
+<span class="tutor">[Tutor]</span> I&#x27;m doing all right. Thank you. It&#x27;s a nice balmy 23 degrees here. Not too hot, not too cold.
+<span class="student">[Student]</span> It&#x27;s so nice.
+<span class="tutor">[Tutor]</span> It is.
+<span class="tutor">[Tutor]</span> All right. So, Joey, what textbook would you like to do today? I have both Daily Topic English and your Snapchat textbook up. Which one would you like to do today?
+<span class="student">[Student]</span> Yes, I guess, in my opinion, it&#x27;s better to talk about Snapchat. I&#x27;d like to put down the textbook and just go to Snapchat.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="student">[Student]</span> Yes, okay.
+<span class="tutor">[Tutor]</span> All right, absolutely no problem. All right, so I&#x27;m checking your records, and it says we&#x27;re on page seven. Which season is best? Is that right?
+<span class="student">[Student]</span> You&#x27;re right. You&#x27;re right. Which season is best?
+<span class="tutor">[Tutor]</span> Very good. Okay. So, let us start. I&#x27;ll get you to read the warm-up question, and then think of a response in English.
+<span class="student">[Student]</span> Okay, no problem. So, part A, warm-up question. Which season has the wettest weather in your country? Wettest.
+<span class="student">[Student]</span> Uh-huh. Uh-huh. That is the humid, right?
+<span class="tutor">[Tutor]</span> Wettest. Well, it could be humidity or it could be rain and snow.
+<span class="student">[Student]</span> Ah, rain or snow. And not rhyme.
+<span class="tutor">[Tutor]</span> Wettest.
+<span class="student">[Student]</span> Humid. Okay. I see. Hmm.
+<span class="student">[Student]</span> Okay, the first. The countries, England, maybe each country, France and Japan, right?
+<span class="tutor">[Tutor]</span> Yeah, the ones in the northern hemisphere that are near the ocean, they&#x27;re often quite damp. They get a lot of rain showers.
+<span class="student">[Student]</span> I see. I understand. But I&#x27;m not sure. Okay. It includes Japan, but Japan has a similar season in Korea. So, similar Korea. So, it&#x27;s the same season in the summer. Maybe. That also has the summer humid period and rainy season. So, I&#x27;m not sure.
+<span class="tutor">[Tutor]</span> It&#x27;s okay, Joey. It&#x27;s my understanding that from April till about July, you get a lot of moisture in the form of rain. And then from July until about the end of September, you&#x27;re still humid, but it is drier. It is hot and dry because your summer is broken into a wet and a dry season. Does that sound right?
+<span class="student">[Student]</span> Yeah, you&#x27;re right. You&#x27;re right. We have the heat wave in June, July, and finish the humid period, and then start the hot season. But usually, it&#x27;s still humid in summer. The August.
+<span class="tutor">[Tutor]</span> Mm-hmm. Yeah, August.
+<span class="student">[Student]</span> October, the August.
+<span class="tutor">[Tutor]</span> Yeah, yeah. So, you&#x27;re very warm and very sticky. Yeah, sticky and warmer. And okay, this is a summer.
+<span class="student">[Student]</span> Korea and Thailand. Oh, Thailand is similar. Yeah, yeah. Summer, the wet, almost tropical. Oh, but that is a real difference. The Thailand starts the summer, the rainy season in spring, the May. So, I think the textbook needs to change Japan, Thailand, the switch the position. And, yes, and where and winter? Where is the China? And I don&#x27;t know that country name. And winter is Brazil, but I think our textbook is the discussion.
+<span class="tutor">[Tutor]</span> Discussion.
+<span class="student">[Student]</span> Maybe if the question is changed, which country is the beautiful? Yeah, which country is the beautiful in this season? Yes. Yes.
+<span class="student">[Student]</span> I understand. Okay.
+<span class="tutor">[Tutor]</span> In the springtime, you have the cherry blossoms.
+<span class="student">[Student]</span> In Japan, yes.
+<span class="tutor">[Tutor]</span> And in Korea, I&#x27;ve heard you have some in Korea. We have cherry blossoms on the Pacific coast of Canada and on the eastern part of my country.
+<span class="student">[Student]</span> Eastern.
+<span class="tutor">[Tutor]</span> Yeah, and they&#x27;re beautiful. The cherry blossoms blossom, they&#x27;re beautiful. And your country, like my country, gets rain and then it gets very green and very warm.
+<span class="student">[Student]</span> Yeah, you&#x27;re right. You&#x27;re right. I love that. It is similar to the character of a people.
+<span class="tutor">[Tutor]</span> Uh-huh. Yeah. Yeah. Uh-huh. Yeah, so basically when we think about your climate and your seasons, we compare you to places like England. Because like Korea, England is surrounded by water. And it affects the rainfall, the humidity, and the amount of sunshine.
+<span class="student">[Student]</span> Yeah.
+<span class="tutor">[Tutor]</span> All right, Joey, you did great. Let&#x27;s go on to part B. I&#x27;ll get you to read that question.
+<span class="student">[Student]</span> Okay, no problem. Which do you prefer? Which weather do you enjoy dressing for most and why? I&#x27;m human. So when it&#x27;s summertime, I love the cold. And when it&#x27;s wintertime, I love hot.
+<span class="tutor">[Tutor]</span> Of course.
+<span class="student">[Student]</span> Yeah, so these days I miss the winter because it is there have some chilly and other things, chilly air and everyone wear the coat. It is so gentle. So I love that. But in the wintertime, I miss the summer.
+<span class="tutor">[Tutor]</span> Of course.
+<span class="student">[Student]</span> Usually I love to, I miss the hot pants and short-sleeved shirts and sunshiny. So, yeah, I love both. But my purpose is different season. Yeah.
+<span class="tutor">[Tutor]</span> Okay. Yes. The thing about dressing in the cold is that you can control the number of layers you need to wear to be comfortable. When your country and mine get to 38 degrees centigrade, there&#x27;s only so much clothing we can remove before we are arrested by the police.
+<span class="student">[Student]</span> Okay, you&#x27;re right, you&#x27;re right.
+<span class="tutor">[Tutor]</span> And this is the, you know, and when you&#x27;re very hot, you want to wear as little clothing as possible, but public propriety says you have to dress and cover up decently. And at least when you&#x27;re cold, you can peel layers off after a while. When it&#x27;s hot, you run out of layers.
+<span class="student">[Student]</span> I see. I understand your comment. And usually, I do say I&#x27;m just wearing the short-sleeved shirt.
+<span class="tutor">[Tutor]</span> Yeah, absolutely.
+<span class="student">[Student]</span> Yeah, the summer style business schedule. So, it is a little hot. So, when I come back to my home, I take off, remove.
+<span class="tutor">[Tutor]</span> Everything.
+<span class="student">[Student]</span> Everything. Just one. It&#x27;s got to run.
+<span class="tutor">[Tutor]</span> Yep. One layer. You go down to your base layer.
+<span class="student">[Student]</span> But that&#x27;s also all.
+<span class="tutor">[Tutor]</span> Oh, sure. And that&#x27;s what it&#x27;s like in Canada. From, I say, from October until about April, we wear wool socks, heavy boots, sweaters, blue jeans, and heavy coats. And then when spring and summer comes, we wear short pants, sandals, and T-shirts.
+<span class="student">[Student]</span> We have people in... Your clothes that pull in your clothes, everything. Things because you have a cold season and these dreams have a hot and cold weather. So it is similar.
+<span class="tutor">[Tutor]</span> I think what I&#x27;m going to send you, Joey, is I&#x27;m going to send you some pictures of how some Canadians dress in February. They&#x27;re wearing a jacket, short pants, and short boots. I think you&#x27;ll get a chuckle. You&#x27;ll get a laugh from them.
+<span class="student">[Student]</span> Yeah, I see.
+<span class="tutor">[Tutor]</span> Because in Canada, we dress very uniquely.
+<span class="student">[Student]</span> Oh, I see. Someday I want to go there.
+<span class="tutor">[Tutor]</span> Oh, you would be very, I think you would find it very surprising to see how Canadians walk around their communities in April with the snow and the shorts.
+<span class="tutor">[Tutor]</span> All right, my friend. Let&#x27;s get you to read part C, the situation, and then the question.
+<span class="student">[Student]</span> Okay. The problem-solving part C situation. You just got off the bus and it suddenly started raining hard. You don&#x27;t have an umbrella. You are about 15 feet, 50 minutes away from your destination and you&#x27;re already running late. Hmm, I see. Understand.
+<span class="tutor">[Tutor]</span> Would you keep walking in the rain or stop somewhere and wait? Why?
+<span class="student">[Student]</span> Hmm, I see. I have to solve this problem. In my case, first, I think, what is the appointment and why I take the bus? Because if I meet their business purpose or if I meet my plan, if I need some need, at that time, I find some umbrella in CVS or just running because we have some needs and destination. So first, I check the CVS convenience store and find some umbrella or take a taxi.
+<span class="tutor">[Tutor]</span> Sure.
+<span class="student">[Student]</span> Yeah.
+<span class="tutor">[Tutor]</span> There you go. Yes, I&#x27;ve had a lot of people say that they would take a taxi. Another response was they would stay on the bus.
+<span class="student">[Student]</span> They stay with the bus, right?
+<span class="tutor">[Tutor]</span> Yeah, maybe they get off at the next stop because it&#x27;s closer than the first one. Yeah. It really depends in a country whether you are cold or if the rain is warm. I went for a walk around a Mexican city during the rain and it was warm. So even though I had a light jacket, it was okay to get wet. I didn&#x27;t get sick. Where in some countries, it&#x27;s very damp and very cold. You don&#x27;t want to do that.
+<span class="student">[Student]</span> I see. Yeah. Yeah.
+<span class="tutor">[Tutor]</span> There&#x27;s lots of different ways. We have a special garment in English. It&#x27;s called a poncho. It is a large square of plastic. It has a place to put your head through with a hood. And the large square of plastic covers your arms and body to protect you from the rain. Do you have anything like that in Korea?
+<span class="student">[Student]</span> Oh yes, you have the plastic cloth that is the one-use cloth. Oh yeah, one-use. Okay. Yeah, one-use clothes. And if you buy some, yeah, that clothes, it is a little cheap, just one or two dollars, but it is possible to put on the cover. We call that wu-i. Wu is the rain and wu-i is the clothes.
+<span class="tutor">[Tutor]</span> Yeah, you have an umbrella.
+<span class="student">[Student]</span> Yes.
+<span class="tutor">[Tutor]</span> I think you would laugh greatly if you saw what Canadians can do with a garbage bag.
+<span class="student">[Student]</span> Garbage bag.
+<span class="tutor">[Tutor]</span> Yeah, we cut a hole for the head and the sleeves and we put it on to stay dry.
+<span class="student">[Student]</span> Yes, understand. Oh, gosh.
+<span class="tutor">[Tutor]</span> All right. Let&#x27;s go to the warm-down questions, and I&#x27;ll get you to read and respond to the first one.
+<span class="student">[Student]</span> Okay. Do you think weather is different now than when you were young? It&#x27;s plain. Yeah, climate is a little changed. When I was young, the rain is so long. If the one time long rainy, it is the one day or two days stay. But these days, our Korea has changed the weather. So that rain is a little short, like the South Asia. And it&#x27;s extremely warm and extremely hot. The climate has changed. So, yeah, I understand.
+<span class="tutor">[Tutor]</span> Yeah, every country has changed nowadays.
+<span class="student">[Student]</span> It is.
+<span class="tutor">[Tutor]</span> It has changed greatly in Canada. Before 1987, we did not get tornadoes in my part of Canada.
+<span class="student">[Student]</span> Yes.
+<span class="tutor">[Tutor]</span> But since that time, 40 years ago, we now have to watch for tornadoes, massive windstorms.
+<span class="student">[Student]</span> I see. I understand.
+<span class="tutor">[Tutor]</span> Yeah, and we didn&#x27;t have that when I was growing up. All right, my friend, we have less than two and a half minutes. Let&#x27;s jump down to the useful vocabulary.
+<span class="student">[Student]</span> Okay. Please, you read the word, the description, and the sentence.
+<span class="tutor">[Tutor]</span> Okay. Okay.
+<span class="student">[Student]</span> Heat wave.
+<span class="tutor">[Tutor]</span> Heat wave.
+<span class="student">[Student]</span> Heat wave.
+<span class="tutor">[Tutor]</span> Better. Yeah, heat wave.
+<span class="student">[Student]</span> A period of very hot weather. We had a heavy wave last July.
+<span class="tutor">[Tutor]</span> Cold snap.
+<span class="student">[Student]</span> Okay, good.
+<span class="tutor">[Tutor]</span> A sudden short period of cold weather.
+<span class="student">[Student]</span> The cold snap catch everyone by surprise.
+<span class="tutor">[Tutor]</span> Okay, I want to help you with one word. You said &quot;catch everyone.&quot; You tried &quot;caught.&quot;
+<span class="student">[Student]</span> Caught.
+<span class="tutor">[Tutor]</span> Caught.
+<span class="student">[Student]</span> Caught.
+<span class="tutor">[Tutor]</span> Caught.
+<span class="student">[Student]</span> Caught everyone.
+<span class="tutor">[Tutor]</span> Better. Better. Yeah.
+<span class="tutor">[Tutor]</span> Catch, present tense. Caught, past tense. Okay, last useful vocab.
+<span class="student">[Student]</span> Okay, blew over. The storm or problem will pass. Blew over. The storm will blow over. Okay, usually I say pass out, but it&#x27;s better. Blew over.
+<span class="tutor">[Tutor]</span> Okay, what you are saying is &quot;blew.&quot; B-L-E-W. Try &quot;blow.&quot;
+<span class="student">[Student]</span> Blow.
+<span class="tutor">[Tutor]</span> Blow over.
+<span class="student">[Student]</span> The snow will blow over soon.
+<span class="tutor">[Tutor]</span> Blow is present tense. Blew, past tense.
+<span class="student">[Student]</span> Ah, yes. Blow. Blow over.
+<span class="tutor">[Tutor]</span> Good job. Okay, Joey, let&#x27;s finish page 7. Please, you read useful expressions and descriptions.
+<span class="student">[Student]</span> Okay. I didn&#x27;t dress for this weather. Used when you&#x27;re wearing inappropriate clothes for the day. I didn&#x27;t dress for this weather. It&#x27;s just around the corner. Used when a season is about to begin soon. The summer is just around the corner.
+<span class="tutor">[Tutor]</span> Right? All right. Okay. All right. You did very good, Joey. I&#x27;m going to type everything up. And if need be, I will send some pronunciation videos. Please, you practice, okay?
+<span class="student">[Student]</span> Okay, I see. Thanks so much.
+<span class="tutor">[Tutor]</span> All right. Bye-bye.
+<span class="student">[Student]</span> Bye-bye.
+<span class="tutor">[Tutor]</span> You take care.
+<span class="student">[Student]</span> Bye-bye.</div>
+        </div>
+    </div>
+    <div class="toast" id="toast">✅ 프롬프트가 복사되었습니다!</div>
+    <script>
+        const REVIEW_PROMPT="너는 나의 영어 회화 복습 파트너야. 오늘 내 전화영어 수업 내용을 기반으로 대화하면서 복습을 도와줘.\n\n[오늘 수업 전사 내용]\n[Student] Hello, teacher. Good morning.\n[Tutor] Hi there, Joey. How are you today?\n[Student] Of course. It's good. Yeah, everything is good.\n[Tutor] Wonderful. Wonderful. Very good to hear. Hope you had a good weekend.\n[Tutor] I'm doing all right. Thank you. It's a nice balmy 23 degrees here. Not too hot, not too cold.\n[Student] It's so nice.\n[Tutor] It is.\n[Tutor] All right. So, Joey, what textbook would you like to do today? I have both Daily Topic English and your Snapchat textbook up. Which one would you like to do today?\n[Student] Yes, I guess, in my opinion, it's better to talk about Snapchat. I'd like to put down the textbook and just go to Snapchat.\n[Tutor] Okay.\n[Student] Yes, okay.\n[Tutor] All right, absolutely no problem. All right, so I'm checking your records, and it says we're on page seven. Which season is best? Is that right?\n[Student] You're right. You're right. Which season is best?\n[Tutor] Very good. Okay. So, let us start. I'll get you to read the warm-up question, and then think of a response in English.\n[Student] Okay, no problem. So, part A, warm-up question. Which season has the wettest weather in your country? Wettest.\n[Student] Uh-huh. Uh-huh. That is the humid, right?\n[Tutor] Wettest. Well, it could be humidity or it could be rain and snow.\n[Student] Ah, rain or snow. And not rhyme.\n[Tutor] Wettest.\n[Student] Humid. Okay. I see. Hmm.\n[Student] Okay, the first. The countries, England, maybe each country, France and Japan, right?\n[Tutor] Yeah, the ones in the northern hemisphere that are near the ocean, they're often quite damp. They get a lot of rain showers.\n[Student] I see. I understand. But I'm not sure. Okay. It includes Japan, but Japan has a similar season in Korea. So, similar Korea. So, it's the same season in the summer. Maybe. That also has the summer humid period and rainy season. So, I'm not sure.\n[Tutor] It's okay, Joey. It's my understanding that from April till about July, you get a lot of moisture in the form of rain. And then from July until about the end of September, you're still humid, but it is drier. It is hot and dry because your summer is broken into a wet and a dry season. Does that sound right?\n[Student] Yeah, you're right. You're right. We have the heat wave in June, July, and finish the humid period, and then start the hot season. But usually, it's still humid in summer. The August.\n[Tutor] Mm-hmm. Yeah, August.\n[Student] October, the August.\n[Tutor] Yeah, yeah. So, you're very warm and very sticky. Yeah, sticky and warmer. And okay, this is a summer.\n[Student] Korea and Thailand. Oh, Thailand is similar. Yeah, yeah. Summer, the wet, almost tropical. Oh, but that is a real difference. The Thailand starts the summer, the rainy season in spring, the May. So, I think the textbook needs to change Japan, Thailand, the switch the position. And, yes, and where and winter? Where is the China? And I don't know that country name. And winter is Brazil, but I think our textbook is the discussion.\n[Tutor] Discussion.\n[Student] Maybe if the question is changed, which country is the beautiful? Yeah, which country is the beautiful in this season? Yes. Yes.\n[Student] I understand. Okay.\n[Tutor] In the springtime, you have the cherry blossoms.\n[Student] In Japan, yes.\n[Tutor] And in Korea, I've heard you have some in Korea. We have cherry blossoms on the Pacific coast of Canada and on the eastern part of my country.\n[Student] Eastern.\n[Tutor] Yeah, and they're beautiful. The cherry blossoms blossom, they're beautiful. And your country, like my country, gets rain and then it gets very green and very warm.\n[Student] Yeah, you're right. You're right. I love that. It is similar to the character of a people.\n[Tutor] Uh-huh. Yeah. Yeah. Uh-huh. Yeah, so basically when we think about your climate and your seasons, we compare you to places like England. Because like Korea, England is surrounded by water. And it affects the rainfall, the humidity, and the amount of sunshine.\n[Student] Yeah.\n[Tutor] All right, Joey, you did great. Let's go on to part B. I'll get you to read that question.\n[Student] Okay, no problem. Which do you prefer? Which weather do you enjoy dressing for most and why? I'm human. So when it's summertime, I love the cold. And when it's wintertime, I love hot.\n[Tutor] Of course.\n[Student] Yeah, so these days I miss the winter because it is there have some chilly and other things, chilly air and everyone wear the coat. It is so gentle. So I love that. But in the wintertime, I miss the summer.\n[Tutor] Of course.\n[Student] Usually I love to, I miss the hot pants and short-sleeved shirts and sunshiny. So, yeah, I love both. But my purpose is different season. Yeah.\n[Tutor] Okay. Yes. The thing about dressing in the cold is that you can control the number of layers you need to wear to be comfortable. When your country and mine get to 38 degrees centigrade, there's only so much clothing we can remove before we are arrested by the police.\n[Student] Okay, you're right, you're right.\n[Tutor] And this is the, you know, and when you're very hot, you want to wear as little clothing as possible, but public propriety says you have to dress and cover up decently. And at least when you're cold, you can peel layers off after a while. When it's hot, you run out of layers.\n[Student] I see. I understand your comment. And usually, I do say I'm just wearing the short-sleeved shirt.\n[Tutor] Yeah, absolutely.\n[Student] Yeah, the summer style business schedule. So, it is a little hot. So, when I come back to my home, I take off, remove.\n[Tutor] Everything.\n[Student] Everything. Just one. It's got to run.\n[Tutor] Yep. One layer. You go down to your base layer.\n[Student] But that's also all.\n[Tutor] Oh, sure. And that's what it's like in Canada. From, I say, from October until about April, we wear wool socks, heavy boots, sweaters, blue jeans, and heavy coats. And then when spring and summer comes, we wear short pants, sandals, and T-shirts.\n[Student] We have people in... Your clothes that pull in your clothes, everything. Things because you have a cold season and these dreams have a hot and cold weather. So it is similar.\n[Tutor] I think what I'm going to send you, Joey, is I'm going to send you some pictures of how some Canadians dress in February. They're wearing a jacket, short pants, and short boots. I think you'll get a chuckle. You'll get a laugh from them.\n[Student] Yeah, I see.\n[Tutor] Because in Canada, we dress very uniquely.\n[Student] Oh, I see. Someday I want to go there.\n[Tutor] Oh, you would be very, I think you would find it very surprising to see how Canadians walk around their communities in April with the snow and the shorts.\n[Tutor] All right, my friend. Let's get you to read part C, the situation, and then the question.\n[Student] Okay. The problem-solving part C situation. You just got off the bus and it suddenly started raining hard. You don't have an umbrella. You are about 15 feet, 50 minutes away from your destination and you're already running late. Hmm, I see. Understand.\n[Tutor] Would you keep walking in the rain or stop somewhere and wait? Why?\n[Student] Hmm, I see. I have to solve this problem. In my case, first, I think, what is the appointment and why I take the bus? Because if I meet their business purpose or if I meet my plan, if I need some need, at that time, I find some umbrella in CVS or just running because we have some needs and destination. So first, I check the CVS convenience store and find some umbrella or take a taxi.\n[Tutor] Sure.\n[Student] Yeah.\n[Tutor] There you go. Yes, I've had a lot of people say that they would take a taxi. Another response was they would stay on the bus.\n[Student] They stay with the bus, right?\n[Tutor] Yeah, maybe they get off at the next stop because it's closer than the first one. Yeah. It really depends in a country whether you are cold or if the rain is warm. I went for a walk around a Mexican city during the rain and it was warm. So even though I had a light jacket, it was okay to get wet. I didn't get sick. Where in some countries, it's very damp and very cold. You don't want to do that.\n[Student] I see. Yeah. Yeah.\n[Tutor] There's lots of different ways. We have a special garment in English. It's called a poncho. It is a large square of plastic. It has a place to put your head through with a hood. And the large square of plastic covers your arms and body to protect you from the rain. Do you have anything like that in Korea?\n[Student] Oh yes, you have the plastic cloth that is the one-use cloth. Oh yeah, one-use. Okay. Yeah, one-use clothes. And if you buy some, yeah, that clothes, it is a little cheap, just one or two dollars, but it is possible to put on the cover. We call that wu-i. Wu is the rain and wu-i is the clothes.\n[Tutor] Yeah, you have an umbrella.\n[Student] Yes.\n[Tutor] I think you would laugh greatly if you saw what Canadians can do with a garbage bag.\n[Student] Garbage bag.\n[Tutor] Yeah, we cut a hole for the head and the sleeves and we put it on to stay dry.\n[Student] Yes, understand. Oh, gosh.\n[Tutor] All right. Let's go to the warm-down questions, and I'll get you to read and respond to the first one.\n[Student] Okay. Do you think weather is different now than when you were young? It's plain. Yeah, climate is a little changed. When I was young, the rain is so long. If the one time long rainy, it is the one day or two days stay. But these days, our Korea has changed the weather. So that rain is a little short, like the South Asia. And it's extremely warm and extremely hot. The climate has changed. So, yeah, I understand.\n[Tutor] Yeah, every country has changed nowadays.\n[Student] It is.\n[Tutor] It has changed greatly in Canada. Before 1987, we did not get tornadoes in my part of Canada.\n[Student] Yes.\n[Tutor] But since that time, 40 years ago, we now have to watch for tornadoes, massive windstorms.\n[Student] I see. I understand.\n[Tutor] Yeah, and we didn't have that when I was growing up. All right, my friend, we have less than two and a half minutes. Let's jump down to the useful vocabulary.\n[Student] Okay. Please, you read the word, the description, and the sentence.\n[Tutor] Okay. Okay.\n[Student] Heat wave.\n[Tutor] Heat wave.\n[Student] Heat wave.\n[Tutor] Better. Yeah, heat wave.\n[Student] A period of very hot weather. We had a heavy wave last July.\n[Tutor] Cold snap.\n[Student] Okay, good.\n[Tutor] A sudden short period of cold weather.\n[Student] The cold snap catch everyone by surprise.\n[Tutor] Okay, I want to help you with one word. You said \"catch everyone.\" You tried \"caught.\"\n[Student] Caught.\n[Tutor] Caught.\n[Student] Caught.\n[Tutor] Caught.\n[Student] Caught everyone.\n[Tutor] Better. Better. Yeah.\n[Tutor] Catch, present tense. Caught, past tense. Okay, last useful vocab.\n[Student] Okay, blew over. The storm or problem will pass. Blew over. The storm will blow over. Okay, usually I say pass out, but it's better. Blew over.\n[Tutor] Okay, what you are saying is \"blew.\" B-L-E-W. Try \"blow.\"\n[Student] Blow.\n[Tutor] Blow over.\n[Student] The snow will blow over soon.\n[Tutor] Blow is present tense. Blew, past tense.\n[Student] Ah, yes. Blow. Blow over.\n[Tutor] Good job. Okay, Joey, let's finish page 7. Please, you read useful expressions and descriptions.\n[Student] Okay. I didn't dress for this weather. Used when you're wearing inappropriate clothes for the day. I didn't dress for this weather. It's just around the corner. Used when a season is about to begin soon. The summer is just around the corner.\n[Tutor] Right? All right. Okay. All right. You did very good, Joey. I'm going to type everything up. And if need be, I will send some pronunciation videos. Please, you practice, okay?\n[Student] Okay, I see. Thanks so much.\n[Tutor] All right. Bye-bye.\n[Student] Bye-bye.\n[Tutor] You take care.\n[Student] Bye-bye.\n\n[AI 피드백]\nJoey, 안녕하세요! 오늘도 활기찬 수업 잘 마치셨습니다. 날씨와 계절에 대한 이야기는 언제나 흥미롭죠. 특히 비즈니스 환경에서 날씨 이야기는 스몰 토크로도 유용하게 활용될 수 있으니 오늘 배운 표현들을 잘 기억해두시면 좋겠습니다.\n\n---\n\n**0. 📌 Topic**\nTopic: Discussing seasons, weather preferences, and problem-solving in unexpected rain.\n\n**1. 📊 오늘의 대화 요약 (Summary)**\n오늘은 계절별 날씨의 특징과 개인적인 선호도에 대해 이야기 나누었습니다. 특히 한국과 캐나다의 날씨를 비교하며 흥미로운 문화적 차이점도 발견했고, 갑작스러운 비 상황에 대한 문제 해결 아이디어를 공유하며 실용적인 대화도 이어갔습니다.\n\n**2. 💬 유창성 업그레이드 (Fluency & Natural Flow)**\n\nJoey가 말한 문장 중 의미는 통하지만, 더 자연스럽게 들릴 수 있는 표현들을 살펴볼게요.\n\n1.  **❌ 학습자 원문 (As Said):** \"I'd like to put down the textbook and just go to Snapchat.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"I'd like to skip the textbook and just go with Snapchat.\"\n    *   **💎 비즈니스 표현 (Professional):** \"I'd prefer to focus on the Snapchat topic rather than the textbook today.\"\n    *   **💡 코칭 포인트:** Using \"skip\" or \"go with\" sounds more natural when choosing one option over another. \"Put down\" usually means literally placing something down.\n        → \"skip\" 또는 \"go with\"를 사용하면 여러 선택지 중 하나를 고를 때 더 자연스럽습니다. \"Put down\"은 물리적으로 물건을 내려놓을 때 주로 사용합니다.\n\n2.  **❌ 학습자 원문 (As Said):** \"the rain is so long. If the one time long rainy, it is the one day or two days stay.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"The rain lasts so long. If we have a long rainy spell, it can last for one or two days.\"\n    *   **💎 비즈니스 표현 (Professional):** \"The duration of the rain is quite extended. A prolonged rainy period can persist for one or two days.\"\n    *   **💡 코칭 포인트:** \"Lasts\" is a more appropriate verb for describing the duration of rain. \"Rainy spell\" is a natural way to refer to a period of rain.\n        → 비의 '지속 기간'을 설명할 때는 \"lasts\"가 더 적절한 동사입니다. \"Rainy spell\"은 비가 오는 기간을 자연스럽게 표현하는 방법입니다.\n\n3.  **❌ 학습자 원문 (As Said):** \"my purpose is different season.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"I have different preferences for each season.\"\n    *   **💎 비즈니스 표현 (Professional):** \"My preferences vary depending on the season.\"\n    *   **💡 코칭 포인트:** \"Purpose\" refers to a goal or intention. When talking about what you like, \"preference\" is a better fit.\n        → \"Purpose\"는 목표나 의도를 의미합니다. 무엇을 좋아하는지에 대해 말할 때는 \"preference\"가 더 적절합니다.\n\n4.  **❌ 학습자 원문 (As Said):** \"We have people in... Your clothes that pull in your clothes, everything. Things because you have a cold season and these dreams have a hot and cold weather. So it is similar.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"We have people who wear many layers of clothes because you have a cold season, and we also have hot and cold weather. So it is similar.\"\n    *   **💎 비즈니스 표현 (Professional):** \"Our clothing habits involve layering due to the distinct cold season, and we also experience both hot and cold weather, which presents a similarity.\"\n    *   **💡 코칭 포인트:** 문장이 다소 복잡하게 얽혀 있어 의미 전달이 어려웠습니다. '옷을 여러 겹 입는다'는 의미를 \"wear many layers of clothes\"로 표현하고, 문장 구조를 더 명확하게 정리하면 좋습니다.\n        → 문장이 다소 복잡하게 얽혀 있어 의미 전달이 어려웠습니다. '옷을 여러 겹 입는다'는 의미를 \"wear many layers of clothes\"로 표현하고, 문장 구조를 더 명확하게 정리하면 좋습니다.\n\n**3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)**\n\nCategory: **Adjective vs. Noun / Missing Noun after Adjective**\n\nJoey는 형용사를 명사처럼 사용하거나, 형용사 뒤에 필요한 명사를 생략하여 의미가 다소 어색해지는 경향이 있었습니다. 날씨나 계절을 묘사할 때 특히 자주 나타나는 패턴입니다.\n\n| ❌ 원문 (As Said)                                   | ✅ 교정 예시 (Corrected)                                |\n| :-------------------------------------------------- | :----------------------------------------------------- |\n| \"I love the cold.\" / \"I love hot.\"                  | \"I love **cold weather**.\" / \"I love **hot weather**.\" |\n| \"Which country is the beautiful?\"                   | \"Which country is the **most beautiful**?\"             |\n| \"the wet, almost tropical.\"                         | \"the **wet**, almost **tropical weather**.\"            |\n| \"It is so gentle.\" (옷차림에 대해)                  | \"It looks so **elegant**.\" 또는 \"It's so **chic**.\"    |\n| \"the rain is so long. If the one time long rainy...\"| \"the rain lasts so long. If we have a long **rainy spell**...\" |\n\n📌 **핵심 규칙:** 형용사는 명사를 수식하거나 보어로 사용됩니다. 명사 없이 형용사만으로 문장을 끝내거나 명사처럼 사용하려면, 그 형용사가 이미 명사로 굳어진 경우(예: *the poor*, *the rich*)를 제외하고는 뒤에 적절한 명사를 붙여주거나 다른 표현을 사용해야 합니다.\n\n🔁 **따라 읽기:**\n🗣️ \"I love cold weather.\"\n🗣️ \"Which country is the most beautiful?\"\n🗣️ \"The wet, almost tropical weather.\"\n\n**4. 📗 어휘 확장 (Vocabulary Vault)**\n\n오늘 대화에서 유용하게 쓰일 수 있는 어휘들을 정리해 보았습니다.\n\n1.  **balmy** /ˈbɑːmi/ (형용사)\n    *   뜻: (날씨가) 온화한, 쾌적한\n    *   실전 예문: The **balmy** weather is perfect for an outdoor team-building event.\n2.  **humid** /ˈhjuːmɪd/ (형용사)\n    *   뜻: 습한, 습기 많은\n    *   실전 예문: Our products need to be stored in a controlled environment to avoid damage from **humid** conditions.\n3.  **heatwave** /ˈhiːtweɪv/ (명사)\n    *   뜻: 폭염, 열파\n    *   실전 예문: The recent **heatwave** led to a significant increase in energy consumption.\n4.  **cold snap** /kəʊld snæp/ (명사)\n    *   뜻: 갑작스러운 한파\n    *   실전 예문: The unexpected **cold snap** caused delays in our outdoor construction project.\n5.  **poncho** /ˈpɒntʃoʊ/ (명사)\n    *   뜻: 판초 (우비처럼 입는 망토 형태의 옷)\n    *   실전 예문: We provide disposable **ponchos** to visitors during unexpected rain showers at our outdoor events.\n\n**5. 📝 실전 복습 챌린지 (Practice)**\n\n오늘 배운 표현과 문법을 활용하여 영작 챌린지에 도전해 보세요!\n\n1.  **상황:** \"저는 습한 날씨보다는 건조하고 쾌적한 날씨를 선호합니다.\"\n    *   **영작:** I prefer dry and **balmy** weather over **humid** conditions.\n2.  **상황:** \"이번 여름에는 기록적인 폭염이 예상됩니다. 모두 대비해야 해요.\"\n    *   **영작:** A record-breaking **heatwave** is expected this summer, so everyone should prepare.\n3.  **상황:** \"갑작스러운 한파 때문에 난방비가 평소보다 훨씬 많이 나왔어요.\"\n    *   **영작:** Due to the sudden **cold snap**, our heating bill was much higher than usual.\n\n**6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)**\n\n✨ **Good Job:**\nJoey가 아주 잘 표현한 문장입니다!\n\"The climate has changed.\"\n→ 이 문장은 간결하면서도 정확하게 의미를 전달했습니다. '기후 변화'라는 중요한 주제를 명확하게 표현해 주셨어요.\n\n🚀 **내일의 한 문장:**\n다음 수업 시작 시, 오늘 배운 표현을 활용하여 튜터에게 이렇게 말해보세요.\n\"I hope the weather is **balmy** wherever you are today!\"\n\n---\n\n**[성과 지표]**\n\n**유창성 점수:** 7/10\n\n**근거:**\nJoey는 다양한 주제에 대해 자신의 의견을 비교적 막힘없이 표현할 수 있는 좋은 유창성을 보여주었습니다. 특히 날씨나 개인적인 선호도에 대한 질문에 빠르게 반응하고 대화를 이어가는 능력이 뛰어났습니다. 하지만 문장 구조가 다소 반복적이거나, 특정 단어 선택에서 더 자연스러운 표현을 사용할 기회가 있었습니다. 또한, 형용사와 명사의 혼동, 전치사 사용 등에서 정확성을 높이면 훨씬 더 유창하게 느껴질 것입니다.\n\n**다음 수업 '원포인트 액션 플랜':**\n다음 수업에서는 **\"형용사와 명사 구별 및 올바른 사용\"**에 집중하여 연습해 봅시다. 특히 날씨나 사물을 묘사할 때 형용사 뒤에 적절한 명사를 붙이거나, 명사형 표현을 사용하는 연습을 해볼 거예요.\n\n위 내용을 바탕으로:\n1. 먼저 오늘 수업에서 내가 틀렸거나 어색했던 표현을 하나 골라서, 관련된 상황을 영어로 질문해줘.\n2. 내가 영어로 대답하면, 자연스러운지 확인하고 더 나은 표현이 있으면 알려줘.\n3. 특히 \"반복 실수 패턴\"에서 지적된 부분을 집중적으로 연습시켜줘.\n4. 이런 식으로 오늘 배운 표현들을 하나씩 복습하자.\n5. 한국어 설명은 필요할 때만 간단히, 대화는 최대한 영어로 진행해줘.\n\n그럼 시작하자!";
+        function startReview(){navigator.clipboard.writeText(REVIEW_PROMPT).then(()=>{showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)}).catch(()=>{const t=document.createElement('textarea');t.value=REVIEW_PROMPT;document.body.appendChild(t);t.select();document.execCommand('copy');document.body.removeChild(t);showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)})}
+        function showToast(){const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500)}
+        function switchTab(n){document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',n==='feedback'?i===0:i===1));document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));document.getElementById('tab-'+n).classList.add('active')}
+    </script>
+</body>
+</html>
