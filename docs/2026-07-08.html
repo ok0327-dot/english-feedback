@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#0f0f13"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="당근영어"><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="icon" type="image/png" sizes="192x192" href="icon-192.png"><script src="install-banner.js" defer></script><script src="sw-reg.js" defer></script>
+    <title>전화영어 복습 - 2026년 07월 08일</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Noto Sans KR',sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.75;min-height:100vh}
+        .header{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);border-bottom:1px solid rgba(255,255,255,.06);padding:48px 24px 40px;text-align:center}
+        .header-date{font-size:13px;color:#94a3b8;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+        .header h1{font-size:28px;font-weight:700;color:#f1f5f9;margin-bottom:16px}
+        .header-meta{display:flex;justify-content:center;gap:24px;font-size:14px;color:#64748b}
+        .header-meta span{display:flex;align-items:center;gap:6px}
+        .cta-section{text-align:center;padding:40px 24px}
+        .cta-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:linear-gradient(135deg,#38bdf8,#818cf8);color:#fff;font-size:16px;font-weight:600;font-family:'Noto Sans KR',sans-serif;border:none;border-radius:50px;cursor:pointer;transition:all .3s;text-decoration:none;box-shadow:0 4px 24px rgba(56,189,248,.25)}
+        .cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(56,189,248,.35)}
+        .cta-btn svg{width:20px;height:20px}
+        .cta-sub{margin-top:12px;font-size:13px;color:#64748b}
+        .toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#38bdf8;padding:14px 28px;border-radius:12px;font-size:14px;font-weight:500;border:1px solid rgba(56,189,248,.2);box-shadow:0 8px 32px rgba(0,0,0,.4);opacity:0;transition:all .4s cubic-bezier(.16,1,.3,1);z-index:1000}
+        .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+        .container{max-width:720px;margin:0 auto;padding:0 24px 80px}
+        .tabs{display:flex;gap:4px;background:#1a1a24;padding:4px;border-radius:12px;margin-bottom:32px}
+        .tab{flex:1;padding:12px;text-align:center;font-size:14px;font-weight:500;color:#64748b;background:0 0;border:none;border-radius:8px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all .2s}
+        .tab.active{background:#262636;color:#f1f5f9}
+        .tab-content{display:none}.tab-content.active{display:block}
+        .feedback h2{font-size:18px;font-weight:700;color:#f1f5f9;margin:36px 0 16px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.06)}
+        .feedback h2:first-child{margin-top:0}
+        .feedback p{margin:8px 0;color:#cbd5e1}
+        .feedback .item{padding:6px 0 6px 16px;border-left:2px solid #334155;margin:6px 0;color:#cbd5e1}
+        .feedback .numbered{padding:8px 0 8px 16px;color:#cbd5e1}
+        .feedback .numbered strong{color:#38bdf8}
+        .feedback strong{color:#f1f5f9}
+        .feedback code{background:#1e293b;padding:2px 8px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#38bdf8}
+        .feedback table{width:100%;border-collapse:collapse;margin:12px 0}
+        .feedback th,.feedback td{padding:10px 14px;text-align:left;border-bottom:1px solid #262636}
+        .feedback th{color:#94a3b8;font-weight:500;font-size:13px}
+        .feedback td{color:#cbd5e1}
+        .arrow{color:#38bdf8;font-weight:700}
+        .transcript{background:#1a1a24;border-radius:12px;padding:28px;font-size:14px;line-height:2;color:#94a3b8;white-space:pre-wrap;word-break:break-word;font-family:'JetBrains Mono','Noto Sans KR',monospace}
+        .transcript .tutor{color:#38bdf8}
+        .transcript .student{color:#a78bfa}
+        @media(max-width:640px){.header{padding:32px 16px}.header h1{font-size:22px}.cta-btn{padding:14px 28px;font-size:15px}.container{padding:0 16px 60px}}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-date">2026년 07월 08일</div>
+        <h1>📚 전화영어 복습</h1>
+        <div class="header-meta">
+            <span>⏱ 19분 46초</span>
+            <span>🎙 전화영어_025180304_20260708080027.m4a</span>
+        </div>
+    </div>
+    <div class="cta-section">
+        <button class="cta-btn" onclick="startReview()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Gemini에서 복습 대화 시작하기
+        </button>
+        <div class="cta-sub">클릭하면 프롬프트가 복사되고 Gemini가 열립니다</div>
+    </div>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('feedback')">📋 AI 피드백</button>
+            <button class="tab" onclick="switchTab('transcript')">🎙 수업 전사</button>
+        </div>
+        <div id="tab-feedback" class="tab-content active">
+            <div class="feedback"><p>Joey, 안녕하세요! 오늘도 활기찬 목소리로 수업에 참여해 주셔서 감사합니다. 날씨와 관련된 다양한 표현들을 배우고, 특히 'will'과 'would'의 뉘앙스 차이에 대해 깊이 있게 탐구한 시간이었죠. Joey의 적극적인 질문 덕분에 더욱 풍성한 대화가 될 수 있었습니다.</p>
+<br>
+<p>그럼, 오늘 Joey가 보여준 멋진 점들과 앞으로 더 자연스러운 영어 실력을 위해 함께 살펴볼 부분들을 자세히 알려드릴게요!</p>
+<br>
+<br>
+<p><strong>0. 📌 Topic</strong></p>
+<p>Topic: Discussing various weather conditions and the usage of 'will' vs. 'would'.</p>
+<br>
+<p><strong>1. 📊 오늘의 대화 요약 (Summary)</strong></p>
+<p>오늘은 한국의 장마철과 태풍, 캐나다의 날씨 등 다양한 기후 현상에 대해 이야기 나누었습니다. 특히, 일상생활에서 날씨 정보를 어떻게 확인하고, 날씨 때문에 계획을 변경했던 경험에 대해서도 심도 있는 대화를 나누며 'will'과 'would'의 용법 차이를 명확히 이해하는 시간을 가졌습니다.</p>
+<br>
+<p><strong>2. 💬 유창성 업그레이드 (Fluency & Natural Flow)</strong></p>
+<p>Joey가 말한 문장 중 의미는 통하지만, 원어민이 들었을 때 좀 더 자연스럽게 들릴 수 있는 표현들을 살펴볼게요.</p>
+<br>
+<div class="item"><strong>❌ 학습자 원문 (As Said):</strong> "maybe one or two weeks this season is still, or rainy season in Korea."</div>
+<div class="item"><strong>✅ 자연스러운 표현 (Natural):</strong> "The rainy season in Korea usually lasts for one or two more weeks."</div>
+<div class="item"><strong>💎 비즈니스 표현 (Professional):</strong> "The rainy season in Korea typically continues for another week or two."</div>
+<div class="item"><strong>💡 코칭 포인트:</strong> Using "lasts for" or "continues for" is more natural when talking about the duration of a season or event. "Still" can be used, but "lasts for" provides clearer context for duration. <span class="arrow">→</span> "lasts for"나 "continues for"를 사용하면 계절이나 이벤트의 지속 기간을 더 명확하게 표현할 수 있습니다. "still"도 사용할 수 있지만, "lasts for"가 기간에 대한 더 명확한 맥락을 제공합니다.</div>
+<br>
+<div class="item"><strong>❌ 학습자 원문 (As Said):</strong> "We would prepare some, yeah, things to do."</div>
+<div class="item"><strong>✅ 자연스러운 표현 (Natural):</strong> "We need to prepare some things."</div>
+<div class="item"><strong>💎 비즈니스 표현 (Professional):</strong> "We should make some preparations."</div>
+<div class="item"><strong>💡 코칭 포인트:</strong> When expressing a necessary action or a plan for the future, "need to" or "should" is more appropriate than "would." "Would" is typically used for hypothetical situations or polite requests. <span class="arrow">→</span> 미래의 필요한 행동이나 계획을 표현할 때는 "would"보다 "need to" 또는 "should"가 더 적절합니다. "would"는 주로 가상의 상황이나 공손한 요청에 사용됩니다.</div>
+<br>
+<div class="item"><strong>❌ 학습자 원문 (As Said):</strong> "I'm just an office worker, so it is not important to weather information."</div>
+<div class="item"><strong>✅ 자연스러운 표현 (Natural):</strong> "As an office worker, weather information isn't critically important for my daily tasks."</div>
+<div class="item"><strong>💎 비즈니스 표현 (Professional):</strong> "Given my role as an office worker, weather information does not directly impact my core responsibilities."</div>
+<div class="item"><strong>💡 코칭 포인트:</strong> Instead of "it is not important to," using phrases like "isn't critically important for" or "doesn't directly impact" sounds more natural and professional. It specifies *why* it's not important in your context. <span class="arrow">→</span> "it is not important to" 대신 "isn't critically important for" 또는 "doesn't directly impact"와 같은 구문을 사용하면 더 자연스럽고 전문적으로 들립니다. 이는 해당 맥락에서 *왜* 중요하지 않은지 구체적으로 설명해 줍니다.</div>
+<br>
+<p><strong>3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)</strong></p>
+<p>오늘 Joey의 대화에서 동사의 시제와 형태를 정확하게 사용하는 부분에서 반복적인 패턴이 보였습니다. 특히 과거 시제나 현재 완료 시제가 필요한 상황에서 현재 시제를 사용하거나 동사 형태가 어색한 경우가 있었습니다.</p>
+<br>
+<p>Category: Verb Tense and Form</p>
+<br>
+<table>
+<tr><th>❌ 원문 (As Said)</th><th>✅ 교정 예시 (Corrected)</th></tr>
+<tr><td>"I heard today some news. The big typhoon is coming to us, so we <strong>prepared</strong>."</td><td>"I heard some news today: a big typhoon is coming, so we <strong>are preparing</strong>."</td></tr>
+<tr><td>"So if the typhoon passes, they <strong>have</strong> so much rain and <strong>drop</strong> the rain..."</td><td>"So if a typhoon passes, it <strong>brings</strong> so much rain and <strong>drops</strong> the rain..."</td></tr>
+<tr><td>"I just <strong>hurt</strong> my hand." (과거형으로 쓰였지만, 맥락상 현재 완료가 더 자연스러움)</td><td>"I <strong>hurt</strong> my hand." 또는 "I <strong>got hurt</strong> on my hand." (과거의 경험을 말할 때)</td></tr>
+</table>
+<br>
+<p>📌 <strong>핵심 규칙:</strong> 문장의 맥락과 시간적 흐름에 맞춰 동사의 시제(tense)와 형태(form)를 정확하게 사용해야 합니다. 특히 과거의 경험이나 현재와 관련된 과거의 일을 말할 때는 현재 완료(have + p.p.)를 고려하고, 진행 중인 행동이나 미래 계획에는 현재 진행형을 활용하는 것이 좋습니다.</p>
+<br>
+<p>🔁 <strong>따라 읽기:</strong></p>
+<p>🗣️ "I heard some news today: a big typhoon is coming, so we are preparing."</p>
+<p>🗣️ "So if a typhoon passes, it brings so much rain and drops the rain."</p>
+<p>🗣️ "I hurt my hand."</p>
+<br>
+<p><strong>4. 📗 어휘 확장 (Vocabulary Vault)</strong></p>
+<p>오늘 대화에서 유용하게 쓰일 수 있는 어휘들을 정리해 보았습니다.</p>
+<br>
+<div class="item"><strong>humid</strong> /hjuːmɪd/ (형용사)</div>
+<div class="item">뜻: 습한, 축축한</div>
+<div class="item">실전 예문: The summer in Korea is typically <strong>humid</strong>, which can be challenging for outdoor activities.</div>
+<br>
+<div class="item"><strong>typhoon</strong> /taɪˈfuːn/ (명사)</div>
+<div class="item">뜻: 태풍</div>
+<div class="item">실전 예문: We need to monitor the <strong>typhoon</strong> trajectory closely as it could impact our shipping schedule.</div>
+<br>
+<div class="item"><strong>forecast</strong> /ˈfɔːrkæst/ (명사/동사)</div>
+<div class="item">뜻: 예보, 예측 / 예보하다, 예측하다</div>
+<div class="item">실전 예문: The economic <strong>forecast</strong> for the next quarter looks promising.</div>
+<br>
+<div class="item"><strong>trajectory</strong> /trəˈdʒɛktəri/ (명사)</div>
+<div class="item">뜻: 궤적, 경로</div>
+<div class="item">실전 예문: We need to analyze the market <strong>trajectory</strong> to make informed investment decisions.</div>
+<br>
+<div class="item"><strong>critically</strong> /ˈkrɪtɪkli/ (부사)</div>
+<div class="item">뜻: 비판적으로; 결정적으로, 매우 중요하게</div>
+<div class="item">실전 예문: Understanding customer needs is <strong>critically</strong> important for product development.</div>
+<br>
+<p><strong>5. 📝 실전 복습 챌린지 (Practice)</strong></p>
+<p>오늘 배운 표현과 문법을 활용하여 영작 연습을 해볼까요?</p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>상황:</strong> 한국의 여름은 보통 습하고 비가 많이 와서 야외 활동에 제약이 많습니다.</div>
+<div class="item"><strong>영작:</strong> (힌트: 'humid', 'restrict' 사용)</div>
+<div class="item"><strong>모범 답안:</strong> Korean summers are typically <strong>humid</strong> and rainy, which can <strong>restrict</strong> outdoor activities.</div>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>상황:</strong> 우리는 다가오는 태풍에 대비하여 비상 계획을 세워야 합니다.</div>
+<div class="item"><strong>영작:</strong> (힌트: 'typhoon', 'emergency plan', 'make preparations' 사용)</div>
+<div class="item"><strong>모범 답안:</strong> We <strong>need to make preparations</strong> for the upcoming <strong>typhoon</strong> by developing an <strong>emergency plan</strong>.</div>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>상황:</strong> 투자 결정을 내리기 전에 시장의 궤적을 면밀히 분석하는 것이 매우 중요합니다.</div>
+<div class="item"><strong>영작:</strong> (힌트: 'investment decision', 'trajectory', 'critically important' 사용)</div>
+<div class="item"><strong>모범 답안:</strong> It is <strong>critically important</strong> to closely analyze the market <strong>trajectory</strong> before making an <strong>investment decision</strong>.</div>
+<br>
+<p><strong>6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)</strong></p>
+<br>
+<p>✨ <strong>Good Job</strong>: Joey, 오늘 'will'과 'would'의 차이에 대해 질문하고 이해하려 노력하는 모습이 정말 인상 깊었습니다. 특히 이 문장이 좋았어요!</p>
+<p><strong>"So it is similar but a little different, right?"</strong></p>
+<p>이 문장은 Joey가 자신의 이해를 확인하고 싶을 때 쓰는 아주 자연스러운 표현입니다. 궁금한 점을 명확히 질문하고, 적극적으로 대화에 참여하는 모습이 정말 훌륭했습니다!</p>
+<br>
+<p>🚀 <strong>내일의 한 문장</strong>: 다음 수업 시작 시 튜터에게 오늘 배운 표현을 활용하여 이렇게 말해보세요.</p>
+<p>"I've been checking the weather <strong>forecast</strong> because I'm planning some outdoor activities this weekend."</p>
+<p>(주말에 야외 활동 계획이 있어서 일기 예보를 확인하고 있었어요.)</p>
+<br>
+<br>
+<p><strong>[성과 지표]</strong></p>
+<br>
+<p><strong>유창성 점수:</strong> 7/10</p>
+<br>
+<p><strong>근거:</strong> Joey는 다양한 주제에 대해 막힘없이 자신의 의견을 표현하려는 노력이 돋보였습니다. 특히 'will'과 'would'의 차이를 이해하기 위해 적극적으로 질문하고 예시를 들어보는 모습은 훌륭한 학습 태도입니다. 다만, 때때로 문장 구조가 다소 어색하거나, 동사의 시제 및 전치사 사용에서 미세한 오류가 발생하여 의미 전달에 약간의 노력이 필요할 때가 있었습니다. 하지만 이는 꾸준한 연습으로 충분히 개선될 수 있는 부분입니다.</p>
+<br>
+<p><strong>다음 수업 '원포인트 액션 플랜':</strong></p>
+<p>다음 수업에서는 <strong>동사의 시제(Verb Tense)와 형태(Form)의 정확성</strong>에 집중하여 대화해 봅시다. 특히 과거의 경험이나 현재와 관련된 과거의 일을 말할 때 현재 완료 시제를 활용하는 연습을 해볼 거예요.</p></div>
+        </div>
+        <div id="tab-transcript" class="tab-content">
+            <div class="transcript"><span class="student">[Student]</span> Hello, Bell. Good morning. Hi.
+<span class="tutor">[Tutor]</span> Yeah, good morning. Yeah, hi. How are you doing today?
+<span class="student">[Student]</span> Of course. It&#x27;s so nice. I&#x27;m great. How is your day? How are you?
+<span class="tutor">[Tutor]</span> Oh, pretty good. Yeah. Are you having a busy morning so far or a quiet morning?
+<span class="student">[Student]</span> This morning I woke up a little late. So maybe I guess it is a little busy morning, but it&#x27;s okay. Yeah. And outside it&#x27;s raining because it is the rainy season in Korea. So maybe I held an umbrella and walked to work. But it&#x27;s okay. I&#x27;m good. Yeah.
+<span class="tutor">[Tutor]</span> Okay, so rainy season started right now.
+<span class="student">[Student]</span> Yes, you&#x27;re right. Maybe one or two weeks this season is still, or rainy season in Korea. So a little humid and a little cloudy and rainy for two weeks. And I heard today some news. The big typhoon is coming to us, so we prepared. We would prepare some, yeah, things to do.
+<span class="tutor">[Tutor]</span> When is it expected?
+<span class="student">[Student]</span> Yeah, that is a big and huge typhoon. And it&#x27;s possible to pass through China, Japan, and Korea. We don&#x27;t know, but we prepared.
+<span class="student">[Student]</span> Teacher, I have a question. Usually we say &quot;will&quot; or &quot;would&quot;. What is different? &quot;Will, I will, blah, blah.&quot; &quot;I would, blah, blah.&quot;
+<span class="tutor">[Tutor]</span> &quot;I will&quot; is &quot;I&#x27;m going to,&quot; future tense.
+<span class="student">[Student]</span> Yes, yes, you&#x27;re right.
+<span class="tutor">[Tutor]</span> &quot;I would&quot; is like a conditional. So like if I would do that or I would in that situation.
+<span class="student">[Student]</span> So it is similar but a little different, right?
+<span class="tutor">[Tutor]</span> So &quot;will&quot; is like &quot;going to go.&quot; &quot;I&#x27;m going to go to the store.&quot; &quot;I will go to the store.&quot;
+<span class="student">[Student]</span> Yes, I will go blah, blah, blah. Yes, okay.
+<span class="tutor">[Tutor]</span> But &quot;would&quot; is like a modal verb. Like &quot;would you,&quot; &quot;could you.&quot;
+<span class="student">[Student]</span> Ah, yes. I see. Okay. Yes, okay.
+<span class="tutor">[Tutor]</span> Good.
+<span class="tutor">[Tutor]</span> Okay, so we can use &quot;will&quot; to talk about the future.
+<span class="student">[Student]</span> Future, yeah.
+<span class="tutor">[Tutor]</span> And &quot;would&quot; is like a modal.
+<span class="student">[Student]</span> Modal. More modal. Modal verb.
+<span class="tutor">[Tutor]</span> Modal verb.
+<span class="student">[Student]</span> Modal verb. So that is more respectful language, right?
+<span class="tutor">[Tutor]</span> So it&#x27;s used to talk about hypothetical situations. Ask a question. &quot;Would you go to the store?&quot; &quot;Would you pass me that book?&quot;
+<span class="student">[Student]</span> Okay, I see. How about this? &quot;I would go, I would go, I would go to the supermarket.&quot; Is it a little not appropriate word, right?
+<span class="tutor">[Tutor]</span> So it&#x27;s a conditional. So based on, &quot;I would go to the supermarket if I had time.&quot;
+<span class="student">[Student]</span> Uh-huh. If I have time. Uh-huh.
+<span class="tutor">[Tutor]</span> Yeah, so it&#x27;s a conditional sentence.
+<span class="student">[Student]</span> Conditional sentence. I would do something if.
+<span class="tutor">[Tutor]</span> If.
+<span class="student">[Student]</span> More conditional. Okay. If I have time, I would go to the store. If I have time, more conditional. Yes, I see. Understand. Okay.
+<span class="tutor">[Tutor]</span> Versus &quot;I will go to the store&quot; means you&#x27;re planning to go to the store.
+<span class="student">[Student]</span> Planning. And &quot;would&quot; is more conditional. If I have enough time, I will go to the supermarket. I would go to the supermarket. Okay. Just I&#x27;m saying &quot;I would go to the supermarket.&quot; Yeah, that&#x27;s my plan. Okay.
+<span class="tutor">[Tutor]</span> Yeah, or you can use &quot;would&quot; as a request like, &quot;Would you pass me your pen?&quot;
+<span class="student">[Student]</span> &quot;Would you pass me the ball?&quot; &quot;Would you pass me the pencil?&quot; That is more... Would you use the question or more respectful situation? Anyway. Like &quot;would&quot; or &quot;could&quot; or &quot;can you?&quot;
+<span class="tutor">[Tutor]</span> &quot;Can you,&quot; yes.
+<span class="tutor">[Tutor]</span> That&#x27;s more modal.
+<span class="student">[Student]</span> Okay, I see.
+<span class="tutor">[Tutor]</span> Did you want to look at the topic today?
+<span class="student">[Student]</span> Yes, today we will study Snapshot, the section 7, &quot;What&#x27;s the weather like today?&quot;
+<span class="tutor">[Tutor]</span> Did you find them?
+<span class="student">[Student]</span> &quot;What&#x27;s the weather like today?&quot;
+<span class="tutor">[Tutor]</span> So you have page 9.
+<span class="student">[Student]</span> Yeah, page 9, section 7. You&#x27;re right.
+<span class="tutor">[Tutor]</span> So what is the most dangerous kind of weather where you live?
+<span class="student">[Student]</span> Before I said, in Korea, typhoon is the dangerous kind of weather. Yeah, because almost June, July, August, September, usually September, we in Korea have the typhoon that comes in the south area first. And then that is going bigger and bigger and passes our country. These typhoons include a little humid and water, cloudy and windy. So if the typhoon passes, they have so much rain and drop the rain, and the strong wind passes. So many buildings are destroyed as the water flows out in the roads. So it is a real danger, yeah, dangerous situation in Korea. Well, I heard today your country, it has some tornado, right? How about your country, the tornado?
+<span class="tutor">[Tutor]</span> Rarely. Rarely in Canada.
+<span class="student">[Student]</span> Ah, yes. Rarely.
+<span class="tutor">[Tutor]</span> In America there are tornadoes.
+<span class="student">[Student]</span> Ah. Did you have some experience to watch the tornado?
+<span class="tutor">[Tutor]</span> No, I don&#x27;t live in an area with tornadoes.
+<span class="student">[Student]</span> Yes, I see.
+<span class="tutor">[Tutor]</span> What is the most dangerous kind of weather where you live?
+<span class="student">[Student]</span> Where I live? Maybe heat waves, like extreme heat.
+<span class="tutor">[Tutor]</span> Heat wave.
+<span class="student">[Student]</span> That&#x27;s very rare. Or maybe earthquake. That&#x27;s not weather. But sometimes there are storms. So like typhoons.
+<span class="tutor">[Tutor]</span> Typhoons.
+<span class="student">[Student]</span> Okay, I see. And you have also, your country also has typhoons, right?
+<span class="tutor">[Tutor]</span> Sometimes, yes, some storms. It can get rainy but rare. Mostly maybe dry weather causing forest fires.
+<span class="student">[Student]</span> Okay, I see. Understand.
+<span class="tutor">[Tutor]</span> How about in Korea, is dry weather or heat waves, are they a concern?
+<span class="student">[Student]</span> The past rainy season, this season is dry and hot, humid and hot. Usually summer is a little humid and has so much moist air, but the wintertime, it is so dry. So we feel more cool, more chilly outside because air doesn&#x27;t include the air. It is so dry. So we divide two seasons. One, the summer is humid and hot and two weeks rainy season. And wintertime, dry and chilly. So it is a little, yeah, it is a little bad but cool. Anyway.
+<span class="tutor">[Tutor]</span> So the part B, how do you decide if you should bring an umbrella and why?
+<span class="student">[Student]</span> Checking the forecast, looking out the window. Usually I&#x27;m checking the forecast, but sometimes the forecast is mistaken, has a mistake. So at that time, I&#x27;m looking out the window and check the weather or not. Yeah, but every morning I&#x27;m a little busy, so it is a little hard to find the outside. So just checking the forecast, but it is possible to check the outside. It is a little dark and cloudy and rainy. At that time, I prepare my umbrella and go outside. Yeah, so yeah, I usually check both.
+<span class="tutor">[Tutor]</span> A combination of both?
+<span class="student">[Student]</span> Yeah, combination check. Yeah, the weather.
+<span class="tutor">[Tutor]</span> Is there any weather app or do you check online? What do you find to be the most accurate forecast?
+<span class="student">[Student]</span> The first, I check the rainy or sun, sun shining because every lunchtime I will go for a walk near the park, so it is important. Yeah, maybe every morning I check outside and the weather forecast. And then if it&#x27;s dry and sun shining, I take a bicycle and go for a walk. But if it is rainy or snow at that time, I prepare a big umbrella and just go for a walk. Anyway, yeah.
+<span class="tutor">[Tutor]</span> Do you check an app or is there a weather app that you use?
+<span class="student">[Student]</span> I usually put on my smartwatch and this watch has some application. Maybe there are so many kinds of weather applications, but I use the local application, not the international weather application. Because that is more adapted. The forecast either needs to adapt to local weather and right. So I&#x27;m checking them. But I don&#x27;t know that. I&#x27;m not sure that&#x27;s name, the application name.
+<span class="tutor">[Tutor]</span> Okay, so a local Korean app.
+<span class="student">[Student]</span> Yeah, local Korean app.
+<span class="tutor">[Tutor]</span> Next we have part C, problem solving. Would you like to read?
+<span class="student">[Student]</span> Okay, no problem.
+<span class="tutor">[Tutor]</span> You have been planning a beach vacation for a month, but now that it&#x27;s finally time to go, the weather forecast says it will rain every day.
+<span class="student">[Student]</span> Oh my gosh.
+<span class="tutor">[Tutor]</span> You can cancel for free.
+<span class="student">[Student]</span> I see.
+<span class="tutor">[Tutor]</span> Would you still go on the trip or try to change your plans?
+<span class="student">[Student]</span> That depends on the plan. For example, I&#x27;m planning everything. And also that is the travel to abroad. And I have a booking the hotel and flight and the rental car. So everything I prepared. At that time, I mean, I have some penalty, pay the penalty. I would pay, pay the penalty. So that is a little ugly. So I just go there and enjoy my travel. But my booking situation is a week and just a plan or a right way. At that time, I totally cancel my travel and find the new place. Yeah, that is my answer. How about you?
+<span class="tutor">[Tutor]</span> Try to rebook.
+<span class="student">[Student]</span> Okay, go on.
+<span class="tutor">[Tutor]</span> Yeah, so maybe try to rebook the vacation or if it&#x27;s a beach vacation, yeah, I don&#x27;t mind the rain. I would still go if it&#x27;s warm.
+<span class="student">[Student]</span> Okay, good. Yes, that is also a nice way.
+<span class="tutor">[Tutor]</span> If it&#x27;s still warm out, like warm and rainy, that&#x27;s not too bad.
+<span class="student">[Student]</span> Ah, yes, you&#x27;re right. Sometimes the rain is so nice. That mood is so beautiful.
+<span class="tutor">[Tutor]</span> Okay. So do you usually trust the weather forecast, or do people generally trust the weather forecast?
+<span class="student">[Student]</span> Oh, yes, almost. That is right. And that is right. So I believe the weather forecast, but sometimes they have some mistakes. And but I&#x27;m just an office worker, so it is not important to weather information. So just a research. And usually I trust the weather forecast. But some people of work who the outside, the dry or make some crops. And teacher, what is that? In a field they made a crop like the fruits and rice and plant they...
+<span class="tutor">[Tutor]</span> A farmer?
+<span class="student">[Student]</span> Oh, yeah, farmer. Sorry.
+<span class="tutor">[Tutor]</span> Or like agriculturist or grower.
+<span class="student">[Student]</span> Yeah, yeah, farmer. Farmer is better. Yes. So farmer and driver, they check the information of the weather because that is so important. Yeah.
+<span class="tutor">[Tutor]</span> Yeah, it&#x27;s your farmer. Yeah, they depend a lot on outside.
+<span class="student">[Student]</span> And teacher, how can I say the farmer? Blah, blah. Farmer worked their field. They made some food that&#x27;s not made, but anyway, they blah, blah, fruit and apple and plant. How can I say? Grow? So they grow fruit and grow vegetables.
+<span class="tutor">[Tutor]</span> Grow, yes. They grow vegetables. They grow plants and apples.
+<span class="student">[Student]</span> Yeah, okay. Thank you so much.
+<span class="tutor">[Tutor]</span> The farmer grows.
+<span class="tutor">[Tutor]</span> Okay. And have you ever changed your plans last minute because of the weather?
+<span class="student">[Student]</span> Oh, this day. Yeah, I check the weather in the morning because I would decide to take a bicycle or just walk. So usually, always it is more convenient to take a bicycle because it is more fast and more reduced time. So I prefer to take a bicycle, but outside, if it&#x27;s rainy, it is a little dangerous because the road is slippery. So yeah, yeah, maybe last year I had some accident on the slippery road. I just hurt my hand. So yeah, I&#x27;d be careful. Mm-hmm.
+<span class="tutor">[Tutor]</span> The table. Yeah, you gotta watch out for those rainy seasons. Oh, okay.
+<span class="student">[Student]</span> More please. Yeah, definitely rainy season. Difficult, a little difficult. Yes, yes. You&#x27;re right. Mm-hmm.
+<span class="tutor">[Tutor]</span> That&#x27;s about it for time. I have to go. I will send you corrections in a bit. Have a great day.
+<span class="student">[Student]</span> You too. Bye-bye, teacher. Have a nice day.
+<span class="tutor">[Tutor]</span> You too. Bye.</div>
+        </div>
+    </div>
+    <div class="toast" id="toast">✅ 프롬프트가 복사되었습니다!</div>
+    <script>
+        const REVIEW_PROMPT="너는 나의 영어 회화 복습 파트너야. 오늘 내 전화영어 수업 내용을 기반으로 대화하면서 복습을 도와줘.\n\n[오늘 수업 전사 내용]\n[Student] Hello, Bell. Good morning. Hi.\n[Tutor] Yeah, good morning. Yeah, hi. How are you doing today?\n[Student] Of course. It's so nice. I'm great. How is your day? How are you?\n[Tutor] Oh, pretty good. Yeah. Are you having a busy morning so far or a quiet morning?\n[Student] This morning I woke up a little late. So maybe I guess it is a little busy morning, but it's okay. Yeah. And outside it's raining because it is the rainy season in Korea. So maybe I held an umbrella and walked to work. But it's okay. I'm good. Yeah.\n[Tutor] Okay, so rainy season started right now.\n[Student] Yes, you're right. Maybe one or two weeks this season is still, or rainy season in Korea. So a little humid and a little cloudy and rainy for two weeks. And I heard today some news. The big typhoon is coming to us, so we prepared. We would prepare some, yeah, things to do.\n[Tutor] When is it expected?\n[Student] Yeah, that is a big and huge typhoon. And it's possible to pass through China, Japan, and Korea. We don't know, but we prepared.\n[Student] Teacher, I have a question. Usually we say \"will\" or \"would\". What is different? \"Will, I will, blah, blah.\" \"I would, blah, blah.\"\n[Tutor] \"I will\" is \"I'm going to,\" future tense.\n[Student] Yes, yes, you're right.\n[Tutor] \"I would\" is like a conditional. So like if I would do that or I would in that situation.\n[Student] So it is similar but a little different, right?\n[Tutor] So \"will\" is like \"going to go.\" \"I'm going to go to the store.\" \"I will go to the store.\"\n[Student] Yes, I will go blah, blah, blah. Yes, okay.\n[Tutor] But \"would\" is like a modal verb. Like \"would you,\" \"could you.\"\n[Student] Ah, yes. I see. Okay. Yes, okay.\n[Tutor] Good.\n[Tutor] Okay, so we can use \"will\" to talk about the future.\n[Student] Future, yeah.\n[Tutor] And \"would\" is like a modal.\n[Student] Modal. More modal. Modal verb.\n[Tutor] Modal verb.\n[Student] Modal verb. So that is more respectful language, right?\n[Tutor] So it's used to talk about hypothetical situations. Ask a question. \"Would you go to the store?\" \"Would you pass me that book?\"\n[Student] Okay, I see. How about this? \"I would go, I would go, I would go to the supermarket.\" Is it a little not appropriate word, right?\n[Tutor] So it's a conditional. So based on, \"I would go to the supermarket if I had time.\"\n[Student] Uh-huh. If I have time. Uh-huh.\n[Tutor] Yeah, so it's a conditional sentence.\n[Student] Conditional sentence. I would do something if.\n[Tutor] If.\n[Student] More conditional. Okay. If I have time, I would go to the store. If I have time, more conditional. Yes, I see. Understand. Okay.\n[Tutor] Versus \"I will go to the store\" means you're planning to go to the store.\n[Student] Planning. And \"would\" is more conditional. If I have enough time, I will go to the supermarket. I would go to the supermarket. Okay. Just I'm saying \"I would go to the supermarket.\" Yeah, that's my plan. Okay.\n[Tutor] Yeah, or you can use \"would\" as a request like, \"Would you pass me your pen?\"\n[Student] \"Would you pass me the ball?\" \"Would you pass me the pencil?\" That is more... Would you use the question or more respectful situation? Anyway. Like \"would\" or \"could\" or \"can you?\"\n[Tutor] \"Can you,\" yes.\n[Tutor] That's more modal.\n[Student] Okay, I see.\n[Tutor] Did you want to look at the topic today?\n[Student] Yes, today we will study Snapshot, the section 7, \"What's the weather like today?\"\n[Tutor] Did you find them?\n[Student] \"What's the weather like today?\"\n[Tutor] So you have page 9.\n[Student] Yeah, page 9, section 7. You're right.\n[Tutor] So what is the most dangerous kind of weather where you live?\n[Student] Before I said, in Korea, typhoon is the dangerous kind of weather. Yeah, because almost June, July, August, September, usually September, we in Korea have the typhoon that comes in the south area first. And then that is going bigger and bigger and passes our country. These typhoons include a little humid and water, cloudy and windy. So if the typhoon passes, they have so much rain and drop the rain, and the strong wind passes. So many buildings are destroyed as the water flows out in the roads. So it is a real danger, yeah, dangerous situation in Korea. Well, I heard today your country, it has some tornado, right? How about your country, the tornado?\n[Tutor] Rarely. Rarely in Canada.\n[Student] Ah, yes. Rarely.\n[Tutor] In America there are tornadoes.\n[Student] Ah. Did you have some experience to watch the tornado?\n[Tutor] No, I don't live in an area with tornadoes.\n[Student] Yes, I see.\n[Tutor] What is the most dangerous kind of weather where you live?\n[Student] Where I live? Maybe heat waves, like extreme heat.\n[Tutor] Heat wave.\n[Student] That's very rare. Or maybe earthquake. That's not weather. But sometimes there are storms. So like typhoons.\n[Tutor] Typhoons.\n[Student] Okay, I see. And you have also, your country also has typhoons, right?\n[Tutor] Sometimes, yes, some storms. It can get rainy but rare. Mostly maybe dry weather causing forest fires.\n[Student] Okay, I see. Understand.\n[Tutor] How about in Korea, is dry weather or heat waves, are they a concern?\n[Student] The past rainy season, this season is dry and hot, humid and hot. Usually summer is a little humid and has so much moist air, but the wintertime, it is so dry. So we feel more cool, more chilly outside because air doesn't include the air. It is so dry. So we divide two seasons. One, the summer is humid and hot and two weeks rainy season. And wintertime, dry and chilly. So it is a little, yeah, it is a little bad but cool. Anyway.\n[Tutor] So the part B, how do you decide if you should bring an umbrella and why?\n[Student] Checking the forecast, looking out the window. Usually I'm checking the forecast, but sometimes the forecast is mistaken, has a mistake. So at that time, I'm looking out the window and check the weather or not. Yeah, but every morning I'm a little busy, so it is a little hard to find the outside. So just checking the forecast, but it is possible to check the outside. It is a little dark and cloudy and rainy. At that time, I prepare my umbrella and go outside. Yeah, so yeah, I usually check both.\n[Tutor] A combination of both?\n[Student] Yeah, combination check. Yeah, the weather.\n[Tutor] Is there any weather app or do you check online? What do you find to be the most accurate forecast?\n[Student] The first, I check the rainy or sun, sun shining because every lunchtime I will go for a walk near the park, so it is important. Yeah, maybe every morning I check outside and the weather forecast. And then if it's dry and sun shining, I take a bicycle and go for a walk. But if it is rainy or snow at that time, I prepare a big umbrella and just go for a walk. Anyway, yeah.\n[Tutor] Do you check an app or is there a weather app that you use?\n[Student] I usually put on my smartwatch and this watch has some application. Maybe there are so many kinds of weather applications, but I use the local application, not the international weather application. Because that is more adapted. The forecast either needs to adapt to local weather and right. So I'm checking them. But I don't know that. I'm not sure that's name, the application name.\n[Tutor] Okay, so a local Korean app.\n[Student] Yeah, local Korean app.\n[Tutor] Next we have part C, problem solving. Would you like to read?\n[Student] Okay, no problem.\n[Tutor] You have been planning a beach vacation for a month, but now that it's finally time to go, the weather forecast says it will rain every day.\n[Student] Oh my gosh.\n[Tutor] You can cancel for free.\n[Student] I see.\n[Tutor] Would you still go on the trip or try to change your plans?\n[Student] That depends on the plan. For example, I'm planning everything. And also that is the travel to abroad. And I have a booking the hotel and flight and the rental car. So everything I prepared. At that time, I mean, I have some penalty, pay the penalty. I would pay, pay the penalty. So that is a little ugly. So I just go there and enjoy my travel. But my booking situation is a week and just a plan or a right way. At that time, I totally cancel my travel and find the new place. Yeah, that is my answer. How about you?\n[Tutor] Try to rebook.\n[Student] Okay, go on.\n[Tutor] Yeah, so maybe try to rebook the vacation or if it's a beach vacation, yeah, I don't mind the rain. I would still go if it's warm.\n[Student] Okay, good. Yes, that is also a nice way.\n[Tutor] If it's still warm out, like warm and rainy, that's not too bad.\n[Student] Ah, yes, you're right. Sometimes the rain is so nice. That mood is so beautiful.\n[Tutor] Okay. So do you usually trust the weather forecast, or do people generally trust the weather forecast?\n[Student] Oh, yes, almost. That is right. And that is right. So I believe the weather forecast, but sometimes they have some mistakes. And but I'm just an office worker, so it is not important to weather information. So just a research. And usually I trust the weather forecast. But some people of work who the outside, the dry or make some crops. And teacher, what is that? In a field they made a crop like the fruits and rice and plant they...\n[Tutor] A farmer?\n[Student] Oh, yeah, farmer. Sorry.\n[Tutor] Or like agriculturist or grower.\n[Student] Yeah, yeah, farmer. Farmer is better. Yes. So farmer and driver, they check the information of the weather because that is so important. Yeah.\n[Tutor] Yeah, it's your farmer. Yeah, they depend a lot on outside.\n[Student] And teacher, how can I say the farmer? Blah, blah. Farmer worked their field. They made some food that's not made, but anyway, they blah, blah, fruit and apple and plant. How can I say? Grow? So they grow fruit and grow vegetables.\n[Tutor] Grow, yes. They grow vegetables. They grow plants and apples.\n[Student] Yeah, okay. Thank you so much.\n[Tutor] The farmer grows.\n[Tutor] Okay. And have you ever changed your plans last minute because of the weather?\n[Student] Oh, this day. Yeah, I check the weather in the morning because I would decide to take a bicycle or just walk. So usually, always it is more convenient to take a bicycle because it is more fast and more reduced time. So I prefer to take a bicycle, but outside, if it's rainy, it is a little dangerous because the road is slippery. So yeah, yeah, maybe last year I had some accident on the slippery road. I just hurt my hand. So yeah, I'd be careful. Mm-hmm.\n[Tutor] The table. Yeah, you gotta watch out for those rainy seasons. Oh, okay.\n[Student] More please. Yeah, definitely rainy season. Difficult, a little difficult. Yes, yes. You're right. Mm-hmm.\n[Tutor] That's about it for time. I have to go. I will send you corrections in a bit. Have a great day.\n[Student] You too. Bye-bye, teacher. Have a nice day.\n[Tutor] You too. Bye.\n\n[AI 피드백]\nJoey, 안녕하세요! 오늘도 활기찬 목소리로 수업에 참여해 주셔서 감사합니다. 날씨와 관련된 다양한 표현들을 배우고, 특히 'will'과 'would'의 뉘앙스 차이에 대해 깊이 있게 탐구한 시간이었죠. Joey의 적극적인 질문 덕분에 더욱 풍성한 대화가 될 수 있었습니다.\n\n그럼, 오늘 Joey가 보여준 멋진 점들과 앞으로 더 자연스러운 영어 실력을 위해 함께 살펴볼 부분들을 자세히 알려드릴게요!\n\n---\n\n**0. 📌 Topic**\nTopic: Discussing various weather conditions and the usage of 'will' vs. 'would'.\n\n**1. 📊 오늘의 대화 요약 (Summary)**\n오늘은 한국의 장마철과 태풍, 캐나다의 날씨 등 다양한 기후 현상에 대해 이야기 나누었습니다. 특히, 일상생활에서 날씨 정보를 어떻게 확인하고, 날씨 때문에 계획을 변경했던 경험에 대해서도 심도 있는 대화를 나누며 'will'과 'would'의 용법 차이를 명확히 이해하는 시간을 가졌습니다.\n\n**2. 💬 유창성 업그레이드 (Fluency & Natural Flow)**\nJoey가 말한 문장 중 의미는 통하지만, 원어민이 들었을 때 좀 더 자연스럽게 들릴 수 있는 표현들을 살펴볼게요.\n\n*   **❌ 학습자 원문 (As Said):** \"maybe one or two weeks this season is still, or rainy season in Korea.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"The rainy season in Korea usually lasts for one or two more weeks.\"\n    *   **💎 비즈니스 표현 (Professional):** \"The rainy season in Korea typically continues for another week or two.\"\n    *   **💡 코칭 포인트:** Using \"lasts for\" or \"continues for\" is more natural when talking about the duration of a season or event. \"Still\" can be used, but \"lasts for\" provides clearer context for duration. → \"lasts for\"나 \"continues for\"를 사용하면 계절이나 이벤트의 지속 기간을 더 명확하게 표현할 수 있습니다. \"still\"도 사용할 수 있지만, \"lasts for\"가 기간에 대한 더 명확한 맥락을 제공합니다.\n\n*   **❌ 학습자 원문 (As Said):** \"We would prepare some, yeah, things to do.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"We need to prepare some things.\"\n    *   **💎 비즈니스 표현 (Professional):** \"We should make some preparations.\"\n    *   **💡 코칭 포인트:** When expressing a necessary action or a plan for the future, \"need to\" or \"should\" is more appropriate than \"would.\" \"Would\" is typically used for hypothetical situations or polite requests. → 미래의 필요한 행동이나 계획을 표현할 때는 \"would\"보다 \"need to\" 또는 \"should\"가 더 적절합니다. \"would\"는 주로 가상의 상황이나 공손한 요청에 사용됩니다.\n\n*   **❌ 학습자 원문 (As Said):** \"I'm just an office worker, so it is not important to weather information.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"As an office worker, weather information isn't critically important for my daily tasks.\"\n    *   **💎 비즈니스 표현 (Professional):** \"Given my role as an office worker, weather information does not directly impact my core responsibilities.\"\n    *   **💡 코칭 포인트:** Instead of \"it is not important to,\" using phrases like \"isn't critically important for\" or \"doesn't directly impact\" sounds more natural and professional. It specifies *why* it's not important in your context. → \"it is not important to\" 대신 \"isn't critically important for\" 또는 \"doesn't directly impact\"와 같은 구문을 사용하면 더 자연스럽고 전문적으로 들립니다. 이는 해당 맥락에서 *왜* 중요하지 않은지 구체적으로 설명해 줍니다.\n\n**3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)**\n오늘 Joey의 대화에서 동사의 시제와 형태를 정확하게 사용하는 부분에서 반복적인 패턴이 보였습니다. 특히 과거 시제나 현재 완료 시제가 필요한 상황에서 현재 시제를 사용하거나 동사 형태가 어색한 경우가 있었습니다.\n\nCategory: Verb Tense and Form\n\n| ❌ 원문 (As Said)                                                                  | ✅ 교정 예시 (Corrected)                                                              |\n| :-------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------ |\n| \"I heard today some news. The big typhoon is coming to us, so we **prepared**.\" | \"I heard some news today: a big typhoon is coming, so we **are preparing**.\"         |\n| \"So if the typhoon passes, they **have** so much rain and **drop** the rain...\"  | \"So if a typhoon passes, it **brings** so much rain and **drops** the rain...\"       |\n| \"I just **hurt** my hand.\" (과거형으로 쓰였지만, 맥락상 현재 완료가 더 자연스러움) | \"I **hurt** my hand.\" 또는 \"I **got hurt** on my hand.\" (과거의 경험을 말할 때) |\n\n📌 **핵심 규칙:** 문장의 맥락과 시간적 흐름에 맞춰 동사의 시제(tense)와 형태(form)를 정확하게 사용해야 합니다. 특히 과거의 경험이나 현재와 관련된 과거의 일을 말할 때는 현재 완료(have + p.p.)를 고려하고, 진행 중인 행동이나 미래 계획에는 현재 진행형을 활용하는 것이 좋습니다.\n\n🔁 **따라 읽기:**\n🗣️ \"I heard some news today: a big typhoon is coming, so we are preparing.\"\n🗣️ \"So if a typhoon passes, it brings so much rain and drops the rain.\"\n🗣️ \"I hurt my hand.\"\n\n**4. 📗 어휘 확장 (Vocabulary Vault)**\n오늘 대화에서 유용하게 쓰일 수 있는 어휘들을 정리해 보았습니다.\n\n*   **humid** /hjuːmɪd/ (형용사)\n    *   뜻: 습한, 축축한\n    *   실전 예문: The summer in Korea is typically **humid**, which can be challenging for outdoor activities.\n\n*   **typhoon** /taɪˈfuːn/ (명사)\n    *   뜻: 태풍\n    *   실전 예문: We need to monitor the **typhoon** trajectory closely as it could impact our shipping schedule.\n\n*   **forecast** /ˈfɔːrkæst/ (명사/동사)\n    *   뜻: 예보, 예측 / 예보하다, 예측하다\n    *   실전 예문: The economic **forecast** for the next quarter looks promising.\n\n*   **trajectory** /trəˈdʒɛktəri/ (명사)\n    *   뜻: 궤적, 경로\n    *   실전 예문: We need to analyze the market **trajectory** to make informed investment decisions.\n\n*   **critically** /ˈkrɪtɪkli/ (부사)\n    *   뜻: 비판적으로; 결정적으로, 매우 중요하게\n    *   실전 예문: Understanding customer needs is **critically** important for product development.\n\n**5. 📝 실전 복습 챌린지 (Practice)**\n오늘 배운 표현과 문법을 활용하여 영작 연습을 해볼까요?\n\n1.  **상황:** 한국의 여름은 보통 습하고 비가 많이 와서 야외 활동에 제약이 많습니다.\n    *   **영작:** (힌트: 'humid', 'restrict' 사용)\n    *   **모범 답안:** Korean summers are typically **humid** and rainy, which can **restrict** outdoor activities.\n\n2.  **상황:** 우리는 다가오는 태풍에 대비하여 비상 계획을 세워야 합니다.\n    *   **영작:** (힌트: 'typhoon', 'emergency plan', 'make preparations' 사용)\n    *   **모범 답안:** We **need to make preparations** for the upcoming **typhoon** by developing an **emergency plan**.\n\n3.  **상황:** 투자 결정을 내리기 전에 시장의 궤적을 면밀히 분석하는 것이 매우 중요합니다.\n    *   **영작:** (힌트: 'investment decision', 'trajectory', 'critically important' 사용)\n    *   **모범 답안:** It is **critically important** to closely analyze the market **trajectory** before making an **investment decision**.\n\n**6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)**\n\n✨ **Good Job**: Joey, 오늘 'will'과 'would'의 차이에 대해 질문하고 이해하려 노력하는 모습이 정말 인상 깊었습니다. 특히 이 문장이 좋았어요!\n**\"So it is similar but a little different, right?\"**\n이 문장은 Joey가 자신의 이해를 확인하고 싶을 때 쓰는 아주 자연스러운 표현입니다. 궁금한 점을 명확히 질문하고, 적극적으로 대화에 참여하는 모습이 정말 훌륭했습니다!\n\n🚀 **내일의 한 문장**: 다음 수업 시작 시 튜터에게 오늘 배운 표현을 활용하여 이렇게 말해보세요.\n\"I've been checking the weather **forecast** because I'm planning some outdoor activities this weekend.\"\n(주말에 야외 활동 계획이 있어서 일기 예보를 확인하고 있었어요.)\n\n---\n\n**[성과 지표]**\n\n**유창성 점수:** 7/10\n\n**근거:** Joey는 다양한 주제에 대해 막힘없이 자신의 의견을 표현하려는 노력이 돋보였습니다. 특히 'will'과 'would'의 차이를 이해하기 위해 적극적으로 질문하고 예시를 들어보는 모습은 훌륭한 학습 태도입니다. 다만, 때때로 문장 구조가 다소 어색하거나, 동사의 시제 및 전치사 사용에서 미세한 오류가 발생하여 의미 전달에 약간의 노력이 필요할 때가 있었습니다. 하지만 이는 꾸준한 연습으로 충분히 개선될 수 있는 부분입니다.\n\n**다음 수업 '원포인트 액션 플랜':**\n다음 수업에서는 **동사의 시제(Verb Tense)와 형태(Form)의 정확성**에 집중하여 대화해 봅시다. 특히 과거의 경험이나 현재와 관련된 과거의 일을 말할 때 현재 완료 시제를 활용하는 연습을 해볼 거예요.\n\n위 내용을 바탕으로:\n1. 먼저 오늘 수업에서 내가 틀렸거나 어색했던 표현을 하나 골라서, 관련된 상황을 영어로 질문해줘.\n2. 내가 영어로 대답하면, 자연스러운지 확인하고 더 나은 표현이 있으면 알려줘.\n3. 특히 \"반복 실수 패턴\"에서 지적된 부분을 집중적으로 연습시켜줘.\n4. 이런 식으로 오늘 배운 표현들을 하나씩 복습하자.\n5. 한국어 설명은 필요할 때만 간단히, 대화는 최대한 영어로 진행해줘.\n\n그럼 시작하자!";
+        function startReview(){navigator.clipboard.writeText(REVIEW_PROMPT).then(()=>{showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)}).catch(()=>{const t=document.createElement('textarea');t.value=REVIEW_PROMPT;document.body.appendChild(t);t.select();document.execCommand('copy');document.body.removeChild(t);showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)})}
+        function showToast(){const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500)}
+        function switchTab(n){document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',n==='feedback'?i===0:i===1));document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));document.getElementById('tab-'+n).classList.add('active')}
+    </script>
+</body>
+</html>
