@@ -1,0 +1,53 @@
+{
+ "date": "2026-07-08",
+ "iso": [
+  2026,
+  28
+ ],
+ "topic": "Discussing various weather conditions and the usage of 'will' vs. 'would'.",
+ "grammar": "Verb Tense and Form",
+ "grammar_norm": "Verb Tense",
+ "score": 7.0,
+ "pairs": [
+  {
+   "said": "maybe one or two weeks this season is still, or rainy season in Korea.",
+   "natural": "The rainy season in Korea usually lasts for one or two more weeks."
+  },
+  {
+   "said": "We would prepare some, yeah, things to do.",
+   "natural": "We need to prepare some things."
+  },
+  {
+   "said": "I'm just an office worker, so it is not important to weather information.",
+   "natural": "As an office worker, weather information isn't critically important for my daily tasks."
+  }
+ ],
+ "vocab": [
+  {
+   "word": "humid",
+   "pos": "형용사",
+   "meaning": "습한, 축축한"
+  },
+  {
+   "word": "typhoon",
+   "pos": "명사",
+   "meaning": "태풍"
+  },
+  {
+   "word": "forecast",
+   "pos": "명사/동사",
+   "meaning": "예보, 예측 / 예보하다, 예측하다"
+  },
+  {
+   "word": "trajectory",
+   "pos": "명사",
+   "meaning": "궤적, 경로"
+  },
+  {
+   "word": "critically",
+   "pos": "부사",
+   "meaning": "비판적으로; 결정적으로, 매우 중요하게"
+  }
+ ],
+ "_html_md5": "fc733f46b286697e10aa0bd7cf4a2148"
+}
