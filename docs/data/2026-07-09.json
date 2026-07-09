@@ -1,0 +1,53 @@
+{
+ "date": "2026-07-09",
+ "iso": [
+  2026,
+  28
+ ],
+ "topic": "Discussing personality traits, work preferences, and travel styles.",
+ "grammar": "Verb Tense and Form",
+ "grammar_norm": "Verb Tense",
+ "score": 7.0,
+ "pairs": [
+  {
+   "said": "our country people believed humility is so great in person and state.",
+   "natural": "People in our country used to believe that humility was a great virtue for individuals and the nation."
+  },
+  {
+   "said": "I'm really have a stress.",
+   "natural": "I get really stressed."
+  },
+  {
+   "said": "my character is their immediate friend",
+   "natural": "I'm more of a spontaneous person."
+  }
+ ],
+ "vocab": [
+  {
+   "word": "humility",
+   "pos": "명사",
+   "meaning": "겸손"
+  },
+  {
+   "word": "assertive",
+   "pos": "형용사",
+   "meaning": "자기주장이 강한, 단호한"
+  },
+  {
+   "word": "laid-back",
+   "pos": "형용사",
+   "meaning": "느긋한, 태평스러운"
+  },
+  {
+   "word": "personality clash",
+   "pos": "명사",
+   "meaning": "성격 충돌"
+  },
+  {
+   "word": "spontaneous",
+   "pos": "형용사",
+   "meaning": "즉흥적인, 자발적인"
+  }
+ ],
+ "_html_md5": "46c757e9591bb93781de8027282b8479"
+}
