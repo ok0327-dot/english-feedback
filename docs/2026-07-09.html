@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#0f0f13"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="당근영어"><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="icon" type="image/png" sizes="192x192" href="icon-192.png"><script src="install-banner.js" defer></script><script src="sw-reg.js" defer></script>
+    <title>전화영어 복습 - 2026년 07월 09일</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Noto Sans KR',sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.75;min-height:100vh}
+        .header{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);border-bottom:1px solid rgba(255,255,255,.06);padding:48px 24px 40px;text-align:center}
+        .header-date{font-size:13px;color:#94a3b8;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+        .header h1{font-size:28px;font-weight:700;color:#f1f5f9;margin-bottom:16px}
+        .header-meta{display:flex;justify-content:center;gap:24px;font-size:14px;color:#64748b}
+        .header-meta span{display:flex;align-items:center;gap:6px}
+        .cta-section{text-align:center;padding:40px 24px}
+        .cta-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:linear-gradient(135deg,#38bdf8,#818cf8);color:#fff;font-size:16px;font-weight:600;font-family:'Noto Sans KR',sans-serif;border:none;border-radius:50px;cursor:pointer;transition:all .3s;text-decoration:none;box-shadow:0 4px 24px rgba(56,189,248,.25)}
+        .cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(56,189,248,.35)}
+        .cta-btn svg{width:20px;height:20px}
+        .cta-sub{margin-top:12px;font-size:13px;color:#64748b}
+        .toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#38bdf8;padding:14px 28px;border-radius:12px;font-size:14px;font-weight:500;border:1px solid rgba(56,189,248,.2);box-shadow:0 8px 32px rgba(0,0,0,.4);opacity:0;transition:all .4s cubic-bezier(.16,1,.3,1);z-index:1000}
+        .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+        .container{max-width:720px;margin:0 auto;padding:0 24px 80px}
+        .tabs{display:flex;gap:4px;background:#1a1a24;padding:4px;border-radius:12px;margin-bottom:32px}
+        .tab{flex:1;padding:12px;text-align:center;font-size:14px;font-weight:500;color:#64748b;background:0 0;border:none;border-radius:8px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all .2s}
+        .tab.active{background:#262636;color:#f1f5f9}
+        .tab-content{display:none}.tab-content.active{display:block}
+        .feedback h2{font-size:18px;font-weight:700;color:#f1f5f9;margin:36px 0 16px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.06)}
+        .feedback h2:first-child{margin-top:0}
+        .feedback p{margin:8px 0;color:#cbd5e1}
+        .feedback .item{padding:6px 0 6px 16px;border-left:2px solid #334155;margin:6px 0;color:#cbd5e1}
+        .feedback .numbered{padding:8px 0 8px 16px;color:#cbd5e1}
+        .feedback .numbered strong{color:#38bdf8}
+        .feedback strong{color:#f1f5f9}
+        .feedback code{background:#1e293b;padding:2px 8px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#38bdf8}
+        .feedback table{width:100%;border-collapse:collapse;margin:12px 0}
+        .feedback th,.feedback td{padding:10px 14px;text-align:left;border-bottom:1px solid #262636}
+        .feedback th{color:#94a3b8;font-weight:500;font-size:13px}
+        .feedback td{color:#cbd5e1}
+        .arrow{color:#38bdf8;font-weight:700}
+        .transcript{background:#1a1a24;border-radius:12px;padding:28px;font-size:14px;line-height:2;color:#94a3b8;white-space:pre-wrap;word-break:break-word;font-family:'JetBrains Mono','Noto Sans KR',monospace}
+        .transcript .tutor{color:#38bdf8}
+        .transcript .student{color:#a78bfa}
+        @media(max-width:640px){.header{padding:32px 16px}.header h1{font-size:22px}.cta-btn{padding:14px 28px;font-size:15px}.container{padding:0 16px 60px}}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-date">2026년 07월 09일</div>
+        <h1>📚 전화영어 복습</h1>
+        <div class="header-meta">
+            <span>⏱ 20분 59초</span>
+            <span>🎙 전화영어_025180304_20260709080022.m4a</span>
+        </div>
+    </div>
+    <div class="cta-section">
+        <button class="cta-btn" onclick="startReview()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Gemini에서 복습 대화 시작하기
+        </button>
+        <div class="cta-sub">클릭하면 프롬프트가 복사되고 Gemini가 열립니다</div>
+    </div>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('feedback')">📋 AI 피드백</button>
+            <button class="tab" onclick="switchTab('transcript')">🎙 수업 전사</button>
+        </div>
+        <div id="tab-feedback" class="tab-content active">
+            <div class="feedback"><p>안녕하세요, Joey! 오늘도 활기찬 대화 나눠주셔서 감사합니다. 비즈니스 환경에서 필요한 다양한 성격 유형과 협업 방식, 그리고 여행 계획까지 흥미로운 주제들을 깊이 있게 이야기 나눌 수 있었어요. 특히 자신의 의견을 명확하게 표현하려는 노력이 돋보였습니다.</p>
+<br>
+<br>
+<h2>0. 📌 Topic</h2>
+<p>Topic: Discussing personality traits, work preferences, and travel styles.</p>
+<br>
+<h2>1. 📊 오늘의 대화 요약 (Summary)</h2>
+<p>오늘 Joey는 한국에서 중요하게 여기는 성격 특성(겸손 vs. 자신감)에 대해 이야기하며 시대에 따른 가치관 변화를 분석했습니다. 또한, 업무 환경에서 선호하는 동료 유형(경청하는 사람 vs. 말하는 사람)과 개인적인 여행 스타일(계획적 vs. 즉흥적)에 대한 의견을 나누며 자신의 가치관을 명확히 설명했습니다.</p>
+<br>
+<h2>2. 💬 유창성 업그레이드 (Fluency & Natural Flow)</h2>
+<br>
+<p>Joey가 실제 말한 문장 중, 의미는 통하지만 더 자연스럽게 다듬을 수 있는 표현 3가지를 선정했습니다.</p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>❌ 학습자 원문 (As Said):</strong> "our country people believed humility is so great in person and state."</div>
+<div class="item"><strong>✅ 자연스러운 표현 (Natural):</strong> "People in our country used to believe that humility was a great virtue for individuals and the nation."</div>
+<div class="item"><strong>💎 비즈니스 표현 (Professional):</strong> "Historically, humility was highly regarded as a fundamental virtue for both individuals and the collective society in our country."</div>
+<div class="item"><strong>💡 코칭 포인트:</strong> "our country people" 대신 "people in our country"를 쓰는 것이 더 자연스럽습니다. "so great" 대신 "a great virtue"나 "highly regarded"를 사용하면 더 자연스럽고 격식 있는 표현이 됩니다.</div>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>❌ 학습자 원문 (As Said):</strong> "I'm really have a stress."</div>
+<div class="item"><strong>✅ 자연스러운 표현 (Natural):</strong> "I get really stressed."</div>
+<div class="item"><strong>💎 비즈니스 표현 (Professional):</strong> "I tend to experience significant stress."</div>
+<div class="item"><strong>💡 코칭 포인트:</strong> "have stress"는 흔히 쓰이는 표현이 아닙니다. 보통 "get stressed"나 "feel stressed"를 사용하며, "really"를 붙여 강도를 강조할 수 있습니다.</div>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>❌ 학습자 원문 (As Said):</strong> "my character is their immediate friend"</div>
+<div class="item"><strong>✅ 자연스러운 표현 (Natural):</strong> "I'm more of a spontaneous person."</div>
+<div class="item"><strong>💎 비즈니스 표현 (Professional):</strong> "My personal preference leans towards a more adaptable and flexible approach."</div>
+<div class="item"><strong>💡 코칭 포인트:</strong> "immediate friend"는 즉흥적인 성격을 나타내지 않습니다. "spontaneous"는 계획을 그때그때 세우는 것을 선호하는 사람을 정확하게 묘사하는 표현입니다.</div>
+<br>
+<h2>3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)</h2>
+<br>
+<p>Category: Verb Tense and Form</p>
+<br>
+<p>Joey는 대화 중 일반적인 사실이나 습관, 그리고 현재 상황에 대해 이야기할 때 동사의 시제나 형태를 혼동하는 경우가 있었습니다. 특히 과거형을 쓰거나 어색한 동사 형태를 사용하는 패턴이 반복되었습니다.</p>
+<br>
+<table>
+<tr><th>❌ 원문 (As Said)</th><th>✅ 교정 예시 (Corrected)</th></tr>
+<tr><td>Their project <strong>is failed</strong>.</td><td>Their project <strong>fails</strong>.</td></tr>
+<tr><td>I'm really <strong>have</strong> a stress.</td><td>I really <strong>get</strong> stressed.</td></tr>
+<tr><td>I <strong>had</strong> so much stress. (when talking about a general situation)</td><td>I <strong>get</strong> so much stress.</td></tr>
+<tr><td>I think every person <strong>was born</strong> with their personality.</td><td>I think every person <strong>is born</strong> with their personality.</td></tr>
+<tr><td>many people <strong>cooperate</strong> some work for work.</td><td>many people <strong>cooperate on</strong> some work.</td></tr>
+</table>
+<br>
+<p>📌 <strong>핵심 규칙:</strong> 일반적인 사실, 습관, 또는 현재의 경향을 이야기할 때는 현재 시제를 사용하고, 동사의 올바른 형태(예: be 동사 + 과거분사 수동태 vs. 능동태 동사)를 쓰는 것에 유의해야 합니다. 또한, 동사 뒤에 적절한 전치사를 사용하는 것도 중요합니다.</p>
+<br>
+<p>🔁 <strong>따라 읽기:</strong></p>
+<p>🗣️ "Their project fails."</p>
+<p>🗣️ "I really get stressed."</p>
+<p>🗣️ "I get so much stress."</p>
+<p>🗣️ "I think every person is born with their personality."</p>
+<p>🗣️ "Many people cooperate on some work."</p>
+<br>
+<h2>4. 📗 어휘 확장 (Vocabulary Vault)</h2>
+<br>
+<p>오늘 수업 중 등장했거나 맥락상 유용한 단어 5개를 소개합니다.</p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>humility</strong> /hjuːˈmɪlɪti/ (명사)</div>
+<div class="item">뜻: 겸손</div>
+<div class="item">실전 예문: Leaders with <strong>humility</strong> often inspire greater loyalty and teamwork.</div>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>assertive</strong> /əˈsɜːrtɪv/ (형용사)</div>
+<div class="item">뜻: 자기주장이 강한, 단호한</div>
+<div class="item">실전 예문: You need to be more <strong>assertive</strong> in expressing your ideas during team meetings.</div>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>laid-back</strong> /ˈleɪd bæk/ (형용사)</div>
+<div class="item">뜻: 느긋한, 태평스러운</div>
+<div class="item">실전 예문: My colleague has a very <strong>laid-back</strong> attitude, which helps keep the team calm under pressure.</div>
+<br>
+<div class="numbered"><strong>4.</strong> <strong>personality clash</strong> /ˌpɜːrsəˈnæləti klæʃ/ (명사)</div>
+<div class="item">뜻: 성격 충돌</div>
+<div class="item">실전 예문: We had a minor <strong>personality clash</strong> on the project, but we managed to resolve it professionally.</div>
+<br>
+<div class="numbered"><strong>5.</strong> <strong>spontaneous</strong> /spɑːnˈteɪniəs/ (형용사)</div>
+<div class="item">뜻: 즉흥적인, 자발적인</div>
+<div class="item">실전 예문: While planning is good, sometimes a <strong>spontaneous</strong> decision can lead to the best opportunities.</div>
+<br>
+<h2>5. 📝 실전 복습 챌린지 (Practice)</h2>
+<br>
+<p>오늘 배운 표현과 문법을 활용하여 영작 챌린지에 도전해 보세요!</p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>상황:</strong> 당신은 새로운 프로젝트 팀에 합류했습니다. 팀원 중 한 명은 매우 느긋한 성격이라 스트레스를 잘 받지 않는 것 같습니다.</div>
+<div class="item"><strong>영작:</strong> "새로운 팀원 중 한 명은 정말 느긋해서 스트레스를 전혀 받지 않는 것 같아요."</div>
+<div class="item"><strong>모범 답안:</strong> "One of our new team members is so <strong>laid-back</strong> that he doesn't seem to <strong>get stressed</strong> at all."</div>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>상황:</strong> 당신은 팀 회의에서 자신의 의견을 좀 더 단호하게 표현해야 할 필요성을 느낍니다.</div>
+<div class="item"><strong>영작:</strong> "저는 팀 회의에서 제 의견을 좀 더 단호하게 표현할 필요가 있어요."</div>
+<div class="item"><strong>모범 답안:</strong> "I need to be more <strong>assertive</strong> in expressing my opinions during team meetings."</div>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>상황:</strong> 당신의 회사는 혁신적인 아이디어를 중요하게 생각하지만, 동시에 겸손한 자세로 배우려는 태도도 강조합니다.</div>
+<div class="item"><strong>영작:</strong> "우리 회사는 혁신적인 아이디어를 높이 평가하지만, 동시에 겸손하게 배우려는 자세도 중요하게 생각합니다."</div>
+<div class="item"><strong>모범 답안:</strong> "Our company highly values innovative ideas, but it also emphasizes the <strong>humility</strong> to keep learning."</div>
+<br>
+<h2>6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)</h2>
+<br>
+<p>✨ <strong>Good Job:</strong> "I prefer the listener better than the speaker."</p>
+<p>Joey는 이 문장에서 자신이 선호하는 사람의 유형을 명확하게 설명했습니다. "prefer A to B" 구조를 완벽하게 사용하지는 않았지만, "better than"을 활용하여 의미를 정확하게 전달하려는 노력이 돋보였고, 그 뒤에 이어지는 구체적인 설명이 매우 설득력 있었습니다. 아주 잘했어요!</p>
+<br>
+<p>🚀 <strong>내일의 한 문장:</strong> "I've been trying to be more assertive in my daily communications. What do you think is the best way to do that?"</p>
+<p>(일상 대화에서 좀 더 단호하게 말하려고 노력하고 있어요. 가장 좋은 방법이 뭐라고 생각하세요?)</p>
+<br>
+<br>
+<h2>[성과 지표]</h2>
+<br>
+<p><strong>유창성 점수:</strong> 7/10점</p>
+<br>
+<p><strong>근거:</strong> Joey는 다양한 주제에 대해 자신의 의견을 막힘없이 표현하려는 의지가 강하고, 대화의 흐름을 잘 이어갔습니다. 하지만 문장 구조나 어휘 선택에서 다소 어색하거나 반복되는 패턴이 있어 원어민처럼 자연스러운 흐름을 방해하는 부분이 있었습니다. 특히 동사 시제와 형태, 그리고 특정 명사 표현에서 개선의 여지가 보입니다.</p>
+<br>
+<p><strong>다음 수업 '원포인트 액션 플랜':</strong></p>
+<p>다음 수업에서는 <strong>"동사 시제 및 형태의 정확성"</strong>에 집중하여 연습해 봅시다. 일반적인 사실이나 습관을 말할 때 현재 시제를 올바르게 사용하고, 동사의 능동/수동 형태를 정확하게 구별하는 연습을 해볼 거예요. 대화 중 이러한 패턴이 나올 때마다 제가 부드럽게 교정해 드리겠습니다.</p></div>
+        </div>
+        <div id="tab-transcript" class="tab-content">
+            <div class="transcript"><span class="tutor">[Tutor]</span> Hello, Karin. Good morning. Hi, Joey.
+[Joey] Hi, good evening.
+<span class="tutor">[Tutor]</span> You having a good start to your day? It&#x27;s almost the weekend.
+[Joey] Yes, you&#x27;re right. I&#x27;m good, I&#x27;m good. How are you today?
+<span class="tutor">[Tutor]</span> Wonderful. I&#x27;m doing okay, thank you. You know, it&#x27;s, yeah, I&#x27;m doing all right. Thanks for asking.
+[Joey] How about your cold? Yeah, because Tuesday you were really sick with your cold, right?
+<span class="tutor">[Tutor]</span> Um, no, sorry, no, no, it&#x27;s okay. You know, sometimes I have better days than others. As an older person, I have a few health issues, but I&#x27;m doing pretty good, thank you. Yeah, okay, good. All right. So, Joey, um, last class we worked on Snack Chat. Yeah, you&#x27;ve done that for the last three classes. Did you want to continue with Snack Chat or did you want to do the Daily Topic English?
+[Joey] Oh, yeah. Snack Chat is better and we will start through Section A, the page 10.
+<span class="tutor">[Tutor]</span> Sure. It&#x27;s a personality thing.
+[Joey] Yeah. Okay. Yeah.
+<span class="tutor">[Tutor]</span> By all means, let&#x27;s keep you moving forward. All right. So, as usual, they have a question. I&#x27;ll ask you to read it and respond.
+[Joey] Okay. I see. Can I read that?
+<span class="tutor">[Tutor]</span> I would love you to read. Please do.
+[Joey] Okay. The question, which personality trait is most valued in your country?
+<span class="tutor">[Tutor]</span> Okay, before you continue, I&#x27;d like to help you with one word. You said, which personality trait is most valued? Let&#x27;s shorten that to valued.
+[Joey] Valued.
+<span class="tutor">[Tutor]</span> Very good. Very good.
+[Joey] Valued in your country. Which personality trait is most valued in your country?
+<span class="tutor">[Tutor]</span> Very good. Good. Okay.
+[Joey] An answer?
+<span class="tutor">[Tutor]</span> Please.
+[Joey] Okay. Our country values humility in Korea. So, yeah, I totally agree with that. Because a long time ago, our country believed, our country people believed humility is so great in person and state. So, if they are developed, and they have humility, it is more great and more developed. But nowadays, people, they don&#x27;t believe that, and sometimes they need to have confidence and need more confidence and pride. So, pride, have a pride. So, I think this humility is the little oldest value trait. But nowadays, it&#x27;s a little changed. We need more confidence and pride, etc.
+<span class="tutor">[Tutor]</span> I can appreciate that. Okay. What I&#x27;d like to help you with is these words that they&#x27;re presenting you on the page, these are all adjectives. But these adjectives have forms as nouns. So for humble, humble is describing an activity. If we&#x27;re describing the condition, I have a new word for you. Humility. Try that.
+[Joey] Humility.
+<span class="tutor">[Tutor]</span> Humility.
+[Joey] Humility.
+<span class="tutor">[Tutor]</span> You&#x27;re very close. We&#x27;re struggling with the R. It&#x27;s only 8 o&#x27;clock in the morning. So I&#x27;m going to type that sentence up for you so you can see the difference and see how we break it down into sound bites. Okay? Very good.
+[Joey] Okay. So you mean humble as a noun is humility, and situation is humility, right?
+<span class="tutor">[Tutor]</span> Yes. The noun form of humble is humility. You&#x27;re right. I&#x27;ll give you another example. The word confident is an adjective, but as a noun, we say confidence.
+[Joey] Confidence.
+<span class="tutor">[Tutor]</span> Confidence.
+[Joey] K-I-D. Confidence and humility.
+<span class="tutor">[Tutor]</span> Very good.
+[Joey] But humble is a little different change because they without the B-M-M, humility.
+<span class="tutor">[Tutor]</span> Yes, you&#x27;re right. And you know that in English, we change words depending on what part of speech they are.
+[Joey] I see. Humility. Yeah. Okay. Uh, I know. Thank you for your feedback. You&#x27;re getting it.
+<span class="tutor">[Tutor]</span> No worries. All right. Let&#x27;s get you to read and work on Part B question.
+[Joey] Okay. The Part B. Which kind of person do you like working with more and why? Hmm. I love to listen. I prefer the listener better than the speaker.
+<span class="tutor">[Tutor]</span> Listener?
+[Joey] And speaker. Because if we make some work and if we make some project, many people cooperate some work for work. But everyone wants to speak and then don&#x27;t listen. Their project is failed. But if some people listen carefully and they think about other people&#x27;s position and opinion, it is better to make a work and make a project. And the personal thing is also better because the listener usually thinks with respect to other people. So, it is a basic personal thing. So, yeah, I prefer listener. And if some organizations have so many leaders and typical, it is a problem. Yeah, and personal request, like the personal request. So, yeah, that&#x27;s my opinion.
+<span class="tutor">[Tutor]</span> Okay, okay. I can appreciate that. People who listen, I really agree with you. They have a better idea and a better understanding of what&#x27;s expected of them. If a person is a leader and all they do is shout out orders, that doesn&#x27;t show that they know what&#x27;s going on. It just says they have expectations and they don&#x27;t care what&#x27;s happening. They just want you to follow them or meet them. Listening is so important, whether you&#x27;re a leader or a follower. Very good, sir. Okay, I think it&#x27;s good. Let&#x27;s get you, again, please take your time to read the situation for Part C.
+[Joey] Okay, no problem. The situation, you and a friend are planning a trip. Your friend is very detail-oriented and wants to plan everything down to the minute. You like to make up the plans as you go. You think the trip won&#x27;t be fun if the schedule is too strict. Would you follow your friend&#x27;s or rethink traveling together? Why? I understand.
+<span class="tutor">[Tutor]</span> One slip of the tongue I&#x27;d like to help you with. You said &quot;or rethink travel together.&quot; Let&#x27;s add that -ing. Traveling. Traveling. Traveling. Very good. Okay, I see where it&#x27;s traveling. Just a moment. Um, ah, yes, rethink traveling together. Okay, good. Okay, are you a free spirit or do you like a schedule?
+[Joey] Ah, okay, I see. I think we think about the travel purpose. Our travel purpose is enjoyable and need to learn and have more experience. But if I go together with my friends, friends who have a distraught person, I&#x27;m really have a stress. So I dropped the plan to travel with my friend because my character is their immediate friend because it is more funny and enjoyable for me. So if some guy like these friends always check the schedule and read the schedule, I had so much stress. That is not travel. That is work. So yes, yes it is. Yeah. So at this situation, I dropped a friend and I would say, &quot;I&#x27;m sorry, teacher, I&#x27;m sorry, friend, my plans. I have some other plans. I rethink the travel.&quot; Yeah, that&#x27;s my opinion and decision. How about you?
+<span class="tutor">[Tutor]</span> Well, I had a chance to travel with friends, especially when I was working in education, and I made a point of talking with them before the trip, and I asked them, &quot;What are your expectations? Do you want to be out every day? Do you want to hang around the pool?&quot; And my friend and I were able to alternate between we&#x27;d have one day at the beach or at the pool and then another day we would plan a day trip, especially when we were visiting in Mexico. And that way we both got what we wanted and we didn&#x27;t feel too tired or too stressed.
+[Joey] I see. You&#x27;re on the other hand. Okay, yeah, on the other hand. Go on, teacher.
+<span class="tutor">[Tutor]</span> On the other hand, when my husband and I have traveled, my husband wants to stay at the hotel, sit by the pool, sit by the beach and do nothing.
+[Joey] Yes.
+<span class="tutor">[Tutor]</span> And I can do that at home for far cheaper. So, again, I said to my husband, &quot;Okay, I know you don&#x27;t want to be very, very busy, but I can&#x27;t sit every day on a beach chair.&quot;
+[Joey] Yeah.
+<span class="tutor">[Tutor]</span> So we&#x27;ve traveled a couple of times together, but my husband really doesn&#x27;t like to travel, so I don&#x27;t push him. I respect his need to sit.
+[Joey] Okay, it is similar to my wife.
+<span class="tutor">[Tutor]</span> Yeah, I know. There&#x27;s always one of them, right? Usually the other spouse is not into it. I get it. Okay. Okay, let&#x27;s go on to the warm-down. And today, I just want to do question one. Could you read it to me, please?
+[Joey] No problem. Do you think people are born with their personality or that it is continually developed?
+<span class="tutor">[Tutor]</span> Very nice. Okay. Very nice.
+[Joey] I think every person was born with their personality. Yeah, because, but that is not 100%. Just half and 70% they have included their personality, but they develop some environment, some rich environment, or a big family or a small family and friends and grow up, they have so many personalities. Yeah, so I think half is to include their personality and half is developed in a society. Yeah, that is my opinion.
+<span class="tutor">[Tutor]</span> Okay, yeah, I agree. They talk about, in child development, they talk about nature versus nurture. How we are born with certain characteristics and then as we grow our minds and our ability to think change. So yeah, every person is different. It&#x27;s not necessarily good or bad. They&#x27;re just different. Yeah, you&#x27;re right. All right, you&#x27;re doing a great job. Okay, we&#x27;re not going to do question 2. Rather, I&#x27;d like to go on now to the useful vocab. I&#x27;ll get you to read the word, the description, and the example sentence. And again, take your time.
+[Joey] Okay. So first I read the location and start the... Okay, I see. Are personality tests like the MBTI helpful?
+<span class="tutor">[Tutor]</span> I&#x27;m very sorry. I confused you again. We&#x27;re not doing question two of the warm-down.
+[Joey] Okay, yes. Useful vocab. I understand 100%. Thank you. Useful vocab. Vocabulary.
+<span class="tutor">[Tutor]</span> Assertive.
+[Joey] Assertive. Confidence in expressing, expressing, expressing these four opinions. Assertive. Assertive, right?
+<span class="tutor">[Tutor]</span> You got it.
+[Joey] Okay. You have to be more assertive in meeting.
+<span class="tutor">[Tutor]</span> Okay. Let&#x27;s walk there for a minute. You said &quot;confident in expression.&quot; Let&#x27;s try &quot;expressing.&quot;
+[Joey] Expressing. Expressing.
+<span class="tutor">[Tutor]</span> Ah, it&#x27;s a little different. Ah. Yeah. What&#x27;s happening, Joey, is that where you see the double S, you&#x27;re making the S-H sound. Like, shh. Shh. Let&#x27;s just try, let&#x27;s try just an S.
+[Joey] Ex-S. Very good. You got it. Expressing. Need more opinions. Very good.
+<span class="tutor">[Tutor]</span> Okay, I see. All right, let&#x27;s go on to the next one. Laid-back.
+[Joey] Laid-back. Like your... Yeah, my wife. Laid-back. Relaxed. Relaxed and not easy. Stressed. Yeah. He&#x27;s still laid-back. Nothing bothers him. Oh, that&#x27;s good. Yeah, great.
+<span class="tutor">[Tutor]</span> Yeah, my husband&#x27;s like that too.
+[Joey] I understand. Yeah.
+<span class="tutor">[Tutor]</span> All right. Let&#x27;s get you to read the third one.
+[Joey] Okay. Personality clash. Personality clash. A situation where two people just don&#x27;t get along. Personality clash. Their personal clash caused problems during the group project. Personal clash. Okay. Yeah.
+<span class="tutor">[Tutor]</span> All right. Let&#x27;s wrap up your class by getting you to read the useful expressions and their descriptions.
+[Joey] Okay. Blah, blah, blah. Rubs people the wrong way. Use the person or habit that&#x27;s open and knowing they are without meaning to.
+<span class="tutor">[Tutor]</span> If you don&#x27;t mind, I want to help you with one word. You said &quot;rubs people the wong way.&quot; In this word, the W is silent, so I need you to practice your R, your growling dog. Wrong.
+[Joey] Wrong way.
+<span class="tutor">[Tutor]</span> Very good.
+[Joey] Wrong way.
+<span class="tutor">[Tutor]</span> Good. All right. And I&#x27;ll get you to the last expression.
+[Joey] Okay. We just didn&#x27;t click. We just didn&#x27;t click. Used when two people don&#x27;t naturally get along. We just didn&#x27;t click. Actually, two kinds of expressions are a little difficult. The first is the when I speak, when I use this expression, rubs people one way. Could you explain more, teacher?
+<span class="tutor">[Tutor]</span> Okay. Sure. In our day to day life, we meet people that we don&#x27;t always connect with. Okay. And if we don&#x27;t make a connection with the people, then sometimes they or you will do something to annoy them or irritate them. Yeah. And what we say is, &quot;John rubs people the wrong way,&quot; which means his behavior, maybe he is impatient, maybe he is rude, but his actions make him less friendly.
+[Joey] I see. So, blah blah is a subject, right? The John&#x27;s rubs is the wrong way.
+<span class="tutor">[Tutor]</span> What I&#x27;m going to try and do, Joey, is I&#x27;m going to see if perhaps I can find a a video, a YouTube video that discusses this particular phrase or maybe even &quot;we just didn&#x27;t click&quot; because we&#x27;re basically talking about the fact that we don&#x27;t make friends right away with everyone we meet. Sometimes we have to get to know them. All right. Okay. All right. Okay. So we&#x27;re going to stop there. We finished page 10. Excellent work. Okay. So just a few things we worked on. You used the word &quot;evaluate,&quot; and I suggested &quot;valued.&quot;
+[Joey] Valued.
+<span class="tutor">[Tutor]</span> We talked about &quot;humbled.&quot; Humble is an adjective. I suggested &quot;humility.&quot;
+[Joey] Humility.
+<span class="tutor">[Tutor]</span> Yeah. We had a couple of words where you used R instead of L. You said &quot;listener.&quot;
+[Joey] Listener.
+<span class="tutor">[Tutor]</span> And then you said &quot;no problem,&quot; and we need &quot;no problem.&quot; Problem. All right. You had a phrase &quot;every people.&quot;
+[Joey] Every person.
+<span class="tutor">[Tutor]</span> Every person. Okay. And then we had &quot;confident in expressing,&quot; and we said &quot;express.&quot;
+[Joey] Hey, expressing.
+<span class="tutor">[Tutor]</span> Okay. So these are a lot of corrections, but they&#x27;re just little things, Joey. You&#x27;re doing so great. I love your enthusiasm. Okay. Did you have any other questions? All right. Have a great day.
+[Joey] Yes. Okay. Take care. Bye-bye. Have a great day, teacher. Bye-bye.</div>
+        </div>
+    </div>
+    <div class="toast" id="toast">✅ 프롬프트가 복사되었습니다!</div>
+    <script>
+        const REVIEW_PROMPT="너는 나의 영어 회화 복습 파트너야. 오늘 내 전화영어 수업 내용을 기반으로 대화하면서 복습을 도와줘.\n\n[오늘 수업 전사 내용]\n[Tutor] Hello, Karin. Good morning. Hi, Joey.\n[Joey] Hi, good evening.\n[Tutor] You having a good start to your day? It's almost the weekend.\n[Joey] Yes, you're right. I'm good, I'm good. How are you today?\n[Tutor] Wonderful. I'm doing okay, thank you. You know, it's, yeah, I'm doing all right. Thanks for asking.\n[Joey] How about your cold? Yeah, because Tuesday you were really sick with your cold, right?\n[Tutor] Um, no, sorry, no, no, it's okay. You know, sometimes I have better days than others. As an older person, I have a few health issues, but I'm doing pretty good, thank you. Yeah, okay, good. All right. So, Joey, um, last class we worked on Snack Chat. Yeah, you've done that for the last three classes. Did you want to continue with Snack Chat or did you want to do the Daily Topic English?\n[Joey] Oh, yeah. Snack Chat is better and we will start through Section A, the page 10.\n[Tutor] Sure. It's a personality thing.\n[Joey] Yeah. Okay. Yeah.\n[Tutor] By all means, let's keep you moving forward. All right. So, as usual, they have a question. I'll ask you to read it and respond.\n[Joey] Okay. I see. Can I read that?\n[Tutor] I would love you to read. Please do.\n[Joey] Okay. The question, which personality trait is most valued in your country?\n[Tutor] Okay, before you continue, I'd like to help you with one word. You said, which personality trait is most valued? Let's shorten that to valued.\n[Joey] Valued.\n[Tutor] Very good. Very good.\n[Joey] Valued in your country. Which personality trait is most valued in your country?\n[Tutor] Very good. Good. Okay.\n[Joey] An answer?\n[Tutor] Please.\n[Joey] Okay. Our country values humility in Korea. So, yeah, I totally agree with that. Because a long time ago, our country believed, our country people believed humility is so great in person and state. So, if they are developed, and they have humility, it is more great and more developed. But nowadays, people, they don't believe that, and sometimes they need to have confidence and need more confidence and pride. So, pride, have a pride. So, I think this humility is the little oldest value trait. But nowadays, it's a little changed. We need more confidence and pride, etc.\n[Tutor] I can appreciate that. Okay. What I'd like to help you with is these words that they're presenting you on the page, these are all adjectives. But these adjectives have forms as nouns. So for humble, humble is describing an activity. If we're describing the condition, I have a new word for you. Humility. Try that.\n[Joey] Humility.\n[Tutor] Humility.\n[Joey] Humility.\n[Tutor] You're very close. We're struggling with the R. It's only 8 o'clock in the morning. So I'm going to type that sentence up for you so you can see the difference and see how we break it down into sound bites. Okay? Very good.\n[Joey] Okay. So you mean humble as a noun is humility, and situation is humility, right?\n[Tutor] Yes. The noun form of humble is humility. You're right. I'll give you another example. The word confident is an adjective, but as a noun, we say confidence.\n[Joey] Confidence.\n[Tutor] Confidence.\n[Joey] K-I-D. Confidence and humility.\n[Tutor] Very good.\n[Joey] But humble is a little different change because they without the B-M-M, humility.\n[Tutor] Yes, you're right. And you know that in English, we change words depending on what part of speech they are.\n[Joey] I see. Humility. Yeah. Okay. Uh, I know. Thank you for your feedback. You're getting it.\n[Tutor] No worries. All right. Let's get you to read and work on Part B question.\n[Joey] Okay. The Part B. Which kind of person do you like working with more and why? Hmm. I love to listen. I prefer the listener better than the speaker.\n[Tutor] Listener?\n[Joey] And speaker. Because if we make some work and if we make some project, many people cooperate some work for work. But everyone wants to speak and then don't listen. Their project is failed. But if some people listen carefully and they think about other people's position and opinion, it is better to make a work and make a project. And the personal thing is also better because the listener usually thinks with respect to other people. So, it is a basic personal thing. So, yeah, I prefer listener. And if some organizations have so many leaders and typical, it is a problem. Yeah, and personal request, like the personal request. So, yeah, that's my opinion.\n[Tutor] Okay, okay. I can appreciate that. People who listen, I really agree with you. They have a better idea and a better understanding of what's expected of them. If a person is a leader and all they do is shout out orders, that doesn't show that they know what's going on. It just says they have expectations and they don't care what's happening. They just want you to follow them or meet them. Listening is so important, whether you're a leader or a follower. Very good, sir. Okay, I think it's good. Let's get you, again, please take your time to read the situation for Part C.\n[Joey] Okay, no problem. The situation, you and a friend are planning a trip. Your friend is very detail-oriented and wants to plan everything down to the minute. You like to make up the plans as you go. You think the trip won't be fun if the schedule is too strict. Would you follow your friend's or rethink traveling together? Why? I understand.\n[Tutor] One slip of the tongue I'd like to help you with. You said \"or rethink travel together.\" Let's add that -ing. Traveling. Traveling. Traveling. Very good. Okay, I see where it's traveling. Just a moment. Um, ah, yes, rethink traveling together. Okay, good. Okay, are you a free spirit or do you like a schedule?\n[Joey] Ah, okay, I see. I think we think about the travel purpose. Our travel purpose is enjoyable and need to learn and have more experience. But if I go together with my friends, friends who have a distraught person, I'm really have a stress. So I dropped the plan to travel with my friend because my character is their immediate friend because it is more funny and enjoyable for me. So if some guy like these friends always check the schedule and read the schedule, I had so much stress. That is not travel. That is work. So yes, yes it is. Yeah. So at this situation, I dropped a friend and I would say, \"I'm sorry, teacher, I'm sorry, friend, my plans. I have some other plans. I rethink the travel.\" Yeah, that's my opinion and decision. How about you?\n[Tutor] Well, I had a chance to travel with friends, especially when I was working in education, and I made a point of talking with them before the trip, and I asked them, \"What are your expectations? Do you want to be out every day? Do you want to hang around the pool?\" And my friend and I were able to alternate between we'd have one day at the beach or at the pool and then another day we would plan a day trip, especially when we were visiting in Mexico. And that way we both got what we wanted and we didn't feel too tired or too stressed.\n[Joey] I see. You're on the other hand. Okay, yeah, on the other hand. Go on, teacher.\n[Tutor] On the other hand, when my husband and I have traveled, my husband wants to stay at the hotel, sit by the pool, sit by the beach and do nothing.\n[Joey] Yes.\n[Tutor] And I can do that at home for far cheaper. So, again, I said to my husband, \"Okay, I know you don't want to be very, very busy, but I can't sit every day on a beach chair.\"\n[Joey] Yeah.\n[Tutor] So we've traveled a couple of times together, but my husband really doesn't like to travel, so I don't push him. I respect his need to sit.\n[Joey] Okay, it is similar to my wife.\n[Tutor] Yeah, I know. There's always one of them, right? Usually the other spouse is not into it. I get it. Okay. Okay, let's go on to the warm-down. And today, I just want to do question one. Could you read it to me, please?\n[Joey] No problem. Do you think people are born with their personality or that it is continually developed?\n[Tutor] Very nice. Okay. Very nice.\n[Joey] I think every person was born with their personality. Yeah, because, but that is not 100%. Just half and 70% they have included their personality, but they develop some environment, some rich environment, or a big family or a small family and friends and grow up, they have so many personalities. Yeah, so I think half is to include their personality and half is developed in a society. Yeah, that is my opinion.\n[Tutor] Okay, yeah, I agree. They talk about, in child development, they talk about nature versus nurture. How we are born with certain characteristics and then as we grow our minds and our ability to think change. So yeah, every person is different. It's not necessarily good or bad. They're just different. Yeah, you're right. All right, you're doing a great job. Okay, we're not going to do question 2. Rather, I'd like to go on now to the useful vocab. I'll get you to read the word, the description, and the example sentence. And again, take your time.\n[Joey] Okay. So first I read the location and start the... Okay, I see. Are personality tests like the MBTI helpful?\n[Tutor] I'm very sorry. I confused you again. We're not doing question two of the warm-down.\n[Joey] Okay, yes. Useful vocab. I understand 100%. Thank you. Useful vocab. Vocabulary.\n[Tutor] Assertive.\n[Joey] Assertive. Confidence in expressing, expressing, expressing these four opinions. Assertive. Assertive, right?\n[Tutor] You got it.\n[Joey] Okay. You have to be more assertive in meeting.\n[Tutor] Okay. Let's walk there for a minute. You said \"confident in expression.\" Let's try \"expressing.\"\n[Joey] Expressing. Expressing.\n[Tutor] Ah, it's a little different. Ah. Yeah. What's happening, Joey, is that where you see the double S, you're making the S-H sound. Like, shh. Shh. Let's just try, let's try just an S.\n[Joey] Ex-S. Very good. You got it. Expressing. Need more opinions. Very good.\n[Tutor] Okay, I see. All right, let's go on to the next one. Laid-back.\n[Joey] Laid-back. Like your... Yeah, my wife. Laid-back. Relaxed. Relaxed and not easy. Stressed. Yeah. He's still laid-back. Nothing bothers him. Oh, that's good. Yeah, great.\n[Tutor] Yeah, my husband's like that too.\n[Joey] I understand. Yeah.\n[Tutor] All right. Let's get you to read the third one.\n[Joey] Okay. Personality clash. Personality clash. A situation where two people just don't get along. Personality clash. Their personal clash caused problems during the group project. Personal clash. Okay. Yeah.\n[Tutor] All right. Let's wrap up your class by getting you to read the useful expressions and their descriptions.\n[Joey] Okay. Blah, blah, blah. Rubs people the wrong way. Use the person or habit that's open and knowing they are without meaning to.\n[Tutor] If you don't mind, I want to help you with one word. You said \"rubs people the wong way.\" In this word, the W is silent, so I need you to practice your R, your growling dog. Wrong.\n[Joey] Wrong way.\n[Tutor] Very good.\n[Joey] Wrong way.\n[Tutor] Good. All right. And I'll get you to the last expression.\n[Joey] Okay. We just didn't click. We just didn't click. Used when two people don't naturally get along. We just didn't click. Actually, two kinds of expressions are a little difficult. The first is the when I speak, when I use this expression, rubs people one way. Could you explain more, teacher?\n[Tutor] Okay. Sure. In our day to day life, we meet people that we don't always connect with. Okay. And if we don't make a connection with the people, then sometimes they or you will do something to annoy them or irritate them. Yeah. And what we say is, \"John rubs people the wrong way,\" which means his behavior, maybe he is impatient, maybe he is rude, but his actions make him less friendly.\n[Joey] I see. So, blah blah is a subject, right? The John's rubs is the wrong way.\n[Tutor] What I'm going to try and do, Joey, is I'm going to see if perhaps I can find a a video, a YouTube video that discusses this particular phrase or maybe even \"we just didn't click\" because we're basically talking about the fact that we don't make friends right away with everyone we meet. Sometimes we have to get to know them. All right. Okay. All right. Okay. So we're going to stop there. We finished page 10. Excellent work. Okay. So just a few things we worked on. You used the word \"evaluate,\" and I suggested \"valued.\"\n[Joey] Valued.\n[Tutor] We talked about \"humbled.\" Humble is an adjective. I suggested \"humility.\"\n[Joey] Humility.\n[Tutor] Yeah. We had a couple of words where you used R instead of L. You said \"listener.\"\n[Joey] Listener.\n[Tutor] And then you said \"no problem,\" and we need \"no problem.\" Problem. All right. You had a phrase \"every people.\"\n[Joey] Every person.\n[Tutor] Every person. Okay. And then we had \"confident in expressing,\" and we said \"express.\"\n[Joey] Hey, expressing.\n[Tutor] Okay. So these are a lot of corrections, but they're just little things, Joey. You're doing so great. I love your enthusiasm. Okay. Did you have any other questions? All right. Have a great day.\n[Joey] Yes. Okay. Take care. Bye-bye. Have a great day, teacher. Bye-bye.\n\n[AI 피드백]\n안녕하세요, Joey! 오늘도 활기찬 대화 나눠주셔서 감사합니다. 비즈니스 환경에서 필요한 다양한 성격 유형과 협업 방식, 그리고 여행 계획까지 흥미로운 주제들을 깊이 있게 이야기 나눌 수 있었어요. 특히 자신의 의견을 명확하게 표현하려는 노력이 돋보였습니다.\n\n---\n\n### 0. 📌 Topic\nTopic: Discussing personality traits, work preferences, and travel styles.\n\n### 1. 📊 오늘의 대화 요약 (Summary)\n오늘 Joey는 한국에서 중요하게 여기는 성격 특성(겸손 vs. 자신감)에 대해 이야기하며 시대에 따른 가치관 변화를 분석했습니다. 또한, 업무 환경에서 선호하는 동료 유형(경청하는 사람 vs. 말하는 사람)과 개인적인 여행 스타일(계획적 vs. 즉흥적)에 대한 의견을 나누며 자신의 가치관을 명확히 설명했습니다.\n\n### 2. 💬 유창성 업그레이드 (Fluency & Natural Flow)\n\nJoey가 실제 말한 문장 중, 의미는 통하지만 더 자연스럽게 다듬을 수 있는 표현 3가지를 선정했습니다.\n\n1.  **❌ 학습자 원문 (As Said):** \"our country people believed humility is so great in person and state.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"People in our country used to believe that humility was a great virtue for individuals and the nation.\"\n    *   **💎 비즈니스 표현 (Professional):** \"Historically, humility was highly regarded as a fundamental virtue for both individuals and the collective society in our country.\"\n    *   **💡 코칭 포인트:** \"our country people\" 대신 \"people in our country\"를 쓰는 것이 더 자연스럽습니다. \"so great\" 대신 \"a great virtue\"나 \"highly regarded\"를 사용하면 더 자연스럽고 격식 있는 표현이 됩니다.\n\n2.  **❌ 학습자 원문 (As Said):** \"I'm really have a stress.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"I get really stressed.\"\n    *   **💎 비즈니스 표현 (Professional):** \"I tend to experience significant stress.\"\n    *   **💡 코칭 포인트:** \"have stress\"는 흔히 쓰이는 표현이 아닙니다. 보통 \"get stressed\"나 \"feel stressed\"를 사용하며, \"really\"를 붙여 강도를 강조할 수 있습니다.\n\n3.  **❌ 학습자 원문 (As Said):** \"my character is their immediate friend\"\n    *   **✅ 자연스러운 표현 (Natural):** \"I'm more of a spontaneous person.\"\n    *   **💎 비즈니스 표현 (Professional):** \"My personal preference leans towards a more adaptable and flexible approach.\"\n    *   **💡 코칭 포인트:** \"immediate friend\"는 즉흥적인 성격을 나타내지 않습니다. \"spontaneous\"는 계획을 그때그때 세우는 것을 선호하는 사람을 정확하게 묘사하는 표현입니다.\n\n### 3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)\n\nCategory: Verb Tense and Form\n\nJoey는 대화 중 일반적인 사실이나 습관, 그리고 현재 상황에 대해 이야기할 때 동사의 시제나 형태를 혼동하는 경우가 있었습니다. 특히 과거형을 쓰거나 어색한 동사 형태를 사용하는 패턴이 반복되었습니다.\n\n| ❌ 원문 (As Said)                                            | ✅ 교정 예시 (Corrected)                                      |\n| :----------------------------------------------------------- | :----------------------------------------------------------- |\n| Their project **is failed**.                                 | Their project **fails**.                                     |\n| I'm really **have** a stress.                                | I really **get** stressed.                                   |\n| I **had** so much stress. (when talking about a general situation) | I **get** so much stress.                                    |\n| I think every person **was born** with their personality.    | I think every person **is born** with their personality.     |\n| many people **cooperate** some work for work.                | many people **cooperate on** some work.                      |\n\n📌 **핵심 규칙:** 일반적인 사실, 습관, 또는 현재의 경향을 이야기할 때는 현재 시제를 사용하고, 동사의 올바른 형태(예: be 동사 + 과거분사 수동태 vs. 능동태 동사)를 쓰는 것에 유의해야 합니다. 또한, 동사 뒤에 적절한 전치사를 사용하는 것도 중요합니다.\n\n🔁 **따라 읽기:**\n🗣️ \"Their project fails.\"\n🗣️ \"I really get stressed.\"\n🗣️ \"I get so much stress.\"\n🗣️ \"I think every person is born with their personality.\"\n🗣️ \"Many people cooperate on some work.\"\n\n### 4. 📗 어휘 확장 (Vocabulary Vault)\n\n오늘 수업 중 등장했거나 맥락상 유용한 단어 5개를 소개합니다.\n\n1.  **humility** /hjuːˈmɪlɪti/ (명사)\n    *   뜻: 겸손\n    *   실전 예문: Leaders with **humility** often inspire greater loyalty and teamwork.\n\n2.  **assertive** /əˈsɜːrtɪv/ (형용사)\n    *   뜻: 자기주장이 강한, 단호한\n    *   실전 예문: You need to be more **assertive** in expressing your ideas during team meetings.\n\n3.  **laid-back** /ˈleɪd bæk/ (형용사)\n    *   뜻: 느긋한, 태평스러운\n    *   실전 예문: My colleague has a very **laid-back** attitude, which helps keep the team calm under pressure.\n\n4.  **personality clash** /ˌpɜːrsəˈnæləti klæʃ/ (명사)\n    *   뜻: 성격 충돌\n    *   실전 예문: We had a minor **personality clash** on the project, but we managed to resolve it professionally.\n\n5.  **spontaneous** /spɑːnˈteɪniəs/ (형용사)\n    *   뜻: 즉흥적인, 자발적인\n    *   실전 예문: While planning is good, sometimes a **spontaneous** decision can lead to the best opportunities.\n\n### 5. 📝 실전 복습 챌린지 (Practice)\n\n오늘 배운 표현과 문법을 활용하여 영작 챌린지에 도전해 보세요!\n\n1.  **상황:** 당신은 새로운 프로젝트 팀에 합류했습니다. 팀원 중 한 명은 매우 느긋한 성격이라 스트레스를 잘 받지 않는 것 같습니다.\n    *   **영작:** \"새로운 팀원 중 한 명은 정말 느긋해서 스트레스를 전혀 받지 않는 것 같아요.\"\n    *   **모범 답안:** \"One of our new team members is so **laid-back** that he doesn't seem to **get stressed** at all.\"\n\n2.  **상황:** 당신은 팀 회의에서 자신의 의견을 좀 더 단호하게 표현해야 할 필요성을 느낍니다.\n    *   **영작:** \"저는 팀 회의에서 제 의견을 좀 더 단호하게 표현할 필요가 있어요.\"\n    *   **모범 답안:** \"I need to be more **assertive** in expressing my opinions during team meetings.\"\n\n3.  **상황:** 당신의 회사는 혁신적인 아이디어를 중요하게 생각하지만, 동시에 겸손한 자세로 배우려는 태도도 강조합니다.\n    *   **영작:** \"우리 회사는 혁신적인 아이디어를 높이 평가하지만, 동시에 겸손하게 배우려는 자세도 중요하게 생각합니다.\"\n    *   **모범 답안:** \"Our company highly values innovative ideas, but it also emphasizes the **humility** to keep learning.\"\n\n### 6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)\n\n✨ **Good Job:** \"I prefer the listener better than the speaker.\"\nJoey는 이 문장에서 자신이 선호하는 사람의 유형을 명확하게 설명했습니다. \"prefer A to B\" 구조를 완벽하게 사용하지는 않았지만, \"better than\"을 활용하여 의미를 정확하게 전달하려는 노력이 돋보였고, 그 뒤에 이어지는 구체적인 설명이 매우 설득력 있었습니다. 아주 잘했어요!\n\n🚀 **내일의 한 문장:** \"I've been trying to be more assertive in my daily communications. What do you think is the best way to do that?\"\n(일상 대화에서 좀 더 단호하게 말하려고 노력하고 있어요. 가장 좋은 방법이 뭐라고 생각하세요?)\n\n---\n\n### [성과 지표]\n\n**유창성 점수:** 7/10점\n\n**근거:** Joey는 다양한 주제에 대해 자신의 의견을 막힘없이 표현하려는 의지가 강하고, 대화의 흐름을 잘 이어갔습니다. 하지만 문장 구조나 어휘 선택에서 다소 어색하거나 반복되는 패턴이 있어 원어민처럼 자연스러운 흐름을 방해하는 부분이 있었습니다. 특히 동사 시제와 형태, 그리고 특정 명사 표현에서 개선의 여지가 보입니다.\n\n**다음 수업 '원포인트 액션 플랜':**\n다음 수업에서는 **\"동사 시제 및 형태의 정확성\"**에 집중하여 연습해 봅시다. 일반적인 사실이나 습관을 말할 때 현재 시제를 올바르게 사용하고, 동사의 능동/수동 형태를 정확하게 구별하는 연습을 해볼 거예요. 대화 중 이러한 패턴이 나올 때마다 제가 부드럽게 교정해 드리겠습니다.\n\n위 내용을 바탕으로:\n1. 먼저 오늘 수업에서 내가 틀렸거나 어색했던 표현을 하나 골라서, 관련된 상황을 영어로 질문해줘.\n2. 내가 영어로 대답하면, 자연스러운지 확인하고 더 나은 표현이 있으면 알려줘.\n3. 특히 \"반복 실수 패턴\"에서 지적된 부분을 집중적으로 연습시켜줘.\n4. 이런 식으로 오늘 배운 표현들을 하나씩 복습하자.\n5. 한국어 설명은 필요할 때만 간단히, 대화는 최대한 영어로 진행해줘.\n\n그럼 시작하자!";
+        function startReview(){navigator.clipboard.writeText(REVIEW_PROMPT).then(()=>{showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)}).catch(()=>{const t=document.createElement('textarea');t.value=REVIEW_PROMPT;document.body.appendChild(t);t.select();document.execCommand('copy');document.body.removeChild(t);showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)})}
+        function showToast(){const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500)}
+        function switchTab(n){document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',n==='feedback'?i===0:i===1));document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));document.getElementById('tab-'+n).classList.add('active')}
+    </script>
+</body>
+</html>
