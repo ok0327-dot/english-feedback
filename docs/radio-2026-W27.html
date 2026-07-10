@@ -1,0 +1,259 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#0f0f13"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="당근영어"><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="icon" type="image/png" sizes="192x192" href="icon-192.png"><script src="install-banner.js" defer></script><script src="sw-reg.js" defer></script>
+<title>🎙️ 라디오 2026-W27</title><style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Noto Sans KR',-apple-system,sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.7}
+.header{background:linear-gradient(135deg,#241a3a,#3a2410,#0f3460);padding:42px 24px 30px;text-align:center;border-bottom:1px solid rgba(255,255,255,.06)}
+.header h1{font-size:24px;color:#f5f0ff;margin-bottom:8px}
+.header .range{font-size:13px;color:#c4b5fd;letter-spacing:1px}
+.nav{max-width:760px;margin:0 auto;padding:14px 20px 0;display:flex;justify-content:space-between;font-size:13px}
+.nav a{color:#64748b;text-decoration:none;padding:6px 10px;border-radius:8px}.nav a:hover{color:#a78bfa;background:#16161d}
+.container{max-width:760px;margin:0 auto;padding:18px 20px 80px}
+.card{background:#16161d;border:1px solid rgba(255,255,255,.06);border-radius:16px;padding:20px;margin-bottom:18px}
+.card h2{font-size:16px;color:#f1f5f9;margin-bottom:12px}
+.player{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-bottom:14px}
+.pbtn{border:none;border-radius:10px;padding:12px 18px;font-size:14px;font-weight:700;cursor:pointer;font-family:inherit;color:#0f0f13;background:linear-gradient(135deg,#a78bfa,#818cf8)}
+.pbtn.alt{background:#1e293b;color:#cbd5e1}
+.pbtn:active{transform:translateY(1px)}
+.speed{display:flex;align-items:center;gap:6px;font-size:12px;color:#94a3b8;margin-left:auto}
+.speed input{accent-color:#a78bfa}
+.stage{display:flex;flex-direction:column;gap:10px;margin-top:6px}
+.bubble{max-width:88%;padding:11px 14px;border-radius:14px;font-size:14px;border:1px solid transparent;transition:all .2s}
+.bubble .who{display:block;font-size:11px;font-weight:700;margin-bottom:3px;opacity:.8}
+.bubble.mc{align-self:flex-start;background:#1e1b2e;border-color:rgba(167,139,250,.25)}.bubble.mc .who{color:#a78bfa}
+.bubble.coach{align-self:flex-end;background:#1a2433;border-color:rgba(56,189,248,.22)}.bubble.coach .who{color:#38bdf8}
+.bubble.on{border-color:#fbbf24;box-shadow:0 0 0 1px #fbbf24}
+.modes{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.mode{display:flex;flex-direction:column;gap:4px;align-items:center;padding:16px 10px;background:#0f0f13;border:1px solid rgba(255,255,255,.08);border-radius:12px;color:#cbd5e1;cursor:pointer;font-size:13px;text-align:center}
+.mode:hover{border-color:rgba(167,139,250,.4);color:#a78bfa}.mode .ico{font-size:22px}.mode .sub{font-size:11px;color:#64748b}
+.muted{color:#64748b;font-size:12px}
+.toast{position:fixed;bottom:28px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#a78bfa;padding:13px 26px;border-radius:12px;font-size:14px;border:1px solid rgba(167,139,250,.25);opacity:0;transition:all .4s;z-index:99}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+.epweek{font-size:13px;color:#a78bfa;font-weight:700;margin-bottom:6px}
+audio{width:100%;margin-top:4px}
+.archive{display:flex;flex-direction:column;gap:6px;margin-top:10px}
+.archive a{font-size:12.5px;color:#94a3b8;text-decoration:none;padding:8px 12px;background:#0f0f13;border:1px solid rgba(255,255,255,.06);border-radius:8px}
+.archive a:hover{color:#a78bfa;border-color:rgba(167,139,250,.3)}
+.weeklist{display:flex;flex-direction:column;gap:6px;margin-top:4px}
+.weekrow{display:flex;align-items:center;gap:10px;font-size:13px;color:#cbd5e1;text-decoration:none;padding:11px 13px;background:#0f0f13;border:1px solid rgba(255,255,255,.06);border-radius:10px}
+.weekrow:hover{border-color:rgba(167,139,250,.4);color:#a78bfa}
+.weekrow.active{border-color:rgba(167,139,250,.5);background:#1e1b2e}
+.weekrow .wk{font-weight:700;color:#a78bfa;white-space:nowrap}
+.weekrow .wr{color:#64748b}
+.weekrow .wk-audio{margin-left:auto;font-size:14px;min-width:18px;text-align:right}
+.foot{text-align:center;font-size:11px;color:#475569;margin-top:26px;line-height:1.8}
+</style></head><body>
+<div class="header"><h1>🎙️ 라디오 · 2026-W27</h1>
+<div class="range">6/29~7/3 · 주차 기록 · 브라우저 음성으로 청취</div></div>
+<div class="nav"><a href="radio.html">← 최신 라디오</a><a href="review-index.html">📚 복습 목록 →</a></div>
+<div class="container">
+
+  <div class="card"><h2>🎧 오디오 에피소드 <span class="muted" style="font-weight:400">· 진짜 음성 · 이 주차</span></h2>
+    <div id="audio-latest" class="muted">에피소드 불러오는 중…</div></div>
+
+  <div class="card"><h2>🗂 주차별 라디오 기록 <span class="muted" style="font-weight:400">· 최신순 · 누적</span></h2>
+    <div class="weeklist"><a class="weekrow" data-wk="2026-W28" href="radio.html"><span class="wk">2026-W28</span><span class="wr">7/6~7/10 · 5회</span><span class="wk-audio"></span></a><a class="weekrow active" data-wk="2026-W27" href="radio-2026-W27.html"><span class="wk">2026-W27 · 현재</span><span class="wr">6/29~7/3 · 3회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W26" href="radio-2026-W26.html"><span class="wk">2026-W26</span><span class="wr">6/22~6/26 · 5회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W25" href="radio-2026-W25.html"><span class="wk">2026-W25</span><span class="wr">6/15~6/19 · 5회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W24" href="radio-2026-W24.html"><span class="wk">2026-W24</span><span class="wr">6/8~6/12 · 5회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W23" href="radio-2026-W23.html"><span class="wk">2026-W23</span><span class="wr">6/1~6/5 · 1회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W22" href="radio-2026-W22.html"><span class="wk">2026-W22</span><span class="wr">5/25~5/29 · 3회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W21" href="radio-2026-W21.html"><span class="wk">2026-W21</span><span class="wr">5/18~5/22 · 3회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W20" href="radio-2026-W20.html"><span class="wk">2026-W20</span><span class="wr">5/11~5/15 · 4회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W19" href="radio-2026-W19.html"><span class="wk">2026-W19</span><span class="wr">5/4~5/8 · 1회</span><span class="wk-audio"></span></a></div></div>
+
+  <div class="card"><h2>▶ 바로 듣기 <span class="muted" style="font-weight:400">· 브라우저 음성(즉시·폴백)</span></h2>
+    <div class="player">
+      <button class="pbtn" id="play">▶ 재생</button>
+      <button class="pbtn alt" id="pause">⏸ 일시정지</button>
+      <button class="pbtn alt" id="resume">▶ 이어듣기</button>
+      <button class="pbtn alt" id="stop">⏹ 처음부터</button>
+      <label class="speed">속도 <input type="range" id="rate" min="0.7" max="1.3" step="0.1" value="1"> <span id="rv">1.0x</span></label>
+    </div>
+    <div class="muted" id="ttswarn" style="margin-bottom:8px"></div>
+    <div class="muted" style="margin:2px 0 10px;font-size:11.5px;line-height:1.7">💡 재생 중에는 화면이 자동으로 꺼지지 않게 막아요(Wake&nbsp;Lock). 다만 직접 화면을 끄면 브라우저 음성은 멈출 수 있어요 — <b>화면을 끈 채 듣고 싶다면 맨 위 🎧 오디오 에피소드(MP3)</b>를 쓰세요. 잠금화면에서도 재생됩니다.</div>
+    <div class="stage" id="stage"></div>
+  </div>
+
+  <div class="card"><h2>💬 이 내용으로 AI와 이야기하기</h2>
+    <div class="muted" style="margin-bottom:10px">클릭하면 이 주차 요약 프롬프트가 복사되고 Gemini가 열립니다. 붙여넣고 대화하세요.</div>
+    <div class="modes">
+      <div class="mode" onclick="copyOpen('chat')"><span class="ico">💬</span>튜터 대화<span class="sub">약점 집중 연습</span></div>
+      <div class="mode" onclick="copyOpen('lecture')"><span class="ico">🎓</span>강의식 설명<span class="sub">규칙+예문+퀴즈</span></div>
+      <div class="mode" onclick="copyOpen('radio')"><span class="ico">🎙</span>라디오 인터뷰<span class="sub">게스트 롤플레이</span></div>
+    </div>
+  </div>
+
+  <div class="card"><h2>📓 NotebookLM 팟캐스트로 듣기 <span class="sub">고품질·무료</span></h2>
+    <div class="muted" style="margin-bottom:12px">이번 주 학습 다이제스트(교정·강사 피드백·어휘 전부)를 복사해 <b>NotebookLM</b>에 붙여넣고 <b>Audio Overview</b>를 만들면, 2인 진행 영어 팟캐스트가 무료로 생성됩니다(현재 TTS보다 자연스러움).</div>
+    <div class="modes">
+      <div class="mode" onclick="window.open('https://notebooklm.google.com/','_blank');copyDigest()"><span class="ico">📓</span>복사+NotebookLM 열기<span class="sub">원클릭 반자동</span></div>
+      <div class="mode" onclick="copyDigest()"><span class="ico">📋</span>다이제스트만 복사<span class="sub">붙여넣기용 텍스트</span></div>
+    </div>
+  </div>
+
+  <div class="foot">대본: scripts/build_radio.py · 다이제스트: scripts/build_digest.py · 음성: 브라우저 Web Speech(무료) · 주차별 누적 · 매주 금요일 Claude 갱신</div>
+</div>
+
+<pre id="radio-src" hidden>민지|en|Hello and welcome back to your Weekly English Radio — the show that turns your real mistakes into real progress.
+민지|en|I&#x27;m Minji, your host, and I&#x27;m so glad you&#x27;re here with us today.
+알렉스|en|And I&#x27;m Alex, your English coach. This is week 2026-W27, and you completed three great lessons this week. Well done!
+민지|en|All three lessons had one big theme: transportation. Subways, buses, taxis, walking, driving — you talked about all of it.
+알렉스|en|Nine corrections came out of those three sessions. But today we are not just going to list them.
+민지|en|We are going to understand them. Why do they happen? How does English think differently from Korean? And how do you fix them for good?
+알렉스|en|Plus, we have a fascinating story at the end about a word you use every day — one that actually changed how a whole country thinks about roads. Stay tuned!
+민지|en|Okay! Let&#x27;s dive in.
+알렉스|en|Segment one: Why It Happens. Let&#x27;s go deep on the grammar that trips you up the most.
+민지|en|Articles. A, an, and the. Small words — huge problems for Korean speakers.
+알렉스|en|They showed up as this week&#x27;s grammar focus, and they are one of your top cumulative weaknesses. Six times in thirty total lessons.
+민지|en|Six times! So this is a pattern worth really understanding, not just memorizing a rule.
+알렉스|en|Exactly. Here is the actual sentence you said this week: &quot;But usually in Seoul, the common transportation is subway because it is connected like a web, a spider web.&quot;
+민지|en|And the natural version: &quot;But in Seoul, the most common transportation is the subway, as it&#x27;s interconnected like a spider web.&quot;
+알렉스|en|Can you spot the differences?
+민지|en|The subway — not just subway! And the most common — not just common!
+알렉스|en|Two article moments hiding in one sentence. Now — why does English need &quot;the&quot; before subway?
+민지|en|Alex, explain it like I&#x27;m five.
+알렉스|en|Think of &quot;the&quot; as a pointing finger shared between two people. &quot;The subway&quot; means: we both know which one. You picture it, I picture it — it&#x27;s the Seoul subway in our shared minds.
+민지|en|And &quot;a subway&quot;?
+알렉스|en|&quot;A subway&quot; means any subway. Not specific. First mention, or one option among many possibilities.
+민지|ko|한국어엔 a와 the가 없으니까 &#x27;우리 둘 다 어떤 걸 말하는지 알아&#x27;라는 신호를 따로 줄 필요가 없어요. 그게 바로 영어에서 the가 하는 일이에요.
+알렉스|en|In Korean, &quot;지하철&quot; covers every situation — specific, general, first mention, shared knowledge, all of it. English has to choose every single time.
+민지|en|And what about superlatives? &quot;The most common&quot; — is there a rule there?
+알렉스|en|Yes, and this is the best shortcut I know. Superlatives always point at one specific thing at the top of a group. So they always use &quot;the&quot; — automatically, no exceptions.
+민지|en|&quot;The most common transportation.&quot; &quot;The best subway system.&quot; &quot;The fastest route home.&quot; The, the, the!
+알렉스|en|Every time you see &quot;most,&quot; &quot;best,&quot; &quot;worst,&quot; &quot;fastest,&quot; &quot;biggest&quot; — put &quot;the&quot; in front automatically. Make it a reflex, not a decision.
+민지|en|Superlative equals the. Done. I love that rule.
+알렉스|en|One more quick test. &quot;I took a taxi to the airport this morning.&quot; What&#x27;s the next natural sentence?
+민지|en|&quot;The taxi driver was very friendly!&quot; — the specific taxi we already introduced.
+알렉스|en|Perfect! You introduce with &quot;a.&quot; Once it&#x27;s established, you point with &quot;the.&quot; That&#x27;s the natural flow of English storytelling.
+민지|en|And this applies in any topic. &quot;I saw a movie last night — the movie was incredible.&quot; &quot;A&quot; introduces, &quot;the&quot; points. Beautiful.
+알렉스|en|Introduce with a. Point with the. That&#x27;s the whole article system in one sentence.
+민지|en|Now let&#x27;s look at our second big pattern: comparing preferences.
+알렉스|en|You said: &quot;So usually I love to take the bus better than the subway.&quot;
+민지|en|I completely understand where that comes from.
+알렉스|en|In Korean: 버스가 지하철보다 더 좋아 — which word-for-word means &quot;love better than.&quot; Makes perfect sense in Korean!
+민지|ko|한국어 &quot;더 좋아해&quot;를 그대로 옮기면 &quot;love better than&quot;이 되는데, 영어는 prefer A over B라는 다른 구조를 써요.
+알렉스|en|The natural English version: &quot;I usually prefer taking the bus over the subway.&quot;
+민지|en|&quot;Prefer A over B.&quot; That&#x27;s the core pattern to remember.
+알렉스|en|Or say &quot;I like the bus more than the subway.&quot; Both work perfectly. The problem is &quot;love better than&quot; — it mixes two different structures and they collide.
+민지|en|So pick one and commit. Either &quot;prefer A over B&quot; — or &quot;like A more than B.&quot;
+알렉스|en|Try it now. I prefer coffee over tea. I like walking more than driving. I prefer the bus over a taxi.
+민지|en|I prefer weekends over Mondays. Does that work?
+알렉스|en|Ha! That is absolutely perfect English. And I think every person listening agrees with that sentence.
+민지|en|Alright, those two patterns are in our brains. Let&#x27;s run through the rest of the week&#x27;s corrections quickly.
+알렉스|en|Correction Clinic! Quick-fire round. Repeat the natural version after us if you can.
+민지|en|Remember: same idea you wanted to say — just in the English shape. Ready?
+알렉스|en|First correction. You said: &quot;I think the first I consider that work is about company or my work. I divide first.&quot;
+민지|en|More naturally: &quot;I first consider whether the appointment is for the company or for myself.&quot;
+알렉스|en|The key word: &quot;whether.&quot; Whether it&#x27;s this or that — it&#x27;s your best friend for two-option situations.
+민지|en|Whether it&#x27;s personal or professional. Whether I take the bus or walk. Practice that word today!
+알렉스|en|You said: &quot;There are four kinds of transportation or walk and divide the country.&quot;
+민지|en|Better: &quot;There are four kinds of transportation, or people just walk, depending on the area.&quot;
+알렉스|en|English always needs a visible subject. &quot;People walk&quot; — not just &quot;walk.&quot; Korean drops subjects naturally; English keeps them in their slot.
+민지|en|You said: &quot;So if you travel, first you take the transportation like the bus, subway, etc. And then we arrive at the endpoint, the popular place. We just walk.&quot;
+알렉스|en|Better: &quot;When you travel, you usually take public transportation like a bus or subway, and once you arrive at your destination, you often walk.&quot;
+민지|en|&quot;Destination&quot; is the perfect word for &quot;endpoint.&quot; What&#x27;s your final destination? Use it every chance you get.
+알렉스|en|You said: &quot;Almost driving is the error and that is my mistake because some busy area is so it is impossible to find the parking area.&quot;
+민지|en|Better: &quot;Almost every time I&#x27;ve driven in a busy area, it&#x27;s been a mistake because finding parking is impossible.&quot;
+알렉스|en|The feeling was totally right! You just needed the English sentence shape: subject, verb, then the reason.
+민지|en|You said: &quot;And your country also listed up the strong of 16 or 15, 16?&quot;
+알렉스|en|Better: &quot;Did your country make it to the round of 16?&quot;
+민지|en|&quot;Make it to&quot; means to successfully reach a stage or a place. &quot;We made it to the final!&quot; &quot;Did you make it to the meeting?&quot; Super useful.
+알렉스|en|You said: &quot;I&#x27;m sorry, my question is a little ugly.&quot;
+민지|en|Better: &quot;I&#x27;m sorry, my question is a bit unclear&quot; — or &quot;a bit awkward.&quot;
+알렉스|en|In Korean, 이상하다 or 어색하다 can translate to &quot;ugly&quot; in your head. But English uses &quot;unclear,&quot; &quot;awkward,&quot; or &quot;off-topic&quot; for this idea.
+민지|en|And last: &quot;But basic, the foundation is knowing the rule because that is the basic rule.&quot;
+알렉스|en|Better: &quot;The basic foundation is knowing the rules.&quot; Short, clean, same meaning. Beautiful.
+민지|en|Notice a pattern across all those corrections? Korean sentence structure is flexible — subjects drop, ideas stack loosely, word order shifts.
+알렉스|en|English needs each piece clearly in its slot. Subject, verb, connector, reason. It&#x27;s explicit where Korean can be implicit.
+민지|en|So you&#x27;re not making random errors. You&#x27;re using Korean logic with English words. That&#x27;s the bridge you&#x27;re crossing — and you&#x27;re halfway there.
+알렉스|en|Once you see it that way, fixing the structure feels like an upgrade, not a correction.
+민지|en|Now, Vocabulary in Context. Real words from this week in real sentences — not just definitions.
+알렉스|en|Word one: interconnected. &quot;Seoul&#x27;s subway lines are deeply interconnected, which makes transfers fast and easy.&quot; A system where everything links together.
+민지|en|Word two: congested. &quot;The highway was so congested on Friday that it took me two hours to get home.&quot; Crowded, slow, backed up.
+알렉스|en|Word three: commute. &quot;My daily commute takes about forty-five minutes by subway.&quot; Your regular trip between home and work.
+민지|en|And rush hour is when everyone commutes at the same time — crowded trains, slow buses, chaos!
+알렉스|en|Word four: detour. &quot;There was an accident on the main road, so the bus took a detour through the back streets.&quot; A longer route to avoid a problem ahead.
+민지|en|Word five: gridlock. &quot;Downtown was in complete gridlock Friday evening — nothing was moving at all.&quot; Traffic frozen solid. Like Seoul on a Friday!
+알렉스|en|Topic Talk time! Five transportation expressions at A2 to B1 level.
+민지|en|One: &quot;catch a bus.&quot; &quot;I need to catch the 7:30 bus or I&#x27;ll be late.&quot; You get it just in time — like catching a ball.
+알렉스|en|Two: &quot;miss the bus.&quot; &quot;I missed the last train and had to take a taxi all the way home.&quot; Very common situation.
+민지|en|Three: &quot;give someone a ride.&quot; &quot;Can you give me a ride to the station?&quot; To drive someone somewhere as a friendly favor.
+알렉스|en|Four: &quot;stuck in traffic.&quot; &quot;Sorry I&#x27;m late — I was stuck in traffic for almost an hour.&quot; Essential!
+민지|en|Five: &quot;on foot.&quot; &quot;The cafe is only ten minutes on foot from here.&quot; Just means walking, but sounds much more polished.
+알렉스|en|Pro tip: string these into a tiny story. &quot;This morning I missed my bus, walked on foot for fifteen minutes, and was still stuck at a crossing — but I made it to work on time.&quot; Using phrases in a story makes them stick three times faster than a list.
+민지|en|Little stories beat vocabulary lists every single time.
+알렉스|en|So tonight, try making one short story about your commute today using at least two of these phrases.
+민지|en|Post it in your notes, say it out loud, or even just think it on the subway. That repetition is where the magic happens.
+알렉스|en|Alright, vocabulary and topic talk: done! Let&#x27;s take a short turn into something completely different.
+민지|en|Culture Corner! Alex, what&#x27;s our story this week?
+알렉스|en|This one fits our transportation theme perfectly. The story of one word: jaywalking.
+민지|en|Jaywalking — crossing the street at the wrong place or the wrong time, right?
+알렉스|en|Exactly. But why &quot;jay&quot;? In the early 1900s in the United States, &quot;Jay&quot; was slang for a naive, unsophisticated person — someone from the countryside who didn&#x27;t know how cities worked.
+민지|en|Like a confused visitor walking straight into traffic without looking?
+알렉스|en|Exactly. A jaywalker was someone clueless enough to wander into the street. But here is the twist most people don&#x27;t know.
+알렉스|en|When cars first appeared in cities, people were furious at them. Cars kept hitting pedestrians. Newspapers ran campaigns against cars. Some cities were seriously considering banning them entirely.
+민지|en|So cars were seen as the danger — not the pedestrian!
+알렉스|en|Right. But the automobile industry had a clever response. They funded campaigns to spread the word &quot;jaywalker&quot; — making the pedestrian who crossed &quot;incorrectly&quot; look like the one causing trouble.
+민지|en|They flipped the whole story!
+알렉스|en|Completely. Within a few decades, most people forgot that cars were ever seen as the problem. Today, the pedestrian who crosses at the wrong spot is the one breaking the law in many countries.
+민지|ko|원래는 차가 위험하다는 인식이었는데, 자동차 회사들이 &#x27;잘못 걷는 보행자가 문제&#x27;라는 개념을 언론을 통해 퍼뜨린 거예요. 단어 하나가 법과 문화를 바꾼 놀라운 사례예요.
+알렉스|en|One word, pushed into newspapers and eventually into law, changed how an entire country thinks about who belongs on the road.
+민지|en|Language is never just language. It shapes reality — who we blame, what we see as normal.
+알렉스|en|And that&#x27;s why studying words carefully is never wasted time. Every word carries a history and a choice.
+민지|en|Next time you see a crosswalk, you just might think of this story.
+민지|en|Okay! Let&#x27;s wrap up 2026-W27. Your fluency average this week is 7.2 out of 10.
+알렉스|en|And it has been holding steady for several weeks. Steady is not stagnant — steady means your foundation is solid and ready to grow.
+민지|en|Thirty lessons completed. That is a real commitment. And the growth is real.
+알렉스|en|Now let&#x27;s push through to the next level. Two missions for next week.
+민지|en|Mission one: before you say any noun, pause for just one second and ask yourself — does this need &quot;a&quot; or &quot;the&quot;? That tiny pause will change your English.
+알렉스|en|Mission two: when comparing two things you like, use &quot;I prefer A over B&quot; — or &quot;I like A more than B.&quot; Drop &quot;love better than&quot; for good.
+민지|en|These two habits — article awareness and comparison structure — will carry you through B1, B2, and beyond.
+알렉스|en|Small tweaks practiced every day become habits. Habits become fluency. That is the process.
+민지|en|Awareness first. Perfection later. Always.
+알렉스|en|And this week, you discussed city systems, cultural differences, road safety, and even the World Cup. Complex content in a second language — that&#x27;s impressive.
+민지|en|The grammar will catch up to your ideas. Keep speaking, keep noticing, and the patterns will click.
+알렉스|en|That&#x27;s all for this episode. Have a wonderful weekend. See you next Friday.
+민지|en|Keep talking, and don&#x27;t fear the mistakes. They&#x27;re just English habits waiting to click. Bye for now!</pre>
+<div class="toast" id="toast">✅ 복사됐어요! Gemini에 붙여넣으세요</div>
+<script>
+const PAGE_WEEK="2026-W27";
+const PROMPTS={chat:"아래는 이번 주 내 전화영어 학습 요약이야.\n\n[이번 주: 2026-W27 · 3회 수업]\n누적 약점 Top: Subject–Verb Agreement(6회), Articles (a/an/the)(6회), Verb Forms / Auxiliaries(4회)\nAI 교정(❌→✅):\n  - But usually in Seoul, the common transportation is subway because it is connected like a web, a spider web. → But in Seoul, the most common transportation is the subway, as it's interconnected like a spider web.\n  - So usually I love to take the bus better than the subway. → So I usually prefer taking the bus over the subway.\n  - I think the first I consider that work is about company or my work. I divide first. → I first consider whether the appointment is for the company or for myself. I'll divide them first.\n  - There are four kinds of transportation or walk and divide the country. → There are four kinds of transportation, or people just walk, depending on the area.\n  - So if you travel, first you take the transportation like the bus, subway, etc. And then we arrive at the endpoint, the popular place. We just walk. → So when you travel, you usually take public transportation like a bus or subway, and then once you arrive at your destination, you often walk.\n  - almost driving is the error and that is my mistake because some busy area is so it is impossible to find the parking area. → Almost every time I've driven in a busy area, it's been a mistake because finding parking is impossible.\n핵심 어휘: interconnected(서로 연결된, 상호 관련된), predominant(우세한, 지배적인, 주요한), idiomatic(관용적인, 숙어의), pertains to(~에 관한 것이다, ~에 속하다), consequently(결과적으로, 따라서), utilize(활용하다, 이용하다 (use보다 격식 있는 표현))\n\n위 약점·교정을 주제로 나와 영어로 대화하면서 복습시켜줘. 먼저 약점 1개와 관련된 상황을 영어로 질문하고, 내 대답이 자연스러운지 교정해줘. 한국어 설명은 필요할 때만 짧게.",lecture:"아래는 이번 주 내 전화영어 학습 요약이야.\n\n[이번 주: 2026-W27 · 3회 수업]\n누적 약점 Top: Subject–Verb Agreement(6회), Articles (a/an/the)(6회), Verb Forms / Auxiliaries(4회)\nAI 교정(❌→✅):\n  - But usually in Seoul, the common transportation is subway because it is connected like a web, a spider web. → But in Seoul, the most common transportation is the subway, as it's interconnected like a spider web.\n  - So usually I love to take the bus better than the subway. → So I usually prefer taking the bus over the subway.\n  - I think the first I consider that work is about company or my work. I divide first. → I first consider whether the appointment is for the company or for myself. I'll divide them first.\n  - There are four kinds of transportation or walk and divide the country. → There are four kinds of transportation, or people just walk, depending on the area.\n  - So if you travel, first you take the transportation like the bus, subway, etc. And then we arrive at the endpoint, the popular place. We just walk. → So when you travel, you usually take public transportation like a bus or subway, and then once you arrive at your destination, you often walk.\n  - almost driving is the error and that is my mistake because some busy area is so it is impossible to find the parking area. → Almost every time I've driven in a busy area, it's been a mistake because finding parking is impossible.\n핵심 어휘: interconnected(서로 연결된, 상호 관련된), predominant(우세한, 지배적인, 주요한), idiomatic(관용적인, 숙어의), pertains to(~에 관한 것이다, ~에 속하다), consequently(결과적으로, 따라서), utilize(활용하다, 이용하다 (use보다 격식 있는 표현))\n\n위 내용을 강의식으로 차근차근 설명해줘. 각 약점이 왜 틀렸는지 규칙을 짚고, 쉬운 예문 2~3개씩 더 들어주고, 마지막에 1분 요약과 연습문제 3개를 줘.",radio:"아래는 이번 주 내 전화영어 학습 요약이야.\n\n[이번 주: 2026-W27 · 3회 수업]\n누적 약점 Top: Subject–Verb Agreement(6회), Articles (a/an/the)(6회), Verb Forms / Auxiliaries(4회)\nAI 교정(❌→✅):\n  - But usually in Seoul, the common transportation is subway because it is connected like a web, a spider web. → But in Seoul, the most common transportation is the subway, as it's interconnected like a spider web.\n  - So usually I love to take the bus better than the subway. → So I usually prefer taking the bus over the subway.\n  - I think the first I consider that work is about company or my work. I divide first. → I first consider whether the appointment is for the company or for myself. I'll divide them first.\n  - There are four kinds of transportation or walk and divide the country. → There are four kinds of transportation, or people just walk, depending on the area.\n  - So if you travel, first you take the transportation like the bus, subway, etc. And then we arrive at the endpoint, the popular place. We just walk. → So when you travel, you usually take public transportation like a bus or subway, and then once you arrive at your destination, you often walk.\n  - almost driving is the error and that is my mistake because some busy area is so it is impossible to find the parking area. → Almost every time I've driven in a busy area, it's been a mistake because finding parking is impossible.\n핵심 어휘: interconnected(서로 연결된, 상호 관련된), predominant(우세한, 지배적인, 주요한), idiomatic(관용적인, 숙어의), pertains to(~에 관한 것이다, ~에 속하다), consequently(결과적으로, 따라서), utilize(활용하다, 이용하다 (use보다 격식 있는 표현))\n\n너는 라디오 진행자, 나는 오늘의 게스트야. 내 이번 주 영어 학습 여정을 주제로 인터뷰하듯 대화해줘. 가볍고 격려하는 톤으로, 중간중간 위 교정 표현을 자연스럽게 연습시켜줘. 영어 위주, 한국어는 가끔."};
+function showToast(m){const t=document.getElementById('toast');t.textContent=m;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500);}
+function copyOpen(mode){const txt=PROMPTS[mode]||'';const go=()=>{showToast('✅ 복사됐어요! Gemini에 붙여넣으세요');setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600);};navigator.clipboard.writeText(txt).then(go).catch(()=>{const a=document.createElement('textarea');a.value=txt;document.body.appendChild(a);a.select();document.execCommand('copy');a.remove();go();});}
+function clip(txt,msg){const go=()=>showToast(msg);navigator.clipboard.writeText(txt).then(go).catch(()=>{const a=document.createElement('textarea');a.value=txt;document.body.appendChild(a);a.select();document.execCommand('copy');a.remove();go();});}
+function copyDigest(){fetch('digest-latest.txt',{cache:'no-store'}).then(r=>{if(!r.ok)throw 0;return r.text();}).then(t=>clip(t,'📓 다이제스트 복사됨! NotebookLM에 붙여넣으세요')).catch(()=>showToast('⚠️ 다이제스트가 아직 없어요 (금요일 생성)'));}
+
+// ── 라디오 플레이어 (Web Speech API) ──
+const RAW=document.getElementById('radio-src').textContent.trim();
+const LINES=RAW.split('\n').map(l=>l.trim()).filter(Boolean).map(l=>{const i1=l.indexOf('|'),i2=l.indexOf('|',i1+1);return{sp:l.slice(0,i1),lang:l.slice(i1+1,i2),text:l.slice(i2+1)};});
+const stage=document.getElementById('stage');
+LINES.forEach((ln,i)=>{const d=document.createElement('div');d.className='bubble '+(ln.sp==='민지'?'mc':'coach');d.dataset.idx=i;d.innerHTML='<span class="who">'+ln.sp+'</span>'+ln.text;stage.appendChild(d);});
+const synth=window.speechSynthesis;
+let voices=[],koV=null,enV=null;
+function pickVoices(){voices=synth?synth.getVoices():[];koV=voices.find(v=>v.lang&&v.lang.toLowerCase().startsWith('ko'))||null;enV=voices.find(v=>v.lang&&v.lang.toLowerCase().startsWith('en'))||null;}
+if(synth){pickVoices();synth.onvoiceschanged=pickVoices;}
+let idx=0,playing=false,rate=1,wakeLock=null;
+async function acquireWake(){try{if('wakeLock' in navigator){wakeLock=await navigator.wakeLock.request('screen');wakeLock.addEventListener('release',()=>{wakeLock=null;});}}catch(e){}}
+function releaseWake(){try{if(wakeLock){wakeLock.release();wakeLock=null;}}catch(e){}}
+function highlight(i){document.querySelectorAll('.bubble').forEach(b=>b.classList.toggle('on',(+b.dataset.idx)===i));const el=document.querySelector('.bubble.on');if(el)el.scrollIntoView({block:'center',behavior:'smooth'});}
+function speakAt(i){if(!synth||i>=LINES.length){playing=false;releaseWake();highlight(-1);idx=0;return;}idx=i;highlight(i);const ln=LINES[i];const u=new SpeechSynthesisUtterance(ln.text);u.lang=ln.lang==='ko'?'ko-KR':'en-US';const v=ln.lang==='ko'?koV:enV;if(v)u.voice=v;u.rate=rate;u.pitch=ln.sp==='민지'?1.15:0.85;u.onend=()=>{if(playing)speakAt(i+1);};u.onerror=()=>{if(playing)setTimeout(()=>speakAt(i+1),250);};synth.speak(u);}
+document.getElementById('play').onclick=()=>{if(!synth){document.getElementById('ttswarn').textContent='이 브라우저는 음성 재생을 지원하지 않아요. 대본을 읽어주세요.';return;}if(playing)return;playing=true;acquireWake();synth.cancel();speakAt(idx>=LINES.length?0:idx);};
+document.getElementById('pause').onclick=()=>{if(synth&&synth.speaking)synth.pause();};
+document.getElementById('resume').onclick=()=>{if(synth){synth.resume();if(playing)acquireWake();}};
+document.getElementById('stop').onclick=()=>{playing=false;releaseWake();if(synth)synth.cancel();idx=0;highlight(-1);};
+document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='visible'&&playing){if(synth)synth.resume();acquireWake();}});
+const rE=document.getElementById('rate');rE.oninput=()=>{rate=parseFloat(rE.value);document.getElementById('rv').textContent=rate.toFixed(1)+'x';};
+if(!synth)document.getElementById('ttswarn').textContent='⚠️ 이 브라우저는 음성 합성을 지원하지 않아 대본만 표시됩니다.';
+
+// ── 오디오 에피소드: 이 페이지의 주차(PAGE_WEEK) MP3 표시 + 목록에 🎧 뱃지 ──
+fetch('radio/episodes.json',{cache:'no-store'}).then(r=>r.ok?r.json():[]).then(eps=>{
+  if(!Array.isArray(eps))eps=[];
+  eps.forEach(e=>{const row=document.querySelector('.weekrow[data-wk="'+e.week+'"] .wk-audio');if(row)row.textContent='🎧';});
+  const L=document.getElementById('audio-latest');
+  const mine=eps.find(e=>e.week===PAGE_WEEK);
+  if(mine){
+    L.innerHTML='<div class="epweek">'+mine.week+' · '+(mine.date||'')+'</div><audio id="ep-audio" controls preload="none" src="radio/'+mine.file+'"></audio>';
+    const au=document.getElementById('ep-audio');
+    // 잠금화면/화면 꺼짐에서도 재생 + 컨트롤 노출(MediaSession). 진짜 음성 파일이라 백그라운드 OK.
+    if(au&&'mediaSession' in navigator){
+      try{navigator.mediaSession.metadata=new MediaMetadata({title:'영어 주간 라디오 '+mine.week,artist:'민지 & 알렉스 · 당근영어',album:'Weekly English Radio'});}catch(e){}
+      try{navigator.mediaSession.setActionHandler('play',()=>au.play());navigator.mediaSession.setActionHandler('pause',()=>au.pause());}catch(e){}
+    }
+  }
+  else{L.textContent='이 주차 오디오(MP3)는 아직 없어요. 아래 ▶ 바로 듣기(브라우저 음성)로 들어보세요.';}
+}).catch(()=>{document.getElementById('audio-latest').textContent='오디오 목록을 불러오지 못했어요. 아래 ▶ 바로 듣기로 들어보세요.';});
+</script>
+</body></html>
