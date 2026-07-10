@@ -1,0 +1,53 @@
+{
+ "date": "2026-07-10",
+ "iso": [
+  2026,
+  28
+ ],
+ "topic": "Discussing personal values, life changes, and priorities with age.",
+ "grammar": "Adjective vs. Adverb / Noun Form",
+ "grammar_norm": "Adjective Vs. Adverb / Noun Form",
+ "score": 7.0,
+ "pairs": [
+  {
+   "said": "Because she was older.",
+   "natural": "Given her age."
+  },
+  {
+   "said": "the young generation leads to a balance of their values in our life.",
+   "natural": "the young generation seeks a balance in their values."
+  },
+  {
+   "said": "I have more relax, yeah, the emotion of emotion.",
+   "natural": "I'm more relaxed now."
+  }
+ ],
+ "vocab": [
+  {
+   "word": "composure",
+   "pos": "명사",
+   "meaning": "침착, 평정심"
+  },
+  {
+   "word": "prioritize",
+   "pos": "동사",
+   "meaning": "우선순위를 매기다, 우선적으로 처리하다"
+  },
+  {
+   "word": "demographic",
+   "pos": "명사",
+   "meaning": "인구 통계학적 집단 (특정 연령, 성별, 소득 등을 가진 집단)"
+  },
+  {
+   "word": "re-evaluate",
+   "pos": "동사",
+   "meaning": "재평가하다, 다시 검토하다"
+  },
+  {
+   "word": "shift",
+   "pos": "명사/동사",
+   "meaning": "변화, 전환; 변화하다, 전환하다"
+  }
+ ],
+ "_html_md5": "0787b26c13acbe8436985585068e35c6"
+}
