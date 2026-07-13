@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#0f0f13"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="당근영어"><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="icon" type="image/png" sizes="192x192" href="icon-192.png"><script src="install-banner.js" defer></script><script src="sw-reg.js" defer></script>
+    <title>전화영어 복습 - 2026년 07월 13일</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Noto Sans KR',sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.75;min-height:100vh}
+        .header{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);border-bottom:1px solid rgba(255,255,255,.06);padding:48px 24px 40px;text-align:center}
+        .header-date{font-size:13px;color:#94a3b8;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+        .header h1{font-size:28px;font-weight:700;color:#f1f5f9;margin-bottom:16px}
+        .header-meta{display:flex;justify-content:center;gap:24px;font-size:14px;color:#64748b}
+        .header-meta span{display:flex;align-items:center;gap:6px}
+        .cta-section{text-align:center;padding:40px 24px}
+        .cta-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:linear-gradient(135deg,#38bdf8,#818cf8);color:#fff;font-size:16px;font-weight:600;font-family:'Noto Sans KR',sans-serif;border:none;border-radius:50px;cursor:pointer;transition:all .3s;text-decoration:none;box-shadow:0 4px 24px rgba(56,189,248,.25)}
+        .cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(56,189,248,.35)}
+        .cta-btn svg{width:20px;height:20px}
+        .cta-sub{margin-top:12px;font-size:13px;color:#64748b}
+        .toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#38bdf8;padding:14px 28px;border-radius:12px;font-size:14px;font-weight:500;border:1px solid rgba(56,189,248,.2);box-shadow:0 8px 32px rgba(0,0,0,.4);opacity:0;transition:all .4s cubic-bezier(.16,1,.3,1);z-index:1000}
+        .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+        .container{max-width:720px;margin:0 auto;padding:0 24px 80px}
+        .tabs{display:flex;gap:4px;background:#1a1a24;padding:4px;border-radius:12px;margin-bottom:32px}
+        .tab{flex:1;padding:12px;text-align:center;font-size:14px;font-weight:500;color:#64748b;background:0 0;border:none;border-radius:8px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all .2s}
+        .tab.active{background:#262636;color:#f1f5f9}
+        .tab-content{display:none}.tab-content.active{display:block}
+        .feedback h2{font-size:18px;font-weight:700;color:#f1f5f9;margin:36px 0 16px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.06)}
+        .feedback h2:first-child{margin-top:0}
+        .feedback p{margin:8px 0;color:#cbd5e1}
+        .feedback .item{padding:6px 0 6px 16px;border-left:2px solid #334155;margin:6px 0;color:#cbd5e1}
+        .feedback .numbered{padding:8px 0 8px 16px;color:#cbd5e1}
+        .feedback .numbered strong{color:#38bdf8}
+        .feedback strong{color:#f1f5f9}
+        .feedback code{background:#1e293b;padding:2px 8px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#38bdf8}
+        .feedback table{width:100%;border-collapse:collapse;margin:12px 0}
+        .feedback th,.feedback td{padding:10px 14px;text-align:left;border-bottom:1px solid #262636}
+        .feedback th{color:#94a3b8;font-weight:500;font-size:13px}
+        .feedback td{color:#cbd5e1}
+        .arrow{color:#38bdf8;font-weight:700}
+        .transcript{background:#1a1a24;border-radius:12px;padding:28px;font-size:14px;line-height:2;color:#94a3b8;white-space:pre-wrap;word-break:break-word;font-family:'JetBrains Mono','Noto Sans KR',monospace}
+        .transcript .tutor{color:#38bdf8}
+        .transcript .student{color:#a78bfa}
+        @media(max-width:640px){.header{padding:32px 16px}.header h1{font-size:22px}.cta-btn{padding:14px 28px;font-size:15px}.container{padding:0 16px 60px}}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-date">2026년 07월 13일</div>
+        <h1>📚 전화영어 복습</h1>
+        <div class="header-meta">
+            <span>⏱ 19분 25초</span>
+            <span>🎙 전화영어_025180304_20260713080010.m4a</span>
+        </div>
+    </div>
+    <div class="cta-section">
+        <button class="cta-btn" onclick="startReview()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Gemini에서 복습 대화 시작하기
+        </button>
+        <div class="cta-sub">클릭하면 프롬프트가 복사되고 Gemini가 열립니다</div>
+    </div>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('feedback')">📋 AI 피드백</button>
+            <button class="tab" onclick="switchTab('transcript')">🎙 수업 전사</button>
+        </div>
+        <div id="tab-feedback" class="tab-content active">
+            <div class="feedback"><p>안녕하세요, Joey! 활기찬 월요일 아침, Ashley 선생님과의 대화 잘 마무리하셨네요. 한국의 여름 이야기부터 멕시코의 생활, 그리고 무서운 동물들에 대한 이야기까지, 다양한 주제로 즐겁게 대화하시는 모습이 인상 깊었습니다. 특히 선생님의 경험을 듣고 자신의 상황과 비교하며 공감하는 모습이 정말 좋았어요. 오늘 배운 내용들을 바탕으로 더욱 유창하고 정확하게 표현할 수 있도록 따뜻한 피드백을 드릴게요!</p>
+<br>
+<br>
+<p><strong>0. 📌 Topic</strong></p>
+<p>Topic: Discussing fears of animals and cultural differences in dealing with them.</p>
+<br>
+<p><strong>1. 📊 오늘의 대화 요약 (Summary)</strong></p>
+<p>Joey는 Ashley 선생님과 첫 만남에서 한국의 날씨와 선생님의 멕시코 생활에 대해 이야기하며 서로의 일상을 공유했습니다. 이어서 교재의 '가장 싫어하는 동물' 주제로 넘어가, 한국인들이 쥐, 뱀, 거미 등을 무서워하는 이유와 열대 지역의 큰 거미, 홍수로 인한 뱀 탈출 등 다양한 경험과 생각을 나누었습니다.</p>
+<br>
+<p><strong>2. 💬 유창성 업그레이드 (Fluency & Natural Flow)</strong></p>
+<p>Joey가 말한 문장 중 의미는 잘 전달되지만, 원어민들이 더 자연스럽게 쓰는 표현으로 다듬어 볼 세 가지를 골라봤어요.</p>
+<br>
+<div class="numbered"><strong>1.</strong> ❌ <strong>As Said</strong>: "That is enjoyable for my life."</div>
+<p>✅ <strong>Natural</strong>: "It's enjoyable for me."</p>
+<p>💎 <strong>Professional</strong>: "I find it very fulfilling."</p>
+<p>💡 <strong>코칭 포인트</strong>: Using "enjoyable for my life" is understandable, but "enjoyable for me" is more direct and natural. "Fulfilling" is a great word for something that brings deep satisfaction.</p>
+<p><span class="arrow">→</span> "enjoyable for my life"는 의미 전달은 되지만, "enjoyable for me"가 훨씬 직접적이고 자연스러운 표현입니다. 좀 더 격식 있는 자리에서는 "fulfilling"을 사용하여 깊은 만족감을 표현할 수 있습니다.</p>
+<br>
+<div class="numbered"><strong>2.</strong> ❌ <strong>As Said</strong>: "So if the subject is changed at the time, the verb also changes, right?"</div>
+<p>✅ <strong>Natural</strong>: "So if the subject changes, the verb also changes, right?"</p>
+<p>💎 <strong>Professional</strong>: "Consequently, a shift in the subject necessitates a corresponding change in the verb conjugation, correct?"</p>
+<p>💡 <strong>코칭 포인트</strong>: The passive voice "is changed" is often unnecessary when the subject performs the action. "At the time" is also a bit redundant here.</p>
+<p><span class="arrow">→</span> 주어가 직접 행동하는 경우, 수동태 "is changed"는 불필요할 때가 많습니다. 또한, "at the time"도 이 문맥에서는 다소 반복적인 표현입니다.</p>
+<br>
+<div class="numbered"><strong>3.</strong> ❌ <strong>As Said</strong>: "people in our country, everyone, doesn't like that. They hate that."</div>
+<p>✅ <strong>Natural</strong>: "In our country, everyone dislikes them." 또는 "People in our country generally dislike them."</p>
+<p>💎 <strong>Professional</strong>: "Generally speaking, these animals are widely disliked by people in our country."</p>
+<p>💡 <strong>코칭 포인트</strong>: "Everyone doesn't like that"은 문법적으로 틀리지는 않지만, "No one likes that" 또는 "Everyone dislikes that"이 더 자연스럽습니다. "that" 대신 복수형 "them"을 사용하는 것이 더 적절합니다.</p>
+<p><span class="arrow">→</span> "everyone doesn't like that"은 의미 전달은 되지만, "No one likes them" 또는 "Everyone dislikes them"이 더 자연스러운 표현입니다. 언급된 동물들이 여러 종류이므로 "that" 대신 복수형 "them"을 사용하는 것이 더 적절합니다.</p>
+<br>
+<p><strong>3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)</strong></p>
+<p>이번 대화에서 Joey가 반복적으로 사용한 문법 패턴 중 <strong>비교급 형용사/부사</strong> 사용에 대한 부분을 짚어볼게요.</p>
+<br>
+<p>Category: Comparative Adjectives and Adverbs</p>
+<br>
+<table>
+<tr><th>❌ 원문 (As Said)</th><th>✅ 교정 예시 (Corrected)</th></tr>
+<tr><td>"So it is <strong>more easy</strong> to deal with a spider."</td><td>"So it is <strong>easier</strong> to deal with a spider."</td></tr>
+<tr><td>"I think it is <strong>more easy</strong> to deal with the spider better than a rat."</td><td>"I think it is <strong>easier</strong> to deal with a spider than a rat."</td></tr>
+</table>
+<br>
+<p>📌 <strong>핵심 규칙</strong>: 대부분의 한두 음절 형용사/부사는 비교급을 만들 때 단어 뒤에 '-er'을 붙이고, 세 음절 이상이거나 일부 예외적인 단어는 'more'을 앞에 붙입니다. 'easy'는 '-y'로 끝나므로 'easier'가 됩니다.</p>
+<br>
+<p>🔁 <strong>따라 읽기</strong>:</p>
+<p>🗣️ "It is easier to deal with a spider."</p>
+<p>🗣️ "I think it is easier to deal with a rat."</p>
+<br>
+<p><strong>4. 📗 어휘 확장 (Vocabulary Vault)</strong></p>
+<p>오늘 대화에서 유용하게 쓰였거나, Joey의 비즈니스 환경에서 활용하기 좋은 단어 5가지를 골라봤습니다.</p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>humid</strong> /hjuːmɪd/ (형용사)</div>
+<p>뜻: 습한, 축축한</p>
+<p>실전 예문: The <strong>humid</strong> weather makes it difficult to focus during long meetings.</p>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>immerse</strong> /ɪˈmɜːrs/ (동사)</div>
+<p>뜻: 몰두하게 하다, 푹 담그다</p>
+<p>실전 예문: To truly understand a new market, you need to <strong>immerse</strong> yourself in its culture.</p>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>exterminator</strong> /ɪkˈstɜːrmɪneɪtər/ (명사)</div>
+<p>뜻: 해충 박멸 전문가</p>
+<p>실전 예문: We had to call an <strong>exterminator</strong> to deal with the pest problem in the warehouse.</p>
+<br>
+<div class="numbered"><strong>4.</strong> <strong>roam</strong> /roʊm/ (동사)</div>
+<p>뜻: (자유롭게) 돌아다니다, 배회하다</p>
+<p>실전 예문: Our sales team is encouraged to <strong>roam</strong> freely and explore new client opportunities.</p>
+<br>
+<div class="numbered"><strong>5.</strong> <strong>courage</strong> /ˈkɜːrɪdʒ/ (명사)</div>
+<p>뜻: 용기, 배짱</p>
+<p>실전 예문: It takes <strong>courage</strong> to present a new idea to the board, especially when it's unconventional.</p>
+<p>💡 <strong>코칭 포인트</strong>: 대화 중 "the courage of our body?"라고 질문하셨는데, 이때는 단순히 "courage"라고 표현하는 것이 자연스럽습니다. "strong heart"도 좋은 표현이지만, "courage"는 더 직접적으로 용기를 의미합니다.</p>
+<p><span class="arrow">→</span> 대화 중 "the courage of our body?"라고 질문하셨는데, 이때는 단순히 "courage"라고 표현하는 것이 자연스럽습니다. "strong heart"도 좋은 표현이지만, "courage"는 더 직접적으로 용기를 의미합니다.</p>
+<br>
+<p><strong>5. 📝 실전 복습 챌린지 (Practice)</strong></p>
+<p>오늘 배운 표현과 문법을 활용하여 다음 문장들을 영작해 보세요.</p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>상황</strong>: 이 프로젝트에 몰두하는 것이 저에게는 정말 보람 있는 일입니다.</div>
+<p><strong>영작</strong>: (힌트: 'immerse'와 'fulfilling' 활용)</p>
+<p><details></p>
+<p><summary>모범 답안</summary></p>
+<p>"Immersing myself in this project is truly fulfilling for me."</p>
+<p></details></p>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>상황</strong>: 그 문제는 우리가 예상했던 것보다 다루기 훨씬 더 쉬웠습니다.</div>
+<p><strong>영작</strong>: (힌트: 'easier'와 'deal with' 활용)</p>
+<p><details></p>
+<p><summary>모범 답안</summary></p>
+<p>"The issue was much easier to deal with than we expected."</p>
+<p></details></p>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>상황</strong>: 시장 상황이 변하면, 우리의 투자 전략도 그에 맞춰 조정되어야 합니다.</div>
+<p><strong>영작</strong>: (힌트: 'shift in', 'necessitates', 'corresponding change' 활용)</p>
+<p><details></p>
+<p><summary>모범 답안</summary></p>
+<p>"If market conditions shift, it necessitates a corresponding change in our investment strategy."</p>
+<p></details></p>
+<br>
+<p><strong>6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)</strong></p>
+<br>
+<p>✨ <strong>Good Job</strong>:</p>
+<p>"So I woke up to find it's a little humid and hot, but it's okay. It's a fresh Monday."</p>
+<p>Joey, 이 문장은 아침에 일어났을 때의 상황과 기분을 아주 자연스럽고 유창하게 묘사했어요. "woke up to find"라는 표현도 좋고, "fresh Monday"로 긍정적인 느낌을 주는 것도 완벽했습니다!</p>
+<br>
+<p>🚀 <strong>내일의 한 문장</strong>:</p>
+<p>다음 수업 시작 시, 오늘 배운 표현을 활용하여 튜터에게 이렇게 질문해보세요.</p>
+<p>"Do you find your work fulfilling, or do you have other hobbies that make you feel that way?"</p>
+<p>(당신은 당신의 일이 보람 있다고 느끼나요, 아니면 그런 느낌을 주는 다른 취미가 있나요?)</p>
+<br>
+<br>
+<p><strong>[성과 지표]</strong></p>
+<br>
+<p><strong>유창성 점수</strong>: 7.5/10</p>
+<br>
+<p><strong>근거</strong>: Joey는 Ashley 선생님과 다양한 주제에 대해 막힘없이 대화하며 자신의 생각을 잘 표현했습니다. 특히 새로운 단어를 배우려는 의지가 강했고, 선생님의 설명을 듣고 바로 따라 하려는 적극적인 태도가 인상 깊었습니다. 하지만 일부 문장에서 어색한 어순, 불필요한 수동태 사용, 그리고 비교급 형용사/부사 사용의 오류가 발견되어 유창성을 더욱 자연스럽게 만들 기회가 있습니다. 전반적으로 의미 전달에는 전혀 문제가 없으며, 꾸준한 연습으로 더욱 매끄러운 표현을 구사할 수 있을 것입니다.</p>
+<br>
+<p><strong>다음 수업 '원포인트 액션 플랜'</strong>:</p>
+<p>다음 수업에서는 <strong>비교급 형용사/부사 사용</strong>에 좀 더 집중하여 연습해 보세요. "more easy" 대신 "easier"처럼 정확한 비교급 형태를 사용하는 습관을 들이면 문법적 정확성이 크게 향상될 것입니다. 수업 중 비교하는 상황이 나올 때마다 의식적으로 정확한 비교급을 사용해 보려고 노력해 보세요!</p></div>
+        </div>
+        <div id="tab-transcript" class="tab-content">
+            <div class="transcript"><span class="student">[Student]</span> Hello, teacher. Nice to meet you.
+<span class="tutor">[Tutor]</span> Hi, nice to meet you. My name is Ashley.
+<span class="student">[Student]</span> Ashley, yeah, nice to meet you. My name is Joey.
+<span class="tutor">[Tutor]</span> Joey, nice to meet you, too.
+<span class="tutor">[Tutor]</span> So how is your morning going so far?
+<span class="student">[Student]</span> This morning, it&#x27;s a little humid and hot because it is the start of summer in Korea.
+<span class="student">[Student]</span> So I woke up to find it&#x27;s a little humid and hot, but it&#x27;s okay.
+<span class="student">[Student]</span> It&#x27;s a fresh Monday.
+<span class="student">[Student]</span> So, yeah.
+<span class="student">[Student]</span> How about you?
+<span class="student">[Student]</span> How about your day?
+<span class="student">[Student]</span> Maybe it&#x27;s Sunday night, right?
+<span class="tutor">[Tutor]</span> Yeah, Sunday evening, about 5 p.m. where I live.
+<span class="student">[Student]</span> 5 p.m.
+<span class="student">[Student]</span> I see.
+<span class="student">[Student]</span> That is so nice.
+<span class="tutor">[Tutor]</span> Yeah.
+<span class="tutor">[Tutor]</span> Yeah, I live in Mexico and it&#x27;s like rainy season here.
+<span class="tutor">[Tutor]</span> So it&#x27;s actually quite cool today.
+<span class="student">[Student]</span> I see.
+<span class="student">[Student]</span> So the temperature is... You stay in Mexico?
+<span class="student">[Student]</span> Wow.
+<span class="tutor">[Tutor]</span> Yeah, but I&#x27;m from Canada originally.
+<span class="student">[Student]</span> I see.
+<span class="student">[Student]</span> So many of my teachers are from Canada.
+<span class="student">[Student]</span> But they travel.
+<span class="student">[Student]</span> Yeah, to some countries.
+<span class="student">[Student]</span> Wow.
+<span class="student">[Student]</span> I like their lifestyle.
+<span class="student">[Student]</span> That is so... Yeah.
+<span class="student">[Student]</span> Fantastic.
+<span class="tutor">[Tutor]</span> Yeah, it&#x27;s a little bit uncommon for sure, but very common for online teachers, I think.
+<span class="tutor">[Tutor]</span> It&#x27;s kind of a whole thing.
+<span class="student">[Student]</span> Oh, yeah.
+<span class="student">[Student]</span> No problem.
+<span class="student">[Student]</span> Yeah.
+<span class="student">[Student]</span> Mm-mm-mm.
+<span class="student">[Student]</span> Yeah.
+<span class="tutor">[Tutor]</span> Do you like to travel?
+<span class="student">[Student]</span> Oh, yes, of course.
+<span class="student">[Student]</span> That is enjoyable for my life.
+<span class="student">[Student]</span> And every year I want to make time to travel abroad because yeah, I love to travel.
+<span class="student">[Student]</span> And it is such a nice time with my family, so yeah, it&#x27;s good.
+<span class="student">[Student]</span> What is your life like?
+<span class="student">[Student]</span> Are you traveling?
+<span class="student">[Student]</span> Or you moved to Mexico?
+<span class="student">[Student]</span> Forever?
+<span class="student">[Student]</span> Kind of?
+<span class="tutor">[Tutor]</span> Yeah.
+<span class="tutor">[Tutor]</span> Yeah, I do live here.
+<span class="tutor">[Tutor]</span> I&#x27;ve been here for about six years or so.
+<span class="tutor">[Tutor]</span> Just about.
+<span class="student">[Student]</span> 16 years?
+<span class="tutor">[Tutor]</span> Quite a while.
+<span class="student">[Student]</span> Just 6 years.
+<span class="student">[Student]</span> 6 years.
+<span class="student">[Student]</span> How about the language?
+<span class="student">[Student]</span> Maybe Mexico doesn&#x27;t use English.
+<span class="student">[Student]</span> They speak Spanish, right?
+<span class="tutor">[Tutor]</span> Yeah, that&#x27;s right.
+<span class="tutor">[Tutor]</span> So I&#x27;ve been learning very kind of slowly.
+<span class="tutor">[Tutor]</span> And I think I can communicate very basic necessities.
+<span class="tutor">[Tutor]</span> But the grammar is very different from English, so it&#x27;s taking me a while to learn.
+<span class="student">[Student]</span> You&#x27;re also a student and teacher.
+<span class="tutor">[Tutor]</span> Yeah, exactly.
+<span class="student">[Student]</span> You understand me because I speak Korean but I need to practice English, so it&#x27;s the same situation.
+<span class="tutor">[Tutor]</span> Exactly.
+<span class="student">[Student]</span> What is the typical thing to learn in Spanish?
+<span class="tutor">[Tutor]</span> So their grammar is interesting because with English, we say maybe past tense, we just add a D, right?
+<span class="student">[Student]</span> Yeah, you&#x27;re right.
+<span class="tutor">[Tutor]</span> Or future tense sometimes stays the same.
+<span class="tutor">[Tutor]</span> But in Spanish, the word can change completely.
+<span class="student">[Student]</span> Completely.
+<span class="student">[Student]</span> I see.
+<span class="student">[Student]</span> Yeah.
+<span class="tutor">[Tutor]</span> Or even if you&#x27;re talking to somebody or if you&#x27;re talking to a group of people, the word changes.
+<span class="student">[Student]</span> Oh, my God.
+<span class="tutor">[Tutor]</span> Yeah.
+<span class="tutor">[Tutor]</span> Like, if you want to say drink, it&#x27;s &quot;beber.&quot;
+<span class="tutor">[Tutor]</span> Or if you want to say, like, we are drinking, it&#x27;s &quot;bebemos.&quot;
+<span class="tutor">[Tutor]</span> So it just changes.
+<span class="student">[Student]</span> So if the subject is changed at the time, the verb also changes, right?
+<span class="tutor">[Tutor]</span> Yeah, exactly.
+<span class="tutor">[Tutor]</span> And words are gendered too.
+<span class="tutor">[Tutor]</span> So sometimes if you&#x27;re talking to females or about females, the word changes to an &#x27;a&#x27; instead of &#x27;o&#x27;.
+<span class="student">[Student]</span> I see.
+<span class="student">[Student]</span> Who is the subject of the verb?
+<span class="tutor">[Tutor]</span> Yeah.
+<span class="student">[Student]</span> Yeah.
+<span class="student">[Student]</span> That&#x27;s interesting. So how do you speak? How do you practice Spanish? At school or at home?
+<span class="tutor">[Tutor]</span> No.
+<span class="tutor">[Tutor]</span> I usually, well, I use Duolingo online.
+<span class="tutor">[Tutor]</span> So it&#x27;s a lot of basics and sentence structure, a little bit of grammar practice.
+<span class="tutor">[Tutor]</span> So I do that as much as possible.
+<span class="tutor">[Tutor]</span> And then I kind of just learn out in the wild.
+<span class="tutor">[Tutor]</span> If I go to the grocery store, I force myself to maybe speak some sentences.
+<span class="tutor">[Tutor]</span> So it&#x27;s kind of just completely being immersed in Spanish.
+<span class="tutor">[Tutor]</span> But I don&#x27;t really take any formal lessons like that.
+<span class="student">[Student]</span> I see. Wow, Joey.
+<span class="tutor">[Tutor]</span> Yeah.
+<span class="student">[Student]</span> Nice. Okay.
+<span class="tutor">[Tutor]</span> Yeah.
+<span class="student">[Student]</span> I&#x27;m just a single... Ah, yes. Go on, teacher.
+<span class="tutor">[Tutor]</span> Oh, sorry. I was just going to say, I see that you usually study a textbook for your classes.
+<span class="student">[Student]</span> Ah, yes, you&#x27;re right. My textbook is Book 2, and maybe this day I practice the Snapshot. So if you start the textbook, Section 10, page 12.
+<span class="tutor">[Tutor]</span> Section 10.
+<span class="student">[Student]</span> Yeah.
+<span class="tutor">[Tutor]</span> Okay, &quot;Not my favorite animal.&quot;
+<span class="student">[Student]</span> Oh my God.
+<span class="tutor">[Tutor]</span> Uh-huh. I see it. I&#x27;ve got it ready to go.
+<span class="student">[Student]</span> All ready to go.
+<span class="tutor">[Tutor]</span> Perfect.
+<span class="tutor">[Tutor]</span> All right. Well, why don&#x27;t we get started with that topic? &quot;Not my favorite animal.&quot; So the first question asks, what animals are people most commonly afraid of in your country?
+<span class="student">[Student]</span> I see. There are four kinds of animals, and people in our country, everyone, doesn&#x27;t like that. They hate that. But our country is under the category of rats, because a long time ago, our country had rats in some bad places.
+<span class="student">[Student]</span> So, yeah, many people, also the older people, are afraid of rats.
+<span class="student">[Student]</span> Yeah, I&#x27;m saying because we don&#x27;t see rats.
+<span class="student">[Student]</span> But a long time ago, our houses were old and a little bad.
+<span class="student">[Student]</span> So sometimes rats would appear in a house or a kitchen.
+<span class="student">[Student]</span> So that is a threat. But nowadays the construction has changed to apartments or some new houses, so we don&#x27;t see rats anymore. But still many people are afraid of rats, and snakes, spiders. Yeah, that is also a threat to people in our country.
+<span class="student">[Student]</span> Sometimes if we go to mountains, we can see snakes and spiders and stray dogs.
+<span class="student">[Student]</span> I think all the unpleasant animals are a bad thing in our country.
+<span class="tutor">[Tutor]</span> Yeah, that&#x27;s understandable.
+<span class="student">[Student]</span> Yeah, today&#x27;s topic is not funny.
+<span class="student">[Student]</span> Anyway, yeah, a little bit negative.
+<span class="tutor">[Tutor]</span> Totally.
+<span class="tutor">[Tutor]</span> Yes.
+<span class="tutor">[Tutor]</span> Well, we could try the &quot;Which do you prefer?&quot; part B.
+<span class="student">[Student]</span> Okay, no problem.
+<span class="tutor">[Tutor]</span> Which would you rather have to deal with in your house and why?
+<span class="tutor">[Tutor]</span> Maybe this is obvious.
+<span class="tutor">[Tutor]</span> A rat or a spider?
+<span class="student">[Student]</span> I see.
+<span class="student">[Student]</span> I heard in some tropical areas, spiders are so big, almost 20 centimeters or 15 centimeters.
+<span class="student">[Student]</span> Oh, my God.
+<span class="student">[Student]</span> And they have fur.
+<span class="student">[Student]</span> But in Korea, the spider is very small because our country has four seasons,
+<span class="student">[Student]</span> and that is not tropical weather.
+<span class="student">[Student]</span> So it is more easy to deal with a spider.
+<span class="student">[Student]</span> Because that is small and not poisonous.
+<span class="student">[Student]</span> Not poisonous, is it right?
+<span class="student">[Student]</span> Not poisonous.
+<span class="student">[Student]</span> Doesn&#x27;t include poison.
+<span class="student">[Student]</span> So, yeah.
+<span class="student">[Student]</span> I think it is more easy to deal with the spider better than a rat.
+<span class="student">[Student]</span> Because a rat is big and fast.
+<span class="student">[Student]</span> And we don&#x27;t know how to deal with rats. So that is a bad situation to meet a rat. And teacher, how can I...
+<span class="student">[Student]</span> Is it poison?
+<span class="student">[Student]</span> Is it right? Poison?
+<span class="tutor">[Tutor]</span> Oh, poisonous.
+<span class="student">[Student]</span> Yeah.
+<span class="student">[Student]</span> Poisonous.
+<span class="tutor">[Tutor]</span> Ah.
+<span class="student">[Student]</span> The spider contains poison.
+<span class="student">[Student]</span> Includes poison.
+<span class="student">[Student]</span> How can I say, teacher?
+<span class="tutor">[Tutor]</span> Some spiders are poisonous.
+<span class="student">[Student]</span> Poisonous.
+<span class="student">[Student]</span> Poisonous.
+<span class="tutor">[Tutor]</span> Some spiders have poison.
+<span class="tutor">[Tutor]</span> Some spiders are poisonous.
+<span class="student">[Student]</span> I see.
+<span class="tutor">[Tutor]</span> Some snakes are poisonous.
+<span class="student">[Student]</span> Okay, good.
+<span class="tutor">[Tutor]</span> Yeah, absolutely.
+<span class="tutor">[Tutor]</span> Are there poisonous spiders in Korea or no?
+<span class="student">[Student]</span> Oh, no, we don&#x27;t have poisonous spiders, only small and not poisonous ones.
+<span class="student">[Student]</span> They are just small arachnids.
+<span class="student">[Student]</span> But they also have big rats, ugly rats.
+<span class="tutor">[Tutor]</span> Yeah, very creepy.
+<span class="student">[Student]</span> Yeah, so creepy, you&#x27;re right.
+<span class="student">[Student]</span> Many people have a spider phobia.
+<span class="tutor">[Tutor]</span> Yeah.
+<span class="tutor">[Tutor]</span> Yeah, actually in Canada we have, well, there&#x27;s one spider that is quite poisonous.
+<span class="student">[Student]</span> Oh my God, yes.
+<span class="tutor">[Tutor]</span> Yeah, in some areas there are very big spiders too.
+<span class="student">[Student]</span> Oh, yes.
+<span class="student">[Student]</span> Some people, they keep spiders as pets.
+<span class="student">[Student]</span> They raise spiders like pets.
+<span class="tutor">[Tutor]</span> Yeah, that&#x27;s true.
+<span class="tutor">[Tutor]</span> Yeah.
+<span class="student">[Student]</span> Creepy.
+<span class="tutor">[Tutor]</span> Yeah.
+<span class="tutor">[Tutor]</span> Not my favorite pet.
+<span class="tutor">[Tutor]</span> Okay, you&#x27;re normal.
+<span class="tutor">[Tutor]</span> Yeah, I&#x27;m not a big snake or lizard or spider fan.
+<span class="tutor">[Tutor]</span> I have a cat.
+<span class="student">[Student]</span> Okay, I heard some news.
+<span class="student">[Student]</span> Some areas, they raise snakes because that is a snake farm. They raise almost
+<span class="student">[Student]</span> 100,000 or 10,000 snakes. But that area had heavy rain and the water was overflowing from the rain.
+<span class="student">[Student]</span> So every snake
+<span class="student">[Student]</span> flooded to other areas.
+<span class="student">[Student]</span> So that is a big problem.
+<span class="student">[Student]</span> I heard about that.
+<span class="student">[Student]</span> Oh, yes.
+<span class="student">[Student]</span> The floodwaters.
+<span class="student">[Student]</span> How can I say it? I forgot that word.
+<span class="tutor">[Tutor]</span> Flood.
+<span class="tutor">[Tutor]</span> It flooded.
+<span class="student">[Student]</span> Flood, right?
+<span class="tutor">[Tutor]</span> Flood, yeah. F-L-O-O-D.
+<span class="student">[Student]</span> Flood.
+<span class="student">[Student]</span> Some area flooded.
+<span class="student">[Student]</span> Was a flood.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="student">[Student]</span> Flooded.
+<span class="student">[Student]</span> Flooded.
+<span class="student">[Student]</span> Was flooded.
+<span class="student">[Student]</span> Some area was flooded.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="tutor">[Tutor]</span> Good.
+<span class="tutor">[Tutor]</span> I think I heard that news, actually.
+<span class="tutor">[Tutor]</span> And all the snakes were just roaming free, right, in the water.
+<span class="student">[Student]</span> Yes.
+<span class="student">[Student]</span> Oh, my God.
+<span class="student">[Student]</span> They spread out of the area, but they didn&#x27;t discover everywhere.
+<span class="student">[Student]</span> I&#x27;m sorry, today&#x27;s subject...
+<span class="tutor">[Tutor]</span> No, I&#x27;m sorry, that&#x27;s not my choice. That&#x27;s, yeah, okay, that&#x27;s okay. Well, we have
+<span class="tutor">[Tutor]</span> Part C is the problem-solving. Okay, so it says, read the situation and then we&#x27;ll answer
+<span class="tutor">[Tutor]</span> the question. So I can read the situation. It says, &quot;You&#x27;re staying in a tropical area
+<span class="tutor">[Tutor]</span> late at night.
+<span class="tutor">[Tutor]</span> You hear
+<span class="tutor">[Tutor]</span> a strange
+<span class="tutor">[Tutor]</span> scratching sound
+<span class="tutor">[Tutor]</span> near your bed.
+<span class="tutor">[Tutor]</span> It happens
+<span class="tutor">[Tutor]</span> again and again,
+<span class="tutor">[Tutor]</span> like something
+<span class="tutor">[Tutor]</span> small is moving
+<span class="tutor">[Tutor]</span> around.&quot;
+<span class="student">[Student]</span> Oh my God.
+<span class="tutor">[Tutor]</span> &quot;You know it&#x27;s
+<span class="tutor">[Tutor]</span> an animal,
+<span class="tutor">[Tutor]</span> but you don&#x27;t
+<span class="tutor">[Tutor]</span> know what kind.&quot;
+<span class="tutor">[Tutor]</span> So this
+<span class="tutor">[Tutor]</span> question says,
+<span class="tutor">[Tutor]</span> &quot;Would you get
+<span class="tutor">[Tutor]</span> up and check
+<span class="tutor">[Tutor]</span> for yourself,
+<span class="tutor">[Tutor]</span> or would you
+<span class="tutor">[Tutor]</span> ignore it
+<span class="tutor">[Tutor]</span> and go to
+<span class="tutor">[Tutor]</span> sleep?
+<span class="tutor">[Tutor]</span> And why?&quot;
+<span class="student">[Student]</span> I think
+<span class="student">[Student]</span> that is a
+<span class="student">[Student]</span> signal of
+<span class="student">[Student]</span> danger.
+<span class="student">[Student]</span> So sometimes, sometimes that is only not important, but sometimes that is a big signal of
+<span class="student">[Student]</span> the dangers of life. So first I get up. I&#x27;m a little afraid here, but I&#x27;m a father and I&#x27;m protecting my family.
+<span class="student">[Student]</span> So first I get up and then I check around.
+<span class="student">[Student]</span> And if that animal is not dangerous, just a dream.
+<span class="student">[Student]</span> At that time, just keep sleeping. But sometimes that is such a big problem, yeah, for
+<span class="student">[Student]</span> safety. At that time, I&#x27;m, if I have, if I need to do, just move the insect or just maybe
+<span class="student">[Student]</span> maybe I call my, yeah, some exterminator.
+<span class="student">[Student]</span> Or, yeah, just, yeah, just to do, just to solve that problem.
+<span class="student">[Student]</span> Yeah.
+<span class="student">[Student]</span> How about you?
+<span class="student">[Student]</span> Would you get up to check yourself or ignore it and go to sleep?
+<span class="student">[Student]</span> Why?
+<span class="tutor">[Tutor]</span> It depends on the situation.
+<span class="tutor">[Tutor]</span> I think I&#x27;ve been in this situation a couple times.
+<span class="student">[Student]</span> Yes, yes, you&#x27;re right.
+<span class="tutor">[Tutor]</span> I was in Thailand, and there are really big, like, lizards.
+<span class="tutor">[Tutor]</span> And I heard something near my bed, but my bed had a mosquito net.
+<span class="student">[Student]</span> Mosquito net.
+<span class="tutor">[Tutor]</span> So bugs and things cannot get in your bed.
+<span class="student">[Student]</span> Uh-uh, uh-uh.
+<span class="tutor">[Tutor]</span> So in that situation,
+<span class="tutor">[Tutor]</span> I ignored it and went back
+<span class="tutor">[Tutor]</span> to sleep.
+<span class="student">[Student]</span> Yes, you&#x27;re right.
+<span class="student">[Student]</span> If you don&#x27;t do anything,
+<span class="student">[Student]</span> that is also
+<span class="student">[Student]</span> a good way.
+<span class="student">[Student]</span> But you have to
+<span class="student">[Student]</span> how can I say,
+<span class="student">[Student]</span> the
+<span class="student">[Student]</span> what is that,
+<span class="student">[Student]</span> the
+<span class="student">[Student]</span> courage
+<span class="student">[Student]</span> of our body?
+<span class="tutor">[Tutor]</span> Heart.
+<span class="student">[Student]</span> You have to have a strong heart.
+<span class="student">[Student]</span> Yes.
+<span class="student">[Student]</span> A strong heart.
+<span class="student">[Student]</span> Yes.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="tutor">[Tutor]</span> Well,
+<span class="tutor">[Tutor]</span> why don&#x27;t we take a look at our
+<span class="tutor">[Tutor]</span> warm-down question?
+<span class="tutor">[Tutor]</span> So the first one asks,
+<span class="tutor">[Tutor]</span> have you ever been scared by an animal?
+<span class="tutor">[Tutor]</span> What happened?
+<span class="student">[Student]</span> I go for a walk
+<span class="student">[Student]</span> after lunch, before lunch,
+<span class="student">[Student]</span> every day with my friends
+<span class="student">[Student]</span> because that is my habit to walk,
+<span class="student">[Student]</span> to walk near the park.
+<span class="student">[Student]</span> So last week, three days ago,
+<span class="student">[Student]</span> I also walked near the park
+<span class="student">[Student]</span> and I found a snake.
+<span class="student">[Student]</span> Yeah, the small snake
+<span class="student">[Student]</span> that crossed my path so fast.
+<span class="student">[Student]</span> So I discovered that.
+<span class="student">[Student]</span> But that&#x27;s so small and cute
+<span class="student">[Student]</span> and not dangerous.
+<span class="student">[Student]</span> Doesn&#x27;t look dangerous.
+<span class="student">[Student]</span> So, yeah.
+<span class="student">[Student]</span> But it&#x27;s okay, yes.
+<span class="student">[Student]</span> And these days sometimes
+<span class="student">[Student]</span> we can find
+<span class="student">[Student]</span> stray dogs.
+<span class="student">[Student]</span> So many people raise
+<span class="student">[Student]</span> dogs, but some dogs
+<span class="student">[Student]</span> escape their home and go to the mountain and have babies and become stray dogs.
+<span class="student">[Student]</span> So yeah, that is also dangerous because they move in groups, and if I only found
+<span class="student">[Student]</span> myself, only one, at that time we have to meet a dangerous situation.
+<span class="student">[Student]</span> Yeah, that is my answer.
+<span class="tutor">[Tutor]</span> Yeah, I didn&#x27;t know they had many stray dogs in Korea, actually.
+<span class="tutor">[Tutor]</span> That&#x27;s interesting.
+<span class="student">[Student]</span> Yes, yes, yes.
+<span class="tutor">[Tutor]</span> All right.
+<span class="tutor">[Tutor]</span> Well, I think we are already just about out of time for our class today.
+<span class="tutor">[Tutor]</span> Yeah.
+<span class="tutor">[Tutor]</span> So I think we&#x27;ll start wrapping up here.
+<span class="tutor">[Tutor]</span> Did you have any questions
+<span class="tutor">[Tutor]</span> for me today?
+<span class="student">[Student]</span> Oh no, I don&#x27;t have questions.
+<span class="student">[Student]</span> And thank you for your class,
+<span class="student">[Student]</span> teacher.
+<span class="tutor">[Tutor]</span> Of course, thank you
+<span class="tutor">[Tutor]</span> for your time. I will send you
+<span class="tutor">[Tutor]</span> a little bit of feedback that I took
+<span class="tutor">[Tutor]</span> throughout our lesson and I hope
+<span class="tutor">[Tutor]</span> you have a great night.
+<span class="student">[Student]</span> Okay, have a nice day. Bye bye, teacher.
+<span class="tutor">[Tutor]</span> Thank you. Bye.</div>
+        </div>
+    </div>
+    <div class="toast" id="toast">✅ 프롬프트가 복사되었습니다!</div>
+    <script>
+        const REVIEW_PROMPT="너는 나의 영어 회화 복습 파트너야. 오늘 내 전화영어 수업 내용을 기반으로 대화하면서 복습을 도와줘.\n\n[오늘 수업 전사 내용]\n[Student] Hello, teacher. Nice to meet you.\n[Tutor] Hi, nice to meet you. My name is Ashley.\n[Student] Ashley, yeah, nice to meet you. My name is Joey.\n[Tutor] Joey, nice to meet you, too.\n[Tutor] So how is your morning going so far?\n[Student] This morning, it's a little humid and hot because it is the start of summer in Korea.\n[Student] So I woke up to find it's a little humid and hot, but it's okay.\n[Student] It's a fresh Monday.\n[Student] So, yeah.\n[Student] How about you?\n[Student] How about your day?\n[Student] Maybe it's Sunday night, right?\n[Tutor] Yeah, Sunday evening, about 5 p.m. where I live.\n[Student] 5 p.m.\n[Student] I see.\n[Student] That is so nice.\n[Tutor] Yeah.\n[Tutor] Yeah, I live in Mexico and it's like rainy season here.\n[Tutor] So it's actually quite cool today.\n[Student] I see.\n[Student] So the temperature is... You stay in Mexico?\n[Student] Wow.\n[Tutor] Yeah, but I'm from Canada originally.\n[Student] I see.\n[Student] So many of my teachers are from Canada.\n[Student] But they travel.\n[Student] Yeah, to some countries.\n[Student] Wow.\n[Student] I like their lifestyle.\n[Student] That is so... Yeah.\n[Student] Fantastic.\n[Tutor] Yeah, it's a little bit uncommon for sure, but very common for online teachers, I think.\n[Tutor] It's kind of a whole thing.\n[Student] Oh, yeah.\n[Student] No problem.\n[Student] Yeah.\n[Student] Mm-mm-mm.\n[Student] Yeah.\n[Tutor] Do you like to travel?\n[Student] Oh, yes, of course.\n[Student] That is enjoyable for my life.\n[Student] And every year I want to make time to travel abroad because yeah, I love to travel.\n[Student] And it is such a nice time with my family, so yeah, it's good.\n[Student] What is your life like?\n[Student] Are you traveling?\n[Student] Or you moved to Mexico?\n[Student] Forever?\n[Student] Kind of?\n[Tutor] Yeah.\n[Tutor] Yeah, I do live here.\n[Tutor] I've been here for about six years or so.\n[Tutor] Just about.\n[Student] 16 years?\n[Tutor] Quite a while.\n[Student] Just 6 years.\n[Student] 6 years.\n[Student] How about the language?\n[Student] Maybe Mexico doesn't use English.\n[Student] They speak Spanish, right?\n[Tutor] Yeah, that's right.\n[Tutor] So I've been learning very kind of slowly.\n[Tutor] And I think I can communicate very basic necessities.\n[Tutor] But the grammar is very different from English, so it's taking me a while to learn.\n[Student] You're also a student and teacher.\n[Tutor] Yeah, exactly.\n[Student] You understand me because I speak Korean but I need to practice English, so it's the same situation.\n[Tutor] Exactly.\n[Student] What is the typical thing to learn in Spanish?\n[Tutor] So their grammar is interesting because with English, we say maybe past tense, we just add a D, right?\n[Student] Yeah, you're right.\n[Tutor] Or future tense sometimes stays the same.\n[Tutor] But in Spanish, the word can change completely.\n[Student] Completely.\n[Student] I see.\n[Student] Yeah.\n[Tutor] Or even if you're talking to somebody or if you're talking to a group of people, the word changes.\n[Student] Oh, my God.\n[Tutor] Yeah.\n[Tutor] Like, if you want to say drink, it's \"beber.\"\n[Tutor] Or if you want to say, like, we are drinking, it's \"bebemos.\"\n[Tutor] So it just changes.\n[Student] So if the subject is changed at the time, the verb also changes, right?\n[Tutor] Yeah, exactly.\n[Tutor] And words are gendered too.\n[Tutor] So sometimes if you're talking to females or about females, the word changes to an 'a' instead of 'o'.\n[Student] I see.\n[Student] Who is the subject of the verb?\n[Tutor] Yeah.\n[Student] Yeah.\n[Student] That's interesting. So how do you speak? How do you practice Spanish? At school or at home?\n[Tutor] No.\n[Tutor] I usually, well, I use Duolingo online.\n[Tutor] So it's a lot of basics and sentence structure, a little bit of grammar practice.\n[Tutor] So I do that as much as possible.\n[Tutor] And then I kind of just learn out in the wild.\n[Tutor] If I go to the grocery store, I force myself to maybe speak some sentences.\n[Tutor] So it's kind of just completely being immersed in Spanish.\n[Tutor] But I don't really take any formal lessons like that.\n[Student] I see. Wow, Joey.\n[Tutor] Yeah.\n[Student] Nice. Okay.\n[Tutor] Yeah.\n[Student] I'm just a single... Ah, yes. Go on, teacher.\n[Tutor] Oh, sorry. I was just going to say, I see that you usually study a textbook for your classes.\n[Student] Ah, yes, you're right. My textbook is Book 2, and maybe this day I practice the Snapshot. So if you start the textbook, Section 10, page 12.\n[Tutor] Section 10.\n[Student] Yeah.\n[Tutor] Okay, \"Not my favorite animal.\"\n[Student] Oh my God.\n[Tutor] Uh-huh. I see it. I've got it ready to go.\n[Student] All ready to go.\n[Tutor] Perfect.\n[Tutor] All right. Well, why don't we get started with that topic? \"Not my favorite animal.\" So the first question asks, what animals are people most commonly afraid of in your country?\n[Student] I see. There are four kinds of animals, and people in our country, everyone, doesn't like that. They hate that. But our country is under the category of rats, because a long time ago, our country had rats in some bad places.\n[Student] So, yeah, many people, also the older people, are afraid of rats.\n[Student] Yeah, I'm saying because we don't see rats.\n[Student] But a long time ago, our houses were old and a little bad.\n[Student] So sometimes rats would appear in a house or a kitchen.\n[Student] So that is a threat. But nowadays the construction has changed to apartments or some new houses, so we don't see rats anymore. But still many people are afraid of rats, and snakes, spiders. Yeah, that is also a threat to people in our country.\n[Student] Sometimes if we go to mountains, we can see snakes and spiders and stray dogs.\n[Student] I think all the unpleasant animals are a bad thing in our country.\n[Tutor] Yeah, that's understandable.\n[Student] Yeah, today's topic is not funny.\n[Student] Anyway, yeah, a little bit negative.\n[Tutor] Totally.\n[Tutor] Yes.\n[Tutor] Well, we could try the \"Which do you prefer?\" part B.\n[Student] Okay, no problem.\n[Tutor] Which would you rather have to deal with in your house and why?\n[Tutor] Maybe this is obvious.\n[Tutor] A rat or a spider?\n[Student] I see.\n[Student] I heard in some tropical areas, spiders are so big, almost 20 centimeters or 15 centimeters.\n[Student] Oh, my God.\n[Student] And they have fur.\n[Student] But in Korea, the spider is very small because our country has four seasons,\n[Student] and that is not tropical weather.\n[Student] So it is more easy to deal with a spider.\n[Student] Because that is small and not poisonous.\n[Student] Not poisonous, is it right?\n[Student] Not poisonous.\n[Student] Doesn't include poison.\n[Student] So, yeah.\n[Student] I think it is more easy to deal with the spider better than a rat.\n[Student] Because a rat is big and fast.\n[Student] And we don't know how to deal with rats. So that is a bad situation to meet a rat. And teacher, how can I...\n[Student] Is it poison?\n[Student] Is it right? Poison?\n[Tutor] Oh, poisonous.\n[Student] Yeah.\n[Student] Poisonous.\n[Tutor] Ah.\n[Student] The spider contains poison.\n[Student] Includes poison.\n[Student] How can I say, teacher?\n[Tutor] Some spiders are poisonous.\n[Student] Poisonous.\n[Student] Poisonous.\n[Tutor] Some spiders have poison.\n[Tutor] Some spiders are poisonous.\n[Student] I see.\n[Tutor] Some snakes are poisonous.\n[Student] Okay, good.\n[Tutor] Yeah, absolutely.\n[Tutor] Are there poisonous spiders in Korea or no?\n[Student] Oh, no, we don't have poisonous spiders, only small and not poisonous ones.\n[Student] They are just small arachnids.\n[Student] But they also have big rats, ugly rats.\n[Tutor] Yeah, very creepy.\n[Student] Yeah, so creepy, you're right.\n[Student] Many people have a spider phobia.\n[Tutor] Yeah.\n[Tutor] Yeah, actually in Canada we have, well, there's one spider that is quite poisonous.\n[Student] Oh my God, yes.\n[Tutor] Yeah, in some areas there are very big spiders too.\n[Student] Oh, yes.\n[Student] Some people, they keep spiders as pets.\n[Student] They raise spiders like pets.\n[Tutor] Yeah, that's true.\n[Tutor] Yeah.\n[Student] Creepy.\n[Tutor] Yeah.\n[Tutor] Not my favorite pet.\n[Tutor] Okay, you're normal.\n[Tutor] Yeah, I'm not a big snake or lizard or spider fan.\n[Tutor] I have a cat.\n[Student] Okay, I heard some news.\n[Student] Some areas, they raise snakes because that is a snake farm. They raise almost\n[Student] 100,000 or 10,000 snakes. But that area had heavy rain and the water was overflowing from the rain.\n[Student] So every snake\n[Student] flooded to other areas.\n[Student] So that is a big problem.\n[Student] I heard about that.\n[Student] Oh, yes.\n[Student] The floodwaters.\n[Student] How can I say it? I forgot that word.\n[Tutor] Flood.\n[Tutor] It flooded.\n[Student] Flood, right?\n[Tutor] Flood, yeah. F-L-O-O-D.\n[Student] Flood.\n[Student] Some area flooded.\n[Student] Was a flood.\n[Tutor] Okay.\n[Student] Flooded.\n[Student] Flooded.\n[Student] Was flooded.\n[Student] Some area was flooded.\n[Tutor] Okay.\n[Tutor] Good.\n[Tutor] I think I heard that news, actually.\n[Tutor] And all the snakes were just roaming free, right, in the water.\n[Student] Yes.\n[Student] Oh, my God.\n[Student] They spread out of the area, but they didn't discover everywhere.\n[Student] I'm sorry, today's subject...\n[Tutor] No, I'm sorry, that's not my choice. That's, yeah, okay, that's okay. Well, we have\n[Tutor] Part C is the problem-solving. Okay, so it says, read the situation and then we'll answer\n[Tutor] the question. So I can read the situation. It says, \"You're staying in a tropical area\n[Tutor] late at night.\n[Tutor] You hear\n[Tutor] a strange\n[Tutor] scratching sound\n[Tutor] near your bed.\n[Tutor] It happens\n[Tutor] again and again,\n[Tutor] like something\n[Tutor] small is moving\n[Tutor] around.\"\n[Student] Oh my God.\n[Tutor] \"You know it's\n[Tutor] an animal,\n[Tutor] but you don't\n[Tutor] know what kind.\"\n[Tutor] So this\n[Tutor] question says,\n[Tutor] \"Would you get\n[Tutor] up and check\n[Tutor] for yourself,\n[Tutor] or would you\n[Tutor] ignore it\n[Tutor] and go to\n[Tutor] sleep?\n[Tutor] And why?\"\n[Student] I think\n[Student] that is a\n[Student] signal of\n[Student] danger.\n[Student] So sometimes, sometimes that is only not important, but sometimes that is a big signal of\n[Student] the dangers of life. So first I get up. I'm a little afraid here, but I'm a father and I'm protecting my family.\n[Student] So first I get up and then I check around.\n[Student] And if that animal is not dangerous, just a dream.\n[Student] At that time, just keep sleeping. But sometimes that is such a big problem, yeah, for\n[Student] safety. At that time, I'm, if I have, if I need to do, just move the insect or just maybe\n[Student] maybe I call my, yeah, some exterminator.\n[Student] Or, yeah, just, yeah, just to do, just to solve that problem.\n[Student] Yeah.\n[Student] How about you?\n[Student] Would you get up to check yourself or ignore it and go to sleep?\n[Student] Why?\n[Tutor] It depends on the situation.\n[Tutor] I think I've been in this situation a couple times.\n[Student] Yes, yes, you're right.\n[Tutor] I was in Thailand, and there are really big, like, lizards.\n[Tutor] And I heard something near my bed, but my bed had a mosquito net.\n[Student] Mosquito net.\n[Tutor] So bugs and things cannot get in your bed.\n[Student] Uh-uh, uh-uh.\n[Tutor] So in that situation,\n[Tutor] I ignored it and went back\n[Tutor] to sleep.\n[Student] Yes, you're right.\n[Student] If you don't do anything,\n[Student] that is also\n[Student] a good way.\n[Student] But you have to\n[Student] how can I say,\n[Student] the\n[Student] what is that,\n[Student] the\n[Student] courage\n[Student] of our body?\n[Tutor] Heart.\n[Student] You have to have a strong heart.\n[Student] Yes.\n[Student] A strong heart.\n[Student] Yes.\n[Tutor] Okay.\n[Tutor] Well,\n[Tutor] why don't we take a look at our\n[Tutor] warm-down question?\n[Tutor] So the first one asks,\n[Tutor] have you ever been scared by an animal?\n[Tutor] What happened?\n[Student] I go for a walk\n[Student] after lunch, before lunch,\n[Student] every day with my friends\n[Student] because that is my habit to walk,\n[Student] to walk near the park.\n[Student] So last week, three days ago,\n[Student] I also walked near the park\n[Student] and I found a snake.\n[Student] Yeah, the small snake\n[Student] that crossed my path so fast.\n[Student] So I discovered that.\n[Student] But that's so small and cute\n[Student] and not dangerous.\n[Student] Doesn't look dangerous.\n[Student] So, yeah.\n[Student] But it's okay, yes.\n[Student] And these days sometimes\n[Student] we can find\n[Student] stray dogs.\n[Student] So many people raise\n[Student] dogs, but some dogs\n[Student] escape their home and go to the mountain and have babies and become stray dogs.\n[Student] So yeah, that is also dangerous because they move in groups, and if I only found\n[Student] myself, only one, at that time we have to meet a dangerous situation.\n[Student] Yeah, that is my answer.\n[Tutor] Yeah, I didn't know they had many stray dogs in Korea, actually.\n[Tutor] That's interesting.\n[Student] Yes, yes, yes.\n[Tutor] All right.\n[Tutor] Well, I think we are already just about out of time for our class today.\n[Tutor] Yeah.\n[Tutor] So I think we'll start wrapping up here.\n[Tutor] Did you have any questions\n[Tutor] for me today?\n[Student] Oh no, I don't have questions.\n[Student] And thank you for your class,\n[Student] teacher.\n[Tutor] Of course, thank you\n[Tutor] for your time. I will send you\n[Tutor] a little bit of feedback that I took\n[Tutor] throughout our lesson and I hope\n[Tutor] you have a great night.\n[Student] Okay, have a nice day. Bye bye, teacher.\n[Tutor] Thank you. Bye.\n\n[AI 피드백]\n안녕하세요, Joey! 활기찬 월요일 아침, Ashley 선생님과의 대화 잘 마무리하셨네요. 한국의 여름 이야기부터 멕시코의 생활, 그리고 무서운 동물들에 대한 이야기까지, 다양한 주제로 즐겁게 대화하시는 모습이 인상 깊었습니다. 특히 선생님의 경험을 듣고 자신의 상황과 비교하며 공감하는 모습이 정말 좋았어요. 오늘 배운 내용들을 바탕으로 더욱 유창하고 정확하게 표현할 수 있도록 따뜻한 피드백을 드릴게요!\n\n---\n\n**0. 📌 Topic**\nTopic: Discussing fears of animals and cultural differences in dealing with them.\n\n**1. 📊 오늘의 대화 요약 (Summary)**\nJoey는 Ashley 선생님과 첫 만남에서 한국의 날씨와 선생님의 멕시코 생활에 대해 이야기하며 서로의 일상을 공유했습니다. 이어서 교재의 '가장 싫어하는 동물' 주제로 넘어가, 한국인들이 쥐, 뱀, 거미 등을 무서워하는 이유와 열대 지역의 큰 거미, 홍수로 인한 뱀 탈출 등 다양한 경험과 생각을 나누었습니다.\n\n**2. 💬 유창성 업그레이드 (Fluency & Natural Flow)**\nJoey가 말한 문장 중 의미는 잘 전달되지만, 원어민들이 더 자연스럽게 쓰는 표현으로 다듬어 볼 세 가지를 골라봤어요.\n\n1.  ❌ **As Said**: \"That is enjoyable for my life.\"\n    ✅ **Natural**: \"It's enjoyable for me.\"\n    💎 **Professional**: \"I find it very fulfilling.\"\n    💡 **코칭 포인트**: Using \"enjoyable for my life\" is understandable, but \"enjoyable for me\" is more direct and natural. \"Fulfilling\" is a great word for something that brings deep satisfaction.\n    → \"enjoyable for my life\"는 의미 전달은 되지만, \"enjoyable for me\"가 훨씬 직접적이고 자연스러운 표현입니다. 좀 더 격식 있는 자리에서는 \"fulfilling\"을 사용하여 깊은 만족감을 표현할 수 있습니다.\n\n2.  ❌ **As Said**: \"So if the subject is changed at the time, the verb also changes, right?\"\n    ✅ **Natural**: \"So if the subject changes, the verb also changes, right?\"\n    💎 **Professional**: \"Consequently, a shift in the subject necessitates a corresponding change in the verb conjugation, correct?\"\n    💡 **코칭 포인트**: The passive voice \"is changed\" is often unnecessary when the subject performs the action. \"At the time\" is also a bit redundant here.\n    → 주어가 직접 행동하는 경우, 수동태 \"is changed\"는 불필요할 때가 많습니다. 또한, \"at the time\"도 이 문맥에서는 다소 반복적인 표현입니다.\n\n3.  ❌ **As Said**: \"people in our country, everyone, doesn't like that. They hate that.\"\n    ✅ **Natural**: \"In our country, everyone dislikes them.\" 또는 \"People in our country generally dislike them.\"\n    💎 **Professional**: \"Generally speaking, these animals are widely disliked by people in our country.\"\n    💡 **코칭 포인트**: \"Everyone doesn't like that\"은 문법적으로 틀리지는 않지만, \"No one likes that\" 또는 \"Everyone dislikes that\"이 더 자연스럽습니다. \"that\" 대신 복수형 \"them\"을 사용하는 것이 더 적절합니다.\n    → \"everyone doesn't like that\"은 의미 전달은 되지만, \"No one likes them\" 또는 \"Everyone dislikes them\"이 더 자연스러운 표현입니다. 언급된 동물들이 여러 종류이므로 \"that\" 대신 복수형 \"them\"을 사용하는 것이 더 적절합니다.\n\n**3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)**\n이번 대화에서 Joey가 반복적으로 사용한 문법 패턴 중 **비교급 형용사/부사** 사용에 대한 부분을 짚어볼게요.\n\nCategory: Comparative Adjectives and Adverbs\n\n| ❌ 원문 (As Said)                                         | ✅ 교정 예시 (Corrected)                                         |\n| :------------------------------------------------------- | :--------------------------------------------------------------- |\n| \"So it is **more easy** to deal with a spider.\"          | \"So it is **easier** to deal with a spider.\"                     |\n| \"I think it is **more easy** to deal with the spider better than a rat.\" | \"I think it is **easier** to deal with a spider than a rat.\"     |\n\n📌 **핵심 규칙**: 대부분의 한두 음절 형용사/부사는 비교급을 만들 때 단어 뒤에 '-er'을 붙이고, 세 음절 이상이거나 일부 예외적인 단어는 'more'을 앞에 붙입니다. 'easy'는 '-y'로 끝나므로 'easier'가 됩니다.\n\n🔁 **따라 읽기**:\n🗣️ \"It is easier to deal with a spider.\"\n🗣️ \"I think it is easier to deal with a rat.\"\n\n**4. 📗 어휘 확장 (Vocabulary Vault)**\n오늘 대화에서 유용하게 쓰였거나, Joey의 비즈니스 환경에서 활용하기 좋은 단어 5가지를 골라봤습니다.\n\n1.  **humid** /hjuːmɪd/ (형용사)\n    뜻: 습한, 축축한\n    실전 예문: The **humid** weather makes it difficult to focus during long meetings.\n\n2.  **immerse** /ɪˈmɜːrs/ (동사)\n    뜻: 몰두하게 하다, 푹 담그다\n    실전 예문: To truly understand a new market, you need to **immerse** yourself in its culture.\n\n3.  **exterminator** /ɪkˈstɜːrmɪneɪtər/ (명사)\n    뜻: 해충 박멸 전문가\n    실전 예문: We had to call an **exterminator** to deal with the pest problem in the warehouse.\n\n4.  **roam** /roʊm/ (동사)\n    뜻: (자유롭게) 돌아다니다, 배회하다\n    실전 예문: Our sales team is encouraged to **roam** freely and explore new client opportunities.\n\n5.  **courage** /ˈkɜːrɪdʒ/ (명사)\n    뜻: 용기, 배짱\n    실전 예문: It takes **courage** to present a new idea to the board, especially when it's unconventional.\n    💡 **코칭 포인트**: 대화 중 \"the courage of our body?\"라고 질문하셨는데, 이때는 단순히 \"courage\"라고 표현하는 것이 자연스럽습니다. \"strong heart\"도 좋은 표현이지만, \"courage\"는 더 직접적으로 용기를 의미합니다.\n    → 대화 중 \"the courage of our body?\"라고 질문하셨는데, 이때는 단순히 \"courage\"라고 표현하는 것이 자연스럽습니다. \"strong heart\"도 좋은 표현이지만, \"courage\"는 더 직접적으로 용기를 의미합니다.\n\n**5. 📝 실전 복습 챌린지 (Practice)**\n오늘 배운 표현과 문법을 활용하여 다음 문장들을 영작해 보세요.\n\n1.  **상황**: 이 프로젝트에 몰두하는 것이 저에게는 정말 보람 있는 일입니다.\n    **영작**: (힌트: 'immerse'와 'fulfilling' 활용)\n    <details>\n    <summary>모범 답안</summary>\n    \"Immersing myself in this project is truly fulfilling for me.\"\n    </details>\n\n2.  **상황**: 그 문제는 우리가 예상했던 것보다 다루기 훨씬 더 쉬웠습니다.\n    **영작**: (힌트: 'easier'와 'deal with' 활용)\n    <details>\n    <summary>모범 답안</summary>\n    \"The issue was much easier to deal with than we expected.\"\n    </details>\n\n3.  **상황**: 시장 상황이 변하면, 우리의 투자 전략도 그에 맞춰 조정되어야 합니다.\n    **영작**: (힌트: 'shift in', 'necessitates', 'corresponding change' 활용)\n    <details>\n    <summary>모범 답안</summary>\n    \"If market conditions shift, it necessitates a corresponding change in our investment strategy.\"\n    </details>\n\n**6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)**\n\n✨ **Good Job**:\n\"So I woke up to find it's a little humid and hot, but it's okay. It's a fresh Monday.\"\nJoey, 이 문장은 아침에 일어났을 때의 상황과 기분을 아주 자연스럽고 유창하게 묘사했어요. \"woke up to find\"라는 표현도 좋고, \"fresh Monday\"로 긍정적인 느낌을 주는 것도 완벽했습니다!\n\n🚀 **내일의 한 문장**:\n다음 수업 시작 시, 오늘 배운 표현을 활용하여 튜터에게 이렇게 질문해보세요.\n\"Do you find your work fulfilling, or do you have other hobbies that make you feel that way?\"\n(당신은 당신의 일이 보람 있다고 느끼나요, 아니면 그런 느낌을 주는 다른 취미가 있나요?)\n\n---\n\n**[성과 지표]**\n\n**유창성 점수**: 7.5/10\n\n**근거**: Joey는 Ashley 선생님과 다양한 주제에 대해 막힘없이 대화하며 자신의 생각을 잘 표현했습니다. 특히 새로운 단어를 배우려는 의지가 강했고, 선생님의 설명을 듣고 바로 따라 하려는 적극적인 태도가 인상 깊었습니다. 하지만 일부 문장에서 어색한 어순, 불필요한 수동태 사용, 그리고 비교급 형용사/부사 사용의 오류가 발견되어 유창성을 더욱 자연스럽게 만들 기회가 있습니다. 전반적으로 의미 전달에는 전혀 문제가 없으며, 꾸준한 연습으로 더욱 매끄러운 표현을 구사할 수 있을 것입니다.\n\n**다음 수업 '원포인트 액션 플랜'**:\n다음 수업에서는 **비교급 형용사/부사 사용**에 좀 더 집중하여 연습해 보세요. \"more easy\" 대신 \"easier\"처럼 정확한 비교급 형태를 사용하는 습관을 들이면 문법적 정확성이 크게 향상될 것입니다. 수업 중 비교하는 상황이 나올 때마다 의식적으로 정확한 비교급을 사용해 보려고 노력해 보세요!\n\n위 내용을 바탕으로:\n1. 먼저 오늘 수업에서 내가 틀렸거나 어색했던 표현을 하나 골라서, 관련된 상황을 영어로 질문해줘.\n2. 내가 영어로 대답하면, 자연스러운지 확인하고 더 나은 표현이 있으면 알려줘.\n3. 특히 \"반복 실수 패턴\"에서 지적된 부분을 집중적으로 연습시켜줘.\n4. 이런 식으로 오늘 배운 표현들을 하나씩 복습하자.\n5. 한국어 설명은 필요할 때만 간단히, 대화는 최대한 영어로 진행해줘.\n\n그럼 시작하자!";
+        function startReview(){navigator.clipboard.writeText(REVIEW_PROMPT).then(()=>{showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)}).catch(()=>{const t=document.createElement('textarea');t.value=REVIEW_PROMPT;document.body.appendChild(t);t.select();document.execCommand('copy');document.body.removeChild(t);showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)})}
+        function showToast(){const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500)}
+        function switchTab(n){document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',n==='feedback'?i===0:i===1));document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));document.getElementById('tab-'+n).classList.add('active')}
+    </script>
+</body>
+</html>

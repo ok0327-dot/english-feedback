@@ -1,0 +1,53 @@
+{
+ "date": "2026-07-13",
+ "iso": [
+  2026,
+  29
+ ],
+ "topic": "Discussing fears of animals and cultural differences in dealing with them.",
+ "grammar": "Comparative Adjectives and Adverbs",
+ "grammar_norm": "Comparative Adjectives And Adverbs",
+ "score": 7.5,
+ "pairs": [
+  {
+   "said": "That is enjoyable for my life.",
+   "natural": "It's enjoyable for me."
+  },
+  {
+   "said": "So if the subject is changed at the time, the verb also changes, right?",
+   "natural": "So if the subject changes, the verb also changes, right?"
+  },
+  {
+   "said": "people in our country, everyone, doesn't like that. They hate that.",
+   "natural": "In our country, everyone dislikes them."
+  }
+ ],
+ "vocab": [
+  {
+   "word": "humid",
+   "pos": "형용사",
+   "meaning": "습한, 축축한"
+  },
+  {
+   "word": "immerse",
+   "pos": "동사",
+   "meaning": "몰두하게 하다, 푹 담그다"
+  },
+  {
+   "word": "exterminator",
+   "pos": "명사",
+   "meaning": "해충 박멸 전문가"
+  },
+  {
+   "word": "roam",
+   "pos": "동사",
+   "meaning": "(자유롭게) 돌아다니다, 배회하다"
+  },
+  {
+   "word": "courage",
+   "pos": "명사",
+   "meaning": "용기, 배짱"
+  }
+ ],
+ "_html_md5": "6af1c854cdf62005902d8c2ff786e20b"
+}
