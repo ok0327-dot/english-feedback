@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#0f0f13"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="당근영어"><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="icon" type="image/png" sizes="192x192" href="icon-192.png"><script src="install-banner.js" defer></script><script src="sw-reg.js" defer></script>
+    <title>전화영어 복습 - 2026년 07월 14일</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Noto Sans KR',sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.75;min-height:100vh}
+        .header{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);border-bottom:1px solid rgba(255,255,255,.06);padding:48px 24px 40px;text-align:center}
+        .header-date{font-size:13px;color:#94a3b8;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+        .header h1{font-size:28px;font-weight:700;color:#f1f5f9;margin-bottom:16px}
+        .header-meta{display:flex;justify-content:center;gap:24px;font-size:14px;color:#64748b}
+        .header-meta span{display:flex;align-items:center;gap:6px}
+        .cta-section{text-align:center;padding:40px 24px}
+        .cta-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:linear-gradient(135deg,#38bdf8,#818cf8);color:#fff;font-size:16px;font-weight:600;font-family:'Noto Sans KR',sans-serif;border:none;border-radius:50px;cursor:pointer;transition:all .3s;text-decoration:none;box-shadow:0 4px 24px rgba(56,189,248,.25)}
+        .cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(56,189,248,.35)}
+        .cta-btn svg{width:20px;height:20px}
+        .cta-sub{margin-top:12px;font-size:13px;color:#64748b}
+        .toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#38bdf8;padding:14px 28px;border-radius:12px;font-size:14px;font-weight:500;border:1px solid rgba(56,189,248,.2);box-shadow:0 8px 32px rgba(0,0,0,.4);opacity:0;transition:all .4s cubic-bezier(.16,1,.3,1);z-index:1000}
+        .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+        .container{max-width:720px;margin:0 auto;padding:0 24px 80px}
+        .tabs{display:flex;gap:4px;background:#1a1a24;padding:4px;border-radius:12px;margin-bottom:32px}
+        .tab{flex:1;padding:12px;text-align:center;font-size:14px;font-weight:500;color:#64748b;background:0 0;border:none;border-radius:8px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all .2s}
+        .tab.active{background:#262636;color:#f1f5f9}
+        .tab-content{display:none}.tab-content.active{display:block}
+        .feedback h2{font-size:18px;font-weight:700;color:#f1f5f9;margin:36px 0 16px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.06)}
+        .feedback h2:first-child{margin-top:0}
+        .feedback p{margin:8px 0;color:#cbd5e1}
+        .feedback .item{padding:6px 0 6px 16px;border-left:2px solid #334155;margin:6px 0;color:#cbd5e1}
+        .feedback .numbered{padding:8px 0 8px 16px;color:#cbd5e1}
+        .feedback .numbered strong{color:#38bdf8}
+        .feedback strong{color:#f1f5f9}
+        .feedback code{background:#1e293b;padding:2px 8px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#38bdf8}
+        .feedback table{width:100%;border-collapse:collapse;margin:12px 0}
+        .feedback th,.feedback td{padding:10px 14px;text-align:left;border-bottom:1px solid #262636}
+        .feedback th{color:#94a3b8;font-weight:500;font-size:13px}
+        .feedback td{color:#cbd5e1}
+        .arrow{color:#38bdf8;font-weight:700}
+        .transcript{background:#1a1a24;border-radius:12px;padding:28px;font-size:14px;line-height:2;color:#94a3b8;white-space:pre-wrap;word-break:break-word;font-family:'JetBrains Mono','Noto Sans KR',monospace}
+        .transcript .tutor{color:#38bdf8}
+        .transcript .student{color:#a78bfa}
+        @media(max-width:640px){.header{padding:32px 16px}.header h1{font-size:22px}.cta-btn{padding:14px 28px;font-size:15px}.container{padding:0 16px 60px}}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-date">2026년 07월 14일</div>
+        <h1>📚 전화영어 복습</h1>
+        <div class="header-meta">
+            <span>⏱ 19분 57초</span>
+            <span>🎙 전화영어_025180304_20260714080026.m4a</span>
+        </div>
+    </div>
+    <div class="cta-section">
+        <button class="cta-btn" onclick="startReview()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Gemini에서 복습 대화 시작하기
+        </button>
+        <div class="cta-sub">클릭하면 프롬프트가 복사되고 Gemini가 열립니다</div>
+    </div>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('feedback')">📋 AI 피드백</button>
+            <button class="tab" onclick="switchTab('transcript')">🎙 수업 전사</button>
+        </div>
+        <div id="tab-feedback" class="tab-content active">
+            <div class="feedback"><p>안녕하세요, Joey! 오늘 수업도 활기차게 잘 마무리하셨네요. 반려동물에 대한 다양한 이야기를 나누며 Joey의 생각과 경험을 공유해 주셔서 정말 즐거웠습니다. 특히 잃어버린 강아지를 발견했을 때 어떻게 대처할지에 대한 Joey의 현실적인 고민과 해결 방안이 인상 깊었어요. 꾸준히 노력하는 Joey의 모습에서 큰 열정이 느껴집니다!</p>
+<br>
+<br>
+<p><strong>0. 📌 Topic</strong></p>
+<p>Topic: Discussing common pets, pet care, and the responsibilities of pet ownership.</p>
+<br>
+<br>
+<p><strong>1. 📊 오늘의 대화 요약 (Summary)</strong></p>
+<p>오늘은 '완벽한 반려동물(The Perfect Pet)'이라는 주제로 대화를 나눴습니다. 한국에서 가장 흔한 반려동물의 종류, 아파트에서 반려동물을 키울 때의 어려움, 그리고 잃어버린 강아지를 발견했을 때의 대처 방안에 대해 이야기했습니다. 또한, 반려동물이 사람에게 주는 행복과 그에 따르는 책임감에 대해서도 깊이 있게 다루었습니다.</p>
+<br>
+<br>
+<p><strong>2. 💬 유창성 업그레이드 (Fluency & Natural Flow)</strong></p>
+<p>Joey가 말한 문장들 중 의미는 통하지만, 원어민이 들었을 때 좀 더 자연스럽게 들릴 수 있는 표현들을 함께 살펴볼게요.</p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>❌ 학습자 원문 (As Said):</strong> "our country is under the category of dogs."</div>
+<div class="item"><strong>✅ 자연스러운 표현 (Natural):</strong> "Dogs are the most common pets in our country."</div>
+<div class="item"><strong>💎 비즈니스 표현 (Professional):</strong> "In our country, dogs are predominantly chosen as pets."</div>
+<div class="item"><strong>💡 코칭 포인트:</strong> Using "under the category of" is grammatically correct but sounds a bit formal and less natural for describing pet popularity. "Most common" or "most popular" is much more direct and idiomatic. <span class="arrow">→</span> "under the category of"는 문법적으로 맞지만, 반려동물의 인기를 설명하기에는 다소 격식 있고 부자연스럽습니다. "Most common"이나 "most popular"가 훨씬 직관적이고 자연스러운 표현입니다.</div>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>❌ 학습자 원문 (As Said):</strong> "I have some worry about..."</div>
+<div class="item"><strong>✅ 자연스러운 표현 (Natural):</strong> "I have some concerns about..." 또는 "I'm a bit worried about..."</div>
+<div class="item"><strong>💎 비즈니스 표현 (Professional):</strong> "I have certain reservations regarding..."</div>
+<div class="item"><strong>💡 코칭 포인트:</strong> "Worry"는 주로 동사나 불가산 명사로 쓰입니다. 특정 문제에 대해 말할 때는 "concerns"(가산 복수)나 "a concern"(가산 단수)이 더 적절하고 자연스럽습니다. <span class="arrow">→</span> "Worry" is typically a verb or an uncountable noun (e.g., "I feel worry"). When referring to specific issues, "concerns" (plural countable) or "a concern" (singular countable) is more appropriate and natural.</div>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>❌ 학습자 원문 (As Said):</strong> "it is hard to have more happier emotion."</div>
+<div class="item"><strong>✅ 자연스러운 표현 (Natural):</strong> "it's hard to feel happier."</div>
+<div class="item"><strong>💎 비즈니스 표현 (Professional):</strong> "it can be challenging to experience greater emotional well-being."</div>
+<div class="item"><strong>💡 코칭 포인트:</strong> "To have emotion"도 이해는 되지만, "to feel emotion" 또는 "to experience emotion"이 더 자연스럽습니다. 또한 "more happier"는 이중 비교급이므로, "happier"만 쓰는 것이 올바릅니다. <span class="arrow">→</span> "To have emotion" is understandable but "to feel emotion" or "to experience emotion" is more natural. Also, "more happier" is a double comparative (happier already means 'more happy'), so just "happier" is correct.</div>
+<br>
+<div class="numbered"><strong>4.</strong> <strong>❌ 학습자 원문 (As Said):</strong> "grow the pet"</div>
+<div class="item"><strong>✅ 자연스러운 표현 (Natural):</strong> "raise a pet" or "keep a pet"</div>
+<div class="item"><strong>💎 비즈니스 표현 (Professional):</strong> "nurture a pet"</div>
+<div class="item"><strong>💡 코칭 포인트:</strong> "Grow"는 주로 식물이나 머리카락 등이 자라거나 성장하는 것을 의미합니다. 반려동물처럼 살아있는 동물을 돌보고 키울 때는 "raise" (양육하다) 또는 "keep" (기르다, 소유하다)라는 동사를 사용하는 것이 자연스럽습니다. <span class="arrow">→</span> While "grow" can be used for plants, for animals, especially pets, we use "raise" (meaning to care for and bring up) or "keep" (meaning to own and look after).</div>
+<br>
+<br>
+<p><strong>3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)</strong></p>
+<p>Category: <strong>First Conditional (If + present simple, will + base verb)</strong></p>
+<br>
+<p>Joey는 미래의 가정을 이야기할 때, 'if' 절 안에 'will'을 사용하는 경향이 있었습니다. 영어의 첫 번째 조건문(First Conditional)에서는 'if' 절에 현재 시제를 사용하고, 주절에 'will'을 사용하여 미래의 가능성을 나타냅니다.</p>
+<br>
+<table>
+<tr><th>❌ 원문 (As Said)</th><th>✅ 교정 예시 (Corrected)</th></tr>
+<tr><td>"If we <strong>will die</strong> and we <strong>will go</strong> to the next world, at that time, our pet will follow me."</td><td>"If we <strong>die</strong> and <strong>go</strong> to the next world, at that time, our pet will follow me."</td></tr>
+<tr><td>"If we <strong>will pass</strong> on the rainbow, on the Rainbow Bridge, the pet is waiting..."</td><td>"If we <strong>pass</strong> on the Rainbow Bridge, the pet is waiting..."</td></tr>
+<tr><td>"So maybe if I take it, take a dog, it is impossible to raise in my home."</td><td>"So maybe if I <strong>take</strong> a dog, it <strong>would be</strong> impossible to raise it in my home."</td></tr>
+</table>
+<br>
+<p>📌 <strong>핵심 규칙:</strong> 미래에 대한 가정을 나타내는 'if' 절에서는 'will' 대신 현재 시제를 사용합니다.</p>
+<br>
+<p>🔁 <strong>따라 읽기:</strong></p>
+<p>🗣️ "If we die and go to the next world, our pet will follow me."</p>
+<p>🗣️ "If we pass on the Rainbow Bridge, the pet is waiting."</p>
+<p>🗣️ "If I take a dog, it would be impossible to raise it in my home."</p>
+<br>
+<br>
+<p><strong>4. 📗 어휘 확장 (Vocabulary Vault)</strong></p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>Humid</strong> /hjuːmɪd/ (adj.)</div>
+<div class="item">뜻: 습한, 습기 있는</div>
+<div class="item">실전 예문: The summer in Korea is often <strong>humid</strong>, which can be challenging for outdoor activities.</div>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>Offspring</strong> /ˈɔːfsprɪŋ/ (n.)</div>
+<div class="item">뜻: 자손, 새끼 (동물의)</div>
+<div class="item">실전 예문: Rabbits are known for producing a large number of <strong>offspring</strong> in a short period.</div>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>Rodent</strong> /ˈroʊdənt/ (n.)</div>
+<div class="item">뜻: 설치류 (쥐, 햄스터, 기니피그 등)</div>
+<div class="item">실전 예문: Hamsters and guinea pigs are popular <strong>rodents</strong> kept as pets due to their small size.</div>
+<br>
+<div class="numbered"><strong>4.</strong> <strong>Commitment</strong> /kəˈmɪtmənt/ (n.)</div>
+<div class="item">뜻: 헌신, 약속, 책임</div>
+<div class="item">실전 예문: Pet ownership requires a significant <strong>commitment</strong> of time and resources.</div>
+<br>
+<div class="numbered"><strong>5.</strong> <strong>Microchip</strong> /ˈmaɪkroʊtʃɪp/ (n.)</div>
+<div class="item">뜻: 마이크로칩 (반려동물 식별용)</div>
+<div class="item">실전 예문: Many veterinarians recommend implanting a <strong>microchip</strong> in pets for identification purposes.</div>
+<br>
+<br>
+<p><strong>5. 📝 실전 복습 챌린지 (Practice)</strong></p>
+<br>
+<p>오늘 배운 표현과 문법을 활용하여 다음 한국어 상황을 영어로 영작해 보세요.</p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>상황:</strong> 한국의 여름 날씨는 매우 습해서 에어컨이 필수적입니다.</div>
+<div class="item"><strong>영작:</strong> (Humid 활용)</div>
+<div class="item"><strong>모범 답안:</strong> The summer weather in Korea is very <strong>humid</strong>, so air conditioning is essential.</div>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>상황:</strong> 만약 우리가 이 프로젝트를 제시간에 끝낸다면, 우리는 다음 단계로 넘어갈 수 있을 것입니다. (조건문 활용)</div>
+<div class="item"><strong>영작:</strong> (If... will... 문법 규칙에 유의하여)</div>
+<div class="item"><strong>모범 답안:</strong> If we <strong>finish</strong> this project on time, we <strong>will be able to</strong> move on to the next phase.</div>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>상황:</strong> 반려동물을 키우는 것은 큰 책임감을 요구하지만, 그만큼 큰 기쁨을 줍니다. (Commitment, responsibility 활용)</div>
+<div class="item"><strong>영작:</strong></div>
+<div class="item"><strong>모범 답안:</strong> Raising a pet requires a significant <strong>commitment</strong> and <strong>responsibility</strong>, but it also brings immense joy.</div>
+<br>
+<br>
+<p><strong>6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)</strong></p>
+<br>
+<p>✨ <strong>Good Job:</strong> "Yes, that's a different culture, right? Wow."</p>
+<p>Joey가 튜터의 페루 기니피그 이야기를 듣고 즉각적으로 문화 차이를 언급하며 감탄사를 덧붙인 이 문장은 매우 자연스럽고 유창했습니다. 대화의 흐름을 잘 이해하고 자신의 생각을 명확하게 표현하는 능력이 돋보였습니다!</p>
+<br>
+<p>🚀 <strong>내일의 한 문장:</strong></p>
+<p>다음 수업 시작 시 튜터에게 오늘 배운 내용을 활용하여 질문을 던져보세요.</p>
+<p>"I've been thinking about the <strong>commitment</strong> of pet ownership. What's the biggest <strong>responsibility</strong> you've experienced with your pets?"</p>
+<p>(반려동물 양육의 책임감에 대해 생각해 봤어요. 튜터님은 반려동물과 함께하며 가장 큰 책임감을 느꼈던 경험이 무엇인가요?)</p>
+<br>
+<br>
+<p><strong>[성과 지표]</strong></p>
+<br>
+<p><strong>유창성 점수(Fluency Score): 7.5/10</strong></p>
+<br>
+<p><strong>근거:</strong> Joey는 오늘 수업에서 다양한 주제에 대해 막힘없이 자신의 의견을 표현했습니다. 특히, 튜터의 질문에 대한 응답 속도가 빠르고, 대화의 흐름을 놓치지 않으려는 노력이 돋보였습니다. "I see", "Understand", "You're right" 등과 같은 추임새를 적절히 사용하여 대화에 적극적으로 참여하는 모습도 좋았습니다. 다만, 가끔 문장 구조가 복잡해지거나 특정 표현을 찾을 때 다소 어색하거나 반복되는 표현을 사용하는 경향이 있었습니다.</p>
+<br>
+<p><strong>다음 수업 '원포인트 액션 플랜':</strong></p>
+<p>다음 수업에서는 <strong>'자연스러운 동사-명사 짝(collocation)'</strong> 활용에 집중해 봅시다. 예를 들어, "have emotion" 대신 "feel emotion", "grow a pet" 대신 "raise a pet"처럼 특정 명사와 어울리는 동사를 자연스럽게 사용하는 연습을 해볼 거예요. 몇 가지 핵심적인 동사-명사 짝을 미리 익혀두면 훨씬 더 유창하고 자연스러운 대화가 가능해질 겁니다.</p></div>
+        </div>
+        <div id="tab-transcript" class="tab-content">
+            <div class="transcript"><span class="student">[Student]</span> Hello, good morning teacher.
+<span class="tutor">[Tutor]</span> Hi. Hi. Hi Joey, how are you?
+<span class="student">[Student]</span> It&#x27;s so hot. Is it hot?
+<span class="tutor">[Tutor]</span> Yeah, it&#x27;s hot and humid. Yeah, it&#x27;s hot in the morning.
+<span class="student">[Student]</span> Is it about to be fine?
+<span class="tutor">[Tutor]</span> Oh yeah, I&#x27;m fine. How are you today?
+<span class="student">[Student]</span> Good, good.
+<span class="tutor">[Tutor]</span> Oh, I&#x27;m doing all right. I&#x27;m doing okay. Did you want to work on Snack Chat again today? Or do you want to do daily topics?
+<span class="student">[Student]</span> Yeah, Snack Chat is better. My plan is to finish the Snack Chat.
+<span class="tutor">[Tutor]</span> Okay. All right. So the records say that you were on the warm-down portion and we have the question number two to complete. Can I get you to read question two and respond from the warm-down?
+<span class="student">[Student]</span> Oh, yes. Maybe we will start the perfect pet, right? The section 11, page 13.
+<span class="tutor">[Tutor]</span> Oh, okay, sure. Okay, yeah, if you want to. Yeah, we can go right to 13. That&#x27;s fine.
+<span class="student">[Student]</span> Okay, very good.
+<span class="tutor">[Tutor]</span> Good, yes. Okay, wonderful. All right. So once again, I&#x27;ll ask you to read the question for part A, and then you can use the visuals to create a response.
+<span class="student">[Student]</span> Ah, yes, I see. What kind of pets are most common?
+<span class="student">[Student]</span> Where do you live?
+<span class="tutor">[Tutor]</span> Okay.
+<span class="student">[Student]</span> I live in South Korea, and our country is under the category of dogs. Yeah, because our people like the dogs.
+<span class="student">[Student]</span> Another meaning.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="student">[Student]</span> And yes, these days, the pet market is developing. So our country&#x27;s people care about pets like cats, fish, birds, but usually cats and dogs are most of the pets. Sure. Yes, yes.
+<span class="tutor">[Tutor]</span> Uh-huh. Okay. Now, it&#x27;s my...
+<span class="student">[Student]</span> Yes, go on, teacher.
+<span class="tutor">[Tutor]</span> I was going to say, it&#x27;s my understanding that having a dog, the only way you can have a dog in an apartment building is if you have permission from the owners or the landlord. Is that right?
+<span class="student">[Student]</span> Ah, yes. You&#x27;re right. You&#x27;re right. Yes. I have some worry about... Yes. Our country&#x27;s people almost live in their apartment. So, sometimes it is a problem to raise a pet in an apartment because... Yeah. So, where is small things. So, if they raise a dog, they can&#x27;t run in the yard. So, it is a little problem. So, if we raise dogs, we have to go for a walk near a park three times or four times. Yeah. So, it is a little problem.
+<span class="tutor">[Tutor]</span> Okay. Uh-huh. Yeah. Fortunately, there are some breeds of dog that are very small, and they often lend themselves to apartment living.
+<span class="student">[Student]</span> Yeah, yeah.
+<span class="tutor">[Tutor]</span> Right. Like you said. Plus, people work long hours in your country, so sometimes having a dog is extra responsibility. Here in Canada, we like all of them. We like cats, dogs, fish, birds. We like lizards. We like rodents. There is no specific favorite pet. People just love them. Okay, sir. Let&#x27;s go on to part B, okay? Let&#x27;s get you to read that.
+<span class="student">[Student]</span> And teacher, before I read that, I have a question. Before I say, &quot;grow the pet,&quot; is that the right expression or not? &quot;Grow the pet.&quot;
+<span class="tutor">[Tutor]</span> Well, we wouldn&#x27;t necessarily say &quot;grow&quot; but we would say &quot;raising&quot; or &quot;keeping a pet.&quot; &quot;Raising&quot; or &quot;keeping.&quot; &quot;Keeping.&quot; &quot;Keep.&quot;
+<span class="student">[Student]</span> Yes. Oh, yes. Keeping.
+<span class="tutor">[Tutor]</span> Yeah, because when you have an animal in your house, you have to raise them and take care of them.
+<span class="student">[Student]</span> Oh, yeah.
+<span class="tutor">[Tutor]</span> And that involves keeping them healthy and fed. Keeping them there. Yeah. So, yes, we wouldn&#x27;t say &quot;grow.&quot; We&#x27;d probably say, &quot;It is difficult to raise or keep a pet in an apartment.&quot;
+<span class="student">[Student]</span> I see.
+<span class="tutor">[Tutor]</span> Does that help?
+<span class="student">[Student]</span> Raising, keeping, not grow.
+<span class="tutor">[Tutor]</span> Yeah, and I&#x27;ll put that in your comments today. No worries.
+<span class="student">[Student]</span> Okay, I see. Understand. Yes, and I read that.
+<span class="tutor">[Tutor]</span> Very good. Section 2, section B.
+<span class="student">[Student]</span> Of course. Part B.
+<span class="tutor">[Tutor]</span> Very good. Go ahead.
+<span class="student">[Student]</span> Which would you rather have in a small apartment and why? The rabbit and hamster.
+<span class="student">[Student]</span> Yes, I see. I have only two choices, rabbit and hamster, right?
+<span class="tutor">[Tutor]</span> Well, if you could think of another small rodent, I&#x27;m happy to hear you out.
+<span class="student">[Student]</span> Yeah, but I have some news about the rabbit. The rabbits produce a lot of offspring themselves, so it is impossible to keep in an apartment. But hamsters are smaller and possible to keep in an apartment, raise in an apartment more easily.
+<span class="tutor">[Tutor]</span> It is?
+<span class="student">[Student]</span> Yes.
+<span class="tutor">[Tutor]</span> It&#x27;s in a cage?
+<span class="student">[Student]</span> So I prefer raising hamsters in our apartment, but not in my apartment because I don&#x27;t like rats.
+<span class="tutor">[Tutor]</span> No, I appreciate that. Yes. I don&#x27;t know if you&#x27;ve ever heard of this particular pet. There is a small animal. It&#x27;s a rodent like a hamster. It&#x27;s called a guinea pig.
+<span class="student">[Student]</span> A guinea pig. Have you ever heard of them?
+<span class="tutor">[Tutor]</span> Yeah.
+<span class="student">[Student]</span> A guinea pig. Guinea pig.
+<span class="tutor">[Tutor]</span> You&#x27;re right. That is more accurate. So that&#x27;s another.
+<span class="student">[Student]</span> Uh-huh. Yeah. Uh-huh. Yes.
+<span class="tutor">[Tutor]</span> Now, in most parts of the world, it is raised as a pet. But in countries in South America, they raise them for food.
+<span class="student">[Student]</span> Oh, my God. The hamster? Guinea pig?
+<span class="tutor">[Tutor]</span> No, not the hamster, the guinea pig.
+<span class="student">[Student]</span> Ah, yes, yes, I see.
+<span class="tutor">[Tutor]</span> When I visited Peru, there were people on the side of the road selling baby and full-grown guinea pigs.
+<span class="student">[Student]</span> Guinea pig.
+<span class="tutor">[Tutor]</span> And when I spoke to the owner and I said, &quot;Did you know that in other countries guinea pigs are pets?&quot; He looked at me very strangely. He said, &quot;These animals are not for pets. They are for eating.&quot; I went, &quot;Oh, no thanks.&quot;
+<span class="student">[Student]</span> Yes, that&#x27;s a different culture, right? Wow.
+<span class="tutor">[Tutor]</span> Very much.
+<span class="student">[Student]</span> Yeah. Yeah, very much. Yeah.
+<span class="tutor">[Tutor]</span> All right. You&#x27;re doing great. Yeah. Okay. Let&#x27;s go on to part C, problem solving. And once again, I&#x27;m going to get you to read the situation, and then we&#x27;ll look at the question.
+<span class="student">[Student]</span> Okay, no problem. The situation. You are walking home and see a small lost dog. It looks healthy but nervous, and it&#x27;s not wearing any ID tags. It slowly walks over to you. It seems friendly. It is getting dark and you don&#x27;t know who it belongs to. Would you take it home for the night or leave it? Why?
+<span class="student">[Student]</span> I see. Very good reading. I understand that situation but I don&#x27;t have experience raising dogs. So maybe if I take it, take a dog, it is impossible to raise in my home. So I think, I just called to help raising help dogs. Yeah, community. The community help their dog and rescue dog and cat.
+<span class="tutor">[Tutor]</span> Rescue.
+<span class="student">[Student]</span> Yeah, rescue. So I will call the center of the raising the pet community. And then I request the help. Yes. Yeah. Uh-huh. Uh-huh. Yes. Yes.
+<span class="tutor">[Tutor]</span> In my community, if people find a lost dog or cat, usually what people will do is, if possible, the first thing they will do is either take it to a veterinarian, an animal doctor, and see if it has microchips. If the animal does not have identification, then we have, as you have mentioned, we have private and community agencies that you can take lost pets to. And they keep them safe until the owners can be found.
+<span class="student">[Student]</span> Yes.
+<span class="tutor">[Tutor]</span> In an apartment, it would be difficult for you to take it because you&#x27;re not ready to take care of it long term.
+<span class="student">[Student]</span> Yeah, you&#x27;re right.
+<span class="tutor">[Tutor]</span> But if you can find someone to rescue it, that&#x27;s a good thing. Very good. Good. Very good. Good, good. All right. Okay. We&#x27;re now going to move on to the warm-down.
+<span class="student">[Student]</span> Warm-down. I&#x27;ll get you to read the questions and respond. Okay. Do you think pets make people happier? Why or why not? Yeah, modern people feel lonely, so it is hard to have more happier emotion. Yeah, to raise dogs and cats. So I agree that the pets make people more happier, people happier, happier. And these days modern people live alone, one person lives in one family, so they want to give love and they want to receive the love, so it is a good way to raise a dog or raise a cat. That is a good way. But I think it is a need for responsibility of the raised dog or the cat.
+<span class="tutor">[Tutor]</span> It is.
+<span class="student">[Student]</span> Yeah, it is. Yeah.
+<span class="tutor">[Tutor]</span> Okay. Yeah. Dogs, you&#x27;re right. Dogs can live from 8 to 15 years. Cats live longer. So it&#x27;s a long-term commitment.
+<span class="student">[Student]</span> I see. How long do cats live, teacher?
+<span class="tutor">[Tutor]</span> Well, cats can live quite a long time. There was a cat in the Guinness World Book of Records who lived to the age of 34.
+<span class="student">[Student]</span> Wow, so long.
+<span class="tutor">[Tutor]</span> Wow, indeed. Yes. Yes. I have had a number of cats and dogs, and I have found that the unfortunate number is 15. By the time they reach 15, it&#x27;s time to say goodbye because they&#x27;re in poor health. They&#x27;re old or they&#x27;re in pain, but they do give a lot of joy.
+<span class="student">[Student]</span> I heard some story about the pet. If we will die and we will go to the next world, at that time, our pet will follow me. And he&#x27;s waiting there and we meet the pet. He welcomes our new world. Right?
+<span class="tutor">[Tutor]</span> In English, we call it the rainbow bridge.
+<span class="student">[Student]</span> Ah, rainbow. They wait for the rainbow.
+<span class="tutor">[Tutor]</span> Yes. They wait for us at the end of the rainbow bridge. And to be with us again when we pass on.
+<span class="student">[Student]</span> Yeah. I see. I practice one more thing. Teacher, sorry. The rainbow bridge.
+<span class="tutor">[Tutor]</span> I see if I can find a video. I see if I can find a video that explains it. Okay.
+<span class="student">[Student]</span> Okay, I see. Thank you so much. Rainbow Bridge. If we will die, if we will pass on the rainbow, on the Rainbow Bridge, the pet is waiting and so welcome. Waiting, waiting them. Waiting for all.
+<span class="tutor">[Tutor]</span> Wait for them.
+<span class="student">[Student]</span> Yeah, waiting for them. Okay.
+<span class="tutor">[Tutor]</span> Very good. Good. All right. Go ahead and read number two when you&#x27;re ready.
+<span class="student">[Student]</span> Okay. What animal would you love to have as a pet? What animal would you love to have as a pet? Explain. Yeah. Actually, I don&#x27;t have experience. Only short time. One week or two weeks. When I was young, I raised a small dog. Only kept it for two weeks. Just briefly. Yeah, so I don&#x27;t have experience, so I don&#x27;t have an answer to this question.
+<span class="tutor">[Tutor]</span> I understand. Yeah, if you grow up without pets, you have nothing to compare it to.
+<span class="student">[Student]</span> Ah, but in my case, I have some plants in my house, so many plants.
+<span class="tutor">[Tutor]</span> Oh, yeah.
+<span class="student">[Student]</span> Sometimes we leave the onion in our house because sometimes they have a leaf, a small leaf. And then we put it in the plant and we grow it up. We will raise that small plant and take them to our house. I love the plant. Anyway.
+<span class="tutor">[Tutor]</span> Okay. That&#x27;s all right. We&#x27;re just under three minutes. Let&#x27;s get you to read the useful vocabulary on the left-hand side. I&#x27;ll get you to read the word, the description, and the example sentence.
+<span class="student">[Student]</span> The breed. A specific type of animal like a poodle or Siamese. Siamese.
+<span class="tutor">[Tutor]</span> Siamese.
+<span class="student">[Student]</span> Siamese. Siamese. What breed is your dog? Breed.
+<span class="tutor">[Tutor]</span> Very good.
+<span class="student">[Student]</span> Breed. Breed. And rescue. A pet that was saved and given a new home. Rescued pets often need extra love and care. Very good. Obedient. Follow rule or command.
+<span class="student">[Student]</span> Their dog is very obedient and calm. Obedient, right?
+<span class="tutor">[Tutor]</span> Obedient. Well, may I help you? You&#x27;re very close. You&#x27;re saying &quot;obedient.&quot; You&#x27;re saying &quot;obedient.&quot; Try &quot;obedient.&quot;
+<span class="student">[Student]</span> Obedient. Obedient.
+<span class="tutor">[Tutor]</span> Better.
+<span class="student">[Student]</span> Obedient. Obedient.
+<span class="tutor">[Tutor]</span> You got it.
+<span class="student">[Student]</span> Their dog is very obedient and calm.
+<span class="tutor">[Tutor]</span> Calm.
+<span class="student">[Student]</span> Calm. I&#x27;m sorry. Calm.
+<span class="tutor">[Tutor]</span> No problem. That&#x27;s okay. And calm. That&#x27;s why I&#x27;m here. Okay. And use this expression.
+<span class="student">[Student]</span> Okay. I have always been more of a person used to share a personal preference.
+<span class="tutor">[Tutor]</span> So people would say, &quot;I&#x27;ve always been more of a cat person, a dog person, a bird person.&quot;
+<span class="student">[Student]</span> Okay, I see. Dog person and cat person. I&#x27;m not big on blah blah.
+<span class="tutor">[Tutor]</span> When you don&#x27;t enjoy or care much about a specific animal or thing.
+<span class="student">[Student]</span> I&#x27;m not big on cat. Big on dog. I&#x27;m not big on pet.
+<span class="tutor">[Tutor]</span> Yes. What we would do there, Joey, is we&#x27;d use the plural form. Cats. Dogs. Fishes.
+<span class="student">[Student]</span> Fishes. Yeah. And not use their pet, right? I&#x27;m not...
+<span class="tutor">[Tutor]</span> No, you can use the name, but in this phrase, we would use the plural version of the noun.
+<span class="student">[Student]</span> Ah, yes, yes, yes. Okay.
+<span class="tutor">[Tutor]</span> All right. All right, sir. You have finished page 13.
+<span class="student">[Student]</span> Uh-huh. Did you have any other questions or concerns? Oh, I don&#x27;t have questions.
+<span class="tutor">[Tutor]</span> All right. On this question. You worked very hard today. Thank you for joining me, and have a great day. I&#x27;ll talk to you again soon.
+<span class="student">[Student]</span> Have a great day too, teacher. Bye-bye.
+<span class="tutor">[Tutor]</span> You take care.</div>
+        </div>
+    </div>
+    <div class="toast" id="toast">✅ 프롬프트가 복사되었습니다!</div>
+    <script>
+        const REVIEW_PROMPT="너는 나의 영어 회화 복습 파트너야. 오늘 내 전화영어 수업 내용을 기반으로 대화하면서 복습을 도와줘.\n\n[오늘 수업 전사 내용]\n[Student] Hello, good morning teacher.\n[Tutor] Hi. Hi. Hi Joey, how are you?\n[Student] It's so hot. Is it hot?\n[Tutor] Yeah, it's hot and humid. Yeah, it's hot in the morning.\n[Student] Is it about to be fine?\n[Tutor] Oh yeah, I'm fine. How are you today?\n[Student] Good, good.\n[Tutor] Oh, I'm doing all right. I'm doing okay. Did you want to work on Snack Chat again today? Or do you want to do daily topics?\n[Student] Yeah, Snack Chat is better. My plan is to finish the Snack Chat.\n[Tutor] Okay. All right. So the records say that you were on the warm-down portion and we have the question number two to complete. Can I get you to read question two and respond from the warm-down?\n[Student] Oh, yes. Maybe we will start the perfect pet, right? The section 11, page 13.\n[Tutor] Oh, okay, sure. Okay, yeah, if you want to. Yeah, we can go right to 13. That's fine.\n[Student] Okay, very good.\n[Tutor] Good, yes. Okay, wonderful. All right. So once again, I'll ask you to read the question for part A, and then you can use the visuals to create a response.\n[Student] Ah, yes, I see. What kind of pets are most common?\n[Student] Where do you live?\n[Tutor] Okay.\n[Student] I live in South Korea, and our country is under the category of dogs. Yeah, because our people like the dogs.\n[Student] Another meaning.\n[Tutor] Okay.\n[Student] And yes, these days, the pet market is developing. So our country's people care about pets like cats, fish, birds, but usually cats and dogs are most of the pets. Sure. Yes, yes.\n[Tutor] Uh-huh. Okay. Now, it's my...\n[Student] Yes, go on, teacher.\n[Tutor] I was going to say, it's my understanding that having a dog, the only way you can have a dog in an apartment building is if you have permission from the owners or the landlord. Is that right?\n[Student] Ah, yes. You're right. You're right. Yes. I have some worry about... Yes. Our country's people almost live in their apartment. So, sometimes it is a problem to raise a pet in an apartment because... Yeah. So, where is small things. So, if they raise a dog, they can't run in the yard. So, it is a little problem. So, if we raise dogs, we have to go for a walk near a park three times or four times. Yeah. So, it is a little problem.\n[Tutor] Okay. Uh-huh. Yeah. Fortunately, there are some breeds of dog that are very small, and they often lend themselves to apartment living.\n[Student] Yeah, yeah.\n[Tutor] Right. Like you said. Plus, people work long hours in your country, so sometimes having a dog is extra responsibility. Here in Canada, we like all of them. We like cats, dogs, fish, birds. We like lizards. We like rodents. There is no specific favorite pet. People just love them. Okay, sir. Let's go on to part B, okay? Let's get you to read that.\n[Student] And teacher, before I read that, I have a question. Before I say, \"grow the pet,\" is that the right expression or not? \"Grow the pet.\"\n[Tutor] Well, we wouldn't necessarily say \"grow\" but we would say \"raising\" or \"keeping a pet.\" \"Raising\" or \"keeping.\" \"Keeping.\" \"Keep.\"\n[Student] Yes. Oh, yes. Keeping.\n[Tutor] Yeah, because when you have an animal in your house, you have to raise them and take care of them.\n[Student] Oh, yeah.\n[Tutor] And that involves keeping them healthy and fed. Keeping them there. Yeah. So, yes, we wouldn't say \"grow.\" We'd probably say, \"It is difficult to raise or keep a pet in an apartment.\"\n[Student] I see.\n[Tutor] Does that help?\n[Student] Raising, keeping, not grow.\n[Tutor] Yeah, and I'll put that in your comments today. No worries.\n[Student] Okay, I see. Understand. Yes, and I read that.\n[Tutor] Very good. Section 2, section B.\n[Student] Of course. Part B.\n[Tutor] Very good. Go ahead.\n[Student] Which would you rather have in a small apartment and why? The rabbit and hamster.\n[Student] Yes, I see. I have only two choices, rabbit and hamster, right?\n[Tutor] Well, if you could think of another small rodent, I'm happy to hear you out.\n[Student] Yeah, but I have some news about the rabbit. The rabbits produce a lot of offspring themselves, so it is impossible to keep in an apartment. But hamsters are smaller and possible to keep in an apartment, raise in an apartment more easily.\n[Tutor] It is?\n[Student] Yes.\n[Tutor] It's in a cage?\n[Student] So I prefer raising hamsters in our apartment, but not in my apartment because I don't like rats.\n[Tutor] No, I appreciate that. Yes. I don't know if you've ever heard of this particular pet. There is a small animal. It's a rodent like a hamster. It's called a guinea pig.\n[Student] A guinea pig. Have you ever heard of them?\n[Tutor] Yeah.\n[Student] A guinea pig. Guinea pig.\n[Tutor] You're right. That is more accurate. So that's another.\n[Student] Uh-huh. Yeah. Uh-huh. Yes.\n[Tutor] Now, in most parts of the world, it is raised as a pet. But in countries in South America, they raise them for food.\n[Student] Oh, my God. The hamster? Guinea pig?\n[Tutor] No, not the hamster, the guinea pig.\n[Student] Ah, yes, yes, I see.\n[Tutor] When I visited Peru, there were people on the side of the road selling baby and full-grown guinea pigs.\n[Student] Guinea pig.\n[Tutor] And when I spoke to the owner and I said, \"Did you know that in other countries guinea pigs are pets?\" He looked at me very strangely. He said, \"These animals are not for pets. They are for eating.\" I went, \"Oh, no thanks.\"\n[Student] Yes, that's a different culture, right? Wow.\n[Tutor] Very much.\n[Student] Yeah. Yeah, very much. Yeah.\n[Tutor] All right. You're doing great. Yeah. Okay. Let's go on to part C, problem solving. And once again, I'm going to get you to read the situation, and then we'll look at the question.\n[Student] Okay, no problem. The situation. You are walking home and see a small lost dog. It looks healthy but nervous, and it's not wearing any ID tags. It slowly walks over to you. It seems friendly. It is getting dark and you don't know who it belongs to. Would you take it home for the night or leave it? Why?\n[Student] I see. Very good reading. I understand that situation but I don't have experience raising dogs. So maybe if I take it, take a dog, it is impossible to raise in my home. So I think, I just called to help raising help dogs. Yeah, community. The community help their dog and rescue dog and cat.\n[Tutor] Rescue.\n[Student] Yeah, rescue. So I will call the center of the raising the pet community. And then I request the help. Yes. Yeah. Uh-huh. Uh-huh. Yes. Yes.\n[Tutor] In my community, if people find a lost dog or cat, usually what people will do is, if possible, the first thing they will do is either take it to a veterinarian, an animal doctor, and see if it has microchips. If the animal does not have identification, then we have, as you have mentioned, we have private and community agencies that you can take lost pets to. And they keep them safe until the owners can be found.\n[Student] Yes.\n[Tutor] In an apartment, it would be difficult for you to take it because you're not ready to take care of it long term.\n[Student] Yeah, you're right.\n[Tutor] But if you can find someone to rescue it, that's a good thing. Very good. Good. Very good. Good, good. All right. Okay. We're now going to move on to the warm-down.\n[Student] Warm-down. I'll get you to read the questions and respond. Okay. Do you think pets make people happier? Why or why not? Yeah, modern people feel lonely, so it is hard to have more happier emotion. Yeah, to raise dogs and cats. So I agree that the pets make people more happier, people happier, happier. And these days modern people live alone, one person lives in one family, so they want to give love and they want to receive the love, so it is a good way to raise a dog or raise a cat. That is a good way. But I think it is a need for responsibility of the raised dog or the cat.\n[Tutor] It is.\n[Student] Yeah, it is. Yeah.\n[Tutor] Okay. Yeah. Dogs, you're right. Dogs can live from 8 to 15 years. Cats live longer. So it's a long-term commitment.\n[Student] I see. How long do cats live, teacher?\n[Tutor] Well, cats can live quite a long time. There was a cat in the Guinness World Book of Records who lived to the age of 34.\n[Student] Wow, so long.\n[Tutor] Wow, indeed. Yes. Yes. I have had a number of cats and dogs, and I have found that the unfortunate number is 15. By the time they reach 15, it's time to say goodbye because they're in poor health. They're old or they're in pain, but they do give a lot of joy.\n[Student] I heard some story about the pet. If we will die and we will go to the next world, at that time, our pet will follow me. And he's waiting there and we meet the pet. He welcomes our new world. Right?\n[Tutor] In English, we call it the rainbow bridge.\n[Student] Ah, rainbow. They wait for the rainbow.\n[Tutor] Yes. They wait for us at the end of the rainbow bridge. And to be with us again when we pass on.\n[Student] Yeah. I see. I practice one more thing. Teacher, sorry. The rainbow bridge.\n[Tutor] I see if I can find a video. I see if I can find a video that explains it. Okay.\n[Student] Okay, I see. Thank you so much. Rainbow Bridge. If we will die, if we will pass on the rainbow, on the Rainbow Bridge, the pet is waiting and so welcome. Waiting, waiting them. Waiting for all.\n[Tutor] Wait for them.\n[Student] Yeah, waiting for them. Okay.\n[Tutor] Very good. Good. All right. Go ahead and read number two when you're ready.\n[Student] Okay. What animal would you love to have as a pet? What animal would you love to have as a pet? Explain. Yeah. Actually, I don't have experience. Only short time. One week or two weeks. When I was young, I raised a small dog. Only kept it for two weeks. Just briefly. Yeah, so I don't have experience, so I don't have an answer to this question.\n[Tutor] I understand. Yeah, if you grow up without pets, you have nothing to compare it to.\n[Student] Ah, but in my case, I have some plants in my house, so many plants.\n[Tutor] Oh, yeah.\n[Student] Sometimes we leave the onion in our house because sometimes they have a leaf, a small leaf. And then we put it in the plant and we grow it up. We will raise that small plant and take them to our house. I love the plant. Anyway.\n[Tutor] Okay. That's all right. We're just under three minutes. Let's get you to read the useful vocabulary on the left-hand side. I'll get you to read the word, the description, and the example sentence.\n[Student] The breed. A specific type of animal like a poodle or Siamese. Siamese.\n[Tutor] Siamese.\n[Student] Siamese. Siamese. What breed is your dog? Breed.\n[Tutor] Very good.\n[Student] Breed. Breed. And rescue. A pet that was saved and given a new home. Rescued pets often need extra love and care. Very good. Obedient. Follow rule or command.\n[Student] Their dog is very obedient and calm. Obedient, right?\n[Tutor] Obedient. Well, may I help you? You're very close. You're saying \"obedient.\" You're saying \"obedient.\" Try \"obedient.\"\n[Student] Obedient. Obedient.\n[Tutor] Better.\n[Student] Obedient. Obedient.\n[Tutor] You got it.\n[Student] Their dog is very obedient and calm.\n[Tutor] Calm.\n[Student] Calm. I'm sorry. Calm.\n[Tutor] No problem. That's okay. And calm. That's why I'm here. Okay. And use this expression.\n[Student] Okay. I have always been more of a person used to share a personal preference.\n[Tutor] So people would say, \"I've always been more of a cat person, a dog person, a bird person.\"\n[Student] Okay, I see. Dog person and cat person. I'm not big on blah blah.\n[Tutor] When you don't enjoy or care much about a specific animal or thing.\n[Student] I'm not big on cat. Big on dog. I'm not big on pet.\n[Tutor] Yes. What we would do there, Joey, is we'd use the plural form. Cats. Dogs. Fishes.\n[Student] Fishes. Yeah. And not use their pet, right? I'm not...\n[Tutor] No, you can use the name, but in this phrase, we would use the plural version of the noun.\n[Student] Ah, yes, yes, yes. Okay.\n[Tutor] All right. All right, sir. You have finished page 13.\n[Student] Uh-huh. Did you have any other questions or concerns? Oh, I don't have questions.\n[Tutor] All right. On this question. You worked very hard today. Thank you for joining me, and have a great day. I'll talk to you again soon.\n[Student] Have a great day too, teacher. Bye-bye.\n[Tutor] You take care.\n\n[AI 피드백]\n안녕하세요, Joey! 오늘 수업도 활기차게 잘 마무리하셨네요. 반려동물에 대한 다양한 이야기를 나누며 Joey의 생각과 경험을 공유해 주셔서 정말 즐거웠습니다. 특히 잃어버린 강아지를 발견했을 때 어떻게 대처할지에 대한 Joey의 현실적인 고민과 해결 방안이 인상 깊었어요. 꾸준히 노력하는 Joey의 모습에서 큰 열정이 느껴집니다!\n\n---\n\n**0. 📌 Topic**\nTopic: Discussing common pets, pet care, and the responsibilities of pet ownership.\n\n---\n\n**1. 📊 오늘의 대화 요약 (Summary)**\n오늘은 '완벽한 반려동물(The Perfect Pet)'이라는 주제로 대화를 나눴습니다. 한국에서 가장 흔한 반려동물의 종류, 아파트에서 반려동물을 키울 때의 어려움, 그리고 잃어버린 강아지를 발견했을 때의 대처 방안에 대해 이야기했습니다. 또한, 반려동물이 사람에게 주는 행복과 그에 따르는 책임감에 대해서도 깊이 있게 다루었습니다.\n\n---\n\n**2. 💬 유창성 업그레이드 (Fluency & Natural Flow)**\nJoey가 말한 문장들 중 의미는 통하지만, 원어민이 들었을 때 좀 더 자연스럽게 들릴 수 있는 표현들을 함께 살펴볼게요.\n\n1.  **❌ 학습자 원문 (As Said):** \"our country is under the category of dogs.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"Dogs are the most common pets in our country.\"\n    *   **💎 비즈니스 표현 (Professional):** \"In our country, dogs are predominantly chosen as pets.\"\n    *   **💡 코칭 포인트:** Using \"under the category of\" is grammatically correct but sounds a bit formal and less natural for describing pet popularity. \"Most common\" or \"most popular\" is much more direct and idiomatic. → \"under the category of\"는 문법적으로 맞지만, 반려동물의 인기를 설명하기에는 다소 격식 있고 부자연스럽습니다. \"Most common\"이나 \"most popular\"가 훨씬 직관적이고 자연스러운 표현입니다.\n\n2.  **❌ 학습자 원문 (As Said):** \"I have some worry about...\"\n    *   **✅ 자연스러운 표현 (Natural):** \"I have some concerns about...\" 또는 \"I'm a bit worried about...\"\n    *   **💎 비즈니스 표현 (Professional):** \"I have certain reservations regarding...\"\n    *   **💡 코칭 포인트:** \"Worry\"는 주로 동사나 불가산 명사로 쓰입니다. 특정 문제에 대해 말할 때는 \"concerns\"(가산 복수)나 \"a concern\"(가산 단수)이 더 적절하고 자연스럽습니다. → \"Worry\" is typically a verb or an uncountable noun (e.g., \"I feel worry\"). When referring to specific issues, \"concerns\" (plural countable) or \"a concern\" (singular countable) is more appropriate and natural.\n\n3.  **❌ 학습자 원문 (As Said):** \"it is hard to have more happier emotion.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"it's hard to feel happier.\"\n    *   **💎 비즈니스 표현 (Professional):** \"it can be challenging to experience greater emotional well-being.\"\n    *   **💡 코칭 포인트:** \"To have emotion\"도 이해는 되지만, \"to feel emotion\" 또는 \"to experience emotion\"이 더 자연스럽습니다. 또한 \"more happier\"는 이중 비교급이므로, \"happier\"만 쓰는 것이 올바릅니다. → \"To have emotion\" is understandable but \"to feel emotion\" or \"to experience emotion\" is more natural. Also, \"more happier\" is a double comparative (happier already means 'more happy'), so just \"happier\" is correct.\n\n4.  **❌ 학습자 원문 (As Said):** \"grow the pet\"\n    *   **✅ 자연스러운 표현 (Natural):** \"raise a pet\" or \"keep a pet\"\n    *   **💎 비즈니스 표현 (Professional):** \"nurture a pet\"\n    *   **💡 코칭 포인트:** \"Grow\"는 주로 식물이나 머리카락 등이 자라거나 성장하는 것을 의미합니다. 반려동물처럼 살아있는 동물을 돌보고 키울 때는 \"raise\" (양육하다) 또는 \"keep\" (기르다, 소유하다)라는 동사를 사용하는 것이 자연스럽습니다. → While \"grow\" can be used for plants, for animals, especially pets, we use \"raise\" (meaning to care for and bring up) or \"keep\" (meaning to own and look after).\n\n---\n\n**3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)**\nCategory: **First Conditional (If + present simple, will + base verb)**\n\nJoey는 미래의 가정을 이야기할 때, 'if' 절 안에 'will'을 사용하는 경향이 있었습니다. 영어의 첫 번째 조건문(First Conditional)에서는 'if' 절에 현재 시제를 사용하고, 주절에 'will'을 사용하여 미래의 가능성을 나타냅니다.\n\n| ❌ 원문 (As Said)                                                                  | ✅ 교정 예시 (Corrected)                                                              |\n| :--------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------ |\n| \"If we **will die** and we **will go** to the next world, at that time, our pet will follow me.\" | \"If we **die** and **go** to the next world, at that time, our pet will follow me.\" |\n| \"If we **will pass** on the rainbow, on the Rainbow Bridge, the pet is waiting...\" | \"If we **pass** on the Rainbow Bridge, the pet is waiting...\"                        |\n| \"So maybe if I take it, take a dog, it is impossible to raise in my home.\"         | \"So maybe if I **take** a dog, it **would be** impossible to raise it in my home.\"   |\n\n📌 **핵심 규칙:** 미래에 대한 가정을 나타내는 'if' 절에서는 'will' 대신 현재 시제를 사용합니다.\n\n🔁 **따라 읽기:**\n🗣️ \"If we die and go to the next world, our pet will follow me.\"\n🗣️ \"If we pass on the Rainbow Bridge, the pet is waiting.\"\n🗣️ \"If I take a dog, it would be impossible to raise it in my home.\"\n\n---\n\n**4. 📗 어휘 확장 (Vocabulary Vault)**\n\n1.  **Humid** /hjuːmɪd/ (adj.)\n    *   뜻: 습한, 습기 있는\n    *   실전 예문: The summer in Korea is often **humid**, which can be challenging for outdoor activities.\n\n2.  **Offspring** /ˈɔːfsprɪŋ/ (n.)\n    *   뜻: 자손, 새끼 (동물의)\n    *   실전 예문: Rabbits are known for producing a large number of **offspring** in a short period.\n\n3.  **Rodent** /ˈroʊdənt/ (n.)\n    *   뜻: 설치류 (쥐, 햄스터, 기니피그 등)\n    *   실전 예문: Hamsters and guinea pigs are popular **rodents** kept as pets due to their small size.\n\n4.  **Commitment** /kəˈmɪtmənt/ (n.)\n    *   뜻: 헌신, 약속, 책임\n    *   실전 예문: Pet ownership requires a significant **commitment** of time and resources.\n\n5.  **Microchip** /ˈmaɪkroʊtʃɪp/ (n.)\n    *   뜻: 마이크로칩 (반려동물 식별용)\n    *   실전 예문: Many veterinarians recommend implanting a **microchip** in pets for identification purposes.\n\n---\n\n**5. 📝 실전 복습 챌린지 (Practice)**\n\n오늘 배운 표현과 문법을 활용하여 다음 한국어 상황을 영어로 영작해 보세요.\n\n1.  **상황:** 한국의 여름 날씨는 매우 습해서 에어컨이 필수적입니다.\n    *   **영작:** (Humid 활용)\n    *   **모범 답안:** The summer weather in Korea is very **humid**, so air conditioning is essential.\n\n2.  **상황:** 만약 우리가 이 프로젝트를 제시간에 끝낸다면, 우리는 다음 단계로 넘어갈 수 있을 것입니다. (조건문 활용)\n    *   **영작:** (If... will... 문법 규칙에 유의하여)\n    *   **모범 답안:** If we **finish** this project on time, we **will be able to** move on to the next phase.\n\n3.  **상황:** 반려동물을 키우는 것은 큰 책임감을 요구하지만, 그만큼 큰 기쁨을 줍니다. (Commitment, responsibility 활용)\n    *   **영작:**\n    *   **모범 답안:** Raising a pet requires a significant **commitment** and **responsibility**, but it also brings immense joy.\n\n---\n\n**6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)**\n\n✨ **Good Job:** \"Yes, that's a different culture, right? Wow.\"\nJoey가 튜터의 페루 기니피그 이야기를 듣고 즉각적으로 문화 차이를 언급하며 감탄사를 덧붙인 이 문장은 매우 자연스럽고 유창했습니다. 대화의 흐름을 잘 이해하고 자신의 생각을 명확하게 표현하는 능력이 돋보였습니다!\n\n🚀 **내일의 한 문장:**\n다음 수업 시작 시 튜터에게 오늘 배운 내용을 활용하여 질문을 던져보세요.\n\"I've been thinking about the **commitment** of pet ownership. What's the biggest **responsibility** you've experienced with your pets?\"\n(반려동물 양육의 책임감에 대해 생각해 봤어요. 튜터님은 반려동물과 함께하며 가장 큰 책임감을 느꼈던 경험이 무엇인가요?)\n\n---\n\n**[성과 지표]**\n\n**유창성 점수(Fluency Score): 7.5/10**\n\n**근거:** Joey는 오늘 수업에서 다양한 주제에 대해 막힘없이 자신의 의견을 표현했습니다. 특히, 튜터의 질문에 대한 응답 속도가 빠르고, 대화의 흐름을 놓치지 않으려는 노력이 돋보였습니다. \"I see\", \"Understand\", \"You're right\" 등과 같은 추임새를 적절히 사용하여 대화에 적극적으로 참여하는 모습도 좋았습니다. 다만, 가끔 문장 구조가 복잡해지거나 특정 표현을 찾을 때 다소 어색하거나 반복되는 표현을 사용하는 경향이 있었습니다.\n\n**다음 수업 '원포인트 액션 플랜':**\n다음 수업에서는 **'자연스러운 동사-명사 짝(collocation)'** 활용에 집중해 봅시다. 예를 들어, \"have emotion\" 대신 \"feel emotion\", \"grow a pet\" 대신 \"raise a pet\"처럼 특정 명사와 어울리는 동사를 자연스럽게 사용하는 연습을 해볼 거예요. 몇 가지 핵심적인 동사-명사 짝을 미리 익혀두면 훨씬 더 유창하고 자연스러운 대화가 가능해질 겁니다.\n\n위 내용을 바탕으로:\n1. 먼저 오늘 수업에서 내가 틀렸거나 어색했던 표현을 하나 골라서, 관련된 상황을 영어로 질문해줘.\n2. 내가 영어로 대답하면, 자연스러운지 확인하고 더 나은 표현이 있으면 알려줘.\n3. 특히 \"반복 실수 패턴\"에서 지적된 부분을 집중적으로 연습시켜줘.\n4. 이런 식으로 오늘 배운 표현들을 하나씩 복습하자.\n5. 한국어 설명은 필요할 때만 간단히, 대화는 최대한 영어로 진행해줘.\n\n그럼 시작하자!";
+        function startReview(){navigator.clipboard.writeText(REVIEW_PROMPT).then(()=>{showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)}).catch(()=>{const t=document.createElement('textarea');t.value=REVIEW_PROMPT;document.body.appendChild(t);t.select();document.execCommand('copy');document.body.removeChild(t);showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)})}
+        function showToast(){const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500)}
+        function switchTab(n){document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',n==='feedback'?i===0:i===1));document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));document.getElementById('tab-'+n).classList.add('active')}
+    </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+{
+ "date": "2026-07-14",
+ "iso": [
+  2026,
+  29
+ ],
+ "topic": "Discussing common pets, pet care, and the responsibilities of pet ownership.",
+ "grammar": "First Conditional",
+ "grammar_norm": "First Conditional",
+ "score": null,
+ "pairs": [
+  {
+   "said": "our country is under the category of dogs.",
+   "natural": "Dogs are the most common pets in our country."
+  },
+  {
+   "said": "I have some worry about...",
+   "natural": "I have some concerns about..."
+  },
+  {
+   "said": "it is hard to have more happier emotion.",
+   "natural": "it's hard to feel happier."
+  },
+  {
+   "said": "grow the pet",
+   "natural": "raise a pet"
+  }
+ ],
+ "vocab": [
+  {
+   "word": "Humid",
+   "pos": "adj.",
+   "meaning": "습한, 습기 있는"
+  },
+  {
+   "word": "Offspring",
+   "pos": "n.",
+   "meaning": "자손, 새끼 (동물의)"
+  },
+  {
+   "word": "Rodent",
+   "pos": "n.",
+   "meaning": "설치류 (쥐, 햄스터, 기니피그 등)"
+  },
+  {
+   "word": "Commitment",
+   "pos": "n.",
+   "meaning": "헌신, 약속, 책임"
+  },
+  {
+   "word": "Microchip",
+   "pos": "n.",
+   "meaning": "마이크로칩 (반려동물 식별용)"
+  }
+ ],
+ "_html_md5": "a740a7a9ccac220ee4aec9c07672c18e"
+}
