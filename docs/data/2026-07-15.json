@@ -1,0 +1,27 @@
+{
+ "date": "2026-07-15",
+ "iso": [
+  2026,
+  29
+ ],
+ "topic": "Discussing the responsibilities and considerations of pet ownership.",
+ "grammar": "Missing or Incorrect Articles",
+ "grammar_norm": "Articles (a/an/the)",
+ "score": null,
+ "pairs": [
+  {
+   "said": "It's similar, like a student.",
+   "natural": "It's similar to a student's life."
+  },
+  {
+   "said": "So I think that is a little sorry about that and a little terrible.",
+   "natural": "I find that a bit unfortunate and even a little disheartening."
+  },
+  {
+   "said": "I don't have experience to purchase a pet in the pet shop.",
+   "natural": "I don't have experience purchasing a pet from a pet shop."
+  }
+ ],
+ "vocab": [],
+ "_html_md5": "f59e52a644e0617b53c342c19135f602"
+}
