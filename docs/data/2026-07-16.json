@@ -1,0 +1,53 @@
+{
+ "date": "2026-07-16",
+ "iso": [
+  2026,
+  29
+ ],
+ "topic": "Discussing animal idioms and cultural perceptions of animals.",
+ "grammar": "Prepositions",
+ "grammar_norm": "Prepositions",
+ "score": 7.0,
+ "pairs": [
+  {
+   "said": "So she, yeah, and she is a little late to recovery .",
+   "natural": "Her recovery is a little slow ."
+  },
+  {
+   "said": "Sometimes some people do not exercise and eat much. Many eat many .",
+   "natural": "Sometimes some people don't exercise and eat a lot. They eat too much."
+  },
+  {
+   "said": "Yeah. It's a strong indicator of strangeness .",
+   "natural": "Yeah, that's a bit strange ."
+  }
+ ],
+ "vocab": [
+  {
+   "word": "greedy",
+   "pos": "adj.",
+   "meaning": "탐욕스러운, 욕심 많은"
+  },
+  {
+   "word": "insulting",
+   "pos": "adj.",
+   "meaning": "모욕적인, 무례한"
+  },
+  {
+   "word": "exceptionalism",
+   "pos": "n.",
+   "meaning": "예외주의 (자신이나 자신의 집단이 다른 것보다 우월하다고 믿는 태도)"
+  },
+  {
+   "word": "diligent",
+   "pos": "adj.",
+   "meaning": "근면한, 성실한"
+  },
+  {
+   "word": "crafty",
+   "pos": "adj.",
+   "meaning": "교활한, 간교한 (주로 영리하고 꾀가 많지만 약간 부정적인 뉘앙스)"
+  }
+ ],
+ "_html_md5": "7344d2e6b5fb2f15b0765424240b4db9"
+}
