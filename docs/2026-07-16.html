@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#0f0f13"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="당근영어"><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="icon" type="image/png" sizes="192x192" href="icon-192.png"><script src="install-banner.js" defer></script><script src="sw-reg.js" defer></script>
+    <title>전화영어 복습 - 2026년 07월 16일</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Noto Sans KR',sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.75;min-height:100vh}
+        .header{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);border-bottom:1px solid rgba(255,255,255,.06);padding:48px 24px 40px;text-align:center}
+        .header-date{font-size:13px;color:#94a3b8;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+        .header h1{font-size:28px;font-weight:700;color:#f1f5f9;margin-bottom:16px}
+        .header-meta{display:flex;justify-content:center;gap:24px;font-size:14px;color:#64748b}
+        .header-meta span{display:flex;align-items:center;gap:6px}
+        .cta-section{text-align:center;padding:40px 24px}
+        .cta-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:linear-gradient(135deg,#38bdf8,#818cf8);color:#fff;font-size:16px;font-weight:600;font-family:'Noto Sans KR',sans-serif;border:none;border-radius:50px;cursor:pointer;transition:all .3s;text-decoration:none;box-shadow:0 4px 24px rgba(56,189,248,.25)}
+        .cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(56,189,248,.35)}
+        .cta-btn svg{width:20px;height:20px}
+        .cta-sub{margin-top:12px;font-size:13px;color:#64748b}
+        .toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#38bdf8;padding:14px 28px;border-radius:12px;font-size:14px;font-weight:500;border:1px solid rgba(56,189,248,.2);box-shadow:0 8px 32px rgba(0,0,0,.4);opacity:0;transition:all .4s cubic-bezier(.16,1,.3,1);z-index:1000}
+        .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+        .container{max-width:720px;margin:0 auto;padding:0 24px 80px}
+        .tabs{display:flex;gap:4px;background:#1a1a24;padding:4px;border-radius:12px;margin-bottom:32px}
+        .tab{flex:1;padding:12px;text-align:center;font-size:14px;font-weight:500;color:#64748b;background:0 0;border:none;border-radius:8px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all .2s}
+        .tab.active{background:#262636;color:#f1f5f9}
+        .tab-content{display:none}.tab-content.active{display:block}
+        .feedback h2{font-size:18px;font-weight:700;color:#f1f5f9;margin:36px 0 16px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.06)}
+        .feedback h2:first-child{margin-top:0}
+        .feedback p{margin:8px 0;color:#cbd5e1}
+        .feedback .item{padding:6px 0 6px 16px;border-left:2px solid #334155;margin:6px 0;color:#cbd5e1}
+        .feedback .numbered{padding:8px 0 8px 16px;color:#cbd5e1}
+        .feedback .numbered strong{color:#38bdf8}
+        .feedback strong{color:#f1f5f9}
+        .feedback code{background:#1e293b;padding:2px 8px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#38bdf8}
+        .feedback table{width:100%;border-collapse:collapse;margin:12px 0}
+        .feedback th,.feedback td{padding:10px 14px;text-align:left;border-bottom:1px solid #262636}
+        .feedback th{color:#94a3b8;font-weight:500;font-size:13px}
+        .feedback td{color:#cbd5e1}
+        .arrow{color:#38bdf8;font-weight:700}
+        .transcript{background:#1a1a24;border-radius:12px;padding:28px;font-size:14px;line-height:2;color:#94a3b8;white-space:pre-wrap;word-break:break-word;font-family:'JetBrains Mono','Noto Sans KR',monospace}
+        .transcript .tutor{color:#38bdf8}
+        .transcript .student{color:#a78bfa}
+        @media(max-width:640px){.header{padding:32px 16px}.header h1{font-size:22px}.cta-btn{padding:14px 28px;font-size:15px}.container{padding:0 16px 60px}}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-date">2026년 07월 16일</div>
+        <h1>📚 전화영어 복습</h1>
+        <div class="header-meta">
+            <span>⏱ 20분 22초</span>
+            <span>🎙 전화영어_025180304_20260716080028.m4a</span>
+        </div>
+    </div>
+    <div class="cta-section">
+        <button class="cta-btn" onclick="startReview()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Gemini에서 복습 대화 시작하기
+        </button>
+        <div class="cta-sub">클릭하면 프롬프트가 복사되고 Gemini가 열립니다</div>
+    </div>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('feedback')">📋 AI 피드백</button>
+            <button class="tab" onclick="switchTab('transcript')">🎙 수업 전사</button>
+        </div>
+        <div id="tab-feedback" class="tab-content active">
+            <div class="feedback"><p>안녕하세요, Joey! 오늘 수업도 정말 즐거웠습니다. 어머니께서 갑작스럽게 편찮으셔서 걱정이 많으셨을 텐데, 수업에 집중해 주셔서 감사해요. 어머님의 빠른 쾌유를 바랍니다.</p>
+<br>
+<p>오늘 동물과 관련된 다양한 표현과 문화적 차이에 대해 이야기 나누면서 Joey의 통찰력과 문화에 대한 깊은 이해에 감탄했습니다. 특히 '우물 안 개구리' 속담을 영어로 설명해 주신 부분은 정말 인상 깊었어요!</p>
+<br>
+<br>
+<p><strong>0. 📌 Topic</strong></p>
+<p>Topic: Discussing animal idioms and cultural perceptions of animals.</p>
+<br>
+<br>
+<p><strong>1. 📊 오늘의 대화 요약 (Summary)</strong></p>
+<p>Joey는 수업 시작 시 어머니의 건강 상태에 대해 이야기했습니다. 이어서 '동물과 관련된 표현'을 주제로, 탐욕스러운 행동을 나타내는 동물 표현과 '여우처럼 영리함'과 '개처럼 충성스러움' 중 선호하는 표현을 비교했습니다. 또한, 동물 관련 한국 속담인 '우물 안 개구리'를 설명하고 십이지신 동물에 대해서도 대화를 나눴습니다.</p>
+<br>
+<br>
+<p><strong>2. 💬 유창성 업그레이드 (Fluency & Natural Flow)</strong></p>
+<br>
+<p>Joey가 사용한 표현 중 의미는 통하지만, 원어민이 들었을 때 더 자연스럽게 들릴 수 있는 표현들을 함께 살펴볼게요.</p>
+<br>
+<div class="item"><strong>❌ 학습자 원문 (As Said):</strong> "So she, yeah, and she is a little <strong>late to recovery</strong>."</div>
+<div class="item"><strong>✅ 자연스러운 표현 (Natural):</strong> "Her recovery is a little <strong>slow</strong>."</div>
+<div class="item"><strong>💎 비즈니스 표현 (Professional):</strong> "Her recovery is <strong>progressing more slowly than anticipated</strong>."</div>
+<div class="item"><strong>💡 코칭 포인트:</strong> "late to recovery"는 일반적으로 사용되는 표현이 아닙니다. 회복 속도를 이야기할 때는 "slow" 또는 "taking time"이 더 자연스럽습니다.</div>
+<br>
+<div class="item"><strong>❌ 학습자 원문 (As Said):</strong> "Sometimes some people do not exercise and eat much. <strong>Many eat many</strong>."</div>
+<div class="item"><strong>✅ 자연스러운 표현 (Natural):</strong> "Sometimes some people don't exercise and eat a lot. <strong>They eat too much.</strong>"</div>
+<div class="item"><strong>💎 비즈니스 표현 (Professional):</strong> "Some individuals may not engage in physical activity and <strong>over-consume food</strong>."</div>
+<div class="item"><strong>💡 코칭 포인트:</strong> "Many eat many"는 문법적으로 어색하고 반복적인 표현입니다. "eat a lot"이나 "eat too much"가 음식을 많이 먹는다는 것을 표현하는 일반적이고 자연스러운 방법입니다.</div>
+<br>
+<div class="item"><strong>❌ 학습자 원문 (As Said):</strong> "Yeah. It's a <strong>strong indicator of strangeness</strong>."</div>
+<div class="item"><strong>✅ 자연스러운 표현 (Natural):</strong> "Yeah, <strong>that's a bit strange</strong>."</div>
+<div class="item"><strong>💎 비즈니스 표현 (Professional):</strong> "Indeed, that's an <strong>unusual characteristic</strong>."</div>
+<div class="item"><strong>💡 코칭 포인트:</strong> "strong indicator of strangeness"는 너무 직역적이고 격식 있는 표현입니다. 가벼운 대화에서는 "that's a bit strange" 또는 "that's interesting"처럼 가벼운 놀라움이나 특이함을 표현하는 것이 더 자연스럽습니다.</div>
+<br>
+<br>
+<p><strong>3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)</strong></p>
+<br>
+<p>Category: Prepositions (전치사)</p>
+<br>
+<p>Joey는 문장 내에서 전치사를 선택하거나 생략하는 부분에서 몇 가지 반복적인 오류를 보였습니다. 특히, 동사 뒤에 오는 전치사를 누락하거나 어색하게 사용하는 경향이 있었습니다.</p>
+<br>
+<table>
+<tr><th>❌ 원문 (As Said)</th><th>✅ 교정 예시 (Corrected)</th></tr>
+<tr><td>"He thinks <strong>only himself</strong>."</td><td>"He thinks <strong>only about himself</strong>."</td></tr>
+<tr><td>"So usually every culture, they compare some animal <strong>to be bad behavior</strong>."</td><td>"So usually every culture, they compare some animal <strong>to bad behavior</strong>."</td></tr>
+<tr><td>"I'm explaining <strong>about that</strong>."</td><td>"I'm explaining <strong>that</strong>." (or "I'm explaining <strong>it</strong>.")</td></tr>
+</table>
+<br>
+<p>📌 <strong>핵심 규칙:</strong> 동사가 특정 전치사와 함께 쓰여야 의미가 완성되거나 (예: <code>think about</code>), 명사를 수식하는 전치사가 필요한 경우 (예: <code>compare to</code>), 또는 동사 자체에 이미 의미가 포함되어 전치사가 불필요한 경우 (예: <code>explain</code>은 <code>about</code> 없이 바로 목적어 사용)가 있습니다.</p>
+<br>
+<p>🔁 <strong>따라 읽기:</strong></p>
+<p>🗣️ "He thinks only about himself."</p>
+<p>🗣️ "So usually every culture, they compare some animal to bad behavior."</p>
+<p>🗣️ "I'm explaining that."</p>
+<br>
+<br>
+<p><strong>4. 📗 어휘 확장 (Vocabulary Vault)</strong></p>
+<br>
+<p>오늘 수업에서 다룬 내용과 Joey의 관심사를 고려하여 유용한 어휘 5개를 소개합니다.</p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>greedy</strong> /그리디/ (adj.)</div>
+<div class="item">뜻: 탐욕스러운, 욕심 많은</div>
+<div class="item">실전 예문: The company was criticized for its <strong>greedy</strong> pursuit of profit at the expense of environmental protection.</div>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>insulting</strong> /인썰팅/ (adj.)</div>
+<div class="item">뜻: 모욕적인, 무례한</div>
+<div class="item">실전 예문: Making a joke about someone's background can be perceived as <strong>insulting</strong> in some cultures.</div>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>exceptionalism</strong> /익셉셔널리즘/ (n.)</div>
+<div class="item">뜻: 예외주의 (자신이나 자신의 집단이 다른 것보다 우월하다고 믿는 태도)</div>
+<div class="item">실전 예문: The CEO warned against corporate <strong>exceptionalism</strong>, emphasizing the importance of learning from competitors.</div>
+<br>
+<div class="numbered"><strong>4.</strong> <strong>diligent</strong> /딜리전트/ (adj.)</div>
+<div class="item">뜻: 근면한, 성실한</div>
+<div class="item">실전 예문: Her <strong>diligent</strong> efforts in market research led to a significant increase in sales.</div>
+<br>
+<div class="numbered"><strong>5.</strong> <strong>crafty</strong> /크래프티/ (adj.)</div>
+<div class="item">뜻: 교활한, 간교한 (주로 영리하고 꾀가 많지만 약간 부정적인 뉘앙스)</div>
+<div class="item">실전 예문: The negotiator used a <strong>crafty</strong> strategy to secure a favorable deal for his client.</div>
+<br>
+<br>
+<p><strong>5. 📝 실전 복습 챌린지 (Practice)</strong></p>
+<br>
+<p>오늘 배운 표현과 문법을 활용하여 다음 문장들을 영작해 보세요.</p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>상황:</strong> 당신은 팀원에게 중요한 정보를 공유하되, 아직 외부에 알려지지 않도록 조심하라고 말하고 싶습니다.</div>
+<div class="item"><strong>영작:</strong> 이 소식을 외부에 발설하지 않도록 조심해 주세요.</div>
+<div class="item"><strong>모범 답안:</strong> Please be careful not to <strong>let the cat out of the bag</strong> about this news.</div>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>상황:</strong> 당신은 동료의 회복이 예상보다 느리다고 상사에게 보고해야 합니다.</div>
+<div class="item"><strong>영작:</strong> 그의 회복은 예상보다 조금 더디게 진행되고 있습니다.</div>
+<div class="item"><strong>모범 답안:</strong> His recovery is <strong>progressing a little slower than anticipated</strong>.</div>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>상황:</strong> 당신은 국제 비즈니스 파트너에게 특정 동물이 한국 문화에서 탐욕스러운 행동과 연관될 수 있음을 설명하고 싶습니다.</div>
+<div class="item"><strong>영작:</strong> 우리 문화에서는 특정 동물을 탐욕스러운 행동에 비유하는 경우가 있습니다.</div>
+<div class="item"><strong>모범 답안:</strong> In our culture, we sometimes <strong>compare certain animals to greedy behavior</strong>.</div>
+<br>
+<br>
+<p><strong>6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)</strong></p>
+<br>
+<p>✨ <strong>Good Job:</strong></p>
+<p>Joey, "Of course, I'm an office worker, so I don't like 'loyal like a dog.' So, usually it's a better expression for me, 'smart like a fox,' because we have to live more wise and independent."</p>
+<p>이 문장은 Joey의 직업적 상황과 개인적인 가치관을 명확하고 논리적으로 연결하여 'smart like a fox'를 선호하는 이유를 아주 설득력 있게 설명해 주었습니다. 비즈니스 환경에서 필요한 독립성과 지혜를 강조한 점이 좋았어요!</p>
+<br>
+<p>🚀 <strong>내일의 한 문장:</strong></p>
+<p>다음 수업 시작 시, 튜터에게 오늘 배운 표현을 활용하여 이렇게 말해보세요.</p>
+<p>"I've been thinking about the animal idioms we discussed. It's interesting how cultures compare animals to certain behaviors."</p>
+<br>
+<br>
+<p><strong>[성과 지표]</strong></p>
+<p><strong>유창성 점수: 7/10점</strong></p>
+<p><strong>근거:</strong> Joey는 다양한 주제에 대해 막힘없이 자신의 의견을 표현하며 대화를 이어나가는 능력이 뛰어납니다. 특히, 한국 문화에 대한 설명을 영어로 능숙하게 전달하는 모습이 인상 깊었습니다. 다만, 일부 표현에서 직역투가 느껴지거나 전치사 사용에 미세한 오류가 있어 더 자연스러운 흐름을 만들 여지가 있습니다.</p>
+<br>
+<p><strong>다음 수업 '원포인트 액션 플랜':</strong></p>
+<p>다음 수업에서는 <strong>전치사 사용에 조금 더 신경 써서 문장을 구성하는 연습</strong>을 해볼까요? 특히, 동사 뒤에 오는 전치사(<code>think about</code>, <code>compare to</code>)나 불필요한 전치사 (<code>explain about</code>)를 줄이는 연습을 하면 Joey의 문장이 훨씬 더 자연스럽고 정확해질 거예요. 오늘 배운 'Target Grammar' 섹션을 다시 한번 복습해 보는 것을 추천합니다!</p></div>
+        </div>
+        <div id="tab-transcript" class="tab-content">
+            <div class="transcript"><span class="tutor">[Tutor]</span> Hello, good morning. Hi there, Joey. Good morning. How are you?
+<span class="student">[Student]</span> Good evening, teacher. I&#x27;m doing good. Yeah, thank you for asking.
+<span class="tutor">[Tutor]</span> Wonderful. Yeah, how are you today? It&#x27;s warm here. Yeah, it&#x27;s not as warm as Korea. It&#x27;s only 28, but with the humidity, it feels like 36, so it&#x27;s warm. That&#x27;s a little warm. Yeah, happy summer.
+<span class="student">[Student]</span> Happy summer. Do you have time?
+<span class="tutor">[Tutor]</span> Yeah.
+<span class="student">[Student]</span> Do you have time for one more class before your long weekend?
+<span class="tutor">[Tutor]</span> Oh, yes. Yes, it&#x27;s possible.
+<span class="student">[Student]</span> And this week, ah, unfortunately, uh, my mother was sick. So, yeah, she went, she stayed in hospital. So maybe Saturday I will go there with my family.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="student">[Student]</span> Yes, and take care of my mother.
+<span class="tutor">[Tutor]</span> Okay. May I ask, was this a long-term illness or did the illness happen suddenly?
+<span class="student">[Student]</span> It happened suddenly, but her back is a little sick and it transferred to her leg. So, when she exercised in the gym, she hurt her back, and she was taken to the hospital and had surgery, especially.
+<span class="tutor">[Tutor]</span> Oh, wow.
+<span class="student">[Student]</span> Yeah.
+<span class="tutor">[Tutor]</span> Okay, so she recovered from surgery.
+<span class="student">[Student]</span> Yes, but she&#x27;s a little old. She&#x27;s over 70 years old. So she, yeah, and she is a little late to recovery. So I&#x27;m a little upset.
+<span class="tutor">[Tutor]</span> It takes time, yeah.
+<span class="student">[Student]</span> Yeah, yeah. So it is a little difficult.
+<span class="tutor">[Tutor]</span> Okay. Well, I&#x27;m sure that they will be happy to see you and, you know, be cheered by you. I think having parents in their older years, like in their 70s and 80s, is really a blessing. Unfortunately, I lost my parents when I was in my 30s. One died at 50 and one died at 58. So, yeah, I don&#x27;t have any elders to be worried about. Sometimes I miss that. So I love to hear about when people still have their parents, even if they&#x27;re getting on in years. I hope everything turns out okay.
+<span class="student">[Student]</span> Oh, thank you so much. Yeah, you&#x27;re so kind.
+<span class="tutor">[Tutor]</span> You&#x27;re very welcome. Okay. Oh, of course. Sure. Okay, Joey, would you like to continue with Snack Chat today? Or would you like to do Daily Topic English?
+<span class="student">[Student]</span> Yes, my plan is to finish, continue the Snack Chat.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="student">[Student]</span> It is Chapter 13, Day is with Animals.
+<span class="tutor">[Tutor]</span> Yes, we finished page 13 last class. So now we&#x27;re on to page 14, and it&#x27;s Pet Ownership.
+<span class="student">[Student]</span> Pet Ownership? Just normal?
+<span class="tutor">[Tutor]</span> Just normal. No, no, no. Just the next page. Because...
+<span class="student">[Student]</span> That&#x27;s right. Yes, yes. 13. The Day is with Animals. Because my...
+<span class="tutor">[Tutor]</span> Your schedule is full.
+<span class="student">[Student]</span> So, Wednesday, my teacher is changing. So...
+<span class="tutor">[Tutor]</span> Oh, I see. I&#x27;m sorry. Yes, you&#x27;re absolutely right. I see your tutor&#x27;s notes. And you are on to page 15. Okay. Okay. No problem at all. Say it with Animals. Okay. Thank you for your patience. All right. Let&#x27;s get started. Okay. I&#x27;ll get you to read the question for Part A and make a response.
+<span class="student">[Student]</span> Okay. No problem. The question. What animal do people compare greedy behavior to in your country? There are four kinds of cute characters in this textbook. In our country, the category is under the pig. Yeah, I understand because in our culture, people say some greedy people like the pig. You eat like a pig. Sometimes some people do not exercise and eat much. Many eat many. At that time, we call him &quot;he likes to eat like a pig.&quot; He eats like a pig. So that is the greedy animal in Korea. I understand. I feel a little strange. Bear and dog are also greedy animals in other countries, right?
+<span class="tutor">[Tutor]</span> Yes, yes. We consider, we kind of connect the bear because a bear will eat just about anything. Not only do they hunt, but they eat plants, berries, leaves. They will eat whatever they need to get ready for their winter sleep.
+<span class="student">[Student]</span> Yes, I see.
+<span class="tutor">[Tutor]</span> Yeah. And then dogs, well, dogs will never pass up free food or a treat. Dogs love, they love to eat.
+<span class="student">[Student]</span> Yeah. It&#x27;s a strong indicator of strangeness.
+<span class="tutor">[Tutor]</span> Well, the thing is, is that goats will also try to eat anything, including plastic, fabric, tires. They&#x27;ll try anything. But pig is the most common.
+<span class="student">[Student]</span> Yes, so usually every culture, they compare some animal to be bad behavior. I understand.
+<span class="tutor">[Tutor]</span> Yes, I will see if I can find a video that describes idioms with animals. You might enjoy it.
+<span class="student">[Student]</span> Thank you so much.
+<span class="tutor">[Tutor]</span> You&#x27;re very welcome. All right, Joey. Let&#x27;s go on to Part B. I&#x27;ll get you to read the question.
+<span class="student">[Student]</span> Which would you rather hear about yourself and why? The smart like a fox versus loyal like a dog?
+<span class="student">[Student]</span> Of course, I&#x27;m an office worker, so I don&#x27;t like &quot;loyal like a dog.&quot;
+<span class="tutor">[Tutor]</span> Oh, yeah.
+<span class="student">[Student]</span> So, usually it&#x27;s a better expression for me, &quot;smart like a fox,&quot; because we have to live more wise and independent. So, yeah, it&#x27;s a better expression for me. &quot;Smart like a fox,&quot; yeah, live my life.
+<span class="tutor">[Tutor]</span> Yes. In your culture, you have the nine-tailed fox.
+<span class="student">[Student]</span> Nine-tailed? Yeah, you&#x27;re right.
+<span class="tutor">[Tutor]</span> Do you know that?
+<span class="student">[Student]</span> Yes, I do.
+<span class="tutor">[Tutor]</span> And that one is considered to be very smart, very crafty, very sneaky, but very intelligent.
+<span class="student">[Student]</span> Yes. Yeah, intelligent. I understand. Yeah, we have so many dramas that are nine-tailed foxes, but always that nine-tailed fox is beautiful in human form.
+<span class="tutor">[Tutor]</span> It is. It is. I don&#x27;t know if you&#x27;re aware of this, Joey. But I&#x27;m able to watch Korean dramas and other programs here in Canada.
+<span class="student">[Student]</span> Ah, yes, yes, I see.
+<span class="tutor">[Tutor]</span> And my daughter and I enjoy them on occasion. They&#x27;re very often well written, and the actors are usually very good.
+<span class="student">[Student]</span> Oh, wow.
+<span class="tutor">[Tutor]</span> Yeah, so Korean television is becoming more popular around the world. That&#x27;s how I know about the nine-tailed fox.
+<span class="student">[Student]</span> Yeah, I feel these days, the Korean culture feels a little changed. Because when you&#x27;re so good, that is spread, that is a shallow culture. Only you watch a movie or thinking about only shallow people. But nowadays, it&#x27;s more spread in the world. It&#x27;s so nice.
+<span class="tutor">[Tutor]</span> I think it is. I&#x27;ve always enjoyed learning about new cultures and new countries, so I enjoy it. All right, Joey, let&#x27;s get you to go to Part C and read the situation, please.
+<span class="student">[Student]</span> Okay, situation. Your foreign friends keep comparing you to a certain animal that&#x27;s considered insulting in your culture. You don&#x27;t think they mean it in a bad way, but it makes you uncomfortable. Would you explain how it sounds to you or just let it go? Yes, that depends on the, how can I say, for example, that is the, that relationship is a little, just not friendly, just one time with me, or just temporary meeting. It&#x27;s possible because they don&#x27;t understand our culture. So I&#x27;m just saying, because they don&#x27;t mean to make a mistake in our culture. So I&#x27;m okay, but I&#x27;m explaining some mistake because...
+<span class="tutor">[Tutor]</span> Oh, sure.
+<span class="student">[Student]</span> Yeah, because it&#x27;s better. If they&#x27;re wrong, they don&#x27;t say it anymore. Yes. Yes. Yes. Yes. So it&#x27;s okay. I understand that it&#x27;s a mistake, but I&#x27;m explaining about that. Yes. Yes.
+<span class="tutor">[Tutor]</span> Uh-huh. That&#x27;s very important that you do explain it so they do not get confused and keep doing it.
+<span class="student">[Student]</span> Yeah. Yeah.
+<span class="tutor">[Tutor]</span> I can appreciate that. Yeah. Okay. Very good. Sounds like you would just try to be a good friend and explain it to them. That&#x27;s wonderful. Awesome. All right. We&#x27;re on to the warm-down. I&#x27;ll get you to read and respond to question one.
+<span class="student">[Student]</span> Okay. Do you have a favorite animal-related saying in your language? What does it mean?
+<span class="student">[Student]</span> I like the &quot;umul an gaeguri.&quot; That means it&#x27;s a frog in a well. Yeah. In a well. A frog in a well. Usually...
+<span class="tutor">[Tutor]</span> A frog in a well. Do you know?
+<span class="tutor">[Tutor]</span> Well, I know, I understand you are talking about an animal in a well. But I&#x27;m not hearing clearly what the animal is. I know it might be hard to say in English.
+<span class="student">[Student]</span> Yes, I see. If imagine a frog lives in a well.
+<span class="tutor">[Tutor]</span> A frog?
+<span class="student">[Student]</span> Yeah, frog.
+<span class="tutor">[Tutor]</span> A frog!
+<span class="student">[Student]</span> Yeah, frog.
+<span class="tutor">[Tutor]</span> Frog, F-R-O-G.
+<span class="student">[Student]</span> Yeah, frog, you&#x27;re right.
+<span class="tutor">[Tutor]</span> All right, good. I&#x27;m glad we figured it out.
+<span class="student">[Student]</span> Yeah, if he lives alone in a well, or his friend lives with his friend, he thinks, &quot;I&#x27;m doing well. I&#x27;m great in the world. I&#x27;m wise in the world.&quot; He thinks only himself. But if he goes outside, goes to the wider world, he can find the vast and more beautiful things, filled with more beautiful things and some more wise things and more everything. Yeah. Yeah. So, yeah. The happiest animal is a frog in a well.
+<span class="tutor">[Tutor]</span> Okay. That&#x27;s kind of unusual. It&#x27;s kind of ironic that you brought that up because we have an English word for that type of attitude. It&#x27;s called exceptionalism.
+<span class="student">[Student]</span> Exceptionalism. Exceptionism. Exceptionism. Yes.
+<span class="tutor">[Tutor]</span> And what it means is that you think you or your country or your culture is superior to everyone else.
+<span class="student">[Student]</span> Americans. Yes, I see. Exceptionalism is a positive meaning, right?
+<span class="tutor">[Tutor]</span> Yeah. You think you&#x27;re superior.
+<span class="student">[Student]</span> Yes, yes. Yeah, it&#x27;s important because if I think only one thing or just one way of thinking, it is not developing myself. So, exceptionalism is better, yeah, to study more.
+<span class="tutor">[Tutor]</span> Oh, yes. Absolutely. Uh-huh. Of course. Okay. Yeah, it&#x27;s important to be open-minded.
+<span class="student">[Student]</span> Open-minded. Open-minded. Same. Okay. Okay. All right.
+<span class="tutor">[Tutor]</span> Okay, now before we go on to number two, I just want to do some background information. So in different cultures, they have animals that represent certain people&#x27;s personalities. Sometimes it&#x27;s based on the year they were born, like the Chinese zodiac or other cultures. So number two says, &quot;What animal do you think matches your personality and why?&quot; Do you ever think of an animal representing you?
+<span class="student">[Student]</span> In Asian cultures, they think we have 12 animals.
+<span class="tutor">[Tutor]</span> That&#x27;s right.
+<span class="student">[Student]</span> Yeah, animal, representative animal. And in my case, I&#x27;m a rooster.
+<span class="tutor">[Tutor]</span> Oh, okay, cool.
+<span class="student">[Student]</span> Yes, the rooster is a hard worker, but I like it because he is so diligent. Every morning, he crows and he thinks what he thinks in the morning. And he is diligent and able to show pride. So, I love that.
+<span class="tutor">[Tutor]</span> Absolutely. Oh, sure. Yeah. I was born under the year of the dragon.
+<span class="student">[Student]</span> Dragon. Oh, you&#x27;re the dragon. Wow. Yeah.
+<span class="tutor">[Tutor]</span> And that&#x27;s always represented to me someone who is in control of their life and takes action. All right. You know that. All right.
+<span class="student">[Student]</span> Okay. The Asian animals have a representative color also. So usually five kinds of colors.
+<span class="tutor">[Tutor]</span> Color? Oh, yeah.
+<span class="student">[Student]</span> The black dragon or yellow dragon, red dragon.
+<span class="tutor">[Tutor]</span> Yeah, that part I don&#x27;t know. I&#x27;m going to have to research that. Thank you for telling me.
+<span class="student">[Student]</span> Okay.
+<span class="tutor">[Tutor]</span> All right, Joey. Let&#x27;s wrap up your lesson by getting you to read the useful vocabulary. You&#x27;re going to read the word, the description, and the example sentence.
+<span class="student">[Student]</span> Okay. Thank you so much. Copycat. A person who copies what others do is just a copycat with no original ideas.
+<span class="tutor">[Tutor]</span> Cash cow.
+<span class="student">[Student]</span> Very good.
+<span class="tutor">[Tutor]</span> Next one.
+<span class="student">[Student]</span> Cash cow. Something that keeps making money with little effort. This new game could be their next cash cow. Okay. Sitting duck.
+<span class="tutor">[Tutor]</span> Sitting duck.
+<span class="student">[Student]</span> A person or thing that&#x27;s easy to attack. I felt like a sitting duck in the argument. Okay.
+<span class="tutor">[Tutor]</span> Very good. Mm-hmm. All right. I&#x27;m just going to get you to read the useful expressions and their description.
+<span class="student">[Student]</span> Okay. Don&#x27;t let the cat out of the bag. Don&#x27;t let the cat. Don&#x27;t let the cat out of the bag. Use the warning. Warn someone not to share the secret. Don&#x27;t let the cat.
+<span class="tutor">[Tutor]</span> Don&#x27;t let the cat out of the bag.
+<span class="student">[Student]</span> Okay. And stop horsing around. Horsing. Horsing around. Stop horsing around. You should tell someone to stop playing or being silly. Stop horsing around.
+<span class="tutor">[Tutor]</span> Very good.
+<span class="student">[Student]</span> Okay. Teacher, I have a question. We have a little short time, but okay.
+<span class="tutor">[Tutor]</span> No, we have time. It&#x27;s okay. Go ahead.
+<span class="student">[Student]</span> Okay. I was wondering that &quot;don&#x27;t let the cat out of the bag&quot; because the cat is to move and open the secret, right?
+<span class="tutor">[Tutor]</span> Yes. The cat represents the information you&#x27;re keeping secret, you&#x27;re keeping contained.
+<span class="student">[Student]</span> Ah, yes, yes, I understand. And &quot;stop horsing around,&quot; because in your culture, the horse is the representative of little stupid animals, right?
+<span class="tutor">[Tutor]</span> Well, no, actually we see them as quite intelligent, but sometimes they run around or jump or they do silly behavior, and we identify it with being silly or being not serious.
+<span class="student">[Student]</span> Okay, I see. Thank you so much.
+<span class="tutor">[Tutor]</span> Yes. All right. No worries. Like I said, I&#x27;ll try and find some animal idioms for you to enjoy over the weekend. All right, sir. Any questions or concerns?
+<span class="student">[Student]</span> No, thank you so much. Have a nice weekend, teacher.
+<span class="tutor">[Tutor]</span> You too. Talk to you next week. Bye-bye.
+<span class="student">[Student]</span> Bye-bye.</div>
+        </div>
+    </div>
+    <div class="toast" id="toast">✅ 프롬프트가 복사되었습니다!</div>
+    <script>
+        const REVIEW_PROMPT="너는 나의 영어 회화 복습 파트너야. 오늘 내 전화영어 수업 내용을 기반으로 대화하면서 복습을 도와줘.\n\n[오늘 수업 전사 내용]\n[Tutor] Hello, good morning. Hi there, Joey. Good morning. How are you?\n[Student] Good evening, teacher. I'm doing good. Yeah, thank you for asking.\n[Tutor] Wonderful. Yeah, how are you today? It's warm here. Yeah, it's not as warm as Korea. It's only 28, but with the humidity, it feels like 36, so it's warm. That's a little warm. Yeah, happy summer.\n[Student] Happy summer. Do you have time?\n[Tutor] Yeah.\n[Student] Do you have time for one more class before your long weekend?\n[Tutor] Oh, yes. Yes, it's possible.\n[Student] And this week, ah, unfortunately, uh, my mother was sick. So, yeah, she went, she stayed in hospital. So maybe Saturday I will go there with my family.\n[Tutor] Okay.\n[Student] Yes, and take care of my mother.\n[Tutor] Okay. May I ask, was this a long-term illness or did the illness happen suddenly?\n[Student] It happened suddenly, but her back is a little sick and it transferred to her leg. So, when she exercised in the gym, she hurt her back, and she was taken to the hospital and had surgery, especially.\n[Tutor] Oh, wow.\n[Student] Yeah.\n[Tutor] Okay, so she recovered from surgery.\n[Student] Yes, but she's a little old. She's over 70 years old. So she, yeah, and she is a little late to recovery. So I'm a little upset.\n[Tutor] It takes time, yeah.\n[Student] Yeah, yeah. So it is a little difficult.\n[Tutor] Okay. Well, I'm sure that they will be happy to see you and, you know, be cheered by you. I think having parents in their older years, like in their 70s and 80s, is really a blessing. Unfortunately, I lost my parents when I was in my 30s. One died at 50 and one died at 58. So, yeah, I don't have any elders to be worried about. Sometimes I miss that. So I love to hear about when people still have their parents, even if they're getting on in years. I hope everything turns out okay.\n[Student] Oh, thank you so much. Yeah, you're so kind.\n[Tutor] You're very welcome. Okay. Oh, of course. Sure. Okay, Joey, would you like to continue with Snack Chat today? Or would you like to do Daily Topic English?\n[Student] Yes, my plan is to finish, continue the Snack Chat.\n[Tutor] Okay.\n[Student] It is Chapter 13, Day is with Animals.\n[Tutor] Yes, we finished page 13 last class. So now we're on to page 14, and it's Pet Ownership.\n[Student] Pet Ownership? Just normal?\n[Tutor] Just normal. No, no, no. Just the next page. Because...\n[Student] That's right. Yes, yes. 13. The Day is with Animals. Because my...\n[Tutor] Your schedule is full.\n[Student] So, Wednesday, my teacher is changing. So...\n[Tutor] Oh, I see. I'm sorry. Yes, you're absolutely right. I see your tutor's notes. And you are on to page 15. Okay. Okay. No problem at all. Say it with Animals. Okay. Thank you for your patience. All right. Let's get started. Okay. I'll get you to read the question for Part A and make a response.\n[Student] Okay. No problem. The question. What animal do people compare greedy behavior to in your country? There are four kinds of cute characters in this textbook. In our country, the category is under the pig. Yeah, I understand because in our culture, people say some greedy people like the pig. You eat like a pig. Sometimes some people do not exercise and eat much. Many eat many. At that time, we call him \"he likes to eat like a pig.\" He eats like a pig. So that is the greedy animal in Korea. I understand. I feel a little strange. Bear and dog are also greedy animals in other countries, right?\n[Tutor] Yes, yes. We consider, we kind of connect the bear because a bear will eat just about anything. Not only do they hunt, but they eat plants, berries, leaves. They will eat whatever they need to get ready for their winter sleep.\n[Student] Yes, I see.\n[Tutor] Yeah. And then dogs, well, dogs will never pass up free food or a treat. Dogs love, they love to eat.\n[Student] Yeah. It's a strong indicator of strangeness.\n[Tutor] Well, the thing is, is that goats will also try to eat anything, including plastic, fabric, tires. They'll try anything. But pig is the most common.\n[Student] Yes, so usually every culture, they compare some animal to be bad behavior. I understand.\n[Tutor] Yes, I will see if I can find a video that describes idioms with animals. You might enjoy it.\n[Student] Thank you so much.\n[Tutor] You're very welcome. All right, Joey. Let's go on to Part B. I'll get you to read the question.\n[Student] Which would you rather hear about yourself and why? The smart like a fox versus loyal like a dog?\n[Student] Of course, I'm an office worker, so I don't like \"loyal like a dog.\"\n[Tutor] Oh, yeah.\n[Student] So, usually it's a better expression for me, \"smart like a fox,\" because we have to live more wise and independent. So, yeah, it's a better expression for me. \"Smart like a fox,\" yeah, live my life.\n[Tutor] Yes. In your culture, you have the nine-tailed fox.\n[Student] Nine-tailed? Yeah, you're right.\n[Tutor] Do you know that?\n[Student] Yes, I do.\n[Tutor] And that one is considered to be very smart, very crafty, very sneaky, but very intelligent.\n[Student] Yes. Yeah, intelligent. I understand. Yeah, we have so many dramas that are nine-tailed foxes, but always that nine-tailed fox is beautiful in human form.\n[Tutor] It is. It is. I don't know if you're aware of this, Joey. But I'm able to watch Korean dramas and other programs here in Canada.\n[Student] Ah, yes, yes, I see.\n[Tutor] And my daughter and I enjoy them on occasion. They're very often well written, and the actors are usually very good.\n[Student] Oh, wow.\n[Tutor] Yeah, so Korean television is becoming more popular around the world. That's how I know about the nine-tailed fox.\n[Student] Yeah, I feel these days, the Korean culture feels a little changed. Because when you're so good, that is spread, that is a shallow culture. Only you watch a movie or thinking about only shallow people. But nowadays, it's more spread in the world. It's so nice.\n[Tutor] I think it is. I've always enjoyed learning about new cultures and new countries, so I enjoy it. All right, Joey, let's get you to go to Part C and read the situation, please.\n[Student] Okay, situation. Your foreign friends keep comparing you to a certain animal that's considered insulting in your culture. You don't think they mean it in a bad way, but it makes you uncomfortable. Would you explain how it sounds to you or just let it go? Yes, that depends on the, how can I say, for example, that is the, that relationship is a little, just not friendly, just one time with me, or just temporary meeting. It's possible because they don't understand our culture. So I'm just saying, because they don't mean to make a mistake in our culture. So I'm okay, but I'm explaining some mistake because...\n[Tutor] Oh, sure.\n[Student] Yeah, because it's better. If they're wrong, they don't say it anymore. Yes. Yes. Yes. Yes. So it's okay. I understand that it's a mistake, but I'm explaining about that. Yes. Yes.\n[Tutor] Uh-huh. That's very important that you do explain it so they do not get confused and keep doing it.\n[Student] Yeah. Yeah.\n[Tutor] I can appreciate that. Yeah. Okay. Very good. Sounds like you would just try to be a good friend and explain it to them. That's wonderful. Awesome. All right. We're on to the warm-down. I'll get you to read and respond to question one.\n[Student] Okay. Do you have a favorite animal-related saying in your language? What does it mean?\n[Student] I like the \"umul an gaeguri.\" That means it's a frog in a well. Yeah. In a well. A frog in a well. Usually...\n[Tutor] A frog in a well. Do you know?\n[Tutor] Well, I know, I understand you are talking about an animal in a well. But I'm not hearing clearly what the animal is. I know it might be hard to say in English.\n[Student] Yes, I see. If imagine a frog lives in a well.\n[Tutor] A frog?\n[Student] Yeah, frog.\n[Tutor] A frog!\n[Student] Yeah, frog.\n[Tutor] Frog, F-R-O-G.\n[Student] Yeah, frog, you're right.\n[Tutor] All right, good. I'm glad we figured it out.\n[Student] Yeah, if he lives alone in a well, or his friend lives with his friend, he thinks, \"I'm doing well. I'm great in the world. I'm wise in the world.\" He thinks only himself. But if he goes outside, goes to the wider world, he can find the vast and more beautiful things, filled with more beautiful things and some more wise things and more everything. Yeah. Yeah. So, yeah. The happiest animal is a frog in a well.\n[Tutor] Okay. That's kind of unusual. It's kind of ironic that you brought that up because we have an English word for that type of attitude. It's called exceptionalism.\n[Student] Exceptionalism. Exceptionism. Exceptionism. Yes.\n[Tutor] And what it means is that you think you or your country or your culture is superior to everyone else.\n[Student] Americans. Yes, I see. Exceptionalism is a positive meaning, right?\n[Tutor] Yeah. You think you're superior.\n[Student] Yes, yes. Yeah, it's important because if I think only one thing or just one way of thinking, it is not developing myself. So, exceptionalism is better, yeah, to study more.\n[Tutor] Oh, yes. Absolutely. Uh-huh. Of course. Okay. Yeah, it's important to be open-minded.\n[Student] Open-minded. Open-minded. Same. Okay. Okay. All right.\n[Tutor] Okay, now before we go on to number two, I just want to do some background information. So in different cultures, they have animals that represent certain people's personalities. Sometimes it's based on the year they were born, like the Chinese zodiac or other cultures. So number two says, \"What animal do you think matches your personality and why?\" Do you ever think of an animal representing you?\n[Student] In Asian cultures, they think we have 12 animals.\n[Tutor] That's right.\n[Student] Yeah, animal, representative animal. And in my case, I'm a rooster.\n[Tutor] Oh, okay, cool.\n[Student] Yes, the rooster is a hard worker, but I like it because he is so diligent. Every morning, he crows and he thinks what he thinks in the morning. And he is diligent and able to show pride. So, I love that.\n[Tutor] Absolutely. Oh, sure. Yeah. I was born under the year of the dragon.\n[Student] Dragon. Oh, you're the dragon. Wow. Yeah.\n[Tutor] And that's always represented to me someone who is in control of their life and takes action. All right. You know that. All right.\n[Student] Okay. The Asian animals have a representative color also. So usually five kinds of colors.\n[Tutor] Color? Oh, yeah.\n[Student] The black dragon or yellow dragon, red dragon.\n[Tutor] Yeah, that part I don't know. I'm going to have to research that. Thank you for telling me.\n[Student] Okay.\n[Tutor] All right, Joey. Let's wrap up your lesson by getting you to read the useful vocabulary. You're going to read the word, the description, and the example sentence.\n[Student] Okay. Thank you so much. Copycat. A person who copies what others do is just a copycat with no original ideas.\n[Tutor] Cash cow.\n[Student] Very good.\n[Tutor] Next one.\n[Student] Cash cow. Something that keeps making money with little effort. This new game could be their next cash cow. Okay. Sitting duck.\n[Tutor] Sitting duck.\n[Student] A person or thing that's easy to attack. I felt like a sitting duck in the argument. Okay.\n[Tutor] Very good. Mm-hmm. All right. I'm just going to get you to read the useful expressions and their description.\n[Student] Okay. Don't let the cat out of the bag. Don't let the cat. Don't let the cat out of the bag. Use the warning. Warn someone not to share the secret. Don't let the cat.\n[Tutor] Don't let the cat out of the bag.\n[Student] Okay. And stop horsing around. Horsing. Horsing around. Stop horsing around. You should tell someone to stop playing or being silly. Stop horsing around.\n[Tutor] Very good.\n[Student] Okay. Teacher, I have a question. We have a little short time, but okay.\n[Tutor] No, we have time. It's okay. Go ahead.\n[Student] Okay. I was wondering that \"don't let the cat out of the bag\" because the cat is to move and open the secret, right?\n[Tutor] Yes. The cat represents the information you're keeping secret, you're keeping contained.\n[Student] Ah, yes, yes, I understand. And \"stop horsing around,\" because in your culture, the horse is the representative of little stupid animals, right?\n[Tutor] Well, no, actually we see them as quite intelligent, but sometimes they run around or jump or they do silly behavior, and we identify it with being silly or being not serious.\n[Student] Okay, I see. Thank you so much.\n[Tutor] Yes. All right. No worries. Like I said, I'll try and find some animal idioms for you to enjoy over the weekend. All right, sir. Any questions or concerns?\n[Student] No, thank you so much. Have a nice weekend, teacher.\n[Tutor] You too. Talk to you next week. Bye-bye.\n[Student] Bye-bye.\n\n[AI 피드백]\n안녕하세요, Joey! 오늘 수업도 정말 즐거웠습니다. 어머니께서 갑작스럽게 편찮으셔서 걱정이 많으셨을 텐데, 수업에 집중해 주셔서 감사해요. 어머님의 빠른 쾌유를 바랍니다.\n\n오늘 동물과 관련된 다양한 표현과 문화적 차이에 대해 이야기 나누면서 Joey의 통찰력과 문화에 대한 깊은 이해에 감탄했습니다. 특히 '우물 안 개구리' 속담을 영어로 설명해 주신 부분은 정말 인상 깊었어요!\n\n---\n\n**0. 📌 Topic**\nTopic: Discussing animal idioms and cultural perceptions of animals.\n\n---\n\n**1. 📊 오늘의 대화 요약 (Summary)**\nJoey는 수업 시작 시 어머니의 건강 상태에 대해 이야기했습니다. 이어서 '동물과 관련된 표현'을 주제로, 탐욕스러운 행동을 나타내는 동물 표현과 '여우처럼 영리함'과 '개처럼 충성스러움' 중 선호하는 표현을 비교했습니다. 또한, 동물 관련 한국 속담인 '우물 안 개구리'를 설명하고 십이지신 동물에 대해서도 대화를 나눴습니다.\n\n---\n\n**2. 💬 유창성 업그레이드 (Fluency & Natural Flow)**\n\nJoey가 사용한 표현 중 의미는 통하지만, 원어민이 들었을 때 더 자연스럽게 들릴 수 있는 표현들을 함께 살펴볼게요.\n\n*   **❌ 학습자 원문 (As Said):** \"So she, yeah, and she is a little **late to recovery**.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"Her recovery is a little **slow**.\"\n    *   **💎 비즈니스 표현 (Professional):** \"Her recovery is **progressing more slowly than anticipated**.\"\n    *   **💡 코칭 포인트:** \"late to recovery\"는 일반적으로 사용되는 표현이 아닙니다. 회복 속도를 이야기할 때는 \"slow\" 또는 \"taking time\"이 더 자연스럽습니다.\n\n*   **❌ 학습자 원문 (As Said):** \"Sometimes some people do not exercise and eat much. **Many eat many**.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"Sometimes some people don't exercise and eat a lot. **They eat too much.**\"\n    *   **💎 비즈니스 표현 (Professional):** \"Some individuals may not engage in physical activity and **over-consume food**.\"\n    *   **💡 코칭 포인트:** \"Many eat many\"는 문법적으로 어색하고 반복적인 표현입니다. \"eat a lot\"이나 \"eat too much\"가 음식을 많이 먹는다는 것을 표현하는 일반적이고 자연스러운 방법입니다.\n\n*   **❌ 학습자 원문 (As Said):** \"Yeah. It's a **strong indicator of strangeness**.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"Yeah, **that's a bit strange**.\"\n    *   **💎 비즈니스 표현 (Professional):** \"Indeed, that's an **unusual characteristic**.\"\n    *   **💡 코칭 포인트:** \"strong indicator of strangeness\"는 너무 직역적이고 격식 있는 표현입니다. 가벼운 대화에서는 \"that's a bit strange\" 또는 \"that's interesting\"처럼 가벼운 놀라움이나 특이함을 표현하는 것이 더 자연스럽습니다.\n\n---\n\n**3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)**\n\nCategory: Prepositions (전치사)\n\nJoey는 문장 내에서 전치사를 선택하거나 생략하는 부분에서 몇 가지 반복적인 오류를 보였습니다. 특히, 동사 뒤에 오는 전치사를 누락하거나 어색하게 사용하는 경향이 있었습니다.\n\n| ❌ 원문 (As Said)                                                                  | ✅ 교정 예시 (Corrected)                                                              |\n| :--------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------ |\n| \"He thinks **only himself**.\"                                                      | \"He thinks **only about himself**.\"                                                   |\n| \"So usually every culture, they compare some animal **to be bad behavior**.\"       | \"So usually every culture, they compare some animal **to bad behavior**.\"             |\n| \"I'm explaining **about that**.\"                                                   | \"I'm explaining **that**.\" (or \"I'm explaining **it**.\")                              |\n\n📌 **핵심 규칙:** 동사가 특정 전치사와 함께 쓰여야 의미가 완성되거나 (예: `think about`), 명사를 수식하는 전치사가 필요한 경우 (예: `compare to`), 또는 동사 자체에 이미 의미가 포함되어 전치사가 불필요한 경우 (예: `explain`은 `about` 없이 바로 목적어 사용)가 있습니다.\n\n🔁 **따라 읽기:**\n🗣️ \"He thinks only about himself.\"\n🗣️ \"So usually every culture, they compare some animal to bad behavior.\"\n🗣️ \"I'm explaining that.\"\n\n---\n\n**4. 📗 어휘 확장 (Vocabulary Vault)**\n\n오늘 수업에서 다룬 내용과 Joey의 관심사를 고려하여 유용한 어휘 5개를 소개합니다.\n\n1.  **greedy** /그리디/ (adj.)\n    *   뜻: 탐욕스러운, 욕심 많은\n    *   실전 예문: The company was criticized for its **greedy** pursuit of profit at the expense of environmental protection.\n\n2.  **insulting** /인썰팅/ (adj.)\n    *   뜻: 모욕적인, 무례한\n    *   실전 예문: Making a joke about someone's background can be perceived as **insulting** in some cultures.\n\n3.  **exceptionalism** /익셉셔널리즘/ (n.)\n    *   뜻: 예외주의 (자신이나 자신의 집단이 다른 것보다 우월하다고 믿는 태도)\n    *   실전 예문: The CEO warned against corporate **exceptionalism**, emphasizing the importance of learning from competitors.\n\n4.  **diligent** /딜리전트/ (adj.)\n    *   뜻: 근면한, 성실한\n    *   실전 예문: Her **diligent** efforts in market research led to a significant increase in sales.\n\n5.  **crafty** /크래프티/ (adj.)\n    *   뜻: 교활한, 간교한 (주로 영리하고 꾀가 많지만 약간 부정적인 뉘앙스)\n    *   실전 예문: The negotiator used a **crafty** strategy to secure a favorable deal for his client.\n\n---\n\n**5. 📝 실전 복습 챌린지 (Practice)**\n\n오늘 배운 표현과 문법을 활용하여 다음 문장들을 영작해 보세요.\n\n1.  **상황:** 당신은 팀원에게 중요한 정보를 공유하되, 아직 외부에 알려지지 않도록 조심하라고 말하고 싶습니다.\n    *   **영작:** 이 소식을 외부에 발설하지 않도록 조심해 주세요.\n    *   **모범 답안:** Please be careful not to **let the cat out of the bag** about this news.\n\n2.  **상황:** 당신은 동료의 회복이 예상보다 느리다고 상사에게 보고해야 합니다.\n    *   **영작:** 그의 회복은 예상보다 조금 더디게 진행되고 있습니다.\n    *   **모범 답안:** His recovery is **progressing a little slower than anticipated**.\n\n3.  **상황:** 당신은 국제 비즈니스 파트너에게 특정 동물이 한국 문화에서 탐욕스러운 행동과 연관될 수 있음을 설명하고 싶습니다.\n    *   **영작:** 우리 문화에서는 특정 동물을 탐욕스러운 행동에 비유하는 경우가 있습니다.\n    *   **모범 답안:** In our culture, we sometimes **compare certain animals to greedy behavior**.\n\n---\n\n**6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)**\n\n✨ **Good Job:**\nJoey, \"Of course, I'm an office worker, so I don't like 'loyal like a dog.' So, usually it's a better expression for me, 'smart like a fox,' because we have to live more wise and independent.\"\n이 문장은 Joey의 직업적 상황과 개인적인 가치관을 명확하고 논리적으로 연결하여 'smart like a fox'를 선호하는 이유를 아주 설득력 있게 설명해 주었습니다. 비즈니스 환경에서 필요한 독립성과 지혜를 강조한 점이 좋았어요!\n\n🚀 **내일의 한 문장:**\n다음 수업 시작 시, 튜터에게 오늘 배운 표현을 활용하여 이렇게 말해보세요.\n\"I've been thinking about the animal idioms we discussed. It's interesting how cultures compare animals to certain behaviors.\"\n\n---\n\n**[성과 지표]**\n**유창성 점수: 7/10점**\n**근거:** Joey는 다양한 주제에 대해 막힘없이 자신의 의견을 표현하며 대화를 이어나가는 능력이 뛰어납니다. 특히, 한국 문화에 대한 설명을 영어로 능숙하게 전달하는 모습이 인상 깊었습니다. 다만, 일부 표현에서 직역투가 느껴지거나 전치사 사용에 미세한 오류가 있어 더 자연스러운 흐름을 만들 여지가 있습니다.\n\n**다음 수업 '원포인트 액션 플랜':**\n다음 수업에서는 **전치사 사용에 조금 더 신경 써서 문장을 구성하는 연습**을 해볼까요? 특히, 동사 뒤에 오는 전치사(`think about`, `compare to`)나 불필요한 전치사 (`explain about`)를 줄이는 연습을 하면 Joey의 문장이 훨씬 더 자연스럽고 정확해질 거예요. 오늘 배운 'Target Grammar' 섹션을 다시 한번 복습해 보는 것을 추천합니다!\n\n위 내용을 바탕으로:\n1. 먼저 오늘 수업에서 내가 틀렸거나 어색했던 표현을 하나 골라서, 관련된 상황을 영어로 질문해줘.\n2. 내가 영어로 대답하면, 자연스러운지 확인하고 더 나은 표현이 있으면 알려줘.\n3. 특히 \"반복 실수 패턴\"에서 지적된 부분을 집중적으로 연습시켜줘.\n4. 이런 식으로 오늘 배운 표현들을 하나씩 복습하자.\n5. 한국어 설명은 필요할 때만 간단히, 대화는 최대한 영어로 진행해줘.\n\n그럼 시작하자!";
+        function startReview(){navigator.clipboard.writeText(REVIEW_PROMPT).then(()=>{showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)}).catch(()=>{const t=document.createElement('textarea');t.value=REVIEW_PROMPT;document.body.appendChild(t);t.select();document.execCommand('copy');document.body.removeChild(t);showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)})}
+        function showToast(){const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500)}
+        function switchTab(n){document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',n==='feedback'?i===0:i===1));document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));document.getElementById('tab-'+n).classList.add('active')}
+    </script>
+</body>
+</html>
