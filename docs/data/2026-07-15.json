@@ -4,24 +4,50 @@
   2026,
   29
  ],
- "topic": "Discussing the responsibilities and considerations of pet ownership.",
- "grammar": "Missing or Incorrect Articles",
- "grammar_norm": "Articles (a/an/the)",
- "score": null,
+ "topic": "Pet Ownership — Responsibility, Getting a Pet, and the Hardest Parts of Owning One",
+ "grammar": "prepositions",
+ "grammar_norm": "Prepositions",
+ "score": 6.0,
  "pairs": [
   {
-   "said": "It's similar, like a student.",
-   "natural": "It's similar to a student's life."
+   "said": "I had my own pet just five days, six days.",
+   "natural": "I had a pet for about five or six days."
   },
   {
-   "said": "So I think that is a little sorry about that and a little terrible.",
-   "natural": "I find that a bit unfortunate and even a little disheartening."
+   "said": "I got a pet on the road.",
+   "natural": "I found a puppy on the street."
   },
   {
-   "said": "I don't have experience to purchase a pet in the pet shop.",
-   "natural": "I don't have experience purchasing a pet from a pet shop."
+   "said": "If somebody is a little sick, their character is a little changed.",
+   "natural": "When someone is sick, their personality changes a bit."
   }
  ],
- "vocab": [],
- "_html_md5": "f59e52a644e0617b53c342c19135f602"
+ "vocab": [
+  {
+   "word": "separation anxiety",
+   "pos": "noun phrase",
+   "meaning": "분리 불안 (보호자가 없을 때 동물이나 아이가 극도로 불안해하는 상태)"
+  },
+  {
+   "word": "adoption",
+   "pos": "noun",
+   "meaning": "입양 (버려진 동물을 공식 절차로 데려오는 것)"
+  },
+  {
+   "word": "abandon",
+   "pos": "verb",
+   "meaning": "버리다, 유기하다"
+  },
+  {
+   "word": "stray",
+   "pos": "adjective / noun",
+   "meaning": "길 잃은 동물, 유기동물"
+  },
+  {
+   "word": "commitment",
+   "pos": "noun",
+   "meaning": "헌신, 지속적인 책임"
+  }
+ ],
+ "_html_md5": "dafb9c9c27a174ae979d55de02b48143"
 }
