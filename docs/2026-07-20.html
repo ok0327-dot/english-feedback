@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#0f0f13"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="당근영어"><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="icon" type="image/png" sizes="192x192" href="icon-192.png"><script src="install-banner.js" defer></script><script src="sw-reg.js" defer></script>
+    <title>전화영어 복습 - 2026년 07월 20일</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Noto Sans KR',sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.75;min-height:100vh}
+        .header{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);border-bottom:1px solid rgba(255,255,255,.06);padding:48px 24px 40px;text-align:center}
+        .header-date{font-size:13px;color:#94a3b8;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+        .header h1{font-size:28px;font-weight:700;color:#f1f5f9;margin-bottom:16px}
+        .header-meta{display:flex;justify-content:center;gap:24px;font-size:14px;color:#64748b}
+        .header-meta span{display:flex;align-items:center;gap:6px}
+        .cta-section{text-align:center;padding:40px 24px}
+        .cta-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:linear-gradient(135deg,#38bdf8,#818cf8);color:#fff;font-size:16px;font-weight:600;font-family:'Noto Sans KR',sans-serif;border:none;border-radius:50px;cursor:pointer;transition:all .3s;text-decoration:none;box-shadow:0 4px 24px rgba(56,189,248,.25)}
+        .cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(56,189,248,.35)}
+        .cta-btn svg{width:20px;height:20px}
+        .cta-sub{margin-top:12px;font-size:13px;color:#64748b}
+        .toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#38bdf8;padding:14px 28px;border-radius:12px;font-size:14px;font-weight:500;border:1px solid rgba(56,189,248,.2);box-shadow:0 8px 32px rgba(0,0,0,.4);opacity:0;transition:all .4s cubic-bezier(.16,1,.3,1);z-index:1000}
+        .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+        .container{max-width:720px;margin:0 auto;padding:0 24px 80px}
+        .tabs{display:flex;gap:4px;background:#1a1a24;padding:4px;border-radius:12px;margin-bottom:32px}
+        .tab{flex:1;padding:12px;text-align:center;font-size:14px;font-weight:500;color:#64748b;background:0 0;border:none;border-radius:8px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all .2s}
+        .tab.active{background:#262636;color:#f1f5f9}
+        .tab-content{display:none}.tab-content.active{display:block}
+        .feedback h2{font-size:18px;font-weight:700;color:#f1f5f9;margin:36px 0 16px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.06)}
+        .feedback h2:first-child{margin-top:0}
+        .feedback p{margin:8px 0;color:#cbd5e1}
+        .feedback .item{padding:6px 0 6px 16px;border-left:2px solid #334155;margin:6px 0;color:#cbd5e1}
+        .feedback .numbered{padding:8px 0 8px 16px;color:#cbd5e1}
+        .feedback .numbered strong{color:#38bdf8}
+        .feedback strong{color:#f1f5f9}
+        .feedback code{background:#1e293b;padding:2px 8px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#38bdf8}
+        .feedback table{width:100%;border-collapse:collapse;margin:12px 0}
+        .feedback th,.feedback td{padding:10px 14px;text-align:left;border-bottom:1px solid #262636}
+        .feedback th{color:#94a3b8;font-weight:500;font-size:13px}
+        .feedback td{color:#cbd5e1}
+        .arrow{color:#38bdf8;font-weight:700}
+        .transcript{background:#1a1a24;border-radius:12px;padding:28px;font-size:14px;line-height:2;color:#94a3b8;white-space:pre-wrap;word-break:break-word;font-family:'JetBrains Mono','Noto Sans KR',monospace}
+        .transcript .tutor{color:#38bdf8}
+        .transcript .student{color:#a78bfa}
+        @media(max-width:640px){.header{padding:32px 16px}.header h1{font-size:22px}.cta-btn{padding:14px 28px;font-size:15px}.container{padding:0 16px 60px}}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-date">2026년 07월 20일</div>
+        <h1>📚 전화영어 복습</h1>
+        <div class="header-meta">
+            <span>⏱ 20분 9초</span>
+            <span>🎙 전화영어_025180304_20260720080011.m4a</span>
+        </div>
+    </div>
+    <div class="cta-section">
+        <button class="cta-btn" onclick="startReview()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Gemini에서 복습 대화 시작하기
+        </button>
+        <div class="cta-sub">클릭하면 프롬프트가 복사되고 Gemini가 열립니다</div>
+    </div>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('feedback')">📋 AI 피드백</button>
+            <button class="tab" onclick="switchTab('transcript')">🎙 수업 전사</button>
+        </div>
+        <div id="tab-feedback" class="tab-content active">
+            <div class="feedback"><p>Joey, 안녕하세요! 오늘 수업도 활기차게 참여해주셔서 감사합니다. 어머님 건강도 많이 회복되셨다니 정말 다행이에요. 주말에 가족들과 즐거운 시간을 보내신 이야기도 인상 깊었습니다. 특히 식단과 건강에 대한 깊이 있는 대화는 Joey님의 자기 관리와 건강에 대한 관심이 돋보이는 시간이었습니다!</p>
+<br>
+<br>
+<p><strong>0. 📌 Topic</strong></p>
+<p>Topic: Discussing food trends, protein preferences, and grocery shopping habits.</p>
+<br>
+<br>
+<p><strong>1. 📊 오늘의 대화 요약 (Summary)</strong></p>
+<p>오늘 Joey님은 주말 동안 병원에 계신 어머님을 방문하고 가족들과 피크닉을 다녀온 이야기를 나누며 대화를 시작했습니다. 이어서 'You are what you eat'이라는 주제로 한국의 최신 음식 트렌드(고단백, 저당, 저칼로리 식단)와 Joey님이 선호하는 단백질 식품(계란)에 대해 이야기했습니다. 또한 온라인 장보기와 오프라인 시장 방문의 장단점을 비교하며 개인적인 경험을 공유했습니다.</p>
+<br>
+<br>
+<p><strong>2. 💬 유창성 업그레이드 (Fluency & Natural Flow)</strong></p>
+<br>
+<p>Joey님, 의미는 잘 전달되었지만, 조금 더 자연스럽고 매끄러운 표현으로 다듬을 수 있는 문장들을 함께 살펴볼게요.</p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>❌ 학습자 원문 (As Said):</strong> "And you're only a Monday teacher, so I cannot see your life."</div>
+<div class="item"><strong>✅ 자연스러운 표현 (Natural):</strong> "Since you only teach on Mondays, I don't get to hear much about your week."</div>
+<div class="item"><strong>💎 비즈니스 표현 (Professional):</strong> "As you only instruct on Mondays, I don't often have the opportunity to learn about your weekly activities."</div>
+<div class="item"><strong>💡 코칭 포인트:</strong> Using "don't get to hear much about" sounds more natural than "cannot see your life" when talking about someone's personal life. It implies a lack of opportunity rather than a physical inability. <span class="arrow">→</span> "cannot see your life" 대신 "don't get to hear much about"을 사용하면 상대방의 개인적인 삶에 대해 들을 기회가 적다는 뉘앙스를 자연스럽게 전달할 수 있습니다.</div>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>❌ 학습자 원문 (As Said):</strong> "And it's possible to cook so many kinds of cooking."</div>
+<div class="item"><strong>✅ 자연스러운 표현 (Natural):</strong> "And you can cook it in so many different ways."</div>
+<div class="item"><strong>💎 비즈니스 표현 (Professional):</strong> "It offers versatility in culinary preparation."</div>
+<div class="item"><strong>💡 코칭 포인트:</strong> "So many kinds of cooking"은 다소 반복적인 표현입니다. "cook it in so many different ways" 또는 "make so many dishes with it"처럼 말하면 더 간결하고 자연스럽습니다.</div>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>❌ 학습자 원문 (As Said):</strong> "And sometimes I'm a little that is not enjoy the taste the egg."</div>
+<div class="item"><strong>✅ 자연스러운 표현 (Natural):</strong> "Sometimes I don't really enjoy the taste of eggs."</div>
+<div class="item"><strong>💎 비즈니스 표현 (Professional):</strong> "Occasionally, I find the taste of eggs less appealing."</div>
+<div class="item"><strong>💡 코칭 포인트:</strong> 원문은 문법적으로 몇 가지 오류가 있습니다. "I don't really enjoy"는 어떤 것을 덜 좋아하거나 선호하지 않을 때 사용하는 간단하고 일반적인 표현입니다.</div>
+<br>
+<br>
+<p><strong>3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)</strong></p>
+<p>Category: Passive Voice (수동태)</p>
+<br>
+<p>Joey님, 오늘 대화에서 어머님의 퇴원 상황을 설명할 때 'discharge'라는 단어를 사용하면서 수동태 표현에 대한 고민이 많으셨어요. 'discharge'는 '방출하다, 퇴원시키다'라는 뜻의 타동사이기 때문에, '누군가가 퇴원당하다'라는 의미로 사용할 때는 반드시 수동태로 "be discharged"라고 표현해야 합니다.</p>
+<br>
+<table>
+<tr><th>❌ 원문 (As Said)</th><th>✅ 교정 예시 (Corrected)</th></tr>
+<tr><td>"My mother <strong>discharged</strong> from my hospital."</td><td>"My mother <strong>was discharged</strong> from the hospital."</td></tr>
+<tr><td>"My mother <strong>discharged</strong> from the hospital and my wife was discharged from the hospital."</td><td>"My mother <strong>was discharged</strong> from the hospital, and my wife helped her."</td></tr>
+<tr><td>"Many people start the crash diet, the people to get married, <strong>get ready</strong>."</td><td>"Many people start a crash diet to <strong>get ready</strong> for their wedding."</td></tr>
+</table>
+<br>
+<p>📌 <strong>핵심 규칙:</strong> 주어가 어떤 동작을 '당하는' 경우 (특히 'discharge'와 같이 타동사가 사용될 때), 'be + 과거분사(p.p.)' 형태의 수동태를 사용해야 합니다.</p>
+<br>
+<p>🔁 <strong>따라 읽기:</strong></p>
+<p>🗣️ "My mother was discharged from the hospital today."</p>
+<p>🗣️ "She was discharged after two weeks of recovery."</p>
+<p>🗣️ "Many people start a crash diet to get ready for their wedding."</p>
+<br>
+<br>
+<p><strong>4. 📗 어휘 확장 (Vocabulary Vault)</strong></p>
+<br>
+<p>오늘 대화에서 나온 표현들과 Joey님의 비즈니스 환경에서 유용하게 쓰일 수 있는 어휘들을 정리해 보았습니다.</p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>recover</strong> /rɪˈkʌvər/ (동사)</div>
+<div class="item">뜻: 회복하다, 되찾다</div>
+<div class="item">실전 예문: Our team needs to <strong>recover</strong> from the recent setback and focus on future growth.</div>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>trend</strong> /trɛnd/ (명사)</div>
+<div class="item">뜻: 유행, 경향, 추세</div>
+<div class="item">실전 예문: We should analyze the latest market <strong>trends</strong> to identify new investment opportunities.</div>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>versatility</strong> /ˌvɜːrsəˈtɪləti/ (명사)</div>
+<div class="item">뜻: 다용도성, 다재다능함</div>
+<div class="item">실전 예문: The <strong>versatility</strong> of this new technology makes it suitable for various industrial applications.</div>
+<br>
+<div class="numbered"><strong>4.</strong> <strong>ingredient</strong> /ɪnˈɡriːdiənt/ (명사)</div>
+<div class="item">뜻: 재료, 성분 (음식뿐 아니라 어떤 것의 구성 요소)</div>
+<div class="item">실전 예문: Trust is a key <strong>ingredient</strong> for successful long-term business partnerships.</div>
+<br>
+<div class="numbered"><strong>5.</strong> <strong>determined</strong> /dɪˈtɜːrmɪnd/ (형용사)</div>
+<div class="item">뜻: 단호한, 결심이 굳은</div>
+<div class="item">실전 예문: Despite the challenges, our CEO remains <strong>determined</strong> to achieve our ambitious sales targets.</div>
+<br>
+<br>
+<p><strong>5. 📝 실전 복습 챌린지 (Practice)</strong></p>
+<br>
+<p>오늘 배운 표현과 문법을 활용하여 다음 문장들을 영어로 영작해 보세요.</p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>상황:</strong> 최근 시장의 새로운 트렌드를 분석하는 것이 중요하다고 생각합니다.</div>
+<div class="item"><strong>영작:</strong> I think it's important to analyze the new market _____.</div>
+<div class="item"><strong>모범 답안:</strong> I think it's important to analyze the new market <strong>trends</strong>.</div>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>상황:</strong> 저는 이 프로젝트를 성공적으로 끝내기로 결심했습니다.</div>
+<div class="item"><strong>영작:</strong> I am _____ to complete this project successfully.</div>
+<div class="item"><strong>모범 답안:</strong> I am <strong>determined</strong> to complete this project successfully.</div>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>상황:</strong> 저희 어머니는 지난주에 병원에서 퇴원하셨고, 지금은 집에서 회복 중이십니다.</div>
+<div class="item"><strong>영작:</strong> My mother _____ from the hospital last week and is now _____ at home.</div>
+<div class="item"><strong>모범 답안:</strong> My mother <strong>was discharged</strong> from the hospital last week and is now <strong>recovering</strong> at home.</div>
+<br>
+<br>
+<p><strong>6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)</strong></p>
+<br>
+<p>✨ <strong>Good Job:</strong></p>
+<p>"Oh, it is fun because I only meet my family on the weekend. So oh yeah, it's so nice time. It's the freshest time for me."</p>
+<p>Joey님, 이 문장은 주말에 가족과 함께 보내는 시간이 얼마나 소중하고 활력을 주는지 잘 표현해주셨어요. 'freshest time'이라는 표현은 비록 아주 흔한 표현은 아니지만, 그 의미가 '가장 신선하고 활력을 주는 시간'으로 충분히 전달되어 Joey님의 진심이 느껴졌습니다. 이처럼 자신만의 방식으로 감정을 표현하는 것은 유창성을 높이는 데 아주 좋은 연습이 됩니다!</p>
+<br>
+<p>🚀 <strong>내일의 한 문장:</strong></p>
+<p>다음 수업 시작 시 튜터에게 오늘 배운 표현을 활용하여 대화를 시작해 보세요.</p>
+<p>"I've been thinking about the latest food trends since our last class. What do you think will be the next big trend?"</p>
+<p>(지난 수업 이후로 최신 음식 트렌드에 대해 생각해 봤어요. 다음 큰 트렌드는 무엇이 될까요?)</p>
+<br>
+<br>
+<p><strong>[성과 지표]</strong></p>
+<p><strong>유창성 점수:</strong> 7/10점</p>
+<br>
+<p><strong>근거:</strong> Joey님은 오늘 대화에서 다양한 주제에 대해 막힘없이 자신의 의견을 표현하려는 노력이 돋보였습니다. 특히 어머님의 퇴원이나 음식 트렌드 같은 개인적인 경험과 생각을 자세히 설명하려는 의지가 강했습니다. 문장 구조나 어휘 선택에서 다소 어색한 부분이 있었지만, 의미 전달에는 큰 문제가 없었으며, 튜터의 질문에 빠르게 반응하고 대화를 이어나가는 능력이 좋았습니다. 'ingredients'와 같은 단어를 기억해내기 위해 노력하는 모습도 인상 깊었습니다.</p>
+<br>
+<p><strong>다음 수업 '원포인트 액션 플랜':</strong></p>
+<p>다음 수업에서는 <strong>수동태 문장 구조를 의식적으로 활용</strong>하는 연습에 집중해봅시다. 특히 'be discharged'와 같이 특정 동사와 함께 자주 쓰이는 수동태 표현들을 익히면, 보다 정확하고 자연스러운 문장 구사를 할 수 있을 거예요. 대화 중 수동태가 필요한 상황이 오면 잠시 멈춰서라도 "be + p.p." 형태를 떠올려보는 연습을 해보세요!</p></div>
+        </div>
+        <div id="tab-transcript" class="tab-content">
+            <div class="transcript"><span class="student">[Student]</span> Hello, teacher. Good morning.
+<span class="tutor">[Tutor]</span> Hi. Hi, Joey. How are you?
+<span class="student">[Student]</span> Yes, I&#x27;m good. Yeah, I&#x27;m good. Thank you for asking. How are you today?
+<span class="tutor">[Tutor]</span> I&#x27;m doing okay also. Okay, good. It&#x27;s been a little bit of a long day.
+<span class="student">[Student]</span> Oh, yeah, that is a long day. And you&#x27;re only a Monday teacher, so I cannot see your life.
+<span class="tutor">[Tutor]</span> Yes, yes. How was your long weekend?
+<span class="student">[Student]</span> It&#x27;s a long weekend, so I stayed at my home. And Saturday I visited my mother who entered the hospital because she had a surgery. So yeah, I visited the hospital and saw my mother. And fortunately, my mother&#x27;s recovery, the conditions, so it&#x27;s better. And on the other days, I had a picnic with my family, so I visited the park and walked. And yeah, that&#x27;s the normal weekend, but it&#x27;s so fun and enjoyable for me.
+<span class="tutor">[Tutor]</span> It&#x27;s so fun and enjoyable.
+<span class="student">[Student]</span> Yeah, fun and enjoyable, you&#x27;re right. Yes, but fun. Ah, yes, son. Yeah, my son and my wife. Yes, sorry. But I meant fun.
+<span class="tutor">[Tutor]</span> Ah, yes, yes.
+<span class="student">[Student]</span> Oh, it is fun because I only meet my family on the weekend. So oh yeah, it&#x27;s so nice time. It&#x27;s the freshest time for me. Yeah, yeah, yeah. Just eating and go to the cafe and go to walk and go to the picnic. Every moment is so nice for me. Yes.
+<span class="tutor">[Tutor]</span> So it sounds chill, relaxing. Yeah, it&#x27;s relaxed and enjoyable. And I hope your mom is feeling better?
+<span class="student">[Student]</span> Oh yes, I have a worry about she don&#x27;t recovery during the two weeks. She stayed in the hospital two weeks. So I&#x27;m a little worried. But when I visited the hospital, she had recovered almost. So maybe she go out today, yeah, from the hospital and she moved to her home. So my wife helped to yeah, out of move their home. So yeah, it&#x27;s better. She helped.
+<span class="tutor">[Tutor]</span> Okay, that&#x27;s good.
+<span class="student">[Student]</span> Yes, how can I say, teacher, my wife helped her have to move the home or out of the hospital? How can I say that expression?
+<span class="tutor">[Tutor]</span> To be discharged.
+<span class="student">[Student]</span> Discharge. Discharge hospital.
+<span class="tutor">[Tutor]</span> Yes. Discharge means being released from the hospital. So that&#x27;s when the doctor says, &quot;Okay, you&#x27;re doing good and you could go home now.&quot; Yeah. Discharge.
+<span class="student">[Student]</span> My mother discharged from my hospital and my wife was discharged from the hospital. My mother was discharged from the hospital.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="student">[Student]</span> Yes.
+<span class="tutor">[Tutor]</span> Okay. And your wife helped her.
+<span class="student">[Student]</span> What is the meaning of discharge?
+<span class="tutor">[Tutor]</span> Discharge means when the doctor releases the patient from the hospital.
+<span class="student">[Student]</span> Pay some hospital fee and out of the hospital, right?
+<span class="tutor">[Tutor]</span> From the hospital means when maybe after the surgery your mom has to stay maybe one day to recover, one day or two to recover. But when she is fully recovered and she&#x27;s doing okay and she can go home, the doctor will say she&#x27;s okay to go.
+<span class="student">[Student]</span> Admission.
+<span class="tutor">[Tutor]</span> And the doctor will release her from it.
+<span class="student">[Student]</span> Yes, exactly. This is the discharge.
+<span class="tutor">[Tutor]</span> Okay. Yes, exactly. Good. Great. Okay. Well, that&#x27;s good to hear. Okay. So for today, are we looking at the daily topic or the Snapchat?
+<span class="student">[Student]</span> Snapchat is the topic of the protein. You are what you eat. Yeah, that is there. Today&#x27;s subject.
+<span class="tutor">[Tutor]</span> And that&#x27;s page 16, correct?
+<span class="student">[Student]</span> Yes, correct.
+<span class="tutor">[Tutor]</span> Okay. So what type of protein do you prefer?
+<span class="student">[Student]</span> Oh, just a moment.
+<span class="tutor">[Tutor]</span> Okay, no worries.
+<span class="student">[Student]</span> Oh, what is food trend? Just a moment. Oh, yes. What is the food trend that is trending in your country right now? The subject, &quot;You are what you eat,&quot; the 14th. And okay, okay, okay. Yes, yes. Okay, go on, teacher. Sorry.
+<span class="tutor">[Tutor]</span> Okay, no worries. It&#x27;s good to check that we&#x27;re on the same page. So what type of protein do you prefer? Do you like meat? Do you like um, plant-based? Do you like eggs? What is your favorite protein?
+<span class="student">[Student]</span> My favorite protein is the egg because that is cheap and easy to buy and easy to keep in a refrigerator. So I love the egg. And it&#x27;s possible to cook so many kinds of cooking. So, I like that. And sometimes I&#x27;m a little that is not enjoy the taste the egg. At that time, I change the grocery. I change the some food. Yes. Like the beef and pork and fish. Yeah, it is more delicious for me. And this question is a little different than my textbook, isn&#x27;t it?
+<span class="tutor">[Tutor]</span> Oh no, I&#x27;m just asking. Just asking for myself.
+<span class="student">[Student]</span> Yes. Ah, yes. Okay. So the textbook, &quot;What is a food trend that is trending in your country right now?&quot; Yes, that is the...
+<span class="tutor">[Tutor]</span> Yeah, you&#x27;re right. Okay, my answer is...
+<span class="student">[Student]</span> In this textbook, it&#x27;s explained in Korea is the high protein food trends, have a food trend. But my opinions, yeah, that is also right. But so everything plant-based, low sugar, and low-calorie and high protein that is popular in Korea in modern days. In modern days. Because many citizens are thinking of their health, so they always think high protein and low sugar. Yes, and low fat. And it is also helped by seasonal food like the fruit and vegetable, etc. So I think the pork kind is included in Korean popular, popular in Korea. Yeah, popular in Korea, you&#x27;re right. How about your country? What is the...?
+<span class="tutor">[Tutor]</span> I think low sugar, low sugar, and plant-based is not too popular, but there are some, there are some restaurants that will have plant options. I see.
+<span class="student">[Student]</span> What is the basic food in your country? For example, in Korea, we will eat rice and soup and side dish. So what kind of food is the main dish in your country?
+<span class="tutor">[Tutor]</span> Here, it&#x27;s kind of similar to the US. Things like hamburger, fries, french fries, potatoes. There&#x27;s lots of grains, whole grains, like carbs, like bread, pasta.
+<span class="student">[Student]</span> So that is different. Yeah, every day is different. Okay, I see.
+<span class="tutor">[Tutor]</span> Good question. And which do you prefer, grocery shopping online or grocery shopping at a local market?
+<span class="student">[Student]</span> Ah, yes. This day, I&#x27;m a little busy. So, yeah, I usually ordering online one time per week or two weeks. But, yeah, so, but usually the item is similar. So, sometimes it is a little boring to cook. So usually one time per month, our family visit the local market. That is so fun because we can find some interesting grocery material, grocery items. And it is sometimes we can find the item of the popular in Korea. Yeah. So that is the point. Yeah, I can find. And it is so fun. And and and if I found the interesting item in grocery store. Yeah, it is more develop our cook and it is interesting our cook. So it&#x27;s better. So we are order the mix local market and all right ordering in grocery shopping. Okay, I see.
+<span class="tutor">[Tutor]</span> You usually order, yeah, one time, or you could say once a, one time per week. Yeah. All right, you could say once or once, once per week, right? Once or twice per week.
+<span class="student">[Student]</span> Once or twice per week. Exactly. Once it was for a week. Once, twice a week. Okay.
+<span class="tutor">[Tutor]</span> Okay. Great. Great. And so it helps develop our cook or it helps improve our cooking.
+<span class="student">[Student]</span> Yes. Improve our cooking. Yeah. Improve my cooking.
+<span class="tutor">[Tutor]</span> I see. That makes sense. Okay. Let&#x27;s go to part C, problem solving. Do you mind reading the situation, please?
+<span class="student">[Student]</span> Oh, yeah. No problem. Before I read, I have one question, teacher.
+<span class="tutor">[Tutor]</span> Of course.
+<span class="student">[Student]</span> I forgot that word. If I go to the grocery store, we found some item of grocery. How can I say that? That is the material of the cook, and we can call the one word. I forgot that. The apple, fruit, meat, everything.
+<span class="tutor">[Tutor]</span> Okay, so for the apples, vegetables, and fruits, those are called produce?
+<span class="student">[Student]</span> The vegetables and meat and rice, it is the matter of the cook. So we can call one word. I forgot that.
+<span class="tutor">[Tutor]</span> Grocery?
+<span class="student">[Student]</span> Oh, grocery? Uh, grocery?
+<span class="tutor">[Tutor]</span> Yes, grocery means food. Grocery shopping, food shopping.
+<span class="student">[Student]</span> So usually the material of the cook, the grocery. What do you mean the material of the cook? For example, if we cook, if we made a pasta, it is put in the beef and pork and sauce and pasta, etc. We include at every material we call some um, ingredient. Ah, yeah. Oh, ingredients. Ingredient. Yeah, yeah, I forgot the word.
+<span class="tutor">[Tutor]</span> Okay, so ingredients. Ingredients. Ingredients. Ingredients. Yeah, don&#x27;t put... Yeah, ingredients. Perfect. Okay, okay. I read that memory. Oh, yeah. Okay, go ahead.
+<span class="tutor">[Tutor]</span> You have started a new diet and are trying to avoid sugar, but your family keeps offering snacks and desserts, stating like, &quot;Just start your diet tomorrow.&quot; You don&#x27;t want to lose, but it&#x27;s hard to say no. Would you stick to your plan or eat it to be polite?
+<span class="student">[Student]</span> Yes, of course. I keep my plans because that is a little hard to keep my plans. So maybe I will just say it honestly. I, my weight is over, so I have to keep my weight. And I have to, I don&#x27;t want to eat their dessert. So I&#x27;m just speaking friendly and honestly. And I think that is the best way. How about you? How about your opinion?
+<span class="tutor">[Tutor]</span> Like, I would agree with you. I would be, I would stick to my plan and also be polite to let them know. Maybe I need more support.
+<span class="student">[Student]</span> Yes.
+<span class="tutor">[Tutor]</span> Okay, so it seems like you&#x27;re determined.
+<span class="student">[Student]</span> Determined. Okay.
+<span class="tutor">[Tutor]</span> Okay, so let&#x27;s go over the warm down.
+<span class="student">[Student]</span> Warm down.
+<span class="tutor">[Tutor]</span> So what is one food trend that you&#x27;ve tried?
+<span class="student">[Student]</span> Hmm. Almost 10 years ago, my weight is over, so I need more diet. So I tried one food diet, the banana, use the banana. Banana. So yeah, so I only eat the banana and milk. That is only my food. Oh, wow. Yeah, very strict. Yes, very strict. And keeping that menu, I stayed there. I recovered my weight and keeping diet. But yeah, so I love banana. So and that is a healthy and have many nutrients. So yeah, I have experienced the banana diet.
+<span class="tutor">[Tutor]</span> Okay. Okay, that&#x27;s good to know. Okay, so let&#x27;s go over the useful vocab. Empty calories.
+<span class="student">[Student]</span> Uh-huh. Empty calories.
+<span class="tutor">[Tutor]</span> This one means food that are high in calories but low in nutrition.
+<span class="student">[Student]</span> Ah, fresh food, empty calorie.
+<span class="tutor">[Tutor]</span> Yes, exactly. Yes. And the next one is portion size.
+<span class="student">[Student]</span> Portion size.
+<span class="tutor">[Tutor]</span> Which is, this is just the amount of this food.
+<span class="student">[Student]</span> Portion size. That portion size is so small.
+<span class="tutor">[Tutor]</span> Okay. Yes, exactly. And then the next one is crash diet.
+<span class="student">[Student]</span> Crash diet. This is fast and extreme diet. Lose weight quickly. Like the banana and milk diet. Many people start the crash diet, the people to get married, get ready.
+<span class="tutor">[Tutor]</span> Yes, exactly. Yes, good example. And can you read out the useful expressions?
+<span class="student">[Student]</span> Okay, yes. Okay, I try that. And maybe you prepare the next class, right?
+<span class="tutor">[Tutor]</span> Yes. Okay, talk to you next time.
+<span class="student">[Student]</span> Okay, okay. Have a good day. Have a good weekend. Have a good Monday. Bye bye, teacher.
+<span class="tutor">[Tutor]</span> Okay, bye.</div>
+        </div>
+    </div>
+    <div class="toast" id="toast">✅ 프롬프트가 복사되었습니다!</div>
+    <script>
+        const REVIEW_PROMPT="너는 나의 영어 회화 복습 파트너야. 오늘 내 전화영어 수업 내용을 기반으로 대화하면서 복습을 도와줘.\n\n[오늘 수업 전사 내용]\n[Student] Hello, teacher. Good morning.\n[Tutor] Hi. Hi, Joey. How are you?\n[Student] Yes, I'm good. Yeah, I'm good. Thank you for asking. How are you today?\n[Tutor] I'm doing okay also. Okay, good. It's been a little bit of a long day.\n[Student] Oh, yeah, that is a long day. And you're only a Monday teacher, so I cannot see your life.\n[Tutor] Yes, yes. How was your long weekend?\n[Student] It's a long weekend, so I stayed at my home. And Saturday I visited my mother who entered the hospital because she had a surgery. So yeah, I visited the hospital and saw my mother. And fortunately, my mother's recovery, the conditions, so it's better. And on the other days, I had a picnic with my family, so I visited the park and walked. And yeah, that's the normal weekend, but it's so fun and enjoyable for me.\n[Tutor] It's so fun and enjoyable.\n[Student] Yeah, fun and enjoyable, you're right. Yes, but fun. Ah, yes, son. Yeah, my son and my wife. Yes, sorry. But I meant fun.\n[Tutor] Ah, yes, yes.\n[Student] Oh, it is fun because I only meet my family on the weekend. So oh yeah, it's so nice time. It's the freshest time for me. Yeah, yeah, yeah. Just eating and go to the cafe and go to walk and go to the picnic. Every moment is so nice for me. Yes.\n[Tutor] So it sounds chill, relaxing. Yeah, it's relaxed and enjoyable. And I hope your mom is feeling better?\n[Student] Oh yes, I have a worry about she don't recovery during the two weeks. She stayed in the hospital two weeks. So I'm a little worried. But when I visited the hospital, she had recovered almost. So maybe she go out today, yeah, from the hospital and she moved to her home. So my wife helped to yeah, out of move their home. So yeah, it's better. She helped.\n[Tutor] Okay, that's good.\n[Student] Yes, how can I say, teacher, my wife helped her have to move the home or out of the hospital? How can I say that expression?\n[Tutor] To be discharged.\n[Student] Discharge. Discharge hospital.\n[Tutor] Yes. Discharge means being released from the hospital. So that's when the doctor says, \"Okay, you're doing good and you could go home now.\" Yeah. Discharge.\n[Student] My mother discharged from my hospital and my wife was discharged from the hospital. My mother was discharged from the hospital.\n[Tutor] Okay.\n[Student] Yes.\n[Tutor] Okay. And your wife helped her.\n[Student] What is the meaning of discharge?\n[Tutor] Discharge means when the doctor releases the patient from the hospital.\n[Student] Pay some hospital fee and out of the hospital, right?\n[Tutor] From the hospital means when maybe after the surgery your mom has to stay maybe one day to recover, one day or two to recover. But when she is fully recovered and she's doing okay and she can go home, the doctor will say she's okay to go.\n[Student] Admission.\n[Tutor] And the doctor will release her from it.\n[Student] Yes, exactly. This is the discharge.\n[Tutor] Okay. Yes, exactly. Good. Great. Okay. Well, that's good to hear. Okay. So for today, are we looking at the daily topic or the Snapchat?\n[Student] Snapchat is the topic of the protein. You are what you eat. Yeah, that is there. Today's subject.\n[Tutor] And that's page 16, correct?\n[Student] Yes, correct.\n[Tutor] Okay. So what type of protein do you prefer?\n[Student] Oh, just a moment.\n[Tutor] Okay, no worries.\n[Student] Oh, what is food trend? Just a moment. Oh, yes. What is the food trend that is trending in your country right now? The subject, \"You are what you eat,\" the 14th. And okay, okay, okay. Yes, yes. Okay, go on, teacher. Sorry.\n[Tutor] Okay, no worries. It's good to check that we're on the same page. So what type of protein do you prefer? Do you like meat? Do you like um, plant-based? Do you like eggs? What is your favorite protein?\n[Student] My favorite protein is the egg because that is cheap and easy to buy and easy to keep in a refrigerator. So I love the egg. And it's possible to cook so many kinds of cooking. So, I like that. And sometimes I'm a little that is not enjoy the taste the egg. At that time, I change the grocery. I change the some food. Yes. Like the beef and pork and fish. Yeah, it is more delicious for me. And this question is a little different than my textbook, isn't it?\n[Tutor] Oh no, I'm just asking. Just asking for myself.\n[Student] Yes. Ah, yes. Okay. So the textbook, \"What is a food trend that is trending in your country right now?\" Yes, that is the...\n[Tutor] Yeah, you're right. Okay, my answer is...\n[Student] In this textbook, it's explained in Korea is the high protein food trends, have a food trend. But my opinions, yeah, that is also right. But so everything plant-based, low sugar, and low-calorie and high protein that is popular in Korea in modern days. In modern days. Because many citizens are thinking of their health, so they always think high protein and low sugar. Yes, and low fat. And it is also helped by seasonal food like the fruit and vegetable, etc. So I think the pork kind is included in Korean popular, popular in Korea. Yeah, popular in Korea, you're right. How about your country? What is the...?\n[Tutor] I think low sugar, low sugar, and plant-based is not too popular, but there are some, there are some restaurants that will have plant options. I see.\n[Student] What is the basic food in your country? For example, in Korea, we will eat rice and soup and side dish. So what kind of food is the main dish in your country?\n[Tutor] Here, it's kind of similar to the US. Things like hamburger, fries, french fries, potatoes. There's lots of grains, whole grains, like carbs, like bread, pasta.\n[Student] So that is different. Yeah, every day is different. Okay, I see.\n[Tutor] Good question. And which do you prefer, grocery shopping online or grocery shopping at a local market?\n[Student] Ah, yes. This day, I'm a little busy. So, yeah, I usually ordering online one time per week or two weeks. But, yeah, so, but usually the item is similar. So, sometimes it is a little boring to cook. So usually one time per month, our family visit the local market. That is so fun because we can find some interesting grocery material, grocery items. And it is sometimes we can find the item of the popular in Korea. Yeah. So that is the point. Yeah, I can find. And it is so fun. And and and if I found the interesting item in grocery store. Yeah, it is more develop our cook and it is interesting our cook. So it's better. So we are order the mix local market and all right ordering in grocery shopping. Okay, I see.\n[Tutor] You usually order, yeah, one time, or you could say once a, one time per week. Yeah. All right, you could say once or once, once per week, right? Once or twice per week.\n[Student] Once or twice per week. Exactly. Once it was for a week. Once, twice a week. Okay.\n[Tutor] Okay. Great. Great. And so it helps develop our cook or it helps improve our cooking.\n[Student] Yes. Improve our cooking. Yeah. Improve my cooking.\n[Tutor] I see. That makes sense. Okay. Let's go to part C, problem solving. Do you mind reading the situation, please?\n[Student] Oh, yeah. No problem. Before I read, I have one question, teacher.\n[Tutor] Of course.\n[Student] I forgot that word. If I go to the grocery store, we found some item of grocery. How can I say that? That is the material of the cook, and we can call the one word. I forgot that. The apple, fruit, meat, everything.\n[Tutor] Okay, so for the apples, vegetables, and fruits, those are called produce?\n[Student] The vegetables and meat and rice, it is the matter of the cook. So we can call one word. I forgot that.\n[Tutor] Grocery?\n[Student] Oh, grocery? Uh, grocery?\n[Tutor] Yes, grocery means food. Grocery shopping, food shopping.\n[Student] So usually the material of the cook, the grocery. What do you mean the material of the cook? For example, if we cook, if we made a pasta, it is put in the beef and pork and sauce and pasta, etc. We include at every material we call some um, ingredient. Ah, yeah. Oh, ingredients. Ingredient. Yeah, yeah, I forgot the word.\n[Tutor] Okay, so ingredients. Ingredients. Ingredients. Ingredients. Yeah, don't put... Yeah, ingredients. Perfect. Okay, okay. I read that memory. Oh, yeah. Okay, go ahead.\n[Tutor] You have started a new diet and are trying to avoid sugar, but your family keeps offering snacks and desserts, stating like, \"Just start your diet tomorrow.\" You don't want to lose, but it's hard to say no. Would you stick to your plan or eat it to be polite?\n[Student] Yes, of course. I keep my plans because that is a little hard to keep my plans. So maybe I will just say it honestly. I, my weight is over, so I have to keep my weight. And I have to, I don't want to eat their dessert. So I'm just speaking friendly and honestly. And I think that is the best way. How about you? How about your opinion?\n[Tutor] Like, I would agree with you. I would be, I would stick to my plan and also be polite to let them know. Maybe I need more support.\n[Student] Yes.\n[Tutor] Okay, so it seems like you're determined.\n[Student] Determined. Okay.\n[Tutor] Okay, so let's go over the warm down.\n[Student] Warm down.\n[Tutor] So what is one food trend that you've tried?\n[Student] Hmm. Almost 10 years ago, my weight is over, so I need more diet. So I tried one food diet, the banana, use the banana. Banana. So yeah, so I only eat the banana and milk. That is only my food. Oh, wow. Yeah, very strict. Yes, very strict. And keeping that menu, I stayed there. I recovered my weight and keeping diet. But yeah, so I love banana. So and that is a healthy and have many nutrients. So yeah, I have experienced the banana diet.\n[Tutor] Okay. Okay, that's good to know. Okay, so let's go over the useful vocab. Empty calories.\n[Student] Uh-huh. Empty calories.\n[Tutor] This one means food that are high in calories but low in nutrition.\n[Student] Ah, fresh food, empty calorie.\n[Tutor] Yes, exactly. Yes. And the next one is portion size.\n[Student] Portion size.\n[Tutor] Which is, this is just the amount of this food.\n[Student] Portion size. That portion size is so small.\n[Tutor] Okay. Yes, exactly. And then the next one is crash diet.\n[Student] Crash diet. This is fast and extreme diet. Lose weight quickly. Like the banana and milk diet. Many people start the crash diet, the people to get married, get ready.\n[Tutor] Yes, exactly. Yes, good example. And can you read out the useful expressions?\n[Student] Okay, yes. Okay, I try that. And maybe you prepare the next class, right?\n[Tutor] Yes. Okay, talk to you next time.\n[Student] Okay, okay. Have a good day. Have a good weekend. Have a good Monday. Bye bye, teacher.\n[Tutor] Okay, bye.\n\n[AI 피드백]\nJoey, 안녕하세요! 오늘 수업도 활기차게 참여해주셔서 감사합니다. 어머님 건강도 많이 회복되셨다니 정말 다행이에요. 주말에 가족들과 즐거운 시간을 보내신 이야기도 인상 깊었습니다. 특히 식단과 건강에 대한 깊이 있는 대화는 Joey님의 자기 관리와 건강에 대한 관심이 돋보이는 시간이었습니다!\n\n---\n\n**0. 📌 Topic**\nTopic: Discussing food trends, protein preferences, and grocery shopping habits.\n\n---\n\n**1. 📊 오늘의 대화 요약 (Summary)**\n오늘 Joey님은 주말 동안 병원에 계신 어머님을 방문하고 가족들과 피크닉을 다녀온 이야기를 나누며 대화를 시작했습니다. 이어서 'You are what you eat'이라는 주제로 한국의 최신 음식 트렌드(고단백, 저당, 저칼로리 식단)와 Joey님이 선호하는 단백질 식품(계란)에 대해 이야기했습니다. 또한 온라인 장보기와 오프라인 시장 방문의 장단점을 비교하며 개인적인 경험을 공유했습니다.\n\n---\n\n**2. 💬 유창성 업그레이드 (Fluency & Natural Flow)**\n\nJoey님, 의미는 잘 전달되었지만, 조금 더 자연스럽고 매끄러운 표현으로 다듬을 수 있는 문장들을 함께 살펴볼게요.\n\n1.  **❌ 학습자 원문 (As Said):** \"And you're only a Monday teacher, so I cannot see your life.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"Since you only teach on Mondays, I don't get to hear much about your week.\"\n    *   **💎 비즈니스 표현 (Professional):** \"As you only instruct on Mondays, I don't often have the opportunity to learn about your weekly activities.\"\n    *   **💡 코칭 포인트:** Using \"don't get to hear much about\" sounds more natural than \"cannot see your life\" when talking about someone's personal life. It implies a lack of opportunity rather than a physical inability. → \"cannot see your life\" 대신 \"don't get to hear much about\"을 사용하면 상대방의 개인적인 삶에 대해 들을 기회가 적다는 뉘앙스를 자연스럽게 전달할 수 있습니다.\n\n2.  **❌ 학습자 원문 (As Said):** \"And it's possible to cook so many kinds of cooking.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"And you can cook it in so many different ways.\"\n    *   **💎 비즈니스 표현 (Professional):** \"It offers versatility in culinary preparation.\"\n    *   **💡 코칭 포인트:** \"So many kinds of cooking\"은 다소 반복적인 표현입니다. \"cook it in so many different ways\" 또는 \"make so many dishes with it\"처럼 말하면 더 간결하고 자연스럽습니다.\n\n3.  **❌ 학습자 원문 (As Said):** \"And sometimes I'm a little that is not enjoy the taste the egg.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"Sometimes I don't really enjoy the taste of eggs.\"\n    *   **💎 비즈니스 표현 (Professional):** \"Occasionally, I find the taste of eggs less appealing.\"\n    *   **💡 코칭 포인트:** 원문은 문법적으로 몇 가지 오류가 있습니다. \"I don't really enjoy\"는 어떤 것을 덜 좋아하거나 선호하지 않을 때 사용하는 간단하고 일반적인 표현입니다.\n\n---\n\n**3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)**\nCategory: Passive Voice (수동태)\n\nJoey님, 오늘 대화에서 어머님의 퇴원 상황을 설명할 때 'discharge'라는 단어를 사용하면서 수동태 표현에 대한 고민이 많으셨어요. 'discharge'는 '방출하다, 퇴원시키다'라는 뜻의 타동사이기 때문에, '누군가가 퇴원당하다'라는 의미로 사용할 때는 반드시 수동태로 \"be discharged\"라고 표현해야 합니다.\n\n| ❌ 원문 (As Said)                                         | ✅ 교정 예시 (Corrected)                                         |\n| :-------------------------------------------------------- | :--------------------------------------------------------------- |\n| \"My mother **discharged** from my hospital.\"             | \"My mother **was discharged** from the hospital.\"               |\n| \"My mother **discharged** from the hospital and my wife was discharged from the hospital.\" | \"My mother **was discharged** from the hospital, and my wife helped her.\" |\n| \"Many people start the crash diet, the people to get married, **get ready**.\" | \"Many people start a crash diet to **get ready** for their wedding.\" |\n\n📌 **핵심 규칙:** 주어가 어떤 동작을 '당하는' 경우 (특히 'discharge'와 같이 타동사가 사용될 때), 'be + 과거분사(p.p.)' 형태의 수동태를 사용해야 합니다.\n\n🔁 **따라 읽기:**\n🗣️ \"My mother was discharged from the hospital today.\"\n🗣️ \"She was discharged after two weeks of recovery.\"\n🗣️ \"Many people start a crash diet to get ready for their wedding.\"\n\n---\n\n**4. 📗 어휘 확장 (Vocabulary Vault)**\n\n오늘 대화에서 나온 표현들과 Joey님의 비즈니스 환경에서 유용하게 쓰일 수 있는 어휘들을 정리해 보았습니다.\n\n1.  **recover** /rɪˈkʌvər/ (동사)\n    *   뜻: 회복하다, 되찾다\n    *   실전 예문: Our team needs to **recover** from the recent setback and focus on future growth.\n\n2.  **trend** /trɛnd/ (명사)\n    *   뜻: 유행, 경향, 추세\n    *   실전 예문: We should analyze the latest market **trends** to identify new investment opportunities.\n\n3.  **versatility** /ˌvɜːrsəˈtɪləti/ (명사)\n    *   뜻: 다용도성, 다재다능함\n    *   실전 예문: The **versatility** of this new technology makes it suitable for various industrial applications.\n\n4.  **ingredient** /ɪnˈɡriːdiənt/ (명사)\n    *   뜻: 재료, 성분 (음식뿐 아니라 어떤 것의 구성 요소)\n    *   실전 예문: Trust is a key **ingredient** for successful long-term business partnerships.\n\n5.  **determined** /dɪˈtɜːrmɪnd/ (형용사)\n    *   뜻: 단호한, 결심이 굳은\n    *   실전 예문: Despite the challenges, our CEO remains **determined** to achieve our ambitious sales targets.\n\n---\n\n**5. 📝 실전 복습 챌린지 (Practice)**\n\n오늘 배운 표현과 문법을 활용하여 다음 문장들을 영어로 영작해 보세요.\n\n1.  **상황:** 최근 시장의 새로운 트렌드를 분석하는 것이 중요하다고 생각합니다.\n    *   **영작:** I think it's important to analyze the new market _____.\n    *   **모범 답안:** I think it's important to analyze the new market **trends**.\n\n2.  **상황:** 저는 이 프로젝트를 성공적으로 끝내기로 결심했습니다.\n    *   **영작:** I am _____ to complete this project successfully.\n    *   **모범 답안:** I am **determined** to complete this project successfully.\n\n3.  **상황:** 저희 어머니는 지난주에 병원에서 퇴원하셨고, 지금은 집에서 회복 중이십니다.\n    *   **영작:** My mother _____ from the hospital last week and is now _____ at home.\n    *   **모범 답안:** My mother **was discharged** from the hospital last week and is now **recovering** at home.\n\n---\n\n**6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)**\n\n✨ **Good Job:**\n\"Oh, it is fun because I only meet my family on the weekend. So oh yeah, it's so nice time. It's the freshest time for me.\"\nJoey님, 이 문장은 주말에 가족과 함께 보내는 시간이 얼마나 소중하고 활력을 주는지 잘 표현해주셨어요. 'freshest time'이라는 표현은 비록 아주 흔한 표현은 아니지만, 그 의미가 '가장 신선하고 활력을 주는 시간'으로 충분히 전달되어 Joey님의 진심이 느껴졌습니다. 이처럼 자신만의 방식으로 감정을 표현하는 것은 유창성을 높이는 데 아주 좋은 연습이 됩니다!\n\n🚀 **내일의 한 문장:**\n다음 수업 시작 시 튜터에게 오늘 배운 표현을 활용하여 대화를 시작해 보세요.\n\"I've been thinking about the latest food trends since our last class. What do you think will be the next big trend?\"\n(지난 수업 이후로 최신 음식 트렌드에 대해 생각해 봤어요. 다음 큰 트렌드는 무엇이 될까요?)\n\n---\n\n**[성과 지표]**\n**유창성 점수:** 7/10점\n\n**근거:** Joey님은 오늘 대화에서 다양한 주제에 대해 막힘없이 자신의 의견을 표현하려는 노력이 돋보였습니다. 특히 어머님의 퇴원이나 음식 트렌드 같은 개인적인 경험과 생각을 자세히 설명하려는 의지가 강했습니다. 문장 구조나 어휘 선택에서 다소 어색한 부분이 있었지만, 의미 전달에는 큰 문제가 없었으며, 튜터의 질문에 빠르게 반응하고 대화를 이어나가는 능력이 좋았습니다. 'ingredients'와 같은 단어를 기억해내기 위해 노력하는 모습도 인상 깊었습니다.\n\n**다음 수업 '원포인트 액션 플랜':**\n다음 수업에서는 **수동태 문장 구조를 의식적으로 활용**하는 연습에 집중해봅시다. 특히 'be discharged'와 같이 특정 동사와 함께 자주 쓰이는 수동태 표현들을 익히면, 보다 정확하고 자연스러운 문장 구사를 할 수 있을 거예요. 대화 중 수동태가 필요한 상황이 오면 잠시 멈춰서라도 \"be + p.p.\" 형태를 떠올려보는 연습을 해보세요!\n\n위 내용을 바탕으로:\n1. 먼저 오늘 수업에서 내가 틀렸거나 어색했던 표현을 하나 골라서, 관련된 상황을 영어로 질문해줘.\n2. 내가 영어로 대답하면, 자연스러운지 확인하고 더 나은 표현이 있으면 알려줘.\n3. 특히 \"반복 실수 패턴\"에서 지적된 부분을 집중적으로 연습시켜줘.\n4. 이런 식으로 오늘 배운 표현들을 하나씩 복습하자.\n5. 한국어 설명은 필요할 때만 간단히, 대화는 최대한 영어로 진행해줘.\n\n그럼 시작하자!";
+        function startReview(){navigator.clipboard.writeText(REVIEW_PROMPT).then(()=>{showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)}).catch(()=>{const t=document.createElement('textarea');t.value=REVIEW_PROMPT;document.body.appendChild(t);t.select();document.execCommand('copy');document.body.removeChild(t);showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)})}
+        function showToast(){const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500)}
+        function switchTab(n){document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',n==='feedback'?i===0:i===1));document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));document.getElementById('tab-'+n).classList.add('active')}
+    </script>
+</body>
+</html>

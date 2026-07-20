@@ -1,0 +1,53 @@
+{
+ "date": "2026-07-20",
+ "iso": [
+  2026,
+  30
+ ],
+ "topic": "Discussing food trends, protein preferences, and grocery shopping habits.",
+ "grammar": "Passive Voice",
+ "grammar_norm": "Passive Voice",
+ "score": 7.0,
+ "pairs": [
+  {
+   "said": "And you're only a Monday teacher, so I cannot see your life.",
+   "natural": "Since you only teach on Mondays, I don't get to hear much about your week."
+  },
+  {
+   "said": "And it's possible to cook so many kinds of cooking.",
+   "natural": "And you can cook it in so many different ways."
+  },
+  {
+   "said": "And sometimes I'm a little that is not enjoy the taste the egg.",
+   "natural": "Sometimes I don't really enjoy the taste of eggs."
+  }
+ ],
+ "vocab": [
+  {
+   "word": "recover",
+   "pos": "동사",
+   "meaning": "회복하다, 되찾다"
+  },
+  {
+   "word": "trend",
+   "pos": "명사",
+   "meaning": "유행, 경향, 추세"
+  },
+  {
+   "word": "versatility",
+   "pos": "명사",
+   "meaning": "다용도성, 다재다능함"
+  },
+  {
+   "word": "ingredient",
+   "pos": "명사",
+   "meaning": "재료, 성분 (음식뿐 아니라 어떤 것의 구성 요소)"
+  },
+  {
+   "word": "determined",
+   "pos": "형용사",
+   "meaning": "단호한, 결심이 굳은"
+  }
+ ],
+ "_html_md5": "b5d96e296918857d6f7e1885985596fb"
+}
