@@ -1,0 +1,53 @@
+{
+ "date": "2026-07-21",
+ "iso": [
+  2026,
+  30
+ ],
+ "topic": "Discussing Exercise Habits and Fitness Trends",
+ "grammar": "Pronoun Case",
+ "grammar_norm": "Pronoun Case",
+ "score": 7.0,
+ "pairs": [
+  {
+   "said": "In Korea, we are under the Pilates category",
+   "natural": "In Korea, Pilates falls into that category."
+  },
+  {
+   "said": "these days our Korea's MG Generation, running is popular",
+   "natural": "These days, running is popular among Korea's MG Generation."
+  },
+  {
+   "said": "Yeah, it hurts. Feeling.",
+   "natural": "Yeah, it hurts. It's a painful feeling."
+  }
+ ],
+ "vocab": [
+  {
+   "word": "solitary",
+   "pos": "adj.",
+   "meaning": "혼자 하는, 고독한"
+  },
+  {
+   "word": "climate-controlled",
+   "pos": "adj.",
+   "meaning": "온도/습도 조절이 되는"
+  },
+  {
+   "word": "efficiently",
+   "pos": "adv.",
+   "meaning": "효율적으로"
+  },
+  {
+   "word": "awkward",
+   "pos": "adj.",
+   "meaning": "어색한, 곤란한"
+  },
+  {
+   "word": "cramp",
+   "pos": "n.",
+   "meaning": "(근육) 경련, 쥐"
+  }
+ ],
+ "_html_md5": "e00f80da60d99ebd950c0b78f5e736a8"
+}
