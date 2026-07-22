@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#0f0f13"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="당근영어"><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="icon" type="image/png" sizes="192x192" href="icon-192.png"><script src="install-banner.js" defer></script><script src="sw-reg.js" defer></script>
+    <title>전화영어 복습 - 2026년 07월 22일</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Noto Sans KR',sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.75;min-height:100vh}
+        .header{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);border-bottom:1px solid rgba(255,255,255,.06);padding:48px 24px 40px;text-align:center}
+        .header-date{font-size:13px;color:#94a3b8;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+        .header h1{font-size:28px;font-weight:700;color:#f1f5f9;margin-bottom:16px}
+        .header-meta{display:flex;justify-content:center;gap:24px;font-size:14px;color:#64748b}
+        .header-meta span{display:flex;align-items:center;gap:6px}
+        .cta-section{text-align:center;padding:40px 24px}
+        .cta-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:linear-gradient(135deg,#38bdf8,#818cf8);color:#fff;font-size:16px;font-weight:600;font-family:'Noto Sans KR',sans-serif;border:none;border-radius:50px;cursor:pointer;transition:all .3s;text-decoration:none;box-shadow:0 4px 24px rgba(56,189,248,.25)}
+        .cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(56,189,248,.35)}
+        .cta-btn svg{width:20px;height:20px}
+        .cta-sub{margin-top:12px;font-size:13px;color:#64748b}
+        .toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#38bdf8;padding:14px 28px;border-radius:12px;font-size:14px;font-weight:500;border:1px solid rgba(56,189,248,.2);box-shadow:0 8px 32px rgba(0,0,0,.4);opacity:0;transition:all .4s cubic-bezier(.16,1,.3,1);z-index:1000}
+        .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+        .container{max-width:720px;margin:0 auto;padding:0 24px 80px}
+        .tabs{display:flex;gap:4px;background:#1a1a24;padding:4px;border-radius:12px;margin-bottom:32px}
+        .tab{flex:1;padding:12px;text-align:center;font-size:14px;font-weight:500;color:#64748b;background:0 0;border:none;border-radius:8px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all .2s}
+        .tab.active{background:#262636;color:#f1f5f9}
+        .tab-content{display:none}.tab-content.active{display:block}
+        .feedback h2{font-size:18px;font-weight:700;color:#f1f5f9;margin:36px 0 16px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.06)}
+        .feedback h2:first-child{margin-top:0}
+        .feedback p{margin:8px 0;color:#cbd5e1}
+        .feedback .item{padding:6px 0 6px 16px;border-left:2px solid #334155;margin:6px 0;color:#cbd5e1}
+        .feedback .numbered{padding:8px 0 8px 16px;color:#cbd5e1}
+        .feedback .numbered strong{color:#38bdf8}
+        .feedback strong{color:#f1f5f9}
+        .feedback code{background:#1e293b;padding:2px 8px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#38bdf8}
+        .feedback table{width:100%;border-collapse:collapse;margin:12px 0}
+        .feedback th,.feedback td{padding:10px 14px;text-align:left;border-bottom:1px solid #262636}
+        .feedback th{color:#94a3b8;font-weight:500;font-size:13px}
+        .feedback td{color:#cbd5e1}
+        .arrow{color:#38bdf8;font-weight:700}
+        .transcript{background:#1a1a24;border-radius:12px;padding:28px;font-size:14px;line-height:2;color:#94a3b8;white-space:pre-wrap;word-break:break-word;font-family:'JetBrains Mono','Noto Sans KR',monospace}
+        .transcript .tutor{color:#38bdf8}
+        .transcript .student{color:#a78bfa}
+        @media(max-width:640px){.header{padding:32px 16px}.header h1{font-size:22px}.cta-btn{padding:14px 28px;font-size:15px}.container{padding:0 16px 60px}}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-date">2026년 07월 22일</div>
+        <h1>📚 전화영어 복습</h1>
+        <div class="header-meta">
+            <span>⏱ 19분 24초</span>
+            <span>🎙 전화영어_025180304_20260722080028.m4a</span>
+        </div>
+    </div>
+    <div class="cta-section">
+        <button class="cta-btn" onclick="startReview()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Gemini에서 복습 대화 시작하기
+        </button>
+        <div class="cta-sub">클릭하면 프롬프트가 복사되고 Gemini가 열립니다</div>
+    </div>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('feedback')">📋 AI 피드백</button>
+            <button class="tab" onclick="switchTab('transcript')">🎙 수업 전사</button>
+        </div>
+        <div id="tab-feedback" class="tab-content active">
+            <div class="feedback"><p>Joey, 안녕하세요! 오늘도 활기찬 목소리로 수업에 참여해 주셔서 감사합니다. 일상적인 쇼핑 습관부터 주말 청소, 이웃과의 배려까지 다양한 주제로 솔직하고 재미있는 이야기를 나눌 수 있어서 좋았어요. 특히 여러 나라의 쇼핑 습관에 대해 미리 조사해 오신 점과, 복잡한 상황 문제에 대해 자신의 경험을 바탕으로 현명한 해결책을 제시해 주신 점이 인상 깊었습니다.</p>
+<br>
+<p>오늘 배운 표현들을 잘 정리해서 Joey의 영어 실력 향상에 도움이 될 수 있도록 피드백을 준비했어요. 함께 살펴볼까요?</p>
+<br>
+<br>
+<p><strong>0. 📌 Topic</strong></p>
+<p>Topic: Discussing daily routines, shopping habits, and household management.</p>
+<br>
+<p><strong>1. 📊 오늘의 대화 요약 (Summary)</strong></p>
+<p>오늘은 주로 일상생활 속 습관에 대해 이야기했습니다. 특히 나라별 장보기 습관과 온라인/오프라인 쇼핑 선호도를 비교하고, 주말 청소 방식과 이웃에게 피해를 주지 않기 위한 세탁 시간 조절 문제에 대해 심도 있게 토론했습니다. 또한, 중요한 일정은 미리 계획하는 습관에 대해서도 대화를 나누었습니다.</p>
+<br>
+<p><strong>2. 💬 유창성 업그레이드 (Fluency & Natural Flow)</strong></p>
+<p>Joey가 실제 말한 문장 중, 의미는 통하지만 원어민이 들었을 때 더 자연스럽게 들릴 수 있는 표현들을 알려드릴게요.</p>
+<br>
+<div class="numbered"><strong>1.</strong> ❌ <strong>As Said</strong>: "This day, I have something to do at night, so I slept at a really late time, so I'm really tired, but it's okay."</div>
+<p>✅ <strong>Natural</strong>: "I had something to do last night, so I went to bed really late, and I'm quite tired today, but it's okay."</p>
+<p>💎 <strong>Professional</strong>: "I had commitments last night, which led to a late bedtime, so I'm feeling a bit fatigued today, but I'm managing."</p>
+<p>💡 <strong>코칭 포인트</strong>: Using "last night" clarifies that the late sleep happened in the past, causing current tiredness. "Went to bed really late" is a more common and natural way to express sleeping late. "This day" is not a common phrase for "today".</p>
+<p>'This day'는 '오늘'을 의미할 때 잘 쓰지 않는 표현이며, 'slept at a really late time'보다는 'went to bed really late'가 훨씬 자연스러운 구어체입니다. 'last night'을 써서 어젯밤에 늦게 잤다는 것을 명확히 해주는 것이 좋습니다.</p>
+<br>
+<div class="numbered"><strong>2.</strong> ❌ <strong>As Said</strong>: "the more it's a normal day, every person is a little busy, so they don't have time to go shopping."</div>
+<p>✅ <strong>Natural</strong>: "On weekdays, most people are quite busy, so they don't have time to go grocery shopping."</p>
+<p>💎 <strong>Professional</strong>: "During the workweek, individuals typically have limited time due to their busy schedules, which restricts their ability to engage in grocery shopping."</p>
+<p>💡 <strong>코칭 포인트</strong>: "The more it's a normal day" is grammatically understandable but sounds a bit clunky. "On weekdays" is a much more direct and common way to refer to normal working days. "Every person" can be replaced with "most people" for a more natural flow.</p>
+<p>'the more it's a normal day'는 어색하게 들릴 수 있습니다. '평일'을 의미할 때는 간단히 'On weekdays'라고 하는 것이 가장 자연스럽습니다. 'every person' 대신 'most people'을 사용하면 더 유연한 표현이 됩니다.</p>
+<br>
+<div class="numbered"><strong>3.</strong> ❌ <strong>As Said</strong>: "I think that is the etiquette, do not do laundry on the weekend night."</div>
+<p>✅ <strong>Natural</strong>: "I think it's proper etiquette not to do laundry on weekend nights."</p>
+<p>💎 <strong>Professional</strong>: "I believe it's considered proper etiquette to refrain from doing laundry on weekend evenings."</p>
+<p>💡 <strong>코칭 포인트</strong>: "Do not do laundry"는 직접적인 명령문 형태입니다. '~하는 것이 예의다'라고 말할 때는 'it's etiquette not to do ~' 또는 'it's proper etiquette to refrain from doing ~'과 같이 to 부정사를 활용하는 것이 더 자연스럽습니다.</p>
+<br>
+<p><strong>3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)</strong></p>
+<p>Category: <strong>Missing Auxiliary Verbs / Incorrect Verb Forms (조동사 누락 및 동사 형태 오류)</strong></p>
+<br>
+<p>Joey는 질문을 하거나 의도, 가정을 표현할 때 조동사를 빠뜨리거나 동사 형태를 잘못 사용하는 경향이 있었습니다. 이는 문장의 의미를 불분명하게 만들 수 있습니다.</p>
+<br>
+<table>
+<tr><th>❌ 원문 (As Said)</th><th>✅ 교정 예시 (Corrected)</th></tr>
+<tr><td>"What <strong>means</strong> the more detailed?"</td><td>"What <strong>does</strong> 'in advance' mean?"</td></tr>
+<tr><td>"I'm just <strong>to wait</strong> the next week"</td><td>"I'll just <strong>wait</strong> until next week."</td></tr>
+<tr><td>"I'm just <strong>to do</strong> laundry at night."</td><td>"I'd just <strong>do</strong> laundry at night." (또는 "I would just do...")</td></tr>
+</table>
+<br>
+<p>📌 <strong>핵심 규칙</strong>: 질문을 만들 때는 주어 앞에 적절한 조동사(do/does/did)를 사용하고, 미래나 가정의 의미를 나타낼 때는 'will'이나 'would' 같은 조동사 뒤에 동사 원형을 써야 합니다.</p>
+<br>
+<p>🔁 <strong>따라 읽기</strong>:</p>
+<p>🗣️ "What does 'in advance' mean?"</p>
+<p>🗣️ "I'll just wait until next week."</p>
+<p>🗣️ "I'd just do laundry at night."</p>
+<br>
+<p><strong>4. 📗 어휘 확장 (Vocabulary Vault)</strong></p>
+<p>수업 중 등장했거나 맥락상 유용한 표준 영어 단어 5개를 소개합니다.</p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>fatigued</strong> /fəˈtiːɡd/ (형용사)</div>
+<p>뜻: 피로한, 지친</p>
+<p>실전 예문: After a long week of negotiations, the team was visibly <strong>fatigued</strong>.</p>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>commitment</strong> /kəˈmɪtmənt/ (명사)</div>
+<p>뜻: 약속, 전념, 헌신 (특히 해야 할 일)</p>
+<p>실전 예문: Balancing work <strong>commitments</strong> and personal life is crucial for well-being.</p>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>etiquette</strong> /ˈɛtɪkət/ (명사)</div>
+<p>뜻: 예의범절, 에티켓</p>
+<p>실전 예문: Understanding business <strong>etiquette</strong> is essential for international collaborations.</p>
+<br>
+<div class="numbered"><strong>4.</strong> <strong>downside</strong> /ˈdaʊnsaɪd/ (명사)</div>
+<p>뜻: 단점, 불리한 점</p>
+<p>실전 예문: The main <strong>downside</strong> of this investment is its high risk.</p>
+<br>
+<div class="numbered"><strong>5.</strong> <strong>in advance</strong> /ɪn ədˈvæns/ (부사구)</div>
+<p>뜻: 미리, 사전에</p>
+<p>실전 예문: Please book your meeting rooms <strong>in advance</strong> to avoid conflicts.</p>
+<br>
+<p><strong>5. 📝 실전 복습 챌린지 (Practice)</strong></p>
+<p>오늘 배운 표현과 문법을 활용하여 영작 챌린지를 해볼까요?</p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>쉬운 문제</strong>: 다음 주 회의를 위해 미리 준비해야 할 것이 무엇인지 팀원들에게 물어보세요.</div>
+<p>(힌트: 'in advance'와 질문에 필요한 조동사를 활용)</p>
+<p><details></p>
+<p><summary>모범 답안</summary></p>
+<p>What do we need to prepare in advance for next week's meeting?</p>
+<p></details></p>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>중간 문제</strong>: 그 프로젝트의 가장 큰 단점은 무엇이며, 이 문제를 해결하기 위해 어떤 노력을 해야 한다고 생각하는지 말해보세요.</div>
+<p>(힌트: 'downside'와 'commitment'를 활용)</p>
+<p><details></p>
+<p><summary>모범 답안</summary></p>
+<p>What's the biggest downside of that project, and what kind of commitment do you think we need to make to solve this problem?</p>
+<p></details></p>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>어려운 문제</strong>: 늦은 밤에 시끄러운 작업을 하는 것은 직장 동료들에게 예의에 어긋날 수 있으니, 미리 계획을 세워서 불편함을 주지 않도록 노력해야 한다고 조언해 주세요.</div>
+<p>(힌트: 'etiquette', 'in advance', 'fatigued'를 활용)</p>
+<p><details></p>
+<p><summary>모범 답안</summary></p>
+<p>It's against proper etiquette to do noisy work late at night, as it can make colleagues feel fatigued the next day. So, we should plan our tasks in advance to avoid causing any inconvenience.</p>
+<p></details></p>
+<br>
+<p><strong>6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)</strong></p>
+<br>
+<p>✨ <strong>Good Job</strong>:</p>
+<p>Joey는 자신의 선호도를 명확하고 간결하게 설명할 때 아주 좋았습니다. 예를 들어, 이 문장처럼요:</p>
+<p>"<strong>I prefer shopping online. It's better. It's convenient and reduces the time.</strong>"</p>
+<p>세 문장이 짧지만, 자신의 의견과 그 이유를 논리적으로 잘 연결하여 전달했습니다. 이런 간결하고 명확한 표현은 비즈니스 환경에서도 매우 중요합니다!</p>
+<br>
+<p>🚀 <strong>내일의 한 문장</strong>:</p>
+<p>다음 수업 시작 시, 오늘 배운 표현을 활용하여 튜터에게 이렇게 말해보세요.</p>
+<p>"I've been thinking about the <strong>downsides</strong> of working too much without planning <strong>in advance</strong>."</p>
+<p>(미리 계획하지 않고 너무 많이 일하는 것의 단점에 대해 생각해 봤어요.)</p>
+<br>
+<br>
+<p><strong>[성과 지표]</strong></p>
+<p><strong>유창성 점수</strong>: 7/10</p>
+<p><strong>근거</strong>: Joey는 다양한 주제에 대해 막힘없이 자신의 의견을 표현하려는 노력이 돋보였습니다. 단어 선택의 폭이 넓고 문장을 길게 이어가는 능력도 좋았습니다. 다만, 가끔 어색한 구어체 표현이나 문법적인 오류로 인해 전달력이 저해되는 부분이 있었습니다. 특히 질문을 만들 때 조동사 사용에 주의가 필요합니다.</p>
+<br>
+<p><strong>다음 수업 '원포인트 액션 플랜'</strong>:</p>
+<p>다음 수업에서는 <strong>"질문 시 조동사 사용 및 동사 형태 일치"</strong>에 집중하여 연습해 봅시다. 질문을 하거나 의도를 표현할 때 'do/does/will/would'와 같은 조동사를 바르게 사용하고, 그 뒤에 오는 동사의 형태를 정확히 쓰는 연습을 해볼 거예요.</p></div>
+        </div>
+        <div id="tab-transcript" class="tab-content">
+            <div class="transcript"><span class="student">[Student]</span> Hello. Good morning, teacher. Hi.
+<span class="tutor">[Tutor]</span> Hi. How are you doing today?
+<span class="student">[Student]</span> Of course, I&#x27;m good. Yeah, I&#x27;m doing good. How about you?
+<span class="tutor">[Tutor]</span> Oh, pretty good. Yeah. How is your morning so far? Are you busy this morning? Is it a quiet morning?
+<span class="student">[Student]</span> It&#x27;s a tired morning. This day, I have something to do at night, so I slept at a really late time, so I&#x27;m really tired, but it&#x27;s okay. Yes.
+<span class="tutor">[Tutor]</span> Okay, so definitely tired this morning.
+<span class="student">[Student]</span> Ah, yes, yes, but it&#x27;s okay. Yeah, I&#x27;m good. I&#x27;m good.
+<span class="tutor">[Tutor]</span> Okay, did you want to look at page 18 here?
+<span class="student">[Student]</span> 18, yeah, what&#x27;s on your schedule, right?
+<span class="student">[Student]</span> The subject.
+<span class="tutor">[Tutor]</span> Yeah, what&#x27;s on your schedule.
+<span class="student">[Student]</span> What&#x27;s on your schedule?
+<span class="student">[Student]</span> What&#x27;s on your schedule?
+<span class="tutor">[Tutor]</span> Okay.
+<span class="tutor">[Tutor]</span> Yeah, so when do people usually go grocery shopping?
+<span class="student">[Student]</span> Okay. This textbook usually has four categories and lists so many countries, but I don&#x27;t know if it&#x27;s right or not. In Korea, people usually go grocery shopping on the weekends because the more it&#x27;s a normal day, every person is a little busy, so they don&#x27;t have time to go shopping. So usually we go grocery shopping on the weekends. And maybe after work category under France, USA, and Japan, because they don&#x27;t have, they have enough time after work. So, yes, and they work a little short time better than other countries. So, they, after work, they do grocery shopping. In the morning or at any time, I don&#x27;t know. I&#x27;m not sure why some countries go to their grocery shopping. Germany, right? And China? India. Yes, yes. I&#x27;m not sure why they go to the grocery shopping in the morning. Vietnam. Yeah. Vietnam. Maybe I think that is the custom about eating breakfast to go to shopping or in the restaurant. Or doing things in the morning before it gets hotter in the afternoon. Yes, it&#x27;s possible. India and Vietnam have hot weather, so they avoid the hot weather. They go to the, they will go to the morning grocery shopping. And all right, anytime, the China, Singapore, and I&#x27;m not sure the middle of the flag of country. Anyway, they will go, they go to the grocery shopping online anytime. Maybe they are developing some IT system, so it&#x27;s possible to anytime they contact to online and then they go to the grocery shopping. Yeah, United Arab, United States, UAE, Arab Emirates. Yes, it&#x27;s possible. You have so many memories of the flag of the country.
+<span class="tutor">[Tutor]</span> Yeah.
+<span class="student">[Student]</span> Yeah, and I looked it up before looking at the page.
+<span class="tutor">[Tutor]</span> Wow, so nice.
+<span class="student">[Student]</span> Yeah. I visited the Arab Emirates, but I didn&#x27;t remember this is the flag of the Arab Emirates.
+<span class="tutor">[Tutor]</span> I&#x27;m pretty sure. How about you? Do you prefer going shopping in person or ordering online anytime?
+<span class="student">[Student]</span> I prefer shopping online. It&#x27;s better. It&#x27;s convenient and reduces the time. Usually I like to go online shopping, but some special day or some special item like the coat or suit or some special item, it is better to go offline shopping because I&#x27;m not sure if it will fit on my body or not, this coat. So some special item or some expensive item, I just go, ah, this is not grocery shopping, clothing shopping. Ah, yes, just shopping. So usually I use online, but maybe every week I have, I do grocery shopping, but once per month, at that time I visit the big mart like the E-Mart or some mart with my family. It is possible to find the popular items or interesting items, so I love that.
+<span class="tutor">[Tutor]</span> And how about with like checking if the fruits or vegetables if they&#x27;re fresh or good condition? Do you like to check that in person or do you trust online shopping?
+<span class="student">[Student]</span> Yes, I understand. But Korea is a little small country. So we are developing online shopping. Every morning it&#x27;s possible to deliver some fresh vegetable or fresh meat. So, yeah, almost that is fresh. Yeah, so I believe that system. I mean, choosing the best one or choosing the best vegetable, it&#x27;s impossible. Yeah, sometimes if we go to offline shopping, it&#x27;s possible to choose the best, freshest, best, bigger apple, banana, etc. But in online shopping mall, to select the fresh item is impossible. So yeah, that is a little bad thing. Yeah, in online shopping. And teacher, do you have another word, &quot;the bad thing&quot;? How can I say?
+<span class="tutor">[Tutor]</span> It&#x27;s a negative thing.
+<span class="student">[Student]</span> It&#x27;s a bad thing.
+<span class="tutor">[Tutor]</span> It&#x27;s a negative thing.
+<span class="student">[Student]</span> Negative point.
+<span class="tutor">[Tutor]</span> Negative point.
+<span class="student">[Student]</span> Okay.
+<span class="tutor">[Tutor]</span> Yeah, it&#x27;s a con. Yeah, it&#x27;s a downside.
+<span class="student">[Student]</span> It&#x27;s a con. It&#x27;s a downside. Side, it&#x27;s negative. Okay, good.
+<span class="tutor">[Tutor]</span> Mm-hmm. And the part B, which do you prefer? Do you prefer doing everything at once when you clean the house or doing a little each day?
+<span class="student">[Student]</span> We choose the middle. Yeah, usually it&#x27;s more common to doing everything at once, but some people select them and they deliver them every day, like the milk and yogurt and some small vegetable and small meat, but a little bit, a little bit. But in my case, usually we order every week. Yes, because I live in another city, so I can control my house every day. So usually we shop at the grocery store every week. I think that is a nice period, nice time for my family.
+<span class="tutor">[Tutor]</span> So how do you prefer to clean the house? Doing everything at once or doing a little each day?
+<span class="student">[Student]</span> Yeah, small cleaning is everyday, like the dish, clean the dish and clean the vacuum, some area. But on the weekends, we clean every area, use the robot vacuum device, cleaner. And usually we go outside, so during the two hours or four hours, my vacuum robot machine is doing cleaning in my house. So yeah, totally we cleaned every area of small, but on the weekends we clean our house totally. Yeah.
+<span class="tutor">[Tutor]</span> So just a little bits when you can, but every weekend, a big clean.
+<span class="student">[Student]</span> Yeah, you&#x27;re right.
+<span class="tutor">[Tutor]</span> Next, we have the situation problem-solving here. Would you like to read?
+<span class="student">[Student]</span> Okay, no problem. The situation: You usually do laundry on the weekends because you get home late during the week. But you are busy this weekend and you are almost out of clean clothes. Oh, the only time you can wash them is late at night. But your neighborhood has complained about noise before. Would you do laundry at night and hope it&#x27;s okay, or wait until next week and risk running out of clothes? Okay, I see. That is a difficult choice. In my case, I&#x27;m just to wait the next week because if I don&#x27;t have experience to complain to my neighborhood, I&#x27;m just to do laundry at night. But yeah, just one time. But I have experience. My neighborhood said, and they said it&#x27;s uncomfortable on the weekend. So yeah, I, yeah, I think that is the etiquette, do not do laundry on the weekend night. So just I&#x27;m wait and and just take the laundry shop my clothes. Yes, that is also a nice way because it is possible to reduce time for laundry. Because these days in Korea, there are so many have a laundry shop and a laundry place and coin laundry shop, so it&#x27;s possible. I use that service.
+<span class="tutor">[Tutor]</span> Can you hear your neighbor&#x27;s laundry machine when they&#x27;re doing laundry?
+<span class="student">[Student]</span> Oh, not practically, but maybe one or two times per year. Yeah, that much.
+<span class="tutor">[Tutor]</span> Okay, so you can&#x27;t hear the people beside you. You can&#x27;t hear them. They&#x27;re not noisy people.
+<span class="student">[Student]</span> Yeah, that is annoying, my morning sleep. So, yeah, so it is same. Yeah, I do laundry on the weekend, a little late time.
+<span class="tutor">[Tutor]</span> Okay, do you think that&#x27;s better than doing it early in the morning?
+<span class="student">[Student]</span> Early?
+<span class="tutor">[Tutor]</span> Yeah.
+<span class="student">[Student]</span> Yes, it&#x27;s better, but not early. Maybe it passed 9 a.m. and then we will start the laundry. But before the 9 a.m., it&#x27;s a little early time. Many, many my neighborhood sleep, enjoy their sleep on the weekends. So yeah, I avoid that time.
+<span class="tutor">[Tutor]</span> And many of your neighbors want to sleep.
+<span class="student">[Student]</span> Yes. And Korea, people usually live in their apartment. So it is a little uncomfortable to the weekend morning or weekend night.
+<span class="tutor">[Tutor]</span> Okay. And do you plan your week in advance? So do you plan out everything you want to do?
+<span class="student">[Student]</span> So, pardon? Teacher, one more please. The second, the warm-down question. Do you plan your week in advance? Advance. Do you plan your week in advance? And teacher, could you explain the question? The advance. Do you plan your week in advance? What means the more detailed?
+<span class="tutor">[Tutor]</span> Ahead of time. So before.
+<span class="student">[Student]</span> So do you plan your week before? That is advanced. I see. Prepare before. Yes, yes, you&#x27;re right. Not a detailed plan, the main plan. I set up the main plan. I make some main plan. And because it is impossible to booking some reservations, some important restaurant or important festival. Yeah, that is important. For example, next week or one month later, Busan has the big festival of fireworks. At that time, we prepared the reservation for this festival. So usually I prepare one month ago or one week ago. Yeah, I search some internet for the information of the festival or some exhibition or something. And then I make a reservation and I make a plan. Yeah, before the week or a month ago.
+<span class="tutor">[Tutor]</span> Yeah, especially with those big events too, like the fireworks. Yeah, that&#x27;s the event. You&#x27;re right. Hmm. Okay, up. Well, that&#x27;s getting about it for our time here. I will send you corrections in a bit. &quot;Neighborhood place,&quot; &quot;neighbor people.&quot;
+<span class="student">[Student]</span> Neighbor people. And innocence.
+<span class="tutor">[Tutor]</span> So any other questions before I go?
+<span class="student">[Student]</span> Oh, no, thank you so much. Have a nice day, teacher.
+<span class="tutor">[Tutor]</span> Yeah, you&#x27;re welcome. Have a great day. Goodbye.
+<span class="student">[Student]</span> Bye-bye.</div>
+        </div>
+    </div>
+    <div class="toast" id="toast">✅ 프롬프트가 복사되었습니다!</div>
+    <script>
+        const REVIEW_PROMPT="너는 나의 영어 회화 복습 파트너야. 오늘 내 전화영어 수업 내용을 기반으로 대화하면서 복습을 도와줘.\n\n[오늘 수업 전사 내용]\n[Student] Hello. Good morning, teacher. Hi.\n[Tutor] Hi. How are you doing today?\n[Student] Of course, I'm good. Yeah, I'm doing good. How about you?\n[Tutor] Oh, pretty good. Yeah. How is your morning so far? Are you busy this morning? Is it a quiet morning?\n[Student] It's a tired morning. This day, I have something to do at night, so I slept at a really late time, so I'm really tired, but it's okay. Yes.\n[Tutor] Okay, so definitely tired this morning.\n[Student] Ah, yes, yes, but it's okay. Yeah, I'm good. I'm good.\n[Tutor] Okay, did you want to look at page 18 here?\n[Student] 18, yeah, what's on your schedule, right?\n[Student] The subject.\n[Tutor] Yeah, what's on your schedule.\n[Student] What's on your schedule?\n[Student] What's on your schedule?\n[Tutor] Okay.\n[Tutor] Yeah, so when do people usually go grocery shopping?\n[Student] Okay. This textbook usually has four categories and lists so many countries, but I don't know if it's right or not. In Korea, people usually go grocery shopping on the weekends because the more it's a normal day, every person is a little busy, so they don't have time to go shopping. So usually we go grocery shopping on the weekends. And maybe after work category under France, USA, and Japan, because they don't have, they have enough time after work. So, yes, and they work a little short time better than other countries. So, they, after work, they do grocery shopping. In the morning or at any time, I don't know. I'm not sure why some countries go to their grocery shopping. Germany, right? And China? India. Yes, yes. I'm not sure why they go to the grocery shopping in the morning. Vietnam. Yeah. Vietnam. Maybe I think that is the custom about eating breakfast to go to shopping or in the restaurant. Or doing things in the morning before it gets hotter in the afternoon. Yes, it's possible. India and Vietnam have hot weather, so they avoid the hot weather. They go to the, they will go to the morning grocery shopping. And all right, anytime, the China, Singapore, and I'm not sure the middle of the flag of country. Anyway, they will go, they go to the grocery shopping online anytime. Maybe they are developing some IT system, so it's possible to anytime they contact to online and then they go to the grocery shopping. Yeah, United Arab, United States, UAE, Arab Emirates. Yes, it's possible. You have so many memories of the flag of the country.\n[Tutor] Yeah.\n[Student] Yeah, and I looked it up before looking at the page.\n[Tutor] Wow, so nice.\n[Student] Yeah. I visited the Arab Emirates, but I didn't remember this is the flag of the Arab Emirates.\n[Tutor] I'm pretty sure. How about you? Do you prefer going shopping in person or ordering online anytime?\n[Student] I prefer shopping online. It's better. It's convenient and reduces the time. Usually I like to go online shopping, but some special day or some special item like the coat or suit or some special item, it is better to go offline shopping because I'm not sure if it will fit on my body or not, this coat. So some special item or some expensive item, I just go, ah, this is not grocery shopping, clothing shopping. Ah, yes, just shopping. So usually I use online, but maybe every week I have, I do grocery shopping, but once per month, at that time I visit the big mart like the E-Mart or some mart with my family. It is possible to find the popular items or interesting items, so I love that.\n[Tutor] And how about with like checking if the fruits or vegetables if they're fresh or good condition? Do you like to check that in person or do you trust online shopping?\n[Student] Yes, I understand. But Korea is a little small country. So we are developing online shopping. Every morning it's possible to deliver some fresh vegetable or fresh meat. So, yeah, almost that is fresh. Yeah, so I believe that system. I mean, choosing the best one or choosing the best vegetable, it's impossible. Yeah, sometimes if we go to offline shopping, it's possible to choose the best, freshest, best, bigger apple, banana, etc. But in online shopping mall, to select the fresh item is impossible. So yeah, that is a little bad thing. Yeah, in online shopping. And teacher, do you have another word, \"the bad thing\"? How can I say?\n[Tutor] It's a negative thing.\n[Student] It's a bad thing.\n[Tutor] It's a negative thing.\n[Student] Negative point.\n[Tutor] Negative point.\n[Student] Okay.\n[Tutor] Yeah, it's a con. Yeah, it's a downside.\n[Student] It's a con. It's a downside. Side, it's negative. Okay, good.\n[Tutor] Mm-hmm. And the part B, which do you prefer? Do you prefer doing everything at once when you clean the house or doing a little each day?\n[Student] We choose the middle. Yeah, usually it's more common to doing everything at once, but some people select them and they deliver them every day, like the milk and yogurt and some small vegetable and small meat, but a little bit, a little bit. But in my case, usually we order every week. Yes, because I live in another city, so I can control my house every day. So usually we shop at the grocery store every week. I think that is a nice period, nice time for my family.\n[Tutor] So how do you prefer to clean the house? Doing everything at once or doing a little each day?\n[Student] Yeah, small cleaning is everyday, like the dish, clean the dish and clean the vacuum, some area. But on the weekends, we clean every area, use the robot vacuum device, cleaner. And usually we go outside, so during the two hours or four hours, my vacuum robot machine is doing cleaning in my house. So yeah, totally we cleaned every area of small, but on the weekends we clean our house totally. Yeah.\n[Tutor] So just a little bits when you can, but every weekend, a big clean.\n[Student] Yeah, you're right.\n[Tutor] Next, we have the situation problem-solving here. Would you like to read?\n[Student] Okay, no problem. The situation: You usually do laundry on the weekends because you get home late during the week. But you are busy this weekend and you are almost out of clean clothes. Oh, the only time you can wash them is late at night. But your neighborhood has complained about noise before. Would you do laundry at night and hope it's okay, or wait until next week and risk running out of clothes? Okay, I see. That is a difficult choice. In my case, I'm just to wait the next week because if I don't have experience to complain to my neighborhood, I'm just to do laundry at night. But yeah, just one time. But I have experience. My neighborhood said, and they said it's uncomfortable on the weekend. So yeah, I, yeah, I think that is the etiquette, do not do laundry on the weekend night. So just I'm wait and and just take the laundry shop my clothes. Yes, that is also a nice way because it is possible to reduce time for laundry. Because these days in Korea, there are so many have a laundry shop and a laundry place and coin laundry shop, so it's possible. I use that service.\n[Tutor] Can you hear your neighbor's laundry machine when they're doing laundry?\n[Student] Oh, not practically, but maybe one or two times per year. Yeah, that much.\n[Tutor] Okay, so you can't hear the people beside you. You can't hear them. They're not noisy people.\n[Student] Yeah, that is annoying, my morning sleep. So, yeah, so it is same. Yeah, I do laundry on the weekend, a little late time.\n[Tutor] Okay, do you think that's better than doing it early in the morning?\n[Student] Early?\n[Tutor] Yeah.\n[Student] Yes, it's better, but not early. Maybe it passed 9 a.m. and then we will start the laundry. But before the 9 a.m., it's a little early time. Many, many my neighborhood sleep, enjoy their sleep on the weekends. So yeah, I avoid that time.\n[Tutor] And many of your neighbors want to sleep.\n[Student] Yes. And Korea, people usually live in their apartment. So it is a little uncomfortable to the weekend morning or weekend night.\n[Tutor] Okay. And do you plan your week in advance? So do you plan out everything you want to do?\n[Student] So, pardon? Teacher, one more please. The second, the warm-down question. Do you plan your week in advance? Advance. Do you plan your week in advance? And teacher, could you explain the question? The advance. Do you plan your week in advance? What means the more detailed?\n[Tutor] Ahead of time. So before.\n[Student] So do you plan your week before? That is advanced. I see. Prepare before. Yes, yes, you're right. Not a detailed plan, the main plan. I set up the main plan. I make some main plan. And because it is impossible to booking some reservations, some important restaurant or important festival. Yeah, that is important. For example, next week or one month later, Busan has the big festival of fireworks. At that time, we prepared the reservation for this festival. So usually I prepare one month ago or one week ago. Yeah, I search some internet for the information of the festival or some exhibition or something. And then I make a reservation and I make a plan. Yeah, before the week or a month ago.\n[Tutor] Yeah, especially with those big events too, like the fireworks. Yeah, that's the event. You're right. Hmm. Okay, up. Well, that's getting about it for our time here. I will send you corrections in a bit. \"Neighborhood place,\" \"neighbor people.\"\n[Student] Neighbor people. And innocence.\n[Tutor] So any other questions before I go?\n[Student] Oh, no, thank you so much. Have a nice day, teacher.\n[Tutor] Yeah, you're welcome. Have a great day. Goodbye.\n[Student] Bye-bye.\n\n[AI 피드백]\nJoey, 안녕하세요! 오늘도 활기찬 목소리로 수업에 참여해 주셔서 감사합니다. 일상적인 쇼핑 습관부터 주말 청소, 이웃과의 배려까지 다양한 주제로 솔직하고 재미있는 이야기를 나눌 수 있어서 좋았어요. 특히 여러 나라의 쇼핑 습관에 대해 미리 조사해 오신 점과, 복잡한 상황 문제에 대해 자신의 경험을 바탕으로 현명한 해결책을 제시해 주신 점이 인상 깊었습니다.\n\n오늘 배운 표현들을 잘 정리해서 Joey의 영어 실력 향상에 도움이 될 수 있도록 피드백을 준비했어요. 함께 살펴볼까요?\n\n---\n\n**0. 📌 Topic**\nTopic: Discussing daily routines, shopping habits, and household management.\n\n**1. 📊 오늘의 대화 요약 (Summary)**\n오늘은 주로 일상생활 속 습관에 대해 이야기했습니다. 특히 나라별 장보기 습관과 온라인/오프라인 쇼핑 선호도를 비교하고, 주말 청소 방식과 이웃에게 피해를 주지 않기 위한 세탁 시간 조절 문제에 대해 심도 있게 토론했습니다. 또한, 중요한 일정은 미리 계획하는 습관에 대해서도 대화를 나누었습니다.\n\n**2. 💬 유창성 업그레이드 (Fluency & Natural Flow)**\nJoey가 실제 말한 문장 중, 의미는 통하지만 원어민이 들었을 때 더 자연스럽게 들릴 수 있는 표현들을 알려드릴게요.\n\n1.  ❌ **As Said**: \"This day, I have something to do at night, so I slept at a really late time, so I'm really tired, but it's okay.\"\n    ✅ **Natural**: \"I had something to do last night, so I went to bed really late, and I'm quite tired today, but it's okay.\"\n    💎 **Professional**: \"I had commitments last night, which led to a late bedtime, so I'm feeling a bit fatigued today, but I'm managing.\"\n    💡 **코칭 포인트**: Using \"last night\" clarifies that the late sleep happened in the past, causing current tiredness. \"Went to bed really late\" is a more common and natural way to express sleeping late. \"This day\" is not a common phrase for \"today\".\n    'This day'는 '오늘'을 의미할 때 잘 쓰지 않는 표현이며, 'slept at a really late time'보다는 'went to bed really late'가 훨씬 자연스러운 구어체입니다. 'last night'을 써서 어젯밤에 늦게 잤다는 것을 명확히 해주는 것이 좋습니다.\n\n2.  ❌ **As Said**: \"the more it's a normal day, every person is a little busy, so they don't have time to go shopping.\"\n    ✅ **Natural**: \"On weekdays, most people are quite busy, so they don't have time to go grocery shopping.\"\n    💎 **Professional**: \"During the workweek, individuals typically have limited time due to their busy schedules, which restricts their ability to engage in grocery shopping.\"\n    💡 **코칭 포인트**: \"The more it's a normal day\" is grammatically understandable but sounds a bit clunky. \"On weekdays\" is a much more direct and common way to refer to normal working days. \"Every person\" can be replaced with \"most people\" for a more natural flow.\n    'the more it's a normal day'는 어색하게 들릴 수 있습니다. '평일'을 의미할 때는 간단히 'On weekdays'라고 하는 것이 가장 자연스럽습니다. 'every person' 대신 'most people'을 사용하면 더 유연한 표현이 됩니다.\n\n3.  ❌ **As Said**: \"I think that is the etiquette, do not do laundry on the weekend night.\"\n    ✅ **Natural**: \"I think it's proper etiquette not to do laundry on weekend nights.\"\n    💎 **Professional**: \"I believe it's considered proper etiquette to refrain from doing laundry on weekend evenings.\"\n    💡 **코칭 포인트**: \"Do not do laundry\"는 직접적인 명령문 형태입니다. '~하는 것이 예의다'라고 말할 때는 'it's etiquette not to do ~' 또는 'it's proper etiquette to refrain from doing ~'과 같이 to 부정사를 활용하는 것이 더 자연스럽습니다.\n\n**3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)**\nCategory: **Missing Auxiliary Verbs / Incorrect Verb Forms (조동사 누락 및 동사 형태 오류)**\n\nJoey는 질문을 하거나 의도, 가정을 표현할 때 조동사를 빠뜨리거나 동사 형태를 잘못 사용하는 경향이 있었습니다. 이는 문장의 의미를 불분명하게 만들 수 있습니다.\n\n| ❌ 원문 (As Said)                                   | ✅ 교정 예시 (Corrected)                                            |\n| :-------------------------------------------------- | :------------------------------------------------------------------ |\n| \"What **means** the more detailed?\"                 | \"What **does** 'in advance' mean?\"                                  |\n| \"I'm just **to wait** the next week\"                | \"I'll just **wait** until next week.\"                               |\n| \"I'm just **to do** laundry at night.\"              | \"I'd just **do** laundry at night.\" (또는 \"I would just do...\") |\n\n📌 **핵심 규칙**: 질문을 만들 때는 주어 앞에 적절한 조동사(do/does/did)를 사용하고, 미래나 가정의 의미를 나타낼 때는 'will'이나 'would' 같은 조동사 뒤에 동사 원형을 써야 합니다.\n\n🔁 **따라 읽기**:\n🗣️ \"What does 'in advance' mean?\"\n🗣️ \"I'll just wait until next week.\"\n🗣️ \"I'd just do laundry at night.\"\n\n**4. 📗 어휘 확장 (Vocabulary Vault)**\n수업 중 등장했거나 맥락상 유용한 표준 영어 단어 5개를 소개합니다.\n\n1.  **fatigued** /fəˈtiːɡd/ (형용사)\n    뜻: 피로한, 지친\n    실전 예문: After a long week of negotiations, the team was visibly **fatigued**.\n\n2.  **commitment** /kəˈmɪtmənt/ (명사)\n    뜻: 약속, 전념, 헌신 (특히 해야 할 일)\n    실전 예문: Balancing work **commitments** and personal life is crucial for well-being.\n\n3.  **etiquette** /ˈɛtɪkət/ (명사)\n    뜻: 예의범절, 에티켓\n    실전 예문: Understanding business **etiquette** is essential for international collaborations.\n\n4.  **downside** /ˈdaʊnsaɪd/ (명사)\n    뜻: 단점, 불리한 점\n    실전 예문: The main **downside** of this investment is its high risk.\n\n5.  **in advance** /ɪn ədˈvæns/ (부사구)\n    뜻: 미리, 사전에\n    실전 예문: Please book your meeting rooms **in advance** to avoid conflicts.\n\n**5. 📝 실전 복습 챌린지 (Practice)**\n오늘 배운 표현과 문법을 활용하여 영작 챌린지를 해볼까요?\n\n1.  **쉬운 문제**: 다음 주 회의를 위해 미리 준비해야 할 것이 무엇인지 팀원들에게 물어보세요.\n    (힌트: 'in advance'와 질문에 필요한 조동사를 활용)\n    <details>\n    <summary>모범 답안</summary>\n    What do we need to prepare in advance for next week's meeting?\n    </details>\n\n2.  **중간 문제**: 그 프로젝트의 가장 큰 단점은 무엇이며, 이 문제를 해결하기 위해 어떤 노력을 해야 한다고 생각하는지 말해보세요.\n    (힌트: 'downside'와 'commitment'를 활용)\n    <details>\n    <summary>모범 답안</summary>\n    What's the biggest downside of that project, and what kind of commitment do you think we need to make to solve this problem?\n    </details>\n\n3.  **어려운 문제**: 늦은 밤에 시끄러운 작업을 하는 것은 직장 동료들에게 예의에 어긋날 수 있으니, 미리 계획을 세워서 불편함을 주지 않도록 노력해야 한다고 조언해 주세요.\n    (힌트: 'etiquette', 'in advance', 'fatigued'를 활용)\n    <details>\n    <summary>모범 답안</summary>\n    It's against proper etiquette to do noisy work late at night, as it can make colleagues feel fatigued the next day. So, we should plan our tasks in advance to avoid causing any inconvenience.\n    </details>\n\n**6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)**\n\n✨ **Good Job**:\nJoey는 자신의 선호도를 명확하고 간결하게 설명할 때 아주 좋았습니다. 예를 들어, 이 문장처럼요:\n\"**I prefer shopping online. It's better. It's convenient and reduces the time.**\"\n세 문장이 짧지만, 자신의 의견과 그 이유를 논리적으로 잘 연결하여 전달했습니다. 이런 간결하고 명확한 표현은 비즈니스 환경에서도 매우 중요합니다!\n\n🚀 **내일의 한 문장**:\n다음 수업 시작 시, 오늘 배운 표현을 활용하여 튜터에게 이렇게 말해보세요.\n\"I've been thinking about the **downsides** of working too much without planning **in advance**.\"\n(미리 계획하지 않고 너무 많이 일하는 것의 단점에 대해 생각해 봤어요.)\n\n---\n\n**[성과 지표]**\n**유창성 점수**: 7/10\n**근거**: Joey는 다양한 주제에 대해 막힘없이 자신의 의견을 표현하려는 노력이 돋보였습니다. 단어 선택의 폭이 넓고 문장을 길게 이어가는 능력도 좋았습니다. 다만, 가끔 어색한 구어체 표현이나 문법적인 오류로 인해 전달력이 저해되는 부분이 있었습니다. 특히 질문을 만들 때 조동사 사용에 주의가 필요합니다.\n\n**다음 수업 '원포인트 액션 플랜'**:\n다음 수업에서는 **\"질문 시 조동사 사용 및 동사 형태 일치\"**에 집중하여 연습해 봅시다. 질문을 하거나 의도를 표현할 때 'do/does/will/would'와 같은 조동사를 바르게 사용하고, 그 뒤에 오는 동사의 형태를 정확히 쓰는 연습을 해볼 거예요.\n\n위 내용을 바탕으로:\n1. 먼저 오늘 수업에서 내가 틀렸거나 어색했던 표현을 하나 골라서, 관련된 상황을 영어로 질문해줘.\n2. 내가 영어로 대답하면, 자연스러운지 확인하고 더 나은 표현이 있으면 알려줘.\n3. 특히 \"반복 실수 패턴\"에서 지적된 부분을 집중적으로 연습시켜줘.\n4. 이런 식으로 오늘 배운 표현들을 하나씩 복습하자.\n5. 한국어 설명은 필요할 때만 간단히, 대화는 최대한 영어로 진행해줘.\n\n그럼 시작하자!";
+        function startReview(){navigator.clipboard.writeText(REVIEW_PROMPT).then(()=>{showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)}).catch(()=>{const t=document.createElement('textarea');t.value=REVIEW_PROMPT;document.body.appendChild(t);t.select();document.execCommand('copy');document.body.removeChild(t);showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)})}
+        function showToast(){const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500)}
+        function switchTab(n){document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',n==='feedback'?i===0:i===1));document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));document.getElementById('tab-'+n).classList.add('active')}
+    </script>
+</body>
+</html>
