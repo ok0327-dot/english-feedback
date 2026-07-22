@@ -1,0 +1,53 @@
+{
+ "date": "2026-07-22",
+ "iso": [
+  2026,
+  30
+ ],
+ "topic": "Discussing daily routines, shopping habits, and household management.",
+ "grammar": "Missing Auxiliary Verbs / Incorrect Verb Forms",
+ "grammar_norm": "Verb Forms / Auxiliaries",
+ "score": 7.0,
+ "pairs": [
+  {
+   "said": "This day, I have something to do at night, so I slept at a really late time, so I'm really tired, but it's okay.",
+   "natural": "I had something to do last night, so I went to bed really late, and I'm quite tired today, but it's okay."
+  },
+  {
+   "said": "the more it's a normal day, every person is a little busy, so they don't have time to go shopping.",
+   "natural": "On weekdays, most people are quite busy, so they don't have time to go grocery shopping."
+  },
+  {
+   "said": "I think that is the etiquette, do not do laundry on the weekend night.",
+   "natural": "I think it's proper etiquette not to do laundry on weekend nights."
+  }
+ ],
+ "vocab": [
+  {
+   "word": "fatigued",
+   "pos": "형용사",
+   "meaning": "피로한, 지친"
+  },
+  {
+   "word": "commitment",
+   "pos": "명사",
+   "meaning": "약속, 전념, 헌신 (특히 해야 할 일)"
+  },
+  {
+   "word": "etiquette",
+   "pos": "명사",
+   "meaning": "예의범절, 에티켓"
+  },
+  {
+   "word": "downside",
+   "pos": "명사",
+   "meaning": "단점, 불리한 점"
+  },
+  {
+   "word": "in advance",
+   "pos": "부사구",
+   "meaning": "미리, 사전에"
+  }
+ ],
+ "_html_md5": "a32fdfac37df2bdfa835fd265290e9f1"
+}
