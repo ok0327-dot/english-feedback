@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#0f0f13"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="당근영어"><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="icon" type="image/png" sizes="192x192" href="icon-192.png"><script src="install-banner.js" defer></script><script src="sw-reg.js" defer></script>
+    <title>전화영어 복습 - 2026년 07월 23일</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Noto Sans KR',sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.75;min-height:100vh}
+        .header{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);border-bottom:1px solid rgba(255,255,255,.06);padding:48px 24px 40px;text-align:center}
+        .header-date{font-size:13px;color:#94a3b8;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+        .header h1{font-size:28px;font-weight:700;color:#f1f5f9;margin-bottom:16px}
+        .header-meta{display:flex;justify-content:center;gap:24px;font-size:14px;color:#64748b}
+        .header-meta span{display:flex;align-items:center;gap:6px}
+        .cta-section{text-align:center;padding:40px 24px}
+        .cta-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:linear-gradient(135deg,#38bdf8,#818cf8);color:#fff;font-size:16px;font-weight:600;font-family:'Noto Sans KR',sans-serif;border:none;border-radius:50px;cursor:pointer;transition:all .3s;text-decoration:none;box-shadow:0 4px 24px rgba(56,189,248,.25)}
+        .cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(56,189,248,.35)}
+        .cta-btn svg{width:20px;height:20px}
+        .cta-sub{margin-top:12px;font-size:13px;color:#64748b}
+        .toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#38bdf8;padding:14px 28px;border-radius:12px;font-size:14px;font-weight:500;border:1px solid rgba(56,189,248,.2);box-shadow:0 8px 32px rgba(0,0,0,.4);opacity:0;transition:all .4s cubic-bezier(.16,1,.3,1);z-index:1000}
+        .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+        .container{max-width:720px;margin:0 auto;padding:0 24px 80px}
+        .tabs{display:flex;gap:4px;background:#1a1a24;padding:4px;border-radius:12px;margin-bottom:32px}
+        .tab{flex:1;padding:12px;text-align:center;font-size:14px;font-weight:500;color:#64748b;background:0 0;border:none;border-radius:8px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all .2s}
+        .tab.active{background:#262636;color:#f1f5f9}
+        .tab-content{display:none}.tab-content.active{display:block}
+        .feedback h2{font-size:18px;font-weight:700;color:#f1f5f9;margin:36px 0 16px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.06)}
+        .feedback h2:first-child{margin-top:0}
+        .feedback p{margin:8px 0;color:#cbd5e1}
+        .feedback .item{padding:6px 0 6px 16px;border-left:2px solid #334155;margin:6px 0;color:#cbd5e1}
+        .feedback .numbered{padding:8px 0 8px 16px;color:#cbd5e1}
+        .feedback .numbered strong{color:#38bdf8}
+        .feedback strong{color:#f1f5f9}
+        .feedback code{background:#1e293b;padding:2px 8px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#38bdf8}
+        .feedback table{width:100%;border-collapse:collapse;margin:12px 0}
+        .feedback th,.feedback td{padding:10px 14px;text-align:left;border-bottom:1px solid #262636}
+        .feedback th{color:#94a3b8;font-weight:500;font-size:13px}
+        .feedback td{color:#cbd5e1}
+        .arrow{color:#38bdf8;font-weight:700}
+        .transcript{background:#1a1a24;border-radius:12px;padding:28px;font-size:14px;line-height:2;color:#94a3b8;white-space:pre-wrap;word-break:break-word;font-family:'JetBrains Mono','Noto Sans KR',monospace}
+        .transcript .tutor{color:#38bdf8}
+        .transcript .student{color:#a78bfa}
+        @media(max-width:640px){.header{padding:32px 16px}.header h1{font-size:22px}.cta-btn{padding:14px 28px;font-size:15px}.container{padding:0 16px 60px}}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-date">2026년 07월 23일</div>
+        <h1>📚 전화영어 복습</h1>
+        <div class="header-meta">
+            <span>⏱ 19분 49초</span>
+            <span>🎙 전화영어_025180304_20260723080039.m4a</span>
+        </div>
+    </div>
+    <div class="cta-section">
+        <button class="cta-btn" onclick="startReview()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Gemini에서 복습 대화 시작하기
+        </button>
+        <div class="cta-sub">클릭하면 프롬프트가 복사되고 Gemini가 열립니다</div>
+    </div>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('feedback')">📋 AI 피드백</button>
+            <button class="tab" onclick="switchTab('transcript')">🎙 수업 전사</button>
+        </div>
+        <div id="tab-feedback" class="tab-content active">
+            <div class="feedback"><p>따뜻하고 실용적인 영어 코치 Bella입니다. Joey님, 오늘 수업도 정말 수고 많으셨어요! 일상적인 루틴과 수면 습관, 그리고 가족과의 조화로운 생활에 대해 이야기 나누면서 다양한 표현들을 자연스럽게 사용하려는 노력이 돋보였습니다. 특히 'nice'라는 단어의 대안을 찾고 싶다고 먼저 말씀하신 점은 정말 인상 깊었어요. 스스로 부족하다고 느끼는 부분을 적극적으로 개선하려는 Joey님의 열정이 느껴졌습니다!</p>
+<br>
+<br>
+<p><strong>0. 📌 Topic</strong></p>
+<p>Topic: Discussing Daily Routines, Sleep Habits, and Living Arrangements</p>
+<br>
+<p><strong>1. 📊 오늘의 대화 요약 (Summary)</strong></p>
+<p>오늘 Joey님은 잠들기 전 활동(오디오북 청취, 휴대폰 사용)과 아침 식사 루틴(우유와 삶은 달걀, 차)에 대해 튜터와 이야기를 나누었습니다. 또한, 가족 구성원과 함께 지낼 때 발생할 수 있는 소음 문제에 대한 대처 방안과 주중/주말의 확연히 다른 개인 루틴에 대해 자세히 설명하며 대화를 이어갔습니다.</p>
+<br>
+<p><strong>2. 💬 유창성 업그레이드 (Fluency & Natural Flow)</strong></p>
+<br>
+<p>Joey님께서 사용하신 표현 중 의미는 잘 전달되었지만, 원어민들이 더 자연스럽게 쓰는 표현으로 다듬어 볼 문장들을 함께 살펴볼게요.</p>
+<br>
+<div class="numbered"><strong>1.</strong> ❌ <strong>학습자 원문 (As Said):</strong> "Sometimes it is similar my way."</div>
+<p>✅ <strong>자연스러운 표현 (Natural):</strong> "Sometimes it's similar to my situation."</p>
+<p>💎 <strong>비즈니스 표현 (Professional):</strong> "My experience sometimes mirrors this."</p>
+<p>💡 <strong>코칭 포인트:</strong> Using "similar to" is the correct and natural way to express comparison. Adding "situation" or "experience" provides clear context. <span class="arrow">→</span> "similar to"를 사용하면 비교 대상을 명확히 할 수 있으며, "situation"이나 "experience" 같은 단어를 추가하면 문맥이 더 자연스러워집니다.</p>
+<br>
+<div class="numbered"><strong>2.</strong> ❌ <strong>학습자 원문 (As Said):</strong> "Usually that is about the meditative or some philosophy of life."</div>
+<p>✅ <strong>자연스러운 표현 (Natural):</strong> "They're usually about meditation or some philosophy of life."</p>
+<p>💎 <strong>비즈니스 표현 (Professional):</strong> "The content typically revolves around meditation or life philosophy."</p>
+<p>💡 <strong>코칭 포인트:</strong> "That"은 단수 대명사이므로, 복수인 오디오북을 지칭할 때는 "they"를 쓰는 것이 맞습니다. 또한, "meditative"는 형용사이므로 명사 "meditation"을 사용하는 것이 자연스럽습니다.</p>
+<br>
+<div class="numbered"><strong>3.</strong> ❌ <strong>학습자 원문 (As Said):</strong> "But sometimes if I travel in other country, usually I drink tea."</div>
+<p>✅ <strong>자연스러운 표현 (Natural):</strong> "But sometimes when I travel to another country, I usually drink tea."</p>
+<p>💎 <strong>비즈니스 표현 (Professional):</strong> "However, when I travel internationally, I tend to opt for tea."</p>
+<p>💡 <strong>코칭 포인트:</strong> "If"는 조건적인 상황을 나타내고, "when"은 반복적이거나 예상되는 상황에 사용합니다. 또한, 특정하지 않은 단수 국가를 말할 때는 "other country" 대신 "another country"가 올바른 표현입니다.</p>
+<br>
+<p><strong>3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)</strong></p>
+<br>
+<p>Category: <strong>Word Order (Adverbs of Frequency)</strong></p>
+<br>
+<p>Joey님은 빈도 부사(always, usually 등)의 위치를 가끔 헷갈리시는 경향이 있었습니다. 빈도 부사는 문장에서 특정 위치에 오는데, 이를 잘 지키면 문장이 훨씬 자연스러워져요.</p>
+<br>
+<table>
+<tr><th>❌ 원문 (As Said)</th><th>✅ 교정 예시 (Corrected)</th></tr>
+<tr><td>"And these days, we have <strong>always</strong> their device, smartphone."</td><td>"And these days, we <strong>always</strong> have their device, smartphone."</td></tr>
+<tr><td>"So <strong>usually</strong> on the day, I just work in my office."</td><td>"So on those days, I <strong>usually</strong> just work in my office."</td></tr>
+<tr><td>"So usually I eat breakfast with tea."</td><td>"So I <strong>usually</strong> eat breakfast with tea."</td></tr>
+</table>
+<br>
+<p>📌 <strong>핵심 규칙:</strong> 빈도 부사(always, usually, often, sometimes 등)는 일반 동사 앞에 오고, be동사나 조동사 뒤에 옵니다.</p>
+<br>
+<p>🔁 <strong>따라 읽기:</strong></p>
+<p>🗣️ "And these days, we always have their device, smartphone."</p>
+<p>🗣️ "So on those days, I usually just work in my office."</p>
+<p>🗣️ "So I usually eat breakfast with tea."</p>
+<br>
+<p><strong>4. 📗 어휘 확장 (Vocabulary Vault)</strong></p>
+<br>
+<p>오늘 대화에서 나왔거나 Joey님의 비즈니스/자기계발 관심사에 유용한 단어들을 알아볼까요?</p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>accommodate</strong> /əˈkɑːmədeɪt/ (동사)</div>
+<div class="item"><strong>뜻:</strong> (요구에 맞춰) 편의를 제공하다, 수용하다, 공간을 제공하다</div>
+<div class="item"><strong>실전 예문:</strong> We need to <strong>accommodate</strong> the new client's specific requirements to ensure their satisfaction.</div>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>disrupt</strong> /dɪsˈrʌpt/ (동사)</div>
+<div class="item"><strong>뜻:</strong> 방해하다, 지장을 주다</div>
+<div class="item"><strong>실전 예문:</strong> Please try not to <strong>disrupt</strong> the meeting flow with unnecessary interruptions.</div>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>revolve around</strong> /rɪˈvɑːlv əˈraʊnd/ (동사구)</div>
+<div class="item"><strong>뜻:</strong> ~을 중심으로 돌아가다, ~이 주를 이루다</div>
+<div class="item"><strong>실전 예문:</strong> My weekend plans often <strong>revolve around</strong> spending quality time with my family.</div>
+<br>
+<div class="numbered"><strong>4.</strong> <strong>opt for</strong> /ɑːpt fɔːr/ (동사구)</div>
+<div class="item"><strong>뜻:</strong> ~을 선택하다, ~을 택하다</div>
+<div class="item"><strong>실전 예문:</strong> Given the tight deadline, we decided to <strong>opt for</strong> the more efficient, albeit more expensive, solution.</div>
+<br>
+<div class="numbered"><strong>5.</strong> <strong>mirror</strong> /ˈmɪrər/ (동사)</div>
+<div class="item"><strong>뜻:</strong> 반영하다, 꼭 닮다</div>
+<div class="item"><strong>실전 예문:</strong> The company's recent performance <strong>mirrors</strong> the overall economic downturn.</div>
+<br>
+<p><strong>5. 📝 실전 복습 챌린지 (Practice)</strong></p>
+<br>
+<p>오늘 배운 표현과 문법을 활용해서 영작 챌린지에 도전해 보세요!</p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>상황:</strong> 저는 보통 아침에 일찍 일어나서 하루를 시작해요.</div>
+<div class="item"><strong>영작:</strong> (힌트: 'usually'와 'start my day'를 활용)</div>
+<div class="item"><strong>모범 답안:</strong> I usually get up early to start my day.</div>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>상황:</strong> 주말에는 가족과 함께 시간을 보내는 것을 중심으로 일정이 돌아갑니다.</div>
+<div class="item"><strong>영작:</strong> (힌트: 'revolve around'를 활용)</div>
+<div class="item"><strong>모범 답안:</strong> My weekend schedule revolves around spending time with my family.</div>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>상황:</strong> 우리는 고객의 요구 사항을 수용하기 위해 항상 최선을 다합니다.</div>
+<div class="item"><strong>영작:</strong> (힌트: 'accommodate'와 빈도 부사 'always'의 위치에 유의)</div>
+<div class="item"><strong>모범 답안:</strong> We always do our best to accommodate our clients' requirements.</div>
+<br>
+<p><strong>6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)</strong></p>
+<br>
+<p>✨ <strong>Good Job:</strong> "But on the weekend, I stopped every work and just do play with my son and my wife."</p>
+<p>Joey님, 이 문장에서 주말에 가족과 함께하는 시간을 소중히 여기는 마음이 잘 느껴졌어요! 'stopped every work'와 'just do play'라는 표현에서 비록 문법적인 부분은 다듬을 수 있지만, 주말의 명확한 루틴 변화와 가족에 대한 애정이 잘 전달되었습니다. 특히 'play with my son and my wife'는 정말 자연스럽고 따뜻한 표현이었습니다.</p>
+<br>
+<p>🚀 <strong>내일의 한 문장:</strong> 다음 수업 시작 시 튜터에게 이렇게 말해보세요!</p>
+<p>"I'm trying to incorporate some new vocabulary, like 'accommodate' and 'revolve around,' into my daily conversations."</p>
+<p>(오늘 배운 'accommodate'와 'revolve around'를 활용하여, 새로운 어휘를 일상 대화에 넣어보려고 노력하고 있다고 말하는 문장입니다.)</p>
+<br>
+<br>
+<p><strong>[성과 지표]</strong></p>
+<br>
+<p><strong>유창성 점수:</strong> 7/10점</p>
+<br>
+<p><strong>근거:</strong> Joey님은 다양한 주제에 대해 막힘없이 자신의 의견을 표현하고 대화를 이어가는 능력이 뛰어납니다. 특히 'nice'의 대안을 찾으려는 적극적인 태도는 유창성 향상에 큰 도움이 될 것입니다. 다만, 문장 구조나 어휘 선택에서 미묘하게 어색한 부분이 있어 원어민처럼 자연스러운 흐름을 만드는 데 약간의 노력이 더 필요합니다.</p>
+<br>
+<p><strong>다음 수업 '원포인트 액션 플랜':</strong></p>
+<p>다음 수업에서는 <strong>빈도 부사의 올바른 위치</strong>를 의식적으로 사용하며 문장을 만들어보는 연습을 해볼까요? "I always...", "I usually...", "I sometimes..."와 같이 문장을 시작할 때부터 빈도 부사의 위치를 염두에 두고 말하는 습관을 들이면 더욱 정확하고 자연스러운 문장 구사에 도움이 될 거예요.</p></div>
+        </div>
+        <div id="tab-transcript" class="tab-content">
+            <div class="transcript"><span class="tutor">[Tutor]</span> Hello, good morning.
+<span class="tutor">[Tutor]</span> Hi, good morning, Joey.
+[Joey] Hi.
+<span class="tutor">[Tutor]</span> You&#x27;re doing well, I trust.
+<span class="tutor">[Tutor]</span> Are you ready for your next lesson?
+[Joey] Oh, yes, I&#x27;m doing good.
+[Joey] Everything is good.
+<span class="tutor">[Tutor]</span> Good to hear.
+[Joey] Yeah, how about you?
+<span class="tutor">[Tutor]</span> I&#x27;m doing okay, thank you.
+<span class="tutor">[Tutor]</span> So we&#x27;re going on now to page 19.
+<span class="tutor">[Tutor]</span> Are you ready?
+[Joey] Yes, I&#x27;m ready.
+[Joey] Yes, I&#x27;m ready.
+<span class="tutor">[Tutor]</span> Fantastic.
+<span class="tutor">[Tutor]</span> Okay. So the title, as you can see, says how I start and end my day.
+<span class="tutor">[Tutor]</span> So as usual, I&#x27;m going to get you to look at part A and read the warm-up question to me and respond.
+[Joey] Okay. What do people in your country usually do to help them fall asleep?
+<span class="tutor">[Tutor]</span> Wow, your country people read a book, right?
+<span class="tutor">[Tutor]</span> Well, that&#x27;s what they say about Canada, but I know we do other things too.
+<span class="tutor">[Tutor]</span> And then in your country, it says you use phone.
+<span class="tutor">[Tutor]</span> Yes, wow, that is a serious problem.
+[Joey] And some people, I love that, meditate or praise Thailand and which country anyway?
+<span class="tutor">[Tutor]</span> Yeah, sure. Yeah, yeah, yeah. It&#x27;s so nice. I think, yes, it can be one of the things that I&#x27;ve learned to do because for many years I did read before bed, but now I use audiobooks.
+[Joey] Oh, it&#x27;s better.
+<span class="tutor">[Tutor]</span> Yeah, I put it on with my phone.
+<span class="tutor">[Tutor]</span> I set a timer, and it only runs for a certain time, and usually by the time it finishes, I&#x27;m asleep.
+<span class="tutor">[Tutor]</span> So it&#x27;s a little easier than having to use a hard copy.
+[Joey] Uh-huh.
+[Joey] Who reads the books, the AI or the real humans?
+<span class="tutor">[Tutor]</span> Well, it&#x27;s usually done by a human narrator.
+<span class="tutor">[Tutor]</span> There is a company here in North America that is called audible.com.
+<span class="tutor">[Tutor]</span> And they have hundreds of narrators.
+[Joey] Wow.
+<span class="tutor">[Tutor]</span> So, yeah, they read the book, they do the voices, and it&#x27;s nice.
+<span class="tutor">[Tutor]</span> I&#x27;ve developed pain in my hands so I can&#x27;t hold a book for long periods of time.
+<span class="tutor">[Tutor]</span> I don&#x27;t need my hands if I&#x27;m listening.
+[Joey] Yes.
+<span class="tutor">[Tutor]</span> All right. Very good.
+[Joey] Sometimes it is similar my way.
+[Joey] I had also this application, a little difference in Korea application.
+<span class="tutor">[Tutor]</span> Oh, yes.
+[Joey] Sometimes before I sleep, I listen to audiobooks.
+[Joey] Usually that is about the meditative or some philosophy of life.
+[Joey] Yeah, that is so nice way to sleep.
+<span class="tutor">[Tutor]</span> It is. You just drift off.
+[Joey] Yeah.
+<span class="tutor">[Tutor]</span> Okay, very good.
+<span class="tutor">[Tutor]</span> All right, let&#x27;s go on to part B.
+<span class="tutor">[Tutor]</span> I&#x27;ll get you to read and respond to that question.
+[Joey] Okay, I see.
+[Joey] Which do you prefer to drink in the morning and why?
+[Joey] Okay, my routine is drinking milk and eating boiled egg.
+[Joey] So it is a little different.
+[Joey] But sometimes if I travel in other country, usually I drink tea.
+[Joey] Yeah.
+<span class="tutor">[Tutor]</span> Oh, yes.
+[Joey] Better than coffee because morning coffee is the, I think it has hurt my stomach.
+[Joey] So usually I eat breakfast with tea.
+[Joey] Yeah, that&#x27;s nice.
+<span class="tutor">[Tutor]</span> Okay, yeah.
+<span class="tutor">[Tutor]</span> So a milk and an egg is better on your stomach.
+<span class="tutor">[Tutor]</span> Stomach, very good.
+[Joey] And that is so many.
+<span class="tutor">[Tutor]</span> I understand.
+[Joey] Yeah, contains the protein.
+[Joey] So, yeah, it is simple and have so many nutrients.
+[Joey] So nice.
+[Joey] It is so nice. Oh, yeah, yeah. It&#x27;s a good idea. I agree with you, Teacher. Usually I say &quot;they nice.&quot; Could you say more different way? It is so nice.
+<span class="tutor">[Tutor]</span> Okay. Well, you could say that my breakfast each day is good. It is appropriate. It is nice. It is easy. Yeah, so you&#x27;re looking for some alternate words to &quot;nice.&quot; That is a wonderful suggestion because &quot;nice&quot; is greatly overused and overrated.
+<span class="tutor">[Tutor]</span> Tell you what I&#x27;m going to do, Joey.
+<span class="tutor">[Tutor]</span> I&#x27;m going to look for an ESL video that gives you alternatives to the word &quot;nice.&quot;
+<span class="tutor">[Tutor]</span> Okay?
+<span class="tutor">[Tutor]</span> You can build your vocabulary.
+[Joey] Okay, I see.
+[Joey] Thanks so much.
+<span class="tutor">[Tutor]</span> Yes.
+<span class="tutor">[Tutor]</span> No worries.
+<span class="tutor">[Tutor]</span> Mm-mm-mm.
+<span class="tutor">[Tutor]</span> All right.
+<span class="tutor">[Tutor]</span> Let&#x27;s continue on to Part C, Problem Solving.
+[Joey] Okay.
+<span class="tutor">[Tutor]</span> And I&#x27;ll get you to read the situation.
+[Joey] Okay.
+[Joey] I really... the morning you are exhausted and irritated by the situation.
+[Joey] Teacher, I read this paragraph.
+<span class="tutor">[Tutor]</span> Yes, you read it.
+[Joey] Yes, I read the paragraph.
+[Joey] I&#x27;m not sure. I&#x27;m not sure the meaning.
+[Joey] &quot;The day off rate taking and watch TV, then sleep except you to be quiet in the morning.&quot;
+[Joey] It means they sleep late time and before the sleep they watch TV.
+[Joey] And just...
+<span class="tutor">[Tutor]</span> Uh-huh.
+[Joey] And what&#x27;s mean &quot;sleep in&quot; and &quot;except you to be quiet in the morning&quot;? Just I&#x27;m quiet in the morning, but they wake up so late, right?
+<span class="tutor">[Tutor]</span> Yeah, let me try to simplify it for you.
+<span class="tutor">[Tutor]</span> Okay.
+[Joey] Uh-huh.
+<span class="tutor">[Tutor]</span> Maybe every day...
+[Joey] Uh-huh.
+<span class="tutor">[Tutor]</span> You go to bed at maybe 10 o&#x27;clock.
+[Joey] 10 o&#x27;clock.
+<span class="tutor">[Tutor]</span> Yeah.
+[Joey] Yeah.
+<span class="tutor">[Tutor]</span> Just for instance.
+<span class="tutor">[Tutor]</span> And then maybe you get up early, like 5 a.m.
+[Joey] 5 a.m.
+<span class="tutor">[Tutor]</span> They might stay up later, 1 a.m., 2 a.m., and then don&#x27;t get up till 8 or 9 in the morning.
+<span class="tutor">[Tutor]</span> So you get up at 6, you&#x27;re ready to start your day.
+<span class="tutor">[Tutor]</span> But they are sleeping.
+<span class="tutor">[Tutor]</span> They want you to be quiet and let them sleep.
+<span class="tutor">[Tutor]</span> And it&#x27;s awkward for you because you have to get ready for work.
+[Joey] I see.
+[Joey] So understand that situation and this expression, &quot;the stay up.&quot;
+[Joey] It&#x27;s the go to sleep. &quot;Stay up.&quot;
+<span class="tutor">[Tutor]</span> Yeah, &quot;stay up.&quot;
+[Joey] It&#x27;s the go to sleep. &quot;Stay up.&quot;
+<span class="tutor">[Tutor]</span> Uh-huh.
+<span class="tutor">[Tutor]</span> &quot;Stay up&quot; means to stay awake longer.
+[Joey] Stay awake longer. I see. Understand.
+<span class="tutor">[Tutor]</span> Yes. When we say &quot;stay up late,&quot; that means instead of going to bed early, they go to bed later in the night.
+[Joey] Ah, late in the night. Late in the night. Okay. Okay. I see.
+<span class="tutor">[Tutor]</span> Very good.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="tutor">[Tutor]</span> I&#x27;ll get you to read the question and we&#x27;ll talk about it.
+[Joey] Would you talk to them or ignore it and risk getting upset? Getting upset.
+[Joey] I think, in my opinion, the people don&#x27;t change and they have their routine.
+[Joey] So I think I&#x27;m just believe them and that is also their life routine, so I can&#x27;t change.
+[Joey] So if I get up early, I just first I go, I do my schedule, for example, the meditations or do yoga or go to the swimming or go for work.
+[Joey] Yeah, that is my routine. So just myself. And then in the lunchtime, the schedule is together, go together. Yeah, yeah, go to the shopping or go to the picnic. Yeah.
+[Joey] And then the rest time, I&#x27;m just get up and rest time in the night. I do go sleep early and my family member is there. They have their schedule. So my opinion, yeah, we just believe their routine and just do. Yeah, it&#x27;s your, yeah.
+[Joey] And if I get up early, just I do my schedule. Yes, yes.
+<span class="tutor">[Tutor]</span> The thing that I&#x27;m hearing here is that because they are your guest, they&#x27;re only staying for a week, then you would try to accommodate their schedule.
+[Joey] Yeah, accommodate.
+<span class="tutor">[Tutor]</span> Joey, they also would need to accommodate your schedule.
+<span class="tutor">[Tutor]</span> It says in the paragraph, they stay up late talking and watching TV.
+<span class="tutor">[Tutor]</span> So if they&#x27;re keeping you awake, that&#x27;s not fair.
+<span class="tutor">[Tutor]</span> You would want them to be accommodating of you so that at night, so that you could be accommodating of them in the morning.
+<span class="tutor">[Tutor]</span> They&#x27;re a family member, you want to get along, yes?
+[Joey] Just they&#x27;re watching TV and they separate their schedule, right?
+<span class="tutor">[Tutor]</span> Yeah.
+<span class="tutor">[Tutor]</span> Yeah, it&#x27;s okay. It&#x27;s no problem.
+[Joey] Yeah, the idea... I have to go on, Teacher. Sorry.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="tutor">[Tutor]</span> In Western culture, when you are a guest in someone&#x27;s home, you try very hard not to disrupt the schedule or routine of your hosts, which means if you stay up late, you are quiet.
+<span class="tutor">[Tutor]</span> And if you sleep in in the morning, you hope your host will be quiet.
+<span class="tutor">[Tutor]</span> If you make them do only your schedule, it can cause hard feelings.
+[Joey] I see. Yes, I understand.
+[Joey] And usually these days, there are modern people watching TV in their mobile phone and they use their earphones.
+<span class="tutor">[Tutor]</span> That&#x27;s the thing. That&#x27;s right.
+[Joey] But this situation is a little bit different.
+[Joey] If they watch the living room TV and the sound is so big, at the meantime, I would say aloud.
+[Joey] The volume is aloud.
+[Joey] At that time, I would say, yeah, could you stop the TV because I will go sleep?
+[Joey] Yeah, just, yeah, only three and try to speak then because it disturbs my sleep.
+<span class="tutor">[Tutor]</span> That&#x27;s right.
+<span class="tutor">[Tutor]</span> Yeah, that&#x27;s right.
+<span class="tutor">[Tutor]</span> And if they&#x27;re a family member, they will understand.
+[Joey] Yes, yes.
+[Joey] And these days, we have always their device, smartphone.
+<span class="tutor">[Tutor]</span> That&#x27;s right.
+<span class="tutor">[Tutor]</span> If you use earbuds, you can watch on your phone, or sometimes you can use Bluetooth to connect to a television so you don&#x27;t have the volume.
+[Joey] You&#x27;re right.
+[Joey] You&#x27;re right. You&#x27;re right.
+<span class="tutor">[Tutor]</span> Let&#x27;s go on to the warm-down and I&#x27;ll have you read question number one, please.
+[Joey] Okay. What&#x27;s something you do on the weekends that&#x27;s different from weekdays? Weekdays.
+<span class="tutor">[Tutor]</span> Very good.
+[Joey] Okay. It&#x27;s totally different.
+[Joey] Monday to Friday, I work in my office.
+[Joey] And it is other city, different city.
+[Joey] Yeah. So with my, yeah.
+[Joey] So usually on the day, I just work in my office.
+[Joey] And night, I developed AI or research some program or search my investment, yeah, items, etc.
+[Joey] But on the weekend, I stopped every work and just do play with my son and my wife.
+[Joey] Just go picnic, watch the movie.
+[Joey] Yeah, so my routine is separate, type two, so normal weekdays and weekends.
+<span class="tutor">[Tutor]</span> Okay, yeah, you focus on your family, I understand.
+[Joey] Yes.
+<span class="tutor">[Tutor]</span> Very good.
+<span class="tutor">[Tutor]</span> All right, we&#x27;re going to skip warm-down question number two, and I&#x27;m going to ask you to go down to the bottom of the page and look at the useful vocab.
+[Joey] Useful vocab?
+<span class="tutor">[Tutor]</span> Okay.
+<span class="tutor">[Tutor]</span> Do you see that?
+[Joey] Okay.
+<span class="tutor">[Tutor]</span> What I&#x27;m going to ask you, what I want you to do is I want you to read the phrase, then the description, and then the example sentence to me.
+<span class="tutor">[Tutor]</span> Can we try that?
+[Joey] Yeah, I&#x27;ll try.
+<span class="tutor">[Tutor]</span> Okay.
+[Joey] Wind it down.
+<span class="tutor">[Tutor]</span> Wind it down.
+<span class="tutor">[Tutor]</span> &quot;Wind down.&quot;
+[Joey] To relax.
+<span class="tutor">[Tutor]</span> May I help you?
+[Joey] Okay.
+[Joey] Wind down.
+<span class="tutor">[Tutor]</span> Try &quot;wind.&quot;
+[Joey] Wind down.
+<span class="tutor">[Tutor]</span> Sorry.
+[Joey] Wind down.
+<span class="tutor">[Tutor]</span> No problem.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="tutor">[Tutor]</span> Keep going.
+[Joey] Wind down.
+[Joey] To relax and end of days.
+[Joey] I like to wind down to listen to music.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="tutor">[Tutor]</span> Very good.
+<span class="tutor">[Tutor]</span> Let&#x27;s try the next one.
+[Joey] Up rock.
+[Joey] To disconnect from digital device.
+[Joey] I try to unplug an hour before the bed.
+<span class="tutor">[Tutor]</span> That&#x27;s a nice habit.
+<span class="tutor">[Tutor]</span> Lovely.
+[Joey] Okay.
+[Joey] And morning routine.
+[Joey] The things you usually do after waking up.
+[Joey] My morning routine includes coffee and quick walk.
+<span class="tutor">[Tutor]</span> Very good.
+[Joey] Before I use expressions, you said &quot;wind.&quot; What does the &quot;wind&quot; separate word mean? &quot;Wind down,&quot; &quot;wind.&quot;
+<span class="tutor">[Tutor]</span> Well, okay. All right. There was a time when we had clocks that didn&#x27;t have batteries, and you had a key, and you wound them up so that they would run through the day.
+<span class="tutor">[Tutor]</span> Now our clocks are not, we do not wind our clocks, but &quot;wind down&quot; means to relax and slow down.
+[Joey] I see.
+[Joey] If I say, so here it is a verb.
+<span class="tutor">[Tutor]</span> It&#x27;s a verb.
+[Joey] &quot;Wind down.&quot;
+[Joey] If I understand just one word, &quot;wind.&quot;
+[Joey] &quot;Wind down&quot; means to rest at the end of day.
+[Joey] If I say just &quot;wind,&quot; one word, what means that word?
+<span class="tutor">[Tutor]</span> Okay.
+<span class="tutor">[Tutor]</span> Another way to say &quot;wind down&quot; would be &quot;unwind.&quot;
+[Joey] Unwind.
+<span class="tutor">[Tutor]</span> Okay.
+[Joey] Unwind.
+<span class="tutor">[Tutor]</span> Yes.
+<span class="tutor">[Tutor]</span> And I will send both of those in a sentence for you so you can compare them, okay?
+[Joey] Okay.
+[Joey] Thank you so much.
+[Joey] And read the last use of expressions.
+[Joey] I&#x27;m stuck in my routines.
+[Joey] Used to when you always follow same-day habits.
+[Joey] I&#x27;m stuck in my routines.
+[Joey] I sleep through my alarm sometimes.
+[Joey] Used to when you are too tired to notice your alarm.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="tutor">[Tutor]</span> All right, sir, you&#x27;re all done. You&#x27;ve worked very hard today. Any questions or concerns?
+[Joey] Oh, yeah, it&#x27;s okay. I&#x27;m, I don&#x27;t have questions. Thank you for your question. Thank you for your class, Teacher.
+<span class="tutor">[Tutor]</span> Okay, I&#x27;ll talk to you next week. Take care. Bye-bye.
+[Joey] Take care. Bye.</div>
+        </div>
+    </div>
+    <div class="toast" id="toast">✅ 프롬프트가 복사되었습니다!</div>
+    <script>
+        const REVIEW_PROMPT="너는 나의 영어 회화 복습 파트너야. 오늘 내 전화영어 수업 내용을 기반으로 대화하면서 복습을 도와줘.\n\n[오늘 수업 전사 내용]\n[Tutor] Hello, good morning.\n[Tutor] Hi, good morning, Joey.\n[Joey] Hi.\n[Tutor] You're doing well, I trust.\n[Tutor] Are you ready for your next lesson?\n[Joey] Oh, yes, I'm doing good.\n[Joey] Everything is good.\n[Tutor] Good to hear.\n[Joey] Yeah, how about you?\n[Tutor] I'm doing okay, thank you.\n[Tutor] So we're going on now to page 19.\n[Tutor] Are you ready?\n[Joey] Yes, I'm ready.\n[Joey] Yes, I'm ready.\n[Tutor] Fantastic.\n[Tutor] Okay. So the title, as you can see, says how I start and end my day.\n[Tutor] So as usual, I'm going to get you to look at part A and read the warm-up question to me and respond.\n[Joey] Okay. What do people in your country usually do to help them fall asleep?\n[Tutor] Wow, your country people read a book, right?\n[Tutor] Well, that's what they say about Canada, but I know we do other things too.\n[Tutor] And then in your country, it says you use phone.\n[Tutor] Yes, wow, that is a serious problem.\n[Joey] And some people, I love that, meditate or praise Thailand and which country anyway?\n[Tutor] Yeah, sure. Yeah, yeah, yeah. It's so nice. I think, yes, it can be one of the things that I've learned to do because for many years I did read before bed, but now I use audiobooks.\n[Joey] Oh, it's better.\n[Tutor] Yeah, I put it on with my phone.\n[Tutor] I set a timer, and it only runs for a certain time, and usually by the time it finishes, I'm asleep.\n[Tutor] So it's a little easier than having to use a hard copy.\n[Joey] Uh-huh.\n[Joey] Who reads the books, the AI or the real humans?\n[Tutor] Well, it's usually done by a human narrator.\n[Tutor] There is a company here in North America that is called audible.com.\n[Tutor] And they have hundreds of narrators.\n[Joey] Wow.\n[Tutor] So, yeah, they read the book, they do the voices, and it's nice.\n[Tutor] I've developed pain in my hands so I can't hold a book for long periods of time.\n[Tutor] I don't need my hands if I'm listening.\n[Joey] Yes.\n[Tutor] All right. Very good.\n[Joey] Sometimes it is similar my way.\n[Joey] I had also this application, a little difference in Korea application.\n[Tutor] Oh, yes.\n[Joey] Sometimes before I sleep, I listen to audiobooks.\n[Joey] Usually that is about the meditative or some philosophy of life.\n[Joey] Yeah, that is so nice way to sleep.\n[Tutor] It is. You just drift off.\n[Joey] Yeah.\n[Tutor] Okay, very good.\n[Tutor] All right, let's go on to part B.\n[Tutor] I'll get you to read and respond to that question.\n[Joey] Okay, I see.\n[Joey] Which do you prefer to drink in the morning and why?\n[Joey] Okay, my routine is drinking milk and eating boiled egg.\n[Joey] So it is a little different.\n[Joey] But sometimes if I travel in other country, usually I drink tea.\n[Joey] Yeah.\n[Tutor] Oh, yes.\n[Joey] Better than coffee because morning coffee is the, I think it has hurt my stomach.\n[Joey] So usually I eat breakfast with tea.\n[Joey] Yeah, that's nice.\n[Tutor] Okay, yeah.\n[Tutor] So a milk and an egg is better on your stomach.\n[Tutor] Stomach, very good.\n[Joey] And that is so many.\n[Tutor] I understand.\n[Joey] Yeah, contains the protein.\n[Joey] So, yeah, it is simple and have so many nutrients.\n[Joey] So nice.\n[Joey] It is so nice. Oh, yeah, yeah. It's a good idea. I agree with you, Teacher. Usually I say \"they nice.\" Could you say more different way? It is so nice.\n[Tutor] Okay. Well, you could say that my breakfast each day is good. It is appropriate. It is nice. It is easy. Yeah, so you're looking for some alternate words to \"nice.\" That is a wonderful suggestion because \"nice\" is greatly overused and overrated.\n[Tutor] Tell you what I'm going to do, Joey.\n[Tutor] I'm going to look for an ESL video that gives you alternatives to the word \"nice.\"\n[Tutor] Okay?\n[Tutor] You can build your vocabulary.\n[Joey] Okay, I see.\n[Joey] Thanks so much.\n[Tutor] Yes.\n[Tutor] No worries.\n[Tutor] Mm-mm-mm.\n[Tutor] All right.\n[Tutor] Let's continue on to Part C, Problem Solving.\n[Joey] Okay.\n[Tutor] And I'll get you to read the situation.\n[Joey] Okay.\n[Joey] I really... the morning you are exhausted and irritated by the situation.\n[Joey] Teacher, I read this paragraph.\n[Tutor] Yes, you read it.\n[Joey] Yes, I read the paragraph.\n[Joey] I'm not sure. I'm not sure the meaning.\n[Joey] \"The day off rate taking and watch TV, then sleep except you to be quiet in the morning.\"\n[Joey] It means they sleep late time and before the sleep they watch TV.\n[Joey] And just...\n[Tutor] Uh-huh.\n[Joey] And what's mean \"sleep in\" and \"except you to be quiet in the morning\"? Just I'm quiet in the morning, but they wake up so late, right?\n[Tutor] Yeah, let me try to simplify it for you.\n[Tutor] Okay.\n[Joey] Uh-huh.\n[Tutor] Maybe every day...\n[Joey] Uh-huh.\n[Tutor] You go to bed at maybe 10 o'clock.\n[Joey] 10 o'clock.\n[Tutor] Yeah.\n[Joey] Yeah.\n[Tutor] Just for instance.\n[Tutor] And then maybe you get up early, like 5 a.m.\n[Joey] 5 a.m.\n[Tutor] They might stay up later, 1 a.m., 2 a.m., and then don't get up till 8 or 9 in the morning.\n[Tutor] So you get up at 6, you're ready to start your day.\n[Tutor] But they are sleeping.\n[Tutor] They want you to be quiet and let them sleep.\n[Tutor] And it's awkward for you because you have to get ready for work.\n[Joey] I see.\n[Joey] So understand that situation and this expression, \"the stay up.\"\n[Joey] It's the go to sleep. \"Stay up.\"\n[Tutor] Yeah, \"stay up.\"\n[Joey] It's the go to sleep. \"Stay up.\"\n[Tutor] Uh-huh.\n[Tutor] \"Stay up\" means to stay awake longer.\n[Joey] Stay awake longer. I see. Understand.\n[Tutor] Yes. When we say \"stay up late,\" that means instead of going to bed early, they go to bed later in the night.\n[Joey] Ah, late in the night. Late in the night. Okay. Okay. I see.\n[Tutor] Very good.\n[Tutor] Okay.\n[Tutor] I'll get you to read the question and we'll talk about it.\n[Joey] Would you talk to them or ignore it and risk getting upset? Getting upset.\n[Joey] I think, in my opinion, the people don't change and they have their routine.\n[Joey] So I think I'm just believe them and that is also their life routine, so I can't change.\n[Joey] So if I get up early, I just first I go, I do my schedule, for example, the meditations or do yoga or go to the swimming or go for work.\n[Joey] Yeah, that is my routine. So just myself. And then in the lunchtime, the schedule is together, go together. Yeah, yeah, go to the shopping or go to the picnic. Yeah.\n[Joey] And then the rest time, I'm just get up and rest time in the night. I do go sleep early and my family member is there. They have their schedule. So my opinion, yeah, we just believe their routine and just do. Yeah, it's your, yeah.\n[Joey] And if I get up early, just I do my schedule. Yes, yes.\n[Tutor] The thing that I'm hearing here is that because they are your guest, they're only staying for a week, then you would try to accommodate their schedule.\n[Joey] Yeah, accommodate.\n[Tutor] Joey, they also would need to accommodate your schedule.\n[Tutor] It says in the paragraph, they stay up late talking and watching TV.\n[Tutor] So if they're keeping you awake, that's not fair.\n[Tutor] You would want them to be accommodating of you so that at night, so that you could be accommodating of them in the morning.\n[Tutor] They're a family member, you want to get along, yes?\n[Joey] Just they're watching TV and they separate their schedule, right?\n[Tutor] Yeah.\n[Tutor] Yeah, it's okay. It's no problem.\n[Joey] Yeah, the idea... I have to go on, Teacher. Sorry.\n[Tutor] Okay.\n[Tutor] In Western culture, when you are a guest in someone's home, you try very hard not to disrupt the schedule or routine of your hosts, which means if you stay up late, you are quiet.\n[Tutor] And if you sleep in in the morning, you hope your host will be quiet.\n[Tutor] If you make them do only your schedule, it can cause hard feelings.\n[Joey] I see. Yes, I understand.\n[Joey] And usually these days, there are modern people watching TV in their mobile phone and they use their earphones.\n[Tutor] That's the thing. That's right.\n[Joey] But this situation is a little bit different.\n[Joey] If they watch the living room TV and the sound is so big, at the meantime, I would say aloud.\n[Joey] The volume is aloud.\n[Joey] At that time, I would say, yeah, could you stop the TV because I will go sleep?\n[Joey] Yeah, just, yeah, only three and try to speak then because it disturbs my sleep.\n[Tutor] That's right.\n[Tutor] Yeah, that's right.\n[Tutor] And if they're a family member, they will understand.\n[Joey] Yes, yes.\n[Joey] And these days, we have always their device, smartphone.\n[Tutor] That's right.\n[Tutor] If you use earbuds, you can watch on your phone, or sometimes you can use Bluetooth to connect to a television so you don't have the volume.\n[Joey] You're right.\n[Joey] You're right. You're right.\n[Tutor] Let's go on to the warm-down and I'll have you read question number one, please.\n[Joey] Okay. What's something you do on the weekends that's different from weekdays? Weekdays.\n[Tutor] Very good.\n[Joey] Okay. It's totally different.\n[Joey] Monday to Friday, I work in my office.\n[Joey] And it is other city, different city.\n[Joey] Yeah. So with my, yeah.\n[Joey] So usually on the day, I just work in my office.\n[Joey] And night, I developed AI or research some program or search my investment, yeah, items, etc.\n[Joey] But on the weekend, I stopped every work and just do play with my son and my wife.\n[Joey] Just go picnic, watch the movie.\n[Joey] Yeah, so my routine is separate, type two, so normal weekdays and weekends.\n[Tutor] Okay, yeah, you focus on your family, I understand.\n[Joey] Yes.\n[Tutor] Very good.\n[Tutor] All right, we're going to skip warm-down question number two, and I'm going to ask you to go down to the bottom of the page and look at the useful vocab.\n[Joey] Useful vocab?\n[Tutor] Okay.\n[Tutor] Do you see that?\n[Joey] Okay.\n[Tutor] What I'm going to ask you, what I want you to do is I want you to read the phrase, then the description, and then the example sentence to me.\n[Tutor] Can we try that?\n[Joey] Yeah, I'll try.\n[Tutor] Okay.\n[Joey] Wind it down.\n[Tutor] Wind it down.\n[Tutor] \"Wind down.\"\n[Joey] To relax.\n[Tutor] May I help you?\n[Joey] Okay.\n[Joey] Wind down.\n[Tutor] Try \"wind.\"\n[Joey] Wind down.\n[Tutor] Sorry.\n[Joey] Wind down.\n[Tutor] No problem.\n[Tutor] Okay.\n[Tutor] Keep going.\n[Joey] Wind down.\n[Joey] To relax and end of days.\n[Joey] I like to wind down to listen to music.\n[Tutor] Okay.\n[Tutor] Very good.\n[Tutor] Let's try the next one.\n[Joey] Up rock.\n[Joey] To disconnect from digital device.\n[Joey] I try to unplug an hour before the bed.\n[Tutor] That's a nice habit.\n[Tutor] Lovely.\n[Joey] Okay.\n[Joey] And morning routine.\n[Joey] The things you usually do after waking up.\n[Joey] My morning routine includes coffee and quick walk.\n[Tutor] Very good.\n[Joey] Before I use expressions, you said \"wind.\" What does the \"wind\" separate word mean? \"Wind down,\" \"wind.\"\n[Tutor] Well, okay. All right. There was a time when we had clocks that didn't have batteries, and you had a key, and you wound them up so that they would run through the day.\n[Tutor] Now our clocks are not, we do not wind our clocks, but \"wind down\" means to relax and slow down.\n[Joey] I see.\n[Joey] If I say, so here it is a verb.\n[Tutor] It's a verb.\n[Joey] \"Wind down.\"\n[Joey] If I understand just one word, \"wind.\"\n[Joey] \"Wind down\" means to rest at the end of day.\n[Joey] If I say just \"wind,\" one word, what means that word?\n[Tutor] Okay.\n[Tutor] Another way to say \"wind down\" would be \"unwind.\"\n[Joey] Unwind.\n[Tutor] Okay.\n[Joey] Unwind.\n[Tutor] Yes.\n[Tutor] And I will send both of those in a sentence for you so you can compare them, okay?\n[Joey] Okay.\n[Joey] Thank you so much.\n[Joey] And read the last use of expressions.\n[Joey] I'm stuck in my routines.\n[Joey] Used to when you always follow same-day habits.\n[Joey] I'm stuck in my routines.\n[Joey] I sleep through my alarm sometimes.\n[Joey] Used to when you are too tired to notice your alarm.\n[Tutor] Okay.\n[Tutor] All right, sir, you're all done. You've worked very hard today. Any questions or concerns?\n[Joey] Oh, yeah, it's okay. I'm, I don't have questions. Thank you for your question. Thank you for your class, Teacher.\n[Tutor] Okay, I'll talk to you next week. Take care. Bye-bye.\n[Joey] Take care. Bye.\n\n[AI 피드백]\n따뜻하고 실용적인 영어 코치 Bella입니다. Joey님, 오늘 수업도 정말 수고 많으셨어요! 일상적인 루틴과 수면 습관, 그리고 가족과의 조화로운 생활에 대해 이야기 나누면서 다양한 표현들을 자연스럽게 사용하려는 노력이 돋보였습니다. 특히 'nice'라는 단어의 대안을 찾고 싶다고 먼저 말씀하신 점은 정말 인상 깊었어요. 스스로 부족하다고 느끼는 부분을 적극적으로 개선하려는 Joey님의 열정이 느껴졌습니다!\n\n---\n\n**0. 📌 Topic**\nTopic: Discussing Daily Routines, Sleep Habits, and Living Arrangements\n\n**1. 📊 오늘의 대화 요약 (Summary)**\n오늘 Joey님은 잠들기 전 활동(오디오북 청취, 휴대폰 사용)과 아침 식사 루틴(우유와 삶은 달걀, 차)에 대해 튜터와 이야기를 나누었습니다. 또한, 가족 구성원과 함께 지낼 때 발생할 수 있는 소음 문제에 대한 대처 방안과 주중/주말의 확연히 다른 개인 루틴에 대해 자세히 설명하며 대화를 이어갔습니다.\n\n**2. 💬 유창성 업그레이드 (Fluency & Natural Flow)**\n\nJoey님께서 사용하신 표현 중 의미는 잘 전달되었지만, 원어민들이 더 자연스럽게 쓰는 표현으로 다듬어 볼 문장들을 함께 살펴볼게요.\n\n1.  ❌ **학습자 원문 (As Said):** \"Sometimes it is similar my way.\"\n    ✅ **자연스러운 표현 (Natural):** \"Sometimes it's similar to my situation.\"\n    💎 **비즈니스 표현 (Professional):** \"My experience sometimes mirrors this.\"\n    💡 **코칭 포인트:** Using \"similar to\" is the correct and natural way to express comparison. Adding \"situation\" or \"experience\" provides clear context. → \"similar to\"를 사용하면 비교 대상을 명확히 할 수 있으며, \"situation\"이나 \"experience\" 같은 단어를 추가하면 문맥이 더 자연스러워집니다.\n\n2.  ❌ **학습자 원문 (As Said):** \"Usually that is about the meditative or some philosophy of life.\"\n    ✅ **자연스러운 표현 (Natural):** \"They're usually about meditation or some philosophy of life.\"\n    💎 **비즈니스 표현 (Professional):** \"The content typically revolves around meditation or life philosophy.\"\n    💡 **코칭 포인트:** \"That\"은 단수 대명사이므로, 복수인 오디오북을 지칭할 때는 \"they\"를 쓰는 것이 맞습니다. 또한, \"meditative\"는 형용사이므로 명사 \"meditation\"을 사용하는 것이 자연스럽습니다.\n\n3.  ❌ **학습자 원문 (As Said):** \"But sometimes if I travel in other country, usually I drink tea.\"\n    ✅ **자연스러운 표현 (Natural):** \"But sometimes when I travel to another country, I usually drink tea.\"\n    💎 **비즈니스 표현 (Professional):** \"However, when I travel internationally, I tend to opt for tea.\"\n    💡 **코칭 포인트:** \"If\"는 조건적인 상황을 나타내고, \"when\"은 반복적이거나 예상되는 상황에 사용합니다. 또한, 특정하지 않은 단수 국가를 말할 때는 \"other country\" 대신 \"another country\"가 올바른 표현입니다.\n\n**3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)**\n\nCategory: **Word Order (Adverbs of Frequency)**\n\nJoey님은 빈도 부사(always, usually 등)의 위치를 가끔 헷갈리시는 경향이 있었습니다. 빈도 부사는 문장에서 특정 위치에 오는데, 이를 잘 지키면 문장이 훨씬 자연스러워져요.\n\n| ❌ 원문 (As Said)                                            | ✅ 교정 예시 (Corrected)                                         |\n| :---------------------------------------------------------- | :------------------------------------------------------------- |\n| \"And these days, we have **always** their device, smartphone.\" | \"And these days, we **always** have their device, smartphone.\" |\n| \"So **usually** on the day, I just work in my office.\"       | \"So on those days, I **usually** just work in my office.\"      |\n| \"So usually I eat breakfast with tea.\"                      | \"So I **usually** eat breakfast with tea.\"                     |\n\n📌 **핵심 규칙:** 빈도 부사(always, usually, often, sometimes 등)는 일반 동사 앞에 오고, be동사나 조동사 뒤에 옵니다.\n\n🔁 **따라 읽기:**\n🗣️ \"And these days, we always have their device, smartphone.\"\n🗣️ \"So on those days, I usually just work in my office.\"\n🗣️ \"So I usually eat breakfast with tea.\"\n\n**4. 📗 어휘 확장 (Vocabulary Vault)**\n\n오늘 대화에서 나왔거나 Joey님의 비즈니스/자기계발 관심사에 유용한 단어들을 알아볼까요?\n\n1.  **accommodate** /əˈkɑːmədeɪt/ (동사)\n    *   **뜻:** (요구에 맞춰) 편의를 제공하다, 수용하다, 공간을 제공하다\n    *   **실전 예문:** We need to **accommodate** the new client's specific requirements to ensure their satisfaction.\n\n2.  **disrupt** /dɪsˈrʌpt/ (동사)\n    *   **뜻:** 방해하다, 지장을 주다\n    *   **실전 예문:** Please try not to **disrupt** the meeting flow with unnecessary interruptions.\n\n3.  **revolve around** /rɪˈvɑːlv əˈraʊnd/ (동사구)\n    *   **뜻:** ~을 중심으로 돌아가다, ~이 주를 이루다\n    *   **실전 예문:** My weekend plans often **revolve around** spending quality time with my family.\n\n4.  **opt for** /ɑːpt fɔːr/ (동사구)\n    *   **뜻:** ~을 선택하다, ~을 택하다\n    *   **실전 예문:** Given the tight deadline, we decided to **opt for** the more efficient, albeit more expensive, solution.\n\n5.  **mirror** /ˈmɪrər/ (동사)\n    *   **뜻:** 반영하다, 꼭 닮다\n    *   **실전 예문:** The company's recent performance **mirrors** the overall economic downturn.\n\n**5. 📝 실전 복습 챌린지 (Practice)**\n\n오늘 배운 표현과 문법을 활용해서 영작 챌린지에 도전해 보세요!\n\n1.  **상황:** 저는 보통 아침에 일찍 일어나서 하루를 시작해요.\n    *   **영작:** (힌트: 'usually'와 'start my day'를 활용)\n    *   **모범 답안:** I usually get up early to start my day.\n\n2.  **상황:** 주말에는 가족과 함께 시간을 보내는 것을 중심으로 일정이 돌아갑니다.\n    *   **영작:** (힌트: 'revolve around'를 활용)\n    *   **모범 답안:** My weekend schedule revolves around spending time with my family.\n\n3.  **상황:** 우리는 고객의 요구 사항을 수용하기 위해 항상 최선을 다합니다.\n    *   **영작:** (힌트: 'accommodate'와 빈도 부사 'always'의 위치에 유의)\n    *   **모범 답안:** We always do our best to accommodate our clients' requirements.\n\n**6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)**\n\n✨ **Good Job:** \"But on the weekend, I stopped every work and just do play with my son and my wife.\"\nJoey님, 이 문장에서 주말에 가족과 함께하는 시간을 소중히 여기는 마음이 잘 느껴졌어요! 'stopped every work'와 'just do play'라는 표현에서 비록 문법적인 부분은 다듬을 수 있지만, 주말의 명확한 루틴 변화와 가족에 대한 애정이 잘 전달되었습니다. 특히 'play with my son and my wife'는 정말 자연스럽고 따뜻한 표현이었습니다.\n\n🚀 **내일의 한 문장:** 다음 수업 시작 시 튜터에게 이렇게 말해보세요!\n\"I'm trying to incorporate some new vocabulary, like 'accommodate' and 'revolve around,' into my daily conversations.\"\n(오늘 배운 'accommodate'와 'revolve around'를 활용하여, 새로운 어휘를 일상 대화에 넣어보려고 노력하고 있다고 말하는 문장입니다.)\n\n---\n\n**[성과 지표]**\n\n**유창성 점수:** 7/10점\n\n**근거:** Joey님은 다양한 주제에 대해 막힘없이 자신의 의견을 표현하고 대화를 이어가는 능력이 뛰어납니다. 특히 'nice'의 대안을 찾으려는 적극적인 태도는 유창성 향상에 큰 도움이 될 것입니다. 다만, 문장 구조나 어휘 선택에서 미묘하게 어색한 부분이 있어 원어민처럼 자연스러운 흐름을 만드는 데 약간의 노력이 더 필요합니다.\n\n**다음 수업 '원포인트 액션 플랜':**\n다음 수업에서는 **빈도 부사의 올바른 위치**를 의식적으로 사용하며 문장을 만들어보는 연습을 해볼까요? \"I always...\", \"I usually...\", \"I sometimes...\"와 같이 문장을 시작할 때부터 빈도 부사의 위치를 염두에 두고 말하는 습관을 들이면 더욱 정확하고 자연스러운 문장 구사에 도움이 될 거예요.\n\n위 내용을 바탕으로:\n1. 먼저 오늘 수업에서 내가 틀렸거나 어색했던 표현을 하나 골라서, 관련된 상황을 영어로 질문해줘.\n2. 내가 영어로 대답하면, 자연스러운지 확인하고 더 나은 표현이 있으면 알려줘.\n3. 특히 \"반복 실수 패턴\"에서 지적된 부분을 집중적으로 연습시켜줘.\n4. 이런 식으로 오늘 배운 표현들을 하나씩 복습하자.\n5. 한국어 설명은 필요할 때만 간단히, 대화는 최대한 영어로 진행해줘.\n\n그럼 시작하자!";
+        function startReview(){navigator.clipboard.writeText(REVIEW_PROMPT).then(()=>{showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)}).catch(()=>{const t=document.createElement('textarea');t.value=REVIEW_PROMPT;document.body.appendChild(t);t.select();document.execCommand('copy');document.body.removeChild(t);showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)})}
+        function showToast(){const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500)}
+        function switchTab(n){document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',n==='feedback'?i===0:i===1));document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));document.getElementById('tab-'+n).classList.add('active')}
+    </script>
+</body>
+</html>

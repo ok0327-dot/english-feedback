@@ -1,0 +1,53 @@
+{
+ "date": "2026-07-23",
+ "iso": [
+  2026,
+  30
+ ],
+ "topic": "Discussing Daily Routines, Sleep Habits, and Living Arrangements",
+ "grammar": "Word Order",
+ "grammar_norm": "Word Order",
+ "score": 7.0,
+ "pairs": [
+  {
+   "said": "Sometimes it is similar my way.",
+   "natural": "Sometimes it's similar to my situation."
+  },
+  {
+   "said": "Usually that is about the meditative or some philosophy of life.",
+   "natural": "They're usually about meditation or some philosophy of life."
+  },
+  {
+   "said": "But sometimes if I travel in other country, usually I drink tea.",
+   "natural": "But sometimes when I travel to another country, I usually drink tea."
+  }
+ ],
+ "vocab": [
+  {
+   "word": "accommodate",
+   "pos": "동사",
+   "meaning": "(요구에 맞춰) 편의를 제공하다, 수용하다, 공간을 제공하다"
+  },
+  {
+   "word": "disrupt",
+   "pos": "동사",
+   "meaning": "방해하다, 지장을 주다"
+  },
+  {
+   "word": "revolve around",
+   "pos": "동사구",
+   "meaning": "~을 중심으로 돌아가다, ~이 주를 이루다"
+  },
+  {
+   "word": "opt for",
+   "pos": "동사구",
+   "meaning": "~을 선택하다, ~을 택하다"
+  },
+  {
+   "word": "mirror",
+   "pos": "동사",
+   "meaning": "반영하다, 꼭 닮다"
+  }
+ ],
+ "_html_md5": "db6844c217703168c5e38f208b383b63"
+}
