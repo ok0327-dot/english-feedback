@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#0f0f13"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="당근영어"><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="icon" type="image/png" sizes="192x192" href="icon-192.png"><script src="install-banner.js" defer></script><script src="sw-reg.js" defer></script>
+    <title>전화영어 복습 - 2026년 07월 24일</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Noto Sans KR',sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.75;min-height:100vh}
+        .header{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);border-bottom:1px solid rgba(255,255,255,.06);padding:48px 24px 40px;text-align:center}
+        .header-date{font-size:13px;color:#94a3b8;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+        .header h1{font-size:28px;font-weight:700;color:#f1f5f9;margin-bottom:16px}
+        .header-meta{display:flex;justify-content:center;gap:24px;font-size:14px;color:#64748b}
+        .header-meta span{display:flex;align-items:center;gap:6px}
+        .cta-section{text-align:center;padding:40px 24px}
+        .cta-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:linear-gradient(135deg,#38bdf8,#818cf8);color:#fff;font-size:16px;font-weight:600;font-family:'Noto Sans KR',sans-serif;border:none;border-radius:50px;cursor:pointer;transition:all .3s;text-decoration:none;box-shadow:0 4px 24px rgba(56,189,248,.25)}
+        .cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(56,189,248,.35)}
+        .cta-btn svg{width:20px;height:20px}
+        .cta-sub{margin-top:12px;font-size:13px;color:#64748b}
+        .toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#38bdf8;padding:14px 28px;border-radius:12px;font-size:14px;font-weight:500;border:1px solid rgba(56,189,248,.2);box-shadow:0 8px 32px rgba(0,0,0,.4);opacity:0;transition:all .4s cubic-bezier(.16,1,.3,1);z-index:1000}
+        .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+        .container{max-width:720px;margin:0 auto;padding:0 24px 80px}
+        .tabs{display:flex;gap:4px;background:#1a1a24;padding:4px;border-radius:12px;margin-bottom:32px}
+        .tab{flex:1;padding:12px;text-align:center;font-size:14px;font-weight:500;color:#64748b;background:0 0;border:none;border-radius:8px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all .2s}
+        .tab.active{background:#262636;color:#f1f5f9}
+        .tab-content{display:none}.tab-content.active{display:block}
+        .feedback h2{font-size:18px;font-weight:700;color:#f1f5f9;margin:36px 0 16px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.06)}
+        .feedback h2:first-child{margin-top:0}
+        .feedback p{margin:8px 0;color:#cbd5e1}
+        .feedback .item{padding:6px 0 6px 16px;border-left:2px solid #334155;margin:6px 0;color:#cbd5e1}
+        .feedback .numbered{padding:8px 0 8px 16px;color:#cbd5e1}
+        .feedback .numbered strong{color:#38bdf8}
+        .feedback strong{color:#f1f5f9}
+        .feedback code{background:#1e293b;padding:2px 8px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#38bdf8}
+        .feedback table{width:100%;border-collapse:collapse;margin:12px 0}
+        .feedback th,.feedback td{padding:10px 14px;text-align:left;border-bottom:1px solid #262636}
+        .feedback th{color:#94a3b8;font-weight:500;font-size:13px}
+        .feedback td{color:#cbd5e1}
+        .arrow{color:#38bdf8;font-weight:700}
+        .transcript{background:#1a1a24;border-radius:12px;padding:28px;font-size:14px;line-height:2;color:#94a3b8;white-space:pre-wrap;word-break:break-word;font-family:'JetBrains Mono','Noto Sans KR',monospace}
+        .transcript .tutor{color:#38bdf8}
+        .transcript .student{color:#a78bfa}
+        @media(max-width:640px){.header{padding:32px 16px}.header h1{font-size:22px}.cta-btn{padding:14px 28px;font-size:15px}.container{padding:0 16px 60px}}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-date">2026년 07월 24일</div>
+        <h1>📚 전화영어 복습</h1>
+        <div class="header-meta">
+            <span>⏱ 19분 37초</span>
+            <span>🎙 전화영어_025180304_20260724080020.m4a</span>
+        </div>
+    </div>
+    <div class="cta-section">
+        <button class="cta-btn" onclick="startReview()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Gemini에서 복습 대화 시작하기
+        </button>
+        <div class="cta-sub">클릭하면 프롬프트가 복사되고 Gemini가 열립니다</div>
+    </div>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('feedback')">📋 AI 피드백</button>
+            <button class="tab" onclick="switchTab('transcript')">🎙 수업 전사</button>
+        </div>
+        <div id="tab-feedback" class="tab-content active">
+            <div class="feedback"><p>안녕하세요, Joey! 오늘 아침 일찍부터 활기찬 대화 나눠주셔서 감사합니다. 비록 아침이라 뇌가 워밍업이 필요하다고 하셨지만, 건강과 일상생활에 대한 이야기를 정말 풍성하게 해주셨어요. 특히 아침에 커피 대신 우유를 드시는 습관이나, 몸이 안 좋을 때 병원에 가는 한국인들의 특징에 대한 Joey의 의견이 흥미로웠습니다.</p>
+<br>
+<p>오늘 대화에서 Joey의 영어 실력이 얼마나 자연스럽게 발전하고 있는지 느낄 수 있었어요. 특히 자신의 의견을 명확하게 전달하려는 노력이 돋보였습니다. 몇 가지 표현을 더 다듬으면 훨씬 더 유창하고 정확하게 소통하실 수 있을 거예요.</p>
+<br>
+<br>
+<p><strong>0. 📌 Topic</strong></p>
+<p>Topic: Discussing health habits and approaches to sickness in daily life.</p>
+<br>
+<p><strong>1. 📊 오늘의 대화 요약 (Summary)</strong></p>
+<p>오늘 Joey는 비 오는 날 자전거 대신 걷는 출근길 이야기와 아침에 커피 대신 우유를 마시는 건강 습관에 대해 이야기했습니다. 이어서 몸이 아플 때 병원에 가는 한국과 캐나다 사람들의 태도 차이, 그리고 아플 때 중요한 약속을 지키는 방법 등에 대해 깊이 있는 대화를 나눴습니다.</p>
+<br>
+<p><strong>2. 💬 유창성 업그레이드 (Fluency & Natural Flow)</strong></p>
+<p>Joey가 실제 말한 문장 중, 의미는 통하지만 더 자연스럽게 다듬을 수 있는 표현들을 살펴볼게요.</p>
+<br>
+<div class="item"><strong>❌ 학습자 원문 (As Said):</strong> "Usually, I had a class after get up in the morning."</div>
+<div class="item"><strong>✅ 자연스러운 표현 (Natural):</strong> "Usually, I <strong>have</strong> a class after <strong>getting up</strong> in the morning."</div>
+<div class="item"><strong>💎 비즈니스 표현 (Professional):</strong> "Typically, I <strong>schedule</strong> my classes after I've <strong>woken up</strong>."</div>
+<div class="item"><strong>💡 코칭 포인트:</strong> Using the simple present tense 'have' is correct for habitual actions. 'Getting up' or 'waking up' is more natural than 'get up' after 'after'. <span class="arrow">→</span> 습관적인 행동에는 현재 시제 'have'를 쓰는 것이 맞습니다. 'after' 다음에는 'getting up' 또는 'waking up'이 'get up'보다 더 자연스럽습니다.</div>
+<br>
+<div class="item"><strong>❌ 학습자 원문 (As Said):</strong> "I feel a little hurt my stomach when I drink coffee in the morning."</div>
+<div class="item"><strong>✅ 자연스러운 표현 (Natural):</strong> "My stomach <strong>hurts a little</strong> when I drink coffee in the morning."</div>
+<div class="item"><strong>💎 비즈니스 표현 (Professional):</strong> "I experience some <strong>stomach discomfort</strong> when I consume coffee in the morning."</div>
+<div class="item"><strong>💡 코칭 포인트:</strong> To describe a physical sensation, 'My stomach hurts'가 더 직접적이고 일반적입니다. 'Discomfort'는 격식 있는 대안입니다. <span class="arrow">→</span> 신체적 통증을 묘사할 때는 'My stomach hurts'가 더 직접적이고 일반적입니다. 'Discomfort'는 격식 있는 대안입니다.</div>
+<br>
+<div class="item"><strong>❌ 학습자 원문 (As Said):</strong> "As possible to short hospital." (회사에서 2시간 휴가를 써서 병원에 가는 상황)</div>
+<div class="item"><strong>✅ 자연스러운 표현 (Natural):</strong> "It's possible to <strong>make a short hospital visit</strong>."</div>
+<div class="item"><strong>💎 비즈니스 표현 (Professional):</strong> "We can utilize the time for <strong>brief medical appointments</strong>."</div>
+<div class="item"><strong>💡 코칭 포인트:</strong> When talking about visiting a place, 'make a visit' or 'go for a visit' is natural. 'Short hospital' needs to be a full phrase like 'short hospital visit' or 'brief medical appointment'. <span class="arrow">→</span> 장소를 방문하는 것에 대해 이야기할 때는 'make a visit' 또는 'go for a visit'이 자연스럽습니다. 'Short hospital'은 'short hospital visit' 또는 'brief medical appointment'와 같이 완전한 구문이 되어야 합니다.</div>
+<br>
+<p><strong>3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)</strong></p>
+<p>Category: Noun Usage (Expressing Illness/Condition)</p>
+<br>
+<p>Joey는 몸이 좋지 않거나 아픈 상태를 표현할 때 'bad condition'이라는 표현을 자주 사용했습니다. 의미는 전달되지만, 원어민들이 일상적으로 사용하는 표현과는 약간의 차이가 있습니다.</p>
+<br>
+<table>
+<tr><th>❌ 원문 (As Said)</th><th>✅ 교정 예시 (Corrected)</th></tr>
+<tr><td>when they feel so bad in their <strong>bad condition</strong>.</td><td>when they <strong>feel very unwell</strong>. / when they <strong>are in a bad state</strong>.</td></tr>
+<tr><td>if they feel really bad and they have some <strong>bad condition</strong>.</td><td>if they feel really bad and <strong>are in a bad condition</strong>. / if they have a <strong>serious condition</strong>.</td></tr>
+<tr><td>if I feel <strong>bad condition</strong> in my body,</td><td>if I <strong>feel unwell</strong> (or <strong>sick</strong>). / if I have a <strong>bad condition</strong> in my body.</td></tr>
+<tr><td>when I feel the <strong>bad condition</strong>. (두 번 반복)</td><td>when I'm <strong>not feeling well</strong>. / when I'm <strong>sick</strong>.</td></tr>
+<tr><td>Abalone soup is my best food when I feel <strong>bad condition</strong>.</td><td>Abalone soup is my go-to food when I'm <strong>not feeling well</strong>.</td></tr>
+<tr><td>when I have <strong>bad condition</strong>.</td><td>when I'm <strong>not feeling well</strong>. / when I <strong>have a bad condition</strong>.</td></tr>
+</table>
+<br>
+<p>📌 <strong>핵심 규칙:</strong> '몸이 안 좋다'는 상태를 표현할 때는 'feel unwell', 'feel sick', 'not feel well'과 같은 형용사 표현이나, 'be in a bad condition' 또는 'have a bad condition'과 같이 명사를 사용할 경우 관사를 함께 쓰는 것이 더 자연스럽습니다.</p>
+<br>
+<p>🔁 <strong>따라 읽기:</strong></p>
+<p>🗣️ "When I'm not feeling well, I prefer to stay home."</p>
+<p>🗣️ "If I feel unwell, I usually drink orange juice."</p>
+<p>🗣️ "It's important to see a doctor if you are in a serious condition."</p>
+<br>
+<p><strong>4. 📗 어휘 확장 (Vocabulary Vault)</strong></p>
+<p>오늘 대화에서 유용하게 쓰였거나, Joey의 비즈니스 환경에서 활용할 수 있는 어휘 5가지입니다.</p>
+<br>
+<div class="item"><strong>diligent</strong> /dɪ́lɪdʒənt/ (형용사)</div>
+<div class="item">뜻: 부지런한, 성실한</div>
+<div class="item">실전 예문: Our team is known for being <strong>diligent</strong> in meeting project deadlines.</div>
+<br>
+<div class="item"><strong>flexible</strong> /fléksəbəl/ (형용사)</div>
+<div class="item">뜻: 유연한, 융통성 있는</div>
+<div class="item">실전 예문: Our company offers <strong>flexible</strong> working hours to support work-life balance.</div>
+<br>
+<div class="item"><strong>remedy</strong> /rémədi/ (명사)</div>
+<div class="item">뜻: 치료법, 해결책 (특히 민간요법)</div>
+<div class="item">실전 예문: Many people try home <strong>remedies</strong> like ginger tea for a cold.</div>
+<br>
+<div class="item"><strong>discomfort</strong> /dɪskʌ́mfərt/ (명사)</div>
+<div class="item">뜻: 불편함, 불쾌감</div>
+<div class="item">실전 예문: Please let us know if you experience any <strong>discomfort</strong> during the presentation.</div>
+<br>
+<div class="item"><strong>contagious</strong> /kəntéidʒəs/ (형용사)</div>
+<div class="item">뜻: 전염성 있는</div>
+<div class="item">실전 예문: If you have a <strong>contagious</strong> illness, it's best to work from home to prevent spreading germs.</div>
+<br>
+<p><strong>5. 📝 실전 복습 챌린지 (Practice)</strong></p>
+<p>오늘 배운 표현과 문법을 활용하여 영작 연습을 해볼까요?</p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>상황:</strong> 평소에는 아침에 일찍 일어나자마자 운동을 하는 편입니다.</div>
+<div class="item"><strong>영작:</strong> (Usually, I ____ after ____ in the morning.)</div>
+<div class="item"><strong>모범 답안:</strong> Usually, I <strong>exercise</strong> after <strong>getting up</strong> in the morning.</div>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>상황:</strong> 몸이 안 좋으면, 저는 보통 약을 먹기보다는 자연적으로 낫기를 선호합니다.</div>
+<div class="item"><strong>영작:</strong> (If I ____, I usually prefer to ____ rather than taking medicine.)</div>
+<div class="item"><strong>모범 답안:</strong> If I <strong>feel unwell</strong>, I usually prefer to <strong>heal naturally</strong> rather than taking medicine.</div>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>상황:</strong> 저희 회사는 직원들이 짧은 병원 방문을 할 수 있도록 유연한 정책을 가지고 있습니다.</div>
+<div class="item"><strong>영작:</strong> (Our company has a ____ policy that allows employees to ____.)</div>
+<div class="item"><strong>모범 답안:</strong> Our company has a <strong>flexible</strong> policy that allows employees to <strong>make short hospital visits</strong>.</div>
+<br>
+<p><strong>6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)</strong></p>
+<br>
+<div class="item">✨ <strong>Good Job</strong>: "Our company has a dentist clinic, but they don't have the other kind of hospital. So, if I feel bad condition in my body, I just tell my boss and take a two-hour break time or two-hour holiday. Yes, we can use the two-hour holiday."</div>
+<div class="item"><strong>칭찬 포인트</strong>: Joey는 회사에서 아플 때 사용할 수 있는 '2시간 휴가' 제도에 대해 아주 구체적이고 논리적으로 설명해주었습니다. 문장 연결도 자연스러웠고, 상황을 명확하게 전달하는 능력이 돋보였습니다. 'two-hour break time or two-hour holiday'와 같이 정확한 표현을 사용한 점도 훌륭합니다!</div>
+<br>
+<div class="item">🚀 <strong>내일의 한 문장</strong>: "I'm curious about how people in your country cope with stress or maintain their well-being."</div>
+<div class="item"><strong>활용 팁</strong>: 다음 수업 시작 시 튜터에게 던질 수 있는 대화 시작 문장입니다. 오늘 '건강'에 대해 이야기했으니, 다음에는 '정신 건강'이나 '웰빙'으로 주제를 확장하여 대화를 이어갈 수 있습니다.</div>
+<br>
+<br>
+<p><strong>[성과 지표]</strong></p>
+<br>
+<div class="item"><strong>유창성 점수</strong>: 7.5/10</div>
+<div class="item"><strong>근거</strong>: Joey는 오늘 대화에서 다양한 주제에 대해 막힘없이 자신의 의견을 표현했습니다. 문장 구조가 복잡해질 때나 특정 표현을 찾을 때 잠시 멈칫하는 경우가 있었지만, 전반적으로 대화의 흐름을 잘 이어갔습니다. 특히 자신의 경험과 생각을 자세히 설명하려는 노력이 돋보였습니다.</div>
+<div class="item"><strong>다음 수업 '원포인트 액션 플랜'</strong>: 일상적인 상황에서 'feel' 동사를 활용한 다양한 감정 및 신체 상태 표현 (예: feel unwell, feel tired, feel great)을 연습하여 더욱 자연스러운 유창성을 기할 수 있도록 돕겠습니다.</div></div>
+        </div>
+        <div id="tab-transcript" class="tab-content">
+            <div class="transcript"><span class="student">[Student]</span> Hello, hello teacher. Hi.
+<span class="tutor">[Tutor]</span> Hi, Joey. Yeah, how are you today?
+<span class="student">[Student]</span> I&#x27;m awake now, so I&#x27;m a little tired. But it&#x27;s okay. I&#x27;m good, I&#x27;m good. Usually, I had a class after get up in the morning. So, yeah, it is a little hard to take a class nowadays. But it&#x27;s okay.
+<span class="tutor">[Tutor]</span> Yes.
+<span class="student">[Student]</span> Pretty early. Pretty early, yes. And usually I slept a little late these days. So it feels a little hard. But it&#x27;s okay. I&#x27;m good. How about you? How are you today?
+<span class="tutor">[Tutor]</span> Good. Yeah, I&#x27;m doing well. Yeah. Yes. Good. Good. Yeah. Nice and sunny day. Not too hot.
+<span class="student">[Student]</span> Oh, really? It&#x27;s sunny day. How about in Korea?
+<span class="student">[Student]</span> These days in Korea, it&#x27;s a rainy season. So we had two weeks of rain. So some days it&#x27;s sunny and some days it&#x27;s rainy. Yeah, so yeah, it&#x27;s different every day. But today, it is a little cloudy, but not rainy. So it&#x27;s possible to take a bicycle in the morning. It&#x27;s good.
+<span class="tutor">[Tutor]</span> Yeah, you take a bicycle, yeah, when you take a bicycle to work.
+<span class="student">[Student]</span> Yeah, you&#x27;re right. It is more convenient and fast. So I take the bicycle. But if it rains, if it had rain at that time, I can&#x27;t take a bicycle and just walk. So sometimes it&#x27;s a little late.
+<span class="tutor">[Tutor]</span> Okay, yeah, you might be a little bit later.
+<span class="student">[Student]</span> Yeah, a little later. Yes, walk instead of bike. You&#x27;re right. I&#x27;m Korean, so uh if I get up early, uh my brain is slow, so it&#x27;s a little hard to speak English in the morning.
+<span class="tutor">[Tutor]</span> Yeah, it&#x27;s okay. It&#x27;s definitely hard to think in the morning and operate.
+<span class="student">[Student]</span> Yeah, my brain needs more warm-up. It&#x27;s better.
+<span class="tutor">[Tutor]</span> A warm-up.
+<span class="student">[Student]</span> Yeah, warm-up. Yeah.
+<span class="tutor">[Tutor]</span> Have you had any coffee yet?
+<span class="student">[Student]</span> No, usually in the morning I drink the milk, not the coffee. Yeah, because I have a weak stomach, so I feel a little hurt my stomach when I drink coffee in the morning. So usually I drink the milk in the morning and after lunch I drink the cafe latte that is more mild, better than yeah Americano or some shot coffee.
+<span class="tutor">[Tutor]</span> Definitely. Yes, yes. Maybe better for your stomach if you have milk or something lighter.
+<span class="student">[Student]</span> Yeah, you&#x27;re right. That is more tasty and more mild and yeah, it&#x27;s better for me.
+<span class="tutor">[Tutor]</span> And did you want to look at page 20 today?
+<span class="student">[Student]</span> Yes. I don&#x27;t feel so great.
+<span class="tutor">[Tutor]</span> Yes. That is the subject, right?
+<span class="student">[Student]</span> Yeah, hurt stomach. Stomach. Okay. Mm.
+<span class="tutor">[Tutor]</span> So when do people usually go to the doctor? Hmm. I see. Oh.
+<span class="student">[Student]</span> Our, it&#x27;s a little different in my opinion, but this text says the Korean people usually right away they go to the doctor when they feel so bad in their bad condition. But I think my opinion is really different because our country people are so diligent. So if they feel really bad and they have some bad condition, just go to work, not the hospital. Go to the company and then at lunchtime or weekend and after work they will go to the hospital. So that is a little different. And in your country, only if they are only if very seriously because your country people are more strong than Korean people and it is concerned about the large country, yeah, and connect to the insurance and hospital. Mm-hmm.
+<span class="tutor">[Tutor]</span> Well, Canadian health care, it&#x27;s free. But...
+<span class="student">[Student]</span> Oh, yes, yes. Oh, really? It&#x27;s different to USA.
+<span class="tutor">[Tutor]</span> Yes, yeah.
+<span class="student">[Student]</span> Ah, yes. I just think, I just thought it&#x27;s the big category, USA and Canada, but that is different, totally that problem.
+<span class="tutor">[Tutor]</span> I see. Okay. Yeah, so maybe some people just think, oh, maybe it&#x27;s not a big deal or think or just try to ignore it, maybe. Or they don&#x27;t want to travel. Maybe the doctor is far away.
+<span class="student">[Student]</span> Ah, yes, yes. Understand. Yeah.
+<span class="tutor">[Tutor]</span> How about you? Do you ever try home remedies or try to get better at home?
+<span class="student">[Student]</span> Yeah, sometimes. I know my body condition and my body, the weak point and strong point. Sometimes I have a problem that some parts in my body, at that time I feel it&#x27;s better to just go to sleep or it&#x27;s better to stay. But if there&#x27;s a little different symptom in my body, it is a little bit dangerous. Just go right away, go to the doctor, see the doctor, yeah.
+<span class="tutor">[Tutor]</span> And does your workplace provide like a clinic or...?
+<span class="student">[Student]</span> Our company has a dentist clinic, but they don&#x27;t have the other kind of hospital. So, if I feel bad condition in my body, I just tell my boss and take a two-hour break time or two-hour holiday. Yes, we can use the two-hour holiday. And then we go to the hospital. Yes. One day is the eight-hour work, so it&#x27;s possible to use two-hour holidays four times. So, yeah, that is a nice way to go to the hospital.
+<span class="tutor">[Tutor]</span> Okay, so they&#x27;re very flexible in the workplace.
+<span class="student">[Student]</span> Yeah, flexible. As possible to short hospital. Used to short hospital. For a short visit or for a short check.
+<span class="tutor">[Tutor]</span> Short check-up.
+<span class="student">[Student]</span> Yes, you&#x27;re right.
+<span class="tutor">[Tutor]</span> And so, which do you prefer when you feel sick and why? Cancel plans early or wait and see how you feel?
+<span class="student">[Student]</span> Oh, that depends on the plans. Yeah. If that is so important plan, the travel, or play with my family, or some meet my important appointment, at that time, I just waited to see how my feelings were better and keep my schedule. But it is a simple plan, like meeting my regular friends or just go shopping. But that is so simple plan. So I cancel directly and cancel plan early and just stay my home or take a rest. Yeah, that is my preference.
+<span class="tutor">[Tutor]</span> Yeah, so it depends on what kind of plans they are.
+<span class="student">[Student]</span> Yes, you&#x27;re right. You&#x27;re right.
+<span class="tutor">[Tutor]</span> And the next problem-solving, would you like to read? The problem-solving situation, you woke up with a sore throat. Oh, my God. And a slight fever. You feel awful but you have a ticket to see a musical tonight with a friend. You have both been looking forward to it for a long time. Would you stay home to rest or go and enjoy the show?
+<span class="student">[Student]</span> Of course, go and enjoy the show because in the paragraph it said it is looked forward to for a long time and it&#x27;s possible to, I have a ticket to see musical tonight with my friends. It is important appointment. It is important schedule. So I just go and watch, enjoy that musical or some yeah, performance. But I have some check the point. If that is a serious problem like the pandemic, it&#x27;s possible to transfer to my friends. So, I will put on my mask because I don&#x27;t want to transfer to my friends that bad condition. Yeah, that is a little problem. But, just go. Yeah, that&#x27;s musical. How about you? How about your opinion in this situation?
+<span class="tutor">[Tutor]</span> Um, well, it really depends on the fever and the sore throat. I just know sometimes if I know I&#x27;m gonna feel worse, I don&#x27;t know if I will enjoy the show. So if I can feel myself getting worse and worse, yeah, sometimes maybe I won&#x27;t enjoy watching the show if I&#x27;m sick.
+<span class="student">[Student]</span> Yes, understand. Okay.
+<span class="tutor">[Tutor]</span> Alright. Or maybe if it&#x27;s mild, maybe wear a mask.
+<span class="student">[Student]</span> Oh, yes. I hope that the Western guys, Western people don&#x27;t like to put on the mask because your country people and the Western style is important to their face. So, and they&#x27;re smiling and angry. It is expressed to their face. So, sometimes it&#x27;s a little rude to put on mask. Is it right or not?
+<span class="tutor">[Tutor]</span> Oh, I haven&#x27;t heard of that. I&#x27;m not sure about that. No, I don&#x27;t think I&#x27;ve...
+<span class="student">[Student]</span> Okay, I see. Understand. That is misunderstanding. Yeah, my thought.
+<span class="tutor">[Tutor]</span> Generally, if you&#x27;re sick or contagious and you don&#x27;t want to spread your germs, some people wear masks.
+<span class="student">[Student]</span> Yeah. That is more common nowadays after a pandemic.
+<span class="tutor">[Tutor]</span> Yeah, it&#x27;s more common.
+<span class="student">[Student]</span> More common. Okay. I see.
+<span class="tutor">[Tutor]</span> And uh how about the next one? What kind of food or drink helps you feel better when you feel sick?
+<span class="student">[Student]</span> Uh when I catch a cold, I love to drink the orange juice. It is sweet and fresh and it&#x27;s possible to get the vitamins. Yeah, vitamins. Yeah, I love to drink the orange juice when I feel the bad condition. Or anything like food or soup or...
+<span class="tutor">[Tutor]</span> Yes.
+<span class="student">[Student]</span> Just to drink orange juice and I&#x27;m not sure. I can&#x27;t remember. How about you? Do you eat some special food when you feel the bad condition?
+<span class="tutor">[Tutor]</span> Maybe soup or tea and honey.
+<span class="student">[Student]</span> Yes, yes. Soup, yeah. Chicken soup.
+<span class="tutor">[Tutor]</span> Chicken soup, usual soup. Okay.
+<span class="student">[Student]</span> Yes, I remember. If you have a sore throat, maybe. I love to have abalone soup. Abalone soup is my best food when I feel bad condition.
+<span class="tutor">[Tutor]</span> Okay. Okay. Yeah, it&#x27;s easier when you&#x27;re sick.
+<span class="student">[Student]</span> You&#x27;re right.
+<span class="tutor">[Tutor]</span> You can just drink it, right? If your throat is sore.
+<span class="student">[Student]</span> Yeah, you&#x27;re right. So usually we will either drink juice or soup. Yeah.
+<span class="tutor">[Tutor]</span> Okay. Do you prefer to let your body heal naturally or take medicine?
+<span class="student">[Student]</span> Uh my wife is a nurse, so she gives the advice when I have bad condition. I have to better to take a medicine. But usually I don&#x27;t take the medicine, just stay because I think every medicine has a side effect. So I prefer to heal naturally. It&#x27;s better. But if I can&#x27;t stand anymore, just take medicine.
+<span class="tutor">[Tutor]</span> Okay, so she recommends just take medicine.
+<span class="student">[Student]</span> Yes, she recommends. Yes, but I don&#x27;t listen to her advice. Yes.
+<span class="tutor">[Tutor]</span> Heal naturally.
+<span class="student">[Student]</span> Yeah, heal naturally.
+<span class="tutor">[Tutor]</span> Unless it&#x27;s really bad.
+<span class="student">[Student]</span> Yes. In hospital.
+<span class="tutor">[Tutor]</span> Yeah, okay. I will send the corrections to you in just a moment. Do you remember any vocabulary we reviewed today?
+<span class="student">[Student]</span> Any vocabulary?
+<span class="tutor">[Tutor]</span> Yeah, any words that you remember from today?
+<span class="student">[Student]</span> Oh, no, I can&#x27;t remember any words.
+<span class="tutor">[Tutor]</span> Okay, well, I&#x27;ll send you the corrections in a bit. Have a great day.
+<span class="student">[Student]</span> Oh, yeah, have a nice weekend. Bye-bye, teacher.
+<span class="tutor">[Tutor]</span> You too, bye.</div>
+        </div>
+    </div>
+    <div class="toast" id="toast">✅ 프롬프트가 복사되었습니다!</div>
+    <script>
+        const REVIEW_PROMPT="너는 나의 영어 회화 복습 파트너야. 오늘 내 전화영어 수업 내용을 기반으로 대화하면서 복습을 도와줘.\n\n[오늘 수업 전사 내용]\n[Student] Hello, hello teacher. Hi.\n[Tutor] Hi, Joey. Yeah, how are you today?\n[Student] I'm awake now, so I'm a little tired. But it's okay. I'm good, I'm good. Usually, I had a class after get up in the morning. So, yeah, it is a little hard to take a class nowadays. But it's okay.\n[Tutor] Yes.\n[Student] Pretty early. Pretty early, yes. And usually I slept a little late these days. So it feels a little hard. But it's okay. I'm good. How about you? How are you today?\n[Tutor] Good. Yeah, I'm doing well. Yeah. Yes. Good. Good. Yeah. Nice and sunny day. Not too hot.\n[Student] Oh, really? It's sunny day. How about in Korea?\n[Student] These days in Korea, it's a rainy season. So we had two weeks of rain. So some days it's sunny and some days it's rainy. Yeah, so yeah, it's different every day. But today, it is a little cloudy, but not rainy. So it's possible to take a bicycle in the morning. It's good.\n[Tutor] Yeah, you take a bicycle, yeah, when you take a bicycle to work.\n[Student] Yeah, you're right. It is more convenient and fast. So I take the bicycle. But if it rains, if it had rain at that time, I can't take a bicycle and just walk. So sometimes it's a little late.\n[Tutor] Okay, yeah, you might be a little bit later.\n[Student] Yeah, a little later. Yes, walk instead of bike. You're right. I'm Korean, so uh if I get up early, uh my brain is slow, so it's a little hard to speak English in the morning.\n[Tutor] Yeah, it's okay. It's definitely hard to think in the morning and operate.\n[Student] Yeah, my brain needs more warm-up. It's better.\n[Tutor] A warm-up.\n[Student] Yeah, warm-up. Yeah.\n[Tutor] Have you had any coffee yet?\n[Student] No, usually in the morning I drink the milk, not the coffee. Yeah, because I have a weak stomach, so I feel a little hurt my stomach when I drink coffee in the morning. So usually I drink the milk in the morning and after lunch I drink the cafe latte that is more mild, better than yeah Americano or some shot coffee.\n[Tutor] Definitely. Yes, yes. Maybe better for your stomach if you have milk or something lighter.\n[Student] Yeah, you're right. That is more tasty and more mild and yeah, it's better for me.\n[Tutor] And did you want to look at page 20 today?\n[Student] Yes. I don't feel so great.\n[Tutor] Yes. That is the subject, right?\n[Student] Yeah, hurt stomach. Stomach. Okay. Mm.\n[Tutor] So when do people usually go to the doctor? Hmm. I see. Oh.\n[Student] Our, it's a little different in my opinion, but this text says the Korean people usually right away they go to the doctor when they feel so bad in their bad condition. But I think my opinion is really different because our country people are so diligent. So if they feel really bad and they have some bad condition, just go to work, not the hospital. Go to the company and then at lunchtime or weekend and after work they will go to the hospital. So that is a little different. And in your country, only if they are only if very seriously because your country people are more strong than Korean people and it is concerned about the large country, yeah, and connect to the insurance and hospital. Mm-hmm.\n[Tutor] Well, Canadian health care, it's free. But...\n[Student] Oh, yes, yes. Oh, really? It's different to USA.\n[Tutor] Yes, yeah.\n[Student] Ah, yes. I just think, I just thought it's the big category, USA and Canada, but that is different, totally that problem.\n[Tutor] I see. Okay. Yeah, so maybe some people just think, oh, maybe it's not a big deal or think or just try to ignore it, maybe. Or they don't want to travel. Maybe the doctor is far away.\n[Student] Ah, yes, yes. Understand. Yeah.\n[Tutor] How about you? Do you ever try home remedies or try to get better at home?\n[Student] Yeah, sometimes. I know my body condition and my body, the weak point and strong point. Sometimes I have a problem that some parts in my body, at that time I feel it's better to just go to sleep or it's better to stay. But if there's a little different symptom in my body, it is a little bit dangerous. Just go right away, go to the doctor, see the doctor, yeah.\n[Tutor] And does your workplace provide like a clinic or...?\n[Student] Our company has a dentist clinic, but they don't have the other kind of hospital. So, if I feel bad condition in my body, I just tell my boss and take a two-hour break time or two-hour holiday. Yes, we can use the two-hour holiday. And then we go to the hospital. Yes. One day is the eight-hour work, so it's possible to use two-hour holidays four times. So, yeah, that is a nice way to go to the hospital.\n[Tutor] Okay, so they're very flexible in the workplace.\n[Student] Yeah, flexible. As possible to short hospital. Used to short hospital. For a short visit or for a short check.\n[Tutor] Short check-up.\n[Student] Yes, you're right.\n[Tutor] And so, which do you prefer when you feel sick and why? Cancel plans early or wait and see how you feel?\n[Student] Oh, that depends on the plans. Yeah. If that is so important plan, the travel, or play with my family, or some meet my important appointment, at that time, I just waited to see how my feelings were better and keep my schedule. But it is a simple plan, like meeting my regular friends or just go shopping. But that is so simple plan. So I cancel directly and cancel plan early and just stay my home or take a rest. Yeah, that is my preference.\n[Tutor] Yeah, so it depends on what kind of plans they are.\n[Student] Yes, you're right. You're right.\n[Tutor] And the next problem-solving, would you like to read? The problem-solving situation, you woke up with a sore throat. Oh, my God. And a slight fever. You feel awful but you have a ticket to see a musical tonight with a friend. You have both been looking forward to it for a long time. Would you stay home to rest or go and enjoy the show?\n[Student] Of course, go and enjoy the show because in the paragraph it said it is looked forward to for a long time and it's possible to, I have a ticket to see musical tonight with my friends. It is important appointment. It is important schedule. So I just go and watch, enjoy that musical or some yeah, performance. But I have some check the point. If that is a serious problem like the pandemic, it's possible to transfer to my friends. So, I will put on my mask because I don't want to transfer to my friends that bad condition. Yeah, that is a little problem. But, just go. Yeah, that's musical. How about you? How about your opinion in this situation?\n[Tutor] Um, well, it really depends on the fever and the sore throat. I just know sometimes if I know I'm gonna feel worse, I don't know if I will enjoy the show. So if I can feel myself getting worse and worse, yeah, sometimes maybe I won't enjoy watching the show if I'm sick.\n[Student] Yes, understand. Okay.\n[Tutor] Alright. Or maybe if it's mild, maybe wear a mask.\n[Student] Oh, yes. I hope that the Western guys, Western people don't like to put on the mask because your country people and the Western style is important to their face. So, and they're smiling and angry. It is expressed to their face. So, sometimes it's a little rude to put on mask. Is it right or not?\n[Tutor] Oh, I haven't heard of that. I'm not sure about that. No, I don't think I've...\n[Student] Okay, I see. Understand. That is misunderstanding. Yeah, my thought.\n[Tutor] Generally, if you're sick or contagious and you don't want to spread your germs, some people wear masks.\n[Student] Yeah. That is more common nowadays after a pandemic.\n[Tutor] Yeah, it's more common.\n[Student] More common. Okay. I see.\n[Tutor] And uh how about the next one? What kind of food or drink helps you feel better when you feel sick?\n[Student] Uh when I catch a cold, I love to drink the orange juice. It is sweet and fresh and it's possible to get the vitamins. Yeah, vitamins. Yeah, I love to drink the orange juice when I feel the bad condition. Or anything like food or soup or...\n[Tutor] Yes.\n[Student] Just to drink orange juice and I'm not sure. I can't remember. How about you? Do you eat some special food when you feel the bad condition?\n[Tutor] Maybe soup or tea and honey.\n[Student] Yes, yes. Soup, yeah. Chicken soup.\n[Tutor] Chicken soup, usual soup. Okay.\n[Student] Yes, I remember. If you have a sore throat, maybe. I love to have abalone soup. Abalone soup is my best food when I feel bad condition.\n[Tutor] Okay. Okay. Yeah, it's easier when you're sick.\n[Student] You're right.\n[Tutor] You can just drink it, right? If your throat is sore.\n[Student] Yeah, you're right. So usually we will either drink juice or soup. Yeah.\n[Tutor] Okay. Do you prefer to let your body heal naturally or take medicine?\n[Student] Uh my wife is a nurse, so she gives the advice when I have bad condition. I have to better to take a medicine. But usually I don't take the medicine, just stay because I think every medicine has a side effect. So I prefer to heal naturally. It's better. But if I can't stand anymore, just take medicine.\n[Tutor] Okay, so she recommends just take medicine.\n[Student] Yes, she recommends. Yes, but I don't listen to her advice. Yes.\n[Tutor] Heal naturally.\n[Student] Yeah, heal naturally.\n[Tutor] Unless it's really bad.\n[Student] Yes. In hospital.\n[Tutor] Yeah, okay. I will send the corrections to you in just a moment. Do you remember any vocabulary we reviewed today?\n[Student] Any vocabulary?\n[Tutor] Yeah, any words that you remember from today?\n[Student] Oh, no, I can't remember any words.\n[Tutor] Okay, well, I'll send you the corrections in a bit. Have a great day.\n[Student] Oh, yeah, have a nice weekend. Bye-bye, teacher.\n[Tutor] You too, bye.\n\n[AI 피드백]\n안녕하세요, Joey! 오늘 아침 일찍부터 활기찬 대화 나눠주셔서 감사합니다. 비록 아침이라 뇌가 워밍업이 필요하다고 하셨지만, 건강과 일상생활에 대한 이야기를 정말 풍성하게 해주셨어요. 특히 아침에 커피 대신 우유를 드시는 습관이나, 몸이 안 좋을 때 병원에 가는 한국인들의 특징에 대한 Joey의 의견이 흥미로웠습니다.\n\n오늘 대화에서 Joey의 영어 실력이 얼마나 자연스럽게 발전하고 있는지 느낄 수 있었어요. 특히 자신의 의견을 명확하게 전달하려는 노력이 돋보였습니다. 몇 가지 표현을 더 다듬으면 훨씬 더 유창하고 정확하게 소통하실 수 있을 거예요.\n\n---\n\n**0. 📌 Topic**\nTopic: Discussing health habits and approaches to sickness in daily life.\n\n**1. 📊 오늘의 대화 요약 (Summary)**\n오늘 Joey는 비 오는 날 자전거 대신 걷는 출근길 이야기와 아침에 커피 대신 우유를 마시는 건강 습관에 대해 이야기했습니다. 이어서 몸이 아플 때 병원에 가는 한국과 캐나다 사람들의 태도 차이, 그리고 아플 때 중요한 약속을 지키는 방법 등에 대해 깊이 있는 대화를 나눴습니다.\n\n**2. 💬 유창성 업그레이드 (Fluency & Natural Flow)**\nJoey가 실제 말한 문장 중, 의미는 통하지만 더 자연스럽게 다듬을 수 있는 표현들을 살펴볼게요.\n\n*   **❌ 학습자 원문 (As Said):** \"Usually, I had a class after get up in the morning.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"Usually, I **have** a class after **getting up** in the morning.\"\n    *   **💎 비즈니스 표현 (Professional):** \"Typically, I **schedule** my classes after I've **woken up**.\"\n    *   **💡 코칭 포인트:** Using the simple present tense 'have' is correct for habitual actions. 'Getting up' or 'waking up' is more natural than 'get up' after 'after'. → 습관적인 행동에는 현재 시제 'have'를 쓰는 것이 맞습니다. 'after' 다음에는 'getting up' 또는 'waking up'이 'get up'보다 더 자연스럽습니다.\n\n*   **❌ 학습자 원문 (As Said):** \"I feel a little hurt my stomach when I drink coffee in the morning.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"My stomach **hurts a little** when I drink coffee in the morning.\"\n    *   **💎 비즈니스 표현 (Professional):** \"I experience some **stomach discomfort** when I consume coffee in the morning.\"\n    *   **💡 코칭 포인트:** To describe a physical sensation, 'My stomach hurts'가 더 직접적이고 일반적입니다. 'Discomfort'는 격식 있는 대안입니다. → 신체적 통증을 묘사할 때는 'My stomach hurts'가 더 직접적이고 일반적입니다. 'Discomfort'는 격식 있는 대안입니다.\n\n*   **❌ 학습자 원문 (As Said):** \"As possible to short hospital.\" (회사에서 2시간 휴가를 써서 병원에 가는 상황)\n    *   **✅ 자연스러운 표현 (Natural):** \"It's possible to **make a short hospital visit**.\"\n    *   **💎 비즈니스 표현 (Professional):** \"We can utilize the time for **brief medical appointments**.\"\n    *   **💡 코칭 포인트:** When talking about visiting a place, 'make a visit' or 'go for a visit' is natural. 'Short hospital' needs to be a full phrase like 'short hospital visit' or 'brief medical appointment'. → 장소를 방문하는 것에 대해 이야기할 때는 'make a visit' 또는 'go for a visit'이 자연스럽습니다. 'Short hospital'은 'short hospital visit' 또는 'brief medical appointment'와 같이 완전한 구문이 되어야 합니다.\n\n**3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)**\nCategory: Noun Usage (Expressing Illness/Condition)\n\nJoey는 몸이 좋지 않거나 아픈 상태를 표현할 때 'bad condition'이라는 표현을 자주 사용했습니다. 의미는 전달되지만, 원어민들이 일상적으로 사용하는 표현과는 약간의 차이가 있습니다.\n\n| ❌ 원문 (As Said)                                         | ✅ 교정 예시 (Corrected)                                         |\n| :------------------------------------------------------- | :----------------------------------------------------------- |\n| when they feel so bad in their **bad condition**.        | when they **feel very unwell**. / when they **are in a bad state**. |\n| if they feel really bad and they have some **bad condition**. | if they feel really bad and **are in a bad condition**. / if they have a **serious condition**. |\n| if I feel **bad condition** in my body,                  | if I **feel unwell** (or **sick**). / if I have a **bad condition** in my body. |\n| when I feel the **bad condition**. (두 번 반복)           | when I'm **not feeling well**. / when I'm **sick**.           |\n| Abalone soup is my best food when I feel **bad condition**. | Abalone soup is my go-to food when I'm **not feeling well**. |\n| when I have **bad condition**.                           | when I'm **not feeling well**. / when I **have a bad condition**. |\n\n📌 **핵심 규칙:** '몸이 안 좋다'는 상태를 표현할 때는 'feel unwell', 'feel sick', 'not feel well'과 같은 형용사 표현이나, 'be in a bad condition' 또는 'have a bad condition'과 같이 명사를 사용할 경우 관사를 함께 쓰는 것이 더 자연스럽습니다.\n\n🔁 **따라 읽기:**\n🗣️ \"When I'm not feeling well, I prefer to stay home.\"\n🗣️ \"If I feel unwell, I usually drink orange juice.\"\n🗣️ \"It's important to see a doctor if you are in a serious condition.\"\n\n**4. 📗 어휘 확장 (Vocabulary Vault)**\n오늘 대화에서 유용하게 쓰였거나, Joey의 비즈니스 환경에서 활용할 수 있는 어휘 5가지입니다.\n\n*   **diligent** /dɪ́lɪdʒənt/ (형용사)\n    *   뜻: 부지런한, 성실한\n    *   실전 예문: Our team is known for being **diligent** in meeting project deadlines.\n\n*   **flexible** /fléksəbəl/ (형용사)\n    *   뜻: 유연한, 융통성 있는\n    *   실전 예문: Our company offers **flexible** working hours to support work-life balance.\n\n*   **remedy** /rémədi/ (명사)\n    *   뜻: 치료법, 해결책 (특히 민간요법)\n    *   실전 예문: Many people try home **remedies** like ginger tea for a cold.\n\n*   **discomfort** /dɪskʌ́mfərt/ (명사)\n    *   뜻: 불편함, 불쾌감\n    *   실전 예문: Please let us know if you experience any **discomfort** during the presentation.\n\n*   **contagious** /kəntéidʒəs/ (형용사)\n    *   뜻: 전염성 있는\n    *   실전 예문: If you have a **contagious** illness, it's best to work from home to prevent spreading germs.\n\n**5. 📝 실전 복습 챌린지 (Practice)**\n오늘 배운 표현과 문법을 활용하여 영작 연습을 해볼까요?\n\n1.  **상황:** 평소에는 아침에 일찍 일어나자마자 운동을 하는 편입니다.\n    *   **영작:** (Usually, I ____ after ____ in the morning.)\n    *   **모범 답안:** Usually, I **exercise** after **getting up** in the morning.\n\n2.  **상황:** 몸이 안 좋으면, 저는 보통 약을 먹기보다는 자연적으로 낫기를 선호합니다.\n    *   **영작:** (If I ____, I usually prefer to ____ rather than taking medicine.)\n    *   **모범 답안:** If I **feel unwell**, I usually prefer to **heal naturally** rather than taking medicine.\n\n3.  **상황:** 저희 회사는 직원들이 짧은 병원 방문을 할 수 있도록 유연한 정책을 가지고 있습니다.\n    *   **영작:** (Our company has a ____ policy that allows employees to ____.)\n    *   **모범 답안:** Our company has a **flexible** policy that allows employees to **make short hospital visits**.\n\n**6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)**\n\n*   ✨ **Good Job**: \"Our company has a dentist clinic, but they don't have the other kind of hospital. So, if I feel bad condition in my body, I just tell my boss and take a two-hour break time or two-hour holiday. Yes, we can use the two-hour holiday.\"\n    *   **칭찬 포인트**: Joey는 회사에서 아플 때 사용할 수 있는 '2시간 휴가' 제도에 대해 아주 구체적이고 논리적으로 설명해주었습니다. 문장 연결도 자연스러웠고, 상황을 명확하게 전달하는 능력이 돋보였습니다. 'two-hour break time or two-hour holiday'와 같이 정확한 표현을 사용한 점도 훌륭합니다!\n\n*   🚀 **내일의 한 문장**: \"I'm curious about how people in your country cope with stress or maintain their well-being.\"\n    *   **활용 팁**: 다음 수업 시작 시 튜터에게 던질 수 있는 대화 시작 문장입니다. 오늘 '건강'에 대해 이야기했으니, 다음에는 '정신 건강'이나 '웰빙'으로 주제를 확장하여 대화를 이어갈 수 있습니다.\n\n---\n\n**[성과 지표]**\n\n*   **유창성 점수**: 7.5/10\n    *   **근거**: Joey는 오늘 대화에서 다양한 주제에 대해 막힘없이 자신의 의견을 표현했습니다. 문장 구조가 복잡해질 때나 특정 표현을 찾을 때 잠시 멈칫하는 경우가 있었지만, 전반적으로 대화의 흐름을 잘 이어갔습니다. 특히 자신의 경험과 생각을 자세히 설명하려는 노력이 돋보였습니다.\n    *   **다음 수업 '원포인트 액션 플랜'**: 일상적인 상황에서 'feel' 동사를 활용한 다양한 감정 및 신체 상태 표현 (예: feel unwell, feel tired, feel great)을 연습하여 더욱 자연스러운 유창성을 기할 수 있도록 돕겠습니다.\n\n위 내용을 바탕으로:\n1. 먼저 오늘 수업에서 내가 틀렸거나 어색했던 표현을 하나 골라서, 관련된 상황을 영어로 질문해줘.\n2. 내가 영어로 대답하면, 자연스러운지 확인하고 더 나은 표현이 있으면 알려줘.\n3. 특히 \"반복 실수 패턴\"에서 지적된 부분을 집중적으로 연습시켜줘.\n4. 이런 식으로 오늘 배운 표현들을 하나씩 복습하자.\n5. 한국어 설명은 필요할 때만 간단히, 대화는 최대한 영어로 진행해줘.\n\n그럼 시작하자!";
+        function startReview(){navigator.clipboard.writeText(REVIEW_PROMPT).then(()=>{showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)}).catch(()=>{const t=document.createElement('textarea');t.value=REVIEW_PROMPT;document.body.appendChild(t);t.select();document.execCommand('copy');document.body.removeChild(t);showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)})}
+        function showToast(){const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500)}
+        function switchTab(n){document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',n==='feedback'?i===0:i===1));document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));document.getElementById('tab-'+n).classList.add('active')}
+    </script>
+</body>
+</html>
