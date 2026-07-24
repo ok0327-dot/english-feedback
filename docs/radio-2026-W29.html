@@ -1,0 +1,260 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#0f0f13"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="당근영어"><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="icon" type="image/png" sizes="192x192" href="icon-192.png"><script src="install-banner.js" defer></script><script src="sw-reg.js" defer></script>
+<title>🎙️ 라디오 2026-W29</title><style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Noto Sans KR',-apple-system,sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.7}
+.header{background:linear-gradient(135deg,#241a3a,#3a2410,#0f3460);padding:42px 24px 30px;text-align:center;border-bottom:1px solid rgba(255,255,255,.06)}
+.header h1{font-size:24px;color:#f5f0ff;margin-bottom:8px}
+.header .range{font-size:13px;color:#c4b5fd;letter-spacing:1px}
+.nav{max-width:760px;margin:0 auto;padding:14px 20px 0;display:flex;justify-content:space-between;font-size:13px}
+.nav a{color:#64748b;text-decoration:none;padding:6px 10px;border-radius:8px}.nav a:hover{color:#a78bfa;background:#16161d}
+.container{max-width:760px;margin:0 auto;padding:18px 20px 80px}
+.card{background:#16161d;border:1px solid rgba(255,255,255,.06);border-radius:16px;padding:20px;margin-bottom:18px}
+.card h2{font-size:16px;color:#f1f5f9;margin-bottom:12px}
+.player{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-bottom:14px}
+.pbtn{border:none;border-radius:10px;padding:12px 18px;font-size:14px;font-weight:700;cursor:pointer;font-family:inherit;color:#0f0f13;background:linear-gradient(135deg,#a78bfa,#818cf8)}
+.pbtn.alt{background:#1e293b;color:#cbd5e1}
+.pbtn:active{transform:translateY(1px)}
+.speed{display:flex;align-items:center;gap:6px;font-size:12px;color:#94a3b8;margin-left:auto}
+.speed input{accent-color:#a78bfa}
+.stage{display:flex;flex-direction:column;gap:10px;margin-top:6px}
+.bubble{max-width:88%;padding:11px 14px;border-radius:14px;font-size:14px;border:1px solid transparent;transition:all .2s}
+.bubble .who{display:block;font-size:11px;font-weight:700;margin-bottom:3px;opacity:.8}
+.bubble.mc{align-self:flex-start;background:#1e1b2e;border-color:rgba(167,139,250,.25)}.bubble.mc .who{color:#a78bfa}
+.bubble.coach{align-self:flex-end;background:#1a2433;border-color:rgba(56,189,248,.22)}.bubble.coach .who{color:#38bdf8}
+.bubble.on{border-color:#fbbf24;box-shadow:0 0 0 1px #fbbf24}
+.modes{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.mode{display:flex;flex-direction:column;gap:4px;align-items:center;padding:16px 10px;background:#0f0f13;border:1px solid rgba(255,255,255,.08);border-radius:12px;color:#cbd5e1;cursor:pointer;font-size:13px;text-align:center}
+.mode:hover{border-color:rgba(167,139,250,.4);color:#a78bfa}.mode .ico{font-size:22px}.mode .sub{font-size:11px;color:#64748b}
+.muted{color:#64748b;font-size:12px}
+.toast{position:fixed;bottom:28px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#a78bfa;padding:13px 26px;border-radius:12px;font-size:14px;border:1px solid rgba(167,139,250,.25);opacity:0;transition:all .4s;z-index:99}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+.epweek{font-size:13px;color:#a78bfa;font-weight:700;margin-bottom:6px}
+audio{width:100%;margin-top:4px}
+.archive{display:flex;flex-direction:column;gap:6px;margin-top:10px}
+.archive a{font-size:12.5px;color:#94a3b8;text-decoration:none;padding:8px 12px;background:#0f0f13;border:1px solid rgba(255,255,255,.06);border-radius:8px}
+.archive a:hover{color:#a78bfa;border-color:rgba(167,139,250,.3)}
+.weeklist{display:flex;flex-direction:column;gap:6px;margin-top:4px}
+.weekrow{display:flex;align-items:center;gap:10px;font-size:13px;color:#cbd5e1;text-decoration:none;padding:11px 13px;background:#0f0f13;border:1px solid rgba(255,255,255,.06);border-radius:10px}
+.weekrow:hover{border-color:rgba(167,139,250,.4);color:#a78bfa}
+.weekrow.active{border-color:rgba(167,139,250,.5);background:#1e1b2e}
+.weekrow .wk{font-weight:700;color:#a78bfa;white-space:nowrap}
+.weekrow .wr{color:#64748b}
+.weekrow .wk-audio{margin-left:auto;font-size:14px;min-width:18px;text-align:right}
+.foot{text-align:center;font-size:11px;color:#475569;margin-top:26px;line-height:1.8}
+</style></head><body>
+<div class="header"><h1>🎙️ 라디오 · 2026-W29</h1>
+<div class="range">7/13~7/17 · 주차 기록 · 브라우저 음성으로 청취</div></div>
+<div class="nav"><a href="radio.html">← 최신 라디오</a><a href="review-index.html">📚 복습 목록 →</a></div>
+<div class="container">
+
+  <div class="card"><h2>🎧 오디오 에피소드 <span class="muted" style="font-weight:400">· 진짜 음성 · 이 주차</span></h2>
+    <div id="audio-latest" class="muted">에피소드 불러오는 중…</div></div>
+
+  <div class="card"><h2>🗂 주차별 라디오 기록 <span class="muted" style="font-weight:400">· 최신순 · 누적</span></h2>
+    <div class="weeklist"><a class="weekrow" data-wk="2026-W30" href="radio.html"><span class="wk">2026-W30</span><span class="wr">7/20~7/24 · 5회</span><span class="wk-audio"></span></a><a class="weekrow active" data-wk="2026-W29" href="radio-2026-W29.html"><span class="wk">2026-W29 · 현재</span><span class="wr">7/13~7/17 · 4회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W28" href="radio-2026-W28.html"><span class="wk">2026-W28</span><span class="wr">7/6~7/10 · 5회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W27" href="radio-2026-W27.html"><span class="wk">2026-W27</span><span class="wr">6/29~7/3 · 3회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W26" href="radio-2026-W26.html"><span class="wk">2026-W26</span><span class="wr">6/22~6/26 · 5회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W25" href="radio-2026-W25.html"><span class="wk">2026-W25</span><span class="wr">6/15~6/19 · 5회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W24" href="radio-2026-W24.html"><span class="wk">2026-W24</span><span class="wr">6/8~6/12 · 5회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W23" href="radio-2026-W23.html"><span class="wk">2026-W23</span><span class="wr">6/1~6/5 · 1회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W22" href="radio-2026-W22.html"><span class="wk">2026-W22</span><span class="wr">5/25~5/29 · 3회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W21" href="radio-2026-W21.html"><span class="wk">2026-W21</span><span class="wr">5/18~5/22 · 3회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W20" href="radio-2026-W20.html"><span class="wk">2026-W20</span><span class="wr">5/11~5/15 · 4회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W19" href="radio-2026-W19.html"><span class="wk">2026-W19</span><span class="wr">5/4~5/8 · 1회</span><span class="wk-audio"></span></a></div></div>
+
+  <div class="card"><h2>▶ 바로 듣기 <span class="muted" style="font-weight:400">· 브라우저 음성(즉시·폴백)</span></h2>
+    <div class="player">
+      <button class="pbtn" id="play">▶ 재생</button>
+      <button class="pbtn alt" id="pause">⏸ 일시정지</button>
+      <button class="pbtn alt" id="resume">▶ 이어듣기</button>
+      <button class="pbtn alt" id="stop">⏹ 처음부터</button>
+      <label class="speed">속도 <input type="range" id="rate" min="0.7" max="1.3" step="0.1" value="1"> <span id="rv">1.0x</span></label>
+    </div>
+    <div class="muted" id="ttswarn" style="margin-bottom:8px"></div>
+    <div class="muted" style="margin:2px 0 10px;font-size:11.5px;line-height:1.7">💡 재생 중에는 화면이 자동으로 꺼지지 않게 막아요(Wake&nbsp;Lock). 다만 직접 화면을 끄면 브라우저 음성은 멈출 수 있어요 — <b>화면을 끈 채 듣고 싶다면 맨 위 🎧 오디오 에피소드(MP3)</b>를 쓰세요. 잠금화면에서도 재생됩니다.</div>
+    <div class="stage" id="stage"></div>
+  </div>
+
+  <div class="card"><h2>💬 이 내용으로 AI와 이야기하기</h2>
+    <div class="muted" style="margin-bottom:10px">클릭하면 이 주차 요약 프롬프트가 복사되고 Gemini가 열립니다. 붙여넣고 대화하세요.</div>
+    <div class="modes">
+      <div class="mode" onclick="copyOpen('chat')"><span class="ico">💬</span>튜터 대화<span class="sub">약점 집중 연습</span></div>
+      <div class="mode" onclick="copyOpen('lecture')"><span class="ico">🎓</span>강의식 설명<span class="sub">규칙+예문+퀴즈</span></div>
+      <div class="mode" onclick="copyOpen('radio')"><span class="ico">🎙</span>라디오 인터뷰<span class="sub">게스트 롤플레이</span></div>
+    </div>
+  </div>
+
+  <div class="card"><h2>📓 NotebookLM 팟캐스트로 듣기 <span class="sub">고품질·무료</span></h2>
+    <div class="muted" style="margin-bottom:12px">이번 주 학습 다이제스트(교정·강사 피드백·어휘 전부)를 복사해 <b>NotebookLM</b>에 붙여넣고 <b>Audio Overview</b>를 만들면, 2인 진행 영어 팟캐스트가 무료로 생성됩니다(현재 TTS보다 자연스러움).</div>
+    <div class="modes">
+      <div class="mode" onclick="window.open('https://notebooklm.google.com/','_blank');copyDigest()"><span class="ico">📓</span>복사+NotebookLM 열기<span class="sub">원클릭 반자동</span></div>
+      <div class="mode" onclick="copyDigest()"><span class="ico">📋</span>다이제스트만 복사<span class="sub">붙여넣기용 텍스트</span></div>
+    </div>
+  </div>
+
+  <div class="foot">대본: scripts/build_radio.py · 다이제스트: scripts/build_digest.py · 음성: 브라우저 Web Speech(무료) · 주차별 누적 · 매주 금요일 Claude 갱신</div>
+</div>
+
+<pre id="radio-src" hidden>민지|en|Hello and welcome back to Weekly English Radio. I&#x27;m Minji, your warm host for this week.
+알렉스|en|And I&#x27;m Alex, your English coach. This is 2026-W29. You had four lessons this week. Great consistency.
+민지|en|This week, the topics were really interesting. Animals, fears, pet ownership, animal idioms.
+알렉스|en|A lot to talk about. And a lot of real corrections to learn from.
+민지|en|Today, we don&#x27;t just want to list your mistakes. We want to understand them. Because when you understand why, you stop making the same mistake again.
+알렉스|en|So let&#x27;s start. What stood out most this week?
+민지|en|Prepositions. They showed up as the grammar focus in two separate lessons this week.
+알렉스|en|Two separate lessons. That is a clear signal. Something about prepositions keeps tripping you up.
+민지|en|So let&#x27;s look at them carefully. Alex, what did you hear in the lessons?
+알렉스|en|The clearest one was this. You said: I had my own pet just five days, six days.
+민지|en|The natural version: I had a pet for about five or six days.
+알렉스|en|The missing word is for. In English, when you talk about a duration, a length of time, you almost always need for in front of it.
+민지|en|For three days. For two months. For a whole year. For about five or six days.
+알렉스|en|Here&#x27;s the why. In Korean, you just put the time expression at the end of the sentence. No extra word needed.
+민지|ko|한국어에서는 &quot;5일 동안 키웠어&quot;처럼 시간 표현이 그냥 붙지만, 영어에서는 for라는 연결어가 필요해요. 없으면 영어 귀에는 뭔가 빠진 느낌이 들어요.
+알렉스|en|Rule of thumb: if the question is how long, the answer needs for. How long did you have the pet? For about five days. How long have you lived in Seoul? For ten years.
+민지|en|How long have you been studying English? For a while now. Practice that pattern today.
+알렉스|en|Now, another preposition moment. You said: I got a pet on the road.
+민지|en|Natural version: I found a puppy on the street.
+알렉스|en|Two things to fix here. First: the verb. You didn&#x27;t buy the puppy, you discovered it. So the verb is found, not got.
+민지|en|Second: on the road versus on the street. These feel similar but they&#x27;re quite different.
+알렉스|en|On the road usually means you&#x27;re traveling. You&#x27;re on a long trip, far from home. On the street means near your neighborhood, a local road near your apartment.
+민지|ko|on the road는 여행 중인 이미지예요. on the street는 동네 골목길 느낌이죠. 길에서 강아지를 발견했다면 on the street가 맞아요.
+알렉스|en|And one more. You said: some dogs have lost from their owner.
+민지|en|Natural version: some dogs have been separated from their owners.
+알렉스|en|We say separated from, not lost from. And it takes the passive form: have been separated. Something happened to them. They didn&#x27;t choose it.
+민지|en|So here are three preposition rules from this week. Write them down.
+알렉스|en|One: for plus time. Two: on the street for local places. Three: separated from when things are pulled apart.
+민지|en|Learn each one as a unit. Don&#x27;t translate from Korean word by word. Just memorize the whole phrase together.
+알렉스|en|Separated from. Wait for. Worried about. Look at. These are frozen pairs. They always go together.
+민지|en|Alright. Now let&#x27;s look at the other grammar focus this week. Comparative Adjectives.
+알렉스|en|Yes. And I heard a classic error. A double comparative.
+민지|en|What&#x27;s that?
+알렉스|en|You said: it is hard to have more happier emotion.
+민지|en|What&#x27;s wrong with that?
+알렉스|en|More and happier are both doing the same job. They both show comparison. Using both is like saying more happier. That&#x27;s double.
+민지|en|So we pick one. Either happier, or more happy.
+알렉스|en|Here&#x27;s the rule. Short adjectives, usually one syllable, get er at the end. Happy becomes happier. Sad becomes sadder. Fast becomes faster. Old becomes older.
+민지|ko|짧은 형용사에는 er을 붙여요. happy는 happier, sad는 sadder. 긴 형용사에만 more를 써요. more beautiful, more expensive. 절대 둘 다 동시에 쓰면 안 돼요.
+알렉스|en|Longer adjectives, two or more syllables, use more. More beautiful. More interesting. More comfortable.
+민지|en|One rule. Short: add er. Long: add more. Never both.
+알렉스|en|And the natural version for today: it&#x27;s hard to feel happier. Clean and clear.
+민지|en|Before the Correction Clinic, let&#x27;s spend one minute on articles. Because this is your number one cumulative weakness. Seven times in our records.
+알렉스|en|Articles. A, an, and the. The most common English words. And the hardest for Korean speakers.
+민지|en|Why is that, Alex?
+알렉스|en|Because Korean has no articles at all. There is no a or the in Korean. So for Korean speakers, articles feel invisible, optional, unnecessary.
+민지|ko|한국어에는 a, an, the 같은 관사가 없어요. 그래서 영어 문장에서 빠뜨려도 의미가 통하는 것 같지만, 영어 귀에는 뭔가 이상하게 들려요. 이 작은 단어들이 엄청난 정보를 전달하거든요.
+알렉스|en|Here is the golden rule. Use a or an the first time you mention something new. Use the when both you and your listener already know what you&#x27;re talking about.
+민지|en|For example: I saw a dog on the street this morning. Then later: The dog was really friendly. First mention: a dog. Second mention: the dog.
+알렉스|en|A practical tip: before every noun, pause for half a second. Ask yourself, is this new information or shared information? New gets a. Shared gets the.
+민지|en|That tiny habit, practiced every day, will fix seven occurrences of the top weakness. Let&#x27;s make it happen.
+민지|en|Now let&#x27;s go to the Correction Clinic. Quick corrections, repeat after us if you can.
+알렉스|en|You said: That is enjoyable for my life.
+민지|en|Better: It&#x27;s enjoyable for me. Or: I really enjoy it.
+알렉스|en|You said: So if the subject is changed at the time, the verb also changes, right?
+민지|en|Better: So if the subject changes, the verb also changes, right? You don&#x27;t need passive here. Active is cleaner and sounds more natural.
+알렉스|en|You said: people in our country, everyone, doesn&#x27;t like that. They hate that.
+민지|en|Better: In our country, everyone dislikes them. One sentence. No repetition. Much cleaner.
+알렉스|en|You said: I have some worry about...
+민지|en|Better: I have some concerns about... Or: I&#x27;m a bit worried about... The word concerns sounds both natural and professional.
+알렉스|en|You said: our country is under the category of dogs.
+민지|en|Better: Dogs are the most common pets in our country. Always lead with the main information. Dogs first.
+알렉스|en|You said: So she is a little late to recovery.
+민지|en|Better: Her recovery is slow. Or: She&#x27;s recovering slowly. Recovery is the subject. Put it first.
+알렉스|en|You said: Sometimes some people do not exercise and eat much. Many eat many.
+민지|en|Better: Some people don&#x27;t exercise and eat too much. Quick rule: many is for things you can count, like many dogs or many apples. Too much is for things you cannot count, like food, time, or noise.
+알렉스|en|You said: Yeah, it&#x27;s a strong indicator of strangeness.
+민지|en|Better: Yeah, that&#x27;s a bit strange. Or: That&#x27;s unusual. Strangeness is technically correct English, but in casual conversation it sounds overly formal and academic.
+알렉스|en|Great work in the clinic. Now, Vocabulary in Context. This week, we stay on the animal and pet theme.
+민지|en|First word: stray. A stray animal has no home. It wanders the streets alone. A stray dog. A stray cat.
+알렉스|en|Example: There are many stray cats near my office building. They come out at night.
+민지|en|Second word: abandon. To abandon something is to leave it behind, often permanently. Abandoned animals have no one to care for them.
+알렉스|en|Example: The puppy was abandoned near the park. Someone just left it there.
+민지|en|Third word: shelter. An animal shelter is a place where stray and abandoned animals are kept safe. Workers there feed them, give them medical care, and help them find new homes.
+알렉스|en|Example: We adopted our dog from the local shelter three years ago. She&#x27;s still with us.
+민지|en|Fourth word: loyal. Loyal means faithful and always there for you. Dogs are famous for being loyal.
+알렉스|en|Example: My old dog was incredibly loyal. He waited by the door every single evening.
+민지|en|Now Topic Talk. Three everyday English phrases around the pet and responsibility theme. A2 to B1 level.
+알렉스|en|First phrase: take care of. This means to look after something or someone. To be responsible for it.
+민지|en|Example: Can you take care of my cat while I&#x27;m traveling?
+알렉스|en|Second phrase: it&#x27;s a big responsibility. This comes up all the time when talking about pets, children, or important projects.
+민지|en|Example: Having a dog is a big responsibility. You need to walk it every day, feed it properly, and visit the vet regularly.
+알렉스|en|Third phrase: man&#x27;s best friend. This is a classic English expression. It means dogs. Dogs have been loyal companions to humans for thousands of years.
+민지|ko|man&#x27;s best friend는 개를 뜻하는 클래식 영어 표현이에요. 수천 년을 함께한 가장 충실한 동반자라는 의미를 담고 있죠.
+알렉스|en|And a bonus idiom: a pet peeve. Not about pets. A pet peeve is a small thing that really irritates you, over and over.
+민지|en|Example: My biggest pet peeve is when someone talks loudly on the phone in a quiet cafe.
+알렉스|en|The word pet here comes from an old French word meaning to grumble or complain. Nothing to do with animals. Just a fun etymology story.
+민지|en|Let&#x27;s also quickly review a few more useful pet and animal words from this week.
+알렉스|en|The word commitment. Commitment means a promise to keep doing something, even when it&#x27;s hard. Owning a pet requires commitment.
+민지|en|Example: I made a commitment to walk my dog every morning, even in the rain.
+알렉스|en|And the word adoption. When you adopt an animal, you bring it into your home and become its new family.
+민지|en|Example: Pet adoption is becoming more popular in Korea as awareness about animal welfare grows.
+알렉스|en|And finally: separation anxiety. The stress or fear that a pet feels when left alone for too long.
+민지|en|The good news: with patient and consistent training, separation anxiety can get much better.
+민지|en|And speaking of fun facts, it&#x27;s time for our favorite segment. Culture Corner. Did You Know?
+알렉스|en|This week&#x27;s story is about a word you use all the time. The word: deadline.
+민지|en|Oh, I say deadline every single week. Where does it come from?
+알렉스|en|It comes from the American Civil War. The 1860s. Prison camps had a physical line drawn around the prison perimeter.
+민지|en|A real line? On the ground?
+알렉스|en|Yes. A line in the dirt, sometimes marked with a fence or rope, very close to the prison wall. If a prisoner crossed that line, the guards were ordered to shoot.
+민지|en|That is terrifying.
+알렉스|en|It was. They called it the dead line. Cross it, and you might die. That is where the word comes from.
+민지|ko|deadline의 어원은 남북전쟁 포로수용소예요. 그 선을 넘으면 총을 맞았기 때문에 dead line, 즉 넘으면 죽는 선이라 불렀어요. 지금은 그냥 마감일이지만 원래는 정말 무서운 단어였어요.
+알렉스|en|Later, the word moved into the printing industry. A deadline on a printing press was a line you could not go past, or the print would be cut off.
+민지|en|And from there, it became what we know today. A time limit. A deadline.
+알렉스|en|Two useful phrases to remember. Miss the deadline: you didn&#x27;t finish in time.
+민지|en|And meet the deadline: you finished exactly on time. Even better: beat the deadline, finish early.
+알렉스|en|Beat the deadline whenever you can.
+민지|en|I love that story. Next time someone stresses about a deadline, I will remind them: at least nobody is going to shoot you for missing it.
+알렉스|en|Ha. That is some very useful perspective. Alright, let&#x27;s wrap up this week&#x27;s episode.
+민지|en|Alex, what is your summary for this week?
+알렉스|en|Your fluency average this week was 6.8 out of ten. Your cumulative average is 7.1. You are steady and consistent.
+민지|en|And consistency is how real progress happens. Not one perfect lesson. Many regular lessons.
+알렉스|en|Next week, two patterns to keep in mind. Prepositions and articles.
+민지|en|For prepositions: when you mention a time period, ask yourself, do I need for? When you describe a location, ask which preposition fits the situation.
+알렉스|en|For articles: before every noun, take half a second. Ask: is this a, or is this the? First mention gets a. Already-known thing gets the.
+민지|en|Awareness first. Perfection follows naturally over time. Don&#x27;t pressure yourself too much.
+알렉스|en|And one more thing. This week you told a real personal story. A puppy you found on the street as a child. That kind of real storytelling is the heart of good English conversation.
+민지|en|Keep telling your stories. In English. Every chance you get.
+알렉스|en|That is all for this week&#x27;s episode. Thank you for listening to Weekly English Radio.
+민지|en|Have a wonderful week. And remember: every mistake is just one English habit waiting to click. See you next Friday. Bye for now.</pre>
+<div class="toast" id="toast">✅ 복사됐어요! Gemini에 붙여넣으세요</div>
+<script>
+const PAGE_WEEK="2026-W29";
+const PROMPTS={chat:"아래는 이번 주 내 전화영어 학습 요약이야.\n\n[이번 주: 2026-W29 · 4회 수업]\n누적 약점 Top: Articles (a/an/the)(7회), Subject–Verb Agreement(6회), Verb Tense(6회)\nAI 교정(❌→✅):\n  - That is enjoyable for my life. → It's enjoyable for me.\n  - So if the subject is changed at the time, the verb also changes, right? → So if the subject changes, the verb also changes, right?\n  - people in our country, everyone, doesn't like that. They hate that. → In our country, everyone dislikes them.\n  - our country is under the category of dogs. → Dogs are the most common pets in our country.\n  - I have some worry about... → I have some concerns about...\n  - it is hard to have more happier emotion. → it's hard to feel happier.\n핵심 어휘: humid(습한, 축축한), immerse(몰두하게 하다, 푹 담그다), exterminator(해충 박멸 전문가), roam((자유롭게) 돌아다니다, 배회하다), courage(용기, 배짱), Humid(습한, 습기 있는)\n\n위 약점·교정을 주제로 나와 영어로 대화하면서 복습시켜줘. 먼저 약점 1개와 관련된 상황을 영어로 질문하고, 내 대답이 자연스러운지 교정해줘. 한국어 설명은 필요할 때만 짧게.",lecture:"아래는 이번 주 내 전화영어 학습 요약이야.\n\n[이번 주: 2026-W29 · 4회 수업]\n누적 약점 Top: Articles (a/an/the)(7회), Subject–Verb Agreement(6회), Verb Tense(6회)\nAI 교정(❌→✅):\n  - That is enjoyable for my life. → It's enjoyable for me.\n  - So if the subject is changed at the time, the verb also changes, right? → So if the subject changes, the verb also changes, right?\n  - people in our country, everyone, doesn't like that. They hate that. → In our country, everyone dislikes them.\n  - our country is under the category of dogs. → Dogs are the most common pets in our country.\n  - I have some worry about... → I have some concerns about...\n  - it is hard to have more happier emotion. → it's hard to feel happier.\n핵심 어휘: humid(습한, 축축한), immerse(몰두하게 하다, 푹 담그다), exterminator(해충 박멸 전문가), roam((자유롭게) 돌아다니다, 배회하다), courage(용기, 배짱), Humid(습한, 습기 있는)\n\n위 내용을 강의식으로 차근차근 설명해줘. 각 약점이 왜 틀렸는지 규칙을 짚고, 쉬운 예문 2~3개씩 더 들어주고, 마지막에 1분 요약과 연습문제 3개를 줘.",radio:"아래는 이번 주 내 전화영어 학습 요약이야.\n\n[이번 주: 2026-W29 · 4회 수업]\n누적 약점 Top: Articles (a/an/the)(7회), Subject–Verb Agreement(6회), Verb Tense(6회)\nAI 교정(❌→✅):\n  - That is enjoyable for my life. → It's enjoyable for me.\n  - So if the subject is changed at the time, the verb also changes, right? → So if the subject changes, the verb also changes, right?\n  - people in our country, everyone, doesn't like that. They hate that. → In our country, everyone dislikes them.\n  - our country is under the category of dogs. → Dogs are the most common pets in our country.\n  - I have some worry about... → I have some concerns about...\n  - it is hard to have more happier emotion. → it's hard to feel happier.\n핵심 어휘: humid(습한, 축축한), immerse(몰두하게 하다, 푹 담그다), exterminator(해충 박멸 전문가), roam((자유롭게) 돌아다니다, 배회하다), courage(용기, 배짱), Humid(습한, 습기 있는)\n\n너는 라디오 진행자, 나는 오늘의 게스트야. 내 이번 주 영어 학습 여정을 주제로 인터뷰하듯 대화해줘. 가볍고 격려하는 톤으로, 중간중간 위 교정 표현을 자연스럽게 연습시켜줘. 영어 위주, 한국어는 가끔."};
+function showToast(m){const t=document.getElementById('toast');t.textContent=m;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500);}
+function copyOpen(mode){const txt=PROMPTS[mode]||'';const go=()=>{showToast('✅ 복사됐어요! Gemini에 붙여넣으세요');setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600);};navigator.clipboard.writeText(txt).then(go).catch(()=>{const a=document.createElement('textarea');a.value=txt;document.body.appendChild(a);a.select();document.execCommand('copy');a.remove();go();});}
+function clip(txt,msg){const go=()=>showToast(msg);navigator.clipboard.writeText(txt).then(go).catch(()=>{const a=document.createElement('textarea');a.value=txt;document.body.appendChild(a);a.select();document.execCommand('copy');a.remove();go();});}
+function copyDigest(){fetch('digest-latest.txt',{cache:'no-store'}).then(r=>{if(!r.ok)throw 0;return r.text();}).then(t=>clip(t,'📓 다이제스트 복사됨! NotebookLM에 붙여넣으세요')).catch(()=>showToast('⚠️ 다이제스트가 아직 없어요 (금요일 생성)'));}
+
+// ── 라디오 플레이어 (Web Speech API) ──
+const RAW=document.getElementById('radio-src').textContent.trim();
+const LINES=RAW.split('\n').map(l=>l.trim()).filter(Boolean).map(l=>{const i1=l.indexOf('|'),i2=l.indexOf('|',i1+1);return{sp:l.slice(0,i1),lang:l.slice(i1+1,i2),text:l.slice(i2+1)};});
+const stage=document.getElementById('stage');
+LINES.forEach((ln,i)=>{const d=document.createElement('div');d.className='bubble '+(ln.sp==='민지'?'mc':'coach');d.dataset.idx=i;d.innerHTML='<span class="who">'+ln.sp+'</span>'+ln.text;stage.appendChild(d);});
+const synth=window.speechSynthesis;
+let voices=[],koV=null,enV=null;
+function pickVoices(){voices=synth?synth.getVoices():[];koV=voices.find(v=>v.lang&&v.lang.toLowerCase().startsWith('ko'))||null;enV=voices.find(v=>v.lang&&v.lang.toLowerCase().startsWith('en'))||null;}
+if(synth){pickVoices();synth.onvoiceschanged=pickVoices;}
+let idx=0,playing=false,rate=1,wakeLock=null;
+async function acquireWake(){try{if('wakeLock' in navigator){wakeLock=await navigator.wakeLock.request('screen');wakeLock.addEventListener('release',()=>{wakeLock=null;});}}catch(e){}}
+function releaseWake(){try{if(wakeLock){wakeLock.release();wakeLock=null;}}catch(e){}}
+function highlight(i){document.querySelectorAll('.bubble').forEach(b=>b.classList.toggle('on',(+b.dataset.idx)===i));const el=document.querySelector('.bubble.on');if(el)el.scrollIntoView({block:'center',behavior:'smooth'});}
+function speakAt(i){if(!synth||i>=LINES.length){playing=false;releaseWake();highlight(-1);idx=0;return;}idx=i;highlight(i);const ln=LINES[i];const u=new SpeechSynthesisUtterance(ln.text);u.lang=ln.lang==='ko'?'ko-KR':'en-US';const v=ln.lang==='ko'?koV:enV;if(v)u.voice=v;u.rate=rate;u.pitch=ln.sp==='민지'?1.15:0.85;u.onend=()=>{if(playing)speakAt(i+1);};u.onerror=()=>{if(playing)setTimeout(()=>speakAt(i+1),250);};synth.speak(u);}
+document.getElementById('play').onclick=()=>{if(!synth){document.getElementById('ttswarn').textContent='이 브라우저는 음성 재생을 지원하지 않아요. 대본을 읽어주세요.';return;}if(playing)return;playing=true;acquireWake();synth.cancel();speakAt(idx>=LINES.length?0:idx);};
+document.getElementById('pause').onclick=()=>{if(synth&&synth.speaking)synth.pause();};
+document.getElementById('resume').onclick=()=>{if(synth){synth.resume();if(playing)acquireWake();}};
+document.getElementById('stop').onclick=()=>{playing=false;releaseWake();if(synth)synth.cancel();idx=0;highlight(-1);};
+document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='visible'&&playing){if(synth)synth.resume();acquireWake();}});
+const rE=document.getElementById('rate');rE.oninput=()=>{rate=parseFloat(rE.value);document.getElementById('rv').textContent=rate.toFixed(1)+'x';};
+if(!synth)document.getElementById('ttswarn').textContent='⚠️ 이 브라우저는 음성 합성을 지원하지 않아 대본만 표시됩니다.';
+
+// ── 오디오 에피소드: 이 페이지의 주차(PAGE_WEEK) MP3 표시 + 목록에 🎧 뱃지 ──
+fetch('radio/episodes.json',{cache:'no-store'}).then(r=>r.ok?r.json():[]).then(eps=>{
+  if(!Array.isArray(eps))eps=[];
+  eps.forEach(e=>{const row=document.querySelector('.weekrow[data-wk="'+e.week+'"] .wk-audio');if(row)row.textContent='🎧';});
+  const L=document.getElementById('audio-latest');
+  const mine=eps.find(e=>e.week===PAGE_WEEK);
+  if(mine){
+    L.innerHTML='<div class="epweek">'+mine.week+' · '+(mine.date||'')+'</div><audio id="ep-audio" controls preload="none" src="radio/'+mine.file+'"></audio>';
+    const au=document.getElementById('ep-audio');
+    // 잠금화면/화면 꺼짐에서도 재생 + 컨트롤 노출(MediaSession). 진짜 음성 파일이라 백그라운드 OK.
+    if(au&&'mediaSession' in navigator){
+      try{navigator.mediaSession.metadata=new MediaMetadata({title:'영어 주간 라디오 '+mine.week,artist:'민지 & 알렉스 · 당근영어',album:'Weekly English Radio'});}catch(e){}
+      try{navigator.mediaSession.setActionHandler('play',()=>au.play());navigator.mediaSession.setActionHandler('pause',()=>au.pause());}catch(e){}
+    }
+  }
+  else{L.textContent='이 주차 오디오(MP3)는 아직 없어요. 아래 ▶ 바로 듣기(브라우저 음성)로 들어보세요.';}
+}).catch(()=>{document.getElementById('audio-latest').textContent='오디오 목록을 불러오지 못했어요. 아래 ▶ 바로 듣기로 들어보세요.';});
+</script>
+</body></html>
