@@ -1,0 +1,53 @@
+{
+ "date": "2026-07-24",
+ "iso": [
+  2026,
+  30
+ ],
+ "topic": "Discussing health habits and approaches to sickness in daily life.",
+ "grammar": "Noun Usage",
+ "grammar_norm": "Noun Usage",
+ "score": 7.5,
+ "pairs": [
+  {
+   "said": "Usually, I had a class after get up in the morning.",
+   "natural": "Usually, I have a class after getting up in the morning."
+  },
+  {
+   "said": "I feel a little hurt my stomach when I drink coffee in the morning.",
+   "natural": "My stomach hurts a little when I drink coffee in the morning."
+  },
+  {
+   "said": "As possible to short hospital.",
+   "natural": "It's possible to make a short hospital visit ."
+  }
+ ],
+ "vocab": [
+  {
+   "word": "diligent",
+   "pos": "형용사",
+   "meaning": "부지런한, 성실한"
+  },
+  {
+   "word": "flexible",
+   "pos": "형용사",
+   "meaning": "유연한, 융통성 있는"
+  },
+  {
+   "word": "remedy",
+   "pos": "명사",
+   "meaning": "치료법, 해결책 (특히 민간요법)"
+  },
+  {
+   "word": "discomfort",
+   "pos": "명사",
+   "meaning": "불편함, 불쾌감"
+  },
+  {
+   "word": "contagious",
+   "pos": "형용사",
+   "meaning": "전염성 있는"
+  }
+ ],
+ "_html_md5": "d5a092cb8d6814109c4512e18af611c2"
+}
