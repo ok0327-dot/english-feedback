@@ -1,0 +1,53 @@
+{
+ "date": "2026-07-27",
+ "iso": [
+  2026,
+  31
+ ],
+ "topic": "Discussing healthcare systems, personal health choices, and online health information.",
+ "grammar": "Comparative Adjectives and Adverbs",
+ "grammar_norm": "Comparative Adjectives And Adverbs",
+ "score": 7.0,
+ "pairs": [
+  {
+   "said": "Every wintertime, we produce the mandarin from the Jeju Island.",
+   "natural": "Every winter, we grow mandarins on Jeju Island."
+  },
+  {
+   "said": "The first I consider is it possible to go to the airport or not?",
+   "natural": "First, I consider whether it's possible to go to the airport or not."
+  },
+  {
+   "said": "So, AI also has the power relation and some bad information.",
+   "natural": "So, AI can also have biases and provide misleading information."
+  }
+ ],
+ "vocab": [
+  {
+   "word": "cultivation",
+   "pos": "명사",
+   "meaning": "경작, 재배"
+  },
+  {
+   "word": "feasibility",
+   "pos": "명사",
+   "meaning": "실행 가능성, 타당성"
+  },
+  {
+   "word": "bias",
+   "pos": "명사",
+   "meaning": "편견, 선입견, 치우침"
+  },
+  {
+   "word": "disseminate",
+   "pos": "동사",
+   "meaning": "(정보 등을) 퍼뜨리다, 전파하다"
+  },
+  {
+   "word": "remedy",
+   "pos": "명사",
+   "meaning": "치료법, 해결책, 약"
+  }
+ ],
+ "_html_md5": "bb464437642a62f2fd1af1a2da725e9b"
+}
