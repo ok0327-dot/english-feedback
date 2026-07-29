@@ -1,0 +1,53 @@
+{
+ "date": "2026-07-29",
+ "iso": [
+  2026,
+  31
+ ],
+ "topic": "Discussing stress management and coping mechanisms",
+ "grammar": "Verb Forms and Agreement",
+ "grammar_norm": "Subject–Verb Agreement",
+ "score": 7.0,
+ "pairs": [
+  {
+   "said": "Your sound is far away. It's good?",
+   "natural": "Your sound is a bit faint. Is it better now?"
+  },
+  {
+   "said": "I'm not agree that because this four category is the same region of our country.",
+   "natural": "I don't agree with that because these four categories are also major sources of stress in our country."
+  },
+  {
+   "said": "The main reason of stress is the human relationship because every stress caused from the humans.",
+   "natural": "The main reason for stress is human relationships because all stress originates from people."
+  }
+ ],
+ "vocab": [
+  {
+   "word": "prevalent",
+   "pos": "형용사",
+   "meaning": "널리 퍼져 있는, 만연한"
+  },
+  {
+   "word": "originate",
+   "pos": "동사",
+   "meaning": "~에서 비롯되다, 유래하다"
+  },
+  {
+   "word": "alleviate",
+   "pos": "동사",
+   "meaning": "(고통, 문제 등을) 완화하다, 경감하다"
+  },
+  {
+   "word": "recharge",
+   "pos": "동사",
+   "meaning": "재충전하다"
+  },
+  {
+   "word": "interpersonal",
+   "pos": "형용사",
+   "meaning": "대인 관계의"
+  }
+ ],
+ "_html_md5": "fc1e782ac59de8a409f1198ac889cff5"
+}
