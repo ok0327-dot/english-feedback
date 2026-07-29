@@ -4,13 +4,15 @@ This is a study digest from my one-on-one English phone lessons this week. Pleas
 
 ## Topics covered this week
 - Discussing healthcare systems, personal health choices, and online health information.
+- Discussing stress management and coping mechanisms
 
 ## Grammar focus this week
 - Comparative Adjectives And Adverbs (1x)
+- Subject–Verb Agreement (1x)
 
-## My all-time weak-point ranking (45 lessons since 2026-05-08)
+## My all-time weak-point ranking (46 lessons since 2026-05-08)
+- Subject–Verb Agreement — 7 lessons
 - Articles (a/an/the) — 7 lessons
-- Subject–Verb Agreement — 6 lessons
 - Verb Tense — 6 lessons
 - Verb Forms / Auxiliaries — 5 lessons
 - Prepositions — 5 lessons
@@ -39,9 +41,15 @@ This is a study digest from my one-on-one English phone lessons this week. Pleas
    Natural: "First, I consider whether it's possible to go to the airport or not."
 3. I said: "So, AI also has the power relation and some bad information."
    Natural: "So, AI can also have biases and provide misleading information."
+4. I said: "Your sound is far away. It's good?"
+   Natural: "Your sound is a bit faint. Is it better now?"
+5. I said: "I'm not agree that because this four category is the same region of our country."
+   Natural: "I don't agree with that because these four categories are also major sources of stress in our country."
+6. I said: "The main reason of stress is the human relationship because every stress caused from the humans."
+   Natural: "The main reason for stress is human relationships because all stress originates from people."
 
 ## Recurring mistakes from earlier weeks — my long-term habits
-My most repeated weak categories overall: Articles (a/an/the), Subject–Verb Agreement. These corrections are from earlier lessons in those categories. Please weave a few into the review so I revisit old mistakes.
+My most repeated weak categories overall: Subject–Verb Agreement, Articles (a/an/the). These corrections are from earlier lessons in those categories. Please weave a few into the review so I revisit old mistakes.
 1. (2026-07-06, Articles (a/an/the)) I said: "In my case, I eat some medicine and eat the fruit enough."
    Natural: "In my case, I take some medicine and eat plenty of fruit."
 2. (2026-07-06, Articles (a/an/the)) I said: "long time, during the long time, China don't make some great car, but nowadays, they started to make some new cars."
@@ -69,6 +77,11 @@ My most repeated weak categories overall: Articles (a/an/the), Subject–Verb Ag
 - bias (명사) — 편견, 선입견, 치우침
 - disseminate (동사) — (정보 등을) 퍼뜨리다, 전파하다
 - remedy (명사) — 치료법, 해결책, 약
+- prevalent (형용사) — 널리 퍼져 있는, 만연한
+- originate (동사) — ~에서 비롯되다, 유래하다
+- alleviate (동사) — (고통, 문제 등을) 완화하다, 경감하다
+- recharge (동사) — 재충전하다
+- interpersonal (형용사) — 대인 관계의
 
 ## Please cover in the podcast
 - Pick my 1–2 most repeated mistakes (see the all-time ranking) and explain the rule with a memorable rule of thumb.

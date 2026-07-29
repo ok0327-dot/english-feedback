@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#0f0f13"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="당근영어"><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="icon" type="image/png" sizes="192x192" href="icon-192.png"><script src="install-banner.js" defer></script><script src="sw-reg.js" defer></script>
+    <title>전화영어 복습 - 2026년 07월 29일</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Noto Sans KR',sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.75;min-height:100vh}
+        .header{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);border-bottom:1px solid rgba(255,255,255,.06);padding:48px 24px 40px;text-align:center}
+        .header-date{font-size:13px;color:#94a3b8;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+        .header h1{font-size:28px;font-weight:700;color:#f1f5f9;margin-bottom:16px}
+        .header-meta{display:flex;justify-content:center;gap:24px;font-size:14px;color:#64748b}
+        .header-meta span{display:flex;align-items:center;gap:6px}
+        .cta-section{text-align:center;padding:40px 24px}
+        .cta-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:linear-gradient(135deg,#38bdf8,#818cf8);color:#fff;font-size:16px;font-weight:600;font-family:'Noto Sans KR',sans-serif;border:none;border-radius:50px;cursor:pointer;transition:all .3s;text-decoration:none;box-shadow:0 4px 24px rgba(56,189,248,.25)}
+        .cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(56,189,248,.35)}
+        .cta-btn svg{width:20px;height:20px}
+        .cta-sub{margin-top:12px;font-size:13px;color:#64748b}
+        .toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#38bdf8;padding:14px 28px;border-radius:12px;font-size:14px;font-weight:500;border:1px solid rgba(56,189,248,.2);box-shadow:0 8px 32px rgba(0,0,0,.4);opacity:0;transition:all .4s cubic-bezier(.16,1,.3,1);z-index:1000}
+        .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+        .container{max-width:720px;margin:0 auto;padding:0 24px 80px}
+        .tabs{display:flex;gap:4px;background:#1a1a24;padding:4px;border-radius:12px;margin-bottom:32px}
+        .tab{flex:1;padding:12px;text-align:center;font-size:14px;font-weight:500;color:#64748b;background:0 0;border:none;border-radius:8px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all .2s}
+        .tab.active{background:#262636;color:#f1f5f9}
+        .tab-content{display:none}.tab-content.active{display:block}
+        .feedback h2{font-size:18px;font-weight:700;color:#f1f5f9;margin:36px 0 16px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.06)}
+        .feedback h2:first-child{margin-top:0}
+        .feedback p{margin:8px 0;color:#cbd5e1}
+        .feedback .item{padding:6px 0 6px 16px;border-left:2px solid #334155;margin:6px 0;color:#cbd5e1}
+        .feedback .numbered{padding:8px 0 8px 16px;color:#cbd5e1}
+        .feedback .numbered strong{color:#38bdf8}
+        .feedback strong{color:#f1f5f9}
+        .feedback code{background:#1e293b;padding:2px 8px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#38bdf8}
+        .feedback table{width:100%;border-collapse:collapse;margin:12px 0}
+        .feedback th,.feedback td{padding:10px 14px;text-align:left;border-bottom:1px solid #262636}
+        .feedback th{color:#94a3b8;font-weight:500;font-size:13px}
+        .feedback td{color:#cbd5e1}
+        .arrow{color:#38bdf8;font-weight:700}
+        .transcript{background:#1a1a24;border-radius:12px;padding:28px;font-size:14px;line-height:2;color:#94a3b8;white-space:pre-wrap;word-break:break-word;font-family:'JetBrains Mono','Noto Sans KR',monospace}
+        .transcript .tutor{color:#38bdf8}
+        .transcript .student{color:#a78bfa}
+        @media(max-width:640px){.header{padding:32px 16px}.header h1{font-size:22px}.cta-btn{padding:14px 28px;font-size:15px}.container{padding:0 16px 60px}}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-date">2026년 07월 29일</div>
+        <h1>📚 전화영어 복습</h1>
+        <div class="header-meta">
+            <span>⏱ 19분 37초</span>
+            <span>🎙 전화영어_025180304_20260729080011.m4a</span>
+        </div>
+    </div>
+    <div class="cta-section">
+        <button class="cta-btn" onclick="startReview()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Gemini에서 복습 대화 시작하기
+        </button>
+        <div class="cta-sub">클릭하면 프롬프트가 복사되고 Gemini가 열립니다</div>
+    </div>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('feedback')">📋 AI 피드백</button>
+            <button class="tab" onclick="switchTab('transcript')">🎙 수업 전사</button>
+        </div>
+        <div id="tab-feedback" class="tab-content active">
+            <div class="feedback"><p>Joey, 안녕하세요! 오늘도 활기찬 목소리로 수업에 참여해주셔서 감사합니다. 스트레스 관리라는 중요한 주제에 대해 깊이 있는 대화를 나눌 수 있어서 저도 즐거웠어요. Joey가 자신의 생각과 감정을 솔직하게 표현하려는 모습이 정말 인상 깊었습니다.</p>
+<br>
+<br>
+<h2>0. 📌 Topic</h2>
+<p>Topic: Discussing stress management and coping mechanisms</p>
+<br>
+<h2>1. 📊 오늘의 대화 요약 (Summary)</h2>
+<p>오늘 Joey는 스트레스의 주요 원인으로 직장, 가족, 돈뿐만 아니라 특히 '인간관계'를 꼽으며 깊이 있는 통찰을 보여주었습니다. 스트레스를 해소하는 자신만의 방법(혼자만의 시간, 운동, 다크 초콜릿)을 공유하고, 혼자 쉬는 것과 사람들과 어울리는 것 사이의 딜레마에 대해서도 이야기 나누었습니다. 또한, 자신의 감정을 타인과 공유하는 것에 대한 생각도 솔직하게 이야기해주었습니다.</p>
+<br>
+<h2>2. 💬 유창성 업그레이드 (Fluency & Natural Flow)</h2>
+<p>Joey가 말한 문장 중 의미는 잘 전달되었지만, 원어민들이 더 자연스럽게 쓰는 표현으로 다듬을 수 있는 것들을 살펴볼게요.</p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>❌ 학습자 원문 (As Said):</strong> "Your sound is far away. It's good?"</div>
+<div class="item"><strong>✅ 자연스러운 표현 (Natural):</strong> "Your sound is a bit faint. Is it better now?"</div>
+<div class="item"><strong>💎 비즈니스 표현 (Professional):</strong> "Your audio quality seems a bit low. Could you check your microphone, please?"</div>
+<div class="item"><strong>💡 코칭 포인트:</strong> Using 'faint' or 'low' for sound quality is more common than 'far away'. 'Is it better now?' is a straightforward way to ask if the issue is resolved.</div>
+<p><span class="arrow">→</span> 'far away' 대신 'faint'나 'low'를 쓰는 것이 소리 품질을 묘사할 때 더 자연스럽습니다. 'Is it better now?'는 문제가 해결되었는지 묻는 직관적인 표현입니다.</p>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>❌ 학습자 원문 (As Said):</strong> "I'm not agree that because this four category is the same region of our country."</div>
+<div class="item"><strong>✅ 자연스러운 표현 (Natural):</strong> "I don't agree with that because these four categories are also major sources of stress in our country."</div>
+<div class="item"><strong>💎 비즈니스 표현 (Professional):</strong> "I respectfully disagree, as these four categories are equally prevalent stressors within our nation."</div>
+<div class="item"><strong>💡 코칭 포인트:</strong> 'I don't agree' is the correct and natural way to express disagreement. Also, 'sources of stress' or 'stressors' are more precise than 'region of stress'.</div>
+<p><span class="arrow">→</span> '동의하지 않는다'는 'I don't agree'가 정확하고 자연스러운 표현입니다. 또한, 'region of stress' 대신 'sources of stress'나 'stressors'가 더 적절한 어휘입니다.</p>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>❌ 학습자 원문 (As Said):</strong> "The main reason of stress is the human relationship because every stress caused from the humans."</div>
+<div class="item"><strong>✅ 자연스러운 표현 (Natural):</strong> "The main reason for stress is human relationships because all stress originates from people."</div>
+<div class="item"><strong>💎 비즈니스 표현 (Professional):</strong> "The primary driver of stress often stems from interpersonal relationships, as human interaction is frequently the genesis of such pressures."</div>
+<div class="item"><strong>💡 코칭 포인트:</strong> We usually say 'reason for' something. 'Originates from' or 'stems from' are more natural ways to express the source of stress than 'caused from'.</div>
+<p><span class="arrow">→</span> '~의 이유'는 보통 'reason for'라고 표현합니다. 스트레스의 근원을 말할 때는 'caused from' 대신 'originate from' 또는 'stem from'이 더 자연스러운 표현입니다.</p>
+<br>
+<h2>3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)</h2>
+<p>Joey의 대화에서 동사의 형태와 시제, 그리고 조동사 사용에 대한 패턴이 반복적으로 나타났습니다. 특히 'be 동사'와 'do 동사'의 활용, 그리고 특정 동사 뒤에 오는 형태에 주의가 필요합니다.</p>
+<br>
+<p>Category: Verb Forms and Agreement</p>
+<br>
+<table>
+<tr><th>❌ 원문 (As Said)</th><th>✅ 교정 예시 (Corrected)</th></tr>
+<tr><td>"I'm not agree that..."</td><td>"I <strong>don't</strong> agree that..."</td></tr>
+<tr><td>"every stress <strong>caused</strong> from the humans."</td><td>"every stress <strong>is caused by</strong> humans."</td></tr>
+<tr><td>"I avoid <strong>to talk</strong> my stress..."</td><td>"I avoid <strong>talking about</strong> my stress..."</td></tr>
+<tr><td>"that make me more feeling is better."</td><td>"that <strong>makes</strong> me feel better."</td></tr>
+<tr><td>"I afraid to spread my feeling to other people."</td><td>"I'm afraid to spread my feeling to other people."</td></tr>
+<tr><td>"my wife also feel bad."</td><td>"my wife also <strong>feels</strong> bad."</td></tr>
+<tr><td>"the emotion also sharing."</td><td>"the emotions are also shared."</td></tr>
+</table>
+<br>
+<p>📌 <strong>핵심 규칙:</strong></p>
+<div class="item"><strong>부정문:</strong> 일반 동사의 부정문은 주어에 따라 'don't' 또는 'doesn't'를 사용합니다. ('I'm not agree' <span class="arrow">→</span> 'I don't agree')</div>
+<div class="item"><strong>수동태/형용사:</strong> 수동태 문장이나 형용사와 함께 쓰일 때는 'be 동사'가 필수적입니다. ('stress caused' <span class="arrow">→</span> 'stress is caused', 'I afraid' <span class="arrow">→</span> 'I'm afraid', 'emotion sharing' <span class="arrow">→</span> 'emotions are shared')</div>
+<div class="item"><strong>동명사/부정사:</strong> 'avoid'와 같은 특정 동사 뒤에는 동명사(-ing)가 옵니다. ('avoid to talk' <span class="arrow">→</span> 'avoid talking')</div>
+<div class="item"><strong>주어-동사 수일치:</strong> 주어가 3인칭 단수일 때 동사 뒤에 '-s'를 붙입니다. ('that make' <span class="arrow">→</span> 'that makes', 'wife feel' <span class="arrow">→</span> 'wife feels')</div>
+<br>
+<p>🔁 <strong>따라 읽기:</strong></p>
+<p>🗣️ "I don't agree that these are the only reasons."</p>
+<p>🗣️ "Every stress is caused by humans, in my opinion."</p>
+<p>🗣️ "I avoid talking about my stress with others."</p>
+<br>
+<h2>4. 📗 어휘 확장 (Vocabulary Vault)</h2>
+<p>오늘 대화에서 유용하게 쓰일 수 있는 어휘들을 살펴볼까요?</p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>prevalent</strong> /prévələnt/ (형용사)</div>
+<div class="item">뜻: 널리 퍼져 있는, 만연한</div>
+<div class="item">실전 예문: Stress-related burnout is becoming increasingly <strong>prevalent</strong> in our industry.</div>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>originate</strong> /ərídʒənèit/ (동사)</div>
+<div class="item">뜻: ~에서 비롯되다, 유래하다</div>
+<div class="item">실전 예문: Many innovative ideas <strong>originate</strong> from collaborative brainstorming sessions.</div>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>alleviate</strong> /əlíːvièit/ (동사)</div>
+<div class="item">뜻: (고통, 문제 등을) 완화하다, 경감하다</div>
+<div class="item">실전 예문: We are looking for solutions to <strong>alleviate</strong> the financial burden on our employees.</div>
+<br>
+<div class="numbered"><strong>4.</strong> <strong>recharge</strong> /riːtʃɑ́ːrdʒ/ (동사)</div>
+<div class="item">뜻: 재충전하다</div>
+<div class="item">실전 예문: I usually take a short break in the afternoon to <strong>recharge</strong> my energy.</div>
+<br>
+<div class="numbered"><strong>5.</strong> <strong>interpersonal</strong> /ìntərpə́ːrsənəl/ (형용사)</div>
+<div class="item">뜻: 대인 관계의</div>
+<div class="item">실전 예문: Strong <strong>interpersonal</strong> skills are crucial for effective team leadership.</div>
+<br>
+<h2>5. 📝 실전 복습 챌린지 (Practice)</h2>
+<p>오늘 배운 표현과 문법을 활용하여 다음 상황에 맞게 영작해 보세요.</p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>상황:</strong> 저는 이 새로운 정책에 동의하지 않습니다. 왜냐하면 그것이 우리 팀에 더 많은 스트레스를 유발할 것이기 때문입니다.</div>
+<div class="item"><strong>영작:</strong> I don't agree with this new policy because it will cause more stress for our team.</div>
+<div class="item"><strong>모범 답안:</strong> I <strong>don't agree</strong> with this new policy because it <strong>will cause</strong> more stress for our team.</div>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>상황:</strong> 저희 회사는 직원들의 번아웃을 완화하기 위한 프로그램을 도입할 계획입니다.</div>
+<div class="item"><strong>영작:</strong> Our company plans to introduce a program to alleviate employee burnout.</div>
+<div class="item"><strong>모범 답안:</strong> Our company plans to introduce a program to <strong>alleviate</strong> employee <strong>burnout</strong>.</div>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>상황:</strong> 저는 보통 업무 관련 스트레스에 대해 이야기하는 것을 피합니다. 왜냐하면 제 부정적인 감정이 다른 사람들에게 퍼질까 봐 두렵기 때문입니다.</div>
+<div class="item"><strong>영작:</strong> I usually avoid talking about work-related stress because I'm afraid of spreading my negative feelings to others.</div>
+<div class="item"><strong>모범 답안:</strong> I usually <strong>avoid talking about</strong> work-related stress because <strong>I'm afraid to spread</strong> my negative feelings to others.</div>
+<br>
+<h2>6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)</h2>
+<br>
+<p>✨ <strong>Good Job:</strong> "I think if I share my opinion to other people, the emotion also sharing. So if I have stress and talk to other people about my feeling, in the meantime, that stress is reduced."</p>
+<p>Joey, 이 문장은 스트레스와 감정 공유에 대한 Joey의 생각을 아주 명확하게 설명해주었습니다. 'the emotion also sharing' 부분은 'emotions are also shared'나 'I also share my emotions'로 다듬을 수 있지만, 전반적으로 복잡한 생각을 유창하게 전달하려는 노력이 돋보였습니다. 특히 'in the meantime, that stress is reduced'라는 표현은 스트레스가 줄어드는 과정을 잘 묘사했습니다. 정말 훌륭해요!</p>
+<br>
+<p>🚀 <strong>내일의 한 문장:</strong> "I'm looking forward to discussing how we can alleviate stress in the workplace next time."</p>
+<p>(다음 시간에는 직장에서 스트레스를 어떻게 완화할 수 있을지 논의하는 것이 기대됩니다.)</p>
+<br>
+<br>
+<h2>[성과 지표]</h2>
+<p><strong>유창성 점수:</strong> 7/10</p>
+<p><strong>근거:</strong> Joey는 다양한 주제에 대해 자신의 생각을 막힘없이 표현할 수 있으며, 대화의 흐름을 잘 이어갑니다. 복잡한 아이디어를 전달하려는 시도가 돋보이며, 주저함 없이 말을 이어가는 모습이 인상적입니다. 다만, 몇몇 문법적 오류나 어색한 표현들이 자연스러운 흐름을 약간 방해하는 경우가 있어 더 높은 점수를 주지 못했습니다. 그러나 전반적인 의사소통 능력은 매우 뛰어납니다.</p>
+<br>
+<p><strong>다음 수업 '원포인트 액션 플랜':</strong></p>
+<p>다음 수업에서는 오늘 다룬 <strong>'동사 형태 및 수일치'</strong>에 집중하여 대화 중 의식적으로 바르게 사용해보는 연습을 해볼게요. 특히 'be 동사'와 'do 동사'의 정확한 사용, 그리고 'avoid' 같은 동사 뒤에 오는 동명사 형태에 유의하며 말하는 연습을 해봅시다.</p></div>
+        </div>
+        <div id="tab-transcript" class="tab-content">
+            <div class="transcript"><span class="student">[Student]</span> Good morning, teacher. Good evening.
+<span class="tutor">[Tutor]</span> Yeah, good morning. How are you today?
+<span class="student">[Student]</span> Yeah, I&#x27;m doing good. Your sound is far away. It&#x27;s good?
+<span class="tutor">[Tutor]</span> Yeah, can you hear me?
+<span class="student">[Student]</span> Yes, it&#x27;s better. Maybe you use the earphone, right? It&#x27;s better.
+<span class="tutor">[Tutor]</span> No, I&#x27;m using headphones.
+<span class="student">[Student]</span> Ah, yes, yes. It&#x27;s clear. Thank you so much.
+<span class="tutor">[Tutor]</span> How are you today? Did you have any plans today?
+<span class="student">[Student]</span> Today? It&#x27;s Wednesday. Yeah, I have some detailed plans to work, but it is just work. Maybe the other things are similar compared to the other day. Just work and go for a walk and take a bicycle and meet the friends. Yeah, it&#x27;s similar. Nothing special.
+<span class="tutor">[Tutor]</span> Oh, because it&#x27;s a pretty routine Wednesday. It&#x27;s the middle of the week.
+<span class="student">[Student]</span> Yeah, pretty routine is the same, similar. Yeah.
+<span class="tutor">[Tutor]</span> And did you want to take a look at page 22 now, I believe?
+<span class="student">[Student]</span> Yes, how do you handle stress? Yeah, the subject name.
+<span class="tutor">[Tutor]</span> So what do people think causes the most stress in your country?
+<span class="student">[Student]</span> Yes, this textbook explains four kinds of regions of stress: work, family, school, money, and our country under the category of work. But I&#x27;m not agree that because this four category is the same region of our country. Work, family, human relationship, school, money. And I think the Korean guys love the money. It is also big region of the stress. Yeah.
+<span class="tutor">[Tutor]</span> Okay, definitely. Is there anything that you would add to this list or that you would put on the list?
+<span class="student">[Student]</span> Yes. The main reason of stress is the human relationship because every stress caused from the humans. Yeah. Sometimes we have an argument with friends, coworkers, colleagues, and family. Yeah, that is a big issue. Yeah. And the other thing, can&#x27;t handle to my life. That is also a big issue. For example, everyone wants to lead their free time themselves. Yes, but they are controlled by other people. So that is also a problem. Yeah. And I&#x27;m not sure the last sentence is right or not.
+<span class="tutor">[Tutor]</span> So yeah, did you mean it&#x27;s hard for people to be independent?
+<span class="student">[Student]</span> Yeah, hard to be independent. For example, everyone wants to drive themselves because that makes them happy. But usually we just take a seat, a back seat or a side seat. We can&#x27;t drive ourselves. We just take a bus or train, but can&#x27;t drive our life. So, yeah, that&#x27;s my meaning, my sentence meaning.
+<span class="tutor">[Tutor]</span> So people are controlled?
+<span class="student">[Student]</span> Yeah, you&#x27;re right. Can control themselves, himself. Just he controlled to other people. I think the happy becomes happiness become to control their life. Yeah, at that time they they feel the happy. So if the other people control their life, control their life at that time, that is not happy and have a stress.
+<span class="tutor">[Tutor]</span> So when others control somebody&#x27;s life.
+<span class="student">[Student]</span> Yeah, when others control some other people.
+<span class="tutor">[Tutor]</span> So next, which would you prefer when you&#x27;re feeling stressed? Being alone or talking to someone?
+<span class="student">[Student]</span> I think I usually being alone because the usual stress cause the human relationship. So if I have so many stress, I will be alone just in my home or just to go to the mountain, go for a walk, go to swimming, take a bicycle. Yes, if I alone something to do to exercise, the side idea is to accept, remove, and the main idea is to remind. So my thinking is to reset. So usually I&#x27;m being alone and during the alone just yeah, walk, running and swimming. Yeah, that is to reduce my stress. How about you? Which do you prefer when you&#x27;re feeling stressed? Being alone?
+<span class="tutor">[Tutor]</span> Yeah, it depends what kind of stress it is.
+<span class="student">[Student]</span> What kind of stress? What kind of stress?
+<span class="tutor">[Tutor]</span> So sometimes it&#x27;s nice to speak with a friend or speak with close family about it. And it depends, sometimes it&#x27;s better to be alone.
+<span class="student">[Student]</span> Yes, you&#x27;re right. You&#x27;re right. Sometimes it is a nice way to solve some stress.
+<span class="tutor">[Tutor]</span> Okay. And is there anything else you do when you&#x27;re feeling stressed?
+<span class="student">[Student]</span> Yes, when I had a lot of stress, I eat, I bite chocolate, the cacao dark chocolate, because, yes, that make me more feeling is better. So in my home I keep my chocolate in my refrigerator and yeah, if I have so much stress, I&#x27;m just biting them. Yes, that is also feeling better. And sometimes I I will go to the swimming in hotel pool and swimming for one hour. Yeah, that is also good way to release my stress. Or had a Thai massage or just walk a sunny street. Yeah, that is a good way to release my stress.
+<span class="tutor">[Tutor]</span> Okay, yeah, definitely having a good snack or a treat or something you enjoy eating.
+<span class="student">[Student]</span> Because usually I don&#x27;t eat the fast food, the routine day, just eat the routine meal. But if I had stress, I wanted to remove that routine. So just biting the chocolate, not a snack, just dark chocolate. Yeah. So, yeah, it&#x27;s a good way.
+<span class="tutor">[Tutor]</span> And next we have the problem solving. Would you like to read?
+<span class="student">[Student]</span> Okay. You have been feeling stressed and had a planned a quiet night at home. But your friend just invited you to a popular restaurant you have always wanted to try. It&#x27;s hard to get a table there and you might not get another chance. You really would need to rest. Would you go out or stay in and recharge? Why? I see. I think the both way is also right. Both way is right. Good. But in my case, I know that is a big problem. If that friend is really thankful because he cares my feelings and he approached to make an appointment. So, yeah, I just go there and meet my friends and talking a lot and eat delicious food and really relieve stress. Yeah, because if that appointment is a little late, I can go there. But if I think my friend&#x27;s mind is, I&#x27;m so thankful for my friend, so I&#x27;m just go there and enjoy my time with my friend.
+<span class="tutor">[Tutor]</span> Okay, so you would probably go just to try to make it feel better and to help yourself feel better.
+<span class="student">[Student]</span> Yes. Maybe it&#x27;s possible or it is impossible to release my stress, but it&#x27;s okay because I&#x27;m so thankful for my friends. I just go there and, yeah, eating together and hang out with my friends.
+<span class="tutor">[Tutor]</span> Yeah, so it might kind of help your mood or help make you feel better.
+<span class="student">[Student]</span> Yeah, make you feel better. You&#x27;re right. But do you prefer to rest and recharge or does going out give you energy? Usually I make energy in myself alone, but sometimes it is also have a good energy to share my idea or talk to other people. So, yeah, you&#x27;re right. That depends on the what stress, what kind of stress, and how can I control my stress. Yeah, that depends on... And, yeah, there is no cheat key. Just find that situation.
+<span class="tutor">[Tutor]</span> Yeah, yeah. Each and every person is different.
+<span class="student">[Student]</span> Yes, yes.
+<span class="tutor">[Tutor]</span> How do you recharge after a long, tiring day?
+<span class="student">[Student]</span> Uh-huh. It&#x27;s a long, tiring day. I... If that is the huge, the big stress and so many stress, I had so much stress. And in the meantime, just go back early in my home and take a shower early and just sleep early, yeah, because I wanted to finish my day, yeah, in the meantime. But if that is the light stress and it is possible to control, I just meet my friends or eat the chocolate or running in the street or walk near park and see the beautiful scene. Yeah, that is the way to control my stress.
+<span class="tutor">[Tutor]</span> Okay, so you prefer to do something, maybe doing something, getting your mind.
+<span class="student">[Student]</span> Yeah, you&#x27;re right. How about you? Do you have some special way to recharge your long, tiring day?
+<span class="tutor">[Tutor]</span> It depends. Taking a shower sounds good. Or getting ready for bed early or maybe going to bed early.
+<span class="student">[Student]</span> Oh, it&#x27;s the same.
+<span class="tutor">[Tutor]</span> Start the next day.
+<span class="student">[Student]</span> Yes.
+<span class="tutor">[Tutor]</span> And do you like talking about your feelings or keeping them private?
+<span class="student">[Student]</span> I think if I share my opinion to other people, the emotion also sharing. So if I have stress and talk to other people about my feeling, in the meantime, that stress is reduced. Yes, but I consider other people&#x27;s thinking because they don&#x27;t want to listen my bad feelings. So because they also want to talk the more enjoyable issue, not on my stress issue. So usually I avoid to talk my stress or reason or my emotion, bad emotion because I afraid to spread my feeling to other people. So it is good way to share to other, share my mind feeling, but I&#x27;m just careful to share my idea and share my emotion.
+<span class="tutor">[Tutor]</span> Okay, so maybe you don&#x27;t want to change the mood or maybe if it&#x27;s happy or maybe it might bring down the atmosphere.
+<span class="student">[Student]</span> Yeah, I agree that if I share my emotion to other people, my stress is reduced, but if I&#x27;m thinking to other people, he&#x27;s also feeling bad because it spread my emotion. So just avoid that. For example, when I feel bad and I talk to my wife, my wife also feel bad. My feeling is better, but my wife is not good from that conversation. So, yeah, that&#x27;s why I avoid speaking to my bad emotions. Just solve myself.
+<span class="tutor">[Tutor]</span> Okay, you prefer to solve on your own.
+<span class="student">[Student]</span> Yes, yes, yes. It&#x27;s better.
+<span class="tutor">[Tutor]</span> And next, would you like to read the useful vocabulary?
+<span class="student">[Student]</span> Okay. Burnout. Exhausted from too much stress or pressure. I felt burnout by the end of the week, over the week. And teacher, is it right pronunciation? Exhausted.
+<span class="tutor">[Tutor]</span> Exhausted.
+<span class="student">[Student]</span> Exhausted. Exhausted. Exhausted. Exhausted. Grounded. Feeling stable and in control. Grounded. Spending time outside helps me. Feeling grounded. Grounded. Feeling grounded. Bottled up. To keep emotion inside instead of sharing them. Hmm. He&#x27;s tended to bottle up his feelings. Good.
+<span class="tutor">[Tutor]</span> And I will send you corrections here in just a moment. Did you have any other questions before I go?
+<span class="student">[Student]</span> Oh, no, I don&#x27;t have questions. Mm-hmm. Have a great day. Good. Okay, thank you so much. Bye-bye.</div>
+        </div>
+    </div>
+    <div class="toast" id="toast">✅ 프롬프트가 복사되었습니다!</div>
+    <script>
+        const REVIEW_PROMPT="너는 나의 영어 회화 복습 파트너야. 오늘 내 전화영어 수업 내용을 기반으로 대화하면서 복습을 도와줘.\n\n[오늘 수업 전사 내용]\n[Student] Good morning, teacher. Good evening.\n[Tutor] Yeah, good morning. How are you today?\n[Student] Yeah, I'm doing good. Your sound is far away. It's good?\n[Tutor] Yeah, can you hear me?\n[Student] Yes, it's better. Maybe you use the earphone, right? It's better.\n[Tutor] No, I'm using headphones.\n[Student] Ah, yes, yes. It's clear. Thank you so much.\n[Tutor] How are you today? Did you have any plans today?\n[Student] Today? It's Wednesday. Yeah, I have some detailed plans to work, but it is just work. Maybe the other things are similar compared to the other day. Just work and go for a walk and take a bicycle and meet the friends. Yeah, it's similar. Nothing special.\n[Tutor] Oh, because it's a pretty routine Wednesday. It's the middle of the week.\n[Student] Yeah, pretty routine is the same, similar. Yeah.\n[Tutor] And did you want to take a look at page 22 now, I believe?\n[Student] Yes, how do you handle stress? Yeah, the subject name.\n[Tutor] So what do people think causes the most stress in your country?\n[Student] Yes, this textbook explains four kinds of regions of stress: work, family, school, money, and our country under the category of work. But I'm not agree that because this four category is the same region of our country. Work, family, human relationship, school, money. And I think the Korean guys love the money. It is also big region of the stress. Yeah.\n[Tutor] Okay, definitely. Is there anything that you would add to this list or that you would put on the list?\n[Student] Yes. The main reason of stress is the human relationship because every stress caused from the humans. Yeah. Sometimes we have an argument with friends, coworkers, colleagues, and family. Yeah, that is a big issue. Yeah. And the other thing, can't handle to my life. That is also a big issue. For example, everyone wants to lead their free time themselves. Yes, but they are controlled by other people. So that is also a problem. Yeah. And I'm not sure the last sentence is right or not.\n[Tutor] So yeah, did you mean it's hard for people to be independent?\n[Student] Yeah, hard to be independent. For example, everyone wants to drive themselves because that makes them happy. But usually we just take a seat, a back seat or a side seat. We can't drive ourselves. We just take a bus or train, but can't drive our life. So, yeah, that's my meaning, my sentence meaning.\n[Tutor] So people are controlled?\n[Student] Yeah, you're right. Can control themselves, himself. Just he controlled to other people. I think the happy becomes happiness become to control their life. Yeah, at that time they they feel the happy. So if the other people control their life, control their life at that time, that is not happy and have a stress.\n[Tutor] So when others control somebody's life.\n[Student] Yeah, when others control some other people.\n[Tutor] So next, which would you prefer when you're feeling stressed? Being alone or talking to someone?\n[Student] I think I usually being alone because the usual stress cause the human relationship. So if I have so many stress, I will be alone just in my home or just to go to the mountain, go for a walk, go to swimming, take a bicycle. Yes, if I alone something to do to exercise, the side idea is to accept, remove, and the main idea is to remind. So my thinking is to reset. So usually I'm being alone and during the alone just yeah, walk, running and swimming. Yeah, that is to reduce my stress. How about you? Which do you prefer when you're feeling stressed? Being alone?\n[Tutor] Yeah, it depends what kind of stress it is.\n[Student] What kind of stress? What kind of stress?\n[Tutor] So sometimes it's nice to speak with a friend or speak with close family about it. And it depends, sometimes it's better to be alone.\n[Student] Yes, you're right. You're right. Sometimes it is a nice way to solve some stress.\n[Tutor] Okay. And is there anything else you do when you're feeling stressed?\n[Student] Yes, when I had a lot of stress, I eat, I bite chocolate, the cacao dark chocolate, because, yes, that make me more feeling is better. So in my home I keep my chocolate in my refrigerator and yeah, if I have so much stress, I'm just biting them. Yes, that is also feeling better. And sometimes I I will go to the swimming in hotel pool and swimming for one hour. Yeah, that is also good way to release my stress. Or had a Thai massage or just walk a sunny street. Yeah, that is a good way to release my stress.\n[Tutor] Okay, yeah, definitely having a good snack or a treat or something you enjoy eating.\n[Student] Because usually I don't eat the fast food, the routine day, just eat the routine meal. But if I had stress, I wanted to remove that routine. So just biting the chocolate, not a snack, just dark chocolate. Yeah. So, yeah, it's a good way.\n[Tutor] And next we have the problem solving. Would you like to read?\n[Student] Okay. You have been feeling stressed and had a planned a quiet night at home. But your friend just invited you to a popular restaurant you have always wanted to try. It's hard to get a table there and you might not get another chance. You really would need to rest. Would you go out or stay in and recharge? Why? I see. I think the both way is also right. Both way is right. Good. But in my case, I know that is a big problem. If that friend is really thankful because he cares my feelings and he approached to make an appointment. So, yeah, I just go there and meet my friends and talking a lot and eat delicious food and really relieve stress. Yeah, because if that appointment is a little late, I can go there. But if I think my friend's mind is, I'm so thankful for my friend, so I'm just go there and enjoy my time with my friend.\n[Tutor] Okay, so you would probably go just to try to make it feel better and to help yourself feel better.\n[Student] Yes. Maybe it's possible or it is impossible to release my stress, but it's okay because I'm so thankful for my friends. I just go there and, yeah, eating together and hang out with my friends.\n[Tutor] Yeah, so it might kind of help your mood or help make you feel better.\n[Student] Yeah, make you feel better. You're right. But do you prefer to rest and recharge or does going out give you energy? Usually I make energy in myself alone, but sometimes it is also have a good energy to share my idea or talk to other people. So, yeah, you're right. That depends on the what stress, what kind of stress, and how can I control my stress. Yeah, that depends on... And, yeah, there is no cheat key. Just find that situation.\n[Tutor] Yeah, yeah. Each and every person is different.\n[Student] Yes, yes.\n[Tutor] How do you recharge after a long, tiring day?\n[Student] Uh-huh. It's a long, tiring day. I... If that is the huge, the big stress and so many stress, I had so much stress. And in the meantime, just go back early in my home and take a shower early and just sleep early, yeah, because I wanted to finish my day, yeah, in the meantime. But if that is the light stress and it is possible to control, I just meet my friends or eat the chocolate or running in the street or walk near park and see the beautiful scene. Yeah, that is the way to control my stress.\n[Tutor] Okay, so you prefer to do something, maybe doing something, getting your mind.\n[Student] Yeah, you're right. How about you? Do you have some special way to recharge your long, tiring day?\n[Tutor] It depends. Taking a shower sounds good. Or getting ready for bed early or maybe going to bed early.\n[Student] Oh, it's the same.\n[Tutor] Start the next day.\n[Student] Yes.\n[Tutor] And do you like talking about your feelings or keeping them private?\n[Student] I think if I share my opinion to other people, the emotion also sharing. So if I have stress and talk to other people about my feeling, in the meantime, that stress is reduced. Yes, but I consider other people's thinking because they don't want to listen my bad feelings. So because they also want to talk the more enjoyable issue, not on my stress issue. So usually I avoid to talk my stress or reason or my emotion, bad emotion because I afraid to spread my feeling to other people. So it is good way to share to other, share my mind feeling, but I'm just careful to share my idea and share my emotion.\n[Tutor] Okay, so maybe you don't want to change the mood or maybe if it's happy or maybe it might bring down the atmosphere.\n[Student] Yeah, I agree that if I share my emotion to other people, my stress is reduced, but if I'm thinking to other people, he's also feeling bad because it spread my emotion. So just avoid that. For example, when I feel bad and I talk to my wife, my wife also feel bad. My feeling is better, but my wife is not good from that conversation. So, yeah, that's why I avoid speaking to my bad emotions. Just solve myself.\n[Tutor] Okay, you prefer to solve on your own.\n[Student] Yes, yes, yes. It's better.\n[Tutor] And next, would you like to read the useful vocabulary?\n[Student] Okay. Burnout. Exhausted from too much stress or pressure. I felt burnout by the end of the week, over the week. And teacher, is it right pronunciation? Exhausted.\n[Tutor] Exhausted.\n[Student] Exhausted. Exhausted. Exhausted. Exhausted. Grounded. Feeling stable and in control. Grounded. Spending time outside helps me. Feeling grounded. Grounded. Feeling grounded. Bottled up. To keep emotion inside instead of sharing them. Hmm. He's tended to bottle up his feelings. Good.\n[Tutor] And I will send you corrections here in just a moment. Did you have any other questions before I go?\n[Student] Oh, no, I don't have questions. Mm-hmm. Have a great day. Good. Okay, thank you so much. Bye-bye.\n\n[AI 피드백]\nJoey, 안녕하세요! 오늘도 활기찬 목소리로 수업에 참여해주셔서 감사합니다. 스트레스 관리라는 중요한 주제에 대해 깊이 있는 대화를 나눌 수 있어서 저도 즐거웠어요. Joey가 자신의 생각과 감정을 솔직하게 표현하려는 모습이 정말 인상 깊었습니다.\n\n---\n\n### 0. 📌 Topic\nTopic: Discussing stress management and coping mechanisms\n\n### 1. 📊 오늘의 대화 요약 (Summary)\n오늘 Joey는 스트레스의 주요 원인으로 직장, 가족, 돈뿐만 아니라 특히 '인간관계'를 꼽으며 깊이 있는 통찰을 보여주었습니다. 스트레스를 해소하는 자신만의 방법(혼자만의 시간, 운동, 다크 초콜릿)을 공유하고, 혼자 쉬는 것과 사람들과 어울리는 것 사이의 딜레마에 대해서도 이야기 나누었습니다. 또한, 자신의 감정을 타인과 공유하는 것에 대한 생각도 솔직하게 이야기해주었습니다.\n\n### 2. 💬 유창성 업그레이드 (Fluency & Natural Flow)\nJoey가 말한 문장 중 의미는 잘 전달되었지만, 원어민들이 더 자연스럽게 쓰는 표현으로 다듬을 수 있는 것들을 살펴볼게요.\n\n1.  **❌ 학습자 원문 (As Said):** \"Your sound is far away. It's good?\"\n    *   **✅ 자연스러운 표현 (Natural):** \"Your sound is a bit faint. Is it better now?\"\n    *   **💎 비즈니스 표현 (Professional):** \"Your audio quality seems a bit low. Could you check your microphone, please?\"\n    *   **💡 코칭 포인트:** Using 'faint' or 'low' for sound quality is more common than 'far away'. 'Is it better now?' is a straightforward way to ask if the issue is resolved.\n        → 'far away' 대신 'faint'나 'low'를 쓰는 것이 소리 품질을 묘사할 때 더 자연스럽습니다. 'Is it better now?'는 문제가 해결되었는지 묻는 직관적인 표현입니다.\n\n2.  **❌ 학습자 원문 (As Said):** \"I'm not agree that because this four category is the same region of our country.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"I don't agree with that because these four categories are also major sources of stress in our country.\"\n    *   **💎 비즈니스 표현 (Professional):** \"I respectfully disagree, as these four categories are equally prevalent stressors within our nation.\"\n    *   **💡 코칭 포인트:** 'I don't agree' is the correct and natural way to express disagreement. Also, 'sources of stress' or 'stressors' are more precise than 'region of stress'.\n        → '동의하지 않는다'는 'I don't agree'가 정확하고 자연스러운 표현입니다. 또한, 'region of stress' 대신 'sources of stress'나 'stressors'가 더 적절한 어휘입니다.\n\n3.  **❌ 학습자 원문 (As Said):** \"The main reason of stress is the human relationship because every stress caused from the humans.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"The main reason for stress is human relationships because all stress originates from people.\"\n    *   **💎 비즈니스 표현 (Professional):** \"The primary driver of stress often stems from interpersonal relationships, as human interaction is frequently the genesis of such pressures.\"\n    *   **💡 코칭 포인트:** We usually say 'reason for' something. 'Originates from' or 'stems from' are more natural ways to express the source of stress than 'caused from'.\n        → '~의 이유'는 보통 'reason for'라고 표현합니다. 스트레스의 근원을 말할 때는 'caused from' 대신 'originate from' 또는 'stem from'이 더 자연스러운 표현입니다.\n\n### 3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)\nJoey의 대화에서 동사의 형태와 시제, 그리고 조동사 사용에 대한 패턴이 반복적으로 나타났습니다. 특히 'be 동사'와 'do 동사'의 활용, 그리고 특정 동사 뒤에 오는 형태에 주의가 필요합니다.\n\nCategory: Verb Forms and Agreement\n\n| ❌ 원문 (As Said)                                      | ✅ 교정 예시 (Corrected)                                      |\n| :---------------------------------------------------- | :---------------------------------------------------------- |\n| \"I'm not agree that...\"                               | \"I **don't** agree that...\"                                 |\n| \"every stress **caused** from the humans.\"            | \"every stress **is caused by** humans.\"                     |\n| \"I avoid **to talk** my stress...\"                    | \"I avoid **talking about** my stress...\"                    |\n| \"that make me more feeling is better.\"                | \"that **makes** me feel better.\"                            |\n| \"I afraid to spread my feeling to other people.\"      | \"I'm afraid to spread my feeling to other people.\"          |\n| \"my wife also feel bad.\"                              | \"my wife also **feels** bad.\"                               |\n| \"the emotion also sharing.\"                           | \"the emotions are also shared.\"                             |\n\n📌 **핵심 규칙:**\n*   **부정문:** 일반 동사의 부정문은 주어에 따라 'don't' 또는 'doesn't'를 사용합니다. ('I'm not agree' → 'I don't agree')\n*   **수동태/형용사:** 수동태 문장이나 형용사와 함께 쓰일 때는 'be 동사'가 필수적입니다. ('stress caused' → 'stress is caused', 'I afraid' → 'I'm afraid', 'emotion sharing' → 'emotions are shared')\n*   **동명사/부정사:** 'avoid'와 같은 특정 동사 뒤에는 동명사(-ing)가 옵니다. ('avoid to talk' → 'avoid talking')\n*   **주어-동사 수일치:** 주어가 3인칭 단수일 때 동사 뒤에 '-s'를 붙입니다. ('that make' → 'that makes', 'wife feel' → 'wife feels')\n\n🔁 **따라 읽기:**\n🗣️ \"I don't agree that these are the only reasons.\"\n🗣️ \"Every stress is caused by humans, in my opinion.\"\n🗣️ \"I avoid talking about my stress with others.\"\n\n### 4. 📗 어휘 확장 (Vocabulary Vault)\n오늘 대화에서 유용하게 쓰일 수 있는 어휘들을 살펴볼까요?\n\n1.  **prevalent** /prévələnt/ (형용사)\n    *   뜻: 널리 퍼져 있는, 만연한\n    *   실전 예문: Stress-related burnout is becoming increasingly **prevalent** in our industry.\n\n2.  **originate** /ərídʒənèit/ (동사)\n    *   뜻: ~에서 비롯되다, 유래하다\n    *   실전 예문: Many innovative ideas **originate** from collaborative brainstorming sessions.\n\n3.  **alleviate** /əlíːvièit/ (동사)\n    *   뜻: (고통, 문제 등을) 완화하다, 경감하다\n    *   실전 예문: We are looking for solutions to **alleviate** the financial burden on our employees.\n\n4.  **recharge** /riːtʃɑ́ːrdʒ/ (동사)\n    *   뜻: 재충전하다\n    *   실전 예문: I usually take a short break in the afternoon to **recharge** my energy.\n\n5.  **interpersonal** /ìntərpə́ːrsənəl/ (형용사)\n    *   뜻: 대인 관계의\n    *   실전 예문: Strong **interpersonal** skills are crucial for effective team leadership.\n\n### 5. 📝 실전 복습 챌린지 (Practice)\n오늘 배운 표현과 문법을 활용하여 다음 상황에 맞게 영작해 보세요.\n\n1.  **상황:** 저는 이 새로운 정책에 동의하지 않습니다. 왜냐하면 그것이 우리 팀에 더 많은 스트레스를 유발할 것이기 때문입니다.\n    *   **영작:** I don't agree with this new policy because it will cause more stress for our team.\n    *   **모범 답안:** I **don't agree** with this new policy because it **will cause** more stress for our team.\n\n2.  **상황:** 저희 회사는 직원들의 번아웃을 완화하기 위한 프로그램을 도입할 계획입니다.\n    *   **영작:** Our company plans to introduce a program to alleviate employee burnout.\n    *   **모범 답안:** Our company plans to introduce a program to **alleviate** employee **burnout**.\n\n3.  **상황:** 저는 보통 업무 관련 스트레스에 대해 이야기하는 것을 피합니다. 왜냐하면 제 부정적인 감정이 다른 사람들에게 퍼질까 봐 두렵기 때문입니다.\n    *   **영작:** I usually avoid talking about work-related stress because I'm afraid of spreading my negative feelings to others.\n    *   **모범 답안:** I usually **avoid talking about** work-related stress because **I'm afraid to spread** my negative feelings to others.\n\n### 6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)\n\n✨ **Good Job:** \"I think if I share my opinion to other people, the emotion also sharing. So if I have stress and talk to other people about my feeling, in the meantime, that stress is reduced.\"\nJoey, 이 문장은 스트레스와 감정 공유에 대한 Joey의 생각을 아주 명확하게 설명해주었습니다. 'the emotion also sharing' 부분은 'emotions are also shared'나 'I also share my emotions'로 다듬을 수 있지만, 전반적으로 복잡한 생각을 유창하게 전달하려는 노력이 돋보였습니다. 특히 'in the meantime, that stress is reduced'라는 표현은 스트레스가 줄어드는 과정을 잘 묘사했습니다. 정말 훌륭해요!\n\n🚀 **내일의 한 문장:** \"I'm looking forward to discussing how we can alleviate stress in the workplace next time.\"\n(다음 시간에는 직장에서 스트레스를 어떻게 완화할 수 있을지 논의하는 것이 기대됩니다.)\n\n---\n\n### [성과 지표]\n**유창성 점수:** 7/10\n**근거:** Joey는 다양한 주제에 대해 자신의 생각을 막힘없이 표현할 수 있으며, 대화의 흐름을 잘 이어갑니다. 복잡한 아이디어를 전달하려는 시도가 돋보이며, 주저함 없이 말을 이어가는 모습이 인상적입니다. 다만, 몇몇 문법적 오류나 어색한 표현들이 자연스러운 흐름을 약간 방해하는 경우가 있어 더 높은 점수를 주지 못했습니다. 그러나 전반적인 의사소통 능력은 매우 뛰어납니다.\n\n**다음 수업 '원포인트 액션 플랜':**\n다음 수업에서는 오늘 다룬 **'동사 형태 및 수일치'**에 집중하여 대화 중 의식적으로 바르게 사용해보는 연습을 해볼게요. 특히 'be 동사'와 'do 동사'의 정확한 사용, 그리고 'avoid' 같은 동사 뒤에 오는 동명사 형태에 유의하며 말하는 연습을 해봅시다.\n\n위 내용을 바탕으로:\n1. 먼저 오늘 수업에서 내가 틀렸거나 어색했던 표현을 하나 골라서, 관련된 상황을 영어로 질문해줘.\n2. 내가 영어로 대답하면, 자연스러운지 확인하고 더 나은 표현이 있으면 알려줘.\n3. 특히 \"반복 실수 패턴\"에서 지적된 부분을 집중적으로 연습시켜줘.\n4. 이런 식으로 오늘 배운 표현들을 하나씩 복습하자.\n5. 한국어 설명은 필요할 때만 간단히, 대화는 최대한 영어로 진행해줘.\n\n그럼 시작하자!";
+        function startReview(){navigator.clipboard.writeText(REVIEW_PROMPT).then(()=>{showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)}).catch(()=>{const t=document.createElement('textarea');t.value=REVIEW_PROMPT;document.body.appendChild(t);t.select();document.execCommand('copy');document.body.removeChild(t);showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)})}
+        function showToast(){const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500)}
+        function switchTab(n){document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',n==='feedback'?i===0:i===1));document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));document.getElementById('tab-'+n).classList.add('active')}
+    </script>
+</body>
+</html>
