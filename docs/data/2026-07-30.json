@@ -1,0 +1,53 @@
+{
+ "date": "2026-07-30",
+ "iso": [
+  2026,
+  31
+ ],
+ "topic": "Discussing health advice, medication, and allergies in different cultural contexts.",
+ "grammar": "Missing Verbs",
+ "grammar_norm": "Missing Subjects / Verbs",
+ "score": 7.0,
+ "pairs": [
+  {
+   "said": "I don't know why that paragraph divides all kinds of the regions .",
+   "natural": "I don't know why that paragraph categorizes things by region ."
+  },
+  {
+   "said": "So it is the right symptoms . We will go there and ask our symptoms and get us, take us some medicine from the pharmacy.",
+   "natural": "So, for the right symptoms , we go there, describe them, and get medicine from the pharmacy."
+  },
+  {
+   "said": "I think we will first check the package instruction because usually the medicine company research their medicine and the information within the bags of their medicine .",
+   "natural": "I think we first check the package instructions because medicine companies research their products and provide information on the packaging ."
+  }
+ ],
+ "vocab": [
+  {
+   "word": "delineate",
+   "pos": "동사",
+   "meaning": "(정확하게) 기술하다, 설명하다, (경계 등을) 정하다"
+  },
+  {
+   "word": "prudent",
+   "pos": "형용사",
+   "meaning": "신중한, 현명한"
+  },
+  {
+   "word": "disseminate",
+   "pos": "동사",
+   "meaning": "(정보, 지식 등을) 퍼뜨리다, 전파하다"
+  },
+  {
+   "word": "ailment",
+   "pos": "명사",
+   "meaning": "(심각하지 않은) 질병, 불쾌"
+  },
+  {
+   "word": "remedy",
+   "pos": "명사/동사",
+   "meaning": "(명사) 치료법, 해결책; (동사) (문제 등을) 개선하다, 고치다"
+  }
+ ],
+ "_html_md5": "a207fb1c426c203d242d84a9a175859d"
+}

@@ -5,18 +5,20 @@ This is a study digest from my one-on-one English phone lessons this week. Pleas
 ## Topics covered this week
 - Discussing healthcare systems, personal health choices, and online health information.
 - Discussing stress management and coping mechanisms
+- Discussing health advice, medication, and allergies in different cultural contexts.
 
 ## Grammar focus this week
 - Comparative Adjectives And Adverbs (1x)
 - Subject–Verb Agreement (1x)
+- Missing Subjects / Verbs (1x)
 
-## My all-time weak-point ranking (46 lessons since 2026-05-08)
+## My all-time weak-point ranking (47 lessons since 2026-05-08)
 - Subject–Verb Agreement — 7 lessons
 - Articles (a/an/the) — 7 lessons
 - Verb Tense — 6 lessons
 - Verb Forms / Auxiliaries — 5 lessons
 - Prepositions — 5 lessons
-- Missing Subjects / Verbs — 2 lessons
+- Missing Subjects / Verbs — 3 lessons
 
 ## Fluency trend (tutor score out of 10, weekly average)
 - 2026-W19: 7.5
@@ -47,6 +49,12 @@ This is a study digest from my one-on-one English phone lessons this week. Pleas
    Natural: "I don't agree with that because these four categories are also major sources of stress in our country."
 6. I said: "The main reason of stress is the human relationship because every stress caused from the humans."
    Natural: "The main reason for stress is human relationships because all stress originates from people."
+7. I said: "I don't know why that paragraph divides all kinds of the regions ."
+   Natural: "I don't know why that paragraph categorizes things by region ."
+8. I said: "So it is the right symptoms . We will go there and ask our symptoms and get us, take us some medicine from the pharmacy."
+   Natural: "So, for the right symptoms , we go there, describe them, and get medicine from the pharmacy."
+9. I said: "I think we will first check the package instruction because usually the medicine company research their medicine and the information within the bags of their medicine ."
+   Natural: "I think we first check the package instructions because medicine companies research their products and provide information on the packaging ."
 
 ## Recurring mistakes from earlier weeks — my long-term habits
 My most repeated weak categories overall: Subject–Verb Agreement, Articles (a/an/the). These corrections are from earlier lessons in those categories. Please weave a few into the review so I revisit old mistakes.
@@ -82,6 +90,9 @@ My most repeated weak categories overall: Subject–Verb Agreement, Articles (a/
 - alleviate (동사) — (고통, 문제 등을) 완화하다, 경감하다
 - recharge (동사) — 재충전하다
 - interpersonal (형용사) — 대인 관계의
+- delineate (동사) — (정확하게) 기술하다, 설명하다, (경계 등을) 정하다
+- prudent (형용사) — 신중한, 현명한
+- ailment (명사) — (심각하지 않은) 질병, 불쾌
 
 ## Please cover in the podcast
 - Pick my 1–2 most repeated mistakes (see the all-time ranking) and explain the rule with a memorable rule of thumb.
