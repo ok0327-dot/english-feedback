@@ -1,0 +1,259 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#0f0f13"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="당근영어"><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="icon" type="image/png" sizes="192x192" href="icon-192.png"><script src="install-banner.js" defer></script><script src="sw-reg.js" defer></script>
+<title>🎙️ 라디오 2026-W30</title><style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Noto Sans KR',-apple-system,sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.7}
+.header{background:linear-gradient(135deg,#241a3a,#3a2410,#0f3460);padding:42px 24px 30px;text-align:center;border-bottom:1px solid rgba(255,255,255,.06)}
+.header h1{font-size:24px;color:#f5f0ff;margin-bottom:8px}
+.header .range{font-size:13px;color:#c4b5fd;letter-spacing:1px}
+.nav{max-width:760px;margin:0 auto;padding:14px 20px 0;display:flex;justify-content:space-between;font-size:13px}
+.nav a{color:#64748b;text-decoration:none;padding:6px 10px;border-radius:8px}.nav a:hover{color:#a78bfa;background:#16161d}
+.container{max-width:760px;margin:0 auto;padding:18px 20px 80px}
+.card{background:#16161d;border:1px solid rgba(255,255,255,.06);border-radius:16px;padding:20px;margin-bottom:18px}
+.card h2{font-size:16px;color:#f1f5f9;margin-bottom:12px}
+.player{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-bottom:14px}
+.pbtn{border:none;border-radius:10px;padding:12px 18px;font-size:14px;font-weight:700;cursor:pointer;font-family:inherit;color:#0f0f13;background:linear-gradient(135deg,#a78bfa,#818cf8)}
+.pbtn.alt{background:#1e293b;color:#cbd5e1}
+.pbtn:active{transform:translateY(1px)}
+.speed{display:flex;align-items:center;gap:6px;font-size:12px;color:#94a3b8;margin-left:auto}
+.speed input{accent-color:#a78bfa}
+.stage{display:flex;flex-direction:column;gap:10px;margin-top:6px}
+.bubble{max-width:88%;padding:11px 14px;border-radius:14px;font-size:14px;border:1px solid transparent;transition:all .2s}
+.bubble .who{display:block;font-size:11px;font-weight:700;margin-bottom:3px;opacity:.8}
+.bubble.mc{align-self:flex-start;background:#1e1b2e;border-color:rgba(167,139,250,.25)}.bubble.mc .who{color:#a78bfa}
+.bubble.coach{align-self:flex-end;background:#1a2433;border-color:rgba(56,189,248,.22)}.bubble.coach .who{color:#38bdf8}
+.bubble.on{border-color:#fbbf24;box-shadow:0 0 0 1px #fbbf24}
+.modes{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.mode{display:flex;flex-direction:column;gap:4px;align-items:center;padding:16px 10px;background:#0f0f13;border:1px solid rgba(255,255,255,.08);border-radius:12px;color:#cbd5e1;cursor:pointer;font-size:13px;text-align:center}
+.mode:hover{border-color:rgba(167,139,250,.4);color:#a78bfa}.mode .ico{font-size:22px}.mode .sub{font-size:11px;color:#64748b}
+.muted{color:#64748b;font-size:12px}
+.toast{position:fixed;bottom:28px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#a78bfa;padding:13px 26px;border-radius:12px;font-size:14px;border:1px solid rgba(167,139,250,.25);opacity:0;transition:all .4s;z-index:99}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+.epweek{font-size:13px;color:#a78bfa;font-weight:700;margin-bottom:6px}
+audio{width:100%;margin-top:4px}
+.archive{display:flex;flex-direction:column;gap:6px;margin-top:10px}
+.archive a{font-size:12.5px;color:#94a3b8;text-decoration:none;padding:8px 12px;background:#0f0f13;border:1px solid rgba(255,255,255,.06);border-radius:8px}
+.archive a:hover{color:#a78bfa;border-color:rgba(167,139,250,.3)}
+.weeklist{display:flex;flex-direction:column;gap:6px;margin-top:4px}
+.weekrow{display:flex;align-items:center;gap:10px;font-size:13px;color:#cbd5e1;text-decoration:none;padding:11px 13px;background:#0f0f13;border:1px solid rgba(255,255,255,.06);border-radius:10px}
+.weekrow:hover{border-color:rgba(167,139,250,.4);color:#a78bfa}
+.weekrow.active{border-color:rgba(167,139,250,.5);background:#1e1b2e}
+.weekrow .wk{font-weight:700;color:#a78bfa;white-space:nowrap}
+.weekrow .wr{color:#64748b}
+.weekrow .wk-audio{margin-left:auto;font-size:14px;min-width:18px;text-align:right}
+.foot{text-align:center;font-size:11px;color:#475569;margin-top:26px;line-height:1.8}
+</style></head><body>
+<div class="header"><h1>🎙️ 라디오 · 2026-W30</h1>
+<div class="range">7/20~7/24 · 주차 기록 · 브라우저 음성으로 청취</div></div>
+<div class="nav"><a href="radio.html">← 최신 라디오</a><a href="review-index.html">📚 복습 목록 →</a></div>
+<div class="container">
+
+  <div class="card"><h2>🎧 오디오 에피소드 <span class="muted" style="font-weight:400">· 진짜 음성 · 이 주차</span></h2>
+    <div id="audio-latest" class="muted">에피소드 불러오는 중…</div></div>
+
+  <div class="card"><h2>🗂 주차별 라디오 기록 <span class="muted" style="font-weight:400">· 최신순 · 누적</span></h2>
+    <div class="weeklist"><a class="weekrow" data-wk="2026-W31" href="radio.html"><span class="wk">2026-W31</span><span class="wr">7/27~7/31 · 3회</span><span class="wk-audio"></span></a><a class="weekrow active" data-wk="2026-W30" href="radio-2026-W30.html"><span class="wk">2026-W30 · 현재</span><span class="wr">7/20~7/24 · 5회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W29" href="radio-2026-W29.html"><span class="wk">2026-W29</span><span class="wr">7/13~7/17 · 4회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W28" href="radio-2026-W28.html"><span class="wk">2026-W28</span><span class="wr">7/6~7/10 · 5회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W27" href="radio-2026-W27.html"><span class="wk">2026-W27</span><span class="wr">6/29~7/3 · 3회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W26" href="radio-2026-W26.html"><span class="wk">2026-W26</span><span class="wr">6/22~6/26 · 5회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W25" href="radio-2026-W25.html"><span class="wk">2026-W25</span><span class="wr">6/15~6/19 · 5회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W24" href="radio-2026-W24.html"><span class="wk">2026-W24</span><span class="wr">6/8~6/12 · 5회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W23" href="radio-2026-W23.html"><span class="wk">2026-W23</span><span class="wr">6/1~6/5 · 1회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W22" href="radio-2026-W22.html"><span class="wk">2026-W22</span><span class="wr">5/25~5/29 · 3회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W21" href="radio-2026-W21.html"><span class="wk">2026-W21</span><span class="wr">5/18~5/22 · 3회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W20" href="radio-2026-W20.html"><span class="wk">2026-W20</span><span class="wr">5/11~5/15 · 4회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W19" href="radio-2026-W19.html"><span class="wk">2026-W19</span><span class="wr">5/4~5/8 · 1회</span><span class="wk-audio"></span></a></div></div>
+
+  <div class="card"><h2>▶ 바로 듣기 <span class="muted" style="font-weight:400">· 브라우저 음성(즉시·폴백)</span></h2>
+    <div class="player">
+      <button class="pbtn" id="play">▶ 재생</button>
+      <button class="pbtn alt" id="pause">⏸ 일시정지</button>
+      <button class="pbtn alt" id="resume">▶ 이어듣기</button>
+      <button class="pbtn alt" id="stop">⏹ 처음부터</button>
+      <label class="speed">속도 <input type="range" id="rate" min="0.7" max="1.3" step="0.1" value="1"> <span id="rv">1.0x</span></label>
+    </div>
+    <div class="muted" id="ttswarn" style="margin-bottom:8px"></div>
+    <div class="muted" style="margin:2px 0 10px;font-size:11.5px;line-height:1.7">💡 재생 중에는 화면이 자동으로 꺼지지 않게 막아요(Wake&nbsp;Lock). 다만 직접 화면을 끄면 브라우저 음성은 멈출 수 있어요 — <b>화면을 끈 채 듣고 싶다면 맨 위 🎧 오디오 에피소드(MP3)</b>를 쓰세요. 잠금화면에서도 재생됩니다.</div>
+    <div class="stage" id="stage"></div>
+  </div>
+
+  <div class="card"><h2>💬 이 내용으로 AI와 이야기하기</h2>
+    <div class="muted" style="margin-bottom:10px">클릭하면 이 주차 요약 프롬프트가 복사되고 Gemini가 열립니다. 붙여넣고 대화하세요.</div>
+    <div class="modes">
+      <div class="mode" onclick="copyOpen('chat')"><span class="ico">💬</span>튜터 대화<span class="sub">약점 집중 연습</span></div>
+      <div class="mode" onclick="copyOpen('lecture')"><span class="ico">🎓</span>강의식 설명<span class="sub">규칙+예문+퀴즈</span></div>
+      <div class="mode" onclick="copyOpen('radio')"><span class="ico">🎙</span>라디오 인터뷰<span class="sub">게스트 롤플레이</span></div>
+    </div>
+  </div>
+
+  <div class="card"><h2>📓 NotebookLM 팟캐스트로 듣기 <span class="sub">고품질·무료</span></h2>
+    <div class="muted" style="margin-bottom:12px">이번 주 학습 다이제스트(교정·강사 피드백·어휘 전부)를 복사해 <b>NotebookLM</b>에 붙여넣고 <b>Audio Overview</b>를 만들면, 2인 진행 영어 팟캐스트가 무료로 생성됩니다(현재 TTS보다 자연스러움).</div>
+    <div class="modes">
+      <div class="mode" onclick="window.open('https://notebooklm.google.com/','_blank');copyDigest()"><span class="ico">📓</span>복사+NotebookLM 열기<span class="sub">원클릭 반자동</span></div>
+      <div class="mode" onclick="copyDigest()"><span class="ico">📋</span>다이제스트만 복사<span class="sub">붙여넣기용 텍스트</span></div>
+    </div>
+  </div>
+
+  <div class="foot">대본: scripts/build_radio.py · 다이제스트: scripts/build_digest.py · 음성: 브라우저 Web Speech(무료) · 주차별 누적 · 매주 금요일 Claude 갱신</div>
+</div>
+
+<pre id="radio-src" hidden>민지|en|Hello everyone, and welcome back to Weekly English Radio. I&#x27;m Minji, your host.
+알렉스|en|And I&#x27;m Alex, your English coach. This is Week 30 of 2026, and you had five full lessons this week. That&#x27;s a full week of real English!
+민지|en|Five lessons! You talked about food trends, fitness, daily routines, sleep habits, and health. Lots of great real-life topics.
+알렉스|en|And we found 15 corrections to work with today. But we&#x27;re not just going to list them. We&#x27;re going to ask: why does this happen?
+민지|en|Understanding the why is the real unlock. Once you see the pattern, the mistake stops repeating.
+알렉스|en|So let&#x27;s start with the deepest pattern this week: Word Order.
+민지|en|Word order sounds basic, but it&#x27;s actually one of the trickiest areas for Korean speakers. Right, Alex?
+알렉스|en|Absolutely. In Korean, the verb usually comes at the end of the sentence. But in English, the verb comes right after the subject, near the very beginning.
+민지|en|That small difference changes the whole rhythm of a sentence.
+알렉스|en|Let me give you the clearest example from this week.
+민지|en|You said: I feel a little hurt my stomach when I drink coffee in the morning.
+알렉스|en|And the natural English version is: My stomach hurts a little when I drink coffee in the morning.
+민지|en|See the big shift? The stomach becomes the subject.
+알렉스|ko|한국어에서는 &#x27;나는 배가 아프다&#x27;처럼 사람이 주어지만, 영어는 아픈 것 자체인 My stomach를 주어 자리에 세웁니다.
+알렉스|en|In English, the thing that acts, hurts, or feels is usually the subject. Not the person who experiences it.
+민지|en|So we say: My head hurts. My feet are tired. My eyes feel heavy.
+알렉스|en|Say those with me now if you can. My head hurts. My feet are tired. My eyes feel heavy.
+민지|en|Rule of thumb: Lead with the thing that acts or feels. Put it at the very front.
+알렉스|en|Here&#x27;s one more word order correction from this week.
+민지|en|You said: these days our Korea&#x27;s MG Generation, running is popular.
+알렉스|en|More natural: These days, running is popular among Korea&#x27;s MG Generation.
+민지|en|In English, we put the main subject right at the start. No long build-up first.
+알렉스|en|Short, clear subject first. Then the verb. Then the details. That&#x27;s the English rhythm.
+민지|en|Perfect. Now let&#x27;s move to our second deep topic: Verb Forms after prepositions.
+알렉스|en|This one is a classic challenge for Korean learners. Let&#x27;s look at the correction.
+민지|en|You said: Usually, I had a class after get up in the morning.
+알렉스|en|The natural version: Usually, I have a class after getting up in the morning.
+민지|en|Two things changed there. First, the tense.
+알렉스|en|Right. This is your regular morning routine, so use the present tense. I have a class, not I had a class.
+민지|en|And second, after get up became after getting up.
+알렉스|en|Yes. In English, after a preposition, the verb must be in the -ing form. Always. No exceptions.
+민지|ko|after, before, without, by 같은 전치사 뒤에는 반드시 동사 -ing 형태를 씁니다. 동사 원형은 안 됩니다.
+알렉스|en|Let&#x27;s practice together. After eating. Before going. Without thinking. By practicing every day.
+민지|en|Say them with me. After eating. Before going. Without thinking. By practicing every day.
+알렉스|en|Rule of thumb: Preposition plus verb always equals -ing. Lock that in.
+민지|en|Alright! Now it&#x27;s time for the Correction Clinic. Quick-fire corrections. Try to repeat the better version out loud after us.
+알렉스|en|You said: And it&#x27;s possible to cook so many kinds of cooking.
+민지|en|Better: And you can cook it in so many different ways.
+알렉스|en|Kinds of cooking is not natural. We say different ways, different methods, or different styles.
+민지|en|You said: And sometimes I&#x27;m a little that is not enjoy the taste the egg.
+알렉스|en|Better: Sometimes I don&#x27;t really enjoy the taste of eggs.
+민지|en|Key fix: the taste OF eggs. We need the preposition of to connect taste and eggs.
+알렉스|en|You said: In Korea, we are under the Pilates category.
+민지|en|Better: In Korea, Pilates falls into that category.
+알렉스|en|Pilates is the subject here. It falls into a category. We don&#x27;t say we are under it.
+민지|en|You said: Yeah, it hurts. Feeling.
+알렉스|en|Better: Yeah, it hurts. It&#x27;s a painful feeling. Always give your sentence a proper subject, not just a fragment.
+민지|en|You said: This day, I have something to do at night, so I slept at a really late time.
+알렉스|en|Better: I had something to do last night, so I went to bed really late.
+민지|en|This day is not natural English. We say last night, today, or yesterday. And went to bed is much more natural than slept at a late time.
+알렉스|en|You said: I think that is the etiquette, do not do laundry on the weekend night.
+민지|en|Better: I think it&#x27;s proper etiquette not to do laundry on weekend nights.
+알렉스|en|The natural pattern is: It&#x27;s proper etiquette to do something. Or: It&#x27;s common etiquette to not do something.
+민지|en|You said: But sometimes if I travel in other country, usually I drink tea.
+알렉스|en|Better: But sometimes when I travel to another country, I usually drink tea.
+민지|en|Two small fixes: use when, not if, for a regular habit. And we travel TO a country, not travel in.
+알렉스|en|You said: Sometimes it is similar my way.
+민지|en|Better: Sometimes it&#x27;s similar to my situation. Always put to after the word similar.
+알렉스|en|You said: Usually that is about the meditative or some philosophy of life.
+민지|en|Better: They&#x27;re usually about meditation or some philosophy of life. They, not that. And meditation, not the meditative.
+알렉스|en|You said: As possible to short hospital.
+민지|en|Better: It&#x27;s possible to make a short hospital visit. Start with It&#x27;s possible to, and finish with a full noun phrase.
+알렉스|en|Great clinic today! Well done for following along.
+민지|en|Before we move on, let&#x27;s do a quick Pronunciation Point.
+알렉스|en|This week&#x27;s word: etiquette. It looks long, but it&#x27;s only three syllables. ET - i - ket.
+민지|en|The final T is almost silent. We don&#x27;t say ET-i-KETT. We say ET-i-ket. Etiquette.
+알렉스|en|Say it with me. Etiquette. One more time. Etiquette. Good.
+민지|en|Second word to check: contagious. kon-TAY-jus. The stress is on the second syllable.
+알렉스|en|kon-TAY-jus. Contagious. Notice how the g sounds like a j sound in contagious.
+민지|en|Stress and sound are important. A correct sentence with wrong stress can confuse a native speaker.
+알렉스|en|So keep listening to natural English, and notice where the stress falls in longer words.
+민지|en|Now, Vocabulary in Context. Not just definitions. Let&#x27;s see how these words really live.
+알렉스|en|First word: recover. It means to get better, but it goes far beyond illness. You can recover from a bad day, recover your confidence after a mistake, or recover data from a broken phone.
+민지|en|Try saying this: I usually recover from a cold in about three days.
+알렉스|en|Second word: etiquette. We heard it in a correction today. It&#x27;s not just table manners. There&#x27;s apartment etiquette, phone etiquette, email etiquette, and meeting etiquette.
+민지|en|Use it like this: It&#x27;s common etiquette to turn your phone off in a movie theater.
+알렉스|en|Third word: contagious. A virus can be contagious. But so can feelings! Laughter is contagious. Yawning is contagious. A good attitude is contagious.
+민지|en|And fourth: discomfort. Not full pain, but something that bothers you a little. I feel some discomfort in my stomach when I skip breakfast.
+알렉스|en|Fifth word: determined. It means you have made a firm decision and you won&#x27;t give up. I was determined to finish the workout even when I was tired.
+민지|en|You can say: She&#x27;s a very determined person. Or: He had a determined look on his face.
+알렉스|en|Sixth word: ingredient. This week you talked about food and eggs. But ingredient works beyond cooking too. Good sleep is a key ingredient for a healthy life.
+민지|en|Try this: Hard work, sleep, and good habits are the ingredients for a better week.
+알렉스|en|Seventh word: versatility. It means being useful in many different ways. Eggs have amazing versatility. You can boil, fry, bake, or scramble them.
+민지|en|You can also talk about a person&#x27;s versatility: She&#x27;s a versatile employee because she can do many different jobs well.
+알렉스|en|And eighth: fatigued. This is stronger than tired. It means very deep tiredness. If you feel fatigued often, your body is asking for more rest.
+민지|en|I often feel fatigued by Friday. That&#x27;s why the weekend is so important!
+알렉스|en|Now let&#x27;s do Topic Talk. The theme this week is health and daily life. These are A2 to B1 expressions for everyday use.
+민지|en|Expression one: under the weather. It means feeling a little sick, not seriously ill. I&#x27;m a bit under the weather today, so I&#x27;ll rest.
+알렉스|en|Expression two: sleep in. To wake up later than usual. I love sleeping in on Saturdays.
+민지|en|Expression three: go easy on something. To be careful or moderate. My doctor told me to go easy on coffee.
+알렉스|en|That fits perfectly with this week! If coffee hurts your stomach, go easy on it.
+민지|en|Expression four: catch a bug. To get a mild illness. I caught a bug last week and stayed home for a day.
+알렉스|en|Expression five: take it easy. To rest and not push yourself too hard. After a busy week, it&#x27;s good to just take it easy on Sunday.
+민지|en|Try to use at least one of these five in a real conversation this week.
+알렉스|en|Alright, time for Culture Corner! Minji, have you ever cheered someone on in English by saying hwaiting?
+민지|en|Of course! We say 화이팅 all the time in Korean. It&#x27;s how we encourage someone.
+알렉스|en|Well, here&#x27;s the thing: if you say hwaiting or fighting to a native English speaker, they might look confused, or even a little alarmed.
+민지|ko|우리가 응원할 때 쓰는 &#x27;화이팅&#x27;은 영어 원어민에게는 낯설거나 &#x27;싸우자&#x27;처럼 들릴 수 있어요.
+알렉스|en|In English, fighting usually means a physical fight. So saying it to cheer someone on doesn&#x27;t quite land.
+민지|en|Oh no! So what do we say instead?
+알렉스|en|The most natural English options are: You&#x27;ve got this! Go for it! Or I&#x27;m rooting for you!
+민지|en|I&#x27;m rooting for you. To root for someone means you support them and want them to win or succeed.
+알렉스|en|You can also say: You can do it! Break a leg! Or simply, Good luck!
+민지|en|Break a leg? That sounds painful!
+알렉스|en|Ha! It&#x27;s a theater expression. Before a performance, actors say break a leg because saying good luck was considered bad luck on stage.
+민지|ko|&#x27;화이팅&#x27; 대신 You&#x27;ve got this! 또는 I&#x27;m rooting for you!를 써보세요. Break a leg는 특히 발표나 공연 전에 쓰는 표현입니다.
+알렉스|en|화이팅 is a wonderful Korean-English blend, but it doesn&#x27;t travel well to native speakers. Now you have the real alternatives.
+민지|en|Okay, let&#x27;s wrap up Week 30 with a quick recap.
+알렉스|en|Your fluency average this week was 7.1 out of 10. That&#x27;s steady and solid. You&#x27;re holding your ground.
+민지|en|The cumulative top weakness is still articles: a, an, and the. Seven times in total. Keep hunting for them.
+알렉스|en|Second on the list: Subject-Verb Agreement at six times. And Verb Tense is also at six. These three together are the areas that will lift your score the most.
+민지|en|But remember: noticing is already half the battle. If you&#x27;re aware of the pattern, you&#x27;re already ahead.
+알렉스|en|This week&#x27;s mission: when you start a sentence, pause for three seconds. Ask yourself: what is my subject? Is my verb right after it?
+민지|en|And remember: after prepositions like after, before, and without, always use the -ing form. After eating. Before going. Without thinking.
+알렉스|en|Also try using one of today&#x27;s Topic Talk expressions. Under the weather. Sleep in. Go easy on. Catch a bug. Take it easy.
+민지|en|And next time you want to cheer someone on in English, say: You&#x27;ve got this! Not hwaiting!
+알렉스|en|Awareness first, perfection later. You&#x27;re building real habits, and habits take time. That&#x27;s completely normal.
+민지|en|That&#x27;s all for Weekly English Radio this week. Thank you so much for listening.
+알렉스|en|Keep talking, keep noticing, and never be afraid of mistakes. We&#x27;ll see you next Friday!
+민지|en|Take care, and have a wonderful week. Bye for now!</pre>
+<div class="toast" id="toast">✅ 복사됐어요! Gemini에 붙여넣으세요</div>
+<script>
+const PAGE_WEEK="2026-W30";
+const PROMPTS={chat:"아래는 이번 주 내 전화영어 학습 요약이야.\n\n[이번 주: 2026-W30 · 5회 수업]\n누적 약점 Top: Articles (a/an/the)(7회), Subject–Verb Agreement(6회), Verb Tense(6회)\nAI 교정(❌→✅):\n  - And you're only a Monday teacher, so I cannot see your life. → Since you only teach on Mondays, I don't get to hear much about your week.\n  - And it's possible to cook so many kinds of cooking. → And you can cook it in so many different ways.\n  - And sometimes I'm a little that is not enjoy the taste the egg. → Sometimes I don't really enjoy the taste of eggs.\n  - In Korea, we are under the Pilates category → In Korea, Pilates falls into that category.\n  - these days our Korea's MG Generation, running is popular → These days, running is popular among Korea's MG Generation.\n  - Yeah, it hurts. Feeling. → Yeah, it hurts. It's a painful feeling.\n핵심 어휘: recover(회복하다, 되찾다), trend(유행, 경향, 추세), versatility(다용도성, 다재다능함), ingredient(재료, 성분 (음식뿐 아니라 어떤 것의 구성 요소)), determined(단호한, 결심이 굳은), solitary(혼자 하는, 고독한)\n\n위 약점·교정을 주제로 나와 영어로 대화하면서 복습시켜줘. 먼저 약점 1개와 관련된 상황을 영어로 질문하고, 내 대답이 자연스러운지 교정해줘. 한국어 설명은 필요할 때만 짧게.",lecture:"아래는 이번 주 내 전화영어 학습 요약이야.\n\n[이번 주: 2026-W30 · 5회 수업]\n누적 약점 Top: Articles (a/an/the)(7회), Subject–Verb Agreement(6회), Verb Tense(6회)\nAI 교정(❌→✅):\n  - And you're only a Monday teacher, so I cannot see your life. → Since you only teach on Mondays, I don't get to hear much about your week.\n  - And it's possible to cook so many kinds of cooking. → And you can cook it in so many different ways.\n  - And sometimes I'm a little that is not enjoy the taste the egg. → Sometimes I don't really enjoy the taste of eggs.\n  - In Korea, we are under the Pilates category → In Korea, Pilates falls into that category.\n  - these days our Korea's MG Generation, running is popular → These days, running is popular among Korea's MG Generation.\n  - Yeah, it hurts. Feeling. → Yeah, it hurts. It's a painful feeling.\n핵심 어휘: recover(회복하다, 되찾다), trend(유행, 경향, 추세), versatility(다용도성, 다재다능함), ingredient(재료, 성분 (음식뿐 아니라 어떤 것의 구성 요소)), determined(단호한, 결심이 굳은), solitary(혼자 하는, 고독한)\n\n위 내용을 강의식으로 차근차근 설명해줘. 각 약점이 왜 틀렸는지 규칙을 짚고, 쉬운 예문 2~3개씩 더 들어주고, 마지막에 1분 요약과 연습문제 3개를 줘.",radio:"아래는 이번 주 내 전화영어 학습 요약이야.\n\n[이번 주: 2026-W30 · 5회 수업]\n누적 약점 Top: Articles (a/an/the)(7회), Subject–Verb Agreement(6회), Verb Tense(6회)\nAI 교정(❌→✅):\n  - And you're only a Monday teacher, so I cannot see your life. → Since you only teach on Mondays, I don't get to hear much about your week.\n  - And it's possible to cook so many kinds of cooking. → And you can cook it in so many different ways.\n  - And sometimes I'm a little that is not enjoy the taste the egg. → Sometimes I don't really enjoy the taste of eggs.\n  - In Korea, we are under the Pilates category → In Korea, Pilates falls into that category.\n  - these days our Korea's MG Generation, running is popular → These days, running is popular among Korea's MG Generation.\n  - Yeah, it hurts. Feeling. → Yeah, it hurts. It's a painful feeling.\n핵심 어휘: recover(회복하다, 되찾다), trend(유행, 경향, 추세), versatility(다용도성, 다재다능함), ingredient(재료, 성분 (음식뿐 아니라 어떤 것의 구성 요소)), determined(단호한, 결심이 굳은), solitary(혼자 하는, 고독한)\n\n너는 라디오 진행자, 나는 오늘의 게스트야. 내 이번 주 영어 학습 여정을 주제로 인터뷰하듯 대화해줘. 가볍고 격려하는 톤으로, 중간중간 위 교정 표현을 자연스럽게 연습시켜줘. 영어 위주, 한국어는 가끔."};
+function showToast(m){const t=document.getElementById('toast');t.textContent=m;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500);}
+function copyOpen(mode){const txt=PROMPTS[mode]||'';const go=()=>{showToast('✅ 복사됐어요! Gemini에 붙여넣으세요');setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600);};navigator.clipboard.writeText(txt).then(go).catch(()=>{const a=document.createElement('textarea');a.value=txt;document.body.appendChild(a);a.select();document.execCommand('copy');a.remove();go();});}
+function clip(txt,msg){const go=()=>showToast(msg);navigator.clipboard.writeText(txt).then(go).catch(()=>{const a=document.createElement('textarea');a.value=txt;document.body.appendChild(a);a.select();document.execCommand('copy');a.remove();go();});}
+function copyDigest(){fetch('digest-latest.txt',{cache:'no-store'}).then(r=>{if(!r.ok)throw 0;return r.text();}).then(t=>clip(t,'📓 다이제스트 복사됨! NotebookLM에 붙여넣으세요')).catch(()=>showToast('⚠️ 다이제스트가 아직 없어요 (금요일 생성)'));}
+
+// ── 라디오 플레이어 (Web Speech API) ──
+const RAW=document.getElementById('radio-src').textContent.trim();
+const LINES=RAW.split('\n').map(l=>l.trim()).filter(Boolean).map(l=>{const i1=l.indexOf('|'),i2=l.indexOf('|',i1+1);return{sp:l.slice(0,i1),lang:l.slice(i1+1,i2),text:l.slice(i2+1)};});
+const stage=document.getElementById('stage');
+LINES.forEach((ln,i)=>{const d=document.createElement('div');d.className='bubble '+(ln.sp==='민지'?'mc':'coach');d.dataset.idx=i;d.innerHTML='<span class="who">'+ln.sp+'</span>'+ln.text;stage.appendChild(d);});
+const synth=window.speechSynthesis;
+let voices=[],koV=null,enV=null;
+function pickVoices(){voices=synth?synth.getVoices():[];koV=voices.find(v=>v.lang&&v.lang.toLowerCase().startsWith('ko'))||null;enV=voices.find(v=>v.lang&&v.lang.toLowerCase().startsWith('en'))||null;}
+if(synth){pickVoices();synth.onvoiceschanged=pickVoices;}
+let idx=0,playing=false,rate=1,wakeLock=null;
+async function acquireWake(){try{if('wakeLock' in navigator){wakeLock=await navigator.wakeLock.request('screen');wakeLock.addEventListener('release',()=>{wakeLock=null;});}}catch(e){}}
+function releaseWake(){try{if(wakeLock){wakeLock.release();wakeLock=null;}}catch(e){}}
+function highlight(i){document.querySelectorAll('.bubble').forEach(b=>b.classList.toggle('on',(+b.dataset.idx)===i));const el=document.querySelector('.bubble.on');if(el)el.scrollIntoView({block:'center',behavior:'smooth'});}
+function speakAt(i){if(!synth||i>=LINES.length){playing=false;releaseWake();highlight(-1);idx=0;return;}idx=i;highlight(i);const ln=LINES[i];const u=new SpeechSynthesisUtterance(ln.text);u.lang=ln.lang==='ko'?'ko-KR':'en-US';const v=ln.lang==='ko'?koV:enV;if(v)u.voice=v;u.rate=rate;u.pitch=ln.sp==='민지'?1.15:0.85;u.onend=()=>{if(playing)speakAt(i+1);};u.onerror=()=>{if(playing)setTimeout(()=>speakAt(i+1),250);};synth.speak(u);}
+document.getElementById('play').onclick=()=>{if(!synth){document.getElementById('ttswarn').textContent='이 브라우저는 음성 재생을 지원하지 않아요. 대본을 읽어주세요.';return;}if(playing)return;playing=true;acquireWake();synth.cancel();speakAt(idx>=LINES.length?0:idx);};
+document.getElementById('pause').onclick=()=>{if(synth&&synth.speaking)synth.pause();};
+document.getElementById('resume').onclick=()=>{if(synth){synth.resume();if(playing)acquireWake();}};
+document.getElementById('stop').onclick=()=>{playing=false;releaseWake();if(synth)synth.cancel();idx=0;highlight(-1);};
+document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='visible'&&playing){if(synth)synth.resume();acquireWake();}});
+const rE=document.getElementById('rate');rE.oninput=()=>{rate=parseFloat(rE.value);document.getElementById('rv').textContent=rate.toFixed(1)+'x';};
+if(!synth)document.getElementById('ttswarn').textContent='⚠️ 이 브라우저는 음성 합성을 지원하지 않아 대본만 표시됩니다.';
+
+// ── 오디오 에피소드: 이 페이지의 주차(PAGE_WEEK) MP3 표시 + 목록에 🎧 뱃지 ──
+fetch('radio/episodes.json',{cache:'no-store'}).then(r=>r.ok?r.json():[]).then(eps=>{
+  if(!Array.isArray(eps))eps=[];
+  eps.forEach(e=>{const row=document.querySelector('.weekrow[data-wk="'+e.week+'"] .wk-audio');if(row)row.textContent='🎧';});
+  const L=document.getElementById('audio-latest');
+  const mine=eps.find(e=>e.week===PAGE_WEEK);
+  if(mine){
+    L.innerHTML='<div class="epweek">'+mine.week+' · '+(mine.date||'')+'</div><audio id="ep-audio" controls preload="none" src="radio/'+mine.file+'"></audio>';
+    const au=document.getElementById('ep-audio');
+    // 잠금화면/화면 꺼짐에서도 재생 + 컨트롤 노출(MediaSession). 진짜 음성 파일이라 백그라운드 OK.
+    if(au&&'mediaSession' in navigator){
+      try{navigator.mediaSession.metadata=new MediaMetadata({title:'영어 주간 라디오 '+mine.week,artist:'민지 & 알렉스 · 당근영어',album:'Weekly English Radio'});}catch(e){}
+      try{navigator.mediaSession.setActionHandler('play',()=>au.play());navigator.mediaSession.setActionHandler('pause',()=>au.pause());}catch(e){}
+    }
+  }
+  else{L.textContent='이 주차 오디오(MP3)는 아직 없어요. 아래 ▶ 바로 듣기(브라우저 음성)로 들어보세요.';}
+}).catch(()=>{document.getElementById('audio-latest').textContent='오디오 목록을 불러오지 못했어요. 아래 ▶ 바로 듣기로 들어보세요.';});
+</script>
+</body></html>
