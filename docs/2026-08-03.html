@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#0f0f13"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="당근영어"><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="icon" type="image/png" sizes="192x192" href="icon-192.png"><script src="install-banner.js" defer></script><script src="sw-reg.js" defer></script>
+    <title>전화영어 복습 - 2026년 08월 03일</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Noto Sans KR',sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.75;min-height:100vh}
+        .header{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);border-bottom:1px solid rgba(255,255,255,.06);padding:48px 24px 40px;text-align:center}
+        .header-date{font-size:13px;color:#94a3b8;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+        .header h1{font-size:28px;font-weight:700;color:#f1f5f9;margin-bottom:16px}
+        .header-meta{display:flex;justify-content:center;gap:24px;font-size:14px;color:#64748b}
+        .header-meta span{display:flex;align-items:center;gap:6px}
+        .cta-section{text-align:center;padding:40px 24px}
+        .cta-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:linear-gradient(135deg,#38bdf8,#818cf8);color:#fff;font-size:16px;font-weight:600;font-family:'Noto Sans KR',sans-serif;border:none;border-radius:50px;cursor:pointer;transition:all .3s;text-decoration:none;box-shadow:0 4px 24px rgba(56,189,248,.25)}
+        .cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(56,189,248,.35)}
+        .cta-btn svg{width:20px;height:20px}
+        .cta-sub{margin-top:12px;font-size:13px;color:#64748b}
+        .toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#38bdf8;padding:14px 28px;border-radius:12px;font-size:14px;font-weight:500;border:1px solid rgba(56,189,248,.2);box-shadow:0 8px 32px rgba(0,0,0,.4);opacity:0;transition:all .4s cubic-bezier(.16,1,.3,1);z-index:1000}
+        .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+        .container{max-width:720px;margin:0 auto;padding:0 24px 80px}
+        .tabs{display:flex;gap:4px;background:#1a1a24;padding:4px;border-radius:12px;margin-bottom:32px}
+        .tab{flex:1;padding:12px;text-align:center;font-size:14px;font-weight:500;color:#64748b;background:0 0;border:none;border-radius:8px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all .2s}
+        .tab.active{background:#262636;color:#f1f5f9}
+        .tab-content{display:none}.tab-content.active{display:block}
+        .feedback h2{font-size:18px;font-weight:700;color:#f1f5f9;margin:36px 0 16px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.06)}
+        .feedback h2:first-child{margin-top:0}
+        .feedback p{margin:8px 0;color:#cbd5e1}
+        .feedback .item{padding:6px 0 6px 16px;border-left:2px solid #334155;margin:6px 0;color:#cbd5e1}
+        .feedback .numbered{padding:8px 0 8px 16px;color:#cbd5e1}
+        .feedback .numbered strong{color:#38bdf8}
+        .feedback strong{color:#f1f5f9}
+        .feedback code{background:#1e293b;padding:2px 8px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#38bdf8}
+        .feedback table{width:100%;border-collapse:collapse;margin:12px 0}
+        .feedback th,.feedback td{padding:10px 14px;text-align:left;border-bottom:1px solid #262636}
+        .feedback th{color:#94a3b8;font-weight:500;font-size:13px}
+        .feedback td{color:#cbd5e1}
+        .arrow{color:#38bdf8;font-weight:700}
+        .transcript{background:#1a1a24;border-radius:12px;padding:28px;font-size:14px;line-height:2;color:#94a3b8;white-space:pre-wrap;word-break:break-word;font-family:'JetBrains Mono','Noto Sans KR',monospace}
+        .transcript .tutor{color:#38bdf8}
+        .transcript .student{color:#a78bfa}
+        @media(max-width:640px){.header{padding:32px 16px}.header h1{font-size:22px}.cta-btn{padding:14px 28px;font-size:15px}.container{padding:0 16px 60px}}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-date">2026년 08월 03일</div>
+        <h1>📚 전화영어 복습</h1>
+        <div class="header-meta">
+            <span>⏱ 19분 55초</span>
+            <span>🎙 전화영어_025180304_20260803080012.m4a</span>
+        </div>
+    </div>
+    <div class="cta-section">
+        <button class="cta-btn" onclick="startReview()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Gemini에서 복습 대화 시작하기
+        </button>
+        <div class="cta-sub">클릭하면 프롬프트가 복사되고 Gemini가 열립니다</div>
+    </div>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('feedback')">📋 AI 피드백</button>
+            <button class="tab" onclick="switchTab('transcript')">🎙 수업 전사</button>
+        </div>
+        <div id="tab-feedback" class="tab-content active">
+            <div class="feedback"><p>Joey, 안녕하세요! 오늘 아침도 활기차게 시작하셨네요. 중국 여행 계획부터 AI를 활용한 취미까지, 정말 다채로운 이야기를 나눴습니다. 특히 걷기 운동이 몸에는 느리지만 마음을 다스리는 데 큰 도움이 된다는 이야기가 인상 깊었어요. Joey의 자기 성찰적인 면모를 엿볼 수 있었습니다.</p>
+<br>
+<br>
+<h2>0. 📌 Topic</h2>
+<p>Topic: Discussing summer vacation plans, creative hobbies, and the benefits of walking.</p>
+<br>
+<h2>1. 📊 오늘의 대화 요약 (Summary)</h2>
+<p>오늘은 Joey의 여름 중국 여행 계획에 대한 이야기로 시작하여, 여행지에서의 언어 소통 문제와 기대감에 대해 나눴습니다. 이어서 한국의 인기 있는 창의적 취미와 Joey가 즐기는 AI 기반 취미 활동, 그리고 걷기 운동이 정신 건강에 미치는 긍정적인 영향에 대해 깊이 있는 대화를 이어갔습니다.</p>
+<br>
+<h2>2. 💬 유창성 업그레이드 (Fluency & Natural Flow)</h2>
+<br>
+<p>Joey가 말한 문장 중, 의미는 잘 전달되었지만 원어민이 들었을 때 조금 더 자연스럽게 들릴 수 있는 표현들을 살펴볼게요.</p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>❌ 학습자 원문 (As Said):</strong> "a little exciting and a little bit upset"</div>
+<div class="item"><strong>✅ 자연스러운 표현 (Natural):</strong> "a little excited and a little bit upset"</div>
+<div class="item"><strong>💎 비즈니스 표현 (Professional):</strong> "I have mixed feelings, feeling both excited and slightly apprehensive."</div>
+<div class="item"><strong>💡 코칭 포인트:</strong> Using the past participle 'excited' (adjective) describes a feeling, whereas 'exciting' (present participle) describes something that causes excitement.</div>
+<p><span class="arrow">→</span> 과거분사 'excited'(형용사)는 감정을 나타내는 반면, 현재분사 'exciting'은 흥분을 유발하는 대상을 묘사합니다.</p>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>❌ 학습자 원문 (As Said):</strong> "we can't generalize about hobbies per country."</div>
+<div class="item"><strong>✅ 자연스러운 표현 (Natural):</strong> "we can't generalize hobbies by country."</div>
+<div class="item"><strong>💎 비즈니스 표현 (Professional):</strong> "It's challenging to categorize hobbies based solely on nationality."</div>
+<div class="item"><strong>💡 코칭 포인트:</strong> 'By country' is a more common and natural prepositional phrase when discussing generalization across different countries.</div>
+<p><span class="arrow">→</span> 'By country'는 여러 국가에 걸친 일반화를 논할 때 더 흔하고 자연스러운 전치사구입니다.</p>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>❌ 학습자 원문 (As Said):</strong> "every place is possible to play the singing song."</div>
+<div class="item"><strong>✅ 자연스러운 표현 (Natural):</strong> "I can sing songs anywhere."</div>
+<div class="item"><strong>💎 비즈니스 표현 (Professional):</strong> "The versatility of singing allows for practice in any environment."</div>
+<div class="item"><strong>💡 코칭 포인트:</strong> 'It is possible to do X'는 문법적으로 맞지만 다소 딱딱하게 들릴 수 있습니다. 'I can' 또는 'You can'으로 다시 표현하면 문장이 더 직접적이고 자연스러워집니다. 또한 'the singing song'은 불필요한 표현이며, 'singing songs' 또는 'singing'으로 충분합니다.</div>
+<p><span class="arrow">→</span> 'It is possible to do X'는 문법적으로 맞지만 다소 딱딱하게 들릴 수 있습니다. 'I can' 또는 'You can'으로 다시 표현하면 문장이 더 직접적이고 자연스러워집니다. 또한 'the singing song'은 불필요한 표현이며, 'singing songs' 또는 'singing'으로 충분합니다.</p>
+<br>
+<h2>3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)</h2>
+<br>
+<p>Category: <strong>Article Usage (a/an/the)</strong></p>
+<br>
+<p>Joey는 명사 앞에 관사(a/an/the)를 사용할 때 종종 혼동하는 경향이 있습니다. 특히 일반적인 개념이나 복수 명사 앞에서 불필요하게 'the'를 사용하거나, 특정하지 않은 명사 앞에 'a'를 빠뜨리는 경우가 보였습니다.</p>
+<br>
+<table>
+<tr><th>❌ 원문 (As Said)</th><th>✅ 교정 예시 (Corrected)</th></tr>
+<tr><td>"a hobby is for <strong>the</strong> personality."</td><td>"hobbies depend on <strong>personality</strong>." (또는 "a hobby is a reflection of <strong>one's personality</strong>.")</td></tr>
+<tr><td>"these days, <strong>SNS</strong> has developed"</td><td>"these days, <strong>the internet/social media</strong> has developed" (또는 "these days, <strong>SNS</strong> has developed" - SNS 자체는 고유명사처럼 쓰이기도 함)</td></tr>
+<tr><td>"I start gathering some equipment, <strong>the small clay</strong> or small clay material"</td><td>"I start gathering some equipment, like <strong>some small clay</strong> or clay material"</td></tr>
+<tr><td>"AI needs storage, needs <strong>a</strong> supercomputer."</td><td>"AI needs storage, needs <strong>supercomputers</strong>." (또는 "AI needs storage, needs <strong>a powerful computer</strong>.")</td></tr>
+</table>
+<br>
+<p>📌 <strong>핵심 규칙:</strong> 'The'는 특정하거나 이미 언급된 명사 앞에 사용하고, 일반적인 개념이나 셀 수 없는 명사 앞에는 보통 사용하지 않습니다. 'A/an'은 처음 언급되거나 불특정한 단수 명사 앞에 사용합니다.</p>
+<br>
+<p>🔁 <strong>따라 읽기:</strong></p>
+<p>🗣️ "Hobbies depend on personality."</p>
+<p>🗣️ "These days, social media has developed."</p>
+<p>🗣️ "I start gathering some equipment, like some small clay."</p>
+<br>
+<h2>4. 📗 어휘 확장 (Vocabulary Vault)</h2>
+<br>
+<p>오늘 대화에서 유용하게 쓰일 수 있는 어휘들을 정리해 보았습니다.</p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>apprehensive</strong> /ˌæprɪˈhɛnsɪv/ (형용사)</div>
+<div class="item">뜻: 걱정하는, 염려하는</div>
+<div class="item">실전 예문: I'm a bit <strong>apprehensive</strong> about the upcoming market volatility.</div>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>infrastructure</strong> /ˈɪnfrəˌstrʌktʃər/ (명사)</div>
+<div class="item">뜻: 사회 기반 시설 (도로, 통신망 등)</div>
+<div class="item">실전 예문: Investing in robust digital <strong>infrastructure</strong> is crucial for our long-term growth.</div>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>versatility</strong> /ˌvɜːrsəˈtɪləti/ (명사)</div>
+<div class="item">뜻: 다용도성, 다재다능함</div>
+<div class="item">실전 예문: The <strong>versatility</strong> of this new software allows for various applications across departments.</div>
+<br>
+<div class="numbered"><strong>4.</strong> <strong>intensive</strong> /ɪnˈtɛnsɪv/ (형용사)</div>
+<div class="item">뜻: 집중적인, 많은 노력을 요하는</div>
+<div class="item">실전 예문: This project requires an <strong>intensive</strong> analysis of market trends and competitor strategies.</div>
+<br>
+<div class="numbered"><strong>5.</strong> <strong>volatility</strong> /ˌvɑːləˈtɪləti/ (명사)</div>
+<div class="item">뜻: 변동성, 불안정성</div>
+<div class="item">실전 예문: We need a risk management plan to mitigate the <strong>volatility</strong> of energy prices.</div>
+<br>
+<h2>5. 📝 실전 복습 챌린지 (Practice)</h2>
+<br>
+<p>오늘 배운 표현과 문법을 활용하여 영작 연습을 해볼까요?</p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>상황:</strong> 새로운 프로젝트를 시작하게 되어 기대되지만, 동시에 성공적으로 해낼 수 있을지 조금 걱정됩니다.</div>
+<div class="item"><strong>영작:</strong> (기대와 걱정이 섞인 감정을 표현해 보세요.)</div>
+<div class="item"><strong>모범 답안:</strong> I have mixed feelings about starting the new project; I'm excited but also a little apprehensive about its success.</div>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>상황:</strong> 우리 회사는 특정 시장에만 의존해서는 안 됩니다. 다양한 시장으로 사업을 확장해야 합니다.</div>
+<div class="item"><strong>영작:</strong> (일반화의 위험성을 피하고, 사업 확장의 필요성을 강조해 보세요.)</div>
+<div class="item"><strong>모범 답안:</strong> We shouldn't generalize our business strategy by relying on a single market; we need to diversify.</div>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>상황:</strong> 이 새로운 AI 시스템은 엄청난 양의 데이터 저장 공간과 강력한 처리 능력을 필요로 합니다.</div>
+<div class="item"><strong>영작:</strong> (AI 시스템의 요구 사항을 정확하게 설명해 보세요. 관사 사용에 유의하세요.)</div>
+<div class="item"><strong>모범 답안:</strong> This new AI system requires significant data storage and powerful processing capabilities.</div>
+<br>
+<h2>6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)</h2>
+<br>
+<p>✨ <strong>Good Job:</strong></p>
+<p>"I think it has so many good effects, but that is not good for exercise because they move slowly, not like running and jogging, swimming. So that doesn't have a good effect on exercise. But I think it has a better, good effect on their mind."</p>
+<p>Joey, 이 문장은 걷기 운동의 장단점을 아주 명확하게 설명했습니다. 특히 "not good for exercise"와 "better, good effect on their mind"를 대비시켜 자신의 생각을 논리적으로 전달하는 능력이 돋보였습니다. 'so many good effects'와 'better, good effect'의 반복은 약간 어색했지만, 의미 전달에는 전혀 문제가 없었습니다. 훌륭해요!</p>
+<br>
+<p>🚀 <strong>내일의 한 문장:</strong></p>
+<p>다음 수업 시작 시, 튜터에게 오늘 배운 'mixed feelings'를 활용하여 최근의 감정을 표현해 보세요.</p>
+<p>"I have mixed feelings about [something that happened recently or an upcoming event]. I'm a bit excited, but also a little apprehensive."</p>
+<br>
+<br>
+<p><strong>[성과 지표]</strong></p>
+<br>
+<p><strong>유창성 점수 (Fluency Score): 7/10</strong></p>
+<br>
+<p><strong>근거:</strong> Joey는 다양한 주제에 대해 막힘없이 자신의 의견을 표현하며 대화를 이끌어가는 능력이 뛰어납니다. 문장 구조가 복잡해질 때도 주저하지 않고 말하려는 노력이 인상 깊습니다. 다만, 특정 표현이 다소 어색하거나 문법적인 오류가 유창성의 흐름을 아주 미세하게 방해하는 경우가 있었습니다. 특히 전치사 선택이나 관사 사용에서 조금 더 정확성을 기하면 훨씬 더 자연스러운 대화가 가능할 것입니다.</p>
+<br>
+<p><strong>다음 수업 '원포인트 액션 플랜':</strong></p>
+<p>다음 수업에서는 <strong>'전치사 (Prepositions)'</strong> 사용에 집중하여, 동사나 명사와의 자연스러운 연결을 연습해 보겠습니다. 예를 들어, 'depend on', 'good for', 'talk about' 등 자주 쓰이는 collocation들을 활용한 문장 만들기를 함께 해봐요.</p></div>
+        </div>
+        <div id="tab-transcript" class="tab-content">
+            <div class="transcript"><span class="student">[Student]</span> Hello, good morning teacher, good evening, hi.
+<span class="tutor">[Tutor]</span> Yeah, hi, how are you doing today?
+<span class="student">[Student]</span> Yes, it&#x27;s the new month, so it is a little hot and humid, but the sunshine is so nice, so I&#x27;m good. I&#x27;m doing good. How are you today?
+<span class="tutor">[Tutor]</span> Oh yeah, I&#x27;m good, thank you. Any plans for the new month?
+<span class="student">[Student]</span> New month. This month, I will go on a summer holiday, summer vacation. So I will go to China in the last week of this month with my family.
+<span class="tutor">[Tutor]</span> Okay, so planning to go to China soon.
+<span class="student">[Student]</span> Yes, yes, you&#x27;re right.
+<span class="tutor">[Tutor]</span> Mm-hmm. Are you getting excited for the trip?
+<span class="student">[Student]</span> Oh yes, a little exciting and a little bit upset because it is impossible to communicate in English or Korean. It is only possible to communicate in Chinese. So I&#x27;m a little upset. And this city is not a megacity. It is a middle-sized city. So, yeah, that is also a little concerning because Shanghai or Beijing is developed and has prosperity for travelers. But this city is a little middle-sized city, and they don&#x27;t have a system for travelers. Yeah, that&#x27;s also a little concerning, but I heard that that city is a beautiful and nice city for travelers. Yeah, I&#x27;m very excited. I have some mixed emotions.
+<span class="tutor">[Tutor]</span> Okay. So a little nervous, but also excited for the trip.
+<span class="student">[Student]</span> Yes, you&#x27;re right. It&#x27;s more simple.
+<span class="tutor">[Tutor]</span> So it looks like the textbook changed here. Do you want to go back to Snapchat, or did you want to look at the business practice?
+<span class="student">[Student]</span> Ah, yes, I will go. Yeah, I want to take a class, the Snapchat. That is section 22. This is how I express myself. And page, I&#x27;m not sure, 24?
+<span class="tutor">[Tutor]</span> Yeah. 24. So yeah, I&#x27;m trying to change it. It looks like something&#x27;s weird with your textbook. Yeah, so page 24.
+<span class="student">[Student]</span> Page 24, yeah, you&#x27;re right.
+<span class="tutor">[Tutor]</span> Sorry, trying to load it here.
+<span class="student">[Student]</span> Oh, yeah.
+<span class="tutor">[Tutor]</span> No problem. What&#x27;s a popular creative hobby in Korea?
+<span class="student">[Student]</span> Oh, in Korea. That is a little difficult to answer because we can&#x27;t generalize about hobbies per country. Usually, a hobby is for the personality. Yeah, so there are four kinds of hobbies: drawing, playing an instrument, DIY craft, and dance. Usually, Korean people like drawing and dance because these days, SNS has developed, so if you go outside on the street, you can see many dancers. Yeah, and they are dancing in the street and record their video and make a video and then upload it to SNS. So I think these days, drawing and dance are popular hobbies in our country.
+<span class="tutor">[Tutor]</span> Any hobbies that you would add to this list?
+<span class="student">[Student]</span> There are so many hobbies. And this is the creative hobby. These days, I make some videos and pictures because AI is developed, and everyone wants to possibly make their video or to make their image, to imagine. So yeah, that is also a creative hobby, making images or making videos and making singing songs. Yeah, it is about, it is connected to AI development.
+<span class="tutor">[Tutor]</span> Well, the AI does it. Any other hobbies that you can do that you&#x27;re able to do yourself?
+<span class="student">[Student]</span> Myself? I love to, that is not a creative hobby, but I love swimming and running and cycling and walking. Yeah, walking is the best these days because that is so slow and does not have a good effect on exercise. But these days, during a walk near the park, I control my mind. I reset. I turn off my brain. So, yeah, that has a good impact for doing the walk, walking on the street or near the park.
+<span class="tutor">[Tutor]</span> So it&#x27;s a good exercise? It has a good effect?
+<span class="student">[Student]</span> Ah, yes. I think it has so many good effects, but that is not good for exercise because they move slowly, not like running and jogging, swimming. So that doesn&#x27;t have a good effect on exercise. But I think it has a better, good effect on their mind.
+<span class="student">[Student]</span> They&#x27;ll control their mind, feel the happiness, and so on. So I love that.
+<span class="tutor">[Tutor]</span> So even though it&#x27;s not an effective exercise, it&#x27;s one you enjoy for your mind.
+<span class="student">[Student]</span> Yes, you&#x27;re right. You&#x27;re right.
+<span class="tutor">[Tutor]</span> So the next one, which do you prefer, which do you think is easier to get better at, and why? Playing music or doing crafts?
+<span class="student">[Student]</span> I see. I love to sing songs, and these days, many people play music in their private space or on the street because people are sad. As it&#x27;s developed, so many entertainers are playing music and singing songs and dancing outside. So it is easier to get better at, yeah, better than doing crafts. So I think playing music is better. And I don&#x27;t know if it is the same as singing a song or not, but singing songs are always possible. If I walk near the park, if I&#x27;m running, every place is possible to play the singing song. So it is easier to get better than doing crafts.
+<span class="tutor">[Tutor]</span> Is it easier to find lessons or schools or places where you can learn?
+<span class="student">[Student]</span> Yes, yes, these days. When I was young, it was a little hard to play music because instruments were only for certain people playing in this society. But nowadays, it is spread throughout society, and there are so many people playing instruments and singing songs. So yeah, it&#x27;s so nice. And doing craft is possible, like origami or some making products. But if I learn this skill, we can meet some expert people. So, I think it is more difficult to get better at. And teacher, I have a question. This question said, &quot;better at.&quot; Does that mean &quot;assess&quot;? What is that word meaning?
+<span class="tutor">[Tutor]</span> Better at doing something.
+<span class="student">[Student]</span> Doing something. Yeah.
+<span class="tutor">[Tutor]</span> I am better at swimming. I am better at running. So it&#x27;s a preposition.
+<span class="student">[Student]</span> Ah, yes. Better at. Okay. Just use the phrase &quot;better at playing music&quot; or &quot;better at doing craft,&quot; right?
+<span class="tutor">[Tutor]</span> Yeah, &quot;at doing something.&quot;
+<span class="student">[Student]</span> Doing something. Okay, good. Yeah, I understood.
+<span class="tutor">[Tutor]</span> And next we have the C, problem-solving. Would you like to read the situation?
+<span class="student">[Student]</span> Okay. You often get excited about a new hobby but lose interest quickly. Right now, you are really into the idea of pottery, but the equipment is expensive. You want to enjoy your hobby, but you don&#x27;t want to waste money again. Would you invest in everything now? Or start with a class to test it out? Why? Okay. My answer is to start with a class to test it out because pottery is such an intensive hobby. It needs the material of the clay and fire and devices, a chair and desk, and some equipment for pottery. So if I prepare that environment, I spend so much money, and my character also easily loses interest quickly. So first, I just take a class and try so many times and meet up with some expert people. And one month or two months or during the six months, if I enjoy that hobby, I start gathering some equipment, the small clay or small clay material or some device for the pottery. Yeah, because I understand. For example, these days I&#x27;m learning AI. And AI needs storage, needs a supercomputer. This computer needs a GPU and some nice GPU. So that leads to an expensive model of a notebook or laptop. So before you buy a laptop, I try to use another&#x27;s CPU or GPU because it&#x27;s possible to borrow. And then if it&#x27;s suitable and also it produces the work, I consider buying or not. So first, I just assess and meet the expert people and try and try again, and then I will decide.
+<span class="tutor">[Tutor]</span> So it&#x27;s something where you want to try in person first or borrow the tools.
+<span class="student">[Student]</span> Yes, you&#x27;re right. It is important to meet the people. Yeah, because those people have some knowledge of their experience. They also work in a similar way to me. So, for people who work this way, I just check their road. Oh, yeah. Yeah. Meet their people, to meet their people.
+<span class="tutor">[Tutor]</span> Yes. So people that could give you maybe advice on the hobby?
+<span class="student">[Student]</span> Yes, they give us some advice on devices or equipment or some efficient way or philosophy of their work, etc.
+<span class="tutor">[Tutor]</span> Have any friends introduced you to a hobby, or have you introduced any friends to a hobby?
+<span class="student">[Student]</span> If I go to the pool, I learn from other people to swim. And maybe 10 years ago, I learned from other people. So that is teaching some skill of swimming or learning the swimming skill. Yeah, usually if I go to the swimming pool or go to the beach, I will teach other guys the swimming skill. Because, yeah, I love that. Yeah, swimming and teaching, etc.
+<span class="tutor">[Tutor]</span> Okay, you&#x27;ll help out others. Getting into it, getting into the hobby.
+<span class="student">[Student]</span> Yes, you&#x27;re right.
+<span class="tutor">[Tutor]</span> So what&#x27;s a creative hobby you enjoy, and how did you start it?
+<span class="student">[Student]</span> Yes, a creative hobby. These days, I learn AI, and I study AI, MCP, or some connection of AI, and study AI. So these days, I make some programs. Yeah, for example, these days I make some applications for myself. I always check the festivals in my hometown because I stay weekends in my hometown. So every Friday, that AI develops every festival of my hometown and some nice restaurants and some good exhibitions of their museum or some art museum and gathers every information, and that application gives some information for me. So like this, I make some applications for myself. So I love that, and during that process, I made some images or some videos. Yeah, that is also nice work for myself. How about you? What&#x27;s your creative hobby or enjoy?
+<span class="tutor">[Tutor]</span> Drawing or sewing or crocheting.
+<span class="student">[Student]</span> Drawing, sewing, crocheting. Sewing, yeah. Sewing? Could you explain more? Sewing, yeah.
+<span class="tutor">[Tutor]</span> Sewing clothes, like with a needle and thread.
+<span class="student">[Student]</span> I see. S-E-W, sewing. S-E-W.
+<span class="tutor">[Tutor]</span> To sew.
+<span class="student">[Student]</span> To sew. Could you explain more? I can understand perfectly.
+<span class="tutor">[Tutor]</span> Making clothes. A needle and thread putting clothes together. Sewing.
+<span class="student">[Student]</span> I&#x27;m making clothes. Okay. I&#x27;m making clothes. Like a sewing machine. So sewing machine. Yeah.
+<span class="tutor">[Tutor]</span> So you make clothing, you make outfits.
+<span class="student">[Student]</span> That is the like the fashion as part of passion or making clothes. So just sewing clothing. Yeah, so fashion. Passion for fashion.
+<span class="tutor">[Tutor]</span> Okay. I will send you corrections here in just a bit. Have a great day.
+<span class="student">[Student]</span> Oh, you too. Bye-bye, teacher.
+<span class="tutor">[Tutor]</span> Thanks. Bye.</div>
+        </div>
+    </div>
+    <div class="toast" id="toast">✅ 프롬프트가 복사되었습니다!</div>
+    <script>
+        const REVIEW_PROMPT="너는 나의 영어 회화 복습 파트너야. 오늘 내 전화영어 수업 내용을 기반으로 대화하면서 복습을 도와줘.\n\n[오늘 수업 전사 내용]\n[Student] Hello, good morning teacher, good evening, hi.\n[Tutor] Yeah, hi, how are you doing today?\n[Student] Yes, it's the new month, so it is a little hot and humid, but the sunshine is so nice, so I'm good. I'm doing good. How are you today?\n[Tutor] Oh yeah, I'm good, thank you. Any plans for the new month?\n[Student] New month. This month, I will go on a summer holiday, summer vacation. So I will go to China in the last week of this month with my family.\n[Tutor] Okay, so planning to go to China soon.\n[Student] Yes, yes, you're right.\n[Tutor] Mm-hmm. Are you getting excited for the trip?\n[Student] Oh yes, a little exciting and a little bit upset because it is impossible to communicate in English or Korean. It is only possible to communicate in Chinese. So I'm a little upset. And this city is not a megacity. It is a middle-sized city. So, yeah, that is also a little concerning because Shanghai or Beijing is developed and has prosperity for travelers. But this city is a little middle-sized city, and they don't have a system for travelers. Yeah, that's also a little concerning, but I heard that that city is a beautiful and nice city for travelers. Yeah, I'm very excited. I have some mixed emotions.\n[Tutor] Okay. So a little nervous, but also excited for the trip.\n[Student] Yes, you're right. It's more simple.\n[Tutor] So it looks like the textbook changed here. Do you want to go back to Snapchat, or did you want to look at the business practice?\n[Student] Ah, yes, I will go. Yeah, I want to take a class, the Snapchat. That is section 22. This is how I express myself. And page, I'm not sure, 24?\n[Tutor] Yeah. 24. So yeah, I'm trying to change it. It looks like something's weird with your textbook. Yeah, so page 24.\n[Student] Page 24, yeah, you're right.\n[Tutor] Sorry, trying to load it here.\n[Student] Oh, yeah.\n[Tutor] No problem. What's a popular creative hobby in Korea?\n[Student] Oh, in Korea. That is a little difficult to answer because we can't generalize about hobbies per country. Usually, a hobby is for the personality. Yeah, so there are four kinds of hobbies: drawing, playing an instrument, DIY craft, and dance. Usually, Korean people like drawing and dance because these days, SNS has developed, so if you go outside on the street, you can see many dancers. Yeah, and they are dancing in the street and record their video and make a video and then upload it to SNS. So I think these days, drawing and dance are popular hobbies in our country.\n[Tutor] Any hobbies that you would add to this list?\n[Student] There are so many hobbies. And this is the creative hobby. These days, I make some videos and pictures because AI is developed, and everyone wants to possibly make their video or to make their image, to imagine. So yeah, that is also a creative hobby, making images or making videos and making singing songs. Yeah, it is about, it is connected to AI development.\n[Tutor] Well, the AI does it. Any other hobbies that you can do that you're able to do yourself?\n[Student] Myself? I love to, that is not a creative hobby, but I love swimming and running and cycling and walking. Yeah, walking is the best these days because that is so slow and does not have a good effect on exercise. But these days, during a walk near the park, I control my mind. I reset. I turn off my brain. So, yeah, that has a good impact for doing the walk, walking on the street or near the park.\n[Tutor] So it's a good exercise? It has a good effect?\n[Student] Ah, yes. I think it has so many good effects, but that is not good for exercise because they move slowly, not like running and jogging, swimming. So that doesn't have a good effect on exercise. But I think it has a better, good effect on their mind.\n[Student] They'll control their mind, feel the happiness, and so on. So I love that.\n[Tutor] So even though it's not an effective exercise, it's one you enjoy for your mind.\n[Student] Yes, you're right. You're right.\n[Tutor] So the next one, which do you prefer, which do you think is easier to get better at, and why? Playing music or doing crafts?\n[Student] I see. I love to sing songs, and these days, many people play music in their private space or on the street because people are sad. As it's developed, so many entertainers are playing music and singing songs and dancing outside. So it is easier to get better at, yeah, better than doing crafts. So I think playing music is better. And I don't know if it is the same as singing a song or not, but singing songs are always possible. If I walk near the park, if I'm running, every place is possible to play the singing song. So it is easier to get better than doing crafts.\n[Tutor] Is it easier to find lessons or schools or places where you can learn?\n[Student] Yes, yes, these days. When I was young, it was a little hard to play music because instruments were only for certain people playing in this society. But nowadays, it is spread throughout society, and there are so many people playing instruments and singing songs. So yeah, it's so nice. And doing craft is possible, like origami or some making products. But if I learn this skill, we can meet some expert people. So, I think it is more difficult to get better at. And teacher, I have a question. This question said, \"better at.\" Does that mean \"assess\"? What is that word meaning?\n[Tutor] Better at doing something.\n[Student] Doing something. Yeah.\n[Tutor] I am better at swimming. I am better at running. So it's a preposition.\n[Student] Ah, yes. Better at. Okay. Just use the phrase \"better at playing music\" or \"better at doing craft,\" right?\n[Tutor] Yeah, \"at doing something.\"\n[Student] Doing something. Okay, good. Yeah, I understood.\n[Tutor] And next we have the C, problem-solving. Would you like to read the situation?\n[Student] Okay. You often get excited about a new hobby but lose interest quickly. Right now, you are really into the idea of pottery, but the equipment is expensive. You want to enjoy your hobby, but you don't want to waste money again. Would you invest in everything now? Or start with a class to test it out? Why? Okay. My answer is to start with a class to test it out because pottery is such an intensive hobby. It needs the material of the clay and fire and devices, a chair and desk, and some equipment for pottery. So if I prepare that environment, I spend so much money, and my character also easily loses interest quickly. So first, I just take a class and try so many times and meet up with some expert people. And one month or two months or during the six months, if I enjoy that hobby, I start gathering some equipment, the small clay or small clay material or some device for the pottery. Yeah, because I understand. For example, these days I'm learning AI. And AI needs storage, needs a supercomputer. This computer needs a GPU and some nice GPU. So that leads to an expensive model of a notebook or laptop. So before you buy a laptop, I try to use another's CPU or GPU because it's possible to borrow. And then if it's suitable and also it produces the work, I consider buying or not. So first, I just assess and meet the expert people and try and try again, and then I will decide.\n[Tutor] So it's something where you want to try in person first or borrow the tools.\n[Student] Yes, you're right. It is important to meet the people. Yeah, because those people have some knowledge of their experience. They also work in a similar way to me. So, for people who work this way, I just check their road. Oh, yeah. Yeah. Meet their people, to meet their people.\n[Tutor] Yes. So people that could give you maybe advice on the hobby?\n[Student] Yes, they give us some advice on devices or equipment or some efficient way or philosophy of their work, etc.\n[Tutor] Have any friends introduced you to a hobby, or have you introduced any friends to a hobby?\n[Student] If I go to the pool, I learn from other people to swim. And maybe 10 years ago, I learned from other people. So that is teaching some skill of swimming or learning the swimming skill. Yeah, usually if I go to the swimming pool or go to the beach, I will teach other guys the swimming skill. Because, yeah, I love that. Yeah, swimming and teaching, etc.\n[Tutor] Okay, you'll help out others. Getting into it, getting into the hobby.\n[Student] Yes, you're right.\n[Tutor] So what's a creative hobby you enjoy, and how did you start it?\n[Student] Yes, a creative hobby. These days, I learn AI, and I study AI, MCP, or some connection of AI, and study AI. So these days, I make some programs. Yeah, for example, these days I make some applications for myself. I always check the festivals in my hometown because I stay weekends in my hometown. So every Friday, that AI develops every festival of my hometown and some nice restaurants and some good exhibitions of their museum or some art museum and gathers every information, and that application gives some information for me. So like this, I make some applications for myself. So I love that, and during that process, I made some images or some videos. Yeah, that is also nice work for myself. How about you? What's your creative hobby or enjoy?\n[Tutor] Drawing or sewing or crocheting.\n[Student] Drawing, sewing, crocheting. Sewing, yeah. Sewing? Could you explain more? Sewing, yeah.\n[Tutor] Sewing clothes, like with a needle and thread.\n[Student] I see. S-E-W, sewing. S-E-W.\n[Tutor] To sew.\n[Student] To sew. Could you explain more? I can understand perfectly.\n[Tutor] Making clothes. A needle and thread putting clothes together. Sewing.\n[Student] I'm making clothes. Okay. I'm making clothes. Like a sewing machine. So sewing machine. Yeah.\n[Tutor] So you make clothing, you make outfits.\n[Student] That is the like the fashion as part of passion or making clothes. So just sewing clothing. Yeah, so fashion. Passion for fashion.\n[Tutor] Okay. I will send you corrections here in just a bit. Have a great day.\n[Student] Oh, you too. Bye-bye, teacher.\n[Tutor] Thanks. Bye.\n\n[AI 피드백]\nJoey, 안녕하세요! 오늘 아침도 활기차게 시작하셨네요. 중국 여행 계획부터 AI를 활용한 취미까지, 정말 다채로운 이야기를 나눴습니다. 특히 걷기 운동이 몸에는 느리지만 마음을 다스리는 데 큰 도움이 된다는 이야기가 인상 깊었어요. Joey의 자기 성찰적인 면모를 엿볼 수 있었습니다.\n\n---\n\n### 0. 📌 Topic\nTopic: Discussing summer vacation plans, creative hobbies, and the benefits of walking.\n\n### 1. 📊 오늘의 대화 요약 (Summary)\n오늘은 Joey의 여름 중국 여행 계획에 대한 이야기로 시작하여, 여행지에서의 언어 소통 문제와 기대감에 대해 나눴습니다. 이어서 한국의 인기 있는 창의적 취미와 Joey가 즐기는 AI 기반 취미 활동, 그리고 걷기 운동이 정신 건강에 미치는 긍정적인 영향에 대해 깊이 있는 대화를 이어갔습니다.\n\n### 2. 💬 유창성 업그레이드 (Fluency & Natural Flow)\n\nJoey가 말한 문장 중, 의미는 잘 전달되었지만 원어민이 들었을 때 조금 더 자연스럽게 들릴 수 있는 표현들을 살펴볼게요.\n\n1.  **❌ 학습자 원문 (As Said):** \"a little exciting and a little bit upset\"\n    *   **✅ 자연스러운 표현 (Natural):** \"a little excited and a little bit upset\"\n    *   **💎 비즈니스 표현 (Professional):** \"I have mixed feelings, feeling both excited and slightly apprehensive.\"\n    *   **💡 코칭 포인트:** Using the past participle 'excited' (adjective) describes a feeling, whereas 'exciting' (present participle) describes something that causes excitement.\n        → 과거분사 'excited'(형용사)는 감정을 나타내는 반면, 현재분사 'exciting'은 흥분을 유발하는 대상을 묘사합니다.\n\n2.  **❌ 학습자 원문 (As Said):** \"we can't generalize about hobbies per country.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"we can't generalize hobbies by country.\"\n    *   **💎 비즈니스 표현 (Professional):** \"It's challenging to categorize hobbies based solely on nationality.\"\n    *   **💡 코칭 포인트:** 'By country' is a more common and natural prepositional phrase when discussing generalization across different countries.\n        → 'By country'는 여러 국가에 걸친 일반화를 논할 때 더 흔하고 자연스러운 전치사구입니다.\n\n3.  **❌ 학습자 원문 (As Said):** \"every place is possible to play the singing song.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"I can sing songs anywhere.\"\n    *   **💎 비즈니스 표현 (Professional):** \"The versatility of singing allows for practice in any environment.\"\n    *   **💡 코칭 포인트:** 'It is possible to do X'는 문법적으로 맞지만 다소 딱딱하게 들릴 수 있습니다. 'I can' 또는 'You can'으로 다시 표현하면 문장이 더 직접적이고 자연스러워집니다. 또한 'the singing song'은 불필요한 표현이며, 'singing songs' 또는 'singing'으로 충분합니다.\n        → 'It is possible to do X'는 문법적으로 맞지만 다소 딱딱하게 들릴 수 있습니다. 'I can' 또는 'You can'으로 다시 표현하면 문장이 더 직접적이고 자연스러워집니다. 또한 'the singing song'은 불필요한 표현이며, 'singing songs' 또는 'singing'으로 충분합니다.\n\n### 3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)\n\nCategory: **Article Usage (a/an/the)**\n\nJoey는 명사 앞에 관사(a/an/the)를 사용할 때 종종 혼동하는 경향이 있습니다. 특히 일반적인 개념이나 복수 명사 앞에서 불필요하게 'the'를 사용하거나, 특정하지 않은 명사 앞에 'a'를 빠뜨리는 경우가 보였습니다.\n\n| ❌ 원문 (As Said)                                                               | ✅ 교정 예시 (Corrected)                                                                    |\n| :----------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------- |\n| \"a hobby is for **the** personality.\"                                         | \"hobbies depend on **personality**.\" (또는 \"a hobby is a reflection of **one's personality**.\") |\n| \"these days, **SNS** has developed\"                                            | \"these days, **the internet/social media** has developed\" (또는 \"these days, **SNS** has developed\" - SNS 자체는 고유명사처럼 쓰이기도 함) |\n| \"I start gathering some equipment, **the small clay** or small clay material\" | \"I start gathering some equipment, like **some small clay** or clay material\"             |\n| \"AI needs storage, needs **a** supercomputer.\"                                 | \"AI needs storage, needs **supercomputers**.\" (또는 \"AI needs storage, needs **a powerful computer**.\") |\n\n📌 **핵심 규칙:** 'The'는 특정하거나 이미 언급된 명사 앞에 사용하고, 일반적인 개념이나 셀 수 없는 명사 앞에는 보통 사용하지 않습니다. 'A/an'은 처음 언급되거나 불특정한 단수 명사 앞에 사용합니다.\n\n🔁 **따라 읽기:**\n🗣️ \"Hobbies depend on personality.\"\n🗣️ \"These days, social media has developed.\"\n🗣️ \"I start gathering some equipment, like some small clay.\"\n\n### 4. 📗 어휘 확장 (Vocabulary Vault)\n\n오늘 대화에서 유용하게 쓰일 수 있는 어휘들을 정리해 보았습니다.\n\n1.  **apprehensive** /ˌæprɪˈhɛnsɪv/ (형용사)\n    *   뜻: 걱정하는, 염려하는\n    *   실전 예문: I'm a bit **apprehensive** about the upcoming market volatility.\n\n2.  **infrastructure** /ˈɪnfrəˌstrʌktʃər/ (명사)\n    *   뜻: 사회 기반 시설 (도로, 통신망 등)\n    *   실전 예문: Investing in robust digital **infrastructure** is crucial for our long-term growth.\n\n3.  **versatility** /ˌvɜːrsəˈtɪləti/ (명사)\n    *   뜻: 다용도성, 다재다능함\n    *   실전 예문: The **versatility** of this new software allows for various applications across departments.\n\n4.  **intensive** /ɪnˈtɛnsɪv/ (형용사)\n    *   뜻: 집중적인, 많은 노력을 요하는\n    *   실전 예문: This project requires an **intensive** analysis of market trends and competitor strategies.\n\n5.  **volatility** /ˌvɑːləˈtɪləti/ (명사)\n    *   뜻: 변동성, 불안정성\n    *   실전 예문: We need a risk management plan to mitigate the **volatility** of energy prices.\n\n### 5. 📝 실전 복습 챌린지 (Practice)\n\n오늘 배운 표현과 문법을 활용하여 영작 연습을 해볼까요?\n\n1.  **상황:** 새로운 프로젝트를 시작하게 되어 기대되지만, 동시에 성공적으로 해낼 수 있을지 조금 걱정됩니다.\n    *   **영작:** (기대와 걱정이 섞인 감정을 표현해 보세요.)\n    *   **모범 답안:** I have mixed feelings about starting the new project; I'm excited but also a little apprehensive about its success.\n\n2.  **상황:** 우리 회사는 특정 시장에만 의존해서는 안 됩니다. 다양한 시장으로 사업을 확장해야 합니다.\n    *   **영작:** (일반화의 위험성을 피하고, 사업 확장의 필요성을 강조해 보세요.)\n    *   **모범 답안:** We shouldn't generalize our business strategy by relying on a single market; we need to diversify.\n\n3.  **상황:** 이 새로운 AI 시스템은 엄청난 양의 데이터 저장 공간과 강력한 처리 능력을 필요로 합니다.\n    *   **영작:** (AI 시스템의 요구 사항을 정확하게 설명해 보세요. 관사 사용에 유의하세요.)\n    *   **모범 답안:** This new AI system requires significant data storage and powerful processing capabilities.\n\n### 6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)\n\n✨ **Good Job:**\n\"I think it has so many good effects, but that is not good for exercise because they move slowly, not like running and jogging, swimming. So that doesn't have a good effect on exercise. But I think it has a better, good effect on their mind.\"\nJoey, 이 문장은 걷기 운동의 장단점을 아주 명확하게 설명했습니다. 특히 \"not good for exercise\"와 \"better, good effect on their mind\"를 대비시켜 자신의 생각을 논리적으로 전달하는 능력이 돋보였습니다. 'so many good effects'와 'better, good effect'의 반복은 약간 어색했지만, 의미 전달에는 전혀 문제가 없었습니다. 훌륭해요!\n\n🚀 **내일의 한 문장:**\n다음 수업 시작 시, 튜터에게 오늘 배운 'mixed feelings'를 활용하여 최근의 감정을 표현해 보세요.\n\"I have mixed feelings about [something that happened recently or an upcoming event]. I'm a bit excited, but also a little apprehensive.\"\n\n---\n\n**[성과 지표]**\n\n**유창성 점수 (Fluency Score): 7/10**\n\n**근거:** Joey는 다양한 주제에 대해 막힘없이 자신의 의견을 표현하며 대화를 이끌어가는 능력이 뛰어납니다. 문장 구조가 복잡해질 때도 주저하지 않고 말하려는 노력이 인상 깊습니다. 다만, 특정 표현이 다소 어색하거나 문법적인 오류가 유창성의 흐름을 아주 미세하게 방해하는 경우가 있었습니다. 특히 전치사 선택이나 관사 사용에서 조금 더 정확성을 기하면 훨씬 더 자연스러운 대화가 가능할 것입니다.\n\n**다음 수업 '원포인트 액션 플랜':**\n다음 수업에서는 **'전치사 (Prepositions)'** 사용에 집중하여, 동사나 명사와의 자연스러운 연결을 연습해 보겠습니다. 예를 들어, 'depend on', 'good for', 'talk about' 등 자주 쓰이는 collocation들을 활용한 문장 만들기를 함께 해봐요.\n\n위 내용을 바탕으로:\n1. 먼저 오늘 수업에서 내가 틀렸거나 어색했던 표현을 하나 골라서, 관련된 상황을 영어로 질문해줘.\n2. 내가 영어로 대답하면, 자연스러운지 확인하고 더 나은 표현이 있으면 알려줘.\n3. 특히 \"반복 실수 패턴\"에서 지적된 부분을 집중적으로 연습시켜줘.\n4. 이런 식으로 오늘 배운 표현들을 하나씩 복습하자.\n5. 한국어 설명은 필요할 때만 간단히, 대화는 최대한 영어로 진행해줘.\n\n그럼 시작하자!";
+        function startReview(){navigator.clipboard.writeText(REVIEW_PROMPT).then(()=>{showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)}).catch(()=>{const t=document.createElement('textarea');t.value=REVIEW_PROMPT;document.body.appendChild(t);t.select();document.execCommand('copy');document.body.removeChild(t);showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)})}
+        function showToast(){const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500)}
+        function switchTab(n){document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',n==='feedback'?i===0:i===1));document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));document.getElementById('tab-'+n).classList.add('active')}
+    </script>
+</body>
+</html>
