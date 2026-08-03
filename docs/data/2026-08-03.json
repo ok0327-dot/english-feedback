@@ -1,0 +1,53 @@
+{
+ "date": "2026-08-03",
+ "iso": [
+  2026,
+  32
+ ],
+ "topic": "Discussing summer vacation plans, creative hobbies, and the benefits of walking.",
+ "grammar": "Article Usage",
+ "grammar_norm": "Articles (a/an/the)",
+ "score": null,
+ "pairs": [
+  {
+   "said": "a little exciting and a little bit upset",
+   "natural": "a little excited and a little bit upset"
+  },
+  {
+   "said": "we can't generalize about hobbies per country.",
+   "natural": "we can't generalize hobbies by country."
+  },
+  {
+   "said": "every place is possible to play the singing song.",
+   "natural": "I can sing songs anywhere."
+  }
+ ],
+ "vocab": [
+  {
+   "word": "apprehensive",
+   "pos": "형용사",
+   "meaning": "걱정하는, 염려하는"
+  },
+  {
+   "word": "infrastructure",
+   "pos": "명사",
+   "meaning": "사회 기반 시설 (도로, 통신망 등)"
+  },
+  {
+   "word": "versatility",
+   "pos": "명사",
+   "meaning": "다용도성, 다재다능함"
+  },
+  {
+   "word": "intensive",
+   "pos": "형용사",
+   "meaning": "집중적인, 많은 노력을 요하는"
+  },
+  {
+   "word": "volatility",
+   "pos": "명사",
+   "meaning": "변동성, 불안정성"
+  }
+ ],
+ "_html_md5": "5c932b714571f102a8c1c8b4d8361df4"
+}
