@@ -1,0 +1,53 @@
+{
+ "date": "2026-08-04",
+ "iso": [
+  2026,
+  32
+ ],
+ "topic": "Discussing outdoor activities and seasonal preferences in Korea.",
+ "grammar": "Verb Forms and Tenses",
+ "grammar_norm": "Verb Forms / Auxiliaries",
+ "score": 7.0,
+ "pairs": [
+  {
+   "said": "How about my opinion?",
+   "natural": "How about my suggestion?"
+  },
+  {
+   "said": "it is more adapt to outdoor activity to summer",
+   "natural": "Summer is more suitable for outdoor activities."
+  },
+  {
+   "said": "just I find some close CVS or Olive Young and then just buying them",
+   "natural": "I'd just find a nearby CVS or Olive Young and buy some."
+  }
+ ],
+ "vocab": [
+  {
+   "word": "terrain",
+   "pos": "명사",
+   "meaning": "지형, 지역"
+  },
+  {
+   "word": "conducive",
+   "pos": "형용사",
+   "meaning": "~에 좋은, 도움이 되는"
+  },
+  {
+   "word": "procure",
+   "pos": "동사",
+   "meaning": "(어렵게) 얻다, 조달하다"
+  },
+  {
+   "word": "deteriorate",
+   "pos": "동사",
+   "meaning": "악화되다, 나빠지다"
+  },
+  {
+   "word": "resilience",
+   "pos": "명사",
+   "meaning": "회복력, 탄력성"
+  }
+ ],
+ "_html_md5": "502ad7a4c6a7cdad0a21a40861005f0f"
+}

@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#0f0f13"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="당근영어"><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="icon" type="image/png" sizes="192x192" href="icon-192.png"><script src="install-banner.js" defer></script><script src="sw-reg.js" defer></script>
+    <title>전화영어 복습 - 2026년 08월 04일</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Noto Sans KR',sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.75;min-height:100vh}
+        .header{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);border-bottom:1px solid rgba(255,255,255,.06);padding:48px 24px 40px;text-align:center}
+        .header-date{font-size:13px;color:#94a3b8;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+        .header h1{font-size:28px;font-weight:700;color:#f1f5f9;margin-bottom:16px}
+        .header-meta{display:flex;justify-content:center;gap:24px;font-size:14px;color:#64748b}
+        .header-meta span{display:flex;align-items:center;gap:6px}
+        .cta-section{text-align:center;padding:40px 24px}
+        .cta-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:linear-gradient(135deg,#38bdf8,#818cf8);color:#fff;font-size:16px;font-weight:600;font-family:'Noto Sans KR',sans-serif;border:none;border-radius:50px;cursor:pointer;transition:all .3s;text-decoration:none;box-shadow:0 4px 24px rgba(56,189,248,.25)}
+        .cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(56,189,248,.35)}
+        .cta-btn svg{width:20px;height:20px}
+        .cta-sub{margin-top:12px;font-size:13px;color:#64748b}
+        .toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#38bdf8;padding:14px 28px;border-radius:12px;font-size:14px;font-weight:500;border:1px solid rgba(56,189,248,.2);box-shadow:0 8px 32px rgba(0,0,0,.4);opacity:0;transition:all .4s cubic-bezier(.16,1,.3,1);z-index:1000}
+        .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+        .container{max-width:720px;margin:0 auto;padding:0 24px 80px}
+        .tabs{display:flex;gap:4px;background:#1a1a24;padding:4px;border-radius:12px;margin-bottom:32px}
+        .tab{flex:1;padding:12px;text-align:center;font-size:14px;font-weight:500;color:#64748b;background:0 0;border:none;border-radius:8px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all .2s}
+        .tab.active{background:#262636;color:#f1f5f9}
+        .tab-content{display:none}.tab-content.active{display:block}
+        .feedback h2{font-size:18px;font-weight:700;color:#f1f5f9;margin:36px 0 16px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.06)}
+        .feedback h2:first-child{margin-top:0}
+        .feedback p{margin:8px 0;color:#cbd5e1}
+        .feedback .item{padding:6px 0 6px 16px;border-left:2px solid #334155;margin:6px 0;color:#cbd5e1}
+        .feedback .numbered{padding:8px 0 8px 16px;color:#cbd5e1}
+        .feedback .numbered strong{color:#38bdf8}
+        .feedback strong{color:#f1f5f9}
+        .feedback code{background:#1e293b;padding:2px 8px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#38bdf8}
+        .feedback table{width:100%;border-collapse:collapse;margin:12px 0}
+        .feedback th,.feedback td{padding:10px 14px;text-align:left;border-bottom:1px solid #262636}
+        .feedback th{color:#94a3b8;font-weight:500;font-size:13px}
+        .feedback td{color:#cbd5e1}
+        .arrow{color:#38bdf8;font-weight:700}
+        .transcript{background:#1a1a24;border-radius:12px;padding:28px;font-size:14px;line-height:2;color:#94a3b8;white-space:pre-wrap;word-break:break-word;font-family:'JetBrains Mono','Noto Sans KR',monospace}
+        .transcript .tutor{color:#38bdf8}
+        .transcript .student{color:#a78bfa}
+        @media(max-width:640px){.header{padding:32px 16px}.header h1{font-size:22px}.cta-btn{padding:14px 28px;font-size:15px}.container{padding:0 16px 60px}}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-date">2026년 08월 04일</div>
+        <h1>📚 전화영어 복습</h1>
+        <div class="header-meta">
+            <span>⏱ 19분 45초</span>
+            <span>🎙 전화영어_025180304_20260804080020.m4a</span>
+        </div>
+    </div>
+    <div class="cta-section">
+        <button class="cta-btn" onclick="startReview()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Gemini에서 복습 대화 시작하기
+        </button>
+        <div class="cta-sub">클릭하면 프롬프트가 복사되고 Gemini가 열립니다</div>
+    </div>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('feedback')">📋 AI 피드백</button>
+            <button class="tab" onclick="switchTab('transcript')">🎙 수업 전사</button>
+        </div>
+        <div id="tab-feedback" class="tab-content active">
+            <div class="feedback"><p>Joey, 안녕하세요! 오늘 수업에서 보여주신 적극적인 참여와 영어로 소통하려는 노력에 정말 감동했습니다. 특히 수업 진행 방식에 대한 좋은 의견을 주셔서 더욱 알찬 시간을 만들 수 있었어요. 발음 연습도 열심히 따라와 주시고, 다양한 아웃도어 활동에 대한 흥미로운 한국의 상황을 공유해 주셔서 저도 많이 배웠습니다.</p>
+<br>
+<br>
+<p><strong>0. 📌 Topic</strong></p>
+<p>Topic: Discussing outdoor activities and seasonal preferences in Korea.</p>
+<br>
+<br>
+<p><strong>1. 📊 오늘의 대화 요약 (Summary)</strong></p>
+<p>오늘 Joey는 한국에서 인기 있는 야외 활동과 계절별 선호 활동에 대해 이야기했습니다. 특히 한국의 산악 지형이 하이킹에 적합하다는 점, 그리고 젊은 세대 사이에서 골프, 테니스에서 달리기로 트렌드가 변화하고 있다는 점을 공유해 주셨습니다. 또한 여름과 겨울 중 어떤 계절이 야외 활동에 더 적합한지에 대한 의견도 나누었습니다.</p>
+<br>
+<br>
+<p><strong>2. 💬 유창성 업그레이드 (Fluency & Natural Flow)</strong></p>
+<p>Joey가 의미는 잘 전달했지만, 원어민이 들었을 때 좀 더 자연스럽게 들릴 수 있는 표현들을 함께 살펴볼까요?</p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>❌ 학습자 원문 (As Said):</strong> "How about my opinion?"</div>
+<div class="item"><strong>✅ 자연스러운 표현 (Natural):</strong> "How about my suggestion?" or "What do you think of my idea?"</div>
+<div class="item"><strong>💎 비즈니스 표현 (Professional):</strong> "I'd like to propose an alternative approach."</div>
+<div class="item"><strong>💡 코칭 포인트:</strong> Using "my opinion" is grammatically correct but "my suggestion" or "my idea" sounds more natural when you're proposing a change to a plan. "What do you think of my idea?" is also a great way to ask for feedback on your proposal.</div>
+<p><span class="arrow">→</span> "my opinion"도 문법적으로 맞지만, 계획 변경을 제안할 때는 "my suggestion"이나 "my idea"가 더 자연스럽습니다. "What do you think of my idea?"는 제안에 대한 피드백을 요청할 때 아주 좋은 표현입니다.</p>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>❌ 학습자 원문 (As Said):</strong> "it is more adapt to outdoor activity to summer"</div>
+<div class="item"><strong>✅ 자연스러운 표현 (Natural):</strong> "Summer is more suitable for outdoor activities."</div>
+<div class="item"><strong>💎 비즈니스 표현 (Professional)::</strong> "Summer offers more conducive conditions for outdoor pursuits."</div>
+<div class="item"><strong>💡 코칭 포인트:</strong> "Adapt"는 주로 '적응하다'라는 동사로 쓰입니다. 어떤 것이 목적에 적합하거나 잘 맞는다고 설명할 때는 "suitable for" 또는 "well-suited for"가 더 자연스럽습니다. 또한 "to summer" 대신 "in summer" 또는 "during summer"를 사용해야 합니다.</div>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>❌ 학습자 원문 (As Said):</strong> "just I find some close CVS or Olive Young and then just buying them"</div>
+<div class="item"><strong>✅ 자연스러운 표현 (Natural):</strong> "I'd just find a nearby CVS or Olive Young and buy some."</div>
+<div class="item"><strong>💎 비즈니스 표현 (Professional):</strong> "In such a scenario, I would locate a proximate convenience store or pharmacy to procure the necessary items."</div>
+<div class="item"><strong>💡 코칭 포인트:</strong> 가상의 행동에 대해 말할 때는 종종 "I would" (또는 "I'd")를 사용합니다. 또한 "close"도 괜찮지만, "nearby"는 근접성을 설명할 때 매우 흔하고 자연스러운 대안입니다. "buying them"은 문맥에 따라 "buy some" 또는 "buy it"으로 쓰는 것이 좋습니다.</div>
+<br>
+<br>
+<p><strong>3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)</strong></p>
+<p>이번 수업에서 Joey가 반복적으로 사용한 문법 패턴 중 <strong>동사 형태와 시제</strong>에 대해 집중적으로 살펴보겠습니다. 특히 현재 시제에서 주어와 동사의 일치, 그리고 동사 대신 명사를 사용하는 경향이 보였습니다.</p>
+<br>
+<p><strong>Category: Verb Forms and Tenses</strong></p>
+<br>
+<table>
+<tr><th>❌ 원문 (As Said)</th><th>✅ 교정 예시 (Corrected)</th></tr>
+<tr><td>"our country is the have a rough terrain."</td><td>"Our country <strong>has</strong> rough terrain."</td></tr>
+<tr><td>"Almost terrain is the, the 70% is the mountains."</td><td>"Almost <strong>70% of our terrain is</strong> mountains."</td></tr>
+<tr><td>"But the young generation, it is different."</td><td>"But the young generation <strong>is</strong> different."</td></tr>
+<tr><td>"But that is the move, the tennis."</td><td>"But that <strong>has moved on to</strong> tennis." (또는 "But that <strong>trend has shifted to</strong> tennis.")</td></tr>
+<tr><td>"And then nowadays, the most popular outdoor activity is running from young generation."</td><td>"And nowadays, running <strong>is</strong> the most popular outdoor activity among the young generation."</td></tr>
+<tr><td>"So it is impossible to move in a mountain."</td><td>"So it is impossible to <strong>hike</strong> in a mountain." (또는 "So it is impossible to <strong>move around</strong> in the mountains.")</td></tr>
+<tr><td>"the environment is corrupt."</td><td>"the environment <strong>has been corrupted</strong>." (또는 "the environment <strong>is deteriorating</strong>.")</td></tr>
+<tr><td>"mosquito is the good environment or some nature."</td><td>"mosquitoes <strong>are good for</strong> the environment or nature."</td></tr>
+</table>
+<br>
+<p>📌 <strong>핵심 규칙:</strong> 주어에 맞는 올바른 동사 형태와 시제를 사용하고, 문맥에 따라 동사를 정확하게 선택해야 합니다. 특히 현재 시제에서 3인칭 단수 주어 뒤에는 동사에 '-s'를 붙이는 것을 기억하고, 'be' 동사 뒤에 다른 동사가 올 때는 적절한 연결(예: 'have' 대신 'has', 'is' + 동명사 등)이 필요합니다.</p>
+<br>
+<p>🔁 <strong>따라 읽기:</strong></p>
+<p>🗣️ "Our country has rough terrain."</p>
+<p>🗣️ "Almost 70% of our terrain is mountains."</p>
+<p>🗣️ "Running is the most popular outdoor activity among the young generation."</p>
+<br>
+<br>
+<p><strong>4. 📗 어휘 확장 (Vocabulary Vault)</strong></p>
+<p>Joey의 비즈니스 환경과 자기계발 관심사를 고려하여 유용한 어휘 5개를 제안합니다.</p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>terrain</strong> /təˈreɪn/ (명사)</div>
+<div class="item">뜻: 지형, 지역</div>
+<div class="item">실전 예문: Our new project requires careful consideration of the local <strong>terrain</strong> for infrastructure development.</div>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>conducive</strong> /kənˈduːsɪv/ (형용사)</div>
+<div class="item">뜻: ~에 좋은, 도움이 되는</div>
+<div class="item">실전 예문: Creating a quiet workspace is <strong>conducive</strong> to higher productivity.</div>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>procure</strong> /prəˈkjʊər/ (동사)</div>
+<div class="item">뜻: (어렵게) 얻다, 조달하다</div>
+<div class="item">실전 예문: We need to <strong>procure</strong> raw materials from a new supplier to reduce costs.</div>
+<br>
+<div class="numbered"><strong>4.</strong> <strong>deteriorate</strong> /dɪˈtɪəriəreɪt/ (동사)</div>
+<div class="item">뜻: 악화되다, 나빠지다</div>
+<div class="item">실전 예문: The market conditions started to <strong>deteriorate</strong> last quarter, impacting our investment portfolio.</div>
+<br>
+<div class="numbered"><strong>5.</strong> <strong>resilience</strong> /rɪˈzɪliəns/ (명사)</div>
+<div class="item">뜻: 회복력, 탄력성</div>
+<div class="item">실전 예문: The company's financial <strong>resilience</strong> allowed us to navigate the recent economic downturn successfully.</div>
+<br>
+<br>
+<p><strong>5. 📝 실전 복습 챌린지 (Practice)</strong></p>
+<p>오늘 배운 표현과 문법을 활용하여 다음 문장들을 영작해 보세요.</p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>쉬운 문제:</strong></div>
+<div class="item">(상황) 회의 시작 전에 오늘 의제에 대한 당신의 제안을 팀원들에게 말하고 싶습니다.</div>
+<div class="item">(영작) 제 제안은 무엇인가요?</div>
+<div class="item"><strong>모범 답안:</strong> What do you think of my suggestion?</div>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>중간 문제:</strong></div>
+<div class="item">(상황) 우리 회사의 새로운 시장 전략은 현재 경제 상황에 더 잘 맞습니다.</div>
+<div class="item">(영작) Our company's new market strategy is more (오늘 배운 형용사 활용) for the current economic situation.</div>
+<div class="item"><strong>모범 답안:</strong> Our company's new market strategy is more <strong>suitable</strong> for the current economic situation.</div>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>어려운 문제:</strong></div>
+<div class="item">(상황) 예상치 못한 공급망 문제로 인해, 우리는 필수 부품을 다른 공급업체로부터 조달해야 했습니다.</div>
+<div class="item">(영작) Due to unexpected supply chain issues, we had to (오늘 배운 동사 활용) essential components from an alternative supplier.</div>
+<div class="item"><strong>모범 답안:</strong> Due to unexpected supply chain issues, we had to <strong>procure</strong> essential components from an alternative supplier.</div>
+<br>
+<br>
+<p><strong>6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)</strong></p>
+<br>
+<p>✨ <strong>Good Job:</strong></p>
+<p>"I would agree. Yes. Very nice."</p>
+<p>이 문장은 Joey가 튜터의 의견에 동의하며 자신의 생각을 간결하고 명확하게 표현한 좋은 예시입니다. "I would agree"는 단순히 "Yes"라고 말하는 것보다 훨씬 더 정중하고 자연스러운 동의 표현입니다. 훌륭해요!</p>
+<br>
+<p>🚀 <strong>내일의 한 문장:</strong></p>
+<p>다음 수업 시작 시 튜터에게 이렇게 말해보세요.</p>
+<p>"I've been thinking about what makes a work environment <strong>conducive</strong> to creativity."</p>
+<p>(창의성에 <strong>도움이 되는</strong> 업무 환경에 대해 생각해 봤어요.)</p>
+<br>
+<br>
+<p><strong>[성과 지표]</strong></p>
+<p><strong>유창성 점수:</strong> 7/10</p>
+<p><strong>근거:</strong> Joey는 자신의 생각을 표현하는 데 주저함이 없고, 대화의 흐름을 적극적으로 이어갑니다. 발음 교정에도 긍정적으로 임하며 유창성을 높이려는 노력이 돋보였습니다. 다만, 일부 표현에서 단어 선택이나 문장 구조가 원어민에게는 다소 어색하게 들릴 수 있는 부분이 있었고, 특정 문법 오류가 반복되는 경향이 있어 자연스러운 흐름을 방해할 때가 있었습니다.</p>
+<br>
+<p><strong>다음 수업 '원포인트 액션 플랜':</strong></p>
+<p>다음 수업에서는 <strong>동사 형태와 시제</strong>에 더 집중하여 연습해 봅시다. 특히 주어와 동사의 수일치, 그리고 문맥에 맞는 동사 선택에 유의하며 말하는 연습을 해볼 거예요. 오늘 배운 어휘들을 활용하여 문장을 만들어보는 것도 좋은 연습이 될 것입니다.</p></div>
+        </div>
+        <div id="tab-transcript" class="tab-content">
+            <div class="transcript"><span class="student">[Student]</span> Oh, teacher, good morning.
+<span class="tutor">[Tutor]</span> Hi there, Joey. How are you?
+<span class="student">[Student]</span> Yeah, of course, it&#x27;s fresh.
+<span class="tutor">[Tutor]</span> It&#x27;s the middle of wintertime. It&#x27;s hot, humid, but sunshine is great and bright.
+<span class="student">[Student]</span> It&#x27;s a transition summer day.
+<span class="tutor">[Tutor]</span> Yeah, I just wish it wasn&#x27;t 42 degrees. You know, it&#x27;s awful hot for you folks. I hope you&#x27;ve got air conditioning and you&#x27;re drinking lots of water.
+<span class="student">[Student]</span> Alright, sir.
+<span class="tutor">[Tutor]</span> You&#x27;re welcome. Okay, so, I see that we are going on to page 25 in your Snack Chat textbook, yeah.
+<span class="student">[Student]</span> And teacher, I&#x27;ve suggested something. Usually, we don&#x27;t have enough time to finish this textbook. So how about that? The first, start the useful vocabulary and useful expression, and then start part A. How about my opinion?
+<span class="tutor">[Tutor]</span> Okay. I&#x27;m trying to make sure I understand. Uh-huh. Did you finish page 24 last class?
+<span class="student">[Student]</span> No, no. So, my suggestion is we will start on page 25. The subject is the red gas outside. But usually, we don&#x27;t have enough time. So, have the first useful vocabulary and useful expression.
+<span class="tutor">[Tutor]</span> Okay. Yes. Okay. And you&#x27;re asking to do them first.
+<span class="student">[Student]</span> Yes, you&#x27;re right. That is first. Okay.
+<span class="tutor">[Tutor]</span> Yeah. Thanks so much. Let me write that down.
+<span class="student">[Student]</span> Hey, no problem.
+<span class="tutor">[Tutor]</span> I want to make things as productive as possible for you. All right. I&#x27;ve written myself a note. All right. Then let&#x27;s go to the bottom of page 25 and look at the vocabulary and the expressions first.
+<span class="student">[Student]</span> Okay. Can I read the useful vocabulary?
+<span class="tutor">[Tutor]</span> I would love you to. Please read the word, the description, and the example sentence.
+<span class="student">[Student]</span> Thank you. Okay. I got the billster from my new hiking boots.
+<span class="tutor">[Tutor]</span> Okay. I want to help you. It&#x27;s okay. Okay. I just want to help you because when you have a consonant and an L together, sometimes they&#x27;re a little bit hard. What I&#x27;m kind of hearing you say, Joey, is &quot;bisters.&quot; &quot;Bisters.&quot; I want you to try making it a little longer.
+<span class="student">[Student]</span> Ballisters.
+<span class="tutor">[Tutor]</span> Ballisters.
+<span class="student">[Student]</span> Ballisters.
+<span class="tutor">[Tutor]</span> Blisters, right.
+<span class="student">[Student]</span> Blisters.
+<span class="tutor">[Tutor]</span> Yeah, blisters. Okay, that&#x27;s better. I&#x27;ll try to find a video so you can practice the L combinations in English. All right, please go on to the second one.
+<span class="student">[Student]</span> Okay. Rough terrier. Terrier. Rough terrier. Bump or difficult grounds. The hiking has some rough terriers near the end. Okay. Is that right?
+<span class="tutor">[Tutor]</span> You&#x27;re close. You&#x27;re saying &quot;terrian.&quot; &quot;Terrian.&quot; Yeah, but you&#x27;re saying it as three syllables. In English, we&#x27;re going to do it in two. Terrain. Terrain. Terrain. Terrain. Yes. Terrain. Yeah. Rough terrain. Yeah. Rough terrain. Okay. And in the description you said &quot;bump&quot; but because we have Y, we have to say &quot;bumpy.&quot;
+<span class="student">[Student]</span> Bumpy. Yeah, bumpy.
+<span class="tutor">[Tutor]</span> Or difficult ground. Bumpy.
+<span class="student">[Student]</span> Yes.
+<span class="tutor">[Tutor]</span> All right. Good. And the third one?
+<span class="student">[Student]</span> Okay, third one. Pack right. To bring only the essentials. For day hike, I try pack right.
+<span class="tutor">[Tutor]</span> Okay. Okay. You said &quot;for day hike.&quot; Let&#x27;s add an S. For day hikes.
+<span class="student">[Student]</span> Day hikes.
+<span class="tutor">[Tutor]</span> Day hikes. That&#x27;s getting better. Try to make the S sound like a snake.
+<span class="student">[Student]</span> Hikes.
+<span class="tutor">[Tutor]</span> Hikes.
+<span class="student">[Student]</span> Hikes.
+<span class="tutor">[Tutor]</span> Better.
+<span class="student">[Student]</span> Hikes.
+<span class="tutor">[Tutor]</span> Better. Okay, good. All right. Now the last word you said &quot;pack right.&quot; We need to try L. Pack light. La la la light. La la light.
+<span class="student">[Student]</span> Okay. Okay.
+<span class="tutor">[Tutor]</span> All right. Good try. Good try. All right. Let&#x27;s get you to read the useful expressions and their description.
+<span class="student">[Student]</span> I need to catch my breath. Use when you feel tired and need to rest after moving a lot. Okay. Okay. I need to catch a breath. Do you know the way back is when you want to help getting back to starting point? Okay. Okay. Good. Okay. Good.
+<span class="tutor">[Tutor]</span> The only thing you missed is you said &quot;help getting back to starting point.&quot; In English, we almost always use a, an, or the. So you want to say &quot;getting back to the starting point.&quot;
+<span class="student">[Student]</span> Getting back to the starting point. Yes, I know that. Back to the starting point. Yeah.
+<span class="tutor">[Tutor]</span> Okay?
+<span class="student">[Student]</span> Yes.
+<span class="tutor">[Tutor]</span> I know that in Korean, you don&#x27;t use articles, and that&#x27;s okay. Okay. All right. Great job, Joey. Let&#x27;s go up to the top. Let&#x27;s get you to read the warm-up question and think of a response.
+<span class="student">[Student]</span> Okay, I see the warm-up question. What&#x27;s popular outdoor activity in your country? There are all kinds of outdoor activities: hiking, cycling, and jogging, and team sports. And our country divides under the category hiking. Yeah, I agree with that because our terrain, our terrain is the, our country is the have a rough terrain. Almost terrain is the, the 70% is the mountains. Yes. Yes. So the older generations usually wear their hiking wear.
+<span class="tutor">[Tutor]</span> Absolutely.
+<span class="student">[Student]</span> So it is so popular outdoor activity, the older generation. Okay. From older generation. But the young generation, it is different. Yeah. So, maybe five years ago, it was popular, the golf. But that is the move, the tennis. And then nowadays, the most popular outdoor activity is running from young generation. So, if you go to the beach or the Hangang River, you can see easily to find running group of people.
+<span class="tutor">[Tutor]</span> Yes, it&#x27;s my understanding that you have a beautiful park system on or around the Han River. In my city, we also have a river that runs through our city. And we have lots of jogging paths and places for people to practice running and other activities. It&#x27;s a real bonus in a city.
+<span class="student">[Student]</span> I would agree. Yes. Very nice.
+<span class="tutor">[Tutor]</span> It is nice. Okay. It is. It&#x27;s nice to have some nature, especially in a city like Seoul with so many people.
+<span class="student">[Student]</span> Okay. Okay.
+<span class="tutor">[Tutor]</span> Let&#x27;s go on to part B. When you&#x27;re ready, I&#x27;ll get you to read the question.
+<span class="student">[Student]</span> Okay. No problem. Which do you prefer? Which season offers better outdoor activities? And why? Summer and winter. Hmm. Yeah, of course, summer. Our country divides four seasons, spring, summer, autumn to winter. And the best season is the spring and autumn to outdoor activity. But if I explain about which is better, summer and winter, it is more adapt to outdoor activity to summer because our winter is so cold. Yeah.
+<span class="tutor">[Tutor]</span> I understand. Truly, I do. Yeah.
+<span class="student">[Student]</span> So it is impossible to just run or follow sports, not an indoor activity. Yeah. So usually if you want to go the mountain or go to the river or beach, it is a better season in summer.
+<span class="tutor">[Tutor]</span> Okay, I can appreciate that. In Canada, as you know, we also have four seasons. And either summer or winter can be nice, but when you&#x27;re dealing with extreme heat or extreme cold, it makes it harder. It makes it harder to enjoy the outdoors.
+<span class="student">[Student]</span> I hear you.
+<span class="tutor">[Tutor]</span> All right. You&#x27;re doing great, Joey.
+<span class="student">[Student]</span> Okay.
+<span class="tutor">[Tutor]</span> Let&#x27;s go on to part C. I&#x27;m going to get you to read the situation. Take your time. We&#x27;ve got another 10 minutes left in our class.
+<span class="student">[Student]</span> Oh, that&#x27;s my time. Okay. Part D, problem-solving situation. You have been looking forward to today&#x27;s hike, but you left your sunscreen at home. The trail has a little shade, and it&#x27;s a hot day. You don&#x27;t want to waste the day, but you are worried about getting burned. Would you still go or change your plans? Why? Yeah, I understand that situation and this day, this summer is a similar environment.
+<span class="tutor">[Tutor]</span> Yes, it is.
+<span class="student">[Student]</span> Yes, usually I keep my shirt, my office, my, keep my sunscreen in my office and my home. And usually when I go outside, I will go outside, I put on my sunscreen. But if I forgot, we will visit the CVS or some Olive Young. That is a super drugstore or convenience store. Because in Korea, it&#x27;s small. So we have a lot of the CVS and Olive Young. So it is too easy to find them. So if we forgot that situation, forgot the sunscreen, just I find some close CVS or Olive Young and then just buying them and go to their appointment point.
+<span class="tutor">[Tutor]</span> Yeah, yeah. Um, yeah, um, I&#x27;m just looking at a UV index for Korea and your UV index is very similar to Canada where the peak time is from like noon to about 3 p.m. Yeah, so yeah, what do you do, right? You wear a long-sleeve shirt if you&#x27;ve got sunscreen, great. If you don&#x27;t, you go to the drugstore. One of the things that I had to get used to living in Canada, we get to about five to seven on the UV index. When I was in Mexico, it went between nine and 11. I felt like a fish in a frying pan because the sun is so much stronger there.
+<span class="student">[Student]</span> How about your opinion? That is the same situation but you can find some CVS or Olive Young or drugstore on the side, Seoul or not. What is your choice?
+<span class="tutor">[Tutor]</span> Yes, absolutely. If I&#x27;m outdoors, I wear a hat. I put on a t-shirt, I slip on sunscreen because I have a medication that I take that makes me extra sensitive to the sun. So I actually stay out of the sun in midday. And here in Canada, you can get sunscreen just about anywhere. Any drugstore, any grocery store. You can go to the convenience store and buy it. It&#x27;s a big issue here in Canada as well. All right, sir. You&#x27;re doing a great job. This is working out very nicely.
+<span class="student">[Student]</span> Okay. Warm down. Let&#x27;s skip question number one. I&#x27;ll get you to read number two. Okay. Do you prefer nature, mountains, rivers, or city park for outdoor fun? Explain.
+<span class="tutor">[Tutor]</span> I see.
+<span class="student">[Student]</span> That depends on the nature. Because if I visit so nice view of nature, the beach, mountain, river, of course, that is perfect place to outdoor activity. Yeah, so usually, I think it&#x27;s better. I prefer the nature better than park outdoor because park is made from the human. So that is well done, but that park don&#x27;t have huge or amazing or great view. Just well done and nice green, vivid picture. So I think if we go to the nature, the big mountain or big river and beautiful beach, we can find beautiful things. So it&#x27;s better.
+<span class="tutor">[Tutor]</span> I can appreciate that. You&#x27;re very lucky because Seoul is so close to the mountains. It&#x27;s my understanding that you can get there in less than an hour. In my part of Canada, it takes me four hours to get to the mountain. So it&#x27;s nice for a weekend. How about, okay, if you had to choose between the mountains and the beach, which one would be your preference?
+<span class="student">[Student]</span> And this season? This is the summer season, so it is better to go beach because if we go to the mountains and now it&#x27;s the weather, our clothes are wet. Sweat.
+<span class="tutor">[Tutor]</span> Very sweaty, very hot. Yeah, yeah.
+<span class="student">[Student]</span> So it is impossible to move in a mountain. But if we go to the beach, we can find a nice cafe and a nice restaurant. And it is more easy to move because the beach is windy, so it is better.
+<span class="tutor">[Tutor]</span> There&#x27;s a lot of wind on the beach? The beach is windy?
+<span class="student">[Student]</span> Yeah, beach is windy. So that is a more adult place to outdoor activity in summertime.
+<span class="tutor">[Tutor]</span> It can be a problem unless you&#x27;re the type of person who likes to do wind sailing or flying kites. Then the wind is helpful.
+<span class="student">[Student]</span> Yeah, you&#x27;re right.
+<span class="tutor">[Tutor]</span> All right. Okay, I wanted to ask you one other question. Do you have a lot of mosquitoes? Do you know mosquitoes?
+<span class="student">[Student]</span> Yes, of course, I know.
+<span class="tutor">[Tutor]</span> Do you, are you having a problem this year with many mosquitoes flying around or is it better in the city?
+<span class="student">[Student]</span> Oh, this day I can&#x27;t find the mosquito because maybe when I was young, I can found so many mosquito in or around. But the generation has changed and the city is more developed. The environment is corrupt. So I think I can&#x27;t find mosquito in this year.
+<span class="tutor">[Tutor]</span> Good for you.
+<span class="student">[Student]</span> Yeah, good for me, but I don&#x27;t know if it&#x27;s good for me or not because mosquito is the good environment or some nature. So I don&#x27;t know why I can&#x27;t find the mosquito.
+<span class="tutor">[Tutor]</span> Well, it&#x27;s better that they don&#x27;t find you. All right, Joey, you worked very hard today. Thank you for your suggestion. It worked very well. You have a good day. I&#x27;ll talk to you next time.
+<span class="student">[Student]</span> Thank you. Thank you so much. Have a nice day. Bye-bye.</div>
+        </div>
+    </div>
+    <div class="toast" id="toast">✅ 프롬프트가 복사되었습니다!</div>
+    <script>
+        const REVIEW_PROMPT="너는 나의 영어 회화 복습 파트너야. 오늘 내 전화영어 수업 내용을 기반으로 대화하면서 복습을 도와줘.\n\n[오늘 수업 전사 내용]\n[Student] Oh, teacher, good morning.\n[Tutor] Hi there, Joey. How are you?\n[Student] Yeah, of course, it's fresh.\n[Tutor] It's the middle of wintertime. It's hot, humid, but sunshine is great and bright.\n[Student] It's a transition summer day.\n[Tutor] Yeah, I just wish it wasn't 42 degrees. You know, it's awful hot for you folks. I hope you've got air conditioning and you're drinking lots of water.\n[Student] Alright, sir.\n[Tutor] You're welcome. Okay, so, I see that we are going on to page 25 in your Snack Chat textbook, yeah.\n[Student] And teacher, I've suggested something. Usually, we don't have enough time to finish this textbook. So how about that? The first, start the useful vocabulary and useful expression, and then start part A. How about my opinion?\n[Tutor] Okay. I'm trying to make sure I understand. Uh-huh. Did you finish page 24 last class?\n[Student] No, no. So, my suggestion is we will start on page 25. The subject is the red gas outside. But usually, we don't have enough time. So, have the first useful vocabulary and useful expression.\n[Tutor] Okay. Yes. Okay. And you're asking to do them first.\n[Student] Yes, you're right. That is first. Okay.\n[Tutor] Yeah. Thanks so much. Let me write that down.\n[Student] Hey, no problem.\n[Tutor] I want to make things as productive as possible for you. All right. I've written myself a note. All right. Then let's go to the bottom of page 25 and look at the vocabulary and the expressions first.\n[Student] Okay. Can I read the useful vocabulary?\n[Tutor] I would love you to. Please read the word, the description, and the example sentence.\n[Student] Thank you. Okay. I got the billster from my new hiking boots.\n[Tutor] Okay. I want to help you. It's okay. Okay. I just want to help you because when you have a consonant and an L together, sometimes they're a little bit hard. What I'm kind of hearing you say, Joey, is \"bisters.\" \"Bisters.\" I want you to try making it a little longer.\n[Student] Ballisters.\n[Tutor] Ballisters.\n[Student] Ballisters.\n[Tutor] Blisters, right.\n[Student] Blisters.\n[Tutor] Yeah, blisters. Okay, that's better. I'll try to find a video so you can practice the L combinations in English. All right, please go on to the second one.\n[Student] Okay. Rough terrier. Terrier. Rough terrier. Bump or difficult grounds. The hiking has some rough terriers near the end. Okay. Is that right?\n[Tutor] You're close. You're saying \"terrian.\" \"Terrian.\" Yeah, but you're saying it as three syllables. In English, we're going to do it in two. Terrain. Terrain. Terrain. Terrain. Yes. Terrain. Yeah. Rough terrain. Yeah. Rough terrain. Okay. And in the description you said \"bump\" but because we have Y, we have to say \"bumpy.\"\n[Student] Bumpy. Yeah, bumpy.\n[Tutor] Or difficult ground. Bumpy.\n[Student] Yes.\n[Tutor] All right. Good. And the third one?\n[Student] Okay, third one. Pack right. To bring only the essentials. For day hike, I try pack right.\n[Tutor] Okay. Okay. You said \"for day hike.\" Let's add an S. For day hikes.\n[Student] Day hikes.\n[Tutor] Day hikes. That's getting better. Try to make the S sound like a snake.\n[Student] Hikes.\n[Tutor] Hikes.\n[Student] Hikes.\n[Tutor] Better.\n[Student] Hikes.\n[Tutor] Better. Okay, good. All right. Now the last word you said \"pack right.\" We need to try L. Pack light. La la la light. La la light.\n[Student] Okay. Okay.\n[Tutor] All right. Good try. Good try. All right. Let's get you to read the useful expressions and their description.\n[Student] I need to catch my breath. Use when you feel tired and need to rest after moving a lot. Okay. Okay. I need to catch a breath. Do you know the way back is when you want to help getting back to starting point? Okay. Okay. Good. Okay. Good.\n[Tutor] The only thing you missed is you said \"help getting back to starting point.\" In English, we almost always use a, an, or the. So you want to say \"getting back to the starting point.\"\n[Student] Getting back to the starting point. Yes, I know that. Back to the starting point. Yeah.\n[Tutor] Okay?\n[Student] Yes.\n[Tutor] I know that in Korean, you don't use articles, and that's okay. Okay. All right. Great job, Joey. Let's go up to the top. Let's get you to read the warm-up question and think of a response.\n[Student] Okay, I see the warm-up question. What's popular outdoor activity in your country? There are all kinds of outdoor activities: hiking, cycling, and jogging, and team sports. And our country divides under the category hiking. Yeah, I agree with that because our terrain, our terrain is the, our country is the have a rough terrain. Almost terrain is the, the 70% is the mountains. Yes. Yes. So the older generations usually wear their hiking wear.\n[Tutor] Absolutely.\n[Student] So it is so popular outdoor activity, the older generation. Okay. From older generation. But the young generation, it is different. Yeah. So, maybe five years ago, it was popular, the golf. But that is the move, the tennis. And then nowadays, the most popular outdoor activity is running from young generation. So, if you go to the beach or the Hangang River, you can see easily to find running group of people.\n[Tutor] Yes, it's my understanding that you have a beautiful park system on or around the Han River. In my city, we also have a river that runs through our city. And we have lots of jogging paths and places for people to practice running and other activities. It's a real bonus in a city.\n[Student] I would agree. Yes. Very nice.\n[Tutor] It is nice. Okay. It is. It's nice to have some nature, especially in a city like Seoul with so many people.\n[Student] Okay. Okay.\n[Tutor] Let's go on to part B. When you're ready, I'll get you to read the question.\n[Student] Okay. No problem. Which do you prefer? Which season offers better outdoor activities? And why? Summer and winter. Hmm. Yeah, of course, summer. Our country divides four seasons, spring, summer, autumn to winter. And the best season is the spring and autumn to outdoor activity. But if I explain about which is better, summer and winter, it is more adapt to outdoor activity to summer because our winter is so cold. Yeah.\n[Tutor] I understand. Truly, I do. Yeah.\n[Student] So it is impossible to just run or follow sports, not an indoor activity. Yeah. So usually if you want to go the mountain or go to the river or beach, it is a better season in summer.\n[Tutor] Okay, I can appreciate that. In Canada, as you know, we also have four seasons. And either summer or winter can be nice, but when you're dealing with extreme heat or extreme cold, it makes it harder. It makes it harder to enjoy the outdoors.\n[Student] I hear you.\n[Tutor] All right. You're doing great, Joey.\n[Student] Okay.\n[Tutor] Let's go on to part C. I'm going to get you to read the situation. Take your time. We've got another 10 minutes left in our class.\n[Student] Oh, that's my time. Okay. Part D, problem-solving situation. You have been looking forward to today's hike, but you left your sunscreen at home. The trail has a little shade, and it's a hot day. You don't want to waste the day, but you are worried about getting burned. Would you still go or change your plans? Why? Yeah, I understand that situation and this day, this summer is a similar environment.\n[Tutor] Yes, it is.\n[Student] Yes, usually I keep my shirt, my office, my, keep my sunscreen in my office and my home. And usually when I go outside, I will go outside, I put on my sunscreen. But if I forgot, we will visit the CVS or some Olive Young. That is a super drugstore or convenience store. Because in Korea, it's small. So we have a lot of the CVS and Olive Young. So it is too easy to find them. So if we forgot that situation, forgot the sunscreen, just I find some close CVS or Olive Young and then just buying them and go to their appointment point.\n[Tutor] Yeah, yeah. Um, yeah, um, I'm just looking at a UV index for Korea and your UV index is very similar to Canada where the peak time is from like noon to about 3 p.m. Yeah, so yeah, what do you do, right? You wear a long-sleeve shirt if you've got sunscreen, great. If you don't, you go to the drugstore. One of the things that I had to get used to living in Canada, we get to about five to seven on the UV index. When I was in Mexico, it went between nine and 11. I felt like a fish in a frying pan because the sun is so much stronger there.\n[Student] How about your opinion? That is the same situation but you can find some CVS or Olive Young or drugstore on the side, Seoul or not. What is your choice?\n[Tutor] Yes, absolutely. If I'm outdoors, I wear a hat. I put on a t-shirt, I slip on sunscreen because I have a medication that I take that makes me extra sensitive to the sun. So I actually stay out of the sun in midday. And here in Canada, you can get sunscreen just about anywhere. Any drugstore, any grocery store. You can go to the convenience store and buy it. It's a big issue here in Canada as well. All right, sir. You're doing a great job. This is working out very nicely.\n[Student] Okay. Warm down. Let's skip question number one. I'll get you to read number two. Okay. Do you prefer nature, mountains, rivers, or city park for outdoor fun? Explain.\n[Tutor] I see.\n[Student] That depends on the nature. Because if I visit so nice view of nature, the beach, mountain, river, of course, that is perfect place to outdoor activity. Yeah, so usually, I think it's better. I prefer the nature better than park outdoor because park is made from the human. So that is well done, but that park don't have huge or amazing or great view. Just well done and nice green, vivid picture. So I think if we go to the nature, the big mountain or big river and beautiful beach, we can find beautiful things. So it's better.\n[Tutor] I can appreciate that. You're very lucky because Seoul is so close to the mountains. It's my understanding that you can get there in less than an hour. In my part of Canada, it takes me four hours to get to the mountain. So it's nice for a weekend. How about, okay, if you had to choose between the mountains and the beach, which one would be your preference?\n[Student] And this season? This is the summer season, so it is better to go beach because if we go to the mountains and now it's the weather, our clothes are wet. Sweat.\n[Tutor] Very sweaty, very hot. Yeah, yeah.\n[Student] So it is impossible to move in a mountain. But if we go to the beach, we can find a nice cafe and a nice restaurant. And it is more easy to move because the beach is windy, so it is better.\n[Tutor] There's a lot of wind on the beach? The beach is windy?\n[Student] Yeah, beach is windy. So that is a more adult place to outdoor activity in summertime.\n[Tutor] It can be a problem unless you're the type of person who likes to do wind sailing or flying kites. Then the wind is helpful.\n[Student] Yeah, you're right.\n[Tutor] All right. Okay, I wanted to ask you one other question. Do you have a lot of mosquitoes? Do you know mosquitoes?\n[Student] Yes, of course, I know.\n[Tutor] Do you, are you having a problem this year with many mosquitoes flying around or is it better in the city?\n[Student] Oh, this day I can't find the mosquito because maybe when I was young, I can found so many mosquito in or around. But the generation has changed and the city is more developed. The environment is corrupt. So I think I can't find mosquito in this year.\n[Tutor] Good for you.\n[Student] Yeah, good for me, but I don't know if it's good for me or not because mosquito is the good environment or some nature. So I don't know why I can't find the mosquito.\n[Tutor] Well, it's better that they don't find you. All right, Joey, you worked very hard today. Thank you for your suggestion. It worked very well. You have a good day. I'll talk to you next time.\n[Student] Thank you. Thank you so much. Have a nice day. Bye-bye.\n\n[AI 피드백]\nJoey, 안녕하세요! 오늘 수업에서 보여주신 적극적인 참여와 영어로 소통하려는 노력에 정말 감동했습니다. 특히 수업 진행 방식에 대한 좋은 의견을 주셔서 더욱 알찬 시간을 만들 수 있었어요. 발음 연습도 열심히 따라와 주시고, 다양한 아웃도어 활동에 대한 흥미로운 한국의 상황을 공유해 주셔서 저도 많이 배웠습니다.\n\n---\n\n**0. 📌 Topic**\nTopic: Discussing outdoor activities and seasonal preferences in Korea.\n\n---\n\n**1. 📊 오늘의 대화 요약 (Summary)**\n오늘 Joey는 한국에서 인기 있는 야외 활동과 계절별 선호 활동에 대해 이야기했습니다. 특히 한국의 산악 지형이 하이킹에 적합하다는 점, 그리고 젊은 세대 사이에서 골프, 테니스에서 달리기로 트렌드가 변화하고 있다는 점을 공유해 주셨습니다. 또한 여름과 겨울 중 어떤 계절이 야외 활동에 더 적합한지에 대한 의견도 나누었습니다.\n\n---\n\n**2. 💬 유창성 업그레이드 (Fluency & Natural Flow)**\nJoey가 의미는 잘 전달했지만, 원어민이 들었을 때 좀 더 자연스럽게 들릴 수 있는 표현들을 함께 살펴볼까요?\n\n1.  **❌ 학습자 원문 (As Said):** \"How about my opinion?\"\n    *   **✅ 자연스러운 표현 (Natural):** \"How about my suggestion?\" or \"What do you think of my idea?\"\n    *   **💎 비즈니스 표현 (Professional):** \"I'd like to propose an alternative approach.\"\n    *   **💡 코칭 포인트:** Using \"my opinion\" is grammatically correct but \"my suggestion\" or \"my idea\" sounds more natural when you're proposing a change to a plan. \"What do you think of my idea?\" is also a great way to ask for feedback on your proposal.\n        → \"my opinion\"도 문법적으로 맞지만, 계획 변경을 제안할 때는 \"my suggestion\"이나 \"my idea\"가 더 자연스럽습니다. \"What do you think of my idea?\"는 제안에 대한 피드백을 요청할 때 아주 좋은 표현입니다.\n\n2.  **❌ 학습자 원문 (As Said):** \"it is more adapt to outdoor activity to summer\"\n    *   **✅ 자연스러운 표현 (Natural):** \"Summer is more suitable for outdoor activities.\"\n    *   **💎 비즈니스 표현 (Professional)::** \"Summer offers more conducive conditions for outdoor pursuits.\"\n    *   **💡 코칭 포인트:** \"Adapt\"는 주로 '적응하다'라는 동사로 쓰입니다. 어떤 것이 목적에 적합하거나 잘 맞는다고 설명할 때는 \"suitable for\" 또는 \"well-suited for\"가 더 자연스럽습니다. 또한 \"to summer\" 대신 \"in summer\" 또는 \"during summer\"를 사용해야 합니다.\n\n3.  **❌ 학습자 원문 (As Said):** \"just I find some close CVS or Olive Young and then just buying them\"\n    *   **✅ 자연스러운 표현 (Natural):** \"I'd just find a nearby CVS or Olive Young and buy some.\"\n    *   **💎 비즈니스 표현 (Professional):** \"In such a scenario, I would locate a proximate convenience store or pharmacy to procure the necessary items.\"\n    *   **💡 코칭 포인트:** 가상의 행동에 대해 말할 때는 종종 \"I would\" (또는 \"I'd\")를 사용합니다. 또한 \"close\"도 괜찮지만, \"nearby\"는 근접성을 설명할 때 매우 흔하고 자연스러운 대안입니다. \"buying them\"은 문맥에 따라 \"buy some\" 또는 \"buy it\"으로 쓰는 것이 좋습니다.\n\n---\n\n**3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)**\n이번 수업에서 Joey가 반복적으로 사용한 문법 패턴 중 **동사 형태와 시제**에 대해 집중적으로 살펴보겠습니다. 특히 현재 시제에서 주어와 동사의 일치, 그리고 동사 대신 명사를 사용하는 경향이 보였습니다.\n\n**Category: Verb Forms and Tenses**\n\n| ❌ 원문 (As Said)                                                                 | ✅ 교정 예시 (Corrected)                                                              |\n| :------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------ |\n| \"our country is the have a rough terrain.\"                                      | \"Our country **has** rough terrain.\"                                                 |\n| \"Almost terrain is the, the 70% is the mountains.\"                               | \"Almost **70% of our terrain is** mountains.\"                                         |\n| \"But the young generation, it is different.\"                                    | \"But the young generation **is** different.\"                                          |\n| \"But that is the move, the tennis.\"                                              | \"But that **has moved on to** tennis.\" (또는 \"But that **trend has shifted to** tennis.\") |\n| \"And then nowadays, the most popular outdoor activity is running from young generation.\" | \"And nowadays, running **is** the most popular outdoor activity among the young generation.\" |\n| \"So it is impossible to move in a mountain.\"                                     | \"So it is impossible to **hike** in a mountain.\" (또는 \"So it is impossible to **move around** in the mountains.\") |\n| \"the environment is corrupt.\"                                                    | \"the environment **has been corrupted**.\" (또는 \"the environment **is deteriorating**.\") |\n| \"mosquito is the good environment or some nature.\"                               | \"mosquitoes **are good for** the environment or nature.\"                              |\n\n📌 **핵심 규칙:** 주어에 맞는 올바른 동사 형태와 시제를 사용하고, 문맥에 따라 동사를 정확하게 선택해야 합니다. 특히 현재 시제에서 3인칭 단수 주어 뒤에는 동사에 '-s'를 붙이는 것을 기억하고, 'be' 동사 뒤에 다른 동사가 올 때는 적절한 연결(예: 'have' 대신 'has', 'is' + 동명사 등)이 필요합니다.\n\n🔁 **따라 읽기:**\n🗣️ \"Our country has rough terrain.\"\n🗣️ \"Almost 70% of our terrain is mountains.\"\n🗣️ \"Running is the most popular outdoor activity among the young generation.\"\n\n---\n\n**4. 📗 어휘 확장 (Vocabulary Vault)**\nJoey의 비즈니스 환경과 자기계발 관심사를 고려하여 유용한 어휘 5개를 제안합니다.\n\n1.  **terrain** /təˈreɪn/ (명사)\n    *   뜻: 지형, 지역\n    *   실전 예문: Our new project requires careful consideration of the local **terrain** for infrastructure development.\n\n2.  **conducive** /kənˈduːsɪv/ (형용사)\n    *   뜻: ~에 좋은, 도움이 되는\n    *   실전 예문: Creating a quiet workspace is **conducive** to higher productivity.\n\n3.  **procure** /prəˈkjʊər/ (동사)\n    *   뜻: (어렵게) 얻다, 조달하다\n    *   실전 예문: We need to **procure** raw materials from a new supplier to reduce costs.\n\n4.  **deteriorate** /dɪˈtɪəriəreɪt/ (동사)\n    *   뜻: 악화되다, 나빠지다\n    *   실전 예문: The market conditions started to **deteriorate** last quarter, impacting our investment portfolio.\n\n5.  **resilience** /rɪˈzɪliəns/ (명사)\n    *   뜻: 회복력, 탄력성\n    *   실전 예문: The company's financial **resilience** allowed us to navigate the recent economic downturn successfully.\n\n---\n\n**5. 📝 실전 복습 챌린지 (Practice)**\n오늘 배운 표현과 문법을 활용하여 다음 문장들을 영작해 보세요.\n\n1.  **쉬운 문제:**\n    *   (상황) 회의 시작 전에 오늘 의제에 대한 당신의 제안을 팀원들에게 말하고 싶습니다.\n    *   (영작) 제 제안은 무엇인가요?\n    *   **모범 답안:** What do you think of my suggestion?\n\n2.  **중간 문제:**\n    *   (상황) 우리 회사의 새로운 시장 전략은 현재 경제 상황에 더 잘 맞습니다.\n    *   (영작) Our company's new market strategy is more (오늘 배운 형용사 활용) for the current economic situation.\n    *   **모범 답안:** Our company's new market strategy is more **suitable** for the current economic situation.\n\n3.  **어려운 문제:**\n    *   (상황) 예상치 못한 공급망 문제로 인해, 우리는 필수 부품을 다른 공급업체로부터 조달해야 했습니다.\n    *   (영작) Due to unexpected supply chain issues, we had to (오늘 배운 동사 활용) essential components from an alternative supplier.\n    *   **모범 답안:** Due to unexpected supply chain issues, we had to **procure** essential components from an alternative supplier.\n\n---\n\n**6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)**\n\n✨ **Good Job:**\n\"I would agree. Yes. Very nice.\"\n이 문장은 Joey가 튜터의 의견에 동의하며 자신의 생각을 간결하고 명확하게 표현한 좋은 예시입니다. \"I would agree\"는 단순히 \"Yes\"라고 말하는 것보다 훨씬 더 정중하고 자연스러운 동의 표현입니다. 훌륭해요!\n\n🚀 **내일의 한 문장:**\n다음 수업 시작 시 튜터에게 이렇게 말해보세요.\n\"I've been thinking about what makes a work environment **conducive** to creativity.\"\n(창의성에 **도움이 되는** 업무 환경에 대해 생각해 봤어요.)\n\n---\n\n**[성과 지표]**\n**유창성 점수:** 7/10\n**근거:** Joey는 자신의 생각을 표현하는 데 주저함이 없고, 대화의 흐름을 적극적으로 이어갑니다. 발음 교정에도 긍정적으로 임하며 유창성을 높이려는 노력이 돋보였습니다. 다만, 일부 표현에서 단어 선택이나 문장 구조가 원어민에게는 다소 어색하게 들릴 수 있는 부분이 있었고, 특정 문법 오류가 반복되는 경향이 있어 자연스러운 흐름을 방해할 때가 있었습니다.\n\n**다음 수업 '원포인트 액션 플랜':**\n다음 수업에서는 **동사 형태와 시제**에 더 집중하여 연습해 봅시다. 특히 주어와 동사의 수일치, 그리고 문맥에 맞는 동사 선택에 유의하며 말하는 연습을 해볼 거예요. 오늘 배운 어휘들을 활용하여 문장을 만들어보는 것도 좋은 연습이 될 것입니다.\n\n위 내용을 바탕으로:\n1. 먼저 오늘 수업에서 내가 틀렸거나 어색했던 표현을 하나 골라서, 관련된 상황을 영어로 질문해줘.\n2. 내가 영어로 대답하면, 자연스러운지 확인하고 더 나은 표현이 있으면 알려줘.\n3. 특히 \"반복 실수 패턴\"에서 지적된 부분을 집중적으로 연습시켜줘.\n4. 이런 식으로 오늘 배운 표현들을 하나씩 복습하자.\n5. 한국어 설명은 필요할 때만 간단히, 대화는 최대한 영어로 진행해줘.\n\n그럼 시작하자!";
+        function startReview(){navigator.clipboard.writeText(REVIEW_PROMPT).then(()=>{showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)}).catch(()=>{const t=document.createElement('textarea');t.value=REVIEW_PROMPT;document.body.appendChild(t);t.select();document.execCommand('copy');document.body.removeChild(t);showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)})}
+        function showToast(){const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500)}
+        function switchTab(n){document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',n==='feedback'?i===0:i===1));document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));document.getElementById('tab-'+n).classList.add('active')}
+    </script>
+</body>
+</html>
