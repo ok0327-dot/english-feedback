@@ -1,0 +1,53 @@
+{
+ "date": "2026-08-06",
+ "iso": [
+  2026,
+  32
+ ],
+ "topic": "Discussing 'Getting to Know You' topics and social interaction strategies.",
+ "grammar": "Prepositional Phrase Errors",
+ "grammar_norm": "Prepositions",
+ "score": 7.0,
+ "pairs": [
+  {
+   "said": "I want to make you happy.",
+   "natural": "I want to be helpful."
+  },
+  {
+   "said": "When I met some people, I feel awkward.",
+   "natural": "When I meet new people, I sometimes feel awkward."
+  },
+  {
+   "said": "These days in Korea, so many young generation, like the MG generation, they exchange their social media account...",
+   "natural": "These days in Korea, many young people, like the MZ generation, exchange social media accounts..."
+  }
+ ],
+ "vocab": [
+  {
+   "word": "approachable",
+   "pos": "adjective",
+   "meaning": "가까이하기 쉬운, 친근한"
+  },
+  {
+   "word": "common ground",
+   "pos": "noun phrase",
+   "meaning": "공통점, 공통의 관심사"
+  },
+  {
+   "word": "awkward",
+   "pos": "adjective",
+   "meaning": "어색한, 서투른"
+  },
+  {
+   "word": "exchange",
+   "pos": "verb",
+   "meaning": "교환하다"
+  },
+  {
+   "word": "polite",
+   "pos": "adjective",
+   "meaning": "예의 바른, 공손한"
+  }
+ ],
+ "_html_md5": "1795ae5e0851665cfd2ac8b39a358538"
+}

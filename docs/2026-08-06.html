@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#0f0f13"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="당근영어"><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="icon" type="image/png" sizes="192x192" href="icon-192.png"><script src="install-banner.js" defer></script><script src="sw-reg.js" defer></script>
+    <title>전화영어 복습 - 2026년 08월 06일</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Noto Sans KR',sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.75;min-height:100vh}
+        .header{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);border-bottom:1px solid rgba(255,255,255,.06);padding:48px 24px 40px;text-align:center}
+        .header-date{font-size:13px;color:#94a3b8;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+        .header h1{font-size:28px;font-weight:700;color:#f1f5f9;margin-bottom:16px}
+        .header-meta{display:flex;justify-content:center;gap:24px;font-size:14px;color:#64748b}
+        .header-meta span{display:flex;align-items:center;gap:6px}
+        .cta-section{text-align:center;padding:40px 24px}
+        .cta-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:linear-gradient(135deg,#38bdf8,#818cf8);color:#fff;font-size:16px;font-weight:600;font-family:'Noto Sans KR',sans-serif;border:none;border-radius:50px;cursor:pointer;transition:all .3s;text-decoration:none;box-shadow:0 4px 24px rgba(56,189,248,.25)}
+        .cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(56,189,248,.35)}
+        .cta-btn svg{width:20px;height:20px}
+        .cta-sub{margin-top:12px;font-size:13px;color:#64748b}
+        .toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#38bdf8;padding:14px 28px;border-radius:12px;font-size:14px;font-weight:500;border:1px solid rgba(56,189,248,.2);box-shadow:0 8px 32px rgba(0,0,0,.4);opacity:0;transition:all .4s cubic-bezier(.16,1,.3,1);z-index:1000}
+        .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+        .container{max-width:720px;margin:0 auto;padding:0 24px 80px}
+        .tabs{display:flex;gap:4px;background:#1a1a24;padding:4px;border-radius:12px;margin-bottom:32px}
+        .tab{flex:1;padding:12px;text-align:center;font-size:14px;font-weight:500;color:#64748b;background:0 0;border:none;border-radius:8px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all .2s}
+        .tab.active{background:#262636;color:#f1f5f9}
+        .tab-content{display:none}.tab-content.active{display:block}
+        .feedback h2{font-size:18px;font-weight:700;color:#f1f5f9;margin:36px 0 16px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.06)}
+        .feedback h2:first-child{margin-top:0}
+        .feedback p{margin:8px 0;color:#cbd5e1}
+        .feedback .item{padding:6px 0 6px 16px;border-left:2px solid #334155;margin:6px 0;color:#cbd5e1}
+        .feedback .numbered{padding:8px 0 8px 16px;color:#cbd5e1}
+        .feedback .numbered strong{color:#38bdf8}
+        .feedback strong{color:#f1f5f9}
+        .feedback code{background:#1e293b;padding:2px 8px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#38bdf8}
+        .feedback table{width:100%;border-collapse:collapse;margin:12px 0}
+        .feedback th,.feedback td{padding:10px 14px;text-align:left;border-bottom:1px solid #262636}
+        .feedback th{color:#94a3b8;font-weight:500;font-size:13px}
+        .feedback td{color:#cbd5e1}
+        .arrow{color:#38bdf8;font-weight:700}
+        .transcript{background:#1a1a24;border-radius:12px;padding:28px;font-size:14px;line-height:2;color:#94a3b8;white-space:pre-wrap;word-break:break-word;font-family:'JetBrains Mono','Noto Sans KR',monospace}
+        .transcript .tutor{color:#38bdf8}
+        .transcript .student{color:#a78bfa}
+        @media(max-width:640px){.header{padding:32px 16px}.header h1{font-size:22px}.cta-btn{padding:14px 28px;font-size:15px}.container{padding:0 16px 60px}}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-date">2026년 08월 06일</div>
+        <h1>📚 전화영어 복습</h1>
+        <div class="header-meta">
+            <span>⏱ 20분 4초</span>
+            <span>🎙 전화영어_025180304_20260806080021.m4a</span>
+        </div>
+    </div>
+    <div class="cta-section">
+        <button class="cta-btn" onclick="startReview()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Gemini에서 복습 대화 시작하기
+        </button>
+        <div class="cta-sub">클릭하면 프롬프트가 복사되고 Gemini가 열립니다</div>
+    </div>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('feedback')">📋 AI 피드백</button>
+            <button class="tab" onclick="switchTab('transcript')">🎙 수업 전사</button>
+        </div>
+        <div id="tab-feedback" class="tab-content active">
+            <div class="feedback"><p>안녕하세요, Joey! 따뜻하고 실용적인 영어 코치입니다. 오늘 수업 내용 잘 분석해서 피드백 드릴게요.</p>
+<br>
+<br>
+<p><strong>0. 📌 Topic</strong></p>
+<p>Topic: Discussing 'Getting to Know You' topics and social interaction strategies.</p>
+<br>
+<p><strong>1. 📊 오늘의 대화 요약 (Summary)</strong></p>
+<p>오늘 수업에서는 'Getting to Know You' 파트에서 다룬 어휘 및 표현들을 익히고 연습했습니다. 특히 'approachable', 'common ground', 'awkward'와 같은 단어의 발음과 의미를 정확히 짚었고, 'I'm bad with names'와 같은 유용한 표현들을 배웠습니다. 또한, 처음 만나는 사람에게 피해야 할 주제와 연락처 교환 방식에 대한 선호도를 이야기하고, 이름을 잊었을 때 정중하게 대처하는 방법에 대해 구체적인 상황을 예로 들어 토론했습니다.</p>
+<br>
+<p><strong>2. 💬 유창성 업그레이드 (Fluency & Natural Flow)</strong></p>
+<br>
+<div class="item"><strong>1) ❌ As Said</strong>: "I want to make you happy."</div>
+<p><strong>✅ Natural</strong>: "I want to be helpful." / "I want to do a good job."</p>
+<p><strong>💎 Professional</strong>: "I aim to meet your expectations." / "I'm committed to ensuring your satisfaction."</p>
+<p><strong>💡 Coaching Point</strong>: "The original sentence 'I want to make you happy' is understandable but can sound a bit too personal or child-like in a professional context. Using 'helpful' or 'do a good job' focuses on your contribution, and 'meet your expectations' or 'ensure your satisfaction' are more professional ways to express your desire to please in a business setting."</p>
+<p><span class="arrow">→</span> 원문 "I want to make you happy"는 의미는 통하지만, 비즈니스 맥락에서는 다소 개인적이거나 어린아이처럼 들릴 수 있습니다. 'helpful'이나 'do a good job'을 사용하면 기여하는 부분에 초점을 맞출 수 있고, 'meet your expectations' 또는 'ensure your satisfaction'은 비즈니스 환경에서 상대방을 만족시키고자 하는 마음을 표현하는 더 전문적인 방법입니다.</p>
+<br>
+<div class="item"><strong>2) ❌ As Said</strong>: "When I met some people, I feel awkward."</div>
+<p><strong>✅ Natural</strong>: "When I meet new people, I sometimes feel awkward."</p>
+<p><strong>💎 Professional</strong>: "I occasionally feel awkward when encountering new people."</p>
+<p><strong>💡 Coaching Point</strong>: "The original sentence uses 'met' which is past tense, but the feeling of awkwardness seems to be a general or recurring experience. Using the present tense 'meet' and adding 'sometimes' or 'occasionally' makes it clear this is a general feeling or habit rather than a specific past event. Also, 'new people' is slightly more common than 'some people' in this general context."</p>
+<p><span class="arrow">→</span> 원문은 과거 시제인 'met'를 사용했지만, 어색함을 느끼는 것은 일반적이거나 반복적인 경험처럼 들립니다. 현재 시제인 'meet'를 사용하고 'sometimes' 또는 'occasionally'를 추가하면 이것이 특정 과거 사건이 아닌 일반적인 감정이나 습관임을 명확히 할 수 있습니다. 또한, 이 일반적인 맥락에서는 'some people'보다 'new people'이 약간 더 흔하게 사용됩니다.</p>
+<br>
+<div class="item"><strong>3) ❌ As Said</strong>: "These days in Korea, so many young generation, like the MG generation, they exchange their social media account..."</div>
+<p><strong>✅ Natural</strong>: "These days in Korea, many young people, like the MZ generation, exchange social media accounts..."</p>
+<p><strong>💎 Professional</strong>: "Currently, in Korea, a significant portion of the younger demographic, particularly the MZ generation, tends to exchange social media handles..."</p>
+<p><strong>💡 Coaching Point</strong>: "The phrase 'so many young generation' is a bit unnatural. It should be 'many young people' or 'a lot of young people'. Also, 'they exchange their social media account' can be simplified to 'exchange social media accounts' or 'exchange social media handles' for a smoother flow. The term 'MZ generation' is more common in Korean context than 'MG generation'."</p>
+<p><span class="arrow">→</span> 'so many young generation'이라는 표현은 다소 부자연스럽습니다. 'many young people' 또는 'a lot of young people'이 되어야 합니다. 또한, 'they exchange their social media account'는 더 자연스러운 흐름을 위해 'exchange social media accounts' 또는 'exchange social media handles'로 단순화할 수 있습니다. 'MG generation'보다는 한국 맥락에서 'MZ generation'이라는 용어가 더 일반적입니다.</p>
+<br>
+<p><strong>3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)</strong></p>
+<p>Category: Prepositional Phrase Errors (Incorrect use of prepositions)</p>
+<br>
+<p>Joey made several errors in using prepositions, particularly when describing actions or topics. This pattern is common for intermediate learners as prepositions often don't have direct equivalents and require memorization of common collocations.</p>
+<br>
+<table>
+<tr><th>❌ 학습자 원문 (As Said)</th><th>✅ 교정 예시 (Correction)</th></tr>
+<tr><td>"I avoid <strong>about</strong> the politics and religion subjects."</td><td>"I avoid politics and religion subjects."</td></tr>
+<tr><td>"The IT expert is coming because these days we consider <strong>about</strong> the AI system..."</td><td>"The IT expert is coming because these days we are considering the AI system..."</td></tr>
+<tr><td>"So, just I give some advice <strong>about</strong> if you meet new people..."</td><td>"So, I give some advice <strong>on</strong> meeting new people..." / "So, my advice <strong>for</strong> meeting new people is..."</td></tr>
+<tr><td>"And then I ask <strong>to</strong> my another friend, 'What's her name?'"</td><td>"And then I ask my friend, 'What's her name?'"</td></tr>
+</table>
+<br>
+<p>📌 <strong>핵심 규칙</strong>: 'avoid'와 같은 일부 동사는 목적어를 바로 취하며 전치사 'about'이 필요하지 않습니다. 'consider'는 'consider about' 대신 목적어를 바로 취하거나 'consider' 뒤에 'the possibility of' 등을 붙여 사용할 수 있습니다. 'advice' 뒤에는 보통 'on'이나 'for'를 사용하여 조언의 대상을 나타냅니다. 'ask' 동사는 'ask someone'처럼 직접 목적어를 취하거나 'ask for'와 같이 사용하며, 'ask to someone'은 일반적으로 사용되지 않습니다.</p>
+<br>
+<p>🔁 <strong>따라 읽기</strong>:</p>
+<p>🗣️ "I avoid politics and religion subjects."</p>
+<p>🗣️ "We are considering the AI system."</p>
+<p>🗣️ "My advice for meeting new people is..."</p>
+<p>🗣️ "I ask my friend, 'What's her name?'"</p>
+<br>
+<p><strong>4. 📗 어휘 확장 (Vocabulary Vault)</strong></p>
+<br>
+<div class="item"><strong>approachable</strong> /əˈproʊtʃəbl/ (adjective)</div>
+<div class="item">뜻: 가까이하기 쉬운, 친근한</div>
+<div class="item">실전 예문: Our new manager is very approachable, making it easy to discuss concerns.</div>
+<div class="item"><strong>common ground</strong> /ˌkɒmən ˈɡraʊnd/ (noun phrase)</div>
+<div class="item">뜻: 공통점, 공통의 관심사</div>
+<div class="item">실전 예문: Finding common ground helped us build a strong working relationship.</div>
+<div class="item"><strong>awkward</strong> /ˈɔːkwərd/ (adjective)</div>
+<div class="item">뜻: 어색한, 서투른</div>
+<div class="item">실전 예문: The silence after the presentation felt a bit awkward.</div>
+<div class="item"><strong>exchange</strong> /ɪksˈtʃeɪndʒ/ (verb)</div>
+<div class="item">뜻: 교환하다</div>
+<div class="item">실전 예문: We exchanged business cards after the meeting.</div>
+<div class="item"><strong>polite</strong> /pəˈlaɪt/ (adjective)</div>
+<div class="item">뜻: 예의 바른, 공손한</div>
+<div class="item">실전 예문: It's important to be polite when speaking with clients.</div>
+<br>
+<p><strong>5. 📝 실전 복습 챌린지 (Practice)</strong></p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>상황</strong>: 회의 후 처음 만난 동료와 명함을 교환해야 합니다.</div>
+<p><strong>영작</strong>: "Let's exchange business cards." 라고 말해보세요.</p>
+<p><strong>모범 답안</strong>: Let's exchange business cards.</p>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>상황</strong>: 새로운 프로젝트 팀에 합류했는데, 팀원들이 모두 친근해 보입니다.</div>
+<p><strong>영작</strong>: "Our new team leader seems very approachable." 라고 말해보세요.</p>
+<p><strong>모범 답안</strong>: Our new team leader seems very approachable.</p>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>상황</strong>: 비즈니스 미팅에서 상대방의 이름이 기억나지 않습니다. 정중하게 다시 물어보고 싶습니다.</div>
+<p><strong>영작</strong>: "I'm terribly sorry, could you tell me your name again?" 라고 말해보세요.</p>
+<p><strong>모범 답안</strong>: I'm terribly sorry, could you tell me your name again?</p>
+<br>
+<p><strong>6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)</strong></p>
+<br>
+<div class="item">✨ <strong>Good Job</strong>: "[Student] I avoid about the politics and religion subjects because that is so sensitive a subject."</div>
+<p>이 문장은 비록 'about' 사용에 문법적 오류가 있었지만, Joey가 왜 특정 주제를 피하는지에 대한 이유를 명확하게 설명하려는 의지를 보여주었습니다. 'sensitive a subject'와 같은 표현을 사용하여 자신의 생각을 구체적으로 전달하려는 노력이 돋보였습니다.</p>
+<br>
+<div class="item">🚀 <strong>내일의 한 문장</strong>: 다음 수업 시작 시 튜터에게 사용할 수 있는 문장입니다.</div>
+<p>"Teacher, I was thinking about common ground. What do you find is the easiest common ground to establish with new business partners?"</p>
+<p>(튜터님, 공통점에 대해 생각해 봤는데요. 새로운 비즈니스 파트너와 가장 쉽게 공통점을 찾을 수 있는 방법은 무엇이라고 생각하시나요?)</p>
+<br>
+<br>
+<p><strong>[성과 지표]</strong></p>
+<br>
+<div class="item"><strong>유창성 점수</strong>: 7/10</div>
+<div class="item"><strong>근거</strong>: Joey는 전반적으로 수업 내용을 잘 따라오고 자신의 생각을 표현하려는 노력을 꾸준히 보여주고 있습니다. 특히 복잡한 상황이나 감정을 설명할 때 자연스러운 표현을 익히고 반복 연습하면 더욱 유창해질 것입니다. 발음 연습과 함께 자연스러운 표현 습득에 집중하면 좋겠습니다.</div>
+<div class="item"><strong>다음 수업 '원포인트 액션 플랜'</strong>: 오늘 배운 'approachable', 'common ground', 'awkward'와 같은 형용사 및 명사구를 활용하여, 다음 수업에서 자신의 경험이나 의견을 2-3문장으로 설명하는 연습을 집중적으로 진행합니다.</div></div>
+        </div>
+        <div id="tab-transcript" class="tab-content">
+            <div class="transcript"><span class="student">[Student]</span> Hello. Hello, teacher. Good morning. Good evening.
+<span class="tutor">[Tutor]</span> Hi there, Joey.
+<span class="student">[Student]</span> Yes.
+<span class="tutor">[Tutor]</span> Happy Thursday.
+<span class="tutor">[Tutor]</span> So, I see that you&#x27;ve moved on to Snack Chat Part 2. Congratulations. You&#x27;re working hard.
+<span class="student">[Student]</span> Yeah. Thanks so much.
+<span class="student">[Student]</span> Yes. I&#x27;m working on Snack Chat&#x27;s second part.
+<span class="tutor">[Tutor]</span> Yeah. This will be great.
+<span class="tutor">[Tutor]</span> Okay, so I&#x27;ve got us starting on page three.
+<span class="tutor">[Tutor]</span> The topic is getting to know you.
+<span class="tutor">[Tutor]</span> And as usual, we&#x27;re going to start at the bottom of page three.
+<span class="tutor">[Tutor]</span> Okay, and I&#x27;ll get you to...
+<span class="student">[Student]</span> Yeah, no worries. I want to make you happy.
+<span class="tutor">[Tutor]</span> All right, so I&#x27;ll get you to read the useful vocab, the phrase, the description, and the example sentence, if you please.
+<span class="student">[Student]</span> Okay, no problem.
+<span class="student">[Student]</span> The useful vocabulary: approachable, easy to talk to and friendly.
+<span class="student">[Student]</span> He looked very approachable at the party.
+<span class="student">[Student]</span> Approachable.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="tutor">[Tutor]</span> All right.
+<span class="tutor">[Tutor]</span> I&#x27;m going to get you to pause.
+<span class="tutor">[Tutor]</span> You&#x27;re very close.
+<span class="tutor">[Tutor]</span> That word, you said approachable.
+<span class="tutor">[Tutor]</span> I&#x27;m going to get you to try able.
+<span class="student">[Student]</span> Approachable.
+<span class="student">[Student]</span> Ever. Approach ever.
+<span class="tutor">[Tutor]</span> Very good.
+<span class="student">[Student]</span> Approach ever.
+<span class="tutor">[Tutor]</span> No problem. You got it.
+<span class="tutor">[Tutor]</span> All right. Let&#x27;s continue.
+<span class="student">[Student]</span> Okay. Common ground.
+<span class="student">[Student]</span> Shared interest or experience.
+<span class="student">[Student]</span> Common ground.
+<span class="student">[Student]</span> We found common ground.
+<span class="student">[Student]</span> Talking about travel.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="tutor">[Tutor]</span> Now, in the meaning,
+<span class="tutor">[Tutor]</span> you said shared interests
+<span class="tutor">[Tutor]</span> and experience.
+<span class="tutor">[Tutor]</span> That&#x27;s singular.
+<span class="tutor">[Tutor]</span> We have to add another syllable.
+<span class="tutor">[Tutor]</span> Experiences.
+<span class="student">[Student]</span> Experiences.
+<span class="tutor">[Tutor]</span> Yes.
+<span class="tutor">[Tutor]</span> To make it
+<span class="tutor">[Tutor]</span> plural.
+<span class="tutor">[Tutor]</span> Very good. And the last one.
+<span class="student">[Student]</span> Okay.
+<span class="student">[Student]</span> Awkward. Silence.
+<span class="student">[Student]</span> A walk.
+<span class="student">[Student]</span> A walk. A word.
+<span class="tutor">[Tutor]</span> May I help you with that word?
+<span class="student">[Student]</span> Yeah. A word. Silence.
+<span class="tutor">[Tutor]</span> Okay, you&#x27;re very close. We&#x27;ve got to get the K sound in there. I&#x27;ll get you to repeat after me, Joey.
+<span class="tutor">[Tutor]</span> Awkward.
+<span class="student">[Student]</span> Awk, awk, silent. Awk.
+<span class="tutor">[Tutor]</span> Yeah, awkward.
+<span class="student">[Student]</span> Awkward, awkward.
+<span class="tutor">[Tutor]</span> You got it.
+<span class="student">[Student]</span> Awkward, silent.
+<span class="tutor">[Tutor]</span> You did it.
+<span class="tutor">[Tutor]</span> Yes, a long uncomfortably awkward silence.
+<span class="student">[Student]</span> And teacher, I understand that expression, but what is the meaning of awkward? Just one word.
+<span class="tutor">[Tutor]</span> Awkward means to be tense or uncomfortable.
+<span class="student">[Student]</span> Uncomfortable. Awkward. Awkward relationship. Is that right?
+<span class="tutor">[Tutor]</span> Yeah. I will put that information in your comments today. I will give you some alternate words for awkward.
+<span class="student">[Student]</span> Awkward.
+<span class="student">[Student]</span> Awkward relationship.
+<span class="tutor">[Tutor]</span> Yes, I see.
+<span class="student">[Student]</span> When I met some people, I feel awkward.
+<span class="tutor">[Tutor]</span> Yes, yes.
+<span class="tutor">[Tutor]</span> You feel uncomfortable.
+<span class="tutor">[Tutor]</span> You don&#x27;t know what to do.
+<span class="tutor">[Tutor]</span> And you feel awkward.
+<span class="tutor">[Tutor]</span> Yes, you got it.
+<span class="tutor">[Tutor]</span> You understand.
+<span class="tutor">[Tutor]</span> Very good.
+<span class="tutor">[Tutor]</span> Good.
+<span class="student">[Student]</span> Okay, I see.
+<span class="tutor">[Tutor]</span> Mm-mm-mm-mm.
+<span class="tutor">[Tutor]</span> All right.
+<span class="tutor">[Tutor]</span> Did I have you read the last sentence?
+<span class="student">[Student]</span> Oh, yes.
+<span class="student">[Student]</span> I ended on awkward silence by asking about weekend plans.
+<span class="tutor">[Tutor]</span> Very good.
+<span class="tutor">[Tutor]</span> All right.
+<span class="tutor">[Tutor]</span> Nicely done.
+<span class="tutor">[Tutor]</span> Let&#x27;s go on to the useful expressions.
+<span class="student">[Student]</span> Okay.
+<span class="student">[Student]</span> I&#x27;m bad with your names.
+<span class="tutor">[Tutor]</span> I&#x27;m bad with names.
+<span class="tutor">[Tutor]</span> used as a way to apologize if you forgot a name.
+<span class="student">[Student]</span> I&#x27;m bad with your names.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="tutor">[Tutor]</span> You&#x27;re adding the word your.
+<span class="student">[Student]</span> Your.
+<span class="tutor">[Tutor]</span> If we look at that phrase, there&#x27;s four words.
+<span class="tutor">[Tutor]</span> I&#x27;m bad with names.
+<span class="student">[Student]</span> Names.
+<span class="student">[Student]</span> I&#x27;m bad with names.
+<span class="tutor">[Tutor]</span> Very good.
+<span class="tutor">[Tutor]</span> Good.
+<span class="tutor">[Tutor]</span> Now, there&#x27;s another word in the description.
+<span class="student">[Student]</span> Okay.
+<span class="tutor">[Tutor]</span> Used as a way to, I&#x27;m going to get you to repeat after me.
+<span class="tutor">[Tutor]</span> Apologize.
+<span class="student">[Student]</span> Apologize.
+<span class="tutor">[Tutor]</span> Apologize.
+<span class="tutor">[Tutor]</span> You got it.
+<span class="tutor">[Tutor]</span> Yeah.
+<span class="tutor">[Tutor]</span> Used as a way to apologize.
+<span class="tutor">[Tutor]</span> If you forgot a name.
+<span class="student">[Student]</span> Apologize. Apologize. Very good. Okay. All right. Yep. Next. What brings you here? Used to ask why someone is at an event.
+<span class="student">[Student]</span> What brings you here?
+<span class="student">[Student]</span> Why you come here, right?
+<span class="tutor">[Tutor]</span> Yeah, that&#x27;s another way to put it.
+<span class="tutor">[Tutor]</span> Why are you here?
+<span class="tutor">[Tutor]</span> What brings you here is more polite.
+<span class="student">[Student]</span> Ah, what brings you here?
+<span class="student">[Student]</span> What brings you here?
+<span class="student">[Student]</span> Wow, what brings you here?
+<span class="tutor">[Tutor]</span> Okay.
+<span class="tutor">[Tutor]</span> Very good.
+<span class="tutor">[Tutor]</span> Very nice.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="tutor">[Tutor]</span> All right.
+<span class="tutor">[Tutor]</span> Let&#x27;s go back up to the top of page three.
+<span class="student">[Student]</span> Uh-huh.
+<span class="tutor">[Tutor]</span> And I&#x27;ll get you to read the question for part A warm-up.
+<span class="student">[Student]</span> Okay.
+<span class="student">[Student]</span> What topics should I avoid when meeting someone for the first time?
+<span class="student">[Student]</span> There are four categories:
+<span class="student">[Student]</span> politics, money, religion, personal appearance.
+<span class="student">[Student]</span> When I meet someone for the first time,
+<span class="student">[Student]</span> I avoid
+<span class="student">[Student]</span> about the politics and religion subjects
+<span class="student">[Student]</span> because that is so sensitive a subject.
+<span class="student">[Student]</span> And some people totally believe
+<span class="student">[Student]</span> that&#x27;s fact.
+<span class="student">[Student]</span> And that subject is so sensitive
+<span class="student">[Student]</span> if I have a concept of upside.
+<span class="student">[Student]</span> And in the meantime,
+<span class="student">[Student]</span> we have some argument.
+<span class="student">[Student]</span> We have some argument.
+<span class="student">[Student]</span> So, yeah, that is the sensitive
+<span class="student">[Student]</span> and make it easier, easier, easier.
+<span class="student">[Student]</span> Yeah.
+<span class="tutor">[Tutor]</span> Good.
+<span class="student">[Student]</span> Problem.
+<span class="student">[Student]</span> So.
+<span class="tutor">[Tutor]</span> Absolutely.
+<span class="student">[Student]</span> Yeah, so usually I avoid about the politics and religion subjects.
+<span class="tutor">[Tutor]</span> That&#x27;s very good.
+<span class="tutor">[Tutor]</span> I actually teach my students that all four of these topics should be avoided around the world.
+<span class="student">[Student]</span> Around the world.
+<span class="tutor">[Tutor]</span> Yeah, we call these the taboo topics of small talk.
+<span class="student">[Student]</span> Oh, yes, I see.
+<span class="tutor">[Tutor]</span> Because you said they are sensitive.
+<span class="tutor">[Tutor]</span> Very good, very good.
+<span class="tutor">[Tutor]</span> You&#x27;re on the right track.
+<span class="tutor">[Tutor]</span> All right, let&#x27;s go on to the Part B question.
+<span class="tutor">[Tutor]</span> I&#x27;ll get you to read that.
+<span class="student">[Student]</span> Okay.
+<span class="student">[Student]</span> Which do you prefer for exchanging contact information and why?
+<span class="student">[Student]</span> The phone number versus social media account?
+<span class="student">[Student]</span> Ah, I see.
+<span class="student">[Student]</span> These days in Korea, so many young generation, like the MG generation, they exchange their social media account when they meet new people.
+<span class="student">[Student]</span> For example, they exchange their Instagram account because it&#x27;s possible to give some message, to DM, direct message.
+<span class="student">[Student]</span> And they use the DM like the message or the messenger.
+<span class="student">[Student]</span> So, yes, it&#x27;s the same, but I&#x27;m more old. I&#x27;m not MG generation, so I&#x27;m usually more convenient when I get this phone number.
+<span class="student">[Student]</span> So, if I met those new people, I exchanged the phone number or I exchanged the business card because that business card includes the phone number, address, name, and the company, etc., and email address.
+<span class="student">[Student]</span> So, yeah, usually it is more comfortable when I exchange the phone number.
+<span class="student">[Student]</span> Yeah.
+<span class="tutor">[Tutor]</span> I was going to ask you if people in your organization still use business cards because sometimes that is the most discreet way to give out your information.
+<span class="tutor">[Tutor]</span> Social media
+<span class="tutor">[Tutor]</span> it&#x27;s awful for privacy.
+<span class="tutor">[Tutor]</span> Once you put anything on the internet,
+<span class="tutor">[Tutor]</span> it&#x27;s there for the world to see.
+<span class="tutor">[Tutor]</span> Yeah.
+<span class="tutor">[Tutor]</span> I can appreciate the business cards
+<span class="tutor">[Tutor]</span> wholeheartedly.
+<span class="tutor">[Tutor]</span> Yeah.
+<span class="tutor">[Tutor]</span> I think
+<span class="tutor">[Tutor]</span> they&#x27;re classier.
+<span class="student">[Student]</span> Yeah, I think it is similar.
+<span class="student">[Student]</span> Invite of, invite of the wedding, wedding invite. For example, some people just send their invite of the SNS.
+<span class="student">[Student]</span> Use SNS.
+<span class="student">[Student]</span> But some people give some invite of paper.
+<span class="student">[Student]</span> That is more polite.
+<span class="student">[Student]</span> So I like that.
+<span class="student">[Student]</span> I love to exchange their business cards.
+<span class="tutor">[Tutor]</span> Sure.
+<span class="tutor">[Tutor]</span> Yeah.
+<span class="tutor">[Tutor]</span> Uh-huh.
+<span class="tutor">[Tutor]</span> It shows thought and effort.
+<span class="student">[Student]</span> Effort.
+<span class="tutor">[Tutor]</span> It shows thought and effort.
+<span class="tutor">[Tutor]</span> All right.
+<span class="student">[Student]</span> And effort.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="tutor">[Tutor]</span> To me, if someone was to send me a text message or an email saying,
+<span class="tutor">[Tutor]</span> &quot;Hi there, we&#x27;re getting married next month.
+<span class="tutor">[Tutor]</span> Can you join us?&quot;
+<span class="tutor">[Tutor]</span> It&#x27;s very informal.
+<span class="student">[Student]</span> Yes, you&#x27;re right.
+<span class="student">[Student]</span> You&#x27;re right.
+<span class="tutor">[Tutor]</span> Business cards and written invitations are a little more classy, a little more professional.
+<span class="tutor">[Tutor]</span> I would agree.
+<span class="student">[Student]</span> And teacher, what is the name of the invited wedding card?
+<span class="tutor">[Tutor]</span> It&#x27;s called a wedding invitation.
+<span class="student">[Student]</span> Wedding invitation.
+<span class="student">[Student]</span> Wedding invitation.
+<span class="student">[Student]</span> Yes.
+<span class="student">[Student]</span> Okay, I see.
+<span class="tutor">[Tutor]</span> And it usually is a paper,
+<span class="tutor">[Tutor]</span> a paper card
+<span class="tutor">[Tutor]</span> with the name of the couple,
+<span class="tutor">[Tutor]</span> the time, the date, and the location.
+<span class="tutor">[Tutor]</span> And then it often has a card
+<span class="tutor">[Tutor]</span> and another self-addressed envelope
+<span class="tutor">[Tutor]</span> you can fill in if you&#x27;re coming, yes or no,
+<span class="tutor">[Tutor]</span> and you send the reply back to them.
+<span class="student">[Student]</span> I see.
+<span class="student">[Student]</span> Yeah.
+<span class="student">[Student]</span> Understand.
+<span class="tutor">[Tutor]</span> That&#x27;s the old way.
+<span class="student">[Student]</span> Okay.
+<span class="tutor">[Tutor]</span> Good.
+<span class="student">[Student]</span> Wedding invitation.
+<span class="tutor">[Tutor]</span> All right.
+<span class="tutor">[Tutor]</span> You got it.
+<span class="tutor">[Tutor]</span> All right, my friend.
+<span class="tutor">[Tutor]</span> We&#x27;re on to part C.
+<span class="tutor">[Tutor]</span> I&#x27;ll get you to read the situation for me.
+<span class="student">[Student]</span> Okay.
+<span class="student">[Student]</span> No problem.
+<span class="student">[Student]</span> The situation.
+<span class="student">[Student]</span> You are meeting your friend&#x27;s coworkers for the first time.
+<span class="student">[Student]</span> You are having a good conversation, but halfway through, you realize you forgot their names.
+<span class="student">[Student]</span> You want to stay polite and not come across as rude.
+<span class="student">[Student]</span> Would you ask for their name again or just avoid using it?
+<span class="student">[Student]</span> Yeah, I understand this situation.
+<span class="student">[Student]</span> Because
+<span class="student">[Student]</span> I take the class
+<span class="student">[Student]</span> every morning,
+<span class="student">[Student]</span> the English class.
+<span class="student">[Student]</span> Sometimes that is the
+<span class="student">[Student]</span> morning, early morning,
+<span class="student">[Student]</span> and I&#x27;m just getting up.
+<span class="student">[Student]</span> So I don&#x27;t know my teacher name.
+<span class="student">[Student]</span> At the time I feel
+<span class="student">[Student]</span> if I ask
+<span class="student">[Student]</span> my teacher name, that is
+<span class="student">[Student]</span> so rude. So
+<span class="student">[Student]</span> I&#x27;m just saying, &quot;Teacher, I&#x27;m so
+<span class="student">[Student]</span> sorry, teacher, blah blah blah.&quot;
+<span class="student">[Student]</span> And then
+<span class="student">[Student]</span> at the end of the class,
+<span class="student">[Student]</span> I will find
+<span class="student">[Student]</span> my teacher&#x27;s name because
+<span class="student">[Student]</span> the Cattle English
+<span class="student">[Student]</span> gives us some information of my
+<span class="student">[Student]</span> teacher.
+<span class="student">[Student]</span> It is a similar situation.
+<span class="student">[Student]</span> And if I met
+<span class="student">[Student]</span> this situation, I&#x27;m just
+<span class="student">[Student]</span> talking, continue,
+<span class="student">[Student]</span> not using his name
+<span class="student">[Student]</span> or her name. And then
+<span class="student">[Student]</span> I just ask
+<span class="student">[Student]</span> to finish
+<span class="student">[Student]</span> the conversation.
+<span class="student">[Student]</span> And
+<span class="student">[Student]</span> then I ask to my
+<span class="student">[Student]</span> another friend, &quot;What&#x27;s her
+<span class="student">[Student]</span> name? I forgot that.&quot;
+<span class="student">[Student]</span> What&#x27;s her
+<span class="student">[Student]</span> name?
+<span class="tutor">[Tutor]</span> Yes.
+<span class="tutor">[Tutor]</span> I totally understand, Joey.
+<span class="tutor">[Tutor]</span> Yes.
+<span class="tutor">[Tutor]</span> Here
+<span class="tutor">[Tutor]</span> in Canada,
+<span class="tutor">[Tutor]</span> because we&#x27;re
+<span class="tutor">[Tutor]</span> a little more relaxed—we&#x27;re not as relaxed
+<span class="tutor">[Tutor]</span> as the Americans—
+<span class="tutor">[Tutor]</span> but if I forget someone&#x27;s name, I&#x27;m similar to you. Towards the end of the conversation, I would say,
+<span class="tutor">[Tutor]</span> &quot;You know, I&#x27;ve really enjoyed talking with you today, but I&#x27;m terribly sorry, could you tell me
+<span class="tutor">[Tutor]</span> your name again?&quot; Yeah, and you make it, you make it kind, you make it a joke, and they go, &quot;Oh yes, my name
+<span class="tutor">[Tutor]</span> is, you know, Jane,&quot; or something. I said, &quot;Well, Jane, it was so nice to meet you and chat with you.&quot; And then
+<span class="tutor">[Tutor]</span> that&#x27;s a nice way to end the conversation.
+<span class="tutor">[Tutor]</span> Yeah.
+<span class="tutor">[Tutor]</span> So,
+<span class="tutor">[Tutor]</span> um,
+<span class="tutor">[Tutor]</span> yeah,
+<span class="tutor">[Tutor]</span> sometimes you just gotta,
+<span class="tutor">[Tutor]</span> gotta bite the bullet, as we say.
+<span class="student">[Student]</span> Yes.
+<span class="tutor">[Tutor]</span> And,
+<span class="tutor">[Tutor]</span> um,
+<span class="student">[Student]</span> And one more,
+<span class="student">[Student]</span> one more thing.
+<span class="student">[Student]</span> I&#x27;m Korean.
+<span class="student">[Student]</span> My Korean name is Min-wook.
+<span class="student">[Student]</span> So if you listen to that name and then next day you will forget that. Because that is not an easy name, the Min-wook. So it is similar to the English name.
+<span class="student">[Student]</span> Yeah.
+<span class="student">[Student]</span> So sometimes I forget more easily, yeah, my teacher name.
+<span class="student">[Student]</span> Please understand.
+<span class="student">[Student]</span> Because I&#x27;m not English culture.
+<span class="student">[Student]</span> I don&#x27;t have English culture.
+<span class="student">[Student]</span> So more easily forget the English name.
+<span class="tutor">[Tutor]</span> No problem. No problem at all. I also can see your full name on my file, but I go by the Anglicized name that my students choose. And if Joey works for you, that&#x27;s great. No worries by me.
+<span class="student">[Student]</span> Okay. Thank you so much.
+<span class="tutor">[Tutor]</span> And if you call me teacher, that&#x27;s okay. You could call me a lot worse things.
+<span class="tutor">[Tutor]</span> All right, friend, let&#x27;s wrap up your lesson by looking at the warm-down.
+<span class="student">[Student]</span> Okay.
+<span class="tutor">[Tutor]</span> And I&#x27;ll get you to read question one and respond.
+<span class="student">[Student]</span> Okay.
+<span class="student">[Student]</span> When was the last time you met someone new?
+<span class="student">[Student]</span> What happened?
+<span class="student">[Student]</span> I see.
+<span class="student">[Student]</span> Maybe one week ago in my company.
+<span class="student">[Student]</span> The IT expert is coming because these days we consider about the AI system, because we
+<span class="student">[Student]</span> consider AI system used in company.
+<span class="student">[Student]</span> So this expert is to explain about that program and process.
+<span class="student">[Student]</span> So we trade our business cards and have a meeting.
+<span class="student">[Student]</span> Yeah, that is the experience.
+<span class="student">[Student]</span> The last time I met someone new.
+<span class="tutor">[Tutor]</span> I would imagine you meet new people on a regular basis in your country.
+<span class="tutor">[Tutor]</span> Because you&#x27;re a big organization, SKGAS.
+<span class="tutor">[Tutor]</span> So yeah, always lots of new people.
+<span class="student">[Student]</span> Okay.
+<span class="student">[Student]</span> Okay.
+<span class="tutor">[Tutor]</span> All right.
+<span class="tutor">[Tutor]</span> Let&#x27;s get you to read number two.
+<span class="student">[Student]</span> Okay.
+<span class="student">[Student]</span> What advice would you give someone who feels shy about meeting new people?
+<span class="student">[Student]</span> I&#x27;m a salesman because five years ago, I was working at the sales team.
+<span class="student">[Student]</span> So it is so easy to meet new people.
+<span class="student">[Student]</span> Because I think it is more afraid of the old people.
+<span class="student">[Student]</span> Have a relation, people meeting is the more difficult
+<span class="student">[Student]</span> because they know my information.
+<span class="student">[Student]</span> But new information, they don&#x27;t have my information.
+<span class="student">[Student]</span> So it is more easy to meet the new people.
+<span class="student">[Student]</span> And just that is the other human.
+<span class="student">[Student]</span> So, just I give some advice about if you meet new people, you just feel just that is the only one person in our people.
+<span class="student">[Student]</span> So, not have expectation, just meeting.
+<span class="student">[Student]</span> Yeah, sure.
+<span class="tutor">[Tutor]</span> I&#x27;m going to give you an English expression that I&#x27;m going to send to you in your comments today.
+<span class="tutor">[Tutor]</span> I&#x27;ve also worked in sales, so I totally understand what you&#x27;ve got to do, but we have an expression in English. I&#x27;ll say it slowly.
+<span class="tutor">[Tutor]</span> Fake it until you make it.
+<span class="student">[Student]</span> Fake it until you make it?
+<span class="tutor">[Tutor]</span> Yes. That means even if you feel shy or uncomfortable, just act confident and friendly until it feels natural.
+<span class="student">[Student]</span> Oh, yes. It&#x27;s nice.
+<span class="tutor">[Tutor]</span> Because that&#x27;s how it is when we&#x27;re in situations that are awkward, like meeting new people.
+<span class="tutor">[Tutor]</span> And you just, you just put a smile on your face and put out your hand or put out your business card.
+<span class="tutor">[Tutor]</span> And at the end of the meet and greet, uh-huh, you&#x27;re doing, you&#x27;re doing everything right.
+<span class="student">[Student]</span> I see. Thank
+<span class="student">[Student]</span> you for advice.
+<span class="tutor">[Tutor]</span> No problem. I said I&#x27;ll put it in the comments for you. All right, sir, it&#x27;s time to
+<span class="tutor">[Tutor]</span> let you go and enter the world of work. Thanks for chatting with me today. Excellent job.
+<span class="tutor">[Tutor]</span> Have a great day. Stay cool. And I will talk to you next time.
+<span class="student">[Student]</span> Have a nice day. Bye bye, teacher.
+<span class="tutor">[Tutor]</span> You take care.</div>
+        </div>
+    </div>
+    <div class="toast" id="toast">✅ 프롬프트가 복사되었습니다!</div>
+    <script>
+        const REVIEW_PROMPT="너는 나의 영어 회화 복습 파트너야. 오늘 내 전화영어 수업 내용을 기반으로 대화하면서 복습을 도와줘.\n\n[오늘 수업 전사 내용]\n[Student] Hello. Hello, teacher. Good morning. Good evening.\n[Tutor] Hi there, Joey.\n[Student] Yes.\n[Tutor] Happy Thursday.\n[Tutor] So, I see that you've moved on to Snack Chat Part 2. Congratulations. You're working hard.\n[Student] Yeah. Thanks so much.\n[Student] Yes. I'm working on Snack Chat's second part.\n[Tutor] Yeah. This will be great.\n[Tutor] Okay, so I've got us starting on page three.\n[Tutor] The topic is getting to know you.\n[Tutor] And as usual, we're going to start at the bottom of page three.\n[Tutor] Okay, and I'll get you to...\n[Student] Yeah, no worries. I want to make you happy.\n[Tutor] All right, so I'll get you to read the useful vocab, the phrase, the description, and the example sentence, if you please.\n[Student] Okay, no problem.\n[Student] The useful vocabulary: approachable, easy to talk to and friendly.\n[Student] He looked very approachable at the party.\n[Student] Approachable.\n[Tutor] Okay.\n[Tutor] All right.\n[Tutor] I'm going to get you to pause.\n[Tutor] You're very close.\n[Tutor] That word, you said approachable.\n[Tutor] I'm going to get you to try able.\n[Student] Approachable.\n[Student] Ever. Approach ever.\n[Tutor] Very good.\n[Student] Approach ever.\n[Tutor] No problem. You got it.\n[Tutor] All right. Let's continue.\n[Student] Okay. Common ground.\n[Student] Shared interest or experience.\n[Student] Common ground.\n[Student] We found common ground.\n[Student] Talking about travel.\n[Tutor] Okay.\n[Tutor] Now, in the meaning,\n[Tutor] you said shared interests\n[Tutor] and experience.\n[Tutor] That's singular.\n[Tutor] We have to add another syllable.\n[Tutor] Experiences.\n[Student] Experiences.\n[Tutor] Yes.\n[Tutor] To make it\n[Tutor] plural.\n[Tutor] Very good. And the last one.\n[Student] Okay.\n[Student] Awkward. Silence.\n[Student] A walk.\n[Student] A walk. A word.\n[Tutor] May I help you with that word?\n[Student] Yeah. A word. Silence.\n[Tutor] Okay, you're very close. We've got to get the K sound in there. I'll get you to repeat after me, Joey.\n[Tutor] Awkward.\n[Student] Awk, awk, silent. Awk.\n[Tutor] Yeah, awkward.\n[Student] Awkward, awkward.\n[Tutor] You got it.\n[Student] Awkward, silent.\n[Tutor] You did it.\n[Tutor] Yes, a long uncomfortably awkward silence.\n[Student] And teacher, I understand that expression, but what is the meaning of awkward? Just one word.\n[Tutor] Awkward means to be tense or uncomfortable.\n[Student] Uncomfortable. Awkward. Awkward relationship. Is that right?\n[Tutor] Yeah. I will put that information in your comments today. I will give you some alternate words for awkward.\n[Student] Awkward.\n[Student] Awkward relationship.\n[Tutor] Yes, I see.\n[Student] When I met some people, I feel awkward.\n[Tutor] Yes, yes.\n[Tutor] You feel uncomfortable.\n[Tutor] You don't know what to do.\n[Tutor] And you feel awkward.\n[Tutor] Yes, you got it.\n[Tutor] You understand.\n[Tutor] Very good.\n[Tutor] Good.\n[Student] Okay, I see.\n[Tutor] Mm-mm-mm-mm.\n[Tutor] All right.\n[Tutor] Did I have you read the last sentence?\n[Student] Oh, yes.\n[Student] I ended on awkward silence by asking about weekend plans.\n[Tutor] Very good.\n[Tutor] All right.\n[Tutor] Nicely done.\n[Tutor] Let's go on to the useful expressions.\n[Student] Okay.\n[Student] I'm bad with your names.\n[Tutor] I'm bad with names.\n[Tutor] used as a way to apologize if you forgot a name.\n[Student] I'm bad with your names.\n[Tutor] Okay.\n[Tutor] You're adding the word your.\n[Student] Your.\n[Tutor] If we look at that phrase, there's four words.\n[Tutor] I'm bad with names.\n[Student] Names.\n[Student] I'm bad with names.\n[Tutor] Very good.\n[Tutor] Good.\n[Tutor] Now, there's another word in the description.\n[Student] Okay.\n[Tutor] Used as a way to, I'm going to get you to repeat after me.\n[Tutor] Apologize.\n[Student] Apologize.\n[Tutor] Apologize.\n[Tutor] You got it.\n[Tutor] Yeah.\n[Tutor] Used as a way to apologize.\n[Tutor] If you forgot a name.\n[Student] Apologize. Apologize. Very good. Okay. All right. Yep. Next. What brings you here? Used to ask why someone is at an event.\n[Student] What brings you here?\n[Student] Why you come here, right?\n[Tutor] Yeah, that's another way to put it.\n[Tutor] Why are you here?\n[Tutor] What brings you here is more polite.\n[Student] Ah, what brings you here?\n[Student] What brings you here?\n[Student] Wow, what brings you here?\n[Tutor] Okay.\n[Tutor] Very good.\n[Tutor] Very nice.\n[Tutor] Okay.\n[Tutor] All right.\n[Tutor] Let's go back up to the top of page three.\n[Student] Uh-huh.\n[Tutor] And I'll get you to read the question for part A warm-up.\n[Student] Okay.\n[Student] What topics should I avoid when meeting someone for the first time?\n[Student] There are four categories:\n[Student] politics, money, religion, personal appearance.\n[Student] When I meet someone for the first time,\n[Student] I avoid\n[Student] about the politics and religion subjects\n[Student] because that is so sensitive a subject.\n[Student] And some people totally believe\n[Student] that's fact.\n[Student] And that subject is so sensitive\n[Student] if I have a concept of upside.\n[Student] And in the meantime,\n[Student] we have some argument.\n[Student] We have some argument.\n[Student] So, yeah, that is the sensitive\n[Student] and make it easier, easier, easier.\n[Student] Yeah.\n[Tutor] Good.\n[Student] Problem.\n[Student] So.\n[Tutor] Absolutely.\n[Student] Yeah, so usually I avoid about the politics and religion subjects.\n[Tutor] That's very good.\n[Tutor] I actually teach my students that all four of these topics should be avoided around the world.\n[Student] Around the world.\n[Tutor] Yeah, we call these the taboo topics of small talk.\n[Student] Oh, yes, I see.\n[Tutor] Because you said they are sensitive.\n[Tutor] Very good, very good.\n[Tutor] You're on the right track.\n[Tutor] All right, let's go on to the Part B question.\n[Tutor] I'll get you to read that.\n[Student] Okay.\n[Student] Which do you prefer for exchanging contact information and why?\n[Student] The phone number versus social media account?\n[Student] Ah, I see.\n[Student] These days in Korea, so many young generation, like the MG generation, they exchange their social media account when they meet new people.\n[Student] For example, they exchange their Instagram account because it's possible to give some message, to DM, direct message.\n[Student] And they use the DM like the message or the messenger.\n[Student] So, yes, it's the same, but I'm more old. I'm not MG generation, so I'm usually more convenient when I get this phone number.\n[Student] So, if I met those new people, I exchanged the phone number or I exchanged the business card because that business card includes the phone number, address, name, and the company, etc., and email address.\n[Student] So, yeah, usually it is more comfortable when I exchange the phone number.\n[Student] Yeah.\n[Tutor] I was going to ask you if people in your organization still use business cards because sometimes that is the most discreet way to give out your information.\n[Tutor] Social media\n[Tutor] it's awful for privacy.\n[Tutor] Once you put anything on the internet,\n[Tutor] it's there for the world to see.\n[Tutor] Yeah.\n[Tutor] I can appreciate the business cards\n[Tutor] wholeheartedly.\n[Tutor] Yeah.\n[Tutor] I think\n[Tutor] they're classier.\n[Student] Yeah, I think it is similar.\n[Student] Invite of, invite of the wedding, wedding invite. For example, some people just send their invite of the SNS.\n[Student] Use SNS.\n[Student] But some people give some invite of paper.\n[Student] That is more polite.\n[Student] So I like that.\n[Student] I love to exchange their business cards.\n[Tutor] Sure.\n[Tutor] Yeah.\n[Tutor] Uh-huh.\n[Tutor] It shows thought and effort.\n[Student] Effort.\n[Tutor] It shows thought and effort.\n[Tutor] All right.\n[Student] And effort.\n[Tutor] Okay.\n[Tutor] To me, if someone was to send me a text message or an email saying,\n[Tutor] \"Hi there, we're getting married next month.\n[Tutor] Can you join us?\"\n[Tutor] It's very informal.\n[Student] Yes, you're right.\n[Student] You're right.\n[Tutor] Business cards and written invitations are a little more classy, a little more professional.\n[Tutor] I would agree.\n[Student] And teacher, what is the name of the invited wedding card?\n[Tutor] It's called a wedding invitation.\n[Student] Wedding invitation.\n[Student] Wedding invitation.\n[Student] Yes.\n[Student] Okay, I see.\n[Tutor] And it usually is a paper,\n[Tutor] a paper card\n[Tutor] with the name of the couple,\n[Tutor] the time, the date, and the location.\n[Tutor] And then it often has a card\n[Tutor] and another self-addressed envelope\n[Tutor] you can fill in if you're coming, yes or no,\n[Tutor] and you send the reply back to them.\n[Student] I see.\n[Student] Yeah.\n[Student] Understand.\n[Tutor] That's the old way.\n[Student] Okay.\n[Tutor] Good.\n[Student] Wedding invitation.\n[Tutor] All right.\n[Tutor] You got it.\n[Tutor] All right, my friend.\n[Tutor] We're on to part C.\n[Tutor] I'll get you to read the situation for me.\n[Student] Okay.\n[Student] No problem.\n[Student] The situation.\n[Student] You are meeting your friend's coworkers for the first time.\n[Student] You are having a good conversation, but halfway through, you realize you forgot their names.\n[Student] You want to stay polite and not come across as rude.\n[Student] Would you ask for their name again or just avoid using it?\n[Student] Yeah, I understand this situation.\n[Student] Because\n[Student] I take the class\n[Student] every morning,\n[Student] the English class.\n[Student] Sometimes that is the\n[Student] morning, early morning,\n[Student] and I'm just getting up.\n[Student] So I don't know my teacher name.\n[Student] At the time I feel\n[Student] if I ask\n[Student] my teacher name, that is\n[Student] so rude. So\n[Student] I'm just saying, \"Teacher, I'm so\n[Student] sorry, teacher, blah blah blah.\"\n[Student] And then\n[Student] at the end of the class,\n[Student] I will find\n[Student] my teacher's name because\n[Student] the Cattle English\n[Student] gives us some information of my\n[Student] teacher.\n[Student] It is a similar situation.\n[Student] And if I met\n[Student] this situation, I'm just\n[Student] talking, continue,\n[Student] not using his name\n[Student] or her name. And then\n[Student] I just ask\n[Student] to finish\n[Student] the conversation.\n[Student] And\n[Student] then I ask to my\n[Student] another friend, \"What's her\n[Student] name? I forgot that.\"\n[Student] What's her\n[Student] name?\n[Tutor] Yes.\n[Tutor] I totally understand, Joey.\n[Tutor] Yes.\n[Tutor] Here\n[Tutor] in Canada,\n[Tutor] because we're\n[Tutor] a little more relaxed—we're not as relaxed\n[Tutor] as the Americans—\n[Tutor] but if I forget someone's name, I'm similar to you. Towards the end of the conversation, I would say,\n[Tutor] \"You know, I've really enjoyed talking with you today, but I'm terribly sorry, could you tell me\n[Tutor] your name again?\" Yeah, and you make it, you make it kind, you make it a joke, and they go, \"Oh yes, my name\n[Tutor] is, you know, Jane,\" or something. I said, \"Well, Jane, it was so nice to meet you and chat with you.\" And then\n[Tutor] that's a nice way to end the conversation.\n[Tutor] Yeah.\n[Tutor] So,\n[Tutor] um,\n[Tutor] yeah,\n[Tutor] sometimes you just gotta,\n[Tutor] gotta bite the bullet, as we say.\n[Student] Yes.\n[Tutor] And,\n[Tutor] um,\n[Student] And one more,\n[Student] one more thing.\n[Student] I'm Korean.\n[Student] My Korean name is Min-wook.\n[Student] So if you listen to that name and then next day you will forget that. Because that is not an easy name, the Min-wook. So it is similar to the English name.\n[Student] Yeah.\n[Student] So sometimes I forget more easily, yeah, my teacher name.\n[Student] Please understand.\n[Student] Because I'm not English culture.\n[Student] I don't have English culture.\n[Student] So more easily forget the English name.\n[Tutor] No problem. No problem at all. I also can see your full name on my file, but I go by the Anglicized name that my students choose. And if Joey works for you, that's great. No worries by me.\n[Student] Okay. Thank you so much.\n[Tutor] And if you call me teacher, that's okay. You could call me a lot worse things.\n[Tutor] All right, friend, let's wrap up your lesson by looking at the warm-down.\n[Student] Okay.\n[Tutor] And I'll get you to read question one and respond.\n[Student] Okay.\n[Student] When was the last time you met someone new?\n[Student] What happened?\n[Student] I see.\n[Student] Maybe one week ago in my company.\n[Student] The IT expert is coming because these days we consider about the AI system, because we\n[Student] consider AI system used in company.\n[Student] So this expert is to explain about that program and process.\n[Student] So we trade our business cards and have a meeting.\n[Student] Yeah, that is the experience.\n[Student] The last time I met someone new.\n[Tutor] I would imagine you meet new people on a regular basis in your country.\n[Tutor] Because you're a big organization, SKGAS.\n[Tutor] So yeah, always lots of new people.\n[Student] Okay.\n[Student] Okay.\n[Tutor] All right.\n[Tutor] Let's get you to read number two.\n[Student] Okay.\n[Student] What advice would you give someone who feels shy about meeting new people?\n[Student] I'm a salesman because five years ago, I was working at the sales team.\n[Student] So it is so easy to meet new people.\n[Student] Because I think it is more afraid of the old people.\n[Student] Have a relation, people meeting is the more difficult\n[Student] because they know my information.\n[Student] But new information, they don't have my information.\n[Student] So it is more easy to meet the new people.\n[Student] And just that is the other human.\n[Student] So, just I give some advice about if you meet new people, you just feel just that is the only one person in our people.\n[Student] So, not have expectation, just meeting.\n[Student] Yeah, sure.\n[Tutor] I'm going to give you an English expression that I'm going to send to you in your comments today.\n[Tutor] I've also worked in sales, so I totally understand what you've got to do, but we have an expression in English. I'll say it slowly.\n[Tutor] Fake it until you make it.\n[Student] Fake it until you make it?\n[Tutor] Yes. That means even if you feel shy or uncomfortable, just act confident and friendly until it feels natural.\n[Student] Oh, yes. It's nice.\n[Tutor] Because that's how it is when we're in situations that are awkward, like meeting new people.\n[Tutor] And you just, you just put a smile on your face and put out your hand or put out your business card.\n[Tutor] And at the end of the meet and greet, uh-huh, you're doing, you're doing everything right.\n[Student] I see. Thank\n[Student] you for advice.\n[Tutor] No problem. I said I'll put it in the comments for you. All right, sir, it's time to\n[Tutor] let you go and enter the world of work. Thanks for chatting with me today. Excellent job.\n[Tutor] Have a great day. Stay cool. And I will talk to you next time.\n[Student] Have a nice day. Bye bye, teacher.\n[Tutor] You take care.\n\n[AI 피드백]\n안녕하세요, Joey! 따뜻하고 실용적인 영어 코치입니다. 오늘 수업 내용 잘 분석해서 피드백 드릴게요.\n\n---\n\n**0. 📌 Topic**\nTopic: Discussing 'Getting to Know You' topics and social interaction strategies.\n\n**1. 📊 오늘의 대화 요약 (Summary)**\n오늘 수업에서는 'Getting to Know You' 파트에서 다룬 어휘 및 표현들을 익히고 연습했습니다. 특히 'approachable', 'common ground', 'awkward'와 같은 단어의 발음과 의미를 정확히 짚었고, 'I'm bad with names'와 같은 유용한 표현들을 배웠습니다. 또한, 처음 만나는 사람에게 피해야 할 주제와 연락처 교환 방식에 대한 선호도를 이야기하고, 이름을 잊었을 때 정중하게 대처하는 방법에 대해 구체적인 상황을 예로 들어 토론했습니다.\n\n**2. 💬 유창성 업그레이드 (Fluency & Natural Flow)**\n\n*   **1) ❌ As Said**: \"I want to make you happy.\"\n    **✅ Natural**: \"I want to be helpful.\" / \"I want to do a good job.\"\n    **💎 Professional**: \"I aim to meet your expectations.\" / \"I'm committed to ensuring your satisfaction.\"\n    **💡 Coaching Point**: \"The original sentence 'I want to make you happy' is understandable but can sound a bit too personal or child-like in a professional context. Using 'helpful' or 'do a good job' focuses on your contribution, and 'meet your expectations' or 'ensure your satisfaction' are more professional ways to express your desire to please in a business setting.\"\n    → 원문 \"I want to make you happy\"는 의미는 통하지만, 비즈니스 맥락에서는 다소 개인적이거나 어린아이처럼 들릴 수 있습니다. 'helpful'이나 'do a good job'을 사용하면 기여하는 부분에 초점을 맞출 수 있고, 'meet your expectations' 또는 'ensure your satisfaction'은 비즈니스 환경에서 상대방을 만족시키고자 하는 마음을 표현하는 더 전문적인 방법입니다.\n\n*   **2) ❌ As Said**: \"When I met some people, I feel awkward.\"\n    **✅ Natural**: \"When I meet new people, I sometimes feel awkward.\"\n    **💎 Professional**: \"I occasionally feel awkward when encountering new people.\"\n    **💡 Coaching Point**: \"The original sentence uses 'met' which is past tense, but the feeling of awkwardness seems to be a general or recurring experience. Using the present tense 'meet' and adding 'sometimes' or 'occasionally' makes it clear this is a general feeling or habit rather than a specific past event. Also, 'new people' is slightly more common than 'some people' in this general context.\"\n    → 원문은 과거 시제인 'met'를 사용했지만, 어색함을 느끼는 것은 일반적이거나 반복적인 경험처럼 들립니다. 현재 시제인 'meet'를 사용하고 'sometimes' 또는 'occasionally'를 추가하면 이것이 특정 과거 사건이 아닌 일반적인 감정이나 습관임을 명확히 할 수 있습니다. 또한, 이 일반적인 맥락에서는 'some people'보다 'new people'이 약간 더 흔하게 사용됩니다.\n\n*   **3) ❌ As Said**: \"These days in Korea, so many young generation, like the MG generation, they exchange their social media account...\"\n    **✅ Natural**: \"These days in Korea, many young people, like the MZ generation, exchange social media accounts...\"\n    **💎 Professional**: \"Currently, in Korea, a significant portion of the younger demographic, particularly the MZ generation, tends to exchange social media handles...\"\n    **💡 Coaching Point**: \"The phrase 'so many young generation' is a bit unnatural. It should be 'many young people' or 'a lot of young people'. Also, 'they exchange their social media account' can be simplified to 'exchange social media accounts' or 'exchange social media handles' for a smoother flow. The term 'MZ generation' is more common in Korean context than 'MG generation'.\"\n    → 'so many young generation'이라는 표현은 다소 부자연스럽습니다. 'many young people' 또는 'a lot of young people'이 되어야 합니다. 또한, 'they exchange their social media account'는 더 자연스러운 흐름을 위해 'exchange social media accounts' 또는 'exchange social media handles'로 단순화할 수 있습니다. 'MG generation'보다는 한국 맥락에서 'MZ generation'이라는 용어가 더 일반적입니다.\n\n**3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)**\nCategory: Prepositional Phrase Errors (Incorrect use of prepositions)\n\nJoey made several errors in using prepositions, particularly when describing actions or topics. This pattern is common for intermediate learners as prepositions often don't have direct equivalents and require memorization of common collocations.\n\n| ❌ 학습자 원문 (As Said)                                                              | ✅ 교정 예시 (Correction)                                                              |\n| :----------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------- |\n| \"I avoid **about** the politics and religion subjects.\"                                | \"I avoid politics and religion subjects.\"                                            |\n| \"The IT expert is coming because these days we consider **about** the AI system...\"    | \"The IT expert is coming because these days we are considering the AI system...\"     |\n| \"So, just I give some advice **about** if you meet new people...\"                     | \"So, I give some advice **on** meeting new people...\" / \"So, my advice **for** meeting new people is...\" |\n| \"And then I ask **to** my another friend, 'What's her name?'\"                         | \"And then I ask my friend, 'What's her name?'\"                                       |\n\n📌 **핵심 규칙**: 'avoid'와 같은 일부 동사는 목적어를 바로 취하며 전치사 'about'이 필요하지 않습니다. 'consider'는 'consider about' 대신 목적어를 바로 취하거나 'consider' 뒤에 'the possibility of' 등을 붙여 사용할 수 있습니다. 'advice' 뒤에는 보통 'on'이나 'for'를 사용하여 조언의 대상을 나타냅니다. 'ask' 동사는 'ask someone'처럼 직접 목적어를 취하거나 'ask for'와 같이 사용하며, 'ask to someone'은 일반적으로 사용되지 않습니다.\n\n🔁 **따라 읽기**:\n🗣️ \"I avoid politics and religion subjects.\"\n🗣️ \"We are considering the AI system.\"\n🗣️ \"My advice for meeting new people is...\"\n🗣️ \"I ask my friend, 'What's her name?'\"\n\n**4. 📗 어휘 확장 (Vocabulary Vault)**\n\n*   **approachable** /əˈproʊtʃəbl/ (adjective)\n    *   뜻: 가까이하기 쉬운, 친근한\n    *   실전 예문: Our new manager is very approachable, making it easy to discuss concerns.\n*   **common ground** /ˌkɒmən ˈɡraʊnd/ (noun phrase)\n    *   뜻: 공통점, 공통의 관심사\n    *   실전 예문: Finding common ground helped us build a strong working relationship.\n*   **awkward** /ˈɔːkwərd/ (adjective)\n    *   뜻: 어색한, 서투른\n    *   실전 예문: The silence after the presentation felt a bit awkward.\n*   **exchange** /ɪksˈtʃeɪndʒ/ (verb)\n    *   뜻: 교환하다\n    *   실전 예문: We exchanged business cards after the meeting.\n*   **polite** /pəˈlaɪt/ (adjective)\n    *   뜻: 예의 바른, 공손한\n    *   실전 예문: It's important to be polite when speaking with clients.\n\n**5. 📝 실전 복습 챌린지 (Practice)**\n\n1.  **상황**: 회의 후 처음 만난 동료와 명함을 교환해야 합니다.\n    **영작**: \"Let's exchange business cards.\" 라고 말해보세요.\n    **모범 답안**: Let's exchange business cards.\n\n2.  **상황**: 새로운 프로젝트 팀에 합류했는데, 팀원들이 모두 친근해 보입니다.\n    **영작**: \"Our new team leader seems very approachable.\" 라고 말해보세요.\n    **모범 답안**: Our new team leader seems very approachable.\n\n3.  **상황**: 비즈니스 미팅에서 상대방의 이름이 기억나지 않습니다. 정중하게 다시 물어보고 싶습니다.\n    **영작**: \"I'm terribly sorry, could you tell me your name again?\" 라고 말해보세요.\n    **모범 답안**: I'm terribly sorry, could you tell me your name again?\n\n**6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)**\n\n*   ✨ **Good Job**: \"[Student] I avoid about the politics and religion subjects because that is so sensitive a subject.\"\n    이 문장은 비록 'about' 사용에 문법적 오류가 있었지만, Joey가 왜 특정 주제를 피하는지에 대한 이유를 명확하게 설명하려는 의지를 보여주었습니다. 'sensitive a subject'와 같은 표현을 사용하여 자신의 생각을 구체적으로 전달하려는 노력이 돋보였습니다.\n\n*   🚀 **내일의 한 문장**: 다음 수업 시작 시 튜터에게 사용할 수 있는 문장입니다.\n    \"Teacher, I was thinking about common ground. What do you find is the easiest common ground to establish with new business partners?\"\n    (튜터님, 공통점에 대해 생각해 봤는데요. 새로운 비즈니스 파트너와 가장 쉽게 공통점을 찾을 수 있는 방법은 무엇이라고 생각하시나요?)\n\n---\n\n**[성과 지표]**\n\n*   **유창성 점수**: 7/10\n*   **근거**: Joey는 전반적으로 수업 내용을 잘 따라오고 자신의 생각을 표현하려는 노력을 꾸준히 보여주고 있습니다. 특히 복잡한 상황이나 감정을 설명할 때 자연스러운 표현을 익히고 반복 연습하면 더욱 유창해질 것입니다. 발음 연습과 함께 자연스러운 표현 습득에 집중하면 좋겠습니다.\n*   **다음 수업 '원포인트 액션 플랜'**: 오늘 배운 'approachable', 'common ground', 'awkward'와 같은 형용사 및 명사구를 활용하여, 다음 수업에서 자신의 경험이나 의견을 2-3문장으로 설명하는 연습을 집중적으로 진행합니다.\n\n위 내용을 바탕으로:\n1. 먼저 오늘 수업에서 내가 틀렸거나 어색했던 표현을 하나 골라서, 관련된 상황을 영어로 질문해줘.\n2. 내가 영어로 대답하면, 자연스러운지 확인하고 더 나은 표현이 있으면 알려줘.\n3. 특히 \"반복 실수 패턴\"에서 지적된 부분을 집중적으로 연습시켜줘.\n4. 이런 식으로 오늘 배운 표현들을 하나씩 복습하자.\n5. 한국어 설명은 필요할 때만 간단히, 대화는 최대한 영어로 진행해줘.\n\n그럼 시작하자!";
+        function startReview(){navigator.clipboard.writeText(REVIEW_PROMPT).then(()=>{showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)}).catch(()=>{const t=document.createElement('textarea');t.value=REVIEW_PROMPT;document.body.appendChild(t);t.select();document.execCommand('copy');document.body.removeChild(t);showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)})}
+        function showToast(){const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500)}
+        function switchTab(n){document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',n==='feedback'?i===0:i===1));document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));document.getElementById('tab-'+n).classList.add('active')}
+    </script>
+</body>
+</html>
