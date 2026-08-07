@@ -1,0 +1,250 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#0f0f13"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="당근영어"><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="icon" type="image/png" sizes="192x192" href="icon-192.png"><script src="install-banner.js" defer></script><script src="sw-reg.js" defer></script>
+<title>🎙️ 라디오 2026-W31</title><style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Noto Sans KR',-apple-system,sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.7}
+.header{background:linear-gradient(135deg,#241a3a,#3a2410,#0f3460);padding:42px 24px 30px;text-align:center;border-bottom:1px solid rgba(255,255,255,.06)}
+.header h1{font-size:24px;color:#f5f0ff;margin-bottom:8px}
+.header .range{font-size:13px;color:#c4b5fd;letter-spacing:1px}
+.nav{max-width:760px;margin:0 auto;padding:14px 20px 0;display:flex;justify-content:space-between;font-size:13px}
+.nav a{color:#64748b;text-decoration:none;padding:6px 10px;border-radius:8px}.nav a:hover{color:#a78bfa;background:#16161d}
+.container{max-width:760px;margin:0 auto;padding:18px 20px 80px}
+.card{background:#16161d;border:1px solid rgba(255,255,255,.06);border-radius:16px;padding:20px;margin-bottom:18px}
+.card h2{font-size:16px;color:#f1f5f9;margin-bottom:12px}
+.player{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-bottom:14px}
+.pbtn{border:none;border-radius:10px;padding:12px 18px;font-size:14px;font-weight:700;cursor:pointer;font-family:inherit;color:#0f0f13;background:linear-gradient(135deg,#a78bfa,#818cf8)}
+.pbtn.alt{background:#1e293b;color:#cbd5e1}
+.pbtn:active{transform:translateY(1px)}
+.speed{display:flex;align-items:center;gap:6px;font-size:12px;color:#94a3b8;margin-left:auto}
+.speed input{accent-color:#a78bfa}
+.stage{display:flex;flex-direction:column;gap:10px;margin-top:6px}
+.bubble{max-width:88%;padding:11px 14px;border-radius:14px;font-size:14px;border:1px solid transparent;transition:all .2s}
+.bubble .who{display:block;font-size:11px;font-weight:700;margin-bottom:3px;opacity:.8}
+.bubble.mc{align-self:flex-start;background:#1e1b2e;border-color:rgba(167,139,250,.25)}.bubble.mc .who{color:#a78bfa}
+.bubble.coach{align-self:flex-end;background:#1a2433;border-color:rgba(56,189,248,.22)}.bubble.coach .who{color:#38bdf8}
+.bubble.on{border-color:#fbbf24;box-shadow:0 0 0 1px #fbbf24}
+.modes{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.mode{display:flex;flex-direction:column;gap:4px;align-items:center;padding:16px 10px;background:#0f0f13;border:1px solid rgba(255,255,255,.08);border-radius:12px;color:#cbd5e1;cursor:pointer;font-size:13px;text-align:center}
+.mode:hover{border-color:rgba(167,139,250,.4);color:#a78bfa}.mode .ico{font-size:22px}.mode .sub{font-size:11px;color:#64748b}
+.muted{color:#64748b;font-size:12px}
+.toast{position:fixed;bottom:28px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#a78bfa;padding:13px 26px;border-radius:12px;font-size:14px;border:1px solid rgba(167,139,250,.25);opacity:0;transition:all .4s;z-index:99}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+.epweek{font-size:13px;color:#a78bfa;font-weight:700;margin-bottom:6px}
+audio{width:100%;margin-top:4px}
+.archive{display:flex;flex-direction:column;gap:6px;margin-top:10px}
+.archive a{font-size:12.5px;color:#94a3b8;text-decoration:none;padding:8px 12px;background:#0f0f13;border:1px solid rgba(255,255,255,.06);border-radius:8px}
+.archive a:hover{color:#a78bfa;border-color:rgba(167,139,250,.3)}
+.weeklist{display:flex;flex-direction:column;gap:6px;margin-top:4px}
+.weekrow{display:flex;align-items:center;gap:10px;font-size:13px;color:#cbd5e1;text-decoration:none;padding:11px 13px;background:#0f0f13;border:1px solid rgba(255,255,255,.06);border-radius:10px}
+.weekrow:hover{border-color:rgba(167,139,250,.4);color:#a78bfa}
+.weekrow.active{border-color:rgba(167,139,250,.5);background:#1e1b2e}
+.weekrow .wk{font-weight:700;color:#a78bfa;white-space:nowrap}
+.weekrow .wr{color:#64748b}
+.weekrow .wk-audio{margin-left:auto;font-size:14px;min-width:18px;text-align:right}
+.foot{text-align:center;font-size:11px;color:#475569;margin-top:26px;line-height:1.8}
+</style></head><body>
+<div class="header"><h1>🎙️ 라디오 · 2026-W31</h1>
+<div class="range">7/27~7/31 · 주차 기록 · 브라우저 음성으로 청취</div></div>
+<div class="nav"><a href="radio.html">← 최신 라디오</a><a href="review-index.html">📚 복습 목록 →</a></div>
+<div class="container">
+
+  <div class="card"><h2>🎧 오디오 에피소드 <span class="muted" style="font-weight:400">· 진짜 음성 · 이 주차</span></h2>
+    <div id="audio-latest" class="muted">에피소드 불러오는 중…</div></div>
+
+  <div class="card"><h2>🗂 주차별 라디오 기록 <span class="muted" style="font-weight:400">· 최신순 · 누적</span></h2>
+    <div class="weeklist"><a class="weekrow" data-wk="2026-W32" href="radio.html"><span class="wk">2026-W32</span><span class="wr">8/3~8/7 · 4회</span><span class="wk-audio"></span></a><a class="weekrow active" data-wk="2026-W31" href="radio-2026-W31.html"><span class="wk">2026-W31 · 현재</span><span class="wr">7/27~7/31 · 3회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W30" href="radio-2026-W30.html"><span class="wk">2026-W30</span><span class="wr">7/20~7/24 · 5회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W29" href="radio-2026-W29.html"><span class="wk">2026-W29</span><span class="wr">7/13~7/17 · 4회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W28" href="radio-2026-W28.html"><span class="wk">2026-W28</span><span class="wr">7/6~7/10 · 5회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W27" href="radio-2026-W27.html"><span class="wk">2026-W27</span><span class="wr">6/29~7/3 · 3회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W26" href="radio-2026-W26.html"><span class="wk">2026-W26</span><span class="wr">6/22~6/26 · 5회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W25" href="radio-2026-W25.html"><span class="wk">2026-W25</span><span class="wr">6/15~6/19 · 5회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W24" href="radio-2026-W24.html"><span class="wk">2026-W24</span><span class="wr">6/8~6/12 · 5회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W23" href="radio-2026-W23.html"><span class="wk">2026-W23</span><span class="wr">6/1~6/5 · 1회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W22" href="radio-2026-W22.html"><span class="wk">2026-W22</span><span class="wr">5/25~5/29 · 3회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W21" href="radio-2026-W21.html"><span class="wk">2026-W21</span><span class="wr">5/18~5/22 · 3회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W20" href="radio-2026-W20.html"><span class="wk">2026-W20</span><span class="wr">5/11~5/15 · 4회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W19" href="radio-2026-W19.html"><span class="wk">2026-W19</span><span class="wr">5/4~5/8 · 1회</span><span class="wk-audio"></span></a></div></div>
+
+  <div class="card"><h2>▶ 바로 듣기 <span class="muted" style="font-weight:400">· 브라우저 음성(즉시·폴백)</span></h2>
+    <div class="player">
+      <button class="pbtn" id="play">▶ 재생</button>
+      <button class="pbtn alt" id="pause">⏸ 일시정지</button>
+      <button class="pbtn alt" id="resume">▶ 이어듣기</button>
+      <button class="pbtn alt" id="stop">⏹ 처음부터</button>
+      <label class="speed">속도 <input type="range" id="rate" min="0.7" max="1.3" step="0.1" value="1"> <span id="rv">1.0x</span></label>
+    </div>
+    <div class="muted" id="ttswarn" style="margin-bottom:8px"></div>
+    <div class="muted" style="margin:2px 0 10px;font-size:11.5px;line-height:1.7">💡 재생 중에는 화면이 자동으로 꺼지지 않게 막아요(Wake&nbsp;Lock). 다만 직접 화면을 끄면 브라우저 음성은 멈출 수 있어요 — <b>화면을 끈 채 듣고 싶다면 맨 위 🎧 오디오 에피소드(MP3)</b>를 쓰세요. 잠금화면에서도 재생됩니다.</div>
+    <div class="stage" id="stage"></div>
+  </div>
+
+  <div class="card"><h2>💬 이 내용으로 AI와 이야기하기</h2>
+    <div class="muted" style="margin-bottom:10px">클릭하면 이 주차 요약 프롬프트가 복사되고 Gemini가 열립니다. 붙여넣고 대화하세요.</div>
+    <div class="modes">
+      <div class="mode" onclick="copyOpen('chat')"><span class="ico">💬</span>튜터 대화<span class="sub">약점 집중 연습</span></div>
+      <div class="mode" onclick="copyOpen('lecture')"><span class="ico">🎓</span>강의식 설명<span class="sub">규칙+예문+퀴즈</span></div>
+      <div class="mode" onclick="copyOpen('radio')"><span class="ico">🎙</span>라디오 인터뷰<span class="sub">게스트 롤플레이</span></div>
+    </div>
+  </div>
+
+  <div class="card"><h2>📓 NotebookLM 팟캐스트로 듣기 <span class="sub">고품질·무료</span></h2>
+    <div class="muted" style="margin-bottom:12px">이번 주 학습 다이제스트(교정·강사 피드백·어휘 전부)를 복사해 <b>NotebookLM</b>에 붙여넣고 <b>Audio Overview</b>를 만들면, 2인 진행 영어 팟캐스트가 무료로 생성됩니다(현재 TTS보다 자연스러움).</div>
+    <div class="modes">
+      <div class="mode" onclick="window.open('https://notebooklm.google.com/','_blank');copyDigest()"><span class="ico">📓</span>복사+NotebookLM 열기<span class="sub">원클릭 반자동</span></div>
+      <div class="mode" onclick="copyDigest()"><span class="ico">📋</span>다이제스트만 복사<span class="sub">붙여넣기용 텍스트</span></div>
+    </div>
+  </div>
+
+  <div class="foot">대본: scripts/build_radio.py · 다이제스트: scripts/build_digest.py · 음성: 브라우저 Web Speech(무료) · 주차별 누적 · 매주 금요일 Claude 갱신</div>
+</div>
+
+<pre id="radio-src" hidden>민지|en|Hello and welcome back to Weekly English Radio. I&#x27;m Minji, your host.
+알렉스|en|And I&#x27;m Alex, your English coach. This is episode 2026-W31.
+민지|en|You had three lessons this week — healthcare systems, stress management, and medication.
+알렉스|en|Great topics. And you had some really interesting mistakes. Not bad ones. Interesting ones.
+민지|en|Because interesting mistakes teach us the most. Today we will not just list what went wrong.
+알렉스|en|We will understand why. And when you understand why, the fix becomes natural.
+민지|en|So let&#x27;s start with the big one. The pattern that has appeared seven times now. Subject-Verb Agreement.
+알렉스|en|Seven times. That&#x27;s our headline this week. Minji, what exactly is subject-verb agreement?
+민지|en|It means the verb must match the subject. He goes, not he go. She is, not she are.
+알렉스|en|Right. And here is the key fact. Korean does not do this. Not at all.
+민지|ko|한국어는 주어가 바뀌어도 동사 형태가 변하지 않아요. &#x27;나는 가요&#x27;, &#x27;그는 가요&#x27;, 둘 다 &#x27;가요&#x27;죠.
+알렉스|en|But English keeps a strict rule. He, she, it — the verb changes. You add an S for simple present.
+민지|en|He walks. She talks. It works. Always that S for he, she, it.
+알렉스|en|Now, let&#x27;s look at what you actually said this week.
+민지|en|You said: I&#x27;m not agree that.
+알렉스|en|The natural version: I don&#x27;t agree with that.
+민지|en|Two things happened there. Can you spot them, Alex?
+알렉스|en|Sure. First, &quot;agree&quot; is a verb, not an adjective. You cannot say &quot;I&#x27;m agree&quot; just like you cannot say &quot;I&#x27;m like&quot; or &quot;I&#x27;m want.&quot;
+민지|ko|&#x27;동의해요&#x27;를 &#x27;나는 동의 상태야&#x27;처럼 느껴서 &quot;I&#x27;m agree&quot;가 나오기 쉬워요. 하지만 agree는 동사라서 &quot;I agree&quot;라고 직접 써야 해요.
+알렉스|en|Second: the preposition. &quot;I don&#x27;t agree WITH that.&quot; Not &quot;agree that.&quot; You agree with something.
+민지|en|Rule of thumb: if it&#x27;s something you DO — agree, understand, think, like — just use the verb directly.
+알렉스|en|I agree. I understand. I think. I want. Simple and clean.
+민지|en|No I&#x27;m agree, no I&#x27;m understand, no I&#x27;m want.
+알렉스|en|Now let&#x27;s look at a longer sentence. This one has a lot going on.
+민지|en|You said: The main reason of stress is the human relationship because every stress caused from the humans.
+알렉스|en|Let&#x27;s take this apart piece by piece.
+민지|en|First: &quot;reason of&quot; is not natural. We say &quot;reason FOR.&quot; The reason for stress. The reason for the problem.
+알렉스|ko|한국어는 &#x27;스트레스의 이유&#x27;처럼 &#x27;의&#x27;를 쓰지만, 영어는 reason for 이에요. of 가 아니라요.
+알렉스|en|Second: &quot;the human relationship&quot; should be &quot;human relationships&quot; — plural.
+민지|en|When we talk about human relationships in general, we use the plural. Not one specific relationship.
+알렉스|en|Third: &quot;every stress caused from&quot; — two problems. &quot;Stress&quot; is uncountable. Use &quot;all stress&quot; not &quot;every stress.&quot;
+민지|en|And we say &quot;all stress originates FROM&quot; or &quot;is caused BY.&quot; The prepositions are different.
+알렉스|en|The full natural sentence: The main reason for stress is human relationships because all stress originates from people.
+민지|en|Say that once out loud. Seriously, it helps.
+알렉스|en|Okay. Let&#x27;s shift to the Correction Clinic. We go fast here. Try to repeat each one after us.
+민지|en|You said: Every wintertime, we produce the mandarin from the Jeju Island.
+알렉스|en|Better: Every winter, we grow mandarins on Jeju Island.
+민지|en|&quot;Every winter&quot; sounds more natural than &quot;every wintertime.&quot; And Jeju Island does not need &quot;the&quot; — it is a proper name.
+알렉스|en|Also: &quot;mandarins&quot; is plural because we mean the fruit in general, not one specific fruit.
+민지|en|You said: The first I consider is it possible to go to the airport or not?
+알렉스|en|Better: First, I consider whether it&#x27;s possible to go to the airport or not.
+민지|en|&quot;The first I consider&quot; is missing something — a noun. You can say &quot;The first thing I consider.&quot;
+알렉스|en|Or just say &quot;First, I consider.&quot; Clean and direct. And &quot;whether&quot; is the natural connector for yes-or-no questions.
+민지|en|Whether it&#x27;s possible. Whether she can come. Whether or not. Very useful pattern.
+알렉스|en|You said: So, AI also has the power relation and some bad information.
+민지|en|Better: So, AI can also have biases and provide misleading information.
+알렉스|en|&quot;Power relation&quot; is not standard here. &quot;Biases&quot; means unfair preferences — when a system or source leans one way.
+민지|en|And &quot;misleading&quot; is a great word. It means something that makes you believe something wrong.
+알렉스|en|You said: Your sound is far away. It&#x27;s good?
+민지|en|Better: Your sound is a bit faint. Is it better now?
+알렉스|en|&quot;Far away&quot; talks about distance. For sound, we say &quot;faint&quot; or &quot;quiet.&quot; Faint means you can barely hear it.
+민지|en|And &quot;Is it better now?&quot; is more polite and natural than &quot;It&#x27;s good?&quot; — which sounds a bit too blunt.
+알렉스|en|Two more. You said: I don&#x27;t know why that paragraph divides all kinds of the regions.
+민지|en|Better: I don&#x27;t know why that paragraph categorizes things by region.
+알렉스|en|&quot;Categorizes by region&quot; is cleaner and more precise than &quot;divides all kinds of the regions.&quot;
+민지|en|And: I think we will first check the package instruction.
+알렉스|en|Better: I think we first check the package instructions. Plural. One medicine box has many instructions.
+민지|en|Great clinic. Now let&#x27;s go to Vocabulary in Context. Words need to live in sentences, not just definitions.
+알렉스|en|First word: cultivation. Noun. Growing plants or crops for food or other use.
+민지|en|Real sentence: Jeju Island has a long history of mandarin cultivation.
+알렉스|en|Collocations: land under cultivation, cultivation of crops, cultivation methods.
+민지|en|Next: feasibility. Noun. Whether something is possible and practical.
+알렉스|en|Real sentence: Before investing, the company did a full feasibility study.
+민지|en|&quot;Feasibility study&quot; is a phrase you will hear a lot in business and engineering contexts.
+알렉스|en|Next: bias. Noun. An unfair preference for or against something.
+민지|en|Real sentence: We need to watch for bias in AI-generated content.
+알렉스|en|Related words: biased means not neutral. Unbiased means fair and balanced.
+민지|en|Next: disseminate. Verb. To spread information widely.
+알렉스|en|Real sentence: Health authorities disseminate guidelines to help people stay safe.
+민지|en|It&#x27;s a formal word. In everyday speech you might say &quot;spread&quot; or &quot;share.&quot; But in writing, disseminate sounds strong.
+알렉스|en|Next: remedy. Noun or verb. A solution or treatment.
+민지|en|As a noun: A warm ginger drink is a common home remedy for a sore throat.
+알렉스|en|As a verb: We need to remedy this situation quickly before it gets worse.
+민지|en|And last: prevalent. Adjective. Widespread and common.
+알렉스|en|Real sentence: Stress is increasingly prevalent among office workers in big cities.
+민지|en|Now our Topic Talk segment. The theme this week was health. So here are five useful health phrases at A2-B1 level.
+알렉스|en|One: come down with something. To get sick.
+민지|en|Example: I came down with a bad cold on Monday. I had to rest all day.
+알렉스|en|Two: be under the weather. To feel unwell.
+민지|en|Example: She is a bit under the weather today. She might leave work early.
+알렉스|en|Three: describe your symptoms. Very useful at a clinic or pharmacy.
+민지|en|Example: The doctor asked me to describe my symptoms before giving me medicine.
+알렉스|en|Four: follow the instructions. For medicine and treatments.
+민지|en|Example: Always follow the package instructions. Do not take more than the recommended amount.
+알렉스|en|Five: check in with your doctor. To talk to a doctor for advice, even briefly.
+민지|en|Example: If the pain continues, check in with your doctor before taking anything else.
+알렉스|en|Great set. Okay, now it&#x27;s time for our favorite segment. Culture Corner. Did you know?
+민지|en|This week, let&#x27;s talk about the word quarantine. You all know it from 2020.
+알렉스|en|Yes. But where does it actually come from?
+민지|en|It comes from Italian. The word is &quot;quarantina.&quot; And it means forty.
+알렉스|en|Forty? Why forty?
+민지|en|In the 14th century, Venice was one of Europe&#x27;s busiest ports. Ships arrived from all over the world.
+알렉스|en|And in those days, the Black Death — a terrible plague — was spreading fast across Europe.
+민지|en|So Venice decided: any ship arriving at our port must wait forty days before anyone can come ashore.
+알렉스|en|Forty days offshore. No contact with land. This was to check if anyone on the ship was sick.
+민지|ko|14세기 베네치아에서 흑사병을 막으려고 배를 해안에서 40일간 대기시킨 것이 quarantine 의 시작이에요. quarantina = 40.
+민지|en|The word quarantine has been part of medicine ever since. And in 2020, the whole world suddenly remembered it.
+알렉스|en|Language carries history. That is what makes it fascinating.
+민지|en|Alright. Time for the recap and mission.
+알렉스|en|This week: three lessons. Nine corrections in total. Healthcare was the big topic.
+민지|en|Your fluency average this week was 7.0. Your cumulative average is 7.1. You are holding steady.
+알렉스|en|Steady is good. It means you have a solid base. Now let&#x27;s push through the ceiling.
+민지|en|This week&#x27;s mission: every time you say a sentence, pause and check — does my verb match my subject?
+알렉스|en|And watch your prepositions. Agree WITH. Reason FOR. Originate FROM. Caused BY.
+민지|en|Small words. Big difference.
+알렉스|en|Rule of thumb for subject-verb agreement: he, she, it — add S. And for action verbs — just use them directly. No I&#x27;m.
+민지|en|Awareness first. Perfection later. Every mistake you notice is one step closer to natural English.
+알렉스|en|That is all for this week. Thank you for listening, and thank you for showing up to class every week.
+민지|en|Keep talking. Keep noticing. And remember — your mistakes are just English habits waiting to click.
+알렉스|en|They will click. See you next Friday. Have a wonderful week!
+민지|en|Bye for now!</pre>
+<div class="toast" id="toast">✅ 복사됐어요! Gemini에 붙여넣으세요</div>
+<script>
+const PAGE_WEEK="2026-W31";
+const PROMPTS={chat:"아래는 이번 주 내 전화영어 학습 요약이야.\n\n[이번 주: 2026-W31 · 3회 수업]\n누적 약점 Top: Subject–Verb Agreement(7회), Articles (a/an/the)(7회), Verb Tense(6회)\nAI 교정(❌→✅):\n  - Every wintertime, we produce the mandarin from the Jeju Island. → Every winter, we grow mandarins on Jeju Island.\n  - The first I consider is it possible to go to the airport or not? → First, I consider whether it's possible to go to the airport or not.\n  - So, AI also has the power relation and some bad information. → So, AI can also have biases and provide misleading information.\n  - Your sound is far away. It's good? → Your sound is a bit faint. Is it better now?\n  - I'm not agree that because this four category is the same region of our country. → I don't agree with that because these four categories are also major sources of stress in our country.\n  - The main reason of stress is the human relationship because every stress caused from the humans. → The main reason for stress is human relationships because all stress originates from people.\n핵심 어휘: cultivation(경작, 재배), feasibility(실행 가능성, 타당성), bias(편견, 선입견, 치우침), disseminate((정보 등을) 퍼뜨리다, 전파하다), remedy(치료법, 해결책, 약), prevalent(널리 퍼져 있는, 만연한)\n\n위 약점·교정을 주제로 나와 영어로 대화하면서 복습시켜줘. 먼저 약점 1개와 관련된 상황을 영어로 질문하고, 내 대답이 자연스러운지 교정해줘. 한국어 설명은 필요할 때만 짧게.",lecture:"아래는 이번 주 내 전화영어 학습 요약이야.\n\n[이번 주: 2026-W31 · 3회 수업]\n누적 약점 Top: Subject–Verb Agreement(7회), Articles (a/an/the)(7회), Verb Tense(6회)\nAI 교정(❌→✅):\n  - Every wintertime, we produce the mandarin from the Jeju Island. → Every winter, we grow mandarins on Jeju Island.\n  - The first I consider is it possible to go to the airport or not? → First, I consider whether it's possible to go to the airport or not.\n  - So, AI also has the power relation and some bad information. → So, AI can also have biases and provide misleading information.\n  - Your sound is far away. It's good? → Your sound is a bit faint. Is it better now?\n  - I'm not agree that because this four category is the same region of our country. → I don't agree with that because these four categories are also major sources of stress in our country.\n  - The main reason of stress is the human relationship because every stress caused from the humans. → The main reason for stress is human relationships because all stress originates from people.\n핵심 어휘: cultivation(경작, 재배), feasibility(실행 가능성, 타당성), bias(편견, 선입견, 치우침), disseminate((정보 등을) 퍼뜨리다, 전파하다), remedy(치료법, 해결책, 약), prevalent(널리 퍼져 있는, 만연한)\n\n위 내용을 강의식으로 차근차근 설명해줘. 각 약점이 왜 틀렸는지 규칙을 짚고, 쉬운 예문 2~3개씩 더 들어주고, 마지막에 1분 요약과 연습문제 3개를 줘.",radio:"아래는 이번 주 내 전화영어 학습 요약이야.\n\n[이번 주: 2026-W31 · 3회 수업]\n누적 약점 Top: Subject–Verb Agreement(7회), Articles (a/an/the)(7회), Verb Tense(6회)\nAI 교정(❌→✅):\n  - Every wintertime, we produce the mandarin from the Jeju Island. → Every winter, we grow mandarins on Jeju Island.\n  - The first I consider is it possible to go to the airport or not? → First, I consider whether it's possible to go to the airport or not.\n  - So, AI also has the power relation and some bad information. → So, AI can also have biases and provide misleading information.\n  - Your sound is far away. It's good? → Your sound is a bit faint. Is it better now?\n  - I'm not agree that because this four category is the same region of our country. → I don't agree with that because these four categories are also major sources of stress in our country.\n  - The main reason of stress is the human relationship because every stress caused from the humans. → The main reason for stress is human relationships because all stress originates from people.\n핵심 어휘: cultivation(경작, 재배), feasibility(실행 가능성, 타당성), bias(편견, 선입견, 치우침), disseminate((정보 등을) 퍼뜨리다, 전파하다), remedy(치료법, 해결책, 약), prevalent(널리 퍼져 있는, 만연한)\n\n너는 라디오 진행자, 나는 오늘의 게스트야. 내 이번 주 영어 학습 여정을 주제로 인터뷰하듯 대화해줘. 가볍고 격려하는 톤으로, 중간중간 위 교정 표현을 자연스럽게 연습시켜줘. 영어 위주, 한국어는 가끔."};
+function showToast(m){const t=document.getElementById('toast');t.textContent=m;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500);}
+function copyOpen(mode){const txt=PROMPTS[mode]||'';const go=()=>{showToast('✅ 복사됐어요! Gemini에 붙여넣으세요');setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600);};navigator.clipboard.writeText(txt).then(go).catch(()=>{const a=document.createElement('textarea');a.value=txt;document.body.appendChild(a);a.select();document.execCommand('copy');a.remove();go();});}
+function clip(txt,msg){const go=()=>showToast(msg);navigator.clipboard.writeText(txt).then(go).catch(()=>{const a=document.createElement('textarea');a.value=txt;document.body.appendChild(a);a.select();document.execCommand('copy');a.remove();go();});}
+function copyDigest(){fetch('digest-latest.txt',{cache:'no-store'}).then(r=>{if(!r.ok)throw 0;return r.text();}).then(t=>clip(t,'📓 다이제스트 복사됨! NotebookLM에 붙여넣으세요')).catch(()=>showToast('⚠️ 다이제스트가 아직 없어요 (금요일 생성)'));}
+
+// ── 라디오 플레이어 (Web Speech API) ──
+const RAW=document.getElementById('radio-src').textContent.trim();
+const LINES=RAW.split('\n').map(l=>l.trim()).filter(Boolean).map(l=>{const i1=l.indexOf('|'),i2=l.indexOf('|',i1+1);return{sp:l.slice(0,i1),lang:l.slice(i1+1,i2),text:l.slice(i2+1)};});
+const stage=document.getElementById('stage');
+LINES.forEach((ln,i)=>{const d=document.createElement('div');d.className='bubble '+(ln.sp==='민지'?'mc':'coach');d.dataset.idx=i;d.innerHTML='<span class="who">'+ln.sp+'</span>'+ln.text;stage.appendChild(d);});
+const synth=window.speechSynthesis;
+let voices=[],koV=null,enV=null;
+function pickVoices(){voices=synth?synth.getVoices():[];koV=voices.find(v=>v.lang&&v.lang.toLowerCase().startsWith('ko'))||null;enV=voices.find(v=>v.lang&&v.lang.toLowerCase().startsWith('en'))||null;}
+if(synth){pickVoices();synth.onvoiceschanged=pickVoices;}
+let idx=0,playing=false,rate=1,wakeLock=null;
+async function acquireWake(){try{if('wakeLock' in navigator){wakeLock=await navigator.wakeLock.request('screen');wakeLock.addEventListener('release',()=>{wakeLock=null;});}}catch(e){}}
+function releaseWake(){try{if(wakeLock){wakeLock.release();wakeLock=null;}}catch(e){}}
+function highlight(i){document.querySelectorAll('.bubble').forEach(b=>b.classList.toggle('on',(+b.dataset.idx)===i));const el=document.querySelector('.bubble.on');if(el)el.scrollIntoView({block:'center',behavior:'smooth'});}
+function speakAt(i){if(!synth||i>=LINES.length){playing=false;releaseWake();highlight(-1);idx=0;return;}idx=i;highlight(i);const ln=LINES[i];const u=new SpeechSynthesisUtterance(ln.text);u.lang=ln.lang==='ko'?'ko-KR':'en-US';const v=ln.lang==='ko'?koV:enV;if(v)u.voice=v;u.rate=rate;u.pitch=ln.sp==='민지'?1.15:0.85;u.onend=()=>{if(playing)speakAt(i+1);};u.onerror=()=>{if(playing)setTimeout(()=>speakAt(i+1),250);};synth.speak(u);}
+document.getElementById('play').onclick=()=>{if(!synth){document.getElementById('ttswarn').textContent='이 브라우저는 음성 재생을 지원하지 않아요. 대본을 읽어주세요.';return;}if(playing)return;playing=true;acquireWake();synth.cancel();speakAt(idx>=LINES.length?0:idx);};
+document.getElementById('pause').onclick=()=>{if(synth&&synth.speaking)synth.pause();};
+document.getElementById('resume').onclick=()=>{if(synth){synth.resume();if(playing)acquireWake();}};
+document.getElementById('stop').onclick=()=>{playing=false;releaseWake();if(synth)synth.cancel();idx=0;highlight(-1);};
+document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='visible'&&playing){if(synth)synth.resume();acquireWake();}});
+const rE=document.getElementById('rate');rE.oninput=()=>{rate=parseFloat(rE.value);document.getElementById('rv').textContent=rate.toFixed(1)+'x';};
+if(!synth)document.getElementById('ttswarn').textContent='⚠️ 이 브라우저는 음성 합성을 지원하지 않아 대본만 표시됩니다.';
+
+// ── 오디오 에피소드: 이 페이지의 주차(PAGE_WEEK) MP3 표시 + 목록에 🎧 뱃지 ──
+fetch('radio/episodes.json',{cache:'no-store'}).then(r=>r.ok?r.json():[]).then(eps=>{
+  if(!Array.isArray(eps))eps=[];
+  eps.forEach(e=>{const row=document.querySelector('.weekrow[data-wk="'+e.week+'"] .wk-audio');if(row)row.textContent='🎧';});
+  const L=document.getElementById('audio-latest');
+  const mine=eps.find(e=>e.week===PAGE_WEEK);
+  if(mine){
+    L.innerHTML='<div class="epweek">'+mine.week+' · '+(mine.date||'')+'</div><audio id="ep-audio" controls preload="none" src="radio/'+mine.file+'"></audio>';
+    const au=document.getElementById('ep-audio');
+    // 잠금화면/화면 꺼짐에서도 재생 + 컨트롤 노출(MediaSession). 진짜 음성 파일이라 백그라운드 OK.
+    if(au&&'mediaSession' in navigator){
+      try{navigator.mediaSession.metadata=new MediaMetadata({title:'영어 주간 라디오 '+mine.week,artist:'민지 & 알렉스 · 당근영어',album:'Weekly English Radio'});}catch(e){}
+      try{navigator.mediaSession.setActionHandler('play',()=>au.play());navigator.mediaSession.setActionHandler('pause',()=>au.pause());}catch(e){}
+    }
+  }
+  else{L.textContent='이 주차 오디오(MP3)는 아직 없어요. 아래 ▶ 바로 듣기(브라우저 음성)로 들어보세요.';}
+}).catch(()=>{document.getElementById('audio-latest').textContent='오디오 목록을 불러오지 못했어요. 아래 ▶ 바로 듣기로 들어보세요.';});
+</script>
+</body></html>
