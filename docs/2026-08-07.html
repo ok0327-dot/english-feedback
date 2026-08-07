@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#0f0f13"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="당근영어"><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="icon" type="image/png" sizes="192x192" href="icon-192.png"><script src="install-banner.js" defer></script><script src="sw-reg.js" defer></script>
+    <title>전화영어 복습 - 2026년 08월 07일</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Noto Sans KR',sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.75;min-height:100vh}
+        .header{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);border-bottom:1px solid rgba(255,255,255,.06);padding:48px 24px 40px;text-align:center}
+        .header-date{font-size:13px;color:#94a3b8;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+        .header h1{font-size:28px;font-weight:700;color:#f1f5f9;margin-bottom:16px}
+        .header-meta{display:flex;justify-content:center;gap:24px;font-size:14px;color:#64748b}
+        .header-meta span{display:flex;align-items:center;gap:6px}
+        .cta-section{text-align:center;padding:40px 24px}
+        .cta-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:linear-gradient(135deg,#38bdf8,#818cf8);color:#fff;font-size:16px;font-weight:600;font-family:'Noto Sans KR',sans-serif;border:none;border-radius:50px;cursor:pointer;transition:all .3s;text-decoration:none;box-shadow:0 4px 24px rgba(56,189,248,.25)}
+        .cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(56,189,248,.35)}
+        .cta-btn svg{width:20px;height:20px}
+        .cta-sub{margin-top:12px;font-size:13px;color:#64748b}
+        .toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#38bdf8;padding:14px 28px;border-radius:12px;font-size:14px;font-weight:500;border:1px solid rgba(56,189,248,.2);box-shadow:0 8px 32px rgba(0,0,0,.4);opacity:0;transition:all .4s cubic-bezier(.16,1,.3,1);z-index:1000}
+        .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+        .container{max-width:720px;margin:0 auto;padding:0 24px 80px}
+        .tabs{display:flex;gap:4px;background:#1a1a24;padding:4px;border-radius:12px;margin-bottom:32px}
+        .tab{flex:1;padding:12px;text-align:center;font-size:14px;font-weight:500;color:#64748b;background:0 0;border:none;border-radius:8px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all .2s}
+        .tab.active{background:#262636;color:#f1f5f9}
+        .tab-content{display:none}.tab-content.active{display:block}
+        .feedback h2{font-size:18px;font-weight:700;color:#f1f5f9;margin:36px 0 16px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.06)}
+        .feedback h2:first-child{margin-top:0}
+        .feedback p{margin:8px 0;color:#cbd5e1}
+        .feedback .item{padding:6px 0 6px 16px;border-left:2px solid #334155;margin:6px 0;color:#cbd5e1}
+        .feedback .numbered{padding:8px 0 8px 16px;color:#cbd5e1}
+        .feedback .numbered strong{color:#38bdf8}
+        .feedback strong{color:#f1f5f9}
+        .feedback code{background:#1e293b;padding:2px 8px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#38bdf8}
+        .feedback table{width:100%;border-collapse:collapse;margin:12px 0}
+        .feedback th,.feedback td{padding:10px 14px;text-align:left;border-bottom:1px solid #262636}
+        .feedback th{color:#94a3b8;font-weight:500;font-size:13px}
+        .feedback td{color:#cbd5e1}
+        .arrow{color:#38bdf8;font-weight:700}
+        .transcript{background:#1a1a24;border-radius:12px;padding:28px;font-size:14px;line-height:2;color:#94a3b8;white-space:pre-wrap;word-break:break-word;font-family:'JetBrains Mono','Noto Sans KR',monospace}
+        .transcript .tutor{color:#38bdf8}
+        .transcript .student{color:#a78bfa}
+        @media(max-width:640px){.header{padding:32px 16px}.header h1{font-size:22px}.cta-btn{padding:14px 28px;font-size:15px}.container{padding:0 16px 60px}}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-date">2026년 08월 07일</div>
+        <h1>📚 전화영어 복습</h1>
+        <div class="header-meta">
+            <span>⏱ 17분 52초</span>
+            <span>🎙 전화영어_025180304_20260807080026.m4a</span>
+        </div>
+    </div>
+    <div class="cta-section">
+        <button class="cta-btn" onclick="startReview()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Gemini에서 복습 대화 시작하기
+        </button>
+        <div class="cta-sub">클릭하면 프롬프트가 복사되고 Gemini가 열립니다</div>
+    </div>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('feedback')">📋 AI 피드백</button>
+            <button class="tab" onclick="switchTab('transcript')">🎙 수업 전사</button>
+        </div>
+        <div id="tab-feedback" class="tab-content active">
+            <div class="feedback"><h2>완성본</h2>
+<br>
+<p>안녕하세요, Joey! 따뜻하고 실용적인 영어 코치입니다. 오늘 수업 내용 잘 분석해서 피드백 드릴게요.</p>
+<br>
+<br>
+<p><strong>0. 📌 Topic</strong></p>
+<p>Topic: Discussing Weekend Plans and Idioms</p>
+<br>
+<p><strong>1. 📊 오늘의 대화 요약 (Summary)</strong></p>
+<p>Today, we discussed various weekend activities and preferences, such as eating out, going to concerts, and visiting cafes. We also explored the idiom "play it by ear" and practiced polite ways to decline invitations. The conversation touched upon personal planning styles, from structured to impulsive, and problem-solving scenarios involving social conflicts.</p>
+<br>
+<p><strong>2. 💬 유창성 업그레이드 (Fluency & Natural Flow)</strong></p>
+<br>
+<div class="item"><strong>Expression 1</strong></div>
+<div class="item">❌ As Said: "I will go back to my home and it's possible to meet my family."</div>
+<div class="item">✅ Natural: "I'll go home and see my family."</div>
+<div class="item">💎 Professional: "I plan to return home and spend time with my family."</div>
+<div class="item">💡 Coaching Point: "Go home" is a very common and natural phrasing. Adding "my" before "home" is usually unnecessary when referring to your own residence. Also, "it's possible to meet" sounds a bit formal and indirect for casual plans. "See my family" or "meet my family" is more direct and natural.</div>
+<p><span class="arrow">→</span> 'Go home'은 매우 흔하고 자연스러운 표현입니다. 자신의 집을 말할 때 'home' 앞에 'my'를 붙이는 것은 보통 불필요합니다. 또한, 캐주얼한 계획에 대해 'it's possible to meet'는 다소 격식 있고 간접적으로 들립니다. 'See my family' 또는 'meet my family'가 더 직접적이고 자연스럽습니다.</p>
+<br>
+<div class="item"><strong>Expression 2</strong></div>
+<div class="item">❌ As Said: "So, some people like to eating out, go to the visiting a cafe, and some people like to going to concert or activities."</div>
+<div class="item">✅ Natural: "So, some people like eating out or visiting cafes, while others prefer going to concerts or doing outdoor activities."</div>
+<div class="item">💎 Professional: "Consequently, certain individuals enjoy dining out or frequenting cafes, whereas others opt for attending concerts or engaging in outdoor pursuits."</div>
+<div class="item">💡 Coaching Point: After verbs like "like," it's more natural to use gerunds (verb + -ing) like "eating out" and "visiting" or infinitives like "to eat out" and "to visit." Saying "go to the visiting a cafe" is grammatically incorrect. Also, "activities" is often used in plural form when referring to a general category of things to do.</div>
+<p><span class="arrow">→</span> 'Like'과 같은 동사 뒤에는 'eating out'이나 'visiting'과 같은 동명사(verb + -ing) 또는 'to eat out', 'to visit'와 같은 부정사를 사용하는 것이 더 자연스럽습니다. "go to the visiting a cafe"는 문법적으로 틀렸습니다. 또한, 'activities'는 일반적으로 할 수 있는 일들의 범주를 말할 때 복수형으로 자주 사용됩니다.</p>
+<br>
+<div class="item"><strong>Expression 3</strong></div>
+<div class="item">❌ As Said: "We find some new restaurant and new street and new cafe. We find a place and walk and found some new place."</div>
+<div class="item">✅ Natural: "We find new restaurants, new streets, and new cafes. We find a place, walk around, and discover new spots."</div>
+<div class="item">💎 Professional: "We discover new dining establishments, thoroughfares, and coffee shops. We locate an area, explore it, and uncover novel locations."</div>
+<div class="item">💡 Coaching Point: When talking about general types of places, using the plural form (restaurants, streets, cafes) is often more natural. Also, ensure verb tense consistency. You used "find" and "walk" (present tense) and then "found" (past tense) in close succession. Using "discover" or "find" for the third instance maintains consistency. "New place" can be pluralized to "new places" or "new spots" for variety.</div>
+<p><span class="arrow">→</span> 일반적인 종류의 장소에 대해 말할 때는 복수형(restaurants, streets, cafes)을 사용하는 것이 더 자연스러운 경우가 많습니다. 또한, 동사 시제를 일관성 있게 유지하는 것이 중요합니다. "find"와 "walk"(현재 시제)를 사용한 후 바로 "found"(과거 시제)를 사용했습니다. 세 번째 경우에 "discover" 또는 "find"를 사용하여 일관성을 유지했습니다. "New place"는 다양성을 위해 "new places" 또는 "new spots"로 복수형으로 바꿀 수 있습니다.</p>
+<br>
+<p><strong>3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)</strong></p>
+<p>Category: Subject-Verb Agreement (people vs. person)</p>
+<br>
+<p>This section focuses on the common mistake of using "people" as a singular noun, which should be "person."</p>
+<br>
+<table>
+<tr><th>❌ 원문 (As Said)</th><th>✅ 교정 예시 (Correction)</th></tr>
+<tr><td>"So there are two people. One people is the playing piano and one people is the listening to music."</td><td>"So there are two people. One person is playing the piano, and another person is listening to music."</td></tr>
+<tr><td>"So there are two people. One people is the playing piano and one people is the listening to music."</td><td>"So there are two people. One person is playing the piano, and the other person is listening to music."</td></tr>
+<tr><td>"So there are two people. One people is the playing piano and one people is the listening to music."</td><td>"So there are two people. One is playing the piano, and the other is listening to music."</td></tr>
+<tr><td>"So there are two people. One people is the playing piano and one people is the listening to music."</td><td>"So there are two people. One person plays the piano, and the other person listens to music."</td></tr>
+<tr><td>(When discussing the idiom's origin) "So there are two people. One people is the playing piano and one people is the listening to music."</td><td>(When discussing the idiom's origin) "So there are two people. One person is playing the piano, and one person is listening to music."</td></tr>
+</table>
+<br>
+<p>📌 핵심 규칙: 'People'은 항상 복수형 명사로, '사람들'을 의미합니다. 단수 '한 사람'을 지칭할 때는 'person'을 사용해야 합니다.</p>
+<br>
+<p>🔁 따라 읽기:</p>
+<p>🗣️ "One person is playing the piano, and another person is listening to music."</p>
+<p>🗣️ "One person plays the piano, and the other person listens to music."</p>
+<p>🗣️ "There are two people: one playing the piano and one listening to music."</p>
+<br>
+<p><strong>4. 📗 어휘 확장 (Vocabulary Vault)</strong></p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>No-show</strong> /noʊ ˈʃoʊ/ (noun)</div>
+<div class="item">뜻: 약속 장소에 나타나지 않는 사람</div>
+<div class="item">실전 예문: "We had a few no-shows for the client meeting, which was unexpected."</div>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>Back out</strong> /bæk ˈaʊt/ (phrasal verb)</div>
+<div class="item">뜻: 약속이나 계획을 취소하다</div>
+<div class="item">실전 예문: "He had to back out of the project due to a family emergency."</div>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>Play it by ear</strong> /pleɪ ɪt baɪ ˈɪr/ (idiom)</div>
+<div class="item">뜻: 즉흥적으로 상황에 맞춰 결정하다, 미리 계획하지 않고 그때그때 봐가며 하다</div>
+<div class="item">실전 예문: "We don't have a strict agenda for the team outing; we'll play it by ear."</div>
+<br>
+<div class="numbered"><strong>4.</strong> <strong>Couch potato</strong> /ˈkaʊtʃ pəˌteɪtoʊ/ (noun)</div>
+<div class="item">뜻: (주로 주말에) 소파에 앉아 텔레비전만 보며 시간을 보내는 사람, 게으름뱅이</div>
+<div class="item">실전 예문: "After a long week, I sometimes feel like a couch potato on Saturday mornings."</div>
+<br>
+<div class="numbered"><strong>5.</strong> <strong>Impulsive</strong> /ɪmˈpʌlsɪv/ (adjective)</div>
+<div class="item">뜻: 충동적인</div>
+<div class="item">실전 예문: "My manager is very organized, unlike my impulsive nature when planning trips."</div>
+<br>
+<p><strong>5. 📝 실전 복습 챌린지 (Practice)</strong></p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>[쉬움]</strong> 친구가 주말에 무엇을 하고 싶은지 물어봤을 때, 아직 확실히 정하지 못해서 상황을 봐서 결정하겠다고 답해보세요.</div>
+<div class="item"><strong>Model Answer</strong>: "I haven't made firm plans yet. We'll probably <strong>play it by ear</strong>."</div>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>[중간]</strong> 당신은 회의에 참석하기로 했지만, 갑자기 급한 일이 생겨 참석할 수 없게 되었습니다. 친구에게 미안함을 표현하며 참석하지 못하게 되었다고 정중하게 말해보세요.</div>
+<div class="item"><strong>Model Answer</strong>: "I'm so sorry, but I have to <strong>back out</strong> of the meeting this afternoon. Something unexpected came up."</div>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>[어려움]</strong> 당신은 에너지 수입 사업을 하는데, 중요한 해외 파트너가 약속 시간에 나타나지 않았습니다. 이 상황을 영어로 설명하고, 앞으로 이러한 상황을 어떻게 방지할지 간략하게 덧붙여 보세요.</div>
+<div class="item"><strong>Model Answer</strong>: "Unfortunately, we experienced a <strong>no-show</strong> from a key international partner for our scheduled meeting today. To prevent this in the future, we will implement a stricter confirmation process and require a deposit for high-stakes appointments."</div>
+<br>
+<p><strong>6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)</strong></p>
+<br>
+<div class="item">✨ <strong>Good Job</strong>: "So nowadays, we enjoy our city, like travel. So we find some new restaurant and new street and new cafe. We find a place and walk and found some new place. Yeah."</div>
+<p>Joey, 이 문장에서 당신이 도시를 탐험하며 새로운 곳을 발견하는 즐거움을 생생하게 표현하려는 노력이 돋보였습니다. 특히 "enjoy our city, like travel"이라는 표현은 여행하는 것처럼 도시를 즐긴다는 당신의 독특한 경험을 잘 나타내 줍니다. 비록 문법적으로 조금 더 다듬을 부분이 있었지만, 하고자 하는 의미가 명확하게 전달되었습니다.</p>
+<br>
+<div class="item">🚀 <strong>내일의 한 문장</strong>: 다음 수업 시작 시 튜터에게 던져보세요!</div>
+<p>"Good morning! I was thinking about our last conversation. I tend to <strong>play it by ear</strong> when making plans, but I'm curious about how structured planning can be beneficial in business. Can we discuss that briefly?"</p>
+<br>
+<p><strong>[성과 지표]</strong></p>
+<br>
+<div class="item"><strong>유창성 점수</strong>: 7/10</div>
+<div class="item"><strong>근거</strong>: Joey는 전반적으로 수업에 적극적으로 참여하며 자신의 생각을 표현하려는 노력을 많이 보였습니다. 특히 주말 활동이나 개인적인 성향에 대해 이야기할 때 자연스러운 표현을 사용하려는 시도가 좋았습니다. 하지만, 몇몇 문장에서 단수/복수 사용 오류, 동사 시제 일관성 부족, 그리고 간접적인 표현 사용 등 유창성을 좀 더 높일 수 있는 부분이 있었습니다. 'play it by ear'와 같은 관용구를 이해하고 사용하려는 적극성이 돋보였습니다.</div>
+<div class="item"><strong>다음 수업 '원포인트 액션 플랜'</strong>:</div>
+<div class="item"><strong>주제</strong>: 비즈니스 맥락에서의 계획 수립 (Structured Planning vs. Impulsive Decision-making)</div>
+<div class="item"><strong>목표</strong>: 'play it by ear'와 같은 즉흥적인 결정 스타일이 비즈니스 환경에서 어떻게 적용될 수 있는지, 혹은 어떤 한계가 있는지에 대해 논의하며, 보다 체계적인 계획 수립과 관련된 비즈니스 영어 표현을 익힙니다.</div>
+<br>
+<p>Joey, 오늘 수고 많으셨습니다! 다음 수업에서 또 만나요!</p></div>
+        </div>
+        <div id="tab-transcript" class="tab-content">
+            <div class="transcript"><span class="student">[Student]</span> Joey: Oh, good morning, teacher. Yes, yes.
+<span class="tutor">[Tutor]</span> How are you today? Happy Friday.
+<span class="student">[Student]</span> Joey: Yeah, you&#x27;re right. You&#x27;re right. Happy Friday. It&#x27;s nice. I will go back to my home and it&#x27;s possible to meet my family.
+<span class="tutor">[Tutor]</span> Oh, that&#x27;s great. Well, thank you for taking some time to do your class if you&#x27;re available.
+<span class="student">[Student]</span> Joey: Oh, yes. No problem. My pleasure.
+<span class="tutor">[Tutor]</span> All right. Wonderful. All right. We&#x27;re starting at the bottom of page four.
+<span class="student">[Student]</span> Joey: Yes, it&#x27;s four.
+<span class="tutor">[Tutor]</span> If you&#x27;re ready, I&#x27;ll get you to read the useful vocab, the phrase, the description, and the sentence, please.
+<span class="student">[Student]</span> Joey: Okay. No problem. Yes. I will read the useful vocab. No-show.
+<span class="tutor">[Tutor]</span> Good.
+<span class="student">[Student]</span> Joey: Someone who doesn&#x27;t show up or cancel. We waited an hour, but he had a no-show. Back out.
+<span class="tutor">[Tutor]</span> Okay. Okay.
+<span class="student">[Student]</span> Joey: Sorry.
+<span class="tutor">[Tutor]</span> Just a slip of the tongue. You said, &quot;but he had no-show.&quot; Let&#x27;s try, &quot;he was a no-show.&quot;
+<span class="student">[Student]</span> Joey: He was no-show.
+<span class="tutor">[Tutor]</span> Excellent. He was a no-show.
+<span class="student">[Student]</span> Joey: Yeah. Yes, you&#x27;re right.
+<span class="tutor">[Tutor]</span> Please continue.
+<span class="student">[Student]</span> Joey: Okay. Backed out. Decided not to participate in an event or a plan. She backed out of the trip.
+<span class="tutor">[Tutor]</span> Very good. Backed out.
+<span class="student">[Student]</span> Joey: Double book. Accidentally scheduling two plans at once. I double booked myself tonight.
+<span class="tutor">[Tutor]</span> Excellent. All right, let&#x27;s go on to the useful expressions when you&#x27;re ready.
+<span class="student">[Student]</span> Joey: Okay, I&#x27;m ready. Let&#x27;s play it by ear. Let&#x27;s play it by ear. Use when you want to decide a plan according to what will happen in the moment.
+<span class="tutor">[Tutor]</span> Very nice. &quot;You want to decide a plan.&quot;
+<span class="student">[Student]</span> Joey: Let&#x27;s plan. So it means just do something immediately for myself, right?
+<span class="tutor">[Tutor]</span> Yeah, you don&#x27;t have a rigorous plan or schedule. You just do things moment by moment.
+<span class="student">[Student]</span> Joey: Moment by moment. Why? This expression used by ear. Let&#x27;s play.
+<span class="tutor">[Tutor]</span> Okay, I can explain it. When people play the piano, you know piano?
+<span class="student">[Student]</span> Joey: Yes.
+<span class="tutor">[Tutor]</span> People usually practice for hours. But sometimes you have people that are so talented that if they hear a song, they can just play it from hearing it. We say, &quot;let&#x27;s play it by ear.&quot; By ear. It&#x27;s similar to jazz. It means to be impulsive. It means to kind of be impulsive or live for the moment.
+<span class="student">[Student]</span> Joey: I see. Understand. So there are two people. One people is the playing piano and one people is the listening to music. Yes. That ear is the first ear. The player or listener.
+<span class="tutor">[Tutor]</span> It&#x27;s usually the player. What I&#x27;m going to do, Joey, is I&#x27;ll try and find you a video that explains this idiom. Okay? And that will help you to better understand.
+<span class="student">[Student]</span> Joey: Ah, yes. Thank you so much. Yes, yes.
+<span class="tutor">[Tutor]</span> No problem.
+<span class="student">[Student]</span> Joey: Okay. Okay, and then next, &quot;I will pass this time.&quot; Used to politely decline an invitation. &quot;I will pass this time.&quot; &quot;I will pass this time.&quot; Oh, yes, this is more easy.
+<span class="tutor">[Tutor]</span> Easier. That makes sense. Oh, that&#x27;s good.
+<span class="student">[Student]</span> Joey: &quot;I will pass this time.&quot; Yes.
+<span class="tutor">[Tutor]</span> Okay. All right. Let&#x27;s go up to the top of page four. And it says, &quot;Are you free this weekend?&quot;
+<span class="student">[Student]</span> Joey: Are you free?
+<span class="tutor">[Tutor]</span> How ironic. Yeah. Uh-huh. Ah, yeah. Okay. Okay. All right. I&#x27;m going to ask you to read the Part A question and create a response. Take your time.
+<span class="student">[Student]</span> Joey: Okay, I see. What is a popular activity to do with friends in your country? Uh-huh. I see. In our country, there is a kind of popular activity on the weekend. Eating out, going to a concert, visiting a cafe, outdoor activities. I think it depends on the person in our country. So, some people like to eating out, go to the visiting a cafe, and some people like to going to concert or activities. But my wife likes to eating out and visiting a cafe because it is similar to travel. So nowadays, we enjoy our city, like travel. So we find some new restaurant and new street and new cafe. We find a place and walk and found some new place. Yeah.
+<span class="tutor">[Tutor]</span> Sounds like you just like to be easy and relaxing. I understand. Okay. Okay. All right. Let&#x27;s get you to read the part B question.
+<span class="student">[Student]</span> Joey: Okay. Which do you prefer for a weekend meet-up and why? Morning plans versus evening plans?
+<span class="tutor">[Tutor]</span> Very good.
+<span class="student">[Student]</span> Joey: I&#x27;m a lazy potato, a couch potato. Okay. Okay. It is a little difficult to get up early on the weekend. All right. So usually I make plans on weekends, evening plans or the afternoon plans. Yes. Uh-huh. Yeah. And sometimes if I get up early, at that time we play do yoga.
+<span class="tutor">[Tutor]</span> We do yoga.
+<span class="student">[Student]</span> Joey: Yeah, that&#x27;s right.
+<span class="tutor">[Tutor]</span> I remember.
+<span class="student">[Student]</span> Joey: Yeah, with my son. But usually the main schedule on weekends is the afternoon or the evening. We just go somewhere or some activity. Yeah. Yeah, go pick up. Yes.
+<span class="tutor">[Tutor]</span> I totally understand. This is one of the reasons why I teach when it is after lunch here in my country. I like to have my mornings open to do housework, get cleaned up, do some exercise. And then I work through the afternoon and evening, and then I can relax. So, yeah, I can appreciate you like some freedom in your schedule. Very good. All right, sir.
+<span class="student">[Student]</span> Joey: I&#x27;m sorry?
+<span class="tutor">[Tutor]</span> Oh, no problem. Yeah.
+<span class="student">[Student]</span> Joey: Thank you so much.
+<span class="tutor">[Tutor]</span> No worries. Let&#x27;s go on to part C, and I&#x27;ll have you read the situation.
+<span class="student">[Student]</span> Joey: Okay. The problem-solving situation. You accidentally made dinner plans with two friends for the same night. They don&#x27;t know each other and you were excited about both friends but don&#x27;t want to hurt anyone&#x27;s feelings. Would you try to combine the plans or cancel one? Hmm, I see. Understand. And maybe 10 years ago, I got married, and I invited my friend to some place. And then I introduced my wife to my friend. But at that time my friends felt a little confused because they don&#x27;t know each other. So it is same situation. This traveling serving. So I think in my case I&#x27;m good because I spend time more efficiently. But for my friend it is a little rude and uncomfortable to feeling my friends. So nowadays, I avoid that situation and made friends with each other because they also made me more comfortable and more relaxed and more enjoyable. So I think it&#x27;s better to make plans for each other.
+<span class="tutor">[Tutor]</span> Yeah, sometimes it is just easier to keep those two meetings separate. I would agree. It&#x27;s different if they have a common acquaintance, but that doesn&#x27;t always happen. All right. Very good, Joey. Let&#x27;s continue on to the warm-down.
+<span class="student">[Student]</span> Joey: Okay, warm-down.
+<span class="tutor">[Tutor]</span> Yeah, I&#x27;ll get you to read number one.
+<span class="student">[Student]</span> Joey: Okay. Do you prefer making plans earlier, early, or at the last minute? Okay. Mm. Yeah. Before I said I&#x27;m a little, it is, I&#x27;m a little. Potato. Immediately person. How can I say? They&#x27;re more not a plan. Just do something.
+<span class="tutor">[Tutor]</span> You&#x27;re more impulsive?
+<span class="student">[Student]</span> Joey: Impulsive, right.
+<span class="tutor">[Tutor]</span> Impulsive. Impulsive means you do something at a moment&#x27;s notice. You just go with the flow.
+<span class="student">[Student]</span> Joey: Yes, that is the I-M-P-U-L-S-I-V-E.
+<span class="tutor">[Tutor]</span> Impulsive.
+<span class="student">[Student]</span> Joey: Yeah, I-M-P-U-L-S-I-V-E, right? Impulsive.
+<span class="tutor">[Tutor]</span> You&#x27;re very close. I-M-P-U-L-S-I-V-E. I-V-E.
+<span class="student">[Student]</span> Joey: Impulsive. Okay, I&#x27;m an impulsive person.
+<span class="tutor">[Tutor]</span> Yeah, I&#x27;ll put it in your comments today so you can see it, okay?
+<span class="student">[Student]</span> Joey: Oh, yes, yes, yes. I&#x27;m an impulsive person, so usually my plan is so weak. Just to do something or just I made a keyword in the weekend concert. Or, for example, if I travel some country, I&#x27;m just a reservation, hotel, and flight, and one important place. And other thing is just to do something. I&#x27;m an impulsive person, so usually I make a plan the last minute. Yeah, do not earlier. Yeah, that&#x27;s my answer, teacher.
+<span class="tutor">[Tutor]</span> Okay, I understand. Yeah, it&#x27;s nice to be able to do that sometimes. Yeah. That&#x27;s one thing that I enjoyed sometimes when I was traveling on my own. If I could just do whatever I wanted at the moment, I didn&#x27;t have to worry. All right, my friend. I&#x27;ll read number two. What is your favorite activity to do with friends? I know you really enjoy yoga with your family. What do you like to do when you go out with the boys or you go out with your co-workers?
+<span class="student">[Student]</span> Joey: Yes. My favorite activity is the first, I meet my friend and then go to the swimming pool and we enjoy the drink beer and swimming. And then go to the Thai massage shop and take a massage one hour or two hours. And then go to the beach and prepare a chair and beer. And then we just talk with my friend. Just to drink and talk and see the beautiful woman in a beach.
+<span class="tutor">[Tutor]</span> Oh, yeah, sure. Why not? You&#x27;re married. You&#x27;re not dead.
+<span class="student">[Student]</span> Joey: Just yeah, that is my perfect schedule with my friends. Or sometimes we play the basketball because I...
+<span class="tutor">[Tutor]</span> Oh, sure, yeah.
+<span class="student">[Student]</span> Joey: I enjoy the basketball because I teach it to my son, the basketball. It is funny. Yeah. That is my perfect day.
+<span class="tutor">[Tutor]</span> That sounds wonderful. That sounds like my vacations in Mexico. So I&#x27;m good for it. I&#x27;ll join you next time.
+<span class="student">[Student]</span> Joey: Okay, I see.
+<span class="tutor">[Tutor]</span> All right. So we&#x27;ve basically gotten through the whole page. Yeah. And we have a few minutes left. We can do some free talk if you have any questions. Or if you&#x27;d like, we can end your class early. Do you have a preference?
+<span class="student">[Student]</span> Joey: Actually, I was wondering, the rest of the &quot;play it by ear,&quot; so maybe you understand something, but I&#x27;m wondering about it is similar situation. For example, the jazz player, he plays some music to piano, and he just played immediately for himself just to listen his ear and immediately impulsive play, do something to piano. Is it right?
+<span class="tutor">[Tutor]</span> Kind of. Actually, if you&#x27;ll bear with me for a moment, I&#x27;m going to get a video link URL for you. Sorry about that. It&#x27;s okay. I&#x27;m going to send you a video link that describes that particular idiom so that you can watch it. And then you can use Korean subtitles if you need or you can use English subtitles, whatever works for you, okay? So I&#x27;m sending this through SMS and it gives you the title and it gives you the URL. I&#x27;m sending it to you right now. I&#x27;m not sure how fast it is, but hopefully you&#x27;ll get that on your phone or your computer shortly.
+<span class="student">[Student]</span> Joey: I see. I got it. Yes, thank you so much. I&#x27;m fine.
+<span class="tutor">[Tutor]</span> Oh, yeah, that&#x27;s great. Oh, I&#x27;m so glad that worked. Okay, so you go ahead and watch that, and if it doesn&#x27;t tell you enough, just type in &quot;Play It By Ear,&quot; and it&#x27;ll bring up lots of other videos for you to watch, okay?
+<span class="student">[Student]</span> Joey: Okay, thank you so much.
+<span class="tutor">[Tutor]</span> Yeah. All right. You have a lovely day and a nice, cool weekend. I&#x27;ll talk to you next time. Thank you, Joey.
+<span class="student">[Student]</span> Joey: Bye-bye, teacher.
+<span class="tutor">[Tutor]</span> Bye-bye.</div>
+        </div>
+    </div>
+    <div class="toast" id="toast">✅ 프롬프트가 복사되었습니다!</div>
+    <script>
+        const REVIEW_PROMPT="너는 나의 영어 회화 복습 파트너야. 오늘 내 전화영어 수업 내용을 기반으로 대화하면서 복습을 도와줘.\n\n[오늘 수업 전사 내용]\n[Student] Joey: Oh, good morning, teacher. Yes, yes.\n[Tutor] How are you today? Happy Friday.\n[Student] Joey: Yeah, you're right. You're right. Happy Friday. It's nice. I will go back to my home and it's possible to meet my family.\n[Tutor] Oh, that's great. Well, thank you for taking some time to do your class if you're available.\n[Student] Joey: Oh, yes. No problem. My pleasure.\n[Tutor] All right. Wonderful. All right. We're starting at the bottom of page four.\n[Student] Joey: Yes, it's four.\n[Tutor] If you're ready, I'll get you to read the useful vocab, the phrase, the description, and the sentence, please.\n[Student] Joey: Okay. No problem. Yes. I will read the useful vocab. No-show.\n[Tutor] Good.\n[Student] Joey: Someone who doesn't show up or cancel. We waited an hour, but he had a no-show. Back out.\n[Tutor] Okay. Okay.\n[Student] Joey: Sorry.\n[Tutor] Just a slip of the tongue. You said, \"but he had no-show.\" Let's try, \"he was a no-show.\"\n[Student] Joey: He was no-show.\n[Tutor] Excellent. He was a no-show.\n[Student] Joey: Yeah. Yes, you're right.\n[Tutor] Please continue.\n[Student] Joey: Okay. Backed out. Decided not to participate in an event or a plan. She backed out of the trip.\n[Tutor] Very good. Backed out.\n[Student] Joey: Double book. Accidentally scheduling two plans at once. I double booked myself tonight.\n[Tutor] Excellent. All right, let's go on to the useful expressions when you're ready.\n[Student] Joey: Okay, I'm ready. Let's play it by ear. Let's play it by ear. Use when you want to decide a plan according to what will happen in the moment.\n[Tutor] Very nice. \"You want to decide a plan.\"\n[Student] Joey: Let's plan. So it means just do something immediately for myself, right?\n[Tutor] Yeah, you don't have a rigorous plan or schedule. You just do things moment by moment.\n[Student] Joey: Moment by moment. Why? This expression used by ear. Let's play.\n[Tutor] Okay, I can explain it. When people play the piano, you know piano?\n[Student] Joey: Yes.\n[Tutor] People usually practice for hours. But sometimes you have people that are so talented that if they hear a song, they can just play it from hearing it. We say, \"let's play it by ear.\" By ear. It's similar to jazz. It means to be impulsive. It means to kind of be impulsive or live for the moment.\n[Student] Joey: I see. Understand. So there are two people. One people is the playing piano and one people is the listening to music. Yes. That ear is the first ear. The player or listener.\n[Tutor] It's usually the player. What I'm going to do, Joey, is I'll try and find you a video that explains this idiom. Okay? And that will help you to better understand.\n[Student] Joey: Ah, yes. Thank you so much. Yes, yes.\n[Tutor] No problem.\n[Student] Joey: Okay. Okay, and then next, \"I will pass this time.\" Used to politely decline an invitation. \"I will pass this time.\" \"I will pass this time.\" Oh, yes, this is more easy.\n[Tutor] Easier. That makes sense. Oh, that's good.\n[Student] Joey: \"I will pass this time.\" Yes.\n[Tutor] Okay. All right. Let's go up to the top of page four. And it says, \"Are you free this weekend?\"\n[Student] Joey: Are you free?\n[Tutor] How ironic. Yeah. Uh-huh. Ah, yeah. Okay. Okay. All right. I'm going to ask you to read the Part A question and create a response. Take your time.\n[Student] Joey: Okay, I see. What is a popular activity to do with friends in your country? Uh-huh. I see. In our country, there is a kind of popular activity on the weekend. Eating out, going to a concert, visiting a cafe, outdoor activities. I think it depends on the person in our country. So, some people like to eating out, go to the visiting a cafe, and some people like to going to concert or activities. But my wife likes to eating out and visiting a cafe because it is similar to travel. So nowadays, we enjoy our city, like travel. So we find some new restaurant and new street and new cafe. We find a place and walk and found some new place. Yeah.\n[Tutor] Sounds like you just like to be easy and relaxing. I understand. Okay. Okay. All right. Let's get you to read the part B question.\n[Student] Joey: Okay. Which do you prefer for a weekend meet-up and why? Morning plans versus evening plans?\n[Tutor] Very good.\n[Student] Joey: I'm a lazy potato, a couch potato. Okay. Okay. It is a little difficult to get up early on the weekend. All right. So usually I make plans on weekends, evening plans or the afternoon plans. Yes. Uh-huh. Yeah. And sometimes if I get up early, at that time we play do yoga.\n[Tutor] We do yoga.\n[Student] Joey: Yeah, that's right.\n[Tutor] I remember.\n[Student] Joey: Yeah, with my son. But usually the main schedule on weekends is the afternoon or the evening. We just go somewhere or some activity. Yeah. Yeah, go pick up. Yes.\n[Tutor] I totally understand. This is one of the reasons why I teach when it is after lunch here in my country. I like to have my mornings open to do housework, get cleaned up, do some exercise. And then I work through the afternoon and evening, and then I can relax. So, yeah, I can appreciate you like some freedom in your schedule. Very good. All right, sir.\n[Student] Joey: I'm sorry?\n[Tutor] Oh, no problem. Yeah.\n[Student] Joey: Thank you so much.\n[Tutor] No worries. Let's go on to part C, and I'll have you read the situation.\n[Student] Joey: Okay. The problem-solving situation. You accidentally made dinner plans with two friends for the same night. They don't know each other and you were excited about both friends but don't want to hurt anyone's feelings. Would you try to combine the plans or cancel one? Hmm, I see. Understand. And maybe 10 years ago, I got married, and I invited my friend to some place. And then I introduced my wife to my friend. But at that time my friends felt a little confused because they don't know each other. So it is same situation. This traveling serving. So I think in my case I'm good because I spend time more efficiently. But for my friend it is a little rude and uncomfortable to feeling my friends. So nowadays, I avoid that situation and made friends with each other because they also made me more comfortable and more relaxed and more enjoyable. So I think it's better to make plans for each other.\n[Tutor] Yeah, sometimes it is just easier to keep those two meetings separate. I would agree. It's different if they have a common acquaintance, but that doesn't always happen. All right. Very good, Joey. Let's continue on to the warm-down.\n[Student] Joey: Okay, warm-down.\n[Tutor] Yeah, I'll get you to read number one.\n[Student] Joey: Okay. Do you prefer making plans earlier, early, or at the last minute? Okay. Mm. Yeah. Before I said I'm a little, it is, I'm a little. Potato. Immediately person. How can I say? They're more not a plan. Just do something.\n[Tutor] You're more impulsive?\n[Student] Joey: Impulsive, right.\n[Tutor] Impulsive. Impulsive means you do something at a moment's notice. You just go with the flow.\n[Student] Joey: Yes, that is the I-M-P-U-L-S-I-V-E.\n[Tutor] Impulsive.\n[Student] Joey: Yeah, I-M-P-U-L-S-I-V-E, right? Impulsive.\n[Tutor] You're very close. I-M-P-U-L-S-I-V-E. I-V-E.\n[Student] Joey: Impulsive. Okay, I'm an impulsive person.\n[Tutor] Yeah, I'll put it in your comments today so you can see it, okay?\n[Student] Joey: Oh, yes, yes, yes. I'm an impulsive person, so usually my plan is so weak. Just to do something or just I made a keyword in the weekend concert. Or, for example, if I travel some country, I'm just a reservation, hotel, and flight, and one important place. And other thing is just to do something. I'm an impulsive person, so usually I make a plan the last minute. Yeah, do not earlier. Yeah, that's my answer, teacher.\n[Tutor] Okay, I understand. Yeah, it's nice to be able to do that sometimes. Yeah. That's one thing that I enjoyed sometimes when I was traveling on my own. If I could just do whatever I wanted at the moment, I didn't have to worry. All right, my friend. I'll read number two. What is your favorite activity to do with friends? I know you really enjoy yoga with your family. What do you like to do when you go out with the boys or you go out with your co-workers?\n[Student] Joey: Yes. My favorite activity is the first, I meet my friend and then go to the swimming pool and we enjoy the drink beer and swimming. And then go to the Thai massage shop and take a massage one hour or two hours. And then go to the beach and prepare a chair and beer. And then we just talk with my friend. Just to drink and talk and see the beautiful woman in a beach.\n[Tutor] Oh, yeah, sure. Why not? You're married. You're not dead.\n[Student] Joey: Just yeah, that is my perfect schedule with my friends. Or sometimes we play the basketball because I...\n[Tutor] Oh, sure, yeah.\n[Student] Joey: I enjoy the basketball because I teach it to my son, the basketball. It is funny. Yeah. That is my perfect day.\n[Tutor] That sounds wonderful. That sounds like my vacations in Mexico. So I'm good for it. I'll join you next time.\n[Student] Joey: Okay, I see.\n[Tutor] All right. So we've basically gotten through the whole page. Yeah. And we have a few minutes left. We can do some free talk if you have any questions. Or if you'd like, we can end your class early. Do you have a preference?\n[Student] Joey: Actually, I was wondering, the rest of the \"play it by ear,\" so maybe you understand something, but I'm wondering about it is similar situation. For example, the jazz player, he plays some music to piano, and he just played immediately for himself just to listen his ear and immediately impulsive play, do something to piano. Is it right?\n[Tutor] Kind of. Actually, if you'll bear with me for a moment, I'm going to get a video link URL for you. Sorry about that. It's okay. I'm going to send you a video link that describes that particular idiom so that you can watch it. And then you can use Korean subtitles if you need or you can use English subtitles, whatever works for you, okay? So I'm sending this through SMS and it gives you the title and it gives you the URL. I'm sending it to you right now. I'm not sure how fast it is, but hopefully you'll get that on your phone or your computer shortly.\n[Student] Joey: I see. I got it. Yes, thank you so much. I'm fine.\n[Tutor] Oh, yeah, that's great. Oh, I'm so glad that worked. Okay, so you go ahead and watch that, and if it doesn't tell you enough, just type in \"Play It By Ear,\" and it'll bring up lots of other videos for you to watch, okay?\n[Student] Joey: Okay, thank you so much.\n[Tutor] Yeah. All right. You have a lovely day and a nice, cool weekend. I'll talk to you next time. Thank you, Joey.\n[Student] Joey: Bye-bye, teacher.\n[Tutor] Bye-bye.\n\n[AI 피드백]\n## 완성본\n\n안녕하세요, Joey! 따뜻하고 실용적인 영어 코치입니다. 오늘 수업 내용 잘 분석해서 피드백 드릴게요.\n\n---\n\n**0. 📌 Topic**\nTopic: Discussing Weekend Plans and Idioms\n\n**1. 📊 오늘의 대화 요약 (Summary)**\nToday, we discussed various weekend activities and preferences, such as eating out, going to concerts, and visiting cafes. We also explored the idiom \"play it by ear\" and practiced polite ways to decline invitations. The conversation touched upon personal planning styles, from structured to impulsive, and problem-solving scenarios involving social conflicts.\n\n**2. 💬 유창성 업그레이드 (Fluency & Natural Flow)**\n\n*   **Expression 1**\n    *   ❌ As Said: \"I will go back to my home and it's possible to meet my family.\"\n    *   ✅ Natural: \"I'll go home and see my family.\"\n    *   💎 Professional: \"I plan to return home and spend time with my family.\"\n    *   💡 Coaching Point: \"Go home\" is a very common and natural phrasing. Adding \"my\" before \"home\" is usually unnecessary when referring to your own residence. Also, \"it's possible to meet\" sounds a bit formal and indirect for casual plans. \"See my family\" or \"meet my family\" is more direct and natural.\n        → 'Go home'은 매우 흔하고 자연스러운 표현입니다. 자신의 집을 말할 때 'home' 앞에 'my'를 붙이는 것은 보통 불필요합니다. 또한, 캐주얼한 계획에 대해 'it's possible to meet'는 다소 격식 있고 간접적으로 들립니다. 'See my family' 또는 'meet my family'가 더 직접적이고 자연스럽습니다.\n\n*   **Expression 2**\n    *   ❌ As Said: \"So, some people like to eating out, go to the visiting a cafe, and some people like to going to concert or activities.\"\n    *   ✅ Natural: \"So, some people like eating out or visiting cafes, while others prefer going to concerts or doing outdoor activities.\"\n    *   💎 Professional: \"Consequently, certain individuals enjoy dining out or frequenting cafes, whereas others opt for attending concerts or engaging in outdoor pursuits.\"\n    *   💡 Coaching Point: After verbs like \"like,\" it's more natural to use gerunds (verb + -ing) like \"eating out\" and \"visiting\" or infinitives like \"to eat out\" and \"to visit.\" Saying \"go to the visiting a cafe\" is grammatically incorrect. Also, \"activities\" is often used in plural form when referring to a general category of things to do.\n        → 'Like'과 같은 동사 뒤에는 'eating out'이나 'visiting'과 같은 동명사(verb + -ing) 또는 'to eat out', 'to visit'와 같은 부정사를 사용하는 것이 더 자연스럽습니다. \"go to the visiting a cafe\"는 문법적으로 틀렸습니다. 또한, 'activities'는 일반적으로 할 수 있는 일들의 범주를 말할 때 복수형으로 자주 사용됩니다.\n\n*   **Expression 3**\n    *   ❌ As Said: \"We find some new restaurant and new street and new cafe. We find a place and walk and found some new place.\"\n    *   ✅ Natural: \"We find new restaurants, new streets, and new cafes. We find a place, walk around, and discover new spots.\"\n    *   💎 Professional: \"We discover new dining establishments, thoroughfares, and coffee shops. We locate an area, explore it, and uncover novel locations.\"\n    *   💡 Coaching Point: When talking about general types of places, using the plural form (restaurants, streets, cafes) is often more natural. Also, ensure verb tense consistency. You used \"find\" and \"walk\" (present tense) and then \"found\" (past tense) in close succession. Using \"discover\" or \"find\" for the third instance maintains consistency. \"New place\" can be pluralized to \"new places\" or \"new spots\" for variety.\n        → 일반적인 종류의 장소에 대해 말할 때는 복수형(restaurants, streets, cafes)을 사용하는 것이 더 자연스러운 경우가 많습니다. 또한, 동사 시제를 일관성 있게 유지하는 것이 중요합니다. \"find\"와 \"walk\"(현재 시제)를 사용한 후 바로 \"found\"(과거 시제)를 사용했습니다. 세 번째 경우에 \"discover\" 또는 \"find\"를 사용하여 일관성을 유지했습니다. \"New place\"는 다양성을 위해 \"new places\" 또는 \"new spots\"로 복수형으로 바꿀 수 있습니다.\n\n**3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)**\nCategory: Subject-Verb Agreement (people vs. person)\n\nThis section focuses on the common mistake of using \"people\" as a singular noun, which should be \"person.\"\n\n| ❌ 원문 (As Said)                                                                                                | ✅ 교정 예시 (Correction)                                                                                              |\n| :--------------------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------- |\n| \"So there are two people. One people is the playing piano and one people is the listening to music.\"              | \"So there are two people. One person is playing the piano, and another person is listening to music.\"                  |\n| \"So there are two people. One people is the playing piano and one people is the listening to music.\"              | \"So there are two people. One person is playing the piano, and the other person is listening to music.\"                |\n| \"So there are two people. One people is the playing piano and one people is the listening to music.\"              | \"So there are two people. One is playing the piano, and the other is listening to music.\"                              |\n| \"So there are two people. One people is the playing piano and one people is the listening to music.\"              | \"So there are two people. One person plays the piano, and the other person listens to music.\"                          |\n| (When discussing the idiom's origin) \"So there are two people. One people is the playing piano and one people is the listening to music.\" | (When discussing the idiom's origin) \"So there are two people. One person is playing the piano, and one person is listening to music.\" |\n\n📌 핵심 규칙: 'People'은 항상 복수형 명사로, '사람들'을 의미합니다. 단수 '한 사람'을 지칭할 때는 'person'을 사용해야 합니다.\n\n🔁 따라 읽기:\n🗣️ \"One person is playing the piano, and another person is listening to music.\"\n🗣️ \"One person plays the piano, and the other person listens to music.\"\n🗣️ \"There are two people: one playing the piano and one listening to music.\"\n\n**4. 📗 어휘 확장 (Vocabulary Vault)**\n\n1.  **No-show** /noʊ ˈʃoʊ/ (noun)\n    *   뜻: 약속 장소에 나타나지 않는 사람\n    *   실전 예문: \"We had a few no-shows for the client meeting, which was unexpected.\"\n\n2.  **Back out** /bæk ˈaʊt/ (phrasal verb)\n    *   뜻: 약속이나 계획을 취소하다\n    *   실전 예문: \"He had to back out of the project due to a family emergency.\"\n\n3.  **Play it by ear** /pleɪ ɪt baɪ ˈɪr/ (idiom)\n    *   뜻: 즉흥적으로 상황에 맞춰 결정하다, 미리 계획하지 않고 그때그때 봐가며 하다\n    *   실전 예문: \"We don't have a strict agenda for the team outing; we'll play it by ear.\"\n\n4.  **Couch potato** /ˈkaʊtʃ pəˌteɪtoʊ/ (noun)\n    *   뜻: (주로 주말에) 소파에 앉아 텔레비전만 보며 시간을 보내는 사람, 게으름뱅이\n    *   실전 예문: \"After a long week, I sometimes feel like a couch potato on Saturday mornings.\"\n\n5.  **Impulsive** /ɪmˈpʌlsɪv/ (adjective)\n    *   뜻: 충동적인\n    *   실전 예문: \"My manager is very organized, unlike my impulsive nature when planning trips.\"\n\n**5. 📝 실전 복습 챌린지 (Practice)**\n\n1.  **[쉬움]** 친구가 주말에 무엇을 하고 싶은지 물어봤을 때, 아직 확실히 정하지 못해서 상황을 봐서 결정하겠다고 답해보세요.\n    *   **Model Answer**: \"I haven't made firm plans yet. We'll probably **play it by ear**.\"\n\n2.  **[중간]** 당신은 회의에 참석하기로 했지만, 갑자기 급한 일이 생겨 참석할 수 없게 되었습니다. 친구에게 미안함을 표현하며 참석하지 못하게 되었다고 정중하게 말해보세요.\n    *   **Model Answer**: \"I'm so sorry, but I have to **back out** of the meeting this afternoon. Something unexpected came up.\"\n\n3.  **[어려움]** 당신은 에너지 수입 사업을 하는데, 중요한 해외 파트너가 약속 시간에 나타나지 않았습니다. 이 상황을 영어로 설명하고, 앞으로 이러한 상황을 어떻게 방지할지 간략하게 덧붙여 보세요.\n    *   **Model Answer**: \"Unfortunately, we experienced a **no-show** from a key international partner for our scheduled meeting today. To prevent this in the future, we will implement a stricter confirmation process and require a deposit for high-stakes appointments.\"\n\n**6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)**\n\n*   ✨ **Good Job**: \"So nowadays, we enjoy our city, like travel. So we find some new restaurant and new street and new cafe. We find a place and walk and found some new place. Yeah.\"\n    Joey, 이 문장에서 당신이 도시를 탐험하며 새로운 곳을 발견하는 즐거움을 생생하게 표현하려는 노력이 돋보였습니다. 특히 \"enjoy our city, like travel\"이라는 표현은 여행하는 것처럼 도시를 즐긴다는 당신의 독특한 경험을 잘 나타내 줍니다. 비록 문법적으로 조금 더 다듬을 부분이 있었지만, 하고자 하는 의미가 명확하게 전달되었습니다.\n\n*   🚀 **내일의 한 문장**: 다음 수업 시작 시 튜터에게 던져보세요!\n    \"Good morning! I was thinking about our last conversation. I tend to **play it by ear** when making plans, but I'm curious about how structured planning can be beneficial in business. Can we discuss that briefly?\"\n\n**[성과 지표]**\n\n*   **유창성 점수**: 7/10\n*   **근거**: Joey는 전반적으로 수업에 적극적으로 참여하며 자신의 생각을 표현하려는 노력을 많이 보였습니다. 특히 주말 활동이나 개인적인 성향에 대해 이야기할 때 자연스러운 표현을 사용하려는 시도가 좋았습니다. 하지만, 몇몇 문장에서 단수/복수 사용 오류, 동사 시제 일관성 부족, 그리고 간접적인 표현 사용 등 유창성을 좀 더 높일 수 있는 부분이 있었습니다. 'play it by ear'와 같은 관용구를 이해하고 사용하려는 적극성이 돋보였습니다.\n*   **다음 수업 '원포인트 액션 플랜'**:\n    *   **주제**: 비즈니스 맥락에서의 계획 수립 (Structured Planning vs. Impulsive Decision-making)\n    *   **목표**: 'play it by ear'와 같은 즉흥적인 결정 스타일이 비즈니스 환경에서 어떻게 적용될 수 있는지, 혹은 어떤 한계가 있는지에 대해 논의하며, 보다 체계적인 계획 수립과 관련된 비즈니스 영어 표현을 익힙니다.\n\n---\nJoey, 오늘 수고 많으셨습니다! 다음 수업에서 또 만나요!\n\n위 내용을 바탕으로:\n1. 먼저 오늘 수업에서 내가 틀렸거나 어색했던 표현을 하나 골라서, 관련된 상황을 영어로 질문해줘.\n2. 내가 영어로 대답하면, 자연스러운지 확인하고 더 나은 표현이 있으면 알려줘.\n3. 특히 \"반복 실수 패턴\"에서 지적된 부분을 집중적으로 연습시켜줘.\n4. 이런 식으로 오늘 배운 표현들을 하나씩 복습하자.\n5. 한국어 설명은 필요할 때만 간단히, 대화는 최대한 영어로 진행해줘.\n\n그럼 시작하자!";
+        function startReview(){navigator.clipboard.writeText(REVIEW_PROMPT).then(()=>{showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)}).catch(()=>{const t=document.createElement('textarea');t.value=REVIEW_PROMPT;document.body.appendChild(t);t.select();document.execCommand('copy');document.body.removeChild(t);showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)})}
+        function showToast(){const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500)}
+        function switchTab(n){document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',n==='feedback'?i===0:i===1));document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));document.getElementById('tab-'+n).classList.add('active')}
+    </script>
+</body>
+</html>

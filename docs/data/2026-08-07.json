@@ -1,0 +1,53 @@
+{
+ "date": "2026-08-07",
+ "iso": [
+  2026,
+  32
+ ],
+ "topic": "Discussing Weekend Plans and Idioms",
+ "grammar": "Subject-Verb Agreement",
+ "grammar_norm": "Subject–Verb Agreement",
+ "score": 7.0,
+ "pairs": [
+  {
+   "said": "I will go back to my home and it's possible to meet my family.",
+   "natural": "I'll go home and see my family."
+  },
+  {
+   "said": "So, some people like to eating out, go to the visiting a cafe, and some people like to going to concert or activities.",
+   "natural": "So, some people like eating out or visiting cafes, while others prefer going to concerts or doing outdoor activities."
+  },
+  {
+   "said": "We find some new restaurant and new street and new cafe. We find a place and walk and found some new place.",
+   "natural": "We find new restaurants, new streets, and new cafes. We find a place, walk around, and discover new spots."
+  }
+ ],
+ "vocab": [
+  {
+   "word": "No-show",
+   "pos": "noun",
+   "meaning": "약속 장소에 나타나지 않는 사람"
+  },
+  {
+   "word": "Back out",
+   "pos": "phrasal verb",
+   "meaning": "약속이나 계획을 취소하다"
+  },
+  {
+   "word": "it by ear",
+   "pos": "idiom",
+   "meaning": "즉흥적으로 상황에 맞춰 결정하다, 미리 계획하지 않고 그때그때 봐가며 하다"
+  },
+  {
+   "word": "Couch potato",
+   "pos": "noun",
+   "meaning": "(주로 주말에) 소파에 앉아 텔레비전만 보며 시간을 보내는 사람, 게으름뱅이"
+  },
+  {
+   "word": "Impulsive",
+   "pos": "adjective",
+   "meaning": "충동적인"
+  }
+ ],
+ "_html_md5": "2c81d6762b1af856ef425899e1c3f5de"
+}
