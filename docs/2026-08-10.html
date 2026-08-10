@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#0f0f13"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="당근영어"><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="icon" type="image/png" sizes="192x192" href="icon-192.png"><script src="install-banner.js" defer></script><script src="sw-reg.js" defer></script>
+    <title>전화영어 복습 - 2026년 08월 10일</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Noto Sans KR',sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.75;min-height:100vh}
+        .header{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);border-bottom:1px solid rgba(255,255,255,.06);padding:48px 24px 40px;text-align:center}
+        .header-date{font-size:13px;color:#94a3b8;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+        .header h1{font-size:28px;font-weight:700;color:#f1f5f9;margin-bottom:16px}
+        .header-meta{display:flex;justify-content:center;gap:24px;font-size:14px;color:#64748b}
+        .header-meta span{display:flex;align-items:center;gap:6px}
+        .cta-section{text-align:center;padding:40px 24px}
+        .cta-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:linear-gradient(135deg,#38bdf8,#818cf8);color:#fff;font-size:16px;font-weight:600;font-family:'Noto Sans KR',sans-serif;border:none;border-radius:50px;cursor:pointer;transition:all .3s;text-decoration:none;box-shadow:0 4px 24px rgba(56,189,248,.25)}
+        .cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(56,189,248,.35)}
+        .cta-btn svg{width:20px;height:20px}
+        .cta-sub{margin-top:12px;font-size:13px;color:#64748b}
+        .toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#38bdf8;padding:14px 28px;border-radius:12px;font-size:14px;font-weight:500;border:1px solid rgba(56,189,248,.2);box-shadow:0 8px 32px rgba(0,0,0,.4);opacity:0;transition:all .4s cubic-bezier(.16,1,.3,1);z-index:1000}
+        .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+        .container{max-width:720px;margin:0 auto;padding:0 24px 80px}
+        .tabs{display:flex;gap:4px;background:#1a1a24;padding:4px;border-radius:12px;margin-bottom:32px}
+        .tab{flex:1;padding:12px;text-align:center;font-size:14px;font-weight:500;color:#64748b;background:0 0;border:none;border-radius:8px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all .2s}
+        .tab.active{background:#262636;color:#f1f5f9}
+        .tab-content{display:none}.tab-content.active{display:block}
+        .feedback h2{font-size:18px;font-weight:700;color:#f1f5f9;margin:36px 0 16px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.06)}
+        .feedback h2:first-child{margin-top:0}
+        .feedback p{margin:8px 0;color:#cbd5e1}
+        .feedback .item{padding:6px 0 6px 16px;border-left:2px solid #334155;margin:6px 0;color:#cbd5e1}
+        .feedback .numbered{padding:8px 0 8px 16px;color:#cbd5e1}
+        .feedback .numbered strong{color:#38bdf8}
+        .feedback strong{color:#f1f5f9}
+        .feedback code{background:#1e293b;padding:2px 8px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#38bdf8}
+        .feedback table{width:100%;border-collapse:collapse;margin:12px 0}
+        .feedback th,.feedback td{padding:10px 14px;text-align:left;border-bottom:1px solid #262636}
+        .feedback th{color:#94a3b8;font-weight:500;font-size:13px}
+        .feedback td{color:#cbd5e1}
+        .arrow{color:#38bdf8;font-weight:700}
+        .transcript{background:#1a1a24;border-radius:12px;padding:28px;font-size:14px;line-height:2;color:#94a3b8;white-space:pre-wrap;word-break:break-word;font-family:'JetBrains Mono','Noto Sans KR',monospace}
+        .transcript .tutor{color:#38bdf8}
+        .transcript .student{color:#a78bfa}
+        @media(max-width:640px){.header{padding:32px 16px}.header h1{font-size:22px}.cta-btn{padding:14px 28px;font-size:15px}.container{padding:0 16px 60px}}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-date">2026년 08월 10일</div>
+        <h1>📚 전화영어 복습</h1>
+        <div class="header-meta">
+            <span>⏱ 19분 44초</span>
+            <span>🎙 전화영어_025180304_20260810080022.m4a</span>
+        </div>
+    </div>
+    <div class="cta-section">
+        <button class="cta-btn" onclick="startReview()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Gemini에서 복습 대화 시작하기
+        </button>
+        <div class="cta-sub">클릭하면 프롬프트가 복사되고 Gemini가 열립니다</div>
+    </div>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('feedback')">📋 AI 피드백</button>
+            <button class="tab" onclick="switchTab('transcript')">🎙 수업 전사</button>
+        </div>
+        <div id="tab-feedback" class="tab-content active">
+            <div class="feedback"><p>안녕하세요, Joey! 따뜻하고 실용적인 영어 코치입니다. 오늘 전화영어 수업 내용 잘 분석해서 피드백 드릴게요. 유창성과 정확성을 동시에 잡고, 비즈니스 환경에서도 자신감 있게 쓸 수 있는 자연스러운 표현들을 함께 익혀봅시다!</p>
+<br>
+<br>
+<p><strong>0. 📌 Topic</strong></p>
+<p>Topic: Discussing Family Traditions and Values</p>
+<br>
+<p><strong>1. 📊 오늘의 대화 요약 (Summary)</strong></p>
+<p>오늘은 가족에 대한 이야기를 나누며 'heirloom', 'family resemblance', 'pass down' 등 가족 관련 어휘와 'following in someone's footsteps', 'tight-knit family' 같은 표현들을 익혔습니다. 또한 한국의 명절 음식 문화와 가족과 함께하는 활동에 대한 선호도를 이야기하고, 존경하는 가족 구성원과 어린 시절의 가족 전통에 대해 되돌아보는 시간을 가졌습니다.</p>
+<br>
+<p><strong>2. 💬 유창성 업그레이드 (Fluency & Natural Flow)</strong></p>
+<br>
+<p>Joey가 사용한 표현 중 의미는 충분히 전달되었지만, 조금 더 자연스럽거나 격식 있게 다듬을 수 있는 표현 3가지를 골라봤어요.</p>
+<br>
+<div class="item"><strong>1st Expression</strong></div>
+<div class="item">❌ As Said: "So the temperature is still high, but it's getting a little lower, going low."</div>
+<div class="item">✅ Natural: "So the temperature is still high, but it's starting to cool down a bit."</div>
+<div class="item">💎 Professional: "While the temperature remains high, we are beginning to experience a slight decrease."</div>
+<div class="item">💡 Coaching Point: "Starting to cool down" is a more common and idiomatic way to describe a gradual change in weather. "Going low" is a bit too direct and less nuanced.</div>
+<p><span class="arrow">→</span> "starting to cool down"은 날씨가 점차 시원해지는 것을 묘사할 때 더 흔하고 자연스러운 표현입니다. "going low"는 너무 직접적이고 뉘앙스가 부족합니다.</p>
+<br>
+<div class="item"><strong>2nd Expression</strong></div>
+<div class="item">❌ As Said: "Yeah, that's normal, but it's so special for me. It's so nice."</div>
+<div class="item">✅ Natural: "It was a simple outing, but it felt very special to me."</div>
+<div class="item">💎 Professional: "Although it was a routine activity, it held significant personal meaning for me."</div>
+<div class="item">💡 Coaching Point: "Felt special" or "meant a lot to me" conveys the emotional value more effectively than just saying "it's so special." Adding context like "simple outing" or "routine activity" makes it more descriptive.</div>
+<p><span class="arrow">→</span> "Felt special" 또는 "meant a lot to me"는 단순히 "it's so special"이라고 말하는 것보다 감정적인 가치를 더 효과적으로 전달합니다. "simple outing" 또는 "routine activity"와 같은 맥락을 추가하면 더 구체적으로 묘사할 수 있습니다.</p>
+<br>
+<div class="item"><strong>3rd Expression</strong></div>
+<div class="item">❌ As Said: "So if I want, I will go to a different beach, because we have different beaches."</div>
+<div class="item">✅ Natural: "So I can visit a different beach whenever I want, because there are many."</div>
+<div class="item">💎 Professional: "I have the flexibility to visit various beaches at my discretion, given their abundance."</div>
+<div class="item">💡 Coaching Point: "Whenever I want" is a more natural phrasing for expressing recurring possibility than "if I want, I will go." "There are many" is a simpler way to say "we have different beaches" in this context.</div>
+<p><span class="arrow">→</span> "Whenever I want"는 "if I want, I will go"보다 반복적인 가능성을 표현할 때 더 자연스러운 구문입니다. "There are many"는 이 맥락에서 "we have different beaches"를 말하는 더 간단한 방법입니다.</p>
+<br>
+<p><strong>3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)</strong></p>
+<br>
+<p>이번 대화에서 Joey가 반복적으로 사용한 문법 패턴 중 하나를 집중적으로 교정해 보겠습니다.</p>
+<br>
+<p>Category: Verb Tense and Aspect (Past vs. Present Perfect)</p>
+<p>Joey는 과거의 경험을 이야기할 때 현재 시제나 과거 시제를 혼용하거나, 경험을 나타내는 현재완료 시제를 적절히 사용하지 못하는 경향을 보입니다.</p>
+<br>
+<table>
+<tr><th>❌ 원문 (As Said)</th><th>✅ 교정 예시 (Correction)</th></tr>
+<tr><td>"So the temperature is still high, but it's getting a little lower, going low." (현재 상황 묘사 시 표현이 부자연스러움)</td><td>"So the temperature is still high, but it's starting to get a little lower." (현재 진행형으로 명확히 묘사)</td></tr>
+<tr><td>"I'm seeing this word for the first time." (처음 보는 상황을 현재 진행형으로 말함)</td><td>"I saw this word for the first time." 또는 "This is the first time I've seen this word." (과거 시제 또는 현재완료 사용)</td></tr>
+<tr><td>"I don't have experience of their enjoyable tradition when I was a child." (어린 시절 경험 부족을 현재 시제로 말함)</td><td>"I didn't have enjoyable traditions when I was a child." (과거 시제로 명확히 표현)</td></tr>
+</table>
+<br>
+<p>📌 핵심 규칙: 과거의 특정 시점이나 경험을 이야기할 때는 과거 시제(simple past)를, 특정 시점까지의 경험이나 현재까지의 결과에 영향을 미치는 과거 일을 말할 때는 현재완료(present perfect)를 사용합니다. 현재 진행 중인 상황은 현재 진행형(present continuous)으로 표현합니다.</p>
+<br>
+<p>🔁 따라 읽기:</p>
+<p>🗣️ "So the temperature is still high, but it's starting to get a little lower."</p>
+<p>🗣️ "This is the first time I've seen this word."</p>
+<p>🗣️ "I didn't have enjoyable traditions when I was a child."</p>
+<br>
+<p><strong>4. 📗 어휘 확장 (Vocabulary Vault)</strong></p>
+<br>
+<p>수업에서 나왔거나 맥락상 유용한 단어 5가지입니다.</p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>Heirloom</strong> /ˈɛr.luːm/ (명사)</div>
+<div class="item">뜻: 가보, 비품 (대대로 물려 내려오는 귀중품)</div>
+<div class="item">실전 예문: "This antique watch has been a family heirloom for generations."</div>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>Family resemblance</strong> /ˌfæm.ə.li rɪˈzɛm.bləns/ (명사구)</div>
+<div class="item">뜻: 가족 간의 닮은 모습, 유전적 유사성</div>
+<div class="item">실전 예문: "There's a strong family resemblance between my brother and our father."</div>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>Pass down</strong> /pæs daʊn/ (동사구)</div>
+<div class="item">뜻: (전통, 유산, 지식 등을) 다음 세대로 물려주다</div>
+<div class="item">실전 예문: "We hope to pass down our cultural heritage to our children."</div>
+<br>
+<div class="numbered"><strong>4.</strong> <strong>Tight-knit</strong> /ˈtaɪt.nɪt/ (형용사)</div>
+<div class="item">뜻: (가족, 공동체 등이) 사이가 매우 좋은, 긴밀한</div>
+<div class="item">실전 예문: "They come from a very tight-knit community where everyone supports each other."</div>
+<br>
+<div class="numbered"><strong>5.</strong> <strong>Look up to</strong> /lʊk ˈʌp tuː/ (동사구)</div>
+<div class="item">뜻: (누구를) 존경하다, 우러러보다</div>
+<div class="item">실전 예문: "Many young athletes look up to professional sports stars."</div>
+<br>
+<p><strong>5. 📝 실전 복습 챌린지 (Practice)</strong></p>
+<br>
+<p>오늘 배운 표현과 문법을 활용하여 영작 연습을 해봅시다!</p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>상황</strong>: 당신의 할머니께서 대대로 물려 내려오는 오래된 보석함을 가지고 계십니다.</div>
+<p><strong>영작</strong>: "My grandmother has an old jewelry box that has been a family <strong>heirloom</strong> for generations."</p>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>상황</strong>: 당신은 부모님처럼 같은 직업을 선택했습니다.</div>
+<p><strong>영작</strong>: "I'm <strong>following in my parents' footsteps</strong> by pursuing the same career."</p>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>상황</strong>: 친구들이 긴 연휴에 여행을 가자고 제안했지만, 당신은 가족과 함께 시간을 보내는 것을 더 중요하게 생각합니다.</div>
+<p><strong>영작</strong>: "Even though my friends invited me on a trip during the long holiday, I chose to spend time with my family because I prioritize spending time with them."</p>
+<p>*(힌트: '가족과 시간을 보내는 것을 더 중요하게 생각한다'는 의미를 명확히 전달해 보세요.)*</p>
+<br>
+<p><strong>모범 답안:</strong></p>
+<div class="numbered"><strong>1.</strong> My grandmother has an old jewelry box that has been a family <strong>heirloom</strong> for generations.</div>
+<div class="numbered"><strong>2.</strong> I'm <strong>following in my parents' footsteps</strong> by pursuing the same career.</div>
+<div class="numbered"><strong>3.</strong> Even though my friends invited me on a trip during the long holiday, I chose to spend time with my family because I prioritize spending time with them.</div>
+<br>
+<p><strong>6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)</strong></p>
+<br>
+<div class="item">✨ <strong>Good Job</strong>:</div>
+<p>"My father is so tight and he is all and conservative. So I, I don't have experience of their enjoyable tradition when I was a child."</p>
+<p>이 문장은 비록 문법적으로 약간의 수정이 필요했지만, 어린 시절의 경험에 대해 솔직하고 구체적으로 설명하려는 Joey의 노력이 돋보였습니다. "I don't have experience of..."라는 표현 대신 "I didn't have..." 또는 "I didn't get to experience..."와 같이 과거 시제를 사용하면 더 자연스럽겠지만, 자신의 상황을 명확히 전달하려는 의지가 잘 드러났습니다.</p>
+<br>
+<div class="item">🚀 <strong>내일의 한 문장</strong>:</div>
+<p>"Teacher, I was wondering if we could talk about how to maintain <strong>tight-knit</strong> family relationships in today's busy world."</p>
+<p>(선생님, 바쁜 현대 사회에서 어떻게 <strong>긴밀한</strong> 가족 관계를 유지할 수 있을지에 대해 이야기해 볼 수 있을까요?)</p>
+<br>
+<br>
+<p><strong>[성과 지표]</strong></p>
+<div class="item"><strong>유창성 점수</strong>: 7/10</div>
+<div class="item"><strong>근거</strong>: Joey는 전반적으로 자신의 생각을 표현하는 데 주저함이 없었고, 배운 어휘나 표현을 활용하려는 시도를 보였습니다. 특히 가족에 대한 자신의 생각이나 경험을 이야기할 때 감정을 담아 유창하게 말하는 모습이 인상 깊었습니다. 다만, 일부 표현에서 더 자연스럽거나 정확한 구문을 사용하면 훨씬 원어민처럼 들릴 것입니다.</div>
+<div class="item"><strong>다음 수업 '원포인트 액션 플랜'</strong>:</div>
+<p>과거 시제와 현재완료 시제를 구분하여 사용하는 연습에 집중합니다. 특히 과거 경험을 이야기할 때 'simple past'를, 현재까지 이어지는 경험이나 결과에 대해 이야기할 때 'present perfect'를 정확히 사용하는 연습을 하겠습니다.</p></div>
+        </div>
+        <div id="tab-transcript" class="tab-content">
+            <div class="transcript"><span class="student">[Student]</span> Hello, teacher. Good morning.
+<span class="tutor">[Tutor]</span> Hi.
+<span class="tutor">[Tutor]</span> Good morning. Yeah, hi. How are you today?
+[Joey] Yeah, of course. It&#x27;s a fresh day. And Korea is going into autumn season. Because, yeah, last Friday was Ipchoo. It means to start the autumn season. So the temperature is still high, but it&#x27;s getting a little lower, going low. So it&#x27;s better. How about you, teacher?
+<span class="tutor">[Tutor]</span> Yeah, usually, yeah, autumn isn&#x27;t until later September, October.
+[Joey] Yes, yes.
+<span class="tutor">[Tutor]</span> But yeah, the weather is cooler today.
+[Joey] Cooler today. Yes, it&#x27;s similar in Korea.
+<span class="tutor">[Tutor]</span> Did you have a nice weekend?
+[Joey] Oh, yes, of course. I spent my time with my family. We visited the beach and walked on the beach and saw many beautiful things and went to a nice restaurant. Yeah, that&#x27;s normal, but it&#x27;s so special for me. It&#x27;s so nice.
+<span class="tutor">[Tutor]</span> Nice. Yeah, nice to enjoy the beach with the family.
+[Joey] Yeah, yeah, you&#x27;re right. Because my hometown is Busan. That city has many beautiful beaches around it. So if I want, I will go to a different beach, because we have different beaches. Yeah. So it&#x27;s so nice. It was so nice.
+<span class="tutor">[Tutor]</span> Yeah, kind of nice to enjoy the scenery, the scene.
+[Joey] Yes, yes.
+<span class="tutor">[Tutor]</span> Are you able to take a look at page five today?
+[Joey] Oh, yeah. The topic is my family, right?
+<span class="tutor">[Tutor]</span> Yeah, my family. Mm-hmm.
+[Joey] And is it possible to start with useful vocabulary and useful expressions?
+<span class="tutor">[Tutor]</span> Yeah, we can look at the useful vocab. Yeah, did you want to read?
+[Joey] Yes, of course.
+<span class="tutor">[Tutor]</span> Okay.
+[Joey] Heirloom.
+<span class="tutor">[Tutor]</span> Heirloom.
+[Joey] Heirloom.
+<span class="tutor">[Tutor]</span> A valuable object passed down in a family.
+[Joey] Heirloom. Heirloom. Yeah, I&#x27;m seeing this word for the first time.
+<span class="tutor">[Tutor]</span> This ring is our family heirloom.
+[Joey] Oh, heirloom. Okay, and the second, family resemblance, right?
+<span class="tutor">[Tutor]</span> Family resemblance.
+[Joey] Resemblance.
+<span class="tutor">[Tutor]</span> When family members look alike, there&#x27;s a strong family resemblance between my cousins.
+[Joey] Cousins. Resemblance, right, teacher? The pronunciation.
+<span class="tutor">[Tutor]</span> Resemble. So resemblance.
+<span class="tutor">[Tutor]</span> There&#x27;s a strong family resemblance.
+[Joey] Resemblance. Resemblance.
+<span class="tutor">[Tutor]</span> Resemblance.
+<span class="tutor">[Tutor]</span> Resemblance.
+[Joey] Resemblance.
+<span class="tutor">[Tutor]</span> Three syllables. Yeah, resemblance.
+[Joey] Pass down.
+<span class="tutor">[Tutor]</span> Pass down.
+<span class="tutor">[Tutor]</span> To give a tradition or object to the next generation.
+[Joey] I hope to pass down our next year&#x27;s tradition.
+<span class="tutor">[Tutor]</span> Pass down?
+[Joey] I hope to pass down our New Year&#x27;s tradition.
+<span class="tutor">[Tutor]</span> To give a traditional object to the next generation.
+[Joey] Okay.
+<span class="tutor">[Tutor]</span> To give to the next, yeah.
+[Joey] Yeah, that is some tradition of a family.
+[Joey] Okay. I see. And useful expression?
+<span class="tutor">[Tutor]</span> I&#x27;m following in my family members&#x27; footsteps.
+<span class="tutor">[Tutor]</span> Used when you choose the same job or lifestyle as a family member.
+[Joey] I see. I understand.
+[Joey] If my ancestor is a singer, I&#x27;m borrowing that job and used the when I choose the same job or lifestyle. Okay, I see.
+<span class="tutor">[Tutor]</span> Yeah, you could say you&#x27;re following their footsteps.
+[Joey] Yeah, footsteps. Following my family member&#x27;s footsteps. My father&#x27;s footsteps.
+<span class="tutor">[Tutor]</span> We are a tight-knit family.
+[Joey] We are a tight-knit family. Tight-knit family, yeah. Tight-knit. Knit.
+<span class="tutor">[Tutor]</span> Used when your family is very close.
+<span class="tutor">[Tutor]</span> You are tight-knit.
+[Joey] Family. Knit. And teacher, what does knit mean? Just a word. Is it a prime knit? Or different meaning?
+<span class="tutor">[Tutor]</span> So it&#x27;s like the word, like, you know, knitting. Knitting something together.
+[Joey] Knitting. Knitting? What does it mean? Knitting is a kind of the prying device?
+<span class="tutor">[Tutor]</span> It&#x27;s like a way to make a sweater. You knit a sweater.
+[Joey] Ah, this is it.
+<span class="tutor">[Tutor]</span> But it&#x27;s like the way of putting things together, so like closely together, yeah.
+[Joey] Ah, that is the... Joint. I see. If it&#x27;s more cold and winter season, we wear that clothes knit. That knit, right?
+<span class="tutor">[Tutor]</span> It just means to be joined together.
+[Joey] Joined together. Yes, yes. Understand.
+<span class="tutor">[Tutor]</span> Good.
+<span class="tutor">[Tutor]</span> You have a tight-knit family.
+[Joey] We&#x27;re a tight-bound family. Okay.
+<span class="tutor">[Tutor]</span> So what role does food play in family traditions in Korea?
+[Joey] What does food play? Food play. And teacher, before the answer, I was wondering about the food play. It means the made food or prepared food, right?
+<span class="tutor">[Tutor]</span> So role play. So what role does this character play?
+[Joey] Character.
+<span class="tutor">[Tutor]</span> So it&#x27;s how important is something? So the key words, what role does something play?
+[Joey] What is important to play, role of play?
+<span class="tutor">[Tutor]</span> Role. Yes, yeah, role. So it&#x27;s a way to ask a question so you can say, what role do meetings play or what role does business play? What role does studying play? So it&#x27;s just a way to ask how important is food? How important is business?
+[Joey] So usually if we say that question, that means what rule is important to make food or prepare food, the breakfast or lunch?
+<span class="tutor">[Tutor]</span> No, so it&#x27;s how important is food.
+[Joey] Food. How important is food?
+<span class="tutor">[Tutor]</span> How important is food? Just food in general. So how important is food?
+[Joey] How important is food? Could you answer for me that question? For example, because if I understand that question perfectly, I need to answer.
+<span class="tutor">[Tutor]</span> So what role does food play in family traditions?
+[Joey] Yes.
+<span class="tutor">[Tutor]</span> I can say food plays an important role in family traditions. We always eat something during the holidays.
+[Joey] Uh-huh.
+<span class="tutor">[Tutor]</span> Or we always come together and make dishes during Christmas.
+[Joey] I see. I understand. So that means to just prepare and eat everything about the food of the traditional day. So what...
+<span class="tutor">[Tutor]</span> No.
+[Joey] No?
+<span class="tutor">[Tutor]</span> No, it&#x27;s just, is food important? Do you usually eat food when you&#x27;re with your family?
+[Joey] Yes, in general. Ah, not prepared, just eating food, right?
+<span class="tutor">[Tutor]</span> Yeah, it means how important is something?
+[Joey] How important is food in our traditional day? Understand, yeah, it is very important. I understand that question because you explained more detail. So I understand that question. And my answer is, in Korea, food is very important on traditional days. Usually our big traditional days are the New Year&#x27;s Day, Chinese New Year&#x27;s Day, and Thanksgiving Day in Korea, Korean Thanksgiving Day. So that big day is the family coming and meeting together, and we enjoy the dish together, family together. So that is very important, and usually at that time we just meet the family, not friends. Just meet the family and talk about something and eating, enjoy the dish. Yeah, yeah, it&#x27;s your...
+<span class="tutor">[Tutor]</span> And which do you prefer when spending time with family, staying home or going out together?
+[Joey] In my case, I love going out together because our family&#x27;s character, members&#x27; character, is to enjoy the outside and enjoy the activity. So usually every week we will go outside, going out together, and find a new restaurant, find a new cafe, and go to travel, go to the picnic, and go for a walk. Yeah, so usually every week, every weekend, we go out together. But just two days, the Thanksgiving Day and New Year&#x27;s Day, at that time I just stay at my family&#x27;s house or my family&#x27;s, no, house. Yeah, but after those two days, we go, we are going out together. It&#x27;s better.
+<span class="tutor">[Tutor]</span> So you like to stay home during the holidays, not you like to go out during the weekend?
+[Joey] Yeah, not enjoy, but usually our family is older and they don&#x27;t move a lot. For example, my mother is seventy-five years old, so she cannot move easily. It is possible to walk, but it is a little hard to travel, the long travel. So just two days, the New Year&#x27;s Day and Thanksgiving Day, we just visit our family, our mother&#x27;s house, and then just stay, you know, home. Stay, you know, home. So, yeah, so it&#x27;s a little different, the big holiday.
+<span class="tutor">[Tutor]</span> With the big holiday.
+[Joey] Yes, yes.
+<span class="tutor">[Tutor]</span> How about the situation? Would you like to read?
+[Joey] Oh, yes, no problem. Part C is the problem solving. Your family always celebrates traditional holidays together. And it&#x27;s important to them. This year, several holidays line up to make a long break. And your friends want to plan a trip. You don&#x27;t want to disappoint your family, but you also want to enjoy your time off. Would you stay and celebrate with your family or travel? Hmm. I understand that situation. Hmm. Uh, yes. My first thing is the family. So usually I choose, uh, just... just share my time with my family. But that is so long holiday. And just, for example, just that holiday is 10 days. And this travel is just three days or four days. And in the meantime, it is possible because, yeah, just three days and four days, I go to travel with my friends and enjoy them. And after seven or six days, I share my time with my family. So that is wise and reasonable. So yeah, it&#x27;s possible. But if my plan was to travel 10 days, it is impossible because my choice is always first is family. So it is impossible for me. Yeah, so yeah.
+<span class="tutor">[Tutor]</span> Even if it&#x27;s a big long break, you prefer to spend time with your family for the time.
+[Joey] Yes, because, because my lifetime, my routine time is only spent time with my family on Friday to Sunday, only possible on weekends. So that is the shorter for me. The holiday is the opportunity to spend time with my family. So that is the precious time for me. So it is impossible to spend totally with my friends. Yeah, just to share the time with my family. Yeah, it&#x27;s all.
+<span class="tutor">[Tutor]</span> And the question here, who in your family do you look up to the most and why?
+[Joey] Look up. Who is the family do you look up the most? And teacher, look up to, look up to someone, look up to means respect someone?
+<span class="tutor">[Tutor]</span> Respect someone. Yeah. So that&#x27;s how about that? Look up to someone. Is there?
+<span class="tutor">[Tutor]</span> So like you look up to, like I look up to my grandfather.
+[Joey] Respect. Yeah, I understand. I look up to my mother. Yeah, because she is so diligent and she started a little restaurant and managed for 40 years, during the 40 years, and made money. And then she supplied to our family. Yeah. My sister, me, and my family. So she paid everything to family. So, yeah, I respect and look up to my mother. But these days she is a little older and her power is a little weak. So I&#x27;m a little upset and I&#x27;m a little angry because she&#x27;s getting older and older. And I&#x27;m just busy with my mother just one or two weeks, her two weeks. And if I meet her, she looks like more older, so I&#x27;m a little sad these days.
+<span class="tutor">[Tutor]</span> Yeah, kind of time goes quickly.
+[Joey] So yeah, time is, you&#x27;re right.
+<span class="tutor">[Tutor]</span> And what&#x27;s a family tradition you enjoyed as a child?
+[Joey] I think we have some family tradition, but when I was a child, I did not enjoy that because my father is so tight and he is all and conservative. So I, I don&#x27;t have experience of their enjoyable tradition when I was a child.
+<span class="tutor">[Tutor]</span> So like a favorite food or a favorite meal or a favorite holiday?
+[Joey] Favorite holiday? Hmm. There is no good memory.
+[Joey] Yes.
+[Joey] Yes, anyway.
+<span class="tutor">[Tutor]</span> Yeah, that&#x27;s getting a bit of time. I will send you corrections here in just a moment. Any other questions before I go?
+[Joey] Oh, no, thanks for your question. Have a nice day.
+<span class="tutor">[Tutor]</span> Have a good day. Goodbye.
+[Joey] You too. Bye-bye.</div>
+        </div>
+    </div>
+    <div class="toast" id="toast">✅ 프롬프트가 복사되었습니다!</div>
+    <script>
+        const REVIEW_PROMPT="너는 나의 영어 회화 복습 파트너야. 오늘 내 전화영어 수업 내용을 기반으로 대화하면서 복습을 도와줘.\n\n[오늘 수업 전사 내용]\n[Student] Hello, teacher. Good morning.\n[Tutor] Hi.\n[Tutor] Good morning. Yeah, hi. How are you today?\n[Joey] Yeah, of course. It's a fresh day. And Korea is going into autumn season. Because, yeah, last Friday was Ipchoo. It means to start the autumn season. So the temperature is still high, but it's getting a little lower, going low. So it's better. How about you, teacher?\n[Tutor] Yeah, usually, yeah, autumn isn't until later September, October.\n[Joey] Yes, yes.\n[Tutor] But yeah, the weather is cooler today.\n[Joey] Cooler today. Yes, it's similar in Korea.\n[Tutor] Did you have a nice weekend?\n[Joey] Oh, yes, of course. I spent my time with my family. We visited the beach and walked on the beach and saw many beautiful things and went to a nice restaurant. Yeah, that's normal, but it's so special for me. It's so nice.\n[Tutor] Nice. Yeah, nice to enjoy the beach with the family.\n[Joey] Yeah, yeah, you're right. Because my hometown is Busan. That city has many beautiful beaches around it. So if I want, I will go to a different beach, because we have different beaches. Yeah. So it's so nice. It was so nice.\n[Tutor] Yeah, kind of nice to enjoy the scenery, the scene.\n[Joey] Yes, yes.\n[Tutor] Are you able to take a look at page five today?\n[Joey] Oh, yeah. The topic is my family, right?\n[Tutor] Yeah, my family. Mm-hmm.\n[Joey] And is it possible to start with useful vocabulary and useful expressions?\n[Tutor] Yeah, we can look at the useful vocab. Yeah, did you want to read?\n[Joey] Yes, of course.\n[Tutor] Okay.\n[Joey] Heirloom.\n[Tutor] Heirloom.\n[Joey] Heirloom.\n[Tutor] A valuable object passed down in a family.\n[Joey] Heirloom. Heirloom. Yeah, I'm seeing this word for the first time.\n[Tutor] This ring is our family heirloom.\n[Joey] Oh, heirloom. Okay, and the second, family resemblance, right?\n[Tutor] Family resemblance.\n[Joey] Resemblance.\n[Tutor] When family members look alike, there's a strong family resemblance between my cousins.\n[Joey] Cousins. Resemblance, right, teacher? The pronunciation.\n[Tutor] Resemble. So resemblance.\n[Tutor] There's a strong family resemblance.\n[Joey] Resemblance. Resemblance.\n[Tutor] Resemblance.\n[Tutor] Resemblance.\n[Joey] Resemblance.\n[Tutor] Three syllables. Yeah, resemblance.\n[Joey] Pass down.\n[Tutor] Pass down.\n[Tutor] To give a tradition or object to the next generation.\n[Joey] I hope to pass down our next year's tradition.\n[Tutor] Pass down?\n[Joey] I hope to pass down our New Year's tradition.\n[Tutor] To give a traditional object to the next generation.\n[Joey] Okay.\n[Tutor] To give to the next, yeah.\n[Joey] Yeah, that is some tradition of a family.\n[Joey] Okay. I see. And useful expression?\n[Tutor] I'm following in my family members' footsteps.\n[Tutor] Used when you choose the same job or lifestyle as a family member.\n[Joey] I see. I understand.\n[Joey] If my ancestor is a singer, I'm borrowing that job and used the when I choose the same job or lifestyle. Okay, I see.\n[Tutor] Yeah, you could say you're following their footsteps.\n[Joey] Yeah, footsteps. Following my family member's footsteps. My father's footsteps.\n[Tutor] We are a tight-knit family.\n[Joey] We are a tight-knit family. Tight-knit family, yeah. Tight-knit. Knit.\n[Tutor] Used when your family is very close.\n[Tutor] You are tight-knit.\n[Joey] Family. Knit. And teacher, what does knit mean? Just a word. Is it a prime knit? Or different meaning?\n[Tutor] So it's like the word, like, you know, knitting. Knitting something together.\n[Joey] Knitting. Knitting? What does it mean? Knitting is a kind of the prying device?\n[Tutor] It's like a way to make a sweater. You knit a sweater.\n[Joey] Ah, this is it.\n[Tutor] But it's like the way of putting things together, so like closely together, yeah.\n[Joey] Ah, that is the... Joint. I see. If it's more cold and winter season, we wear that clothes knit. That knit, right?\n[Tutor] It just means to be joined together.\n[Joey] Joined together. Yes, yes. Understand.\n[Tutor] Good.\n[Tutor] You have a tight-knit family.\n[Joey] We're a tight-bound family. Okay.\n[Tutor] So what role does food play in family traditions in Korea?\n[Joey] What does food play? Food play. And teacher, before the answer, I was wondering about the food play. It means the made food or prepared food, right?\n[Tutor] So role play. So what role does this character play?\n[Joey] Character.\n[Tutor] So it's how important is something? So the key words, what role does something play?\n[Joey] What is important to play, role of play?\n[Tutor] Role. Yes, yeah, role. So it's a way to ask a question so you can say, what role do meetings play or what role does business play? What role does studying play? So it's just a way to ask how important is food? How important is business?\n[Joey] So usually if we say that question, that means what rule is important to make food or prepare food, the breakfast or lunch?\n[Tutor] No, so it's how important is food.\n[Joey] Food. How important is food?\n[Tutor] How important is food? Just food in general. So how important is food?\n[Joey] How important is food? Could you answer for me that question? For example, because if I understand that question perfectly, I need to answer.\n[Tutor] So what role does food play in family traditions?\n[Joey] Yes.\n[Tutor] I can say food plays an important role in family traditions. We always eat something during the holidays.\n[Joey] Uh-huh.\n[Tutor] Or we always come together and make dishes during Christmas.\n[Joey] I see. I understand. So that means to just prepare and eat everything about the food of the traditional day. So what...\n[Tutor] No.\n[Joey] No?\n[Tutor] No, it's just, is food important? Do you usually eat food when you're with your family?\n[Joey] Yes, in general. Ah, not prepared, just eating food, right?\n[Tutor] Yeah, it means how important is something?\n[Joey] How important is food in our traditional day? Understand, yeah, it is very important. I understand that question because you explained more detail. So I understand that question. And my answer is, in Korea, food is very important on traditional days. Usually our big traditional days are the New Year's Day, Chinese New Year's Day, and Thanksgiving Day in Korea, Korean Thanksgiving Day. So that big day is the family coming and meeting together, and we enjoy the dish together, family together. So that is very important, and usually at that time we just meet the family, not friends. Just meet the family and talk about something and eating, enjoy the dish. Yeah, yeah, it's your...\n[Tutor] And which do you prefer when spending time with family, staying home or going out together?\n[Joey] In my case, I love going out together because our family's character, members' character, is to enjoy the outside and enjoy the activity. So usually every week we will go outside, going out together, and find a new restaurant, find a new cafe, and go to travel, go to the picnic, and go for a walk. Yeah, so usually every week, every weekend, we go out together. But just two days, the Thanksgiving Day and New Year's Day, at that time I just stay at my family's house or my family's, no, house. Yeah, but after those two days, we go, we are going out together. It's better.\n[Tutor] So you like to stay home during the holidays, not you like to go out during the weekend?\n[Joey] Yeah, not enjoy, but usually our family is older and they don't move a lot. For example, my mother is seventy-five years old, so she cannot move easily. It is possible to walk, but it is a little hard to travel, the long travel. So just two days, the New Year's Day and Thanksgiving Day, we just visit our family, our mother's house, and then just stay, you know, home. Stay, you know, home. So, yeah, so it's a little different, the big holiday.\n[Tutor] With the big holiday.\n[Joey] Yes, yes.\n[Tutor] How about the situation? Would you like to read?\n[Joey] Oh, yes, no problem. Part C is the problem solving. Your family always celebrates traditional holidays together. And it's important to them. This year, several holidays line up to make a long break. And your friends want to plan a trip. You don't want to disappoint your family, but you also want to enjoy your time off. Would you stay and celebrate with your family or travel? Hmm. I understand that situation. Hmm. Uh, yes. My first thing is the family. So usually I choose, uh, just... just share my time with my family. But that is so long holiday. And just, for example, just that holiday is 10 days. And this travel is just three days or four days. And in the meantime, it is possible because, yeah, just three days and four days, I go to travel with my friends and enjoy them. And after seven or six days, I share my time with my family. So that is wise and reasonable. So yeah, it's possible. But if my plan was to travel 10 days, it is impossible because my choice is always first is family. So it is impossible for me. Yeah, so yeah.\n[Tutor] Even if it's a big long break, you prefer to spend time with your family for the time.\n[Joey] Yes, because, because my lifetime, my routine time is only spent time with my family on Friday to Sunday, only possible on weekends. So that is the shorter for me. The holiday is the opportunity to spend time with my family. So that is the precious time for me. So it is impossible to spend totally with my friends. Yeah, just to share the time with my family. Yeah, it's all.\n[Tutor] And the question here, who in your family do you look up to the most and why?\n[Joey] Look up. Who is the family do you look up the most? And teacher, look up to, look up to someone, look up to means respect someone?\n[Tutor] Respect someone. Yeah. So that's how about that? Look up to someone. Is there?\n[Tutor] So like you look up to, like I look up to my grandfather.\n[Joey] Respect. Yeah, I understand. I look up to my mother. Yeah, because she is so diligent and she started a little restaurant and managed for 40 years, during the 40 years, and made money. And then she supplied to our family. Yeah. My sister, me, and my family. So she paid everything to family. So, yeah, I respect and look up to my mother. But these days she is a little older and her power is a little weak. So I'm a little upset and I'm a little angry because she's getting older and older. And I'm just busy with my mother just one or two weeks, her two weeks. And if I meet her, she looks like more older, so I'm a little sad these days.\n[Tutor] Yeah, kind of time goes quickly.\n[Joey] So yeah, time is, you're right.\n[Tutor] And what's a family tradition you enjoyed as a child?\n[Joey] I think we have some family tradition, but when I was a child, I did not enjoy that because my father is so tight and he is all and conservative. So I, I don't have experience of their enjoyable tradition when I was a child.\n[Tutor] So like a favorite food or a favorite meal or a favorite holiday?\n[Joey] Favorite holiday? Hmm. There is no good memory.\n[Joey] Yes.\n[Joey] Yes, anyway.\n[Tutor] Yeah, that's getting a bit of time. I will send you corrections here in just a moment. Any other questions before I go?\n[Joey] Oh, no, thanks for your question. Have a nice day.\n[Tutor] Have a good day. Goodbye.\n[Joey] You too. Bye-bye.\n\n[AI 피드백]\n안녕하세요, Joey! 따뜻하고 실용적인 영어 코치입니다. 오늘 전화영어 수업 내용 잘 분석해서 피드백 드릴게요. 유창성과 정확성을 동시에 잡고, 비즈니스 환경에서도 자신감 있게 쓸 수 있는 자연스러운 표현들을 함께 익혀봅시다!\n\n---\n\n**0. 📌 Topic**\nTopic: Discussing Family Traditions and Values\n\n**1. 📊 오늘의 대화 요약 (Summary)**\n오늘은 가족에 대한 이야기를 나누며 'heirloom', 'family resemblance', 'pass down' 등 가족 관련 어휘와 'following in someone's footsteps', 'tight-knit family' 같은 표현들을 익혔습니다. 또한 한국의 명절 음식 문화와 가족과 함께하는 활동에 대한 선호도를 이야기하고, 존경하는 가족 구성원과 어린 시절의 가족 전통에 대해 되돌아보는 시간을 가졌습니다.\n\n**2. 💬 유창성 업그레이드 (Fluency & Natural Flow)**\n\nJoey가 사용한 표현 중 의미는 충분히 전달되었지만, 조금 더 자연스럽거나 격식 있게 다듬을 수 있는 표현 3가지를 골라봤어요.\n\n*   **1st Expression**\n    *   ❌ As Said: \"So the temperature is still high, but it's getting a little lower, going low.\"\n    *   ✅ Natural: \"So the temperature is still high, but it's starting to cool down a bit.\"\n    *   💎 Professional: \"While the temperature remains high, we are beginning to experience a slight decrease.\"\n    *   💡 Coaching Point: \"Starting to cool down\" is a more common and idiomatic way to describe a gradual change in weather. \"Going low\" is a bit too direct and less nuanced.\n        → \"starting to cool down\"은 날씨가 점차 시원해지는 것을 묘사할 때 더 흔하고 자연스러운 표현입니다. \"going low\"는 너무 직접적이고 뉘앙스가 부족합니다.\n\n*   **2nd Expression**\n    *   ❌ As Said: \"Yeah, that's normal, but it's so special for me. It's so nice.\"\n    *   ✅ Natural: \"It was a simple outing, but it felt very special to me.\"\n    *   💎 Professional: \"Although it was a routine activity, it held significant personal meaning for me.\"\n    *   💡 Coaching Point: \"Felt special\" or \"meant a lot to me\" conveys the emotional value more effectively than just saying \"it's so special.\" Adding context like \"simple outing\" or \"routine activity\" makes it more descriptive.\n        → \"Felt special\" 또는 \"meant a lot to me\"는 단순히 \"it's so special\"이라고 말하는 것보다 감정적인 가치를 더 효과적으로 전달합니다. \"simple outing\" 또는 \"routine activity\"와 같은 맥락을 추가하면 더 구체적으로 묘사할 수 있습니다.\n\n*   **3rd Expression**\n    *   ❌ As Said: \"So if I want, I will go to a different beach, because we have different beaches.\"\n    *   ✅ Natural: \"So I can visit a different beach whenever I want, because there are many.\"\n    *   💎 Professional: \"I have the flexibility to visit various beaches at my discretion, given their abundance.\"\n    *   💡 Coaching Point: \"Whenever I want\" is a more natural phrasing for expressing recurring possibility than \"if I want, I will go.\" \"There are many\" is a simpler way to say \"we have different beaches\" in this context.\n        → \"Whenever I want\"는 \"if I want, I will go\"보다 반복적인 가능성을 표현할 때 더 자연스러운 구문입니다. \"There are many\"는 이 맥락에서 \"we have different beaches\"를 말하는 더 간단한 방법입니다.\n\n**3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)**\n\n이번 대화에서 Joey가 반복적으로 사용한 문법 패턴 중 하나를 집중적으로 교정해 보겠습니다.\n\nCategory: Verb Tense and Aspect (Past vs. Present Perfect)\nJoey는 과거의 경험을 이야기할 때 현재 시제나 과거 시제를 혼용하거나, 경험을 나타내는 현재완료 시제를 적절히 사용하지 못하는 경향을 보입니다.\n\n| ❌ 원문 (As Said)                                                                                                 | ✅ 교정 예시 (Correction)                                                                                             |\n| :---------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------- |\n| \"So the temperature is still high, but it's getting a little lower, going low.\" (현재 상황 묘사 시 표현이 부자연스러움) | \"So the temperature is still high, but it's starting to get a little lower.\" (현재 진행형으로 명확히 묘사)                  |\n| \"I'm seeing this word for the first time.\" (처음 보는 상황을 현재 진행형으로 말함)                                   | \"I saw this word for the first time.\" 또는 \"This is the first time I've seen this word.\" (과거 시제 또는 현재완료 사용) |\n| \"I don't have experience of their enjoyable tradition when I was a child.\" (어린 시절 경험 부족을 현재 시제로 말함)     | \"I didn't have enjoyable traditions when I was a child.\" (과거 시제로 명확히 표현)                                      |\n\n📌 핵심 규칙: 과거의 특정 시점이나 경험을 이야기할 때는 과거 시제(simple past)를, 특정 시점까지의 경험이나 현재까지의 결과에 영향을 미치는 과거 일을 말할 때는 현재완료(present perfect)를 사용합니다. 현재 진행 중인 상황은 현재 진행형(present continuous)으로 표현합니다.\n\n🔁 따라 읽기:\n🗣️ \"So the temperature is still high, but it's starting to get a little lower.\"\n🗣️ \"This is the first time I've seen this word.\"\n🗣️ \"I didn't have enjoyable traditions when I was a child.\"\n\n**4. 📗 어휘 확장 (Vocabulary Vault)**\n\n수업에서 나왔거나 맥락상 유용한 단어 5가지입니다.\n\n1.  **Heirloom** /ˈɛr.luːm/ (명사)\n    *   뜻: 가보, 비품 (대대로 물려 내려오는 귀중품)\n    *   실전 예문: \"This antique watch has been a family heirloom for generations.\"\n\n2.  **Family resemblance** /ˌfæm.ə.li rɪˈzɛm.bləns/ (명사구)\n    *   뜻: 가족 간의 닮은 모습, 유전적 유사성\n    *   실전 예문: \"There's a strong family resemblance between my brother and our father.\"\n\n3.  **Pass down** /pæs daʊn/ (동사구)\n    *   뜻: (전통, 유산, 지식 등을) 다음 세대로 물려주다\n    *   실전 예문: \"We hope to pass down our cultural heritage to our children.\"\n\n4.  **Tight-knit** /ˈtaɪt.nɪt/ (형용사)\n    *   뜻: (가족, 공동체 등이) 사이가 매우 좋은, 긴밀한\n    *   실전 예문: \"They come from a very tight-knit community where everyone supports each other.\"\n\n5.  **Look up to** /lʊk ˈʌp tuː/ (동사구)\n    *   뜻: (누구를) 존경하다, 우러러보다\n    *   실전 예문: \"Many young athletes look up to professional sports stars.\"\n\n**5. 📝 실전 복습 챌린지 (Practice)**\n\n오늘 배운 표현과 문법을 활용하여 영작 연습을 해봅시다!\n\n1.  **상황**: 당신의 할머니께서 대대로 물려 내려오는 오래된 보석함을 가지고 계십니다.\n    **영작**: \"My grandmother has an old jewelry box that has been a family **heirloom** for generations.\"\n\n2.  **상황**: 당신은 부모님처럼 같은 직업을 선택했습니다.\n    **영작**: \"I'm **following in my parents' footsteps** by pursuing the same career.\"\n\n3.  **상황**: 친구들이 긴 연휴에 여행을 가자고 제안했지만, 당신은 가족과 함께 시간을 보내는 것을 더 중요하게 생각합니다.\n    **영작**: \"Even though my friends invited me on a trip during the long holiday, I chose to spend time with my family because I prioritize spending time with them.\"\n    *(힌트: '가족과 시간을 보내는 것을 더 중요하게 생각한다'는 의미를 명확히 전달해 보세요.)*\n\n---\n**모범 답안:**\n1.  My grandmother has an old jewelry box that has been a family **heirloom** for generations.\n2.  I'm **following in my parents' footsteps** by pursuing the same career.\n3.  Even though my friends invited me on a trip during the long holiday, I chose to spend time with my family because I prioritize spending time with them.\n\n**6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)**\n\n*   ✨ **Good Job**:\n    \"My father is so tight and he is all and conservative. So I, I don't have experience of their enjoyable tradition when I was a child.\"\n    이 문장은 비록 문법적으로 약간의 수정이 필요했지만, 어린 시절의 경험에 대해 솔직하고 구체적으로 설명하려는 Joey의 노력이 돋보였습니다. \"I don't have experience of...\"라는 표현 대신 \"I didn't have...\" 또는 \"I didn't get to experience...\"와 같이 과거 시제를 사용하면 더 자연스럽겠지만, 자신의 상황을 명확히 전달하려는 의지가 잘 드러났습니다.\n\n*   🚀 **내일의 한 문장**:\n    \"Teacher, I was wondering if we could talk about how to maintain **tight-knit** family relationships in today's busy world.\"\n    (선생님, 바쁜 현대 사회에서 어떻게 **긴밀한** 가족 관계를 유지할 수 있을지에 대해 이야기해 볼 수 있을까요?)\n\n---\n\n**[성과 지표]**\n*   **유창성 점수**: 7/10\n    *   **근거**: Joey는 전반적으로 자신의 생각을 표현하는 데 주저함이 없었고, 배운 어휘나 표현을 활용하려는 시도를 보였습니다. 특히 가족에 대한 자신의 생각이나 경험을 이야기할 때 감정을 담아 유창하게 말하는 모습이 인상 깊었습니다. 다만, 일부 표현에서 더 자연스럽거나 정확한 구문을 사용하면 훨씬 원어민처럼 들릴 것입니다.\n*   **다음 수업 '원포인트 액션 플랜'**:\n    과거 시제와 현재완료 시제를 구분하여 사용하는 연습에 집중합니다. 특히 과거 경험을 이야기할 때 'simple past'를, 현재까지 이어지는 경험이나 결과에 대해 이야기할 때 'present perfect'를 정확히 사용하는 연습을 하겠습니다.\n\n위 내용을 바탕으로:\n1. 먼저 오늘 수업에서 내가 틀렸거나 어색했던 표현을 하나 골라서, 관련된 상황을 영어로 질문해줘.\n2. 내가 영어로 대답하면, 자연스러운지 확인하고 더 나은 표현이 있으면 알려줘.\n3. 특히 \"반복 실수 패턴\"에서 지적된 부분을 집중적으로 연습시켜줘.\n4. 이런 식으로 오늘 배운 표현들을 하나씩 복습하자.\n5. 한국어 설명은 필요할 때만 간단히, 대화는 최대한 영어로 진행해줘.\n\n그럼 시작하자!";
+        function startReview(){navigator.clipboard.writeText(REVIEW_PROMPT).then(()=>{showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)}).catch(()=>{const t=document.createElement('textarea');t.value=REVIEW_PROMPT;document.body.appendChild(t);t.select();document.execCommand('copy');document.body.removeChild(t);showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)})}
+        function showToast(){const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500)}
+        function switchTab(n){document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',n==='feedback'?i===0:i===1));document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));document.getElementById('tab-'+n).classList.add('active')}
+    </script>
+</body>
+</html>
