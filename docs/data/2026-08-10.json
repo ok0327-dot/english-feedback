@@ -1,0 +1,53 @@
+{
+ "date": "2026-08-10",
+ "iso": [
+  2026,
+  33
+ ],
+ "topic": "Discussing Family Traditions and Values",
+ "grammar": "Verb Tense and Aspect",
+ "grammar_norm": "Verb Tense",
+ "score": 7.0,
+ "pairs": [
+  {
+   "said": "So the temperature is still high, but it's getting a little lower, going low.",
+   "natural": "So the temperature is still high, but it's starting to cool down a bit."
+  },
+  {
+   "said": "Yeah, that's normal, but it's so special for me. It's so nice.",
+   "natural": "It was a simple outing, but it felt very special to me."
+  },
+  {
+   "said": "So if I want, I will go to a different beach, because we have different beaches.",
+   "natural": "So I can visit a different beach whenever I want, because there are many."
+  }
+ ],
+ "vocab": [
+  {
+   "word": "Heirloom",
+   "pos": "명사",
+   "meaning": "가보, 비품 (대대로 물려 내려오는 귀중품)"
+  },
+  {
+   "word": "Family resemblance",
+   "pos": "명사구",
+   "meaning": "가족 간의 닮은 모습, 유전적 유사성"
+  },
+  {
+   "word": "Pass down",
+   "pos": "동사구",
+   "meaning": "(전통, 유산, 지식 등을) 다음 세대로 물려주다"
+  },
+  {
+   "word": "Tight-knit",
+   "pos": "형용사",
+   "meaning": "(가족, 공동체 등이) 사이가 매우 좋은, 긴밀한"
+  },
+  {
+   "word": "Look up to",
+   "pos": "동사구",
+   "meaning": "(누구를) 존경하다, 우러러보다"
+  }
+ ],
+ "_html_md5": "82706fe8a159bbc41fff5013614cd42d"
+}
