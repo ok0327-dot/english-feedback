@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#0f0f13"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="당근영어"><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="icon" type="image/png" sizes="192x192" href="icon-192.png"><script src="install-banner.js" defer></script><script src="sw-reg.js" defer></script>
+    <title>전화영어 복습 - 2026년 08월 11일</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Noto Sans KR',sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.75;min-height:100vh}
+        .header{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);border-bottom:1px solid rgba(255,255,255,.06);padding:48px 24px 40px;text-align:center}
+        .header-date{font-size:13px;color:#94a3b8;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+        .header h1{font-size:28px;font-weight:700;color:#f1f5f9;margin-bottom:16px}
+        .header-meta{display:flex;justify-content:center;gap:24px;font-size:14px;color:#64748b}
+        .header-meta span{display:flex;align-items:center;gap:6px}
+        .cta-section{text-align:center;padding:40px 24px}
+        .cta-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:linear-gradient(135deg,#38bdf8,#818cf8);color:#fff;font-size:16px;font-weight:600;font-family:'Noto Sans KR',sans-serif;border:none;border-radius:50px;cursor:pointer;transition:all .3s;text-decoration:none;box-shadow:0 4px 24px rgba(56,189,248,.25)}
+        .cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(56,189,248,.35)}
+        .cta-btn svg{width:20px;height:20px}
+        .cta-sub{margin-top:12px;font-size:13px;color:#64748b}
+        .toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#38bdf8;padding:14px 28px;border-radius:12px;font-size:14px;font-weight:500;border:1px solid rgba(56,189,248,.2);box-shadow:0 8px 32px rgba(0,0,0,.4);opacity:0;transition:all .4s cubic-bezier(.16,1,.3,1);z-index:1000}
+        .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+        .container{max-width:720px;margin:0 auto;padding:0 24px 80px}
+        .tabs{display:flex;gap:4px;background:#1a1a24;padding:4px;border-radius:12px;margin-bottom:32px}
+        .tab{flex:1;padding:12px;text-align:center;font-size:14px;font-weight:500;color:#64748b;background:0 0;border:none;border-radius:8px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all .2s}
+        .tab.active{background:#262636;color:#f1f5f9}
+        .tab-content{display:none}.tab-content.active{display:block}
+        .feedback h2{font-size:18px;font-weight:700;color:#f1f5f9;margin:36px 0 16px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.06)}
+        .feedback h2:first-child{margin-top:0}
+        .feedback p{margin:8px 0;color:#cbd5e1}
+        .feedback .item{padding:6px 0 6px 16px;border-left:2px solid #334155;margin:6px 0;color:#cbd5e1}
+        .feedback .numbered{padding:8px 0 8px 16px;color:#cbd5e1}
+        .feedback .numbered strong{color:#38bdf8}
+        .feedback strong{color:#f1f5f9}
+        .feedback code{background:#1e293b;padding:2px 8px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#38bdf8}
+        .feedback table{width:100%;border-collapse:collapse;margin:12px 0}
+        .feedback th,.feedback td{padding:10px 14px;text-align:left;border-bottom:1px solid #262636}
+        .feedback th{color:#94a3b8;font-weight:500;font-size:13px}
+        .feedback td{color:#cbd5e1}
+        .arrow{color:#38bdf8;font-weight:700}
+        .transcript{background:#1a1a24;border-radius:12px;padding:28px;font-size:14px;line-height:2;color:#94a3b8;white-space:pre-wrap;word-break:break-word;font-family:'JetBrains Mono','Noto Sans KR',monospace}
+        .transcript .tutor{color:#38bdf8}
+        .transcript .student{color:#a78bfa}
+        @media(max-width:640px){.header{padding:32px 16px}.header h1{font-size:22px}.cta-btn{padding:14px 28px;font-size:15px}.container{padding:0 16px 60px}}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-date">2026년 08월 11일</div>
+        <h1>📚 전화영어 복습</h1>
+        <div class="header-meta">
+            <span>⏱ 19분 2초</span>
+            <span>🎙 전화영어_025180304_20260811080047.m4a</span>
+        </div>
+    </div>
+    <div class="cta-section">
+        <button class="cta-btn" onclick="startReview()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Gemini에서 복습 대화 시작하기
+        </button>
+        <div class="cta-sub">클릭하면 프롬프트가 복사되고 Gemini가 열립니다</div>
+    </div>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('feedback')">📋 AI 피드백</button>
+            <button class="tab" onclick="switchTab('transcript')">🎙 수업 전사</button>
+        </div>
+        <div id="tab-feedback" class="tab-content active">
+            <div class="feedback"><p>Joey, 안녕하세요! 오늘 수업 피드백입니다. 연애와 관계에 대한 솔직하고 깊이 있는 대화 덕분에 아주 즐거운 시간이었어요. 특히 'my understanding' 같은 표현에 대한 궁금증을 적극적으로 질문하고 활용하려는 모습이 정말 인상 깊었습니다. 꾸준히 노력하는 Joey의 모습에서 큰 성장을 기대합니다!</p>
+<br>
+<br>
+<h2><strong>0. 📌 Topic</strong></h2>
+<p>Topic: Discussing first dates, relationship goals, and love at first sight.</p>
+<br>
+<h2><strong>1. 📊 오늘의 대화 요약 (Summary)</strong></h2>
+<p>오늘은 첫 데이트 장소, 연인 관계에서 친구나 가족의 조언을 듣는 문제, 그리고 첫눈에 반하는 사랑에 대한 Joey의 생각과 경험을 나누며 관계에 대한 다양한 관점을 탐구했습니다.</p>
+<br>
+<h2><strong>2. 💬 유창성 업그레이드 (Fluency & Natural Flow)</strong></h2>
+<p>Joey가 말한 문장 중 의미는 통하지만, 원어민이 들었을 때 조금 더 자연스럽게 들릴 수 있는 표현들을 함께 살펴볼게요.</p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>❌ 학습자 원문 (As Said):</strong> "And you have a happy Monday night."</div>
+<div class="item"><strong>✅ 자연스러운 표현 (Natural):</strong> "I hope you had a happy Monday night."</div>
+<div class="item"><strong>💎 비즈니스 표현 (Professional):</strong> "I trust you had a pleasant Monday evening."</div>
+<div class="item"><strong>💡 코칭 포인트:</strong> Using "I hope you had..." is a common and polite way to express a wish about someone's past experience. "And you have..." sounds like a statement about the present or future. <span class="arrow">→</span> "I hope you had..."는 상대방의 지난 경험에 대해 소망을 표현하는 흔하고 정중한 방식입니다. "And you have..."는 현재나 미래에 대한 진술처럼 들립니다.</div>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>❌ 학습자 원문 (As Said):</strong> "Where is popular for a first date in your country?"</div>
+<div class="item"><strong>✅ 자연스러운 표현 (Natural):</strong> "What is a popular place for a first date in your country?"</div>
+<div class="item"><strong>💎 비즈니스 표현 (Professional):</strong> "Could you share insights on popular first date venues in your country?"</div>
+<div class="item"><strong>💡 코칭 포인트:</strong> To ask about a place, "What is a popular place..." is more natural. "Where is popular" is grammatically awkward. <span class="arrow">→</span> 장소에 대해 물을 때는 "What is a popular place..."가 더 자연스럽습니다. "Where is popular"는 문법적으로 어색합니다.</div>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>❌ 학습자 원문 (As Said):</strong> "talking something."</div>
+<div class="item"><strong>✅ 자연스러운 표현 (Natural):</strong> "talking about something."</div>
+<div class="item"><strong>💎 비즈니스 표현 (Professional):</strong> "discussing various topics."</div>
+<div class="item"><strong>💡 코칭 포인트:</strong> When "talk" is followed by a topic, we usually use the preposition "about." "Talk something" is generally incorrect. <span class="arrow">→</span> "talk" 뒤에 주제가 올 때는 보통 전치사 "about"을 사용합니다. "Talk something"은 일반적으로 올바르지 않습니다.</div>
+<br>
+<h2><strong>3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)</strong></h2>
+<p>이번 대화에서는 비교급 표현에서 'more'를 중복해서 사용하는 패턴이 눈에 띄었습니다.</p>
+<br>
+<p><strong>Category: Redundant Comparatives</strong></p>
+<br>
+<table>
+<tr><th>❌ 학습자 원문 (As Said)</th><th>✅ 교정 예시 (Corrected)</th></tr>
+<tr><td>"if I want to stay <strong>more longer</strong>"</td><td>"if I want to stay <strong>longer</strong>"</td></tr>
+<tr><td>"if I want to do more short time or stay <strong>more shorter</strong>"</td><td>"if I want to spend <strong>less time</strong> or stay <strong>shorter</strong>"</td></tr>
+<tr><td>"I'm focused on the <strong>more outside</strong>."</td><td>"I'm focused on the <strong>outside more</strong>."</td></tr>
+</table>
+<br>
+<p>📌 <strong>핵심 규칙:</strong> 이미 비교급 형태(-er로 끝나는 단어 또는 'less'나 'more'가 붙는 단어)인 형용사나 부사 앞에는 'more'를 다시 붙이지 않습니다. 'more short time' 대신 'less time'을 사용하는 것이 더 자연스럽습니다.</p>
+<br>
+<p>🔁 <strong>따라 읽기:</strong></p>
+<p>🗣️ "If I want to stay longer."</p>
+<p>🗣️ "If I want to spend less time or stay shorter."</p>
+<p>🗣️ "I'm focused on the outside more."</p>
+<br>
+<h2><strong>4. 📗 어휘 확장 (Vocabulary Vault)</strong></h2>
+<p>오늘 대화에서 유용하게 쓰일 수 있는 어휘들을 정리해 보았어요.</p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>laid-back</strong> /ˌleɪdˈbæk/ (adj)</div>
+<div class="item">뜻: 느긋한, 여유로운, 편안한</div>
+<div class="item">실전 예문: The new project manager has a very <strong>laid-back</strong> approach, which helps reduce team stress.</div>
+<div class="numbered"><strong>2.</strong> <strong>agenda</strong> /əˈdʒɛndə/ (n)</div>
+<div class="item">뜻: 의제, 안건; (숨겨진) 의도, 계획</div>
+<div class="item">실전 예문: While their advice seemed helpful, I suspected they had their own <strong>agenda</strong> regarding the investment.</div>
+<div class="numbered"><strong>3.</strong> <strong>insightful</strong> /ˈɪnˌsaɪtfəl/ (adj)</div>
+<div class="item">뜻: 통찰력 있는, 예리한</div>
+<div class="item">실전 예문: Your <strong>insightful</strong> analysis of market trends was very helpful for our strategy meeting.</div>
+<div class="numbered"><strong>4.</strong> <strong>superficial</strong> /ˌsuːpərˈfɪʃəl/ (adj)</div>
+<div class="item">뜻: 피상적인, 깊이 없는</div>
+<div class="item">실전 예문: We need to move beyond <strong>superficial</strong> discussions and address the core issues of the proposal.</div>
+<div class="numbered"><strong>5.</strong> <strong>embrace</strong> /ɪmˈbreɪs/ (v)</div>
+<div class="item">뜻: 받아들이다, 포용하다; 껴안다</div>
+<div class="item">실전 예문: Our company needs to <strong>embrace</strong> new technologies to stay competitive in the market.</div>
+<br>
+<h2><strong>5. 📝 실전 복습 챌린지 (Practice)</strong></h2>
+<p>오늘 배운 표현과 문법을 활용해서 다음 문장들을 영어로 만들어 보세요.</p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>상황:</strong> 당신은 어제 중요한 회의를 마쳤고, 오늘 아침 동료에게 어제 회의가 어땠는지 묻고 싶습니다.</div>
+<div class="item"><strong>영작:</strong> 어제 회의 잘 마치셨기를 바랍니다.</div>
+<div class="item"><strong>모범 답안:</strong> I hope you had a productive meeting yesterday.</div>
+<div class="numbered"><strong>2.</strong> <strong>상황:</strong> 당신은 새로운 사업 아이디어를 제안했는데, 동료가 "그 아이디어는 피상적인 것 같아요. 더 깊이 있는 분석이 필요해요."라고 말합니다.</div>
+<div class="item"><strong>영작:</strong> 동료의 조언을 듣고, "네, 저도 피상적인 논의를 넘어 핵심 문제들을 다뤄야 한다고 생각합니다."라고 답합니다.</div>
+<div class="item"><strong>모범 답안:</strong> Yes, I agree we need to move beyond superficial discussions and address the core issues.</div>
+<div class="numbered"><strong>3.</strong> <strong>상황:</strong> 당신은 팀원들에게 "새로운 변화를 포용하고, 더 긴 시간 동안 협력해야 한다"고 독려하고 싶습니다.</div>
+<div class="item"><strong>영작:</strong> 우리는 새로운 변화를 포용하고, 더 긴 시간 동안 함께 일해야 합니다.</div>
+<div class="item"><strong>모범 답안:</strong> We need to embrace new changes and work together for a longer time.</div>
+<br>
+<h2><strong>6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)</strong></h2>
+<br>
+<p>✨ <strong>Good Job:</strong></p>
+<p>"I think love is totally my decision. So, I trust my feelings first."</p>
+<p>Joey, 이 문장은 자신의 생각을 아주 명확하고 자신감 있게 표현했어요. 'totally my decision'이라는 표현으로 주체적인 태도를 잘 보여주었고, 'trust my feelings first'로 자신의 가치관을 확실히 전달했습니다. 아주 훌륭합니다!</p>
+<br>
+<p>🚀 <strong>내일의 한 문장:</strong></p>
+<p>다음 수업 시작 시, 튜터에게 오늘 배운 표현을 활용하여 이렇게 말해보세요.</p>
+<p>"I hope you had a laid-back weekend!" (느긋한 주말 보내셨기를 바랍니다!)</p>
+<br>
+<h2><strong>[성과 지표]</strong></h2>
+<br>
+<p><strong>유창성 점수:</strong> 7.5/10</p>
+<p><strong>근거:</strong> Joey는 다양한 주제에 대해 자신의 의견을 솔직하고 적극적으로 표현하며 대화를 이어나가는 능력이 뛰어납니다. 새로운 어휘나 표현에 대한 궁금증을 즉시 질문하고 활용하려는 태도도 아주 긍정적입니다. 다만, 문법적인 정확성(특히 비교급 중복 사용, 전치사 누락)과 더 자연스러운 표현 선택에서 개선의 여지가 있어 유창성 점수를 7.5점으로 책정했습니다.</p>
+<br>
+<p><strong>다음 수업 '원포인트 액션 플랜':</strong></p>
+<p>다음 수업에서는 <strong>비교급 표현의 정확성</strong>에 집중해 봅시다. 'more'와 '-er' 형태의 중복 사용을 피하고, 'shorter'나 'longer'와 같은 올바른 비교급 형태를 자연스럽게 사용하는 연습을 해볼 거예요. 대화 중 비교급을 사용할 때 한 번 더 생각하고 말하는 습관을 들여보세요!</p></div>
+        </div>
+        <div id="tab-transcript" class="tab-content">
+            <div class="transcript">[Joey] Teacher, good morning.
+<span class="tutor">[Tutor]</span> Hi.
+[Joey] Good day.
+<span class="tutor">[Tutor]</span> Yes. Happy Tuesday.
+[Joey] And you have a happy Monday night.
+<span class="tutor">[Tutor]</span> Yes, thank you. Do you have time for your class this morning?
+[Joey] Oh, pardon?
+<span class="tutor">[Tutor]</span> Do you have time for your class this morning?
+[Joey] Time? Is there a textbook? Do you?
+<span class="tutor">[Tutor]</span> Uh-huh. Are you ready for your class this morning?
+[Joey] Of course. Sorry.
+<span class="tutor">[Tutor]</span> Wonderful. No worries.
+[Joey] Okay.
+<span class="tutor">[Tutor]</span> Okay. So I have us starting page six.
+[Joey] Uh-huh.
+<span class="tutor">[Tutor]</span> And once again, we&#x27;re going to start at the bottom, and I&#x27;ll ask you to read the useful vocabulary to me. You&#x27;ll read the word, the description, and the sentence, please.
+[Joey] Oh, yes, no problem. The useful vocabulary, chemistry.
+<span class="tutor">[Tutor]</span> Yes.
+[Joey] That means... Chemistry.
+<span class="tutor">[Tutor]</span> Yes, that means natural connections between two people. We had great chemistry from the start.
+[Joey] Very good.
+<span class="tutor">[Tutor]</span> Okay. Next one.
+[Joey] Next one, deal breaker. It means something, sometimes you can upset in a relationship.
+<span class="tutor">[Tutor]</span> Lying is a deal breaker for me.
+[Joey] Okay.
+<span class="tutor">[Tutor]</span> I&#x27;d like to help you with a couple of words. In the description, you said &quot;sometime,&quot; and the word was &quot;something.&quot;
+[Joey] Yeah, something.
+<span class="tutor">[Tutor]</span> Yeah, you&#x27;re right. It&#x27;s okay. It&#x27;s okay. And then you said in the sentence, &quot;lying is a deal-break.&quot; We&#x27;d want to add that extra syllable, &quot;deal-breaker.&quot;
+[Joey] Deal-breaker. Yeah. Deal-breaker. Lying is a deal-breaker for me.
+<span class="tutor">[Tutor]</span> Yeah, just a slip of the tongue. That happens. Awesome. All right. Very good. And the last one.
+[Joey] Last one, ghost. That is the root. End in contact without explanation. He ghosted.
+<span class="tutor">[Tutor]</span> He ghosted.
+[Joey] Ghosted.
+<span class="tutor">[Tutor]</span> Ghosted.
+[Joey] Ghosted.
+<span class="tutor">[Tutor]</span> He ghosted.
+[Joey] Ghosted me after the second date.
+<span class="tutor">[Tutor]</span> He ghosted. Very good. Yes. If a word in English ends with a T, then the last two words say -ed. You got it.
+[Joey] Ghosted.
+<span class="tutor">[Tutor]</span> Very good.
+[Joey] Ghosted.
+<span class="tutor">[Tutor]</span> Okay. Yeah. Good. Very good. All right. Let&#x27;s get you to read the useful expression.
+[Joey] Okay. Okay. We are just seeing where it goes. Use when dating someone without serious plan yet. We just see where it goes.
+<span class="tutor">[Tutor]</span> Okay, and &quot;I think we really clicked.&quot; Clicked. Clicked. Clicked. Clicked. Clicked. With a T. Click.
+[Joey] Click.
+<span class="tutor">[Tutor]</span> Just a moment.
+[Joey] I think we really clicked. Use when you have a strong connection with someone.
+<span class="tutor">[Tutor]</span> That was very good. Very good. All right. Nice. All right. Let&#x27;s go to the top of page six. And so, our topic is relationship goals. I&#x27;ll ask you to read the Part A question and respond.
+[Joey] Okay, I see. The warm-up question. Where is popular for a first date in your country?
+<span class="tutor">[Tutor]</span> I see.
+[Joey] The older generation, my parents&#x27; generation, they met at a bakery when they met first time. That&#x27;s really sweet. And if they met the first time, they ate their bakery and drank coffee. And nowadays...
+<span class="tutor">[Tutor]</span> Sure.
+[Joey] Yeah, nowadays it changed their culture and our generation visit the coffee shop when we have a first date. And that is similar, drink a coffee or eating cake and talking something. Yeah, it is so natural way. And when I watch the movie, the Western stars, they go to the nice restaurant and usually they go to the steak, steakhouse or some nice restaurant, Italian restaurant. I was wondering if you, you have, you had a first date, when is the, where is the place, where is the place to...
+<span class="tutor">[Tutor]</span> Well, I would say it&#x27;s probably a coffee shop or a restaurant. Sometimes, sometimes it&#x27;s a movie, but you don&#x27;t get to talk during a movie. So, going to a coffee shop, a restaurant, or a walk in the park, always a nice idea.
+[Joey] Okay. And when you met your husband first time and when you had a date the first time, where was the place?
+<span class="tutor">[Tutor]</span> Oh, my goodness. Well, that was decades ago. I&#x27;m serious. Yes. I think we met at a mutual friend&#x27;s house. Mutual and we talked. Uh-huh. Mutual. Yeah, a mutual friend&#x27;s house. And I think we played some games and we talked and, you know, it was very, very laid back. Oh, yeah, yeah, that&#x27;s a very, very long time ago. That&#x27;s a nice. All right, let&#x27;s go on. Let&#x27;s go on to Part B. Yeah, and it says, &quot;Which first date idea do you prefer and why?&quot; So now you&#x27;ve talked about how much, how good it is to go to a coffee shop or a restaurant, but which one is your preference? Would you rather go to a coffee shop where it&#x27;s cheaper, or do you want to wow her with a restaurant dinner?
+[Joey] Usually that is combined. Usually I will go to the restaurant dinner first and then go to the coffee shop. Or another combination, first we will go to the restaurant dinner and then go to the pub because it is so enjoyable when I meet the first time the people. So yeah, usually, yeah, that two combination is my preference. And if I select just one place, if I want to stay more longer, I choose the restaurant dinner. But if I want to do more short time or stay more shorter, I choose the coffee shop.
+<span class="tutor">[Tutor]</span> Sure. It all depends on the time you have. I understand. Okay, that&#x27;s great. Very good, Joey. All right, let&#x27;s move on to Part C, and I&#x27;ll get you to read the situation to me.
+[Joey] Okay, the situation. You have been seeing someone you really like, but your friends say they aren&#x27;t a good match. You have also heard some bad things about them. You are not sure if you should trust your own feeling or take their advice. Would you listen to your friends or keep dating this person?
+<span class="tutor">[Tutor]</span> I see. Understand.
+[Joey] I think love is totally my decision. So, I trust my feelings first. And friends say something that is a little rude because people have some good points and bad points, pros and cons. Always. Yeah. So, yeah, that is a little rude. Some people said something to my lover. So yeah, first I trust my feelings totally. And the other thing, sometimes the family gives some advice to that person. That is a little problem. Because if that advice is continued for so long time, and meantime, I check them first because we will have a good relationship for so long time. So first that advice is true or not, or that is so serious or not. And then we check them and then, yeah, keep the relationship.
+<span class="tutor">[Tutor]</span> Yeah. Sometimes families and friends mean well, but sometimes they have their own agenda or, you know, ultimately you have to make the decision.
+[Joey] Yeah, I agree. Yeah.
+<span class="tutor">[Tutor]</span> My understanding for some people in Asian countries or other cultures, people want, like parents want their children to supposedly marry the right person or the appropriate person. But that&#x27;s not really up to them to decide. So it makes dating complicated.
+[Joey] Yes, that is a little complicated. And before you said that, you said, &quot;my understanding.&quot; Oh, that is a nice expression. Could you explain more &quot;my understanding&quot; when we use that expression?
+<span class="tutor">[Tutor]</span> Okay. When I say &quot;my understanding is that,&quot; I&#x27;m expressing that I have learned other information or other data that helps me to make an observation or to make a comment about something, like, in this case, we&#x27;re talking about culture, the culture of marriage in different countries. I know that in some cultures, marriages are arranged. In other cultures, the parents have a lot of say as to whom a person should marry. And in Western culture, it&#x27;s basically the people choose their partners without any say from their parents. So, when I say &quot;it&#x27;s my understanding,&quot; it means it&#x27;s my prior knowledge or my prior experience.
+[Joey] I see. My understanding. Understand. So usually that is a mix. First, that is my knowledge. My knowledge. And then you first say something. And then I said one more time, &quot;My understanding, blah, blah, blah.&quot; Is it right?
+<span class="tutor">[Tutor]</span> Yeah. I said, &quot;It&#x27;s my understanding that in some Asian cultures, parents get involved with choosing marriage partners for their children.&quot;
+[Joey] I see. Understand. Okay. According to my knowledge, the same expression.
+<span class="tutor">[Tutor]</span> Yep. Okay. Yes. Absolutely. You could say, &quot;according to my knowledge&quot; or &quot;from your understanding.&quot; Yep, you&#x27;re very insightful. You&#x27;ve got this, Joey. Very good.
+[Joey] Thank you so much. Yes.
+<span class="tutor">[Tutor]</span> You&#x27;re very welcome. Okay, let&#x27;s move on to the warm-down. I&#x27;ll get you to read question one and respond.
+[Joey] Okay. Do you believe in love at first sight? Why or why not?
+[Joey] Yeah, it&#x27;s possible. But usually the first sight meeting does not lead to a good long relationship because falling in love is just, I think, my understanding, the first love is to just accept their appearance and accepted appearance, not talking, just look at the appearance, &quot;Wow, it&#x27;s so great. I wanted to talk with her.&quot; Yeah, just I&#x27;m impressed that her appearance. So that is only about the appearance. So I think it&#x27;s possible. Yeah, it&#x27;s possible. But they don&#x27;t have a long relationship. Yeah, when he has a good love and have a good, have a correct relationship. Yeah, that&#x27;s my answer.
+<span class="tutor">[Tutor]</span> Love at first sight can be very superficial. I would agree. Because it&#x27;s based on appearance. It&#x27;s based on, you know, man and woman. So I think that it&#x27;s a good indication of a possible relationship, but you never really know until you get to know them a little better. That&#x27;s how it was with me and my husband. So, you know, we took time to get to know each other.
+[Joey] Ah, yeah. All right. All right. All right, friend.
+<span class="tutor">[Tutor]</span> I&#x27;ll read number two.
+[Joey] Okay.
+<span class="tutor">[Tutor]</span> Would you rather have a partner who is very similar or very different from you? So how would you say your spouse is, your wife? Is she very similar or very different?
+[Joey] Ah, she has both. Oh, okay. So total difference. I love activity, exercise, like swimming or running, jogging or hiking. But she likes the inside better than swimming. She appreciates the water. So usually that hobby is a total difference. And she focuses on the water inside, but in my case, I&#x27;m focused on the more outside. So that are different. So sometimes it is attached to a different thing, but sometimes that is also good way to similar thing, like the dish, how can I choice of dish or yes, I don&#x27;t know that&#x27;s just one word. But yeah, I think the both is so nice. Both have some, yeah. Yes.
+<span class="tutor">[Tutor]</span> Yeah, no, I can appreciate that. I know that every couple has differences, but if you can understand and embrace them as being part of that other person, then you can, you can definitely make it work. Um, I know for my husband and I, we were also very, very different, but um, we, you know, we worked through it, we got to make it work. And now as we&#x27;re getting older, we&#x27;re starting to be more alike. You know, they say married couples start to look like each other after about 40 years. I think it all comes from just getting to know someone and accepting them the way they are.
+[Joey] Oh, yes. That is so nice. Yeah, you&#x27;re right. I agree with you. Okay.
+<span class="tutor">[Tutor]</span> All right. So, Joey, there were a number of things that I&#x27;ve made comments on. I&#x27;ll get everything typed up for you. Otherwise, it was a very good class. Class, you&#x27;re showing me so and how you, okay, very sure. Huh. So a six and class will go on to page seven, &quot;Planning the Perfect Trip.&quot; If you have any questions or concerns...
+[Joey] Oh, no, that is perfect class. Thank you for your class. Right. Yes. You...
+<span class="tutor">[Tutor]</span> You worked hard. You have a great day, and I&#x27;ll talk to you next time.
+[Joey] Thank you. Have a nice day. Bye-bye, teacher.
+<span class="tutor">[Tutor]</span> Bye-bye.</div>
+        </div>
+    </div>
+    <div class="toast" id="toast">✅ 프롬프트가 복사되었습니다!</div>
+    <script>
+        const REVIEW_PROMPT="너는 나의 영어 회화 복습 파트너야. 오늘 내 전화영어 수업 내용을 기반으로 대화하면서 복습을 도와줘.\n\n[오늘 수업 전사 내용]\n[Joey] Teacher, good morning.\n[Tutor] Hi.\n[Joey] Good day.\n[Tutor] Yes. Happy Tuesday.\n[Joey] And you have a happy Monday night.\n[Tutor] Yes, thank you. Do you have time for your class this morning?\n[Joey] Oh, pardon?\n[Tutor] Do you have time for your class this morning?\n[Joey] Time? Is there a textbook? Do you?\n[Tutor] Uh-huh. Are you ready for your class this morning?\n[Joey] Of course. Sorry.\n[Tutor] Wonderful. No worries.\n[Joey] Okay.\n[Tutor] Okay. So I have us starting page six.\n[Joey] Uh-huh.\n[Tutor] And once again, we're going to start at the bottom, and I'll ask you to read the useful vocabulary to me. You'll read the word, the description, and the sentence, please.\n[Joey] Oh, yes, no problem. The useful vocabulary, chemistry.\n[Tutor] Yes.\n[Joey] That means... Chemistry.\n[Tutor] Yes, that means natural connections between two people. We had great chemistry from the start.\n[Joey] Very good.\n[Tutor] Okay. Next one.\n[Joey] Next one, deal breaker. It means something, sometimes you can upset in a relationship.\n[Tutor] Lying is a deal breaker for me.\n[Joey] Okay.\n[Tutor] I'd like to help you with a couple of words. In the description, you said \"sometime,\" and the word was \"something.\"\n[Joey] Yeah, something.\n[Tutor] Yeah, you're right. It's okay. It's okay. And then you said in the sentence, \"lying is a deal-break.\" We'd want to add that extra syllable, \"deal-breaker.\"\n[Joey] Deal-breaker. Yeah. Deal-breaker. Lying is a deal-breaker for me.\n[Tutor] Yeah, just a slip of the tongue. That happens. Awesome. All right. Very good. And the last one.\n[Joey] Last one, ghost. That is the root. End in contact without explanation. He ghosted.\n[Tutor] He ghosted.\n[Joey] Ghosted.\n[Tutor] Ghosted.\n[Joey] Ghosted.\n[Tutor] He ghosted.\n[Joey] Ghosted me after the second date.\n[Tutor] He ghosted. Very good. Yes. If a word in English ends with a T, then the last two words say -ed. You got it.\n[Joey] Ghosted.\n[Tutor] Very good.\n[Joey] Ghosted.\n[Tutor] Okay. Yeah. Good. Very good. All right. Let's get you to read the useful expression.\n[Joey] Okay. Okay. We are just seeing where it goes. Use when dating someone without serious plan yet. We just see where it goes.\n[Tutor] Okay, and \"I think we really clicked.\" Clicked. Clicked. Clicked. Clicked. Clicked. With a T. Click.\n[Joey] Click.\n[Tutor] Just a moment.\n[Joey] I think we really clicked. Use when you have a strong connection with someone.\n[Tutor] That was very good. Very good. All right. Nice. All right. Let's go to the top of page six. And so, our topic is relationship goals. I'll ask you to read the Part A question and respond.\n[Joey] Okay, I see. The warm-up question. Where is popular for a first date in your country?\n[Tutor] I see.\n[Joey] The older generation, my parents' generation, they met at a bakery when they met first time. That's really sweet. And if they met the first time, they ate their bakery and drank coffee. And nowadays...\n[Tutor] Sure.\n[Joey] Yeah, nowadays it changed their culture and our generation visit the coffee shop when we have a first date. And that is similar, drink a coffee or eating cake and talking something. Yeah, it is so natural way. And when I watch the movie, the Western stars, they go to the nice restaurant and usually they go to the steak, steakhouse or some nice restaurant, Italian restaurant. I was wondering if you, you have, you had a first date, when is the, where is the place, where is the place to...\n[Tutor] Well, I would say it's probably a coffee shop or a restaurant. Sometimes, sometimes it's a movie, but you don't get to talk during a movie. So, going to a coffee shop, a restaurant, or a walk in the park, always a nice idea.\n[Joey] Okay. And when you met your husband first time and when you had a date the first time, where was the place?\n[Tutor] Oh, my goodness. Well, that was decades ago. I'm serious. Yes. I think we met at a mutual friend's house. Mutual and we talked. Uh-huh. Mutual. Yeah, a mutual friend's house. And I think we played some games and we talked and, you know, it was very, very laid back. Oh, yeah, yeah, that's a very, very long time ago. That's a nice. All right, let's go on. Let's go on to Part B. Yeah, and it says, \"Which first date idea do you prefer and why?\" So now you've talked about how much, how good it is to go to a coffee shop or a restaurant, but which one is your preference? Would you rather go to a coffee shop where it's cheaper, or do you want to wow her with a restaurant dinner?\n[Joey] Usually that is combined. Usually I will go to the restaurant dinner first and then go to the coffee shop. Or another combination, first we will go to the restaurant dinner and then go to the pub because it is so enjoyable when I meet the first time the people. So yeah, usually, yeah, that two combination is my preference. And if I select just one place, if I want to stay more longer, I choose the restaurant dinner. But if I want to do more short time or stay more shorter, I choose the coffee shop.\n[Tutor] Sure. It all depends on the time you have. I understand. Okay, that's great. Very good, Joey. All right, let's move on to Part C, and I'll get you to read the situation to me.\n[Joey] Okay, the situation. You have been seeing someone you really like, but your friends say they aren't a good match. You have also heard some bad things about them. You are not sure if you should trust your own feeling or take their advice. Would you listen to your friends or keep dating this person?\n[Tutor] I see. Understand.\n[Joey] I think love is totally my decision. So, I trust my feelings first. And friends say something that is a little rude because people have some good points and bad points, pros and cons. Always. Yeah. So, yeah, that is a little rude. Some people said something to my lover. So yeah, first I trust my feelings totally. And the other thing, sometimes the family gives some advice to that person. That is a little problem. Because if that advice is continued for so long time, and meantime, I check them first because we will have a good relationship for so long time. So first that advice is true or not, or that is so serious or not. And then we check them and then, yeah, keep the relationship.\n[Tutor] Yeah. Sometimes families and friends mean well, but sometimes they have their own agenda or, you know, ultimately you have to make the decision.\n[Joey] Yeah, I agree. Yeah.\n[Tutor] My understanding for some people in Asian countries or other cultures, people want, like parents want their children to supposedly marry the right person or the appropriate person. But that's not really up to them to decide. So it makes dating complicated.\n[Joey] Yes, that is a little complicated. And before you said that, you said, \"my understanding.\" Oh, that is a nice expression. Could you explain more \"my understanding\" when we use that expression?\n[Tutor] Okay. When I say \"my understanding is that,\" I'm expressing that I have learned other information or other data that helps me to make an observation or to make a comment about something, like, in this case, we're talking about culture, the culture of marriage in different countries. I know that in some cultures, marriages are arranged. In other cultures, the parents have a lot of say as to whom a person should marry. And in Western culture, it's basically the people choose their partners without any say from their parents. So, when I say \"it's my understanding,\" it means it's my prior knowledge or my prior experience.\n[Joey] I see. My understanding. Understand. So usually that is a mix. First, that is my knowledge. My knowledge. And then you first say something. And then I said one more time, \"My understanding, blah, blah, blah.\" Is it right?\n[Tutor] Yeah. I said, \"It's my understanding that in some Asian cultures, parents get involved with choosing marriage partners for their children.\"\n[Joey] I see. Understand. Okay. According to my knowledge, the same expression.\n[Tutor] Yep. Okay. Yes. Absolutely. You could say, \"according to my knowledge\" or \"from your understanding.\" Yep, you're very insightful. You've got this, Joey. Very good.\n[Joey] Thank you so much. Yes.\n[Tutor] You're very welcome. Okay, let's move on to the warm-down. I'll get you to read question one and respond.\n[Joey] Okay. Do you believe in love at first sight? Why or why not?\n[Joey] Yeah, it's possible. But usually the first sight meeting does not lead to a good long relationship because falling in love is just, I think, my understanding, the first love is to just accept their appearance and accepted appearance, not talking, just look at the appearance, \"Wow, it's so great. I wanted to talk with her.\" Yeah, just I'm impressed that her appearance. So that is only about the appearance. So I think it's possible. Yeah, it's possible. But they don't have a long relationship. Yeah, when he has a good love and have a good, have a correct relationship. Yeah, that's my answer.\n[Tutor] Love at first sight can be very superficial. I would agree. Because it's based on appearance. It's based on, you know, man and woman. So I think that it's a good indication of a possible relationship, but you never really know until you get to know them a little better. That's how it was with me and my husband. So, you know, we took time to get to know each other.\n[Joey] Ah, yeah. All right. All right. All right, friend.\n[Tutor] I'll read number two.\n[Joey] Okay.\n[Tutor] Would you rather have a partner who is very similar or very different from you? So how would you say your spouse is, your wife? Is she very similar or very different?\n[Joey] Ah, she has both. Oh, okay. So total difference. I love activity, exercise, like swimming or running, jogging or hiking. But she likes the inside better than swimming. She appreciates the water. So usually that hobby is a total difference. And she focuses on the water inside, but in my case, I'm focused on the more outside. So that are different. So sometimes it is attached to a different thing, but sometimes that is also good way to similar thing, like the dish, how can I choice of dish or yes, I don't know that's just one word. But yeah, I think the both is so nice. Both have some, yeah. Yes.\n[Tutor] Yeah, no, I can appreciate that. I know that every couple has differences, but if you can understand and embrace them as being part of that other person, then you can, you can definitely make it work. Um, I know for my husband and I, we were also very, very different, but um, we, you know, we worked through it, we got to make it work. And now as we're getting older, we're starting to be more alike. You know, they say married couples start to look like each other after about 40 years. I think it all comes from just getting to know someone and accepting them the way they are.\n[Joey] Oh, yes. That is so nice. Yeah, you're right. I agree with you. Okay.\n[Tutor] All right. So, Joey, there were a number of things that I've made comments on. I'll get everything typed up for you. Otherwise, it was a very good class. Class, you're showing me so and how you, okay, very sure. Huh. So a six and class will go on to page seven, \"Planning the Perfect Trip.\" If you have any questions or concerns...\n[Joey] Oh, no, that is perfect class. Thank you for your class. Right. Yes. You...\n[Tutor] You worked hard. You have a great day, and I'll talk to you next time.\n[Joey] Thank you. Have a nice day. Bye-bye, teacher.\n[Tutor] Bye-bye.\n\n[AI 피드백]\nJoey, 안녕하세요! 오늘 수업 피드백입니다. 연애와 관계에 대한 솔직하고 깊이 있는 대화 덕분에 아주 즐거운 시간이었어요. 특히 'my understanding' 같은 표현에 대한 궁금증을 적극적으로 질문하고 활용하려는 모습이 정말 인상 깊었습니다. 꾸준히 노력하는 Joey의 모습에서 큰 성장을 기대합니다!\n\n---\n\n### **0. 📌 Topic**\nTopic: Discussing first dates, relationship goals, and love at first sight.\n\n### **1. 📊 오늘의 대화 요약 (Summary)**\n오늘은 첫 데이트 장소, 연인 관계에서 친구나 가족의 조언을 듣는 문제, 그리고 첫눈에 반하는 사랑에 대한 Joey의 생각과 경험을 나누며 관계에 대한 다양한 관점을 탐구했습니다.\n\n### **2. 💬 유창성 업그레이드 (Fluency & Natural Flow)**\nJoey가 말한 문장 중 의미는 통하지만, 원어민이 들었을 때 조금 더 자연스럽게 들릴 수 있는 표현들을 함께 살펴볼게요.\n\n1.  **❌ 학습자 원문 (As Said):** \"And you have a happy Monday night.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"I hope you had a happy Monday night.\"\n    *   **💎 비즈니스 표현 (Professional):** \"I trust you had a pleasant Monday evening.\"\n    *   **💡 코칭 포인트:** Using \"I hope you had...\" is a common and polite way to express a wish about someone's past experience. \"And you have...\" sounds like a statement about the present or future. → \"I hope you had...\"는 상대방의 지난 경험에 대해 소망을 표현하는 흔하고 정중한 방식입니다. \"And you have...\"는 현재나 미래에 대한 진술처럼 들립니다.\n\n2.  **❌ 학습자 원문 (As Said):** \"Where is popular for a first date in your country?\"\n    *   **✅ 자연스러운 표현 (Natural):** \"What is a popular place for a first date in your country?\"\n    *   **💎 비즈니스 표현 (Professional):** \"Could you share insights on popular first date venues in your country?\"\n    *   **💡 코칭 포인트:** To ask about a place, \"What is a popular place...\" is more natural. \"Where is popular\" is grammatically awkward. → 장소에 대해 물을 때는 \"What is a popular place...\"가 더 자연스럽습니다. \"Where is popular\"는 문법적으로 어색합니다.\n\n3.  **❌ 학습자 원문 (As Said):** \"talking something.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"talking about something.\"\n    *   **💎 비즈니스 표현 (Professional):** \"discussing various topics.\"\n    *   **💡 코칭 포인트:** When \"talk\" is followed by a topic, we usually use the preposition \"about.\" \"Talk something\" is generally incorrect. → \"talk\" 뒤에 주제가 올 때는 보통 전치사 \"about\"을 사용합니다. \"Talk something\"은 일반적으로 올바르지 않습니다.\n\n### **3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)**\n이번 대화에서는 비교급 표현에서 'more'를 중복해서 사용하는 패턴이 눈에 띄었습니다.\n\n**Category: Redundant Comparatives**\n\n| ❌ 학습자 원문 (As Said)                               | ✅ 교정 예시 (Corrected)                                   |\n| :------------------------------------------------------ | :--------------------------------------------------------- |\n| \"if I want to stay **more longer**\"                     | \"if I want to stay **longer**\"                           |\n| \"if I want to do more short time or stay **more shorter**\" | \"if I want to spend **less time** or stay **shorter**\" |\n| \"I'm focused on the **more outside**.\"                  | \"I'm focused on the **outside more**.\"                   |\n\n📌 **핵심 규칙:** 이미 비교급 형태(-er로 끝나는 단어 또는 'less'나 'more'가 붙는 단어)인 형용사나 부사 앞에는 'more'를 다시 붙이지 않습니다. 'more short time' 대신 'less time'을 사용하는 것이 더 자연스럽습니다.\n\n🔁 **따라 읽기:**\n🗣️ \"If I want to stay longer.\"\n🗣️ \"If I want to spend less time or stay shorter.\"\n🗣️ \"I'm focused on the outside more.\"\n\n### **4. 📗 어휘 확장 (Vocabulary Vault)**\n오늘 대화에서 유용하게 쓰일 수 있는 어휘들을 정리해 보았어요.\n\n1.  **laid-back** /ˌleɪdˈbæk/ (adj)\n    *   뜻: 느긋한, 여유로운, 편안한\n    *   실전 예문: The new project manager has a very **laid-back** approach, which helps reduce team stress.\n2.  **agenda** /əˈdʒɛndə/ (n)\n    *   뜻: 의제, 안건; (숨겨진) 의도, 계획\n    *   실전 예문: While their advice seemed helpful, I suspected they had their own **agenda** regarding the investment.\n3.  **insightful** /ˈɪnˌsaɪtfəl/ (adj)\n    *   뜻: 통찰력 있는, 예리한\n    *   실전 예문: Your **insightful** analysis of market trends was very helpful for our strategy meeting.\n4.  **superficial** /ˌsuːpərˈfɪʃəl/ (adj)\n    *   뜻: 피상적인, 깊이 없는\n    *   실전 예문: We need to move beyond **superficial** discussions and address the core issues of the proposal.\n5.  **embrace** /ɪmˈbreɪs/ (v)\n    *   뜻: 받아들이다, 포용하다; 껴안다\n    *   실전 예문: Our company needs to **embrace** new technologies to stay competitive in the market.\n\n### **5. 📝 실전 복습 챌린지 (Practice)**\n오늘 배운 표현과 문법을 활용해서 다음 문장들을 영어로 만들어 보세요.\n\n1.  **상황:** 당신은 어제 중요한 회의를 마쳤고, 오늘 아침 동료에게 어제 회의가 어땠는지 묻고 싶습니다.\n    *   **영작:** 어제 회의 잘 마치셨기를 바랍니다.\n    *   **모범 답안:** I hope you had a productive meeting yesterday.\n2.  **상황:** 당신은 새로운 사업 아이디어를 제안했는데, 동료가 \"그 아이디어는 피상적인 것 같아요. 더 깊이 있는 분석이 필요해요.\"라고 말합니다.\n    *   **영작:** 동료의 조언을 듣고, \"네, 저도 피상적인 논의를 넘어 핵심 문제들을 다뤄야 한다고 생각합니다.\"라고 답합니다.\n    *   **모범 답안:** Yes, I agree we need to move beyond superficial discussions and address the core issues.\n3.  **상황:** 당신은 팀원들에게 \"새로운 변화를 포용하고, 더 긴 시간 동안 협력해야 한다\"고 독려하고 싶습니다.\n    *   **영작:** 우리는 새로운 변화를 포용하고, 더 긴 시간 동안 함께 일해야 합니다.\n    *   **모범 답안:** We need to embrace new changes and work together for a longer time.\n\n### **6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)**\n\n✨ **Good Job:**\n\"I think love is totally my decision. So, I trust my feelings first.\"\nJoey, 이 문장은 자신의 생각을 아주 명확하고 자신감 있게 표현했어요. 'totally my decision'이라는 표현으로 주체적인 태도를 잘 보여주었고, 'trust my feelings first'로 자신의 가치관을 확실히 전달했습니다. 아주 훌륭합니다!\n\n🚀 **내일의 한 문장:**\n다음 수업 시작 시, 튜터에게 오늘 배운 표현을 활용하여 이렇게 말해보세요.\n\"I hope you had a laid-back weekend!\" (느긋한 주말 보내셨기를 바랍니다!)\n\n### **[성과 지표]**\n\n**유창성 점수:** 7.5/10\n**근거:** Joey는 다양한 주제에 대해 자신의 의견을 솔직하고 적극적으로 표현하며 대화를 이어나가는 능력이 뛰어납니다. 새로운 어휘나 표현에 대한 궁금증을 즉시 질문하고 활용하려는 태도도 아주 긍정적입니다. 다만, 문법적인 정확성(특히 비교급 중복 사용, 전치사 누락)과 더 자연스러운 표현 선택에서 개선의 여지가 있어 유창성 점수를 7.5점으로 책정했습니다.\n\n**다음 수업 '원포인트 액션 플랜':**\n다음 수업에서는 **비교급 표현의 정확성**에 집중해 봅시다. 'more'와 '-er' 형태의 중복 사용을 피하고, 'shorter'나 'longer'와 같은 올바른 비교급 형태를 자연스럽게 사용하는 연습을 해볼 거예요. 대화 중 비교급을 사용할 때 한 번 더 생각하고 말하는 습관을 들여보세요!\n\n위 내용을 바탕으로:\n1. 먼저 오늘 수업에서 내가 틀렸거나 어색했던 표현을 하나 골라서, 관련된 상황을 영어로 질문해줘.\n2. 내가 영어로 대답하면, 자연스러운지 확인하고 더 나은 표현이 있으면 알려줘.\n3. 특히 \"반복 실수 패턴\"에서 지적된 부분을 집중적으로 연습시켜줘.\n4. 이런 식으로 오늘 배운 표현들을 하나씩 복습하자.\n5. 한국어 설명은 필요할 때만 간단히, 대화는 최대한 영어로 진행해줘.\n\n그럼 시작하자!";
+        function startReview(){navigator.clipboard.writeText(REVIEW_PROMPT).then(()=>{showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)}).catch(()=>{const t=document.createElement('textarea');t.value=REVIEW_PROMPT;document.body.appendChild(t);t.select();document.execCommand('copy');document.body.removeChild(t);showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)})}
+        function showToast(){const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500)}
+        function switchTab(n){document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',n==='feedback'?i===0:i===1));document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));document.getElementById('tab-'+n).classList.add('active')}
+    </script>
+</body>
+</html>

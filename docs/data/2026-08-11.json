@@ -1,0 +1,53 @@
+{
+ "date": "2026-08-11",
+ "iso": [
+  2026,
+  33
+ ],
+ "topic": "Discussing first dates, relationship goals, and love at first sight.",
+ "grammar": "Redundant Comparatives",
+ "grammar_norm": "Redundant Comparatives",
+ "score": 7.5,
+ "pairs": [
+  {
+   "said": "And you have a happy Monday night.",
+   "natural": "I hope you had a happy Monday night."
+  },
+  {
+   "said": "Where is popular for a first date in your country?",
+   "natural": "What is a popular place for a first date in your country?"
+  },
+  {
+   "said": "talking something.",
+   "natural": "talking about something."
+  }
+ ],
+ "vocab": [
+  {
+   "word": "laid-back",
+   "pos": "adj",
+   "meaning": "느긋한, 여유로운, 편안한"
+  },
+  {
+   "word": "agenda",
+   "pos": "n",
+   "meaning": "의제, 안건; (숨겨진) 의도, 계획"
+  },
+  {
+   "word": "insightful",
+   "pos": "adj",
+   "meaning": "통찰력 있는, 예리한"
+  },
+  {
+   "word": "superficial",
+   "pos": "adj",
+   "meaning": "피상적인, 깊이 없는"
+  },
+  {
+   "word": "embrace",
+   "pos": "v",
+   "meaning": "받아들이다, 포용하다; 껴안다"
+  }
+ ],
+ "_html_md5": "83f9fec7a3c511a5d2b2e2bb84f3de9b"
+}
