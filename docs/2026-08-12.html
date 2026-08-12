@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#0f0f13"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="당근영어"><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="icon" type="image/png" sizes="192x192" href="icon-192.png"><script src="install-banner.js" defer></script><script src="sw-reg.js" defer></script>
+    <title>전화영어 복습 - 2026년 08월 12일</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Noto Sans KR',sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.75;min-height:100vh}
+        .header{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);border-bottom:1px solid rgba(255,255,255,.06);padding:48px 24px 40px;text-align:center}
+        .header-date{font-size:13px;color:#94a3b8;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+        .header h1{font-size:28px;font-weight:700;color:#f1f5f9;margin-bottom:16px}
+        .header-meta{display:flex;justify-content:center;gap:24px;font-size:14px;color:#64748b}
+        .header-meta span{display:flex;align-items:center;gap:6px}
+        .cta-section{text-align:center;padding:40px 24px}
+        .cta-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:linear-gradient(135deg,#38bdf8,#818cf8);color:#fff;font-size:16px;font-weight:600;font-family:'Noto Sans KR',sans-serif;border:none;border-radius:50px;cursor:pointer;transition:all .3s;text-decoration:none;box-shadow:0 4px 24px rgba(56,189,248,.25)}
+        .cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(56,189,248,.35)}
+        .cta-btn svg{width:20px;height:20px}
+        .cta-sub{margin-top:12px;font-size:13px;color:#64748b}
+        .toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#38bdf8;padding:14px 28px;border-radius:12px;font-size:14px;font-weight:500;border:1px solid rgba(56,189,248,.2);box-shadow:0 8px 32px rgba(0,0,0,.4);opacity:0;transition:all .4s cubic-bezier(.16,1,.3,1);z-index:1000}
+        .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+        .container{max-width:720px;margin:0 auto;padding:0 24px 80px}
+        .tabs{display:flex;gap:4px;background:#1a1a24;padding:4px;border-radius:12px;margin-bottom:32px}
+        .tab{flex:1;padding:12px;text-align:center;font-size:14px;font-weight:500;color:#64748b;background:0 0;border:none;border-radius:8px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all .2s}
+        .tab.active{background:#262636;color:#f1f5f9}
+        .tab-content{display:none}.tab-content.active{display:block}
+        .feedback h2{font-size:18px;font-weight:700;color:#f1f5f9;margin:36px 0 16px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.06)}
+        .feedback h2:first-child{margin-top:0}
+        .feedback p{margin:8px 0;color:#cbd5e1}
+        .feedback .item{padding:6px 0 6px 16px;border-left:2px solid #334155;margin:6px 0;color:#cbd5e1}
+        .feedback .numbered{padding:8px 0 8px 16px;color:#cbd5e1}
+        .feedback .numbered strong{color:#38bdf8}
+        .feedback strong{color:#f1f5f9}
+        .feedback code{background:#1e293b;padding:2px 8px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#38bdf8}
+        .feedback table{width:100%;border-collapse:collapse;margin:12px 0}
+        .feedback th,.feedback td{padding:10px 14px;text-align:left;border-bottom:1px solid #262636}
+        .feedback th{color:#94a3b8;font-weight:500;font-size:13px}
+        .feedback td{color:#cbd5e1}
+        .arrow{color:#38bdf8;font-weight:700}
+        .transcript{background:#1a1a24;border-radius:12px;padding:28px;font-size:14px;line-height:2;color:#94a3b8;white-space:pre-wrap;word-break:break-word;font-family:'JetBrains Mono','Noto Sans KR',monospace}
+        .transcript .tutor{color:#38bdf8}
+        .transcript .student{color:#a78bfa}
+        @media(max-width:640px){.header{padding:32px 16px}.header h1{font-size:22px}.cta-btn{padding:14px 28px;font-size:15px}.container{padding:0 16px 60px}}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-date">2026년 08월 12일</div>
+        <h1>📚 전화영어 복습</h1>
+        <div class="header-meta">
+            <span>⏱ 19분 30초</span>
+            <span>🎙 전화영어_025180304_20260812080027.m4a</span>
+        </div>
+    </div>
+    <div class="cta-section">
+        <button class="cta-btn" onclick="startReview()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Gemini에서 복습 대화 시작하기
+        </button>
+        <div class="cta-sub">클릭하면 프롬프트가 복사되고 Gemini가 열립니다</div>
+    </div>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('feedback')">📋 AI 피드백</button>
+            <button class="tab" onclick="switchTab('transcript')">🎙 수업 전사</button>
+        </div>
+        <div id="tab-feedback" class="tab-content active">
+            <div class="feedback"><p>안녕하세요, Joey! 오늘 Bell 튜터님과의 대화 피드백입니다. 가을 날씨 이야기부터 해외여행 선호도, 비행 경험, 그리고 숙소 선택 기준까지 정말 다양한 주제로 풍성한 대화를 나누셨네요. 특히 여행에 대한 Joey님의 확고한 가치관이 인상 깊었습니다. 오늘 배운 표현들로 영어 실력을 한 단계 더 업그레이드해 봅시다!</p>
+<br>
+<br>
+<p><strong>0. 📌 Topic</strong></p>
+<p>Topic: Discussing Travel Preferences and Vacation Planning</p>
+<br>
+<p><strong>1. 📊 오늘의 대화 요약 (Summary)</strong></p>
+<p>오늘은 날씨 변화와 함께 가을을 즐기는 일상 이야기로 시작하여, 'red-eye flight'과 'budget airline' 같은 여행 관련 어휘를 익히고 활용했습니다. 또한 한국인의 휴가 계획 방식, 자유 여행과 패키지여행 중 선호하는 방식, 그리고 숙소 선택 시 가장 중요하게 생각하는 '안전'에 대해 깊이 있는 대화를 나눴습니다.</p>
+<br>
+<p><strong>2. 💬 유창성 업그레이드 (Fluency & Natural Flow)</strong></p>
+<p>Joey님이 실제 말한 문장 중, 의미는 통하지만 원어민이 들었을 때 조금 더 자연스럽게 들릴 수 있는 표현들을 살펴볼게요.</p>
+<br>
+<div class="numbered"><strong>1.</strong> ❌ <strong>As Said</strong>: "my printed paper is really removed some document."</div>
+<p>✅ <strong>Natural</strong>: "Some parts of my printed paper are missing."</p>
+<p>💎 <strong>Professional</strong>: "There are some omissions in my printed document."</p>
+<p>💡 <strong>코칭 포인트</strong>: "removed"는 무언가를 의도적으로 제거했다는 뉘앙스가 강한 반면, "missing"은 단순히 없다는 상태를 나타냅니다.</p>
+<br>
+<div class="numbered"><strong>2.</strong> ❌ <strong>As Said</strong>: "usually the summertime I had so sweat on my body but nowadays it's more fresh and there is no sweat."</div>
+<p>✅ <strong>Natural</strong>: "Usually in the summertime I would sweat a lot, but nowadays it's much fresher and I don't sweat."</p>
+<p>💎 <strong>Professional</strong>: "During the summer, I typically experience significant perspiration, but now the climate is much more refreshing, and I remain dry."</p>
+<p>💡 <strong>코칭 포인트</strong>: "sweat"은 동사(땀을 흘리다)나 불가산 명사(땀)로 쓰이는 경우가 많습니다. "had so sweat"은 자연스러운 조합이 아니며, "would sweat a lot"은 과거의 습관적인 행동을 묘사할 때 사용합니다.</p>
+<br>
+<div class="numbered"><strong>3.</strong> ❌ <strong>As Said</strong>: "I love to Middle Asia airline."</div>
+<p>✅ <strong>Natural</strong>: "I love Middle Eastern airlines."</p>
+<p>💎 <strong>Professional</strong>: "Regarding my preferred airlines, I am quite fond of those based in the Middle East."</p>
+<p>💡 <strong>코칭 포인트</strong>: "Middle Eastern"은 중동 지역에서 온 것을 묘사하는 올바른 형용사 형태입니다. 일반적인 항공사 범주를 언급할 때는 "airlines"로 복수형을 사용해야 합니다.</p>
+<br>
+<p><strong>3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)</strong></p>
+<p>이번 수업에서는 <strong>형용사(Adjective)와 명사(Noun)의 혼동</strong>이 여러 번 보였습니다. 특히 추상적인 개념이나 상태를 표현할 때 명사 대신 형용사를 사용하는 경향이 있었습니다.</p>
+<br>
+<p>Category: Adjective vs. Noun Confusion</p>
+<br>
+<table>
+<tr><th>❌ 학습자 원문 (As Said)</th><th>✅ 교정 예시 (Corrected)</th></tr>
+<tr><td>"that is more free state travel"</td><td>"That is a freer form of travel." 또는 "That offers more freedom."</td></tr>
+<tr><td>"my first consider is safe"</td><td>"My first consideration is safety."</td></tr>
+<tr><td>"if I don't have enough safe conditions"</td><td>"If there aren't enough safe conditions." 또는 "If it's not safe enough."</td></tr>
+</table>
+<br>
+<p>📌 <strong>핵심 규칙</strong>: 추상적인 개념이나 상태를 나타낼 때는 형용사(예: free, safe) 대신 명사(예: freedom, safety)를 사용하거나, 문맥에 맞게 형용사를 적절히 활용하여 문장을 구성합니다.</p>
+<br>
+<p>🔁 <strong>따라 읽기 (Repeat After Me)</strong></p>
+<p>🗣️ "That offers more freedom."</p>
+<p>🗣️ "My first consideration is safety."</p>
+<p>🗣️ "If it's not safe enough."</p>
+<br>
+<p><strong>4. 📗 어휘 확장 (Vocabulary Vault)</strong></p>
+<p>오늘 대화에서 유용하게 쓰였거나 비즈니스 맥락에서 활용하기 좋은 단어 5개를 정리해 보았습니다.</p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>off-season</strong> /ˈɔːfˌsiːzn/ (명사)</div>
+<p>뜻: 비수기</p>
+<p>실전 예문: Traveling during the <strong>off-season</strong> can significantly reduce costs for business trips.</p>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>budget airline</strong> /ˈbʌdʒɪt ˈɛərlaɪn/ (명사)</div>
+<p>뜻: 저가 항공사</p>
+<p>실전 예문: We opted for a <strong>budget airline</strong> to cut down on travel expenses for the team retreat.</p>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>layover</strong> /ˈleɪˌoʊvər/ (명사)</div>
+<p>뜻: (비행기) 경유, 체류 시간</p>
+<p>실전 예문: A long <strong>layover</strong> can be an opportunity to explore a new city, even for a few hours.</p>
+<br>
+<div class="numbered"><strong>4.</strong> <strong>independent travel</strong> /ˌɪndɪˈpɛndənt ˈtrævl/ (명사)</div>
+<p>뜻: 자유 여행</p>
+<p>실전 예문: Many young professionals prefer <strong>independent travel</strong> for its flexibility and personalized experience.</p>
+<br>
+<div class="numbered"><strong>5.</strong> <strong>consideration</strong> /kənˌsɪdəˈreɪʃn/ (명사)</div>
+<p>뜻: 고려 사항, 숙고</p>
+<p>실전 예문: Safety is always our primary <strong>consideration</strong> when planning international projects.</p>
+<br>
+<p><strong>5. 📝 실전 복습 챌린지 (Practice)</strong></p>
+<p>오늘 배운 표현과 문법을 활용하여 다음 문장들을 영작해 보세요.</p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>상황</strong>: 저희는 비용 절감을 위해 비수기에 출장을 계획하고 있습니다.</div>
+<p><strong>영작</strong>: We are planning business trips during the <strong>off-season</strong> to save costs.</p>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>상황</strong>: 저는 긴 경유 시간을 활용하여 공항 라운지에서 휴식을 취하는 것을 선호합니다.</div>
+<p><strong>영작</strong>: I prefer to use a long <strong>layover</strong> to relax in the airport lounge.</p>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>상황</strong>: 이 프로젝트의 성공을 위한 가장 중요한 고려 사항은 효율적인 자원 배분입니다.</div>
+<p><strong>영작</strong>: The most important <strong>consideration</strong> for the success of this project is efficient resource allocation.</p>
+<br>
+<p><strong>6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)</strong></p>
+<br>
+<p>✨ <strong>Good Job</strong>:</p>
+<p>Joey님은 오늘 수업에서 'I don't mind paying more for hotel.' 이라는 표현을 정확하게 사용하고 기억했습니다. 이 문장은 자신의 선호도를 명확하게 전달하면서도 격식 있는 뉘앙스를 담고 있어 아주 훌륭합니다. 비즈니스 환경에서도 자신의 의견을 부드럽게 표현할 때 유용하게 활용될 수 있는 문장이에요!</p>
+<br>
+<p>🚀 <strong>내일의 한 문장</strong>:</p>
+<p>다음 수업 시작 시 Bell 튜터님께 오늘 배운 표현을 활용하여 이렇게 말해보세요.</p>
+<p>"I don't mind discussing any topic today, but I'm curious about the next travel destination."</p>
+<p>(오늘 어떤 주제든 괜찮지만, 다음 여행지에 대해 궁금해요.)</p>
+<br>
+<br>
+<p><strong>[성과 지표]</strong></p>
+<p><strong>유창성 점수</strong>: 7/10점</p>
+<p><strong>근거</strong>: Joey님은 다양한 주제에 대해 막힘없이 자신의 의견을 표현하며 대화를 이어가는 능력이 뛰어납니다. 특히 질문에 대한 답변 속도가 빠르고, 적극적으로 대화에 참여하는 모습이 인상 깊습니다. 다만, 특정 문법 오류(형용사/명사 혼동)나 어색한 표현들이 간헐적으로 나타나 유창성의 흐름을 아주 미세하게 끊는 경우가 있었습니다.</p>
+<br>
+<p><strong>다음 수업 '원포인트 액션 플랜'</strong>:</p>
+<p>다음 수업에서는 <strong>"명사/형용사 구별 및 정확한 사용"</strong>에 집중하여, 추상적인 개념을 표현할 때 올바른 품사를 선택하는 연습을 해봅시다. 예를 들어, "safe"와 "safety", "free"와 "freedom" 같은 단어들을 활용한 문장 만들기를 통해 자연스러운 표현을 익힐 수 있도록 도와드릴게요.</p>
+<br>
+<p>Joey님, 오늘도 정말 수고 많으셨습니다! 다음 수업에서 또 만나요!</p></div>
+        </div>
+        <div id="tab-transcript" class="tab-content">
+            <div class="transcript"><span class="student">[Student]</span> Hello, teacher. Good morning.
+<span class="tutor">[Tutor]</span> Yeah, good morning. How are you doing today?
+<span class="student">[Student]</span> Yeah, hi, Bell. Hi, Bell. Yeah, I&#x27;m good. I&#x27;m good. Yeah. It&#x27;s a fresh day. Fresh morning.
+<span class="student">[Student]</span> How are you today?
+<span class="tutor">[Tutor]</span> Yeah, pretty good. Yeah, so middle of the week.
+<span class="student">[Student]</span> Ah, yeah.
+<span class="tutor">[Tutor]</span> Middle of the week, yeah.
+<span class="student">[Student]</span> Uh-huh.
+<span class="tutor">[Tutor]</span> So are you having a busy week so far or normal week?
+<span class="student">[Student]</span> That is the normal week, but the weather is changed. We&#x27;re following the autumn season, so when I go outside, the fresh air and little chilly air is windy. So it&#x27;s fresh and nice. And summer is going away nowadays.
+<span class="tutor">[Tutor]</span> Okay, so a little bit easier to spend time outdoors.
+<span class="student">[Student]</span> Yes, yes. Every lunchtime I go walk the near park and usually the summertime I had so sweat on my body but nowadays it&#x27;s more fresh and there is no sweat. So it&#x27;s more fresh and nice.
+<span class="tutor">[Tutor]</span> Okay, so you can enjoy the outdoors during your lunch break, walk outside without...
+<span class="student">[Student]</span> Yes, you&#x27;re right.
+<span class="tutor">[Tutor]</span> ...getting way too sweaty, way too hot.
+<span class="tutor">[Tutor]</span> So the textbook, are you able to look at page seven?
+<span class="student">[Student]</span> Oh, yes, it&#x27;s possible, yes. But my printed paper is really removed some document. So please understand that situation.
+<span class="tutor">[Tutor]</span> Okay. Are you able to see the useful vocab?
+<span class="student">[Student]</span> Oh, yes.
+<span class="tutor">[Tutor]</span> There were red eyes. A flight that travels overnight. Red eyes. I took a red-eye from LA to New York.
+<span class="tutor">[Tutor]</span> Yeah, that&#x27;s a funny expression, red-eyes.
+<span class="student">[Student]</span> Red-eyes?
+<span class="tutor">[Tutor]</span> Yes.
+<span class="student">[Student]</span> And teacher, I have a question. If I work overnight, at that time, can I use that expression, the red-eyes? Only possible to use for a flight, right? Or if I work overnight, and then can I use that red-eye?
+<span class="tutor">[Tutor]</span> Generally, this is used for a flight. On the flight. So it&#x27;s used for like a type of flight that goes overnight.
+<span class="student">[Student]</span> Overnight.
+<span class="tutor">[Tutor]</span> And arrives in the morning.
+<span class="student">[Student]</span> I see. Okay.
+<span class="tutor">[Tutor]</span> And off-season, the less busy and cheaper travel time, we traveled during the during the off-season to save money.
+<span class="student">[Student]</span> Off-season. Off-season. Okay.
+<span class="tutor">[Tutor]</span> Not tourist season.
+<span class="student">[Student]</span> Yeah. And one more question. Not Not tourist. Not tourist season.
+<span class="tutor">[Tutor]</span> So there&#x27;s not many tourists.
+<span class="student">[Student]</span> Ah, not tourist season. Okay.
+<span class="tutor">[Tutor]</span> And the last vocabulary, budget airline. The cheaper airline with fewer services.
+<span class="student">[Student]</span> Hmm. The budget airline didn&#x27;t include meal or entertainment.
+<span class="tutor">[Tutor]</span> Yeah, budget airline.
+<span class="student">[Student]</span> Mm-mm-mm. Okay.
+<span class="tutor">[Tutor]</span> Have you ever taken a red-eye flight?
+<span class="student">[Student]</span> Oh yes, many times. Usually, if we travel abroad to South Asia, at that time, the flight usually going to start dinner and arrive the next morning. So, yeah, it is a little tired when I took that flight.
+<span class="tutor">[Tutor]</span> Yeah, and it might be hard to sleep on the plane sometimes.
+<span class="student">[Student]</span> Yes, yes. That is a tired situation, red-eyes.
+<span class="student">[Student]</span> And how about that useful expression? Okay. Oh, teacher, one more question. Sorry. That expression is the red-eye. But is it more correct expression, red-eyes, not red-eye?
+<span class="tutor">[Tutor]</span> No, it&#x27;s red-eyes.
+<span class="student">[Student]</span> Why the only one eye?
+<span class="tutor">[Tutor]</span> That&#x27;s just what the phrase is.
+<span class="student">[Student]</span> Phrases.
+<span class="tutor">[Tutor]</span> Red-eyes. The idiom. That&#x27;s what the term is. That&#x27;s what it&#x27;s like.
+<span class="student">[Student]</span> Okay, I see.
+<span class="student">[Student]</span> I don&#x27;t mind the use of these patients. I don&#x27;t mind paying more for... I don&#x27;t mind paying more for use when discussion of preference to better bright hotel option. I don&#x27;t mind paying more for hotel.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="student">[Student]</span> That&#x27;s good. And next expression, I worried. Oh my god, that is erasure. Oh, I&#x27;m worried about missing the connection. I&#x27;m worried missing. I&#x27;m worried in. I worried at missing the connection. Yeah, I&#x27;m worried about missing the connection. I&#x27;m worried about missing the connection. Used when there are short connection time between flights. Okay. Have you ever been worried about missing your connection?
+<span class="student">[Student]</span> Oh, yeah. Because I mind paying for the flight pay. So sometimes I take some budget airline or the connection airline, connection air flight. So yeah, it is more cheaper. Sometimes it is half price. So yeah, I have some experience.
+<span class="tutor">[Tutor]</span> So looking at now the Part A warm-up questions, how do people usually pick vacation dates in Korea?
+<span class="student">[Student]</span> In Korea, the people usually pick vacation, holiday schedule, or cheapest time. There are two groups. One group is the family. Then they have children and the children have a vacation, fixed vacation, and mother father work through company. They also is the fixed vacation so the date of vacation is fixed. So usually they select the holiday schedule. And some groups have more freedom. They have the free schedule, and it is possible to select time. So usually they select the cheapest time, cheapest schedule. So I think in Korea, there are two groups. Usually pick a vacation, holiday schedule, and time.
+<span class="tutor">[Tutor]</span> It depends. Maybe if you have family or kids, you have to take time off during summertime.
+<span class="student">[Student]</span> You&#x27;re right. It depends on member of the family.
+<span class="tutor">[Tutor]</span> And if you could pick vacation dates for good weather, what season would be a good time to go on vacation?
+<span class="student">[Student]</span> Usually it&#x27;s better to go the spring or autumn season, but that season we don&#x27;t have enough vacation. So usually my selection is the August last week and the Christmas season. Yeah, usually we go twice per year to abroad. Yeah, so it is impossible to select spring or autumn season.
+<span class="tutor">[Tutor]</span> Okay, well, maybe August. Yeah, it&#x27;s a little bit better weather.
+<span class="student">[Student]</span> Yeah.
+<span class="tutor">[Tutor]</span> So the question, which do you prefer when traveling abroad? An organized tour or independent travel?
+<span class="student">[Student]</span> I see. I think the traveling value is their freedom. So usually it is possible. I can go to independent travel because it is possible to go anywhere and it is possible to go eat anything and meet many people. So that is more free. That is more free state travel and that is other for me. Yeah, just if I want to stay in my hotel, just stay. And if I go to the meet another people and go to the traditional market, it was pretty free. So yeah, I love that. And teacher, is your right expression? It is free. It has a free. It is freedom? It is freedom. It&#x27;s better? Or I have freedom, yeah. I have freedom. I have freedom. I have freedom. Yeah, that is my selection.
+<span class="tutor">[Tutor]</span> Yeah, you&#x27;re more independent. You have freedom. Yeah, it&#x27;s better.
+<span class="student">[Student]</span> But organized tour is more safe, but we don&#x27;t have freedom. So just get up early and then start the tour and look at some construction four or five times and then go back to our hotel, go sleep. That is the study, not the travel. So I&#x27;m not enjoy that. I don&#x27;t enjoy that.
+<span class="tutor">[Tutor]</span> Yeah, so you don&#x27;t enjoy that kind of having to go by a schedule.
+<span class="student">[Student]</span> Yeah, don&#x27;t be late. Yeah, but usually Koreans, people believe that is a good way to travel. Just get up early at 6 o&#x27;clock and then they go to some viewpoint or some famous place and find them and look them like the study and then go back to our hotels just at 10pm. So, yes, it&#x27;s a tired travel. Yeah.
+<span class="tutor">[Tutor]</span> Yeah, it&#x27;s like a busy day. You don&#x27;t get to relax in any way.
+<span class="student">[Student]</span> There is no rest. Just travel, like their work.
+<span class="tutor">[Tutor]</span> Maybe like one activity or maybe one organized tour, then one relaxed day.
+<span class="student">[Student]</span> Oh, yeah. I love that because if I mix just one schedule of their tour, that is so nice. For example, if I go to Canada and just make some plan to organize a tour of the Aurora. Yeah, because it&#x27;s possible because if we don&#x27;t have the information about the Aurora and place and the vehicle. So that&#x27;s a nice way. Just a mix of nice tour, activity tour.
+<span class="tutor">[Tutor]</span> Yeah, with something specialized that might supply you with equipment or warm clothing for the Aurora.
+<span class="student">[Student]</span> Yeah, you&#x27;re right. That&#x27;s a nice way.
+<span class="tutor">[Tutor]</span> Or they have like sightseeing buses or hop-on, hop-off bus so you can get off the bus and explore.
+<span class="student">[Student]</span> Yeah. Yeah. That&#x27;s amazing. Yeah, that is so enjoyable.
+<span class="tutor">[Tutor]</span> The next thing, problem solving. Would you like to read the situation?
+<span class="student">[Student]</span> Okay. You and your friends are planning a trip. They want to book a cheaper flight with a long layover. You&#x27;d rather pay more for direct flight and avoid wasting time?
+<span class="student">[Student]</span> Yeah, wasting time. Wasting time.
+<span class="tutor">[Tutor]</span> Would you fly with them or book the direct flight and meet them there?
+<span class="student">[Student]</span> In Korean culture, if we go together to travel, we will go together. We go with together. So if I that situation, I just go with my friend. Because if I just take direct and business flight and meet the airport or some place, that&#x27;s not plan. That is the relation of business. So if I reach and if I have enough resource, I just go together with my friends. Because that is plan and that is the relation of friend. So, just I go together and add. I love to transfer price because it is possible to discount 50% more. And cost price, I can eat more luxury. I can stay more luxury hotel or luxury food. And luxury is free. Us. So yeah, I go with my plan. I will go with my plan.
+<span class="tutor">[Tutor]</span> So if you&#x27;re choosing, do you like to have a long layover or a short layover?
+<span class="student">[Student]</span> Yes, maybe. Yeah, when I visit Bali, we transfer to Singapore. Yes, but my son is so young, so young age. So we just stay in airport hotel in Singapore and that transfer is the time is a little long. But we enjoyed that because that is also process of travel. Yeah, it&#x27;s okay.
+<span class="tutor">[Tutor]</span> Yeah, a little time spent in Singapore in that country.
+<span class="student">[Student]</span> Yes, Singapore. Because that is the hub airport in Asia.
+<span class="tutor">[Tutor]</span> Yeah, big one.
+<span class="student">[Student]</span> Yeah, big one.
+<span class="tutor">[Tutor]</span> What&#x27;s your favorite airline to fly with?
+<span class="student">[Student]</span> Really? Okay.
+<span class="tutor">[Tutor]</span> What&#x27;s your favorite airline to fly with?
+<span class="student">[Student]</span> My favorite airline? I love to Middle Asia airline. For example, Emirates, Etihad, Qatar airline. That airline is to have a reasonable price and give us some luxury service. The meal or the entertainment, etc. So, yeah, I love that. The Middle Asia Airport company.
+<span class="tutor">[Tutor]</span> Okay, so good prices, good service.
+<span class="student">[Student]</span> Yeah, good price and good service. You&#x27;re right.
+<span class="tutor">[Tutor]</span> What&#x27;s the most important thing to you when picking a place to stay on vacation?
+<span class="student">[Student]</span> These days, my first consider is safe because I travel with my family and my son is only nine years old. So first I&#x27;m checked safe. If that place is famous and nice, but if I don&#x27;t have enough safe conditions, I don&#x27;t go there because at that situation, I just go alone, not together with my family.
+<span class="tutor">[Tutor]</span> Safety is the biggest concern.
+<span class="student">[Student]</span> Yes, that is the first condition.
+<span class="tutor">[Tutor]</span> Definitely, yeah, feeling safe helps you relax and enjoy everything a lot more.
+<span class="student">[Student]</span> Yeah, okay.
+<span class="tutor">[Tutor]</span> So I will send you corrections here in just a moment. Any vocab that you remember from today?
+<span class="student">[Student]</span> Yes, I remember. I don&#x27;t mind paying more for hotel. I don&#x27;t mind paying for hotel more.
+<span class="tutor">[Tutor]</span> Yeah, that&#x27;s true. Yeah.
+<span class="tutor">[Tutor]</span> Okay, well, I&#x27;ll send the corrections in a bit. Have a great day.
+<span class="student">[Student]</span> Oh, have a great day, too. Bye-bye, teacher.
+<span class="tutor">[Tutor]</span> Thanks. Goodbye.</div>
+        </div>
+    </div>
+    <div class="toast" id="toast">✅ 프롬프트가 복사되었습니다!</div>
+    <script>
+        const REVIEW_PROMPT="너는 나의 영어 회화 복습 파트너야. 오늘 내 전화영어 수업 내용을 기반으로 대화하면서 복습을 도와줘.\n\n[오늘 수업 전사 내용]\n[Student] Hello, teacher. Good morning.\n[Tutor] Yeah, good morning. How are you doing today?\n[Student] Yeah, hi, Bell. Hi, Bell. Yeah, I'm good. I'm good. Yeah. It's a fresh day. Fresh morning.\n[Student] How are you today?\n[Tutor] Yeah, pretty good. Yeah, so middle of the week.\n[Student] Ah, yeah.\n[Tutor] Middle of the week, yeah.\n[Student] Uh-huh.\n[Tutor] So are you having a busy week so far or normal week?\n[Student] That is the normal week, but the weather is changed. We're following the autumn season, so when I go outside, the fresh air and little chilly air is windy. So it's fresh and nice. And summer is going away nowadays.\n[Tutor] Okay, so a little bit easier to spend time outdoors.\n[Student] Yes, yes. Every lunchtime I go walk the near park and usually the summertime I had so sweat on my body but nowadays it's more fresh and there is no sweat. So it's more fresh and nice.\n[Tutor] Okay, so you can enjoy the outdoors during your lunch break, walk outside without...\n[Student] Yes, you're right.\n[Tutor] ...getting way too sweaty, way too hot.\n[Tutor] So the textbook, are you able to look at page seven?\n[Student] Oh, yes, it's possible, yes. But my printed paper is really removed some document. So please understand that situation.\n[Tutor] Okay. Are you able to see the useful vocab?\n[Student] Oh, yes.\n[Tutor] There were red eyes. A flight that travels overnight. Red eyes. I took a red-eye from LA to New York.\n[Tutor] Yeah, that's a funny expression, red-eyes.\n[Student] Red-eyes?\n[Tutor] Yes.\n[Student] And teacher, I have a question. If I work overnight, at that time, can I use that expression, the red-eyes? Only possible to use for a flight, right? Or if I work overnight, and then can I use that red-eye?\n[Tutor] Generally, this is used for a flight. On the flight. So it's used for like a type of flight that goes overnight.\n[Student] Overnight.\n[Tutor] And arrives in the morning.\n[Student] I see. Okay.\n[Tutor] And off-season, the less busy and cheaper travel time, we traveled during the during the off-season to save money.\n[Student] Off-season. Off-season. Okay.\n[Tutor] Not tourist season.\n[Student] Yeah. And one more question. Not Not tourist. Not tourist season.\n[Tutor] So there's not many tourists.\n[Student] Ah, not tourist season. Okay.\n[Tutor] And the last vocabulary, budget airline. The cheaper airline with fewer services.\n[Student] Hmm. The budget airline didn't include meal or entertainment.\n[Tutor] Yeah, budget airline.\n[Student] Mm-mm-mm. Okay.\n[Tutor] Have you ever taken a red-eye flight?\n[Student] Oh yes, many times. Usually, if we travel abroad to South Asia, at that time, the flight usually going to start dinner and arrive the next morning. So, yeah, it is a little tired when I took that flight.\n[Tutor] Yeah, and it might be hard to sleep on the plane sometimes.\n[Student] Yes, yes. That is a tired situation, red-eyes.\n[Student] And how about that useful expression? Okay. Oh, teacher, one more question. Sorry. That expression is the red-eye. But is it more correct expression, red-eyes, not red-eye?\n[Tutor] No, it's red-eyes.\n[Student] Why the only one eye?\n[Tutor] That's just what the phrase is.\n[Student] Phrases.\n[Tutor] Red-eyes. The idiom. That's what the term is. That's what it's like.\n[Student] Okay, I see.\n[Student] I don't mind the use of these patients. I don't mind paying more for... I don't mind paying more for use when discussion of preference to better bright hotel option. I don't mind paying more for hotel.\n[Tutor] Okay.\n[Student] That's good. And next expression, I worried. Oh my god, that is erasure. Oh, I'm worried about missing the connection. I'm worried missing. I'm worried in. I worried at missing the connection. Yeah, I'm worried about missing the connection. I'm worried about missing the connection. Used when there are short connection time between flights. Okay. Have you ever been worried about missing your connection?\n[Student] Oh, yeah. Because I mind paying for the flight pay. So sometimes I take some budget airline or the connection airline, connection air flight. So yeah, it is more cheaper. Sometimes it is half price. So yeah, I have some experience.\n[Tutor] So looking at now the Part A warm-up questions, how do people usually pick vacation dates in Korea?\n[Student] In Korea, the people usually pick vacation, holiday schedule, or cheapest time. There are two groups. One group is the family. Then they have children and the children have a vacation, fixed vacation, and mother father work through company. They also is the fixed vacation so the date of vacation is fixed. So usually they select the holiday schedule. And some groups have more freedom. They have the free schedule, and it is possible to select time. So usually they select the cheapest time, cheapest schedule. So I think in Korea, there are two groups. Usually pick a vacation, holiday schedule, and time.\n[Tutor] It depends. Maybe if you have family or kids, you have to take time off during summertime.\n[Student] You're right. It depends on member of the family.\n[Tutor] And if you could pick vacation dates for good weather, what season would be a good time to go on vacation?\n[Student] Usually it's better to go the spring or autumn season, but that season we don't have enough vacation. So usually my selection is the August last week and the Christmas season. Yeah, usually we go twice per year to abroad. Yeah, so it is impossible to select spring or autumn season.\n[Tutor] Okay, well, maybe August. Yeah, it's a little bit better weather.\n[Student] Yeah.\n[Tutor] So the question, which do you prefer when traveling abroad? An organized tour or independent travel?\n[Student] I see. I think the traveling value is their freedom. So usually it is possible. I can go to independent travel because it is possible to go anywhere and it is possible to go eat anything and meet many people. So that is more free. That is more free state travel and that is other for me. Yeah, just if I want to stay in my hotel, just stay. And if I go to the meet another people and go to the traditional market, it was pretty free. So yeah, I love that. And teacher, is your right expression? It is free. It has a free. It is freedom? It is freedom. It's better? Or I have freedom, yeah. I have freedom. I have freedom. I have freedom. Yeah, that is my selection.\n[Tutor] Yeah, you're more independent. You have freedom. Yeah, it's better.\n[Student] But organized tour is more safe, but we don't have freedom. So just get up early and then start the tour and look at some construction four or five times and then go back to our hotel, go sleep. That is the study, not the travel. So I'm not enjoy that. I don't enjoy that.\n[Tutor] Yeah, so you don't enjoy that kind of having to go by a schedule.\n[Student] Yeah, don't be late. Yeah, but usually Koreans, people believe that is a good way to travel. Just get up early at 6 o'clock and then they go to some viewpoint or some famous place and find them and look them like the study and then go back to our hotels just at 10pm. So, yes, it's a tired travel. Yeah.\n[Tutor] Yeah, it's like a busy day. You don't get to relax in any way.\n[Student] There is no rest. Just travel, like their work.\n[Tutor] Maybe like one activity or maybe one organized tour, then one relaxed day.\n[Student] Oh, yeah. I love that because if I mix just one schedule of their tour, that is so nice. For example, if I go to Canada and just make some plan to organize a tour of the Aurora. Yeah, because it's possible because if we don't have the information about the Aurora and place and the vehicle. So that's a nice way. Just a mix of nice tour, activity tour.\n[Tutor] Yeah, with something specialized that might supply you with equipment or warm clothing for the Aurora.\n[Student] Yeah, you're right. That's a nice way.\n[Tutor] Or they have like sightseeing buses or hop-on, hop-off bus so you can get off the bus and explore.\n[Student] Yeah. Yeah. That's amazing. Yeah, that is so enjoyable.\n[Tutor] The next thing, problem solving. Would you like to read the situation?\n[Student] Okay. You and your friends are planning a trip. They want to book a cheaper flight with a long layover. You'd rather pay more for direct flight and avoid wasting time?\n[Student] Yeah, wasting time. Wasting time.\n[Tutor] Would you fly with them or book the direct flight and meet them there?\n[Student] In Korean culture, if we go together to travel, we will go together. We go with together. So if I that situation, I just go with my friend. Because if I just take direct and business flight and meet the airport or some place, that's not plan. That is the relation of business. So if I reach and if I have enough resource, I just go together with my friends. Because that is plan and that is the relation of friend. So, just I go together and add. I love to transfer price because it is possible to discount 50% more. And cost price, I can eat more luxury. I can stay more luxury hotel or luxury food. And luxury is free. Us. So yeah, I go with my plan. I will go with my plan.\n[Tutor] So if you're choosing, do you like to have a long layover or a short layover?\n[Student] Yes, maybe. Yeah, when I visit Bali, we transfer to Singapore. Yes, but my son is so young, so young age. So we just stay in airport hotel in Singapore and that transfer is the time is a little long. But we enjoyed that because that is also process of travel. Yeah, it's okay.\n[Tutor] Yeah, a little time spent in Singapore in that country.\n[Student] Yes, Singapore. Because that is the hub airport in Asia.\n[Tutor] Yeah, big one.\n[Student] Yeah, big one.\n[Tutor] What's your favorite airline to fly with?\n[Student] Really? Okay.\n[Tutor] What's your favorite airline to fly with?\n[Student] My favorite airline? I love to Middle Asia airline. For example, Emirates, Etihad, Qatar airline. That airline is to have a reasonable price and give us some luxury service. The meal or the entertainment, etc. So, yeah, I love that. The Middle Asia Airport company.\n[Tutor] Okay, so good prices, good service.\n[Student] Yeah, good price and good service. You're right.\n[Tutor] What's the most important thing to you when picking a place to stay on vacation?\n[Student] These days, my first consider is safe because I travel with my family and my son is only nine years old. So first I'm checked safe. If that place is famous and nice, but if I don't have enough safe conditions, I don't go there because at that situation, I just go alone, not together with my family.\n[Tutor] Safety is the biggest concern.\n[Student] Yes, that is the first condition.\n[Tutor] Definitely, yeah, feeling safe helps you relax and enjoy everything a lot more.\n[Student] Yeah, okay.\n[Tutor] So I will send you corrections here in just a moment. Any vocab that you remember from today?\n[Student] Yes, I remember. I don't mind paying more for hotel. I don't mind paying for hotel more.\n[Tutor] Yeah, that's true. Yeah.\n[Tutor] Okay, well, I'll send the corrections in a bit. Have a great day.\n[Student] Oh, have a great day, too. Bye-bye, teacher.\n[Tutor] Thanks. Goodbye.\n\n[AI 피드백]\n안녕하세요, Joey! 오늘 Bell 튜터님과의 대화 피드백입니다. 가을 날씨 이야기부터 해외여행 선호도, 비행 경험, 그리고 숙소 선택 기준까지 정말 다양한 주제로 풍성한 대화를 나누셨네요. 특히 여행에 대한 Joey님의 확고한 가치관이 인상 깊었습니다. 오늘 배운 표현들로 영어 실력을 한 단계 더 업그레이드해 봅시다!\n\n---\n\n**0. 📌 Topic**\nTopic: Discussing Travel Preferences and Vacation Planning\n\n**1. 📊 오늘의 대화 요약 (Summary)**\n오늘은 날씨 변화와 함께 가을을 즐기는 일상 이야기로 시작하여, 'red-eye flight'과 'budget airline' 같은 여행 관련 어휘를 익히고 활용했습니다. 또한 한국인의 휴가 계획 방식, 자유 여행과 패키지여행 중 선호하는 방식, 그리고 숙소 선택 시 가장 중요하게 생각하는 '안전'에 대해 깊이 있는 대화를 나눴습니다.\n\n**2. 💬 유창성 업그레이드 (Fluency & Natural Flow)**\nJoey님이 실제 말한 문장 중, 의미는 통하지만 원어민이 들었을 때 조금 더 자연스럽게 들릴 수 있는 표현들을 살펴볼게요.\n\n1.  ❌ **As Said**: \"my printed paper is really removed some document.\"\n    ✅ **Natural**: \"Some parts of my printed paper are missing.\"\n    💎 **Professional**: \"There are some omissions in my printed document.\"\n    💡 **코칭 포인트**: \"removed\"는 무언가를 의도적으로 제거했다는 뉘앙스가 강한 반면, \"missing\"은 단순히 없다는 상태를 나타냅니다.\n\n2.  ❌ **As Said**: \"usually the summertime I had so sweat on my body but nowadays it's more fresh and there is no sweat.\"\n    ✅ **Natural**: \"Usually in the summertime I would sweat a lot, but nowadays it's much fresher and I don't sweat.\"\n    💎 **Professional**: \"During the summer, I typically experience significant perspiration, but now the climate is much more refreshing, and I remain dry.\"\n    💡 **코칭 포인트**: \"sweat\"은 동사(땀을 흘리다)나 불가산 명사(땀)로 쓰이는 경우가 많습니다. \"had so sweat\"은 자연스러운 조합이 아니며, \"would sweat a lot\"은 과거의 습관적인 행동을 묘사할 때 사용합니다.\n\n3.  ❌ **As Said**: \"I love to Middle Asia airline.\"\n    ✅ **Natural**: \"I love Middle Eastern airlines.\"\n    💎 **Professional**: \"Regarding my preferred airlines, I am quite fond of those based in the Middle East.\"\n    💡 **코칭 포인트**: \"Middle Eastern\"은 중동 지역에서 온 것을 묘사하는 올바른 형용사 형태입니다. 일반적인 항공사 범주를 언급할 때는 \"airlines\"로 복수형을 사용해야 합니다.\n\n**3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)**\n이번 수업에서는 **형용사(Adjective)와 명사(Noun)의 혼동**이 여러 번 보였습니다. 특히 추상적인 개념이나 상태를 표현할 때 명사 대신 형용사를 사용하는 경향이 있었습니다.\n\nCategory: Adjective vs. Noun Confusion\n\n| ❌ 학습자 원문 (As Said)                                   | ✅ 교정 예시 (Corrected)                                         |\n| :------------------------------------------------------- | :------------------------------------------------------------- |\n| \"that is more free state travel\"                         | \"That is a freer form of travel.\" 또는 \"That offers more freedom.\" |\n| \"my first consider is safe\"                              | \"My first consideration is safety.\"                               |\n| \"if I don't have enough safe conditions\"                 | \"If there aren't enough safe conditions.\" 또는 \"If it's not safe enough.\" |\n\n📌 **핵심 규칙**: 추상적인 개념이나 상태를 나타낼 때는 형용사(예: free, safe) 대신 명사(예: freedom, safety)를 사용하거나, 문맥에 맞게 형용사를 적절히 활용하여 문장을 구성합니다.\n\n🔁 **따라 읽기 (Repeat After Me)**\n🗣️ \"That offers more freedom.\"\n🗣️ \"My first consideration is safety.\"\n🗣️ \"If it's not safe enough.\"\n\n**4. 📗 어휘 확장 (Vocabulary Vault)**\n오늘 대화에서 유용하게 쓰였거나 비즈니스 맥락에서 활용하기 좋은 단어 5개를 정리해 보았습니다.\n\n1.  **off-season** /ˈɔːfˌsiːzn/ (명사)\n    뜻: 비수기\n    실전 예문: Traveling during the **off-season** can significantly reduce costs for business trips.\n\n2.  **budget airline** /ˈbʌdʒɪt ˈɛərlaɪn/ (명사)\n    뜻: 저가 항공사\n    실전 예문: We opted for a **budget airline** to cut down on travel expenses for the team retreat.\n\n3.  **layover** /ˈleɪˌoʊvər/ (명사)\n    뜻: (비행기) 경유, 체류 시간\n    실전 예문: A long **layover** can be an opportunity to explore a new city, even for a few hours.\n\n4.  **independent travel** /ˌɪndɪˈpɛndənt ˈtrævl/ (명사)\n    뜻: 자유 여행\n    실전 예문: Many young professionals prefer **independent travel** for its flexibility and personalized experience.\n\n5.  **consideration** /kənˌsɪdəˈreɪʃn/ (명사)\n    뜻: 고려 사항, 숙고\n    실전 예문: Safety is always our primary **consideration** when planning international projects.\n\n**5. 📝 실전 복습 챌린지 (Practice)**\n오늘 배운 표현과 문법을 활용하여 다음 문장들을 영작해 보세요.\n\n1.  **상황**: 저희는 비용 절감을 위해 비수기에 출장을 계획하고 있습니다.\n    **영작**: We are planning business trips during the **off-season** to save costs.\n\n2.  **상황**: 저는 긴 경유 시간을 활용하여 공항 라운지에서 휴식을 취하는 것을 선호합니다.\n    **영작**: I prefer to use a long **layover** to relax in the airport lounge.\n\n3.  **상황**: 이 프로젝트의 성공을 위한 가장 중요한 고려 사항은 효율적인 자원 배분입니다.\n    **영작**: The most important **consideration** for the success of this project is efficient resource allocation.\n\n**6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)**\n\n✨ **Good Job**:\nJoey님은 오늘 수업에서 'I don't mind paying more for hotel.' 이라는 표현을 정확하게 사용하고 기억했습니다. 이 문장은 자신의 선호도를 명확하게 전달하면서도 격식 있는 뉘앙스를 담고 있어 아주 훌륭합니다. 비즈니스 환경에서도 자신의 의견을 부드럽게 표현할 때 유용하게 활용될 수 있는 문장이에요!\n\n🚀 **내일의 한 문장**:\n다음 수업 시작 시 Bell 튜터님께 오늘 배운 표현을 활용하여 이렇게 말해보세요.\n\"I don't mind discussing any topic today, but I'm curious about the next travel destination.\"\n(오늘 어떤 주제든 괜찮지만, 다음 여행지에 대해 궁금해요.)\n\n---\n\n**[성과 지표]**\n**유창성 점수**: 7/10점\n**근거**: Joey님은 다양한 주제에 대해 막힘없이 자신의 의견을 표현하며 대화를 이어가는 능력이 뛰어납니다. 특히 질문에 대한 답변 속도가 빠르고, 적극적으로 대화에 참여하는 모습이 인상 깊습니다. 다만, 특정 문법 오류(형용사/명사 혼동)나 어색한 표현들이 간헐적으로 나타나 유창성의 흐름을 아주 미세하게 끊는 경우가 있었습니다.\n\n**다음 수업 '원포인트 액션 플랜'**:\n다음 수업에서는 **\"명사/형용사 구별 및 정확한 사용\"**에 집중하여, 추상적인 개념을 표현할 때 올바른 품사를 선택하는 연습을 해봅시다. 예를 들어, \"safe\"와 \"safety\", \"free\"와 \"freedom\" 같은 단어들을 활용한 문장 만들기를 통해 자연스러운 표현을 익힐 수 있도록 도와드릴게요.\n\nJoey님, 오늘도 정말 수고 많으셨습니다! 다음 수업에서 또 만나요!\n\n위 내용을 바탕으로:\n1. 먼저 오늘 수업에서 내가 틀렸거나 어색했던 표현을 하나 골라서, 관련된 상황을 영어로 질문해줘.\n2. 내가 영어로 대답하면, 자연스러운지 확인하고 더 나은 표현이 있으면 알려줘.\n3. 특히 \"반복 실수 패턴\"에서 지적된 부분을 집중적으로 연습시켜줘.\n4. 이런 식으로 오늘 배운 표현들을 하나씩 복습하자.\n5. 한국어 설명은 필요할 때만 간단히, 대화는 최대한 영어로 진행해줘.\n\n그럼 시작하자!";
+        function startReview(){navigator.clipboard.writeText(REVIEW_PROMPT).then(()=>{showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)}).catch(()=>{const t=document.createElement('textarea');t.value=REVIEW_PROMPT;document.body.appendChild(t);t.select();document.execCommand('copy');document.body.removeChild(t);showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)})}
+        function showToast(){const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500)}
+        function switchTab(n){document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',n==='feedback'?i===0:i===1));document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));document.getElementById('tab-'+n).classList.add('active')}
+    </script>
+</body>
+</html>
