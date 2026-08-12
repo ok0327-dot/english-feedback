@@ -1,0 +1,53 @@
+{
+ "date": "2026-08-12",
+ "iso": [
+  2026,
+  33
+ ],
+ "topic": "Discussing Travel Preferences and Vacation Planning",
+ "grammar": "Adjective vs. Noun Confusion",
+ "grammar_norm": "Adjective Vs. Noun Confusion",
+ "score": 7.0,
+ "pairs": [
+  {
+   "said": "my printed paper is really removed some document.",
+   "natural": "Some parts of my printed paper are missing."
+  },
+  {
+   "said": "usually the summertime I had so sweat on my body but nowadays it's more fresh and there is no sweat.",
+   "natural": "Usually in the summertime I would sweat a lot, but nowadays it's much fresher and I don't sweat."
+  },
+  {
+   "said": "I love to Middle Asia airline.",
+   "natural": "I love Middle Eastern airlines."
+  }
+ ],
+ "vocab": [
+  {
+   "word": "off-season",
+   "pos": "명사",
+   "meaning": "비수기"
+  },
+  {
+   "word": "budget airline",
+   "pos": "명사",
+   "meaning": "저가 항공사"
+  },
+  {
+   "word": "layover",
+   "pos": "명사",
+   "meaning": "(비행기) 경유, 체류 시간"
+  },
+  {
+   "word": "independent travel",
+   "pos": "명사",
+   "meaning": "자유 여행"
+  },
+  {
+   "word": "consideration",
+   "pos": "명사",
+   "meaning": "고려 사항, 숙고"
+  }
+ ],
+ "_html_md5": "a108e5cce9182e8d9e631973606ced53"
+}
