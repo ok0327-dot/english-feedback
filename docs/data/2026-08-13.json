@@ -1,0 +1,53 @@
+{
+ "date": "2026-08-13",
+ "iso": [
+  2026,
+  33
+ ],
+ "topic": "Discussing Travel Packing Strategies and International Mobile Services",
+ "grammar": "Countable and Uncountable Nouns",
+ "grammar_norm": "Countable And Uncountable Nouns",
+ "score": 7.0,
+ "pairs": [
+  {
+   "said": "Just the short word is named vocabulary.",
+   "natural": "Vocab is just the short form of vocabulary."
+  },
+  {
+   "said": "Almost I've used the same backpack for ten years.",
+   "natural": "I've used the same backpack for almost ten years."
+  },
+  {
+   "said": "I'm prepared for next week in China.",
+   "natural": "I'm getting ready for my trip to China next week."
+  }
+ ],
+ "vocab": [
+  {
+   "word": "gate check",
+   "pos": "명사, 동사",
+   "meaning": "(수하물을) 탑승구에서 위탁 수하물로 부치다"
+  },
+  {
+   "word": "baggage claim",
+   "pos": "명사",
+   "meaning": "수하물 찾는 곳"
+  },
+  {
+   "word": "duty-free allowance",
+   "pos": "명사",
+   "meaning": "면세 한도"
+  },
+  {
+   "word": "roaming service",
+   "pos": "명사",
+   "meaning": "로밍 서비스"
+  },
+  {
+   "word": "repack",
+   "pos": "동사",
+   "meaning": "다시 싸다, 재포장하다"
+  }
+ ],
+ "_html_md5": "59c6fdbdd56bb49f77ed0341f9b2a3c9"
+}
