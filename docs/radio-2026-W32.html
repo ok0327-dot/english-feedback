@@ -1,0 +1,260 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#0f0f13"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="당근영어"><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="icon" type="image/png" sizes="192x192" href="icon-192.png"><script src="install-banner.js" defer></script><script src="sw-reg.js" defer></script>
+<title>🎙️ 라디오 2026-W32</title><style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Noto Sans KR',-apple-system,sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.7}
+.header{background:linear-gradient(135deg,#241a3a,#3a2410,#0f3460);padding:42px 24px 30px;text-align:center;border-bottom:1px solid rgba(255,255,255,.06)}
+.header h1{font-size:24px;color:#f5f0ff;margin-bottom:8px}
+.header .range{font-size:13px;color:#c4b5fd;letter-spacing:1px}
+.nav{max-width:760px;margin:0 auto;padding:14px 20px 0;display:flex;justify-content:space-between;font-size:13px}
+.nav a{color:#64748b;text-decoration:none;padding:6px 10px;border-radius:8px}.nav a:hover{color:#a78bfa;background:#16161d}
+.container{max-width:760px;margin:0 auto;padding:18px 20px 80px}
+.card{background:#16161d;border:1px solid rgba(255,255,255,.06);border-radius:16px;padding:20px;margin-bottom:18px}
+.card h2{font-size:16px;color:#f1f5f9;margin-bottom:12px}
+.player{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-bottom:14px}
+.pbtn{border:none;border-radius:10px;padding:12px 18px;font-size:14px;font-weight:700;cursor:pointer;font-family:inherit;color:#0f0f13;background:linear-gradient(135deg,#a78bfa,#818cf8)}
+.pbtn.alt{background:#1e293b;color:#cbd5e1}
+.pbtn:active{transform:translateY(1px)}
+.speed{display:flex;align-items:center;gap:6px;font-size:12px;color:#94a3b8;margin-left:auto}
+.speed input{accent-color:#a78bfa}
+.stage{display:flex;flex-direction:column;gap:10px;margin-top:6px}
+.bubble{max-width:88%;padding:11px 14px;border-radius:14px;font-size:14px;border:1px solid transparent;transition:all .2s}
+.bubble .who{display:block;font-size:11px;font-weight:700;margin-bottom:3px;opacity:.8}
+.bubble.mc{align-self:flex-start;background:#1e1b2e;border-color:rgba(167,139,250,.25)}.bubble.mc .who{color:#a78bfa}
+.bubble.coach{align-self:flex-end;background:#1a2433;border-color:rgba(56,189,248,.22)}.bubble.coach .who{color:#38bdf8}
+.bubble.on{border-color:#fbbf24;box-shadow:0 0 0 1px #fbbf24}
+.modes{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.mode{display:flex;flex-direction:column;gap:4px;align-items:center;padding:16px 10px;background:#0f0f13;border:1px solid rgba(255,255,255,.08);border-radius:12px;color:#cbd5e1;cursor:pointer;font-size:13px;text-align:center}
+.mode:hover{border-color:rgba(167,139,250,.4);color:#a78bfa}.mode .ico{font-size:22px}.mode .sub{font-size:11px;color:#64748b}
+.muted{color:#64748b;font-size:12px}
+.toast{position:fixed;bottom:28px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#a78bfa;padding:13px 26px;border-radius:12px;font-size:14px;border:1px solid rgba(167,139,250,.25);opacity:0;transition:all .4s;z-index:99}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+.epweek{font-size:13px;color:#a78bfa;font-weight:700;margin-bottom:6px}
+audio{width:100%;margin-top:4px}
+.archive{display:flex;flex-direction:column;gap:6px;margin-top:10px}
+.archive a{font-size:12.5px;color:#94a3b8;text-decoration:none;padding:8px 12px;background:#0f0f13;border:1px solid rgba(255,255,255,.06);border-radius:8px}
+.archive a:hover{color:#a78bfa;border-color:rgba(167,139,250,.3)}
+.weeklist{display:flex;flex-direction:column;gap:6px;margin-top:4px}
+.weekrow{display:flex;align-items:center;gap:10px;font-size:13px;color:#cbd5e1;text-decoration:none;padding:11px 13px;background:#0f0f13;border:1px solid rgba(255,255,255,.06);border-radius:10px}
+.weekrow:hover{border-color:rgba(167,139,250,.4);color:#a78bfa}
+.weekrow.active{border-color:rgba(167,139,250,.5);background:#1e1b2e}
+.weekrow .wk{font-weight:700;color:#a78bfa;white-space:nowrap}
+.weekrow .wr{color:#64748b}
+.weekrow .wk-audio{margin-left:auto;font-size:14px;min-width:18px;text-align:right}
+.foot{text-align:center;font-size:11px;color:#475569;margin-top:26px;line-height:1.8}
+</style></head><body>
+<div class="header"><h1>🎙️ 라디오 · 2026-W32</h1>
+<div class="range">8/3~8/7 · 주차 기록 · 브라우저 음성으로 청취</div></div>
+<div class="nav"><a href="radio.html">← 최신 라디오</a><a href="review-index.html">📚 복습 목록 →</a></div>
+<div class="container">
+
+  <div class="card"><h2>🎧 오디오 에피소드 <span class="muted" style="font-weight:400">· 진짜 음성 · 이 주차</span></h2>
+    <div id="audio-latest" class="muted">에피소드 불러오는 중…</div></div>
+
+  <div class="card"><h2>🗂 주차별 라디오 기록 <span class="muted" style="font-weight:400">· 최신순 · 누적</span></h2>
+    <div class="weeklist"><a class="weekrow" data-wk="2026-W33" href="radio.html"><span class="wk">2026-W33</span><span class="wr">8/10~8/14 · 5회</span><span class="wk-audio"></span></a><a class="weekrow active" data-wk="2026-W32" href="radio-2026-W32.html"><span class="wk">2026-W32 · 현재</span><span class="wr">8/3~8/7 · 4회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W31" href="radio-2026-W31.html"><span class="wk">2026-W31</span><span class="wr">7/27~7/31 · 3회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W30" href="radio-2026-W30.html"><span class="wk">2026-W30</span><span class="wr">7/20~7/24 · 5회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W29" href="radio-2026-W29.html"><span class="wk">2026-W29</span><span class="wr">7/13~7/17 · 4회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W28" href="radio-2026-W28.html"><span class="wk">2026-W28</span><span class="wr">7/6~7/10 · 5회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W27" href="radio-2026-W27.html"><span class="wk">2026-W27</span><span class="wr">6/29~7/3 · 3회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W26" href="radio-2026-W26.html"><span class="wk">2026-W26</span><span class="wr">6/22~6/26 · 5회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W25" href="radio-2026-W25.html"><span class="wk">2026-W25</span><span class="wr">6/15~6/19 · 5회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W24" href="radio-2026-W24.html"><span class="wk">2026-W24</span><span class="wr">6/8~6/12 · 5회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W23" href="radio-2026-W23.html"><span class="wk">2026-W23</span><span class="wr">6/1~6/5 · 1회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W22" href="radio-2026-W22.html"><span class="wk">2026-W22</span><span class="wr">5/25~5/29 · 3회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W21" href="radio-2026-W21.html"><span class="wk">2026-W21</span><span class="wr">5/18~5/22 · 3회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W20" href="radio-2026-W20.html"><span class="wk">2026-W20</span><span class="wr">5/11~5/15 · 4회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W19" href="radio-2026-W19.html"><span class="wk">2026-W19</span><span class="wr">5/4~5/8 · 1회</span><span class="wk-audio"></span></a></div></div>
+
+  <div class="card"><h2>▶ 바로 듣기 <span class="muted" style="font-weight:400">· 브라우저 음성(즉시·폴백)</span></h2>
+    <div class="player">
+      <button class="pbtn" id="play">▶ 재생</button>
+      <button class="pbtn alt" id="pause">⏸ 일시정지</button>
+      <button class="pbtn alt" id="resume">▶ 이어듣기</button>
+      <button class="pbtn alt" id="stop">⏹ 처음부터</button>
+      <label class="speed">속도 <input type="range" id="rate" min="0.7" max="1.3" step="0.1" value="1"> <span id="rv">1.0x</span></label>
+    </div>
+    <div class="muted" id="ttswarn" style="margin-bottom:8px"></div>
+    <div class="muted" style="margin:2px 0 10px;font-size:11.5px;line-height:1.7">💡 재생 중에는 화면이 자동으로 꺼지지 않게 막아요(Wake&nbsp;Lock). 다만 직접 화면을 끄면 브라우저 음성은 멈출 수 있어요 — <b>화면을 끈 채 듣고 싶다면 맨 위 🎧 오디오 에피소드(MP3)</b>를 쓰세요. 잠금화면에서도 재생됩니다.</div>
+    <div class="stage" id="stage"></div>
+  </div>
+
+  <div class="card"><h2>💬 이 내용으로 AI와 이야기하기</h2>
+    <div class="muted" style="margin-bottom:10px">클릭하면 이 주차 요약 프롬프트가 복사되고 Gemini가 열립니다. 붙여넣고 대화하세요.</div>
+    <div class="modes">
+      <div class="mode" onclick="copyOpen('chat')"><span class="ico">💬</span>튜터 대화<span class="sub">약점 집중 연습</span></div>
+      <div class="mode" onclick="copyOpen('lecture')"><span class="ico">🎓</span>강의식 설명<span class="sub">규칙+예문+퀴즈</span></div>
+      <div class="mode" onclick="copyOpen('radio')"><span class="ico">🎙</span>라디오 인터뷰<span class="sub">게스트 롤플레이</span></div>
+    </div>
+  </div>
+
+  <div class="card"><h2>📓 NotebookLM 팟캐스트로 듣기 <span class="sub">고품질·무료</span></h2>
+    <div class="muted" style="margin-bottom:12px">이번 주 학습 다이제스트(교정·강사 피드백·어휘 전부)를 복사해 <b>NotebookLM</b>에 붙여넣고 <b>Audio Overview</b>를 만들면, 2인 진행 영어 팟캐스트가 무료로 생성됩니다(현재 TTS보다 자연스러움).</div>
+    <div class="modes">
+      <div class="mode" onclick="window.open('https://notebooklm.google.com/','_blank');copyDigest()"><span class="ico">📓</span>복사+NotebookLM 열기<span class="sub">원클릭 반자동</span></div>
+      <div class="mode" onclick="copyDigest()"><span class="ico">📋</span>다이제스트만 복사<span class="sub">붙여넣기용 텍스트</span></div>
+    </div>
+  </div>
+
+  <div class="foot">대본: scripts/build_radio.py · 다이제스트: scripts/build_digest.py · 음성: 브라우저 Web Speech(무료) · 주차별 누적 · 매주 금요일 Claude 갱신</div>
+</div>
+
+<pre id="radio-src" hidden>민지|en|Hello everyone, and welcome back to English Boost Radio. I&#x27;m Minji, your host for this Friday session.
+알렉스|en|And I&#x27;m Alex, your English coach. This is 2026-W32. You had four lessons this week — summer vacation plans, outdoor activities, social interactions, and weekend idioms. Great topics!
+민지|en|Four lessons. That means four chances to practice, and four chances to learn. Alex, today we are not just listing mistakes.
+알렉스|en|That&#x27;s right. Today we want you to understand why certain patterns keep showing up — so when you fix them, they actually stay fixed.
+민지|en|I love that approach. So let&#x27;s open with the biggest story of the week. What&#x27;s number one?
+알렉스|en|Subject-Verb Agreement. It has appeared eight times in your cumulative record. That puts it tied at number one.
+민지|en|Eight times! So this is not a one-time thing. What exactly is the rule?
+알렉스|en|In English, when the subject is &quot;he,&quot; &quot;she,&quot; or &quot;it&quot; — that&#x27;s called third-person singular — the verb gets a small change. You add an &quot;s&quot; at the end.
+민지|en|He speaks. She runs. It works. Sounds simple, right?
+알렉스|en|It sounds simple, but here&#x27;s why it&#x27;s hard for Korean speakers. In Korean, verbs don&#x27;t change based on who is doing the action. &quot;나는 가요, 당신은 가요, 그는 가요&quot; — the verb stays the same.
+민지|ko|한국어는 주어가 바뀌어도 동사 형태가 그대로예요. 그래서 영어에서 he speaks의 -s를 깜빡하게 되는 거예요.
+알렉스|en|Exactly. Your brain says &quot;subject done, verb done.&quot; But English says &quot;wait — if it&#x27;s he, she, or it, you need to mark the verb too.&quot;
+민지|en|It&#x27;s like English wants to double-check the subject inside the verb itself.
+알렉스|en|That&#x27;s a great way to put it! And the cultural angle here is interesting. English grammar evolved from languages that marked verbs very carefully — Latin, Old English — where endings told you who was doing what even without a subject.
+민지|ko|영어 동사에 -s를 붙이는 건 역사적 흔적이에요. 옛날엔 동사 끝만 봐도 주어를 알 수 있었거든요.
+알렉스|en|So even though modern English dropped most of those endings, the third-person singular &quot;s&quot; survived. It&#x27;s stubborn like that.
+민지|en|I love that. Grammar as a historical survivor. OK, let&#x27;s hear a real example from this week.
+알렉스|en|Here&#x27;s one. You said: &quot;When I met some people, I feel awkward.&quot; Hear the mismatch? &quot;met&quot; is past tense, but &quot;feel&quot; jumps to present.
+민지|en|Ah, so the tenses clash.
+알렉스|en|Right. And the natural version: &quot;When I meet new people, I sometimes feel awkward.&quot; Same tense throughout. And notice the word &quot;sometimes&quot; — that makes it feel like a real habit, not a universal fact.
+민지|en|That one little word changes everything. &quot;Sometimes&quot; makes it sound so much more human.
+알렉스|en|Native speakers add &quot;sometimes,&quot; &quot;usually,&quot; or &quot;often&quot; to soften statements about habits. It&#x27;s more honest and more natural.
+민지|ko|sometimes, usually, often 같은 부사를 습관 표현에 넣으면 훨씬 자연스럽고 진실되게 들려요.
+알렉스|en|Rule of thumb: before you say the verb, check the subject. Is it &quot;he,&quot; &quot;she,&quot; or &quot;it&quot;? Then pause — and add that &quot;s.&quot;
+민지|en|He speaks. She runs. It works. Say it three times fast and make it a reflex!
+알렉스|en|Let&#x27;s move to our second deep-dive pattern — Articles. Also sitting at eight in your cumulative record.
+민지|en|Articles. &quot;A,&quot; &quot;an,&quot; and &quot;the.&quot; Why are these so hard, Alex?
+알렉스|en|Because Korean simply does not have them. In Korean, you just say &quot;사과&quot; — apple. No &quot;a&quot; or &quot;the&quot; needed. So Korean learners often skip them entirely.
+민지|ko|한국어에는 관사가 없어요. 그냥 &#x27;사과&#x27;라고 하면 되는데 영어는 &#x27;an apple&#x27;이냐 &#x27;the apple&#x27;이냐를 따져야 하죠.
+알렉스|en|In English, &quot;a&quot; and &quot;the&quot; carry real information. &quot;A&quot; means: this is new, I&#x27;m introducing it for the first time, it&#x27;s one of many. &quot;The&quot; means: we both already know which one I&#x27;m talking about.
+민지|en|Oh, so &quot;the&quot; is like shared knowledge between the speaker and the listener?
+알렉스|en|Exactly. Think of it as a signal you send to your listener. &quot;I found a restaurant&quot; — first time, new information. &quot;The restaurant was amazing&quot; — now we both know which one.
+민지|en|It&#x27;s like a little flag that says &quot;you know this one.&quot;
+알렉스|en|And here&#x27;s the cultural contrast. English speakers use &quot;the&quot; very naturally because they assume the listener needs to be &quot;brought in&quot; to their mental world. In Korean conversation, context is often assumed shared, so you can skip that flag.
+민지|ko|영어 화자는 &#x27;the&#x27;로 청자를 자신의 이야기 세계로 끌어들여요. 한국어는 맥락이 이미 공유됐다고 보고 그냥 말하는 경향이 있어요.
+알렉스|en|Rule of thumb: first mention uses &quot;a&quot; or &quot;an.&quot; After that, use &quot;the.&quot; For general statements, use no article at all — just the bare noun.
+민지|en|Let me try. &quot;I like coffee.&quot; No article — general. &quot;I bought a coffee this morning.&quot; One cup, first mention. &quot;The coffee was too sweet.&quot; That specific one we&#x27;re talking about.
+알렉스|en|Perfect. You&#x27;ve got it!
+민지|en|One more article tip before we move on. What about &quot;an&quot; versus &quot;a&quot;?
+알렉스|en|Great question. Use &quot;an&quot; before a vowel sound — not just a vowel letter, but the sound. &quot;An apple,&quot; &quot;an hour&quot; — &quot;hour&quot; starts with a vowel sound even though it&#x27;s written with &quot;h.&quot;
+민지|en|So it&#x27;s about how it sounds, not how it&#x27;s spelled. &quot;An honest person,&quot; &quot;a university&quot; — because &quot;university&quot; starts with a &quot;y&quot; sound.
+알렉스|en|Exactly right. It&#x27;s all about making the words flow easily in your mouth. English is very oral that way.
+민지|en|I love that. The language shapes itself for your mouth. Now let&#x27;s head into our Correction Clinic. Quick-fire corrections — repeat after us if you can!
+민지|en|First. You said: &quot;a little exciting and a little bit upset.&quot;
+알렉스|en|Better: &quot;a little excited and a little bit upset.&quot;
+민지|en|Why? Because when you feel the emotion — when it&#x27;s happening inside you — English uses the &quot;-ed&quot; form. Excited, interested, tired, bored, surprised.
+알렉스|en|The &quot;-ing&quot; form describes something that causes that emotion. A movie can be exciting. But you feel excited. If you feel it — use &quot;-ed.&quot;
+민지|ko|-ed는 내가 느끼는 감정, -ing는 그것이 그런 감정을 일으키는 것. 내가 느끼면 무조건 -ed!
+알렉스|en|Next. You said: &quot;every place is possible to play the singing song.&quot;
+민지|en|Better: &quot;I can sing songs anywhere.&quot;
+알렉스|en|Notice how the English version uses a real subject — &quot;I.&quot; Korean often builds sentences around abstract ideas like &quot;it is possible.&quot; English prefers a person as the subject. &quot;I can&quot; instead of &quot;it is possible.&quot;
+민지|en|Next. You said: &quot;How about my opinion?&quot;
+알렉스|en|Better: &quot;How about my suggestion?&quot; The word &quot;opinion&quot; means what you think. &quot;Suggestion&quot; means something you want to offer. In this context, you&#x27;re proposing something — so &quot;suggestion&quot; is the right word.
+민지|en|Small word swap, completely different meaning. Good one.
+알렉스|en|Next. You said: &quot;it is more adapt to outdoor activity to summer.&quot;
+민지|en|Better: &quot;Summer is more suitable for outdoor activities.&quot; Again, flip the subject to &quot;Summer&quot; — make the sentence start with what you&#x27;re really talking about.
+알렉스|en|Next. You said: &quot;I will go back to my home and it&#x27;s possible to meet my family.&quot;
+민지|en|Better: &quot;I&#x27;ll go home and see my family.&quot;
+알렉스|en|Two things here. First, &quot;go home&quot; — not &quot;go back to my home.&quot; We usually just say &quot;go home.&quot; Second, &quot;see my family&quot; — not &quot;meet my family.&quot; You &quot;meet&quot; strangers. You &quot;see&quot; family. It feels warmer.
+민지|en|&quot;See my family&quot; really does sound much warmer. OK, a few more quick ones!
+알렉스|en|You said: &quot;These days in Korea, so many young generation, like the MG generation...&quot;
+민지|en|Better: &quot;These days in Korea, many young people, like the MZ generation...&quot; Two fixes — &quot;young people&quot; not &quot;young generation,&quot; and the group is called &quot;MZ,&quot; not &quot;MG.&quot;
+알렉스|en|You said: &quot;So, some people like to eating out, go to the visiting a cafe...&quot;
+민지|en|Better: &quot;Some people like eating out or visiting cafes, while others prefer going to concerts or doing activities.&quot; The key fix — after &quot;like,&quot; use the &quot;-ing&quot; form. Like eating, like visiting, like going.
+알렉스|en|You said: &quot;We find some new restaurant and new street and new cafe.&quot;
+민지|en|Better: &quot;We find new restaurants, new streets, and new cafes.&quot; In English, when you say &quot;new restaurants&quot; — plural — it sounds like you found several, which is more natural for exploring a neighborhood.
+알렉스|en|Great work making it through the clinic. Every one of those is a small shift — same meaning, just the English habit layered on top.
+민지|en|And when you say them out loud, they start to feel natural faster. Speaking is the shortcut!
+알렉스|en|Absolutely. Now let&#x27;s talk vocabulary. Not definitions — how these words actually live in real sentences.
+알렉스|en|First: apprehensive. It means worried or nervous about what might happen. Stronger than just &quot;nervous&quot; — it means you&#x27;re thinking ahead about possible problems.
+민지|en|&quot;I was apprehensive about starting a conversation with a stranger at the party.&quot; You can feel that weight in the word, right?
+알렉스|en|Next: resilience. The ability to bounce back from difficulty. You can &quot;show resilience&quot; or &quot;have resilience.&quot;
+민지|en|&quot;She showed real resilience when she kept practicing even after failing the test three times.&quot; That&#x27;s the word for bouncing back strong.
+알렉스|en|Next: conducive. It means &quot;helpful toward something,&quot; usually a good outcome. &quot;Conducive to learning,&quot; &quot;conducive to relaxation.&quot;
+민지|en|&quot;A quiet room is conducive to studying.&quot; Notice it&#x27;s always &quot;conducive to&quot; — that preposition is part of the package.
+알렉스|en|Now our Topic Talk. This week&#x27;s topics were social interaction and weekend plans. Let&#x27;s learn five expressions you can use right away.
+민지|en|Expression one: &quot;break the ice.&quot; To say or do something that makes people feel more comfortable in a new or awkward situation.
+알렉스|en|&quot;She told a funny story to break the ice at the team meeting.&quot; Imagine an icebreaker ship — it opens the path. That&#x27;s what this phrase does in conversation.
+민지|en|Expression two: &quot;common ground.&quot; Something two people share or agree on.
+알렉스|en|&quot;We found common ground when we both said we love hiking.&quot; It&#x27;s perfect for getting-to-know-you conversations. Look for the common ground early!
+민지|en|Expression three: &quot;play it by ear.&quot; To decide things as you go, without a fixed plan.
+알렉스|en|&quot;I don&#x27;t have plans for Saturday yet — I&#x27;ll just play it by ear.&quot; This is actually in your vocabulary cards from this week. You already know it!
+민지|en|Expression four: &quot;no-show.&quot; A person who doesn&#x27;t appear somewhere as expected.
+알렉스|en|&quot;He was a complete no-show at his own birthday party!&quot; It can also be a verb — &quot;Don&#x27;t no-show on me!&quot;
+민지|en|Expression five: &quot;back out.&quot; To withdraw from a promise or plan.
+알렉스|en|&quot;I was going to go camping, but I backed out at the last minute.&quot; Very common when talking about weekend plans that changed.
+민지|en|Five expressions, all from real conversations. Use at least one this week!
+알렉스|en|And one bonus word from your vocab cards this week: &quot;couch potato.&quot; It means someone who spends all their time sitting and watching TV, not doing anything active.
+민지|en|&quot;He&#x27;s such a couch potato on weekends — he just watches dramas for eight hours straight.&quot; It&#x27;s a funny image — a potato sitting on a couch!
+알렉스|en|You can use it gently about yourself too. &quot;I was a total couch potato this weekend. I needed the rest.&quot; Native speakers use it in a lighthearted way.
+민지|en|So that&#x27;s six new tools for your social conversation toolkit. Perfect timing as summer social activities pick up!
+알렉스|en|Now, my favorite segment. Culture Corner!
+민지|en|What&#x27;s today&#x27;s story, Alex?
+알렉스|en|Today we&#x27;re asking: where did &quot;break a leg&quot; come from? Actors say this to wish each other good luck before a performance. But why?
+민지|en|Why would you wish someone a broken leg?
+알렉스|en|One popular theory comes from theater history. In old theaters, the area just offstage — where actors waited — was framed by two vertical curtain pieces called &quot;legs.&quot;
+민지|en|Oh, so &quot;legs&quot; were literally parts of the stage structure?
+알렉스|en|Exactly. The line where the stage lights began was sometimes called the &quot;leg line.&quot; To &quot;break the leg line&quot; meant you actually stepped past it and got onto the stage — meaning you got the role, you performed.
+민지|en|So &quot;break a leg&quot; literally meant &quot;I hope you make it onto that stage&quot;!
+알렉스|en|That&#x27;s one theory. Another says theater people are famously superstitious. They believed saying &quot;good luck&quot; directly would invite bad luck — so they said the opposite to trick fate.
+민지|ko|배우들이 공연 전 &#x27;행운을 빌어&#x27;라고 하면 오히려 재수가 없다고 믿어서, 반대로 &#x27;break a leg&#x27;라고 했다는 설도 있어요.
+알렉스|en|Either way, &quot;break a leg&quot; is now the standard theater blessing. You&#x27;ll hear it any time someone&#x27;s about to go on stage — or take on a big challenge.
+민지|en|Like a job interview, a presentation, or even your next English lesson!
+알렉스|en|Exactly. And it&#x27;s a great example of how idiomatic English works — the literal meaning and the real meaning are completely different. That&#x27;s what makes idioms tricky, but also fun.
+민지|en|I love how language keeps the past alive. A phrase from old theater curtains is still in use today.
+알렉스|en|Language is like a museum you carry in your mouth. Every idiom has a history.
+민지|ko|&#x27;break a leg&#x27; 같은 관용구는 의미를 단어 그대로 풀면 틀려요. 하나씩 이야기로 기억하면 훨씬 오래 남아요.
+알렉스|en|And now you&#x27;ll never forget it. Break a leg on your English journey this week!
+민지|en|See what he did there? That was a live example — and totally natural!
+알렉스|en|Time for our Recap. This week you had four great lessons. Your fluency average was 7.0, right in line with your overall 7.1.
+민지|en|Steady is good. And now you understand why the top two patterns are sticky — it&#x27;s not random, it&#x27;s your Korean brain doing what it&#x27;s trained to do.
+알렉스|en|The brain is loyal. It keeps using the system it learned first. Your job is to gently teach it a new habit — one sentence at a time.
+민지|en|One sentence at a time. I like that. Small steps, consistent effort.
+알렉스|en|Your mission for next week is two things. One: every time you use &quot;he,&quot; &quot;she,&quot; or &quot;it,&quot; pause for that &quot;s.&quot; Make it a reflex.
+민지|en|Two: when you introduce something new in a sentence, say &quot;a.&quot; When you mention it again, say &quot;the.&quot; Keep that little flag flying.
+알렉스|en|And remember the five social expressions: break the ice, common ground, play it by ear, no-show, and back out. Use at least one in a real conversation this week.
+민지|en|And if you learned one new thing from Culture Corner — &quot;break a leg&quot; and its theater history — that counts too!
+알렉스|en|Awareness first, perfection later. You don&#x27;t need to be perfect — you just need to notice.
+민지|en|That&#x27;s a wrap for this week&#x27;s English Boost Radio. Thank you for listening, and thank you for practicing every single week.
+알렉스|en|Keep talking, keep making mistakes, and keep learning. That&#x27;s the only way language grows.
+민지|en|These are just English habits waiting to click inside you. And they will click — sooner than you think. See you next Friday. Bye for now!</pre>
+<div class="toast" id="toast">✅ 복사됐어요! Gemini에 붙여넣으세요</div>
+<script>
+const PAGE_WEEK="2026-W32";
+const PROMPTS={chat:"아래는 이번 주 내 전화영어 학습 요약이야.\n\n[이번 주: 2026-W32 · 4회 수업]\n누적 약점 Top: Subject–Verb Agreement(8회), Articles (a/an/the)(8회), Verb Forms / Auxiliaries(6회)\nAI 교정(❌→✅):\n  - a little exciting and a little bit upset → a little excited and a little bit upset\n  - we can't generalize about hobbies per country. → we can't generalize hobbies by country.\n  - every place is possible to play the singing song. → I can sing songs anywhere.\n  - How about my opinion? → How about my suggestion?\n  - it is more adapt to outdoor activity to summer → Summer is more suitable for outdoor activities.\n  - just I find some close CVS or Olive Young and then just buying them → I'd just find a nearby CVS or Olive Young and buy some.\n핵심 어휘: apprehensive(걱정하는, 염려하는), infrastructure(사회 기반 시설 (도로, 통신망 등)), versatility(다용도성, 다재다능함), intensive(집중적인, 많은 노력을 요하는), volatility(변동성, 불안정성), terrain(지형, 지역)\n\n위 약점·교정을 주제로 나와 영어로 대화하면서 복습시켜줘. 먼저 약점 1개와 관련된 상황을 영어로 질문하고, 내 대답이 자연스러운지 교정해줘. 한국어 설명은 필요할 때만 짧게.",lecture:"아래는 이번 주 내 전화영어 학습 요약이야.\n\n[이번 주: 2026-W32 · 4회 수업]\n누적 약점 Top: Subject–Verb Agreement(8회), Articles (a/an/the)(8회), Verb Forms / Auxiliaries(6회)\nAI 교정(❌→✅):\n  - a little exciting and a little bit upset → a little excited and a little bit upset\n  - we can't generalize about hobbies per country. → we can't generalize hobbies by country.\n  - every place is possible to play the singing song. → I can sing songs anywhere.\n  - How about my opinion? → How about my suggestion?\n  - it is more adapt to outdoor activity to summer → Summer is more suitable for outdoor activities.\n  - just I find some close CVS or Olive Young and then just buying them → I'd just find a nearby CVS or Olive Young and buy some.\n핵심 어휘: apprehensive(걱정하는, 염려하는), infrastructure(사회 기반 시설 (도로, 통신망 등)), versatility(다용도성, 다재다능함), intensive(집중적인, 많은 노력을 요하는), volatility(변동성, 불안정성), terrain(지형, 지역)\n\n위 내용을 강의식으로 차근차근 설명해줘. 각 약점이 왜 틀렸는지 규칙을 짚고, 쉬운 예문 2~3개씩 더 들어주고, 마지막에 1분 요약과 연습문제 3개를 줘.",radio:"아래는 이번 주 내 전화영어 학습 요약이야.\n\n[이번 주: 2026-W32 · 4회 수업]\n누적 약점 Top: Subject–Verb Agreement(8회), Articles (a/an/the)(8회), Verb Forms / Auxiliaries(6회)\nAI 교정(❌→✅):\n  - a little exciting and a little bit upset → a little excited and a little bit upset\n  - we can't generalize about hobbies per country. → we can't generalize hobbies by country.\n  - every place is possible to play the singing song. → I can sing songs anywhere.\n  - How about my opinion? → How about my suggestion?\n  - it is more adapt to outdoor activity to summer → Summer is more suitable for outdoor activities.\n  - just I find some close CVS or Olive Young and then just buying them → I'd just find a nearby CVS or Olive Young and buy some.\n핵심 어휘: apprehensive(걱정하는, 염려하는), infrastructure(사회 기반 시설 (도로, 통신망 등)), versatility(다용도성, 다재다능함), intensive(집중적인, 많은 노력을 요하는), volatility(변동성, 불안정성), terrain(지형, 지역)\n\n너는 라디오 진행자, 나는 오늘의 게스트야. 내 이번 주 영어 학습 여정을 주제로 인터뷰하듯 대화해줘. 가볍고 격려하는 톤으로, 중간중간 위 교정 표현을 자연스럽게 연습시켜줘. 영어 위주, 한국어는 가끔."};
+function showToast(m){const t=document.getElementById('toast');t.textContent=m;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500);}
+function copyOpen(mode){const txt=PROMPTS[mode]||'';const go=()=>{showToast('✅ 복사됐어요! Gemini에 붙여넣으세요');setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600);};navigator.clipboard.writeText(txt).then(go).catch(()=>{const a=document.createElement('textarea');a.value=txt;document.body.appendChild(a);a.select();document.execCommand('copy');a.remove();go();});}
+function clip(txt,msg){const go=()=>showToast(msg);navigator.clipboard.writeText(txt).then(go).catch(()=>{const a=document.createElement('textarea');a.value=txt;document.body.appendChild(a);a.select();document.execCommand('copy');a.remove();go();});}
+function copyDigest(){fetch('digest-latest.txt',{cache:'no-store'}).then(r=>{if(!r.ok)throw 0;return r.text();}).then(t=>clip(t,'📓 다이제스트 복사됨! NotebookLM에 붙여넣으세요')).catch(()=>showToast('⚠️ 다이제스트가 아직 없어요 (금요일 생성)'));}
+
+// ── 라디오 플레이어 (Web Speech API) ──
+const RAW=document.getElementById('radio-src').textContent.trim();
+const LINES=RAW.split('\n').map(l=>l.trim()).filter(Boolean).map(l=>{const i1=l.indexOf('|'),i2=l.indexOf('|',i1+1);return{sp:l.slice(0,i1),lang:l.slice(i1+1,i2),text:l.slice(i2+1)};});
+const stage=document.getElementById('stage');
+LINES.forEach((ln,i)=>{const d=document.createElement('div');d.className='bubble '+(ln.sp==='민지'?'mc':'coach');d.dataset.idx=i;d.innerHTML='<span class="who">'+ln.sp+'</span>'+ln.text;stage.appendChild(d);});
+const synth=window.speechSynthesis;
+let voices=[],koV=null,enV=null;
+function pickVoices(){voices=synth?synth.getVoices():[];koV=voices.find(v=>v.lang&&v.lang.toLowerCase().startsWith('ko'))||null;enV=voices.find(v=>v.lang&&v.lang.toLowerCase().startsWith('en'))||null;}
+if(synth){pickVoices();synth.onvoiceschanged=pickVoices;}
+let idx=0,playing=false,rate=1,wakeLock=null;
+async function acquireWake(){try{if('wakeLock' in navigator){wakeLock=await navigator.wakeLock.request('screen');wakeLock.addEventListener('release',()=>{wakeLock=null;});}}catch(e){}}
+function releaseWake(){try{if(wakeLock){wakeLock.release();wakeLock=null;}}catch(e){}}
+function highlight(i){document.querySelectorAll('.bubble').forEach(b=>b.classList.toggle('on',(+b.dataset.idx)===i));const el=document.querySelector('.bubble.on');if(el)el.scrollIntoView({block:'center',behavior:'smooth'});}
+function speakAt(i){if(!synth||i>=LINES.length){playing=false;releaseWake();highlight(-1);idx=0;return;}idx=i;highlight(i);const ln=LINES[i];const u=new SpeechSynthesisUtterance(ln.text);u.lang=ln.lang==='ko'?'ko-KR':'en-US';const v=ln.lang==='ko'?koV:enV;if(v)u.voice=v;u.rate=rate;u.pitch=ln.sp==='민지'?1.15:0.85;u.onend=()=>{if(playing)speakAt(i+1);};u.onerror=()=>{if(playing)setTimeout(()=>speakAt(i+1),250);};synth.speak(u);}
+document.getElementById('play').onclick=()=>{if(!synth){document.getElementById('ttswarn').textContent='이 브라우저는 음성 재생을 지원하지 않아요. 대본을 읽어주세요.';return;}if(playing)return;playing=true;acquireWake();synth.cancel();speakAt(idx>=LINES.length?0:idx);};
+document.getElementById('pause').onclick=()=>{if(synth&&synth.speaking)synth.pause();};
+document.getElementById('resume').onclick=()=>{if(synth){synth.resume();if(playing)acquireWake();}};
+document.getElementById('stop').onclick=()=>{playing=false;releaseWake();if(synth)synth.cancel();idx=0;highlight(-1);};
+document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='visible'&&playing){if(synth)synth.resume();acquireWake();}});
+const rE=document.getElementById('rate');rE.oninput=()=>{rate=parseFloat(rE.value);document.getElementById('rv').textContent=rate.toFixed(1)+'x';};
+if(!synth)document.getElementById('ttswarn').textContent='⚠️ 이 브라우저는 음성 합성을 지원하지 않아 대본만 표시됩니다.';
+
+// ── 오디오 에피소드: 이 페이지의 주차(PAGE_WEEK) MP3 표시 + 목록에 🎧 뱃지 ──
+fetch('radio/episodes.json',{cache:'no-store'}).then(r=>r.ok?r.json():[]).then(eps=>{
+  if(!Array.isArray(eps))eps=[];
+  eps.forEach(e=>{const row=document.querySelector('.weekrow[data-wk="'+e.week+'"] .wk-audio');if(row)row.textContent='🎧';});
+  const L=document.getElementById('audio-latest');
+  const mine=eps.find(e=>e.week===PAGE_WEEK);
+  if(mine){
+    L.innerHTML='<div class="epweek">'+mine.week+' · '+(mine.date||'')+'</div><audio id="ep-audio" controls preload="none" src="radio/'+mine.file+'"></audio>';
+    const au=document.getElementById('ep-audio');
+    // 잠금화면/화면 꺼짐에서도 재생 + 컨트롤 노출(MediaSession). 진짜 음성 파일이라 백그라운드 OK.
+    if(au&&'mediaSession' in navigator){
+      try{navigator.mediaSession.metadata=new MediaMetadata({title:'영어 주간 라디오 '+mine.week,artist:'민지 & 알렉스 · 당근영어',album:'Weekly English Radio'});}catch(e){}
+      try{navigator.mediaSession.setActionHandler('play',()=>au.play());navigator.mediaSession.setActionHandler('pause',()=>au.pause());}catch(e){}
+    }
+  }
+  else{L.textContent='이 주차 오디오(MP3)는 아직 없어요. 아래 ▶ 바로 듣기(브라우저 음성)로 들어보세요.';}
+}).catch(()=>{document.getElementById('audio-latest').textContent='오디오 목록을 불러오지 못했어요. 아래 ▶ 바로 듣기로 들어보세요.';});
+</script>
+</body></html>
