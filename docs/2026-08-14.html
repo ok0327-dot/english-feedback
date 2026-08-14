@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#0f0f13"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="당근영어"><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="icon" type="image/png" sizes="192x192" href="icon-192.png"><script src="install-banner.js" defer></script><script src="sw-reg.js" defer></script>
+    <title>전화영어 복습 - 2026년 08월 14일</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Noto Sans KR',sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.75;min-height:100vh}
+        .header{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);border-bottom:1px solid rgba(255,255,255,.06);padding:48px 24px 40px;text-align:center}
+        .header-date{font-size:13px;color:#94a3b8;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+        .header h1{font-size:28px;font-weight:700;color:#f1f5f9;margin-bottom:16px}
+        .header-meta{display:flex;justify-content:center;gap:24px;font-size:14px;color:#64748b}
+        .header-meta span{display:flex;align-items:center;gap:6px}
+        .cta-section{text-align:center;padding:40px 24px}
+        .cta-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:linear-gradient(135deg,#38bdf8,#818cf8);color:#fff;font-size:16px;font-weight:600;font-family:'Noto Sans KR',sans-serif;border:none;border-radius:50px;cursor:pointer;transition:all .3s;text-decoration:none;box-shadow:0 4px 24px rgba(56,189,248,.25)}
+        .cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(56,189,248,.35)}
+        .cta-btn svg{width:20px;height:20px}
+        .cta-sub{margin-top:12px;font-size:13px;color:#64748b}
+        .toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#38bdf8;padding:14px 28px;border-radius:12px;font-size:14px;font-weight:500;border:1px solid rgba(56,189,248,.2);box-shadow:0 8px 32px rgba(0,0,0,.4);opacity:0;transition:all .4s cubic-bezier(.16,1,.3,1);z-index:1000}
+        .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+        .container{max-width:720px;margin:0 auto;padding:0 24px 80px}
+        .tabs{display:flex;gap:4px;background:#1a1a24;padding:4px;border-radius:12px;margin-bottom:32px}
+        .tab{flex:1;padding:12px;text-align:center;font-size:14px;font-weight:500;color:#64748b;background:0 0;border:none;border-radius:8px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all .2s}
+        .tab.active{background:#262636;color:#f1f5f9}
+        .tab-content{display:none}.tab-content.active{display:block}
+        .feedback h2{font-size:18px;font-weight:700;color:#f1f5f9;margin:36px 0 16px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.06)}
+        .feedback h2:first-child{margin-top:0}
+        .feedback p{margin:8px 0;color:#cbd5e1}
+        .feedback .item{padding:6px 0 6px 16px;border-left:2px solid #334155;margin:6px 0;color:#cbd5e1}
+        .feedback .numbered{padding:8px 0 8px 16px;color:#cbd5e1}
+        .feedback .numbered strong{color:#38bdf8}
+        .feedback strong{color:#f1f5f9}
+        .feedback code{background:#1e293b;padding:2px 8px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#38bdf8}
+        .feedback table{width:100%;border-collapse:collapse;margin:12px 0}
+        .feedback th,.feedback td{padding:10px 14px;text-align:left;border-bottom:1px solid #262636}
+        .feedback th{color:#94a3b8;font-weight:500;font-size:13px}
+        .feedback td{color:#cbd5e1}
+        .arrow{color:#38bdf8;font-weight:700}
+        .transcript{background:#1a1a24;border-radius:12px;padding:28px;font-size:14px;line-height:2;color:#94a3b8;white-space:pre-wrap;word-break:break-word;font-family:'JetBrains Mono','Noto Sans KR',monospace}
+        .transcript .tutor{color:#38bdf8}
+        .transcript .student{color:#a78bfa}
+        @media(max-width:640px){.header{padding:32px 16px}.header h1{font-size:22px}.cta-btn{padding:14px 28px;font-size:15px}.container{padding:0 16px 60px}}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-date">2026년 08월 14일</div>
+        <h1>📚 전화영어 복습</h1>
+        <div class="header-meta">
+            <span>⏱ 20분 1초</span>
+            <span>🎙 전화영어_025180304_20260814080011.m4a</span>
+        </div>
+    </div>
+    <div class="cta-section">
+        <button class="cta-btn" onclick="startReview()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Gemini에서 복습 대화 시작하기
+        </button>
+        <div class="cta-sub">클릭하면 프롬프트가 복사되고 Gemini가 열립니다</div>
+    </div>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('feedback')">📋 AI 피드백</button>
+            <button class="tab" onclick="switchTab('transcript')">🎙 수업 전사</button>
+        </div>
+        <div id="tab-feedback" class="tab-content active">
+            <div class="feedback"><p>안녕하세요, Joey! 따뜻하고 실용적인 영어 코치입니다. 오늘 수업 내용 분석을 통해 Joey님의 영어 실력 향상을 돕겠습니다.</p>
+<br>
+<br>
+<p><strong>0. 📌 Topic</strong></p>
+<p>Topic: Discussing Travel Styles and Personal Preferences</p>
+<br>
+<p><strong>1. 📊 오늘의 대화 요약 (Summary)</strong></p>
+<p>Joey님은 오늘 수업에서 다양한 여행 스타일에 대해 이야기했습니다. 특히 혼자 여행할 때와 가족과 함께 여행할 때의 차이점, 그리고 한국인들이 여행을 대하는 방식에 대한 자신의 생각을 공유했습니다. 또한, 아들의 생일 주간 계획에 대해 이야기하며 개인적인 경험을 나누었습니다.</p>
+<br>
+<p><strong>2. 💬 유창성 업그레이드 (Fluency & Natural Flow)</strong></p>
+<br>
+<div class="item"><strong>1️⃣</strong></div>
+<div class="item">❌ As Said: "I'm not having any technical issues today."</div>
+<div class="item">✅ Natural: "I'm not experiencing any technical issues today."</div>
+<div class="item">💎 Professional: "I'm all set technically for our session today."</div>
+<div class="item">💡 Coaching Point: "experiencing"을 사용하는 것이 문제를 겪고 있다는 것을 말할 때 더 흔하고 약간 더 격식 있는 표현입니다. "All set"은 준비가 되었음을 확인하는 매우 자연스럽고 빠른 방법입니다.</div>
+<br>
+<div class="item"><strong>2️⃣</strong></div>
+<div class="item">❌ As Said: "So if they are go travel to abroad, and meantime they are travel like a work."</div>
+<div class="item">✅ Natural: "So when they travel abroad, they often treat it like work."</div>
+<div class="item">💎 Professional: "When traveling abroad, many Koreans approach it with a work-like intensity."</div>
+<div class="item">💡 Coaching Point: 원문에는 "are go travel"과 같이 문법적으로 어색한 부분이 있습니다. 수정된 표현들은 "treat it like work" 또는 "approach it with intensity"와 같은 구문을 사용하여 더 자연스럽고 명확하게 의미를 전달합니다.</div>
+<br>
+<div class="item"><strong>3️⃣</strong></div>
+<div class="item">❌ As Said: "But these days, we move the two carriers, two rollers, because my son and my wife has many clothes and many belongings."</div>
+<div class="item">✅ Natural: "But these days, we bring two carriers, two rollers, because my son and my wife have a lot of clothes and belongings."</div>
+<div class="item">💎 Professional: "Nowadays, our luggage has increased to two carriers and two rollers, as my son and wife tend to pack numerous clothes and personal items."</div>
+<div class="item">💡 Coaching Point: "move the two carriers"라는 표현은 다소 어색합니다. "bring"이나 "pack"이 더 자연스럽습니다. 또한, "many clothes and many belongings"는 더 나은 흐름을 위해 "a lot of clothes and belongings" 또는 "numerous clothes and personal items"로 단순화할 수 있습니다. 주어-동사 수 일치 ("my son and my wife"는 복수)도 수정이 필요합니다.</div>
+<br>
+<p><strong>3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)</strong></p>
+<p>Category: Subject-Verb Agreement (복수 주어와 동사 수 일치)</p>
+<br>
+<p>Joey님은 복수 주어 뒤에 단수 동사를 사용하거나, 주어와 동사의 수 일치를 혼동하는 경우가 반복적으로 나타났습니다. 특히 'and'로 연결된 복수 주어 뒤에 오는 동사 형태에 주의가 필요합니다.</p>
+<br>
+<table>
+<tr><th>❌ 원문 (As Said)</th><th>✅ 교정 예시 (Correction)</th></tr>
+<tr><td>"But these days, we move the two carriers, two rollers, because my son and my wife <strong>has</strong> many clothes and many belongings."</td><td>"But these days, we move the two carriers, two rollers, because my son and my wife <strong>have</strong> many clothes and many belongings."</td></tr>
+<tr><td>"So if they are go travel to abroad, and meantime they are travel like a work." (Implied: "they travel")</td><td>"So when they travel abroad, they travel like work." (The original structure was complex, but the core issue is implied.)</td></tr>
+<tr><td>"When I was a single, my bag <strong>is</strong> so light." (This is a tense issue, but also implies a singular subject.)</td><td>"When I was single, my bag <strong>was</strong> so light." (Corrected for tense, but also highlighting singular vs. plural.)</td></tr>
+<tr><td>"And these days, the people change a little." (Implied: "people change")</td><td>"And these days, people change a little." (This sentence is grammatically correct as is, but the pattern of confusion exists.)</td></tr>
+</table>
+<br>
+<p>📌 <strong>핵심 규칙</strong>: 'and'로 연결된 두 명사 이상 또는 'we', 'they'와 같은 복수 대명사가 주어일 경우, 동사는 반드시 복수형(일반적으로 동사 원형)을 사용해야 합니다.</p>
+<br>
+<p>🔁 <strong>따라 읽기</strong>:</p>
+<p>🗣️ "My son and my wife <strong>have</strong> many clothes and belongings."</p>
+<p>🗣️ "When they travel abroad, they <strong>travel</strong> like work."</p>
+<p>🗣️ "When I was single, my bag <strong>was</strong> so light." (Note: This sentence was primarily a tense issue, but the pattern of subject-verb confusion is observed elsewhere.)</p>
+<br>
+<p><strong>4. 📗 어휘 확장 (Vocabulary Vault)</strong></p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>get away</strong> /ɡɛt əˈweɪ/ (phrasal verb)</div>
+<div class="item">뜻: (일상에서 벗어나) 휴가를 떠나다, 잠시 떠나다</div>
+<div class="item">실전 예문: "I need to get away for a weekend to recharge."</div>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>tourist trap</strong> /ˈtʊərɪst træp/ (noun)</div>
+<div class="item">뜻: 관광객을 대상으로 바가지를 씌우는, 실속 없는 관광지</div>
+<div class="item">실전 예문: "Be careful not to fall for any tourist traps in the city center."</div>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>local gem</strong> /ˈloʊkəl dʒɛm/ (noun phrase)</div>
+<div class="item">뜻: 현지인만 아는 숨겨진 명소/보석 같은 곳</div>
+<div class="item">실전 예문: "We found a fantastic local gem for dinner last night."</div>
+<br>
+<div class="numbered"><strong>4.</strong> <strong>change of scenery</strong> /tʃeɪndʒ əv ˈsiːnəri/ (noun phrase)</div>
+<div class="item">뜻: 기분 전환, 새로운 환경</div>
+<div class="item">실전 예문: "A short trip can provide a much-needed change of scenery."</div>
+<br>
+<div class="numbered"><strong>5.</strong> <strong>packed with activity</strong> /ˈpækt wɪθ ækˈtɪvəti/ (adjective phrase)</div>
+<div class="item">뜻: 활동으로 가득 찬, 매우 바쁜</div>
+<div class="item">실전 예문: "My schedule is usually packed with activity during the week."</div>
+<br>
+<p><strong>5. 📝 실전 복습 챌린지 (Practice)</strong></p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>상황:</strong> 친구에게 최근 다녀온 여행에 대해 이야기하고 싶습니다. 특히, 너무 유명해서 실망했던 관광지에 대해 말하고 싶을 때 사용할 수 있는 표현을 영어로 만들어 보세요.</div>
+<div class="item"><strong>영작:</strong> "That place was a real ______." (힌트: 2번 어휘)</div>
+<div class="item"><strong>모범 답안:</strong> "That place was a real tourist trap."</div>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>상황:</strong> 일상에 지쳐 잠시 벗어나고 싶을 때, 영어로 어떻게 표현할 수 있을까요? (힌트: 4번 어휘 활용)</div>
+<div class="item"><strong>영작:</strong> "I really need a ______."</div>
+<div class="item"><strong>모범 답안:</strong> "I really need a change of scenery."</div>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>상황:</strong> 한국인들이 해외여행 시 종종 여행을 일처럼 빡빡하게 계획하는 경향이 있다는 점을 설명하고 싶습니다. 이때, '일처럼 여행하다'라는 의미를 자연스럽게 전달해 보세요. (힌트: 2번 유창성 업그레이드 표현 활용)</div>
+<div class="item"><strong>영작:</strong> "When Koreans travel abroad, they often ______."</div>
+<div class="item"><strong>모범 답안:</strong> "When Koreans travel abroad, they often treat it like work."</div>
+<br>
+<p><strong>6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)</strong></p>
+<br>
+<div class="item">✨ <strong>Good Job</strong>:</div>
+<p>"And these days, the people change a little. So that depends on people. And sometimes some people like their relaxed and slow but some people here they want to packed with activity so what uh like work and some people focus on their food or shopping."</p>
+<p>Joey님은 한국 사람들의 여행 스타일이 변화하고 있다는 점을 설명하며, 여전히 일처럼 여행하는 사람들과 여유롭고 느긋한 여행을 선호하는 사람들을 비교하며 구체적인 예시(음식, 쇼핑 등)를 들어 설명했습니다. 다양한 관점을 제시하며 자신의 생각을 논리적으로 풀어낸 점이 아주 좋았습니다!</p>
+<br>
+<div class="item">🚀 <strong>내일의 한 문장</strong>:</div>
+<p>"Karin, I'm looking forward to our lesson today. I hope we can talk about some interesting travel destinations, maybe even find a hidden <strong>local gem</strong>!"</p>
+<p>(다음 수업 시작 시 튜터에게 던져보세요!)</p>
+<br>
+<br>
+<p><strong>[성과 지표]</strong></p>
+<br>
+<div class="item"><strong>유창성 점수</strong>: 7/10</div>
+<div class="item"><strong>근거</strong>: Joey님은 전반적으로 자신의 생각을 표현하는 데 큰 어려움이 없었습니다. 특히 다양한 여행 스타일에 대한 비교 설명이나 개인적인 경험을 이야기할 때 자연스러운 흐름을 보여주었습니다. 다만, 몇 가지 표현에서 더 자연스럽고 격식 있는 표현으로 다듬을 여지가 있었습니다.</div>
+<div class="item"><strong>다음 수업 '원포인트 액션 플랜'</strong>:</div>
+<p>오늘 배운 'local gem', 'change of scenery', 'get away'와 같은 표현들을 활용하여, 다음 수업에서 본인이 최근 경험했던 '특별했던 장소'나 '기분 전환이 필요했던 순간'에 대해 영어로 이야기해보는 연습을 하겠습니다.</p></div>
+        </div>
+        <div id="tab-transcript" class="tab-content">
+            <div class="transcript"><span class="student">[Student]</span> Hello, Karin. Good morning. Good evening.
+<span class="tutor">[Tutor]</span> Good morning, Joey.
+<span class="student">[Student]</span> Yes.
+<span class="student">[Student]</span> I&#x27;m not having any technical issues today.
+<span class="student">[Student]</span> Oh, yes. I&#x27;m good. Everything is good.
+<span class="tutor">[Tutor]</span> Wonderful.
+<span class="tutor">[Tutor]</span> How was your day?
+<span class="student">[Student]</span> It&#x27;s much better than yesterday. Thank you for asking.
+<span class="tutor">[Tutor]</span> Okay, good. Yes, it&#x27;s nice.
+<span class="tutor">[Tutor]</span> All right. Well, happy Friday. Let&#x27;s get your day started so the weekend comes sooner, all right?
+<span class="student">[Student]</span> Yeah, you&#x27;re right. And this week is my son&#x27;s birthday week.
+<span class="tutor">[Tutor]</span> Oh, wow. You have a party?
+<span class="student">[Student]</span> Yes, of course. That is the party weekend. So, yeah, we really enjoyed that.
+<span class="student">[Student]</span> Yeah, I hope everything goes wonderful. Thank you.
+<span class="tutor">[Tutor]</span> All right, Joey, we&#x27;re at the bottom of page nine, if you&#x27;re ready.
+<span class="student">[Student]</span> Yeah, I&#x27;m ready.
+<span class="tutor">[Tutor]</span> And I&#x27;ll get you to read the useful vocab for me.
+<span class="student">[Student]</span> Okay.
+<span class="tutor">[Tutor]</span> Today&#x27;s subject is the best trip ever.
+<span class="tutor">[Tutor]</span> And today&#x27;s vocabulary.
+<span class="student">[Student]</span> We can get away.
+<span class="student">[Student]</span> We can get away. Or short weekend trip to relax, usually close to home.
+<span class="student">[Student]</span> We can get away to a hot spring.
+<span class="tutor">[Tutor]</span> Very nice.
+<span class="tutor">[Tutor]</span> Now, I understand that Monday the 17th is a holiday for you.
+<span class="tutor">[Tutor]</span> Is that correct?
+<span class="student">[Student]</span> Yeah, it&#x27;s correct.
+<span class="tutor">[Tutor]</span> That is Independence Day from Japan.
+<span class="student">[Student]</span> Oh, right.
+<span class="tutor">[Tutor]</span> Wonderful.
+<span class="tutor">[Tutor]</span> You get a three-day weekend.
+<span class="tutor">[Tutor]</span> That&#x27;s awesome.
+<span class="student">[Student]</span> Yes.
+<span class="tutor">[Tutor]</span> All right.
+<span class="tutor">[Tutor]</span> Let&#x27;s continue on.
+<span class="student">[Student]</span> Okay.
+<span class="tutor">[Tutor]</span> Tourist trap.
+<span class="student">[Student]</span> A popular place for tourists that&#x27;s overpriced and fake.
+<span class="student">[Student]</span> Denmark was such a tourist trap.
+<span class="student">[Student]</span> Tourist trap.
+<span class="tutor">[Tutor]</span> Very nice.
+<span class="tutor">[Tutor]</span> All right, let&#x27;s try the last one.
+<span class="student">[Student]</span> The last one?
+<span class="tutor">[Tutor]</span> Local gem.
+<span class="student">[Student]</span> A special place only locals usually know about.
+<span class="student">[Student]</span> You found a little local gem near our hotel.
+<span class="tutor">[Tutor]</span> Very good.
+<span class="student">[Student]</span> Okay.
+<span class="tutor">[Tutor]</span> All right.
+<span class="tutor">[Tutor]</span> Let&#x27;s go on to the useful expressions.
+<span class="student">[Student]</span> Okay.
+<span class="student">[Student]</span> I wouldn&#x27;t go out of my way to see it.
+<span class="student">[Student]</span> Used when a place isn&#x27;t worth the time or effort.
+<span class="student">[Student]</span> I need a change of scenery.
+<span class="student">[Student]</span> Used when you want a break from daily life.
+<span class="student">[Student]</span> Yes, I see.
+<span class="tutor">[Tutor]</span> Good reading.
+<span class="tutor">[Tutor]</span> Do you have any questions about the vocabulary or the expression?
+<span class="student">[Student]</span> No, just I have one question.
+<span class="student">[Student]</span> That is not about this vocabulary and expression.
+<span class="tutor">[Tutor]</span> That&#x27;s fine.
+<span class="student">[Student]</span> Usually I say that depends on the person or that depends on people.
+<span class="student">[Student]</span> Which is better expression?
+<span class="student">[Student]</span> Which is correct expression?
+<span class="student">[Student]</span> It depends on people or it depends on the person.
+<span class="student">[Student]</span> What is the more correct expression, teacher?
+<span class="tutor">[Tutor]</span> Well, it depends.
+<span class="tutor">[Tutor]</span> If you&#x27;re talking about someone singular,
+<span class="tutor">[Tutor]</span> then you would say it depends on the person.
+<span class="student">[Student]</span> Person.
+<span class="tutor">[Tutor]</span> Yes.
+<span class="tutor">[Tutor]</span> If you are talking about more than two or more people,
+<span class="tutor">[Tutor]</span> then you could say people or group.
+<span class="student">[Student]</span> So, both are correct expressions,
+<span class="student">[Student]</span> but if I use that expression people,
+<span class="student">[Student]</span> that is about group.
+<span class="tutor">[Tutor]</span> That&#x27;s the plural version.
+<span class="student">[Student]</span> Yes, I see.
+<span class="student">[Student]</span> I understand.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="tutor">[Tutor]</span> All right.
+<span class="tutor">[Tutor]</span> Very good.
+<span class="student">[Student]</span> Okay.
+<span class="tutor">[Tutor]</span> All right.
+<span class="tutor">[Tutor]</span> Let&#x27;s go up to the top of page 9. I&#x27;ll have you read the warm-up question and respond.
+<span class="student">[Student]</span> Okay. What kind of travel style is common for people from your country?
+<span class="student">[Student]</span> That depends on a person.
+<span class="student">[Student]</span> But usually in Korea, the Koreans are diligent.
+<span class="student">[Student]</span> So if they are go travel to abroad, and meantime they are travel like a work.
+<span class="student">[Student]</span> For example they are get up early the 6 a.m. and then start to travel go to the whole work 5 points and then finish the 9 or 10 p.m.
+<span class="student">[Student]</span> It is similar to the work.
+<span class="student">[Student]</span> Yeah, I don&#x27;t like that.
+<span class="student">[Student]</span> And these days, the people change a little.
+<span class="student">[Student]</span> So that depends on people.
+<span class="student">[Student]</span> And sometimes some people like their relaxed and slow but some people here they want to
+<span class="student">[Student]</span> packed with activity so what uh like work and some people focus on their food or shopping.
+<span class="student">[Student]</span> Yeah, it&#x27;s different. Yes, person. Uh-huh.
+<span class="tutor">[Tutor]</span> Um, personally, when I go shop, when I go visiting another country, I try to have days that are relaxed and slow. And then other days, I might
+<span class="tutor">[Tutor]</span> do like a day tour or, you know, have a number of activities. So I try to balance between
+<span class="tutor">[Tutor]</span> the two.
+<span class="student">[Student]</span> That&#x27;s a nice way.
+<span class="tutor">[Tutor]</span> Yeah, I think so. Because especially if I&#x27;m tired from a day packed with activities, the
+<span class="tutor">[Tutor]</span> next day I can just relax on the beach.
+<span class="student">[Student]</span> Yeah, it is similar.
+<span class="student">[Student]</span> Pongdang, pongdang.
+<span class="tutor">[Tutor]</span> Yes.
+<span class="tutor">[Tutor]</span> Yes.
+<span class="tutor">[Tutor]</span> Strong and weak, strong and weak.
+<span class="student">[Student]</span> Yeah, it&#x27;s so nice.
+<span class="student">[Student]</span> And I think the Koreans don&#x27;t have relaxed,
+<span class="student">[Student]</span> don&#x27;t have their relaxed time or,
+<span class="student">[Student]</span> what can I say?
+<span class="student">[Student]</span> How can I say?
+<span class="student">[Student]</span> Don&#x27;t have their, you know,
+<span class="tutor">[Tutor]</span> They don&#x27;t get enough relaxation.
+<span class="student">[Student]</span> Yeah, relaxation.
+<span class="student">[Student]</span> Just a moment, teacher.
+<span class="student">[Student]</span> I searched something.
+<span class="student">[Student]</span> Yeah, sorry.
+<span class="tutor">[Tutor]</span> Absolutely.
+<span class="tutor">[Tutor]</span> Google Translate is wonderful.
+<span class="student">[Student]</span> Yes, yes.
+<span class="student">[Student]</span> That is the meaning.
+<span class="student">[Student]</span> That meaning is the room and space.
+<span class="student">[Student]</span> And I think it is not a specific correct expression, but space, flexibility, composure, margin.
+<span class="student">[Student]</span> Yes.
+<span class="student">[Student]</span> Diversion.
+<span class="student">[Student]</span> Yeah, yeah.
+<span class="student">[Student]</span> Koreans don&#x27;t have their mind of flexibility or comfort or margin for a spare.
+<span class="tutor">[Tutor]</span> Well, I know that Korean people are very driven.
+<span class="tutor">[Tutor]</span> They&#x27;re very hardworking.
+<span class="tutor">[Tutor]</span> And sometimes the idea of being relaxed or off the clock can be difficult.
+<span class="tutor">[Tutor]</span> If that&#x27;s all you know, then doing something different feels very strange.
+<span class="student">[Student]</span> Okay.
+<span class="tutor">[Tutor]</span> Good.
+<span class="tutor">[Tutor]</span> You&#x27;re doing fine.
+<span class="tutor">[Tutor]</span> Let&#x27;s get you to read the question for part B and respond.
+<span class="student">[Student]</span> Okay. What do you think feel more like a real vacation and why?
+<span class="student">[Student]</span> Flying to another country, staying at a local resort.
+<span class="tutor">[Tutor]</span> I see.
+<span class="student">[Student]</span> Personally,
+<span class="student">[Student]</span> I like to
+<span class="student">[Student]</span> I like
+<span class="student">[Student]</span> I think
+<span class="student">[Student]</span> the travel is
+<span class="student">[Student]</span> the travel has
+<span class="student">[Student]</span> freedom
+<span class="student">[Student]</span> and new experience.
+<span class="student">[Student]</span> But if I
+<span class="student">[Student]</span> stay at local resort,
+<span class="student">[Student]</span> I have some
+<span class="student">[Student]</span> rest my time,
+<span class="student">[Student]</span> but we don&#x27;t have
+<span class="student">[Student]</span> the experience
+<span class="student">[Student]</span> of the new or
+<span class="student">[Student]</span> or something you
+<span class="student">[Student]</span> something you think.
+<span class="student">[Student]</span> So,
+<span class="student">[Student]</span> personally I like to
+<span class="student">[Student]</span> I like to
+<span class="student">[Student]</span> fly to another country
+<span class="student">[Student]</span> because
+<span class="student">[Student]</span> if I go there,
+<span class="student">[Student]</span> the food,
+<span class="student">[Student]</span> history,
+<span class="student">[Student]</span> people,
+<span class="student">[Student]</span> everything is different.
+<span class="student">[Student]</span> And
+<span class="student">[Student]</span> I had more experience.
+<span class="student">[Student]</span> So,
+<span class="student">[Student]</span> usually I love to
+<span class="student">[Student]</span> the
+<span class="student">[Student]</span> abroad.
+<span class="student">[Student]</span> Yeah,
+<span class="student">[Student]</span> in my vacation.
+<span class="student">[Student]</span> And
+<span class="student">[Student]</span> I like to visit the local market because I can see so many new things, new products,
+<span class="student">[Student]</span> and new people.
+<span class="student">[Student]</span> So yeah, that is my preference.
+<span class="tutor">[Tutor]</span> I have to admit that when I&#x27;ve flown to another country, it does feel uh like more of a holiday. Like you said, you see the you see the people, the food, the history. I I love the markets and I love, you know,
+<span class="tutor">[Tutor]</span> seeing the scenery and nature. So yeah, it&#x27;s a real change of environment and that&#x27;s what makes it
+<span class="tutor">[Tutor]</span> feel like a holiday.
+<span class="student">[Student]</span> You&#x27;re right. Quite right.
+<span class="tutor">[Tutor]</span> All right. Very nice.
+<span class="tutor">[Tutor]</span> Let&#x27;s get you to read the
+<span class="tutor">[Tutor]</span> situation next.
+<span class="student">[Student]</span> Okay. The problem solving.
+<span class="student">[Student]</span> The situation.
+<span class="student">[Student]</span> You check into your hotel
+<span class="student">[Student]</span> after a long
+<span class="student">[Student]</span> thrilling day.
+<span class="student">[Student]</span> You were looking forward
+<span class="student">[Student]</span> to relaxing, but
+<span class="student">[Student]</span> the room is dirty
+<span class="student">[Student]</span> and has a strange
+<span class="student">[Student]</span> smell. Oh my god.
+<span class="student">[Student]</span> You are exhausted and just want to sleep, but you don&#x27;t feel comfortable staying there.
+<span class="student">[Student]</span> Would you ask to change rooms or try to stay anyway?
+<span class="student">[Student]</span> Hmm, I see. That&#x27;s a problem.
+<span class="student">[Student]</span> Usually, these days, I travel with my family.
+<span class="student">[Student]</span> So it is the we got together. So I&#x27;m I&#x27;m both of my family. So usually, yeah, I
+<span class="student">[Student]</span> keep my right. So if I tired and exhausted and need to relaxing, but I go to
+<span class="student">[Student]</span> the front and then say change my room. Yeah, because yeah, that is the I&#x27;m
+<span class="student">[Student]</span> transparent. I have a responsibility of my family&#x27;s and change a room. Yeah. And
+<span class="student">[Student]</span> if I travel alone, if I imagine that situation, I&#x27;m also changing my room
+<span class="student">[Student]</span> because I checked in this room and sleep and then get up. Yeah, my feeling is not
+<span class="student">[Student]</span> comfortable. Everything is uncomfortable and angry. So people do that situation.
+<span class="student">[Student]</span> Yeah, I&#x27;ve changed my situation, my space.
+<span class="student">[Student]</span> Yeah.
+<span class="student">[Student]</span> Yeah.
+<span class="tutor">[Tutor]</span> Unfortunately, sometimes rooms get missed.
+<span class="tutor">[Tutor]</span> And if the room is not up to the standards you were expecting, you have every right to tell them that and ask for a different room.
+<span class="tutor">[Tutor]</span> Because you&#x27;re paying a good amount of money for a place to sit and feel clean and safe.
+<span class="student">[Student]</span> Uh-huh.
+<span class="tutor">[Tutor]</span> And if the room feels dirty, you&#x27;re absolutely right.
+<span class="tutor">[Tutor]</span> You don&#x27;t feel comfortable.
+<span class="student">[Student]</span> Yeah.
+<span class="tutor">[Tutor]</span> It&#x27;s not nice.
+<span class="student">[Student]</span> Yeah.
+<span class="tutor">[Tutor]</span> And all you want is a nice, clean room.
+<span class="student">[Student]</span> Yeah, that is our right.
+<span class="student">[Student]</span> Yeah.
+<span class="student">[Student]</span> Mm-mm-mm.
+<span class="student">[Student]</span> Uh-huh.
+<span class="student">[Student]</span> Yeah.
+<span class="tutor">[Tutor]</span> I&#x27;ve been very lucky.
+<span class="tutor">[Tutor]</span> I usually haven&#x27;t had too much of a problem when I travel.
+<span class="tutor">[Tutor]</span> I&#x27;ve found some hotels or I&#x27;ve stayed in hostels.
+<span class="tutor">[Tutor]</span> And sometimes the level of cleanliness is just incredible.
+<span class="tutor">[Tutor]</span> It&#x27;s really, really good.
+<span class="tutor">[Tutor]</span> So those are the ones I send a good review for.
+<span class="tutor">[Tutor]</span> If it&#x27;s not good, I tell them about it.
+<span class="tutor">[Tutor]</span> All right.
+<span class="tutor">[Tutor]</span> We&#x27;re doing great.
+<span class="tutor">[Tutor]</span> Let&#x27;s move on to the warm down.
+<span class="tutor">[Tutor]</span> I&#x27;ll read question number one.
+<span class="student">[Student]</span> Number one.
+<span class="tutor">[Tutor]</span> How has your travel style changed over time?
+<span class="student">[Student]</span> Before the answer, I have a question.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="student">[Student]</span> Over time means is there past?
+<span class="tutor">[Tutor]</span> It could, yes.
+<span class="tutor">[Tutor]</span> Yes, you might travel differently as a family versus traveling by yourself or with your wife as a couple.
+<span class="student">[Student]</span> I see, understand.
+<span class="student">[Student]</span> When I was a single, my bag is so light.
+<span class="student">[Student]</span> I don&#x27;t use the roller, just use the one backpack.
+<span class="student">[Student]</span> So it is so light and so right and more easy.
+<span class="student">[Student]</span> But these days, we move the two carriers, two rollers, because my son and my wife has
+<span class="student">[Student]</span> many clothes and many belongings. So usually these days the change is more heavy and more prepared. Yeah, travel. Yeah, that is a big change. More prepare, more luggage.
+<span class="student">[Student]</span> Yeah, and the schedule also difference. When I was a single, I moved a lot. I walked a lot.
+<span class="student">[Student]</span> 30,000 steps per day. It is so long step and got many experience.
+<span class="student">[Student]</span> But now they... Of course. It has changed. I find more safety, safe schedule.
+<span class="student">[Student]</span> So yeah, that is difference. It is.
+<span class="tutor">[Tutor]</span> It&#x27;s incredibly different. I&#x27;ve had an opportunity
+<span class="tutor">[Tutor]</span> to travel with my family and I&#x27;ve had a chance to travel alone. And when you
+<span class="tutor">[Tutor]</span> travel with your family, it may be a vacation, but it still feels a little
+<span class="tutor">[Tutor]</span> like work because you want to make sure that everybody is happy and safe and
+<span class="tutor">[Tutor]</span> having a good time. Yeah. And you&#x27;re by yourself, you&#x27;re free. You don&#x27;t have to
+<span class="tutor">[Tutor]</span> worry about anybody but yourself. Yes. And so as much as I love vacationing with my family,
+<span class="tutor">[Tutor]</span> I&#x27;ve really enjoyed this. I&#x27;ve really enjoyed vacationing with a friend from work or going on
+<span class="tutor">[Tutor]</span> my own traveling solo.
+<span class="student">[Student]</span> Okay.
+<span class="tutor">[Tutor]</span> That&#x27;s the best of both worlds. Yeah. All right, my friend. So you&#x27;ve
+<span class="tutor">[Tutor]</span> gotten all the way through page nine. We have a few minutes. I really don&#x27;t want to start the next
+<span class="tutor">[Tutor]</span> page. So if you don&#x27;t mind, I was going to ask, you said it&#x27;s your son&#x27;s birthday this weekend.
+<span class="tutor">[Tutor]</span> What sort of events or what sort of activities do you plan? Do you have a party at home? Do you
+<span class="tutor">[Tutor]</span> take him to a restaurant or a special place? Is it a big party or a little party?
+<span class="student">[Student]</span> Our family usually make a plan that my son&#x27;s birthday week, we will go to travel.
+<span class="tutor">[Tutor]</span> The whole week, okay.
+<span class="student">[Student]</span> Yeah, so we are go to the travel to the Xi&#x27;an in China.
+<span class="student">[Student]</span> So that is also a good activity for my son.
+<span class="tutor">[Tutor]</span> Yeah, very nice.
+<span class="student">[Student]</span> Yeah, that is a plan, but my son&#x27;s birthday is not a correct travel day.
+<span class="student">[Student]</span> So at that day, I just go make a small party.
+<span class="student">[Student]</span> Yeah, go to the picnic or go to the weekend&#x27;s getaway.
+<span class="student">[Student]</span> Yeah, that is all.
+<span class="tutor">[Tutor]</span> That sounds fine, especially if it&#x27;s just a family get-together.
+<span class="tutor">[Tutor]</span> And you don&#x27;t need anything big and fancy.
+<span class="tutor">[Tutor]</span> Okay, all right.
+<span class="tutor">[Tutor]</span> So another thing I wanted to talk about, Joey,
+<span class="tutor">[Tutor]</span> is that we&#x27;ve been working together now for several weeks
+<span class="tutor">[Tutor]</span> and I just want to check in how you&#x27;re finding your program.
+<span class="tutor">[Tutor]</span> Do you have any questions or concerns?
+<span class="tutor">[Tutor]</span> Is there anything you need me to change or add to your program
+<span class="tutor">[Tutor]</span> to help you feel better about it, or is everything okay?
+<span class="student">[Student]</span> I think you choose these textbooks.
+<span class="student">[Student]</span> So I&#x27;m so, I think that is so good and so nice.
+<span class="student">[Student]</span> So if I finish that course, maybe, I don&#x27;t know,
+<span class="student">[Student]</span> I&#x27;m not sure that section is the part or finish,
+<span class="student">[Student]</span> two or not, continue three.
+<span class="student">[Student]</span> I&#x27;m not sure, but if I finish that Snapchat,
+<span class="tutor">[Tutor]</span> Yes.
+<span class="student">[Student]</span> Just discuss with you.
+<span class="tutor">[Tutor]</span> Yes, yes.
+<span class="tutor">[Tutor]</span> Well, yeah, so there&#x27;s only the two parts.
+<span class="tutor">[Tutor]</span> So there&#x27;s part one and part two.
+<span class="tutor">[Tutor]</span> So once we get closer to the end, then we can re-examine what your needs are
+<span class="tutor">[Tutor]</span> and try to work with a study coach to help you find the best program after Snapchat is completed.
+<span class="student">[Student]</span> Thank you so much.
+<span class="tutor">[Tutor]</span> Sound okay?
+<span class="student">[Student]</span> Yeah.
+<span class="tutor">[Tutor]</span> You&#x27;re very, very welcome.
+<span class="tutor">[Tutor]</span> If you ever have any English issue or vocabulary or any concerns,
+<span class="tutor">[Tutor]</span> please do not hesitate to bring them to class.
+<span class="tutor">[Tutor]</span> I&#x27;m more than happy to help you, okay?
+<span class="student">[Student]</span> Yeah.
+<span class="student">[Student]</span> Thank you so much.
+<span class="student">[Student]</span> Yeah.
+<span class="tutor">[Tutor]</span> All right.
+<span class="tutor">[Tutor]</span> You have a great weekend.
+<span class="tutor">[Tutor]</span> I&#x27;ll talk to you next time.
+<span class="tutor">[Tutor]</span> Thank you, Joey.
+<span class="tutor">[Tutor]</span> Bye-bye.
+<span class="student">[Student]</span> You too.
+<span class="student">[Student]</span> Bye-bye, teacher.</div>
+        </div>
+    </div>
+    <div class="toast" id="toast">✅ 프롬프트가 복사되었습니다!</div>
+    <script>
+        const REVIEW_PROMPT="너는 나의 영어 회화 복습 파트너야. 오늘 내 전화영어 수업 내용을 기반으로 대화하면서 복습을 도와줘.\n\n[오늘 수업 전사 내용]\n[Student] Hello, Karin. Good morning. Good evening.\n[Tutor] Good morning, Joey.\n[Student] Yes.\n[Student] I'm not having any technical issues today.\n[Student] Oh, yes. I'm good. Everything is good.\n[Tutor] Wonderful.\n[Tutor] How was your day?\n[Student] It's much better than yesterday. Thank you for asking.\n[Tutor] Okay, good. Yes, it's nice.\n[Tutor] All right. Well, happy Friday. Let's get your day started so the weekend comes sooner, all right?\n[Student] Yeah, you're right. And this week is my son's birthday week.\n[Tutor] Oh, wow. You have a party?\n[Student] Yes, of course. That is the party weekend. So, yeah, we really enjoyed that.\n[Student] Yeah, I hope everything goes wonderful. Thank you.\n[Tutor] All right, Joey, we're at the bottom of page nine, if you're ready.\n[Student] Yeah, I'm ready.\n[Tutor] And I'll get you to read the useful vocab for me.\n[Student] Okay.\n[Tutor] Today's subject is the best trip ever.\n[Tutor] And today's vocabulary.\n[Student] We can get away.\n[Student] We can get away. Or short weekend trip to relax, usually close to home.\n[Student] We can get away to a hot spring.\n[Tutor] Very nice.\n[Tutor] Now, I understand that Monday the 17th is a holiday for you.\n[Tutor] Is that correct?\n[Student] Yeah, it's correct.\n[Tutor] That is Independence Day from Japan.\n[Student] Oh, right.\n[Tutor] Wonderful.\n[Tutor] You get a three-day weekend.\n[Tutor] That's awesome.\n[Student] Yes.\n[Tutor] All right.\n[Tutor] Let's continue on.\n[Student] Okay.\n[Tutor] Tourist trap.\n[Student] A popular place for tourists that's overpriced and fake.\n[Student] Denmark was such a tourist trap.\n[Student] Tourist trap.\n[Tutor] Very nice.\n[Tutor] All right, let's try the last one.\n[Student] The last one?\n[Tutor] Local gem.\n[Student] A special place only locals usually know about.\n[Student] You found a little local gem near our hotel.\n[Tutor] Very good.\n[Student] Okay.\n[Tutor] All right.\n[Tutor] Let's go on to the useful expressions.\n[Student] Okay.\n[Student] I wouldn't go out of my way to see it.\n[Student] Used when a place isn't worth the time or effort.\n[Student] I need a change of scenery.\n[Student] Used when you want a break from daily life.\n[Student] Yes, I see.\n[Tutor] Good reading.\n[Tutor] Do you have any questions about the vocabulary or the expression?\n[Student] No, just I have one question.\n[Student] That is not about this vocabulary and expression.\n[Tutor] That's fine.\n[Student] Usually I say that depends on the person or that depends on people.\n[Student] Which is better expression?\n[Student] Which is correct expression?\n[Student] It depends on people or it depends on the person.\n[Student] What is the more correct expression, teacher?\n[Tutor] Well, it depends.\n[Tutor] If you're talking about someone singular,\n[Tutor] then you would say it depends on the person.\n[Student] Person.\n[Tutor] Yes.\n[Tutor] If you are talking about more than two or more people,\n[Tutor] then you could say people or group.\n[Student] So, both are correct expressions,\n[Student] but if I use that expression people,\n[Student] that is about group.\n[Tutor] That's the plural version.\n[Student] Yes, I see.\n[Student] I understand.\n[Tutor] Okay.\n[Tutor] All right.\n[Tutor] Very good.\n[Student] Okay.\n[Tutor] All right.\n[Tutor] Let's go up to the top of page 9. I'll have you read the warm-up question and respond.\n[Student] Okay. What kind of travel style is common for people from your country?\n[Student] That depends on a person.\n[Student] But usually in Korea, the Koreans are diligent.\n[Student] So if they are go travel to abroad, and meantime they are travel like a work.\n[Student] For example they are get up early the 6 a.m. and then start to travel go to the whole work 5 points and then finish the 9 or 10 p.m.\n[Student] It is similar to the work.\n[Student] Yeah, I don't like that.\n[Student] And these days, the people change a little.\n[Student] So that depends on people.\n[Student] And sometimes some people like their relaxed and slow but some people here they want to\n[Student] packed with activity so what uh like work and some people focus on their food or shopping.\n[Student] Yeah, it's different. Yes, person. Uh-huh.\n[Tutor] Um, personally, when I go shop, when I go visiting another country, I try to have days that are relaxed and slow. And then other days, I might\n[Tutor] do like a day tour or, you know, have a number of activities. So I try to balance between\n[Tutor] the two.\n[Student] That's a nice way.\n[Tutor] Yeah, I think so. Because especially if I'm tired from a day packed with activities, the\n[Tutor] next day I can just relax on the beach.\n[Student] Yeah, it is similar.\n[Student] Pongdang, pongdang.\n[Tutor] Yes.\n[Tutor] Yes.\n[Tutor] Strong and weak, strong and weak.\n[Student] Yeah, it's so nice.\n[Student] And I think the Koreans don't have relaxed,\n[Student] don't have their relaxed time or,\n[Student] what can I say?\n[Student] How can I say?\n[Student] Don't have their, you know,\n[Tutor] They don't get enough relaxation.\n[Student] Yeah, relaxation.\n[Student] Just a moment, teacher.\n[Student] I searched something.\n[Student] Yeah, sorry.\n[Tutor] Absolutely.\n[Tutor] Google Translate is wonderful.\n[Student] Yes, yes.\n[Student] That is the meaning.\n[Student] That meaning is the room and space.\n[Student] And I think it is not a specific correct expression, but space, flexibility, composure, margin.\n[Student] Yes.\n[Student] Diversion.\n[Student] Yeah, yeah.\n[Student] Koreans don't have their mind of flexibility or comfort or margin for a spare.\n[Tutor] Well, I know that Korean people are very driven.\n[Tutor] They're very hardworking.\n[Tutor] And sometimes the idea of being relaxed or off the clock can be difficult.\n[Tutor] If that's all you know, then doing something different feels very strange.\n[Student] Okay.\n[Tutor] Good.\n[Tutor] You're doing fine.\n[Tutor] Let's get you to read the question for part B and respond.\n[Student] Okay. What do you think feel more like a real vacation and why?\n[Student] Flying to another country, staying at a local resort.\n[Tutor] I see.\n[Student] Personally,\n[Student] I like to\n[Student] I like\n[Student] I think\n[Student] the travel is\n[Student] the travel has\n[Student] freedom\n[Student] and new experience.\n[Student] But if I\n[Student] stay at local resort,\n[Student] I have some\n[Student] rest my time,\n[Student] but we don't have\n[Student] the experience\n[Student] of the new or\n[Student] or something you\n[Student] something you think.\n[Student] So,\n[Student] personally I like to\n[Student] I like to\n[Student] fly to another country\n[Student] because\n[Student] if I go there,\n[Student] the food,\n[Student] history,\n[Student] people,\n[Student] everything is different.\n[Student] And\n[Student] I had more experience.\n[Student] So,\n[Student] usually I love to\n[Student] the\n[Student] abroad.\n[Student] Yeah,\n[Student] in my vacation.\n[Student] And\n[Student] I like to visit the local market because I can see so many new things, new products,\n[Student] and new people.\n[Student] So yeah, that is my preference.\n[Tutor] I have to admit that when I've flown to another country, it does feel uh like more of a holiday. Like you said, you see the you see the people, the food, the history. I I love the markets and I love, you know,\n[Tutor] seeing the scenery and nature. So yeah, it's a real change of environment and that's what makes it\n[Tutor] feel like a holiday.\n[Student] You're right. Quite right.\n[Tutor] All right. Very nice.\n[Tutor] Let's get you to read the\n[Tutor] situation next.\n[Student] Okay. The problem solving.\n[Student] The situation.\n[Student] You check into your hotel\n[Student] after a long\n[Student] thrilling day.\n[Student] You were looking forward\n[Student] to relaxing, but\n[Student] the room is dirty\n[Student] and has a strange\n[Student] smell. Oh my god.\n[Student] You are exhausted and just want to sleep, but you don't feel comfortable staying there.\n[Student] Would you ask to change rooms or try to stay anyway?\n[Student] Hmm, I see. That's a problem.\n[Student] Usually, these days, I travel with my family.\n[Student] So it is the we got together. So I'm I'm both of my family. So usually, yeah, I\n[Student] keep my right. So if I tired and exhausted and need to relaxing, but I go to\n[Student] the front and then say change my room. Yeah, because yeah, that is the I'm\n[Student] transparent. I have a responsibility of my family's and change a room. Yeah. And\n[Student] if I travel alone, if I imagine that situation, I'm also changing my room\n[Student] because I checked in this room and sleep and then get up. Yeah, my feeling is not\n[Student] comfortable. Everything is uncomfortable and angry. So people do that situation.\n[Student] Yeah, I've changed my situation, my space.\n[Student] Yeah.\n[Student] Yeah.\n[Tutor] Unfortunately, sometimes rooms get missed.\n[Tutor] And if the room is not up to the standards you were expecting, you have every right to tell them that and ask for a different room.\n[Tutor] Because you're paying a good amount of money for a place to sit and feel clean and safe.\n[Student] Uh-huh.\n[Tutor] And if the room feels dirty, you're absolutely right.\n[Tutor] You don't feel comfortable.\n[Student] Yeah.\n[Tutor] It's not nice.\n[Student] Yeah.\n[Tutor] And all you want is a nice, clean room.\n[Student] Yeah, that is our right.\n[Student] Yeah.\n[Student] Mm-mm-mm.\n[Student] Uh-huh.\n[Student] Yeah.\n[Tutor] I've been very lucky.\n[Tutor] I usually haven't had too much of a problem when I travel.\n[Tutor] I've found some hotels or I've stayed in hostels.\n[Tutor] And sometimes the level of cleanliness is just incredible.\n[Tutor] It's really, really good.\n[Tutor] So those are the ones I send a good review for.\n[Tutor] If it's not good, I tell them about it.\n[Tutor] All right.\n[Tutor] We're doing great.\n[Tutor] Let's move on to the warm down.\n[Tutor] I'll read question number one.\n[Student] Number one.\n[Tutor] How has your travel style changed over time?\n[Student] Before the answer, I have a question.\n[Tutor] Okay.\n[Student] Over time means is there past?\n[Tutor] It could, yes.\n[Tutor] Yes, you might travel differently as a family versus traveling by yourself or with your wife as a couple.\n[Student] I see, understand.\n[Student] When I was a single, my bag is so light.\n[Student] I don't use the roller, just use the one backpack.\n[Student] So it is so light and so right and more easy.\n[Student] But these days, we move the two carriers, two rollers, because my son and my wife has\n[Student] many clothes and many belongings. So usually these days the change is more heavy and more prepared. Yeah, travel. Yeah, that is a big change. More prepare, more luggage.\n[Student] Yeah, and the schedule also difference. When I was a single, I moved a lot. I walked a lot.\n[Student] 30,000 steps per day. It is so long step and got many experience.\n[Student] But now they... Of course. It has changed. I find more safety, safe schedule.\n[Student] So yeah, that is difference. It is.\n[Tutor] It's incredibly different. I've had an opportunity\n[Tutor] to travel with my family and I've had a chance to travel alone. And when you\n[Tutor] travel with your family, it may be a vacation, but it still feels a little\n[Tutor] like work because you want to make sure that everybody is happy and safe and\n[Tutor] having a good time. Yeah. And you're by yourself, you're free. You don't have to\n[Tutor] worry about anybody but yourself. Yes. And so as much as I love vacationing with my family,\n[Tutor] I've really enjoyed this. I've really enjoyed vacationing with a friend from work or going on\n[Tutor] my own traveling solo.\n[Student] Okay.\n[Tutor] That's the best of both worlds. Yeah. All right, my friend. So you've\n[Tutor] gotten all the way through page nine. We have a few minutes. I really don't want to start the next\n[Tutor] page. So if you don't mind, I was going to ask, you said it's your son's birthday this weekend.\n[Tutor] What sort of events or what sort of activities do you plan? Do you have a party at home? Do you\n[Tutor] take him to a restaurant or a special place? Is it a big party or a little party?\n[Student] Our family usually make a plan that my son's birthday week, we will go to travel.\n[Tutor] The whole week, okay.\n[Student] Yeah, so we are go to the travel to the Xi'an in China.\n[Student] So that is also a good activity for my son.\n[Tutor] Yeah, very nice.\n[Student] Yeah, that is a plan, but my son's birthday is not a correct travel day.\n[Student] So at that day, I just go make a small party.\n[Student] Yeah, go to the picnic or go to the weekend's getaway.\n[Student] Yeah, that is all.\n[Tutor] That sounds fine, especially if it's just a family get-together.\n[Tutor] And you don't need anything big and fancy.\n[Tutor] Okay, all right.\n[Tutor] So another thing I wanted to talk about, Joey,\n[Tutor] is that we've been working together now for several weeks\n[Tutor] and I just want to check in how you're finding your program.\n[Tutor] Do you have any questions or concerns?\n[Tutor] Is there anything you need me to change or add to your program\n[Tutor] to help you feel better about it, or is everything okay?\n[Student] I think you choose these textbooks.\n[Student] So I'm so, I think that is so good and so nice.\n[Student] So if I finish that course, maybe, I don't know,\n[Student] I'm not sure that section is the part or finish,\n[Student] two or not, continue three.\n[Student] I'm not sure, but if I finish that Snapchat,\n[Tutor] Yes.\n[Student] Just discuss with you.\n[Tutor] Yes, yes.\n[Tutor] Well, yeah, so there's only the two parts.\n[Tutor] So there's part one and part two.\n[Tutor] So once we get closer to the end, then we can re-examine what your needs are\n[Tutor] and try to work with a study coach to help you find the best program after Snapchat is completed.\n[Student] Thank you so much.\n[Tutor] Sound okay?\n[Student] Yeah.\n[Tutor] You're very, very welcome.\n[Tutor] If you ever have any English issue or vocabulary or any concerns,\n[Tutor] please do not hesitate to bring them to class.\n[Tutor] I'm more than happy to help you, okay?\n[Student] Yeah.\n[Student] Thank you so much.\n[Student] Yeah.\n[Tutor] All right.\n[Tutor] You have a great weekend.\n[Tutor] I'll talk to you next time.\n[Tutor] Thank you, Joey.\n[Tutor] Bye-bye.\n[Student] You too.\n[Student] Bye-bye, teacher.\n\n[AI 피드백]\n안녕하세요, Joey! 따뜻하고 실용적인 영어 코치입니다. 오늘 수업 내용 분석을 통해 Joey님의 영어 실력 향상을 돕겠습니다.\n\n---\n\n**0. 📌 Topic**\nTopic: Discussing Travel Styles and Personal Preferences\n\n**1. 📊 오늘의 대화 요약 (Summary)**\nJoey님은 오늘 수업에서 다양한 여행 스타일에 대해 이야기했습니다. 특히 혼자 여행할 때와 가족과 함께 여행할 때의 차이점, 그리고 한국인들이 여행을 대하는 방식에 대한 자신의 생각을 공유했습니다. 또한, 아들의 생일 주간 계획에 대해 이야기하며 개인적인 경험을 나누었습니다.\n\n**2. 💬 유창성 업그레이드 (Fluency & Natural Flow)**\n\n*   **1️⃣**\n    *   ❌ As Said: \"I'm not having any technical issues today.\"\n    *   ✅ Natural: \"I'm not experiencing any technical issues today.\"\n    *   💎 Professional: \"I'm all set technically for our session today.\"\n    *   💡 Coaching Point: \"experiencing\"을 사용하는 것이 문제를 겪고 있다는 것을 말할 때 더 흔하고 약간 더 격식 있는 표현입니다. \"All set\"은 준비가 되었음을 확인하는 매우 자연스럽고 빠른 방법입니다.\n\n*   **2️⃣**\n    *   ❌ As Said: \"So if they are go travel to abroad, and meantime they are travel like a work.\"\n    *   ✅ Natural: \"So when they travel abroad, they often treat it like work.\"\n    *   💎 Professional: \"When traveling abroad, many Koreans approach it with a work-like intensity.\"\n    *   💡 Coaching Point: 원문에는 \"are go travel\"과 같이 문법적으로 어색한 부분이 있습니다. 수정된 표현들은 \"treat it like work\" 또는 \"approach it with intensity\"와 같은 구문을 사용하여 더 자연스럽고 명확하게 의미를 전달합니다.\n\n*   **3️⃣**\n    *   ❌ As Said: \"But these days, we move the two carriers, two rollers, because my son and my wife has many clothes and many belongings.\"\n    *   ✅ Natural: \"But these days, we bring two carriers, two rollers, because my son and my wife have a lot of clothes and belongings.\"\n    *   💎 Professional: \"Nowadays, our luggage has increased to two carriers and two rollers, as my son and wife tend to pack numerous clothes and personal items.\"\n    *   💡 Coaching Point: \"move the two carriers\"라는 표현은 다소 어색합니다. \"bring\"이나 \"pack\"이 더 자연스럽습니다. 또한, \"many clothes and many belongings\"는 더 나은 흐름을 위해 \"a lot of clothes and belongings\" 또는 \"numerous clothes and personal items\"로 단순화할 수 있습니다. 주어-동사 수 일치 (\"my son and my wife\"는 복수)도 수정이 필요합니다.\n\n**3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)**\nCategory: Subject-Verb Agreement (복수 주어와 동사 수 일치)\n\nJoey님은 복수 주어 뒤에 단수 동사를 사용하거나, 주어와 동사의 수 일치를 혼동하는 경우가 반복적으로 나타났습니다. 특히 'and'로 연결된 복수 주어 뒤에 오는 동사 형태에 주의가 필요합니다.\n\n| ❌ 원문 (As Said)                                                                                              | ✅ 교정 예시 (Correction)                                                                                             |\n| :------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------- |\n| \"But these days, we move the two carriers, two rollers, because my son and my wife **has** many clothes and many belongings.\" | \"But these days, we move the two carriers, two rollers, because my son and my wife **have** many clothes and many belongings.\" |\n| \"So if they are go travel to abroad, and meantime they are travel like a work.\" (Implied: \"they travel\")        | \"So when they travel abroad, they travel like work.\" (The original structure was complex, but the core issue is implied.) |\n| \"When I was a single, my bag **is** so light.\" (This is a tense issue, but also implies a singular subject.)    | \"When I was single, my bag **was** so light.\" (Corrected for tense, but also highlighting singular vs. plural.)          |\n| \"And these days, the people change a little.\" (Implied: \"people change\")                                      | \"And these days, people change a little.\" (This sentence is grammatically correct as is, but the pattern of confusion exists.) |\n\n📌 **핵심 규칙**: 'and'로 연결된 두 명사 이상 또는 'we', 'they'와 같은 복수 대명사가 주어일 경우, 동사는 반드시 복수형(일반적으로 동사 원형)을 사용해야 합니다.\n\n🔁 **따라 읽기**:\n🗣️ \"My son and my wife **have** many clothes and belongings.\"\n🗣️ \"When they travel abroad, they **travel** like work.\"\n🗣️ \"When I was single, my bag **was** so light.\" (Note: This sentence was primarily a tense issue, but the pattern of subject-verb confusion is observed elsewhere.)\n\n**4. 📗 어휘 확장 (Vocabulary Vault)**\n\n1.  **get away** /ɡɛt əˈweɪ/ (phrasal verb)\n    *   뜻: (일상에서 벗어나) 휴가를 떠나다, 잠시 떠나다\n    *   실전 예문: \"I need to get away for a weekend to recharge.\"\n\n2.  **tourist trap** /ˈtʊərɪst træp/ (noun)\n    *   뜻: 관광객을 대상으로 바가지를 씌우는, 실속 없는 관광지\n    *   실전 예문: \"Be careful not to fall for any tourist traps in the city center.\"\n\n3.  **local gem** /ˈloʊkəl dʒɛm/ (noun phrase)\n    *   뜻: 현지인만 아는 숨겨진 명소/보석 같은 곳\n    *   실전 예문: \"We found a fantastic local gem for dinner last night.\"\n\n4.  **change of scenery** /tʃeɪndʒ əv ˈsiːnəri/ (noun phrase)\n    *   뜻: 기분 전환, 새로운 환경\n    *   실전 예문: \"A short trip can provide a much-needed change of scenery.\"\n\n5.  **packed with activity** /ˈpækt wɪθ ækˈtɪvəti/ (adjective phrase)\n    *   뜻: 활동으로 가득 찬, 매우 바쁜\n    *   실전 예문: \"My schedule is usually packed with activity during the week.\"\n\n**5. 📝 실전 복습 챌린지 (Practice)**\n\n1.  **상황:** 친구에게 최근 다녀온 여행에 대해 이야기하고 싶습니다. 특히, 너무 유명해서 실망했던 관광지에 대해 말하고 싶을 때 사용할 수 있는 표현을 영어로 만들어 보세요.\n    *   **영작:** \"That place was a real ______.\" (힌트: 2번 어휘)\n    *   **모범 답안:** \"That place was a real tourist trap.\"\n\n2.  **상황:** 일상에 지쳐 잠시 벗어나고 싶을 때, 영어로 어떻게 표현할 수 있을까요? (힌트: 4번 어휘 활용)\n    *   **영작:** \"I really need a ______.\"\n    *   **모범 답안:** \"I really need a change of scenery.\"\n\n3.  **상황:** 한국인들이 해외여행 시 종종 여행을 일처럼 빡빡하게 계획하는 경향이 있다는 점을 설명하고 싶습니다. 이때, '일처럼 여행하다'라는 의미를 자연스럽게 전달해 보세요. (힌트: 2번 유창성 업그레이드 표현 활용)\n    *   **영작:** \"When Koreans travel abroad, they often ______.\"\n    *   **모범 답안:** \"When Koreans travel abroad, they often treat it like work.\"\n\n**6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)**\n\n*   ✨ **Good Job**:\n    \"And these days, the people change a little. So that depends on people. And sometimes some people like their relaxed and slow but some people here they want to packed with activity so what uh like work and some people focus on their food or shopping.\"\n    Joey님은 한국 사람들의 여행 스타일이 변화하고 있다는 점을 설명하며, 여전히 일처럼 여행하는 사람들과 여유롭고 느긋한 여행을 선호하는 사람들을 비교하며 구체적인 예시(음식, 쇼핑 등)를 들어 설명했습니다. 다양한 관점을 제시하며 자신의 생각을 논리적으로 풀어낸 점이 아주 좋았습니다!\n\n*   🚀 **내일의 한 문장**:\n    \"Karin, I'm looking forward to our lesson today. I hope we can talk about some interesting travel destinations, maybe even find a hidden **local gem**!\"\n    (다음 수업 시작 시 튜터에게 던져보세요!)\n\n---\n\n**[성과 지표]**\n\n*   **유창성 점수**: 7/10\n    *   **근거**: Joey님은 전반적으로 자신의 생각을 표현하는 데 큰 어려움이 없었습니다. 특히 다양한 여행 스타일에 대한 비교 설명이나 개인적인 경험을 이야기할 때 자연스러운 흐름을 보여주었습니다. 다만, 몇 가지 표현에서 더 자연스럽고 격식 있는 표현으로 다듬을 여지가 있었습니다.\n*   **다음 수업 '원포인트 액션 플랜'**:\n    오늘 배운 'local gem', 'change of scenery', 'get away'와 같은 표현들을 활용하여, 다음 수업에서 본인이 최근 경험했던 '특별했던 장소'나 '기분 전환이 필요했던 순간'에 대해 영어로 이야기해보는 연습을 하겠습니다.\n\n위 내용을 바탕으로:\n1. 먼저 오늘 수업에서 내가 틀렸거나 어색했던 표현을 하나 골라서, 관련된 상황을 영어로 질문해줘.\n2. 내가 영어로 대답하면, 자연스러운지 확인하고 더 나은 표현이 있으면 알려줘.\n3. 특히 \"반복 실수 패턴\"에서 지적된 부분을 집중적으로 연습시켜줘.\n4. 이런 식으로 오늘 배운 표현들을 하나씩 복습하자.\n5. 한국어 설명은 필요할 때만 간단히, 대화는 최대한 영어로 진행해줘.\n\n그럼 시작하자!";
+        function startReview(){navigator.clipboard.writeText(REVIEW_PROMPT).then(()=>{showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)}).catch(()=>{const t=document.createElement('textarea');t.value=REVIEW_PROMPT;document.body.appendChild(t);t.select();document.execCommand('copy');document.body.removeChild(t);showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)})}
+        function showToast(){const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500)}
+        function switchTab(n){document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',n==='feedback'?i===0:i===1));document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));document.getElementById('tab-'+n).classList.add('active')}
+    </script>
+</body>
+</html>
