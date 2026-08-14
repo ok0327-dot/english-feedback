@@ -1,0 +1,53 @@
+{
+ "date": "2026-08-14",
+ "iso": [
+  2026,
+  33
+ ],
+ "topic": "Discussing Travel Styles and Personal Preferences",
+ "grammar": "Subject-Verb Agreement",
+ "grammar_norm": "Subject–Verb Agreement",
+ "score": 7.0,
+ "pairs": [
+  {
+   "said": "I'm not having any technical issues today.",
+   "natural": "I'm not experiencing any technical issues today."
+  },
+  {
+   "said": "So if they are go travel to abroad, and meantime they are travel like a work.",
+   "natural": "So when they travel abroad, they often treat it like work."
+  },
+  {
+   "said": "But these days, we move the two carriers, two rollers, because my son and my wife has many clothes and many belongings.",
+   "natural": "But these days, we bring two carriers, two rollers, because my son and my wife have a lot of clothes and belongings."
+  }
+ ],
+ "vocab": [
+  {
+   "word": "get away",
+   "pos": "phrasal verb",
+   "meaning": "(일상에서 벗어나) 휴가를 떠나다, 잠시 떠나다"
+  },
+  {
+   "word": "tourist trap",
+   "pos": "noun",
+   "meaning": "관광객을 대상으로 바가지를 씌우는, 실속 없는 관광지"
+  },
+  {
+   "word": "local gem",
+   "pos": "noun phrase",
+   "meaning": "현지인만 아는 숨겨진 명소/보석 같은 곳"
+  },
+  {
+   "word": "change of scenery",
+   "pos": "noun phrase",
+   "meaning": "기분 전환, 새로운 환경"
+  },
+  {
+   "word": "packed with activity",
+   "pos": "adjective phrase",
+   "meaning": "활동으로 가득 찬, 매우 바쁜"
+  }
+ ],
+ "_html_md5": "8bd318e5dd260f2f99fd6c979985b4c7"
+}
