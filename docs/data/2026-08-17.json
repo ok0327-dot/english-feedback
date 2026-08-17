@@ -1,0 +1,53 @@
+{
+ "date": "2026-08-17",
+ "iso": [
+  2026,
+  34
+ ],
+ "topic": "Discussing phone communication and related vocabulary.",
+ "grammar": "Verb Forms",
+ "grammar_norm": "Verb Forms / Auxiliaries",
+ "score": 7.0,
+ "pairs": [
+  {
+   "said": "Maybe that is south area in Spain, right?",
+   "natural": "Is that in southern Spain, right?"
+  },
+  {
+   "said": "I have some suggestion about you because could you start the first useful vocabulary and useful expression first?",
+   "natural": "I have a suggestion: could we start with the useful vocabulary and expressions first?"
+  },
+  {
+   "said": "I'm more older generation, so I like to phone call.",
+   "natural": "I'm from an older generation, so I prefer phone calls."
+  }
+ ],
+ "vocab": [
+  {
+   "word": "pocket dial",
+   "pos": "동사",
+   "meaning": "(실수로) 주머니 속에서 전화가 걸리다"
+  },
+  {
+   "word": "busy signal",
+   "pos": "명사",
+   "meaning": "통화 중 신호"
+  },
+  {
+   "word": "auto-correct",
+   "pos": "동사/명사",
+   "meaning": "자동 수정 (기능)"
+  },
+  {
+   "word": "break up",
+   "pos": "구동사",
+   "meaning": "(전화 통화 중) 신호가 끊기거나 잘 들리지 않다"
+  },
+  {
+   "word": "decline",
+   "pos": "동사",
+   "meaning": "(전화 등을) 거절하다, 사양하다"
+  }
+ ],
+ "_html_md5": "8aa55834ddb6091a85142f292fb88bdd"
+}
