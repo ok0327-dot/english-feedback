@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#0f0f13"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="당근영어"><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="icon" type="image/png" sizes="192x192" href="icon-192.png"><script src="install-banner.js" defer></script><script src="sw-reg.js" defer></script>
+    <title>전화영어 복습 - 2026년 08월 18일</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Noto Sans KR',sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.75;min-height:100vh}
+        .header{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);border-bottom:1px solid rgba(255,255,255,.06);padding:48px 24px 40px;text-align:center}
+        .header-date{font-size:13px;color:#94a3b8;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+        .header h1{font-size:28px;font-weight:700;color:#f1f5f9;margin-bottom:16px}
+        .header-meta{display:flex;justify-content:center;gap:24px;font-size:14px;color:#64748b}
+        .header-meta span{display:flex;align-items:center;gap:6px}
+        .cta-section{text-align:center;padding:40px 24px}
+        .cta-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:linear-gradient(135deg,#38bdf8,#818cf8);color:#fff;font-size:16px;font-weight:600;font-family:'Noto Sans KR',sans-serif;border:none;border-radius:50px;cursor:pointer;transition:all .3s;text-decoration:none;box-shadow:0 4px 24px rgba(56,189,248,.25)}
+        .cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(56,189,248,.35)}
+        .cta-btn svg{width:20px;height:20px}
+        .cta-sub{margin-top:12px;font-size:13px;color:#64748b}
+        .toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#38bdf8;padding:14px 28px;border-radius:12px;font-size:14px;font-weight:500;border:1px solid rgba(56,189,248,.2);box-shadow:0 8px 32px rgba(0,0,0,.4);opacity:0;transition:all .4s cubic-bezier(.16,1,.3,1);z-index:1000}
+        .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+        .container{max-width:720px;margin:0 auto;padding:0 24px 80px}
+        .tabs{display:flex;gap:4px;background:#1a1a24;padding:4px;border-radius:12px;margin-bottom:32px}
+        .tab{flex:1;padding:12px;text-align:center;font-size:14px;font-weight:500;color:#64748b;background:0 0;border:none;border-radius:8px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all .2s}
+        .tab.active{background:#262636;color:#f1f5f9}
+        .tab-content{display:none}.tab-content.active{display:block}
+        .feedback h2{font-size:18px;font-weight:700;color:#f1f5f9;margin:36px 0 16px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.06)}
+        .feedback h2:first-child{margin-top:0}
+        .feedback p{margin:8px 0;color:#cbd5e1}
+        .feedback .item{padding:6px 0 6px 16px;border-left:2px solid #334155;margin:6px 0;color:#cbd5e1}
+        .feedback .numbered{padding:8px 0 8px 16px;color:#cbd5e1}
+        .feedback .numbered strong{color:#38bdf8}
+        .feedback strong{color:#f1f5f9}
+        .feedback code{background:#1e293b;padding:2px 8px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#38bdf8}
+        .feedback table{width:100%;border-collapse:collapse;margin:12px 0}
+        .feedback th,.feedback td{padding:10px 14px;text-align:left;border-bottom:1px solid #262636}
+        .feedback th{color:#94a3b8;font-weight:500;font-size:13px}
+        .feedback td{color:#cbd5e1}
+        .arrow{color:#38bdf8;font-weight:700}
+        .transcript{background:#1a1a24;border-radius:12px;padding:28px;font-size:14px;line-height:2;color:#94a3b8;white-space:pre-wrap;word-break:break-word;font-family:'JetBrains Mono','Noto Sans KR',monospace}
+        .transcript .tutor{color:#38bdf8}
+        .transcript .student{color:#a78bfa}
+        @media(max-width:640px){.header{padding:32px 16px}.header h1{font-size:22px}.cta-btn{padding:14px 28px;font-size:15px}.container{padding:0 16px 60px}}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-date">2026년 08월 18일</div>
+        <h1>📚 전화영어 복습</h1>
+        <div class="header-meta">
+            <span>⏱ 20분 59초</span>
+            <span>🎙 전화영어_025180304_20260818080011.m4a</span>
+        </div>
+    </div>
+    <div class="cta-section">
+        <button class="cta-btn" onclick="startReview()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Gemini에서 복습 대화 시작하기
+        </button>
+        <div class="cta-sub">클릭하면 프롬프트가 복사되고 Gemini가 열립니다</div>
+    </div>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('feedback')">📋 AI 피드백</button>
+            <button class="tab" onclick="switchTab('transcript')">🎙 수업 전사</button>
+        </div>
+        <div id="tab-feedback" class="tab-content active">
+            <div class="feedback"><p>Joey, 오늘 수업은 정말 즐거웠습니다! 새로운 앱과 디지털 습관에 대해 이야기하며 Joey의 흥미로운 생각들을 많이 들을 수 있었어요. 특히 AI와 코딩을 활용해 업무 효율을 높이는 이야기는 정말 인상 깊었습니다. 다음 주 중국 여행 이야기도 기대되네요!</p>
+<br>
+<br>
+<h2>0. 📌 Topic</h2>
+<p>Topic: Discussing Digital Habits and Upcoming Travel Plans</p>
+<br>
+<h2>1. 📊 오늘의 대화 요약 (Summary)</h2>
+<p>오늘 Joey는 한국에서 인기 있는 비메시징 앱(유튜브, 인스타그램)에 대해 이야기하고, 아침에 가장 먼저 확인하는 것과 그 이유를 설명했습니다. 또한, 친구가 데이터 로밍을 실수로 켜서 요금 폭탄이 나왔을 때 어떻게 대처할지에 대한 흥미로운 토론도 나누었고, AI를 활용한 업무 자동화 경험과 다음 주 중국 여행 계획을 공유했습니다.</p>
+<br>
+<h2>2. 💬 유창성 업그레이드 (Fluency & Natural Flow)</h2>
+<p>Joey가 말한 문장 중 의미는 통하지만, 원어민들이 더 자연스럽게 쓰는 표현으로 다듬어볼게요.</p>
+<br>
+<div class="numbered"><strong>1.</strong> ❌ <strong>학습자 원문 (As Said):</strong> "many young generations have a relationship, use Instagram."</div>
+<div class="item">✅ <strong>자연스러운 표현 (Natural):</strong> "Many young people connect with each other using Instagram."</div>
+<div class="item">💎 <strong>비즈니스 표현 (Professional):</strong> "Many younger demographics engage and build networks through platforms like Instagram."</div>
+<div class="item">💡 <strong>코칭 포인트:</strong> "Generations"는 특정 시대에 태어난 사람들을 지칭할 때 쓰이며, 단순히 '젊은 사람들'을 말할 때는 "young people"이 더 자연스럽습니다. "Have a relationship"보다는 "connect with each other"나 "build relationships"가 더 유연하게 들립니다.</div>
+<br>
+<div class="numbered"><strong>2.</strong> ❌ <strong>학습자 원문 (As Said):</strong> "some people search some information used in YouTube"</div>
+<div class="item">✅ <strong>자연스러운 표현 (Natural):</strong> "Some people search for information on YouTube."</div>
+<div class="item">💎 <strong>비즈니스 표현 (Professional):</strong> "Many individuals utilize YouTube as a resource for information retrieval."</div>
+<div class="item">💡 <strong>코칭 포인트:</strong> 무언가를 '검색하다'라고 할 때는 "search for"를 쓰는 것이 일반적입니다. 또한, 특정 플랫폼에서 정보를 찾을 때는 "on YouTube"와 같이 "on"을 사용하는 것이 자연스럽습니다.</div>
+<br>
+<div class="numbered"><strong>3.</strong> ❌ <strong>학습자 원문 (As Said):</strong> "So in Korea it is popular to our population."</div>
+<div class="item">✅ <strong>자연스러운 표현 (Natural):</strong> "So it is popular among our population in Korea." 또는 "So it is widely popular in Korea."</div>
+<div class="item">💎 <strong>비즈니스 표현 (Professional):</strong> "Consequently, it enjoys widespread popularity across the Korean populace."</div>
+<div class="item">💡 <strong>코칭 포인트:</strong> 어떤 것이 특정 집단 사이에서 인기가 많다고 할 때는 "popular among" 또는 "popular with"를 사용합니다. "Popular to"는 이 문맥에서 표준 영어가 아닙니다.</div>
+<br>
+<div class="numbered"><strong>4.</strong> ❌ <strong>학습자 원문 (As Said):</strong> "My phone's alarm worked, is it right?"</div>
+<div class="item">✅ <strong>자연스러운 표현 (Natural):</strong> "My phone alarm went off."</div>
+<div class="item">💎 <strong>비즈니스 표현 (Professional):</strong> "My phone's alarm successfully activated."</div>
+<div class="item">💡 <strong>코칭 포인트:</strong> 알람이 울렸다고 말할 때는 "go off"라는 구동사를 사용합니다. "worked"는 문법적으로 틀리진 않지만, 알람 소리에 대해서는 "went off"가 훨씬 자연스럽습니다.</div>
+<br>
+<h2>3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)</h2>
+<p>Category: <strong>Preposition Usage (전치사 사용)</strong></p>
+<br>
+<p>Joey는 전치사 사용에서 미묘한 실수를 반복하는 경향이 있습니다. 특히 <code>of</code>, <code>in</code>, <code>to</code> 등의 전치사를 문맥에 맞지 않게 사용하는 경우가 보였습니다. 정확한 전치사 사용은 문장의 자연스러움과 의미 전달의 정확성을 높이는 데 중요합니다.</p>
+<br>
+<table>
+<tr><th>❌ 원문 (As Said)</th><th>✅ 교정 예시 (Corrected)</th></tr>
+<tr><td>"I don't have information <strong>of</strong> the pay amount"</td><td>"I don't have information <strong>about</strong> the pay amount"</td></tr>
+<tr><td>"some people search some information <strong>used in</strong> YouTube"</td><td>"some people search <strong>for</strong> information <strong>on</strong> YouTube"</td></tr>
+<tr><td>"So <strong>in</strong> Korea it is popular <strong>to</strong> our population."</td><td>"So <strong>in</strong> Korea it is popular <strong>among</strong> our population."</td></tr>
+<tr><td>"during the sleep time"</td><td>"during <strong>my</strong> sleep time" 또는 "during sleep"</td></tr>
+<tr><td>"before the sleep"</td><td>"before <strong>going to</strong> sleep" 또는 "before sleep"</td></tr>
+</table>
+<br>
+<p>📌 <strong>핵심 규칙:</strong> 전치사는 동사, 명사, 형용사와 함께 특정 의미를 형성하는 경우가 많으므로, 각 단어에 맞는 전치사 짝(collocation)을 익히는 것이 중요합니다. 특히 <code>about</code>은 '무엇에 대한 정보'를 나타낼 때, <code>for</code>는 '무엇을 찾다'의 의미로 <code>search</code>와 함께, <code>on</code>은 플랫폼이나 표면을 나타낼 때, <code>among</code>은 '집단 사이에서'라는 의미로 <code>popular</code>와 함께 자주 쓰입니다.</p>
+<br>
+<p>🔁 <strong>따라 읽기:</strong></p>
+<p>🗣️ "I don't have information <strong>about</strong> the pay amount."</p>
+<p>🗣️ "Some people search <strong>for</strong> information <strong>on</strong> YouTube."</p>
+<p>🗣️ "It is popular <strong>among</strong> our population in Korea."</p>
+<br>
+<h2>4. 📗 어휘 확장 (Vocabulary Vault)</h2>
+<p>오늘 수업 중 나왔거나 관련하여 유용하게 쓸 수 있는 어휘들을 정리해 보았습니다.</p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>demographic</strong> /ˌdɛməˈɡræfɪk/ (명사)</div>
+<div class="item">뜻: 인구 통계학적 집단 (특정 연령, 성별, 소득 등 특성을 가진 집단)</div>
+<div class="item">실전 예문: Our marketing strategy targets the <strong>demographic</strong> of young professionals interested in sustainable energy.</div>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>utilize</strong> /ˈjuːtəlaɪz/ (동사)</div>
+<div class="item">뜻: 활용하다, 이용하다 (use보다 격식 있는 표현)</div>
+<div class="item">실전 예문: We should <strong>utilize</strong> AI tools to enhance our data analysis efficiency.</div>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>retrieve</strong> /rɪˈtriːv/ (동사)</div>
+<div class="item">뜻: (정보 등을) 검색하다, 불러오다, 되찾다</div>
+<div class="item">실전 예문: The system allows us to quickly <strong>retrieve</strong> historical investment data.</div>
+<br>
+<div class="numbered"><strong>4.</strong> <strong>populace</strong> /ˈpɒpjələs/ (명사)</div>
+<div class="item">뜻: (특정 국가나 지역의) 모든 사람, 대중</div>
+<div class="item">실전 예문: The new policy aims to improve the living standards of the entire <strong>populace</strong>.</div>
+<br>
+<div class="numbered"><strong>5.</strong> <strong>interconnected</strong> /ˌɪntərkəˈnɛktɪd/ (형용사)</div>
+<div class="item">뜻: 상호 연결된</div>
+<div class="item">실전 예문: In the modern business world, global markets are highly <strong>interconnected</strong>.</div>
+<br>
+<h2>5. 📝 실전 복습 챌린지 (Practice)</h2>
+<p>오늘 배운 표현과 문법을 활용하여 영작 챌린지에 도전해 보세요!</p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>상황:</strong> 우리 회사는 젊은층을 대상으로 하는 새로운 투자 상품을 개발 중입니다.</div>
+<div class="item"><strong>영작:</strong> (힌트: demographic, target)</div>
+<div class="item"><strong>모범 답안:</strong> Our company is developing a new investment product that <strong>targets</strong> the young <strong>demographic</strong>.</div>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>상황:</strong> 저는 출장 중에 휴대폰으로 중요한 정보를 자주 검색합니다.</div>
+<div class="item"><strong>영작:</strong> (힌트: search for, retrieve, on my phone)</div>
+<div class="item"><strong>모범 답안:</strong> I often <strong>search for</strong> and <strong>retrieve</strong> important information <strong>on my phone</strong> during business trips.</div>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>상황:</strong> 이 새로운 앱은 우리 팀원들 사이에서 엄청난 인기를 얻고 있으며, 업무 효율성을 크게 높여줍니다.</div>
+<div class="item"><strong>영작:</strong> (힌트: popular among, utilize, enhance efficiency)</div>
+<div class="item"><strong>모범 답안:</strong> This new app is incredibly <strong>popular among</strong> our team members, and we <strong>utilize</strong> it to significantly <strong>enhance</strong> our work <strong>efficiency</strong>.</div>
+<br>
+<h2>6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)</h2>
+<br>
+<p>✨ <strong>Good Job:</strong></p>
+<p>Joey는 오늘 튜터의 질문에 대해 자신의 의견을 명확하게 표현하는 능력이 정말 좋았습니다. 특히 "I don't like it. Every people... Yeah, yeah, it's my opinion that phone time prevents people from face-to-face socializing." 이 부분에서 Joey의 확고한 의견과 논리적인 전개가 인상 깊었습니다. 비록 "Every people" 대신 "Everyone" 또는 "All people"이 더 자연스럽지만, 자신의 생각을 자신감 있게 전달하려는 노력이 돋보였습니다. 아주 훌륭해요! 또한, "Usage alert"의 발음(<code>a lot</code> -> <code>alert</code>)과 "phone"의 발음(<code>pone</code> -> <code>phone</code>)을 튜터의 도움을 받아 즉시 교정하고 반복 연습하는 모습에서 학습에 대한 열의를 엿볼 수 있었습니다.</p>
+<br>
+<p>🚀 <strong>내일의 한 문장:</strong></p>
+<p>다음 수업 시작 시, 오늘 배운 표현을 활용하여 튜터에게 중국 여행 계획에 대해 한 문장으로 이야기해 보세요.</p>
+<p>"I'm looking forward to <strong>utilizing</strong> my time in China to explore its rich history and culture."</p>
+<p>(중국에서 시간을 잘 활용해서 풍부한 역사와 문화를 탐험하는 것이 기대됩니다.)</p>
+<br>
+<br>
+<h2>[성과 지표]</h2>
+<p><strong>유창성 점수:</strong> 7.5/10</p>
+<br>
+<p><strong>근거:</strong> Joey는 다양한 주제에 대해 막힘없이 자신의 의견을 표현하려는 의지가 매우 강하며, 대화의 흐름을 끊지 않고 이어가는 능력이 뛰어납니다. 특히 AI와 코딩, 개인적인 경험에 대한 이야기는 매우 유창하게 전달되었습니다. 다만, 몇몇 문장 구조와 전치사 사용에서 자연스럽지 않은 부분이 있어 원어민처럼 들리지는 않았습니다. 하지만 의미 전달에는 전혀 문제가 없었으며, 튜터와의 상호작용도 매우 활발했습니다.</p>
+<br>
+<p><strong>다음 수업 '원포인트 액션 플랜':</strong></p>
+<p>다음 수업에서는 <strong>전치사 사용의 정확성</strong>에 집중하여, 특히 <code>search for</code>, <code>popular among/with</code>, <code>information about</code>과 같이 특정 동사/명사와 짝을 이루는 전치사(collocations)를 익히는 연습을 해봅시다. 이를 통해 Joey의 문장이 더욱 자연스럽고 정확해질 수 있을 것입니다.</p></div>
+        </div>
+        <div id="tab-transcript" class="tab-content">
+            <div class="transcript"><span class="tutor">[Tutor]</span> Hello, good morning.
+<span class="student">[Student]</span> Hi teacher. Hi Karin.
+<span class="tutor">[Tutor]</span> Yes. Are you doing okay?
+<span class="student">[Student]</span> Yeah, I&#x27;m good. I&#x27;m good. How are you today?
+<span class="tutor">[Tutor]</span> Wonderful. I&#x27;m doing all right. Thank you.
+<span class="tutor">[Tutor]</span> Okay. I&#x27;m a little confused, Joey. I&#x27;m looking at your records here, and I can see that you and I finished with page 9, then you did page 10, and you were supposed to do page 11, but it looks like the young lady or gentleman had you do page 9 over again?
+<span class="student">[Student]</span> Because that was the free talking time.
+<span class="tutor">[Tutor]</span> I see. Okay.
+<span class="student">[Student]</span> Next week I will travel to China.
+<span class="tutor">[Tutor]</span> Oh, wow.
+<span class="student">[Student]</span> Yeah. Maybe next week I can take the class and before the departure, I will finish my class. And today we will start Section 10. You should try this app.
+<span class="tutor">[Tutor]</span> Yeah. All right. I appreciate you clearing that up for me. Thank you. All right. So as usual, we&#x27;ll start at the bottom and I&#x27;ll get you to read the useful vocabulary, please.
+<span class="student">[Student]</span> Okay, no problem. Useful vocabulary. Usage alert. A message warning about high data. Call or text usage. Usage. Usage. How can I read that? Usage, right?
+<span class="tutor">[Tutor]</span> You&#x27;ve got the part of usage, but the second word, I heard you pronounce &quot;a lot.&quot;
+<span class="tutor">[Tutor]</span> Let&#x27;s try a-l-e-r-t.
+<span class="student">[Student]</span> Ah, alert.
+<span class="tutor">[Tutor]</span> You get an R.
+<span class="student">[Student]</span> Usage alert.
+<span class="tutor">[Tutor]</span> Yeah, that&#x27;s better.
+<span class="student">[Student]</span> Usage alert.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="tutor">[Tutor]</span> Yeah.
+<span class="student">[Student]</span> It is similar, &quot;a lot.&quot;
+<span class="tutor">[Tutor]</span> Alert.
+<span class="student">[Student]</span> Hmm.
+<span class="student">[Student]</span> Usage alert.
+<span class="tutor">[Tutor]</span> &quot;A lot&quot; is an O, and this is more of an R blend.
+<span class="student">[Student]</span> Yes.
+<span class="student">[Student]</span> Okay.
+<span class="tutor">[Tutor]</span> Let&#x27;s get you to read the description and the sentence.
+<span class="student">[Student]</span> Oh, description and sentence.
+<span class="student">[Student]</span> Okay.
+<span class="tutor">[Tutor]</span> Okay, please.
+<span class="student">[Student]</span> Okay.
+<span class="student">[Student]</span> Okay. A message warning about high data call or text usage.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="student">[Student]</span> And usage alert after watching video on 4G.
+<span class="tutor">[Tutor]</span> Okay. That was very good. Let&#x27;s try the next one when you&#x27;re ready.
+<span class="student">[Student]</span> Ah, billing cycle.
+<span class="tutor">[Tutor]</span> Good.
+<span class="student">[Student]</span> Time period between phone bill payment.
+<span class="student">[Student]</span> My bill&#x27;s billing cycle is on the 10th.
+<span class="tutor">[Tutor]</span> That was very good. You got the T-H. Very nice.
+<span class="student">[Student]</span> Okay.
+<span class="tutor">[Tutor]</span> All right. And the third phrase?
+<span class="student">[Student]</span> Okay. Doom scrolling.
+<span class="tutor">[Tutor]</span> Doom scrolling.
+<span class="student">[Student]</span> Okay. Continuously reading negative news or content online. I couldn&#x27;t sleep after doom scrolling for one hour on hours before bed. Doom scrolling.
+<span class="student">[Student]</span> Okay. Before I read the next sentence, I have a question about &quot;doom.&quot; Doom.
+<span class="student">[Student]</span> Doom? What means doom?
+<span class="tutor">[Tutor]</span> Doom.
+<span class="student">[Student]</span> Doom.
+<span class="tutor">[Tutor]</span> Doom is a word in English that means something that is going to happen that is bad or ominous or frightful. So when we say doom scrolling, that means that we&#x27;re reading a lot of negative news or negative content that doesn&#x27;t exactly make you happy.
+<span class="student">[Student]</span> Doom is similar to stupid or negative?
+<span class="tutor">[Tutor]</span> Negative is the better one.
+<span class="student">[Student]</span> Negative is better.
+<span class="tutor">[Tutor]</span> So basically scrolling is when you keep going up and down on your feed and you&#x27;re checking out Facebook.
+<span class="student">[Student]</span> Okay, I see. Doom scrolling. Okay, I understand.
+<span class="tutor">[Tutor]</span> Very good. All right. When you&#x27;re ready, I&#x27;ll have you go to the useful expressions. Read the sentence and read the description.
+<span class="student">[Student]</span> Okay, useful expressions. This app is eating up all my data. Used to complain about high data use.
+<span class="tutor">[Tutor]</span> Good.
+<span class="student">[Student]</span> I need to cut my screen time. Used when you are spending too much time on your phone. I need to cut down my screen time.
+<span class="tutor">[Tutor]</span> Okay. Very good. I see. All right. There&#x27;s one word that I&#x27;d like to help you. At the end of the second sentence, the P-H, you&#x27;re pronouncing it as a P, &quot;pone,&quot; but P-H in English says F, &quot;phone.&quot;
+<span class="student">[Student]</span> Phone. Ah, yes. Phone. Phone. Phone. Phone is better. Okay, I see. P-H is similar to F. Phone.
+<span class="tutor">[Tutor]</span> Yes. I don&#x27;t know if I&#x27;ve sent you a video, but I do have one that describes that we have a number of two letters together that make the F sound. I&#x27;ll find it and put it in the teacher comments for you, okay?
+<span class="student">[Student]</span> Okay, good. Yes, I understand.
+<span class="tutor">[Tutor]</span> All right, my friend. Let&#x27;s go back up to the top of page 12.
+<span class="student">[Student]</span> Uh-huh. Okay.
+<span class="tutor">[Tutor]</span> When you&#x27;re ready, I&#x27;ll have you read and respond.
+<span class="student">[Student]</span> Okay. The part A warm-up question.
+<span class="tutor">[Tutor]</span> What&#x27;s the most popular non-messaging app in your country?
+<span class="student">[Student]</span> In our country, YouTube and Instagram are the most popular non-messaging applications. And many young generations have a relationship, use Instagram. They use Instagram and sometimes they put on their photo and they connect to other people, have a relationship, and that is similar to a small society. And YouTube, every generation watches YouTube and some people search some information used in YouTube and some people just watch the fun content from YouTube. So in Korea it is popular to our population.
+<span class="tutor">[Tutor]</span> It&#x27;s very popular as well. I actually watch more YouTube than I do local broadcasting programs because I don&#x27;t get as many advertisements and I get to watch content that interests me. So it&#x27;s better. I don&#x27;t always want to watch a crime show or a dance program. On YouTube, I can watch documentaries. I can learn things. Yeah, it&#x27;s very, very popular. I agree.
+<span class="student">[Student]</span> Yeah. What kind of content do you like?
+<span class="tutor">[Tutor]</span> Well, I enjoy learning about history of other countries.
+<span class="student">[Student]</span> Oh, I see.
+<span class="tutor">[Tutor]</span> Yeah, I like to watch travel videos.
+<span class="student">[Student]</span> Travel and history.
+<span class="tutor">[Tutor]</span> Yes. Yep. And I watch news and current events on YouTube.
+<span class="student">[Student]</span> You said it.
+<span class="tutor">[Tutor]</span> Yeah, because there&#x27;s a lot of people reporting on everything.
+<span class="student">[Student]</span> I see. You are a wise woman.
+<span class="tutor">[Tutor]</span> Well, I try to stay informed. Alright, let&#x27;s go on to Part B when you&#x27;re ready.
+<span class="student">[Student]</span> Okay, the Part B.
+<span class="tutor">[Tutor]</span> Which do you prefer to check first in the morning and why? Messaging, emails versus social media.
+<span class="student">[Student]</span> When I get up in the morning, I check the first time my various alarms and I check my message first because during the sleep time sometimes there is some big event. So I check the first message and then I prepare to go outside and then go to my office and check my email because that is the work. And usually, I don&#x27;t check the social media because it is possible to check in a toilet or the washroom. Yes.
+<span class="tutor">[Tutor]</span> You&#x27;re absolutely right. Yeah.
+<span class="student">[Student]</span> So I check the message and email. And teacher, I have a question more.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="student">[Student]</span> I want to express my alarm is the blah, blah, blah. Blah, blah, blah. How can I say that expression? My bed is the... Almost people keep their alarm, and in the morning, my phone is around the bed. How can I say that expression?
+<span class="tutor">[Tutor]</span> Well, I&#x27;m trying to figure out what you&#x27;re saying. I know you&#x27;re trying very hard. Okay, you said something about people&#x27;s alarm. Are you talking about an alarm?
+<span class="student">[Student]</span> Alarm that rings or goes off at a certain time. Yes, in the night before the sleep, we will make some alarm and the morning alarm. It&#x27;s called an alarm. Yeah.
+<span class="tutor">[Tutor]</span> Okay. And you want to know how to tell them you forgot your alarm or you forgot to set your alarm?
+<span class="student">[Student]</span> Oh, no. Just I want to express my alarm. How can I say? It is not... My phone&#x27;s alarm worked, is it right?
+<span class="tutor">[Tutor]</span> I&#x27;m afraid that you&#x27;ve caught me at a disadvantage, Joey. May I suggest that you Google it from Korean into English, and then use a search engine to further find any sayings or idioms involving alarms?
+<span class="student">[Student]</span> I see. Okay, I see. Just a moment.
+<span class="tutor">[Tutor]</span> Yeah, sure. You&#x27;re my last class. Take all the time you need.
+<span class="student">[Student]</span> This AI said, &quot;My phone alarm went off.&quot;
+<span class="student">[Student]</span> Went off this morning. Yes, okay.
+<span class="student">[Student]</span> Went off. Okay.
+<span class="tutor">[Tutor]</span> To clarify the English, okay?
+<span class="student">[Student]</span> Uh-huh.
+<span class="tutor">[Tutor]</span> So I&#x27;m going to get you to repeat after me.
+<span class="tutor">[Tutor]</span> My phone.
+<span class="student">[Student]</span> My phone.
+<span class="tutor">[Tutor]</span> Alarm.
+<span class="student">[Student]</span> Alarm.
+<span class="tutor">[Tutor]</span> Went off.
+<span class="student">[Student]</span> Went off.
+<span class="tutor">[Tutor]</span> Alarm went off.
+<span class="student">[Student]</span> Mm.
+<span class="tutor">[Tutor]</span> Okay, so I&#x27;m going to write, I&#x27;m going to put that right now in your comments.
+<span class="student">[Student]</span> Uh-huh.
+<span class="tutor">[Tutor]</span> And I&#x27;m going to send it to you with the pronunciation, the visual pronunciation that I&#x27;ve shown you with other words.
+<span class="student">[Student]</span> Okay.
+<span class="tutor">[Tutor]</span> So you&#x27;ll be able to practice saying it.
+<span class="student">[Student]</span> Okay. Our alarm goes off. Okay. Thank you so much. I understand.
+<span class="tutor">[Tutor]</span> No problem. I&#x27;m happy to help. If I can make it easy for you, that&#x27;s great. All right. If you&#x27;re ready, let&#x27;s continue on to part C, and I&#x27;ll get you to read the problem solving.
+<span class="student">[Student]</span> Okay, the part C problem solving. The situation, your friend borrowed your phone while you were traveling, and they accidentally turned on data roaming instead of using Wi-Fi. Now you have a huge roaming bill.
+<span class="student">[Student]</span> Okay. Would you ask your friend to pay part of the bill or just let it go?
+<span class="student">[Student]</span> Okay. I&#x27;m not sure why this paragraph doesn&#x27;t give some information about the money. How much?
+<span class="tutor">[Tutor]</span> How much you would bill pay. Yeah, you wouldn&#x27;t find out until you get your bill.
+<span class="student">[Student]</span> Yes, I understand, but I don&#x27;t have information of the pay amount, bill paying.
+<span class="student">[Student]</span> Yes, he or she is my friend, so usually I pay all, but if that is the big money like over the $1,000 or that is a big accident. At that time, I ask my friend because that is a huge amount of money. So yeah, if it&#x27;s small money, just $10, $20 or $50, I&#x27;m just paying them. But if it is over $100 or more, I ask my friend because she or he also understands that situation.
+<span class="tutor">[Tutor]</span> Oh, sure. And if they&#x27;re a good friend, they&#x27;re going to feel bad and embarrassed, and they&#x27;re going to want to help you solve the problem.
+<span class="student">[Student]</span> Yes. I agree with you.
+<span class="tutor">[Tutor]</span> If it&#x27;s a small amount, you let it go. But if it&#x27;s a lot of money, sometimes you got to say, &quot;Oh, you know, this happened the other day,&quot; but yeah.
+<span class="student">[Student]</span> Yeah, yeah, I hear you. Yes, okay.
+<span class="tutor">[Tutor]</span> Another solution that people have given me is that if you had a friend who did charge up roaming fees and you didn&#x27;t want to have a conflict with them, you might not ask them for the money, but the next time they want to borrow your phone, you&#x27;d say, &quot;Oh gosh, no, sorry, can&#x27;t do that.&quot;
+<span class="student">[Student]</span> Same mistake and same problem and same solution. Avoid it for the next time. Okay, I understand.
+<span class="tutor">[Tutor]</span> That&#x27;s also good, right? All right, sir. Well, yeah, they can&#x27;t do it if you don&#x27;t let them get your phone, right?
+<span class="student">[Student]</span> Yeah.
+<span class="tutor">[Tutor]</span> All right, sir. You&#x27;re doing great today. Let&#x27;s go to the warm down, and I&#x27;ll get you to read number one.
+<span class="student">[Student]</span> Number one.
+<span class="tutor">[Tutor]</span> What&#x27;s the one app you use every single day? Why is it useful?
+<span class="student">[Student]</span> These days, I use the cloud application, the AI.
+<span class="tutor">[Tutor]</span> Oh, yeah?
+<span class="student">[Student]</span> Yeah, and nowadays my desktop connects to my mobile phone.
+<span class="tutor">[Tutor]</span> Oh, okay.
+<span class="student">[Student]</span> Yeah, so it is working on my mobile phone, like the remote control.
+<span class="tutor">[Tutor]</span> Oh, sure. Nice. Okay. You&#x27;re interconnected.
+<span class="student">[Student]</span> Yeah, so if I have some work, I just send a message to my crew, and the crew works my computer. Yeah, the laptop computer. So it is convenient and efficient for me. So these days it is so funny to make some automatic process using the coding and AI. So now many things are connected and will connect.
+<span class="tutor">[Tutor]</span> Yeah, I know. Some of the apps give us abilities we&#x27;ve only dreamed of 40 years ago. You know, if I had been told 40 years ago that in the future, I&#x27;d have a phone and a smart watch connected, you know, or that I even had a watch that had multifunction, it would have been incredible, you know.
+<span class="student">[Student]</span> Yeah.
+<span class="tutor">[Tutor]</span> I&#x27;m just that old. All right. Last question and opinion. One. I&#x27;ll let you read it.
+<span class="student">[Student]</span> Okay. Do you think people spend too much on their phones these days? Why or why not?
+<span class="tutor">[Tutor]</span> I think they&#x27;re talking about the cost of their phones. The price of their phones.
+<span class="student">[Student]</span> Yeah, their phones.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="student">[Student]</span> Yes, yes. It&#x27;s true. Many people spend too much time. They use their phones, and if some people meet and then just dinner, after that, they just watch their mobile phone. I don&#x27;t enjoy that because we are meeting offline, but they also include online work. So sometimes I&#x27;m not sure what is the real world. Yeah, so I don&#x27;t like it. Every people... Yeah, yeah, it&#x27;s my opinion that phone time prevents people from face-to-face socializing. Yeah.
+<span class="tutor">[Tutor]</span> Because you&#x27;ve got the time to text on your phone, but you don&#x27;t have time to give someone a call or meet them for coffee. So how we use our time is being used up by our smartphones. That&#x27;s my opinion. On the weekends, I turn off my computer and I put my phone down and I don&#x27;t look at it for hours because I don&#x27;t feel like I need to.
+<span class="student">[Student]</span> Okay.
+<span class="tutor">[Tutor]</span> That&#x27;s a great opinion.
+<span class="student">[Student]</span> It is.
+<span class="tutor">[Tutor]</span> Yeah. Well, like I said, it&#x27;s just my opinion.
+<span class="student">[Student]</span> Okay.
+<span class="tutor">[Tutor]</span> So, sir, you are done at page 12. Now, I would just like to clarify with you if it&#x27;s all right. You said you&#x27;re going to China next week. So may I ask the dates that you&#x27;ll be away? Are you going to be away for the whole week of the last week of August?
+<span class="student">[Student]</span> Yeah, maybe four weeks. Yeah, four weeks.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="student">[Student]</span> I will stay in China.
+<span class="tutor">[Tutor]</span> Okay. And is that on business or holiday?
+<span class="student">[Student]</span> It&#x27;s holiday with my family.
+<span class="tutor">[Tutor]</span> Oh, wonderful. Good for you. All right. So I believe that we will have one more class. Actually, let&#x27;s see. Today is Monday, so it&#x27;s Tuesday. So we&#x27;ve got two more classes. If you can make it, great. If you can&#x27;t, then just reschedule them, okay?
+<span class="student">[Student]</span> Okay. Thank you so much, teacher.
+<span class="tutor">[Tutor]</span> All right. You have a great day. Bye-bye.
+<span class="student">[Student]</span> Great day.</div>
+        </div>
+    </div>
+    <div class="toast" id="toast">✅ 프롬프트가 복사되었습니다!</div>
+    <script>
+        const REVIEW_PROMPT="너는 나의 영어 회화 복습 파트너야. 오늘 내 전화영어 수업 내용을 기반으로 대화하면서 복습을 도와줘.\n\n[오늘 수업 전사 내용]\n[Tutor] Hello, good morning.\n[Student] Hi teacher. Hi Karin.\n[Tutor] Yes. Are you doing okay?\n[Student] Yeah, I'm good. I'm good. How are you today?\n[Tutor] Wonderful. I'm doing all right. Thank you.\n[Tutor] Okay. I'm a little confused, Joey. I'm looking at your records here, and I can see that you and I finished with page 9, then you did page 10, and you were supposed to do page 11, but it looks like the young lady or gentleman had you do page 9 over again?\n[Student] Because that was the free talking time.\n[Tutor] I see. Okay.\n[Student] Next week I will travel to China.\n[Tutor] Oh, wow.\n[Student] Yeah. Maybe next week I can take the class and before the departure, I will finish my class. And today we will start Section 10. You should try this app.\n[Tutor] Yeah. All right. I appreciate you clearing that up for me. Thank you. All right. So as usual, we'll start at the bottom and I'll get you to read the useful vocabulary, please.\n[Student] Okay, no problem. Useful vocabulary. Usage alert. A message warning about high data. Call or text usage. Usage. Usage. How can I read that? Usage, right?\n[Tutor] You've got the part of usage, but the second word, I heard you pronounce \"a lot.\"\n[Tutor] Let's try a-l-e-r-t.\n[Student] Ah, alert.\n[Tutor] You get an R.\n[Student] Usage alert.\n[Tutor] Yeah, that's better.\n[Student] Usage alert.\n[Tutor] Okay.\n[Tutor] Yeah.\n[Student] It is similar, \"a lot.\"\n[Tutor] Alert.\n[Student] Hmm.\n[Student] Usage alert.\n[Tutor] \"A lot\" is an O, and this is more of an R blend.\n[Student] Yes.\n[Student] Okay.\n[Tutor] Let's get you to read the description and the sentence.\n[Student] Oh, description and sentence.\n[Student] Okay.\n[Tutor] Okay, please.\n[Student] Okay.\n[Student] Okay. A message warning about high data call or text usage.\n[Tutor] Okay.\n[Student] And usage alert after watching video on 4G.\n[Tutor] Okay. That was very good. Let's try the next one when you're ready.\n[Student] Ah, billing cycle.\n[Tutor] Good.\n[Student] Time period between phone bill payment.\n[Student] My bill's billing cycle is on the 10th.\n[Tutor] That was very good. You got the T-H. Very nice.\n[Student] Okay.\n[Tutor] All right. And the third phrase?\n[Student] Okay. Doom scrolling.\n[Tutor] Doom scrolling.\n[Student] Okay. Continuously reading negative news or content online. I couldn't sleep after doom scrolling for one hour on hours before bed. Doom scrolling.\n[Student] Okay. Before I read the next sentence, I have a question about \"doom.\" Doom.\n[Student] Doom? What means doom?\n[Tutor] Doom.\n[Student] Doom.\n[Tutor] Doom is a word in English that means something that is going to happen that is bad or ominous or frightful. So when we say doom scrolling, that means that we're reading a lot of negative news or negative content that doesn't exactly make you happy.\n[Student] Doom is similar to stupid or negative?\n[Tutor] Negative is the better one.\n[Student] Negative is better.\n[Tutor] So basically scrolling is when you keep going up and down on your feed and you're checking out Facebook.\n[Student] Okay, I see. Doom scrolling. Okay, I understand.\n[Tutor] Very good. All right. When you're ready, I'll have you go to the useful expressions. Read the sentence and read the description.\n[Student] Okay, useful expressions. This app is eating up all my data. Used to complain about high data use.\n[Tutor] Good.\n[Student] I need to cut my screen time. Used when you are spending too much time on your phone. I need to cut down my screen time.\n[Tutor] Okay. Very good. I see. All right. There's one word that I'd like to help you. At the end of the second sentence, the P-H, you're pronouncing it as a P, \"pone,\" but P-H in English says F, \"phone.\"\n[Student] Phone. Ah, yes. Phone. Phone. Phone. Phone is better. Okay, I see. P-H is similar to F. Phone.\n[Tutor] Yes. I don't know if I've sent you a video, but I do have one that describes that we have a number of two letters together that make the F sound. I'll find it and put it in the teacher comments for you, okay?\n[Student] Okay, good. Yes, I understand.\n[Tutor] All right, my friend. Let's go back up to the top of page 12.\n[Student] Uh-huh. Okay.\n[Tutor] When you're ready, I'll have you read and respond.\n[Student] Okay. The part A warm-up question.\n[Tutor] What's the most popular non-messaging app in your country?\n[Student] In our country, YouTube and Instagram are the most popular non-messaging applications. And many young generations have a relationship, use Instagram. They use Instagram and sometimes they put on their photo and they connect to other people, have a relationship, and that is similar to a small society. And YouTube, every generation watches YouTube and some people search some information used in YouTube and some people just watch the fun content from YouTube. So in Korea it is popular to our population.\n[Tutor] It's very popular as well. I actually watch more YouTube than I do local broadcasting programs because I don't get as many advertisements and I get to watch content that interests me. So it's better. I don't always want to watch a crime show or a dance program. On YouTube, I can watch documentaries. I can learn things. Yeah, it's very, very popular. I agree.\n[Student] Yeah. What kind of content do you like?\n[Tutor] Well, I enjoy learning about history of other countries.\n[Student] Oh, I see.\n[Tutor] Yeah, I like to watch travel videos.\n[Student] Travel and history.\n[Tutor] Yes. Yep. And I watch news and current events on YouTube.\n[Student] You said it.\n[Tutor] Yeah, because there's a lot of people reporting on everything.\n[Student] I see. You are a wise woman.\n[Tutor] Well, I try to stay informed. Alright, let's go on to Part B when you're ready.\n[Student] Okay, the Part B.\n[Tutor] Which do you prefer to check first in the morning and why? Messaging, emails versus social media.\n[Student] When I get up in the morning, I check the first time my various alarms and I check my message first because during the sleep time sometimes there is some big event. So I check the first message and then I prepare to go outside and then go to my office and check my email because that is the work. And usually, I don't check the social media because it is possible to check in a toilet or the washroom. Yes.\n[Tutor] You're absolutely right. Yeah.\n[Student] So I check the message and email. And teacher, I have a question more.\n[Tutor] Okay.\n[Student] I want to express my alarm is the blah, blah, blah. Blah, blah, blah. How can I say that expression? My bed is the... Almost people keep their alarm, and in the morning, my phone is around the bed. How can I say that expression?\n[Tutor] Well, I'm trying to figure out what you're saying. I know you're trying very hard. Okay, you said something about people's alarm. Are you talking about an alarm?\n[Student] Alarm that rings or goes off at a certain time. Yes, in the night before the sleep, we will make some alarm and the morning alarm. It's called an alarm. Yeah.\n[Tutor] Okay. And you want to know how to tell them you forgot your alarm or you forgot to set your alarm?\n[Student] Oh, no. Just I want to express my alarm. How can I say? It is not... My phone's alarm worked, is it right?\n[Tutor] I'm afraid that you've caught me at a disadvantage, Joey. May I suggest that you Google it from Korean into English, and then use a search engine to further find any sayings or idioms involving alarms?\n[Student] I see. Okay, I see. Just a moment.\n[Tutor] Yeah, sure. You're my last class. Take all the time you need.\n[Student] This AI said, \"My phone alarm went off.\"\n[Student] Went off this morning. Yes, okay.\n[Student] Went off. Okay.\n[Tutor] To clarify the English, okay?\n[Student] Uh-huh.\n[Tutor] So I'm going to get you to repeat after me.\n[Tutor] My phone.\n[Student] My phone.\n[Tutor] Alarm.\n[Student] Alarm.\n[Tutor] Went off.\n[Student] Went off.\n[Tutor] Alarm went off.\n[Student] Mm.\n[Tutor] Okay, so I'm going to write, I'm going to put that right now in your comments.\n[Student] Uh-huh.\n[Tutor] And I'm going to send it to you with the pronunciation, the visual pronunciation that I've shown you with other words.\n[Student] Okay.\n[Tutor] So you'll be able to practice saying it.\n[Student] Okay. Our alarm goes off. Okay. Thank you so much. I understand.\n[Tutor] No problem. I'm happy to help. If I can make it easy for you, that's great. All right. If you're ready, let's continue on to part C, and I'll get you to read the problem solving.\n[Student] Okay, the part C problem solving. The situation, your friend borrowed your phone while you were traveling, and they accidentally turned on data roaming instead of using Wi-Fi. Now you have a huge roaming bill.\n[Student] Okay. Would you ask your friend to pay part of the bill or just let it go?\n[Student] Okay. I'm not sure why this paragraph doesn't give some information about the money. How much?\n[Tutor] How much you would bill pay. Yeah, you wouldn't find out until you get your bill.\n[Student] Yes, I understand, but I don't have information of the pay amount, bill paying.\n[Student] Yes, he or she is my friend, so usually I pay all, but if that is the big money like over the $1,000 or that is a big accident. At that time, I ask my friend because that is a huge amount of money. So yeah, if it's small money, just $10, $20 or $50, I'm just paying them. But if it is over $100 or more, I ask my friend because she or he also understands that situation.\n[Tutor] Oh, sure. And if they're a good friend, they're going to feel bad and embarrassed, and they're going to want to help you solve the problem.\n[Student] Yes. I agree with you.\n[Tutor] If it's a small amount, you let it go. But if it's a lot of money, sometimes you got to say, \"Oh, you know, this happened the other day,\" but yeah.\n[Student] Yeah, yeah, I hear you. Yes, okay.\n[Tutor] Another solution that people have given me is that if you had a friend who did charge up roaming fees and you didn't want to have a conflict with them, you might not ask them for the money, but the next time they want to borrow your phone, you'd say, \"Oh gosh, no, sorry, can't do that.\"\n[Student] Same mistake and same problem and same solution. Avoid it for the next time. Okay, I understand.\n[Tutor] That's also good, right? All right, sir. Well, yeah, they can't do it if you don't let them get your phone, right?\n[Student] Yeah.\n[Tutor] All right, sir. You're doing great today. Let's go to the warm down, and I'll get you to read number one.\n[Student] Number one.\n[Tutor] What's the one app you use every single day? Why is it useful?\n[Student] These days, I use the cloud application, the AI.\n[Tutor] Oh, yeah?\n[Student] Yeah, and nowadays my desktop connects to my mobile phone.\n[Tutor] Oh, okay.\n[Student] Yeah, so it is working on my mobile phone, like the remote control.\n[Tutor] Oh, sure. Nice. Okay. You're interconnected.\n[Student] Yeah, so if I have some work, I just send a message to my crew, and the crew works my computer. Yeah, the laptop computer. So it is convenient and efficient for me. So these days it is so funny to make some automatic process using the coding and AI. So now many things are connected and will connect.\n[Tutor] Yeah, I know. Some of the apps give us abilities we've only dreamed of 40 years ago. You know, if I had been told 40 years ago that in the future, I'd have a phone and a smart watch connected, you know, or that I even had a watch that had multifunction, it would have been incredible, you know.\n[Student] Yeah.\n[Tutor] I'm just that old. All right. Last question and opinion. One. I'll let you read it.\n[Student] Okay. Do you think people spend too much on their phones these days? Why or why not?\n[Tutor] I think they're talking about the cost of their phones. The price of their phones.\n[Student] Yeah, their phones.\n[Tutor] Okay.\n[Student] Yes, yes. It's true. Many people spend too much time. They use their phones, and if some people meet and then just dinner, after that, they just watch their mobile phone. I don't enjoy that because we are meeting offline, but they also include online work. So sometimes I'm not sure what is the real world. Yeah, so I don't like it. Every people... Yeah, yeah, it's my opinion that phone time prevents people from face-to-face socializing. Yeah.\n[Tutor] Because you've got the time to text on your phone, but you don't have time to give someone a call or meet them for coffee. So how we use our time is being used up by our smartphones. That's my opinion. On the weekends, I turn off my computer and I put my phone down and I don't look at it for hours because I don't feel like I need to.\n[Student] Okay.\n[Tutor] That's a great opinion.\n[Student] It is.\n[Tutor] Yeah. Well, like I said, it's just my opinion.\n[Student] Okay.\n[Tutor] So, sir, you are done at page 12. Now, I would just like to clarify with you if it's all right. You said you're going to China next week. So may I ask the dates that you'll be away? Are you going to be away for the whole week of the last week of August?\n[Student] Yeah, maybe four weeks. Yeah, four weeks.\n[Tutor] Okay.\n[Student] I will stay in China.\n[Tutor] Okay. And is that on business or holiday?\n[Student] It's holiday with my family.\n[Tutor] Oh, wonderful. Good for you. All right. So I believe that we will have one more class. Actually, let's see. Today is Monday, so it's Tuesday. So we've got two more classes. If you can make it, great. If you can't, then just reschedule them, okay?\n[Student] Okay. Thank you so much, teacher.\n[Tutor] All right. You have a great day. Bye-bye.\n[Student] Great day.\n\n[AI 피드백]\nJoey, 오늘 수업은 정말 즐거웠습니다! 새로운 앱과 디지털 습관에 대해 이야기하며 Joey의 흥미로운 생각들을 많이 들을 수 있었어요. 특히 AI와 코딩을 활용해 업무 효율을 높이는 이야기는 정말 인상 깊었습니다. 다음 주 중국 여행 이야기도 기대되네요!\n\n---\n\n### 0. 📌 Topic\nTopic: Discussing Digital Habits and Upcoming Travel Plans\n\n### 1. 📊 오늘의 대화 요약 (Summary)\n오늘 Joey는 한국에서 인기 있는 비메시징 앱(유튜브, 인스타그램)에 대해 이야기하고, 아침에 가장 먼저 확인하는 것과 그 이유를 설명했습니다. 또한, 친구가 데이터 로밍을 실수로 켜서 요금 폭탄이 나왔을 때 어떻게 대처할지에 대한 흥미로운 토론도 나누었고, AI를 활용한 업무 자동화 경험과 다음 주 중국 여행 계획을 공유했습니다.\n\n### 2. 💬 유창성 업그레이드 (Fluency & Natural Flow)\nJoey가 말한 문장 중 의미는 통하지만, 원어민들이 더 자연스럽게 쓰는 표현으로 다듬어볼게요.\n\n1.  ❌ **학습자 원문 (As Said):** \"many young generations have a relationship, use Instagram.\"\n    *   ✅ **자연스러운 표현 (Natural):** \"Many young people connect with each other using Instagram.\"\n    *   💎 **비즈니스 표현 (Professional):** \"Many younger demographics engage and build networks through platforms like Instagram.\"\n    *   💡 **코칭 포인트:** \"Generations\"는 특정 시대에 태어난 사람들을 지칭할 때 쓰이며, 단순히 '젊은 사람들'을 말할 때는 \"young people\"이 더 자연스럽습니다. \"Have a relationship\"보다는 \"connect with each other\"나 \"build relationships\"가 더 유연하게 들립니다.\n\n2.  ❌ **학습자 원문 (As Said):** \"some people search some information used in YouTube\"\n    *   ✅ **자연스러운 표현 (Natural):** \"Some people search for information on YouTube.\"\n    *   💎 **비즈니스 표현 (Professional):** \"Many individuals utilize YouTube as a resource for information retrieval.\"\n    *   💡 **코칭 포인트:** 무언가를 '검색하다'라고 할 때는 \"search for\"를 쓰는 것이 일반적입니다. 또한, 특정 플랫폼에서 정보를 찾을 때는 \"on YouTube\"와 같이 \"on\"을 사용하는 것이 자연스럽습니다.\n\n3.  ❌ **학습자 원문 (As Said):** \"So in Korea it is popular to our population.\"\n    *   ✅ **자연스러운 표현 (Natural):** \"So it is popular among our population in Korea.\" 또는 \"So it is widely popular in Korea.\"\n    *   💎 **비즈니스 표현 (Professional):** \"Consequently, it enjoys widespread popularity across the Korean populace.\"\n    *   💡 **코칭 포인트:** 어떤 것이 특정 집단 사이에서 인기가 많다고 할 때는 \"popular among\" 또는 \"popular with\"를 사용합니다. \"Popular to\"는 이 문맥에서 표준 영어가 아닙니다.\n\n4.  ❌ **학습자 원문 (As Said):** \"My phone's alarm worked, is it right?\"\n    *   ✅ **자연스러운 표현 (Natural):** \"My phone alarm went off.\"\n    *   💎 **비즈니스 표현 (Professional):** \"My phone's alarm successfully activated.\"\n    *   💡 **코칭 포인트:** 알람이 울렸다고 말할 때는 \"go off\"라는 구동사를 사용합니다. \"worked\"는 문법적으로 틀리진 않지만, 알람 소리에 대해서는 \"went off\"가 훨씬 자연스럽습니다.\n\n### 3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)\nCategory: **Preposition Usage (전치사 사용)**\n\nJoey는 전치사 사용에서 미묘한 실수를 반복하는 경향이 있습니다. 특히 `of`, `in`, `to` 등의 전치사를 문맥에 맞지 않게 사용하는 경우가 보였습니다. 정확한 전치사 사용은 문장의 자연스러움과 의미 전달의 정확성을 높이는 데 중요합니다.\n\n| ❌ 원문 (As Said)                                   | ✅ 교정 예시 (Corrected)                                         |\n| :-------------------------------------------------- | :------------------------------------------------------------- |\n| \"I don't have information **of** the pay amount\"     | \"I don't have information **about** the pay amount\"            |\n| \"some people search some information **used in** YouTube\" | \"some people search **for** information **on** YouTube\"        |\n| \"So **in** Korea it is popular **to** our population.\" | \"So **in** Korea it is popular **among** our population.\"      |\n| \"during the sleep time\"                             | \"during **my** sleep time\" 또는 \"during sleep\"                 |\n| \"before the sleep\"                                  | \"before **going to** sleep\" 또는 \"before sleep\"                |\n\n📌 **핵심 규칙:** 전치사는 동사, 명사, 형용사와 함께 특정 의미를 형성하는 경우가 많으므로, 각 단어에 맞는 전치사 짝(collocation)을 익히는 것이 중요합니다. 특히 `about`은 '무엇에 대한 정보'를 나타낼 때, `for`는 '무엇을 찾다'의 의미로 `search`와 함께, `on`은 플랫폼이나 표면을 나타낼 때, `among`은 '집단 사이에서'라는 의미로 `popular`와 함께 자주 쓰입니다.\n\n🔁 **따라 읽기:**\n🗣️ \"I don't have information **about** the pay amount.\"\n🗣️ \"Some people search **for** information **on** YouTube.\"\n🗣️ \"It is popular **among** our population in Korea.\"\n\n### 4. 📗 어휘 확장 (Vocabulary Vault)\n오늘 수업 중 나왔거나 관련하여 유용하게 쓸 수 있는 어휘들을 정리해 보았습니다.\n\n1.  **demographic** /ˌdɛməˈɡræfɪk/ (명사)\n    *   뜻: 인구 통계학적 집단 (특정 연령, 성별, 소득 등 특성을 가진 집단)\n    *   실전 예문: Our marketing strategy targets the **demographic** of young professionals interested in sustainable energy.\n\n2.  **utilize** /ˈjuːtəlaɪz/ (동사)\n    *   뜻: 활용하다, 이용하다 (use보다 격식 있는 표현)\n    *   실전 예문: We should **utilize** AI tools to enhance our data analysis efficiency.\n\n3.  **retrieve** /rɪˈtriːv/ (동사)\n    *   뜻: (정보 등을) 검색하다, 불러오다, 되찾다\n    *   실전 예문: The system allows us to quickly **retrieve** historical investment data.\n\n4.  **populace** /ˈpɒpjələs/ (명사)\n    *   뜻: (특정 국가나 지역의) 모든 사람, 대중\n    *   실전 예문: The new policy aims to improve the living standards of the entire **populace**.\n\n5.  **interconnected** /ˌɪntərkəˈnɛktɪd/ (형용사)\n    *   뜻: 상호 연결된\n    *   실전 예문: In the modern business world, global markets are highly **interconnected**.\n\n### 5. 📝 실전 복습 챌린지 (Practice)\n오늘 배운 표현과 문법을 활용하여 영작 챌린지에 도전해 보세요!\n\n1.  **상황:** 우리 회사는 젊은층을 대상으로 하는 새로운 투자 상품을 개발 중입니다.\n    *   **영작:** (힌트: demographic, target)\n    *   **모범 답안:** Our company is developing a new investment product that **targets** the young **demographic**.\n\n2.  **상황:** 저는 출장 중에 휴대폰으로 중요한 정보를 자주 검색합니다.\n    *   **영작:** (힌트: search for, retrieve, on my phone)\n    *   **모범 답안:** I often **search for** and **retrieve** important information **on my phone** during business trips.\n\n3.  **상황:** 이 새로운 앱은 우리 팀원들 사이에서 엄청난 인기를 얻고 있으며, 업무 효율성을 크게 높여줍니다.\n    *   **영작:** (힌트: popular among, utilize, enhance efficiency)\n    *   **모범 답안:** This new app is incredibly **popular among** our team members, and we **utilize** it to significantly **enhance** our work **efficiency**.\n\n### 6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)\n\n✨ **Good Job:**\nJoey는 오늘 튜터의 질문에 대해 자신의 의견을 명확하게 표현하는 능력이 정말 좋았습니다. 특히 \"I don't like it. Every people... Yeah, yeah, it's my opinion that phone time prevents people from face-to-face socializing.\" 이 부분에서 Joey의 확고한 의견과 논리적인 전개가 인상 깊었습니다. 비록 \"Every people\" 대신 \"Everyone\" 또는 \"All people\"이 더 자연스럽지만, 자신의 생각을 자신감 있게 전달하려는 노력이 돋보였습니다. 아주 훌륭해요! 또한, \"Usage alert\"의 발음(`a lot` -> `alert`)과 \"phone\"의 발음(`pone` -> `phone`)을 튜터의 도움을 받아 즉시 교정하고 반복 연습하는 모습에서 학습에 대한 열의를 엿볼 수 있었습니다.\n\n🚀 **내일의 한 문장:**\n다음 수업 시작 시, 오늘 배운 표현을 활용하여 튜터에게 중국 여행 계획에 대해 한 문장으로 이야기해 보세요.\n\"I'm looking forward to **utilizing** my time in China to explore its rich history and culture.\"\n(중국에서 시간을 잘 활용해서 풍부한 역사와 문화를 탐험하는 것이 기대됩니다.)\n\n---\n\n### [성과 지표]\n**유창성 점수:** 7.5/10\n\n**근거:** Joey는 다양한 주제에 대해 막힘없이 자신의 의견을 표현하려는 의지가 매우 강하며, 대화의 흐름을 끊지 않고 이어가는 능력이 뛰어납니다. 특히 AI와 코딩, 개인적인 경험에 대한 이야기는 매우 유창하게 전달되었습니다. 다만, 몇몇 문장 구조와 전치사 사용에서 자연스럽지 않은 부분이 있어 원어민처럼 들리지는 않았습니다. 하지만 의미 전달에는 전혀 문제가 없었으며, 튜터와의 상호작용도 매우 활발했습니다.\n\n**다음 수업 '원포인트 액션 플랜':**\n다음 수업에서는 **전치사 사용의 정확성**에 집중하여, 특히 `search for`, `popular among/with`, `information about`과 같이 특정 동사/명사와 짝을 이루는 전치사(collocations)를 익히는 연습을 해봅시다. 이를 통해 Joey의 문장이 더욱 자연스럽고 정확해질 수 있을 것입니다.\n\n위 내용을 바탕으로:\n1. 먼저 오늘 수업에서 내가 틀렸거나 어색했던 표현을 하나 골라서, 관련된 상황을 영어로 질문해줘.\n2. 내가 영어로 대답하면, 자연스러운지 확인하고 더 나은 표현이 있으면 알려줘.\n3. 특히 \"반복 실수 패턴\"에서 지적된 부분을 집중적으로 연습시켜줘.\n4. 이런 식으로 오늘 배운 표현들을 하나씩 복습하자.\n5. 한국어 설명은 필요할 때만 간단히, 대화는 최대한 영어로 진행해줘.\n\n그럼 시작하자!";
+        function startReview(){navigator.clipboard.writeText(REVIEW_PROMPT).then(()=>{showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)}).catch(()=>{const t=document.createElement('textarea');t.value=REVIEW_PROMPT;document.body.appendChild(t);t.select();document.execCommand('copy');document.body.removeChild(t);showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)})}
+        function showToast(){const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500)}
+        function switchTab(n){document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',n==='feedback'?i===0:i===1));document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));document.getElementById('tab-'+n).classList.add('active')}
+    </script>
+</body>
+</html>

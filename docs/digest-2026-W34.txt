@@ -4,16 +4,18 @@ This is a study digest from my one-on-one English phone lessons this week. Pleas
 
 ## Topics covered this week
 - Discussing phone communication and related vocabulary.
+- Discussing Digital Habits and Upcoming Travel Plans
 
 ## Grammar focus this week
 - Verb Forms / Auxiliaries (1x)
+- Prepositions (1x)
 
-## My all-time weak-point ranking (57 lessons since 2026-05-08)
+## My all-time weak-point ranking (58 lessons since 2026-05-08)
 - Subject–Verb Agreement — 9 lessons
 - Articles (a/an/the) — 8 lessons
 - Verb Forms / Auxiliaries — 7 lessons
 - Verb Tense — 7 lessons
-- Prepositions — 6 lessons
+- Prepositions — 7 lessons
 - Missing Subjects / Verbs — 3 lessons
 
 ## Fluency trend (tutor score out of 10, weekly average)
@@ -32,7 +34,7 @@ This is a study digest from my one-on-one English phone lessons this week. Pleas
 - 2026-W31: 7.0
 - 2026-W32: 7.0
 - 2026-W33: 7.1
-- 2026-W34: 7.0
+- 2026-W34: 7.2
 - Overall average: 7.1
 
 ## Corrections — what I said vs. the natural version
@@ -42,6 +44,14 @@ This is a study digest from my one-on-one English phone lessons this week. Pleas
    Natural: "I have a suggestion: could we start with the useful vocabulary and expressions first?"
 3. I said: "I'm more older generation, so I like to phone call."
    Natural: "I'm from an older generation, so I prefer phone calls."
+4. I said: "many young generations have a relationship, use Instagram."
+   Natural: "Many young people connect with each other using Instagram."
+5. I said: "some people search some information used in YouTube"
+   Natural: "Some people search for information on YouTube."
+6. I said: "So in Korea it is popular to our population."
+   Natural: "So it is popular among our population in Korea."
+7. I said: "My phone's alarm worked, is it right?"
+   Natural: "My phone alarm went off."
 
 ## Recurring mistakes from earlier weeks — my long-term habits
 My most repeated weak categories overall: Subject–Verb Agreement, Articles (a/an/the). These corrections are from earlier lessons in those categories. Please weave a few into the review so I revisit old mistakes.
@@ -72,6 +82,11 @@ My most repeated weak categories overall: Subject–Verb Agreement, Articles (a/
 - auto-correct (동사/명사) — 자동 수정 (기능)
 - break up (구동사) — (전화 통화 중) 신호가 끊기거나 잘 들리지 않다
 - decline (동사) — (전화 등을) 거절하다, 사양하다
+- demographic (명사) — 인구 통계학적 집단 (특정 연령, 성별, 소득 등 특성을 가진 집단)
+- utilize (동사) — 활용하다, 이용하다 (use보다 격식 있는 표현)
+- retrieve (동사) — (정보 등을) 검색하다, 불러오다, 되찾다
+- populace (명사) — (특정 국가나 지역의) 모든 사람, 대중
+- interconnected (형용사) — 상호 연결된
 
 ## Please cover in the podcast
 - Pick my 1–2 most repeated mistakes (see the all-time ranking) and explain the rule with a memorable rule of thumb.

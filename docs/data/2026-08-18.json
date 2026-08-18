@@ -1,0 +1,57 @@
+{
+ "date": "2026-08-18",
+ "iso": [
+  2026,
+  34
+ ],
+ "topic": "Discussing Digital Habits and Upcoming Travel Plans",
+ "grammar": "Preposition Usage",
+ "grammar_norm": "Prepositions",
+ "score": 7.5,
+ "pairs": [
+  {
+   "said": "many young generations have a relationship, use Instagram.",
+   "natural": "Many young people connect with each other using Instagram."
+  },
+  {
+   "said": "some people search some information used in YouTube",
+   "natural": "Some people search for information on YouTube."
+  },
+  {
+   "said": "So in Korea it is popular to our population.",
+   "natural": "So it is popular among our population in Korea."
+  },
+  {
+   "said": "My phone's alarm worked, is it right?",
+   "natural": "My phone alarm went off."
+  }
+ ],
+ "vocab": [
+  {
+   "word": "demographic",
+   "pos": "명사",
+   "meaning": "인구 통계학적 집단 (특정 연령, 성별, 소득 등 특성을 가진 집단)"
+  },
+  {
+   "word": "utilize",
+   "pos": "동사",
+   "meaning": "활용하다, 이용하다 (use보다 격식 있는 표현)"
+  },
+  {
+   "word": "retrieve",
+   "pos": "동사",
+   "meaning": "(정보 등을) 검색하다, 불러오다, 되찾다"
+  },
+  {
+   "word": "populace",
+   "pos": "명사",
+   "meaning": "(특정 국가나 지역의) 모든 사람, 대중"
+  },
+  {
+   "word": "interconnected",
+   "pos": "형용사",
+   "meaning": "상호 연결된"
+  }
+ ],
+ "_html_md5": "42dac91ba13446812249bd2b6d827bd8"
+}
