@@ -5,18 +5,18 @@ This is a study digest from my one-on-one English phone lessons this week. Pleas
 ## Topics covered this week
 - Discussing phone communication and related vocabulary.
 - Discussing Digital Habits and Upcoming Travel Plans
-- Discussing social media privacy and travel preparations.
+- Discussing phone repair scenarios and introducing oneself.
 
 ## Grammar focus this week
-- Verb Forms / Auxiliaries (2x)
-- Prepositions (1x)
+- Prepositions (2x)
+- Verb Forms / Auxiliaries (1x)
 
 ## My all-time weak-point ranking (59 lessons since 2026-05-08)
 - Subject–Verb Agreement — 9 lessons
-- Verb Forms / Auxiliaries — 8 lessons
 - Articles (a/an/the) — 8 lessons
+- Prepositions — 8 lessons
+- Verb Forms / Auxiliaries — 7 lessons
 - Verb Tense — 7 lessons
-- Prepositions — 7 lessons
 - Missing Subjects / Verbs — 3 lessons
 
 ## Fluency trend (tutor score out of 10, weekly average)
@@ -35,7 +35,7 @@ This is a study digest from my one-on-one English phone lessons this week. Pleas
 - 2026-W31: 7.0
 - 2026-W32: 7.0
 - 2026-W33: 7.1
-- 2026-W34: 7.3
+- 2026-W34: 7.2
 - Overall average: 7.1
 
 ## Corrections — what I said vs. the natural version
@@ -53,15 +53,15 @@ This is a study digest from my one-on-one English phone lessons this week. Pleas
    Natural: "So it is popular among our population in Korea."
 7. I said: "My phone's alarm worked, is it right?"
    Natural: "My phone alarm went off."
-8. I said: "before I'm prepared to go, I take a lesson with you"
-   Natural: "Before I head out, I take an English lesson."
-9. I said: "Because this day, this weekend, I will depart abroad with my family for travel."
-   Natural: "This weekend, my family and I are traveling abroad."
-10. I said: "it is a little apparent for me."
-   Natural: "It's a bit concerning for me."
+8. I said: "many people went to summer vacation."
+   Natural: "Many people went on summer vacation."
+9. I said: "But if we come the winter, you also come the summertime."
+   Natural: "But when it's winter here, it's summer there."
+10. I said: "I put in charging port in my mobile phone."
+   Natural: "I plug my phone into the charging port."
 
 ## Recurring mistakes from earlier weeks — my long-term habits
-My most repeated weak categories overall: Subject–Verb Agreement, Verb Forms / Auxiliaries. These corrections are from earlier lessons in those categories. Please weave a few into the review so I revisit old mistakes.
+My most repeated weak categories overall: Subject–Verb Agreement, Articles (a/an/the). These corrections are from earlier lessons in those categories. Please weave a few into the review so I revisit old mistakes.
 1. (2026-08-14, Subject–Verb Agreement) I said: "I'm not having any technical issues today."
    Natural: "I'm not experiencing any technical issues today."
 2. (2026-08-14, Subject–Verb Agreement) I said: "So if they are go travel to abroad, and meantime they are travel like a work."
@@ -74,12 +74,12 @@ My most repeated weak categories overall: Subject–Verb Agreement, Verb Forms /
    Natural: "So, some people like eating out or visiting cafes, while others prefer going to concerts or doing outdoor activities."
 6. (2026-08-07, Subject–Verb Agreement) I said: "We find some new restaurant and new street and new cafe. We find a place and walk and found some new place."
    Natural: "We find new restaurants, new streets, and new cafes. We find a place, walk around, and discover new spots."
-7. (2026-08-04, Verb Forms / Auxiliaries) I said: "How about my opinion?"
-   Natural: "How about my suggestion?"
-8. (2026-08-04, Verb Forms / Auxiliaries) I said: "it is more adapt to outdoor activity to summer"
-   Natural: "Summer is more suitable for outdoor activities."
-9. (2026-08-04, Verb Forms / Auxiliaries) I said: "just I find some close CVS or Olive Young and then just buying them"
-   Natural: "I'd just find a nearby CVS or Olive Young and buy some."
+7. (2026-08-03, Articles (a/an/the)) I said: "a little exciting and a little bit upset"
+   Natural: "a little excited and a little bit upset"
+8. (2026-08-03, Articles (a/an/the)) I said: "we can't generalize about hobbies per country."
+   Natural: "we can't generalize hobbies by country."
+9. (2026-08-03, Articles (a/an/the)) I said: "every place is possible to play the singing song."
+   Natural: "I can sing songs anywhere."
 10. (2026-07-29, Subject–Verb Agreement) I said: "Your sound is far away. It's good?"
    Natural: "Your sound is a bit faint. Is it better now?"
 
@@ -94,11 +94,11 @@ My most repeated weak categories overall: Subject–Verb Agreement, Verb Forms /
 - retrieve (동사) — (정보 등을) 검색하다, 불러오다, 되찾다
 - populace (명사) — (특정 국가나 지역의) 모든 사람, 대중
 - interconnected (형용사) — 상호 연결된
-- fortified (adj) — 강화된, 요새화된 (보안이나 시스템 등이 더욱 튼튼해졌음을 의미)
-- handle (n) — (소셜 미디어) 사용자 이름, 아이디
-- troll (n/v) — (인터넷에서) 악의적인 댓글을 달거나 분란을 일으키는 사람 / 그런 행동을 하다
-- blow up (phr. v.) — (게시물 등이) 큰 인기를 얻다, 화제가 되다; (사업 등이) 급성장하다
-- infringe (v) — (법률, 권리 등을) 위반하다, 침해하다
+- authorized (형용사) — 공인된, 승인된
+- glitch (명사) — 작은 문제, 결함 (특히 기술적인)
+- randomly (부사) — 무작위로, 임의로
+- coincide (동사) — 동시에 일어나다, 일치하다
+- logical (형용사) — 논리적인, 타당한
 
 ## Please cover in the podcast
 - Pick my 1–2 most repeated mistakes (see the all-time ranking) and explain the rule with a memorable rule of thumb.
