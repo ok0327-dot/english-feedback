@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#0f0f13"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="당근영어"><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="icon" type="image/png" sizes="192x192" href="icon-192.png"><script src="install-banner.js" defer></script><script src="sw-reg.js" defer></script>
+    <title>전화영어 복습 - 2026년 08월 19일</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Noto Sans KR',sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.75;min-height:100vh}
+        .header{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);border-bottom:1px solid rgba(255,255,255,.06);padding:48px 24px 40px;text-align:center}
+        .header-date{font-size:13px;color:#94a3b8;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+        .header h1{font-size:28px;font-weight:700;color:#f1f5f9;margin-bottom:16px}
+        .header-meta{display:flex;justify-content:center;gap:24px;font-size:14px;color:#64748b}
+        .header-meta span{display:flex;align-items:center;gap:6px}
+        .cta-section{text-align:center;padding:40px 24px}
+        .cta-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:linear-gradient(135deg,#38bdf8,#818cf8);color:#fff;font-size:16px;font-weight:600;font-family:'Noto Sans KR',sans-serif;border:none;border-radius:50px;cursor:pointer;transition:all .3s;text-decoration:none;box-shadow:0 4px 24px rgba(56,189,248,.25)}
+        .cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(56,189,248,.35)}
+        .cta-btn svg{width:20px;height:20px}
+        .cta-sub{margin-top:12px;font-size:13px;color:#64748b}
+        .toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#38bdf8;padding:14px 28px;border-radius:12px;font-size:14px;font-weight:500;border:1px solid rgba(56,189,248,.2);box-shadow:0 8px 32px rgba(0,0,0,.4);opacity:0;transition:all .4s cubic-bezier(.16,1,.3,1);z-index:1000}
+        .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+        .container{max-width:720px;margin:0 auto;padding:0 24px 80px}
+        .tabs{display:flex;gap:4px;background:#1a1a24;padding:4px;border-radius:12px;margin-bottom:32px}
+        .tab{flex:1;padding:12px;text-align:center;font-size:14px;font-weight:500;color:#64748b;background:0 0;border:none;border-radius:8px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all .2s}
+        .tab.active{background:#262636;color:#f1f5f9}
+        .tab-content{display:none}.tab-content.active{display:block}
+        .feedback h2{font-size:18px;font-weight:700;color:#f1f5f9;margin:36px 0 16px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.06)}
+        .feedback h2:first-child{margin-top:0}
+        .feedback p{margin:8px 0;color:#cbd5e1}
+        .feedback .item{padding:6px 0 6px 16px;border-left:2px solid #334155;margin:6px 0;color:#cbd5e1}
+        .feedback .numbered{padding:8px 0 8px 16px;color:#cbd5e1}
+        .feedback .numbered strong{color:#38bdf8}
+        .feedback strong{color:#f1f5f9}
+        .feedback code{background:#1e293b;padding:2px 8px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#38bdf8}
+        .feedback table{width:100%;border-collapse:collapse;margin:12px 0}
+        .feedback th,.feedback td{padding:10px 14px;text-align:left;border-bottom:1px solid #262636}
+        .feedback th{color:#94a3b8;font-weight:500;font-size:13px}
+        .feedback td{color:#cbd5e1}
+        .arrow{color:#38bdf8;font-weight:700}
+        .transcript{background:#1a1a24;border-radius:12px;padding:28px;font-size:14px;line-height:2;color:#94a3b8;white-space:pre-wrap;word-break:break-word;font-family:'JetBrains Mono','Noto Sans KR',monospace}
+        .transcript .tutor{color:#38bdf8}
+        .transcript .student{color:#a78bfa}
+        @media(max-width:640px){.header{padding:32px 16px}.header h1{font-size:22px}.cta-btn{padding:14px 28px;font-size:15px}.container{padding:0 16px 60px}}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-date">2026년 08월 19일</div>
+        <h1>📚 전화영어 복습</h1>
+        <div class="header-meta">
+            <span>⏱ 19분 32초</span>
+            <span>🎙 전화영어_025180304_20260819080014.m4a</span>
+        </div>
+    </div>
+    <div class="cta-section">
+        <button class="cta-btn" onclick="startReview()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Gemini에서 복습 대화 시작하기
+        </button>
+        <div class="cta-sub">클릭하면 프롬프트가 복사되고 Gemini가 열립니다</div>
+    </div>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('feedback')">📋 AI 피드백</button>
+            <button class="tab" onclick="switchTab('transcript')">🎙 수업 전사</button>
+        </div>
+        <div id="tab-feedback" class="tab-content active">
+            <div class="feedback"><p>안녕하세요, Joey! 오늘 수업도 정말 즐거웠습니다. AI 시대의 프라이버시 문제부터 여행 준비 이야기까지, 흥미로운 주제들로 가득했네요. Joey님이 적극적으로 의견을 나누고 배운 표현들을 활용하려는 모습이 정말 인상 깊었습니다.</p>
+<br>
+<br>
+<h2>0. 📌 Topic</h2>
+<p>Topic: Discussing social media privacy and travel preparations.</p>
+<br>
+<h2>1. 📊 오늘의 대화 요약 (Summary)</h2>
+<p>오늘은 소셜 미디어 사용과 온라인 프라이버시 보호에 대한 Joey님의 생각과 경험을 나누었습니다. 특히 AI 기술 발달로 인해 개인 정보 유출에 대한 우려가 커지면서, 비인간적인(non-human) 게시물을 선호하게 된 이유에 대해 깊이 있는 대화를 나눴습니다. 또한, 다가오는 가족 해외여행 준비 과정에 대해서도 이야기하며 마무리했습니다.</p>
+<br>
+<h2>2. 💬 유창성 업그레이드 (Fluency & Natural Flow)</h2>
+<p>Joey님이 실제 말한 문장 중, 의미는 통하지만 원어민이 들었을 때 조금 더 자연스럽게 들릴 수 있는 표현들을 살펴볼게요.</p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>❌ 학습자 원문 (As Said):</strong> "before I'm prepared to go, I take a lesson with you"</div>
+<div class="item"><strong>✅ 자연스러운 표현 (Natural):</strong> "Before I head out, I take an English lesson."</div>
+<div class="item"><strong>💎 비즈니스 표현 (Professional):</strong> "Prior to my departure, I typically engage in an English lesson."</div>
+<div class="item"><strong>💡 코칭 포인트:</strong> "head out"이나 "leave"는 일상 대화에서 "어딘가로 가다"를 표현할 때 더 흔하고 자연스럽습니다. "Prior to my departure"는 "떠나기 전에"를 격식 있게 표현하는 방법입니다.</div>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>❌ 학습자 원문 (As Said):</strong> "Because this day, this weekend, I will depart abroad with my family for travel."</div>
+<div class="item"><strong>✅ 자연스러운 표현 (Natural):</strong> "This weekend, my family and I are traveling abroad."</div>
+<div class="item"><strong>💎 비즈니스 표현 (Professional):</strong> "My family and I are scheduled to travel internationally this coming weekend."</div>
+<div class="item"><strong>💡 코칭 포인트:</strong> "This day, this weekend"은 중복입니다. "depart abroad for travel"은 "travel abroad"로 간단하게 표현할 수 있습니다. 미래 계획을 말할 때 현재진행형 "are traveling"을 쓰는 것이 매우 흔하고 자연스럽습니다.</div>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>❌ 학습자 원문 (As Said):</strong> "it is a little apparent for me." (Joey meant "concerning" or "alarming")</div>
+<div class="item"><strong>✅ 자연스러운 표현 (Natural):</strong> "It's a bit concerning for me."</div>
+<div class="item"><strong>💎 비즈니스 표현 (Professional):</strong> "I find that situation somewhat alarming."</div>
+<div class="item"><strong>💡 코칭 포인트:</strong> "Apparent"는 "명백한" 또는 "분명한"이라는 뜻입니다. 어떤 것이 걱정되거나 불안하게 느껴진다고 표현하고 싶을 때는 "concerning"이나 "alarming"이 더 적절한 단어입니다.</div>
+<br>
+<h2>3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)</h2>
+<p>Category: <strong>Incorrect Verb Form After "I'm"</strong></p>
+<br>
+<p>Joey님은 "I'm" 뒤에 동사 원형이나 과거형을 사용하는 경향이 있었습니다. "I'm"은 "I am"의 줄임말이므로, 뒤에는 주로 현재분사(-ing) 형태가 와서 현재 진행형을 만들거나, 과거분사(p.p.) 형태가 와서 수동태를 만듭니다. 동사 원형은 "I" 뒤에 바로 오거나, "I will" 등의 조동사 뒤에 옵니다.</p>
+<br>
+<table>
+<tr><th>❌ 원문 (As Said)</th><th>✅ 교정 예시 (Corrected)</th></tr>
+<tr><td>"these days I'm just post non-human posts"</td><td>"these days I just post non-human posts" (능동) <br/> "these days I'm just posting non-human posts" (진행)</td></tr>
+<tr><td>"I'm just deleted my post"</td><td>"I just deleted my post" (능동 과거)</td></tr>
+<tr><td>"sometimes I'm repost"</td><td>"sometimes I repost" (능동 현재)</td></tr>
+</table>
+<br>
+<p>📌 <strong>핵심 규칙:</strong> "I'm" (I am) 뒤에는 동사 원형이 아닌 현재분사(-ing)나 과거분사(p.p.)가 오거나, 형용사/명사가 와야 합니다. 동사 원형은 주어 바로 뒤에 오거나 조동사 뒤에 옵니다.</p>
+<br>
+<p>🔁 <strong>따라 읽기:</strong></p>
+<p>🗣️ "These days I just post non-human posts."</p>
+<p>🗣️ "I just deleted my post."</p>
+<p>🗣️ "Sometimes I repost."</p>
+<br>
+<h2>4. 📗 어휘 확장 (Vocabulary Vault)</h2>
+<p>오늘 수업에서 다루었거나 비즈니스 환경에서 유용하게 쓰일 수 있는 어휘들을 소개해 드립니다.</p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>fortified</strong> /fɔːrtɪfaɪd/ (adj)</div>
+<div class="item">뜻: 강화된, 요새화된 (보안이나 시스템 등이 더욱 튼튼해졌음을 의미)</div>
+<div class="item">실전 예문: Our cybersecurity system has been <strong>fortified</strong> to prevent data breaches.</div>
+<div class="numbered"><strong>2.</strong> <strong>handle</strong> /hændl/ (n)</div>
+<div class="item">뜻: (소셜 미디어) 사용자 이름, 아이디</div>
+<div class="item">실전 예문: Please share your LinkedIn <strong>handle</strong> so we can connect professionally.</div>
+<div class="numbered"><strong>3.</strong> <strong>troll</strong> /troʊl/ (n/v)</div>
+<div class="item">뜻: (인터넷에서) 악의적인 댓글을 달거나 분란을 일으키는 사람 / 그런 행동을 하다</div>
+<div class="item">실전 예문: We need to implement stricter policies to deal with online <strong>trolls</strong> who disrupt our community.</div>
+<div class="numbered"><strong>4.</strong> <strong>blow up</strong> /bloʊ ʌp/ (phr. v.)</div>
+<div class="item">뜻: (게시물 등이) 큰 인기를 얻다, 화제가 되다; (사업 등이) 급성장하다</div>
+<div class="item">실전 예문: Our latest marketing campaign really <strong>blew up</strong> on social media, generating significant leads.</div>
+<div class="numbered"><strong>5.</strong> <strong>infringe</strong> /ɪnˈfrɪndʒ/ (v)</div>
+<div class="item">뜻: (법률, 권리 등을) 위반하다, 침해하다</div>
+<div class="item">실전 예문: Sharing personal information without consent could <strong>infringe</strong> on an individual's privacy rights.</div>
+<br>
+<h2>5. 📝 실전 복습 챌린지 (Practice)</h2>
+<p>오늘 배운 표현과 문법을 활용하여 다음 문장들을 영작해 보세요.</p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>상황:</strong> 최근 우리 회사의 신제품 출시 소식이 소셜 미디어에서 큰 화제가 되고 있습니다.</div>
+<div class="item"><strong>영작:</strong> (힌트: 'blow up' 활용)</div>
+<div class="item"><strong>모범 답안:</strong> The news of our company's new product launch is really <strong>blowing up</strong> on social media.</div>
+<div class="numbered"><strong>2.</strong> <strong>상황:</strong> 저는 보통 외출하기 전에 아침 식사를 준비합니다.</div>
+<div class="item"><strong>영작:</strong> (힌트: 'before I head out' 또는 'before I prepare to go' 활용)</div>
+<div class="item"><strong>모범 답안:</strong> Before I <strong>head out</strong>, I usually prepare breakfast.</div>
+<div class="numbered"><strong>3.</strong> <strong>상황:</strong> 온라인에서 개인 정보를 공유하는 것은 때때로 우리의 프라이버시를 침해할 수 있어 우려스럽습니다.</div>
+<div class="item"><strong>영작:</strong> (힌트: 'infringe'와 'concerning' 활용)</div>
+<div class="item"><strong>모범 답안:</strong> Sharing personal information online can sometimes <strong>infringe</strong> on our privacy, which is quite <strong>concerning</strong>.</div>
+<br>
+<h2>6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)</h2>
+<br>
+<p>✨ <strong>Good Job:</strong></p>
+<p>Joey님이 오늘 가장 잘 표현한 문장 중 하나는 바로 이것입니다:</p>
+<p>"<strong>Yes, you're right. How about you? Which would you rather post? Selfie or non-human post?</strong>"</p>
+<p>이 문장은 대화의 흐름을 자연스럽게 이어가면서 튜터에게 질문을 던져 상호작용을 이끌어냈습니다. 짧고 명확하며, 배운 어휘(non-human post)를 바로 활용하는 센스까지 돋보였습니다! 정말 훌륭해요!</p>
+<br>
+<p>🚀 <strong>내일의 한 문장:</strong></p>
+<p>다음 수업 시작 시, 튜터에게 오늘 배운 내용을 활용하여 이렇게 말해보는 건 어떨까요?</p>
+<p>"I've been thinking about how our company can <strong>fortify</strong> its online presence without <strong>infringing</strong> on user privacy."</p>
+<p>(우리 회사가 사용자 프라이버시를 침해하지 않으면서 온라인 존재감을 어떻게 강화할 수 있을지 생각해 봤어요.)</p>
+<br>
+<br>
+<h2>[성과 지표]</h2>
+<p><strong>유창성 점수:</strong> 7.5/10</p>
+<br>
+<p><strong>근거:</strong> Joey님은 다양한 주제에 대해 막힘없이 자신의 의견을 표현하려는 의지가 매우 강합니다. 대화의 흐름을 주도하고 질문을 던지며 적극적으로 참여하는 모습이 인상적입니다. 다만, 문장 구조가 한국어식 사고방식에 영향을 받아 다소 어색하게 느껴지거나, 특정 문법 오류(예: "I'm" 뒤 동사 원형 사용)가 반복되는 경향이 있어 유창성 점수를 7.5점으로 책정했습니다. 어휘력은 중급 수준으로 충분히 의사소통이 가능합니다.</p>
+<br>
+<p><strong>다음 수업 '원포인트 액션 플랜':</strong></p>
+<p>다음 수업에서는 <strong>"I'm" 뒤에 오는 동사 형태(현재분사 -ing 또는 과거분사 p.p.)</strong>에 좀 더 신경 써서 말하는 연습을 해봅시다. 문장을 말하기 전에 "I'm" 뒤에 어떤 동사 형태가 와야 할지 한 번 더 생각하는 습관을 들이면 좋습니다.</p></div>
+        </div>
+        <div id="tab-transcript" class="tab-content">
+            <div class="transcript"><span class="student">[Student]</span> Hello. Hello, Karen. Good afternoon.
+<span class="tutor">[Tutor]</span> Hi, how are you doing today?
+<span class="student">[Student]</span> Hi, Karen. I&#x27;m so good. I&#x27;m good, I&#x27;m good. Yes, it&#x27;s a nice day. How are you today?
+<span class="tutor">[Tutor]</span> Oh, pretty good. Nice day. Are you outside today or working today?
+<span class="student">[Student]</span> Oh, yes. Of course, it&#x27;s normal days. I will go to work. So, yeah, before I&#x27;m prepared to go, I take a lesson with you, the English lesson.
+<span class="tutor">[Tutor]</span> Okay. Well, speaking of, I think we&#x27;re on page 13, I believe.
+<span class="student">[Student]</span> Oh, yes. Maybe it is section 12. Should I open this? This is the today lesson subject.
+<span class="tutor">[Tutor]</span> Oh, I thought, why isn&#x27;t this charging?
+<span class="student">[Student]</span> Oh, yes. Because, oh no, the next page. Because this day, this weekend, I will depart abroad with my family for travel. So, yeah, I take the temporary class. So it is continued to section of 12. Should I pass this? Because before your lesson, I had one more. Yeah, take a lesson. Because next week, I can&#x27;t take the class during the travel period. So, yeah. Today, we will start. Should I pass this?
+<span class="tutor">[Tutor]</span> Okay, it hasn&#x27;t showed up on the record yet. It just showed 12 was the last page.
+<span class="student">[Student]</span> Yes, you&#x27;re right.
+<span class="tutor">[Tutor]</span> I guess if you took a class just before, then it wouldn&#x27;t show up yet.
+<span class="student">[Student]</span> Show up yet. I can&#x27;t see the update, so I can only see that.
+<span class="student">[Student]</span> Oh, yes, I understand. Yeah, there&#x27;s no problem.
+<span class="tutor">[Tutor]</span> So looking at page 14 then, so would you like to read the useful vocab?
+<span class="student">[Student]</span> Oh, yeah, no problem. Fortified, an account confirmed as real often with a check mark.
+<span class="tutor">[Tutor]</span> Celebrities usually get verified quickly.
+<span class="student">[Student]</span> An account confirmed as real often with a check mark. Okay, verified. And social media. Okay, and social media handle. Your unique username on a platform. What&#x27;s your Instagram handle? Handle. Another ID. Yes, okay. What is your Instagram handle? And teacher, how can I read the &quot;at&quot;? Usually we made some this &quot;at&quot; use the email. Is your right pronunciation &quot;at&quot;? So, a, it&#x27;s &quot;at&quot;, &quot;at the rate&quot;. Okay, is there another name &quot;at&quot; for these people use that because the app? Okay, yes.
+<span class="tutor">[Tutor]</span> Yes, yes.
+<span class="student">[Student]</span> Second, troll. Someone who posted rude comments to upset people. I blocked a troll yesterday. Okay. And use the expression?
+<span class="tutor">[Tutor]</span> Yes, yeah, the expression.
+<span class="student">[Student]</span> Okay. It&#x27;s blowing up. Used when a post is getting a lot of attention. Blowing up. It&#x27;s blowing up. Used when a post getting a lot attention. Blowing up. Tag me in that. Used when you want to include in a post. Tag me in that.
+<span class="student">[Student]</span> Okay, yeah.
+<span class="tutor">[Tutor]</span> So do you have any posts or have you had any posts blow up or any posts that were blowing up?
+<span class="student">[Student]</span> I don&#x27;t use the SNS, so I&#x27;m not sure it is blowing up or not. Just in Korea, we are used to KakaoTalk. It is similar to the SNS and sometimes I post my picture, so at that time, and many people know about that, but I&#x27;m not sure it is blowing up or not. Just that is their remark on my account.
+<span class="tutor">[Tutor]</span> Okay, so is it more for your personal, like, friends, family?
+<span class="student">[Student]</span> Yes, yes, you&#x27;re right.
+<span class="tutor">[Tutor]</span> So looking at Part A, the warm-up questions.
+<span class="tutor">[Tutor]</span> Okay, are you okay? What happened? Can you hear me? What is the go-to social media app in Korea?
+<span class="student">[Student]</span> Yes, yes. In our Korea, people usually use Instagram because Koreans like to take a picture and post the picture. So, yeah, it is popular, popular application in Korea. Instagram and there are so other things that the Facebook is the old application in Korea, so we don&#x27;t use that anymore. And TikTok and Twitter X, it is also popular, but that&#x27;s not main application in Korea. And this section, it is application of &quot;Walk&quot;. What&#x27;s that application? Do you know that?
+<span class="tutor">[Tutor]</span> Walk.
+<span class="student">[Student]</span> Work.
+<span class="tutor">[Tutor]</span> Walk? Yeah, I&#x27;m not sure.
+<span class="student">[Student]</span> Oh, you&#x27;re not. Okay. Yes.
+<span class="tutor">[Tutor]</span> So they could have made a mistake, but it looks like maybe they meant to do Instagram, but maybe put the wrong one.
+<span class="student">[Student]</span> Yes, it&#x27;s possible. Yeah, maybe it is their Instagram or some other, yeah, application, but it is all of the the mistake of their print. Yeah, that can happen here. So I think and probably, yes, something like a picture or an image app. Yeah, social media. Yes, it is about connect about the picture. Okay. And looking at part B, which would you rather post and why? Selfies and people or...
+<span class="student">[Student]</span> Okay. In my case, I love to take selfies and people, but these days, AI is developed. So if I post some picture, many people possibly guessed my information about the place or the place or some other information, my home or some other information. So, these days I post non-human posts, just street or mountain or lake and beach. Yeah, because it does not give some other information, just give the place. So, these days I&#x27;m just post non-human posts and not post the selfie and my family.
+<span class="tutor">[Tutor]</span> Okay, so you changed over time. So you used to take selfies, but now for privacy.
+<span class="student">[Student]</span> Yeah, privacy. Yeah, for the privacy. For example, I heard that if some guys take a selfie, at that time the AI analyzes the picture. So that is the gathering information, the place, and printed dumps and paste and their home information. So it is a little apparent for me. Yeah, I just post my non-human post. Mm. Oh, okay, yes. So kind of avoiding. Yeah.
+<span class="tutor">[Tutor]</span> Avoid. Avoiding those creepy or internet or privacy.
+<span class="student">[Student]</span> Yeah.
+<span class="tutor">[Tutor]</span> Keeping your privacy.
+<span class="student">[Student]</span> Yeah, you&#x27;re right. How about you? Which would you rather post? Selfie or non-human post?
+<span class="tutor">[Tutor]</span> More non-human posts.
+<span class="student">[Student]</span> Ah, nice. Okay, it is similar. Yes.
+<span class="tutor">[Tutor]</span> Sorry. So next, we have the problem solving. Would you like to read?
+<span class="student">[Student]</span> Oh, no problem. The situation A, a stranger keeps commenting on your post. Some are normal, but others feel too personal. Ah, they haven&#x27;t said anything too rude, but it&#x27;s making you uncomfortable. You still want to post freely. Would you block the person or make your account private so only friends can see your post? Hmm, I see. I think it is just a stranger, not have a relationship, just a stranger of online. So I&#x27;m just block the person because there are so many people in the world and there are also many people are rude in the online world. So just block, it is an easy way to keep my SNS. So just block the person and keep my post.
+<span class="tutor">[Tutor]</span> Yeah, it&#x27;s your... So yeah, it&#x27;s common, yeah. So maybe a troll or somebody trying to troll you.
+<span class="student">[Student]</span> Yeah.
+<span class="tutor">[Tutor]</span> Being annoying.
+<span class="student">[Student]</span> Yeah. Sometimes some people like their trolls, things. Yeah, they are happy when you insult to other people or spread over the rumor. Yeah. So I don&#x27;t like that because it is connected to my human right. So just block. Yeah, it is more easy. Block to the troll.
+<span class="tutor">[Tutor]</span> Yeah, yeah. Usually the block button is nice and easy to use.
+<span class="student">[Student]</span> Yes, you&#x27;re right.
+<span class="tutor">[Tutor]</span> And have you ever deleted a post after posting?
+<span class="student">[Student]</span> Yes, sometimes I post my travel picture and then go back to my bed, go to sleep. And then next day, I realized that&#x27;s the atmosphere is a little real or it is a real private picture to other people. And in the meantime, I&#x27;m just deleted my post because sometimes my feeling is the difference and my post also feel the difference. Yeah, sometimes it&#x27;s nice, but next day or when I feel bad, that post is a little bad and so just personalize and in the meantime just delete and sometimes I&#x27;m repost. Yeah, yeah, I don&#x27;t know. I&#x27;m human, so yes, it is my feeling is a little different every day, so I&#x27;m not sure.
+<span class="tutor">[Tutor]</span> Yes, it&#x27;s common to change your mind and you think, oh, it&#x27;s not a bad picture. Why did I delete it? And you might post it again. Or maybe a friend might ask you, why did you delete it? That was a good picture.
+<span class="student">[Student]</span> Yes, yes, you&#x27;re right.
+<span class="tutor">[Tutor]</span> Okay. Okay. What do you do to protect your privacy online?
+<span class="student">[Student]</span> Hmm, ah, yes, a long time ago I post my stepping and my pace and my family and my lover. But this day, I avoid that situation because before I said, this is so dangerous, dangerous generation, dangerous modern situation because if I want, these days I study AI, so just if I take one picture, I can make same picture to that person. For example, if I take your picture, just one picture, I can make other picture, travel or cooking or walking, everything. And it&#x27;s also possible to make a clip, a movie clip. It is more easy. So these days I avoid my face and my home and my lover, my family. I avoid that picture.
+<span class="tutor">[Tutor]</span> Yeah, yeah, kind of once it&#x27;s online, anyone can see it, anyone can access it and who, yeah.
+<span class="student">[Student]</span> Hello, teacher, are you okay? It&#x27;s some...
+<span class="tutor">[Tutor]</span> Hello? Yeah, hello. Yes.
+<span class="student">[Student]</span> Okay, it is almost finished the class, so it&#x27;s okay.
+<span class="tutor">[Tutor]</span> I&#x27;m sorry. I don&#x27;t understand. Can you not hear me? Is the quality...
+<span class="student">[Student]</span> Oh, yes, maybe your connection is to have a little problem. Maybe sometimes it is sound. And in the meantime, I can hear your voice. But it&#x27;s okay. Yeah, just it is short time. Maybe I&#x27;m just afraid that your next class, you check.
+<span class="tutor">[Tutor]</span> Yeah, similar. No, there&#x27;s nothing. It&#x27;s clear on my end.
+<span class="student">[Student]</span> Oh, yes, it&#x27;s better. It&#x27;s better. It&#x27;s totally clear. Yeah, on my end. And I&#x27;m not sure.
+<span class="tutor">[Tutor]</span> Okay. Maybe, yes, or something. Are you traveling right now?
+<span class="student">[Student]</span> This Saturday morning, I will depart to airport. So, this day I take two lessons per day. And maybe next week, I&#x27;m just focusing on my travel and can&#x27;t take the English class.
+<span class="tutor">[Tutor]</span> Okay, and um, so you are you all ready to travel on Saturday?
+<span class="student">[Student]</span> Uh, yes, maybe the half. Yeah, I installed my application used in China because every application is forbidden in China. Google Map or some SNS, AI, etc. So I installed the Chinese application. Gaode Map and some card maps. Yes, so yeah, I&#x27;m installed and I&#x27;m prepared some reservation, the tickets, my etc. So I finished the half. Yes, and so today I will some make some insurance, travel insurance, etc. Yes, it&#x27;s all. Oh.
+<span class="tutor">[Tutor]</span> And when you downloaded the new apps, did you have to sign up for them or did you give them your email address?
+<span class="student">[Student]</span> I needed to sign up, use my mobile phone number. But that is twice for China, so it is more easy because almost application prepared. So yeah, there&#x27;s no problem.
+<span class="tutor">[Tutor]</span> Okay, so it&#x27;ll be good. You have everything. Mostly... Okay.
+<span class="tutor">[Tutor]</span> Well, I will send you corrections in just a bit.
+<span class="student">[Student]</span> Uh-huh.
+<span class="tutor">[Tutor]</span> Yeah, have a great day. Goodbye.
+<span class="student">[Student]</span> Okay, you too. Have a nice day. Bye-bye, teacher.
+<span class="tutor">[Tutor]</span> Bye.</div>
+        </div>
+    </div>
+    <div class="toast" id="toast">✅ 프롬프트가 복사되었습니다!</div>
+    <script>
+        const REVIEW_PROMPT="너는 나의 영어 회화 복습 파트너야. 오늘 내 전화영어 수업 내용을 기반으로 대화하면서 복습을 도와줘.\n\n[오늘 수업 전사 내용]\n[Student] Hello. Hello, Karen. Good afternoon.\n[Tutor] Hi, how are you doing today?\n[Student] Hi, Karen. I'm so good. I'm good, I'm good. Yes, it's a nice day. How are you today?\n[Tutor] Oh, pretty good. Nice day. Are you outside today or working today?\n[Student] Oh, yes. Of course, it's normal days. I will go to work. So, yeah, before I'm prepared to go, I take a lesson with you, the English lesson.\n[Tutor] Okay. Well, speaking of, I think we're on page 13, I believe.\n[Student] Oh, yes. Maybe it is section 12. Should I open this? This is the today lesson subject.\n[Tutor] Oh, I thought, why isn't this charging?\n[Student] Oh, yes. Because, oh no, the next page. Because this day, this weekend, I will depart abroad with my family for travel. So, yeah, I take the temporary class. So it is continued to section of 12. Should I pass this? Because before your lesson, I had one more. Yeah, take a lesson. Because next week, I can't take the class during the travel period. So, yeah. Today, we will start. Should I pass this?\n[Tutor] Okay, it hasn't showed up on the record yet. It just showed 12 was the last page.\n[Student] Yes, you're right.\n[Tutor] I guess if you took a class just before, then it wouldn't show up yet.\n[Student] Show up yet. I can't see the update, so I can only see that.\n[Student] Oh, yes, I understand. Yeah, there's no problem.\n[Tutor] So looking at page 14 then, so would you like to read the useful vocab?\n[Student] Oh, yeah, no problem. Fortified, an account confirmed as real often with a check mark.\n[Tutor] Celebrities usually get verified quickly.\n[Student] An account confirmed as real often with a check mark. Okay, verified. And social media. Okay, and social media handle. Your unique username on a platform. What's your Instagram handle? Handle. Another ID. Yes, okay. What is your Instagram handle? And teacher, how can I read the \"at\"? Usually we made some this \"at\" use the email. Is your right pronunciation \"at\"? So, a, it's \"at\", \"at the rate\". Okay, is there another name \"at\" for these people use that because the app? Okay, yes.\n[Tutor] Yes, yes.\n[Student] Second, troll. Someone who posted rude comments to upset people. I blocked a troll yesterday. Okay. And use the expression?\n[Tutor] Yes, yeah, the expression.\n[Student] Okay. It's blowing up. Used when a post is getting a lot of attention. Blowing up. It's blowing up. Used when a post getting a lot attention. Blowing up. Tag me in that. Used when you want to include in a post. Tag me in that.\n[Student] Okay, yeah.\n[Tutor] So do you have any posts or have you had any posts blow up or any posts that were blowing up?\n[Student] I don't use the SNS, so I'm not sure it is blowing up or not. Just in Korea, we are used to KakaoTalk. It is similar to the SNS and sometimes I post my picture, so at that time, and many people know about that, but I'm not sure it is blowing up or not. Just that is their remark on my account.\n[Tutor] Okay, so is it more for your personal, like, friends, family?\n[Student] Yes, yes, you're right.\n[Tutor] So looking at Part A, the warm-up questions.\n[Tutor] Okay, are you okay? What happened? Can you hear me? What is the go-to social media app in Korea?\n[Student] Yes, yes. In our Korea, people usually use Instagram because Koreans like to take a picture and post the picture. So, yeah, it is popular, popular application in Korea. Instagram and there are so other things that the Facebook is the old application in Korea, so we don't use that anymore. And TikTok and Twitter X, it is also popular, but that's not main application in Korea. And this section, it is application of \"Walk\". What's that application? Do you know that?\n[Tutor] Walk.\n[Student] Work.\n[Tutor] Walk? Yeah, I'm not sure.\n[Student] Oh, you're not. Okay. Yes.\n[Tutor] So they could have made a mistake, but it looks like maybe they meant to do Instagram, but maybe put the wrong one.\n[Student] Yes, it's possible. Yeah, maybe it is their Instagram or some other, yeah, application, but it is all of the the mistake of their print. Yeah, that can happen here. So I think and probably, yes, something like a picture or an image app. Yeah, social media. Yes, it is about connect about the picture. Okay. And looking at part B, which would you rather post and why? Selfies and people or...\n[Student] Okay. In my case, I love to take selfies and people, but these days, AI is developed. So if I post some picture, many people possibly guessed my information about the place or the place or some other information, my home or some other information. So, these days I post non-human posts, just street or mountain or lake and beach. Yeah, because it does not give some other information, just give the place. So, these days I'm just post non-human posts and not post the selfie and my family.\n[Tutor] Okay, so you changed over time. So you used to take selfies, but now for privacy.\n[Student] Yeah, privacy. Yeah, for the privacy. For example, I heard that if some guys take a selfie, at that time the AI analyzes the picture. So that is the gathering information, the place, and printed dumps and paste and their home information. So it is a little apparent for me. Yeah, I just post my non-human post. Mm. Oh, okay, yes. So kind of avoiding. Yeah.\n[Tutor] Avoid. Avoiding those creepy or internet or privacy.\n[Student] Yeah.\n[Tutor] Keeping your privacy.\n[Student] Yeah, you're right. How about you? Which would you rather post? Selfie or non-human post?\n[Tutor] More non-human posts.\n[Student] Ah, nice. Okay, it is similar. Yes.\n[Tutor] Sorry. So next, we have the problem solving. Would you like to read?\n[Student] Oh, no problem. The situation A, a stranger keeps commenting on your post. Some are normal, but others feel too personal. Ah, they haven't said anything too rude, but it's making you uncomfortable. You still want to post freely. Would you block the person or make your account private so only friends can see your post? Hmm, I see. I think it is just a stranger, not have a relationship, just a stranger of online. So I'm just block the person because there are so many people in the world and there are also many people are rude in the online world. So just block, it is an easy way to keep my SNS. So just block the person and keep my post.\n[Tutor] Yeah, it's your... So yeah, it's common, yeah. So maybe a troll or somebody trying to troll you.\n[Student] Yeah.\n[Tutor] Being annoying.\n[Student] Yeah. Sometimes some people like their trolls, things. Yeah, they are happy when you insult to other people or spread over the rumor. Yeah. So I don't like that because it is connected to my human right. So just block. Yeah, it is more easy. Block to the troll.\n[Tutor] Yeah, yeah. Usually the block button is nice and easy to use.\n[Student] Yes, you're right.\n[Tutor] And have you ever deleted a post after posting?\n[Student] Yes, sometimes I post my travel picture and then go back to my bed, go to sleep. And then next day, I realized that's the atmosphere is a little real or it is a real private picture to other people. And in the meantime, I'm just deleted my post because sometimes my feeling is the difference and my post also feel the difference. Yeah, sometimes it's nice, but next day or when I feel bad, that post is a little bad and so just personalize and in the meantime just delete and sometimes I'm repost. Yeah, yeah, I don't know. I'm human, so yes, it is my feeling is a little different every day, so I'm not sure.\n[Tutor] Yes, it's common to change your mind and you think, oh, it's not a bad picture. Why did I delete it? And you might post it again. Or maybe a friend might ask you, why did you delete it? That was a good picture.\n[Student] Yes, yes, you're right.\n[Tutor] Okay. Okay. What do you do to protect your privacy online?\n[Student] Hmm, ah, yes, a long time ago I post my stepping and my pace and my family and my lover. But this day, I avoid that situation because before I said, this is so dangerous, dangerous generation, dangerous modern situation because if I want, these days I study AI, so just if I take one picture, I can make same picture to that person. For example, if I take your picture, just one picture, I can make other picture, travel or cooking or walking, everything. And it's also possible to make a clip, a movie clip. It is more easy. So these days I avoid my face and my home and my lover, my family. I avoid that picture.\n[Tutor] Yeah, yeah, kind of once it's online, anyone can see it, anyone can access it and who, yeah.\n[Student] Hello, teacher, are you okay? It's some...\n[Tutor] Hello? Yeah, hello. Yes.\n[Student] Okay, it is almost finished the class, so it's okay.\n[Tutor] I'm sorry. I don't understand. Can you not hear me? Is the quality...\n[Student] Oh, yes, maybe your connection is to have a little problem. Maybe sometimes it is sound. And in the meantime, I can hear your voice. But it's okay. Yeah, just it is short time. Maybe I'm just afraid that your next class, you check.\n[Tutor] Yeah, similar. No, there's nothing. It's clear on my end.\n[Student] Oh, yes, it's better. It's better. It's totally clear. Yeah, on my end. And I'm not sure.\n[Tutor] Okay. Maybe, yes, or something. Are you traveling right now?\n[Student] This Saturday morning, I will depart to airport. So, this day I take two lessons per day. And maybe next week, I'm just focusing on my travel and can't take the English class.\n[Tutor] Okay, and um, so you are you all ready to travel on Saturday?\n[Student] Uh, yes, maybe the half. Yeah, I installed my application used in China because every application is forbidden in China. Google Map or some SNS, AI, etc. So I installed the Chinese application. Gaode Map and some card maps. Yes, so yeah, I'm installed and I'm prepared some reservation, the tickets, my etc. So I finished the half. Yes, and so today I will some make some insurance, travel insurance, etc. Yes, it's all. Oh.\n[Tutor] And when you downloaded the new apps, did you have to sign up for them or did you give them your email address?\n[Student] I needed to sign up, use my mobile phone number. But that is twice for China, so it is more easy because almost application prepared. So yeah, there's no problem.\n[Tutor] Okay, so it'll be good. You have everything. Mostly... Okay.\n[Tutor] Well, I will send you corrections in just a bit.\n[Student] Uh-huh.\n[Tutor] Yeah, have a great day. Goodbye.\n[Student] Okay, you too. Have a nice day. Bye-bye, teacher.\n[Tutor] Bye.\n\n[AI 피드백]\n안녕하세요, Joey! 오늘 수업도 정말 즐거웠습니다. AI 시대의 프라이버시 문제부터 여행 준비 이야기까지, 흥미로운 주제들로 가득했네요. Joey님이 적극적으로 의견을 나누고 배운 표현들을 활용하려는 모습이 정말 인상 깊었습니다.\n\n---\n\n### 0. 📌 Topic\nTopic: Discussing social media privacy and travel preparations.\n\n### 1. 📊 오늘의 대화 요약 (Summary)\n오늘은 소셜 미디어 사용과 온라인 프라이버시 보호에 대한 Joey님의 생각과 경험을 나누었습니다. 특히 AI 기술 발달로 인해 개인 정보 유출에 대한 우려가 커지면서, 비인간적인(non-human) 게시물을 선호하게 된 이유에 대해 깊이 있는 대화를 나눴습니다. 또한, 다가오는 가족 해외여행 준비 과정에 대해서도 이야기하며 마무리했습니다.\n\n### 2. 💬 유창성 업그레이드 (Fluency & Natural Flow)\nJoey님이 실제 말한 문장 중, 의미는 통하지만 원어민이 들었을 때 조금 더 자연스럽게 들릴 수 있는 표현들을 살펴볼게요.\n\n1.  **❌ 학습자 원문 (As Said):** \"before I'm prepared to go, I take a lesson with you\"\n    *   **✅ 자연스러운 표현 (Natural):** \"Before I head out, I take an English lesson.\"\n    *   **💎 비즈니스 표현 (Professional):** \"Prior to my departure, I typically engage in an English lesson.\"\n    *   **💡 코칭 포인트:** \"head out\"이나 \"leave\"는 일상 대화에서 \"어딘가로 가다\"를 표현할 때 더 흔하고 자연스럽습니다. \"Prior to my departure\"는 \"떠나기 전에\"를 격식 있게 표현하는 방법입니다.\n\n2.  **❌ 학습자 원문 (As Said):** \"Because this day, this weekend, I will depart abroad with my family for travel.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"This weekend, my family and I are traveling abroad.\"\n    *   **💎 비즈니스 표현 (Professional):** \"My family and I are scheduled to travel internationally this coming weekend.\"\n    *   **💡 코칭 포인트:** \"This day, this weekend\"은 중복입니다. \"depart abroad for travel\"은 \"travel abroad\"로 간단하게 표현할 수 있습니다. 미래 계획을 말할 때 현재진행형 \"are traveling\"을 쓰는 것이 매우 흔하고 자연스럽습니다.\n\n3.  **❌ 학습자 원문 (As Said):** \"it is a little apparent for me.\" (Joey meant \"concerning\" or \"alarming\")\n    *   **✅ 자연스러운 표현 (Natural):** \"It's a bit concerning for me.\"\n    *   **💎 비즈니스 표현 (Professional):** \"I find that situation somewhat alarming.\"\n    *   **💡 코칭 포인트:** \"Apparent\"는 \"명백한\" 또는 \"분명한\"이라는 뜻입니다. 어떤 것이 걱정되거나 불안하게 느껴진다고 표현하고 싶을 때는 \"concerning\"이나 \"alarming\"이 더 적절한 단어입니다.\n\n### 3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)\nCategory: **Incorrect Verb Form After \"I'm\"**\n\nJoey님은 \"I'm\" 뒤에 동사 원형이나 과거형을 사용하는 경향이 있었습니다. \"I'm\"은 \"I am\"의 줄임말이므로, 뒤에는 주로 현재분사(-ing) 형태가 와서 현재 진행형을 만들거나, 과거분사(p.p.) 형태가 와서 수동태를 만듭니다. 동사 원형은 \"I\" 뒤에 바로 오거나, \"I will\" 등의 조동사 뒤에 옵니다.\n\n| ❌ 원문 (As Said)                                         | ✅ 교정 예시 (Corrected)                                      |\n| :--------------------------------------------------------- | :----------------------------------------------------------- |\n| \"these days I'm just post non-human posts\"               | \"these days I just post non-human posts\" (능동) <br/> \"these days I'm just posting non-human posts\" (진행) |\n| \"I'm just deleted my post\"                               | \"I just deleted my post\" (능동 과거)                         |\n| \"sometimes I'm repost\"                                   | \"sometimes I repost\" (능동 현재)                             |\n\n📌 **핵심 규칙:** \"I'm\" (I am) 뒤에는 동사 원형이 아닌 현재분사(-ing)나 과거분사(p.p.)가 오거나, 형용사/명사가 와야 합니다. 동사 원형은 주어 바로 뒤에 오거나 조동사 뒤에 옵니다.\n\n🔁 **따라 읽기:**\n🗣️ \"These days I just post non-human posts.\"\n🗣️ \"I just deleted my post.\"\n🗣️ \"Sometimes I repost.\"\n\n### 4. 📗 어휘 확장 (Vocabulary Vault)\n오늘 수업에서 다루었거나 비즈니스 환경에서 유용하게 쓰일 수 있는 어휘들을 소개해 드립니다.\n\n1.  **fortified** /fɔːrtɪfaɪd/ (adj)\n    *   뜻: 강화된, 요새화된 (보안이나 시스템 등이 더욱 튼튼해졌음을 의미)\n    *   실전 예문: Our cybersecurity system has been **fortified** to prevent data breaches.\n2.  **handle** /hændl/ (n)\n    *   뜻: (소셜 미디어) 사용자 이름, 아이디\n    *   실전 예문: Please share your LinkedIn **handle** so we can connect professionally.\n3.  **troll** /troʊl/ (n/v)\n    *   뜻: (인터넷에서) 악의적인 댓글을 달거나 분란을 일으키는 사람 / 그런 행동을 하다\n    *   실전 예문: We need to implement stricter policies to deal with online **trolls** who disrupt our community.\n4.  **blow up** /bloʊ ʌp/ (phr. v.)\n    *   뜻: (게시물 등이) 큰 인기를 얻다, 화제가 되다; (사업 등이) 급성장하다\n    *   실전 예문: Our latest marketing campaign really **blew up** on social media, generating significant leads.\n5.  **infringe** /ɪnˈfrɪndʒ/ (v)\n    *   뜻: (법률, 권리 등을) 위반하다, 침해하다\n    *   실전 예문: Sharing personal information without consent could **infringe** on an individual's privacy rights.\n\n### 5. 📝 실전 복습 챌린지 (Practice)\n오늘 배운 표현과 문법을 활용하여 다음 문장들을 영작해 보세요.\n\n1.  **상황:** 최근 우리 회사의 신제품 출시 소식이 소셜 미디어에서 큰 화제가 되고 있습니다.\n    *   **영작:** (힌트: 'blow up' 활용)\n    *   **모범 답안:** The news of our company's new product launch is really **blowing up** on social media.\n2.  **상황:** 저는 보통 외출하기 전에 아침 식사를 준비합니다.\n    *   **영작:** (힌트: 'before I head out' 또는 'before I prepare to go' 활용)\n    *   **모범 답안:** Before I **head out**, I usually prepare breakfast.\n3.  **상황:** 온라인에서 개인 정보를 공유하는 것은 때때로 우리의 프라이버시를 침해할 수 있어 우려스럽습니다.\n    *   **영작:** (힌트: 'infringe'와 'concerning' 활용)\n    *   **모범 답안:** Sharing personal information online can sometimes **infringe** on our privacy, which is quite **concerning**.\n\n### 6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)\n\n✨ **Good Job:**\nJoey님이 오늘 가장 잘 표현한 문장 중 하나는 바로 이것입니다:\n\"**Yes, you're right. How about you? Which would you rather post? Selfie or non-human post?**\"\n이 문장은 대화의 흐름을 자연스럽게 이어가면서 튜터에게 질문을 던져 상호작용을 이끌어냈습니다. 짧고 명확하며, 배운 어휘(non-human post)를 바로 활용하는 센스까지 돋보였습니다! 정말 훌륭해요!\n\n🚀 **내일의 한 문장:**\n다음 수업 시작 시, 튜터에게 오늘 배운 내용을 활용하여 이렇게 말해보는 건 어떨까요?\n\"I've been thinking about how our company can **fortify** its online presence without **infringing** on user privacy.\"\n(우리 회사가 사용자 프라이버시를 침해하지 않으면서 온라인 존재감을 어떻게 강화할 수 있을지 생각해 봤어요.)\n\n---\n\n### [성과 지표]\n**유창성 점수:** 7.5/10\n\n**근거:** Joey님은 다양한 주제에 대해 막힘없이 자신의 의견을 표현하려는 의지가 매우 강합니다. 대화의 흐름을 주도하고 질문을 던지며 적극적으로 참여하는 모습이 인상적입니다. 다만, 문장 구조가 한국어식 사고방식에 영향을 받아 다소 어색하게 느껴지거나, 특정 문법 오류(예: \"I'm\" 뒤 동사 원형 사용)가 반복되는 경향이 있어 유창성 점수를 7.5점으로 책정했습니다. 어휘력은 중급 수준으로 충분히 의사소통이 가능합니다.\n\n**다음 수업 '원포인트 액션 플랜':**\n다음 수업에서는 **\"I'm\" 뒤에 오는 동사 형태(현재분사 -ing 또는 과거분사 p.p.)**에 좀 더 신경 써서 말하는 연습을 해봅시다. 문장을 말하기 전에 \"I'm\" 뒤에 어떤 동사 형태가 와야 할지 한 번 더 생각하는 습관을 들이면 좋습니다.\n\n위 내용을 바탕으로:\n1. 먼저 오늘 수업에서 내가 틀렸거나 어색했던 표현을 하나 골라서, 관련된 상황을 영어로 질문해줘.\n2. 내가 영어로 대답하면, 자연스러운지 확인하고 더 나은 표현이 있으면 알려줘.\n3. 특히 \"반복 실수 패턴\"에서 지적된 부분을 집중적으로 연습시켜줘.\n4. 이런 식으로 오늘 배운 표현들을 하나씩 복습하자.\n5. 한국어 설명은 필요할 때만 간단히, 대화는 최대한 영어로 진행해줘.\n\n그럼 시작하자!";
+        function startReview(){navigator.clipboard.writeText(REVIEW_PROMPT).then(()=>{showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)}).catch(()=>{const t=document.createElement('textarea');t.value=REVIEW_PROMPT;document.body.appendChild(t);t.select();document.execCommand('copy');document.body.removeChild(t);showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)})}
+        function showToast(){const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500)}
+        function switchTab(n){document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',n==='feedback'?i===0:i===1));document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));document.getElementById('tab-'+n).classList.add('active')}
+    </script>
+</body>
+</html>
