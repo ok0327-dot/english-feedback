@@ -15,3 +15,6 @@ __pycache__/
 
 # Playwright MCP session logs
 .playwright-mcp/
+
+# 로그인 실패 디버그 덤프(스크린샷·HTML) — 개인정보 포함 가능하므로 커밋 금지
+debug-carrot/
