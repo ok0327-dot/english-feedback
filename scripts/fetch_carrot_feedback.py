@@ -183,6 +183,11 @@ def _login_once(email, password):
         browser = p.chromium.launch(headless=True)
         page = browser.new_context().new_page()
 
+        # 세션 리플레이 비콘(replays.carrotsolutions.co.kr)은 스트리밍이라 요청이 끝나지 않는다.
+        # 수집에 불필요하므로 아예 차단해 페이지 로드를 가볍게 만든다.
+        # The session-replay beacon streams and never completes; it is irrelevant here, so block it.
+        page.route(re.compile(r"replays\.carrotsolutions\.co\.kr"), lambda r: r.abort())
+
         def on_request(req):
             # allFeedback 우선, 없으면 homeapi 로 가는 인증 요청에서라도 확보
             # prefer allFeedback, else any authenticated homeapi request
@@ -195,7 +200,12 @@ def _login_once(email, password):
         page.on("request", on_request)
         try:
             print(f"🌐 [1/6] 로그인 페이지 이동 / open login page: {LOGIN_URL}")
-            page.goto(LOGIN_URL, wait_until="networkidle", timeout=45000)
+            # ⚠️ wait_until="networkidle" 금지. 이 사이트는 끝나지 않는 분석 요청을 물고 있어
+            #    networkidle 이 영원히 만족되지 않고 100% 타임아웃한다(실측: 8주 연속 CI 실패 원인).
+            #    대신 DOM 준비만 기다리고, 실제로 필요한 요소를 _resolve() 로 폴링한다.
+            # ⚠️ Never use networkidle here: a never-ending analytics request makes it time out
+            #    deterministically. Wait for the DOM, then poll for the element we actually need.
+            page.goto(LOGIN_URL, wait_until="domcontentloaded", timeout=45000)
 
             print("✍️ [2/6] 이메일 입력 / fill email")
             _resolve(page, [
@@ -241,7 +251,9 @@ def _login_once(email, password):
             print("🏫 로그인 성공 — myClassroom 진입 / logged in")
 
             print("📡 [6/6] 피드백 페이지에서 accesstoken 캡처 / capture token")
-            page.goto(FEEDBACK_PAGE, wait_until="networkidle", timeout=45000)
+            # 위와 같은 이유로 networkidle 금지. 토큰은 아래 폴링으로 기다린다.
+            # networkidle is unusable here for the same reason; the poll below waits for the token.
+            page.goto(FEEDBACK_PAGE, wait_until="domcontentloaded", timeout=45000)
             for _ in range(40):
                 if captured["token"]:
                     break

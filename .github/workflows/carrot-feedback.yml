@@ -140,8 +140,12 @@ jobs:
         if: steps.preflight.outputs.ready == 'true'
         run: python scripts/build_carrot_page.py
 
+      # ⚠️ main 에서 실행될 때만 푸시한다. 브랜치에서 테스트 실행할 때 `HEAD:main` 이
+      #    그 브랜치 전체를 main 으로 밀어 넣는 사고(사실상 무단 머지)를 막는 가드.
+      # ⚠️ Push only from main — otherwise a test run on a branch would shove that whole
+      #    branch into main via `HEAD:main`.
       - name: 💾 변경분 커밋·푸시
-        if: steps.preflight.outputs.ready == 'true'
+        if: steps.preflight.outputs.ready == 'true' && github.ref == 'refs/heads/main'
         run: |
           git config user.email "actions@github.com"
           git config user.name "GitHub Actions"
