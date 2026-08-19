@@ -1,5 +1,5 @@
 <!DOCTYPE html><html lang="ko"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1"><link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#0f0f13"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="당근영어"><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="icon" type="image/png" sizes="192x192" href="icon-192.png"><script src="install-banner.js" defer></script>
+<meta name="viewport" content="width=device-width,initial-scale=1"><link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#0f0f13"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="당근영어"><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="icon" type="image/png" sizes="192x192" href="icon-192.png"><script src="install-banner.js" defer></script><script src="sw-reg.js" defer></script>
 <title>🎓 강사 공식 피드백</title><style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:'Noto Sans KR',-apple-system,sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.7}
@@ -10,9 +10,23 @@ body{font-family:'Noto Sans KR',-apple-system,sans-serif;background:#0f0f13;colo
 .nav a{color:#64748b;text-decoration:none;padding:6px 10px;border-radius:8px}
 .nav a:hover{color:#fbbf24;background:#16161d}
 .container{max-width:760px;margin:0 auto;padding:18px 20px 80px}
-.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:20px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:20px}
 .stat{background:#16161d;border:1px solid rgba(255,255,255,.06);border-radius:14px;padding:16px 10px;text-align:center}
-.stat .n{font-size:22px;font-weight:700;color:#fb923c}.stat .l{font-size:11px;color:#94a3b8;margin-top:4px}
+.stat .n{font-size:22px;font-weight:700;color:#fb923c}
+.stat .n.sm{font-size:13.5px;line-height:1.5;padding-top:4px}
+.stat .l{font-size:11px;color:#94a3b8;margin-top:4px}
+@media(max-width:520px){.stats{grid-template-columns:repeat(2,1fr)}}
+.fresh{display:none;border-radius:14px;padding:13px 16px;margin-bottom:16px;font-size:13px;line-height:1.65;border:1px solid transparent}
+.fresh.show{display:block}
+.fresh b{font-weight:700}
+.fresh .sub{font-size:11.5px;opacity:.85;margin-top:5px}
+.fresh.ok{background:rgba(34,197,94,.07);border-color:rgba(34,197,94,.22);color:#86efac}
+.fresh.warn{background:rgba(251,146,60,.10);border-color:rgba(251,146,60,.40);color:#fdba74}
+.fresh.bad{background:rgba(248,113,113,.10);border-color:rgba(248,113,113,.45);color:#fca5a5}
+.gap{background:rgba(251,146,60,.07);border:1px dashed rgba(251,146,60,.38);border-radius:14px;padding:12px 16px;margin-bottom:18px;font-size:12.5px;color:#fdba74}
+.gap .ms{color:#fbbf24;font-weight:700}
+.gap .sub{display:block;font-size:11.5px;color:#94a3b8;margin-top:4px}
+.gap code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;color:#cbd5e1;background:#0f0f13;border-radius:5px;padding:1px 5px}
 .intro{background:#16161d;border:1px solid rgba(251,146,60,.18);border-radius:14px;padding:16px 18px;margin-bottom:20px;font-size:13px;color:#cbd5e1}
 .intro b{color:#fbbf24}
 .mhd{font-size:13px;color:#fb923c;font-weight:700;margin:22px 0 10px;border-bottom:1px solid rgba(255,255,255,.06);padding-bottom:6px}
@@ -28,17 +42,20 @@ body{font-family:'Noto Sans KR',-apple-system,sans-serif;background:#0f0f13;colo
 .foot{text-align:center;font-size:11px;color:#475569;margin-top:26px;line-height:1.8}
 </style></head><body>
 <div class="header"><h1>🎓 강사 공식 피드백</h1>
-<div class="range">Carrot English 강사 직접 작성</div></div>
+<div class="range">Carrot English 강사 직접 작성 · 마지막 갱신 2026-08-19 (추정)</div></div>
 <div class="nav"><a href="index.html">← 일일 복습</a><a href="review-index.html">📊 주간 복습 →</a></div>
 <div class="container">
+  <div class="fresh" id="fresh" data-fetched-at="2026-08-19" data-source="파일 수정시각" data-estimated="1" data-recent-gaps="2026-07,2026-08"><div class="msg"></div><div class="sub"></div></div>
   <div class="stats">
     <div class="stat"><div class="n">20</div><div class="l">강사 피드백 일수</div></div>
     <div class="stat"><div class="n">96</div><div class="l">강사 교정 항목</div></div>
     <div class="stat"><div class="n">1</div><div class="l">수집 월</div></div>
+    <div class="stat"><div class="n sm">2026-08-19 (추정)</div><div class="l">마지막 갱신</div></div>
   </div>
+  <div class="gap">🕳 누락된 달: <span class="ms">2026-07, 2026-08</span><span class="sub">해당 월은 강사 피드백이 한 건도 수집되지 않았습니다. 백필 / backfill: <code>python3 scripts/fetch_carrot_feedback.py --backfill</code></span></div>
   <div class="intro">이 페이지는 <b>Carrot English 강사님이 매 수업 직접 작성</b>한 공식 피드백입니다.
   AI 피드백(일일 복습)과 <b>함께 보면</b> 같은 약점을 다른 관점에서 짚어줘 학습 효과가 큽니다.
-  매주 자동 갱신됩니다.</div>
+  매주 월요일 자동 갱신되며, <b>갱신이 멈추면 위에 경고 배너</b>가 표시됩니다.</div>
   <div class="mhd">2026년 6월 · 20일</div><div class="day"><div class="d">🗓 2026-06-26<span class="cnt">교정 7개</span></div><div class="memo">Today we discussed viewing sunflowers as well as the topic &quot;It&#x27;s a investment&quot;. Discussed plans to view SnackChat next month. Practiced listening and answered questions about the topic and different types of investments. Continue to practice plural forms. Here are today&#x27;s notes:</div><div class="pair"><div class="said">❌ I do not yet</div><div class="nat">✅ I have not yet</div></div><div class="pair"><div class="said">❌ I see a man who working on the desk</div><div class="nat">✅ I see a man who is working at the desk. I see a man whose work is on the desk.</div></div><div class="pair"><div class="said">❌ These days Korea government they offer some tax</div><div class="nat">✅ These days the Korean government offers some tax</div></div><div class="pair"><div class="said">❌ Which is prefer</div><div class="nat">✅ Which do you prefer</div></div><div class="pair"><div class="said">❌ I&#x27;m little conservation person</div><div class="nat">✅ I&#x27;m a little conservative. I&#x27;m a little bit of a conservative people.</div></div><div class="pair"><div class="said">❌ Five years ago almost people like the invest</div><div class="nat">✅ Five years ago [almost all/most] people like to invest in real estate</div></div><div class="pair"><div class="said">❌ The stock market grows ups</div><div class="nat">✅ The stock market grows</div></div></div><div class="day"><div class="d">🗓 2026-06-25<span class="cnt">교정 4개</span></div><div class="memo">No worries - We can start with Snak-Chat next week!</div><div class="pair"><div class="said">❌ DIS picture SHOW a professional group pf people</div><div class="nat">✅ THIS picture SHOW(S) a GROUP OF PROFESSIONAL people.</div></div><div class="pair"><div class="said">❌ It can help POCUS</div><div class="nat">✅ It can help you FOCUS (pronounced FOH-KUS)</div></div><div class="pair"><div class="said">❌ What do you think is the purpose of STRATEGIC planning?</div><div class="nat">✅ What do you think is the purpose of STRATEGIC (pronounced STRAH-TEE-JIK) planning?</div></div><div class="pair"><div class="said">❌ DUH arrrow needs to be DIRECT to the right way to find the TARGET.</div><div class="nat">✅ The (pronounced THUH) arrow needs to be DIRECTED to the right way to find the TARGET.</div></div></div><div class="day"><div class="d">🗓 2026-06-24<span class="cnt">교정 6개</span></div><div class="memo">Today we discussed the topic &quot;Office Supplies&quot;. Reviewed the meaning of [stationary- writing materials and office supplies] and answered discussion questions about you, stapler, scissors, tape, sticky note, notepad, clipboard]. Here are today&#x27;s notes:</div><div class="pair"><div class="said">❌ Today I want to talk today topic</div><div class="nat">✅ Today I want to talk about today&#x27;s topic</div></div><div class="pair"><div class="said">❌ Some womans writing something on the note</div><div class="nat">✅ Some woman is writing something on the notepad</div></div><div class="pair"><div class="said">❌ Almost I use the computer but this memory is not directly</div><div class="nat">✅ I almost always use the computer but [memory is not direct/it can be difficult to remember]</div></div><div class="pair"><div class="said">❌ What is your favorite supplier in office</div><div class="nat">✅ What is your favorite office supply</div></div><div class="pair"><div class="said">❌ At the time there is no prepared so I visit the offline shop</div><div class="nat">✅ At the time there is nothing prepared so I visit the offline shop/stationary store/office supply store</div></div><div class="pair"><div class="said">❌ Sometimes that is I need more directly and more classic</div><div class="nat">✅ Sometimes I need to write more immediate and classic</div></div></div><div class="day"><div class="d">🗓 2026-06-23<span class="cnt">교정 4개</span></div><div class="memo">Thank you for joining me!  I love your enthusiasm!!</div><div class="pair"><div class="said">❌ He WEARS a SHUIT AND TIE.</div><div class="nat">✅ He is WEARING A SUIT AND TIE.</div></div><div class="pair"><div class="said">❌ The paper shows COLORFUL GRAPHS</div><div class="nat">✅ The paper shows COLORFUL GRAPHICS</div></div><div class="pair"><div class="said">❌ What are DEY?</div><div class="nat">✅ What are THEY?</div></div><div class="pair"><div class="said">❌ Often mistakes and misunderstandings
 can READ  (pronounced LEED)to needless risks</div><div class="nat">✅ Often mistakes and misunderstandings
 can LEAD (pronounced REED) to needless risks</div></div></div><div class="day"><div class="d">🗓 2026-06-22<span class="cnt">교정 5개</span></div><div class="memo">Nice work today, here are some corrections</div><div class="pair"><div class="said">❌ Saturday will went to hotel pool</div><div class="nat">✅ Saturday we went to the hotel pool</div></div><div class="pair"><div class="said">❌ we swimming almost 4 hours more</div><div class="nat">✅ we swam for almost 4 hours</div></div><div class="pair"><div class="said">❌ if you buy the house in the Seoul</div><div class="nat">✅ if you buy a house in Seoul</div></div><div class="pair"><div class="said">❌ the value is higher</div><div class="nat">✅ the value is always increasing</div></div><div class="pair"><div class="said">❌ its possible to every information</div><div class="nat">✅ it&#x27;s possible to find every information</div></div></div><div class="day"><div class="d">🗓 2026-06-19<span class="cnt">교정 3개</span></div><div class="memo">You are making great progress and showing a solid understanding of the work. It’s clear that you are putting in consistent effort, and this is reflected in the quality of your work and the improvement in your skills. Keep up the good work!</div><div class="pair"><div class="said">❌ I always with my family on Friday</div><div class="nat">✅ I always spend time with my family on Friday</div></div><div class="pair"><div class="said">❌ We will go to the Sauna</div><div class="nat">✅ We will visit the Sauna together</div></div><div class="pair"><div class="said">❌ Sometimes I love that</div><div class="nat">✅ I also enjoy watching the games when I can</div></div></div><div class="day"><div class="d">🗓 2026-06-18<span class="cnt">교정 3개</span></div><div class="memo">Thank you for chatting and being open to modifying your program! You worked hard again today!
@@ -53,4 +70,44 @@ vocab: discrepancies</div><div class="pair"><div class="said">❌ it&#x27;s so t
 vocab: productive</div><div class="pair"><div class="said">❌ I share my time with my family</div><div class="nat">✅ I spent time with my family</div></div><div class="pair"><div class="said">❌ other womens</div><div class="nat">✅ other women</div></div><div class="pair"><div class="said">❌ white expert nursing clothes</div><div class="nat">✅ white nursing uniform</div></div><div class="pair"><div class="said">❌ puzzling</div><div class="nat">✅ do a puzzle</div></div><div class="pair"><div class="said">❌ at age 55, my son will become 20</div><div class="nat">✅ at age 55, my son will be 20</div></div></div><div class="day"><div class="d">🗓 2026-06-05<span class="cnt">교정 6개</span></div><div class="memo">Today we reviewed the topic &quot;Team building activities&quot;. Answered questions about team building exercises in your workplace and characteristics of a good team. Practiced conversation skills while speaking about a familiar subject. Here are today&#x27;s notes:</div><div class="pair"><div class="said">❌ It is a little tired</div><div class="nat">✅ I am a little tired. It is a little tiring.</div></div><div class="pair"><div class="said">❌ In this picture I can see the four people gathering hands because they cheer up something</div><div class="nat">✅ In this picture I can see the four people gathering hands because they are cheering for something</div></div><div class="pair"><div class="said">❌ Usually one time per year, two time per year team building activity</div><div class="nat">✅ Usually one time per year, two times per year we have team a building activity</div></div><div class="pair"><div class="said">❌ Work on another city</div><div class="nat">✅ Working in another city</div></div><div class="pair"><div class="said">❌ They do work not good well</div><div class="nat">✅ They do not [work well/do good work]</div></div><div class="pair"><div class="said">❌ Usually we don&#x27;t have a rule the same team work the period</div><div class="nat">✅ Usually we don&#x27;t have a rule about a [limit/limited period] working on the same team</div></div></div><div class="day"><div class="d">🗓 2026-06-04<span class="cnt">교정 3개</span></div><div class="memo">Wonderful to chat with you today!  Your English is solid!  As discussed, I have sent a message to Carrot for changing your textbook program!</div><div class="pair"><div class="said">❌ Ten years ago, SHE IS A NURSE.</div><div class="nat">✅ Ten years ago, SHE WAS A NURSE. She had our son and chose to stay at home.</div></div><div class="pair"><div class="said">❌ My goal is COMMUNICATION (pronounced CAW-MUH-KAY-SHUN)</div><div class="nat">✅ My goal is COMMUNICATION (pronounced CAW-MYOO-KAY-SHUN)</div></div><div class="pair"><div class="said">❌ It&#x27;s our first time. I would introduce myself and you introduce yourself.</div><div class="nat">✅ I would like to do INTRODUCTIONS and free talk.</div></div></div><div class="day"><div class="d">🗓 2026-06-04<span class="cnt">교정 5개</span></div><div class="memo">Hello Joey! It was nice to meet you. I will change your text book to daily topic. I hope you have a nice day!</div><div class="pair"><div class="said">❌ how you have you been</div><div class="nat">✅ how have you been</div></div><div class="pair"><div class="said">❌ i just recommend</div><div class="nat">✅ Can I just recommend.</div></div><div class="pair"><div class="said">❌ do you have some plans to the weekends</div><div class="nat">✅ do you have some plans for the weekends</div></div><div class="pair"><div class="said">❌ ask the answer</div><div class="nat">✅ answer the question</div></div><div class="pair"><div class="said">❌ every product price is going higher</div><div class="nat">✅ the prices of products are increasing</div></div></div><div class="day"><div class="d">🗓 2026-06-02<span class="cnt">교정 6개</span></div><div class="pair"><div class="said">❌ I finish my work.</div><div class="nat">✅ I finished my work.</div></div><div class="pair"><div class="said">❌ That city is IT city.</div><div class="nat">✅ That city is an IT city.</div></div><div class="pair"><div class="said">❌ If you visit this city, you feel a little younger.</div><div class="nat">✅ If you visit this city, you will feel a little younger.</div></div><div class="pair"><div class="said">❌ This city has a relaxed atmosphere.</div><div class="nat">✅ This city has a relaxed atmosphere.</div></div><div class="pair"><div class="said">❌ It is free, comfortable, and young.</div><div class="nat">✅ It is a free, comfortable, and young city.</div></div><div class="pair"><div class="said">❌ Maybe if I have a chance, I want to talk to you more.</div><div class="nat">✅ If I have the opportunity, I would like to talk to you again.</div></div></div><div class="day"><div class="d">🗓 2026-06-01<span class="cnt">교정 5개</span></div><div class="memo">It was great having class with you today. Here are your corrections</div><div class="pair"><div class="said">❌ I take relax in my home</div><div class="nat">✅ I relax in my home</div></div><div class="pair"><div class="said">❌ Do you live Canada</div><div class="nat">✅ Do you live in Canada</div></div><div class="pair"><div class="said">❌ it&#x27;s connect with second question</div><div class="nat">✅ it&#x27;s connected with the second question</div></div><div class="pair"><div class="said">❌ just one section not a full section</div><div class="nat">✅ just one part of the story not the full story</div></div><div class="pair"><div class="said">❌ they have different thinking</div><div class="nat">✅ they have different opinions OR they have different way of thinking</div></div></div>
   <div class="foot">데이터: Carrot English allFeedback · scripts/build_carrot_page.py<br>
   매주 자동 갱신 · 강사 직접 작성 원문</div>
-</div><script>if("serviceWorker" in navigator){addEventListener("load",function(){navigator.serviceWorker.register("sw.js").catch(function(){})})}</script></body></html>
+</div>
+<script>
+(function(){
+  var el=document.getElementById('fresh');
+  if(!el)return;
+  var at=el.getAttribute('data-fetched-at')||'';
+  var est=el.getAttribute('data-estimated')==='1';
+  var src=el.getAttribute('data-source')||'';
+  var msg=el.querySelector('.msg'), sub=el.querySelector('.sub');
+  // 최근 달(이번달·지난달)이 통째로 비어 있으면 날짜와 무관하게 빨강 / recent empty months = hard alarm.
+  // 파일 mtime 추정치는 git checkout 시각에 오염될 수 있어 이 검사가 최후의 안전장치다.
+  var rg=(el.getAttribute('data-recent-gaps')||'').split(',').filter(Boolean);
+  if(rg.length){
+    el.className='fresh bad show';
+    msg.innerHTML='⚠️ <b>최근 '+rg.length+'개월치 강사 피드백이 비어 있습니다</b> ('+rg.join(', ')+') — 수집 워크플로우를 확인하세요.';
+    sub.textContent='마지막 갱신 '+(at||'기록 없음')+(est?' (추정)':'')+(src?' · 출처: '+src:'');
+    return;
+  }
+  if(!/^\d{4}-\d{2}-\d{2}$/.test(at)){
+    el.className='fresh bad show';
+    msg.innerHTML='⚠️ <b>강사 피드백 수집 기록이 없습니다</b> — 수집 워크플로우를 확인하세요.';
+    sub.textContent='docs/carrot/_meta.json · _fetched.txt 둘 다 없음';
+    return;
+  }
+  // KST(+09:00) 자정 기준 경과일 / days elapsed, anchored to KST midnight
+  var n=Math.floor((Date.now()-Date.parse(at+'T00:00:00+09:00'))/86400000);
+  if(n<0)n=0;
+  if(n>20){
+    el.className='fresh bad show';
+    msg.innerHTML='⚠️ <b>강사 피드백이 '+n+'일째 갱신되지 않았습니다</b> — 수집 워크플로우를 확인하세요.';
+  }else if(n>=10){
+    el.className='fresh warn show';
+    msg.innerHTML='⚠️ 강사 피드백이 <b>'+n+'일째</b> 갱신되지 않았습니다 — 수집 워크플로우를 확인하세요.';
+  }else{
+    el.className='fresh ok show';
+    msg.innerHTML='✅ 최신 상태 · '+(n===0?'오늘':n+'일 전')+' 갱신';
+  }
+  sub.textContent='마지막 갱신 '+at+(est?' (추정)':'')+(src?' · 출처: '+src:'');
+})();
+</script>
+</body></html>
