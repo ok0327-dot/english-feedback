@@ -5,22 +5,28 @@
 
 ---
 
-## 🚨 최우선 — 지금 바로 (BLOCKER)
+## ✅ 완료 (2026-08-19)
 
-### 0. 🥕 Carrot 강사 피드백 수집이 8주째 멈춰 있음 → 시크릿 등록 + 백필
-- **무엇**: 주간 워크플로우 `carrot-feedback.yml` 이 **2026-06-28 ~ 2026-08-16, 8주 연속 전부 실패**.
-- **원인**: repo secrets **`CARROT_EMAIL` / `CARROT_PASSWORD` 가 등록된 적이 없음** → `fetch_carrot_feedback.py` 가 자격증명 없음으로 즉시 종료(exit 2).
-- **피해**: `docs/carrot/` 에 `2026-06.json` 하나뿐. **2026-07 · 2026-08 강사 피드백 전부 누락**. 사이트는 "매주 자동 갱신됩니다"라고만 표시해 실패가 보이지 않았음.
-- **상태**: 🔴 **미해결 — 데이터 계속 유실 중**. 이번 주 월요일도 같은 이유로 실패.
-- **방법(사용자)**: 👉 **[`scripts/CARROT_SETUP.md`](scripts/CARROT_SETUP.md) 런북 그대로 따라가면 복구됨.** 요약:
-  1. Settings → Secrets and variables → Actions → New repository secret ×2
-     (`CARROT_EMAIL` = `minuk-kang@sk.com`, `CARROT_PASSWORD` = Carrot 비밀번호)
-     또는 터미널: `gh secret set CARROT_EMAIL --repo ok0327-dot/english-feedback --body 'minuk-kang@sk.com'` /
-     `gh secret set CARROT_PASSWORD --repo ok0327-dot/english-feedback` (비번은 프롬프트 입력 — 히스토리에 남기지 말 것)
-  2. 곧바로 누락분 백필: `gh workflow run carrot-feedback.yml --repo ok0327-dot/english-feedback -f backfill=true`
-  3. 확인: `gh run watch` / `gh run list --workflow=carrot-feedback.yml`, 그리고 `docs/carrot/2026-07.json`·`2026-08.json`·`_meta.json` 생성 여부
-- **참고**: 종료 코드 0=성공 / 2=시크릿 미설정 / 3=로그인 실패 / 4=API 실패. 실패 시 Actions 실행 페이지 하단 **Artifacts → `carrot-debug-<run_id>`** 에 로그인 실패 스크린샷·HTML 이 남음. 상세는 런북 5·6장.
-- **🔐 주의**: 비밀번호를 채팅·커밋·로그에 붙여넣지 말 것.
+### 0. 🥕 Carrot 강사 피드백 수집 복구 — **완료**
+- **무엇**: `carrot-feedback.yml` 이 **2026-06-28 ~ 2026-08-16, 8주 연속 실패**하던 것을 복구. 데이터 2월~8월 전부 수집됨.
+- **원인이 2개였다**:
+  1. repo secrets `CARROT_EMAIL` / `CARROT_PASSWORD` 미등록 → 즉시 exit.
+  2. **`wait_until="networkidle"`** — 당근농장 사이트가 세션 리플레이 비콘
+     `replays.carrotsolutions.co.kr/ingest/v1/web/start` 를 스트리밍으로 열어둔 채 끝내지 않아
+     networkidle 이 **구조적으로 절대 만족될 수 없었음**(간헐 flake 아님, 100% 결정적 타임아웃).
+     시크릿을 8주 전에 넣었어도 똑같이 실패했을 것.
+     → `domcontentloaded` 로 변경 + 해당 비콘 `page.route` 차단으로 해결(0.4초).
+- **결과**: `docs/carrot/` 2026-02~08 (7개월) · **122일 · 교정 554개** (복구 전 20일/96개).
+- **재발 방지**:
+  - 정기 실행이 항상 `--backfill` → 실패로 생긴 구멍을 스스로 메움.
+  - 시크릿 미설정은 '실패(빨간 X)'가 아니라 **'skip + 설정 안내'** 로 구분(alert fatigue 방지).
+  - 종료 코드별 텔레그램 문구(2=미설정 / 3=로그인 실패 / 4=API) + 실패 시 디버그 아티팩트 업로드.
+  - `carrot.html` 에 **신선도 배너**(10일↑ 주황 / 21일↑ 빨강) + 누락 월 표시 → 수집이 죽으면 화면에서 바로 보임.
+  - 커밋 스텝에 `github.ref == 'refs/heads/main'` 가드 → 브랜치 테스트가 main 을 덮어쓰지 못함.
+- **참고**: 종료 코드 0=성공 / 2=시크릿 미설정·인자 오류 / 3=로그인 실패 / 4=API 실패.
+  실패 시 Actions 실행 페이지 하단 **Artifacts → `carrot-debug-<run_id>`** 에 로그인 실패 스크린샷·HTML.
+  상세 런북: [`scripts/CARROT_SETUP.md`](scripts/CARROT_SETUP.md).
+- **⚠️ 앞으로 로그인이 깨지면**: exit 3 이 뜨고 디버그 스크린샷이 남는다. Carrot 로그인 UI 변경 또는 비밀번호 변경을 의심할 것.
 
 ---
 
@@ -78,6 +84,6 @@
 ## 🧭 현재 시스템 한눈에 (참고)
 - **매일(평일)**: `english-feedback.yml` → `process_lesson.py`(Drive 녹음→Groq 전사→Gemini 피드백→docs/일일 페이지+이메일). 짤림 방지 패치 적용됨.
 - **매주 금(클라우드 Claude 루틴 `trig_01U9s2QgDnVTFKarpV5PfFo4`)**: 짤린 일일 자가복구 → 주간 복습(`build_weekly_review`) → synthesis/curation/강사vsAI/라디오 대본(`#radio-src`, 15~20분 전부영어 Topic Talk) 교체 → 푸시. 정본 = `scripts/WEEKLY_ROUTINE.md`.
-- **매주 월**: `carrot-feedback.yml` 강사 피드백 수집 — 🔴 **시크릿 미등록으로 8주 연속 실패 중**(위 0번 · `scripts/CARROT_SETUP.md`).
+- **매주 월**: `carrot-feedback.yml` 강사 피드백 수집 — ✅ 정상(2026-08-19 복구). 정기 실행도 `--backfill` 이라 구멍이 생기면 스스로 메움. 런북 `scripts/CARROT_SETUP.md`.
 - **매주 금(루틴 직후)**: `radio-audio.yml` 라디오 MP3 생성(Gemini TTS→폴백 gTTS)+텔레그램.
 - **페이지**: 일일 홈(index) → 주간 복습 / 🎓 강사 공식 피드백 / 🎙️ 영어 주간 라디오.
