@@ -1,0 +1,660 @@
+{
+ "success": true,
+ "code": 0,
+ "message": null,
+ "data": {
+  "list": [
+   {
+    "idxFeedback": 35813974,
+    "createDate": "2026-08-19",
+    "memo": "This lesson we discussed the topic \"Should I Post This?\". Reviewed the use and meaning of the expressions [verified, (social medial) handle, troll, blowing up, tag someone]. Answered question about online privacy and personal data. Here are today's notes:",
+    "subList": [
+     {
+      "idxFeedbackSub": 61054396,
+      "original": "Sometime I post my picture, at that time many people know about that",
+      "better": "Sometimes I post my picture, at that time many people know about that",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 61054397,
+      "original": "Koreans like the take a picture ",
+      "better": "Koreans like to take a picture ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 61054398,
+      "original": "I love to take a selfie and people ",
+      "better": "I love to take a selfie and pictures of people ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 61054399,
+      "original": "I'm just block this person ",
+      "better": "I'll just block this person ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 61054400,
+      "original": "Sometimes I'm post my travel picture and then go to sleep.",
+      "better": "Sometimes I'll post my travel picture and then go to sleep.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 61054401,
+      "original": "This Saturday morning I will go to departure to airport ",
+      "better": "This Saturday morning I will depart to the airport ",
+      "betterTrans": null,
+      "isSave": "N"
+     }
+    ]
+   },
+   {
+    "idxFeedback": 35813503,
+    "createDate": "2026-08-19",
+    "memo": "Thank you for your great effort in today’s lesson. You had a wonderful attitude and did very well. I hope you enjoy the rest of your day, and I’m looking forward to seeing you again soon!",
+    "subList": [
+     {
+      "idxFeedbackSub": 61052738,
+      "original": "Hard rest always good way to fix phone.",
+      "better": "A hard reset is always a good way to fix a phone.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 61052739,
+      "original": "If I made some application use the AI, this application usually have a glitch. ",
+      "better": "If I make an application using AI, the application usually has glitches.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 61052740,
+      "original": "When I go back sleep, I put in charging point in my mobile phone. ",
+      "better": "When I go to sleep, I connect my charger to the charging port. ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 61052741,
+      "original": "I just connect to other people to use SNS or software instead of repair my mobile phone. ",
+      "better": "I just connect with other people through social media or apps instead of repairing my mobile phone.",
+      "betterTrans": null,
+      "isSave": "N"
+     }
+    ]
+   },
+   {
+    "idxFeedback": 35801576,
+    "createDate": "2026-08-18",
+    "memo": "Good class today!  Here are two practice videos for you:\n\n1)   How to Pronounce the letters F, FF, PH, GH as the F Sound - American English Pronunciation video:  https://youtu.be/EbC1M3IJTtI?si=cXPGUYsJifb8RwqR\n2)  Pronunciation of Doom | Definition of Doom video:  https://youtu.be/3jdKdEc0Hig?si=VtLi6-r4PxNXpIjN",
+    "subList": [
+     {
+      "idxFeedbackSub": 60999758,
+      "original": "I received a usage  ALOT after watching videos on 4G.",
+      "better": "I received a usage  ALERT (pronounced AH-LURT) after watching videos on 4G.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 60999759,
+      "original": "I couldn't sleep after doom SCREAMING before bed.",
+      "better": "I couldn't sleep after doom SCROLLING before bed.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 60999760,
+      "original": "My PHONE ALARM (pronounced  PONE ALUM) keeps GOING (pronounced GLOW-ING) off!",
+      "better": "MY PHONE ALARM (pronounced FONE  AH-LARM) keeps GO-ING off!",
+      "betterTrans": null,
+      "isSave": "N"
+     }
+    ]
+   },
+   {
+    "idxFeedback": 35792342,
+    "createDate": "2026-08-17",
+    "memo": "Great work Joey. You demonstrated good fluency and responded to questions with confidence. Continue expanding your vocabulary and using new expressions during conversations.",
+    "subList": [
+     {
+      "idxFeedbackSub": 60958355,
+      "original": "I will have a plan to travel with my family.",
+      "better": "I will be traveling with my family.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 60958356,
+      "original": "Ten years later my son becomes twenty. ",
+      "better": "Ten years from now my son will be twenty.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 60958357,
+      "original": "My son and me promise together.",
+      "better": "My son and I made a promise to each other.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 60958358,
+      "original": "Every place have a pros and cons.",
+      "better": "Every place has it's pros and cons.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 60958359,
+      "original": "Please be careful to monkey.",
+      "better": "Please be careful of the monkey's.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 60958360,
+      "original": "I will have some shopping my clothes.",
+      "better": "I will continue shopping for clothes.",
+      "betterTrans": null,
+      "isSave": "N"
+     }
+    ]
+   },
+   {
+    "idxFeedback": 35790911,
+    "createDate": "2026-08-17",
+    "memo": "Great class today! For homework, please review the key expressions.",
+    "subList": [
+     {
+      "idxFeedbackSub": 60952831,
+      "original": "Sometimes someone calls pocket dialed because my name starts with, so people make mistakes.  ",
+      "better": "Sometimes people accidentally pocket-dial me because my name comes up first in their contacts. ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 60952832,
+      "original": "When my wife calls me, but I can't take the call because busy signal.",
+      "better": "When my wife calls me, I can't answer because my line is busy. ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 60952833,
+      "original": "When a coding, my AI goes to auto correction.",
+      "better": "When I'm coding, my AI automatically corrects my code. ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 60952834,
+      "original": "Yesterday my teacher called me for English class, but the line was breaking up.",
+      "better": "Yesterday, my teacher called me for my English class, but the connection kept breaking up.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 60952835,
+      "original": "I think in my case I send a text message, if it's impossible to take a call, my phone automatically sends a message.",
+      "better": "In my case, if I can't answer a call, my phone automatically sends a text message.",
+      "betterTrans": null,
+      "isSave": "N"
+     }
+    ]
+   },
+   {
+    "idxFeedback": 35790499,
+    "createDate": "2026-08-17",
+    "memo": "This lesson we discussed your usually routine when visiting the airport as well as your upcoming trip to China. Reviewed the pronunciation of [through-threw, security] and the expression [final leg- final part of the trip, flight attendant-stewardess /stew‧ard‧ess/, splurge ]. Answered questions about your habits and routines, practicing the use of tenses and travel vocabulary. Here are today's notes:",
+    "subList": [
+     {
+      "idxFeedbackSub": 60951326,
+      "original": "Every people feel the little respect day ",
+      "better": "Every person feels the little [respect that/respectful] day ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 60951327,
+      "original": "Last night I will install some application ",
+      "better": "Last night I installed some application ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 60951328,
+      "original": "Usually my plane not departure at on time ",
+      "better": "Usually my plane does not depart at on time ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 60951329,
+      "original": "I think it is depend on the person ",
+      "better": "I think it depends on the person ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 60951330,
+      "original": "If that travel is for my family, at that time I'm just pay ",
+      "better": "If [travelling/that trip] is with my family, at that time I just pay ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 60951331,
+      "original": "I love to Middle East airport, that airport is so luxury ",
+      "better": "I love to (go to/visit] Middle East airports, that airport is so luxury/luxurious",
+      "betterTrans": null,
+      "isSave": "N"
+     }
+    ]
+   },
+   {
+    "idxFeedback": 35780836,
+    "createDate": "2026-08-14",
+    "memo": "Happy Friday!  Have a lovely weekend!",
+    "subList": [
+     {
+      "idxFeedbackSub": 60909767,
+      "original": "When i was single, I DON'T use the RUGGAGE.",
+      "better": "When i was single, I DIDN'T use the LUGGAGE (pronounced LUH-GAGE).",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 60909768,
+      "original": "The people, the POOD and history are different.",
+      "better": "The people, the FOOD and history are different.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 60909769,
+      "original": "You check into your hotel after a long, TEERING day.",
+      "better": " You check into your hotel after a long, TIRING (pronounced TIE-RING) day.",
+      "betterTrans": null,
+      "isSave": "N"
+     }
+    ]
+   },
+   {
+    "idxFeedback": 35769041,
+    "createDate": "2026-08-13",
+    "memo": "Very good class again today!  You're doing great!",
+    "subList": [
+     {
+      "idxFeedbackSub": 60857977,
+      "original": "Duty Free ALLOWANCE (pronounced Ah-ROW-ANS) for ALCOHOL (pronounced AL-KOHL)  usually two bottles.",
+      "better": "Duty Free ALLOWANCE (pronounced Ah-LAU-ANS) for ALCOHOL (pronounced AL-KOH HAUL)  is usually two bottles.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 60857978,
+      "original": "Which do you PRE-PER?",
+      "better": "Which do you PRE-FER?",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 60857979,
+      "original": "You’re running late for your flight, and your suitcase is 2 KILOMETRES (km) over the\nairline’s weight limit.",
+      "better": "You’re running late for your flight, and your suitcase is 2 KILOGRAMS (kg)  over the airline’s weight limit.",
+      "betterTrans": null,
+      "isSave": "N"
+     }
+    ]
+   },
+   {
+    "idxFeedback": 35756676,
+    "createDate": "2026-08-12",
+    "memo": "This lesson we talked about the changing weather and the topic \"Planning the Perfect Trip\". Reviewed the useful vocab [red-eye, off-season, budget airline] as well as \"I'm worried about missing the connection\". Discussed you preference for enjoying travelling without a tour group. Here are today's notes:",
+    "subList": [
+     {
+      "idxFeedbackSub": 60804725,
+      "original": "The weather is change ",
+      "better": "The weather has changed",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 60804726,
+      "original": "I took a red-eyes from LA to New York ",
+      "better": "I took a red-eye from LA to New York ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 60804727,
+      "original": "It is a little tired when I took that flight ",
+      "better": "[I was a little tired/It was a little tiring] when I took that flight ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 60804728,
+      "original": "It is free ",
+      "better": "I have freedom. I am independent.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 60804729,
+      "original": "Just I'm go together ",
+      "better": "Just we'll go together. We'll just go together.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 60804730,
+      "original": "These days my first consider is the safe because I travel with my family ",
+      "better": "These days my first concern/ consideration is the safety because I travel with my family ",
+      "betterTrans": null,
+      "isSave": "N"
+     }
+    ]
+   },
+   {
+    "idxFeedback": 35745153,
+    "createDate": "2026-08-11",
+    "memo": "You showed some unique insight and intuition - very good skill!",
+    "subList": [
+     {
+      "idxFeedbackSub": 60754615,
+      "original": "SomeTIME you can't accept in a relation",
+      "better": "SomeTHING you can't accept in a relation",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 60754616,
+      "original": "\"We’re just SEEING (pronounced SEE-NING where it goes.\"",
+      "better": "\"We’re just SEEING (pronounced SEE-YING) where it goes.\"",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 60754617,
+      "original": "A first date is usually COMBINATED.",
+      "better": "A first date is usually COMBINED.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 60754618,
+      "original": "You have also heard some bad things about DEM.",
+      "better": "You have also heard some bad things about THEM.",
+      "betterTrans": null,
+      "isSave": "N"
+     }
+    ]
+   },
+   {
+    "idxFeedback": 35731960,
+    "createDate": "2026-08-10",
+    "memo": "Today we reviewed spending time with family and traditions. Answered the question about  \"what role does food (something) play?] and practiced the meaning and pronunciation of [heirloom, family resemblance /resemblance/, tight-knit, knit, look up to (someone)]. Read the problem solving question aloud and provided a detailed answers about your preference to spend time with family. Here are today's notes:",
+    "subList": [
+     {
+      "idxFeedbackSub": 60698418,
+      "original": "Korea is the going to autumn season ",
+      "better": "Korea is going into the autumn season ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 60698419,
+      "original": "We visit the beach and walk the beach and see the many beautiful scene ",
+      "better": "We visited the beach and walked the beach and saw the beautiful scene/  many beautiful scenes",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 60698420,
+      "original": "Every weekend we going out together",
+      "better": "Every weekend we go out together",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 60698421,
+      "original": "It's a little difference, the big holiday ",
+      "better": "It's a little different, the big holiday ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 60698422,
+      "original": "Usually I'm choice is just share my time with my family",
+      "better": "Usually my choice is just to share my time with my family",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 60698423,
+      "original": "These day she is the little older and the power is a little weak ",
+      "better": "These days she is a little older and her power is (becoming) a little weak ",
+      "betterTrans": null,
+      "isSave": "N"
+     }
+    ]
+   },
+   {
+    "idxFeedback": 35720619,
+    "createDate": "2026-08-07",
+    "memo": "You worked hard this week - Thank you!  Have a pleasant weekend!",
+    "subList": [
+     {
+      "idxFeedbackSub": 60650239,
+      "original": "“We waited an hour, but he HAD a no-show.”",
+      "better": "“We waited an hour, but he WAS a no-show.”",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 60650240,
+      "original": ": You accidentally made dinner plans with two PRIENDS for the same night.",
+      "better": ": You accidentally made dinner plans with two FRIENDS for the same night.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 60650241,
+      "original": "Do you prefer making plans early or at the RAST minute",
+      "better": "Do you prefer making plans early or at the LAST minute",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 60650242,
+      "original": "I am an IMPERSIVE person.",
+      "better": "I am an IMPULSIVE  (pronounced IM=PUL-SIV) person.",
+      "betterTrans": null,
+      "isSave": "N"
+     }
+    ]
+   },
+   {
+    "idxFeedback": 35710439,
+    "createDate": "2026-08-06",
+    "memo": "Excellent work again today!  Here is a video that might interest you:\n1)  \"Fake It Till You Make It\" | Critical Thinking video:  https://youtu.be/x_Q_gtAbvuI?si=fOScaqqLvaa3YeV4",
+    "subList": [
+     {
+      "idxFeedbackSub": 60605500,
+      "original": "Common ground means shared interests or EXPERIENCE (SINGULAR)    Used as a way to apologize if you forget a",
+      "better": "Common ground means shared interests or EXPERIENCE(S) (PLURAL).",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 60605501,
+      "original": "He looked very APPROACHABLE (pronounced AH=PROCH=AY=BUL).",
+      "better": "He looked very APPROACHABLE (pronounced AH=PROCH=AH=BUL).",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 60605502,
+      "original": "I ended the AWKWARD (pronounced AH-WARD) silence.",
+      "better": "I ended the AWKWARD (pronounced AUK-WARD) silence.\nAlternatives:  uncomfortable. tense, troublesome",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 60605503,
+      "original": "Which do you prefer for exchanging CONTRACT information, and why?",
+      "better": "Which do you prefer for exchanging CONTACT information, and why?",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 60605504,
+      "original": "What advice would you give someone who feels shy about meeting new ",
+      "better": "Fake it until You make it!\nJust act confident and friendly until it feels natural!",
+      "betterTrans": null,
+      "isSave": "N"
+     }
+    ]
+   },
+   {
+    "idxFeedback": 35697952,
+    "createDate": "2026-08-05",
+    "memo": "Today we discussed the topic \"I Learn Everything Online\" and reviewed the vocabulary[sunrise-sunset, involuntarily /in‧vol‧un‧ta‧ri‧ly/]. Compared online content preferences and hobbies you enjoy. Here are today's notes:",
+    "subList": [
+     {
+      "idxFeedbackSub": 60552180,
+      "original": "My friend these day he work the delivery the food to people ",
+      "better": "My friend these days, he works delivering the food to people ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 60552181,
+      "original": "He always happy to sunset ",
+      "better": "He always happy for sunset ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 60552182,
+      "original": "When I free times I try to make a code use the ai ",
+      "better": "When I have free time I try to make/write code using ai ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 60552183,
+      "original": "It's so funny for me (Makes me laugh)",
+      "better": "It's so fun for me (I enjoy it)",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 60552184,
+      "original": "I try to sell this my course online because I don't enjoy them ",
+      "better": "I will try to sell [this/my] course/courses online because I don't enjoy it/them ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 60552185,
+      "original": "That is not reality society ",
+      "better": "That is not [real society/reality]",
+      "betterTrans": null,
+      "isSave": "N"
+     }
+    ]
+   },
+   {
+    "idxFeedback": 35687020,
+    "createDate": "2026-08-04",
+    "memo": "Very good class today!  Please watch, study and practice with the video links below:\n1)  Pronunciation Tip: How to Pronounce the Letter Y at the end of a word - English Pronunciation video:  https://youtu.be/HjkEoSXHIVU?si=W3hXJNKkYHPaObaI\n2)   How To Pronounce L Blends in English video:  https://youtu.be/VfZYdi9_ZH4?si=Lx5mYseVFDdLwNCt",
+    "subList": [
+     {
+      "idxFeedbackSub": 60505225,
+      "original": "I got BLISTERS (pronounced BIS-TERS) from my new hiking boots. ",
+      "better": "I got BLISTERS (pronounced BLIS-TERS) from my new hiking boots. ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 60505226,
+      "original": "Our country HAVE rough TERRAIN (pronounced TER-AY-EEN).",
+      "better": "Our country HAS rough TERRAIN (pronounced TER-RAIN)",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 60505227,
+      "original": "Our country divide 4 seasons",
+      "better": "Our Country HAS 4 seasons",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 60505228,
+      "original": "The BEACHEE is windy.",
+      "better": "The BEACH is windy.",
+      "betterTrans": null,
+      "isSave": "N"
+     }
+    ]
+   },
+   {
+    "idxFeedback": 35674898,
+    "createDate": "2026-08-03",
+    "memo": "Today we reviewed the topic \"This Is How I Express Myself\". Discussed creative hobbies and interests. Responded to the discussion questions and practiced the use of comparative language [more=Three or More Syllable Adjectives (more responsible], to sew]. Continue to review the Useful Vocab Here are today's notes:",
+    "subList": [
+     {
+      "idxFeedbackSub": 60452856,
+      "original": "It is only possible to communication to China ",
+      "better": "It is only possible to communicate in Chinese ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 60452857,
+      "original": "These days the sns developed ",
+      "better": "These days, sns has developed ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 60452858,
+      "original": "Walk is the best these days because it is a slow and it is not have a good effect to the exercise ",
+      "better": "Walking is the best these days because, although it is slow and it is not an effective exercise, it's good for my mind ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 60452859,
+      "original": "It is more easier to get dance ",
+      "better": "It is much easier to get better at dancing",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 60452860,
+      "original": "You often get exercise about new hobbies",
+      "better": "You often get excited about new hobbies",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 60452861,
+      "original": "I study to ai ",
+      "better": "I study [ai/how to use ai]",
+      "betterTrans": null,
+      "isSave": "N"
+     }
+    ]
+   }
+  ]
+ }
+}

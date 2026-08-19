@@ -1,0 +1,253 @@
+{
+ "success": true,
+ "code": 0,
+ "message": null,
+ "data": {
+  "list": [
+   {
+    "idxFeedback": 34497537,
+    "createDate": "2026-02-27",
+    "memo": "It was good hearing from you Joey. Have a lovely 3-day holiday. Here are some notes from our lesson that you can look through. See you next week.",
+    "subList": [
+     {
+      "idxFeedbackSub": 55400470,
+      "original": "Our ancestors keep gathering and make documents",
+      "better": "Our ancestors kept gathering and making documents.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 55400471,
+      "original": "He wants the peaceful",
+      "better": "He wants peace.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 55400472,
+      "original": "You prepare next time.",
+      "better": "You'll prepare for next time.",
+      "betterTrans": null,
+      "isSave": "N"
+     }
+    ]
+   },
+   {
+    "idxFeedback": 34488438,
+    "createDate": "2026-02-26",
+    "memo": "Excellent class today, have a great weekend!",
+    "subList": [
+     {
+      "idxFeedbackSub": 55361726,
+      "original": "They hold the hand.",
+      "better": "They raise their hand.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 55361727,
+      "original": "I need information to destination.",
+      "better": "I need information about the destination.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 55361728,
+      "original": "I will go to business trip in the USA",
+      "better": "In December I will go on a business trip to the USA",
+      "betterTrans": null,
+      "isSave": "N"
+     }
+    ]
+   },
+   {
+    "idxFeedback": 34479221,
+    "createDate": "2026-02-25",
+    "memo": "It was an absolute pleasure to meet you Joey. We had such an interesting conversation. Here are some notes from the lesson that you can look through. I hope to hear from you again soon. Have a great day!",
+    "subList": [
+     {
+      "idxFeedbackSub": 55323083,
+      "original": "More communicate with other people.",
+      "better": "To communicate more with other people.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 55323084,
+      "original": "They come back our country",
+      "better": "The return to their country.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 55323085,
+      "original": "Connect to the other people...",
+      "better": "They need to connect with other people.",
+      "betterTrans": null,
+      "isSave": "N"
+     }
+    ]
+   },
+   {
+    "idxFeedback": 34469908,
+    "createDate": "2026-02-24",
+    "memo": "Excellent class today, keep it up!",
+    "subList": [
+     {
+      "idxFeedbackSub": 55283049,
+      "original": "I agree that sentence.",
+      "better": "I agree with that sentence.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 55283050,
+      "original": "That is so big problem.",
+      "better": "That's a big problem.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 55283051,
+      "original": "I feel so happiness.",
+      "better": "I feel so happy.",
+      "betterTrans": null,
+      "isSave": "N"
+     }
+    ]
+   },
+   {
+    "idxFeedback": 34466389,
+    "createDate": "2026-02-23",
+    "memo": "Thank you for the great lesson! Please find some few corrections below.",
+    "subList": [
+     {
+      "idxFeedbackSub": 55268581,
+      "original": "This weekend i met my  bother for  mother birthday, we congratulate her.",
+      "better": "This weekend, I met my brother to celebrate my mother’s birthday",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 55268582,
+      "original": "We visit the beach, we visit coffee restaurant. ",
+      "better": "We spent some time at the beach and had coffee at a café.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 55268583,
+      "original": "I love so many things, i like to work, when lunch time.",
+      "better": "I love many things. I like to walk at lunchtime.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 55268584,
+      "original": "Maybe five years, nowadays  i swim twice a month because of  my work.",
+      "better": "I have been swimming for about five years, but nowadays I only swim twice a month because of my work",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 55268585,
+      "original": "My routine of the ride, i get up at 7:40 then i start my day, i take a shower and take bike to go to work.",
+      "better": "My daily routine is: I get up at 7:40, then I start my day. I take a shower and ride my bike to work.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 55268586,
+      "original": "I work at auditing, to check problem or do interview.",
+      "better": "My job involves checking for problems and conducting interviews.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 55268587,
+      "original": "For lunch i go to walk some the park, sometime i have coffee with my co workers.",
+      "better": "During lunch, I usually go for a walk in the park, and sometimes I have coffee with my co-workers.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 55268588,
+      "original": "There are a lot of motivate first thing is at work, my company gives money.",
+      "better": "There are many things that motivate me. The first one is my job, my company pays me well",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 55268589,
+      "original": "I think money  don't give perfect happiness, when i travel to other city i miss the countryside.",
+      "better": "I think money doesn’t bring complete happiness. When I travel to another city, I miss the countryside.",
+      "betterTrans": null,
+      "isSave": "N"
+     }
+    ]
+   },
+   {
+    "idxFeedback": 34460454,
+    "createDate": "2026-02-23",
+    "memo": "Great class today, see you next time!",
+    "subList": [
+     {
+      "idxFeedbackSub": 55243188,
+      "original": "The AI system has to analysis my class",
+      "better": "The AI system has to analyze my class",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 55243189,
+      "original": "I come back my home.",
+      "better": "I came back home.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 55243190,
+      "original": "I reservation the ticket two weeks ago.",
+      "better": "I reserved the ticket two weeks ago.",
+      "betterTrans": null,
+      "isSave": "N"
+     }
+    ]
+   },
+   {
+    "idxFeedback": 34454319,
+    "createDate": "2026-02-20",
+    "memo": "Good Lesson! Have a good evening",
+    "subList": [
+     {
+      "idxFeedbackSub": 55216532,
+      "original": "I don't like the food",
+      "better": "They use too much cilantro.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 55216533,
+      "original": "I will resign",
+      "better": "I will leave my job.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 55216534,
+      "original": "It's more good",
+      "better": "It's better",
+      "betterTrans": null,
+      "isSave": "N"
+     }
+    ]
+   },
+   {
+    "idxFeedback": 34452582,
+    "createDate": "2026-02-20",
+    "memo": "Well done! I can see your progress. Keep it up — see you next class!",
+    "subList": []
+   }
+  ]
+ }
+}

@@ -1,0 +1,905 @@
+{
+ "success": true,
+ "code": 0,
+ "message": null,
+ "data": {
+  "list": [
+   {
+    "idxFeedback": 35657833,
+    "createDate": "2026-07-30",
+    "memo": "Good Job Today!",
+    "subList": [
+     {
+      "idxFeedbackSub": 60378198,
+      "original": "it is possible ",
+      "better": "I think it is correct",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 60378199,
+      "original": "usually Korean guys usually go for health for pharmacist",
+      "better": "Koreans usually go to a pharmacist first to ask for health advice ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 60378200,
+      "original": "There are so many pharmacy ",
+      "better": "There are so many pharmacies ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 60378201,
+      "original": "we ask our sympothsms",
+      "better": "we ask about our symptoms ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 60378202,
+      "original": "after class you check them",
+      "better": "after class I will check them ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 60378203,
+      "original": "if you typing for my feedback ",
+      "better": "if you are typing my mistakes on my feedback ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 60378204,
+      "original": "the written in box is important I check first",
+      "better": "the instructions written on the back of the box is important so I do check it first",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 60378205,
+      "original": "that is so natural ",
+      "better": "I think I would just take the allergy pill that is available there",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 60378206,
+      "original": "if i go to the abroad",
+      "better": "if I go abroad",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 60378207,
+      "original": "I'm taking that",
+      "better": "If I have problems then I would take that pill made from cabbage",
+      "betterTrans": null,
+      "isSave": "N"
+     }
+    ]
+   },
+   {
+    "idxFeedback": 35647992,
+    "createDate": "2026-07-29",
+    "memo": "Today we reviewed the topic \"How Do You Handle Stress?\". Practiced listening and responding to topic questions in detail. Continue to practice sentence structure and articles/prepositions. Practiced the pronunciation of [exhausted, bottle]. Here are today's notes:",
+    "subList": [
+     {
+      "idxFeedbackSub": 60335639,
+      "original": "I'm not agree that ",
+      "better": "I don't agree with that ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 60335640,
+      "original": "He can't control his life he is control others ",
+      "better": "He can't control his life he is controlled by others",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 60335641,
+      "original": "If I alone something to do or exercise the side idea is remove and the main idea is remind ",
+      "better": "If I am alone, having something to do or exercising, the stress is removed and the main idea remains ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 60335642,
+      "original": "Your friend just invited you to a popular restaurant you ’ve always wanted to be\ntry. Would you go to out or stay in and recharge?",
+      "better": "Your friend just invited you to a popular restaurant you ’ve always wanted to\ntry. Would you go out or stay in and recharge?",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 60335643,
+      "original": "I had so many stress",
+      "better": "I had so much stress",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 60335644,
+      "original": "I consider to other people thinking. If I thinking to other people, he also feel bad",
+      "better": "I consider other people's thinking. If I'm thinking of/about other people, he also feels bad",
+      "betterTrans": null,
+      "isSave": "N"
+     }
+    ]
+   },
+   {
+    "idxFeedback": 35624652,
+    "createDate": "2026-07-27",
+    "memo": "Good work today, here are your corrections\nword: severe\nexpression: walk-in",
+    "subList": [
+     {
+      "idxFeedbackSub": 60234504,
+      "original": "I'm disagree with paragraph. ",
+      "better": "I disagree with the paragraph. ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 60234505,
+      "original": "I would go to pharmacy and take the medicine before go meet doctor.",
+      "better": "I would go to the pharmacy and take the medicine before seeing a doctor.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 60234506,
+      "original": "It is more easy to take the medicine before meet the doctor. ",
+      "better": "It is easier to take the medicine before meeting the doctor. ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 60234507,
+      "original": "First, I consider if possible to hospital or not.",
+      "better": "First, I will consider if it is possible to go to the hospital or not.",
+      "betterTrans": null,
+      "isSave": "N"
+     }
+    ]
+   },
+   {
+    "idxFeedback": 35613955,
+    "createDate": "2026-07-24",
+    "memo": "Today we discussed the topic \"I Don’t Feel So Great\" and answered the related questions with detailed responses about your experiences feeling sick. Continue to practice the pronunciation of [stomach /stʌmɪk/, sore throat]",
+    "subList": [
+     {
+      "idxFeedbackSub": 60188726,
+      "original": "Usually I'm slept a little late time these day ",
+      "better": "Usually I slept at a little late time these days",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 60188727,
+      "original": "It's difference every day but today is a little clouded but not rainy ",
+      "better": "It's different every day but today is a little clouded/cloudy but not rainy ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 60188728,
+      "original": "I feel hurt my stomach when I drink coffee",
+      "better": "I my stomach hurts when I drink coffee",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 60188729,
+      "original": "At the time I wait and see how my feels ",
+      "better": "At the time I wait and see how I feel",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 60188730,
+      "original": "It is important appointment, it is important schedule ",
+      "better": "It is an important appointment, it is an [important event/thing/plan] scheduled ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 60188731,
+      "original": "My wife is nurse so she give the advice when I the bad condition I have to take medicine ",
+      "better": "My wife is a nurse so she gives the advice when my conditions is bad I have to take medicine ",
+      "betterTrans": null,
+      "isSave": "N"
+     }
+    ]
+   },
+   {
+    "idxFeedback": 35603263,
+    "createDate": "2026-07-23",
+    "memo": "Good class today! Here are those video links I spoke of for you:\n1)   English lesson - Vocab Booster - Synonyms of Nice video:  https://youtu.be/ipSqbzI3aNI?si=zsX1QJbZ-p2y3dqi\n2)  How to Pronounce Stomach video:  https://youtu.be/uvbUmWLmEdo?si=EiafoPbwSgs4NhC-",
+    "subList": [
+     {
+      "idxFeedbackSub": 60141894,
+      "original": "What do people in your country usually do to help them FELL asleep?",
+      "better": "What do people in your country usually do to help them FALL asleep?",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 60141895,
+      "original": "I think coffee hurt my STOMACH (pronounced STOH-MATCH",
+      "better": "I think coffee hurt my STOMACH (pronounced STOH-MAK).",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 60141896,
+      "original": "A PAMILY member is staying with you for a week.",
+      "better": "A FAMILY member is staying with you for a week.\n",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 60141897,
+      "original": "Your guest wants to STAY UP LATE.",
+      "better": "Alternative:  Your guest wants to BE A NIGHT OWL, KEEP LATE HOURS/BURN THE MIDNIGHT OILO.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 60141898,
+      "original": "I like to  WIND  (pronounced WINED) DOWN before bed by reading a book",
+      "better": "I like to  DECOMPRESS/RELAX/CHILL OUT before bed by reading a book",
+      "betterTrans": null,
+      "isSave": "N"
+     }
+    ]
+   },
+   {
+    "idxFeedback": 35590210,
+    "createDate": "2026-07-22",
+    "memo": "Today we discussed \"What's on Your Schedule?\" and answered questions about how you manage your everyday tasks. Described your routine and practiced using the present simple tense. {neighborhood-place, neighbor- people, in advance, fireworks] Great job reading the situation aloud with accurate syllables. Here are today's notes:",
+    "subList": [
+     {
+      "idxFeedbackSub": 60085365,
+      "original": "It's so tired morning because these day I have something to do ",
+      "better": "I'm so tired this morning because these days I have something to do ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 60085366,
+      "original": "In Korea usually go grocery shopping on the weekends because normal day every people is a little busy ",
+      "better": "In Korea, people usually go grocery shopping on the weekends because normal day every people are a little busy ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 60085367,
+      "original": "I'm not sure if it is put on my body or not ",
+      "better": "I'm not sure if [it fits/I can put it] on my body or not ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 60085368,
+      "original": "It's a bad thing.",
+      "better": "It's a negative point. It's the down side.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 60085369,
+      "original": "Usually we shopping on grocery storey ever week ",
+      "better": "Usually we [shop/go shopping] at the grocery store every week ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 60085370,
+      "original": "I have experience my neighborhood said they are uncomfortable ",
+      "better": "I have experienced my neighbor said they are uncomfortable ",
+      "betterTrans": null,
+      "isSave": "N"
+     }
+    ]
+   },
+   {
+    "idxFeedback": 35577978,
+    "createDate": "2026-07-21",
+    "memo": "Good class today!  Keep up the good work!",
+    "subList": [
+     {
+      "idxFeedbackSub": 60031844,
+      "original": "PILATES (pronounced PIH-LOTZ) is popular with young WOMENS.",
+      "better": "PILATES (pronounced PIH-LAH-TEEZ ) is popular with young WOMEN.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 60031845,
+      "original": "DERE are so many devices at the gym",
+      "better": "THERE are so many MACHINES at the gym.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 60031846,
+      "original": " You signed up for a package of fitness CLASS.",
+      "better": " You signed up for a package of fitness CLASS(ES).",
+      "betterTrans": null,
+      "isSave": "N"
+     }
+    ]
+   },
+   {
+    "idxFeedback": 35565584,
+    "createDate": "2026-07-20",
+    "memo": "Keep up the good work, here are your corrections\nvocab: discharge, ingredients",
+    "subList": [
+     {
+      "idxFeedbackSub": 59978011,
+      "original": "It was funny and enjoyable.",
+      "better": "It was fun and enjoyable.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 59978012,
+      "original": "I have worry she don't recovery during the two week. ",
+      "better": "I was worried she would not recover during the two week. ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 59978013,
+      "original": "My wife helped move the room out of the hospital",
+      "better": "My mother discharge from the hospital. ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 59978014,
+      "original": "Easy to keep in the refridge.",
+      "better": "Easy to keep in the fridge or refrigerator.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 59978015,
+      "original": "i usually ordering one time or two times per week.",
+      "better": "i usually order once or twice per week.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 59978016,
+      "original": "It helps develop our cook.",
+      "better": "It helps improve our cooking.",
+      "betterTrans": null,
+      "isSave": "N"
+     }
+    ]
+   },
+   {
+    "idxFeedback": 35554151,
+    "createDate": "2026-07-16",
+    "memo": "Good class!  Have a good long weekend!\n1)   Animal Idioms! Learn English Idioms, Phrases and Expressions video:  https://youtu.be/o-RTcdqx98o?si=bFcYxDErrPdKhvA3",
+    "subList": [
+     {
+      "idxFeedbackSub": 59927767,
+      "original": "Some people do not exercise and eat like DUH pig.",
+      "better": "Some people do not exercise and eat like A pig.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 59927768,
+      "original": "Your foreign friend keeps COMPARE you to a certain animal that’s considered insulting in your culture.",
+      "better": "Your foreign friend keeps COMPAR-ING you to a certain animal that’s considered insulting in your culture.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 59927769,
+      "original": "Do you have a favourite animal-related saying in your RANGUAGE?",
+      "better": "Do you have a favourite animal-related saying in your LANGUAGE?",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 59927770,
+      "original": "Don't RET DUH cat out of DUH bag.",
+      "better": "Don't LET THE cat out of THE bag.",
+      "betterTrans": null,
+      "isSave": "N"
+     }
+    ]
+   },
+   {
+    "idxFeedback": 35540833,
+    "createDate": "2026-07-15",
+    "memo": "Today we discussed the topic \"Pet Ownership\". Discussed the most important things about getting a pet and the difficulties of pet ownership. Some errors with word order and form, but good use of topic appropriate vocabulary. Practiced the pronunciation of [anxiety]  and the expression \"“There’s a lot more to [something] than people think.”. Here are today's notes:",
+    "subList": [
+     {
+      "idxFeedbackSub": 59870614,
+      "original": "I have reservation to ticket to train ",
+      "better": "I have a reservation for a ticket to the train. /I have a train ticket reservation. ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 59870615,
+      "original": "I agree that ",
+      "better": "I agree (with that)",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 59870616,
+      "original": "Many dogs need so long space, it is adapt to grow their dog",
+      "better": "Many dogs need so much space, it is adapted to [raise/look after] their dog",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 59870617,
+      "original": "They have do good thing ",
+      "better": "They do a good thing. They do good things.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 59870618,
+      "original": "If that dog is live together 5 year or 6 year that is the like the family, I consider move to another apartment ",
+      "better": "If that dog is live together with them 5 years or 6 years, that is the like family, I (will) consider moving to another apartment ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 59870619,
+      "original": "I take the house 5 day or 6 day",
+      "better": "I take/took the puppy back to the house for 5 days or 6 days",
+      "betterTrans": null,
+      "isSave": "N"
+     }
+    ]
+   },
+   {
+    "idxFeedback": 35529402,
+    "createDate": "2026-07-14",
+    "memo": "Good class today!  Here is that video I mentioned I would send:\n1)  The Rainbow Bridge For Dogs And Cats video:  https://youtu.be/JajshYyFpfY?si=63W7zgBZigM0-jQ1",
+    "subList": [
+     {
+      "idxFeedbackSub": 59820439,
+      "original": "OUR people mostly live IN AN APARTMENT.",
+      "better": "MOST people mostly live in APARTMENTS.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 59820440,
+      "original": "It is hard to have a pet GROWED in an apartment.",
+      "better": "It is hard to have a pet RAISED /KEPT in an apartment.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 59820441,
+      "original": "WHICH-EE would you RADDER have a  small apartment?",
+      "better": "WHICH would you RATHER have a  small apartment?",
+      "betterTrans": null,
+      "isSave": "N"
+     }
+    ]
+   },
+   {
+    "idxFeedback": 35515930,
+    "createDate": "2026-07-13",
+    "memo": "Have a good day!",
+    "subList": [
+     {
+      "idxFeedbackSub": 59761984,
+      "original": "It is start the summer in Korea.",
+      "better": "Summer has started in Korea.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 59761985,
+      "original": "Mexico not use the English.",
+      "better": "Mexico does not use English.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 59761986,
+      "original": "My textbook is 2.",
+      "better": "I'm studying 2 different textbooks.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 59761987,
+      "original": "It is more easy to deal a spider.",
+      "better": "It's easier to deal with a spider.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 59761988,
+      "original": "Some spider have poison. ",
+      "better": "Some spiders are poisonous.",
+      "betterTrans": null,
+      "isSave": "N"
+     }
+    ]
+   },
+   {
+    "idxFeedback": 35504518,
+    "createDate": "2026-07-10",
+    "memo": "Today we discussed the topic \"Getting Older\". Reviewed cultural values and changing goals as you age. Practiced listening to questions and answering in detail. Practiced pronunciation [mellow, calm, outgrow-outgrew]. Here are today's notes:",
+    "subList": [
+     {
+      "idxFeedbackSub": 59713688,
+      "original": "I will go hospital and pick back my mother ",
+      "better": "I will go to the hospital and pick up my mother ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 59713689,
+      "original": "The believe that is best thing in a life ",
+      "better": "The believe that is the best thing in life ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 59713690,
+      "original": "I have a bucket list about travelling",
+      "better": "I have a bucket list for travelling",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 59713691,
+      "original": "These day I think the family time is more important for me",
+      "better": "These days I think the family time is more important for me",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 59713692,
+      "original": "I have more relax. ",
+      "better": "I am more relaxed. I have more patience. ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 59713693,
+      "original": "I don't some give advice",
+      "better": "I don't give some  advice",
+      "betterTrans": null,
+      "isSave": "N"
+     }
+    ]
+   },
+   {
+    "idxFeedback": 35493569,
+    "createDate": "2026-07-09",
+    "memo": "Lots of hard work today! Please watch, study and practice with the video links below:\n1)   How to Pronounce F and P Consonant Sounds | Learn English Pronunciation Course video:  https://youtu.be/jF9GJUBD-aU?si=3FC3-Qj3aYsPr_ag\n2)   How to Pronounce Humility video:  https://youtu.be/pnP1mhgE8ZA?si=D2QzIoHVW3qCkKDW\n3)   Practicing /th/ (voiced) – English Pronunciation Lesson (Part 2) video:  https://youtu.be/kxHONbHASfE?si=4KTxlisfRNUG566L",
+    "subList": [
+     {
+      "idxFeedbackSub": 59665150,
+      "original": "Which personality trait is most VALUATE  in your country?",
+      "better": "Which personality trait is most VALUED in your country?",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 59665151,
+      "original": "If DEY have HUMBLE (adjective).",
+      "better": "If THEY have HUMILITY(noun). ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 59665152,
+      "original": "I PRE-PER a RISTENER.",
+      "better": "I PRE-FER a LISTENER.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 59665153,
+      "original": "no PLOBLEM",
+      "better": "No PROB-LEM",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 59665154,
+      "original": "Every PEOPLE are born WID DER personality",
+      "better": "Every PERSON are born WITH  THEIR personality",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 59665155,
+      "original": "Confident in expreSHing needs or opinion",
+      "better": "Confident in expressing needs or opinion",
+      "betterTrans": null,
+      "isSave": "N"
+     }
+    ]
+   },
+   {
+    "idxFeedback": 35480576,
+    "createDate": "2026-07-08",
+    "memo": "Today we looked at the Snack Chat topic \"What’s the Weather Like Today?\". Reviewed the modal verb \"would\" (could/can \"I would go to the store, if I have enough time\"). Discussed checking the forecast and practiced using descriptive vocabulary to describe the weather in Korea. Here are today's notes:",
+    "subList": [
+     {
+      "idxFeedbackSub": 59608798,
+      "original": "The big typhoon is come to us ",
+      "better": "The big typhoon is coming to us ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 59608799,
+      "original": "The strong windy. Many building is destroy",
+      "better": "The strong wind. Many buildings are destroyed ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 59608800,
+      "original": "First I'm check the rainy or sun shining ",
+      "better": "First I'm check if it's rainy or the sun is shining ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 59608801,
+      "original": "This watch is have a some application ",
+      "better": "This watch has some application ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 59608802,
+      "original": "I planning everything and also that is the travel to abroad ",
+      "better": "I'm planning everything and also that includes travel to abroad ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 59608803,
+      "original": "People who made some crop ",
+      "better": "Farmers grows crops and works the field ",
+      "betterTrans": null,
+      "isSave": "N"
+     }
+    ]
+   },
+   {
+    "idxFeedback": 35469553,
+    "createDate": "2026-07-07",
+    "memo": "You worked hard today!  Talk to you next time!",
+    "subList": [
+     {
+      "idxFeedbackSub": 59560175,
+      "original": "DEN start the dry season",
+      "better": "THENto dry season STARTS...",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 59560176,
+      "original": "DESE DAY I miss the winter.",
+      "better": "THESE DAYS I miss the winter.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 59560177,
+      "original": "When is my appointment and WHY I TAKE THE  bus?",
+      "better": "When is my appointment and WHY I AM TAKING the bus?",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 59560178,
+      "original": "WEDDER makes little CHANGEE",
+      "better": "WEATHER MAKES THE WEATHER CHANGE.",
+      "betterTrans": null,
+      "isSave": "N"
+     }
+    ]
+   },
+   {
+    "idxFeedback": 35455938,
+    "createDate": "2026-07-06",
+    "memo": "Thanks for class today, here are your corrections\nvocab: remedy, totalled",
+    "subList": [
+     {
+      "idxFeedbackSub": 59501816,
+      "original": "Eat the medicine ",
+      "better": "Take medicine ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 59501817,
+      "original": "During the long time China doesn't make new cars",
+      "better": "It's been a long time since China made new cars",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 59501818,
+      "original": "There is fire accident in electric cars",
+      "better": "Electric cars cause fire accidents",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 59501819,
+      "original": "Simple device",
+      "better": "Simple tool ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 59501820,
+      "original": "Usually I came back my home",
+      "better": "Usually I came back home first",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 59501821,
+      "original": "totaled ",
+      "better": "because of the smoke,  the car was totaled and cannot be driven",
+      "betterTrans": null,
+      "isSave": "N"
+     }
+    ]
+   },
+   {
+    "idxFeedback": 35445373,
+    "createDate": "2026-07-03",
+    "memo": "Today we discussed rules of the road and World cup round of 16. Discussed getting a license in Korea and what makes someone a good driver. Practiced the use of prepositions to describe driving skills such as getting on/off the highway as well as other driving expressions. Here are today's notes:",
+    "subList": [
+     {
+      "idxFeedbackSub": 59457583,
+      "original": "Your opp side team ",
+      "better": "Your opposing team. The opposite team",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 59457584,
+      "original": "That test mean just test of function ",
+      "better": "That test mean just a [test of function/practical test] ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 59457585,
+      "original": "We are the tester and some people check our point in a road ",
+      "better": "We are the teste and some driving [tester/examiner] checks our points on the road ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 59457586,
+      "original": "It is easy to parking in my way. It is easy to parking ",
+      "better": "It is easy to park. It is easy to park",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 59457587,
+      "original": "How to get the highway, how to move the line on the road, how to ",
+      "better": "How to get on the highway, [how to move over-cross the line on the road/ how to change lanes], how to signal-read a sign",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 59457588,
+      "original": "I'm little embarrassed this situation ",
+      "better": "I [am/was] a little embarrassed with this situation. ",
+      "betterTrans": null,
+      "isSave": "N"
+     }
+    ]
+   },
+   {
+    "idxFeedback": 35435236,
+    "createDate": "2026-07-02",
+    "memo": "Good work again today! Please watch, study and practice with the video link below:\n1)  Learn to Pronounce WORK, WALK, WORKED, WALKED - American English Pronunciation Lesson video:  https://youtu.be/nA22zPCBcP0?si=hGUniAqYbhne5D5K",
+    "subList": [
+     {
+      "idxFeedbackSub": 59413253,
+      "original": "What is the most popular way to travel short DISTANCE in your count",
+      "better": "What is the most popular way to travel short DISTANCE(S) in your count",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 59413254,
+      "original": "We just WORK.",
+      "better": "We just WALK.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 59413255,
+      "original": " You’re meeting a friend for RUNCH",
+      "better": " You’re meeting a friend for LUNCH",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 59413256,
+      "original": "I was little CONPUSED",
+      "better": "I was a little CON-FUSED.",
+      "betterTrans": null,
+      "isSave": "N"
+     }
+    ]
+   },
+   {
+    "idxFeedback": 35423629,
+    "createDate": "2026-07-01",
+    "memo": "Today we began looking at the textbook Snack Chat and the topic \"Public Transport\". Answered questions about common types of transportation you have experiences. Discussed commuting preferences and practiced the use of comparative language. Continue to review the new vocabulary P.3 . Here are today's notes:",
+    "subList": [
+     {
+      "idxFeedbackSub": 59363951,
+      "original": "I live the Busan so it is often the beach ",
+      "better": "I live in Busan so I often go to the beach ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 59363952,
+      "original": "It is connected some bridge ",
+      "better": "It is connected by some bridge ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 59363953,
+      "original": "The other thing is more big and move the long distance ",
+      "better": "The other thing is much bigger and moves long distance ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 59363954,
+      "original": "The big river flows in the city ",
+      "better": "The big river flows through the city ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 59363955,
+      "original": "I love to watching the window ",
+      "better": "I love watching outside/to look out the window ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 59363956,
+      "original": "I consider it is important or not",
+      "better": "I consider if it is important or not",
+      "betterTrans": null,
+      "isSave": "N"
+     }
+    ]
+   }
+  ]
+ }
+}
