@@ -4,50 +4,50 @@
   2026,
   34
  ],
- "topic": "Discussing social media privacy and travel preparations.",
- "grammar": "Incorrect Verb Form After \"I'm\"",
- "grammar_norm": "Verb Forms / Auxiliaries",
- "score": 7.5,
+ "topic": "Discussing phone repair scenarios and introducing oneself.",
+ "grammar": "Gerunds after prepositions",
+ "grammar_norm": "Prepositions",
+ "score": 7.0,
  "pairs": [
   {
-   "said": "before I'm prepared to go, I take a lesson with you",
-   "natural": "Before I head out, I take an English lesson."
+   "said": "many people went to summer vacation.",
+   "natural": "Many people went on summer vacation."
   },
   {
-   "said": "Because this day, this weekend, I will depart abroad with my family for travel.",
-   "natural": "This weekend, my family and I are traveling abroad."
+   "said": "But if we come the winter, you also come the summertime.",
+   "natural": "But when it's winter here, it's summer there."
   },
   {
-   "said": "it is a little apparent for me.",
-   "natural": "It's a bit concerning for me."
+   "said": "I put in charging port in my mobile phone.",
+   "natural": "I plug my phone into the charging port."
   }
  ],
  "vocab": [
   {
-   "word": "fortified",
-   "pos": "adj",
-   "meaning": "강화된, 요새화된 (보안이나 시스템 등이 더욱 튼튼해졌음을 의미)"
+   "word": "authorized",
+   "pos": "형용사",
+   "meaning": "공인된, 승인된"
   },
   {
-   "word": "handle",
-   "pos": "n",
-   "meaning": "(소셜 미디어) 사용자 이름, 아이디"
+   "word": "glitch",
+   "pos": "명사",
+   "meaning": "작은 문제, 결함 (특히 기술적인)"
   },
   {
-   "word": "troll",
-   "pos": "n/v",
-   "meaning": "(인터넷에서) 악의적인 댓글을 달거나 분란을 일으키는 사람 / 그런 행동을 하다"
+   "word": "randomly",
+   "pos": "부사",
+   "meaning": "무작위로, 임의로"
   },
   {
-   "word": "blow up",
-   "pos": "phr. v.",
-   "meaning": "(게시물 등이) 큰 인기를 얻다, 화제가 되다; (사업 등이) 급성장하다"
+   "word": "coincide",
+   "pos": "동사",
+   "meaning": "동시에 일어나다, 일치하다"
   },
   {
-   "word": "infringe",
-   "pos": "v",
-   "meaning": "(법률, 권리 등을) 위반하다, 침해하다"
+   "word": "logical",
+   "pos": "형용사",
+   "meaning": "논리적인, 타당한"
   }
  ],
- "_html_md5": "083e5c68af77d691927c11c9d64ca099"
+ "_html_md5": "e1bed2b89e4f47f7e8c2aa9b4200083b"
 }
