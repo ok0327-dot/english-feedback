@@ -1,0 +1,744 @@
+{
+ "success": true,
+ "code": 0,
+ "message": null,
+ "data": {
+  "list": [
+   {
+    "idxFeedback": 34909163,
+    "createDate": "2026-04-28",
+    "memo": "Excellent class today, see you next time!",
+    "subList": [
+     {
+      "idxFeedbackSub": 57149975,
+      "original": "Group of the tourists",
+      "better": "Group of tourists",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 57149976,
+      "original": "Who teach to English group",
+      "better": "The group that teaches English",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 57149977,
+      "original": "If I travel Hawaii",
+      "better": "If I travel to Hawaii",
+      "betterTrans": null,
+      "isSave": "N"
+     }
+    ]
+   },
+   {
+    "idxFeedback": 34897936,
+    "createDate": "2026-04-27",
+    "memo": "Excellent class today, see you next time!",
+    "subList": [
+     {
+      "idxFeedbackSub": 57101459,
+      "original": "I agree that",
+      "better": "I agree with that",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 57101460,
+      "original": "Need to able to",
+      "better": "Need to be able to",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 57101461,
+      "original": "They get the information to travel",
+      "better": "They get travel information",
+      "betterTrans": null,
+      "isSave": "N"
+     }
+    ]
+   },
+   {
+    "idxFeedback": 34887756,
+    "createDate": "2026-04-24",
+    "memo": "This lesson we continued to discuss conflict resolution in the workplace. Practiced reading aloud and pronunciation [follow through]. Answered questions about conflicts impacting quality of work. Continue to review the opinion questions and workplace conflict. Here are today's notes:",
+    "subList": [
+     {
+      "idxFeedbackSub": 57059156,
+      "original": "This weekends I don't decide",
+      "better": "This weekend I haven't decided ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 57059157,
+      "original": "They project is fail ",
+      "better": "Their project fails ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 57059158,
+      "original": "Sometimes we have a argue, sometimes we have so many argue ",
+      "better": "Sometimes we have an argument sometimes we have so many arguments ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 57059159,
+      "original": "They are have a responsibility ",
+      "better": "They have responsibility ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 57059160,
+      "original": "If we have argue some problem, we just forget that problem.",
+      "better": "[If we have an argument over/If we argue about] some problem, we just forget that problem.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 57059161,
+      "original": "-I love to negotiation because that is kind of strateg",
+      "better": "-I love [negotiation/negotiate] because that is kind of strategy",
+      "betterTrans": null,
+      "isSave": "N"
+     }
+    ]
+   },
+   {
+    "idxFeedback": 34877045,
+    "createDate": "2026-04-23",
+    "memo": "Great class today, keep it up! Have a wonderful weekend!",
+    "subList": [
+     {
+      "idxFeedbackSub": 57013157,
+      "original": "Another people",
+      "better": "Another person",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 57013158,
+      "original": "If I be angry",
+      "better": "If I\"m angry",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 57013159,
+      "original": "Usually I like to competing",
+      "better": "Usually I like to compete",
+      "betterTrans": null,
+      "isSave": "N"
+     }
+    ]
+   },
+   {
+    "idxFeedback": 34865933,
+    "createDate": "2026-04-22",
+    "memo": "This lesson we reviewed two scenarios about sympathizing with and congratulating co-worker. Reviewed the meaning and pronunciation of [subordinate-lower in rank, importance, or position, I will treat my co-worker to lunch., suave-confident, smooth, charming, apt- appropriate] Practiced pronunciation as well as asked about the use and meaning of terms. \"Use whatever tactics and power you have to assert your position and win\" =Use any strategy and strength to make an argument and get others to agree with you. Here are today's notes:",
+    "subList": [
+     {
+      "idxFeedbackSub": 56964473,
+      "original": "After lunch every times I go for a walk near park",
+      "better": "After lunch every time I go for a walk near the park ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 56964474,
+      "original": "If the CEO almost all people are subordinated ",
+      "better": "If if it's the CEO almost everyone is a subordinate",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 56964475,
+      "original": "How about your mind ",
+      "better": "How about yourself?/How are you doing?/What is on your mind?",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 56964476,
+      "original": "He will got to the another branch but he is the manager position  ",
+      "better": "He will got to another branch but he [got/has] the manager position ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 56964477,
+      "original": "We have to give a various explain ",
+      "better": "We have to give various explanations ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 56964478,
+      "original": "The every December, our company report promotion member ",
+      "better": "Every December, our company reports the promotion of members",
+      "betterTrans": null,
+      "isSave": "N"
+     }
+    ]
+   },
+   {
+    "idxFeedback": 34854445,
+    "createDate": "2026-04-21",
+    "memo": "Excellent class today, keep it up!",
+    "subList": [
+     {
+      "idxFeedbackSub": 56914001,
+      "original": "It was an urgent cold.",
+      "better": "It got suddenly cold.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 56914002,
+      "original": "Usually I don't have a situation to be swamped because I finish all my work earlier. ",
+      "better": "I don't get swamped because I finish my work on time. ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 56914003,
+      "original": "I want to talk to you about slack off these days.",
+      "better": "I want to talk to you about slacking off these days.",
+      "betterTrans": null,
+      "isSave": "N"
+     }
+    ]
+   },
+   {
+    "idxFeedback": 34842785,
+    "createDate": "2026-04-20",
+    "memo": "Excellent class today, see you soon!",
+    "subList": [
+     {
+      "idxFeedbackSub": 56864231,
+      "original": "If I be teacher",
+      "better": "If I'm a teacher ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 56864232,
+      "original": "It is more easy for myself to work",
+      "better": "It is easier to do it myself",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 56864233,
+      "original": "That spend so many time",
+      "better": "That takes so much time",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 56864234,
+      "original": "He was check",
+      "better": "He checked",
+      "betterTrans": null,
+      "isSave": "N"
+     }
+    ]
+   },
+   {
+    "idxFeedback": 34832348,
+    "createDate": "2026-04-17",
+    "memo": "Today we started the lesson situational communication strategies. Reviewed the meaning \"sympathy\" as well as formal versus informal. Discussed situations in the workplace when you have expressed sympathy to co-workers and offered help. \n[a-g expressing sympathy, b-j offering help, c-m asking to talk, d-q commenting on mood, e-p expressing concern, f-n asking about a problem, h-o offering a solution, i-L complimenting , k-r asking for help].",
+    "subList": [
+     {
+      "idxFeedbackSub": 56820508,
+      "original": "Just I'm react my opinions ",
+      "better": "I just react with my opinions ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 56820509,
+      "original": "Every people have a different opinion or different thinking, sometimes we are so friends ",
+      "better": "Every person has a different opinion or different thinking, sometimes we are [friends/so friendly]",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 56820510,
+      "original": "We select the way how to do ",
+      "better": "We select [how/the way] to do things/act",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 56820511,
+      "original": "If we select the some way and go to the there ",
+      "better": "If we select some way and go there ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 56820512,
+      "original": "Could I speak with your a minute, got some times?",
+      "better": "Could I speak with you for a minute, got some time?",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 56820513,
+      "original": "Every day I'm little confuse ",
+      "better": "Every day I'm a little confused",
+      "betterTrans": null,
+      "isSave": "N"
+     }
+    ]
+   },
+   {
+    "idxFeedback": 34821313,
+    "createDate": "2026-04-16",
+    "memo": "Excellent class today! Enjoy your weekend! \n\nNew expression: in the spur of the moment",
+    "subList": [
+     {
+      "idxFeedbackSub": 56772381,
+      "original": "Our company had so many education for employees.",
+      "better": "Our company offers so much training to employees.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 56772382,
+      "original": "These days I am practice the confidence.",
+      "better": "These days I am practicing gaining confidence.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 56772383,
+      "original": "I have low expectations to everything.",
+      "better": "I have low expectations about everything.",
+      "betterTrans": null,
+      "isSave": "N"
+     }
+    ]
+   },
+   {
+    "idxFeedback": 34810212,
+    "createDate": "2026-04-15",
+    "memo": "This lesson we completed speaking errors and strengths. Reviewed the meaning and practiced the pronunciation of the terms [pizzazz, intonation, strategy, strong- \"strength\" sounds like \"length\", anxious-anxiety ]. Answered the discussion questions about speakers you enjoy and being nervous while speaking in public in front of many people. Here are today's notes:",
+    "subList": [
+     {
+      "idxFeedbackSub": 56724247,
+      "original": "Usually this season I made some report ",
+      "better": "Usually this season I make some report ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 56724248,
+      "original": "I'm totally agree that ",
+      "better": "I totally agree with that ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 56724249,
+      "original": "Usually many speaker have a problem speaking too quickly because they want to finish early the report ",
+      "better": "Usually many speakers have a problem with speaking too quickly because they want to finish the report early ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 56724250,
+      "original": "They can't catch your speaking ",
+      "better": "They can't catch [your meaning/what you say]",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 56724251,
+      "original": "It is more hard the listen unknown people",
+      "better": "It is much harder to listen to unknown people",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 56724252,
+      "original": "Almost people have some suffer to speak anxiety ",
+      "better": "Almost [all people/everyone] has some/suffers from [speech/speaking] anxiety ",
+      "betterTrans": null,
+      "isSave": "N"
+     }
+    ]
+   },
+   {
+    "idxFeedback": 34798836,
+    "createDate": "2026-04-14",
+    "memo": "Excellent class today, keep it up! The presentation tips you gave today were great!",
+    "subList": [
+     {
+      "idxFeedbackSub": 56674660,
+      "original": "You have so many number",
+      "better": "You have so much information",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 56674661,
+      "original": "I become the more age",
+      "better": "I gained more experience",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 56674662,
+      "original": "We just listen our voice",
+      "better": "We have to listen to our own speech",
+      "betterTrans": null,
+      "isSave": "N"
+     }
+    ]
+   },
+   {
+    "idxFeedback": 34787270,
+    "createDate": "2026-04-13",
+    "memo": "Excellent class today, keep it up!\n\nNew expression: in the meantime = during the time before something happen or while something else is being done",
+    "subList": [
+     {
+      "idxFeedbackSub": 56624748,
+      "original": "In financial my wife and me have the same goal so we have to see eye to eye.",
+      "better": "My wife and I have the same financial goals so we have to see eye to eye.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 56624749,
+      "original": "We make some plant",
+      "better": "We opened a plant",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 56624750,
+      "original": "It's more cheaper",
+      "better": "It's cheaper",
+      "betterTrans": null,
+      "isSave": "N"
+     }
+    ]
+   },
+   {
+    "idxFeedback": 34777221,
+    "createDate": "2026-04-10",
+    "memo": "Today we read a dialog aloud and answered the discussion questions. Reviewed the meaning of the expression [so far -until now-up to this point, at stake -adverbal phrase= at risk https://www.merriam-webster.com/dictionary/at%20stake, \"stake\" alone can be a verb or a noun with different meanings https://www.merriam-webster.com/dictionary/stake  ]. Here are today's notes:",
+    "subList": [
+     {
+      "idxFeedbackSub": 56582121,
+      "original": "There are so many city in a Canada ",
+      "better": "There are so many cities in Canada ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 56582122,
+      "original": "Maybe Ms. Sanders prepare presentation ",
+      "better": "Maybe Ms. Sanders prepares [a/her] presentation ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 56582123,
+      "original": "If i know about that contents and practice well at that time I have to speaking more",
+      "better": "If i know about that content and practice well at that time I have speak more",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 56582124,
+      "original": "Just imagine you just talk one people",
+      "better": "Just imagine you are talking to one person]",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 56582125,
+      "original": "If we practice many times it is more easier",
+      "better": "If we practice many times it is much easier",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 56582126,
+      "original": "If I don't have the presentation skill but if I have a knowledge of the subject at the time I can speaking well",
+      "better": "If I don't have the presentation skill but if I have knowledge of the subject at the time I can speak well",
+      "betterTrans": null,
+      "isSave": "N"
+     }
+    ]
+   },
+   {
+    "idxFeedback": 34766451,
+    "createDate": "2026-04-09",
+    "memo": "Excellent class today, keep it up! Enjoy your weekend!",
+    "subList": [
+     {
+      "idxFeedbackSub": 56535609,
+      "original": "I keep textbook my desk",
+      "better": "I keep my textbook at my desk.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 56535610,
+      "original": "I don't have time enough.",
+      "better": "I don't have enough time. ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 56535611,
+      "original": "It's more easy and safe.",
+      "better": "It's easier and safer.",
+      "betterTrans": null,
+      "isSave": "N"
+     }
+    ]
+   },
+   {
+    "idxFeedback": 34755782,
+    "createDate": "2026-04-08",
+    "memo": "Today we talked about having a business trip and plans to meet with co-workers. Discussed the word [indicate, certified-certification] and having interviews over the next two days. Here are today's notes:",
+    "subList": [
+     {
+      "idxFeedbackSub": 56489699,
+      "original": "Today I prepared the business trip so I'm in a home ",
+      "better": "Today I prepared for a business trip so I'm at a home ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 56489700,
+      "original": "That is first business travel ",
+      "better": "That is the first place to travel on my business",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 56489701,
+      "original": "Totally six.",
+      "better": "In total, six. A total of six.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 56489702,
+      "original": "They don't have a nervous, they have a confidence ",
+      "better": "They aren't nervous, [they have confidence/they are confident]  ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 56489703,
+      "original": "Every people is change, because five years ago I work other people ",
+      "better": "[Every person/Everyone] has changed, because five years ago I worked with other people ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 56489704,
+      "original": "Our co-worker don't keep the legal ",
+      "better": "Our co-worker [is doing something illegal/is acting illegally ]",
+      "betterTrans": null,
+      "isSave": "N"
+     }
+    ]
+   },
+   {
+    "idxFeedback": 34744152,
+    "createDate": "2026-04-07",
+    "memo": "Excellent class today, see you next time!",
+    "subList": [
+     {
+      "idxFeedbackSub": 56439005,
+      "original": "I think we are consider the listener.",
+      "better": "We have to consider the audience.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 56439006,
+      "original": "My job don't have a lot of presentations.",
+      "better": "I don't have to do a lot of presentations as part of my job.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 56439007,
+      "original": "A is the informal",
+      "better": "A is the informal expression",
+      "betterTrans": null,
+      "isSave": "N"
+     }
+    ]
+   },
+   {
+    "idxFeedback": 34733288,
+    "createDate": "2026-04-06",
+    "memo": "Great class today, keep it up!",
+    "subList": [
+     {
+      "idxFeedbackSub": 56391752,
+      "original": "Look the cherry blossom",
+      "better": "Look at the cherry blossoms",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 56391753,
+      "original": "He catched cherry blossoms",
+      "better": "He caught cherry blossoms",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 56391754,
+      "original": "If my son catch a cold we have to prepare something.",
+      "better": "If my son catches a cold we have to be prepared.",
+      "betterTrans": null,
+      "isSave": "N"
+     }
+    ]
+   },
+   {
+    "idxFeedback": 34726219,
+    "createDate": "2026-04-03",
+    "memo": "Today we discussed the second scenario and cultural differences in body language while communicating with others. Reviewed the meaning and pronunciation  of the vocabulary [rhetoric, significant, assertive, emphatic-emphasis, subservient, appropriate]. Head bowing: In this text it means bowing when greeting someone, different from nodding your head up and down to confirm you are listening. Here are today's notes:",
+    "subList": [
+     {
+      "idxFeedbackSub": 56363769,
+      "original": "There are 2 person, the other people.",
+      "better": "There are 2 people, the other person.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 56363770,
+      "original": "He need to evaluate from head of New York ",
+      "better": "He needs to evaluate the head of New York ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 56363771,
+      "original": "The China people don't use the speak from front of foreign people ",
+      "better": "The Chinese people don't speak in front of foreign people ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 56363772,
+      "original": "Sometimes it is possible it is close to relationship ",
+      "better": "Sometimes it is possible in a close relationship ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 56363773,
+      "original": "I agree that ",
+      "better": "I agree with that",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 56363774,
+      "original": "When they walk the street they hand to hand ",
+      "better": "When they walk the street they hold hands",
+      "betterTrans": null,
+      "isSave": "N"
+     }
+    ]
+   },
+   {
+    "idxFeedback": 34716365,
+    "createDate": "2026-04-02",
+    "memo": "Great class today, have a great weekend!",
+    "subList": [
+     {
+      "idxFeedbackSub": 56321007,
+      "original": "It's more easy.",
+      "better": "It's easier.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 56321008,
+      "original": "If my teacher explains about new expression I'm all ears",
+      "better": "If my teacher explains new expressions I'm all ears.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 56321009,
+      "original": "You have a lot of experience to abroad.",
+      "better": "You have a lot of experience abroad. ",
+      "betterTrans": null,
+      "isSave": "N"
+     }
+    ]
+   },
+   {
+    "idxFeedback": 34707312,
+    "createDate": "2026-04-01",
+    "memo": "This lesson we reviewed the dialog about asking about cultural differences in preparation for travel to another country. Practiced the phrase  [It's my treat. I will treat you to lunch. Lunch is on me. I've got lunch. I'll pick up the tab.] \nGreat job reading the dialog aloud and practicing pronunciation. Read patterns for clarifying  and apologizing. Here are today's notes:",
+    "subList": [
+     {
+      "idxFeedbackSub": 56281888,
+      "original": "Nowaday it is the bloom out the cherry blossom ",
+      "better": "Nowadays the cherry blossoms are blooming ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 56281889,
+      "original": "Maybe Mr. Butler treat to lunch Mr. Gupta ",
+      "better": "Maybe Mr. Butler will treat Mr. Gupta to lunch",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 56281890,
+      "original": "I want to listen about the culture of the restaurant ",
+      "better": "I want to hear about the culture of the restaurant ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 56281891,
+      "original": "I heard that they don't chewing the gum",
+      "better": "I heard that they don't chew gum",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 56281892,
+      "original": "It is a little confuse when I rent a car ",
+      "better": "It is a little confusing when I rent a car ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 56281893,
+      "original": "It is more easy to understanding. I'm sorry I didn't understand what you just say. ",
+      "better": "It is more easy to understand.. I'm sorry I didn't understand what you just said. ",
+      "betterTrans": null,
+      "isSave": "N"
+     }
+    ]
+   }
+  ]
+ }
+}

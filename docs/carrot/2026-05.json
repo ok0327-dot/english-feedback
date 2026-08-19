@@ -1,0 +1,695 @@
+{
+ "success": true,
+ "code": 0,
+ "message": null,
+ "data": {
+  "list": [
+   {
+    "idxFeedback": 35153830,
+    "createDate": "2026-05-29",
+    "memo": "Great work today. Please see my feedback below.",
+    "subList": [
+     {
+      "idxFeedbackSub": 58204588,
+      "original": "almost 25 or in day during",
+      "better": "It's almost 27 degrees during the day.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 58204589,
+      "original": "During the two weeks, they always rainy",
+      "better": "During those two weeks, it always rains.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 58204590,
+      "original": "During the two weeks, they always rainy",
+      "better": "Those two weeks are always rainy.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 58204591,
+      "original": "I have some plan to hair cut",
+      "better": "I plan to get my hair cut this weekend.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 58204592,
+      "original": "I always meet my family in Friday night",
+      "better": "I always meet my family on Friday night.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 58204593,
+      "original": "After I finish my work in Friday, I will go back my home",
+      "better": "After I finish my work on Friday, I will go back home.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 58204594,
+      "original": "We will go outside",
+      "better": "We will go out.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 58204595,
+      "original": "Every people have different character",
+      "better": "Every person has a different personality.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 58204596,
+      "original": "Who do you play with tennis?",
+      "better": "Who do you play tennis with?",
+      "betterTrans": null,
+      "isSave": "N"
+     }
+    ]
+   },
+   {
+    "idxFeedback": 35142340,
+    "createDate": "2026-05-28",
+    "memo": "Thank You!",
+    "subList": [
+     {
+      "idxFeedbackSub": 58154469,
+      "original": "That is my routine everyday.",
+      "better": "That is my daily routine.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 58154470,
+      "original": "Where are from now?",
+      "better": "Where are you living now?",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 58154471,
+      "original": "If you lived in South Africa, your country really cold these days.",
+      "better": "Since you live in South Africa, it's very cold these days.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 58154472,
+      "original": "Maybe, the first time I will visit Canada.",
+      "better": "Maybe, on my first trip I will visit Canada.",
+      "betterTrans": null,
+      "isSave": "N"
+     }
+    ]
+   },
+   {
+    "idxFeedback": 35136975,
+    "createDate": "2026-05-27",
+    "memo": "Kindly review the corrections made today and ensure you are prepared for the upcoming lesson.",
+    "subList": [
+     {
+      "idxFeedbackSub": 58131194,
+      "original": "During the five year",
+      "better": "During these past five years",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 58131195,
+      "original": "These day I work in",
+      "better": "Now I am working in ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 58131196,
+      "original": "I can see grow ups situation ",
+      "better": "I can see him growing up ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 58131197,
+      "original": "I work Sales team other city",
+      "better": "I used to work in the sales team in another city ",
+      "betterTrans": null,
+      "isSave": "N"
+     }
+    ]
+   },
+   {
+    "idxFeedback": 35107053,
+    "createDate": "2026-05-25",
+    "memo": "Excellent class today, keep it up!",
+    "subList": [
+     {
+      "idxFeedbackSub": 58002030,
+      "original": "Our purpose is to investor in apartment.",
+      "better": "Our idea is to invest in real estate.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 58002031,
+      "original": "My son is teaching English",
+      "better": "My son is learning English",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 58002032,
+      "original": "I can decision more quickly",
+      "better": "I can make decisions more quickly",
+      "betterTrans": null,
+      "isSave": "N"
+     }
+    ]
+   },
+   {
+    "idxFeedback": 35096647,
+    "createDate": "2026-05-22",
+    "memo": "Today we had a free talk lesson discussing travel plans and upcoming trips. Talked about preparing for your trips. Answered questions about places you would like to visit and food you would like to eat. Here are today's notes:",
+    "subList": [
+     {
+      "idxFeedbackSub": 57957867,
+      "original": "Today I have early arrive early my office ",
+      "better": "Today I have arrived early at/to my office ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 57957868,
+      "original": "The summertime I will go to the China ",
+      "better": "In the summertime I will go to China ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 57957869,
+      "original": "Did you have a heard that name",
+      "better": "Did you hear that name? Have you heard that name",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 57957870,
+      "original": "Maybe that country we will travel two week",
+      "better": "Maybe to that country we will travel for two week",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 57957871,
+      "original": "I'm really exciting ",
+      "better": "I'm really excited ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 57957872,
+      "original": "The character is a little confused ",
+      "better": "The character is a little confusing",
+      "betterTrans": null,
+      "isSave": "N"
+     }
+    ]
+   },
+   {
+    "idxFeedback": 35085238,
+    "createDate": "2026-05-21",
+    "memo": "Excellent class today, have a great weekend!",
+    "subList": [
+     {
+      "idxFeedbackSub": 57908284,
+      "original": "That is so good way",
+      "better": "That is such a good way",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 57908285,
+      "original": "They lose their safe belt",
+      "better": "They don't use their safety belt.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 57908286,
+      "original": "I had mistake",
+      "better": "I made a mistake",
+      "betterTrans": null,
+      "isSave": "N"
+     }
+    ]
+   },
+   {
+    "idxFeedback": 35073344,
+    "createDate": "2026-05-20",
+    "memo": "Today we reviewed a scenario about the pros and cons of an investment as well as the risks of making big decisions for the company.  Reviewed the pronunciation and meaning of [evaluating, yield, fraught]. Here are today's notes:",
+    "subList": [
+     {
+      "idxFeedbackSub": 57857196,
+      "original": "There is two member in this scenario ",
+      "better": "There are two members in this scenario ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 57857197,
+      "original": "The cons is usually there are so many competitor in the market ",
+      "better": "The cons are usually there are so many competitors in the market ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 57857198,
+      "original": "There are so many opportunity in the market ",
+      "better": "There are so many opportunities in the market ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 57857199,
+      "original": "I think the pros is these days generation change the feel of the car",
+      "better": "I think the pros are these days this generation changes the feel of the car\n",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 57857200,
+      "original": "That paragraph about hidden trap in the decision making ",
+      "better": "That paragraph is about hidden traps [in the decision making process/when making a decision[",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 57857201,
+      "original": "We have to decision how to that co-worker",
+      "better": "We have to [make a decision about/decide] (how to deal/what to do) with that co-worker",
+      "betterTrans": null,
+      "isSave": "N"
+     }
+    ]
+   },
+   {
+    "idxFeedback": 35061197,
+    "createDate": "2026-05-19",
+    "memo": "Great class today, keep it up!",
+    "subList": [
+     {
+      "idxFeedbackSub": 57804256,
+      "original": "Many people shied ",
+      "better": "Many people are shy",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 57804257,
+      "original": "That task is over my head",
+      "better": "That subject is over my head",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 57804258,
+      "original": "This could lead to improvement my English skills.",
+      "better": "This could lead to an improvement of my English skills.",
+      "betterTrans": null,
+      "isSave": "N"
+     }
+    ]
+   },
+   {
+    "idxFeedback": 35048931,
+    "createDate": "2026-05-18",
+    "memo": "Excellent class today, see you next time?",
+    "subList": [
+     {
+      "idxFeedbackSub": 57751631,
+      "original": "Mr Northman suggest if we give discount voucher.",
+      "better": "Mr Northman suggests that we give a discount on their next order. ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 57751632,
+      "original": "When I play the golf",
+      "better": "When I play golf",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 57751633,
+      "original": "I agree that ",
+      "better": "I agree with ",
+      "betterTrans": null,
+      "isSave": "N"
+     }
+    ]
+   },
+   {
+    "idxFeedback": 35038301,
+    "createDate": "2026-05-15",
+    "memo": "Today we discussed cultural differences you have experienced when travelling to other countries and speaking with foreigners. Practiced the pronunciation of [tracking - tackling, re-evaluate]. Began reviewing Formal vs Informal and completed [a-q, b-k, c-h]. Here are today's notes :",
+    "subList": [
+     {
+      "idxFeedbackSub": 57707046,
+      "original": "That is first time, because everytimes I lost my opportunity to join competition ",
+      "better": "That is the first time, because every time I lost my opportunity to join competition ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 57707047,
+      "original": "They are prayed so loudly, that is a little noisy but I'm respect ",
+      "better": "They prayed so loudly, that is a little noisy but [I'm respectful/I respect it] ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 57707048,
+      "original": "I think that is depend on the country ",
+      "better": "I think that depends on the country ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 57707049,
+      "original": "If I rude some, and if I don't keep that rule from the culture, that is a little rude for their culture ",
+      "better": "If I am rude, and if I don't keep to the rules from the culture, that is a little rude for/towards their culture ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 57707050,
+      "original": "Our people are understand the foreigner ",
+      "better": "Our people are understanding of foreigners",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 57707051,
+      "original": "That is also understand ",
+      "better": "That is also understandable ",
+      "betterTrans": null,
+      "isSave": "N"
+     }
+    ]
+   },
+   {
+    "idxFeedback": 35026819,
+    "createDate": "2026-05-14",
+    "memo": "Excellent class today! Have a great weekend!",
+    "subList": [
+     {
+      "idxFeedbackSub": 57657771,
+      "original": "I don't heard that.",
+      "better": "I've never heard that before.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 57657772,
+      "original": "That information learned another people.",
+      "better": "That information is learned from people.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 57657773,
+      "original": "Every people have a desire",
+      "better": "Every person wants something",
+      "betterTrans": null,
+      "isSave": "N"
+     }
+    ]
+   },
+   {
+    "idxFeedback": 35015070,
+    "createDate": "2026-05-13",
+    "memo": "Today we discussed making proposals and negotiations in the work place. Reviewed the pronunciation [crucial, negotiation- ne‧go‧ti‧a‧tion, eagerness] as well as an alternative meaning to aggressive [an aggressive bid-competitive]. Continue to review the expressions and vocabulary from today's lesson. Here are today's notes:",
+    "subList": [
+     {
+      "idxFeedbackSub": 57607390,
+      "original": "Every night I'm research and develop my project ",
+      "better": "Every night I'm researching and developing my project ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 57607391,
+      "original": "This article talk about negotain skill",
+      "better": "This article talks about negotiation skill",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 57607392,
+      "original": "The most important, my opinions, the skill of preparation and research ",
+      "better": "The most important, in my opinion, the skill of preparation and research ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 57607393,
+      "original": "At the time we don't have some patient that become to lose that negotiation ",
+      "better": "At the time, if we don't have some patience, that could lose that negotiation ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 57607394,
+      "original": "That is similar the 4, empathy",
+      "better": "That is similar to 4, empathy",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 57607395,
+      "original": "That is depend on what kind of information",
+      "better": "That depends on what kind of information",
+      "betterTrans": null,
+      "isSave": "N"
+     }
+    ]
+   },
+   {
+    "idxFeedback": 35003166,
+    "createDate": "2026-05-12",
+    "memo": "Excellent class today, keep it up!",
+    "subList": [
+     {
+      "idxFeedbackSub": 57556082,
+      "original": "We feel the confused",
+      "better": "We feel confused",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 57556083,
+      "original": "Our system found that information",
+      "better": "Our system finds that information",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 57556084,
+      "original": "This software is made me",
+      "better": "I made this software",
+      "betterTrans": null,
+      "isSave": "N"
+     }
+    ]
+   },
+   {
+    "idxFeedback": 34990679,
+    "createDate": "2026-05-11",
+    "memo": "Excellent class today, keep it up!",
+    "subList": [
+     {
+      "idxFeedbackSub": 57503093,
+      "original": "Find our needs",
+      "better": "Identify our needs",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 57503094,
+      "original": "Thank for your ask",
+      "better": "Thank you for asking",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 57503095,
+      "original": "These days Korean investors on a roll.",
+      "better": "These days Korean investors are on a roll.",
+      "betterTrans": null,
+      "isSave": "N"
+     }
+    ]
+   },
+   {
+    "idxFeedback": 34979498,
+    "createDate": "2026-05-08",
+    "memo": "Today we had a free talk lesson and discussed your current business trip. Reviewed vocabulary  [port-seaport, afterward, vegetables- produce]. Here are today's notes.",
+    "subList": [
+     {
+      "idxFeedbackSub": 57456196,
+      "original": "Today I having a business travel ",
+      "better": "Today I am having a business trip ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 57456197,
+      "original": "We sell the domestic and sell abroad ",
+      "better": "We sell domestically and sell abroad ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 57456198,
+      "original": "Usually the Friday night the main office I go back my home, driving on my car",
+      "better": "Usually the Friday night the main office I go back to my home, driving in my car",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 57456199,
+      "original": "They are sold their business ",
+      "better": "They have sold their business ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 57456200,
+      "original": "Usually mango is the import the Thailand ",
+      "better": "Usually mangos are imported from the Thailand ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 57456201,
+      "original": "Just a remind 40 minutes more drive ",
+      "better": "Just a 40 minute more drive remaining",
+      "betterTrans": null,
+      "isSave": "N"
+     }
+    ]
+   },
+   {
+    "idxFeedback": 34968003,
+    "createDate": "2026-05-07",
+    "memo": "Excellent class today, keep it up!",
+    "subList": [
+     {
+      "idxFeedbackSub": 57406604,
+      "original": "They work another company.",
+      "better": "They work for different companies.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 57406605,
+      "original": "Her opinion is flexibility",
+      "better": "Her focus is on flexibility",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 57406606,
+      "original": "The company volume is increased by 30%.",
+      "better": "The order volume will increase by 30%.",
+      "betterTrans": null,
+      "isSave": "N"
+     }
+    ]
+   },
+   {
+    "idxFeedback": 34955630,
+    "createDate": "2026-05-06",
+    "memo": "Today we completed the warm up questions about your negotiation skills and had a look at formal versus informal phrases. Here are today's notes and the answer key for the section. \n[a-c agreeing, b-o Introducing an Idea, d-r Inviting Interest, e-h Refusing, f-p Asking for More Information, g-L Asking for More time, i-m Hinting at a request, j-n Recommending Something, k-q Addressing doubt].",
+    "subList": [
+     {
+      "idxFeedbackSub": 57352214,
+      "original": "It is so wonderful holiday for me",
+      "better": "It [is/was] such a wonderful holiday for me",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 57352215,
+      "original": "I like to negotiation to something ",
+      "better": "I like to negotiate to something ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 57352216,
+      "original": "You will interest in this ",
+      "better": "You will be interested in this ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 57352217,
+      "original": "Let me think (it's) over ",
+      "better": "Let me think it over ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 57352218,
+      "original": "Asking for more times",
+      "better": "Asking for more time",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 57352219,
+      "original": "How do you consider trying ",
+      "better": "Have you considered trying ",
+      "betterTrans": null,
+      "isSave": "N"
+     }
+    ]
+   },
+   {
+    "idxFeedback": 34951249,
+    "createDate": "2026-05-04",
+    "memo": "It was wonderful speaking with you today, Joey! You’re making great progress, and I’m really proud of your effort. Keep up the fantastic work. For homework, please skim through the next chapter of your textbook to prepare for your next lesson. Take care!",
+    "subList": [
+     {
+      "idxFeedbackSub": 57334247,
+      "original": "My son likes the book for the science.",
+      "better": "My son likes science books",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 57334248,
+      "original": "Our day is same.",
+      "better": "We celebrate both parents on the same day. ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 57334249,
+      "original": "Many childrens/sons prepare for Parents' Day",
+      "better": "Many children/sons prepare for Parents' Day",
+      "betterTrans": null,
+      "isSave": "N"
+     }
+    ]
+   }
+  ]
+ }
+}
