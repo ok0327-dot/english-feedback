@@ -2,11 +2,26 @@ name: 🎓 Carrot 강사 피드백 주간 수집
 on:
   schedule:
     # UTC 21:00 일 = KST 06:00 월. 매주 1회 강사 공식 피드백 스냅샷 갱신.
+    # UTC 21:00 Sun = KST 06:00 Mon — weekly snapshot of official tutor feedback.
+    # ⚠️ 이 잡이 조용히 죽으면 그 달 피드백이 영구 유실된다. 그래서
+    #    (1) 정기 실행도 --backfill 로 돌려 빠진 달을 자동 복구하고
+    #    (2) 미설정/실패를 텔레그램으로 즉시 알린다.
+    # ⚠️ If this job dies silently, that month's feedback is lost for good — hence
+    #    scheduled runs always use --backfill and every bad outcome is notified.
     - cron: '0 21 * * 0'
   workflow_dispatch:
     inputs:
       months:
-        description: '특정 월 수집 (예: "2026-06 2026-05", 비우면 이번달+지난달)'
+        description: '특정 월 수집 (예: "2026-06 2026-05", 비우면 아래 backfill 설정에 따름)'
+        required: false
+        default: ''
+      backfill:
+        description: '누락된 달 전부 채우기 (--backfill). months 를 비웠을 때만 적용'
+        type: boolean
+        required: false
+        default: false
+      since:
+        description: 'backfill 시작 월 (예: 2026-02, 비우면 스크립트 기본값)'
         required: false
         default: ''
 permissions:
@@ -18,42 +33,175 @@ jobs:
   fetch:
     runs-on: ubuntu-latest
     timeout-minutes: 12
+    env:
+      # 디버그 덤프 위치(스크립트와 동일 계약) / debug dump dir shared with the fetcher
+      CARROT_DEBUG_DIR: ${{ github.workspace }}/debug-carrot
+      NOTIFY_URL: https://telegram-notify-hub.dk0327.workers.dev/send
+      SECRETS_URL: ${{ github.server_url }}/${{ github.repository }}/settings/secrets/actions
+      RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
     steps:
       - name: 📥 체크아웃
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-      - name: 🐍 Python 설정
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
-      - name: 📦 의존성 설치
-        run: |
-          pip install requests playwright
-          python -m playwright install --with-deps chromium
-      - name: 🥕 강사 피드백 수집
-        run: python scripts/fetch_carrot_feedback.py ${{ github.event.inputs.months }}
+
+      # 🚦 프리플라이트: 시크릿이 없으면 무거운 playwright 설치 전에 즉시 중단.
+      #    Preflight — bail out before the heavy playwright install when creds are missing.
+      #    ❗️ '실패(빨간 X)'가 아니라 '미설정(skip)'으로 끝낸다. 매주 실패가 쌓이면
+      #       사용자가 알림에 둔감해지기 때문(alert fatigue).
+      - name: 🚦 시크릿 프리플라이트 검사
+        id: preflight
         env:
           CARROT_EMAIL: ${{ secrets.CARROT_EMAIL }}
           CARROT_PASSWORD: ${{ secrets.CARROT_PASSWORD }}
+          KNH_SEND_SECRET: ${{ secrets.KNH_SEND_SECRET }}
+        run: |
+          missing=""
+          [ -z "$CARROT_EMAIL" ] && missing="CARROT_EMAIL"
+          [ -z "$CARROT_PASSWORD" ] && missing="${missing:+$missing, }CARROT_PASSWORD"
+          if [ -z "$missing" ]; then
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+            echo "✅ 자격증명 시크릿 확인 완료 / credentials present"
+            exit 0
+          fi
+          echo "ready=false" >> "$GITHUB_OUTPUT"
+          echo "::warning title=Carrot 수집 미설정::시크릿 미등록($missing) — 수집을 건너뜁니다. $SECRETS_URL 에서 추가하세요."
+          {
+            echo "## ⚠️ Carrot 강사 피드백 수집 — 미설정으로 건너뜀 (skipped, not failed)"
+            echo ""
+            echo "저장소 시크릿 **$missing** 이(가) 등록되어 있지 않습니다."
+            echo "Repository secret(s) **$missing** are not configured."
+            echo ""
+            echo "### 설정 방법 / How to fix"
+            echo "1. [Settings → Secrets and variables → Actions]($SECRETS_URL) 로 이동"
+            echo "2. **New repository secret** 클릭"
+            echo "3. \`CARROT_EMAIL\` = Carrot English 로그인 이메일"
+            echo "4. \`CARROT_PASSWORD\` = 해당 계정 비밀번호"
+            echo "5. 이 워크플로우를 **Run workflow → backfill ✅** 로 수동 실행 → 밀린 달까지 한 번에 복구"
+            echo ""
+            echo "> 시크릿 값은 로그·커밋·아티팩트에 남지 않습니다 / secret values never appear in logs, commits, or artifacts."
+          } >> "$GITHUB_STEP_SUMMARY"
+          # 원인을 정확히 말해주는 알림(실패 알림과 구분) / actionable, distinct from failure alerts
+          if [ -n "$KNH_SEND_SECRET" ]; then
+            TEXT="⚠️ Carrot 강사 피드백 수집 미설정 — CARROT_EMAIL/CARROT_PASSWORD 시크릿이 없습니다. Settings → Secrets and variables → Actions 에서 추가하세요: $SECRETS_URL"
+            jq -n --arg t "$TEXT" '{channel:"telegram", text:$t}' \
+              | curl -s -X POST "$NOTIFY_URL" -H "X-Notify-Secret: $KNH_SEND_SECRET" \
+                     -H "Content-Type: application/json" --data-binary @- >/dev/null || true
+          fi
+
+      - name: 🐍 Python 설정
+        if: steps.preflight.outputs.ready == 'true'
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.11'
+
+      - name: 📦 의존성 설치
+        if: steps.preflight.outputs.ready == 'true'
+        run: |
+          pip install requests playwright
+          python -m playwright install --with-deps chromium
+
+      # 🥕 수집. 종료 코드 계약 / exit-code contract:
+      #    0 성공 · 2 자격증명 미설정 · 3 로그인·토큰 캡처 실패 · 4 API 호출 실패
+      #    코드를 outputs 로 넘긴 뒤 그대로 exit → 잡은 정상적으로 실패(빨간 X)로 끝난다.
+      - name: 🥕 강사 피드백 수집
+        id: fetch
+        if: steps.preflight.outputs.ready == 'true'
+        env:
+          CARROT_EMAIL: ${{ secrets.CARROT_EMAIL }}
+          CARROT_PASSWORD: ${{ secrets.CARROT_PASSWORD }}
+          # ⚠️ 사용자 입력은 반드시 env 경유(스크립트 인젝션 방지) / route inputs via env
+          IN_MONTHS: ${{ inputs.months }}
+          IN_BACKFILL: ${{ inputs.backfill }}
+          IN_SINCE: ${{ inputs.since }}
+          EVENT_NAME: ${{ github.event_name }}
+        run: |
+          if [ -n "$IN_MONTHS" ]; then
+            # 월을 직접 지정 / explicit months (word-splitting intended)
+            set -- $IN_MONTHS
+          elif [ "$EVENT_NAME" != "workflow_dispatch" ] || [ "$IN_BACKFILL" = "true" ]; then
+            # 정기 실행은 항상 백필 → 지난 실패로 생긴 구멍을 스스로 복구
+            # Scheduled runs always backfill so past failures self-heal.
+            set -- --backfill
+            if [ -n "$IN_SINCE" ]; then set -- "$@" --since "$IN_SINCE"; fi
+          else
+            # 수동 실행 + backfill 미체크 → 기존 동작(이번달 + 지난달)
+            set --
+          fi
+          echo "▶️ python scripts/fetch_carrot_feedback.py $*"
+          set +e
+          python scripts/fetch_carrot_feedback.py "$@"
+          code=$?
+          set -e
+          echo "code=$code" >> "$GITHUB_OUTPUT"
+          exit $code
+
       - name: 🎨 강사 피드백 페이지 생성
+        if: steps.preflight.outputs.ready == 'true'
         run: python scripts/build_carrot_page.py
+
       - name: 💾 변경분 커밋·푸시
+        if: steps.preflight.outputs.ready == 'true'
         run: |
           git config user.email "actions@github.com"
           git config user.name "GitHub Actions"
+          # docs/carrot/ 전체를 강제 추가 → YYYY-MM.json, _meta.json, _fetched.txt 모두 포함
+          # (.gitignore 의 전역 *.json 규칙을 -f 로 우회) / force-add covers meta + stamp files
           git add -f docs/carrot/ docs/carrot.html
           if git diff --cached --quiet; then
-            echo "변경 없음 — 커밋 생략"
+            echo "변경 없음 — 커밋 생략 / nothing to commit"
           else
-            git commit -m "chore(carrot): 강사 공식 피드백 주간 갱신"
+            # 수집한 월을 커밋 메시지에 노출 / surface collected months in the message
+            MONTHS=$(python -c "import json;print(', '.join(json.load(open('docs/carrot/_meta.json'))['months']))" 2>/dev/null || true)
+            if [ -n "$MONTHS" ]; then
+              git commit -m "chore(carrot): 강사 공식 피드백 갱신 ($MONTHS)"
+            else
+              git commit -m "chore(carrot): 강사 공식 피드백 주간 갱신"
+            fi
             git push origin HEAD:main
           fi
-      - name: 🔔 실패 시 텔레그램 알림
+
+      # 🧪 로그인 실패 시 남은 스크린샷·HTML 회수 (자격증명은 마스킹되어 저장됨)
+      #    Collect login-failure dumps for debugging; creds are masked by the fetcher.
+      - name: 🧪 디버그 아티팩트 업로드
         if: failure()
-        run: |
-          curl -s -X POST "https://telegram-notify-hub.dk0327.workers.dev/send" \
-            -H "X-Notify-Secret: $KNH_SEND_SECRET" -H "Content-Type: application/json" \
-            -d '{"channel":"telegram","text":"❌ Carrot 강사 피드백 수집 실패 — Actions 로그 확인"}' || true
+        uses: actions/upload-artifact@v5
+        with:
+          name: carrot-debug-${{ github.run_id }}
+          path: debug-carrot/
+          retention-days: 7
+          if-no-files-found: ignore
+
+      # 🔔 수집 실패 알림 — 종료 코드별로 원인을 다르게 안내
+      #    Failure notification with a cause-specific message per exit code.
+      - name: 🔔 수집 실패 텔레그램 알림
+        if: always() && steps.fetch.outcome == 'failure'
         env:
           KNH_SEND_SECRET: ${{ secrets.KNH_SEND_SECRET }}
+          CODE: ${{ steps.fetch.outputs.code }}
+        run: |
+          case "$CODE" in
+            2) TEXT="⚠️ Carrot 수집 중단(exit 2) — 자격증명 미설정 또는 잘못된 인자(months/since 는 YYYY-MM). 시크릿 확인: $SECRETS_URL · 로그: $RUN_URL" ;;
+            3) TEXT="❌ Carrot 로그인 실패(exit 3) — 비밀번호 변경 또는 Carrot 로그인 화면 변경 가능성. 디버그 아티팩트(carrot-debug) 확인: $RUN_URL" ;;
+            4) TEXT="❌ Carrot API 호출 실패(exit 4) — 토큰 만료 또는 서버 오류 가능성. Actions 로그 확인: $RUN_URL" ;;
+            *) TEXT="❌ Carrot 강사 피드백 수집 실패(exit ${CODE:-unknown}) — Actions 로그 확인: $RUN_URL" ;;
+          esac
+          echo "::error title=Carrot 수집 실패::$TEXT"
+          if [ -n "$KNH_SEND_SECRET" ]; then
+            jq -n --arg t "$TEXT" '{channel:"telegram", text:$t}' \
+              | curl -s -X POST "$NOTIFY_URL" -H "X-Notify-Secret: $KNH_SEND_SECRET" \
+                     -H "Content-Type: application/json" --data-binary @- >/dev/null || true
+          fi
+
+      # 수집 외 단계(페이지 생성·커밋 등)에서 죽은 경우 / failures outside the fetch step
+      - name: 🔔 기타 실패 텔레그램 알림
+        if: failure() && steps.fetch.outcome != 'failure'
+        env:
+          KNH_SEND_SECRET: ${{ secrets.KNH_SEND_SECRET }}
+        run: |
+          TEXT="❌ Carrot 워크플로우 실패 — 수집 이후 단계(페이지 생성/커밋)에서 오류. Actions 로그 확인: $RUN_URL"
+          if [ -n "$KNH_SEND_SECRET" ]; then
+            jq -n --arg t "$TEXT" '{channel:"telegram", text:$t}' \
+              | curl -s -X POST "$NOTIFY_URL" -H "X-Notify-Secret: $KNH_SEND_SECRET" \
+                     -H "Content-Type: application/json" --data-binary @- >/dev/null || true
+          fi
