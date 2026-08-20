@@ -4,54 +4,50 @@
   2026,
   34
  ],
- "topic": "Discussing customer service experiences and preferences.",
- "grammar": "Comparative Adjectives and Adverbs",
- "grammar_norm": "Comparative Adjectives And Adverbs",
- "score": 7.0,
+ "topic": "Discussing email-related vocabulary and natural vs. formal expressions.",
+ "grammar": "Countable and Uncountable Nouns",
+ "grammar_norm": "Countable And Uncountable Nouns",
+ "score": 7.5,
  "pairs": [
   {
-   "said": "It is more easy.",
-   "natural": "It's easier."
+   "said": "First, I will read that.",
+   "natural": "First, I'll read it."
   },
   {
-   "said": "sometime I have, I make a reservation and then I request, I request to the restaurant, can you send me the inviting or in email or in text message?",
-   "natural": "Sometimes when I make a reservation, I ask the restaurant, 'Could you send me the confirmation by email or text message?'"
+   "said": "It is cutting to my head.",
+   "natural": "It makes me think."
   },
   {
-   "said": "the enterprise is changing. They want to use the live chat because they don't want to pay to human to employ.",
-   "natural": "Companies are changing. They want to use live chat because they don't want to pay for human employees."
-  },
-  {
-   "said": "I don't remind some good service.",
-   "natural": "I don't remember any good service."
+   "said": "Usually we will send the message email and sometimes he replies my email.",
+   "natural": "Usually we send emails, and sometimes we get replies."
   }
  ],
  "vocab": [
   {
-   "word": "refund",
-   "pos": "n, v",
-   "meaning": "환불(금), 환불하다"
+   "word": "Subject line",
+   "pos": "명사",
+   "meaning": "이메일 제목"
   },
   {
-   "word": "frustrated",
-   "pos": "adj",
-   "meaning": "좌절감을 느끼는, 불만스러운"
+   "word": "Follow-up",
+   "pos": "명사",
+   "meaning": "후속 조치, 후속 연락"
   },
   {
-   "word": "warranty",
-   "pos": "n",
-   "meaning": "보증(서), 품질 보증"
+   "word": "High priority",
+   "pos": "명사구",
+   "meaning": "최우선 순위"
   },
   {
-   "word": "resolve",
-   "pos": "v",
-   "meaning": "해결하다, 결심하다"
+   "word": "Appreciate",
+   "pos": "동사",
+   "meaning": "감사하다, 진가를 알아보다"
   },
   {
-   "word": "allocate",
-   "pos": "v",
-   "meaning": "할당하다, 배분하다"
+   "word": "Decipher",
+   "pos": "동사",
+   "meaning": "해독하다, 판독하다 (이해하기 어려운 내용을 이해하다)"
   }
  ],
- "_html_md5": "097e072693173aa3f25900ec2fc8ca6f"
+ "_html_md5": "187f90b663387a6fe666c51679a1ee27"
 }
