@@ -1,0 +1,259 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#0f0f13"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="당근영어"><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="icon" type="image/png" sizes="192x192" href="icon-192.png"><script src="install-banner.js" defer></script><script src="sw-reg.js" defer></script>
+<title>🎙️ 라디오 2026-W33</title><style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Noto Sans KR',-apple-system,sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.7}
+.header{background:linear-gradient(135deg,#241a3a,#3a2410,#0f3460);padding:42px 24px 30px;text-align:center;border-bottom:1px solid rgba(255,255,255,.06)}
+.header h1{font-size:24px;color:#f5f0ff;margin-bottom:8px}
+.header .range{font-size:13px;color:#c4b5fd;letter-spacing:1px}
+.nav{max-width:760px;margin:0 auto;padding:14px 20px 0;display:flex;justify-content:space-between;font-size:13px}
+.nav a{color:#64748b;text-decoration:none;padding:6px 10px;border-radius:8px}.nav a:hover{color:#a78bfa;background:#16161d}
+.container{max-width:760px;margin:0 auto;padding:18px 20px 80px}
+.card{background:#16161d;border:1px solid rgba(255,255,255,.06);border-radius:16px;padding:20px;margin-bottom:18px}
+.card h2{font-size:16px;color:#f1f5f9;margin-bottom:12px}
+.player{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-bottom:14px}
+.pbtn{border:none;border-radius:10px;padding:12px 18px;font-size:14px;font-weight:700;cursor:pointer;font-family:inherit;color:#0f0f13;background:linear-gradient(135deg,#a78bfa,#818cf8)}
+.pbtn.alt{background:#1e293b;color:#cbd5e1}
+.pbtn:active{transform:translateY(1px)}
+.speed{display:flex;align-items:center;gap:6px;font-size:12px;color:#94a3b8;margin-left:auto}
+.speed input{accent-color:#a78bfa}
+.stage{display:flex;flex-direction:column;gap:10px;margin-top:6px}
+.bubble{max-width:88%;padding:11px 14px;border-radius:14px;font-size:14px;border:1px solid transparent;transition:all .2s}
+.bubble .who{display:block;font-size:11px;font-weight:700;margin-bottom:3px;opacity:.8}
+.bubble.mc{align-self:flex-start;background:#1e1b2e;border-color:rgba(167,139,250,.25)}.bubble.mc .who{color:#a78bfa}
+.bubble.coach{align-self:flex-end;background:#1a2433;border-color:rgba(56,189,248,.22)}.bubble.coach .who{color:#38bdf8}
+.bubble.on{border-color:#fbbf24;box-shadow:0 0 0 1px #fbbf24}
+.modes{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.mode{display:flex;flex-direction:column;gap:4px;align-items:center;padding:16px 10px;background:#0f0f13;border:1px solid rgba(255,255,255,.08);border-radius:12px;color:#cbd5e1;cursor:pointer;font-size:13px;text-align:center}
+.mode:hover{border-color:rgba(167,139,250,.4);color:#a78bfa}.mode .ico{font-size:22px}.mode .sub{font-size:11px;color:#64748b}
+.muted{color:#64748b;font-size:12px}
+.toast{position:fixed;bottom:28px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#a78bfa;padding:13px 26px;border-radius:12px;font-size:14px;border:1px solid rgba(167,139,250,.25);opacity:0;transition:all .4s;z-index:99}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+.epweek{font-size:13px;color:#a78bfa;font-weight:700;margin-bottom:6px}
+audio{width:100%;margin-top:4px}
+.archive{display:flex;flex-direction:column;gap:6px;margin-top:10px}
+.archive a{font-size:12.5px;color:#94a3b8;text-decoration:none;padding:8px 12px;background:#0f0f13;border:1px solid rgba(255,255,255,.06);border-radius:8px}
+.archive a:hover{color:#a78bfa;border-color:rgba(167,139,250,.3)}
+.weeklist{display:flex;flex-direction:column;gap:6px;margin-top:4px}
+.weekrow{display:flex;align-items:center;gap:10px;font-size:13px;color:#cbd5e1;text-decoration:none;padding:11px 13px;background:#0f0f13;border:1px solid rgba(255,255,255,.06);border-radius:10px}
+.weekrow:hover{border-color:rgba(167,139,250,.4);color:#a78bfa}
+.weekrow.active{border-color:rgba(167,139,250,.5);background:#1e1b2e}
+.weekrow .wk{font-weight:700;color:#a78bfa;white-space:nowrap}
+.weekrow .wr{color:#64748b}
+.weekrow .wk-audio{margin-left:auto;font-size:14px;min-width:18px;text-align:right}
+.foot{text-align:center;font-size:11px;color:#475569;margin-top:26px;line-height:1.8}
+</style></head><body>
+<div class="header"><h1>🎙️ 라디오 · 2026-W33</h1>
+<div class="range">8/10~8/14 · 주차 기록 · 브라우저 음성으로 청취</div></div>
+<div class="nav"><a href="radio.html">← 최신 라디오</a><a href="review-index.html">📚 복습 목록 →</a></div>
+<div class="container">
+
+  <div class="card"><h2>🎧 오디오 에피소드 <span class="muted" style="font-weight:400">· 진짜 음성 · 이 주차</span></h2>
+    <div id="audio-latest" class="muted">에피소드 불러오는 중…</div></div>
+
+  <div class="card"><h2>🗂 주차별 라디오 기록 <span class="muted" style="font-weight:400">· 최신순 · 누적</span></h2>
+    <div class="weeklist"><a class="weekrow" data-wk="2026-W34" href="radio.html"><span class="wk">2026-W34</span><span class="wr">8/17~8/21 · 5회</span><span class="wk-audio"></span></a><a class="weekrow active" data-wk="2026-W33" href="radio-2026-W33.html"><span class="wk">2026-W33 · 현재</span><span class="wr">8/10~8/14 · 5회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W32" href="radio-2026-W32.html"><span class="wk">2026-W32</span><span class="wr">8/3~8/7 · 4회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W31" href="radio-2026-W31.html"><span class="wk">2026-W31</span><span class="wr">7/27~7/31 · 3회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W30" href="radio-2026-W30.html"><span class="wk">2026-W30</span><span class="wr">7/20~7/24 · 5회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W29" href="radio-2026-W29.html"><span class="wk">2026-W29</span><span class="wr">7/13~7/17 · 4회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W28" href="radio-2026-W28.html"><span class="wk">2026-W28</span><span class="wr">7/6~7/10 · 5회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W27" href="radio-2026-W27.html"><span class="wk">2026-W27</span><span class="wr">6/29~7/3 · 3회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W26" href="radio-2026-W26.html"><span class="wk">2026-W26</span><span class="wr">6/22~6/26 · 5회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W25" href="radio-2026-W25.html"><span class="wk">2026-W25</span><span class="wr">6/15~6/19 · 5회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W24" href="radio-2026-W24.html"><span class="wk">2026-W24</span><span class="wr">6/8~6/12 · 5회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W23" href="radio-2026-W23.html"><span class="wk">2026-W23</span><span class="wr">6/1~6/5 · 1회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W22" href="radio-2026-W22.html"><span class="wk">2026-W22</span><span class="wr">5/25~5/29 · 3회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W21" href="radio-2026-W21.html"><span class="wk">2026-W21</span><span class="wr">5/18~5/22 · 3회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W20" href="radio-2026-W20.html"><span class="wk">2026-W20</span><span class="wr">5/11~5/15 · 4회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W19" href="radio-2026-W19.html"><span class="wk">2026-W19</span><span class="wr">5/4~5/8 · 1회</span><span class="wk-audio"></span></a></div></div>
+
+  <div class="card"><h2>▶ 바로 듣기 <span class="muted" style="font-weight:400">· 브라우저 음성(즉시·폴백)</span></h2>
+    <div class="player">
+      <button class="pbtn" id="play">▶ 재생</button>
+      <button class="pbtn alt" id="pause">⏸ 일시정지</button>
+      <button class="pbtn alt" id="resume">▶ 이어듣기</button>
+      <button class="pbtn alt" id="stop">⏹ 처음부터</button>
+      <label class="speed">속도 <input type="range" id="rate" min="0.7" max="1.3" step="0.1" value="1"> <span id="rv">1.0x</span></label>
+    </div>
+    <div class="muted" id="ttswarn" style="margin-bottom:8px"></div>
+    <div class="muted" style="margin:2px 0 10px;font-size:11.5px;line-height:1.7">💡 재생 중에는 화면이 자동으로 꺼지지 않게 막아요(Wake&nbsp;Lock). 다만 직접 화면을 끄면 브라우저 음성은 멈출 수 있어요 — <b>화면을 끈 채 듣고 싶다면 맨 위 🎧 오디오 에피소드(MP3)</b>를 쓰세요. 잠금화면에서도 재생됩니다.</div>
+    <div class="stage" id="stage"></div>
+  </div>
+
+  <div class="card"><h2>💬 이 내용으로 AI와 이야기하기</h2>
+    <div class="muted" style="margin-bottom:10px">클릭하면 이 주차 요약 프롬프트가 복사되고 Gemini가 열립니다. 붙여넣고 대화하세요.</div>
+    <div class="modes">
+      <div class="mode" onclick="copyOpen('chat')"><span class="ico">💬</span>튜터 대화<span class="sub">약점 집중 연습</span></div>
+      <div class="mode" onclick="copyOpen('lecture')"><span class="ico">🎓</span>강의식 설명<span class="sub">규칙+예문+퀴즈</span></div>
+      <div class="mode" onclick="copyOpen('radio')"><span class="ico">🎙</span>라디오 인터뷰<span class="sub">게스트 롤플레이</span></div>
+    </div>
+  </div>
+
+  <div class="card"><h2>📓 NotebookLM 팟캐스트로 듣기 <span class="sub">고품질·무료</span></h2>
+    <div class="muted" style="margin-bottom:12px">이번 주 학습 다이제스트(교정·강사 피드백·어휘 전부)를 복사해 <b>NotebookLM</b>에 붙여넣고 <b>Audio Overview</b>를 만들면, 2인 진행 영어 팟캐스트가 무료로 생성됩니다(현재 TTS보다 자연스러움).</div>
+    <div class="modes">
+      <div class="mode" onclick="window.open('https://notebooklm.google.com/','_blank');copyDigest()"><span class="ico">📓</span>복사+NotebookLM 열기<span class="sub">원클릭 반자동</span></div>
+      <div class="mode" onclick="copyDigest()"><span class="ico">📋</span>다이제스트만 복사<span class="sub">붙여넣기용 텍스트</span></div>
+    </div>
+  </div>
+
+  <div class="foot">대본: scripts/build_radio.py · 다이제스트: scripts/build_digest.py · 음성: 브라우저 Web Speech(무료) · 주차별 누적 · 매주 금요일 Claude 갱신</div>
+</div>
+
+<pre id="radio-src" hidden>민지|en|Hello, and welcome back to your Weekly English Radio. I&#x27;m Minji, your host.
+알렉스|en|And I&#x27;m Alex, your English coach. This is Week 33 of 2026, and what a week it was.
+민지|en|Five lessons this week. Topics: family traditions, love at first sight, travel planning, packing strategies, and travel styles.
+알렉스|en|Big conversations, rich material. And today we are not just listing what went wrong. We are going to understand it.
+민지|en|Because when you understand why a pattern keeps showing up, you can fix it — not just avoid it today, but fix it for good.
+알렉스|en|Exactly. Okay Minji, let&#x27;s start with the headline. What was the number one grammar pattern this week?
+민지|en|Subject-Verb Agreement. Nine times in our cumulative record. Nine. That is the most of any grammar category so far.
+알렉스|en|And it showed up again this week. So let&#x27;s really dig in. Minji, what&#x27;s the Korean connection here?
+민지|en|In Korean, the verb does not change based on who is doing the action. &quot;가다&quot; is &quot;가다&quot; whether it&#x27;s I, you, he, or they.
+알렉스|en|But in English, there is one very specific rule. Third person singular — he, she, or it — gets a special verb form.
+민지|ko|한국어에선 주어가 뭐든 동사가 바뀌지 않아요. 영어는 &#x27;그, 그녀, 그것&#x27; 단수 주어일 때 동사에 S를 붙여야 해요.
+알렉스|en|He goes. She walks. It works. That S is a signal to the listener — exactly one thing is doing this action.
+민지|en|Now, the trickier part that showed up this week. What happens when you connect two subjects with &quot;and&quot;?
+알렉스|en|&quot;My son and my wife.&quot; Two people. Connected by &quot;and.&quot; That makes a compound subject — and compound means plural.
+민지|en|This week you said: &quot;my son and my wife has many clothes and many belongings.&quot;
+알렉스|en|The natural fix: &quot;my son and my wife have a lot of clothes and belongings.&quot; Have, not has. Two people equals plural verb.
+민지|ko|&#x27;A and B&#x27; — and로 연결된 두 주어는 항상 복수예요. &#x27;has&#x27;가 아니라 &#x27;have&#x27;. 예외가 없는 규칙이에요.
+알렉스|en|The rule of thumb, and say this out loud: A and B always takes a plural verb. A and B have. A and B are. A and B do.
+민지|en|Let&#x27;s practice. Repeat after us. &quot;My son and my wife have a big suitcase.&quot;
+알렉스|en|&quot;Alex and Minji are your hosts.&quot; &quot;The book and the pen are on the table.&quot;
+민지|en|One more. &quot;My mom and my dad have been married for thirty-five years.&quot;
+알렉스|en|Every time you join two nouns with &quot;and&quot; — pause for one second. Ask: is this one or more than one? More than one — use the plural form.
+민지|en|Here&#x27;s a quick twist. &quot;Everyone&quot; sounds like it includes many people, right? But it&#x27;s actually singular in grammar.
+알렉스|en|&quot;Everyone is here.&quot; Not &quot;everyone are here.&quot; Same for somebody, nobody, anything — grammatically one thing, always singular.
+민지|en|So to be clear: &quot;A and B&quot; — two things joined by and — always plural. &quot;Everyone, someone, nobody&quot; — always singular. Keep those two rules separate.
+민지|en|Now let&#x27;s talk about Articles quickly. Number two in our cumulative list. Eight instances.
+알렉스|en|A, an, the. Three tiny words with enormous impact on how natural you sound.
+민지|en|The key question to ask yourself before every noun: does my listener already know about this specific thing?
+알렉스|en|First time mentioning it — use &quot;a.&quot; Already shared knowledge between you and your listener — use &quot;the.&quot;
+민지|ko|처음 언급할 땐 &#x27;a&#x27;, 이미 공유된 대상엔 &#x27;the&#x27;. 핵심 질문 하나: 내 청자도 이 대상을 알고 있나? 이것만 기억하면 돼요.
+민지|en|Example: &quot;I saw a dog today. The dog was wearing a tiny hat.&quot; First mention: a dog. Second mention: the same dog — so the dog.
+알렉스|en|Train yourself to ask that question before every noun. It becomes automatic faster than you think.
+민지|en|Now our second deep-dive pattern: Countable and Uncountable Nouns. This one is genuinely hard for Korean speakers.
+알렉스|en|Because in Korean, this distinction barely exists in the grammar. &quot;물 많다&quot; — lots of water. &quot;가방 많다&quot; — lots of bags. The nouns look the same.
+민지|ko|한국어는 가산·불가산 명사를 문법으로 구분하지 않아요. 영어는 이 구분이 동사와 관사 선택에 직접 영향을 줘요.
+알렉스|en|In English, bags is countable. One bag, two bags, many bags — it has a plural form.
+민지|en|But water is uncountable. It has no plural. You cannot say &quot;two waters&quot; or &quot;many informations.&quot; Just water. Just information.
+알렉스|en|This week you said: &quot;I had so sweat on my body.&quot; Sweat as a substance — that&#x27;s uncountable. You can&#x27;t say &quot;a sweat&quot; in that sense.
+민지|en|Natural fix: &quot;I would sweat a lot.&quot; Or &quot;I was sweating a lot.&quot; Turn the noun into a verb — the problem disappears.
+알렉스|en|Rule of thumb: if you can&#x27;t put &quot;a&quot; directly in front of it — a sweat, a water, an information — it is probably uncountable.
+민지|en|And to count uncountable nouns, use a unit word. A glass of water. A drop of sweat. A piece of information. Beautiful and correct.
+알렉스|en|A few more uncountables that often trip people up: advice, luggage, furniture, equipment.
+민지|en|&quot;I have some advice for you.&quot; Not &quot;some advices.&quot; &quot;The luggage is heavy.&quot; Not &quot;the luggages.&quot; One form for all amounts.
+알렉스|en|Travel word to remember: baggage and luggage are both uncountable. You check your luggage — not your luggages.
+민지|en|Alright. Let&#x27;s move to the Correction Clinic. Fifteen corrections this week. Quick-fire — repeat after us if you can.
+알렉스|en|You said: &quot;the temperature is getting a little lower, going low.&quot;
+민지|en|Better: &quot;the temperature is starting to cool down a bit.&quot; Cool down is the natural phrasal verb for temperature dropping.
+알렉스|en|You said: &quot;it&#x27;s so special for me. It&#x27;s so nice.&quot;
+민지|en|Better: &quot;It felt very special to me.&quot; Past tense — felt. That moment has passed. And &quot;special to me&quot; is the natural phrase.
+알렉스|en|You said: &quot;So if I want, I will go to a different beach.&quot;
+민지|en|Better: &quot;So I can visit a different beach whenever I want.&quot; Whenever is more natural than &quot;if I want.&quot; And can instead of will.
+알렉스|en|You said: &quot;And you have a happy Monday night.&quot;
+민지|en|Better: &quot;I hope you had a happy Monday night.&quot; English wishes need &quot;I hope.&quot; And the night is past — so use had.
+알렉스|en|You said: &quot;Where is popular for a first date in your country?&quot;
+민지|en|Better: &quot;What is a popular place for a first date in your country?&quot; Where asks for a location. What asks for a thing. A place is a thing — use what.
+알렉스|ko|&#x27;어디가 유명해요?&#x27;를 직역하면 &#x27;where is popular?&#x27;가 되지만, 영어는 &#x27;what is a popular place?&#x27;라고 물어요. 장소 이름을 원할 땐 &#x27;what&#x27;이에요.
+민지|en|You said: &quot;talking something.&quot;
+알렉스|en|Better: &quot;talking about something.&quot; Talk always needs a preposition. Talk about, talk to, talk with. Never just &quot;talk something.&quot;
+민지|en|You said: &quot;my printed paper is really removed some document.&quot;
+알렉스|en|Better: &quot;Some parts of my printed paper are missing.&quot; Removed suggests someone took it. Missing just means it&#x27;s not there — natural and simple.
+민지|en|You said: &quot;I love to Middle Asia airline.&quot;
+알렉스|en|Better: &quot;I love Middle Eastern airlines.&quot; The region is the Middle East — adjective form is Middle Eastern. And airlines is plural here, used as a category.
+민지|en|You said: &quot;Almost I&#x27;ve used the same backpack for ten years.&quot;
+알렉스|en|Better: &quot;I&#x27;ve used the same backpack for almost ten years.&quot; Almost modifies ten years — so it goes right before the number, not at the start of the sentence.
+민지|en|You said: &quot;I&#x27;m prepared for next week in China.&quot;
+알렉스|en|Better: &quot;I&#x27;m getting ready for my trip to China next week.&quot; Getting ready is natural and active. Prepared sounds formal. And: trip to China, not just &quot;for China.&quot;
+민지|en|You said: &quot;I&#x27;m not having any technical issues today.&quot;
+알렉스|en|Better: &quot;I&#x27;m not experiencing any technical issues today.&quot; We experience situations — not have them. Experience is the more natural word here.
+민지|en|Last one. You said: &quot;So if they are go travel to abroad, they are travel like a work.&quot;
+알렉스|en|Better: &quot;So when they travel abroad, they often treat it like work.&quot; Two fixes: travel abroad needs no &quot;to.&quot; And treat it like work — not &quot;travel like a work.&quot;
+민지|en|Clinic complete. Solid work getting through all fifteen.
+알렉스|en|Before we move on — one pattern from the clinic is worth pausing on. &quot;Talking something&quot; versus &quot;talking about something.&quot;
+민지|en|This one comes up all the time. Talk, think, dream, worry — these verbs in English always need a preposition before the topic.
+알렉스|en|Talk about it. Think about it. Dream about it. Worry about it. The preposition is not optional — it&#x27;s part of the verb itself.
+민지|en|And &quot;travel abroad&quot; — no &quot;to.&quot; Because abroad already contains the direction. Saying &quot;travel to abroad&quot; is like saying &quot;go to outside.&quot; It&#x27;s built in.
+알렉스|en|Two preposition fixes to take into next week: talk ABOUT, travel ABROAD. Say them ten times today. Make them automatic.
+민지|en|Now — Vocabulary in Context.
+알렉스|en|This week&#x27;s theme was travel. Let&#x27;s bring the vocabulary to life with real sentences, not just definitions.
+민지|en|Heirloom. &quot;This ring is a family heirloom — my grandmother wore it every single day for forty years.&quot;
+알렉스|en|Tight-knit. &quot;We&#x27;re a tight-knit family. Even when we disagree, we always come back to each other.&quot;
+민지|en|Laid-back. &quot;My travel style is very laid-back. I arrive in a new city with no plan and just see what happens.&quot;
+알렉스|en|Layover. &quot;My layover in Istanbul was eight hours, so I left the airport and had dinner in the old city.&quot;
+민지|en|Off-season. &quot;Off-season travel is underrated. Cheaper flights, smaller crowds, and locals actually have time to talk to you.&quot;
+알렉스|en|Now Topic Talk — five travel expressions at A2 to B1 level that native speakers use all the time.
+민지|en|One: get away. &quot;I really need to get away this weekend. Even one night somewhere different resets everything.&quot;
+알렉스|en|Two: tourist trap. &quot;That seafood place near the pier is a total tourist trap — double the price, half the quality.&quot;
+민지|en|Three: local gem. &quot;Our guesthouse owner told us about a local gem — a tiny noodle shop with no English menu. Best food of the whole trip.&quot;
+알렉스|en|Four: change of scenery. &quot;I didn&#x27;t go far — just a different neighborhood — but the change of scenery did wonders for my mood.&quot;
+민지|en|Five: pack light. &quot;I&#x27;ve learned to pack light. One carry-on bag for two weeks. If I forget something, I buy it there.&quot;
+알렉스|en|Collocations to remember: pack light, get away, tourist trap, local gem, change of scenery. Natural English is built on combinations like these.
+민지|en|And remember — learning the combination is not the same as learning the word alone. Pack light, not pack lightly. Tourist trap, not tourist pitfall.
+알렉스|en|Textbook English gives you individual words. Real English gives you the combinations. Prioritize combinations every time.
+민지|en|Use one of those today. Say it out loud. That&#x27;s the moment it stops being a note and starts becoming your English.
+알렉스|en|Now — Culture Corner. Did You Know? My favorite part of the show.
+민지|en|Me too. Alex, what are we exploring this week?
+알렉스|en|The word &quot;deadline.&quot; You hear it everywhere — at work, at school, in conversation. But where did it come from?
+민지|en|It sounds dramatic, right? Dead. Line. Like something terrible happens if you cross it.
+알렉스|en|Something very terrible, actually. This expression comes from American Civil War prison camps in the 1860s.
+민지|en|There was a physical line drawn around the prison — sometimes a wall, sometimes just a mark on the ground.
+알렉스|en|Any prisoner who crossed that line would be shot immediately. No warning. That was the &quot;dead line.&quot; Cross it and you are dead.
+민지|ko|1860년대 미국 남북전쟁 포로수용소에서 &#x27;이 선을 넘으면 즉시 사살&#x27;이라는 실제 경계선이 &#x27;dead line&#x27;이었어요. 그게 지금의 &#x27;마감 기한&#x27;이 된 거예요.
+알렉스|en|Later, newspaper publishers borrowed the idea. If text went past a certain mark on the printing plate, it couldn&#x27;t be printed. That mark — also called the deadline.
+민지|en|And from there it spread to mean any final limit. Any point of no return. After this moment, it is too late.
+알렉스|en|Language carries history in its bones. Every word has traveled through time to reach you — that&#x27;s what makes it worth learning.
+민지|en|Next time your work deadline feels stressful — remember, at least nobody gets shot for missing it anymore.
+알렉스|en|Ha. Perspective. Okay — let&#x27;s bring it all home.
+민지|en|Recap time. This week: five lessons, fluency average 7.1 out of ten. That matches your overall cumulative average exactly.
+알렉스|en|Fifty-six lessons in and the average is holding at 7.1. That&#x27;s consistency, and consistency is the foundation of fluency.
+민지|en|But consistency also means you&#x27;re ready to break through. And the thing that will break the ceiling is Subject-Verb Agreement.
+알렉스|en|Nine cumulative instances. This week&#x27;s form: &quot;A and B has&quot; instead of &quot;A and B have.&quot; That specific pattern is your mission next week.
+민지|en|Every sentence with two subjects joined by &quot;and&quot; — pause. Check. Two subjects means plural. Have. Are. Do. Not has, is, does.
+알렉스|en|And keep half an eye on Articles too. Eight cumulative instances, right behind SVA. First mention: a. Known thing: the.
+민지|en|Two questions, that&#x27;s your whole toolkit. Is this one thing or two? Is this new information or already shared?
+알렉스|en|Awareness first, perfection later. You don&#x27;t need to be perfect next week. You need to notice. Noticing is the first step.
+민지|en|And you&#x27;ve already proven you can notice — fifty-six lessons of showing up and noticing. That&#x27;s how you get to 7.1.
+알렉스|en|Seven point one over fifty-six lessons. Steady. Real. That&#x27;s not luck — that&#x27;s a habit you built.
+알렉스|en|That&#x27;s a wrap on Week 33. Thank you for spending this time with us.
+민지|en|And thank you for five lessons in one week. That is not easy. That is a choice you made every day.
+알렉스|en|Keep making that choice. We&#x27;ll be right here next Friday.
+민지|en|Until then — keep talking, keep noticing, and remember: your mistakes are just English habits getting ready to click. Bye for now!</pre>
+<div class="toast" id="toast">✅ 복사됐어요! Gemini에 붙여넣으세요</div>
+<script>
+const PAGE_WEEK="2026-W33";
+const PROMPTS={chat:"아래는 이번 주 내 전화영어 학습 요약이야.\n\n[이번 주: 2026-W33 · 5회 수업]\n누적 약점 Top: Subject–Verb Agreement(9회), Articles (a/an/the)(8회), Verb Tense(7회)\nAI 교정(❌→✅):\n  - So the temperature is still high, but it's getting a little lower, going low. → So the temperature is still high, but it's starting to cool down a bit.\n  - Yeah, that's normal, but it's so special for me. It's so nice. → It was a simple outing, but it felt very special to me.\n  - So if I want, I will go to a different beach, because we have different beaches. → So I can visit a different beach whenever I want, because there are many.\n  - And you have a happy Monday night. → I hope you had a happy Monday night.\n  - Where is popular for a first date in your country? → What is a popular place for a first date in your country?\n  - talking something. → talking about something.\n강사 교정(❌→✅):\n  - When i was single, I DON'T use the RUGGAGE. → When i was single, I DIDN'T use the LUGGAGE (pronounced LUH-GAGE).\n  - The people, the POOD and history are different. → The people, the FOOD and history are different.\n  - You check into your hotel after a long, TEERING day. → You check into your hotel after a long, TIRING (pronounced TIE-RING) day.\n  - Duty Free ALLOWANCE (pronounced Ah-ROW-ANS) for ALCOHOL (pronounced AL-KOHL)  usually two bottles. → Duty Free ALLOWANCE (pronounced Ah-LAU-ANS) for ALCOHOL (pronounced AL-KOH HAUL)  is usually two bottles.\n  - Which do you PRE-PER? → Which do you PRE-FER?\n  - You’re running late for your flight, and your suitcase is 2 KILOMETRES (km) over the\nairline’s weight limit. → You’re running late for your flight, and your suitcase is 2 KILOGRAMS (kg)  over the airline’s weight limit.\n핵심 어휘: Heirloom(가보, 비품 (대대로 물려 내려오는 귀중품)), Family resemblance(가족 간의 닮은 모습, 유전적 유사성), Pass down((전통, 유산, 지식 등을) 다음 세대로 물려주다), Tight-knit((가족, 공동체 등이) 사이가 매우 좋은, 긴밀한), Look up to((누구를) 존경하다, 우러러보다), laid-back(느긋한, 여유로운, 편안한)\n\n위 약점·교정을 주제로 나와 영어로 대화하면서 복습시켜줘. 먼저 약점 1개와 관련된 상황을 영어로 질문하고, 내 대답이 자연스러운지 교정해줘. 한국어 설명은 필요할 때만 짧게.",lecture:"아래는 이번 주 내 전화영어 학습 요약이야.\n\n[이번 주: 2026-W33 · 5회 수업]\n누적 약점 Top: Subject–Verb Agreement(9회), Articles (a/an/the)(8회), Verb Tense(7회)\nAI 교정(❌→✅):\n  - So the temperature is still high, but it's getting a little lower, going low. → So the temperature is still high, but it's starting to cool down a bit.\n  - Yeah, that's normal, but it's so special for me. It's so nice. → It was a simple outing, but it felt very special to me.\n  - So if I want, I will go to a different beach, because we have different beaches. → So I can visit a different beach whenever I want, because there are many.\n  - And you have a happy Monday night. → I hope you had a happy Monday night.\n  - Where is popular for a first date in your country? → What is a popular place for a first date in your country?\n  - talking something. → talking about something.\n강사 교정(❌→✅):\n  - When i was single, I DON'T use the RUGGAGE. → When i was single, I DIDN'T use the LUGGAGE (pronounced LUH-GAGE).\n  - The people, the POOD and history are different. → The people, the FOOD and history are different.\n  - You check into your hotel after a long, TEERING day. → You check into your hotel after a long, TIRING (pronounced TIE-RING) day.\n  - Duty Free ALLOWANCE (pronounced Ah-ROW-ANS) for ALCOHOL (pronounced AL-KOHL)  usually two bottles. → Duty Free ALLOWANCE (pronounced Ah-LAU-ANS) for ALCOHOL (pronounced AL-KOH HAUL)  is usually two bottles.\n  - Which do you PRE-PER? → Which do you PRE-FER?\n  - You’re running late for your flight, and your suitcase is 2 KILOMETRES (km) over the\nairline’s weight limit. → You’re running late for your flight, and your suitcase is 2 KILOGRAMS (kg)  over the airline’s weight limit.\n핵심 어휘: Heirloom(가보, 비품 (대대로 물려 내려오는 귀중품)), Family resemblance(가족 간의 닮은 모습, 유전적 유사성), Pass down((전통, 유산, 지식 등을) 다음 세대로 물려주다), Tight-knit((가족, 공동체 등이) 사이가 매우 좋은, 긴밀한), Look up to((누구를) 존경하다, 우러러보다), laid-back(느긋한, 여유로운, 편안한)\n\n위 내용을 강의식으로 차근차근 설명해줘. 각 약점이 왜 틀렸는지 규칙을 짚고, 쉬운 예문 2~3개씩 더 들어주고, 마지막에 1분 요약과 연습문제 3개를 줘.",radio:"아래는 이번 주 내 전화영어 학습 요약이야.\n\n[이번 주: 2026-W33 · 5회 수업]\n누적 약점 Top: Subject–Verb Agreement(9회), Articles (a/an/the)(8회), Verb Tense(7회)\nAI 교정(❌→✅):\n  - So the temperature is still high, but it's getting a little lower, going low. → So the temperature is still high, but it's starting to cool down a bit.\n  - Yeah, that's normal, but it's so special for me. It's so nice. → It was a simple outing, but it felt very special to me.\n  - So if I want, I will go to a different beach, because we have different beaches. → So I can visit a different beach whenever I want, because there are many.\n  - And you have a happy Monday night. → I hope you had a happy Monday night.\n  - Where is popular for a first date in your country? → What is a popular place for a first date in your country?\n  - talking something. → talking about something.\n강사 교정(❌→✅):\n  - When i was single, I DON'T use the RUGGAGE. → When i was single, I DIDN'T use the LUGGAGE (pronounced LUH-GAGE).\n  - The people, the POOD and history are different. → The people, the FOOD and history are different.\n  - You check into your hotel after a long, TEERING day. → You check into your hotel after a long, TIRING (pronounced TIE-RING) day.\n  - Duty Free ALLOWANCE (pronounced Ah-ROW-ANS) for ALCOHOL (pronounced AL-KOHL)  usually two bottles. → Duty Free ALLOWANCE (pronounced Ah-LAU-ANS) for ALCOHOL (pronounced AL-KOH HAUL)  is usually two bottles.\n  - Which do you PRE-PER? → Which do you PRE-FER?\n  - You’re running late for your flight, and your suitcase is 2 KILOMETRES (km) over the\nairline’s weight limit. → You’re running late for your flight, and your suitcase is 2 KILOGRAMS (kg)  over the airline’s weight limit.\n핵심 어휘: Heirloom(가보, 비품 (대대로 물려 내려오는 귀중품)), Family resemblance(가족 간의 닮은 모습, 유전적 유사성), Pass down((전통, 유산, 지식 등을) 다음 세대로 물려주다), Tight-knit((가족, 공동체 등이) 사이가 매우 좋은, 긴밀한), Look up to((누구를) 존경하다, 우러러보다), laid-back(느긋한, 여유로운, 편안한)\n\n너는 라디오 진행자, 나는 오늘의 게스트야. 내 이번 주 영어 학습 여정을 주제로 인터뷰하듯 대화해줘. 가볍고 격려하는 톤으로, 중간중간 위 교정 표현을 자연스럽게 연습시켜줘. 영어 위주, 한국어는 가끔."};
+function showToast(m){const t=document.getElementById('toast');t.textContent=m;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500);}
+function copyOpen(mode){const txt=PROMPTS[mode]||'';const go=()=>{showToast('✅ 복사됐어요! Gemini에 붙여넣으세요');setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600);};navigator.clipboard.writeText(txt).then(go).catch(()=>{const a=document.createElement('textarea');a.value=txt;document.body.appendChild(a);a.select();document.execCommand('copy');a.remove();go();});}
+function clip(txt,msg){const go=()=>showToast(msg);navigator.clipboard.writeText(txt).then(go).catch(()=>{const a=document.createElement('textarea');a.value=txt;document.body.appendChild(a);a.select();document.execCommand('copy');a.remove();go();});}
+function copyDigest(){fetch('digest-latest.txt',{cache:'no-store'}).then(r=>{if(!r.ok)throw 0;return r.text();}).then(t=>clip(t,'📓 다이제스트 복사됨! NotebookLM에 붙여넣으세요')).catch(()=>showToast('⚠️ 다이제스트가 아직 없어요 (금요일 생성)'));}
+
+// ── 라디오 플레이어 (Web Speech API) ──
+const RAW=document.getElementById('radio-src').textContent.trim();
+const LINES=RAW.split('\n').map(l=>l.trim()).filter(Boolean).map(l=>{const i1=l.indexOf('|'),i2=l.indexOf('|',i1+1);return{sp:l.slice(0,i1),lang:l.slice(i1+1,i2),text:l.slice(i2+1)};});
+const stage=document.getElementById('stage');
+LINES.forEach((ln,i)=>{const d=document.createElement('div');d.className='bubble '+(ln.sp==='민지'?'mc':'coach');d.dataset.idx=i;d.innerHTML='<span class="who">'+ln.sp+'</span>'+ln.text;stage.appendChild(d);});
+const synth=window.speechSynthesis;
+let voices=[],koV=null,enV=null;
+function pickVoices(){voices=synth?synth.getVoices():[];koV=voices.find(v=>v.lang&&v.lang.toLowerCase().startsWith('ko'))||null;enV=voices.find(v=>v.lang&&v.lang.toLowerCase().startsWith('en'))||null;}
+if(synth){pickVoices();synth.onvoiceschanged=pickVoices;}
+let idx=0,playing=false,rate=1,wakeLock=null;
+async function acquireWake(){try{if('wakeLock' in navigator){wakeLock=await navigator.wakeLock.request('screen');wakeLock.addEventListener('release',()=>{wakeLock=null;});}}catch(e){}}
+function releaseWake(){try{if(wakeLock){wakeLock.release();wakeLock=null;}}catch(e){}}
+function highlight(i){document.querySelectorAll('.bubble').forEach(b=>b.classList.toggle('on',(+b.dataset.idx)===i));const el=document.querySelector('.bubble.on');if(el)el.scrollIntoView({block:'center',behavior:'smooth'});}
+function speakAt(i){if(!synth||i>=LINES.length){playing=false;releaseWake();highlight(-1);idx=0;return;}idx=i;highlight(i);const ln=LINES[i];const u=new SpeechSynthesisUtterance(ln.text);u.lang=ln.lang==='ko'?'ko-KR':'en-US';const v=ln.lang==='ko'?koV:enV;if(v)u.voice=v;u.rate=rate;u.pitch=ln.sp==='민지'?1.15:0.85;u.onend=()=>{if(playing)speakAt(i+1);};u.onerror=()=>{if(playing)setTimeout(()=>speakAt(i+1),250);};synth.speak(u);}
+document.getElementById('play').onclick=()=>{if(!synth){document.getElementById('ttswarn').textContent='이 브라우저는 음성 재생을 지원하지 않아요. 대본을 읽어주세요.';return;}if(playing)return;playing=true;acquireWake();synth.cancel();speakAt(idx>=LINES.length?0:idx);};
+document.getElementById('pause').onclick=()=>{if(synth&&synth.speaking)synth.pause();};
+document.getElementById('resume').onclick=()=>{if(synth){synth.resume();if(playing)acquireWake();}};
+document.getElementById('stop').onclick=()=>{playing=false;releaseWake();if(synth)synth.cancel();idx=0;highlight(-1);};
+document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='visible'&&playing){if(synth)synth.resume();acquireWake();}});
+const rE=document.getElementById('rate');rE.oninput=()=>{rate=parseFloat(rE.value);document.getElementById('rv').textContent=rate.toFixed(1)+'x';};
+if(!synth)document.getElementById('ttswarn').textContent='⚠️ 이 브라우저는 음성 합성을 지원하지 않아 대본만 표시됩니다.';
+
+// ── 오디오 에피소드: 이 페이지의 주차(PAGE_WEEK) MP3 표시 + 목록에 🎧 뱃지 ──
+fetch('radio/episodes.json',{cache:'no-store'}).then(r=>r.ok?r.json():[]).then(eps=>{
+  if(!Array.isArray(eps))eps=[];
+  eps.forEach(e=>{const row=document.querySelector('.weekrow[data-wk="'+e.week+'"] .wk-audio');if(row)row.textContent='🎧';});
+  const L=document.getElementById('audio-latest');
+  const mine=eps.find(e=>e.week===PAGE_WEEK);
+  if(mine){
+    L.innerHTML='<div class="epweek">'+mine.week+' · '+(mine.date||'')+'</div><audio id="ep-audio" controls preload="none" src="radio/'+mine.file+'"></audio>';
+    const au=document.getElementById('ep-audio');
+    // 잠금화면/화면 꺼짐에서도 재생 + 컨트롤 노출(MediaSession). 진짜 음성 파일이라 백그라운드 OK.
+    if(au&&'mediaSession' in navigator){
+      try{navigator.mediaSession.metadata=new MediaMetadata({title:'영어 주간 라디오 '+mine.week,artist:'민지 & 알렉스 · 당근영어',album:'Weekly English Radio'});}catch(e){}
+      try{navigator.mediaSession.setActionHandler('play',()=>au.play());navigator.mediaSession.setActionHandler('pause',()=>au.pause());}catch(e){}
+    }
+  }
+  else{L.textContent='이 주차 오디오(MP3)는 아직 없어요. 아래 ▶ 바로 듣기(브라우저 음성)로 들어보세요.';}
+}).catch(()=>{document.getElementById('audio-latest').textContent='오디오 목록을 불러오지 못했어요. 아래 ▶ 바로 듣기로 들어보세요.';});
+</script>
+</body></html>
