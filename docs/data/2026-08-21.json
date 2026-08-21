@@ -1,0 +1,57 @@
+{
+ "date": "2026-08-21",
+ "iso": [
+  2026,
+  34
+ ],
+ "topic": "Discussing birthday celebrations and gift-giving customs.",
+ "grammar": "Article Usage",
+ "grammar_norm": "Articles (a/an/the)",
+ "score": 7.0,
+ "pairs": [
+  {
+   "said": "Tomorrow we will travel.",
+   "natural": "Tomorrow we're traveling."
+  },
+  {
+   "said": "I'm taking twice per day, two classes per day.",
+   "natural": "I'm taking two classes a day."
+  },
+  {
+   "said": "But it's possible because some sentences are misprinted, but almost 99% printed is well.",
+   "natural": "Some sentences are misprinted, but about 99% of the printout is fine."
+  },
+  {
+   "said": "I throwing my travel in China. I throwing. Right?",
+   "natural": "I'm planning my trip to China."
+  }
+ ],
+ "vocab": [
+  {
+   "word": "milestone",
+   "pos": "명사",
+   "meaning": "중요한 단계, 획기적인 사건"
+  },
+  {
+   "word": "venue",
+   "pos": "명사",
+   "meaning": "(행사, 회의 등의) 장소"
+  },
+  {
+   "word": "legible",
+   "pos": "형용사",
+   "meaning": "읽을 수 있는, 알아보기 쉬운"
+  },
+  {
+   "word": "oversight",
+   "pos": "명사",
+   "meaning": "실수, 간과"
+  },
+  {
+   "word": "appreciate",
+   "pos": "동사",
+   "meaning": "~을 고맙게 여기다, 진가를 알아보다"
+  }
+ ],
+ "_html_md5": "24da0e225e52c30b8c395692c191d0cc"
+}
