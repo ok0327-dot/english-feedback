@@ -5,6 +5,181 @@
  "data": {
   "list": [
    {
+    "idxFeedback": 35838864,
+    "createDate": "2026-08-21",
+    "memo": "Good work today!   Have a lovely holiday!",
+    "subList": [
+     {
+      "idxFeedbackSub": 61161552,
+      "original": "Milestone BIRTHDAY often have BIG celebrations.",
+      "better": "Milestone BIRTHDAY(S) often have BIG-GER celebrations.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 61161553,
+      "original": "This VENUE fits over 100 guests easily",
+      "better": "This LOCATION/EVENT CENTER fits over 100 guests easily",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 61161554,
+      "original": "\"We’re THROWING a party.\"",
+      "better": "\"We’re HAVING a party.\"",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 61161555,
+      "original": "Wishing you all the best!\"",
+      "better": "Alternatives:\nI am wishing you all the best!\"\nI wish you all the best!\"",
+      "betterTrans": null,
+      "isSave": "N"
+     }
+    ]
+   },
+   {
+    "idxFeedback": 35838198,
+    "createDate": "2026-08-21",
+    "memo": "I really enjoyed our class! Your prior knowledge made our time together productive. I also admired how considerate, understanding, and attentive you were during our conversation.",
+    "subList": [
+     {
+      "idxFeedbackSub": 61158796,
+      "original": "Voice Recognition",
+      "better": "Pronounced rec-ug-NISH-un.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 61158797,
+      "original": "I don't have question anymore.",
+      "better": "I don't have any more questions.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 61158798,
+      "original": "The temperature is the 30 degree in daytime.",
+      "better": "The temperature is around 30 degrees during the day.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 61158799,
+      "original": "It is the going down the temperature.",
+      "better": "The temperature is going down.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 61158800,
+      "original": "I don't see that article.",
+      "better": "I haven't seen that article.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 61158801,
+      "original": "I don't listen that news.",
+      "better": "I haven't heard that news.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 61158802,
+      "original": "Thermostat  (controls heating/cooling).",
+      "better": " Pronounced THUR-moh-stat",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 61158803,
+      "original": "Appliance  (household machines like refrigerators or vacuums).",
+      "better": " Pronounced uh-PLY-uns",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 61158804,
+      "original": "Usually we ask some normal question, not specific and not expert.",
+      "better": "Usually, we ask general questions, not specific or technical ones.",
+      "betterTrans": null,
+      "isSave": "N"
+     }
+    ]
+   },
+   {
+    "idxFeedback": 35825949,
+    "createDate": "2026-08-20",
+    "memo": "Thank you for being so prepared each class - much appreciated!",
+    "subList": [
+     {
+      "idxFeedbackSub": 61106359,
+      "original": "My laptop's under WAIR-RAN-TEE so the repair was free",
+      "better": "My laptop's under warranty (pronounced WAR-RAN-TEE so the repair was free",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 61106360,
+      "original": "Many people use PONE call service.",
+      "better": "Many people use PHONE call service.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 61106361,
+      "original": "You called customer service because of a mistake with YOU order.",
+      "better": "You called customer service because of a mistake with YOUR (pronounced YUR) order.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 61106362,
+      "original": "I don't REMIND some good service.",
+      "better": "I don't REMEMBER some good service.",
+      "betterTrans": null,
+      "isSave": "N"
+     }
+    ]
+   },
+   {
+    "idxFeedback": 35825846,
+    "createDate": "2026-08-20",
+    "memo": "Have a great day today. Please review the notes below.",
+    "subList": [
+     {
+      "idxFeedbackSub": 61105978,
+      "original": "Previous [PREE-vee-us]",
+      "better": "I liked my previous job.\nWe talked about this in the previous class.\nShe lived here in previous years.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 61105979,
+      "original": "Priority [pry-OR-uh-tee]",
+      "better": "Safety is our top priority.\nMy family is my first priority.\nFinishing this work is a priority today.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 61105980,
+      "original": "Thanks for getting back to me. (Casual)",
+      "better": "I appreciate you getting back to me.\nThank you for your reply. (formal)\nThanks for your response. (formal)",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 61105981,
+      "original": "Per our conversation...",
+      "better": "From our discussion...\nFrom our conversation...\nFrom our talk,.,",
+      "betterTrans": null,
+      "isSave": "N"
+     }
+    ]
+   },
+   {
     "idxFeedback": 35813974,
     "createDate": "2026-08-19",
     "memo": "This lesson we discussed the topic \"Should I Post This?\". Reviewed the use and meaning of the expressions [verified, (social medial) handle, troll, blowing up, tag someone]. Answered question about online privacy and personal data. Here are today's notes:",
