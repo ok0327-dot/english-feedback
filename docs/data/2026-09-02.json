@@ -1,0 +1,53 @@
+{
+ "date": "2026-09-02",
+ "iso": [
+  2026,
+  36
+ ],
+ "topic": "Discussing wedding traditions and personal experiences.",
+ "grammar": "Verb Tense/Aspect",
+ "grammar_norm": "Verb Tense",
+ "score": 6.5,
+ "pairs": [
+  {
+   "said": "the wedding place is the wedding hall.",
+   "natural": "weddings are usually held in a wedding hall."
+  },
+  {
+   "said": "I don't have experience with that situation, similar situation.",
+   "natural": "I haven't experienced a similar situation."
+  },
+  {
+   "said": "I don't have an appointment these days to visit the ceremony, get a wedding event.",
+   "natural": "I don't have any wedding invitations to attend these days."
+  }
+ ],
+ "vocab": [
+  {
+   "word": "officiant",
+   "pos": "명사",
+   "meaning": "(결혼식, 장례식 등) 의식을 집전하는 사람, 주례자"
+  },
+  {
+   "word": "venue",
+   "pos": "명사",
+   "meaning": "(콘서트, 스포츠 경기, 회의 등) 행사가 열리는 장소"
+  },
+  {
+   "word": "commitment",
+   "pos": "명사",
+   "meaning": "약속, 전념, 헌신 (특히 시간이나 자원을 들여야 하는 의무)"
+  },
+  {
+   "word": "predominantly",
+   "pos": "부사",
+   "meaning": "주로, 대개, 대부분"
+  },
+  {
+   "word": "scenario",
+   "pos": "명사",
+   "meaning": "(앞으로 일어날 수 있는) 예상 상황, 시나리오"
+  }
+ ],
+ "_html_md5": "73e8c2a2e95c3aeb736157a35f91ec21"
+}
