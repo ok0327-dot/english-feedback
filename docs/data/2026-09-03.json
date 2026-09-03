@@ -1,0 +1,53 @@
+{
+ "date": "2026-09-03",
+ "iso": [
+  2026,
+  36
+ ],
+ "topic": "Discussing graduation traditions, career achievements, and personal accomplishments.",
+ "grammar": "Missing or Incorrect Verb Forms",
+ "grammar_norm": "Verb Forms / Auxiliaries",
+ "score": 7.0,
+ "pairs": [
+  {
+   "said": "My achievement of one thing is to stay my weight for 30 years.",
+   "natural": "One achievement I'm proud of is maintaining my weight for 20 years."
+  },
+  {
+   "said": "if we graduated in university, at that time, we were throwing the cap.",
+   "natural": "If we graduated from university, we would throw our caps."
+  },
+  {
+   "said": "Your husband is so urgent.",
+   "natural": "Your husband was so eager/impatient."
+  }
+ ],
+ "vocab": [
+  {
+   "word": "diploma",
+   "pos": "명사",
+   "meaning": "졸업장, 학위 증서"
+  },
+  {
+   "word": "valedictorian",
+   "pos": "명사",
+   "meaning": "졸업생 대표 (졸업식에서 고별 연설을 하는 최우수 졸업생)"
+  },
+  {
+   "word": "applause",
+   "pos": "명사",
+   "meaning": "박수 (갈채)"
+  },
+  {
+   "word": "achievement",
+   "pos": "명사",
+   "meaning": "성취, 달성, 업적"
+  },
+  {
+   "word": "steal one's thunder",
+   "pos": "숙어",
+   "meaning": "남의 공을 가로채다, 남의 이목을 가로채다"
+  }
+ ],
+ "_html_md5": "b8aecdf92080ca15a2127191b9e89db3"
+}
