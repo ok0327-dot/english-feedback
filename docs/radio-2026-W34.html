@@ -1,0 +1,261 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#0f0f13"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="당근영어"><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="icon" type="image/png" sizes="192x192" href="icon-192.png"><script src="install-banner.js" defer></script><script src="sw-reg.js" defer></script>
+<title>🎙️ 라디오 2026-W34</title><style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Noto Sans KR',-apple-system,sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.7}
+.header{background:linear-gradient(135deg,#241a3a,#3a2410,#0f3460);padding:42px 24px 30px;text-align:center;border-bottom:1px solid rgba(255,255,255,.06)}
+.header h1{font-size:24px;color:#f5f0ff;margin-bottom:8px}
+.header .range{font-size:13px;color:#c4b5fd;letter-spacing:1px}
+.nav{max-width:760px;margin:0 auto;padding:14px 20px 0;display:flex;justify-content:space-between;font-size:13px}
+.nav a{color:#64748b;text-decoration:none;padding:6px 10px;border-radius:8px}.nav a:hover{color:#a78bfa;background:#16161d}
+.container{max-width:760px;margin:0 auto;padding:18px 20px 80px}
+.card{background:#16161d;border:1px solid rgba(255,255,255,.06);border-radius:16px;padding:20px;margin-bottom:18px}
+.card h2{font-size:16px;color:#f1f5f9;margin-bottom:12px}
+.player{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-bottom:14px}
+.pbtn{border:none;border-radius:10px;padding:12px 18px;font-size:14px;font-weight:700;cursor:pointer;font-family:inherit;color:#0f0f13;background:linear-gradient(135deg,#a78bfa,#818cf8)}
+.pbtn.alt{background:#1e293b;color:#cbd5e1}
+.pbtn:active{transform:translateY(1px)}
+.speed{display:flex;align-items:center;gap:6px;font-size:12px;color:#94a3b8;margin-left:auto}
+.speed input{accent-color:#a78bfa}
+.stage{display:flex;flex-direction:column;gap:10px;margin-top:6px}
+.bubble{max-width:88%;padding:11px 14px;border-radius:14px;font-size:14px;border:1px solid transparent;transition:all .2s}
+.bubble .who{display:block;font-size:11px;font-weight:700;margin-bottom:3px;opacity:.8}
+.bubble.mc{align-self:flex-start;background:#1e1b2e;border-color:rgba(167,139,250,.25)}.bubble.mc .who{color:#a78bfa}
+.bubble.coach{align-self:flex-end;background:#1a2433;border-color:rgba(56,189,248,.22)}.bubble.coach .who{color:#38bdf8}
+.bubble.on{border-color:#fbbf24;box-shadow:0 0 0 1px #fbbf24}
+.modes{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.mode{display:flex;flex-direction:column;gap:4px;align-items:center;padding:16px 10px;background:#0f0f13;border:1px solid rgba(255,255,255,.08);border-radius:12px;color:#cbd5e1;cursor:pointer;font-size:13px;text-align:center}
+.mode:hover{border-color:rgba(167,139,250,.4);color:#a78bfa}.mode .ico{font-size:22px}.mode .sub{font-size:11px;color:#64748b}
+.muted{color:#64748b;font-size:12px}
+.toast{position:fixed;bottom:28px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#a78bfa;padding:13px 26px;border-radius:12px;font-size:14px;border:1px solid rgba(167,139,250,.25);opacity:0;transition:all .4s;z-index:99}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+.epweek{font-size:13px;color:#a78bfa;font-weight:700;margin-bottom:6px}
+audio{width:100%;margin-top:4px}
+.archive{display:flex;flex-direction:column;gap:6px;margin-top:10px}
+.archive a{font-size:12.5px;color:#94a3b8;text-decoration:none;padding:8px 12px;background:#0f0f13;border:1px solid rgba(255,255,255,.06);border-radius:8px}
+.archive a:hover{color:#a78bfa;border-color:rgba(167,139,250,.3)}
+.weeklist{display:flex;flex-direction:column;gap:6px;margin-top:4px}
+.weekrow{display:flex;align-items:center;gap:10px;font-size:13px;color:#cbd5e1;text-decoration:none;padding:11px 13px;background:#0f0f13;border:1px solid rgba(255,255,255,.06);border-radius:10px}
+.weekrow:hover{border-color:rgba(167,139,250,.4);color:#a78bfa}
+.weekrow.active{border-color:rgba(167,139,250,.5);background:#1e1b2e}
+.weekrow .wk{font-weight:700;color:#a78bfa;white-space:nowrap}
+.weekrow .wr{color:#64748b}
+.weekrow .wk-audio{margin-left:auto;font-size:14px;min-width:18px;text-align:right}
+.foot{text-align:center;font-size:11px;color:#475569;margin-top:26px;line-height:1.8}
+</style></head><body>
+<div class="header"><h1>🎙️ 라디오 · 2026-W34</h1>
+<div class="range">8/17~8/21 · 주차 기록 · 브라우저 음성으로 청취</div></div>
+<div class="nav"><a href="radio.html">← 최신 라디오</a><a href="review-index.html">📚 복습 목록 →</a></div>
+<div class="container">
+
+  <div class="card"><h2>🎧 오디오 에피소드 <span class="muted" style="font-weight:400">· 진짜 음성 · 이 주차</span></h2>
+    <div id="audio-latest" class="muted">에피소드 불러오는 중…</div></div>
+
+  <div class="card"><h2>🗂 주차별 라디오 기록 <span class="muted" style="font-weight:400">· 최신순 · 누적</span></h2>
+    <div class="weeklist"><a class="weekrow" data-wk="2026-W36" href="radio.html"><span class="wk">2026-W36</span><span class="wr">8/31~9/4 · 3회</span><span class="wk-audio"></span></a><a class="weekrow active" data-wk="2026-W34" href="radio-2026-W34.html"><span class="wk">2026-W34 · 현재</span><span class="wr">8/17~8/21 · 5회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W33" href="radio-2026-W33.html"><span class="wk">2026-W33</span><span class="wr">8/10~8/14 · 5회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W32" href="radio-2026-W32.html"><span class="wk">2026-W32</span><span class="wr">8/3~8/7 · 4회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W31" href="radio-2026-W31.html"><span class="wk">2026-W31</span><span class="wr">7/27~7/31 · 3회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W30" href="radio-2026-W30.html"><span class="wk">2026-W30</span><span class="wr">7/20~7/24 · 5회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W29" href="radio-2026-W29.html"><span class="wk">2026-W29</span><span class="wr">7/13~7/17 · 4회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W28" href="radio-2026-W28.html"><span class="wk">2026-W28</span><span class="wr">7/6~7/10 · 5회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W27" href="radio-2026-W27.html"><span class="wk">2026-W27</span><span class="wr">6/29~7/3 · 3회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W26" href="radio-2026-W26.html"><span class="wk">2026-W26</span><span class="wr">6/22~6/26 · 5회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W25" href="radio-2026-W25.html"><span class="wk">2026-W25</span><span class="wr">6/15~6/19 · 5회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W24" href="radio-2026-W24.html"><span class="wk">2026-W24</span><span class="wr">6/8~6/12 · 5회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W23" href="radio-2026-W23.html"><span class="wk">2026-W23</span><span class="wr">6/1~6/5 · 1회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W22" href="radio-2026-W22.html"><span class="wk">2026-W22</span><span class="wr">5/25~5/29 · 3회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W21" href="radio-2026-W21.html"><span class="wk">2026-W21</span><span class="wr">5/18~5/22 · 3회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W20" href="radio-2026-W20.html"><span class="wk">2026-W20</span><span class="wr">5/11~5/15 · 4회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W19" href="radio-2026-W19.html"><span class="wk">2026-W19</span><span class="wr">5/4~5/8 · 1회</span><span class="wk-audio"></span></a></div></div>
+
+  <div class="card"><h2>▶ 바로 듣기 <span class="muted" style="font-weight:400">· 브라우저 음성(즉시·폴백)</span></h2>
+    <div class="player">
+      <button class="pbtn" id="play">▶ 재생</button>
+      <button class="pbtn alt" id="pause">⏸ 일시정지</button>
+      <button class="pbtn alt" id="resume">▶ 이어듣기</button>
+      <button class="pbtn alt" id="stop">⏹ 처음부터</button>
+      <label class="speed">속도 <input type="range" id="rate" min="0.7" max="1.3" step="0.1" value="1"> <span id="rv">1.0x</span></label>
+    </div>
+    <div class="muted" id="ttswarn" style="margin-bottom:8px"></div>
+    <div class="muted" style="margin:2px 0 10px;font-size:11.5px;line-height:1.7">💡 재생 중에는 화면이 자동으로 꺼지지 않게 막아요(Wake&nbsp;Lock). 다만 직접 화면을 끄면 브라우저 음성은 멈출 수 있어요 — <b>화면을 끈 채 듣고 싶다면 맨 위 🎧 오디오 에피소드(MP3)</b>를 쓰세요. 잠금화면에서도 재생됩니다.</div>
+    <div class="stage" id="stage"></div>
+  </div>
+
+  <div class="card"><h2>💬 이 내용으로 AI와 이야기하기</h2>
+    <div class="muted" style="margin-bottom:10px">클릭하면 이 주차 요약 프롬프트가 복사되고 Gemini가 열립니다. 붙여넣고 대화하세요.</div>
+    <div class="modes">
+      <div class="mode" onclick="copyOpen('chat')"><span class="ico">💬</span>튜터 대화<span class="sub">약점 집중 연습</span></div>
+      <div class="mode" onclick="copyOpen('lecture')"><span class="ico">🎓</span>강의식 설명<span class="sub">규칙+예문+퀴즈</span></div>
+      <div class="mode" onclick="copyOpen('radio')"><span class="ico">🎙</span>라디오 인터뷰<span class="sub">게스트 롤플레이</span></div>
+    </div>
+  </div>
+
+  <div class="card"><h2>📓 NotebookLM 팟캐스트로 듣기 <span class="sub">고품질·무료</span></h2>
+    <div class="muted" style="margin-bottom:12px">이번 주 학습 다이제스트(교정·강사 피드백·어휘 전부)를 복사해 <b>NotebookLM</b>에 붙여넣고 <b>Audio Overview</b>를 만들면, 2인 진행 영어 팟캐스트가 무료로 생성됩니다(현재 TTS보다 자연스러움).</div>
+    <div class="modes">
+      <div class="mode" onclick="window.open('https://notebooklm.google.com/','_blank');copyDigest()"><span class="ico">📓</span>복사+NotebookLM 열기<span class="sub">원클릭 반자동</span></div>
+      <div class="mode" onclick="copyDigest()"><span class="ico">📋</span>다이제스트만 복사<span class="sub">붙여넣기용 텍스트</span></div>
+    </div>
+  </div>
+
+  <div class="foot">대본: scripts/build_radio.py · 다이제스트: scripts/build_digest.py · 음성: 브라우저 Web Speech(무료) · 주차별 누적 · 매주 금요일 Claude 갱신</div>
+</div>
+
+<pre id="radio-src" hidden>민지|en|Hello everyone, and welcome back to 당근영어 Radio!
+민지|en|I am Minji, your host, and as always, Alex is here with me.
+알렉스|en|Hey everyone! Great to be with you again this week.
+민지|en|This week you completed five lessons — phone calls, digital habits, travel plans, phone repair, and birthday celebrations.
+알렉스|en|Five topics, five days. That is impressive commitment!
+민지|en|And today we are not just listing mistakes. We want to understand WHY they happen.
+알렉스|en|Because when you understand the pattern, you can change it for good.
+민지|en|Our biggest focus today: Subject-Verb Agreement. It has been at the top of the cumulative weakness list for weeks.
+알렉스|en|Nine occurrences in the cumulative count. It keeps coming back. So let us really dig into it today.
+민지|en|Let us go!
+알렉스|en|Here is a real sentence from this week: Every place have a pros and cons.
+민지|en|I hear this kind of sentence often. What is wrong there, Alex?
+알렉스|en|The key word is &quot;every.&quot; In English, &quot;every&quot; always goes with a singular verb.
+알렉스|en|So the correct sentence is: Every place HAS its pros and cons.
+민지|en|Every place HAS. Not have. But why do so many learners make this mistake?
+알렉스|ko|한국어에서는 주어가 단수인지 복수인지에 따라 동사가 바뀌지 않아요. &quot;모든 곳은 장단점이 있다&quot; — 동사는 그냥 &quot;있다&quot;예요. 영어는 반드시 has로 바꿔야 하는데 이 단계가 자동화되지 않은 거죠.
+알렉스|en|In Korean, the verb does not change based on singular or plural subjects. So your brain naturally skips that step.
+민지|en|What is a good rule of thumb?
+알렉스|en|Simple: &quot;every&quot; is always singular. Every person IS here. Every idea HAS its time. Every mistake MAKES you better.
+민지|en|Try it with me. Every lesson...
+알렉스|en|Every lesson HELPS. Every lesson IS worth it. Never &quot;every lesson help.&quot;
+민지|en|Good! Now here is another sentence from this week: My son and me promise together.
+알렉스|en|Two problems here. First, the subject form is &quot;I,&quot; not &quot;me.&quot; I is a subject. Me is an object.
+민지|en|Easy trick: remove the other person and test it. Would you say &quot;Me promise&quot;? No! You say &quot;I promise.&quot;
+알렉스|en|Right. So the natural version: My son and I made a promise to each other.
+민지|en|My son and I. Not me. Got it!
+알렉스|en|And one more from this week: When a coding, my AI goes to auto correction.
+알렉스|en|The correct version: When I am coding, my AI automatically corrects my code.
+민지|en|The subject I was missing! Always ask: who is doing the action? That is your subject.
+알렉스|en|Now let us talk about Articles — the other number one weakness, also at nine occurrences cumulative.
+민지|en|This week we heard: I have some suggestion about you.
+알렉스|en|Suggestion is a countable noun. Singular. So it needs an article. The correct version: I have A suggestion.
+알렉스|ko|한국어에는 관사가 없잖아요. &quot;제안이 있어요&quot;라고 하면 끝이에요. 영어는 셀 수 있는 단수 명사 앞에 무조건 a 또는 the를 붙여야 해요. 한국어 뇌에는 이 단계가 없으니까 계속 빠지는 거예요.
+알렉스|en|Rule: if it is countable and singular, give it an article. A suggestion, a question, a problem, a phone.
+민지|en|And uncountable nouns do not need an article. I love music. Not I love a music.
+알렉스|en|I need water. Not I need a water. Unless you mean one glass — then a water is short for a glass of water.
+민지|en|Now, prepositions — the third biggest weakness, at eight occurrences cumulative.
+알렉스|en|Classic from this week: Many people went TO summer vacation.
+민지|en|Is that wrong? We go TO places, right?
+알렉스|en|Yes, but vacation is not a place. It is a state or activity. So we say: went ON summer vacation.
+알렉스|ko|한국어로는 &quot;여름휴가를 갔다&quot;가 자연스럽죠. 영어는 vacation이 장소가 아니라 상태이기 때문에 go on vacation을 써요. on vacation, on a trip, on a break — 이 묶음 표현을 통째로 외워두세요.
+민지|en|Go ON vacation, go ON a trip, go ON a business trip. The word &quot;on&quot; shows a state or activity.
+알렉스|en|Another one from this week: Some people search some information used in YouTube. Two preposition problems!
+민지|en|What are they?
+알렉스|en|First: you search FOR information. Not just search information. Second: ON YouTube, not IN YouTube.
+민지|en|We are ON platforms. On YouTube, on Instagram, on the internet. Not in them.
+알렉스|en|Rule of thumb: never study a preposition alone. Learn the whole chunk. Search FOR. Go ON vacation. Popular AMONG. Plug INTO.
+민지|en|Time for Correction Clinic! Let us go through more corrections quickly. Repeat after me if you can!
+알렉스|en|You said: My phone alarm worked. Better: My phone alarm went OFF.
+민지|en|Go off means a sound suddenly starts. The alarm went off at six. The fire alarm went off.
+알렉스|en|You said: I put in charging port in my mobile phone. Better: I plug my phone INTO the charging port.
+민지|en|Plug INTO. Not put in. Plug your phone into the wall. Plug your headphones into your laptop.
+알렉스|en|You said: Tomorrow we will travel. Better: Tomorrow we are traveling.
+민지|en|When the plan is already arranged, use present continuous for the future. We are meeting on Friday. We are flying to China next week.
+알렉스|en|You said: I am taking twice per day, two classes per day. Better: I am taking two classes A day.
+민지|en|A day means per day. Twice a day. Three times a week. Once a month. Very natural in spoken English!
+알렉스|en|You said: So in Korea it is popular to our population. Better: popular AMONG our population in Korea.
+민지|en|Among means within a group. Popular among young people. Common among students.
+알렉스|en|You said: I am more older generation. Better: I am FROM an older generation.
+민지|en|Two fixes: from shows which group you belong to, and older is the correct comparative — not more older.
+알렉스|en|We say older, younger, taller — never more older or more younger. The -er ending is already comparative!
+민지|en|Now let us go to Tutor&#x27;s Desk — corrections straight from your real live classroom!
+알렉스|en|This week your tutor gave fifty-one corrections. That is very detailed, high-quality feedback.
+민지|en|First, pronunciation corrections. The tutor caught something funny this week.
+알렉스|en|You said: doom SCREAMING before bed. The word is doom SCROLLING. S-C-R-O-L-L-I-N-G.
+민지|en|Doom scrolling is endlessly scrolling through bad news on your phone at night. We have all done this!
+알렉스|ko|둠스크롤링은 2020년 코로나 시기에 유행한 신조어예요. 불안한 뉴스를 멈추지 못하고 계속 스크롤하는 그 상태를 가리켜요.
+알렉스|en|Next pronunciation: you said PONE ALUM. The teacher corrected it: FONE AH-LARM. Phone alarm.
+민지|en|Let us say it slowly. Phone. F-OWN. And alarm. AH-LARM. Phone alarm!
+알렉스|en|The tutor also corrected: I don&#x27;t REMIND some good service. The correct word is REMEMBER.
+민지|en|Remind and remember are different. Remember is in your own mind. Remind is something you do for another person.
+알렉스|en|I remember my teacher&#x27;s name. But: Can you remind ME about the meeting? You remind someone else.
+민지|en|The tutor also caught: The temperature is the 30 degree in daytime. How many things to fix?
+알렉스|en|Three! No &quot;the&quot; before 30. Degrees is plural. And &quot;during the day&quot; sounds more natural than &quot;in daytime.&quot;
+민지|en|Correct version: The temperature is around 30 degrees during the day. Clean and natural.
+알렉스|en|And the tutor caught: Last night I will install some application.
+민지|en|Last night is in the past! The verb must be past tense.
+알렉스|en|Correct: Last night I installed some apps. Will is for the future. Installed is for the past.
+민지|en|Time matters in English — always match your verb to when it happened.
+알렉스|en|Now, Vocabulary in Context! Let us make this week&#x27;s words stick with real collocations.
+민지|en|First word: pocket dial. This means your phone accidentally calls someone while it is in your pocket.
+알렉스|en|I accidentally pocket-dialed my boss during lunch. Very embarrassing!
+민지|en|People also say butt dial — same meaning, but when your phone dials someone because you sat on it.
+알렉스|en|Next: break up. In phone calls, breaking up means the audio is choppy and unclear.
+민지|en|Sorry, you are breaking up — I cannot hear you! Very different from breaking up in a relationship!
+알렉스|en|Topic Talk: three bonus expressions for digital and travel life.
+민지|en|One: my flight got delayed. Much more natural than my flight was late.
+알렉스|en|The meeting got postponed. The parcel got delayed. The event got canceled. Got plus past participle!
+민지|en|Two: I am running low on data. Running low means almost finished.
+알렉스|en|Running low on battery. Running low on time. Running low on patience! Very useful for many situations.
+민지|en|Three: Can you get back to me on that? This means please reply to me later about this topic.
+알렉스|en|I will get back to you by Friday. Thanks for your patience — I will get back to you soon.
+민지|en|Professional, natural, and very common in work emails and business conversations.
+알렉스|en|Time for Culture Corner! This week&#x27;s story comes from the birthday and celebration lesson.
+민지|en|Yes! We talked about parties, milestone events, and big celebrations. That made me think of theater.
+알렉스|en|Theater? Why theater?
+민지|en|Because of a famous theater expression: break a leg!
+알렉스|en|Of course. Actors say it to each other before a performance instead of saying good luck.
+민지|en|But WHY would you tell someone to break their leg before going on stage?
+알렉스|en|One popular theory comes from the theater itself. The curtains hanging on the sides of the stage are called legs.
+민지|en|Really? The curtains are called legs?
+알렉스|en|Yes! So to break a leg means to push through those curtains — meaning to actually step out on stage and perform!
+알렉스|ko|&quot;break a leg&quot;는 무대 양쪽 커튼을 &quot;leg&quot;라고 부른 데서 왔다는 설이 있어요. 즉 &quot;무대에 서라!&quot; 라는 뜻이었던 거죠. 무대에 서는 것 자체가 이미 성공이니까요.
+알렉스|en|Another theory: actors believed saying good luck was actually bad luck. So they said the opposite to cancel it!
+민지|en|Theater superstitions are very strong! Did you know actors also never say the title of a famous Shakespeare play inside a theater?
+알렉스|en|That is right. They call it the Scottish play instead. Saying the real title is considered very bad luck.
+민지|en|So next time someone has a big presentation or a job interview — tell them: break a leg!
+알렉스|en|Just explain it first so they do not think you are being unkind!
+민지|en|Okay! Let us wrap up with the recap and your mission for next week.
+알렉스|en|This week in numbers: five lessons completed, fluency average 7.2, cumulative average 7.1. Steady and solid!
+민지|en|Sixty-one total lessons since the cutoff. You showed up every single day this week — that is real dedication.
+알렉스|en|Your two biggest cumulative weaknesses are Subject-Verb Agreement and Articles, both at nine occurrences each.
+민지|en|Mission for next week, part one: before every sentence, pause for one second and ask yourself — is my subject singular or plural?
+알렉스|en|That one second of awareness changes everything. Every place HAS. My son and I MADE. Every lesson HELPS.
+민지|en|Mission part two: give every singular countable noun an article automatically. A suggestion. A question. A trip.
+알렉스|en|Train your brain to include the article every single time. Make it a reflex.
+민지|en|Awareness first. Perfection later. Just noticing the pattern is already real progress.
+알렉스|en|You are doing genuinely great work. Five days, five lessons, fifty-one tutor corrections reviewed.
+민지|en|Every mistake you made this week is one you will catch faster next week. That is how language grows.
+알렉스|en|Keep talking. Keep making mistakes. And keep showing up. We will be here next Friday!
+민지|en|Thank you so much for listening to 당근영어 Radio. See you next week!
+알렉스|en|Bye everyone. You are amazing — keep going!</pre>
+<div class="toast" id="toast">✅ 복사됐어요! Gemini에 붙여넣으세요</div>
+<script>
+const PAGE_WEEK="2026-W34";
+const PROMPTS={chat:"아래는 이번 주 내 전화영어 학습 요약이야.\n\n[이번 주: 2026-W34 · 5회 수업]\n누적 약점 Top: Subject–Verb Agreement(9회), Articles (a/an/the)(9회), Prepositions(8회)\nAI 교정(❌→✅):\n  - Maybe that is south area in Spain, right? → Is that in southern Spain, right?\n  - I have some suggestion about you because could you start the first useful vocabulary and useful expression first? → I have a suggestion: could we start with the useful vocabulary and expressions first?\n  - I'm more older generation, so I like to phone call. → I'm from an older generation, so I prefer phone calls.\n  - many young generations have a relationship, use Instagram. → Many young people connect with each other using Instagram.\n  - some people search some information used in YouTube → Some people search for information on YouTube.\n  - So in Korea it is popular to our population. → So it is popular among our population in Korea.\n강사 교정(❌→✅):\n  - Milestone BIRTHDAY often have BIG celebrations. → Milestone BIRTHDAY(S) often have BIG-GER celebrations.\n  - This VENUE fits over 100 guests easily → This LOCATION/EVENT CENTER fits over 100 guests easily\n  - \"We’re THROWING a party.\" → \"We’re HAVING a party.\"\n  - Wishing you all the best!\" → Alternatives:\nI am wishing you all the best!\"\nI wish you all the best!\"\n  - Voice Recognition → Pronounced rec-ug-NISH-un.\n  - I don't have question anymore. → I don't have any more questions.\n핵심 어휘: pocket dial((실수로) 주머니 속에서 전화가 걸리다), busy signal(통화 중 신호), auto-correct(자동 수정 (기능)), break up((전화 통화 중) 신호가 끊기거나 잘 들리지 않다), decline((전화 등을) 거절하다, 사양하다), demographic(인구 통계학적 집단 (특정 연령, 성별, 소득 등 특성을 가진 집단))\n\n위 약점·교정을 주제로 나와 영어로 대화하면서 복습시켜줘. 먼저 약점 1개와 관련된 상황을 영어로 질문하고, 내 대답이 자연스러운지 교정해줘. 한국어 설명은 필요할 때만 짧게.",lecture:"아래는 이번 주 내 전화영어 학습 요약이야.\n\n[이번 주: 2026-W34 · 5회 수업]\n누적 약점 Top: Subject–Verb Agreement(9회), Articles (a/an/the)(9회), Prepositions(8회)\nAI 교정(❌→✅):\n  - Maybe that is south area in Spain, right? → Is that in southern Spain, right?\n  - I have some suggestion about you because could you start the first useful vocabulary and useful expression first? → I have a suggestion: could we start with the useful vocabulary and expressions first?\n  - I'm more older generation, so I like to phone call. → I'm from an older generation, so I prefer phone calls.\n  - many young generations have a relationship, use Instagram. → Many young people connect with each other using Instagram.\n  - some people search some information used in YouTube → Some people search for information on YouTube.\n  - So in Korea it is popular to our population. → So it is popular among our population in Korea.\n강사 교정(❌→✅):\n  - Milestone BIRTHDAY often have BIG celebrations. → Milestone BIRTHDAY(S) often have BIG-GER celebrations.\n  - This VENUE fits over 100 guests easily → This LOCATION/EVENT CENTER fits over 100 guests easily\n  - \"We’re THROWING a party.\" → \"We’re HAVING a party.\"\n  - Wishing you all the best!\" → Alternatives:\nI am wishing you all the best!\"\nI wish you all the best!\"\n  - Voice Recognition → Pronounced rec-ug-NISH-un.\n  - I don't have question anymore. → I don't have any more questions.\n핵심 어휘: pocket dial((실수로) 주머니 속에서 전화가 걸리다), busy signal(통화 중 신호), auto-correct(자동 수정 (기능)), break up((전화 통화 중) 신호가 끊기거나 잘 들리지 않다), decline((전화 등을) 거절하다, 사양하다), demographic(인구 통계학적 집단 (특정 연령, 성별, 소득 등 특성을 가진 집단))\n\n위 내용을 강의식으로 차근차근 설명해줘. 각 약점이 왜 틀렸는지 규칙을 짚고, 쉬운 예문 2~3개씩 더 들어주고, 마지막에 1분 요약과 연습문제 3개를 줘.",radio:"아래는 이번 주 내 전화영어 학습 요약이야.\n\n[이번 주: 2026-W34 · 5회 수업]\n누적 약점 Top: Subject–Verb Agreement(9회), Articles (a/an/the)(9회), Prepositions(8회)\nAI 교정(❌→✅):\n  - Maybe that is south area in Spain, right? → Is that in southern Spain, right?\n  - I have some suggestion about you because could you start the first useful vocabulary and useful expression first? → I have a suggestion: could we start with the useful vocabulary and expressions first?\n  - I'm more older generation, so I like to phone call. → I'm from an older generation, so I prefer phone calls.\n  - many young generations have a relationship, use Instagram. → Many young people connect with each other using Instagram.\n  - some people search some information used in YouTube → Some people search for information on YouTube.\n  - So in Korea it is popular to our population. → So it is popular among our population in Korea.\n강사 교정(❌→✅):\n  - Milestone BIRTHDAY often have BIG celebrations. → Milestone BIRTHDAY(S) often have BIG-GER celebrations.\n  - This VENUE fits over 100 guests easily → This LOCATION/EVENT CENTER fits over 100 guests easily\n  - \"We’re THROWING a party.\" → \"We’re HAVING a party.\"\n  - Wishing you all the best!\" → Alternatives:\nI am wishing you all the best!\"\nI wish you all the best!\"\n  - Voice Recognition → Pronounced rec-ug-NISH-un.\n  - I don't have question anymore. → I don't have any more questions.\n핵심 어휘: pocket dial((실수로) 주머니 속에서 전화가 걸리다), busy signal(통화 중 신호), auto-correct(자동 수정 (기능)), break up((전화 통화 중) 신호가 끊기거나 잘 들리지 않다), decline((전화 등을) 거절하다, 사양하다), demographic(인구 통계학적 집단 (특정 연령, 성별, 소득 등 특성을 가진 집단))\n\n너는 라디오 진행자, 나는 오늘의 게스트야. 내 이번 주 영어 학습 여정을 주제로 인터뷰하듯 대화해줘. 가볍고 격려하는 톤으로, 중간중간 위 교정 표현을 자연스럽게 연습시켜줘. 영어 위주, 한국어는 가끔."};
+function showToast(m){const t=document.getElementById('toast');t.textContent=m;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500);}
+function copyOpen(mode){const txt=PROMPTS[mode]||'';const go=()=>{showToast('✅ 복사됐어요! Gemini에 붙여넣으세요');setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600);};navigator.clipboard.writeText(txt).then(go).catch(()=>{const a=document.createElement('textarea');a.value=txt;document.body.appendChild(a);a.select();document.execCommand('copy');a.remove();go();});}
+function clip(txt,msg){const go=()=>showToast(msg);navigator.clipboard.writeText(txt).then(go).catch(()=>{const a=document.createElement('textarea');a.value=txt;document.body.appendChild(a);a.select();document.execCommand('copy');a.remove();go();});}
+function copyDigest(){fetch('digest-latest.txt',{cache:'no-store'}).then(r=>{if(!r.ok)throw 0;return r.text();}).then(t=>clip(t,'📓 다이제스트 복사됨! NotebookLM에 붙여넣으세요')).catch(()=>showToast('⚠️ 다이제스트가 아직 없어요 (금요일 생성)'));}
+
+// ── 라디오 플레이어 (Web Speech API) ──
+const RAW=document.getElementById('radio-src').textContent.trim();
+const LINES=RAW.split('\n').map(l=>l.trim()).filter(Boolean).map(l=>{const i1=l.indexOf('|'),i2=l.indexOf('|',i1+1);return{sp:l.slice(0,i1),lang:l.slice(i1+1,i2),text:l.slice(i2+1)};});
+const stage=document.getElementById('stage');
+LINES.forEach((ln,i)=>{const d=document.createElement('div');d.className='bubble '+(ln.sp==='민지'?'mc':'coach');d.dataset.idx=i;d.innerHTML='<span class="who">'+ln.sp+'</span>'+ln.text;stage.appendChild(d);});
+const synth=window.speechSynthesis;
+let voices=[],koV=null,enV=null;
+function pickVoices(){voices=synth?synth.getVoices():[];koV=voices.find(v=>v.lang&&v.lang.toLowerCase().startsWith('ko'))||null;enV=voices.find(v=>v.lang&&v.lang.toLowerCase().startsWith('en'))||null;}
+if(synth){pickVoices();synth.onvoiceschanged=pickVoices;}
+let idx=0,playing=false,rate=1,wakeLock=null;
+async function acquireWake(){try{if('wakeLock' in navigator){wakeLock=await navigator.wakeLock.request('screen');wakeLock.addEventListener('release',()=>{wakeLock=null;});}}catch(e){}}
+function releaseWake(){try{if(wakeLock){wakeLock.release();wakeLock=null;}}catch(e){}}
+function highlight(i){document.querySelectorAll('.bubble').forEach(b=>b.classList.toggle('on',(+b.dataset.idx)===i));const el=document.querySelector('.bubble.on');if(el)el.scrollIntoView({block:'center',behavior:'smooth'});}
+function speakAt(i){if(!synth||i>=LINES.length){playing=false;releaseWake();highlight(-1);idx=0;return;}idx=i;highlight(i);const ln=LINES[i];const u=new SpeechSynthesisUtterance(ln.text);u.lang=ln.lang==='ko'?'ko-KR':'en-US';const v=ln.lang==='ko'?koV:enV;if(v)u.voice=v;u.rate=rate;u.pitch=ln.sp==='민지'?1.15:0.85;u.onend=()=>{if(playing)speakAt(i+1);};u.onerror=()=>{if(playing)setTimeout(()=>speakAt(i+1),250);};synth.speak(u);}
+document.getElementById('play').onclick=()=>{if(!synth){document.getElementById('ttswarn').textContent='이 브라우저는 음성 재생을 지원하지 않아요. 대본을 읽어주세요.';return;}if(playing)return;playing=true;acquireWake();synth.cancel();speakAt(idx>=LINES.length?0:idx);};
+document.getElementById('pause').onclick=()=>{if(synth&&synth.speaking)synth.pause();};
+document.getElementById('resume').onclick=()=>{if(synth){synth.resume();if(playing)acquireWake();}};
+document.getElementById('stop').onclick=()=>{playing=false;releaseWake();if(synth)synth.cancel();idx=0;highlight(-1);};
+document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='visible'&&playing){if(synth)synth.resume();acquireWake();}});
+const rE=document.getElementById('rate');rE.oninput=()=>{rate=parseFloat(rE.value);document.getElementById('rv').textContent=rate.toFixed(1)+'x';};
+if(!synth)document.getElementById('ttswarn').textContent='⚠️ 이 브라우저는 음성 합성을 지원하지 않아 대본만 표시됩니다.';
+
+// ── 오디오 에피소드: 이 페이지의 주차(PAGE_WEEK) MP3 표시 + 목록에 🎧 뱃지 ──
+fetch('radio/episodes.json',{cache:'no-store'}).then(r=>r.ok?r.json():[]).then(eps=>{
+  if(!Array.isArray(eps))eps=[];
+  eps.forEach(e=>{const row=document.querySelector('.weekrow[data-wk="'+e.week+'"] .wk-audio');if(row)row.textContent='🎧';});
+  const L=document.getElementById('audio-latest');
+  const mine=eps.find(e=>e.week===PAGE_WEEK);
+  if(mine){
+    L.innerHTML='<div class="epweek">'+mine.week+' · '+(mine.date||'')+'</div><audio id="ep-audio" controls preload="none" src="radio/'+mine.file+'"></audio>';
+    const au=document.getElementById('ep-audio');
+    // 잠금화면/화면 꺼짐에서도 재생 + 컨트롤 노출(MediaSession). 진짜 음성 파일이라 백그라운드 OK.
+    if(au&&'mediaSession' in navigator){
+      try{navigator.mediaSession.metadata=new MediaMetadata({title:'영어 주간 라디오 '+mine.week,artist:'민지 & 알렉스 · 당근영어',album:'Weekly English Radio'});}catch(e){}
+      try{navigator.mediaSession.setActionHandler('play',()=>au.play());navigator.mediaSession.setActionHandler('pause',()=>au.pause());}catch(e){}
+    }
+  }
+  else{L.textContent='이 주차 오디오(MP3)는 아직 없어요. 아래 ▶ 바로 듣기(브라우저 음성)로 들어보세요.';}
+}).catch(()=>{document.getElementById('audio-latest').textContent='오디오 목록을 불러오지 못했어요. 아래 ▶ 바로 듣기로 들어보세요.';});
+</script>
+</body></html>
