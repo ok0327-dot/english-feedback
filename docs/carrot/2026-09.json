@@ -1,0 +1,163 @@
+{
+ "success": true,
+ "code": 0,
+ "message": null,
+ "data": {
+  "list": [
+   {
+    "idxFeedback": 35955061,
+    "createDate": "2026-09-04",
+    "memo": "Very good class again!  Have a lovely weekend with your family!",
+    "subList": [
+     {
+      "idxFeedbackSub": 61670302,
+      "original": "Misplace:  to something somewhere and FORGOT where.",
+      "better": "Misplace:  to something somewhere and FORGET where.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 61670303,
+      "original": "Track Down:  To fins something after SEARCH.",
+      "better": "Track Down:  To fins something after SEARCH-ING.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 61670304,
+      "original": "Labelled: (pronounced RAY-BELD) Marked with a name or tag.",
+      "better": "Labelled: (pronounced LAY-BELD) Marked with a name or tag.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 61670305,
+      "original": "I'm RETRACING (pronounced REE-TRAH-KING) my steps.",
+      "better": "I'm RETRACING (pronounced REE-TRAY-SNG) my steps.",
+      "betterTrans": null,
+      "isSave": "N"
+     }
+    ]
+   },
+   {
+    "idxFeedback": 35943501,
+    "createDate": "2026-09-03",
+    "memo": "Always a productive class!  Please watch, study and practice with the video links below:\n1)   English Pronunciation - Colleague vs. College video: https://youtu.be/ovhHBN0pIiQ?si=nth-JaUDaZLAF62v\n2)  How to Pronounce Achievement (correctly!) video:  https://youtu.be/4ktIardrlFI?si=PvKt1yEYAe81w1zo\n3)  How to Say Valedictorian video:  https://youtu.be/Ofb4Ll2y5S8?i=Xipu11ln99ieRaWE\n4)  STEAL SOMEONE’S THUNDER ⚡ | Learn This English Idiom with Stories video:  https://youtu.be/rDZQ94Q0Sr4?si=x7hX77whr2mEbHKY",
+    "subList": [
+     {
+      "idxFeedbackSub": 61619052,
+      "original": "He framed his COLLEGE diploma (pronounced COLLEAGUE).",
+      "better": "He framed his COLLEGE diploma (pronounced KOH-LEGJ).",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 61619053,
+      "original": "My cousin was the VALEDICTARIAN of high school.",
+      "better": "My cousin was the VALEDICTORIAN  (pronounced VAH-LEH-DIK-TOR-EE-AN) of high school.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 61619054,
+      "original": " This means so much to me.",
+      "better": "Alternatives:  This means EVERYTHING to me/ I REALLY APPRECIATE THIS.",
+      "betterTrans": null,
+      "isSave": "N"
+     }
+    ]
+   },
+   {
+    "idxFeedback": 35930667,
+    "createDate": "2026-09-02",
+    "memo": "This lesson we discussed the topic \"Are You Going to the Wedding?\". Answered questions about wedding ceremonies and common ways to celebrate. Reviewed the vocabulary [bride, groom, destination, save the date, reminder, officiant /of‧Fi‧ci‧ant/  vs efficient /e‧ffi‧cient  ]. Here are today's notes:",
+    "subList": [
+     {
+      "idxFeedbackSub": 61562896,
+      "original": "That is not work just learning to ai",
+      "better": "That is/was not work just learning (to use) ai",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 61562897,
+      "original": "There are so many country the ceremony of the church ",
+      "better": "There are so many countries where the ceremony is held in a church ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 61562898,
+      "original": "Almost people do wedding ceremony in wedding hall",
+      "better": "Almost [everyone has/all people] a wedding ceremony in wedding hall",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 61562899,
+      "original": "The Korean divide four season ",
+      "better": "Korea is divided into four season ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 61562900,
+      "original": "Many bride want to get married in May or in October so that is so busy season in Korean ",
+      "better": "Many brides want to get married in May or in October so that is such a busy season in Korea",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 61562901,
+      "original": "Ten years ago my close friend is get married ",
+      "better": "Ten years ago my close friend got married ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 61562902,
+      "original": "I do of the role of the mc ",
+      "better": "I did the role of the mc ",
+      "betterTrans": null,
+      "isSave": "N"
+     }
+    ]
+   },
+   {
+    "idxFeedback": 35919163,
+    "createDate": "2026-09-01",
+    "memo": "Welcome back!  Good work today!",
+    "subList": [
+     {
+      "idxFeedbackSub": 61512242,
+      "original": "\"It's a custom to BOW (pronounced BOH like KNOW) on New Year's Day.",
+      "better": "\"It's a custom to BOW (pronounced BOW like COW) on New Year's Day.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 61512243,
+      "original": "Would you prefer to get a partial(pronounced PAR-TEE-UL) refund?",
+      "better": "Would you prefer to get a partial(pronounced PAR-SHUL) refund?",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 61512244,
+      "original": "The traditional POOD is not spicy, sometimes oily.",
+      "better": "The traditional FOOD is not spicy, sometimes oily.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 61512245,
+      "original": "There were many ATTRACTIONS to visit.",
+      "better": "Alternatives:  There were many PLACES OF INTEREST/SIGHTS/LANDMARKS to visit. to visit.",
+      "betterTrans": null,
+      "isSave": "N"
+     }
+    ]
+   }
+  ]
+ }
+}
