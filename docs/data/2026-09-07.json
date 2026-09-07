@@ -1,0 +1,53 @@
+{
+ "date": "2026-09-07",
+ "iso": [
+  2026,
+  37
+ ],
+ "topic": "Discussing Emergency Situations and Responses",
+ "grammar": "Missing or Incorrect Determiners",
+ "grammar_norm": "Determiners / Quantifiers",
+ "score": 7.5,
+ "pairs": [
+  {
+   "said": "It's a Monday and it's going into autumn season , so it's a little chilly.",
+   "natural": "It's Monday, and as autumn approaches , it's a little chilly."
+  },
+  {
+   "said": "I also knew about Canada and USA. That is the, that code is the 911.",
+   "natural": "I also know about Canada and the USA; their emergency number is 911."
+  },
+  {
+   "said": "What is the big big emergency situation, emergency scare from the natural?",
+   "natural": "What's the biggest natural emergency that scares you?"
+  }
+ ],
+ "vocab": [
+  {
+   "word": "onset",
+   "pos": "n",
+   "meaning": "시작, 발병"
+  },
+  {
+   "word": "utilize",
+   "pos": "v",
+   "meaning": "활용하다, 사용하다 (use보다 격식 있는 표현)"
+  },
+  {
+   "word": "scenario",
+   "pos": "n",
+   "meaning": "(예상되는) 시나리오, 상황"
+  },
+  {
+   "word": "contingency",
+   "pos": "n",
+   "meaning": "만일의 사태, 비상사태"
+  },
+  {
+   "word": "prone",
+   "pos": "adj",
+   "meaning": "~하기 쉬운, ~의 경향이 있는"
+  }
+ ],
+ "_html_md5": "4aab74ea17d32172a9a14555f0dcacc3"
+}
