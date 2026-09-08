@@ -1,0 +1,53 @@
+{
+ "date": "2026-09-08",
+ "iso": [
+  2026,
+  37
+ ],
+ "topic": "Discussing effective communication and managing misunderstandings in professional settings",
+ "grammar": "Subject-Verb Agreement",
+ "grammar_norm": "Subject–Verb Agreement",
+ "score": 8.0,
+ "pairs": [
+  {
+   "said": "So if we go outside, a little chilly, windy.",
+   "natural": "It's a little chilly and windy if you go outside."
+  },
+  {
+   "said": "But it is limited, only for personal work.",
+   "natural": "But it's limited to personal use."
+  },
+  {
+   "said": "That is my meaning.",
+   "natural": "That's what I mean."
+  }
+ ],
+ "vocab": [
+  {
+   "word": "clarify",
+   "pos": "동사",
+   "meaning": "명확하게 하다, 분명히 하다"
+  },
+  {
+   "word": "thread",
+   "pos": "명사",
+   "meaning": "(온라인 대화의) 스레드, 연속된 메시지"
+  },
+  {
+   "word": "misunderstanding",
+   "pos": "명사",
+   "meaning": "오해"
+  },
+  {
+   "word": "commit",
+   "pos": "동사",
+   "meaning": "약속하다, 전념하다, (시간/돈 등을) 쏟다"
+  },
+  {
+   "word": "perseverance",
+   "pos": "명사",
+   "meaning": "인내, 끈기"
+  }
+ ],
+ "_html_md5": "94083df8daac92150a1e6e838431acd2"
+}

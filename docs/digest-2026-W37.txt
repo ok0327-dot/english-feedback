@@ -4,12 +4,14 @@ This is a study digest from my one-on-one English phone lessons this week. Pleas
 
 ## Topics covered this week
 - Discussing Emergency Situations and Responses
+- Discussing effective communication and managing misunderstandings in professional settings
 
 ## Grammar focus this week
 - Determiners / Quantifiers (1x)
+- Subject–Verb Agreement (1x)
 
-## My all-time weak-point ranking (65 lessons since 2026-05-08)
-- Subject–Verb Agreement — 9 lessons
+## My all-time weak-point ranking (66 lessons since 2026-05-08)
+- Subject–Verb Agreement — 10 lessons
 - Articles (a/an/the) — 9 lessons
 - Prepositions — 9 lessons
 - Verb Forms / Auxiliaries — 8 lessons
@@ -34,7 +36,7 @@ This is a study digest from my one-on-one English phone lessons this week. Pleas
 - 2026-W33: 7.1
 - 2026-W34: 7.2
 - 2026-W36: 6.8
-- 2026-W37: 7.5
+- 2026-W37: 7.8
 - Overall average: 7.1
 
 ## Corrections — what I said vs. the natural version
@@ -44,6 +46,12 @@ This is a study digest from my one-on-one English phone lessons this week. Pleas
    Natural: "I also know about Canada and the USA; their emergency number is 911."
 3. I said: "What is the big big emergency situation, emergency scare from the natural?"
    Natural: "What's the biggest natural emergency that scares you?"
+4. I said: "So if we go outside, a little chilly, windy."
+   Natural: "It's a little chilly and windy if you go outside."
+5. I said: "But it is limited, only for personal work."
+   Natural: "But it's limited to personal use."
+6. I said: "That is my meaning."
+   Natural: "That's what I mean."
 
 ## Recurring mistakes from earlier weeks — my long-term habits
 My most repeated weak categories overall: Subject–Verb Agreement, Articles (a/an/the). These corrections are from earlier lessons in those categories. Please weave a few into the review so I revisit old mistakes.
@@ -74,6 +82,11 @@ My most repeated weak categories overall: Subject–Verb Agreement, Articles (a/
 - scenario (n) — (예상되는) 시나리오, 상황
 - contingency (n) — 만일의 사태, 비상사태
 - prone (adj) — ~하기 쉬운, ~의 경향이 있는
+- clarify (동사) — 명확하게 하다, 분명히 하다
+- thread (명사) — (온라인 대화의) 스레드, 연속된 메시지
+- misunderstanding (명사) — 오해
+- commit (동사) — 약속하다, 전념하다, (시간/돈 등을) 쏟다
+- perseverance (명사) — 인내, 끈기
 
 ## Please cover in the podcast
 - Pick my 1–2 most repeated mistakes (see the all-time ranking) and explain the rule with a memorable rule of thumb.
