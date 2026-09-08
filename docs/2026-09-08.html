@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#0f0f13"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="당근영어"><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="icon" type="image/png" sizes="192x192" href="icon-192.png"><script src="install-banner.js" defer></script><script src="sw-reg.js" defer></script>
+    <title>전화영어 복습 - 2026년 09월 08일</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Noto Sans KR',sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.75;min-height:100vh}
+        .header{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);border-bottom:1px solid rgba(255,255,255,.06);padding:48px 24px 40px;text-align:center}
+        .header-date{font-size:13px;color:#94a3b8;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+        .header h1{font-size:28px;font-weight:700;color:#f1f5f9;margin-bottom:16px}
+        .header-meta{display:flex;justify-content:center;gap:24px;font-size:14px;color:#64748b}
+        .header-meta span{display:flex;align-items:center;gap:6px}
+        .cta-section{text-align:center;padding:40px 24px}
+        .cta-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:linear-gradient(135deg,#38bdf8,#818cf8);color:#fff;font-size:16px;font-weight:600;font-family:'Noto Sans KR',sans-serif;border:none;border-radius:50px;cursor:pointer;transition:all .3s;text-decoration:none;box-shadow:0 4px 24px rgba(56,189,248,.25)}
+        .cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(56,189,248,.35)}
+        .cta-btn svg{width:20px;height:20px}
+        .cta-sub{margin-top:12px;font-size:13px;color:#64748b}
+        .toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#38bdf8;padding:14px 28px;border-radius:12px;font-size:14px;font-weight:500;border:1px solid rgba(56,189,248,.2);box-shadow:0 8px 32px rgba(0,0,0,.4);opacity:0;transition:all .4s cubic-bezier(.16,1,.3,1);z-index:1000}
+        .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+        .container{max-width:720px;margin:0 auto;padding:0 24px 80px}
+        .tabs{display:flex;gap:4px;background:#1a1a24;padding:4px;border-radius:12px;margin-bottom:32px}
+        .tab{flex:1;padding:12px;text-align:center;font-size:14px;font-weight:500;color:#64748b;background:0 0;border:none;border-radius:8px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all .2s}
+        .tab.active{background:#262636;color:#f1f5f9}
+        .tab-content{display:none}.tab-content.active{display:block}
+        .feedback h2{font-size:18px;font-weight:700;color:#f1f5f9;margin:36px 0 16px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.06)}
+        .feedback h2:first-child{margin-top:0}
+        .feedback p{margin:8px 0;color:#cbd5e1}
+        .feedback .item{padding:6px 0 6px 16px;border-left:2px solid #334155;margin:6px 0;color:#cbd5e1}
+        .feedback .numbered{padding:8px 0 8px 16px;color:#cbd5e1}
+        .feedback .numbered strong{color:#38bdf8}
+        .feedback strong{color:#f1f5f9}
+        .feedback code{background:#1e293b;padding:2px 8px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#38bdf8}
+        .feedback table{width:100%;border-collapse:collapse;margin:12px 0}
+        .feedback th,.feedback td{padding:10px 14px;text-align:left;border-bottom:1px solid #262636}
+        .feedback th{color:#94a3b8;font-weight:500;font-size:13px}
+        .feedback td{color:#cbd5e1}
+        .arrow{color:#38bdf8;font-weight:700}
+        .transcript{background:#1a1a24;border-radius:12px;padding:28px;font-size:14px;line-height:2;color:#94a3b8;white-space:pre-wrap;word-break:break-word;font-family:'JetBrains Mono','Noto Sans KR',monospace}
+        .transcript .tutor{color:#38bdf8}
+        .transcript .student{color:#a78bfa}
+        @media(max-width:640px){.header{padding:32px 16px}.header h1{font-size:22px}.cta-btn{padding:14px 28px;font-size:15px}.container{padding:0 16px 60px}}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-date">2026년 09월 08일</div>
+        <h1>📚 전화영어 복습</h1>
+        <div class="header-meta">
+            <span>⏱ 20분 22초</span>
+            <span>🎙 전화영어_025180304_20260908080020.m4a</span>
+        </div>
+    </div>
+    <div class="cta-section">
+        <button class="cta-btn" onclick="startReview()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Gemini에서 복습 대화 시작하기
+        </button>
+        <div class="cta-sub">클릭하면 프롬프트가 복사되고 Gemini가 열립니다</div>
+    </div>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('feedback')">📋 AI 피드백</button>
+            <button class="tab" onclick="switchTab('transcript')">🎙 수업 전사</button>
+        </div>
+        <div id="tab-feedback" class="tab-content active">
+            <div class="feedback"><p>안녕하세요, Joey! 오늘 수업도 정말 수고 많으셨습니다. 가을 날씨 이야기로 시작해서 업무 소통 방식, 오해 대처법, 그리고 약속 관리까지 다양한 주제를 깊이 있게 다뤄주셨어요. 특히 약속을 지키기 위해 노력하는 Joey의 모습에서 책임감을 느낄 수 있었습니다.</p>
+<br>
+<p>오늘 Joey가 보여준 적극적인 질문("Is the question used to include 'deal with,' is it 'control'?", "That is my meaning. Is it right?")은 정말 훌륭했습니다. 궁금한 점을 바로바로 짚고 넘어가는 태도가 영어 실력 향상에 큰 도움이 될 거예요!</p>
+<br>
+<br>
+<p><strong>0. 📌 Topic</strong></p>
+<p>Topic: Discussing effective communication and managing misunderstandings in professional settings.</p>
+<br>
+<br>
+<p><strong>1. 📊 오늘의 대화 요약 (Summary)</strong></p>
+<p>오늘 수업에서는 업무 환경에서 주로 사용하는 소통 방식(이메일, 전화, 앱 등)에 대해 이야기하고, '오해된 이메일'과 '놓친 회의 시간' 중 어떤 문제가 더 심각한지 토론했습니다. 또한, 의도치 않게 약속을 잡았을 때 어떻게 대처할지에 대해서도 깊이 있는 대화를 나눴습니다.</p>
+<br>
+<br>
+<p><strong>2. 💬 유창성 업그레이드 (Fluency & Natural Flow)</strong></p>
+<br>
+<p>Joey가 말한 문장 중 의미는 잘 전달되었지만, 원어민들이 더 자연스럽게 쓰는 표현들을 함께 살펴볼까요?</p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>❌ 학습자 원문 (As Said):</strong> "So if we go outside, a little chilly, windy."</div>
+<div class="item"><strong>✅ 자연스러운 표현 (Natural):</strong> "It's a little chilly and windy if you go outside."</div>
+<div class="item"><strong>💎 비즈니스 표현 (Professional):</strong> "The weather tends to be a bit chilly and windy outdoors these days."</div>
+<div class="item"><strong>💡 코칭 포인트:</strong> Using 'it's' as the subject for weather descriptions is more natural. Also, 'a little' is an adverb modifying the adjectives 'chilly' and 'windy.'</div>
+<p><span class="arrow">→</span> 날씨를 묘사할 때는 'It's'를 주어로 사용하는 것이 더 자연스럽습니다. 또한 'a little'은 형용사 'chilly'와 'windy'를 수식하는 부사로 쓰입니다.</p>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>❌ 학습자 원문 (As Said):</strong> "But it is limited, only for personal work."</div>
+<div class="item"><strong>✅ 자연스러운 표현 (Natural):</strong> "But it's limited to personal use."</div>
+<div class="item"><strong>💎 비즈니스 표현 (Professional):</strong> "However, its usage is typically restricted to personal communication."</div>
+<div class="item"><strong>💡 코칭 포인트:</strong> 'Limited to'는 제한을 이야기할 때 흔히 쓰이는 자연스러운 연어입니다. 이 맥락에서는 'personal use' 또는 'personal communication'이 'personal work'보다 더 자연스러운 표현입니다.</div>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>❌ 학습자 원문 (As Said):</strong> "That is my meaning."</div>
+<div class="item"><strong>✅ 자연스러운 표현 (Natural):</strong> "That's what I mean."</div>
+<div class="item"><strong>💎 비즈니스 표현 (Professional):</strong> "That accurately reflects my intended message."</div>
+<div class="item"><strong>💡 코칭 포인트:</strong> 'That's what I mean'은 이해를 확인하거나 자신의 요점을 명확히 할 때 매우 흔하고 관용적인 표현입니다. 'my meaning'도 문법적으로 이해할 수 있지만, 'what I mean'이 대화에서 훨씬 자연스럽게 들립니다.</div>
+<br>
+<br>
+<p><strong>3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)</strong></p>
+<br>
+<p>Category: Subject-Verb Agreement (주어-동사 수일치)</p>
+<br>
+<p>Joey는 주어와 동사의 수를 일치시키는 데 가끔 실수를 하는 경향이 있었습니다. 특히 주어가 단수일 때 동사에 's'를 붙이지 않거나, 복수 주어에 단수 동사를 사용하는 경우가 보였습니다.</p>
+<br>
+<table>
+<tr><th>❌ 원문 (As Said)</th><th>✅ 교정 예시 (Corrected)</th></tr>
+<tr><td>"I think this paragraph <strong>divides</strong> the kind of their communication way..."</td><td>"I think this paragraph <strong>divides</strong> their communication methods..."</td></tr>
+<tr><td>"So I don't focus on, I didn't focus on their reason my friend <strong>was</strong> saying, and just I accept everything."</td><td>"So I didn't focus on the reason my friend <strong>was</strong> saying, and I just accepted everything."</td></tr>
+<tr><td>"I'm just saying my teacher, could you repeat for me, etc.?"</td><td>"I'm just saying to my teacher, 'Could you repeat for me?'"</td></tr>
+</table>
+<br>
+<p>📌 <strong>핵심 규칙:</strong> 주어와 동사는 항상 수(단수/복수)를 일치시켜야 합니다. 단수 주어 뒤에는 단수 동사(예: he *goes*, the sky *is*), 복수 주어 뒤에는 복수 동사(예: they *go*, we *are*)가 와야 합니다. 또한, 동사 'say' 뒤에 사람을 언급할 때는 'to'를 붙여 'say to someone' 형태로 사용하는 것이 자연스럽습니다.</p>
+<br>
+<p>🔁 <strong>따라 읽기:</strong></p>
+<p>🗣️ "I think this paragraph divides their communication methods."</p>
+<p>🗣️ "I didn't focus on the reason my friend was saying."</p>
+<p>🗣️ "I'm just saying to my teacher, 'Could you repeat for me?'"</p>
+<br>
+<br>
+<p><strong>4. 📗 어휘 확장 (Vocabulary Vault)</strong></p>
+<br>
+<p>오늘 수업에서 나왔거나 비즈니스 환경에서 유용하게 쓸 수 있는 단어들을 정리해 보았습니다.</p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>clarify</strong> /klǽrəfài/ (동사)</div>
+<div class="item">뜻: 명확하게 하다, 분명히 하다</div>
+<div class="item">실전 예문: Could you <strong>clarify</strong> the project timeline for me?</div>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>thread</strong> /θred/ (명사)</div>
+<div class="item">뜻: (온라인 대화의) 스레드, 연속된 메시지</div>
+<div class="item">실전 예문: I accidentally sent that message to the wrong <strong>thread</strong>.</div>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>misunderstanding</strong> /mìsʌndərstǽndɪŋ/ (명사)</div>
+<div class="item">뜻: 오해</div>
+<div class="item">실전 예문: There seems to be a <strong>misunderstanding</strong> regarding the meeting agenda.</div>
+<br>
+<div class="numbered"><strong>4.</strong> <strong>commit</strong> /kəmít/ (동사)</div>
+<div class="item">뜻: 약속하다, 전념하다, (시간/돈 등을) 쏟다</div>
+<div class="item">실전 예문: We need to <strong>commit</strong> to the new strategy to achieve our goals.</div>
+<br>
+<div class="numbered"><strong>5.</strong> <strong>perseverance</strong> /pə̀ːrsəvíərəns/ (명사)</div>
+<div class="item">뜻: 인내, 끈기</div>
+<div class="item">실전 예문: His <strong>perseverance</strong> in learning new skills is truly admirable.</div>
+<br>
+<br>
+<p><strong>5. 📝 실전 복습 챌린지 (Practice)</strong></p>
+<br>
+<p>오늘 배운 표현과 문법을 활용하여 다음 상황에 맞는 문장을 영작해 보세요.</p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>상황:</strong> 당신은 어제 동료에게 보낸 이메일 내용이 명확하지 않았다고 생각합니다. 동료에게 다시 한번 설명을 요청하고 싶습니다.</div>
+<div class="item"><strong>영작:</strong> (Clarify를 사용하여)</div>
+<div class="item"><strong>모범 답안:</strong> Could you <strong>clarify</strong> what you meant in your last email?</div>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>상황:</strong> 회의 중 동료가 한 말의 의미를 정확히 파악했습니다. "그것이 제가 의미한 바입니다."라고 말하고 싶습니다.</div>
+<div class="item"><strong>영작:</strong> (오늘 배운 자연스러운 표현을 사용하여)</div>
+<div class="item"><strong>모범 답안:</strong> Yes, <strong>that's what I mean.</strong></div>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>상황:</strong> 당신은 새로운 프로젝트에 전념하고 있지만, 가끔 의사소통에 오해가 생겨 어려움을 겪는다고 말하고 싶습니다.</div>
+<div class="item"><strong>영작:</strong> (Commit과 misunderstanding을 사용하여 한 문장으로)</div>
+<div class="item"><strong>모범 답안:</strong> I'm fully <strong>committed</strong> to this new project, but sometimes I face challenges due to <strong>misunderstandings</strong> in communication.</div>
+<br>
+<br>
+<p><strong>6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)</strong></p>
+<br>
+<p>✨ <strong>Good Job</strong>: Joey, 오늘 수업 중 이 문장이 정말 좋았습니다:</p>
+<p>"I think missed, missed time, missed meeting time is the bigger problem because we have an appointment with other people and everyone believes that's the meeting time. But if I missed that meeting time, that is the reason that people will not trust me. So it is a big problem."</p>
+<p>이 문장은 Joey의 생각을 아주 논리적이고 명확하게 전달했습니다. 'missed meeting time'이 왜 더 큰 문제인지, 그리고 그것이 'trust'와 어떻게 연결되는지 구체적으로 설명한 점이 인상 깊었습니다. 👍</p>
+<br>
+<p>🚀 <strong>내일의 한 문장</strong>: 다음 수업 시작 시 튜터에게 오늘 배운 표현을 활용하여 이렇게 말해보세요.</p>
+<p>"I've been trying to <strong>clarify</strong> some points from our last discussion."</p>
+<br>
+<br>
+<p><strong>[성과 지표]</strong></p>
+<br>
+<p><strong>유창성 점수:</strong> 8/10</p>
+<br>
+<p><strong>근거:</strong> Joey는 다양한 주제에 대해 막힘없이 자신의 의견을 표현하며 대화를 이끌어가는 능력이 뛰어납니다. 질문에 대한 이해도 빠르고, 복잡한 상황도 비교적 상세하게 설명할 수 있습니다. 가끔 어색하거나 직역투의 표현이 나오지만, 이는 의미 전달에 큰 지장을 주지 않는 수준입니다. 특히 궁금한 점을 바로 질문하는 적극성이 유창성 향상에 긍정적인 영향을 미칩니다.</p>
+<br>
+<p><strong>다음 수업 '원포인트 액션 플랜':</strong></p>
+<p>다음 수업에서는 <strong>'주어-동사 수일치'</strong>에 조금 더 신경 써서 말하는 연습을 해봅시다. 문장을 말하기 전에 주어가 단수인지 복수인지 한 번 더 확인하는 습관을 들이면 정확성이 훨씬 높아질 거예요!</p></div>
+        </div>
+        <div id="tab-transcript" class="tab-content">
+            <div class="transcript"><span class="student">[Student]</span> Hello, hello teacher.
+<span class="tutor">[Tutor]</span> Hi again.
+<span class="student">[Student]</span> Hi again.
+<span class="tutor">[Tutor]</span> Good.
+<span class="tutor">[Tutor]</span> Wonderful.
+<span class="tutor">[Tutor]</span> All right, I hear you&#x27;re getting some nice mild weather where you are. Yes? No heat waves?
+<span class="student">[Student]</span> Yes, these days, autumn season in Korea. So if we go outside, a little chilly, windy.
+<span class="student">[Student]</span> Windy, yes, and the sky is so high and clear. It&#x27;s nice weather these days.
+<span class="tutor">[Tutor]</span> Sounds wonderful. That&#x27;s what it&#x27;s kind of like here too right now. It&#x27;s only 17 degrees and sunny, but I&#x27;ll take that over 37 degrees any day. Wow. So yeah, the gap is very similar. Yeah, yeah. Understand. All right, sir. If you&#x27;re ready to go, I have us on page 24, and the topic is, it&#x27;s an emergency.
+<span class="student">[Student]</span> Oh, there&#x27;s a problem. Yes, 22, section 22. 22. Thank you.
+<span class="tutor">[Tutor]</span> I&#x27;m sorry. You&#x27;re right. Okay. You&#x27;re very... Okay. So, let&#x27;s start with the useful vocabulary as we always do. I&#x27;ll get you to read the word, the description, and the example sentence.
+<span class="student">[Student]</span> Okay. The useful vocabulary. Clarify. To make something clear or easier to understand. Can you clarify what you mean in that message?
+<span class="tutor">[Tutor]</span> Can you clarify what you meant in that message? If you don&#x27;t mind, I&#x27;d like to just fine-tune that word. Clarify.
+<span class="student">[Student]</span> Clarify.
+<span class="tutor">[Tutor]</span> Clarify.
+<span class="student">[Student]</span> Yeah.
+<span class="tutor">[Tutor]</span> Clarify.
+<span class="student">[Student]</span> Clarify.
+<span class="tutor">[Tutor]</span> Very good.
+<span class="student">[Student]</span> Clarify.
+<span class="tutor">[Tutor]</span> Clarify.
+<span class="student">[Student]</span> Clarify. Okay.
+<span class="student">[Student]</span> Wrong thread.
+<span class="tutor">[Tutor]</span> Wrong thread.
+<span class="student">[Student]</span> Yep.
+<span class="tutor">[Tutor]</span> Wrong thread.
+<span class="student">[Student]</span> Wrong thread.
+<span class="tutor">[Tutor]</span> Wrong thread. The incorrect chat or message group.
+<span class="student">[Student]</span> I sent the photo to the wrong thread.
+<span class="tutor">[Tutor]</span> An audio issue. A problem with the sound.
+<span class="student">[Student]</span> There is an audio issue. I can&#x27;t hear anything you are saying.
+<span class="tutor">[Tutor]</span> Very good. All right. Let&#x27;s go to the useful expressions unless you have any questions.
+<span class="student">[Student]</span> Oh, that&#x27;s not what I meant. That&#x27;s not what I meant.
+<span class="tutor">[Tutor]</span> Used to fix confusing or unclear message. Good. Okay.
+<span class="student">[Student]</span> I thought you said. Used to explain how a misunderstanding happened. I thought you said the meeting time is 2 p.m.
+<span class="tutor">[Tutor]</span> Got it. You used it the right way. Very good. Very good. Awesome. All right. Let&#x27;s scroll up to the top. And we will look at Part A, the warm-up questions.
+<span class="student">[Student]</span> Okay.
+<span class="tutor">[Tutor]</span> And I&#x27;ll get you to read and respond. Please take your time.
+<span class="student">[Student]</span> Okay. I see that&#x27;s my time. Okay, Part A, a warm-up question. How do people communicate for work, school, and everyday things? I think this paragraph divides the kind of their communication way, but in our country, we usually use email. Yeah, because if I work in my office, I usually use email. So, a phone call is only for an emergency situation or some big event or some explanation. And at that time, I use a phone call. But usually, I receive emails and send emails. That is my work, the communication way. And sometimes I use a mobile application, the company application. Yeah. Okay. That is only possible to use in a company.
+<span class="tutor">[Tutor]</span> Yeah, in the company.
+<span class="student">[Student]</span> Yeah, in the company. And we also use the Teams application. Yeah, yeah, it is possible on mobile and possible on desktop. So I think the main work is to use email, and sometimes we use a phone call or WhatsApp, a phone call and some message app, messenger app.
+<span class="tutor">[Tutor]</span> Yes. It&#x27;s my understanding that KakaoTalk is extremely popular in Korea.
+<span class="student">[Student]</span> Yes, you&#x27;re right. But it is limited, only for personal work.
+<span class="tutor">[Tutor]</span> That&#x27;s right. Personal communication.
+<span class="student">[Student]</span> Yes, personal communication. You&#x27;re right.
+<span class="tutor">[Tutor]</span> All right. Let&#x27;s go on to Part B when you&#x27;re ready.
+<span class="student">[Student]</span> Okay. Which do you prefer? Which would you rather deal with at school, work, and why? Misunderstood email versus missed meeting time. And teacher, before the answer, I have one question.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="student">[Student]</span> Is the question used to include &quot;deal with,&quot; is it &quot;control&quot;?
+<span class="tutor">[Tutor]</span> &quot;Deal with&quot; means, yeah, how do you solve an issue? Deal with it, manage it. How do you deal with my problem? Right. Yes, a misunderstood email or a missed meeting time.
+<span class="student">[Student]</span> I see. Understand. I think missed, missed time, missed meeting time is the bigger problem because we have an appointment with other people and everyone believes that&#x27;s the meeting time. But if I missed that meeting time, that is the reason that people will not trust me. So it is a big problem. So before the work, we will check the schedule, the Outlook or some application. But a misunderstood email is possible to deal with more easily because it is possible to request an explanation or, yeah, yeah. So it is possible. It only, they don&#x27;t, they don&#x27;t complicate the time. So yeah, that is a more easy problem. So it is a better problem and it is easy to deal with. So yeah, yeah, in a work time.
+<span class="tutor">[Tutor]</span> So what I hear you saying is that dealing with a missed meeting or appointment is more important and time-sensitive than a misunderstood email. An email is not as important because it&#x27;s sent by email and you can probably deal with it with more time than you would have to correct a missed meeting. Yeah?
+<span class="student">[Student]</span> Yeah, you&#x27;re right.
+<span class="tutor">[Tutor]</span> Okay, very good. I want to make sure I understand you. You&#x27;re doing good. Okay, good. All right. When you&#x27;re ready, let&#x27;s go on to Part C and get you to read the situation.
+<span class="student">[Student]</span> Teacher, I have some problem. This printed text is a little problematic. I will say some, I read that, but maybe some word is erased. Please help me.
+<span class="tutor">[Tutor]</span> You do your best. I will just listen.
+<span class="student">[Student]</span> Okay. Situation: Your friend asked if you could, if you could help with something next week. Your friend asked if you could help with something next week. Okay.
+<span class="student">[Student]</span> You, you didn&#x27;t, you didn&#x27;t fully understand what they meant, but it sounded simple. So you are, you, you said, you said blah blah. Later you realize, you said blah blah. Later you realize they expect, they&#x27;re expecting much more than you thought and you have time for it. Hmm.
+<span class="tutor">[Tutor]</span> Very good. Okay. Yeah, we have, you realize they&#x27;re expecting much more than you thought and you don&#x27;t have time to help them. You don&#x27;t have time for it. I don&#x27;t have time. Would you admit the mistake or try to help anyway?
+<span class="student">[Student]</span> So I don&#x27;t focus on, I didn&#x27;t focus on their reason my friend was saying, and just I accept everything. But after, I think it is an impossible appointment. So yeah, just I&#x27;m understanding and my mistake or try to help anyway. Actually, I first, I, I check that if it&#x27;s possible or not. If it is an amazing thing like an impossible schedule or some borrowed money or something, I mean, I&#x27;m just saying, yeah, I&#x27;m frankly speaking about that messed-up situation and clarify that problem and give the apology. But if it is possible and adaptable, I&#x27;m just taking them because that is my mistake and that I speak myself. So I promise myself, promised to my plan. So if that is a real problem and acceptable, I&#x27;m just taking them.
+<span class="tutor">[Tutor]</span> I understand what you&#x27;re saying. You&#x27;re saying that if you committed to it without fully understanding what was needed and you realized that, then you would first check your schedule because they are asking for something next week. If you&#x27;re not available, then you would apologize right away. But if you could help them in some way, you would tell them, &quot;I&#x27;m sorry, I did not understand your request. I can help you in the following way. I can do this, but not that.&quot; Yes, that sounds very considerate of you, Joey.
+<span class="student">[Student]</span> Yeah, that is my meaning. Yeah, that is. Oh, teacher, what is a better expression? That is I mean. That is my meaning. Is it right? Or just Konglish? Okay. It&#x27;s my meaning. Okay, so. How can I say it? Your meaning.
+<span class="tutor">[Tutor]</span> Your meaning.
+<span class="student">[Student]</span> That is my meaning.
+<span class="tutor">[Tutor]</span> All right. Yes, that is my meaning.
+<span class="student">[Student]</span> Yeah.
+<span class="tutor">[Tutor]</span> That&#x27;s what I mean.
+<span class="student">[Student]</span> Yeah.
+<span class="tutor">[Tutor]</span> Let&#x27;s look at that useful expression at the bottom. Remember where it says, &quot;That&#x27;s not what I meant&quot;?
+<span class="student">[Student]</span> That&#x27;s not what I meant.
+<span class="tutor">[Tutor]</span> Yeah, that&#x27;s the negative. You could say the positive. That&#x27;s what I meant.
+<span class="student">[Student]</span> That&#x27;s what I meant.
+<span class="tutor">[Tutor]</span> That&#x27;s what I meant. Yeah, that&#x27;s the positive. That&#x27;s what I meant.
+<span class="student">[Student]</span> What I meant.
+<span class="tutor">[Tutor]</span> Very good. Good. Okay. You&#x27;re doing fine. All right. Warm-down. I will read number one. What&#x27;s something you learned to do better after making a mistake? Explain.
+<span class="student">[Student]</span> Oh, there&#x27;s so many things. Yeah.
+<span class="tutor">[Tutor]</span> Well, just pick one.
+<span class="student">[Student]</span> Yeah. Yeah, because I majored in economics and... economics, yeah. When I was a student, I majored in economics, but these days I study AI and I don&#x27;t have the knowledge of coding these days. So I just made something and failed, and made something, failed. Try and fail, try, fail. So at that process, I learned so many things. Yeah, so that is a perfect way. Yeah, just learning from my mistake. Yeah. Uh, yeah, so I love that. I love that a lot. Mm. Uh, yes.
+<span class="tutor">[Tutor]</span> Uh-huh. I agree with you. I have done different activities where I have to follow a pattern or a sequence of steps. Uh-huh. And I do it and it doesn&#x27;t turn out, so I do it again. It doesn&#x27;t turn out, so I try again.
+<span class="student">[Student]</span> Yeah.
+<span class="tutor">[Tutor]</span> And sometimes I&#x27;ll do something 12 times and then I finally get it right.
+<span class="student">[Student]</span> Yeah, that&#x27;s a great way. It&#x27;s fair.
+<span class="tutor">[Tutor]</span> Repetition helps.
+<span class="student">[Student]</span> Yeah, so a nice way to learn.
+<span class="tutor">[Tutor]</span> Especially if you&#x27;re by yourself. If you&#x27;re under pressure, then it gets a little harder. All right, my friend. Let&#x27;s look at warm-down number two. What&#x27;s the last tech problem you had and how did you fix it? Something with your phone, a printer.
+<span class="student">[Student]</span> Yes. These days... Okay. Yeah, I can say some about the AI problem, but just I&#x27;m saying it&#x27;s more simple. When I study my English class in the morning, yeah. Sometimes I have some internet problem, so the sound is a little not clear. So I&#x27;m just saying my teacher, could you repeat for me, etc.?
+<span class="tutor">[Tutor]</span> Could I repeat for you? You asked me to repeat?
+<span class="student">[Student]</span> Oh no, because that is the, ah yes, you&#x27;re right, repeat. Yeah, this is the internet problem. So sometimes the sound is not clear. So in the meantime, I&#x27;m just saying, &quot;Could you repeat that sentence?&quot; And these days, my text printed is misprinted. Some word is erased. And in the meantime, I&#x27;m saying my teacher, &quot;Teacher, I can&#x27;t read that word. Could you help me?&quot; Yeah, so I&#x27;m just requesting my teacher and solve that problem.
+<span class="tutor">[Tutor]</span> Okay, I really liked how you persevered with reading Part C, problem-solving. If you ever find that your text is unreadable, please let me know. I&#x27;ll be happy to read it to you. Okay. I see. And sometimes we do have distortions or audio problems. So I am very happy if you say to me, &quot;I&#x27;m sorry, teacher. Could you repeat that?&quot; I love those two ideas. Let&#x27;s do that.
+<span class="student">[Student]</span> Okay. Good. Yeah. Great idea.
+<span class="tutor">[Tutor]</span> Yeah. Well, as usual, sir, you finished the entire page. You did a really good job. Did you have any questions or concerns?
+<span class="student">[Student]</span> Teacher, your textbook is almost done, so I will choose my textbook. If you have time the next time, I must finish then, could you recommend for me the textbook?
+<span class="tutor">[Tutor]</span> Certainly, certainly. I&#x27;m just going to quickly check something. We have a few seconds. I just want to check here. I&#x27;m just checking to see if I have to do an evaluation on you coming up. I don&#x27;t know. I don&#x27;t have an evaluation coming up for you right away. What I will do, Joey, I will listen to recordings of our classes. I will look at your last evaluation and I will send a message to CARET recommending to them some suggestions for your next textbook.
+<span class="student">[Student]</span> Okay, thank you so much.
+<span class="tutor">[Tutor]</span> Yeah, then the study manager will contact you to discuss the options. Okay?
+<span class="student">[Student]</span> Yeah, it&#x27;s better. Thank you so much.
+<span class="tutor">[Tutor]</span> I will get on that today and tomorrow. All right, sir. Good work. It&#x27;s Wednesday where you are, so I won&#x27;t talk to you again until next week. So I&#x27;ll get that sorted out.
+<span class="student">[Student]</span> Yes. Have a great day, teacher. Yeah, I&#x27;m okay.
+<span class="tutor">[Tutor]</span> Yeah. See you next week. All right. Take care. Bye bye.
+<span class="student">[Student]</span> Yes.</div>
+        </div>
+    </div>
+    <div class="toast" id="toast">✅ 프롬프트가 복사되었습니다!</div>
+    <script>
+        const REVIEW_PROMPT="너는 나의 영어 회화 복습 파트너야. 오늘 내 전화영어 수업 내용을 기반으로 대화하면서 복습을 도와줘.\n\n[오늘 수업 전사 내용]\n[Student] Hello, hello teacher.\n[Tutor] Hi again.\n[Student] Hi again.\n[Tutor] Good.\n[Tutor] Wonderful.\n[Tutor] All right, I hear you're getting some nice mild weather where you are. Yes? No heat waves?\n[Student] Yes, these days, autumn season in Korea. So if we go outside, a little chilly, windy.\n[Student] Windy, yes, and the sky is so high and clear. It's nice weather these days.\n[Tutor] Sounds wonderful. That's what it's kind of like here too right now. It's only 17 degrees and sunny, but I'll take that over 37 degrees any day. Wow. So yeah, the gap is very similar. Yeah, yeah. Understand. All right, sir. If you're ready to go, I have us on page 24, and the topic is, it's an emergency.\n[Student] Oh, there's a problem. Yes, 22, section 22. 22. Thank you.\n[Tutor] I'm sorry. You're right. Okay. You're very... Okay. So, let's start with the useful vocabulary as we always do. I'll get you to read the word, the description, and the example sentence.\n[Student] Okay. The useful vocabulary. Clarify. To make something clear or easier to understand. Can you clarify what you mean in that message?\n[Tutor] Can you clarify what you meant in that message? If you don't mind, I'd like to just fine-tune that word. Clarify.\n[Student] Clarify.\n[Tutor] Clarify.\n[Student] Yeah.\n[Tutor] Clarify.\n[Student] Clarify.\n[Tutor] Very good.\n[Student] Clarify.\n[Tutor] Clarify.\n[Student] Clarify. Okay.\n[Student] Wrong thread.\n[Tutor] Wrong thread.\n[Student] Yep.\n[Tutor] Wrong thread.\n[Student] Wrong thread.\n[Tutor] Wrong thread. The incorrect chat or message group.\n[Student] I sent the photo to the wrong thread.\n[Tutor] An audio issue. A problem with the sound.\n[Student] There is an audio issue. I can't hear anything you are saying.\n[Tutor] Very good. All right. Let's go to the useful expressions unless you have any questions.\n[Student] Oh, that's not what I meant. That's not what I meant.\n[Tutor] Used to fix confusing or unclear message. Good. Okay.\n[Student] I thought you said. Used to explain how a misunderstanding happened. I thought you said the meeting time is 2 p.m.\n[Tutor] Got it. You used it the right way. Very good. Very good. Awesome. All right. Let's scroll up to the top. And we will look at Part A, the warm-up questions.\n[Student] Okay.\n[Tutor] And I'll get you to read and respond. Please take your time.\n[Student] Okay. I see that's my time. Okay, Part A, a warm-up question. How do people communicate for work, school, and everyday things? I think this paragraph divides the kind of their communication way, but in our country, we usually use email. Yeah, because if I work in my office, I usually use email. So, a phone call is only for an emergency situation or some big event or some explanation. And at that time, I use a phone call. But usually, I receive emails and send emails. That is my work, the communication way. And sometimes I use a mobile application, the company application. Yeah. Okay. That is only possible to use in a company.\n[Tutor] Yeah, in the company.\n[Student] Yeah, in the company. And we also use the Teams application. Yeah, yeah, it is possible on mobile and possible on desktop. So I think the main work is to use email, and sometimes we use a phone call or WhatsApp, a phone call and some message app, messenger app.\n[Tutor] Yes. It's my understanding that KakaoTalk is extremely popular in Korea.\n[Student] Yes, you're right. But it is limited, only for personal work.\n[Tutor] That's right. Personal communication.\n[Student] Yes, personal communication. You're right.\n[Tutor] All right. Let's go on to Part B when you're ready.\n[Student] Okay. Which do you prefer? Which would you rather deal with at school, work, and why? Misunderstood email versus missed meeting time. And teacher, before the answer, I have one question.\n[Tutor] Okay.\n[Student] Is the question used to include \"deal with,\" is it \"control\"?\n[Tutor] \"Deal with\" means, yeah, how do you solve an issue? Deal with it, manage it. How do you deal with my problem? Right. Yes, a misunderstood email or a missed meeting time.\n[Student] I see. Understand. I think missed, missed time, missed meeting time is the bigger problem because we have an appointment with other people and everyone believes that's the meeting time. But if I missed that meeting time, that is the reason that people will not trust me. So it is a big problem. So before the work, we will check the schedule, the Outlook or some application. But a misunderstood email is possible to deal with more easily because it is possible to request an explanation or, yeah, yeah. So it is possible. It only, they don't, they don't complicate the time. So yeah, that is a more easy problem. So it is a better problem and it is easy to deal with. So yeah, yeah, in a work time.\n[Tutor] So what I hear you saying is that dealing with a missed meeting or appointment is more important and time-sensitive than a misunderstood email. An email is not as important because it's sent by email and you can probably deal with it with more time than you would have to correct a missed meeting. Yeah?\n[Student] Yeah, you're right.\n[Tutor] Okay, very good. I want to make sure I understand you. You're doing good. Okay, good. All right. When you're ready, let's go on to Part C and get you to read the situation.\n[Student] Teacher, I have some problem. This printed text is a little problematic. I will say some, I read that, but maybe some word is erased. Please help me.\n[Tutor] You do your best. I will just listen.\n[Student] Okay. Situation: Your friend asked if you could, if you could help with something next week. Your friend asked if you could help with something next week. Okay.\n[Student] You, you didn't, you didn't fully understand what they meant, but it sounded simple. So you are, you, you said, you said blah blah. Later you realize, you said blah blah. Later you realize they expect, they're expecting much more than you thought and you have time for it. Hmm.\n[Tutor] Very good. Okay. Yeah, we have, you realize they're expecting much more than you thought and you don't have time to help them. You don't have time for it. I don't have time. Would you admit the mistake or try to help anyway?\n[Student] So I don't focus on, I didn't focus on their reason my friend was saying, and just I accept everything. But after, I think it is an impossible appointment. So yeah, just I'm understanding and my mistake or try to help anyway. Actually, I first, I, I check that if it's possible or not. If it is an amazing thing like an impossible schedule or some borrowed money or something, I mean, I'm just saying, yeah, I'm frankly speaking about that messed-up situation and clarify that problem and give the apology. But if it is possible and adaptable, I'm just taking them because that is my mistake and that I speak myself. So I promise myself, promised to my plan. So if that is a real problem and acceptable, I'm just taking them.\n[Tutor] I understand what you're saying. You're saying that if you committed to it without fully understanding what was needed and you realized that, then you would first check your schedule because they are asking for something next week. If you're not available, then you would apologize right away. But if you could help them in some way, you would tell them, \"I'm sorry, I did not understand your request. I can help you in the following way. I can do this, but not that.\" Yes, that sounds very considerate of you, Joey.\n[Student] Yeah, that is my meaning. Yeah, that is. Oh, teacher, what is a better expression? That is I mean. That is my meaning. Is it right? Or just Konglish? Okay. It's my meaning. Okay, so. How can I say it? Your meaning.\n[Tutor] Your meaning.\n[Student] That is my meaning.\n[Tutor] All right. Yes, that is my meaning.\n[Student] Yeah.\n[Tutor] That's what I mean.\n[Student] Yeah.\n[Tutor] Let's look at that useful expression at the bottom. Remember where it says, \"That's not what I meant\"?\n[Student] That's not what I meant.\n[Tutor] Yeah, that's the negative. You could say the positive. That's what I meant.\n[Student] That's what I meant.\n[Tutor] That's what I meant. Yeah, that's the positive. That's what I meant.\n[Student] What I meant.\n[Tutor] Very good. Good. Okay. You're doing fine. All right. Warm-down. I will read number one. What's something you learned to do better after making a mistake? Explain.\n[Student] Oh, there's so many things. Yeah.\n[Tutor] Well, just pick one.\n[Student] Yeah. Yeah, because I majored in economics and... economics, yeah. When I was a student, I majored in economics, but these days I study AI and I don't have the knowledge of coding these days. So I just made something and failed, and made something, failed. Try and fail, try, fail. So at that process, I learned so many things. Yeah, so that is a perfect way. Yeah, just learning from my mistake. Yeah. Uh, yeah, so I love that. I love that a lot. Mm. Uh, yes.\n[Tutor] Uh-huh. I agree with you. I have done different activities where I have to follow a pattern or a sequence of steps. Uh-huh. And I do it and it doesn't turn out, so I do it again. It doesn't turn out, so I try again.\n[Student] Yeah.\n[Tutor] And sometimes I'll do something 12 times and then I finally get it right.\n[Student] Yeah, that's a great way. It's fair.\n[Tutor] Repetition helps.\n[Student] Yeah, so a nice way to learn.\n[Tutor] Especially if you're by yourself. If you're under pressure, then it gets a little harder. All right, my friend. Let's look at warm-down number two. What's the last tech problem you had and how did you fix it? Something with your phone, a printer.\n[Student] Yes. These days... Okay. Yeah, I can say some about the AI problem, but just I'm saying it's more simple. When I study my English class in the morning, yeah. Sometimes I have some internet problem, so the sound is a little not clear. So I'm just saying my teacher, could you repeat for me, etc.?\n[Tutor] Could I repeat for you? You asked me to repeat?\n[Student] Oh no, because that is the, ah yes, you're right, repeat. Yeah, this is the internet problem. So sometimes the sound is not clear. So in the meantime, I'm just saying, \"Could you repeat that sentence?\" And these days, my text printed is misprinted. Some word is erased. And in the meantime, I'm saying my teacher, \"Teacher, I can't read that word. Could you help me?\" Yeah, so I'm just requesting my teacher and solve that problem.\n[Tutor] Okay, I really liked how you persevered with reading Part C, problem-solving. If you ever find that your text is unreadable, please let me know. I'll be happy to read it to you. Okay. I see. And sometimes we do have distortions or audio problems. So I am very happy if you say to me, \"I'm sorry, teacher. Could you repeat that?\" I love those two ideas. Let's do that.\n[Student] Okay. Good. Yeah. Great idea.\n[Tutor] Yeah. Well, as usual, sir, you finished the entire page. You did a really good job. Did you have any questions or concerns?\n[Student] Teacher, your textbook is almost done, so I will choose my textbook. If you have time the next time, I must finish then, could you recommend for me the textbook?\n[Tutor] Certainly, certainly. I'm just going to quickly check something. We have a few seconds. I just want to check here. I'm just checking to see if I have to do an evaluation on you coming up. I don't know. I don't have an evaluation coming up for you right away. What I will do, Joey, I will listen to recordings of our classes. I will look at your last evaluation and I will send a message to CARET recommending to them some suggestions for your next textbook.\n[Student] Okay, thank you so much.\n[Tutor] Yeah, then the study manager will contact you to discuss the options. Okay?\n[Student] Yeah, it's better. Thank you so much.\n[Tutor] I will get on that today and tomorrow. All right, sir. Good work. It's Wednesday where you are, so I won't talk to you again until next week. So I'll get that sorted out.\n[Student] Yes. Have a great day, teacher. Yeah, I'm okay.\n[Tutor] Yeah. See you next week. All right. Take care. Bye bye.\n[Student] Yes.\n\n[AI 피드백]\n안녕하세요, Joey! 오늘 수업도 정말 수고 많으셨습니다. 가을 날씨 이야기로 시작해서 업무 소통 방식, 오해 대처법, 그리고 약속 관리까지 다양한 주제를 깊이 있게 다뤄주셨어요. 특히 약속을 지키기 위해 노력하는 Joey의 모습에서 책임감을 느낄 수 있었습니다.\n\n오늘 Joey가 보여준 적극적인 질문(\"Is the question used to include 'deal with,' is it 'control'?\", \"That is my meaning. Is it right?\")은 정말 훌륭했습니다. 궁금한 점을 바로바로 짚고 넘어가는 태도가 영어 실력 향상에 큰 도움이 될 거예요!\n\n---\n\n**0. 📌 Topic**\nTopic: Discussing effective communication and managing misunderstandings in professional settings.\n\n---\n\n**1. 📊 오늘의 대화 요약 (Summary)**\n오늘 수업에서는 업무 환경에서 주로 사용하는 소통 방식(이메일, 전화, 앱 등)에 대해 이야기하고, '오해된 이메일'과 '놓친 회의 시간' 중 어떤 문제가 더 심각한지 토론했습니다. 또한, 의도치 않게 약속을 잡았을 때 어떻게 대처할지에 대해서도 깊이 있는 대화를 나눴습니다.\n\n---\n\n**2. 💬 유창성 업그레이드 (Fluency & Natural Flow)**\n\nJoey가 말한 문장 중 의미는 잘 전달되었지만, 원어민들이 더 자연스럽게 쓰는 표현들을 함께 살펴볼까요?\n\n1.  **❌ 학습자 원문 (As Said):** \"So if we go outside, a little chilly, windy.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"It's a little chilly and windy if you go outside.\"\n    *   **💎 비즈니스 표현 (Professional):** \"The weather tends to be a bit chilly and windy outdoors these days.\"\n    *   **💡 코칭 포인트:** Using 'it's' as the subject for weather descriptions is more natural. Also, 'a little' is an adverb modifying the adjectives 'chilly' and 'windy.'\n        → 날씨를 묘사할 때는 'It's'를 주어로 사용하는 것이 더 자연스럽습니다. 또한 'a little'은 형용사 'chilly'와 'windy'를 수식하는 부사로 쓰입니다.\n\n2.  **❌ 학습자 원문 (As Said):** \"But it is limited, only for personal work.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"But it's limited to personal use.\"\n    *   **💎 비즈니스 표현 (Professional):** \"However, its usage is typically restricted to personal communication.\"\n    *   **💡 코칭 포인트:** 'Limited to'는 제한을 이야기할 때 흔히 쓰이는 자연스러운 연어입니다. 이 맥락에서는 'personal use' 또는 'personal communication'이 'personal work'보다 더 자연스러운 표현입니다.\n\n3.  **❌ 학습자 원문 (As Said):** \"That is my meaning.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"That's what I mean.\"\n    *   **💎 비즈니스 표현 (Professional):** \"That accurately reflects my intended message.\"\n    *   **💡 코칭 포인트:** 'That's what I mean'은 이해를 확인하거나 자신의 요점을 명확히 할 때 매우 흔하고 관용적인 표현입니다. 'my meaning'도 문법적으로 이해할 수 있지만, 'what I mean'이 대화에서 훨씬 자연스럽게 들립니다.\n\n---\n\n**3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)**\n\nCategory: Subject-Verb Agreement (주어-동사 수일치)\n\nJoey는 주어와 동사의 수를 일치시키는 데 가끔 실수를 하는 경향이 있었습니다. 특히 주어가 단수일 때 동사에 's'를 붙이지 않거나, 복수 주어에 단수 동사를 사용하는 경우가 보였습니다.\n\n| ❌ 원문 (As Said)                                                                | ✅ 교정 예시 (Corrected)                                                                 |\n| :------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------- |\n| \"I think this paragraph **divides** the kind of their communication way...\"       | \"I think this paragraph **divides** their communication methods...\"                      |\n| \"So I don't focus on, I didn't focus on their reason my friend **was** saying, and just I accept everything.\" | \"So I didn't focus on the reason my friend **was** saying, and I just accepted everything.\" |\n| \"I'm just saying my teacher, could you repeat for me, etc.?\"                     | \"I'm just saying to my teacher, 'Could you repeat for me?'\"                             |\n\n📌 **핵심 규칙:** 주어와 동사는 항상 수(단수/복수)를 일치시켜야 합니다. 단수 주어 뒤에는 단수 동사(예: he *goes*, the sky *is*), 복수 주어 뒤에는 복수 동사(예: they *go*, we *are*)가 와야 합니다. 또한, 동사 'say' 뒤에 사람을 언급할 때는 'to'를 붙여 'say to someone' 형태로 사용하는 것이 자연스럽습니다.\n\n🔁 **따라 읽기:**\n🗣️ \"I think this paragraph divides their communication methods.\"\n🗣️ \"I didn't focus on the reason my friend was saying.\"\n🗣️ \"I'm just saying to my teacher, 'Could you repeat for me?'\"\n\n---\n\n**4. 📗 어휘 확장 (Vocabulary Vault)**\n\n오늘 수업에서 나왔거나 비즈니스 환경에서 유용하게 쓸 수 있는 단어들을 정리해 보았습니다.\n\n1.  **clarify** /klǽrəfài/ (동사)\n    *   뜻: 명확하게 하다, 분명히 하다\n    *   실전 예문: Could you **clarify** the project timeline for me?\n\n2.  **thread** /θred/ (명사)\n    *   뜻: (온라인 대화의) 스레드, 연속된 메시지\n    *   실전 예문: I accidentally sent that message to the wrong **thread**.\n\n3.  **misunderstanding** /mìsʌndərstǽndɪŋ/ (명사)\n    *   뜻: 오해\n    *   실전 예문: There seems to be a **misunderstanding** regarding the meeting agenda.\n\n4.  **commit** /kəmít/ (동사)\n    *   뜻: 약속하다, 전념하다, (시간/돈 등을) 쏟다\n    *   실전 예문: We need to **commit** to the new strategy to achieve our goals.\n\n5.  **perseverance** /pə̀ːrsəvíərəns/ (명사)\n    *   뜻: 인내, 끈기\n    *   실전 예문: His **perseverance** in learning new skills is truly admirable.\n\n---\n\n**5. 📝 실전 복습 챌린지 (Practice)**\n\n오늘 배운 표현과 문법을 활용하여 다음 상황에 맞는 문장을 영작해 보세요.\n\n1.  **상황:** 당신은 어제 동료에게 보낸 이메일 내용이 명확하지 않았다고 생각합니다. 동료에게 다시 한번 설명을 요청하고 싶습니다.\n    *   **영작:** (Clarify를 사용하여)\n    *   **모범 답안:** Could you **clarify** what you meant in your last email?\n\n2.  **상황:** 회의 중 동료가 한 말의 의미를 정확히 파악했습니다. \"그것이 제가 의미한 바입니다.\"라고 말하고 싶습니다.\n    *   **영작:** (오늘 배운 자연스러운 표현을 사용하여)\n    *   **모범 답안:** Yes, **that's what I mean.**\n\n3.  **상황:** 당신은 새로운 프로젝트에 전념하고 있지만, 가끔 의사소통에 오해가 생겨 어려움을 겪는다고 말하고 싶습니다.\n    *   **영작:** (Commit과 misunderstanding을 사용하여 한 문장으로)\n    *   **모범 답안:** I'm fully **committed** to this new project, but sometimes I face challenges due to **misunderstandings** in communication.\n\n---\n\n**6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)**\n\n✨ **Good Job**: Joey, 오늘 수업 중 이 문장이 정말 좋았습니다:\n\"I think missed, missed time, missed meeting time is the bigger problem because we have an appointment with other people and everyone believes that's the meeting time. But if I missed that meeting time, that is the reason that people will not trust me. So it is a big problem.\"\n이 문장은 Joey의 생각을 아주 논리적이고 명확하게 전달했습니다. 'missed meeting time'이 왜 더 큰 문제인지, 그리고 그것이 'trust'와 어떻게 연결되는지 구체적으로 설명한 점이 인상 깊었습니다. 👍\n\n🚀 **내일의 한 문장**: 다음 수업 시작 시 튜터에게 오늘 배운 표현을 활용하여 이렇게 말해보세요.\n\"I've been trying to **clarify** some points from our last discussion.\"\n\n---\n\n**[성과 지표]**\n\n**유창성 점수:** 8/10\n\n**근거:** Joey는 다양한 주제에 대해 막힘없이 자신의 의견을 표현하며 대화를 이끌어가는 능력이 뛰어납니다. 질문에 대한 이해도 빠르고, 복잡한 상황도 비교적 상세하게 설명할 수 있습니다. 가끔 어색하거나 직역투의 표현이 나오지만, 이는 의미 전달에 큰 지장을 주지 않는 수준입니다. 특히 궁금한 점을 바로 질문하는 적극성이 유창성 향상에 긍정적인 영향을 미칩니다.\n\n**다음 수업 '원포인트 액션 플랜':**\n다음 수업에서는 **'주어-동사 수일치'**에 조금 더 신경 써서 말하는 연습을 해봅시다. 문장을 말하기 전에 주어가 단수인지 복수인지 한 번 더 확인하는 습관을 들이면 정확성이 훨씬 높아질 거예요!\n\n위 내용을 바탕으로:\n1. 먼저 오늘 수업에서 내가 틀렸거나 어색했던 표현을 하나 골라서, 관련된 상황을 영어로 질문해줘.\n2. 내가 영어로 대답하면, 자연스러운지 확인하고 더 나은 표현이 있으면 알려줘.\n3. 특히 \"반복 실수 패턴\"에서 지적된 부분을 집중적으로 연습시켜줘.\n4. 이런 식으로 오늘 배운 표현들을 하나씩 복습하자.\n5. 한국어 설명은 필요할 때만 간단히, 대화는 최대한 영어로 진행해줘.\n\n그럼 시작하자!";
+        function startReview(){navigator.clipboard.writeText(REVIEW_PROMPT).then(()=>{showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)}).catch(()=>{const t=document.createElement('textarea');t.value=REVIEW_PROMPT;document.body.appendChild(t);t.select();document.execCommand('copy');document.body.removeChild(t);showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)})}
+        function showToast(){const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500)}
+        function switchTab(n){document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',n==='feedback'?i===0:i===1));document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));document.getElementById('tab-'+n).classList.add('active')}
+    </script>
+</body>
+</html>
