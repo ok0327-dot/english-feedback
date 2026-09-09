@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#0f0f13"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="당근영어"><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="icon" type="image/png" sizes="192x192" href="icon-192.png"><script src="install-banner.js" defer></script><script src="sw-reg.js" defer></script>
+    <title>전화영어 복습 - 2026년 09월 09일</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Noto Sans KR',sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.75;min-height:100vh}
+        .header{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);border-bottom:1px solid rgba(255,255,255,.06);padding:48px 24px 40px;text-align:center}
+        .header-date{font-size:13px;color:#94a3b8;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+        .header h1{font-size:28px;font-weight:700;color:#f1f5f9;margin-bottom:16px}
+        .header-meta{display:flex;justify-content:center;gap:24px;font-size:14px;color:#64748b}
+        .header-meta span{display:flex;align-items:center;gap:6px}
+        .cta-section{text-align:center;padding:40px 24px}
+        .cta-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:linear-gradient(135deg,#38bdf8,#818cf8);color:#fff;font-size:16px;font-weight:600;font-family:'Noto Sans KR',sans-serif;border:none;border-radius:50px;cursor:pointer;transition:all .3s;text-decoration:none;box-shadow:0 4px 24px rgba(56,189,248,.25)}
+        .cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(56,189,248,.35)}
+        .cta-btn svg{width:20px;height:20px}
+        .cta-sub{margin-top:12px;font-size:13px;color:#64748b}
+        .toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#38bdf8;padding:14px 28px;border-radius:12px;font-size:14px;font-weight:500;border:1px solid rgba(56,189,248,.2);box-shadow:0 8px 32px rgba(0,0,0,.4);opacity:0;transition:all .4s cubic-bezier(.16,1,.3,1);z-index:1000}
+        .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+        .container{max-width:720px;margin:0 auto;padding:0 24px 80px}
+        .tabs{display:flex;gap:4px;background:#1a1a24;padding:4px;border-radius:12px;margin-bottom:32px}
+        .tab{flex:1;padding:12px;text-align:center;font-size:14px;font-weight:500;color:#64748b;background:0 0;border:none;border-radius:8px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all .2s}
+        .tab.active{background:#262636;color:#f1f5f9}
+        .tab-content{display:none}.tab-content.active{display:block}
+        .feedback h2{font-size:18px;font-weight:700;color:#f1f5f9;margin:36px 0 16px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.06)}
+        .feedback h2:first-child{margin-top:0}
+        .feedback p{margin:8px 0;color:#cbd5e1}
+        .feedback .item{padding:6px 0 6px 16px;border-left:2px solid #334155;margin:6px 0;color:#cbd5e1}
+        .feedback .numbered{padding:8px 0 8px 16px;color:#cbd5e1}
+        .feedback .numbered strong{color:#38bdf8}
+        .feedback strong{color:#f1f5f9}
+        .feedback code{background:#1e293b;padding:2px 8px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#38bdf8}
+        .feedback table{width:100%;border-collapse:collapse;margin:12px 0}
+        .feedback th,.feedback td{padding:10px 14px;text-align:left;border-bottom:1px solid #262636}
+        .feedback th{color:#94a3b8;font-weight:500;font-size:13px}
+        .feedback td{color:#cbd5e1}
+        .arrow{color:#38bdf8;font-weight:700}
+        .transcript{background:#1a1a24;border-radius:12px;padding:28px;font-size:14px;line-height:2;color:#94a3b8;white-space:pre-wrap;word-break:break-word;font-family:'JetBrains Mono','Noto Sans KR',monospace}
+        .transcript .tutor{color:#38bdf8}
+        .transcript .student{color:#a78bfa}
+        @media(max-width:640px){.header{padding:32px 16px}.header h1{font-size:22px}.cta-btn{padding:14px 28px;font-size:15px}.container{padding:0 16px 60px}}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-date">2026년 09월 09일</div>
+        <h1>📚 전화영어 복습</h1>
+        <div class="header-meta">
+            <span>⏱ 20분 43초</span>
+            <span>🎙 전화영어_025180304_20260909080016.m4a</span>
+        </div>
+    </div>
+    <div class="cta-section">
+        <button class="cta-btn" onclick="startReview()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Gemini에서 복습 대화 시작하기
+        </button>
+        <div class="cta-sub">클릭하면 프롬프트가 복사되고 Gemini가 열립니다</div>
+    </div>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('feedback')">📋 AI 피드백</button>
+            <button class="tab" onclick="switchTab('transcript')">🎙 수업 전사</button>
+        </div>
+        <div id="tab-feedback" class="tab-content active">
+            <div class="feedback"><p>안녕하세요, Joey! 오늘 저녁 약속부터 수업 중 궁금했던 표현까지 활발하게 질문하고 참여해주셔서 정말 좋았습니다. 특히 어려운 상황 설명도 끝까지 이해하려 노력하고, 자신의 생각을 논리적으로 표현하려는 모습이 인상 깊었어요. 오늘 배운 표현들을 잘 활용해서 비즈니스 환경에서도 자신감 있게 소통하시길 바랍니다!</p>
+<br>
+<br>
+<p><strong>0. 📌 Topic</strong></p>
+<p>Topic: Discussing apologies, conflict resolution, and the role of time in forgiveness.</p>
+<br>
+<p><strong>1. 📊 오늘의 대화 요약 (Summary)</strong></p>
+<p>오늘은 사과와 관련된 다양한 영어 표현들("make amends", "overreact", "cool off", "that wasn't fair of me", "make it up to you")을 학습하고, 사과를 하는 상황과 받는 상황에 대한 Joey의 개인적인 의견을 나누었습니다. 또한 친구와의 갈등 상황에서 어떻게 대처할지에 대한 문제 해결 시나리오를 통해 의사소통 전략을 고민하고, 용서에 있어 시간의 중요성에 대해서도 이야기했습니다.</p>
+<br>
+<p><strong>2. 💬 유창성 업그레이드 (Fluency & Natural Flow)</strong></p>
+<p>Joey가 말한 문장 중 의미는 통하지만, 원어민이 들었을 때 좀 더 자연스럽게 들릴 수 있는 표현들을 살펴볼게요.</p>
+<br>
+<div class="numbered"><strong>1.</strong> ❌ <strong>학습자 원문 (As Said):</strong> "Today, we have a dinner with my coworker."</div>
+<p>✅ <strong>자연스러운 표현 (Natural):</strong> "Today, I'm having dinner with my coworker."</p>
+<p>💎 <strong>비즈니스 표현 (Professional):</strong> "Today, I'm scheduled to have dinner with my colleague."</p>
+<p>💡 <strong>코칭 포인트:</strong> Using the present continuous tense (e.g., "I'm having") is very common and natural for future plans or arrangements. Also, "have dinner" usually doesn't require an article "a".</p>
+<p>'현재 진행형(I'm having)'은 가까운 미래의 계획이나 약속을 말할 때 매우 자연스럽고 흔하게 사용됩니다. 또한, 'have dinner'는 일반적으로 관사 'a' 없이 사용됩니다.</p>
+<br>
+<div class="numbered"><strong>2.</strong> ❌ <strong>학습자 원문 (As Said):</strong> "I think I'm just half."</div>
+<p>✅ <strong>자연스러운 표현 (Natural):</strong> "I think it's fifty-fifty." or "I'm a bit torn."</p>
+<p>💎 <strong>비즈니스 표현 (Professional):</strong> "I believe it depends on the specific circumstances."</p>
+<p>💡 <strong>코칭 포인트:</strong> "Fifty-fifty" is a common idiomatic expression for something that is equally divided or balanced. "Torn" describes a feeling of being unable to decide between two options.</p>
+<p>'fifty-fifty'는 반반이거나 균형 잡힌 상황을 나타내는 흔한 관용구입니다. 'torn'은 두 가지 선택지 사이에서 결정을 내리기 어려운 감정을 묘사합니다.</p>
+<br>
+<div class="numbered"><strong>3.</strong> ❌ <strong>학습자 원문 (As Said):</strong> "I'm so easy a person and some people might think he is so easy a person, so I always get walked all over."</div>
+<p>✅ <strong>자연스러운 표현 (Natural):</strong> "I'm such an easygoing person that some people might take advantage of me."</p>
+<p>💎 <strong>비즈니스 표현 (Professional):</strong> "I am concerned that my accommodating nature could be perceived as a weakness, leading to potential exploitation."</p>
+<p>💡 <strong>코칭 포인트:</strong> The structure "such a/an + adjective + noun" is used to emphasize a quality. "Easygoing" is a natural adjective for someone who is relaxed and tolerant. "Take advantage of someone" is a common idiom for exploiting someone's kindness.</p>
+<p>'such a/an + 형용사 + 명사' 구조는 어떤 특성을 강조할 때 사용됩니다. 'easygoing'은 편안하고 관대한 사람을 묘사하는 자연스러운 형용사입니다. 'take advantage of someone'은 누군가의 친절함을 이용하는 것을 의미하는 흔한 관용구입니다.</p>
+<br>
+<p><strong>3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)</strong></p>
+<p>Category: <strong>Missing or Incorrect Prepositions (전치사 누락 또는 오용)</strong></p>
+<p>Joey의 대화에서 특정 동사나 명사 뒤에 필요한 전치사가 빠지거나, 문맥에 맞지 않는 전치사가 사용되는 경우가 반복적으로 나타났습니다. 전치사는 문장의 의미를 명확하게 하고 단어 간의 관계를 설정하는 데 매우 중요합니다.</p>
+<br>
+<table>
+<tr><th>❌ <strong>원문 (As Said)</strong></th><th>✅ <strong>교정 예시 (Corrected)</strong></th></tr>
+<tr><td>"I'm not admitting <strong>about</strong> another person, not direct person."</td><td>"I'm not admitting <strong>to</strong> another person, not the direct person."</td></tr>
+<tr><td>"Enough talk <strong>about</strong> that issue <strong>to</strong> talk to Friend A."</td><td>"Enough talk <strong>about</strong> that issue; I don't need to talk <strong>to</strong> Friend A about it." (or "No need to talk to Friend A about that issue.")</td></tr>
+<tr><td>"I'm not sure that I'm, my understanding..."</td><td>"I'm not sure <strong>about</strong> my understanding..."</td></tr>
+<tr><td>"don't mention <strong>about</strong> that issue."</td><td>"don't mention that issue." (or "don't mention <strong>anything about</strong> that issue.")</td></tr>
+</table>
+<br>
+<p>📌 <strong>핵심 규칙:</strong> 동사나 명사가 어떤 전치사와 함께 쓰이는지(collocation)를 익히고, 문맥에 맞는 전치사를 정확히 사용하는 연습이 필요합니다. 특히 'about'은 '무엇에 관하여'라는 의미로 자주 쓰이지만, 모든 경우에 필요한 것은 아니며, 특정 동사(예: mention) 뒤에는 직접 목적어가 오기도 합니다.</p>
+<br>
+<p>🔁 <strong>따라 읽기:</strong></p>
+<p>🗣️ "I'm not admitting to another person, not the direct person."</p>
+<p>🗣️ "I'm not sure about my understanding."</p>
+<p>🗣️ "Don't mention that issue."</p>
+<br>
+<p><strong>4. 📗 어휘 확장 (Vocabulary Vault)</strong></p>
+<p>오늘 대화에서 유용하게 쓰일 수 있는 어휘들을 정리해 보았습니다.</p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>colleague</strong> /kɒliːɡ/ (명사)</div>
+<p>뜻: (직장) 동료</p>
+<p>실전 예문: I'm having dinner with a <strong>colleague</strong> tonight to discuss our new project.</p>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>accommodating</strong> /əˈkɒmədeɪtɪŋ/ (형용사)</div>
+<p>뜻: 협조적인, 잘 맞춰주는</p>
+<p>실전 예문: We need an <strong>accommodating</strong> partner who is willing to adapt to our schedule.</p>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>exploit</strong> /ɪkˈsplɔɪt/ (동사)</div>
+<p>뜻: (부당하게) 이용하다, 착취하다</p>
+<p>실전 예문: We must ensure that our business practices do not <strong>exploit</strong> vulnerable communities.</p>
+<br>
+<div class="numbered"><strong>4.</strong> <strong>resolve</strong> /rɪˈzɒlv/ (동사)</div>
+<p>뜻: (문제 등을) 해결하다; (결심)하다</p>
+<p>실전 예문: Let's try to <strong>resolve</strong> this issue before it escalates further.</p>
+<br>
+<div class="numbered"><strong>5.</strong> <strong>forgiveness</strong> /fərˈɡɪvnəs/ (명사)</div>
+<p>뜻: 용서</p>
+<p>실전 예문: True <strong>forgiveness</strong> can be a powerful step towards healing and moving forward.</p>
+<br>
+<p><strong>5. 📝 실전 복습 챌린지 (Practice)</strong></p>
+<p>오늘 배운 표현과 문법을 활용하여 영작해 보세요.</p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>상황:</strong> 오늘 저녁에 중요한 고객과 저녁 식사 약속이 있습니다.</div>
+<p><strong>영작:</strong> (오늘 배운 'have dinner with'를 활용하여)</p>
+<p><details></p>
+<p><summary>모범 답안</summary></p>
+<p>"I'm having dinner with an important client tonight."</p>
+<p></details></p>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>상황:</strong> 저는 너무 잘 맞춰주는 성격이라 가끔 사람들이 저를 이용할까 봐 걱정됩니다.</div>
+<p><strong>영작:</strong> (오늘 배운 'such a/an'과 'take advantage of'를 활용하여)</p>
+<p><details></p>
+<p><summary>모범 답안</summary></p>
+<p>"I'm such an accommodating person that I sometimes worry people might take advantage of me."</p>
+<p></details></p>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>상황:</strong> 복잡한 갈등 상황에서는 서두르지 않고 시간을 가지고 문제를 해결하는 것이 중요하다고 생각합니다.</div>
+<p><strong>영작:</strong> (오늘 배운 'resolve'와 'time helps'의 아이디어를 활용하여)</p>
+<p><details></p>
+<p><summary>모범 답안</summary></p>
+<p>"In complex conflict situations, I believe it's important to take time and resolve the issue without rushing, as time often helps with understanding and forgiveness."</p>
+<p></details></p>
+<br>
+<p><strong>6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)</strong></p>
+<br>
+<p>✨ <strong>Good Job:</strong> "In my country, people used to bow their head. And some people used to put their hands together when they feel sorry because that is culture and we just care about others' minds."</p>
+<p>Joey가 한국의 사과 문화에 대해 설명한 이 문장은 매우 명확하고 구체적이었습니다. 'used to'를 사용하여 과거의 습관적인 행동을 잘 표현했고, 'because'를 통해 이유를 설명하는 논리적인 전개도 훌륭했습니다. 문화적 차이를 영어로 잘 전달하는 모습이 아주 인상 깊었어요!</p>
+<br>
+<p>🚀 <strong>내일의 한 문장:</strong> "I'm curious to hear your thoughts on how cultural differences impact business negotiations."</p>
+<p>(오늘 배운 'colleague'나 'resolve'와 같은 비즈니스 관련 어휘를 활용하여 다음 수업에서 튜터에게 던질 수 있는 질문입니다. 오늘 문화 이야기를 나눈 것과 연결하여 자연스럽게 대화를 시작해 보세요.)</p>
+<br>
+<br>
+<p><strong>[성과 지표]</strong></p>
+<p><strong>유창성 점수(10점 만점): 7점</strong></p>
+<br>
+<p><strong>근거:</strong> Joey는 다양한 주제에 대해 자신의 의견을 비교적 막힘없이 표현하며 대화를 이끌어가는 능력이 뛰어납니다. 특히 질문을 이해하고 답변을 구성하는 속도가 빠르고, 새로운 표현을 배우려는 적극적인 태도가 유창성 향상에 큰 도움이 됩니다. 다만, 특정 표현이나 문법 구조에서 약간의 어색함이 발견되어 자연스러운 흐름을 방해하는 경우가 있었고, 이는 오늘 '유창성 업그레이드' 섹션에서 다룬 내용입니다.</p>
+<br>
+<p><strong>다음 수업 '원포인트 액션 플랜':</strong></p>
+<p>다음 수업에서는 <strong>"전치사(Prepositions)의 정확한 사용"</strong>에 집중하여 연습해 보면 좋겠습니다. 오늘 다룬 'Target Grammar'처럼, 동사나 명사 뒤에 오는 전치사를 좀 더 신경 써서 사용하면 문장의 정확성과 자연스러움을 동시에 높일 수 있을 거예요. 특정 동사(예: admit to, mention)나 명사(예: concern about)와 함께 쓰이는 전치사 짝꿍들을 눈여겨보고, 다음 대화에서 의식적으로 활용해보는 것을 추천합니다!</p></div>
+        </div>
+        <div id="tab-transcript" class="tab-content">
+            <div class="transcript"><span class="tutor">[Tutor]</span> Hello, good morning.
+<span class="student">[Student]</span> Good morning, how are you today?
+<span class="tutor">[Tutor]</span> Hi, well, yeah, I&#x27;m good. I&#x27;m good. How are you today, Joey?
+<span class="student">[Student]</span> Oh, I&#x27;m pretty good.
+<span class="tutor">[Tutor]</span> Any plans for today?
+<span class="student">[Student]</span> Today, we have a dinner with my coworker. So yeah, so tonight I am going to drink beer and eat some night food. And talk with my co-workers, colleagues. Yeah, that&#x27;s my plan. And morning and afternoon, just work in my office. So it&#x27;s a normal Wednesday. How about your plans?
+<span class="tutor">[Tutor]</span> Oh yeah, pretty quiet. Yeah, it&#x27;s already evening. So my plans are teaching this evening.
+<span class="student">[Student]</span> Ah, yes, I see. And teacher, I have one question. If I say, &quot;How are you?&quot; or &quot;What&#x27;s it going today?&quot; or &quot;How&#x27;s it going today?&quot; How can I say that expression?
+<span class="tutor">[Tutor]</span> &quot;How is it going today?&quot;
+<span class="student">[Student]</span> &quot;How was it going?&quot; &quot;How is it?&quot; &quot;How is it going today?&quot; Right. &quot;How is it going today?&quot; &quot;How is it going today?&quot;
+<span class="tutor">[Tutor]</span> Mmm...
+<span class="student">[Student]</span> Okay. I see. &quot;How is it going today?&quot; Okay. &quot;How&#x27;s it going today?&quot; &quot;How is it going?&quot; &quot;How was&quot; or &quot;How is&quot;? &quot;How is it going?&quot; I see. &quot;How is it going today?&quot; Okay. I want to use that expression. &quot;How is it going today?&quot;
+<span class="tutor">[Tutor]</span> And today we&#x27;re looking at page 25, I believe. Yes, section 23, forgive me, this subject. So did you want to look at the vocabulary?
+<span class="student">[Student]</span> Oh, yes. The use of vocabulary. &quot;Make amends.&quot; &quot;Amends.&quot; &quot;Amends.&quot; &quot;Amends.&quot; &quot;Make amends.&quot; &quot;Amends.&quot; Right. &quot;Amends.&quot; &quot;Make amends.&quot; &quot;To try to say sorry by doing something. I bought flowers to make amends.&quot; &quot;Amends.&quot; Is it the right expression? Right pronunciation? &quot;Amends.&quot;
+<span class="tutor">[Tutor]</span> She bought flowers to make amends.
+<span class="tutor">[Tutor]</span> &quot;Overreact.&quot;
+<span class="tutor">[Tutor]</span> &quot;To respond too strongly to something small.&quot;
+<span class="student">[Student]</span> &quot;Sorry, I think I overreacted earlier.&quot; &quot;Sorry, I think I overreacted earlier.&quot;
+<span class="tutor">[Tutor]</span> &quot;Cool off.&quot;
+<span class="tutor">[Tutor]</span> &quot;To take a break and calm down.&quot;
+<span class="student">[Student]</span> &quot;Cool off.&quot; &quot;Let&#x27;s both cool off and talk later.&quot; &quot;I&#x27;ll talk to later.&quot;
+<span class="tutor">[Tutor]</span> Okay, yeah, &quot;Let&#x27;s both cool off and talk later.&quot; And yeah, &quot;I think I overreacted.&quot;
+<span class="student">[Student]</span> &quot;Overreact.&quot; &quot;Overreacted.&quot; &quot;Overreacted.&quot; &quot;Overreacted.&quot; Okay. &quot;Overreacted.&quot; Okay. The... the useful expression?
+<span class="tutor">[Tutor]</span> Hmm. &quot;That wasn&#x27;t fair of me.&quot;
+<span class="tutor">[Tutor]</span> &quot;Used to admit that you were wrong or harsh.&quot;
+<span class="student">[Student]</span> &quot;Used to admit.&quot; &quot;That wasn&#x27;t fair of me.&quot; Hmm. &quot;That wasn&#x27;t fair of me.&quot; Oh, just I feel that expression, &quot;to complain of something,&quot; but that explanation is a little different, right? That is taking my wrong act or wrong activity, right? But I just, I guess just that meaning is, &quot;That wasn&#x27;t fair of me,&quot; it is &quot;to complain about some situation.&quot; What is better? Correct?
+<span class="tutor">[Tutor]</span> So it&#x27;s used to admit or say that you were wrong. So you, you didn&#x27;t make a fair decision, so you were incorrect.
+<span class="student">[Student]</span> I see. Maybe just, &quot;admit.&quot; &quot;Admit.&quot; &quot;Admit.&quot; &quot;Admit.&quot; Yeah. Just a moment. &quot;Admit.&quot; &quot;Admit.&quot; &quot;Admit.&quot; &quot;Admit.&quot; Yeah. Just a moment. Or &quot;to say,&quot; &quot;Used to say that you were wrong.&quot; &quot;I was wrong.&quot; &quot;Used to say.&quot; Just a moment. &quot;Admit.&quot; &quot;Admit.&quot;
+<span class="student">[Student]</span> Okay. I see. That is of that my wrong activity or wrong doing something. Or &quot;admit.&quot;
+<span class="tutor">[Tutor]</span> So you&#x27;re saying that you were wrong.
+<span class="student">[Student]</span> Well, that expression, &quot;That wasn&#x27;t fair of me,&quot; that situation is not fair, right? But that is similar to &quot;the complaint of something&quot; and not or make some of my activities.
+<span class="tutor">[Tutor]</span> So it&#x27;s different grammar. So, and this means, &quot;That wasn&#x27;t fair of me.&quot; &quot;That wasn&#x27;t fair of me to do.&quot; &quot;That wasn&#x27;t fair of me to say.&quot;
+<span class="student">[Student]</span> It means, &quot;That&#x27;s my fault,&quot; right? Just a moment. Sorry, teacher.
+<span class="tutor">[Tutor]</span> So it&#x27;s saying that behavior wasn&#x27;t right. It wasn&#x27;t fair. It wasn&#x27;t correct.
+<span class="tutor">[Tutor]</span> So it&#x27;s saying, &quot;I was wrong.&quot;
+<span class="student">[Student]</span> &quot;I was wrong.&quot; That is &quot;admit the wrong.&quot; Okay, just a moment.
+<span class="student">[Student]</span> Okay, I see. &quot;That wasn&#x27;t fair of me.&quot;
+<span class="student">[Student]</span> &quot;That wasn&#x27;t.&quot; I see, understand. &quot;That wasn&#x27;t fair of me.&quot; &quot;That&#x27;s my fault.&quot; &quot;That&#x27;s my fault.&quot; Okay, I understand.
+<span class="tutor">[Tutor]</span> Because you&#x27;re saying &quot;of me,&quot; so that means &quot;of my actions.&quot;
+<span class="student">[Student]</span> &quot;Fair of me.&quot; &quot;That&#x27;s fair of me.&quot;
+<span class="tutor">[Tutor]</span> Okay, &quot;Let me make it up to you.&quot;
+<span class="student">[Student]</span> &quot;Let me make it up to you.&quot;
+<span class="tutor">[Tutor]</span> &quot;Used when you want someone to apologize.&quot;
+<span class="student">[Student]</span> &quot;Let me make it up to you.&quot; &quot;Let me make it up to you.&quot; &quot;Let me make it up to you.&quot; &quot;I&#x27;m sorry.&quot; &quot;Let me make it up to you.&quot; Okay.
+<span class="tutor">[Tutor]</span> &quot;Let me do something for you.&quot; &quot;Let me make it up to you.&quot;
+<span class="student">[Student]</span> Okay, I understand. Good.
+<span class="tutor">[Tutor]</span> So the first question here, part A, &quot;What body language shows someone feels sorry in your country?&quot;
+<span class="student">[Student]</span> In my country, people used to bow their head. And some people used to put their hands together when they feel sorry because that is culture and we just care about others&#x27; minds. And sometimes, I&#x27;ve seen some people use their right hand and attach it to their nearby heart, &quot;I&#x27;m sorry,&quot; and then they say, &quot;I&#x27;m sorry.&quot; Yeah, I think that&#x27;s also a nice way to express sorry. So yeah, usually my country people use the bowed head, and some people&#x27;s hands are together. Yeah, sure. And how about your country?
+<span class="tutor">[Tutor]</span> Yes, there&#x27;s the avoid eye contact or nervous, nervous smiling. They might say, &quot;Oh, sorry,&quot; or they might wave or apologize. Do you comment how about the body language? It depends. Yeah, any variation that people might smile or lower their head or hands together.
+<span class="student">[Student]</span> Ah, yes. Understand. Good.
+<span class="tutor">[Tutor]</span> And which would you prefer? &quot;Having to apologize&quot; or &quot;receiving an apology?&quot; &quot;Having to apologize&quot; or &quot;receiving an apology?&quot;
+<span class="student">[Student]</span> I think it depends on who is at fault, because if some guy always says &quot;having to apologize,&quot; it is not solving a problem. Yeah, I think first we think about who is more at fault and who caused the problem, so and then we will decide &quot;having to apologize&quot; or &quot;receiving an apology.&quot; Yeah, so it...
+<span class="tutor">[Tutor]</span> It depends on the problem or some situation of conflict.
+<span class="tutor">[Tutor]</span> Okay, so in your personal life, which would you prefer doing? Do you prefer apologizing or do you prefer receiving?
+<span class="student">[Student]</span> I think I&#x27;m just half. If I feel that that is my fault and then I make that problem, at that time I&#x27;m just directly giving an apology to other people. But I think if it is not my fault and it is some serious problem and that is not my fault and some people make a problem, certainly, and in the meantime I&#x27;m just waiting to receive an apology or just a fight. Yeah, if I always give an apology, I&#x27;m so easy a person and some people might think he is so easy a person, so I always get walked all over. Yeah, so I don&#x27;t, I hate that situation, so just I select, first I analyze that problem and then I will decide to give an apology or not.
+<span class="tutor">[Tutor]</span> Give an apology.
+<span class="student">[Student]</span> Yeah, give an apology.
+<span class="tutor">[Tutor]</span> Apology.
+<span class="student">[Student]</span> Apology.
+<span class="tutor">[Tutor]</span> Apology.
+<span class="student">[Student]</span> Apology, yeah.
+<span class="tutor">[Tutor]</span> Apology or apologize.
+<span class="tutor">[Tutor]</span> Apologize and apology are two different words.
+<span class="tutor">[Tutor]</span> Apologize is the verb.
+<span class="student">[Student]</span> It&#x27;s a different word. Apology. What is the apology?
+<span class="tutor">[Tutor]</span> That is the noun.
+<span class="student">[Student]</span> Apology?
+<span class="tutor">[Tutor]</span> Yes, noun.
+<span class="student">[Student]</span> The noun, yeah. Apology is the noun and apologize is the verb, right? Yeah, to apologize. Yeah, and this sentence, this textbook sentence, &quot;have to apologize,&quot; right? Yeah, yes. Okay, good. &quot;Having to apologize.&quot; &quot;Having to swim.&quot; &quot;Having to walk.&quot; Yeah, &quot;having to walk.&quot; &quot;Having to apologize.&quot; &quot;Having to walk.&quot; Okay. Where they next they say &quot;receiving,&quot; so they were &quot;receiving an apology.&quot; It&#x27;s a little different. &quot;Receiving an apology&quot; and &quot;having to apologize.&quot; I see.
+<span class="tutor">[Tutor]</span> And the next problem solving, would you like to read?
+<span class="student">[Student]</span> Okay, no problem. The situation: &quot;Friend A secretly tells you that Friend B is still upset about the fight you two had.&quot; Oh, teacher, I&#x27;m so sorry, my textbook has some erased words during the process to print out, so some words are erased. Please understand. &quot;Situation: Friend A secretly tells you that Friend B is still upset about the fight you two had. You thought everything had been resolved, so you are shocked to hear this. You want to make things right, but bringing it up with Friend B might put Friend A in an awkward position. Would you approach Friend B to apologize and try to resolve personal things or pretend you didn&#x27;t hear anything from Friend A?&quot;
+<span class="student">[Student]</span> Okay, I see. So if I summarize that sentence, Friend B is still upset because of my fault, and Friend A transferred that situation, right?
+<span class="tutor">[Tutor]</span> Well, you thought you and Friend B, the fight was solved. Solved? You thought everything was okay. You had a fight, but you thought you made up. But your Friend A says, &quot;Oh, they&#x27;re still mad at you.&quot;
+<span class="tutor">[Tutor]</span> You thought the problem was solved, but another friend says, &quot;Oh no, they&#x27;re still upset.&quot;
+<span class="student">[Student]</span> I see. That problem is the me as a Friend B. So I think, I think that is more important to communicate with Friend B. So I think Friend B is saying something. And I&#x27;m not sure that is right or not, that&#x27;s true or not. But he transferred something. So I just believe and talk to Friend B. And Friend A&#x27;s comment is just his opinion or his thinking, so just, it&#x27;s just that information. I&#x27;m just saying, &quot;Talk to Friend B,&quot; and just frankly speaking, yeah, it&#x27;s your... and I&#x27;m not sure that I&#x27;m, my understanding...
+<span class="tutor">[Tutor]</span> Yeah, so they&#x27;re worried that maybe Friend B might be upset at Friend A, yeah, telling you. Yeah, so that&#x27;s where they&#x27;re worried.
+<span class="student">[Student]</span> Okay, first I&#x27;m just going to say something with my, uh, Friend B. Uh, Friend A, yes, and, uh, Friend B, I&#x27;m sorry, Friend B. And then actually I&#x27;m not, I&#x27;m not admitting about another person, not direct person. Yeah, the problem made to me and problem the Friend B. So just I&#x27;m solving that problem with Friend B. Yeah, enough talk about that issue to talk to Friend A.
+<span class="tutor">[Tutor]</span> Okay, yeah, maybe don&#x27;t talk about Friend A or don&#x27;t mention.
+<span class="student">[Student]</span> Yeah, yeah, that they don&#x27;t, yeah, you&#x27;re right, don&#x27;t mention about that issue.
+<span class="tutor">[Tutor]</span> And the wrap-up question, &quot;Do you think time helps with forgiveness?&quot;
+<span class="student">[Student]</span> Uh-huh. Oh yeah, that is so good idea. And that is a good solution, the time. Because our mind is so urgent. And these days, every person serves the directory. But something needs some time because if we have enough time, my mind is more released and more acceptable. So if we have such a big fight and big, how can I say, big fight and the issue, I&#x27;m just, I, I think we need more time. Yeah, because time gives us some, how can I say, mindset or mind release. So yeah, that is a good way to, yeah, the time after our forgiveness.
+<span class="tutor">[Tutor]</span> Yeah, time helps you calm down.
+<span class="student">[Student]</span> Yeah, you&#x27;re right.
+<span class="tutor">[Tutor]</span> Calm down and cool off.
+<span class="student">[Student]</span> Yes.
+<span class="tutor">[Tutor]</span> After a fight or conflict.
+<span class="student">[Student]</span> Yeah. Some guys said if we fight and then we will count just three.
+<span class="tutor">[Tutor]</span> Yeah, that is to make a cool off time. Oh, yeah, yeah, the counting. Yeah, that&#x27;s definitely a helpful tool. Yeah, yeah, yeah, you&#x27;re right.
+<span class="tutor">[Tutor]</span> Well, that&#x27;s about it for time. I will send you corrections in a moment. Do you have any questions?
+<span class="student">[Student]</span> No, thank you so much, teacher. Have a nice day.
+<span class="tutor">[Tutor]</span> Okay, you&#x27;re welcome. Have a great day.</div>
+        </div>
+    </div>
+    <div class="toast" id="toast">✅ 프롬프트가 복사되었습니다!</div>
+    <script>
+        const REVIEW_PROMPT="너는 나의 영어 회화 복습 파트너야. 오늘 내 전화영어 수업 내용을 기반으로 대화하면서 복습을 도와줘.\n\n[오늘 수업 전사 내용]\n[Tutor] Hello, good morning.\n[Student] Good morning, how are you today?\n[Tutor] Hi, well, yeah, I'm good. I'm good. How are you today, Joey?\n[Student] Oh, I'm pretty good.\n[Tutor] Any plans for today?\n[Student] Today, we have a dinner with my coworker. So yeah, so tonight I am going to drink beer and eat some night food. And talk with my co-workers, colleagues. Yeah, that's my plan. And morning and afternoon, just work in my office. So it's a normal Wednesday. How about your plans?\n[Tutor] Oh yeah, pretty quiet. Yeah, it's already evening. So my plans are teaching this evening.\n[Student] Ah, yes, I see. And teacher, I have one question. If I say, \"How are you?\" or \"What's it going today?\" or \"How's it going today?\" How can I say that expression?\n[Tutor] \"How is it going today?\"\n[Student] \"How was it going?\" \"How is it?\" \"How is it going today?\" Right. \"How is it going today?\" \"How is it going today?\"\n[Tutor] Mmm...\n[Student] Okay. I see. \"How is it going today?\" Okay. \"How's it going today?\" \"How is it going?\" \"How was\" or \"How is\"? \"How is it going?\" I see. \"How is it going today?\" Okay. I want to use that expression. \"How is it going today?\"\n[Tutor] And today we're looking at page 25, I believe. Yes, section 23, forgive me, this subject. So did you want to look at the vocabulary?\n[Student] Oh, yes. The use of vocabulary. \"Make amends.\" \"Amends.\" \"Amends.\" \"Amends.\" \"Make amends.\" \"Amends.\" Right. \"Amends.\" \"Make amends.\" \"To try to say sorry by doing something. I bought flowers to make amends.\" \"Amends.\" Is it the right expression? Right pronunciation? \"Amends.\"\n[Tutor] She bought flowers to make amends.\n[Tutor] \"Overreact.\"\n[Tutor] \"To respond too strongly to something small.\"\n[Student] \"Sorry, I think I overreacted earlier.\" \"Sorry, I think I overreacted earlier.\"\n[Tutor] \"Cool off.\"\n[Tutor] \"To take a break and calm down.\"\n[Student] \"Cool off.\" \"Let's both cool off and talk later.\" \"I'll talk to later.\"\n[Tutor] Okay, yeah, \"Let's both cool off and talk later.\" And yeah, \"I think I overreacted.\"\n[Student] \"Overreact.\" \"Overreacted.\" \"Overreacted.\" \"Overreacted.\" Okay. \"Overreacted.\" Okay. The... the useful expression?\n[Tutor] Hmm. \"That wasn't fair of me.\"\n[Tutor] \"Used to admit that you were wrong or harsh.\"\n[Student] \"Used to admit.\" \"That wasn't fair of me.\" Hmm. \"That wasn't fair of me.\" Oh, just I feel that expression, \"to complain of something,\" but that explanation is a little different, right? That is taking my wrong act or wrong activity, right? But I just, I guess just that meaning is, \"That wasn't fair of me,\" it is \"to complain about some situation.\" What is better? Correct?\n[Tutor] So it's used to admit or say that you were wrong. So you, you didn't make a fair decision, so you were incorrect.\n[Student] I see. Maybe just, \"admit.\" \"Admit.\" \"Admit.\" \"Admit.\" Yeah. Just a moment. \"Admit.\" \"Admit.\" \"Admit.\" \"Admit.\" Yeah. Just a moment. Or \"to say,\" \"Used to say that you were wrong.\" \"I was wrong.\" \"Used to say.\" Just a moment. \"Admit.\" \"Admit.\"\n[Student] Okay. I see. That is of that my wrong activity or wrong doing something. Or \"admit.\"\n[Tutor] So you're saying that you were wrong.\n[Student] Well, that expression, \"That wasn't fair of me,\" that situation is not fair, right? But that is similar to \"the complaint of something\" and not or make some of my activities.\n[Tutor] So it's different grammar. So, and this means, \"That wasn't fair of me.\" \"That wasn't fair of me to do.\" \"That wasn't fair of me to say.\"\n[Student] It means, \"That's my fault,\" right? Just a moment. Sorry, teacher.\n[Tutor] So it's saying that behavior wasn't right. It wasn't fair. It wasn't correct.\n[Tutor] So it's saying, \"I was wrong.\"\n[Student] \"I was wrong.\" That is \"admit the wrong.\" Okay, just a moment.\n[Student] Okay, I see. \"That wasn't fair of me.\"\n[Student] \"That wasn't.\" I see, understand. \"That wasn't fair of me.\" \"That's my fault.\" \"That's my fault.\" Okay, I understand.\n[Tutor] Because you're saying \"of me,\" so that means \"of my actions.\"\n[Student] \"Fair of me.\" \"That's fair of me.\"\n[Tutor] Okay, \"Let me make it up to you.\"\n[Student] \"Let me make it up to you.\"\n[Tutor] \"Used when you want someone to apologize.\"\n[Student] \"Let me make it up to you.\" \"Let me make it up to you.\" \"Let me make it up to you.\" \"I'm sorry.\" \"Let me make it up to you.\" Okay.\n[Tutor] \"Let me do something for you.\" \"Let me make it up to you.\"\n[Student] Okay, I understand. Good.\n[Tutor] So the first question here, part A, \"What body language shows someone feels sorry in your country?\"\n[Student] In my country, people used to bow their head. And some people used to put their hands together when they feel sorry because that is culture and we just care about others' minds. And sometimes, I've seen some people use their right hand and attach it to their nearby heart, \"I'm sorry,\" and then they say, \"I'm sorry.\" Yeah, I think that's also a nice way to express sorry. So yeah, usually my country people use the bowed head, and some people's hands are together. Yeah, sure. And how about your country?\n[Tutor] Yes, there's the avoid eye contact or nervous, nervous smiling. They might say, \"Oh, sorry,\" or they might wave or apologize. Do you comment how about the body language? It depends. Yeah, any variation that people might smile or lower their head or hands together.\n[Student] Ah, yes. Understand. Good.\n[Tutor] And which would you prefer? \"Having to apologize\" or \"receiving an apology?\" \"Having to apologize\" or \"receiving an apology?\"\n[Student] I think it depends on who is at fault, because if some guy always says \"having to apologize,\" it is not solving a problem. Yeah, I think first we think about who is more at fault and who caused the problem, so and then we will decide \"having to apologize\" or \"receiving an apology.\" Yeah, so it...\n[Tutor] It depends on the problem or some situation of conflict.\n[Tutor] Okay, so in your personal life, which would you prefer doing? Do you prefer apologizing or do you prefer receiving?\n[Student] I think I'm just half. If I feel that that is my fault and then I make that problem, at that time I'm just directly giving an apology to other people. But I think if it is not my fault and it is some serious problem and that is not my fault and some people make a problem, certainly, and in the meantime I'm just waiting to receive an apology or just a fight. Yeah, if I always give an apology, I'm so easy a person and some people might think he is so easy a person, so I always get walked all over. Yeah, so I don't, I hate that situation, so just I select, first I analyze that problem and then I will decide to give an apology or not.\n[Tutor] Give an apology.\n[Student] Yeah, give an apology.\n[Tutor] Apology.\n[Student] Apology.\n[Tutor] Apology.\n[Student] Apology, yeah.\n[Tutor] Apology or apologize.\n[Tutor] Apologize and apology are two different words.\n[Tutor] Apologize is the verb.\n[Student] It's a different word. Apology. What is the apology?\n[Tutor] That is the noun.\n[Student] Apology?\n[Tutor] Yes, noun.\n[Student] The noun, yeah. Apology is the noun and apologize is the verb, right? Yeah, to apologize. Yeah, and this sentence, this textbook sentence, \"have to apologize,\" right? Yeah, yes. Okay, good. \"Having to apologize.\" \"Having to swim.\" \"Having to walk.\" Yeah, \"having to walk.\" \"Having to apologize.\" \"Having to walk.\" Okay. Where they next they say \"receiving,\" so they were \"receiving an apology.\" It's a little different. \"Receiving an apology\" and \"having to apologize.\" I see.\n[Tutor] And the next problem solving, would you like to read?\n[Student] Okay, no problem. The situation: \"Friend A secretly tells you that Friend B is still upset about the fight you two had.\" Oh, teacher, I'm so sorry, my textbook has some erased words during the process to print out, so some words are erased. Please understand. \"Situation: Friend A secretly tells you that Friend B is still upset about the fight you two had. You thought everything had been resolved, so you are shocked to hear this. You want to make things right, but bringing it up with Friend B might put Friend A in an awkward position. Would you approach Friend B to apologize and try to resolve personal things or pretend you didn't hear anything from Friend A?\"\n[Student] Okay, I see. So if I summarize that sentence, Friend B is still upset because of my fault, and Friend A transferred that situation, right?\n[Tutor] Well, you thought you and Friend B, the fight was solved. Solved? You thought everything was okay. You had a fight, but you thought you made up. But your Friend A says, \"Oh, they're still mad at you.\"\n[Tutor] You thought the problem was solved, but another friend says, \"Oh no, they're still upset.\"\n[Student] I see. That problem is the me as a Friend B. So I think, I think that is more important to communicate with Friend B. So I think Friend B is saying something. And I'm not sure that is right or not, that's true or not. But he transferred something. So I just believe and talk to Friend B. And Friend A's comment is just his opinion or his thinking, so just, it's just that information. I'm just saying, \"Talk to Friend B,\" and just frankly speaking, yeah, it's your... and I'm not sure that I'm, my understanding...\n[Tutor] Yeah, so they're worried that maybe Friend B might be upset at Friend A, yeah, telling you. Yeah, so that's where they're worried.\n[Student] Okay, first I'm just going to say something with my, uh, Friend B. Uh, Friend A, yes, and, uh, Friend B, I'm sorry, Friend B. And then actually I'm not, I'm not admitting about another person, not direct person. Yeah, the problem made to me and problem the Friend B. So just I'm solving that problem with Friend B. Yeah, enough talk about that issue to talk to Friend A.\n[Tutor] Okay, yeah, maybe don't talk about Friend A or don't mention.\n[Student] Yeah, yeah, that they don't, yeah, you're right, don't mention about that issue.\n[Tutor] And the wrap-up question, \"Do you think time helps with forgiveness?\"\n[Student] Uh-huh. Oh yeah, that is so good idea. And that is a good solution, the time. Because our mind is so urgent. And these days, every person serves the directory. But something needs some time because if we have enough time, my mind is more released and more acceptable. So if we have such a big fight and big, how can I say, big fight and the issue, I'm just, I, I think we need more time. Yeah, because time gives us some, how can I say, mindset or mind release. So yeah, that is a good way to, yeah, the time after our forgiveness.\n[Tutor] Yeah, time helps you calm down.\n[Student] Yeah, you're right.\n[Tutor] Calm down and cool off.\n[Student] Yes.\n[Tutor] After a fight or conflict.\n[Student] Yeah. Some guys said if we fight and then we will count just three.\n[Tutor] Yeah, that is to make a cool off time. Oh, yeah, yeah, the counting. Yeah, that's definitely a helpful tool. Yeah, yeah, yeah, you're right.\n[Tutor] Well, that's about it for time. I will send you corrections in a moment. Do you have any questions?\n[Student] No, thank you so much, teacher. Have a nice day.\n[Tutor] Okay, you're welcome. Have a great day.\n\n[AI 피드백]\n안녕하세요, Joey! 오늘 저녁 약속부터 수업 중 궁금했던 표현까지 활발하게 질문하고 참여해주셔서 정말 좋았습니다. 특히 어려운 상황 설명도 끝까지 이해하려 노력하고, 자신의 생각을 논리적으로 표현하려는 모습이 인상 깊었어요. 오늘 배운 표현들을 잘 활용해서 비즈니스 환경에서도 자신감 있게 소통하시길 바랍니다!\n\n---\n\n**0. 📌 Topic**\nTopic: Discussing apologies, conflict resolution, and the role of time in forgiveness.\n\n**1. 📊 오늘의 대화 요약 (Summary)**\n오늘은 사과와 관련된 다양한 영어 표현들(\"make amends\", \"overreact\", \"cool off\", \"that wasn't fair of me\", \"make it up to you\")을 학습하고, 사과를 하는 상황과 받는 상황에 대한 Joey의 개인적인 의견을 나누었습니다. 또한 친구와의 갈등 상황에서 어떻게 대처할지에 대한 문제 해결 시나리오를 통해 의사소통 전략을 고민하고, 용서에 있어 시간의 중요성에 대해서도 이야기했습니다.\n\n**2. 💬 유창성 업그레이드 (Fluency & Natural Flow)**\nJoey가 말한 문장 중 의미는 통하지만, 원어민이 들었을 때 좀 더 자연스럽게 들릴 수 있는 표현들을 살펴볼게요.\n\n1.  ❌ **학습자 원문 (As Said):** \"Today, we have a dinner with my coworker.\"\n    ✅ **자연스러운 표현 (Natural):** \"Today, I'm having dinner with my coworker.\"\n    💎 **비즈니스 표현 (Professional):** \"Today, I'm scheduled to have dinner with my colleague.\"\n    💡 **코칭 포인트:** Using the present continuous tense (e.g., \"I'm having\") is very common and natural for future plans or arrangements. Also, \"have dinner\" usually doesn't require an article \"a\".\n    '현재 진행형(I'm having)'은 가까운 미래의 계획이나 약속을 말할 때 매우 자연스럽고 흔하게 사용됩니다. 또한, 'have dinner'는 일반적으로 관사 'a' 없이 사용됩니다.\n\n2.  ❌ **학습자 원문 (As Said):** \"I think I'm just half.\"\n    ✅ **자연스러운 표현 (Natural):** \"I think it's fifty-fifty.\" or \"I'm a bit torn.\"\n    💎 **비즈니스 표현 (Professional):** \"I believe it depends on the specific circumstances.\"\n    💡 **코칭 포인트:** \"Fifty-fifty\" is a common idiomatic expression for something that is equally divided or balanced. \"Torn\" describes a feeling of being unable to decide between two options.\n    'fifty-fifty'는 반반이거나 균형 잡힌 상황을 나타내는 흔한 관용구입니다. 'torn'은 두 가지 선택지 사이에서 결정을 내리기 어려운 감정을 묘사합니다.\n\n3.  ❌ **학습자 원문 (As Said):** \"I'm so easy a person and some people might think he is so easy a person, so I always get walked all over.\"\n    ✅ **자연스러운 표현 (Natural):** \"I'm such an easygoing person that some people might take advantage of me.\"\n    💎 **비즈니스 표현 (Professional):** \"I am concerned that my accommodating nature could be perceived as a weakness, leading to potential exploitation.\"\n    💡 **코칭 포인트:** The structure \"such a/an + adjective + noun\" is used to emphasize a quality. \"Easygoing\" is a natural adjective for someone who is relaxed and tolerant. \"Take advantage of someone\" is a common idiom for exploiting someone's kindness.\n    'such a/an + 형용사 + 명사' 구조는 어떤 특성을 강조할 때 사용됩니다. 'easygoing'은 편안하고 관대한 사람을 묘사하는 자연스러운 형용사입니다. 'take advantage of someone'은 누군가의 친절함을 이용하는 것을 의미하는 흔한 관용구입니다.\n\n**3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)**\nCategory: **Missing or Incorrect Prepositions (전치사 누락 또는 오용)**\nJoey의 대화에서 특정 동사나 명사 뒤에 필요한 전치사가 빠지거나, 문맥에 맞지 않는 전치사가 사용되는 경우가 반복적으로 나타났습니다. 전치사는 문장의 의미를 명확하게 하고 단어 간의 관계를 설정하는 데 매우 중요합니다.\n\n| ❌ **원문 (As Said)**                                         | ✅ **교정 예시 (Corrected)**                                     |\n| :----------------------------------------------------------- | :------------------------------------------------------------- |\n| \"I'm not admitting **about** another person, not direct person.\" | \"I'm not admitting **to** another person, not the direct person.\" |\n| \"Enough talk **about** that issue **to** talk to Friend A.\"    | \"Enough talk **about** that issue; I don't need to talk **to** Friend A about it.\" (or \"No need to talk to Friend A about that issue.\") |\n| \"I'm not sure that I'm, my understanding...\"                 | \"I'm not sure **about** my understanding...\"                   |\n| \"don't mention **about** that issue.\"                        | \"don't mention that issue.\" (or \"don't mention **anything about** that issue.\") |\n\n📌 **핵심 규칙:** 동사나 명사가 어떤 전치사와 함께 쓰이는지(collocation)를 익히고, 문맥에 맞는 전치사를 정확히 사용하는 연습이 필요합니다. 특히 'about'은 '무엇에 관하여'라는 의미로 자주 쓰이지만, 모든 경우에 필요한 것은 아니며, 특정 동사(예: mention) 뒤에는 직접 목적어가 오기도 합니다.\n\n🔁 **따라 읽기:**\n🗣️ \"I'm not admitting to another person, not the direct person.\"\n🗣️ \"I'm not sure about my understanding.\"\n🗣️ \"Don't mention that issue.\"\n\n**4. 📗 어휘 확장 (Vocabulary Vault)**\n오늘 대화에서 유용하게 쓰일 수 있는 어휘들을 정리해 보았습니다.\n\n1.  **colleague** /kɒliːɡ/ (명사)\n    뜻: (직장) 동료\n    실전 예문: I'm having dinner with a **colleague** tonight to discuss our new project.\n\n2.  **accommodating** /əˈkɒmədeɪtɪŋ/ (형용사)\n    뜻: 협조적인, 잘 맞춰주는\n    실전 예문: We need an **accommodating** partner who is willing to adapt to our schedule.\n\n3.  **exploit** /ɪkˈsplɔɪt/ (동사)\n    뜻: (부당하게) 이용하다, 착취하다\n    실전 예문: We must ensure that our business practices do not **exploit** vulnerable communities.\n\n4.  **resolve** /rɪˈzɒlv/ (동사)\n    뜻: (문제 등을) 해결하다; (결심)하다\n    실전 예문: Let's try to **resolve** this issue before it escalates further.\n\n5.  **forgiveness** /fərˈɡɪvnəs/ (명사)\n    뜻: 용서\n    실전 예문: True **forgiveness** can be a powerful step towards healing and moving forward.\n\n**5. 📝 실전 복습 챌린지 (Practice)**\n오늘 배운 표현과 문법을 활용하여 영작해 보세요.\n\n1.  **상황:** 오늘 저녁에 중요한 고객과 저녁 식사 약속이 있습니다.\n    **영작:** (오늘 배운 'have dinner with'를 활용하여)\n    <details>\n    <summary>모범 답안</summary>\n    \"I'm having dinner with an important client tonight.\"\n    </details>\n\n2.  **상황:** 저는 너무 잘 맞춰주는 성격이라 가끔 사람들이 저를 이용할까 봐 걱정됩니다.\n    **영작:** (오늘 배운 'such a/an'과 'take advantage of'를 활용하여)\n    <details>\n    <summary>모범 답안</summary>\n    \"I'm such an accommodating person that I sometimes worry people might take advantage of me.\"\n    </details>\n\n3.  **상황:** 복잡한 갈등 상황에서는 서두르지 않고 시간을 가지고 문제를 해결하는 것이 중요하다고 생각합니다.\n    **영작:** (오늘 배운 'resolve'와 'time helps'의 아이디어를 활용하여)\n    <details>\n    <summary>모범 답안</summary>\n    \"In complex conflict situations, I believe it's important to take time and resolve the issue without rushing, as time often helps with understanding and forgiveness.\"\n    </details>\n\n**6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)**\n\n✨ **Good Job:** \"In my country, people used to bow their head. And some people used to put their hands together when they feel sorry because that is culture and we just care about others' minds.\"\nJoey가 한국의 사과 문화에 대해 설명한 이 문장은 매우 명확하고 구체적이었습니다. 'used to'를 사용하여 과거의 습관적인 행동을 잘 표현했고, 'because'를 통해 이유를 설명하는 논리적인 전개도 훌륭했습니다. 문화적 차이를 영어로 잘 전달하는 모습이 아주 인상 깊었어요!\n\n🚀 **내일의 한 문장:** \"I'm curious to hear your thoughts on how cultural differences impact business negotiations.\"\n(오늘 배운 'colleague'나 'resolve'와 같은 비즈니스 관련 어휘를 활용하여 다음 수업에서 튜터에게 던질 수 있는 질문입니다. 오늘 문화 이야기를 나눈 것과 연결하여 자연스럽게 대화를 시작해 보세요.)\n\n---\n\n**[성과 지표]**\n**유창성 점수(10점 만점): 7점**\n\n**근거:** Joey는 다양한 주제에 대해 자신의 의견을 비교적 막힘없이 표현하며 대화를 이끌어가는 능력이 뛰어납니다. 특히 질문을 이해하고 답변을 구성하는 속도가 빠르고, 새로운 표현을 배우려는 적극적인 태도가 유창성 향상에 큰 도움이 됩니다. 다만, 특정 표현이나 문법 구조에서 약간의 어색함이 발견되어 자연스러운 흐름을 방해하는 경우가 있었고, 이는 오늘 '유창성 업그레이드' 섹션에서 다룬 내용입니다.\n\n**다음 수업 '원포인트 액션 플랜':**\n다음 수업에서는 **\"전치사(Prepositions)의 정확한 사용\"**에 집중하여 연습해 보면 좋겠습니다. 오늘 다룬 'Target Grammar'처럼, 동사나 명사 뒤에 오는 전치사를 좀 더 신경 써서 사용하면 문장의 정확성과 자연스러움을 동시에 높일 수 있을 거예요. 특정 동사(예: admit to, mention)나 명사(예: concern about)와 함께 쓰이는 전치사 짝꿍들을 눈여겨보고, 다음 대화에서 의식적으로 활용해보는 것을 추천합니다!\n\n위 내용을 바탕으로:\n1. 먼저 오늘 수업에서 내가 틀렸거나 어색했던 표현을 하나 골라서, 관련된 상황을 영어로 질문해줘.\n2. 내가 영어로 대답하면, 자연스러운지 확인하고 더 나은 표현이 있으면 알려줘.\n3. 특히 \"반복 실수 패턴\"에서 지적된 부분을 집중적으로 연습시켜줘.\n4. 이런 식으로 오늘 배운 표현들을 하나씩 복습하자.\n5. 한국어 설명은 필요할 때만 간단히, 대화는 최대한 영어로 진행해줘.\n\n그럼 시작하자!";
+        function startReview(){navigator.clipboard.writeText(REVIEW_PROMPT).then(()=>{showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)}).catch(()=>{const t=document.createElement('textarea');t.value=REVIEW_PROMPT;document.body.appendChild(t);t.select();document.execCommand('copy');document.body.removeChild(t);showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)})}
+        function showToast(){const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500)}
+        function switchTab(n){document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',n==='feedback'?i===0:i===1));document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));document.getElementById('tab-'+n).classList.add('active')}
+    </script>
+</body>
+</html>
