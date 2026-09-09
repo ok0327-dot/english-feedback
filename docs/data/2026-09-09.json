@@ -1,0 +1,53 @@
+{
+ "date": "2026-09-09",
+ "iso": [
+  2026,
+  37
+ ],
+ "topic": "Discussing apologies, conflict resolution, and the role of time in forgiveness.",
+ "grammar": "Missing or Incorrect Prepositions",
+ "grammar_norm": "Prepositions",
+ "score": null,
+ "pairs": [
+  {
+   "said": "Today, we have a dinner with my coworker.",
+   "natural": "Today, I'm having dinner with my coworker."
+  },
+  {
+   "said": "I think I'm just half.",
+   "natural": "I think it's fifty-fifty."
+  },
+  {
+   "said": "I'm so easy a person and some people might think he is so easy a person, so I always get walked all over.",
+   "natural": "I'm such an easygoing person that some people might take advantage of me."
+  }
+ ],
+ "vocab": [
+  {
+   "word": "colleague",
+   "pos": "명사",
+   "meaning": "(직장) 동료"
+  },
+  {
+   "word": "accommodating",
+   "pos": "형용사",
+   "meaning": "협조적인, 잘 맞춰주는"
+  },
+  {
+   "word": "exploit",
+   "pos": "동사",
+   "meaning": "(부당하게) 이용하다, 착취하다"
+  },
+  {
+   "word": "resolve",
+   "pos": "동사",
+   "meaning": "(문제 등을) 해결하다; (결심)하다"
+  },
+  {
+   "word": "forgiveness",
+   "pos": "명사",
+   "meaning": "용서"
+  }
+ ],
+ "_html_md5": "e7238da4ec58e07886e5caa870479cfa"
+}
