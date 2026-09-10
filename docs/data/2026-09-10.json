@@ -1,0 +1,27 @@
+{
+ "date": "2026-09-10",
+ "iso": [
+  2026,
+  37
+ ],
+ "topic": "Discussing home and personal security measures, and future study plans.",
+ "grammar": "Missing or Incorrect Articles",
+ "grammar_norm": "Articles (a/an/the)",
+ "score": 7.5,
+ "pairs": [
+  {
+   "said": "And what is the stuff? Stuff is the same meaning as belonging?",
+   "natural": "What is 'stuff'? Is 'stuff' the same as 'belongings'?"
+  },
+  {
+   "said": "And our company also sometimes uses the passcode because it is so simple, but it is also that security is so strong.",
+   "natural": "Our company also sometimes uses a passcode because it's simple yet very secure."
+  },
+  {
+   "said": "First, I confirm my lost item. If I mistake or some step, move just a minute, a second.",
+   "natural": "First, I'd confirm that my item is actually lost, in case I just misplaced it or stepped away for a moment."
+  }
+ ],
+ "vocab": [],
+ "_html_md5": "e21d732772c7b205224c0264f3306a65"
+}
