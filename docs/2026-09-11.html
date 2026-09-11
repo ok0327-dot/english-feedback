@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#0f0f13"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="당근영어"><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="icon" type="image/png" sizes="192x192" href="icon-192.png"><script src="install-banner.js" defer></script><script src="sw-reg.js" defer></script>
+    <title>전화영어 복습 - 2026년 09월 11일</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Noto Sans KR',sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.75;min-height:100vh}
+        .header{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);border-bottom:1px solid rgba(255,255,255,.06);padding:48px 24px 40px;text-align:center}
+        .header-date{font-size:13px;color:#94a3b8;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+        .header h1{font-size:28px;font-weight:700;color:#f1f5f9;margin-bottom:16px}
+        .header-meta{display:flex;justify-content:center;gap:24px;font-size:14px;color:#64748b}
+        .header-meta span{display:flex;align-items:center;gap:6px}
+        .cta-section{text-align:center;padding:40px 24px}
+        .cta-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:linear-gradient(135deg,#38bdf8,#818cf8);color:#fff;font-size:16px;font-weight:600;font-family:'Noto Sans KR',sans-serif;border:none;border-radius:50px;cursor:pointer;transition:all .3s;text-decoration:none;box-shadow:0 4px 24px rgba(56,189,248,.25)}
+        .cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(56,189,248,.35)}
+        .cta-btn svg{width:20px;height:20px}
+        .cta-sub{margin-top:12px;font-size:13px;color:#64748b}
+        .toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#38bdf8;padding:14px 28px;border-radius:12px;font-size:14px;font-weight:500;border:1px solid rgba(56,189,248,.2);box-shadow:0 8px 32px rgba(0,0,0,.4);opacity:0;transition:all .4s cubic-bezier(.16,1,.3,1);z-index:1000}
+        .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+        .container{max-width:720px;margin:0 auto;padding:0 24px 80px}
+        .tabs{display:flex;gap:4px;background:#1a1a24;padding:4px;border-radius:12px;margin-bottom:32px}
+        .tab{flex:1;padding:12px;text-align:center;font-size:14px;font-weight:500;color:#64748b;background:0 0;border:none;border-radius:8px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all .2s}
+        .tab.active{background:#262636;color:#f1f5f9}
+        .tab-content{display:none}.tab-content.active{display:block}
+        .feedback h2{font-size:18px;font-weight:700;color:#f1f5f9;margin:36px 0 16px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.06)}
+        .feedback h2:first-child{margin-top:0}
+        .feedback p{margin:8px 0;color:#cbd5e1}
+        .feedback .item{padding:6px 0 6px 16px;border-left:2px solid #334155;margin:6px 0;color:#cbd5e1}
+        .feedback .numbered{padding:8px 0 8px 16px;color:#cbd5e1}
+        .feedback .numbered strong{color:#38bdf8}
+        .feedback strong{color:#f1f5f9}
+        .feedback code{background:#1e293b;padding:2px 8px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#38bdf8}
+        .feedback table{width:100%;border-collapse:collapse;margin:12px 0}
+        .feedback th,.feedback td{padding:10px 14px;text-align:left;border-bottom:1px solid #262636}
+        .feedback th{color:#94a3b8;font-weight:500;font-size:13px}
+        .feedback td{color:#cbd5e1}
+        .arrow{color:#38bdf8;font-weight:700}
+        .transcript{background:#1a1a24;border-radius:12px;padding:28px;font-size:14px;line-height:2;color:#94a3b8;white-space:pre-wrap;word-break:break-word;font-family:'JetBrains Mono','Noto Sans KR',monospace}
+        .transcript .tutor{color:#38bdf8}
+        .transcript .student{color:#a78bfa}
+        @media(max-width:640px){.header{padding:32px 16px}.header h1{font-size:22px}.cta-btn{padding:14px 28px;font-size:15px}.container{padding:0 16px 60px}}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-date">2026년 09월 11일</div>
+        <h1>📚 전화영어 복습</h1>
+        <div class="header-meta">
+            <span>⏱ 20분 55초</span>
+            <span>🎙 전화영어_025180304_20260911080029.m4a</span>
+        </div>
+    </div>
+    <div class="cta-section">
+        <button class="cta-btn" onclick="startReview()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Gemini에서 복습 대화 시작하기
+        </button>
+        <div class="cta-sub">클릭하면 프롬프트가 복사되고 Gemini가 열립니다</div>
+    </div>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('feedback')">📋 AI 피드백</button>
+            <button class="tab" onclick="switchTab('transcript')">🎙 수업 전사</button>
+        </div>
+        <div id="tab-feedback" class="tab-content active">
+            <div class="feedback"><h2>Joey를 위한 따뜻하고 실용적인 영어 코칭 피드백</h2>
+<br>
+<p>안녕하세요, Joey! 금요일 아침부터 Karen 튜터님과 활기찬 대화 나누시느라 수고 많으셨습니다. 주말 계획부터 중국 시안 여행기, 그리고 미래 여행 버킷리스트까지 정말 다양한 이야기를 흥미롭게 풀어내셨어요. 특히 아드님과 친구처럼 지내는 모습이 인상 깊었습니다.</p>
+<br>
+<p>오늘 대화에서 Joey님이 보여주신 영어 실력은 정말 훌륭했습니다. 특히 튜터와 자연스럽게 대화를 이어나가는 유창성은 돋보였습니다. 몇몇 표현들을 조금 더 다듬고, 문법적인 정확성을 높인다면 더욱 자신감 있게 영어를 구사하실 수 있을 거예요. 제가 따뜻한 코치가 되어 도와드리겠습니다!</p>
+<br>
+<br>
+<p><strong>0. 📌 Topic</strong></p>
+<p>Topic: Discussing weekend plans, travel experiences, and future travel destinations.</p>
+<br>
+<p><strong>1. 📊 오늘의 대화 요약 (Summary)</strong></p>
+<p>오늘 Joey님은 주말에 아드님과 수영장 및 해변에서 시간을 보낼 계획을 공유했습니다. 이어서 최근 중국 시안으로 다녀온 여름휴가 경험과 그곳에서 본 병마용에 대한 흥미로운 이야기를 나누셨고, 미래에 방문하고 싶은 여행지로 이집트를 꼽으며 튜터와 여행에 대한 대화를 이어갔습니다. 또한, 최근 한국과 중국의 코로나 재확산 상황에 대한 우려도 함께 나누었습니다.</p>
+<br>
+<p><strong>2. 💬 유창성 업그레이드 (Fluency & Natural Flow)</strong></p>
+<p>Joey님이 말씀하신 문장 중 의미는 통하지만, 원어민이 들었을 때 조금 더 자연스럽게 들릴 수 있는 표현 3가지를 골라봤습니다.</p>
+<br>
+<div class="item"><strong>❌ 학습자 원문 (As Said):</strong> "Yes, of course. I agree with you, and <strong>it's possible to be talking.</strong>"</div>
+<div class="item"><strong>✅ 자연스러운 표현 (Natural):</strong> "Yes, of course. I agree with you, and <strong>I'm happy to talk.</strong>"</div>
+<div class="item"><strong>💎 비즈니스 표현 (Professional):</strong> "Yes, of course. I agree with you, and <strong>I'm ready to proceed with the discussion.</strong>"</div>
+<div class="item"><strong>💡 코칭 포인트:</strong> "It's possible to be talking"은 문법적으로 맞지만 다소 어색하게 들릴 수 있습니다. "I'm happy to talk" 또는 "I'm ready to talk"처럼 말씀하시면 대화에 대한 의지를 더 직접적이고 자연스럽게 표현할 수 있습니다.</div>
+<br>
+<div class="item"><strong>❌ 학습자 원문 (As Said):</strong> "I don't have enough of your information. So I'm just interested in <strong>your nowadays news or some lifestyle, etc.</strong>"</div>
+<div class="item"><strong>✅ 자연스러운 표현 (Natural):</strong> "I don't have enough information about you, so I'm just interested in <strong>your recent news or lifestyle.</strong>"</div>
+<div class="item"><strong>💎 비즈니스 표현 (Professional):</strong> "I'm not fully briefed on your current situation, so I'm keen to hear about <strong>your recent updates or professional insights.</strong>"</div>
+<div class="item"><strong>💡 코칭 포인트:</strong> "Nowadays news"는 잘 쓰지 않는 표현입니다. "Recent news"나 "current events"가 더 자연스럽습니다. "Some lifestyle"도 모호하므로, "your lifestyle" 또는 "your daily life"를 사용하는 것이 더 구체적입니다.</div>
+<br>
+<div class="item"><strong>❌ 학습자 원문 (As Said):</strong> "it is more earlier, so <strong>I'm a little pressed by that situation.</strong>"</div>
+<div class="item"><strong>✅ 자연스러운 표현 (Natural):</strong> "it is earlier than usual, so <strong>I'm a little concerned/worried about that situation.</strong>"</div>
+<div class="item"><strong>💎 비즈니스 표현 (Professional):</strong> "Given that it's earlier than anticipated, <strong>I'm taking precautions regarding that situation.</strong>"</div>
+<div class="item"><strong>💡 코칭 포인트:</strong> "Pressed by"는 주로 '압박을 받다' 또는 '상황에 의해 강요되다'라는 의미로 사용됩니다. 걱정이나 우려를 표현할 때는 "concerned about" 또는 "worried about"이 더 자연스럽고 정확합니다. 또한, "more earlier" 대신 "earlier than usual" 또는 "earlier than anticipated"와 같이 표현하는 것이 자연스럽습니다.</div>
+<br>
+<p><strong>3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)</strong></p>
+<p>Category: Verb Tense/Form (시제/동사 형태)</p>
+<br>
+<p>Joey님은 과거의 경험이나 습관적인 행동을 이야기할 때 현재 시제를 사용하거나, 미래 시제('will')를 습관적으로 사용하는 경향이 있었습니다. 대화의 맥락에 맞는 시제를 일관성 있게 사용하면 문장의 정확성이 훨씬 높아집니다.</p>
+<br>
+<table>
+<tr><th>❌ 원문 (As Said)</th><th>✅ 교정 예시 (Corrected)</th></tr>
+<tr><td>"She <strong>will go</strong> there on Monday."</td><td>"She <strong>is going</strong> there on Monday." (미리 정해진 계획)</td></tr>
+<tr><td>"every weekend, we <strong>will go</strong> to the summer picnic or <strong>go</strong> to swimming."</td><td>"every weekend, we <strong>go</strong> to a summer picnic or <strong>go</strong> swimming." (습관적인 행동)</td></tr>
+<tr><td>"Yes, that <strong>is</strong> summer vacation."</td><td>"Yes, that <strong>was</strong> my summer vacation." (과거의 일)</td></tr>
+<tr><td>"I work there as a guy Monday to Friday. And then I <strong>came back</strong> to my home in Busan."</td><td>"I work there from Monday to Friday, and then I <strong>come back</strong> to my home in Busan." (습관적인 행동)</td></tr>
+</table>
+<br>
+<p>📌 <strong>핵심 규칙:</strong></p>
+<div class="item"><strong>미리 정해진 계획</strong>은 <code>be going to + 동사원형</code> 또는 <code>현재 진행형 (be + 동사-ing)</code>을 사용하세요. ('will'은 즉흥적인 결정이나 예측에 더 적합합니다.)</div>
+<div class="item"><strong>습관적이거나 반복되는 행동</strong>은 <code>현재 시제 (simple present)</code>를 사용하세요.</div>
+<div class="item"><strong>과거에 일어난 일이나 과거의 사실</strong>은 <code>과거 시제 (simple past)</code>를 사용하세요.</div>
+<br>
+<p>🔁 <strong>따라 읽기:</strong></p>
+<p>🗣️ "She is going there on Monday."</p>
+<p>🗣️ "Every weekend, we go to a summer picnic or go swimming."</p>
+<p>🗣️ "Yes, that was my summer vacation."</p>
+<p>🗣️ "I work there from Monday to Friday, and then I come back to my home in Busan."</p>
+<br>
+<p><strong>4. 📗 어휘 확장 (Vocabulary Vault)</strong></p>
+<p>수업 중 등장했거나 맥락상 유용한 표준 영어 단어 5개를 소개합니다.</p>
+<br>
+<div class="item"><strong>accommodating</strong> /əˈkɒmədeɪtɪŋ/ (adj.)</div>
+<div class="item">뜻: 협조적인, 융통성 있는, 잘 맞춰주는</div>
+<div class="item">실전 예문: Our team is very <strong>accommodating</strong> to new ideas and changes.</div>
+<div class="item"><strong>chilly</strong> /ˈtʃɪli/ (adj.)</div>
+<div class="item">뜻: 쌀쌀한, 으스스한</div>
+<div class="item">실전 예문: The office felt a bit <strong>chilly</strong> this morning, so I turned up the heat.</div>
+<div class="item"><strong>volatile</strong> /ˈvɒlətaɪl/ (adj.)</div>
+<div class="item">뜻: 변동성이 큰, 불안정한, 격렬한</div>
+<div class="item">실전 예문: The stock market has been quite <strong>volatile</strong> recently due to global events.</div>
+<div class="item"><strong>intimidating</strong> /ɪnˈtɪmɪdeɪtɪŋ/ (adj.)</div>
+<div class="item">뜻: 위협적인, 겁을 주는, 주눅 들게 하는</div>
+<div class="item">실전 예문: Presenting to the board can be <strong>intimidating</strong>, but it's a great opportunity.</div>
+<div class="item"><strong>haggle</strong> /ˈhæɡl/ (v.)</div>
+<div class="item">뜻: (값을 깎으려고) 실랑이하다, 흥정하다</div>
+<div class="item">실전 예문: I always try to <strong>haggle</strong> for a better price when I visit traditional markets abroad.</div>
+<br>
+<p><strong>5. 📝 실전 복습 챌린지 (Practice)</strong></p>
+<p>오늘 배운 표현과 문법을 활용하여 다음 한국어 문장을 영어로 영작해 보세요.</p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>상황:</strong> 다음 주에 중요한 회의가 있어서 준비하고 있어요.</div>
+<div class="item"><strong>영작:</strong> (나는 다음 주에 중요한 회의를 준비하고 있습니다.)</div>
+<div class="item"><strong>모범 답안:</strong> I <strong>am preparing</strong> for an important meeting next week.</div>
+<div class="numbered"><strong>2.</strong> <strong>상황:</strong> 최근 에너지 수입 가격 변동성 때문에 우리 회사는 새로운 공급처를 찾고 있습니다.</div>
+<div class="item"><strong>영작:</strong> (최근 에너지 수입 가격의 변동성 때문에, 우리 회사는 새로운 공급처를 찾고 있습니다.)</div>
+<div class="item"><strong>모범 답안:</strong> Due to the recent <strong>volatile</strong> prices of energy imports, our company <strong>is looking</strong> for new suppliers.</div>
+<div class="numbered"><strong>3.</strong> <strong>상황:</strong> 저는 항상 팀원들의 다양한 의견에 귀 기울이고, 그들의 아이디어에 대해 협조적인 태도를 취합니다.</div>
+<div class="item"><strong>영작:</strong> (나는 항상 팀원들의 다양한 의견에 귀 기울이고, 그들의 아이디어에 대해 협조적인 태도를 취합니다.)</div>
+<div class="item"><strong>모범 답안:</strong> I always listen to my team members' diverse opinions and maintain an <strong>accommodating</strong> attitude towards their ideas.</div>
+<br>
+<p><strong>6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)</strong></p>
+<br>
+<p>✨ <strong>Good Job:</strong> Joey님이 오늘 가장 잘 표현한 문장은 바로 이 문장이었습니다!</p>
+<p>"I always supply the water because the sandcastle needs water, so I supply water, and sometimes I make a castle also, and we have a competition, or we make together the sandcastle or the bridge or some construction because in Haeundae, it is so large sand beach. So yeah, that is so good place to play with my son."</p>
+<p>아드님과 해변에서 모래성을 만들며 노는 모습을 정말 생생하고 구체적으로 설명해 주셨어요. 어떤 놀이를 하고, 왜 해운대가 좋은 장소인지 이유까지 덧붙여서 듣는 사람이 마치 그 장면에 함께 있는 것처럼 느껴졌습니다. 훌륭해요!</p>
+<br>
+<p>🚀 <strong>내일의 한 문장:</strong> 다음 수업 시작 시 튜터에게 오늘 배운 표현을 활용하여 대화를 시작해 보세요.</p>
+<p>"I'm a little concerned about the upcoming project deadline. How about you?"</p>
+<p>(다가오는 프로젝트 마감일 때문에 약간 걱정이 됩니다. 튜터님은 어떠세요?)</p>
+<br>
+<br>
+<p><strong>[성과 지표]</strong></p>
+<p><strong>유창성 점수:</strong> 7.5/10</p>
+<p><strong>근거:</strong> Joey님은 대화의 흐름을 끊지 않고 자연스럽게 자신의 생각을 표현하는 능력이 뛰어납니다. 다양한 주제에 대해 막힘없이 이야기하며 튜터와 상호작용하는 모습이 인상 깊었습니다. 다만, 가끔 적절한 단어나 문법 구조를 찾기 위해 잠시 멈추는 경우가 있었고, 일부 표현이 원어민에게는 다소 어색하게 들릴 수 있었습니다.</p>
+<br>
+<p><strong>다음 수업 '원포인트 액션 플랜':</strong></p>
+<p>다음 수업에서는 <strong>"시제(Verb Tense)의 일관성"</strong>에 집중해 주세요. 특히 과거 경험, 습관적인 행동, 그리고 미리 정해진 계획을 이야기할 때 적절한 시제를 사용하는 연습을 해봅시다. 오늘 배운 내용을 복습하며 문장의 정확성을 높이는 데 집중하면 유창성과 함께 정확성도 크게 향상될 것입니다!</p></div>
+        </div>
+        <div id="tab-transcript" class="tab-content">
+            <div class="transcript">[Joey] Hello, good morning, teacher. It&#x27;s Friday.
+<span class="tutor">[Tutor]</span> Hi there. Hi.
+<span class="tutor">[Tutor]</span> Hi, Joey.
+[Joey] Hi, Karen.
+<span class="tutor">[Tutor]</span> Do you have time for class today?
+[Joey] Yes, of course. It&#x27;s time for class.
+<span class="tutor">[Tutor]</span> Okay, wonderful.
+<span class="tutor">[Tutor]</span> Okay, I&#x27;m afraid I have some bad news. I did message Carrot about changing your textbook, but as of this morning, they haven&#x27;t gotten to my request yet.
+[Joey] Yeah, no problem. It&#x27;s okay.
+<span class="tutor">[Tutor]</span> I have some options I can offer you. I have a number of free talk conversation topics that we could do today. If you want to have a full class, we can do that. If you want to have a shorter talk class, we can do that as well. Do you have a preference? What you&#x27;d like to do on this end of the week?
+[Joey] Yes, of course. I agree with you, and it&#x27;s possible to be talking. Yeah.
+<span class="tutor">[Tutor]</span> So that&#x27;s what I thought you would do. That&#x27;s okay.
+[Joey] Okay, no problem.
+<span class="tutor">[Tutor]</span> Wonderful. Thank you for being so accommodating. Okay. So I thought today we&#x27;d talk about hopefully a common topic. I&#x27;d like to talk about airplanes and flying.
+[Joey] Airplanes and flying? Yeah, okay.
+<span class="tutor">[Tutor]</span> Would that be okay?
+[Joey] Yeah, or I don&#x27;t have enough of your information. So I&#x27;m just interested in your nowadays news or some lifestyle, etc.
+<span class="tutor">[Tutor]</span> How about this? You&#x27;d like to talk more about current events?
+[Joey] Yeah, we can do that too.
+<span class="tutor">[Tutor]</span> Oh, yeah. Absolutely. Good. Yeah. Okay. All right.
+[Joey] How about your routine in life day?
+<span class="tutor">[Tutor]</span> Oh. Oh. Well, today I had to take my daughter to a clinic, and we had problems with traffic. We had problems with parking.
+[Joey] Okay.
+<span class="tutor">[Tutor]</span> And then when we got to the doctor, it turned out the appointment was for something other than we expected.
+[Joey] I see.
+<span class="tutor">[Tutor]</span> So, yeah, but we got through it, and then we came home. And now, of course, you&#x27;re my last class for the day. And, yeah, I&#x27;m just looking forward to the weekend. Now, I don&#x27;t know if I asked you this yesterday, but do you have some plans for the weekend now that Friday is here?
+[Joey] Yes. I give some time to my wife. So my wife will go to the concert because she is a fan of the boy band.
+<span class="tutor">[Tutor]</span> Is it BTS?
+[Joey] Maybe similar, but I don&#x27;t know. I&#x27;m not sure.
+<span class="tutor">[Tutor]</span> A different boy band.
+<span class="tutor">[Tutor]</span> Oh, okay. I understand.
+[Joey] She will go there on Monday. So maybe, I guess, I will go to the swimming pool with my son.
+<span class="tutor">[Tutor]</span> Oh, okay.
+[Joey] Yeah, my wife doesn&#x27;t like the water. So usually, without my wife, I will go to the swimming pool with my son. So maybe I will go to the swimming pool near the hotel. And I&#x27;m a little worried about this day. The weather is a little chilly, so I prepare my son not to catch a cold.
+<span class="tutor">[Tutor]</span> Yeah, that&#x27;s the last thing you want is any issues with illnesses. It&#x27;s my understanding that COVID is happening in Korea again.
+[Joey] Ah, yeah.
+<span class="tutor">[Tutor]</span> Have you heard about that?
+[Joey] You&#x27;re right. I traveled to China two weeks ago, and it is the same rumor in China is spread Corona again, and Korea is a similar situation. So yeah, it is a little problem because this is September. Maybe usually in Korea, the best time to catch a cold or spread the virus is, you know, winter, November, or some October, but it is more earlier, so I&#x27;m a little pressed by that situation.
+<span class="tutor">[Tutor]</span> Sure, yeah, nobody wants to get sick. I haven&#x27;t heard much about COVID here in Canada, so I&#x27;ve got our fingers crossed. Okay, let&#x27;s talk a little bit about your son, shall we? How old is he? What grade is he in?
+[Joey] He&#x27;s 10 years old, and he&#x27;s in the fourth grade of elementary school. Yeah.
+<span class="tutor">[Tutor]</span> Oh, wow. Okay. Okay. Yeah.
+[Joey] I have one son. So, yeah. He is like a friend. Yeah. So, every weekend, we will go to the summer picnic or go to swimming. Yeah. And travel. Yeah. He&#x27;s a friend.
+<span class="tutor">[Tutor]</span> Okay. Yes. Well, that&#x27;s lovely. You&#x27;ve got a good relationship with him.
+[Joey] Yeah. We have a good relationship with him. Yeah.
+<span class="tutor">[Tutor]</span> You&#x27;re right. Yeah. So aside from going to the beach, what else do you like to do with your son?
+[Joey] Hmm, my son likes the sandcastle, making a sandcastle. So if we go to the beach, so I will, he wears the short pants and short-sleeve shirt, and or he wears the tight, their swimming tight. How can I say? Swimming wear? Swimming trunk? Swimwear? Swimwear. And we will go to their, yeah, stand their beach and make something. And I always supply the water because the sandcastle needs water, so I supply water, and sometimes I make a castle also, and we have a competition, or we make together the sandcastle or the bridge or some construction because in Haeundae, it is so large sand beach. So yeah, that is so good place to play with my son.
+<span class="tutor">[Tutor]</span> Oh, wow. Yeah, because I think you told me earlier that you work in Seoul, so you&#x27;re there during the week and then you go home on the weekends. Is that right?
+[Joey] Yeah, you&#x27;re right. I work there as a guy Monday to Friday. And then I came back to my home in Busan.
+<span class="tutor">[Tutor]</span> Okay.
+[Joey] Yeah. So, yeah.
+<span class="tutor">[Tutor]</span> Interesting. Well, that sounds like a lovely idea. Going to the beach if the weather permits. How long does it take you to travel from Seoul to Busan?
+[Joey] Yeah. How much time?
+[Joey] Yeah, they take five hours door to door. But if I take the train, it is only two hours, 20 minutes. But I will go to the station.
+<span class="tutor">[Tutor]</span> Wonderful.
+[Joey] I will go to the station and take a bus and transfer. That takes time. So usually I take time four hours or five hours. That is the average time to take.
+<span class="tutor">[Tutor]</span> That sounds better than sitting in a car for five hours. Wow, that&#x27;s amazing.
+[Joey] Yeah, that&#x27;s quite amazing.
+<span class="tutor">[Tutor]</span> Okay, you mentioned that you went to China last week. It was for business, I presume. Where did you go in China? Anywhere like one of the big cities?
+[Joey] Yes, that is summer vacation.
+<span class="tutor">[Tutor]</span> For your holiday, okay.
+[Joey] Yeah, holiday vacation. And I went to Xi&#x27;an. That is so old city. Xi&#x27;an is the oldest city, and maybe during the 1000 or 2000 years, that is the capital. And that city point is the Silk Road because China is trade Europe and East Asia. And that starting point is the Xi&#x27;an. So maybe 1000 years ago, I&#x27;m not sure. That is the biggest city in the world.
+<span class="tutor">[Tutor]</span> Oh, wow. Yeah, it&#x27;s just for 13 dynasties, the capital. Wow. And did you hear, have you heard about the Terracotta in Qin country?
+[Joey] Yes, I have.
+<span class="tutor">[Tutor]</span> Did you have a chance to see them?
+[Joey] Yeah, because that Qin Terracotta is located in Xi&#x27;an. So we&#x27;ve been there, and this summer vacation we looked around that Terracotta. It is so interesting.
+<span class="tutor">[Tutor]</span> I bet. Now, people or videos that I&#x27;ve watched about them say that they are almost life-size. Is that correct? Or are they as tall as people are, really?
+[Joey] Almost 2 meters. Yeah, it is similar. 1.8 meter or 2 meter. It is the same size as human. And if we search their footprint, that is the print in their shoes. So that is so detailed. Yeah, details. Some, how can I say, made it some detail terracotta. So that is so interesting.
+<span class="tutor">[Tutor]</span> Yeah, they say they&#x27;re incredibly detailed.
+[Joey] Yeah, and as for more information, they put in the color. The color is the vivid color, but during the outside, the Terracotta changes like the sand. But in a land, in a land, their color is...
+<span class="tutor">[Tutor]</span> Yeah, they were buried. Yeah, vivid color, the greens and yellow. Yes.
+<span class="tutor">[Tutor]</span> So that sounds very interesting. I didn&#x27;t know that. Yeah. I know they say similar things about statues and pictures in Egypt. Ancient Egypt being brightly painted, but then after thousands of years, the paint wore away. So that happened in China too.
+[Joey] It is so interesting.
+<span class="tutor">[Tutor]</span> Well, that sounds really good.
+[Joey] I heard today they stopped searching the Terracotta anymore because they wait for the scientists to develop. Because these days&#x27; skills, these days&#x27; technical, they don&#x27;t have, how can I say, the perfect such the perfect Terracotta. So they stopped the search anymore. They wait for their science skills.
+<span class="tutor">[Tutor]</span> Interesting. I&#x27;ve always been fascinated by China and Chinese culture, but I&#x27;ve yet to visit. To me, China is such a big country. I know it&#x27;s not as big as Canada, but with all its history and customs, it&#x27;s pretty intimidating. Now, where else have you visited? Where else have you traveled?
+[Joey] That travel?
+<span class="tutor">[Tutor]</span> Would you like to? Yeah, where else would you like to travel to? Where would you like to go in the future?
+[Joey] Future? I see. Yeah, Egypt is always the best place, best wish place. So maybe I want to go to Cairo. Let me go to Egypt.
+<span class="tutor">[Tutor]</span> Lucky you.
+[Joey] Yeah, but I heard that that is a little dangerous with my family. So I prepare more, and I&#x27;m not sure when is departure to Egypt, because we need to be safe and careful. So maybe two or three years, you know, two or three years we will go there. But I&#x27;m not sure the correct date.
+<span class="tutor">[Tutor]</span> Well, I can appreciate your caution because with everything going on in the Middle East now, it maybe isn&#x27;t the safest place to go to. Things are pretty volatile in the Middle East right now with everything going on with Iran.
+[Joey] Yeah, I agree. And teacher, I have one question. Yeah, okay. What is your bucket list travel place?
+<span class="tutor">[Tutor]</span> Where have I traveled in the past? Oh, not past. In the future? Future, yes. Oh, gosh. Well, you know, um, I did quite a bit of traveling between 2011 and 2021.
+[Joey] Oh, yes. You are a heavy traveler.
+<span class="tutor">[Tutor]</span> Well, yeah, I enjoyed it, but now I haven&#x27;t considered any more travel. One place I&#x27;d like to go back to is Mexico. I really, really love Mexico.
+[Joey] Yeah.
+<span class="tutor">[Tutor]</span> But other than that, I&#x27;ve stayed pretty close to home. I was lucky enough that I got to visit several countries during that 10-year period. I guess my travel bug is all worn out. My wanderlust is all worn out. So, yeah, especially right now, traveling is kind of difficult because right now with the problems in the U.S., many flights out of Canada, you have to transfer in a U.S. airport. And I don&#x27;t feel like that is safe. You know, you don&#x27;t feel safe in Egypt. I don&#x27;t feel safe traveling through the United States. So, like you, I&#x27;m going to wait until things calm down a little, and then maybe I&#x27;ll think about traveling again.
+[Joey] I see. I understand. What is the beautiful city in past travel? Yeah, in your past travel.
+<span class="tutor">[Tutor]</span> Oh, gosh, beautiful cities.
+[Joey] Yeah.
+<span class="tutor">[Tutor]</span> Well, you know, beauty can be subjective. One city that I visited in Mexico, which is on the Pacific Coast, is a place called Puerto Vallarta.
+[Joey] Puerto Vallarta.
+<span class="tutor">[Tutor]</span> And it&#x27;s a city which has a beach, and then it goes, it sprawls out along the coast, but the beach is backed onto mountains. So the old part of the town goes up the mountains, like, you know, the steep streets. And a lot of the buildings are built from when the Spanish were there. So there&#x27;s many cities in Mexico where, you know, they have beautiful buildings and parks and architecture.
+[Joey] Yeah, I see. I like the picture.
+<span class="tutor">[Tutor]</span> Yes, yes. And so I&#x27;ve had a chance to visit a few places like that. I went to a place in Mexico called Cancun, and it was beautiful because it was in the Caribbean, but the city is quite young. It was built in the 70s, 60s and 70s.
+[Joey] Oh, yeah.
+<span class="tutor">[Tutor]</span> Yeah, I enjoy visiting older cities, older towns. I like history.
+[Joey] Good, yeah. That is some nice information. What sort of things? Yeah. Okay.
+<span class="tutor">[Tutor]</span> So, you know, when you went to China and saw the Terracotta Warriors, that was history. What else do you, what also interests you when you go traveling to a different country? What do you like to see?
+[Joey] Usually I visit the traditional market because I like to confirm their price because I love to trade everything. So I compare the price in Korea, USA, and that country, and it is also due to the negotiation. It is so interesting and enjoyable for me. So it&#x27;s lovely.
+<span class="tutor">[Tutor]</span> Uh-huh. I especially enjoy going to the open-air markets in different countries. Yeah, because we don&#x27;t have a lot of them here in Canada, uh-huh, because it gets cold. So, um, yeah, it&#x27;s a lot of fun. Same idea, looking at the prices, comparing what things cost there versus what they are in Canada. I really like getting to see products that I&#x27;m not familiar with. So, for instance, when I went to Peru, I got to see a lot of fruits and vegetables I had never seen before. And it was interesting. I&#x27;d buy them, take them home, and then try to cook them. Sometimes it worked out. Sometimes it didn&#x27;t. All right, Joey. You&#x27;ve been a really good sport today chatting with me. It&#x27;s been a pleasure.
+[Joey] Thank you so much.
+<span class="tutor">[Tutor]</span> Hopefully by Monday, they will have your textbook set up. I will follow up with that. I hope you have a lovely, safe weekend with your son. I look forward to talking to you next week.
+[Joey] You too. You have a great weekend. Bye-bye, teacher.
+<span class="tutor">[Tutor]</span> Thank you. Take care. Bye-bye.
+[Joey] Bye-bye.</div>
+        </div>
+    </div>
+    <div class="toast" id="toast">✅ 프롬프트가 복사되었습니다!</div>
+    <script>
+        const REVIEW_PROMPT="너는 나의 영어 회화 복습 파트너야. 오늘 내 전화영어 수업 내용을 기반으로 대화하면서 복습을 도와줘.\n\n[오늘 수업 전사 내용]\n[Joey] Hello, good morning, teacher. It's Friday.\n[Tutor] Hi there. Hi.\n[Tutor] Hi, Joey.\n[Joey] Hi, Karen.\n[Tutor] Do you have time for class today?\n[Joey] Yes, of course. It's time for class.\n[Tutor] Okay, wonderful.\n[Tutor] Okay, I'm afraid I have some bad news. I did message Carrot about changing your textbook, but as of this morning, they haven't gotten to my request yet.\n[Joey] Yeah, no problem. It's okay.\n[Tutor] I have some options I can offer you. I have a number of free talk conversation topics that we could do today. If you want to have a full class, we can do that. If you want to have a shorter talk class, we can do that as well. Do you have a preference? What you'd like to do on this end of the week?\n[Joey] Yes, of course. I agree with you, and it's possible to be talking. Yeah.\n[Tutor] So that's what I thought you would do. That's okay.\n[Joey] Okay, no problem.\n[Tutor] Wonderful. Thank you for being so accommodating. Okay. So I thought today we'd talk about hopefully a common topic. I'd like to talk about airplanes and flying.\n[Joey] Airplanes and flying? Yeah, okay.\n[Tutor] Would that be okay?\n[Joey] Yeah, or I don't have enough of your information. So I'm just interested in your nowadays news or some lifestyle, etc.\n[Tutor] How about this? You'd like to talk more about current events?\n[Joey] Yeah, we can do that too.\n[Tutor] Oh, yeah. Absolutely. Good. Yeah. Okay. All right.\n[Joey] How about your routine in life day?\n[Tutor] Oh. Oh. Well, today I had to take my daughter to a clinic, and we had problems with traffic. We had problems with parking.\n[Joey] Okay.\n[Tutor] And then when we got to the doctor, it turned out the appointment was for something other than we expected.\n[Joey] I see.\n[Tutor] So, yeah, but we got through it, and then we came home. And now, of course, you're my last class for the day. And, yeah, I'm just looking forward to the weekend. Now, I don't know if I asked you this yesterday, but do you have some plans for the weekend now that Friday is here?\n[Joey] Yes. I give some time to my wife. So my wife will go to the concert because she is a fan of the boy band.\n[Tutor] Is it BTS?\n[Joey] Maybe similar, but I don't know. I'm not sure.\n[Tutor] A different boy band.\n[Tutor] Oh, okay. I understand.\n[Joey] She will go there on Monday. So maybe, I guess, I will go to the swimming pool with my son.\n[Tutor] Oh, okay.\n[Joey] Yeah, my wife doesn't like the water. So usually, without my wife, I will go to the swimming pool with my son. So maybe I will go to the swimming pool near the hotel. And I'm a little worried about this day. The weather is a little chilly, so I prepare my son not to catch a cold.\n[Tutor] Yeah, that's the last thing you want is any issues with illnesses. It's my understanding that COVID is happening in Korea again.\n[Joey] Ah, yeah.\n[Tutor] Have you heard about that?\n[Joey] You're right. I traveled to China two weeks ago, and it is the same rumor in China is spread Corona again, and Korea is a similar situation. So yeah, it is a little problem because this is September. Maybe usually in Korea, the best time to catch a cold or spread the virus is, you know, winter, November, or some October, but it is more earlier, so I'm a little pressed by that situation.\n[Tutor] Sure, yeah, nobody wants to get sick. I haven't heard much about COVID here in Canada, so I've got our fingers crossed. Okay, let's talk a little bit about your son, shall we? How old is he? What grade is he in?\n[Joey] He's 10 years old, and he's in the fourth grade of elementary school. Yeah.\n[Tutor] Oh, wow. Okay. Okay. Yeah.\n[Joey] I have one son. So, yeah. He is like a friend. Yeah. So, every weekend, we will go to the summer picnic or go to swimming. Yeah. And travel. Yeah. He's a friend.\n[Tutor] Okay. Yes. Well, that's lovely. You've got a good relationship with him.\n[Joey] Yeah. We have a good relationship with him. Yeah.\n[Tutor] You're right. Yeah. So aside from going to the beach, what else do you like to do with your son?\n[Joey] Hmm, my son likes the sandcastle, making a sandcastle. So if we go to the beach, so I will, he wears the short pants and short-sleeve shirt, and or he wears the tight, their swimming tight. How can I say? Swimming wear? Swimming trunk? Swimwear? Swimwear. And we will go to their, yeah, stand their beach and make something. And I always supply the water because the sandcastle needs water, so I supply water, and sometimes I make a castle also, and we have a competition, or we make together the sandcastle or the bridge or some construction because in Haeundae, it is so large sand beach. So yeah, that is so good place to play with my son.\n[Tutor] Oh, wow. Yeah, because I think you told me earlier that you work in Seoul, so you're there during the week and then you go home on the weekends. Is that right?\n[Joey] Yeah, you're right. I work there as a guy Monday to Friday. And then I came back to my home in Busan.\n[Tutor] Okay.\n[Joey] Yeah. So, yeah.\n[Tutor] Interesting. Well, that sounds like a lovely idea. Going to the beach if the weather permits. How long does it take you to travel from Seoul to Busan?\n[Joey] Yeah. How much time?\n[Joey] Yeah, they take five hours door to door. But if I take the train, it is only two hours, 20 minutes. But I will go to the station.\n[Tutor] Wonderful.\n[Joey] I will go to the station and take a bus and transfer. That takes time. So usually I take time four hours or five hours. That is the average time to take.\n[Tutor] That sounds better than sitting in a car for five hours. Wow, that's amazing.\n[Joey] Yeah, that's quite amazing.\n[Tutor] Okay, you mentioned that you went to China last week. It was for business, I presume. Where did you go in China? Anywhere like one of the big cities?\n[Joey] Yes, that is summer vacation.\n[Tutor] For your holiday, okay.\n[Joey] Yeah, holiday vacation. And I went to Xi'an. That is so old city. Xi'an is the oldest city, and maybe during the 1000 or 2000 years, that is the capital. And that city point is the Silk Road because China is trade Europe and East Asia. And that starting point is the Xi'an. So maybe 1000 years ago, I'm not sure. That is the biggest city in the world.\n[Tutor] Oh, wow. Yeah, it's just for 13 dynasties, the capital. Wow. And did you hear, have you heard about the Terracotta in Qin country?\n[Joey] Yes, I have.\n[Tutor] Did you have a chance to see them?\n[Joey] Yeah, because that Qin Terracotta is located in Xi'an. So we've been there, and this summer vacation we looked around that Terracotta. It is so interesting.\n[Tutor] I bet. Now, people or videos that I've watched about them say that they are almost life-size. Is that correct? Or are they as tall as people are, really?\n[Joey] Almost 2 meters. Yeah, it is similar. 1.8 meter or 2 meter. It is the same size as human. And if we search their footprint, that is the print in their shoes. So that is so detailed. Yeah, details. Some, how can I say, made it some detail terracotta. So that is so interesting.\n[Tutor] Yeah, they say they're incredibly detailed.\n[Joey] Yeah, and as for more information, they put in the color. The color is the vivid color, but during the outside, the Terracotta changes like the sand. But in a land, in a land, their color is...\n[Tutor] Yeah, they were buried. Yeah, vivid color, the greens and yellow. Yes.\n[Tutor] So that sounds very interesting. I didn't know that. Yeah. I know they say similar things about statues and pictures in Egypt. Ancient Egypt being brightly painted, but then after thousands of years, the paint wore away. So that happened in China too.\n[Joey] It is so interesting.\n[Tutor] Well, that sounds really good.\n[Joey] I heard today they stopped searching the Terracotta anymore because they wait for the scientists to develop. Because these days' skills, these days' technical, they don't have, how can I say, the perfect such the perfect Terracotta. So they stopped the search anymore. They wait for their science skills.\n[Tutor] Interesting. I've always been fascinated by China and Chinese culture, but I've yet to visit. To me, China is such a big country. I know it's not as big as Canada, but with all its history and customs, it's pretty intimidating. Now, where else have you visited? Where else have you traveled?\n[Joey] That travel?\n[Tutor] Would you like to? Yeah, where else would you like to travel to? Where would you like to go in the future?\n[Joey] Future? I see. Yeah, Egypt is always the best place, best wish place. So maybe I want to go to Cairo. Let me go to Egypt.\n[Tutor] Lucky you.\n[Joey] Yeah, but I heard that that is a little dangerous with my family. So I prepare more, and I'm not sure when is departure to Egypt, because we need to be safe and careful. So maybe two or three years, you know, two or three years we will go there. But I'm not sure the correct date.\n[Tutor] Well, I can appreciate your caution because with everything going on in the Middle East now, it maybe isn't the safest place to go to. Things are pretty volatile in the Middle East right now with everything going on with Iran.\n[Joey] Yeah, I agree. And teacher, I have one question. Yeah, okay. What is your bucket list travel place?\n[Tutor] Where have I traveled in the past? Oh, not past. In the future? Future, yes. Oh, gosh. Well, you know, um, I did quite a bit of traveling between 2011 and 2021.\n[Joey] Oh, yes. You are a heavy traveler.\n[Tutor] Well, yeah, I enjoyed it, but now I haven't considered any more travel. One place I'd like to go back to is Mexico. I really, really love Mexico.\n[Joey] Yeah.\n[Tutor] But other than that, I've stayed pretty close to home. I was lucky enough that I got to visit several countries during that 10-year period. I guess my travel bug is all worn out. My wanderlust is all worn out. So, yeah, especially right now, traveling is kind of difficult because right now with the problems in the U.S., many flights out of Canada, you have to transfer in a U.S. airport. And I don't feel like that is safe. You know, you don't feel safe in Egypt. I don't feel safe traveling through the United States. So, like you, I'm going to wait until things calm down a little, and then maybe I'll think about traveling again.\n[Joey] I see. I understand. What is the beautiful city in past travel? Yeah, in your past travel.\n[Tutor] Oh, gosh, beautiful cities.\n[Joey] Yeah.\n[Tutor] Well, you know, beauty can be subjective. One city that I visited in Mexico, which is on the Pacific Coast, is a place called Puerto Vallarta.\n[Joey] Puerto Vallarta.\n[Tutor] And it's a city which has a beach, and then it goes, it sprawls out along the coast, but the beach is backed onto mountains. So the old part of the town goes up the mountains, like, you know, the steep streets. And a lot of the buildings are built from when the Spanish were there. So there's many cities in Mexico where, you know, they have beautiful buildings and parks and architecture.\n[Joey] Yeah, I see. I like the picture.\n[Tutor] Yes, yes. And so I've had a chance to visit a few places like that. I went to a place in Mexico called Cancun, and it was beautiful because it was in the Caribbean, but the city is quite young. It was built in the 70s, 60s and 70s.\n[Joey] Oh, yeah.\n[Tutor] Yeah, I enjoy visiting older cities, older towns. I like history.\n[Joey] Good, yeah. That is some nice information. What sort of things? Yeah. Okay.\n[Tutor] So, you know, when you went to China and saw the Terracotta Warriors, that was history. What else do you, what also interests you when you go traveling to a different country? What do you like to see?\n[Joey] Usually I visit the traditional market because I like to confirm their price because I love to trade everything. So I compare the price in Korea, USA, and that country, and it is also due to the negotiation. It is so interesting and enjoyable for me. So it's lovely.\n[Tutor] Uh-huh. I especially enjoy going to the open-air markets in different countries. Yeah, because we don't have a lot of them here in Canada, uh-huh, because it gets cold. So, um, yeah, it's a lot of fun. Same idea, looking at the prices, comparing what things cost there versus what they are in Canada. I really like getting to see products that I'm not familiar with. So, for instance, when I went to Peru, I got to see a lot of fruits and vegetables I had never seen before. And it was interesting. I'd buy them, take them home, and then try to cook them. Sometimes it worked out. Sometimes it didn't. All right, Joey. You've been a really good sport today chatting with me. It's been a pleasure.\n[Joey] Thank you so much.\n[Tutor] Hopefully by Monday, they will have your textbook set up. I will follow up with that. I hope you have a lovely, safe weekend with your son. I look forward to talking to you next week.\n[Joey] You too. You have a great weekend. Bye-bye, teacher.\n[Tutor] Thank you. Take care. Bye-bye.\n[Joey] Bye-bye.\n\n[AI 피드백]\n## Joey를 위한 따뜻하고 실용적인 영어 코칭 피드백\n\n안녕하세요, Joey! 금요일 아침부터 Karen 튜터님과 활기찬 대화 나누시느라 수고 많으셨습니다. 주말 계획부터 중국 시안 여행기, 그리고 미래 여행 버킷리스트까지 정말 다양한 이야기를 흥미롭게 풀어내셨어요. 특히 아드님과 친구처럼 지내는 모습이 인상 깊었습니다.\n\n오늘 대화에서 Joey님이 보여주신 영어 실력은 정말 훌륭했습니다. 특히 튜터와 자연스럽게 대화를 이어나가는 유창성은 돋보였습니다. 몇몇 표현들을 조금 더 다듬고, 문법적인 정확성을 높인다면 더욱 자신감 있게 영어를 구사하실 수 있을 거예요. 제가 따뜻한 코치가 되어 도와드리겠습니다!\n\n---\n\n**0. 📌 Topic**\nTopic: Discussing weekend plans, travel experiences, and future travel destinations.\n\n**1. 📊 오늘의 대화 요약 (Summary)**\n오늘 Joey님은 주말에 아드님과 수영장 및 해변에서 시간을 보낼 계획을 공유했습니다. 이어서 최근 중국 시안으로 다녀온 여름휴가 경험과 그곳에서 본 병마용에 대한 흥미로운 이야기를 나누셨고, 미래에 방문하고 싶은 여행지로 이집트를 꼽으며 튜터와 여행에 대한 대화를 이어갔습니다. 또한, 최근 한국과 중국의 코로나 재확산 상황에 대한 우려도 함께 나누었습니다.\n\n**2. 💬 유창성 업그레이드 (Fluency & Natural Flow)**\nJoey님이 말씀하신 문장 중 의미는 통하지만, 원어민이 들었을 때 조금 더 자연스럽게 들릴 수 있는 표현 3가지를 골라봤습니다.\n\n*   **❌ 학습자 원문 (As Said):** \"Yes, of course. I agree with you, and **it's possible to be talking.**\"\n    *   **✅ 자연스러운 표현 (Natural):** \"Yes, of course. I agree with you, and **I'm happy to talk.**\"\n    *   **💎 비즈니스 표현 (Professional):** \"Yes, of course. I agree with you, and **I'm ready to proceed with the discussion.**\"\n    *   **💡 코칭 포인트:** \"It's possible to be talking\"은 문법적으로 맞지만 다소 어색하게 들릴 수 있습니다. \"I'm happy to talk\" 또는 \"I'm ready to talk\"처럼 말씀하시면 대화에 대한 의지를 더 직접적이고 자연스럽게 표현할 수 있습니다.\n\n*   **❌ 학습자 원문 (As Said):** \"I don't have enough of your information. So I'm just interested in **your nowadays news or some lifestyle, etc.**\"\n    *   **✅ 자연스러운 표현 (Natural):** \"I don't have enough information about you, so I'm just interested in **your recent news or lifestyle.**\"\n    *   **💎 비즈니스 표현 (Professional):** \"I'm not fully briefed on your current situation, so I'm keen to hear about **your recent updates or professional insights.**\"\n    *   **💡 코칭 포인트:** \"Nowadays news\"는 잘 쓰지 않는 표현입니다. \"Recent news\"나 \"current events\"가 더 자연스럽습니다. \"Some lifestyle\"도 모호하므로, \"your lifestyle\" 또는 \"your daily life\"를 사용하는 것이 더 구체적입니다.\n\n*   **❌ 학습자 원문 (As Said):** \"it is more earlier, so **I'm a little pressed by that situation.**\"\n    *   **✅ 자연스러운 표현 (Natural):** \"it is earlier than usual, so **I'm a little concerned/worried about that situation.**\"\n    *   **💎 비즈니스 표현 (Professional):** \"Given that it's earlier than anticipated, **I'm taking precautions regarding that situation.**\"\n    *   **💡 코칭 포인트:** \"Pressed by\"는 주로 '압박을 받다' 또는 '상황에 의해 강요되다'라는 의미로 사용됩니다. 걱정이나 우려를 표현할 때는 \"concerned about\" 또는 \"worried about\"이 더 자연스럽고 정확합니다. 또한, \"more earlier\" 대신 \"earlier than usual\" 또는 \"earlier than anticipated\"와 같이 표현하는 것이 자연스럽습니다.\n\n**3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)**\nCategory: Verb Tense/Form (시제/동사 형태)\n\nJoey님은 과거의 경험이나 습관적인 행동을 이야기할 때 현재 시제를 사용하거나, 미래 시제('will')를 습관적으로 사용하는 경향이 있었습니다. 대화의 맥락에 맞는 시제를 일관성 있게 사용하면 문장의 정확성이 훨씬 높아집니다.\n\n| ❌ 원문 (As Said)                                                                  | ✅ 교정 예시 (Corrected)                                                                    |\n| :-------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------ |\n| \"She **will go** there on Monday.\"                                                | \"She **is going** there on Monday.\" (미리 정해진 계획)                                     |\n| \"every weekend, we **will go** to the summer picnic or **go** to swimming.\"       | \"every weekend, we **go** to a summer picnic or **go** swimming.\" (습관적인 행동)         |\n| \"Yes, that **is** summer vacation.\"                                               | \"Yes, that **was** my summer vacation.\" (과거의 일)                                         |\n| \"I work there as a guy Monday to Friday. And then I **came back** to my home in Busan.\" | \"I work there from Monday to Friday, and then I **come back** to my home in Busan.\" (습관적인 행동) |\n\n📌 **핵심 규칙:**\n*   **미리 정해진 계획**은 `be going to + 동사원형` 또는 `현재 진행형 (be + 동사-ing)`을 사용하세요. ('will'은 즉흥적인 결정이나 예측에 더 적합합니다.)\n*   **습관적이거나 반복되는 행동**은 `현재 시제 (simple present)`를 사용하세요.\n*   **과거에 일어난 일이나 과거의 사실**은 `과거 시제 (simple past)`를 사용하세요.\n\n🔁 **따라 읽기:**\n🗣️ \"She is going there on Monday.\"\n🗣️ \"Every weekend, we go to a summer picnic or go swimming.\"\n🗣️ \"Yes, that was my summer vacation.\"\n🗣️ \"I work there from Monday to Friday, and then I come back to my home in Busan.\"\n\n**4. 📗 어휘 확장 (Vocabulary Vault)**\n수업 중 등장했거나 맥락상 유용한 표준 영어 단어 5개를 소개합니다.\n\n*   **accommodating** /əˈkɒmədeɪtɪŋ/ (adj.)\n    *   뜻: 협조적인, 융통성 있는, 잘 맞춰주는\n    *   실전 예문: Our team is very **accommodating** to new ideas and changes.\n*   **chilly** /ˈtʃɪli/ (adj.)\n    *   뜻: 쌀쌀한, 으스스한\n    *   실전 예문: The office felt a bit **chilly** this morning, so I turned up the heat.\n*   **volatile** /ˈvɒlətaɪl/ (adj.)\n    *   뜻: 변동성이 큰, 불안정한, 격렬한\n    *   실전 예문: The stock market has been quite **volatile** recently due to global events.\n*   **intimidating** /ɪnˈtɪmɪdeɪtɪŋ/ (adj.)\n    *   뜻: 위협적인, 겁을 주는, 주눅 들게 하는\n    *   실전 예문: Presenting to the board can be **intimidating**, but it's a great opportunity.\n*   **haggle** /ˈhæɡl/ (v.)\n    *   뜻: (값을 깎으려고) 실랑이하다, 흥정하다\n    *   실전 예문: I always try to **haggle** for a better price when I visit traditional markets abroad.\n\n**5. 📝 실전 복습 챌린지 (Practice)**\n오늘 배운 표현과 문법을 활용하여 다음 한국어 문장을 영어로 영작해 보세요.\n\n1.  **상황:** 다음 주에 중요한 회의가 있어서 준비하고 있어요.\n    *   **영작:** (나는 다음 주에 중요한 회의를 준비하고 있습니다.)\n    *   **모범 답안:** I **am preparing** for an important meeting next week.\n2.  **상황:** 최근 에너지 수입 가격 변동성 때문에 우리 회사는 새로운 공급처를 찾고 있습니다.\n    *   **영작:** (최근 에너지 수입 가격의 변동성 때문에, 우리 회사는 새로운 공급처를 찾고 있습니다.)\n    *   **모범 답안:** Due to the recent **volatile** prices of energy imports, our company **is looking** for new suppliers.\n3.  **상황:** 저는 항상 팀원들의 다양한 의견에 귀 기울이고, 그들의 아이디어에 대해 협조적인 태도를 취합니다.\n    *   **영작:** (나는 항상 팀원들의 다양한 의견에 귀 기울이고, 그들의 아이디어에 대해 협조적인 태도를 취합니다.)\n    *   **모범 답안:** I always listen to my team members' diverse opinions and maintain an **accommodating** attitude towards their ideas.\n\n**6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)**\n\n✨ **Good Job:** Joey님이 오늘 가장 잘 표현한 문장은 바로 이 문장이었습니다!\n\"I always supply the water because the sandcastle needs water, so I supply water, and sometimes I make a castle also, and we have a competition, or we make together the sandcastle or the bridge or some construction because in Haeundae, it is so large sand beach. So yeah, that is so good place to play with my son.\"\n아드님과 해변에서 모래성을 만들며 노는 모습을 정말 생생하고 구체적으로 설명해 주셨어요. 어떤 놀이를 하고, 왜 해운대가 좋은 장소인지 이유까지 덧붙여서 듣는 사람이 마치 그 장면에 함께 있는 것처럼 느껴졌습니다. 훌륭해요!\n\n🚀 **내일의 한 문장:** 다음 수업 시작 시 튜터에게 오늘 배운 표현을 활용하여 대화를 시작해 보세요.\n\"I'm a little concerned about the upcoming project deadline. How about you?\"\n(다가오는 프로젝트 마감일 때문에 약간 걱정이 됩니다. 튜터님은 어떠세요?)\n\n---\n\n**[성과 지표]**\n**유창성 점수:** 7.5/10\n**근거:** Joey님은 대화의 흐름을 끊지 않고 자연스럽게 자신의 생각을 표현하는 능력이 뛰어납니다. 다양한 주제에 대해 막힘없이 이야기하며 튜터와 상호작용하는 모습이 인상 깊었습니다. 다만, 가끔 적절한 단어나 문법 구조를 찾기 위해 잠시 멈추는 경우가 있었고, 일부 표현이 원어민에게는 다소 어색하게 들릴 수 있었습니다.\n\n**다음 수업 '원포인트 액션 플랜':**\n다음 수업에서는 **\"시제(Verb Tense)의 일관성\"**에 집중해 주세요. 특히 과거 경험, 습관적인 행동, 그리고 미리 정해진 계획을 이야기할 때 적절한 시제를 사용하는 연습을 해봅시다. 오늘 배운 내용을 복습하며 문장의 정확성을 높이는 데 집중하면 유창성과 함께 정확성도 크게 향상될 것입니다!\n\n위 내용을 바탕으로:\n1. 먼저 오늘 수업에서 내가 틀렸거나 어색했던 표현을 하나 골라서, 관련된 상황을 영어로 질문해줘.\n2. 내가 영어로 대답하면, 자연스러운지 확인하고 더 나은 표현이 있으면 알려줘.\n3. 특히 \"반복 실수 패턴\"에서 지적된 부분을 집중적으로 연습시켜줘.\n4. 이런 식으로 오늘 배운 표현들을 하나씩 복습하자.\n5. 한국어 설명은 필요할 때만 간단히, 대화는 최대한 영어로 진행해줘.\n\n그럼 시작하자!";
+        function startReview(){navigator.clipboard.writeText(REVIEW_PROMPT).then(()=>{showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)}).catch(()=>{const t=document.createElement('textarea');t.value=REVIEW_PROMPT;document.body.appendChild(t);t.select();document.execCommand('copy');document.body.removeChild(t);showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)})}
+        function showToast(){const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500)}
+        function switchTab(n){document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',n==='feedback'?i===0:i===1));document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));document.getElementById('tab-'+n).classList.add('active')}
+    </script>
+</body>
+</html>
