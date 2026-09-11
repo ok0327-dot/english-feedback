@@ -4,11 +4,50 @@
   2026,
   36
  ],
- "topic": "Discussing how people react to finding or losing items.",
- "grammar": "Missing or Incorrect Prepositions",
- "grammar_norm": "Prepositions",
- "score": null,
- "pairs": [],
- "vocab": [],
- "_html_md5": "89de706952f4ad99f6462441d9da9bef"
+ "topic": "Lost and Found – Everyday Strategies for Finding Missing Items",
+ "grammar": "verb tense",
+ "grammar_norm": "Verb Tense",
+ "score": 6.0,
+ "pairs": [
+  {
+   "said": "I come back to my home.",
+   "natural": "I came back home."
+  },
+  {
+   "said": "My possibility is low to find.",
+   "natural": "My chances of finding it are low."
+  },
+  {
+   "said": "I retrace my steps to the lost place.",
+   "natural": "I retrace my steps to where I lost it."
+  }
+ ],
+ "vocab": [
+  {
+   "word": "misplace",
+   "pos": "동사",
+   "meaning": "물건을 어딘가에 두고 어디에 뒀는지 잊어버리다"
+  },
+  {
+   "word": "retrace",
+   "pos": "동사",
+   "meaning": "이전에 간 경로를 다시 따라가다; 발걸음을 되짚다"
+  },
+  {
+   "word": "track down",
+   "pos": "구동사",
+   "meaning": "추적하여 찾아내다"
+  },
+  {
+   "word": "handed in",
+   "pos": "구동사",
+   "meaning": "(분실물 등을) 맡기다, 제출하다"
+  },
+  {
+   "word": "diminish",
+   "pos": "동사",
+   "meaning": "줄어들다, 감소하다"
+  }
+ ],
+ "_html_md5": "a9b7cac61c08f720f411fb4f03107a8e"
 }
