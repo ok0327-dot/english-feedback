@@ -1,0 +1,53 @@
+{
+ "date": "2026-09-11",
+ "iso": [
+  2026,
+  37
+ ],
+ "topic": "Discussing weekend plans, travel experiences, and future travel destinations.",
+ "grammar": "Verb Tense/Form",
+ "grammar_norm": "Verb Tense",
+ "score": 7.5,
+ "pairs": [
+  {
+   "said": "Yes, of course. I agree with you, and it's possible to be talking.",
+   "natural": "Yes, of course. I agree with you, and I'm happy to talk."
+  },
+  {
+   "said": "I don't have enough of your information. So I'm just interested in your nowadays news or some lifestyle, etc.",
+   "natural": "I don't have enough information about you, so I'm just interested in your recent news or lifestyle."
+  },
+  {
+   "said": "it is more earlier, so I'm a little pressed by that situation.",
+   "natural": "it is earlier than usual, so I'm a little concerned/worried about that situation."
+  }
+ ],
+ "vocab": [
+  {
+   "word": "accommodating",
+   "pos": "adj.",
+   "meaning": "협조적인, 융통성 있는, 잘 맞춰주는"
+  },
+  {
+   "word": "chilly",
+   "pos": "adj.",
+   "meaning": "쌀쌀한, 으스스한"
+  },
+  {
+   "word": "volatile",
+   "pos": "adj.",
+   "meaning": "변동성이 큰, 불안정한, 격렬한"
+  },
+  {
+   "word": "intimidating",
+   "pos": "adj.",
+   "meaning": "위협적인, 겁을 주는, 주눅 들게 하는"
+  },
+  {
+   "word": "haggle",
+   "pos": "v.",
+   "meaning": "(값을 깎으려고) 실랑이하다, 흥정하다"
+  }
+ ],
+ "_html_md5": "d8bc61cd62da5d155804fcf29a8a9a24"
+}
