@@ -1,0 +1,61 @@
+{
+ "date": "2026-09-14",
+ "iso": [
+  2026,
+  38
+ ],
+ "topic": "Discussing travel goals and destinations using new expressions.",
+ "grammar": "Incorrect use of 'the' with proper nouns",
+ "grammar_norm": "Incorrect Use Of 'The' With Proper Nouns",
+ "score": 7.5,
+ "pairs": [
+  {
+   "said": "Today. Yes, it's a tired Monday because last night, on Sunday, I had ice swimming with my son.",
+   "natural": "It's a tiring Monday because last night, on Sunday, I went ice swimming with my son."
+  },
+  {
+   "said": "Is it more going down ?",
+   "natural": "Is it getting colder ?"
+  },
+  {
+   "said": "I always saw the the Terracotta about history book .",
+   "natural": "I always read about the Terracotta Warriors in history books ."
+  },
+  {
+   "said": "Why that expression used the element?",
+   "natural": "Why is that expression used with 'element'?"
+  },
+  {
+   "said": "Yes, usually if I make a plan to travel , I'm just mixed , relaxation and adventure.",
+   "natural": "Yes, usually if I plan a trip , I like to mix relaxation and adventure."
+  }
+ ],
+ "vocab": [
+  {
+   "word": "ultimate",
+   "pos": "형용사",
+   "meaning": "궁극적인, 최종적인, 최고의"
+  },
+  {
+   "word": "destination",
+   "pos": "명사",
+   "meaning": "목적지, 행선지"
+  },
+  {
+   "word": "element",
+   "pos": "명사",
+   "meaning": "요소, 성분; (in one's element) 자기에게 가장 편안하고 잘 맞는 환경"
+  },
+  {
+   "word": "inspire",
+   "pos": "동사",
+   "meaning": "영감을 주다, 고무하다, 격려하다"
+  },
+  {
+   "word": "tranquil",
+   "pos": "형용사",
+   "meaning": "고요한, 평온한"
+  }
+ ],
+ "_html_md5": "17128dede974adb38405bcb51fce05c0"
+}
