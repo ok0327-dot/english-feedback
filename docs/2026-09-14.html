@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#0f0f13"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="당근영어"><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="icon" type="image/png" sizes="192x192" href="icon-192.png"><script src="install-banner.js" defer></script><script src="sw-reg.js" defer></script>
+    <title>전화영어 복습 - 2026년 09월 14일</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Noto Sans KR',sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.75;min-height:100vh}
+        .header{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);border-bottom:1px solid rgba(255,255,255,.06);padding:48px 24px 40px;text-align:center}
+        .header-date{font-size:13px;color:#94a3b8;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+        .header h1{font-size:28px;font-weight:700;color:#f1f5f9;margin-bottom:16px}
+        .header-meta{display:flex;justify-content:center;gap:24px;font-size:14px;color:#64748b}
+        .header-meta span{display:flex;align-items:center;gap:6px}
+        .cta-section{text-align:center;padding:40px 24px}
+        .cta-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:linear-gradient(135deg,#38bdf8,#818cf8);color:#fff;font-size:16px;font-weight:600;font-family:'Noto Sans KR',sans-serif;border:none;border-radius:50px;cursor:pointer;transition:all .3s;text-decoration:none;box-shadow:0 4px 24px rgba(56,189,248,.25)}
+        .cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(56,189,248,.35)}
+        .cta-btn svg{width:20px;height:20px}
+        .cta-sub{margin-top:12px;font-size:13px;color:#64748b}
+        .toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#38bdf8;padding:14px 28px;border-radius:12px;font-size:14px;font-weight:500;border:1px solid rgba(56,189,248,.2);box-shadow:0 8px 32px rgba(0,0,0,.4);opacity:0;transition:all .4s cubic-bezier(.16,1,.3,1);z-index:1000}
+        .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+        .container{max-width:720px;margin:0 auto;padding:0 24px 80px}
+        .tabs{display:flex;gap:4px;background:#1a1a24;padding:4px;border-radius:12px;margin-bottom:32px}
+        .tab{flex:1;padding:12px;text-align:center;font-size:14px;font-weight:500;color:#64748b;background:0 0;border:none;border-radius:8px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all .2s}
+        .tab.active{background:#262636;color:#f1f5f9}
+        .tab-content{display:none}.tab-content.active{display:block}
+        .feedback h2{font-size:18px;font-weight:700;color:#f1f5f9;margin:36px 0 16px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.06)}
+        .feedback h2:first-child{margin-top:0}
+        .feedback p{margin:8px 0;color:#cbd5e1}
+        .feedback .item{padding:6px 0 6px 16px;border-left:2px solid #334155;margin:6px 0;color:#cbd5e1}
+        .feedback .numbered{padding:8px 0 8px 16px;color:#cbd5e1}
+        .feedback .numbered strong{color:#38bdf8}
+        .feedback strong{color:#f1f5f9}
+        .feedback code{background:#1e293b;padding:2px 8px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#38bdf8}
+        .feedback table{width:100%;border-collapse:collapse;margin:12px 0}
+        .feedback th,.feedback td{padding:10px 14px;text-align:left;border-bottom:1px solid #262636}
+        .feedback th{color:#94a3b8;font-weight:500;font-size:13px}
+        .feedback td{color:#cbd5e1}
+        .arrow{color:#38bdf8;font-weight:700}
+        .transcript{background:#1a1a24;border-radius:12px;padding:28px;font-size:14px;line-height:2;color:#94a3b8;white-space:pre-wrap;word-break:break-word;font-family:'JetBrains Mono','Noto Sans KR',monospace}
+        .transcript .tutor{color:#38bdf8}
+        .transcript .student{color:#a78bfa}
+        @media(max-width:640px){.header{padding:32px 16px}.header h1{font-size:22px}.cta-btn{padding:14px 28px;font-size:15px}.container{padding:0 16px 60px}}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-date">2026년 09월 14일</div>
+        <h1>📚 전화영어 복습</h1>
+        <div class="header-meta">
+            <span>⏱ 19분 52초</span>
+            <span>🎙 전화영어_025180304_20260914080015.m4a</span>
+        </div>
+    </div>
+    <div class="cta-section">
+        <button class="cta-btn" onclick="startReview()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Gemini에서 복습 대화 시작하기
+        </button>
+        <div class="cta-sub">클릭하면 프롬프트가 복사되고 Gemini가 열립니다</div>
+    </div>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('feedback')">📋 AI 피드백</button>
+            <button class="tab" onclick="switchTab('transcript')">🎙 수업 전사</button>
+        </div>
+        <div id="tab-feedback" class="tab-content active">
+            <div class="feedback"><p>안녕하세요, Joey! 활기찬 월요일 아침 전화 영어 수업, 정말 수고 많으셨습니다. 아이와 함께 한 아이스 스위밍 이야기도 흥미로웠고, 새로운 교재에 대한 호기심과 학습 열정이 느껴져서 저도 즐거웠습니다. 특히 'next-level experience'와 'in my element' 같은 표현들을 자기 경험에 연결해서 질문하고 활용하려는 모습이 아주 인상 깊었어요!</p>
+<br>
+<br>
+<h2><strong>0. 📌 Topic</strong></h2>
+<p>Topic: Discussing travel goals and destinations using new expressions.</p>
+<br>
+<h2><strong>1. 📊 오늘의 대화 요약 (Summary)</strong></h2>
+<p>오늘은 새로운 교재의 "Let's Hit the Road" 단원을 시작하며, 'next-level experience'와 'in my element' 같은 핵심 표현들을 익히고 활용했습니다. Joey의 올해 여행 목표와 그 장소들을 선택한 이유에 대해 이야기 나누며, 모험과 휴식 중 어떤 여행 스타일을 선호하는지에 대해서도 깊이 있는 대화를 나눴습니다.</p>
+<br>
+<h2><strong>2. 💬 유창성 업그레이드 (Fluency & Natural Flow)</strong></h2>
+<p>Joey가 의미는 잘 전달했지만, 원어민들이 더 자연스럽게 쓰는 표현으로 다듬을 수 있는 문장들을 함께 살펴볼게요.</p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>❌ 학습자 원문 (As Said):</strong> "Today. Yes, it's a <strong>tired Monday</strong> because last night, on Sunday, I <strong>had ice swimming</strong> with my son."</div>
+<div class="item"><strong>✅ 자연스러운 표현 (Natural):</strong> "It's a <strong>tiring Monday</strong> because last night, on Sunday, I <strong>went ice swimming</strong> with my son."</div>
+<div class="item"><strong>💎 비즈니스 표현 (Professional):</strong> "It's been a <strong>demanding start to the week</strong> as I <strong>engaged in ice swimming</strong> with my son this past Sunday."</div>
+<div class="item"><strong>💡 코칭 포인트:</strong> Using 'tiring' describes the day itself as causing tiredness, rather than the day being tired. 'Go swimming' is the most natural verb to use for the activity.</div>
+<p><span class="arrow">→</span> 'tiring'은 '피곤함을 주는'이라는 의미로, 요일 자체가 피곤함을 유발한다는 뉘앙스를 줍니다. 수영 활동에는 'go swimming'을 쓰는 것이 가장 자연스럽습니다.</p>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>❌ 학습자 원문 (As Said):</strong> "Is it <strong>more going down</strong>?" (온도에 대해 질문하며)</div>
+<div class="item"><strong>✅ 자연스러운 표현 (Natural):</strong> "Is it <strong>getting colder</strong>?" 또는 "Is the temperature <strong>dropping</strong>?"</div>
+<div class="item"><strong>💎 비즈니스 표현 (Professional):</strong> "Are we <strong>experiencing a significant drop in temperature</strong>?"</div>
+<div class="item"><strong>💡 코칭 포인트:</strong> 'More going down'은 이해는 되지만, 온도 변화를 표현할 때 관용적으로 쓰이는 표현은 아닙니다. 'Getting colder'나 'dropping'이 온도 하락을 나타내는 일반적인 표현입니다.</div>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>❌ 학습자 원문 (As Said):</strong> "I always <strong>saw the the Terracotta about history book</strong>." (병마용에 대해 이야기하며)</div>
+<div class="item"><strong>✅ 자연스러운 표현 (Natural):</strong> "I always <strong>read about the Terracotta Warriors in history books</strong>."</div>
+<div class="item"><strong>💎 비즈니스 표현 (Professional):</strong> "I've consistently <strong>encountered references to the Terracotta Warriors in historical texts</strong>."</div>
+<div class="item"><strong>💡 코칭 포인트:</strong> To describe learning about something from a book, 'read about' is the appropriate verb. Also, 'Terracotta Warriors' is the full, common name for the historical site.</div>
+<p><span class="arrow">→</span> 책을 통해 무언가에 대해 알게 되었다고 말할 때는 'read about'을 쓰는 것이 적절합니다. 또한, 'Terracotta Warriors'가 이 유적지의 완전하고 일반적인 명칭입니다.</p>
+<br>
+<div class="numbered"><strong>4.</strong> <strong>❌ 학습자 원문 (As Said):</strong> "Why that expression used the element?" (in my element 표현에 대해 질문하며)</div>
+<div class="item"><strong>✅ 자연스러운 표현 (Natural):</strong> "Why <strong>is that expression used with</strong> 'element'?" 또는 "Why <strong>does that expression use</strong> 'element'?"</div>
+<div class="item"><strong>💡 코칭 포인트:</strong> 질문을 만들 때는 동사 'use' 앞에 조동사 'do/does'나 be동사 'is/are'를 활용하고, 수동태('is used')나 능동태('does use') 형태를 정확히 사용하는 것이 중요합니다.</div>
+<p><span class="arrow">→</span> 질문을 만들 때 동사 'use' 앞에 조동사 'do/does'나 be동사 'is/are'를 활용하고, 수동태('is used')나 능동태('does use') 형태를 정확히 사용하는 것이 중요합니다.</p>
+<br>
+<div class="numbered"><strong>5.</strong> <strong>❌ 학습자 원문 (As Said):</strong> "Yes, usually if I <strong>make a plan to travel</strong>, I'm just <strong>mixed</strong>, relaxation and adventure."</div>
+<div class="item"><strong>✅ 자연스러운 표현 (Natural):</strong> "Yes, usually if I <strong>plan a trip</strong>, I <strong>like to mix</strong> relaxation and adventure."</div>
+<div class="item"><strong>💡 코칭 포인트:</strong> 'make a plan to travel' 대신 'plan a trip'이 더 간결하고 자연스러운 표현입니다. 'mix'는 동사로 사용하여 '섞다'는 의미를 전달할 수 있습니다.</div>
+<p><span class="arrow">→</span> 'make a plan to travel' 대신 'plan a trip'이 더 간결하고 자연스러운 표현입니다. 'mix'는 동사로 사용하여 '섞다'는 의미를 전달할 수 있습니다.</p>
+<br>
+<h2><strong>3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)</strong></h2>
+<p>이번 수업에서는 <strong>고유명사 앞 관사 사용</strong>에 대한 패턴이 반복적으로 나타났습니다. 특히 국가, 도시, 특정 지명 앞에 불필요하게 'the'를 사용하는 경우가 있었습니다.</p>
+<br>
+<p><strong>Category: Incorrect use of 'the' with proper nouns (countries, cities, specific places)</strong></p>
+<br>
+<table>
+<tr><th>❌ 학습자 원문 (As Said)</th><th>✅ 교정 예시 (Corrected)</th></tr>
+<tr><td>"My goal this year, I will visit the four areas: <strong>the China</strong>, Xi'an, <strong>the China</strong> Xi'an, and <strong>the Sapporo</strong> in Japan, and Texas, Texas in USA, and last thing is <strong>the Spain</strong>."</td><td>"My goal this year is to visit four areas: China (Xi'an), Sapporo in Japan, Texas in the USA, and lastly, Spain."</td></tr>
+<tr><td>"And <strong>the USA</strong> is, <strong>the USA</strong> and Japan is for business travel."</td><td>"And the USA and Japan are for business travel."</td></tr>
+</table>
+<br>
+<p>📌 <strong>핵심 규칙:</strong> 대부분의 국가, 도시, 대륙, 주(state) 이름 앞에는 정관사 'the'를 붙이지 않습니다. 예외적으로 'the United States', 'the United Kingdom'처럼 복수형 국가명이나 연합체를 나타내는 국가명 앞에는 'the'를 붙입니다.</p>
+<br>
+<p>🔁 <strong>따라 읽기:</strong></p>
+<p>🗣️ "My goal this year is to visit four areas: China (Xi'an), Sapporo in Japan, Texas in the USA, and lastly, Spain."</p>
+<p>🗣️ "The USA and Japan are for business travel."</p>
+<br>
+<h2><strong>4. 📗 어휘 확장 (Vocabulary Vault)</strong></h2>
+<p>오늘 수업에서 다루었거나 비즈니스 환경에서 유용하게 쓸 수 있는 어휘들을 정리해 보았습니다.</p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>ultimate</strong> /'ʌltɪmət/ (형용사)</div>
+<div class="item">뜻: 궁극적인, 최종적인, 최고의</div>
+<div class="item">실전 예문: Our <strong>ultimate</strong> goal is to achieve market leadership in renewable energy.</div>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>destination</strong> /ˌdɛstɪˈneɪʃən/ (명사)</div>
+<div class="item">뜻: 목적지, 행선지</div>
+<div class="item">실전 예문: We need to clearly define our project <strong>destination</strong> before allocating resources.</div>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>element</strong> /'ɛlɪmənt/ (명사)</div>
+<div class="item">뜻: 요소, 성분; (in one's element) 자기에게 가장 편안하고 잘 맞는 환경</div>
+<div class="item">실전 예문: Sarah is truly <strong>in her element</strong> when she's leading a complex negotiation.</div>
+<br>
+<div class="numbered"><strong>4.</strong> <strong>inspire</strong> /ɪnˈspaɪər/ (동사)</div>
+<div class="item">뜻: 영감을 주다, 고무하다, 격려하다</div>
+<div class="item">실전 예문: Her presentation <strong>inspired</strong> the team to think creatively about new investment opportunities.</div>
+<br>
+<div class="numbered"><strong>5.</strong> <strong>tranquil</strong> /'træŋkwɪl/ (형용사)</div>
+<div class="item">뜻: 고요한, 평온한</div>
+<div class="item">실전 예문: We are seeking a <strong>tranquil</strong> environment for our next team retreat to foster deep thinking.</div>
+<br>
+<h2><strong>5. 📝 실전 복습 챌린지 (Practice)</strong></h2>
+<p>오늘 배운 표현과 문법을 활용하여 다음 문장들을 영작해 보세요.</p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>상황:</strong> 이번 주말은 정말 피곤할 것 같아요. 아이와 함께 마라톤에 참가할 예정이거든요.</div>
+<div class="item"><strong>영작:</strong> (힌트: 'tiring'과 'go running' 활용)</div>
+<div class="item"><strong>모범 답안:</strong> This weekend will be a <strong>tiring</strong> one. I'm <strong>going running</strong> in a marathon with my son.</div>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>상황:</strong> 저는 복잡한 데이터 분석을 할 때 가장 편안함을 느낍니다. 그것이 제가 가장 잘하는 일이죠.</div>
+<div class="item"><strong>영작:</strong> (힌트: 'in my element' 활용)</div>
+<div class="item"><strong>모범 답안:</strong> I feel most <strong>in my element</strong> when I'm analyzing complex data. That's what I do best.</div>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>상황:</strong> 저희 회사의 궁극적인 목표는 아시아 시장에서 에너지 수입의 새로운 기준을 세우는 것입니다.</div>
+<div class="item"><strong>영작:</strong> (힌트: 'ultimate goal', 'set a new standard', 'energy import' 활용)</div>
+<div class="item"><strong>모범 답안:</strong> Our company's <strong>ultimate goal</strong> is to <strong>set a new standard</strong> for <strong>energy import</strong> in the Asian market.</div>
+<br>
+<h2><strong>6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)</strong></h2>
+<br>
+<p>✨ <strong>Good Job:</strong></p>
+<p>"<strong>I think it is important to balance the adventure and relaxing day.</strong>"</p>
+<p>이 문장은 Joey가 자신의 여행 철학을 명확하고 유창하게 설명한 부분입니다. 'balance'라는 동사를 적절히 사용하여 'adventure'와 'relaxing day' 사이의 균형을 강조한 점이 좋았습니다. 복잡한 생각을 깔끔하게 정리하여 전달하는 능력이 돋보였습니다!</p>
+<br>
+<p>🚀 <strong>내일의 한 문장:</strong></p>
+<p>다음 수업 시작 시, 튜터에게 오늘 배운 표현을 활용하여 이렇게 말해보세요.</p>
+<p>"I'm looking forward to our next class. I hope it will be another <strong>next-level experience</strong>!"</p>
+<br>
+<br>
+<h2><strong>[성과 지표]</strong></h2>
+<p><strong>유창성 점수: 7.5/10</strong></p>
+<br>
+<p><strong>근거:</strong> Joey는 다양한 주제에 대해 막힘없이 자신의 의견을 표현하려는 노력이 돋보였습니다. 새로운 표현에 대한 이해도가 높고, 이를 자신의 상황에 적용하려는 적극적인 태도가 유창성을 높이는 데 기여했습니다. 다만, 일부 문장 구조나 전치사, 관사 사용에서 어색함이 있었지만, 이는 의미 전달에 큰 방해가 되지 않는 수준이었습니다. 대화의 흐름을 끊지 않고 꾸준히 이어나가는 능력이 훌륭합니다.</p>
+<br>
+<p><strong>다음 수업 '원포인트 액션 플랜':</strong></p>
+<p>다음 수업에서는 <strong>"고유명사 앞 관사 사용"</strong>에 조금 더 주의를 기울여 보세요. 특히 국가나 도시 이름 앞에 'the'를 붙일지 말지 한 번 더 생각하는 습관을 들이면 좋습니다. 예를 들어, "I visited China" (O) 대신 "I visited the China" (X)라고 하지 않도록 연습해 봅시다!</p></div>
+        </div>
+        <div id="tab-transcript" class="tab-content">
+            <div class="transcript"><span class="tutor">[Tutor]</span> Hello, good morning. Hi.
+[Joey] Good morning.
+<span class="tutor">[Tutor]</span> Hi there.
+[Joey] Today.
+[Joey] Yes, it&#x27;s a tired Monday because last night, on Sunday, I had ice swimming with my son.
+[Joey] So it was almost 4 hours. During the 4 hours, we swam, so it was tiring.
+[Joey] Yeah, and it&#x27;s Monday, so I will start a new thing.
+[Joey] A little tired, but it&#x27;s okay.
+<span class="tutor">[Tutor]</span> How was your weekend?
+<span class="tutor">[Tutor]</span> Yeah, again, pretty good weekend.
+<span class="tutor">[Tutor]</span> Yeah, it was nice weather.
+<span class="tutor">[Tutor]</span> Nice to get outside and enjoy the fall.
+[Joey] How was the temperature?
+[Joey] Is it more going down?
+[Joey] A little chilly?
+<span class="tutor">[Tutor]</span> Yeah, it&#x27;s about 20 degrees.
+[Joey] 20 degrees. Yeah, it&#x27;s similar.
+<span class="tutor">[Tutor]</span> Okay. Um, so yeah, here we have the new textbook.
+[Joey] Oh, yeah, just a moment. I&#x27;m checking them.
+[Joey] Oh, yes, &quot;Let&#x27;s Hit the Road.&quot;
+[Joey] The title, the title subject, the title name is &quot;Let&#x27;s Hit the Road.&quot;
+[Joey] It is about travel.
+<span class="tutor">[Tutor]</span> Yeah, travel and destinations.
+[Joey] Travel and destinations.
+<span class="tutor">[Tutor]</span> Looking on the next page, we have the key expressions.
+<span class="tutor">[Tutor]</span> Would you like to read the example?
+[Joey] Oh, yes, yes.
+[Joey] First, I&#x27;ll check that.
+[Joey] Let&#x27;s hit the road.
+<span class="tutor">[Tutor]</span> Key expression.
+<span class="tutor">[Tutor]</span> &quot;Next-level experience.&quot;
+<span class="tutor">[Tutor]</span> &quot;Christmas in Paris would be a next-level experience.&quot;
+<span class="tutor">[Tutor]</span> So remember we&#x27;re looking at the main lesson?
+[Joey] Main lesson is to &quot;Let&#x27;s Hit the Road,&quot; right?
+<span class="tutor">[Tutor]</span> So you&#x27;re looking at the pre-learn lesson.
+<span class="tutor">[Tutor]</span> So at the very top of the page,
+<span class="tutor">[Tutor]</span> so there&#x27;s pre-learn lesson and main lesson.
+[Joey] Ah, yes, I see.
+[Joey] But maybe
+[Joey] pre-learn
+[Joey] pre-learn
+[Joey] lesson is about
+[Joey] for myself,
+[Joey] and then
+[Joey] we
+[Joey] we discuss
+[Joey] about the main lesson,
+[Joey] right?
+<span class="tutor">[Tutor]</span> Yeah, you can review
+<span class="tutor">[Tutor]</span> the pre-learn lesson.
+<span class="tutor">[Tutor]</span> That&#x27;s just practice
+<span class="tutor">[Tutor]</span> for this one,
+<span class="tutor">[Tutor]</span> or we can
+<span class="tutor">[Tutor]</span> start the main lesson.
+[Joey] Yeah, so
+[Joey] it is only possible
+[Joey] to
+[Joey] for myself
+[Joey] or
+[Joey] just together?
+<span class="tutor">[Tutor]</span> So the pre-learn lesson is for you on your time, and then together we look at the main lesson.
+[Joey] Yeah, so before the class, I prepare, yeah, I will prepare the pre-lesson, but today I can study the pre-lesson.
+[Joey] So it&#x27;s possible to just the main lesson with you.
+<span class="tutor">[Tutor]</span> Yeah, yeah.
+[Joey] Yes, because that sentence is the same to pre-lesson and main lesson.
+<span class="tutor">[Tutor]</span> Yet they review the same expressions.
+[Joey] Yes, same expressions.
+[Joey] So can I read the main lesson, the key expression, right?
+<span class="tutor">[Tutor]</span> Yes, so the main lesson, key expression, and key question.
+[Joey] Key question. Okay, I will read that.
+[Joey] Key expression:
+[Joey] &quot;Next-level experience.&quot;
+[Joey] &quot;Christmas in Paris
+[Joey] would be a next-level experience.&quot;
+[Joey] &quot;Africa is a
+[Joey] next-level experience.&quot;
+[Joey] &quot;Live performance on stage is a
+[Joey] next-level experience.&quot;
+[Joey] &quot;Listening to live music
+[Joey] is a next-level experience.&quot;
+[Joey] Hmm.
+[Joey] I think
+[Joey] what do you think is a next-level experience?
+[Joey] Next-level experience? Just visit India is a next-level experience for a traveler. Visit India.
+<span class="tutor">[Tutor]</span> So something very exciting, very once-in-a-lifetime.
+[Joey] Yeah, sometimes it&#x27;s a little risky, but it is also good experience, next-level experience.
+<span class="tutor">[Tutor]</span> How about the next key expression?
+[Joey] Okay, the next key expression. &quot;I&#x27;m in my element.&quot; &quot;I&#x27;m in my element when I&#x27;m
+[Joey] surrounded by nature.&quot; Maybe that is to be happy, right? In my element. Or just you&#x27;re very good at something, also skilled, or you feel comfortable.
+[Joey] I feel comfortable.
+<span class="tutor">[Tutor]</span> For example, &quot;Baking makes me feel in my element.&quot; Good baker, they feel comfortable, skilled.
+[Joey] Come to me in my element. Why that expression used the element?
+<span class="tutor">[Tutor]</span> Element is just one
+<span class="tutor">[Tutor]</span> small part, right? So in my element, so in my state of being.
+[Joey] Yeah, but why that consists of the element? Because it means
+[Joey] state of being, in my state of being, in my state, most in my state. Okay, I read that example.
+[Joey] &quot;Relaxing by the ocean puts me in my element.&quot; &quot;A big city is where I&#x27;m truly
+[Joey] truly in my element.&quot; Is it right?
+<span class="tutor">[Tutor]</span> Truly. Truly in my element.
+[Joey] &quot;Baking makes me feel
+[Joey] in my element.&quot;
+[Joey] Okay. &quot;Swimming makes me feel in my element
+[Joey] in the ocean.&quot;
+[Joey] Okay. Okay.
+[Joey] In the next?
+<span class="tutor">[Tutor]</span> Yeah, next we have today&#x27;s question: &quot;What&#x27;s your ultimate travel goal for the year?&quot;
+[Joey] &quot;What is your ultimate travel goal for the year?&quot;
+<span class="tutor">[Tutor]</span> So we have two examples. Do you want to give your own example?
+[Joey] Uh, yes. Just first the answer. &quot;I am happy to travel to hiking the Inca trail.&quot;
+<span class="tutor">[Tutor]</span> Inca trail.
+[Joey] &quot;I love to visit
+[Joey] Iceland to see the
+[Joey] Northern Lights.&quot;
+[Joey] My goal
+[Joey] this year, I will visit
+[Joey] the four areas:
+[Joey] the China,
+[Joey] Xi&#x27;an,
+[Joey] the China Xi&#x27;an,
+[Joey] and
+[Joey] the Sapporo in Japan,
+[Joey] and
+[Joey] Texas,
+[Joey] Texas in USA, and last thing is the Spain. Yeah, the Madrid and Barcelona and Sevilla.
+[Joey] I will, I will have a plan for travel. And the USA is, the USA and Japan is
+[Joey] for business travel. And Sapporo, China and Spain is for my, my
+[Joey] family travel. So I prepare, and my ultimate goal is to be happy, yeah, with my
+[Joey] friend, with my family.
+<span class="tutor">[Tutor]</span> Mm-hmm. You have a mix of your personal and business travel
+<span class="tutor">[Tutor]</span> to some interesting places.
+[Joey] Yeah, personal and business travel.
+[Joey] You&#x27;re right.
+<span class="tutor">[Tutor]</span> The follow-up question,
+<span class="tutor">[Tutor]</span> &quot;What is the main reason you&#x27;re drawn to one of those places?&quot;
+[Joey] &quot;What is the main reason?&quot;
+<span class="tutor">[Tutor]</span> &quot;I&#x27;ve seen pictures and the scenery looks amazing.&quot;
+[Joey] I see. Maybe just I&#x27;m selecting one place
+[Joey] and why the main reason.
+[Joey] I will tell you the main reason, right?
+<span class="tutor">[Tutor]</span> Okay.
+[Joey] For China,
+[Joey] for example,
+[Joey] China.
+[Joey] I visited China
+[Joey] one month ago.
+[Joey] And
+[Joey] I always
+[Joey] saw the
+[Joey] the Terracotta
+[Joey] about history book.
+[Joey] So I&#x27;m interested
+[Joey] to
+[Joey] look at the
+[Joey] Terracotta
+[Joey] Soldier.
+[Joey] So
+[Joey] and I heard
+[Joey] that
+[Joey] 2,000 years ago that is the biggest wall in the world, and that is also the start of the Silk Road.
+[Joey] So yeah, I just wanted to look at that environment, that history, and eat the delicious food.
+[Joey] So yeah, that is the main reason to visit the Xi&#x27;an in China.
+<span class="tutor">[Tutor]</span> Yeah, definitely a lot of history there, too, and good food.
+[Joey] Yes, yes, yes. You&#x27;re right.
+<span class="tutor">[Tutor]</span> On the next page, we have the A, &quot;My Story.&quot;
+<span class="tutor">[Tutor]</span> So here we have, you can fill in the subject, the yellow, with your own words. And if you&#x27;re not sure, there are suggestions on the bottom.
+[Joey] Okay.
+[Joey] &quot;To visit Turkey would be a next-level experience for me.&quot;
+[Joey] Maybe this country name is changed.
+[Joey] I forgot that.
+<span class="tutor">[Tutor]</span> Turkish?
+[Joey] Turkey.
+<span class="tutor">[Tutor]</span> Turkey, yeah.
+[Joey] Turkey, yeah.
+[Joey] Yeah, visiting Turkey would be a next-level experience for me.
+[Joey] I would, I would feel in my element there because
+[Joey] that price, that country price makes me happy.
+[Joey] Yeah, I would love to visit with
+[Joey] Istanbul.
+[Joey] The person and people
+[Joey] with
+[Joey] just alone.
+[Joey] But with
+[Joey] my friend,
+[Joey] with my best friend.
+[Joey] I think
+[Joey] with no one.
+<span class="tutor">[Tutor]</span> If you don&#x27;t want to go alone.
+[Joey] Yeah, alone.
+[Joey] I would love to visit
+[Joey] alone.
+[Joey] I think it would be
+[Joey] a perfect chance to
+[Joey] relax, to relax,
+[Joey] or
+[Joey] a chance to visit the city.
+<span class="tutor">[Tutor]</span> Yeah.
+<span class="tutor">[Tutor]</span> Yeah, old city, good food.
+[Joey] Good food, yeah, you&#x27;re right.
+<span class="tutor">[Tutor]</span> Next page we have B, &quot;The Mission.&quot;
+<span class="tutor">[Tutor]</span> &quot;Do you prefer adventure or relaxation when traveling?&quot;
+[Joey] Yes, usually if I make a plan to travel, I&#x27;m just mixed, relaxation and adventure.
+[Joey] And if I make a planned adventure for three days or four days, I just mixed
+[Joey] relaxation day. And that relaxation day is only just to look around the city, just
+[Joey] take a bicycle and drink coffee, just relax and slowly I&#x27;m just look around
+[Joey] that city. And adventure is to go hiking or just to go to the beautiful point.
+[Joey] Yeah, so yeah, I love to do both, but I think it is important to balance the
+[Joey] adventure and relaxing day.
+<span class="tutor">[Tutor]</span> Relaxation, kind of a mix so you don&#x27;t go too hard.
+[Joey] But don&#x27;t. Yeah, sometimes I feel only adventure will make it labor like
+[Joey] work. So yeah, and Koreans are diligent. If they during the
+[Joey] travel, they get up at six o&#x27;clock and then go to sleep at 10 p.m., 11 p.m. And
+[Joey] during the awake, they always find the new place or the good place. So I think
+[Joey] it is not travel. Just we find more relaxed, yes, and yeah, take care and look
+[Joey] for myself, etc.
+<span class="tutor">[Tutor]</span> So kind of sightseeing, trying to find
+<span class="tutor">[Tutor]</span> new places.
+[Joey] Yes.
+[Joey] Yes.
+[Joey] With the people.
+<span class="tutor">[Tutor]</span> Oh, yeah.
+<span class="tutor">[Tutor]</span> Do you want to look at C?
+[Joey] C.
+<span class="tutor">[Tutor]</span> Next page.
+<span class="tutor">[Tutor]</span> So here we have a list
+<span class="tutor">[Tutor]</span> of vocabulary words.
+<span class="tutor">[Tutor]</span> So looking at these, what type of vacation
+<span class="tutor">[Tutor]</span> do you enjoy most?
+<span class="tutor">[Tutor]</span> Do you enjoy like rugged or modern?
+[Joey] Rugged.
+[Joey] Can I read the word?
+<span class="tutor">[Tutor]</span> Yeah.
+[Joey] Because some words I don&#x27;t read.
+[Joey] I can read.
+[Joey] So just first I read that.
+[Joey] &quot;Freeze.&quot;
+[Joey] &quot;Sandy.&quot;
+[Joey] &quot;Crane.&quot;
+[Joey] &quot;Difficult.&quot;
+[Joey] &quot;Exotic.&quot;
+[Joey] &quot;Exotic.&quot;
+[Joey] &quot;Exotic,&quot; right?
+<span class="tutor">[Tutor]</span> Exotic.
+[Joey] Exotic.
+<span class="tutor">[Tutor]</span> Exotic.
+[Joey] Exotic.
+<span class="tutor">[Tutor]</span> Exotic.
+[Joey] Exotic, rugged, rugged, tranquil, tranquil, rugged,
+[Joey] tranquil, remote, majestic. Oh, majestic. Lush, vibrant, vibrant, vibrant,
+[Joey] bustling, bustling, bustling, bustling, bustling, historic, modern, iconic, iconic.
+[Joey] If I limit time and select just some words, I&#x27;m just selecting exotic, exotic environment
+[Joey] because that is abroad, go to abroad, and I want to see the new thing. And the brain
+[Joey] also, if I accept the new information, that is better. So I&#x27;m checking the
+[Joey] exotic. And sometimes I wanted to see the majestic, but sometimes I want to
+[Joey] tranquil. Yeah, because that is connected to my mind. So before the travel, go to
+[Joey] travel, if my mind is busy, and meantime I&#x27;m always finding the
+[Joey] the tranquil, the peaceful. And yeah, you&#x27;re right. And if I go to travel, I
+[Joey] I always check the iconic and just peaceful place
+[Joey] because every city has iconic construction or some place.
+[Joey] And that is also nice to visit there because everyone knows that.
+[Joey] And I also, yeah, see that construction and feel
+[Joey] happy. Yeah.
+<span class="tutor">[Tutor]</span> Yeah, nice. Yeah, definitely a good one. Iconic. Yeah, some well-known place.
+[Joey] Yes, iconic.
+<span class="tutor">[Tutor]</span> Next, do you want to move on to D? This is kind of two pages, &quot;Digging Deeper.&quot;
+[Joey] Yeah, that&#x27;s so long. Yes. Okay, that textbook is so long. Okay, good.
+<span class="tutor">[Tutor]</span> So here we have the world&#x27;s most visited countries.
+[Joey] Yeah, there are so many various countries. Yes.
+<span class="tutor">[Tutor]</span> What makes people choose certain travel destinations or certain countries?
+<span class="tutor">[Tutor]</span> What do you think? Money, activities, landmarks?
+[Joey] These days, I think many people make a travel and choose some travel because
+[Joey] SNS always advertises that country. Many people post their travel pictures.
+[Joey] So some people are interested in that picture, and just one picture, and they want to go travel.
+[Joey] In my case, it is similar.
+[Joey] Sometimes I read a book and I want to go there, so I make a plan.
+[Joey] Sometimes I just find the summer vacation, the flying ticket, and sometimes I find the
+[Joey] cheapest ticket or some nice reasonable price ticket.
+[Joey] The best thing is to just move my mind, just to see one picture.
+<span class="tutor">[Tutor]</span> That kind of inspires you.
+[Joey] Yeah, that makes me, that inspires me.
+[Joey] That is right, that inspires me.
+[Joey] That inspires me or that moves me?
+[Joey] That inspires me, right?
+<span class="tutor">[Tutor]</span> That inspires me.
+[Joey] Oh, it&#x27;s a nice expression.
+[Joey] That inspires me. Okay.
+<span class="tutor">[Tutor]</span> Yeah, or yeah, moves me and motivates me.
+[Joey] Motivates me.
+[Joey] Inspires me.
+[Joey] Okay.
+<span class="tutor">[Tutor]</span> Good.
+<span class="tutor">[Tutor]</span> So that&#x27;s about it for time here.
+<span class="tutor">[Tutor]</span> So what did you think of the new textbook?
+[Joey] Oh, it&#x27;s good.
+[Joey] Yeah, how about you?
+<span class="tutor">[Tutor]</span> Yeah, that&#x27;s fine.
+<span class="tutor">[Tutor]</span> It&#x27;s got lots of vocabulary.
+[Joey] Okay, yes.
+<span class="tutor">[Tutor]</span> I will send you corrections in just a moment.
+<span class="tutor">[Tutor]</span> Have a great day.
+[Joey] Okay, you too.
+[Joey] Have a great day too.
+<span class="tutor">[Tutor]</span> You take care.
+<span class="tutor">[Tutor]</span> Bye bye.</div>
+        </div>
+    </div>
+    <div class="toast" id="toast">✅ 프롬프트가 복사되었습니다!</div>
+    <script>
+        const REVIEW_PROMPT="너는 나의 영어 회화 복습 파트너야. 오늘 내 전화영어 수업 내용을 기반으로 대화하면서 복습을 도와줘.\n\n[오늘 수업 전사 내용]\n[Tutor] Hello, good morning. Hi.\n[Joey] Good morning.\n[Tutor] Hi there.\n[Joey] Today.\n[Joey] Yes, it's a tired Monday because last night, on Sunday, I had ice swimming with my son.\n[Joey] So it was almost 4 hours. During the 4 hours, we swam, so it was tiring.\n[Joey] Yeah, and it's Monday, so I will start a new thing.\n[Joey] A little tired, but it's okay.\n[Tutor] How was your weekend?\n[Tutor] Yeah, again, pretty good weekend.\n[Tutor] Yeah, it was nice weather.\n[Tutor] Nice to get outside and enjoy the fall.\n[Joey] How was the temperature?\n[Joey] Is it more going down?\n[Joey] A little chilly?\n[Tutor] Yeah, it's about 20 degrees.\n[Joey] 20 degrees. Yeah, it's similar.\n[Tutor] Okay. Um, so yeah, here we have the new textbook.\n[Joey] Oh, yeah, just a moment. I'm checking them.\n[Joey] Oh, yes, \"Let's Hit the Road.\"\n[Joey] The title, the title subject, the title name is \"Let's Hit the Road.\"\n[Joey] It is about travel.\n[Tutor] Yeah, travel and destinations.\n[Joey] Travel and destinations.\n[Tutor] Looking on the next page, we have the key expressions.\n[Tutor] Would you like to read the example?\n[Joey] Oh, yes, yes.\n[Joey] First, I'll check that.\n[Joey] Let's hit the road.\n[Tutor] Key expression.\n[Tutor] \"Next-level experience.\"\n[Tutor] \"Christmas in Paris would be a next-level experience.\"\n[Tutor] So remember we're looking at the main lesson?\n[Joey] Main lesson is to \"Let's Hit the Road,\" right?\n[Tutor] So you're looking at the pre-learn lesson.\n[Tutor] So at the very top of the page,\n[Tutor] so there's pre-learn lesson and main lesson.\n[Joey] Ah, yes, I see.\n[Joey] But maybe\n[Joey] pre-learn\n[Joey] pre-learn\n[Joey] lesson is about\n[Joey] for myself,\n[Joey] and then\n[Joey] we\n[Joey] we discuss\n[Joey] about the main lesson,\n[Joey] right?\n[Tutor] Yeah, you can review\n[Tutor] the pre-learn lesson.\n[Tutor] That's just practice\n[Tutor] for this one,\n[Tutor] or we can\n[Tutor] start the main lesson.\n[Joey] Yeah, so\n[Joey] it is only possible\n[Joey] to\n[Joey] for myself\n[Joey] or\n[Joey] just together?\n[Tutor] So the pre-learn lesson is for you on your time, and then together we look at the main lesson.\n[Joey] Yeah, so before the class, I prepare, yeah, I will prepare the pre-lesson, but today I can study the pre-lesson.\n[Joey] So it's possible to just the main lesson with you.\n[Tutor] Yeah, yeah.\n[Joey] Yes, because that sentence is the same to pre-lesson and main lesson.\n[Tutor] Yet they review the same expressions.\n[Joey] Yes, same expressions.\n[Joey] So can I read the main lesson, the key expression, right?\n[Tutor] Yes, so the main lesson, key expression, and key question.\n[Joey] Key question. Okay, I will read that.\n[Joey] Key expression:\n[Joey] \"Next-level experience.\"\n[Joey] \"Christmas in Paris\n[Joey] would be a next-level experience.\"\n[Joey] \"Africa is a\n[Joey] next-level experience.\"\n[Joey] \"Live performance on stage is a\n[Joey] next-level experience.\"\n[Joey] \"Listening to live music\n[Joey] is a next-level experience.\"\n[Joey] Hmm.\n[Joey] I think\n[Joey] what do you think is a next-level experience?\n[Joey] Next-level experience? Just visit India is a next-level experience for a traveler. Visit India.\n[Tutor] So something very exciting, very once-in-a-lifetime.\n[Joey] Yeah, sometimes it's a little risky, but it is also good experience, next-level experience.\n[Tutor] How about the next key expression?\n[Joey] Okay, the next key expression. \"I'm in my element.\" \"I'm in my element when I'm\n[Joey] surrounded by nature.\" Maybe that is to be happy, right? In my element. Or just you're very good at something, also skilled, or you feel comfortable.\n[Joey] I feel comfortable.\n[Tutor] For example, \"Baking makes me feel in my element.\" Good baker, they feel comfortable, skilled.\n[Joey] Come to me in my element. Why that expression used the element?\n[Tutor] Element is just one\n[Tutor] small part, right? So in my element, so in my state of being.\n[Joey] Yeah, but why that consists of the element? Because it means\n[Joey] state of being, in my state of being, in my state, most in my state. Okay, I read that example.\n[Joey] \"Relaxing by the ocean puts me in my element.\" \"A big city is where I'm truly\n[Joey] truly in my element.\" Is it right?\n[Tutor] Truly. Truly in my element.\n[Joey] \"Baking makes me feel\n[Joey] in my element.\"\n[Joey] Okay. \"Swimming makes me feel in my element\n[Joey] in the ocean.\"\n[Joey] Okay. Okay.\n[Joey] In the next?\n[Tutor] Yeah, next we have today's question: \"What's your ultimate travel goal for the year?\"\n[Joey] \"What is your ultimate travel goal for the year?\"\n[Tutor] So we have two examples. Do you want to give your own example?\n[Joey] Uh, yes. Just first the answer. \"I am happy to travel to hiking the Inca trail.\"\n[Tutor] Inca trail.\n[Joey] \"I love to visit\n[Joey] Iceland to see the\n[Joey] Northern Lights.\"\n[Joey] My goal\n[Joey] this year, I will visit\n[Joey] the four areas:\n[Joey] the China,\n[Joey] Xi'an,\n[Joey] the China Xi'an,\n[Joey] and\n[Joey] the Sapporo in Japan,\n[Joey] and\n[Joey] Texas,\n[Joey] Texas in USA, and last thing is the Spain. Yeah, the Madrid and Barcelona and Sevilla.\n[Joey] I will, I will have a plan for travel. And the USA is, the USA and Japan is\n[Joey] for business travel. And Sapporo, China and Spain is for my, my\n[Joey] family travel. So I prepare, and my ultimate goal is to be happy, yeah, with my\n[Joey] friend, with my family.\n[Tutor] Mm-hmm. You have a mix of your personal and business travel\n[Tutor] to some interesting places.\n[Joey] Yeah, personal and business travel.\n[Joey] You're right.\n[Tutor] The follow-up question,\n[Tutor] \"What is the main reason you're drawn to one of those places?\"\n[Joey] \"What is the main reason?\"\n[Tutor] \"I've seen pictures and the scenery looks amazing.\"\n[Joey] I see. Maybe just I'm selecting one place\n[Joey] and why the main reason.\n[Joey] I will tell you the main reason, right?\n[Tutor] Okay.\n[Joey] For China,\n[Joey] for example,\n[Joey] China.\n[Joey] I visited China\n[Joey] one month ago.\n[Joey] And\n[Joey] I always\n[Joey] saw the\n[Joey] the Terracotta\n[Joey] about history book.\n[Joey] So I'm interested\n[Joey] to\n[Joey] look at the\n[Joey] Terracotta\n[Joey] Soldier.\n[Joey] So\n[Joey] and I heard\n[Joey] that\n[Joey] 2,000 years ago that is the biggest wall in the world, and that is also the start of the Silk Road.\n[Joey] So yeah, I just wanted to look at that environment, that history, and eat the delicious food.\n[Joey] So yeah, that is the main reason to visit the Xi'an in China.\n[Tutor] Yeah, definitely a lot of history there, too, and good food.\n[Joey] Yes, yes, yes. You're right.\n[Tutor] On the next page, we have the A, \"My Story.\"\n[Tutor] So here we have, you can fill in the subject, the yellow, with your own words. And if you're not sure, there are suggestions on the bottom.\n[Joey] Okay.\n[Joey] \"To visit Turkey would be a next-level experience for me.\"\n[Joey] Maybe this country name is changed.\n[Joey] I forgot that.\n[Tutor] Turkish?\n[Joey] Turkey.\n[Tutor] Turkey, yeah.\n[Joey] Turkey, yeah.\n[Joey] Yeah, visiting Turkey would be a next-level experience for me.\n[Joey] I would, I would feel in my element there because\n[Joey] that price, that country price makes me happy.\n[Joey] Yeah, I would love to visit with\n[Joey] Istanbul.\n[Joey] The person and people\n[Joey] with\n[Joey] just alone.\n[Joey] But with\n[Joey] my friend,\n[Joey] with my best friend.\n[Joey] I think\n[Joey] with no one.\n[Tutor] If you don't want to go alone.\n[Joey] Yeah, alone.\n[Joey] I would love to visit\n[Joey] alone.\n[Joey] I think it would be\n[Joey] a perfect chance to\n[Joey] relax, to relax,\n[Joey] or\n[Joey] a chance to visit the city.\n[Tutor] Yeah.\n[Tutor] Yeah, old city, good food.\n[Joey] Good food, yeah, you're right.\n[Tutor] Next page we have B, \"The Mission.\"\n[Tutor] \"Do you prefer adventure or relaxation when traveling?\"\n[Joey] Yes, usually if I make a plan to travel, I'm just mixed, relaxation and adventure.\n[Joey] And if I make a planned adventure for three days or four days, I just mixed\n[Joey] relaxation day. And that relaxation day is only just to look around the city, just\n[Joey] take a bicycle and drink coffee, just relax and slowly I'm just look around\n[Joey] that city. And adventure is to go hiking or just to go to the beautiful point.\n[Joey] Yeah, so yeah, I love to do both, but I think it is important to balance the\n[Joey] adventure and relaxing day.\n[Tutor] Relaxation, kind of a mix so you don't go too hard.\n[Joey] But don't. Yeah, sometimes I feel only adventure will make it labor like\n[Joey] work. So yeah, and Koreans are diligent. If they during the\n[Joey] travel, they get up at six o'clock and then go to sleep at 10 p.m., 11 p.m. And\n[Joey] during the awake, they always find the new place or the good place. So I think\n[Joey] it is not travel. Just we find more relaxed, yes, and yeah, take care and look\n[Joey] for myself, etc.\n[Tutor] So kind of sightseeing, trying to find\n[Tutor] new places.\n[Joey] Yes.\n[Joey] Yes.\n[Joey] With the people.\n[Tutor] Oh, yeah.\n[Tutor] Do you want to look at C?\n[Joey] C.\n[Tutor] Next page.\n[Tutor] So here we have a list\n[Tutor] of vocabulary words.\n[Tutor] So looking at these, what type of vacation\n[Tutor] do you enjoy most?\n[Tutor] Do you enjoy like rugged or modern?\n[Joey] Rugged.\n[Joey] Can I read the word?\n[Tutor] Yeah.\n[Joey] Because some words I don't read.\n[Joey] I can read.\n[Joey] So just first I read that.\n[Joey] \"Freeze.\"\n[Joey] \"Sandy.\"\n[Joey] \"Crane.\"\n[Joey] \"Difficult.\"\n[Joey] \"Exotic.\"\n[Joey] \"Exotic.\"\n[Joey] \"Exotic,\" right?\n[Tutor] Exotic.\n[Joey] Exotic.\n[Tutor] Exotic.\n[Joey] Exotic.\n[Tutor] Exotic.\n[Joey] Exotic, rugged, rugged, tranquil, tranquil, rugged,\n[Joey] tranquil, remote, majestic. Oh, majestic. Lush, vibrant, vibrant, vibrant,\n[Joey] bustling, bustling, bustling, bustling, bustling, historic, modern, iconic, iconic.\n[Joey] If I limit time and select just some words, I'm just selecting exotic, exotic environment\n[Joey] because that is abroad, go to abroad, and I want to see the new thing. And the brain\n[Joey] also, if I accept the new information, that is better. So I'm checking the\n[Joey] exotic. And sometimes I wanted to see the majestic, but sometimes I want to\n[Joey] tranquil. Yeah, because that is connected to my mind. So before the travel, go to\n[Joey] travel, if my mind is busy, and meantime I'm always finding the\n[Joey] the tranquil, the peaceful. And yeah, you're right. And if I go to travel, I\n[Joey] I always check the iconic and just peaceful place\n[Joey] because every city has iconic construction or some place.\n[Joey] And that is also nice to visit there because everyone knows that.\n[Joey] And I also, yeah, see that construction and feel\n[Joey] happy. Yeah.\n[Tutor] Yeah, nice. Yeah, definitely a good one. Iconic. Yeah, some well-known place.\n[Joey] Yes, iconic.\n[Tutor] Next, do you want to move on to D? This is kind of two pages, \"Digging Deeper.\"\n[Joey] Yeah, that's so long. Yes. Okay, that textbook is so long. Okay, good.\n[Tutor] So here we have the world's most visited countries.\n[Joey] Yeah, there are so many various countries. Yes.\n[Tutor] What makes people choose certain travel destinations or certain countries?\n[Tutor] What do you think? Money, activities, landmarks?\n[Joey] These days, I think many people make a travel and choose some travel because\n[Joey] SNS always advertises that country. Many people post their travel pictures.\n[Joey] So some people are interested in that picture, and just one picture, and they want to go travel.\n[Joey] In my case, it is similar.\n[Joey] Sometimes I read a book and I want to go there, so I make a plan.\n[Joey] Sometimes I just find the summer vacation, the flying ticket, and sometimes I find the\n[Joey] cheapest ticket or some nice reasonable price ticket.\n[Joey] The best thing is to just move my mind, just to see one picture.\n[Tutor] That kind of inspires you.\n[Joey] Yeah, that makes me, that inspires me.\n[Joey] That is right, that inspires me.\n[Joey] That inspires me or that moves me?\n[Joey] That inspires me, right?\n[Tutor] That inspires me.\n[Joey] Oh, it's a nice expression.\n[Joey] That inspires me. Okay.\n[Tutor] Yeah, or yeah, moves me and motivates me.\n[Joey] Motivates me.\n[Joey] Inspires me.\n[Joey] Okay.\n[Tutor] Good.\n[Tutor] So that's about it for time here.\n[Tutor] So what did you think of the new textbook?\n[Joey] Oh, it's good.\n[Joey] Yeah, how about you?\n[Tutor] Yeah, that's fine.\n[Tutor] It's got lots of vocabulary.\n[Joey] Okay, yes.\n[Tutor] I will send you corrections in just a moment.\n[Tutor] Have a great day.\n[Joey] Okay, you too.\n[Joey] Have a great day too.\n[Tutor] You take care.\n[Tutor] Bye bye.\n\n[AI 피드백]\n안녕하세요, Joey! 활기찬 월요일 아침 전화 영어 수업, 정말 수고 많으셨습니다. 아이와 함께 한 아이스 스위밍 이야기도 흥미로웠고, 새로운 교재에 대한 호기심과 학습 열정이 느껴져서 저도 즐거웠습니다. 특히 'next-level experience'와 'in my element' 같은 표현들을 자기 경험에 연결해서 질문하고 활용하려는 모습이 아주 인상 깊었어요!\n\n---\n\n### **0. 📌 Topic**\nTopic: Discussing travel goals and destinations using new expressions.\n\n### **1. 📊 오늘의 대화 요약 (Summary)**\n오늘은 새로운 교재의 \"Let's Hit the Road\" 단원을 시작하며, 'next-level experience'와 'in my element' 같은 핵심 표현들을 익히고 활용했습니다. Joey의 올해 여행 목표와 그 장소들을 선택한 이유에 대해 이야기 나누며, 모험과 휴식 중 어떤 여행 스타일을 선호하는지에 대해서도 깊이 있는 대화를 나눴습니다.\n\n### **2. 💬 유창성 업그레이드 (Fluency & Natural Flow)**\nJoey가 의미는 잘 전달했지만, 원어민들이 더 자연스럽게 쓰는 표현으로 다듬을 수 있는 문장들을 함께 살펴볼게요.\n\n1.  **❌ 학습자 원문 (As Said):** \"Today. Yes, it's a **tired Monday** because last night, on Sunday, I **had ice swimming** with my son.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"It's a **tiring Monday** because last night, on Sunday, I **went ice swimming** with my son.\"\n    *   **💎 비즈니스 표현 (Professional):** \"It's been a **demanding start to the week** as I **engaged in ice swimming** with my son this past Sunday.\"\n    *   **💡 코칭 포인트:** Using 'tiring' describes the day itself as causing tiredness, rather than the day being tired. 'Go swimming' is the most natural verb to use for the activity.\n        → 'tiring'은 '피곤함을 주는'이라는 의미로, 요일 자체가 피곤함을 유발한다는 뉘앙스를 줍니다. 수영 활동에는 'go swimming'을 쓰는 것이 가장 자연스럽습니다.\n\n2.  **❌ 학습자 원문 (As Said):** \"Is it **more going down**?\" (온도에 대해 질문하며)\n    *   **✅ 자연스러운 표현 (Natural):** \"Is it **getting colder**?\" 또는 \"Is the temperature **dropping**?\"\n    *   **💎 비즈니스 표현 (Professional):** \"Are we **experiencing a significant drop in temperature**?\"\n    *   **💡 코칭 포인트:** 'More going down'은 이해는 되지만, 온도 변화를 표현할 때 관용적으로 쓰이는 표현은 아닙니다. 'Getting colder'나 'dropping'이 온도 하락을 나타내는 일반적인 표현입니다.\n\n3.  **❌ 학습자 원문 (As Said):** \"I always **saw the the Terracotta about history book**.\" (병마용에 대해 이야기하며)\n    *   **✅ 자연스러운 표현 (Natural):** \"I always **read about the Terracotta Warriors in history books**.\"\n    *   **💎 비즈니스 표현 (Professional):** \"I've consistently **encountered references to the Terracotta Warriors in historical texts**.\"\n    *   **💡 코칭 포인트:** To describe learning about something from a book, 'read about' is the appropriate verb. Also, 'Terracotta Warriors' is the full, common name for the historical site.\n        → 책을 통해 무언가에 대해 알게 되었다고 말할 때는 'read about'을 쓰는 것이 적절합니다. 또한, 'Terracotta Warriors'가 이 유적지의 완전하고 일반적인 명칭입니다.\n\n4.  **❌ 학습자 원문 (As Said):** \"Why that expression used the element?\" (in my element 표현에 대해 질문하며)\n    *   **✅ 자연스러운 표현 (Natural):** \"Why **is that expression used with** 'element'?\" 또는 \"Why **does that expression use** 'element'?\"\n    *   **💡 코칭 포인트:** 질문을 만들 때는 동사 'use' 앞에 조동사 'do/does'나 be동사 'is/are'를 활용하고, 수동태('is used')나 능동태('does use') 형태를 정확히 사용하는 것이 중요합니다.\n        → 질문을 만들 때 동사 'use' 앞에 조동사 'do/does'나 be동사 'is/are'를 활용하고, 수동태('is used')나 능동태('does use') 형태를 정확히 사용하는 것이 중요합니다.\n\n5.  **❌ 학습자 원문 (As Said):** \"Yes, usually if I **make a plan to travel**, I'm just **mixed**, relaxation and adventure.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"Yes, usually if I **plan a trip**, I **like to mix** relaxation and adventure.\"\n    *   **💡 코칭 포인트:** 'make a plan to travel' 대신 'plan a trip'이 더 간결하고 자연스러운 표현입니다. 'mix'는 동사로 사용하여 '섞다'는 의미를 전달할 수 있습니다.\n        → 'make a plan to travel' 대신 'plan a trip'이 더 간결하고 자연스러운 표현입니다. 'mix'는 동사로 사용하여 '섞다'는 의미를 전달할 수 있습니다.\n\n### **3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)**\n이번 수업에서는 **고유명사 앞 관사 사용**에 대한 패턴이 반복적으로 나타났습니다. 특히 국가, 도시, 특정 지명 앞에 불필요하게 'the'를 사용하는 경우가 있었습니다.\n\n**Category: Incorrect use of 'the' with proper nouns (countries, cities, specific places)**\n\n| ❌ 학습자 원문 (As Said)                                         | ✅ 교정 예시 (Corrected)                                          |\n| :--------------------------------------------------------------- | :--------------------------------------------------------------- |\n| \"My goal this year, I will visit the four areas: **the China**, Xi'an, **the China** Xi'an, and **the Sapporo** in Japan, and Texas, Texas in USA, and last thing is **the Spain**.\" | \"My goal this year is to visit four areas: China (Xi'an), Sapporo in Japan, Texas in the USA, and lastly, Spain.\" |\n| \"And **the USA** is, **the USA** and Japan is for business travel.\" | \"And the USA and Japan are for business travel.\"                  |\n\n📌 **핵심 규칙:** 대부분의 국가, 도시, 대륙, 주(state) 이름 앞에는 정관사 'the'를 붙이지 않습니다. 예외적으로 'the United States', 'the United Kingdom'처럼 복수형 국가명이나 연합체를 나타내는 국가명 앞에는 'the'를 붙입니다.\n\n🔁 **따라 읽기:**\n🗣️ \"My goal this year is to visit four areas: China (Xi'an), Sapporo in Japan, Texas in the USA, and lastly, Spain.\"\n🗣️ \"The USA and Japan are for business travel.\"\n\n### **4. 📗 어휘 확장 (Vocabulary Vault)**\n오늘 수업에서 다루었거나 비즈니스 환경에서 유용하게 쓸 수 있는 어휘들을 정리해 보았습니다.\n\n1.  **ultimate** /'ʌltɪmət/ (형용사)\n    *   뜻: 궁극적인, 최종적인, 최고의\n    *   실전 예문: Our **ultimate** goal is to achieve market leadership in renewable energy.\n\n2.  **destination** /ˌdɛstɪˈneɪʃən/ (명사)\n    *   뜻: 목적지, 행선지\n    *   실전 예문: We need to clearly define our project **destination** before allocating resources.\n\n3.  **element** /'ɛlɪmənt/ (명사)\n    *   뜻: 요소, 성분; (in one's element) 자기에게 가장 편안하고 잘 맞는 환경\n    *   실전 예문: Sarah is truly **in her element** when she's leading a complex negotiation.\n\n4.  **inspire** /ɪnˈspaɪər/ (동사)\n    *   뜻: 영감을 주다, 고무하다, 격려하다\n    *   실전 예문: Her presentation **inspired** the team to think creatively about new investment opportunities.\n\n5.  **tranquil** /'træŋkwɪl/ (형용사)\n    *   뜻: 고요한, 평온한\n    *   실전 예문: We are seeking a **tranquil** environment for our next team retreat to foster deep thinking.\n\n### **5. 📝 실전 복습 챌린지 (Practice)**\n오늘 배운 표현과 문법을 활용하여 다음 문장들을 영작해 보세요.\n\n1.  **상황:** 이번 주말은 정말 피곤할 것 같아요. 아이와 함께 마라톤에 참가할 예정이거든요.\n    *   **영작:** (힌트: 'tiring'과 'go running' 활용)\n    *   **모범 답안:** This weekend will be a **tiring** one. I'm **going running** in a marathon with my son.\n\n2.  **상황:** 저는 복잡한 데이터 분석을 할 때 가장 편안함을 느낍니다. 그것이 제가 가장 잘하는 일이죠.\n    *   **영작:** (힌트: 'in my element' 활용)\n    *   **모범 답안:** I feel most **in my element** when I'm analyzing complex data. That's what I do best.\n\n3.  **상황:** 저희 회사의 궁극적인 목표는 아시아 시장에서 에너지 수입의 새로운 기준을 세우는 것입니다.\n    *   **영작:** (힌트: 'ultimate goal', 'set a new standard', 'energy import' 활용)\n    *   **모범 답안:** Our company's **ultimate goal** is to **set a new standard** for **energy import** in the Asian market.\n\n### **6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)**\n\n✨ **Good Job:**\n\"**I think it is important to balance the adventure and relaxing day.**\"\n이 문장은 Joey가 자신의 여행 철학을 명확하고 유창하게 설명한 부분입니다. 'balance'라는 동사를 적절히 사용하여 'adventure'와 'relaxing day' 사이의 균형을 강조한 점이 좋았습니다. 복잡한 생각을 깔끔하게 정리하여 전달하는 능력이 돋보였습니다!\n\n🚀 **내일의 한 문장:**\n다음 수업 시작 시, 튜터에게 오늘 배운 표현을 활용하여 이렇게 말해보세요.\n\"I'm looking forward to our next class. I hope it will be another **next-level experience**!\"\n\n---\n\n### **[성과 지표]**\n**유창성 점수: 7.5/10**\n\n**근거:** Joey는 다양한 주제에 대해 막힘없이 자신의 의견을 표현하려는 노력이 돋보였습니다. 새로운 표현에 대한 이해도가 높고, 이를 자신의 상황에 적용하려는 적극적인 태도가 유창성을 높이는 데 기여했습니다. 다만, 일부 문장 구조나 전치사, 관사 사용에서 어색함이 있었지만, 이는 의미 전달에 큰 방해가 되지 않는 수준이었습니다. 대화의 흐름을 끊지 않고 꾸준히 이어나가는 능력이 훌륭합니다.\n\n**다음 수업 '원포인트 액션 플랜':**\n다음 수업에서는 **\"고유명사 앞 관사 사용\"**에 조금 더 주의를 기울여 보세요. 특히 국가나 도시 이름 앞에 'the'를 붙일지 말지 한 번 더 생각하는 습관을 들이면 좋습니다. 예를 들어, \"I visited China\" (O) 대신 \"I visited the China\" (X)라고 하지 않도록 연습해 봅시다!\n\n위 내용을 바탕으로:\n1. 먼저 오늘 수업에서 내가 틀렸거나 어색했던 표현을 하나 골라서, 관련된 상황을 영어로 질문해줘.\n2. 내가 영어로 대답하면, 자연스러운지 확인하고 더 나은 표현이 있으면 알려줘.\n3. 특히 \"반복 실수 패턴\"에서 지적된 부분을 집중적으로 연습시켜줘.\n4. 이런 식으로 오늘 배운 표현들을 하나씩 복습하자.\n5. 한국어 설명은 필요할 때만 간단히, 대화는 최대한 영어로 진행해줘.\n\n그럼 시작하자!";
+        function startReview(){navigator.clipboard.writeText(REVIEW_PROMPT).then(()=>{showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)}).catch(()=>{const t=document.createElement('textarea');t.value=REVIEW_PROMPT;document.body.appendChild(t);t.select();document.execCommand('copy');document.body.removeChild(t);showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)})}
+        function showToast(){const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500)}
+        function switchTab(n){document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',n==='feedback'?i===0:i===1));document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));document.getElementById('tab-'+n).classList.add('active')}
+    </script>
+</body>
+</html>
