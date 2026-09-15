@@ -1,0 +1,53 @@
+{
+ "date": "2026-09-15",
+ "iso": [
+  2026,
+  38
+ ],
+ "topic": "Discussing unexpected travel experiences and booking preferences.",
+ "grammar": "Incorrect use of prepositions and phrasal verbs with 'wo",
+ "grammar_norm": "Prepositions",
+ "score": 7.0,
+ "pairs": [
+  {
+   "said": "I think this sentence meaning is a change in environment or a change in situation.",
+   "natural": "I think this phrase means a change in environment or situation."
+  },
+  {
+   "said": "Every word that includes 'took,' is it possible to also use 'take,' 'take a turn'?",
+   "natural": "For phrases like 'took a turn,' can I also use 'take a turn'?"
+  },
+  {
+   "said": "I had three luggages.",
+   "natural": "I had three pieces of luggage."
+  }
+ ],
+ "vocab": [
+  {
+   "word": "itchy feet",
+   "pos": "idiom",
+   "meaning": "여행하고 싶어 안달이 난 마음, 떠나고 싶은 마음"
+  },
+  {
+   "word": "take a turn",
+   "pos": "phrase",
+   "meaning": "상황이 바뀌다, 전환점을 맞다 (주로 예상치 못한 방향으로)"
+  },
+  {
+   "word": "turn things around",
+   "pos": "phrase",
+   "meaning": "상황을 역전시키다, 개선하다 (나쁜 상황을 좋은 상황으로)"
+  },
+  {
+   "word": "accommodation",
+   "pos": "n",
+   "meaning": "숙박 시설"
+  },
+  {
+   "word": "backup plan",
+   "pos": "n",
+   "meaning": "비상 계획, 대안"
+  }
+ ],
+ "_html_md5": "956f40ffbceeeba53463112cb219b7ee"
+}
