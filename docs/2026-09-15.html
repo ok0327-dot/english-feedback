@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#0f0f13"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="당근영어"><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="icon" type="image/png" sizes="192x192" href="icon-192.png"><script src="install-banner.js" defer></script><script src="sw-reg.js" defer></script>
+    <title>전화영어 복습 - 2026년 09월 15일</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Noto Sans KR',sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.75;min-height:100vh}
+        .header{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);border-bottom:1px solid rgba(255,255,255,.06);padding:48px 24px 40px;text-align:center}
+        .header-date{font-size:13px;color:#94a3b8;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+        .header h1{font-size:28px;font-weight:700;color:#f1f5f9;margin-bottom:16px}
+        .header-meta{display:flex;justify-content:center;gap:24px;font-size:14px;color:#64748b}
+        .header-meta span{display:flex;align-items:center;gap:6px}
+        .cta-section{text-align:center;padding:40px 24px}
+        .cta-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:linear-gradient(135deg,#38bdf8,#818cf8);color:#fff;font-size:16px;font-weight:600;font-family:'Noto Sans KR',sans-serif;border:none;border-radius:50px;cursor:pointer;transition:all .3s;text-decoration:none;box-shadow:0 4px 24px rgba(56,189,248,.25)}
+        .cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(56,189,248,.35)}
+        .cta-btn svg{width:20px;height:20px}
+        .cta-sub{margin-top:12px;font-size:13px;color:#64748b}
+        .toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#38bdf8;padding:14px 28px;border-radius:12px;font-size:14px;font-weight:500;border:1px solid rgba(56,189,248,.2);box-shadow:0 8px 32px rgba(0,0,0,.4);opacity:0;transition:all .4s cubic-bezier(.16,1,.3,1);z-index:1000}
+        .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+        .container{max-width:720px;margin:0 auto;padding:0 24px 80px}
+        .tabs{display:flex;gap:4px;background:#1a1a24;padding:4px;border-radius:12px;margin-bottom:32px}
+        .tab{flex:1;padding:12px;text-align:center;font-size:14px;font-weight:500;color:#64748b;background:0 0;border:none;border-radius:8px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all .2s}
+        .tab.active{background:#262636;color:#f1f5f9}
+        .tab-content{display:none}.tab-content.active{display:block}
+        .feedback h2{font-size:18px;font-weight:700;color:#f1f5f9;margin:36px 0 16px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.06)}
+        .feedback h2:first-child{margin-top:0}
+        .feedback p{margin:8px 0;color:#cbd5e1}
+        .feedback .item{padding:6px 0 6px 16px;border-left:2px solid #334155;margin:6px 0;color:#cbd5e1}
+        .feedback .numbered{padding:8px 0 8px 16px;color:#cbd5e1}
+        .feedback .numbered strong{color:#38bdf8}
+        .feedback strong{color:#f1f5f9}
+        .feedback code{background:#1e293b;padding:2px 8px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#38bdf8}
+        .feedback table{width:100%;border-collapse:collapse;margin:12px 0}
+        .feedback th,.feedback td{padding:10px 14px;text-align:left;border-bottom:1px solid #262636}
+        .feedback th{color:#94a3b8;font-weight:500;font-size:13px}
+        .feedback td{color:#cbd5e1}
+        .arrow{color:#38bdf8;font-weight:700}
+        .transcript{background:#1a1a24;border-radius:12px;padding:28px;font-size:14px;line-height:2;color:#94a3b8;white-space:pre-wrap;word-break:break-word;font-family:'JetBrains Mono','Noto Sans KR',monospace}
+        .transcript .tutor{color:#38bdf8}
+        .transcript .student{color:#a78bfa}
+        @media(max-width:640px){.header{padding:32px 16px}.header h1{font-size:22px}.cta-btn{padding:14px 28px;font-size:15px}.container{padding:0 16px 60px}}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-date">2026년 09월 15일</div>
+        <h1>📚 전화영어 복습</h1>
+        <div class="header-meta">
+            <span>⏱ 20분 28초</span>
+            <span>🎙 전화영어_025180304_20260915080012.m4a</span>
+        </div>
+    </div>
+    <div class="cta-section">
+        <button class="cta-btn" onclick="startReview()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Gemini에서 복습 대화 시작하기
+        </button>
+        <div class="cta-sub">클릭하면 프롬프트가 복사되고 Gemini가 열립니다</div>
+    </div>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('feedback')">📋 AI 피드백</button>
+            <button class="tab" onclick="switchTab('transcript')">🎙 수업 전사</button>
+        </div>
+        <div id="tab-feedback" class="tab-content active">
+            <div class="feedback"><p>Joey, 안녕하세요! 오늘 수업도 정말 열심히 참여해 주셔서 감사합니다. 여행 관련 표현들을 배우고, Joey의 흥미로운 경험담까지 들을 수 있어서 아주 즐거운 시간이었어요. 특히 에스컬레이터에서 겪었던 일은 정말 생생하게 느껴졌습니다!</p>
+<br>
+<p>오늘 배운 표현들을 바탕으로 Joey의 영어 실력이 한 단계 더 발전할 수 있도록 따뜻하고 실용적인 피드백을 드릴게요.</p>
+<br>
+<br>
+<p><strong>0. 📌 Topic</strong></p>
+<p>Topic: Discussing unexpected travel experiences and booking preferences.</p>
+<br>
+<br>
+<p><strong>1. 📊 오늘의 대화 요약 (Summary)</strong></p>
+<p>오늘은 'I have itchy feet'이라는 표현으로 시작하여, 예상치 못했던 여행 경험에 대해 이야기하고, 'took a turn'과 'turn things around' 같은 유용한 표현들을 살펴보았습니다. 또한, 여행 예약 사이트의 특징과 선호하는 여행 방식(혼자 vs. 함께, 해변 vs. 산)에 대해서도 깊이 있는 대화를 나누었습니다.</p>
+<br>
+<br>
+<p><strong>2. 💬 유창성 업그레이드 (Fluency & Natural Flow)</strong></p>
+<p>Joey가 말씀하신 문장 중 의미는 잘 전달되었지만, 원어민들이 더 자연스럽게 쓰는 표현으로 다듬으면 좋을 문장 3가지를 선정했습니다.</p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>❌ 학습자 원문 (As Said):</strong> "I think this sentence meaning is a change in environment or a change in situation."</div>
+<div class="item"><strong>✅ 자연스러운 표현 (Natural):</strong> "I think this phrase means a change in environment or situation."</div>
+<div class="item"><strong>💎 비즈니스 표현 (Professional):</strong> "I interpret this phrase as indicating a shift in circumstances or environment."</div>
+<div class="item"><strong>💡 코칭 포인트:</strong> "This sentence meaning"은 다소 중복되는 표현입니다. "the meaning of this sentence" 또는 간단히 "this phrase means..."라고 하는 것이 더 자연스럽습니다. 'took a turn'과 같은 여러 단어의 묶음을 지칭할 때는 'phrase'가 더 정확합니다.</div>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>❌ 학습자 원문 (As Said):</strong> "Every word that includes 'took,' is it possible to also use 'take,' 'take a turn'?"</div>
+<div class="item"><strong>✅ 자연스러운 표현 (Natural):</strong> "For phrases like 'took a turn,' can I also use 'take a turn'?"</div>
+<div class="item"><strong>💎 비즈니스 표현 (Professional):</strong> "Regarding expressions containing 'took,' is it permissible to use 'take' for present or future contexts?"</div>
+<div class="item"><strong>💡 코칭 포인트:</strong> "Every word that includes 'took'"는 다소 어색하고 광범위하게 들릴 수 있습니다. 질문하고자 하는 특정 구에 초점을 맞춰 "phrases like 'took a turn'"이라고 하면 질문이 더 명확하고 간결해집니다.</div>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>❌ 학습자 원문 (As Said):</strong> "I had three luggages."</div>
+<div class="item"><strong>✅ 자연스러운 표현 (Natural):</strong> "I had three pieces of luggage."</div>
+<div class="item"><strong>💎 비즈니스 표현 (Professional):</strong> "I was carrying three items of luggage."</div>
+<div class="item"><strong>💡 코칭 포인트:</strong> 'Luggage'는 영어에서 셀 수 없는 명사로, 'luggages'와 같은 복수형이 없습니다. 개별 품목을 셀 때는 'pieces of luggage'를 사용합니다.</div>
+<br>
+<br>
+<p><strong>3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)</strong></p>
+<p>Category: Incorrect use of prepositions and phrasal verbs with 'work' and 'search'</p>
+<br>
+<p>Joey는 특정 동사 뒤에 오는 전치사나 구동사 사용에서 좀 더 자연스러운 표현을 익히면 좋을 것 같아요. 특히 'by work'나 'searching the beach'와 같이 한국어 사고방식에서 직역된 표현들이 보였습니다.</p>
+<br>
+<table>
+<tr><th>❌ 원문 (As Said)</th><th>✅ 교정 예시 (Corrected)</th></tr>
+<tr><td>We managed to turn things around <strong>by work</strong> because I always worked slowly, slowly, slowly, and then I perfectly recovered my back.</td><td>We managed to turn things around <strong>through hard work</strong> because I always worked slowly and steadily, and then I fully recovered.</td></tr>
+<tr><td>if I need some relaxation, at that time I'm just <strong>searching the beach</strong>.</td><td>If I need some relaxation, at that time I'm just <strong>looking for a beach destination</strong>.</td></tr>
+<tr><td>Just <strong>go some place</strong>, travel alone, and just drink a coffee alone and think about walking the street, the new place.</td><td>Just <strong>go to some place</strong>, travel alone, and just drink a coffee alone and think about walking the street, the new place.</td></tr>
+<tr><td>A good decision helps <strong>turning around</strong> quickly.</td><td>A good decision helps <strong>to turn things around</strong> quickly.</td></tr>
+</table>
+<br>
+<p>📌 <strong>핵심 규칙:</strong> 동사 뒤에 오는 전치사나 구동사는 문맥에 따라 정해진 짝이 있으므로, 자주 쓰는 표현들을 통째로 익히는 것이 중요합니다. 특히 'work'는 'by work'보다는 'through hard work'나 'by working hard'처럼 구체적인 방식을 나타내는 것이 자연스럽고, 'search'는 대상을 직접 'search'하기보다는 'search for' 또는 'look for'를 쓰는 경우가 많습니다. 'go' 뒤에는 장소를 나타낼 때 전치사 'to'가 필요하며, 'help' 동사 뒤에는 동사원형이나 'to 부정사'가 옵니다.</p>
+<br>
+<p>🔁 <strong>따라 읽기:</strong></p>
+<p>🗣️ "We managed to turn things around through hard work."</p>
+<p>🗣️ "If I need some relaxation, I'm just looking for a beach destination."</p>
+<p>🗣️ "Just go to some place, travel alone."</p>
+<p>🗣️ "A good decision helps to turn things around quickly."</p>
+<br>
+<br>
+<p><strong>4. 📗 어휘 확장 (Vocabulary Vault)</strong></p>
+<p>오늘 대화에서 유용하게 쓰일 수 있는 어휘 5가지를 선정했습니다.</p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>itchy feet</strong> /ɪtʃi fiːt/ (idiom)</div>
+<div class="item">뜻: 여행하고 싶어 안달이 난 마음, 떠나고 싶은 마음</div>
+<div class="item">실전 예문: After a long project, I always get <strong>itchy feet</strong> and start planning my next trip.</div>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>take a turn</strong> /teɪk ə tɜːrn/ (phrase)</div>
+<div class="item">뜻: 상황이 바뀌다, 전환점을 맞다 (주로 예상치 못한 방향으로)</div>
+<div class="item">실전 예문: The market situation <strong>took a turn</strong> when the new regulations were announced.</div>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>turn things around</strong> /tɜːrn θɪŋz əˈraʊnd/ (phrase)</div>
+<div class="item">뜻: 상황을 역전시키다, 개선하다 (나쁜 상황을 좋은 상황으로)</div>
+<div class="item">실전 예문: Our team worked tirelessly to <strong>turn things around</strong> after the initial setback.</div>
+<br>
+<div class="numbered"><strong>4.</strong> <strong>accommodation</strong> /əˌkɒməˈdeɪʃən/ (n)</div>
+<div class="item">뜻: 숙박 시설</div>
+<div class="item">실전 예문: We need to book our <strong>accommodation</strong> well in advance for the upcoming conference.</div>
+<br>
+<div class="numbered"><strong>5.</strong> <strong>backup plan</strong> /ˈbækʌp plæn/ (n)</div>
+<div class="item">뜻: 비상 계획, 대안</div>
+<div class="item">실전 예문: Always have a <strong>backup plan</strong> in case the primary strategy doesn't work out.</div>
+<br>
+<br>
+<p><strong>5. 📝 실전 복습 챌린지 (Practice)</strong></p>
+<p>오늘 배운 표현과 문법을 활용하여 다음 문장들을 영작해 보세요.</p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>상황:</strong> 긴 휴가 후, 저는 여행을 떠나고 싶어 안달이 났습니다.</div>
+<div class="item"><strong>영작:</strong> (itchy feet 활용)</div>
+<div class="item"><strong>모범 답안:</strong> After a long vacation, I have <strong>itchy feet</strong> to travel again.</div>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>상황:</strong> 프로젝트 초기에는 어려움이 있었지만, 팀의 노력으로 상황을 역전시킬 수 있었습니다.</div>
+<div class="item"><strong>영작:</strong> (turn things around 활용)</div>
+<div class="item"><strong>모범 답안:</strong> The project faced difficulties initially, but the team's efforts helped us <strong>turn things around</strong>.</div>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>상황:</strong> 저는 항상 예상치 못한 상황에 대비하여 비상 계획을 세우는 것이 중요하다고 생각합니다.</div>
+<div class="item"><strong>영작:</strong> (backup plan 활용, 'take a turn' 또는 'situation' 포함)</div>
+<div class="item"><strong>모범 답안:</strong> I believe it's crucial to always have a <strong>backup plan</strong> in case the <strong>situation takes an unexpected turn</strong>.</div>
+<br>
+<br>
+<p><strong>6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)</strong></p>
+<br>
+<p>✨ <strong>Good Job:</strong> "Our trip took a turn when I hurt my back in the escalator."</p>
+<p>Joey, 이 문장은 오늘 배운 'took a turn'이라는 표현을 본인의 경험담에 아주 자연스럽게 녹여내어 사용한 훌륭한 예시입니다. 문장 구조도 완벽했고, 뒤에 이어지는 이야기와도 매끄럽게 연결되어 듣는 사람이 상황을 쉽게 상상할 수 있었어요. 정말 잘하셨습니다!</p>
+<br>
+<p>🚀 <strong>내일의 한 문장:</strong> 다음 수업 시작 시, 튜터에게 오늘 배운 표현을 활용하여 이렇게 말해보세요.</p>
+<p>"I'm feeling a bit of <strong>itchy feet</strong> today, thinking about my next travel destination!"</p>
+<br>
+<br>
+<p><strong>[성과 지표]</strong></p>
+<p><strong>유창성 점수: 7/10</strong></p>
+<br>
+<p><strong>근거:</strong> Joey는 다양한 주제에 대해 막힘없이 자신의 의견을 표현하려는 노력이 돋보였습니다. 특히 'took a turn'과 같은 새로운 표현을 자신의 경험담에 적극적으로 적용하는 모습이 매우 인상적이었습니다. 다만, 일부 문장에서 전치사 사용이나 명사의 가산/불가산 형태, 그리고 특정 동사와의 자연스러운 연결에서 약간의 어색함이 발견되어 유창성 점수를 7점으로 평가했습니다. 이는 꾸준한 연습을 통해 충분히 개선될 수 있는 부분입니다.</p>
+<br>
+<p><strong>다음 수업 '원포인트 액션 플랜':</strong></p>
+<p>다음 수업에서는 <strong>"동사 + 전치사/구동사"</strong> 조합을 조금 더 의식적으로 사용해 보는 연습을 해볼까요? 특히 'search for', 'look for', 'go to', 'help to [동사원형]'과 같이 자주 쓰이는 표현들을 집중적으로 활용하여 문장을 만들어보는 시간을 가지면 좋을 것 같습니다.</p></div>
+        </div>
+        <div id="tab-transcript" class="tab-content">
+            <div class="transcript"><span class="tutor">[Tutor]</span> Hello, Karin. Good afternoon.
+<span class="tutor">[Tutor]</span> Hi, Joey. How are you?
+<span class="student">[Student]</span> I&#x27;m doing great. Yes, it&#x27;s excellent.
+<span class="tutor">[Tutor]</span> Good morning.
+<span class="tutor">[Tutor]</span> Yeah, that&#x27;s great. They&#x27;ve given you a new textbook. Have you had a chance to look at it?
+<span class="student">[Student]</span> Yeah, I got it. My textbook is...
+<span class="tutor">[Tutor]</span> Okay.
+<span class="student">[Student]</span> Yeah.
+<span class="tutor">[Tutor]</span> Okay, that&#x27;s great. It&#x27;s about a linear textbook.
+<span class="student">[Student]</span> Okay. Okay.
+<span class="tutor">[Tutor]</span> All right. So let&#x27;s look at the first lesson and let&#x27;s just take our time. It&#x27;s a totally different format than the snack chat.
+<span class="student">[Student]</span> Oh, yeah.
+<span class="tutor">[Tutor]</span> Right?
+<span class="student">[Student]</span> Different.
+<span class="tutor">[Tutor]</span> Okay. So the first title we&#x27;re looking at is &quot;I have itchy feet.&quot;
+<span class="student">[Student]</span> Ah, yes. I have itchy feet.
+<span class="tutor">[Tutor]</span> Okay. On that page, it shows today&#x27;s goal. Can I get you to read today&#x27;s goal for me? It&#x27;s at the bottom of the page.
+<span class="student">[Student]</span> Okay, I see. Share an interesting story about a trip that didn&#x27;t go as planned and response to someone else&#x27;s story.
+<span class="tutor">[Tutor]</span> All right. All right. A couple of words I&#x27;d like to help you with. You said, &quot;and response.&quot; Let&#x27;s try a D at the end. Respond.
+<span class="student">[Student]</span> Respond.
+<span class="tutor">[Tutor]</span> Good. And then you said &quot;to someone else.&quot; We have an extra syllable. Else&#x27;s.
+<span class="student">[Student]</span> Else&#x27;s.
+<span class="tutor">[Tutor]</span> Respond to someone else.
+<span class="student">[Student]</span> Else&#x27;s.
+<span class="tutor">[Tutor]</span> Respond to someone else&#x27;s story.
+<span class="student">[Student]</span> Yes.
+<span class="tutor">[Tutor]</span> You did great.
+<span class="student">[Student]</span> Okay.
+<span class="tutor">[Tutor]</span> Good. All right. Let&#x27;s go on then to the next page.
+<span class="student">[Student]</span> Uh-huh.
+<span class="tutor">[Tutor]</span> All right. So the first thing we&#x27;re going to do is we&#x27;re going to look at some key expressions and then some questions. Okay?
+<span class="student">[Student]</span> Uh-huh.
+<span class="tutor">[Tutor]</span> So on the page, you&#x27;ll see a pink banner that says, &quot;took a turn.&quot;
+<span class="student">[Student]</span> Took a turn.
+<span class="tutor">[Tutor]</span> And then, yep, and then underneath that, there are four sentences that use that phrase. I&#x27;m going to ask you to read those four sentences to me, please.
+<span class="student">[Student]</span> Okay. First, &quot;took a turn.&quot; Our trips took a turn when we missed our flight. The things really took a turn after it started raining. The hike took a turn when we saw a bear.
+<span class="student">[Student]</span> The day took a turn when I got food poisoning.
+<span class="tutor">[Tutor]</span> Okay, okay, very good. So, after reading those four sentences, what do you think &quot;took a turn&quot; means?
+<span class="student">[Student]</span> I think this sentence meaning is a change in environment or a change in situation.
+<span class="tutor">[Tutor]</span> Yes. Yes. Yes, that&#x27;s better. Yes. A change in the situation. Absolutely. Very good. All right.
+<span class="student">[Student]</span> Every word that includes &quot;took,&quot; is it possible to also use &quot;take,&quot; &quot;take a turn&quot;?
+<span class="tutor">[Tutor]</span> Yes.
+<span class="student">[Student]</span> Ah. Yes. I see. Yeah.
+<span class="tutor">[Tutor]</span> You could use &quot;take a turn&quot; to describe something in the present or future tense.
+<span class="student">[Student]</span> Okay.
+<span class="tutor">[Tutor]</span> But &quot;took a turn&quot; is past tense.
+<span class="student">[Student]</span> I see. Okay. All right. I understand.
+<span class="tutor">[Tutor]</span> So, very good. All right. Our second expression also uses the word &quot;turn&quot; again. &quot;Turn things around.&quot;
+<span class="student">[Student]</span> Turn things around.
+<span class="tutor">[Tutor]</span> I&#x27;ll have you read. I&#x27;ll get you to read those four sentences for me.
+<span class="student">[Student]</span> We were able to turn things around with someone&#x27;s help. Okay. A good decision helps turning around quickly.
+<span class="student">[Student]</span> A beach day turned around after a bad start. The view turned around after a tough hike.
+<span class="student">[Student]</span> I see. The first, I think it is a bad situation, but I tried to approach something and it&#x27;s turning around. It&#x27;s changing.
+<span class="tutor">[Tutor]</span> Yes, you&#x27;re changing something from bad to good. Okay, you&#x27;re right. Very good. You did well.
+<span class="student">[Student]</span> Okay.
+<span class="tutor">[Tutor]</span> Okay, very good. Let&#x27;s go on to the next page. And here they&#x27;re showing you some questions and example responses. So, the first one is today&#x27;s question. Read the question and then read response A1 and response A2.
+<span class="student">[Student]</span> Okay. Was your vacation what you expected? Not at all. It was full of surprises. Ah, yes. It didn&#x27;t go as planned, but it was fun.
+<span class="tutor">[Tutor]</span> Okay, very good. &quot;It didn&#x27;t go as planned, but it was fun.&quot; Ah, yes, I understand. Okay, follow-up question.
+<span class="student">[Student]</span> Yes.
+<span class="tutor">[Tutor]</span> Would you recommend someone else?
+<span class="student">[Student]</span> For sure, but I&#x27;d give them a few tips first.
+<span class="tutor">[Tutor]</span> Very good. All right. You did it. Very nice. All right. We&#x27;re now going to go on to the next activity. It&#x27;s called Part A, My Story.
+<span class="student">[Student]</span> My Story.
+<span class="tutor">[Tutor]</span> Yeah, and we&#x27;re going to do this nice and slow. It says, &quot;Fill in the yellow box or subject with your own words. Use the suggestions below if you get stuck.&quot; So, in each sentence, there is a yellow box. Do you see that?
+<span class="student">[Student]</span> Oh, yes. I see that.
+<span class="tutor">[Tutor]</span> Very good. Okay. Now, underneath the four sentences, they have suggestions for each of those boxes.
+<span class="tutor">[Tutor]</span> What you&#x27;re going to do is you&#x27;re going to look at the sentence, and then you&#x27;re going to look at the suggestions and pick one of the phrases to complete the sentence.
+<span class="student">[Student]</span> Okay. I see.
+<span class="tutor">[Tutor]</span> All right. So let&#x27;s just start with number one. As I said, we&#x27;re going to do this nice and slow. The first sentence says, &quot;Our trip took a turn when,&quot; and now we have to fill in the blank of &quot;unexpected event.&quot; So, go down to the suggestions, look at the choices, and choose one to complete sentence number one.
+<span class="student">[Student]</span> Okay, I see. Just first, I imagine some situation, and my situation is when I traveled to Kyoto, maybe three years ago, I visited that place. So I imagined the situation and then I started the sentence.
+<span class="student">[Student]</span> Our trip took a turn when I hurt my back in the escalator.
+<span class="tutor">[Tutor]</span> Oh, no.
+<span class="student">[Student]</span> Yeah, it&#x27;s really.
+<span class="tutor">[Tutor]</span> I bet. Oh, dear. You fell?
+<span class="student">[Student]</span> Yeah, because in the escalator, I had three luggages. And so I moved all and I took the escalator. But some small luggages fell down. So I was so surprised because in front of me, some guy was there. So I leaned the best and then took my luggage, and then I hurt my back. So I imagined that situation. Our trip took a turn when I hurt my back in the escalator. I felt embarrassed at that time, but it all worked out okay. We managed to turn things around by work because I always worked slowly, slowly, slowly, and then I perfectly recovered my back. It was all worth it and I slept all day.
+<span class="student">[Student]</span> And it was all worth it because I learned to always be careful in escalators.
+<span class="tutor">[Tutor]</span> Okay. Okay. Okay, that was a wonderful first try. Okay, you worked very, very hard on that. I&#x27;m just going to model for you what you could do if next time the sentences are too hard or you can&#x27;t think of a fill in the blank. So we could do it like this. We could say, &quot;Our trip took a turn when our flight was canceled.&quot; Number two, &quot;It felt stressful at the time, but it all worked out okay.&quot; Now, I&#x27;ll go to number three. &quot;We managed to turn things around by changing our reservations.&quot; And then number four, &quot;It was all worth it because I learned to always have a backup plan.&quot;
+<span class="student">[Student]</span> Backup plan? Okay.
+<span class="tutor">[Tutor]</span> But you did a great job.
+<span class="student">[Student]</span> Okay.
+<span class="tutor">[Tutor]</span> I liked your story better.
+<span class="student">[Student]</span> Could you repeat the last sentence one more please?
+<span class="tutor">[Tutor]</span> Yes. &quot;It was all worth it because I learned to always have a backup plan.&quot;
+<span class="student">[Student]</span> Backup plan. I have to make a backup plan. Okay. I see. All right.
+<span class="tutor">[Tutor]</span> Good job. You did fine. All right. Now, the next one is a mission, Part B, but we&#x27;re going to skip over it. We&#x27;re going to go to Part C.
+<span class="student">[Student]</span> Okay. Yes.
+<span class="tutor">[Tutor]</span> And it says, &quot;Which do you prefer?&quot; And the instructions say, &quot;Choose one of the two choices and give a reason behind your choice.&quot; I want you to go down to the bottom of the page, and you&#x27;ll see a box that says &quot;Quick Talk,&quot; and it has a question. Can you read that question to me?
+<span class="student">[Student]</span> Okay, I see.
+<span class="student">[Student]</span> So, you want the last Quick Talk?
+<span class="tutor">[Tutor]</span> I want you to read the Quick Talk sentence to me first.
+<span class="student">[Student]</span> Sentence, probably. First. Okay. So I will make some questions, but there is divided two kinds of questions. The first is about the beach versus the mountains.
+<span class="tutor">[Tutor]</span> Yes. Oh, Joey, you&#x27;re trying so hard. Thank you. All right. Tell you what, let me do this for you. I&#x27;ll read the sentence. &quot;Do you prefer traveling alone or with others and why?&quot; Now, we&#x27;re going to look at the visual, and you have the beach versus the mountain, and then you have some reasons, and you can use the picture to describe your preference. Do you like to travel alone or with others, and where would you go and why?
+<span class="student">[Student]</span> Where would you go and why? So that question mixed alone with others and mixed the beach and mountain, right?
+<span class="tutor">[Tutor]</span> Yes. So let&#x27;s talk about where would you go first? Would you go to the beach or would you go to the mountains?
+<span class="student">[Student]</span> That is case by case because every nature is beautiful.
+<span class="tutor">[Tutor]</span> It is?
+<span class="student">[Student]</span> Yeah, and sometimes if I need some relaxation, at that time I&#x27;m just searching the beach. But if I try to get a new mind, or new fresh something, I will go to the hiking in the mountains.
+<span class="tutor">[Tutor]</span> Okay, that&#x27;s good. Absolutely. That&#x27;s a good question, a good answer. Okay, now, based on where you go, would you travel alone or would you travel with others?
+<span class="student">[Student]</span> That is also case by case. But these days I need to travel alone because it is a little hard to react to other people. Just go some place, travel alone, and just drink a coffee alone and think about walking the street, the new place. Yeah, these days I want to do that. That kind of travel.
+<span class="tutor">[Tutor]</span> Yes, I have to admit I kind of enjoy traveling alone myself. Ultimate freedom. Yeah. All right. That was very good, Joey. Very good. Okay. All right. Let&#x27;s go on to the next site, Part D, Digging in Deeper. Digging in Deeper. Okay. Okay. Yeah. All right. So we have this picture of places that help you book accommodations online. Okay. And you can see we&#x27;ve got two, four, six, eight different travel search engines.
+<span class="student">[Student]</span> Yes.
+<span class="tutor">[Tutor]</span> And based on this information in front of us, we want to try and answer the question.
+<span class="student">[Student]</span> Okay. No problem.
+<span class="tutor">[Tutor]</span> So I&#x27;ll get you to read question number one and then try to make a response.
+<span class="student">[Student]</span> Okay, the first. What feature matters to you when choosing a booking site? Why might some travelers use multiple sites?
+<span class="student">[Student]</span> Okay, I did. I used Agoda, but this paragraph doesn&#x27;t express Agoda. But usually I select the Agoda application and website. And people usually use the multiple or multiple sites, booking sites, because they want to compare the price. Yeah, every website has a different price in the same hotel. So if I check the two or three kinds of the website, we can find a cheaper traveler. So people use the multiple sites.
+<span class="student">[Student]</span> And the next?
+<span class="tutor">[Tutor]</span> Yes, go ahead and read the next one. You&#x27;re doing great.
+<span class="student">[Student]</span> Okay, do you think online booking sites have changed travel planning? Why or why not?
+<span class="student">[Student]</span> Yeah, usually I select first. Select the first place. But sometimes I&#x27;m searching for some place. But something has some promotion. Some place has some special promotion. The hotel price, hot price ticket. And meantime, I changed my decision and then I tried that. Yeah, travel. Because it saved my travel price. Yeah. Yeah, so it is a nice opportunity for me.
+<span class="tutor">[Tutor]</span> Uh-huh. Uh-huh. Oh, yes, I agree.
+<span class="tutor">[Tutor]</span> It&#x27;s nice to get a variety of booking or accommodation rates. Uh-huh. And there was a time that when we booked through a travel agent, through a human being, we had to go on the word of the travel agent as to whether or not the hotel was a nice one. But these search engines, they show you pictures of the hotel and the bedrooms and the accommodations, so you can make an informed decision about where you want your money to go.
+<span class="student">[Student]</span> Yeah. I like that. I like that a lot. And this day, I found out that Dubai, that city is so dangerous, but it is so attractive city nowadays. Anyway.
+<span class="tutor">[Tutor]</span> Oh, wow. So you&#x27;re saying you&#x27;ve been to Dubai. You&#x27;ve been to the Middle East.
+<span class="student">[Student]</span> Yeah. Yeah. Dubai.
+<span class="tutor">[Tutor]</span> Is that what you&#x27;re saying? Wow. Okay. Well, you&#x27;re braver than me. I&#x27;ve never gotten past the Western Hemisphere. All right, friend. We&#x27;re going to stop there. You worked hard. Did you have any questions?
+<span class="student">[Student]</span> Oh, no. That is first question. I like that. Yeah. Thank you so much.
+<span class="tutor">[Tutor]</span> All right. Yeah. As you get more comfortable, we&#x27;ll speed up. But right now, we&#x27;re just going to keep slow, okay? Just to make it less stressful. Great job, Joey. I&#x27;ll talk to you next time.
+<span class="student">[Student]</span> Thank you. Have a great day. Bye-bye, teacher.
+<span class="tutor">[Tutor]</span> Bye.</div>
+        </div>
+    </div>
+    <div class="toast" id="toast">✅ 프롬프트가 복사되었습니다!</div>
+    <script>
+        const REVIEW_PROMPT="너는 나의 영어 회화 복습 파트너야. 오늘 내 전화영어 수업 내용을 기반으로 대화하면서 복습을 도와줘.\n\n[오늘 수업 전사 내용]\n[Tutor] Hello, Karin. Good afternoon.\n[Tutor] Hi, Joey. How are you?\n[Student] I'm doing great. Yes, it's excellent.\n[Tutor] Good morning.\n[Tutor] Yeah, that's great. They've given you a new textbook. Have you had a chance to look at it?\n[Student] Yeah, I got it. My textbook is...\n[Tutor] Okay.\n[Student] Yeah.\n[Tutor] Okay, that's great. It's about a linear textbook.\n[Student] Okay. Okay.\n[Tutor] All right. So let's look at the first lesson and let's just take our time. It's a totally different format than the snack chat.\n[Student] Oh, yeah.\n[Tutor] Right?\n[Student] Different.\n[Tutor] Okay. So the first title we're looking at is \"I have itchy feet.\"\n[Student] Ah, yes. I have itchy feet.\n[Tutor] Okay. On that page, it shows today's goal. Can I get you to read today's goal for me? It's at the bottom of the page.\n[Student] Okay, I see. Share an interesting story about a trip that didn't go as planned and response to someone else's story.\n[Tutor] All right. All right. A couple of words I'd like to help you with. You said, \"and response.\" Let's try a D at the end. Respond.\n[Student] Respond.\n[Tutor] Good. And then you said \"to someone else.\" We have an extra syllable. Else's.\n[Student] Else's.\n[Tutor] Respond to someone else.\n[Student] Else's.\n[Tutor] Respond to someone else's story.\n[Student] Yes.\n[Tutor] You did great.\n[Student] Okay.\n[Tutor] Good. All right. Let's go on then to the next page.\n[Student] Uh-huh.\n[Tutor] All right. So the first thing we're going to do is we're going to look at some key expressions and then some questions. Okay?\n[Student] Uh-huh.\n[Tutor] So on the page, you'll see a pink banner that says, \"took a turn.\"\n[Student] Took a turn.\n[Tutor] And then, yep, and then underneath that, there are four sentences that use that phrase. I'm going to ask you to read those four sentences to me, please.\n[Student] Okay. First, \"took a turn.\" Our trips took a turn when we missed our flight. The things really took a turn after it started raining. The hike took a turn when we saw a bear.\n[Student] The day took a turn when I got food poisoning.\n[Tutor] Okay, okay, very good. So, after reading those four sentences, what do you think \"took a turn\" means?\n[Student] I think this sentence meaning is a change in environment or a change in situation.\n[Tutor] Yes. Yes. Yes, that's better. Yes. A change in the situation. Absolutely. Very good. All right.\n[Student] Every word that includes \"took,\" is it possible to also use \"take,\" \"take a turn\"?\n[Tutor] Yes.\n[Student] Ah. Yes. I see. Yeah.\n[Tutor] You could use \"take a turn\" to describe something in the present or future tense.\n[Student] Okay.\n[Tutor] But \"took a turn\" is past tense.\n[Student] I see. Okay. All right. I understand.\n[Tutor] So, very good. All right. Our second expression also uses the word \"turn\" again. \"Turn things around.\"\n[Student] Turn things around.\n[Tutor] I'll have you read. I'll get you to read those four sentences for me.\n[Student] We were able to turn things around with someone's help. Okay. A good decision helps turning around quickly.\n[Student] A beach day turned around after a bad start. The view turned around after a tough hike.\n[Student] I see. The first, I think it is a bad situation, but I tried to approach something and it's turning around. It's changing.\n[Tutor] Yes, you're changing something from bad to good. Okay, you're right. Very good. You did well.\n[Student] Okay.\n[Tutor] Okay, very good. Let's go on to the next page. And here they're showing you some questions and example responses. So, the first one is today's question. Read the question and then read response A1 and response A2.\n[Student] Okay. Was your vacation what you expected? Not at all. It was full of surprises. Ah, yes. It didn't go as planned, but it was fun.\n[Tutor] Okay, very good. \"It didn't go as planned, but it was fun.\" Ah, yes, I understand. Okay, follow-up question.\n[Student] Yes.\n[Tutor] Would you recommend someone else?\n[Student] For sure, but I'd give them a few tips first.\n[Tutor] Very good. All right. You did it. Very nice. All right. We're now going to go on to the next activity. It's called Part A, My Story.\n[Student] My Story.\n[Tutor] Yeah, and we're going to do this nice and slow. It says, \"Fill in the yellow box or subject with your own words. Use the suggestions below if you get stuck.\" So, in each sentence, there is a yellow box. Do you see that?\n[Student] Oh, yes. I see that.\n[Tutor] Very good. Okay. Now, underneath the four sentences, they have suggestions for each of those boxes.\n[Tutor] What you're going to do is you're going to look at the sentence, and then you're going to look at the suggestions and pick one of the phrases to complete the sentence.\n[Student] Okay. I see.\n[Tutor] All right. So let's just start with number one. As I said, we're going to do this nice and slow. The first sentence says, \"Our trip took a turn when,\" and now we have to fill in the blank of \"unexpected event.\" So, go down to the suggestions, look at the choices, and choose one to complete sentence number one.\n[Student] Okay, I see. Just first, I imagine some situation, and my situation is when I traveled to Kyoto, maybe three years ago, I visited that place. So I imagined the situation and then I started the sentence.\n[Student] Our trip took a turn when I hurt my back in the escalator.\n[Tutor] Oh, no.\n[Student] Yeah, it's really.\n[Tutor] I bet. Oh, dear. You fell?\n[Student] Yeah, because in the escalator, I had three luggages. And so I moved all and I took the escalator. But some small luggages fell down. So I was so surprised because in front of me, some guy was there. So I leaned the best and then took my luggage, and then I hurt my back. So I imagined that situation. Our trip took a turn when I hurt my back in the escalator. I felt embarrassed at that time, but it all worked out okay. We managed to turn things around by work because I always worked slowly, slowly, slowly, and then I perfectly recovered my back. It was all worth it and I slept all day.\n[Student] And it was all worth it because I learned to always be careful in escalators.\n[Tutor] Okay. Okay. Okay, that was a wonderful first try. Okay, you worked very, very hard on that. I'm just going to model for you what you could do if next time the sentences are too hard or you can't think of a fill in the blank. So we could do it like this. We could say, \"Our trip took a turn when our flight was canceled.\" Number two, \"It felt stressful at the time, but it all worked out okay.\" Now, I'll go to number three. \"We managed to turn things around by changing our reservations.\" And then number four, \"It was all worth it because I learned to always have a backup plan.\"\n[Student] Backup plan? Okay.\n[Tutor] But you did a great job.\n[Student] Okay.\n[Tutor] I liked your story better.\n[Student] Could you repeat the last sentence one more please?\n[Tutor] Yes. \"It was all worth it because I learned to always have a backup plan.\"\n[Student] Backup plan. I have to make a backup plan. Okay. I see. All right.\n[Tutor] Good job. You did fine. All right. Now, the next one is a mission, Part B, but we're going to skip over it. We're going to go to Part C.\n[Student] Okay. Yes.\n[Tutor] And it says, \"Which do you prefer?\" And the instructions say, \"Choose one of the two choices and give a reason behind your choice.\" I want you to go down to the bottom of the page, and you'll see a box that says \"Quick Talk,\" and it has a question. Can you read that question to me?\n[Student] Okay, I see.\n[Student] So, you want the last Quick Talk?\n[Tutor] I want you to read the Quick Talk sentence to me first.\n[Student] Sentence, probably. First. Okay. So I will make some questions, but there is divided two kinds of questions. The first is about the beach versus the mountains.\n[Tutor] Yes. Oh, Joey, you're trying so hard. Thank you. All right. Tell you what, let me do this for you. I'll read the sentence. \"Do you prefer traveling alone or with others and why?\" Now, we're going to look at the visual, and you have the beach versus the mountain, and then you have some reasons, and you can use the picture to describe your preference. Do you like to travel alone or with others, and where would you go and why?\n[Student] Where would you go and why? So that question mixed alone with others and mixed the beach and mountain, right?\n[Tutor] Yes. So let's talk about where would you go first? Would you go to the beach or would you go to the mountains?\n[Student] That is case by case because every nature is beautiful.\n[Tutor] It is?\n[Student] Yeah, and sometimes if I need some relaxation, at that time I'm just searching the beach. But if I try to get a new mind, or new fresh something, I will go to the hiking in the mountains.\n[Tutor] Okay, that's good. Absolutely. That's a good question, a good answer. Okay, now, based on where you go, would you travel alone or would you travel with others?\n[Student] That is also case by case. But these days I need to travel alone because it is a little hard to react to other people. Just go some place, travel alone, and just drink a coffee alone and think about walking the street, the new place. Yeah, these days I want to do that. That kind of travel.\n[Tutor] Yes, I have to admit I kind of enjoy traveling alone myself. Ultimate freedom. Yeah. All right. That was very good, Joey. Very good. Okay. All right. Let's go on to the next site, Part D, Digging in Deeper. Digging in Deeper. Okay. Okay. Yeah. All right. So we have this picture of places that help you book accommodations online. Okay. And you can see we've got two, four, six, eight different travel search engines.\n[Student] Yes.\n[Tutor] And based on this information in front of us, we want to try and answer the question.\n[Student] Okay. No problem.\n[Tutor] So I'll get you to read question number one and then try to make a response.\n[Student] Okay, the first. What feature matters to you when choosing a booking site? Why might some travelers use multiple sites?\n[Student] Okay, I did. I used Agoda, but this paragraph doesn't express Agoda. But usually I select the Agoda application and website. And people usually use the multiple or multiple sites, booking sites, because they want to compare the price. Yeah, every website has a different price in the same hotel. So if I check the two or three kinds of the website, we can find a cheaper traveler. So people use the multiple sites.\n[Student] And the next?\n[Tutor] Yes, go ahead and read the next one. You're doing great.\n[Student] Okay, do you think online booking sites have changed travel planning? Why or why not?\n[Student] Yeah, usually I select first. Select the first place. But sometimes I'm searching for some place. But something has some promotion. Some place has some special promotion. The hotel price, hot price ticket. And meantime, I changed my decision and then I tried that. Yeah, travel. Because it saved my travel price. Yeah. Yeah, so it is a nice opportunity for me.\n[Tutor] Uh-huh. Uh-huh. Oh, yes, I agree.\n[Tutor] It's nice to get a variety of booking or accommodation rates. Uh-huh. And there was a time that when we booked through a travel agent, through a human being, we had to go on the word of the travel agent as to whether or not the hotel was a nice one. But these search engines, they show you pictures of the hotel and the bedrooms and the accommodations, so you can make an informed decision about where you want your money to go.\n[Student] Yeah. I like that. I like that a lot. And this day, I found out that Dubai, that city is so dangerous, but it is so attractive city nowadays. Anyway.\n[Tutor] Oh, wow. So you're saying you've been to Dubai. You've been to the Middle East.\n[Student] Yeah. Yeah. Dubai.\n[Tutor] Is that what you're saying? Wow. Okay. Well, you're braver than me. I've never gotten past the Western Hemisphere. All right, friend. We're going to stop there. You worked hard. Did you have any questions?\n[Student] Oh, no. That is first question. I like that. Yeah. Thank you so much.\n[Tutor] All right. Yeah. As you get more comfortable, we'll speed up. But right now, we're just going to keep slow, okay? Just to make it less stressful. Great job, Joey. I'll talk to you next time.\n[Student] Thank you. Have a great day. Bye-bye, teacher.\n[Tutor] Bye.\n\n[AI 피드백]\nJoey, 안녕하세요! 오늘 수업도 정말 열심히 참여해 주셔서 감사합니다. 여행 관련 표현들을 배우고, Joey의 흥미로운 경험담까지 들을 수 있어서 아주 즐거운 시간이었어요. 특히 에스컬레이터에서 겪었던 일은 정말 생생하게 느껴졌습니다!\n\n오늘 배운 표현들을 바탕으로 Joey의 영어 실력이 한 단계 더 발전할 수 있도록 따뜻하고 실용적인 피드백을 드릴게요.\n\n---\n\n**0. 📌 Topic**\nTopic: Discussing unexpected travel experiences and booking preferences.\n\n---\n\n**1. 📊 오늘의 대화 요약 (Summary)**\n오늘은 'I have itchy feet'이라는 표현으로 시작하여, 예상치 못했던 여행 경험에 대해 이야기하고, 'took a turn'과 'turn things around' 같은 유용한 표현들을 살펴보았습니다. 또한, 여행 예약 사이트의 특징과 선호하는 여행 방식(혼자 vs. 함께, 해변 vs. 산)에 대해서도 깊이 있는 대화를 나누었습니다.\n\n---\n\n**2. 💬 유창성 업그레이드 (Fluency & Natural Flow)**\nJoey가 말씀하신 문장 중 의미는 잘 전달되었지만, 원어민들이 더 자연스럽게 쓰는 표현으로 다듬으면 좋을 문장 3가지를 선정했습니다.\n\n1.  **❌ 학습자 원문 (As Said):** \"I think this sentence meaning is a change in environment or a change in situation.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"I think this phrase means a change in environment or situation.\"\n    *   **💎 비즈니스 표현 (Professional):** \"I interpret this phrase as indicating a shift in circumstances or environment.\"\n    *   **💡 코칭 포인트:** \"This sentence meaning\"은 다소 중복되는 표현입니다. \"the meaning of this sentence\" 또는 간단히 \"this phrase means...\"라고 하는 것이 더 자연스럽습니다. 'took a turn'과 같은 여러 단어의 묶음을 지칭할 때는 'phrase'가 더 정확합니다.\n\n2.  **❌ 학습자 원문 (As Said):** \"Every word that includes 'took,' is it possible to also use 'take,' 'take a turn'?\"\n    *   **✅ 자연스러운 표현 (Natural):** \"For phrases like 'took a turn,' can I also use 'take a turn'?\"\n    *   **💎 비즈니스 표현 (Professional):** \"Regarding expressions containing 'took,' is it permissible to use 'take' for present or future contexts?\"\n    *   **💡 코칭 포인트:** \"Every word that includes 'took'\"는 다소 어색하고 광범위하게 들릴 수 있습니다. 질문하고자 하는 특정 구에 초점을 맞춰 \"phrases like 'took a turn'\"이라고 하면 질문이 더 명확하고 간결해집니다.\n\n3.  **❌ 학습자 원문 (As Said):** \"I had three luggages.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"I had three pieces of luggage.\"\n    *   **💎 비즈니스 표현 (Professional):** \"I was carrying three items of luggage.\"\n    *   **💡 코칭 포인트:** 'Luggage'는 영어에서 셀 수 없는 명사로, 'luggages'와 같은 복수형이 없습니다. 개별 품목을 셀 때는 'pieces of luggage'를 사용합니다.\n\n---\n\n**3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)**\nCategory: Incorrect use of prepositions and phrasal verbs with 'work' and 'search'\n\nJoey는 특정 동사 뒤에 오는 전치사나 구동사 사용에서 좀 더 자연스러운 표현을 익히면 좋을 것 같아요. 특히 'by work'나 'searching the beach'와 같이 한국어 사고방식에서 직역된 표현들이 보였습니다.\n\n| ❌ 원문 (As Said)                                                                                              | ✅ 교정 예시 (Corrected)                                                                                             |\n| :------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------- |\n| We managed to turn things around **by work** because I always worked slowly, slowly, slowly, and then I perfectly recovered my back. | We managed to turn things around **through hard work** because I always worked slowly and steadily, and then I fully recovered. |\n| if I need some relaxation, at that time I'm just **searching the beach**.                                      | If I need some relaxation, at that time I'm just **looking for a beach destination**.                                |\n| Just **go some place**, travel alone, and just drink a coffee alone and think about walking the street, the new place. | Just **go to some place**, travel alone, and just drink a coffee alone and think about walking the street, the new place. |\n| A good decision helps **turning around** quickly.                                                              | A good decision helps **to turn things around** quickly.                                                             |\n\n📌 **핵심 규칙:** 동사 뒤에 오는 전치사나 구동사는 문맥에 따라 정해진 짝이 있으므로, 자주 쓰는 표현들을 통째로 익히는 것이 중요합니다. 특히 'work'는 'by work'보다는 'through hard work'나 'by working hard'처럼 구체적인 방식을 나타내는 것이 자연스럽고, 'search'는 대상을 직접 'search'하기보다는 'search for' 또는 'look for'를 쓰는 경우가 많습니다. 'go' 뒤에는 장소를 나타낼 때 전치사 'to'가 필요하며, 'help' 동사 뒤에는 동사원형이나 'to 부정사'가 옵니다.\n\n🔁 **따라 읽기:**\n🗣️ \"We managed to turn things around through hard work.\"\n🗣️ \"If I need some relaxation, I'm just looking for a beach destination.\"\n🗣️ \"Just go to some place, travel alone.\"\n🗣️ \"A good decision helps to turn things around quickly.\"\n\n---\n\n**4. 📗 어휘 확장 (Vocabulary Vault)**\n오늘 대화에서 유용하게 쓰일 수 있는 어휘 5가지를 선정했습니다.\n\n1.  **itchy feet** /ɪtʃi fiːt/ (idiom)\n    *   뜻: 여행하고 싶어 안달이 난 마음, 떠나고 싶은 마음\n    *   실전 예문: After a long project, I always get **itchy feet** and start planning my next trip.\n\n2.  **take a turn** /teɪk ə tɜːrn/ (phrase)\n    *   뜻: 상황이 바뀌다, 전환점을 맞다 (주로 예상치 못한 방향으로)\n    *   실전 예문: The market situation **took a turn** when the new regulations were announced.\n\n3.  **turn things around** /tɜːrn θɪŋz əˈraʊnd/ (phrase)\n    *   뜻: 상황을 역전시키다, 개선하다 (나쁜 상황을 좋은 상황으로)\n    *   실전 예문: Our team worked tirelessly to **turn things around** after the initial setback.\n\n4.  **accommodation** /əˌkɒməˈdeɪʃən/ (n)\n    *   뜻: 숙박 시설\n    *   실전 예문: We need to book our **accommodation** well in advance for the upcoming conference.\n\n5.  **backup plan** /ˈbækʌp plæn/ (n)\n    *   뜻: 비상 계획, 대안\n    *   실전 예문: Always have a **backup plan** in case the primary strategy doesn't work out.\n\n---\n\n**5. 📝 실전 복습 챌린지 (Practice)**\n오늘 배운 표현과 문법을 활용하여 다음 문장들을 영작해 보세요.\n\n1.  **상황:** 긴 휴가 후, 저는 여행을 떠나고 싶어 안달이 났습니다.\n    *   **영작:** (itchy feet 활용)\n    *   **모범 답안:** After a long vacation, I have **itchy feet** to travel again.\n\n2.  **상황:** 프로젝트 초기에는 어려움이 있었지만, 팀의 노력으로 상황을 역전시킬 수 있었습니다.\n    *   **영작:** (turn things around 활용)\n    *   **모범 답안:** The project faced difficulties initially, but the team's efforts helped us **turn things around**.\n\n3.  **상황:** 저는 항상 예상치 못한 상황에 대비하여 비상 계획을 세우는 것이 중요하다고 생각합니다.\n    *   **영작:** (backup plan 활용, 'take a turn' 또는 'situation' 포함)\n    *   **모범 답안:** I believe it's crucial to always have a **backup plan** in case the **situation takes an unexpected turn**.\n\n---\n\n**6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)**\n\n✨ **Good Job:** \"Our trip took a turn when I hurt my back in the escalator.\"\nJoey, 이 문장은 오늘 배운 'took a turn'이라는 표현을 본인의 경험담에 아주 자연스럽게 녹여내어 사용한 훌륭한 예시입니다. 문장 구조도 완벽했고, 뒤에 이어지는 이야기와도 매끄럽게 연결되어 듣는 사람이 상황을 쉽게 상상할 수 있었어요. 정말 잘하셨습니다!\n\n🚀 **내일의 한 문장:** 다음 수업 시작 시, 튜터에게 오늘 배운 표현을 활용하여 이렇게 말해보세요.\n\"I'm feeling a bit of **itchy feet** today, thinking about my next travel destination!\"\n\n---\n\n**[성과 지표]**\n**유창성 점수: 7/10**\n\n**근거:** Joey는 다양한 주제에 대해 막힘없이 자신의 의견을 표현하려는 노력이 돋보였습니다. 특히 'took a turn'과 같은 새로운 표현을 자신의 경험담에 적극적으로 적용하는 모습이 매우 인상적이었습니다. 다만, 일부 문장에서 전치사 사용이나 명사의 가산/불가산 형태, 그리고 특정 동사와의 자연스러운 연결에서 약간의 어색함이 발견되어 유창성 점수를 7점으로 평가했습니다. 이는 꾸준한 연습을 통해 충분히 개선될 수 있는 부분입니다.\n\n**다음 수업 '원포인트 액션 플랜':**\n다음 수업에서는 **\"동사 + 전치사/구동사\"** 조합을 조금 더 의식적으로 사용해 보는 연습을 해볼까요? 특히 'search for', 'look for', 'go to', 'help to [동사원형]'과 같이 자주 쓰이는 표현들을 집중적으로 활용하여 문장을 만들어보는 시간을 가지면 좋을 것 같습니다.\n\n위 내용을 바탕으로:\n1. 먼저 오늘 수업에서 내가 틀렸거나 어색했던 표현을 하나 골라서, 관련된 상황을 영어로 질문해줘.\n2. 내가 영어로 대답하면, 자연스러운지 확인하고 더 나은 표현이 있으면 알려줘.\n3. 특히 \"반복 실수 패턴\"에서 지적된 부분을 집중적으로 연습시켜줘.\n4. 이런 식으로 오늘 배운 표현들을 하나씩 복습하자.\n5. 한국어 설명은 필요할 때만 간단히, 대화는 최대한 영어로 진행해줘.\n\n그럼 시작하자!";
+        function startReview(){navigator.clipboard.writeText(REVIEW_PROMPT).then(()=>{showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)}).catch(()=>{const t=document.createElement('textarea');t.value=REVIEW_PROMPT;document.body.appendChild(t);t.select();document.execCommand('copy');document.body.removeChild(t);showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)})}
+        function showToast(){const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500)}
+        function switchTab(n){document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',n==='feedback'?i===0:i===1));document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));document.getElementById('tab-'+n).classList.add('active')}
+    </script>
+</body>
+</html>
