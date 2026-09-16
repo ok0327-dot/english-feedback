@@ -1,0 +1,53 @@
+{
+ "date": "2026-09-16",
+ "iso": [
+  2026,
+  38
+ ],
+ "topic": "Discussing weekend plans and movie experiences using new expressions.",
+ "grammar": "Incorrect use of articles",
+ "grammar_norm": "Articles (a/an/the)",
+ "score": 7.0,
+ "pairs": [
+  {
+   "said": "After work, I will go to some dinner with my friends in Yeouido Park.",
+   "natural": "After work, I will have dinner with my friends in Yeouido Park."
+  },
+  {
+   "said": "Everything is perfect for the weather. We have a vivid color and tree.",
+   "natural": "Everything is perfect for this weather. We have vivid colors and trees ."
+  },
+  {
+   "said": "I think that writer has such a great imagination and made a story.",
+   "natural": "I think that writer has such a great imagination and created a compelling story ."
+  }
+ ],
+ "vocab": [
+  {
+   "word": "hype",
+   "pos": "명사",
+   "meaning": "과대광고, 과장된 선전"
+  },
+  {
+   "word": "miss the mark",
+   "pos": "숙어",
+   "meaning": "목표를 달성하지 못하다, 기대에 미치지 못하다"
+  },
+  {
+   "word": "thought-provoking",
+   "pos": "형용사",
+   "meaning": "생각할 거리를 주는, 시사하는 바가 많은"
+  },
+  {
+   "word": "unresolved",
+   "pos": "형용사",
+   "meaning": "미해결의, 결론이 나지 않은"
+  },
+  {
+   "word": "prowess",
+   "pos": "명사",
+   "meaning": "뛰어난 능력, 기량"
+  }
+ ],
+ "_html_md5": "d1eec7ea39a4bf44a093d7e49f141998"
+}
