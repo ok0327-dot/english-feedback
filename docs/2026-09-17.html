@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#0f0f13"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="당근영어"><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="icon" type="image/png" sizes="192x192" href="icon-192.png"><script src="install-banner.js" defer></script><script src="sw-reg.js" defer></script>
+    <title>전화영어 복습 - 2026년 09월 17일</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Noto Sans KR',sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.75;min-height:100vh}
+        .header{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);border-bottom:1px solid rgba(255,255,255,.06);padding:48px 24px 40px;text-align:center}
+        .header-date{font-size:13px;color:#94a3b8;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+        .header h1{font-size:28px;font-weight:700;color:#f1f5f9;margin-bottom:16px}
+        .header-meta{display:flex;justify-content:center;gap:24px;font-size:14px;color:#64748b}
+        .header-meta span{display:flex;align-items:center;gap:6px}
+        .cta-section{text-align:center;padding:40px 24px}
+        .cta-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:linear-gradient(135deg,#38bdf8,#818cf8);color:#fff;font-size:16px;font-weight:600;font-family:'Noto Sans KR',sans-serif;border:none;border-radius:50px;cursor:pointer;transition:all .3s;text-decoration:none;box-shadow:0 4px 24px rgba(56,189,248,.25)}
+        .cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(56,189,248,.35)}
+        .cta-btn svg{width:20px;height:20px}
+        .cta-sub{margin-top:12px;font-size:13px;color:#64748b}
+        .toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#38bdf8;padding:14px 28px;border-radius:12px;font-size:14px;font-weight:500;border:1px solid rgba(56,189,248,.2);box-shadow:0 8px 32px rgba(0,0,0,.4);opacity:0;transition:all .4s cubic-bezier(.16,1,.3,1);z-index:1000}
+        .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+        .container{max-width:720px;margin:0 auto;padding:0 24px 80px}
+        .tabs{display:flex;gap:4px;background:#1a1a24;padding:4px;border-radius:12px;margin-bottom:32px}
+        .tab{flex:1;padding:12px;text-align:center;font-size:14px;font-weight:500;color:#64748b;background:0 0;border:none;border-radius:8px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all .2s}
+        .tab.active{background:#262636;color:#f1f5f9}
+        .tab-content{display:none}.tab-content.active{display:block}
+        .feedback h2{font-size:18px;font-weight:700;color:#f1f5f9;margin:36px 0 16px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.06)}
+        .feedback h2:first-child{margin-top:0}
+        .feedback p{margin:8px 0;color:#cbd5e1}
+        .feedback .item{padding:6px 0 6px 16px;border-left:2px solid #334155;margin:6px 0;color:#cbd5e1}
+        .feedback .numbered{padding:8px 0 8px 16px;color:#cbd5e1}
+        .feedback .numbered strong{color:#38bdf8}
+        .feedback strong{color:#f1f5f9}
+        .feedback code{background:#1e293b;padding:2px 8px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#38bdf8}
+        .feedback table{width:100%;border-collapse:collapse;margin:12px 0}
+        .feedback th,.feedback td{padding:10px 14px;text-align:left;border-bottom:1px solid #262636}
+        .feedback th{color:#94a3b8;font-weight:500;font-size:13px}
+        .feedback td{color:#cbd5e1}
+        .arrow{color:#38bdf8;font-weight:700}
+        .transcript{background:#1a1a24;border-radius:12px;padding:28px;font-size:14px;line-height:2;color:#94a3b8;white-space:pre-wrap;word-break:break-word;font-family:'JetBrains Mono','Noto Sans KR',monospace}
+        .transcript .tutor{color:#38bdf8}
+        .transcript .student{color:#a78bfa}
+        @media(max-width:640px){.header{padding:32px 16px}.header h1{font-size:22px}.cta-btn{padding:14px 28px;font-size:15px}.container{padding:0 16px 60px}}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-date">2026년 09월 17일</div>
+        <h1>📚 전화영어 복습</h1>
+        <div class="header-meta">
+            <span>⏱ 20분 5초</span>
+            <span>🎙 전화영어_025180304_20260917080040.m4a</span>
+        </div>
+    </div>
+    <div class="cta-section">
+        <button class="cta-btn" onclick="startReview()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Gemini에서 복습 대화 시작하기
+        </button>
+        <div class="cta-sub">클릭하면 프롬프트가 복사되고 Gemini가 열립니다</div>
+    </div>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('feedback')">📋 AI 피드백</button>
+            <button class="tab" onclick="switchTab('transcript')">🎙 수업 전사</button>
+        </div>
+        <div id="tab-feedback" class="tab-content active">
+            <div class="feedback"><p>안녕하세요, Joey! 오늘 수업도 정말 즐겁고 유익했습니다. 영화와 TV 쇼에 대한 개인적인 선호도를 이야기하며 다양한 표현들을 자연스럽게 익힐 수 있었어요. 특히 'not in the headspace for'나 'cliffhanger' 같은 재미있는 표현들을 잘 이해하고 활용하려는 모습이 인상 깊었습니다.</p>
+<br>
+<br>
+<h2><strong>0. 📌 Topic</strong></h2>
+<p>Topic: Discussing movie/TV show preferences and related idioms.</p>
+<br>
+<br>
+<h2><strong>1. 📊 오늘의 대화 요약 (Summary)</strong></h2>
+<p>오늘 수업에서는 영화와 TV 쇼 시청 선호도에 대해 이야기하며, 'not in the headspace for'와 'cliffhanger' 같은 새로운 표현들을 배웠습니다. 집에서 영화를 보는 것과 극장에서 보는 것의 장단점을 비교하고, 'roll the credits'와 'a sleeper hit'과 같은 영화 관련 숙어의 의미를 탐구했습니다.</p>
+<br>
+<br>
+<h2><strong>2. 💬 유창성 업그레이드 (Fluency & Natural Flow)</strong></h2>
+<p>Joey가 말한 문장 중 의미는 통하지만, 원어민들이 더 자연스럽게 쓰는 표현들을 함께 살펴볼까요?</p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>❌ 학습자 원문 (As Said):</strong> "Last night I drank beer with nice food."</div>
+<div class="item"><strong>✅ 자연스러운 표현 (Natural):</strong> "Last night, I had some beer with good food."</div>
+<div class="item"><strong>💎 비즈니스 표현 (Professional):</strong> "Last night, I enjoyed some beer with a pleasant meal."</div>
+<div class="item"><strong>💡 코칭 포인트:</strong> "To have"는 음식이나 음료를 섭취하는 것을 "to drink"나 "to eat"보다 더 일반적이고 자연스럽게 표현할 때 사용됩니다. "nice food"보다는 "good food"나 "a pleasant meal"이 더 자연스럽습니다.</div>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>❌ 학습자 원문 (As Said):</strong> "That meaning is the good ending and interesting ending and purposeless ending, right?"</div>
+<div class="item"><strong>✅ 자연스러운 표현 (Natural):</strong> "Does that mean it's a good, interesting, or purposeless ending?"</div>
+<div class="item"><strong>💎 비즈니스 표현 (Professional):</strong> "Does that imply it's a positive, engaging, or inconclusive ending?"</div>
+<div class="item"><strong>💡 코칭 포인트:</strong> 의미를 명확히 할 때는 "Does that mean..." 또는 "Are you saying..."을 사용하는 것이 더 자연스럽습니다. 또한, 명사 앞에 형용사를 직접 나열하는 것이 (예: "a good, interesting, or purposeless ending") 문장의 흐름을 더 부드럽게 합니다.</div>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>❌ 학습자 원문 (As Said):</strong> "because they select so interesting section and made some hype advertisement."</div>
+<div class="item"><strong>✅ 자연스러운 표현 (Natural):</strong> "because they select such interesting sections and create hyped advertisements."</div>
+<div class="item"><strong>💎 비즈니스 표현 (Professional):</strong> "as they highlight particularly engaging segments and produce highly persuasive advertisements."</div>
+<div class="item"><strong>💡 코칭 포인트:</strong> "So"는 보통 형용사나 부사 앞에 오지만, 명사를 강조할 때는 "such a/an + 형용사 + 명사" 또는 "such + 복수 명사"를 사용합니다. 또한, 일반적인 사실을 말할 때는 과거형 "made" 대신 현재형 "create"를 쓰는 것이 더 적절합니다. "Hype"는 명사로도 쓰이지만, 여기서는 "hyped" (과장된)라는 형용사가 더 자연스럽습니다.</div>
+<br>
+<br>
+<h2><strong>3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)</strong></h2>
+<p>Category: <strong>Noun-Adjective Confusion</strong></p>
+<br>
+<p>Joey는 명사와 형용사를 혼동하여 사용하는 경향이 있었습니다. 특히 문장 끝에서 서술형으로 사용될 때 명사 형태를 쓰는 경우가 많았습니다.</p>
+<br>
+<table>
+<tr><th>❌ 원문 (As Said)</th><th>✅ 교정 예시 (Corrected)</th></tr>
+<tr><td>"It's a <strong>difference</strong>."</td><td>"It's <strong>different</strong>."</td></tr>
+<tr><td>"It is <strong>same</strong> because if we watch some clip or movie in our home, that give a comfortable and more <strong>relaxing</strong> our body and our mind."</td><td>"It is <strong>the same</strong> because if we watch some clips or movies at home, it gives comfort and more <strong>relaxation</strong> to our body and mind."</td></tr>
+<tr><td>"and because it gave their convenience and <strong>comfortable</strong>."</td><td>"and because it provides convenience and <strong>comfort</strong>."</td></tr>
+</table>
+<br>
+<p>📌 <strong>핵심 규칙:</strong> 형용사는 명사를 수식하거나 주어의 상태를 설명하고, 명사는 사물, 개념, 사람 등을 나타냅니다. "~하다/한"의 의미일 때는 형용사를, "~함/것"의 의미일 때는 명사를 사용합니다.</p>
+<br>
+<p>🔁 <strong>따라 읽기:</strong></p>
+<p>🗣️ "It's different."</p>
+<p>🗣️ "It is the same because it gives comfort and more relaxation to our body and mind."</p>
+<p>🗣️ "It provides convenience and comfort."</p>
+<br>
+<br>
+<h2><strong>4. 📗 어휘 확장 (Vocabulary Vault)</strong></h2>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>preference</strong> /préfərəns/ (명사)</div>
+<div class="item">뜻: 선호, 더 좋아하는 것</div>
+<div class="item">실전 예문: We need to consider the client's <strong>preference</strong> before finalizing the proposal.</div>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>cliffhanger</strong> /klífhæŋər/ (명사)</div>
+<div class="item">뜻: 다음 회나 결말을 궁금하게 만드는 상황, 손에 땀을 쥐게 하는 결말</div>
+<div class="item">실전 예문: The negotiation ended on a <strong>cliffhanger</strong>, leaving us wondering about the final outcome.</div>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>abruptly</strong> /əbrʌ́ptli/ (부사)</div>
+<div class="item">뜻: 갑자기, 불쑥</div>
+<div class="item">실전 예문: The meeting ended <strong>abruptly</strong> due to an urgent call.</div>
+<br>
+<div class="numbered"><strong>4.</strong> <strong>compromise</strong> /kɑ́mprəmàiz/ (명사/동사)</div>
+<div class="item">뜻: 타협, 절충; 타협하다, 절충하다</div>
+<div class="item">실전 예문: We reached a <strong>compromise</strong> on the project deadline. (명사) / We need to <strong>compromise</strong> to find a solution that works for everyone. (동사)</div>
+<br>
+<div class="numbered"><strong>5.</strong> <strong>binge-watch</strong> /bɪndʒ wɑːtʃ/ (동사)</div>
+<div class="item">뜻: (TV 프로그램 등을) 몰아보다</div>
+<div class="item">실전 예문: I plan to <strong>binge-watch</strong> the new documentary series this weekend.</div>
+<br>
+<br>
+<h2><strong>5. 📝 실전 복습 챌린지 (Practice)</strong></h2>
+<br>
+<p>오늘 배운 표현과 문법을 활용하여 다음 상황에 맞는 문장을 영어로 만들어 보세요.</p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>상황:</strong> 퇴근 후에는 복잡한 일을 할 기분이 아니에요.</div>
+<div class="item"><strong>영작:</strong> (I'm not in the headspace for...)</div>
+<div class="item"><strong>모범 답안:</strong> After work, I'm not in the headspace for anything complicated.</div>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>상황:</strong> 이 프로젝트는 모두가 만족할 만한 타협점을 찾는 것이 중요합니다.</div>
+<div class="item"><strong>영작:</strong> (It's important to find a... for everyone.)</div>
+<div class="item"><strong>모범 답안:</strong> It's important to find a compromise that satisfies everyone on this project.</div>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>상황:</strong> 그 신생 기업은 처음에는 주목받지 못했지만, 결국 예상치 못한 성공을 거두었습니다.</div>
+<div class="item"><strong>영작:</strong> (The startup... but eventually became...)</div>
+<div class="item"><strong>모범 답안:</strong> The startup wasn't expected to be popular at first, but it eventually became a sleeper hit.</div>
+<br>
+<br>
+<h2><strong>6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)</strong></h2>
+<br>
+<p>✨ <strong>Good Job:</strong></p>
+<p>Joey가 가장 잘 표현한 문장은 바로 이겁니다:</p>
+<p>"I can have whatever. I can make pizza. I can have chicken. Whatever I want."</p>
+<p>이 문장은 자신의 의견을 매우 명확하고 자신감 있게 전달했으며, 일상 대화에서 자주 쓰이는 자연스러운 패턴을 완벽하게 구사했습니다. 'Whatever I want'라는 표현으로 자유로운 선택권을 강조한 점도 아주 좋았습니다!</p>
+<br>
+<p>🚀 <strong>내일의 한 문장:</strong></p>
+<p>다음 수업 시작 시 튜터에게 이렇게 말해보세요:</p>
+<p>"I'm not in the headspace for a complicated discussion today, so let's keep it light!"</p>
+<p>(오늘은 복잡한 이야기는 할 기분이 아니라서, 가볍게 이야기해요!)</p>
+<br>
+<br>
+<h2><strong>[성과 지표]</strong></h2>
+<br>
+<p><strong>유창성 점수:</strong> 7/10</p>
+<br>
+<p><strong>근거:</strong> Joey는 다양한 주제에 대해 막힘없이 자신의 의견을 표현하려는 의지가 매우 강합니다. 새로운 어휘(예: cliffhanger, hype)를 빠르게 이해하고 활용하려는 노력이 돋보였습니다. 다만, 문장 구조를 더 자연스럽게 만들거나 명사와 형용사 사용을 정확히 하는 부분에서 약간의 개선이 필요합니다. 몇몇 문장에서 단어 선택이나 문법적 오류가 있었지만, 전반적인 의사소통에는 전혀 문제가 없었습니다.</p>
+<br>
+<p><strong>다음 수업 '원포인트 액션 플랜':</strong></p>
+<p>다음 수업에서는 <strong>"명사와 형용사 구분하여 사용하기"</strong> 에 집중하여 더 정확하고 자연스러운 문장 구사를 연습해 봅시다. 특히 문장의 끝에서 주어의 상태를 설명할 때 형용사를 사용하는 연습을 해볼 거예요.</p></div>
+        </div>
+        <div id="tab-transcript" class="tab-content">
+            <div class="transcript"><span class="tutor">[Tutor]</span> Hello, Carlyle. Good morning. Hi, Joey. How are you this morning?
+<span class="student">[Student]</span> I&#x27;m a little tired. Last night I drank beer with nice food.
+<span class="tutor">[Tutor]</span> Sure.
+<span class="student">[Student]</span> So I&#x27;m a little tired, but it&#x27;s good.
+<span class="tutor">[Tutor]</span> Oh, okay, okay. No worries. We&#x27;ll just take things easy today. No rush, no pressure. All right. Did you need a moment to bring up your lesson or are you ready to go?
+<span class="student">[Student]</span> Oh, yes. I&#x27;m ready. Let&#x27;s go to the class.
+<span class="tutor">[Tutor]</span> Great. All right. So today&#x27;s title is I Don&#x27;t Want Any Spoilers. And I will ask you to read today&#x27;s goal aloud to me.
+<span class="student">[Student]</span> Ah, yes. Today&#x27;s goal is to decide one movie or TV show to stream with someone by discussing personal preference.
+<span class="tutor">[Tutor]</span> All right. We&#x27;re going to try that last word one more time. I heard you say prepper. Let&#x27;s do it slower. Preferences.
+<span class="student">[Student]</span> Preference.
+<span class="tutor">[Tutor]</span> Preference. How about this?
+<span class="student">[Student]</span> Preference.
+<span class="tutor">[Tutor]</span> Very good. Very good. Thank you.
+<span class="student">[Student]</span> Preference.
+<span class="tutor">[Tutor]</span> All right. Okay. Let&#x27;s go on to the next page. We&#x27;re going to do some key expressions. The first expression is not in the headspace for. I&#x27;m going to ask you to read the pink sentence and the three bulleted sentences underneath that one.
+<span class="student">[Student]</span> Okay. Sorry, I&#x27;m not in the headspace for drama. I&#x27;m not in the headspace for subtitles. She&#x27;s not in the headspace for anything complicated tonight. No horror movies. I&#x27;m not in the headspace for that.
+<span class="tutor">[Tutor]</span> Okay. So after reading the four sentences, what do you think &quot;not in the headspace for&quot; means?
+<span class="student">[Student]</span> I don&#x27;t have interest in, or I don&#x27;t have the, I don&#x27;t like that, or I don&#x27;t have enough.
+<span class="tutor">[Tutor]</span> Yeah, &quot;I don&#x27;t like that&quot; is better.
+<span class="student">[Student]</span> Okay. Okay. Yeah.
+<span class="tutor">[Tutor]</span> So you&#x27;re not interested or it&#x27;s not your preference.
+<span class="student">[Student]</span> Yeah, that made sense.
+<span class="tutor">[Tutor]</span> Very good. Very good. Yeah. All right. Our next expression is the word &quot;cliffhanger.&quot;
+<span class="student">[Student]</span> Cliffhanger.
+<span class="tutor">[Tutor]</span> And I&#x27;ll get you to read the four sentences.
+<span class="student">[Student]</span> Uh-huh. Okay. It always ends with a cliffhanger. This novel ends on a cliffhanger. This drama ends the season on a cliffhanger. The movie ends on a cliffhanger.
+<span class="tutor">[Tutor]</span> Right. Have you ever heard this word before in English?
+<span class="student">[Student]</span> I think it is the movie title name, Cliffhanger.
+<span class="tutor">[Tutor]</span> There is a movie called Cliffhanger. Yeah. But this is a word in English. It has a meaning. What do you think it might mean?
+<span class="student">[Student]</span> That meaning is the good ending and interesting ending and purposeless ending, right?
+<span class="tutor">[Tutor]</span> You&#x27;re very close. Good job. It means, it says here, because I&#x27;ve got it on Google, a plot device that ends a situation abruptly, leaving the main character in a dangerous position with an uncertain outcome.
+<span class="student">[Student]</span> Unsure that end, and people wondering how to end and just imagine something.
+<span class="tutor">[Tutor]</span> Cliffhanger. Yeah, it leaves people going, &quot;What&#x27;s going on? What&#x27;s going to happen next?&quot; Very good. Very good.
+<span class="student">[Student]</span> And teacher, I was wondering about that, the cliffhanger.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="student">[Student]</span> Does it come from the movie title? Because I heard that.
+<span class="tutor">[Tutor]</span> No, no, it&#x27;s not from a specific movie. It is a word we use in English. But you&#x27;re right, there has been a movie made that was called Cliffhanger. And I&#x27;m not familiar with it, but it might have had something to do with cliffs or climbing.
+<span class="student">[Student]</span> I see. I understand. It&#x27;s a difference. Yeah. It&#x27;s not a compromise, the movie title.
+<span class="tutor">[Tutor]</span> Okay. All right. We&#x27;re going to move on to today&#x27;s question and the follow-up question. I&#x27;ll get you to read to me.
+<span class="student">[Student]</span> Okay. Does this movie look good to you? Yes, I have been waiting to see it for a while. Not really. Let&#x27;s keep searching.
+<span class="tutor">[Tutor]</span> Let&#x27;s keep searching. Yeah, follow-up question?
+<span class="student">[Student]</span> Should we check the review before deciding? I don&#x27;t trust any review. I don&#x27;t trust reviews. Let&#x27;s just go for it.
+<span class="tutor">[Tutor]</span> Let&#x27;s just go for it. Okay. Yeah. That&#x27;s another phrase we have. It just means let&#x27;s just go ahead. Let&#x27;s take a chance. Let&#x27;s just go for it.
+<span class="student">[Student]</span> Very good. Let&#x27;s just go for it.
+<span class="tutor">[Tutor]</span> Okay. All right. We&#x27;re going to go on to part A, My Story.
+<span class="student">[Student]</span> Yes.
+<span class="tutor">[Tutor]</span> And to make things a little easier for you, instead of creating your own story, all you&#x27;re going to do is fill in the yellow box with a suggestion from the group of suggestions under the four sentences.
+<span class="student">[Student]</span> Okay, I see. I made some sentences. I prefer...
+<span class="tutor">[Tutor]</span> Okay. Okay. Keep going ahead. Give it a try.
+<span class="student">[Student]</span> Okay, I see. I prefer watching sci-fi when I can decide what to watch.
+<span class="tutor">[Tutor]</span> Sci-fi. Okay. Science fiction? May I help you? You&#x27;re pronouncing it sci-fi?
+<span class="student">[Student]</span> Yeah.
+<span class="tutor">[Tutor]</span> Try this. Sci-fi.
+<span class="student">[Student]</span> Ah, sci-fi.
+<span class="tutor">[Tutor]</span> Fiction. Sci-fi. That&#x27;s short for science fiction. Very good.
+<span class="student">[Student]</span> I prefer watching sci-fi when I can&#x27;t decide what to watch.
+<span class="tutor">[Tutor]</span> I&#x27;ll put that in the comments today so you can see it, okay?
+<span class="student">[Student]</span> Okay, I see. Sci-fi.
+<span class="tutor">[Tutor]</span> All right. Try number two.
+<span class="student">[Student]</span> Okay. I usually pick movies based on reviews and blog recommendations.
+<span class="tutor">[Tutor]</span> Sounds great. Let&#x27;s do number three.
+<span class="student">[Student]</span> I don&#x27;t always trust advertisements when they recommend movies because they select so interesting section and made some hype advertisement.
+<span class="tutor">[Tutor]</span> You remember that word.
+<span class="student">[Student]</span> Yeah, advertisement.
+<span class="tutor">[Tutor]</span> Hype. No, you remember hype. I&#x27;m impressed. Good job. All right, let&#x27;s try number four.
+<span class="student">[Student]</span> I like to re-watch. I like to re-watch classic movie when nothing looks good. Ah, like the...
+<span class="tutor">[Tutor]</span> Good job. Yeah, like The Terminator or River Road.
+<span class="tutor">[Tutor]</span> Oh, yeah. That&#x27;s... yeah, that&#x27;s a... that&#x27;s a good binge show. That&#x27;s something you like, like you watch on the weekends. Yeah. Uh-huh. Yeah. I&#x27;ve been... there&#x27;s been a few series that I&#x27;d like to see again. I&#x27;d like to see The Terminator series again. And then I&#x27;ve been thinking about watching X-Men again. So I&#x27;ll have to figure that. Yeah. I like superhero shows. All right. That was fantastic, Joey. Okay. All right. We are going to skip part B for now. Come back to it if we have time. Let&#x27;s go to part C. Which do you prefer? Okay. And as in last class, I&#x27;m going to get you to read the question at the bottom. And then you can use the visual to create a response.
+<span class="student">[Student]</span> Okay, I see. Which do you prefer, right? Choose one out of the choice, give the reason behind. Yeah, and I get... yeah, go right down to the bottom quick talk and read the question. Okay, if you could only watch movies in one place for the rest of your life, would you choose home or theater?
+<span class="tutor">[Tutor]</span> Why?
+<span class="student">[Student]</span> Okay, just that is amazing. And if I&#x27;m just to select one place, only one place in my whole time, right? And I choose comfortable. And because after after pandemic, the people watching YouTube or the movie in a home, not a theater. It is same because if we watch some clip or movie in our home, that give a comfortable and more relaxing our body and our mind. So it is only one choice. So if I select the theater, every time I will go there, that place. And if I if I wanted to watch one movie, just go there. So I consider the movie, the go to the dealer and price, etc. So I&#x27;m selected in a home. And that is the possible to every portable device used, every portable device like their laptops, mobile phones and smart pad, etc. So yeah, I love to do in my home and select a portable device and because it gave their convenience and comfortable. Yeah, that is my...
+<span class="tutor">[Tutor]</span> Yes, I would agree with you. I can&#x27;t remember the last time I visited a theater to watch a movie, but I&#x27;ve gotten used to watching at home. Like you said, it&#x27;s more comfortable. There are less distractions from other people. And I can probably make all the theater snacks at home and save a lot of money. Yes, you&#x27;re right. You&#x27;re right. I think if I if I was to give you a price, a small bag of theater popcorn would be around thirteen thousand won.
+<span class="student">[Student]</span> Oh, thirteen thousand won.
+<span class="tutor">[Tutor]</span> Yeah, to us it&#x27;s expensive.
+<span class="student">[Student]</span> Wow.
+<span class="tutor">[Tutor]</span> Where I yeah, and I can make it at home a lot cheaper and I can get all the ingredients.
+<span class="student">[Student]</span> Theater, special occasion. When you watch the movie in your home, what would you eat during the watching movie? The popcorn or the salad?
+<span class="tutor">[Tutor]</span> In Western culture, people have popcorn. Sometimes they will have candy or chocolate bars and they drink soda. Sometimes people just drink tea or coffee, but it&#x27;s the idea that if you have a comfortable chair at home and a big screen TV, it&#x27;s almost like being in the theater with all the other people.
+<span class="student">[Student]</span> Oh, yeah, it&#x27;s possible and good. I can have whatever. I can make pizza. I can have chicken. Whatever I want.
+<span class="tutor">[Tutor]</span> Yeah, you&#x27;re right. All right. Let&#x27;s take a look. Okay. Now, the next page is called Digging in Deeper. And we&#x27;re looking at a visual. But what I&#x27;d like to do today is I&#x27;d like to continue on to Part E, Tips for Idioms.
+<span class="student">[Student]</span> Okay.
+<span class="tutor">[Tutor]</span> Because I&#x27;d like to teach you some more vocabulary, okay?
+<span class="student">[Student]</span> Yes, good choice. All right. Uh-huh.
+<span class="tutor">[Tutor]</span> All right. So I&#x27;m going to get you to read the title of the first idiom, the description, the example, and then read the question to me, okay?
+<span class="student">[Student]</span> Okay. The problem. The first sentence. Roll the credits. Roll the credits.
+<span class="tutor">[Tutor]</span> To finish something or wrap it up.
+<span class="student">[Student]</span> Wrap it up. Wrap it up.
+<span class="tutor">[Tutor]</span> Yeah, wrap it up. Can I help you with that word?
+<span class="student">[Student]</span> Oh, yes.
+<span class="tutor">[Tutor]</span> You&#x27;re saying the W, but in this word, the W is silent. Let&#x27;s try the R.
+<span class="student">[Student]</span> Wrap it up. Wrap it up.
+<span class="tutor">[Tutor]</span> Wrap it up. Very good. To finish something or wrap it up.
+<span class="student">[Student]</span> Wrap it up. Roll it up.
+<span class="tutor">[Tutor]</span> Roll it up. I&#x27;ll send some practice for you. I&#x27;ll get you to read the example.
+<span class="student">[Student]</span> After five seasons, the show finally rolled up credits for the last time.
+<span class="tutor">[Tutor]</span> Rolled the credits. Very good.
+<span class="student">[Student]</span> Ah, yes. Teacher, I can imagine that word because &quot;roll the credit.&quot; Why is it the finish word? Meaning the finish. Roll the credit.
+<span class="tutor">[Tutor]</span> Well, it used to be that at the end of a television show or movie, they would show all the names of the people that worked on producing the films. And by telling people who was involved, it was called the credits. And they said, &quot;roll the credits.&quot; It means to show everyone who was involved in the show&#x27;s production. I&#x27;ll see if I can find a video that discusses that idiom for you. Okay. It&#x27;ll make it easier to understand.
+<span class="student">[Student]</span> All right. Okay. All right.
+<span class="tutor">[Tutor]</span> Let&#x27;s get you to read the question.
+<span class="student">[Student]</span> Have you ever felt ready to roll the credits on a job or project?
+<span class="student">[Student]</span> Oh, yes. Have you ever felt like you need to tell people about who was involved in the job or the credit? That situation is not only about the movie or the entertainment.
+<span class="tutor">[Tutor]</span> No.
+<span class="student">[Student]</span> Yeah, just every time I take a task about the internal audit. So usually I finish the internal audit for three months. So in the meantime, yeah, I&#x27;m so, I feel so comfortable. And I satisfied that situation. So usually, yeah. Yeah. And I ended up finished and start a new something. So that is good effect for me.
+<span class="tutor">[Tutor]</span> Right. Very nice. All right, Joey. Let&#x27;s work on the second idiom and then we&#x27;ll wrap up for today, okay?
+<span class="student">[Student]</span> Okay.
+<span class="tutor">[Tutor]</span> I&#x27;ll get you to read the title of the next idiom.
+<span class="student">[Student]</span> Uh-huh. A Sleeper Hit.
+<span class="tutor">[Tutor]</span> A Sleeper Hit. Very good. A movie that wasn&#x27;t expected to be popular but became successful. Example.
+<span class="student">[Student]</span> Everyone was surprised when the low-budget horror movie turned out to be a sleeper hit.
+<span class="student">[Student]</span> Yes. Okay. The question, what movie does unexpected become a sleeper hit in your country?
+<span class="student">[Student]</span> I&#x27;m not sure about the movie, but this day some song is the popular or sleeper hit because the YouTube is the watch it possible any anything. So some people is the made some made a clip and that&#x27;s clip only short clip is the interesting and people like that. And that song is the hit this, yeah, very popular. So it is possible.
+<span class="tutor">[Tutor]</span> Okay. Hmm. All right, you&#x27;ve done a great job. All right, my friend, you are done for today. Yeah, did you have any questions or concerns?
+<span class="student">[Student]</span> Ah, no, it&#x27;s okay. I&#x27;m good. I&#x27;m good. Yeah, thank you for your class.
+<span class="tutor">[Tutor]</span> All right. Oh, thank you for joining me. You do such a good job. Enjoy the rest of your week. I look forward to talking to you on Monday. You take care. Bye bye, teacher.</div>
+        </div>
+    </div>
+    <div class="toast" id="toast">✅ 프롬프트가 복사되었습니다!</div>
+    <script>
+        const REVIEW_PROMPT="너는 나의 영어 회화 복습 파트너야. 오늘 내 전화영어 수업 내용을 기반으로 대화하면서 복습을 도와줘.\n\n[오늘 수업 전사 내용]\n[Tutor] Hello, Carlyle. Good morning. Hi, Joey. How are you this morning?\n[Student] I'm a little tired. Last night I drank beer with nice food.\n[Tutor] Sure.\n[Student] So I'm a little tired, but it's good.\n[Tutor] Oh, okay, okay. No worries. We'll just take things easy today. No rush, no pressure. All right. Did you need a moment to bring up your lesson or are you ready to go?\n[Student] Oh, yes. I'm ready. Let's go to the class.\n[Tutor] Great. All right. So today's title is I Don't Want Any Spoilers. And I will ask you to read today's goal aloud to me.\n[Student] Ah, yes. Today's goal is to decide one movie or TV show to stream with someone by discussing personal preference.\n[Tutor] All right. We're going to try that last word one more time. I heard you say prepper. Let's do it slower. Preferences.\n[Student] Preference.\n[Tutor] Preference. How about this?\n[Student] Preference.\n[Tutor] Very good. Very good. Thank you.\n[Student] Preference.\n[Tutor] All right. Okay. Let's go on to the next page. We're going to do some key expressions. The first expression is not in the headspace for. I'm going to ask you to read the pink sentence and the three bulleted sentences underneath that one.\n[Student] Okay. Sorry, I'm not in the headspace for drama. I'm not in the headspace for subtitles. She's not in the headspace for anything complicated tonight. No horror movies. I'm not in the headspace for that.\n[Tutor] Okay. So after reading the four sentences, what do you think \"not in the headspace for\" means?\n[Student] I don't have interest in, or I don't have the, I don't like that, or I don't have enough.\n[Tutor] Yeah, \"I don't like that\" is better.\n[Student] Okay. Okay. Yeah.\n[Tutor] So you're not interested or it's not your preference.\n[Student] Yeah, that made sense.\n[Tutor] Very good. Very good. Yeah. All right. Our next expression is the word \"cliffhanger.\"\n[Student] Cliffhanger.\n[Tutor] And I'll get you to read the four sentences.\n[Student] Uh-huh. Okay. It always ends with a cliffhanger. This novel ends on a cliffhanger. This drama ends the season on a cliffhanger. The movie ends on a cliffhanger.\n[Tutor] Right. Have you ever heard this word before in English?\n[Student] I think it is the movie title name, Cliffhanger.\n[Tutor] There is a movie called Cliffhanger. Yeah. But this is a word in English. It has a meaning. What do you think it might mean?\n[Student] That meaning is the good ending and interesting ending and purposeless ending, right?\n[Tutor] You're very close. Good job. It means, it says here, because I've got it on Google, a plot device that ends a situation abruptly, leaving the main character in a dangerous position with an uncertain outcome.\n[Student] Unsure that end, and people wondering how to end and just imagine something.\n[Tutor] Cliffhanger. Yeah, it leaves people going, \"What's going on? What's going to happen next?\" Very good. Very good.\n[Student] And teacher, I was wondering about that, the cliffhanger.\n[Tutor] Okay.\n[Student] Does it come from the movie title? Because I heard that.\n[Tutor] No, no, it's not from a specific movie. It is a word we use in English. But you're right, there has been a movie made that was called Cliffhanger. And I'm not familiar with it, but it might have had something to do with cliffs or climbing.\n[Student] I see. I understand. It's a difference. Yeah. It's not a compromise, the movie title.\n[Tutor] Okay. All right. We're going to move on to today's question and the follow-up question. I'll get you to read to me.\n[Student] Okay. Does this movie look good to you? Yes, I have been waiting to see it for a while. Not really. Let's keep searching.\n[Tutor] Let's keep searching. Yeah, follow-up question?\n[Student] Should we check the review before deciding? I don't trust any review. I don't trust reviews. Let's just go for it.\n[Tutor] Let's just go for it. Okay. Yeah. That's another phrase we have. It just means let's just go ahead. Let's take a chance. Let's just go for it.\n[Student] Very good. Let's just go for it.\n[Tutor] Okay. All right. We're going to go on to part A, My Story.\n[Student] Yes.\n[Tutor] And to make things a little easier for you, instead of creating your own story, all you're going to do is fill in the yellow box with a suggestion from the group of suggestions under the four sentences.\n[Student] Okay, I see. I made some sentences. I prefer...\n[Tutor] Okay. Okay. Keep going ahead. Give it a try.\n[Student] Okay, I see. I prefer watching sci-fi when I can decide what to watch.\n[Tutor] Sci-fi. Okay. Science fiction? May I help you? You're pronouncing it sci-fi?\n[Student] Yeah.\n[Tutor] Try this. Sci-fi.\n[Student] Ah, sci-fi.\n[Tutor] Fiction. Sci-fi. That's short for science fiction. Very good.\n[Student] I prefer watching sci-fi when I can't decide what to watch.\n[Tutor] I'll put that in the comments today so you can see it, okay?\n[Student] Okay, I see. Sci-fi.\n[Tutor] All right. Try number two.\n[Student] Okay. I usually pick movies based on reviews and blog recommendations.\n[Tutor] Sounds great. Let's do number three.\n[Student] I don't always trust advertisements when they recommend movies because they select so interesting section and made some hype advertisement.\n[Tutor] You remember that word.\n[Student] Yeah, advertisement.\n[Tutor] Hype. No, you remember hype. I'm impressed. Good job. All right, let's try number four.\n[Student] I like to re-watch. I like to re-watch classic movie when nothing looks good. Ah, like the...\n[Tutor] Good job. Yeah, like The Terminator or River Road.\n[Tutor] Oh, yeah. That's... yeah, that's a... that's a good binge show. That's something you like, like you watch on the weekends. Yeah. Uh-huh. Yeah. I've been... there's been a few series that I'd like to see again. I'd like to see The Terminator series again. And then I've been thinking about watching X-Men again. So I'll have to figure that. Yeah. I like superhero shows. All right. That was fantastic, Joey. Okay. All right. We are going to skip part B for now. Come back to it if we have time. Let's go to part C. Which do you prefer? Okay. And as in last class, I'm going to get you to read the question at the bottom. And then you can use the visual to create a response.\n[Student] Okay, I see. Which do you prefer, right? Choose one out of the choice, give the reason behind. Yeah, and I get... yeah, go right down to the bottom quick talk and read the question. Okay, if you could only watch movies in one place for the rest of your life, would you choose home or theater?\n[Tutor] Why?\n[Student] Okay, just that is amazing. And if I'm just to select one place, only one place in my whole time, right? And I choose comfortable. And because after after pandemic, the people watching YouTube or the movie in a home, not a theater. It is same because if we watch some clip or movie in our home, that give a comfortable and more relaxing our body and our mind. So it is only one choice. So if I select the theater, every time I will go there, that place. And if I if I wanted to watch one movie, just go there. So I consider the movie, the go to the dealer and price, etc. So I'm selected in a home. And that is the possible to every portable device used, every portable device like their laptops, mobile phones and smart pad, etc. So yeah, I love to do in my home and select a portable device and because it gave their convenience and comfortable. Yeah, that is my...\n[Tutor] Yes, I would agree with you. I can't remember the last time I visited a theater to watch a movie, but I've gotten used to watching at home. Like you said, it's more comfortable. There are less distractions from other people. And I can probably make all the theater snacks at home and save a lot of money. Yes, you're right. You're right. I think if I if I was to give you a price, a small bag of theater popcorn would be around thirteen thousand won.\n[Student] Oh, thirteen thousand won.\n[Tutor] Yeah, to us it's expensive.\n[Student] Wow.\n[Tutor] Where I yeah, and I can make it at home a lot cheaper and I can get all the ingredients.\n[Student] Theater, special occasion. When you watch the movie in your home, what would you eat during the watching movie? The popcorn or the salad?\n[Tutor] In Western culture, people have popcorn. Sometimes they will have candy or chocolate bars and they drink soda. Sometimes people just drink tea or coffee, but it's the idea that if you have a comfortable chair at home and a big screen TV, it's almost like being in the theater with all the other people.\n[Student] Oh, yeah, it's possible and good. I can have whatever. I can make pizza. I can have chicken. Whatever I want.\n[Tutor] Yeah, you're right. All right. Let's take a look. Okay. Now, the next page is called Digging in Deeper. And we're looking at a visual. But what I'd like to do today is I'd like to continue on to Part E, Tips for Idioms.\n[Student] Okay.\n[Tutor] Because I'd like to teach you some more vocabulary, okay?\n[Student] Yes, good choice. All right. Uh-huh.\n[Tutor] All right. So I'm going to get you to read the title of the first idiom, the description, the example, and then read the question to me, okay?\n[Student] Okay. The problem. The first sentence. Roll the credits. Roll the credits.\n[Tutor] To finish something or wrap it up.\n[Student] Wrap it up. Wrap it up.\n[Tutor] Yeah, wrap it up. Can I help you with that word?\n[Student] Oh, yes.\n[Tutor] You're saying the W, but in this word, the W is silent. Let's try the R.\n[Student] Wrap it up. Wrap it up.\n[Tutor] Wrap it up. Very good. To finish something or wrap it up.\n[Student] Wrap it up. Roll it up.\n[Tutor] Roll it up. I'll send some practice for you. I'll get you to read the example.\n[Student] After five seasons, the show finally rolled up credits for the last time.\n[Tutor] Rolled the credits. Very good.\n[Student] Ah, yes. Teacher, I can imagine that word because \"roll the credit.\" Why is it the finish word? Meaning the finish. Roll the credit.\n[Tutor] Well, it used to be that at the end of a television show or movie, they would show all the names of the people that worked on producing the films. And by telling people who was involved, it was called the credits. And they said, \"roll the credits.\" It means to show everyone who was involved in the show's production. I'll see if I can find a video that discusses that idiom for you. Okay. It'll make it easier to understand.\n[Student] All right. Okay. All right.\n[Tutor] Let's get you to read the question.\n[Student] Have you ever felt ready to roll the credits on a job or project?\n[Student] Oh, yes. Have you ever felt like you need to tell people about who was involved in the job or the credit? That situation is not only about the movie or the entertainment.\n[Tutor] No.\n[Student] Yeah, just every time I take a task about the internal audit. So usually I finish the internal audit for three months. So in the meantime, yeah, I'm so, I feel so comfortable. And I satisfied that situation. So usually, yeah. Yeah. And I ended up finished and start a new something. So that is good effect for me.\n[Tutor] Right. Very nice. All right, Joey. Let's work on the second idiom and then we'll wrap up for today, okay?\n[Student] Okay.\n[Tutor] I'll get you to read the title of the next idiom.\n[Student] Uh-huh. A Sleeper Hit.\n[Tutor] A Sleeper Hit. Very good. A movie that wasn't expected to be popular but became successful. Example.\n[Student] Everyone was surprised when the low-budget horror movie turned out to be a sleeper hit.\n[Student] Yes. Okay. The question, what movie does unexpected become a sleeper hit in your country?\n[Student] I'm not sure about the movie, but this day some song is the popular or sleeper hit because the YouTube is the watch it possible any anything. So some people is the made some made a clip and that's clip only short clip is the interesting and people like that. And that song is the hit this, yeah, very popular. So it is possible.\n[Tutor] Okay. Hmm. All right, you've done a great job. All right, my friend, you are done for today. Yeah, did you have any questions or concerns?\n[Student] Ah, no, it's okay. I'm good. I'm good. Yeah, thank you for your class.\n[Tutor] All right. Oh, thank you for joining me. You do such a good job. Enjoy the rest of your week. I look forward to talking to you on Monday. You take care. Bye bye, teacher.\n\n[AI 피드백]\n안녕하세요, Joey! 오늘 수업도 정말 즐겁고 유익했습니다. 영화와 TV 쇼에 대한 개인적인 선호도를 이야기하며 다양한 표현들을 자연스럽게 익힐 수 있었어요. 특히 'not in the headspace for'나 'cliffhanger' 같은 재미있는 표현들을 잘 이해하고 활용하려는 모습이 인상 깊었습니다.\n\n---\n\n### **0. 📌 Topic**\nTopic: Discussing movie/TV show preferences and related idioms.\n\n---\n\n### **1. 📊 오늘의 대화 요약 (Summary)**\n오늘 수업에서는 영화와 TV 쇼 시청 선호도에 대해 이야기하며, 'not in the headspace for'와 'cliffhanger' 같은 새로운 표현들을 배웠습니다. 집에서 영화를 보는 것과 극장에서 보는 것의 장단점을 비교하고, 'roll the credits'와 'a sleeper hit'과 같은 영화 관련 숙어의 의미를 탐구했습니다.\n\n---\n\n### **2. 💬 유창성 업그레이드 (Fluency & Natural Flow)**\nJoey가 말한 문장 중 의미는 통하지만, 원어민들이 더 자연스럽게 쓰는 표현들을 함께 살펴볼까요?\n\n1.  **❌ 학습자 원문 (As Said):** \"Last night I drank beer with nice food.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"Last night, I had some beer with good food.\"\n    *   **💎 비즈니스 표현 (Professional):** \"Last night, I enjoyed some beer with a pleasant meal.\"\n    *   **💡 코칭 포인트:** \"To have\"는 음식이나 음료를 섭취하는 것을 \"to drink\"나 \"to eat\"보다 더 일반적이고 자연스럽게 표현할 때 사용됩니다. \"nice food\"보다는 \"good food\"나 \"a pleasant meal\"이 더 자연스럽습니다.\n\n2.  **❌ 학습자 원문 (As Said):** \"That meaning is the good ending and interesting ending and purposeless ending, right?\"\n    *   **✅ 자연스러운 표현 (Natural):** \"Does that mean it's a good, interesting, or purposeless ending?\"\n    *   **💎 비즈니스 표현 (Professional):** \"Does that imply it's a positive, engaging, or inconclusive ending?\"\n    *   **💡 코칭 포인트:** 의미를 명확히 할 때는 \"Does that mean...\" 또는 \"Are you saying...\"을 사용하는 것이 더 자연스럽습니다. 또한, 명사 앞에 형용사를 직접 나열하는 것이 (예: \"a good, interesting, or purposeless ending\") 문장의 흐름을 더 부드럽게 합니다.\n\n3.  **❌ 학습자 원문 (As Said):** \"because they select so interesting section and made some hype advertisement.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"because they select such interesting sections and create hyped advertisements.\"\n    *   **💎 비즈니스 표현 (Professional):** \"as they highlight particularly engaging segments and produce highly persuasive advertisements.\"\n    *   **💡 코칭 포인트:** \"So\"는 보통 형용사나 부사 앞에 오지만, 명사를 강조할 때는 \"such a/an + 형용사 + 명사\" 또는 \"such + 복수 명사\"를 사용합니다. 또한, 일반적인 사실을 말할 때는 과거형 \"made\" 대신 현재형 \"create\"를 쓰는 것이 더 적절합니다. \"Hype\"는 명사로도 쓰이지만, 여기서는 \"hyped\" (과장된)라는 형용사가 더 자연스럽습니다.\n\n---\n\n### **3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)**\nCategory: **Noun-Adjective Confusion**\n\nJoey는 명사와 형용사를 혼동하여 사용하는 경향이 있었습니다. 특히 문장 끝에서 서술형으로 사용될 때 명사 형태를 쓰는 경우가 많았습니다.\n\n| ❌ 원문 (As Said)                                                                                              | ✅ 교정 예시 (Corrected)                                                                                             |\n| :------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------- |\n| \"It's a **difference**.\"                                                                                         | \"It's **different**.\"                                                                                                |\n| \"It is **same** because if we watch some clip or movie in our home, that give a comfortable and more **relaxing** our body and our mind.\" | \"It is **the same** because if we watch some clips or movies at home, it gives comfort and more **relaxation** to our body and mind.\" |\n| \"and because it gave their convenience and **comfortable**.\"                                                      | \"and because it provides convenience and **comfort**.\"                                                               |\n\n📌 **핵심 규칙:** 형용사는 명사를 수식하거나 주어의 상태를 설명하고, 명사는 사물, 개념, 사람 등을 나타냅니다. \"~하다/한\"의 의미일 때는 형용사를, \"~함/것\"의 의미일 때는 명사를 사용합니다.\n\n🔁 **따라 읽기:**\n🗣️ \"It's different.\"\n🗣️ \"It is the same because it gives comfort and more relaxation to our body and mind.\"\n🗣️ \"It provides convenience and comfort.\"\n\n---\n\n### **4. 📗 어휘 확장 (Vocabulary Vault)**\n\n1.  **preference** /préfərəns/ (명사)\n    *   뜻: 선호, 더 좋아하는 것\n    *   실전 예문: We need to consider the client's **preference** before finalizing the proposal.\n\n2.  **cliffhanger** /klífhæŋər/ (명사)\n    *   뜻: 다음 회나 결말을 궁금하게 만드는 상황, 손에 땀을 쥐게 하는 결말\n    *   실전 예문: The negotiation ended on a **cliffhanger**, leaving us wondering about the final outcome.\n\n3.  **abruptly** /əbrʌ́ptli/ (부사)\n    *   뜻: 갑자기, 불쑥\n    *   실전 예문: The meeting ended **abruptly** due to an urgent call.\n\n4.  **compromise** /kɑ́mprəmàiz/ (명사/동사)\n    *   뜻: 타협, 절충; 타협하다, 절충하다\n    *   실전 예문: We reached a **compromise** on the project deadline. (명사) / We need to **compromise** to find a solution that works for everyone. (동사)\n\n5.  **binge-watch** /bɪndʒ wɑːtʃ/ (동사)\n    *   뜻: (TV 프로그램 등을) 몰아보다\n    *   실전 예문: I plan to **binge-watch** the new documentary series this weekend.\n\n---\n\n### **5. 📝 실전 복습 챌린지 (Practice)**\n\n오늘 배운 표현과 문법을 활용하여 다음 상황에 맞는 문장을 영어로 만들어 보세요.\n\n1.  **상황:** 퇴근 후에는 복잡한 일을 할 기분이 아니에요.\n    *   **영작:** (I'm not in the headspace for...)\n    *   **모범 답안:** After work, I'm not in the headspace for anything complicated.\n\n2.  **상황:** 이 프로젝트는 모두가 만족할 만한 타협점을 찾는 것이 중요합니다.\n    *   **영작:** (It's important to find a... for everyone.)\n    *   **모범 답안:** It's important to find a compromise that satisfies everyone on this project.\n\n3.  **상황:** 그 신생 기업은 처음에는 주목받지 못했지만, 결국 예상치 못한 성공을 거두었습니다.\n    *   **영작:** (The startup... but eventually became...)\n    *   **모범 답안:** The startup wasn't expected to be popular at first, but it eventually became a sleeper hit.\n\n---\n\n### **6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)**\n\n✨ **Good Job:**\nJoey가 가장 잘 표현한 문장은 바로 이겁니다:\n\"I can have whatever. I can make pizza. I can have chicken. Whatever I want.\"\n이 문장은 자신의 의견을 매우 명확하고 자신감 있게 전달했으며, 일상 대화에서 자주 쓰이는 자연스러운 패턴을 완벽하게 구사했습니다. 'Whatever I want'라는 표현으로 자유로운 선택권을 강조한 점도 아주 좋았습니다!\n\n🚀 **내일의 한 문장:**\n다음 수업 시작 시 튜터에게 이렇게 말해보세요:\n\"I'm not in the headspace for a complicated discussion today, so let's keep it light!\"\n(오늘은 복잡한 이야기는 할 기분이 아니라서, 가볍게 이야기해요!)\n\n---\n\n### **[성과 지표]**\n\n**유창성 점수:** 7/10\n\n**근거:** Joey는 다양한 주제에 대해 막힘없이 자신의 의견을 표현하려는 의지가 매우 강합니다. 새로운 어휘(예: cliffhanger, hype)를 빠르게 이해하고 활용하려는 노력이 돋보였습니다. 다만, 문장 구조를 더 자연스럽게 만들거나 명사와 형용사 사용을 정확히 하는 부분에서 약간의 개선이 필요합니다. 몇몇 문장에서 단어 선택이나 문법적 오류가 있었지만, 전반적인 의사소통에는 전혀 문제가 없었습니다.\n\n**다음 수업 '원포인트 액션 플랜':**\n다음 수업에서는 **\"명사와 형용사 구분하여 사용하기\"** 에 집중하여 더 정확하고 자연스러운 문장 구사를 연습해 봅시다. 특히 문장의 끝에서 주어의 상태를 설명할 때 형용사를 사용하는 연습을 해볼 거예요.\n\n위 내용을 바탕으로:\n1. 먼저 오늘 수업에서 내가 틀렸거나 어색했던 표현을 하나 골라서, 관련된 상황을 영어로 질문해줘.\n2. 내가 영어로 대답하면, 자연스러운지 확인하고 더 나은 표현이 있으면 알려줘.\n3. 특히 \"반복 실수 패턴\"에서 지적된 부분을 집중적으로 연습시켜줘.\n4. 이런 식으로 오늘 배운 표현들을 하나씩 복습하자.\n5. 한국어 설명은 필요할 때만 간단히, 대화는 최대한 영어로 진행해줘.\n\n그럼 시작하자!";
+        function startReview(){navigator.clipboard.writeText(REVIEW_PROMPT).then(()=>{showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)}).catch(()=>{const t=document.createElement('textarea');t.value=REVIEW_PROMPT;document.body.appendChild(t);t.select();document.execCommand('copy');document.body.removeChild(t);showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)})}
+        function showToast(){const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500)}
+        function switchTab(n){document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',n==='feedback'?i===0:i===1));document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));document.getElementById('tab-'+n).classList.add('active')}
+    </script>
+</body>
+</html>

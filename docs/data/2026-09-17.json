@@ -1,0 +1,53 @@
+{
+ "date": "2026-09-17",
+ "iso": [
+  2026,
+  38
+ ],
+ "topic": "Discussing movie/TV show preferences and related idioms.",
+ "grammar": "Noun-Adjective Confusion",
+ "grammar_norm": "Noun-Adjective Confusion",
+ "score": 7.0,
+ "pairs": [
+  {
+   "said": "Last night I drank beer with nice food.",
+   "natural": "Last night, I had some beer with good food."
+  },
+  {
+   "said": "That meaning is the good ending and interesting ending and purposeless ending, right?",
+   "natural": "Does that mean it's a good, interesting, or purposeless ending?"
+  },
+  {
+   "said": "because they select so interesting section and made some hype advertisement.",
+   "natural": "because they select such interesting sections and create hyped advertisements."
+  }
+ ],
+ "vocab": [
+  {
+   "word": "preference",
+   "pos": "명사",
+   "meaning": "선호, 더 좋아하는 것"
+  },
+  {
+   "word": "cliffhanger",
+   "pos": "명사",
+   "meaning": "다음 회나 결말을 궁금하게 만드는 상황, 손에 땀을 쥐게 하는 결말"
+  },
+  {
+   "word": "abruptly",
+   "pos": "부사",
+   "meaning": "갑자기, 불쑥"
+  },
+  {
+   "word": "compromise",
+   "pos": "명사/동사",
+   "meaning": "타협, 절충; 타협하다, 절충하다"
+  },
+  {
+   "word": "binge-watch",
+   "pos": "동사",
+   "meaning": "(TV 프로그램 등을) 몰아보다"
+  }
+ ],
+ "_html_md5": "7a06bda45cfc3eebfb7f94c3ce04dc0d"
+}
