@@ -6,13 +6,15 @@ This is a study digest from my one-on-one English phone lessons this week. Pleas
 - Discussing travel goals and destinations using new expressions.
 - Discussing unexpected travel experiences and booking preferences.
 - Discussing weekend plans and movie experiences using new expressions.
+- Discussing movie/TV show preferences and related idioms.
 
 ## Grammar focus this week
 - Incorrect Use Of 'The' With Proper Nouns (1x)
 - Prepositions (1x)
 - Articles (a/an/the) (1x)
+- Noun-Adjective Confusion (1x)
 
-## My all-time weak-point ranking (72 lessons since 2026-05-08)
+## My all-time weak-point ranking (73 lessons since 2026-05-08)
 - Articles (a/an/the) — 11 lessons
 - Subject–Verb Agreement — 10 lessons
 - Verb Tense — 10 lessons
@@ -39,7 +41,7 @@ This is a study digest from my one-on-one English phone lessons this week. Pleas
 - 2026-W34: 7.2
 - 2026-W36: 6.5
 - 2026-W37: 7.6
-- 2026-W38: 7.2
+- 2026-W38: 7.1
 - Overall average: 7.1
 
 ## Corrections — what I said vs. the natural version
@@ -65,6 +67,12 @@ This is a study digest from my one-on-one English phone lessons this week. Pleas
    Natural: "Everything is perfect for this weather. We have vivid colors and trees ."
 11. I said: "I think that writer has such a great imagination and made a story."
    Natural: "I think that writer has such a great imagination and created a compelling story ."
+12. I said: "Last night I drank beer with nice food."
+   Natural: "Last night, I had some beer with good food."
+13. I said: "That meaning is the good ending and interesting ending and purposeless ending, right?"
+   Natural: "Does that mean it's a good, interesting, or purposeless ending?"
+14. I said: "because they select so interesting section and made some hype advertisement."
+   Natural: "because they select such interesting sections and create hyped advertisements."
 
 ## Recurring mistakes from earlier weeks — my long-term habits
 My most repeated weak categories overall: Articles (a/an/the), Subject–Verb Agreement. These corrections are from earlier lessons in those categories. Please weave a few into the review so I revisit old mistakes.
@@ -105,6 +113,11 @@ My most repeated weak categories overall: Articles (a/an/the), Subject–Verb Ag
 - thought-provoking (형용사) — 생각할 거리를 주는, 시사하는 바가 많은
 - unresolved (형용사) — 미해결의, 결론이 나지 않은
 - prowess (명사) — 뛰어난 능력, 기량
+- preference (명사) — 선호, 더 좋아하는 것
+- cliffhanger (명사) — 다음 회나 결말을 궁금하게 만드는 상황, 손에 땀을 쥐게 하는 결말
+- abruptly (부사) — 갑자기, 불쑥
+- compromise (명사/동사) — 타협, 절충; 타협하다, 절충하다
+- binge-watch (동사) — (TV 프로그램 등을) 몰아보다
 
 ## Please cover in the podcast
 - Pick my 1–2 most repeated mistakes (see the all-time ranking) and explain the rule with a memorable rule of thumb.
