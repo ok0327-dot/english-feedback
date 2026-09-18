@@ -1,0 +1,53 @@
+{
+ "date": "2026-09-18",
+ "iso": [
+  2026,
+  38
+ ],
+ "topic": "Exploring Food Trends and Descriptive Vocabulary",
+ "grammar": "Subject-Verb Agreement",
+ "grammar_norm": "Subject–Verb Agreement",
+ "score": 8.0,
+ "pairs": [
+  {
+   "said": "I finally tried the Dubai cookie after seeing it blow up.",
+   "natural": "I finally tried the Dubai cookie after seeing it become so popular."
+  },
+  {
+   "said": "Before I try it, I expected it is to be melty and that to be...",
+   "natural": "Before I try it, I expected it to be melty..."
+  },
+  {
+   "said": "This play is too bougie for me.",
+   "natural": "This place is too bougie for me."
+  }
+ ],
+ "vocab": [
+  {
+   "word": "Bougie",
+   "pos": "adjective",
+   "meaning": "(비격식) 속물적인, 고급인 체하는, 비싼"
+  },
+  {
+   "word": "On point",
+   "pos": "idiomatic expression",
+   "meaning": "완벽한, 딱 맞는, 아주 좋은"
+  },
+  {
+   "word": "Savory",
+   "pos": "adjective",
+   "meaning": "짭짤한, 맛있는 (단맛이 아닌)"
+  },
+  {
+   "word": "Decadent",
+   "pos": "adjective",
+   "meaning": "퇴폐적인, (음식이) 매우 풍부하고 달콤한, 고급스러운"
+  },
+  {
+   "word": "Hype",
+   "pos": "noun/verb",
+   "meaning": "(명사) 과대광고, 열광 / (동사) 과대광고하다, 열광시키다"
+  }
+ ],
+ "_html_md5": "5b4f6e26f5345f622a55c9122df58282"
+}

@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#0f0f13"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="당근영어"><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="icon" type="image/png" sizes="192x192" href="icon-192.png"><script src="install-banner.js" defer></script><script src="sw-reg.js" defer></script>
+    <title>전화영어 복습 - 2026년 09월 18일</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Noto Sans KR',sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.75;min-height:100vh}
+        .header{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);border-bottom:1px solid rgba(255,255,255,.06);padding:48px 24px 40px;text-align:center}
+        .header-date{font-size:13px;color:#94a3b8;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+        .header h1{font-size:28px;font-weight:700;color:#f1f5f9;margin-bottom:16px}
+        .header-meta{display:flex;justify-content:center;gap:24px;font-size:14px;color:#64748b}
+        .header-meta span{display:flex;align-items:center;gap:6px}
+        .cta-section{text-align:center;padding:40px 24px}
+        .cta-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:linear-gradient(135deg,#38bdf8,#818cf8);color:#fff;font-size:16px;font-weight:600;font-family:'Noto Sans KR',sans-serif;border:none;border-radius:50px;cursor:pointer;transition:all .3s;text-decoration:none;box-shadow:0 4px 24px rgba(56,189,248,.25)}
+        .cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(56,189,248,.35)}
+        .cta-btn svg{width:20px;height:20px}
+        .cta-sub{margin-top:12px;font-size:13px;color:#64748b}
+        .toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#38bdf8;padding:14px 28px;border-radius:12px;font-size:14px;font-weight:500;border:1px solid rgba(56,189,248,.2);box-shadow:0 8px 32px rgba(0,0,0,.4);opacity:0;transition:all .4s cubic-bezier(.16,1,.3,1);z-index:1000}
+        .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+        .container{max-width:720px;margin:0 auto;padding:0 24px 80px}
+        .tabs{display:flex;gap:4px;background:#1a1a24;padding:4px;border-radius:12px;margin-bottom:32px}
+        .tab{flex:1;padding:12px;text-align:center;font-size:14px;font-weight:500;color:#64748b;background:0 0;border:none;border-radius:8px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all .2s}
+        .tab.active{background:#262636;color:#f1f5f9}
+        .tab-content{display:none}.tab-content.active{display:block}
+        .feedback h2{font-size:18px;font-weight:700;color:#f1f5f9;margin:36px 0 16px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.06)}
+        .feedback h2:first-child{margin-top:0}
+        .feedback p{margin:8px 0;color:#cbd5e1}
+        .feedback .item{padding:6px 0 6px 16px;border-left:2px solid #334155;margin:6px 0;color:#cbd5e1}
+        .feedback .numbered{padding:8px 0 8px 16px;color:#cbd5e1}
+        .feedback .numbered strong{color:#38bdf8}
+        .feedback strong{color:#f1f5f9}
+        .feedback code{background:#1e293b;padding:2px 8px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#38bdf8}
+        .feedback table{width:100%;border-collapse:collapse;margin:12px 0}
+        .feedback th,.feedback td{padding:10px 14px;text-align:left;border-bottom:1px solid #262636}
+        .feedback th{color:#94a3b8;font-weight:500;font-size:13px}
+        .feedback td{color:#cbd5e1}
+        .arrow{color:#38bdf8;font-weight:700}
+        .transcript{background:#1a1a24;border-radius:12px;padding:28px;font-size:14px;line-height:2;color:#94a3b8;white-space:pre-wrap;word-break:break-word;font-family:'JetBrains Mono','Noto Sans KR',monospace}
+        .transcript .tutor{color:#38bdf8}
+        .transcript .student{color:#a78bfa}
+        @media(max-width:640px){.header{padding:32px 16px}.header h1{font-size:22px}.cta-btn{padding:14px 28px;font-size:15px}.container{padding:0 16px 60px}}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-date">2026년 09월 18일</div>
+        <h1>📚 전화영어 복습</h1>
+        <div class="header-meta">
+            <span>⏱ 20분 48초</span>
+            <span>🎙 전화영어_025180304_20260918080018.m4a</span>
+        </div>
+    </div>
+    <div class="cta-section">
+        <button class="cta-btn" onclick="startReview()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Gemini에서 복습 대화 시작하기
+        </button>
+        <div class="cta-sub">클릭하면 프롬프트가 복사되고 Gemini가 열립니다</div>
+    </div>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('feedback')">📋 AI 피드백</button>
+            <button class="tab" onclick="switchTab('transcript')">🎙 수업 전사</button>
+        </div>
+        <div id="tab-feedback" class="tab-content active">
+            <div class="feedback"><p>안녕하세요, Joey! 따뜻하고 실용적인 영어 코치입니다. 오늘 전화영어 수업 내용에 대한 분석과 피드백을 한국어로 정리해 드릴게요. 유창성과 정확성을 동시에 잡고, 입에 붙는 자연스러운 표현을 익히는 데 집중했습니다.</p>
+<br>
+<br>
+<p><strong>0. 📌 Topic</strong></p>
+<p>Topic: Exploring Food Trends and Descriptive Vocabulary</p>
+<br>
+<p><strong>1. 📊 오늘의 대화 요약 (Summary)</strong></p>
+<p>오늘 수업에서는 'Hyped Bites'라는 주제로, 푸드 트렌드와 관련된 다양한 형용사(예: bougie, on point, savory, decadent)를 익혔습니다. 또한, 소셜 미디어에서 음식 콘텐츠의 인기와 'hype' 마케팅 현상에 대해 이야기하며, 두바이 쿠키를 예시로 들어 가격 대비 가치와 과대 광고에 대한 의견을 나누었습니다.</p>
+<br>
+<p><strong>2. 💬 유창성 업그레이드 (Fluency & Natural Flow)</strong></p>
+<br>
+<p>Joey가 실제 말한 표현 중, 의미는 통하지만 조금 더 자연스럽거나 격식 있게 다듬을 수 있는 표현 3가지를 골라봤습니다.</p>
+<br>
+<div class="item"><strong>첫 번째 표현</strong></div>
+<div class="item">❌ 학습자 원문 (As Said): "I finally tried the Dubai cookie after seeing it blow up."</div>
+<div class="item">✅ 자연스러운 표현 (Natural): "I finally tried the Dubai cookie after seeing it become so popular."</div>
+<div class="item">💎 비즈니스 표현 (Professional): "I finally tried the Dubai cookie after it gained significant traction."</div>
+<div class="item">💡 코칭 포인트: The phrase "blow up" is quite informal and often implies something exploded or became famous very suddenly, sometimes negatively. Using "become so popular" or "gained significant traction" sounds more natural and professional in general conversation, especially in a business context.</div>
+<p><span class="arrow">→</span> "blow up"은 매우 비격식적인 표현으로, 종종 무언가 갑자기 폭발하듯 유명해졌다는 의미로 쓰입니다. "become so popular" 또는 "gained significant traction"과 같은 표현은 일반적인 대화, 특히 비즈니스 맥락에서 더 자연스럽고 전문적으로 들립니다.</p>
+<br>
+<div class="item"><strong>두 번째 표현</strong></div>
+<div class="item">❌ 학습자 원문 (As Said): "Before I try it, I expected it is to be melty and that to be..."</div>
+<div class="item">✅ 자연스러운 표현 (Natural): "Before I try it, I expected it to be melty..."</div>
+<div class="item">💎 비즈니스 표현 (Professional): "Prior to trying it, I anticipated it would be melty..."</div>
+<div class="item">💡 코칭 포인트: The structure "I expected it is to be..." is a bit awkward. In English, after "expect," we usually follow with "to + verb" or a "that" clause with a subject and verb. "I expected it to be..." is the most common and natural way to express this.</div>
+<p><span class="arrow">→</span> "I expected it is to be..."와 같은 구조는 다소 어색합니다. 영어에서 'expect' 다음에는 보통 'to + 동사원형' 또는 'that' 절을 사용합니다. "I expected it to be..."가 이를 표현하는 가장 일반적이고 자연스러운 방식입니다.</p>
+<br>
+<div class="item"><strong>세 번째 표현</strong></div>
+<div class="item">❌ 학습자 원문 (As Said): "This play is too bougie for me."</div>
+<div class="item">✅ 자연스러운 표현 (Natural): "This place is too bougie for me."</div>
+<div class="item">💎 비즈니스 표현 (Professional): "This establishment is a bit too upscale for my taste."</div>
+<div class="item">💡 코칭 포인트: It seems "play" might have been a mishearing or typo for "place." The word "bougie" (short for bourgeois) implies something is high-class, fancy, or expensive, often in a way that's perceived as trying too hard or being out of reach. Using "place" is standard. For a more professional tone, "establishment" is a good alternative for a venue or business, and "upscale" is a synonym for high-class.</div>
+<p><span class="arrow">→</span> "play"는 "place"의 오기이거나 잘못 들은 것 같습니다. "bougie"(bourgeois의 줄임말)는 종종 과시적이거나 손이 닿지 않는 방식으로 고급스럽고, 화려하거나, 비싸다는 것을 의미합니다. "place"를 사용하는 것이 일반적입니다. 더 전문적인 톤을 위해서는 장소나 사업체를 지칭할 때 "establishment"를 사용하고, 고급스러운이라는 의미로 "upscale"을 쓸 수 있습니다.</p>
+<br>
+<p><strong>3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)</strong></p>
+<br>
+<p>이번 대화에서 Joey가 반복적으로 보인 문법 패턴은 '주어-동사 수일치 오류'였습니다. 특히 복수형 주어에 단수형 동사를 사용하거나, 단수형 주어에 복수형 동사를 사용하는 경우가 있었습니다.</p>
+<br>
+<div class="item"><strong>Category: Subject-Verb Agreement</strong></div>
+<div class="item"><strong>핵심 규칙</strong>: 문장의 주어가 단수이면 동사도 단수 형태를, 주어가 복수이면 동사도 복수 형태를 사용해야 합니다. (단, 현재 시제 3인칭 단수 주어에는 동사에 '-s'나 '-es'를 붙입니다.)</div>
+<br>
+<table>
+<tr><th>❌ 원문 (As Said)</th><th>✅ 교정 예시 (Correction)</th></tr>
+<tr><td>"Today's goal is to introduce a plant to a vital food trend and its plan is to appear."</td><td>"Today's goal is to introduce a plant to a vital food trend and its plan <strong>appears</strong>." (또는 "and its appearance is planned.")</td></tr>
+<tr><td>"38% users view food content on SNS."</td><td>"38% <strong>of</strong> users view food content on SNS."</td></tr>
+<tr><td>"the people buy them. So that is a similar situation."</td><td>"the people buy them. So that <strong>is</strong> a similar situation." (주어 'people'이 복수이므로 'are' 사용)</td></tr>
+<tr><td>"almost maybe I think in 50% more people in Korea, they have experience by them, have them the Dubai cookie."</td><td>"almost maybe I think more than 50% of people in Korea <strong>have experienced buying</strong> the Dubai cookie."</td></tr>
+</table>
+<br>
+<div class="item"><strong>🔁 따라 읽기 (Practice)</strong></div>
+<div class="numbered"><strong>1.</strong> 🗣️ "Today's goal is to introduce a plant to a vital food trend and its plan <strong>appears</strong>."</div>
+<div class="numbered"><strong>2.</strong> 🗣️ "38% <strong>of</strong> users view food content on SNS."</div>
+<div class="numbered"><strong>3.</strong> 🗣️ "The people buy them. So that <strong>is</strong> a similar situation."</div>
+<div class="numbered"><strong>4.</strong> 🗣️ "More than 50% of people in Korea <strong>have experienced buying</strong> the Dubai cookie."</div>
+<br>
+<p><strong>4. 📗 어휘 확장 (Vocabulary Vault)</strong></p>
+<br>
+<p>수업에서 나왔거나 맥락상 유용한 단어 5가지입니다.</p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>Bougie</strong> /búːʒi/ (adjective)</div>
+<div class="item">뜻: (비격식) 속물적인, 고급인 체하는, 비싼</div>
+<div class="item">실전 예문: Our company's annual dinner is usually held at a rather bougie restaurant downtown.</div>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>On point</strong> /ɒn pɔɪnt/ (idiomatic expression)</div>
+<div class="item">뜻: 완벽한, 딱 맞는, 아주 좋은</div>
+<div class="item">실전 예문: The project proposal was well-researched and the presentation was on point.</div>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>Savory</strong> /séɪvəri/ (adjective)</div>
+<div class="item">뜻: 짭짤한, 맛있는 (단맛이 아닌)</div>
+<div class="item">실전 예문: I prefer savory snacks like nuts or chips over sweet ones.</div>
+<br>
+<div class="numbered"><strong>4.</strong> <strong>Decadent</strong> /dékədənt/ (adjective)</div>
+<div class="item">뜻: 퇴폐적인, (음식이) 매우 풍부하고 달콤한, 고급스러운</div>
+<div class="item">실전 예문: The chocolate lava cake was incredibly decadent and rich.</div>
+<br>
+<div class="numbered"><strong>5.</strong> <strong>Hype</strong> /haɪp/ (noun/verb)</div>
+<div class="item">뜻: (명사) 과대광고, 열광 / (동사) 과대광고하다, 열광시키다</div>
+<div class="item">실전 예문: The product launch was accompanied by a lot of hype from the marketing team.</div>
+<br>
+<p><strong>5. 📝 실전 복습 챌린지 (Practice)</strong></p>
+<br>
+<p>오늘 배운 표현과 문법을 활용하여 영작 연습을 해봅시다.</p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>쉬운 문제</strong>: 친구에게 새로 산 옷이 정말 멋지다고 칭찬하고 싶을 때, "on point"를 사용하여 말해보세요.</div>
+<div class="item">*예시 답안*: Your new outfit is totally on point!</div>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>중급 문제</strong>: 최근에 아주 비싸지만 만족스러웠던 식당 경험에 대해 이야기하고 싶습니다. "bougie"와 "establishment"를 사용하여 문장을 만들어 보세요.</div>
+<div class="item">*예시 답안*: We went to a rather bougie establishment last night, and while it was expensive, the service was excellent.</div>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>고급 문제</strong>: 소셜 미디어에서 본 음식 광고가 과대광고(hype)일 뿐인지, 아니면 정말 맛있을지 고민하는 상황을 묘사해 보세요. "hype"를 명사로 사용하고, 주어-동사 수일치에 유의하여 작성하세요.</div>
+<div class="item">*예시 답안*: The extensive hype surrounding that new dessert makes me wonder if it's truly delicious or just a marketing tactic.</div>
+<br>
+<p><strong>6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)</strong></p>
+<br>
+<div class="item">✨ <strong>Good Job</strong>:</div>
+<p>"Your class is on point to me, so I'm good. Thank you. Thank you for your class."</p>
+<p>Joey가 튜터에게 수업 내용이 자신에게 딱 맞고 좋다고 표현한 이 문장은 'on point'라는 표현을 맥락에 맞게 아주 잘 사용했습니다. 또한, 감사 표현을 두 번 반복하며 진심을 전달하는 모습이 인상적이었습니다.</p>
+<br>
+<div class="item">🚀 <strong>내일의 한 문장</strong>:</div>
+<p>다음 수업 시작 시, 오늘 배운 'on point'와 'bougie'를 활용하여 튜터에게 이렇게 말해보세요.</p>
+<p>"Hi teacher! I hope you had a great weekend. My weekend was good, and I found a new restaurant that was surprisingly not too bougie, but the food was really on point!"</p>
+<br>
+<br>
+<p><strong>[성과 지표]</strong></p>
+<br>
+<div class="item"><strong>유창성 점수</strong>: 8/10</div>
+<div class="item"><strong>근거</strong>: Joey는 전반적으로 자신의 생각을 자연스럽게 표현하려는 노력을 많이 보였습니다. 'on point'와 같은 표현을 능숙하게 사용했고, 복잡한 주제에 대해서도 자신의 의견을 논리적으로 전개했습니다. 다만, 일부 표현(예: "blow up", "it is to be")에서 더 자연스러운 원어민 표현을 익히면 유창성이 더욱 향상될 것입니다.</div>
+<div class="item"><strong>다음 수업 '원포인트 액션 플랜'</strong>:</div>
+<p>이번 수업에서 다룬 'Subject-Verb Agreement' 오류를 다음 수업 시작 시 간단히 복습하고, Joey가 이 규칙을 적용하여 짧은 문장 2-3개를 직접 만들어 말해보는 연습을 하겠습니다.</p></div>
+        </div>
+        <div id="tab-transcript" class="tab-content">
+            <div class="transcript"><span class="tutor">[Tutor]</span> Hello there. Happy Friday.
+[Joey] Hi. Happy Friday. Oh my gosh. Sorry, teacher. Yes, yes, yes.
+<span class="tutor">[Tutor]</span> It&#x27;s okay. I look at this as kind of Friday, even though it&#x27;s only Thursday for me. I get the next two days off. I&#x27;m happy.
+[Joey] Yeah. I&#x27;m so sorry.
+<span class="tutor">[Tutor]</span> Yeah. No worries. Yeah. All right, sir. Are you ready to get your last bit of English for the weekend?
+[Joey] Uh-huh.
+<span class="tutor">[Tutor]</span> All right. Did you need a moment to bring up the lesson or are you ready to go?
+[Joey] Yeah, I&#x27;m ready.
+<span class="tutor">[Tutor]</span> Let&#x27;s go.
+<span class="tutor">[Tutor]</span> Fantastic.
+[Joey] Okay.
+<span class="tutor">[Tutor]</span> So today&#x27;s title is Hyped Bites.
+[Joey] Hyped Bites.
+<span class="tutor">[Tutor]</span> Hyped Bites. Yeah, I&#x27;ll get you to read today&#x27;s goal to me.
+[Joey] Okay, no problem. Today&#x27;s goal is to introduce a plant to a vital food trend and its plan is to appear.
+<span class="tutor">[Tutor]</span> Okay, that was very good. Thank you. All right, we&#x27;re going to move on to the next page, key expressions and key questions. Okay. Our first expression is &quot;on point&quot; and I&#x27;ll have you read the four sentences.
+[Joey] Okay, that&#x27;s four sentences. The seasoning on this dish is on point. Your output is on point. You look amazing. Your time is on point. I was just about to call you. The music at that party was on point.
+<span class="tutor">[Tutor]</span> Very good. We&#x27;re going to pause for a minute. Yeah. In the second sentence, I heard your &quot;out-pit&quot; with a P. Let&#x27;s try with an F. &quot;Outfit.&quot;
+[Joey] Outfit.
+<span class="tutor">[Tutor]</span> Outfit.
+<span class="tutor">[Tutor]</span> Very good.
+[Joey] Outfit.
+<span class="tutor">[Tutor]</span> Very good.
+[Joey] Your outfit.
+<span class="tutor">[Tutor]</span> Is on point. Yes. Okay. Very good. Your...
+[Joey] Your feedback.
+<span class="tutor">[Tutor]</span> Is on point. Thank you. All right. Now, this next word, the G makes a J sound. J sound. Yeah. So it&#x27;s... So it&#x27;s going to be pronounced &quot;bougie.&quot;
+[Joey] Bougie. Ah, bougie. Bougie. Bougie. Yes. Yes.
+<span class="tutor">[Tutor]</span> All right. Let&#x27;s get you to try those four sentences. Take your time.
+[Joey] No problem. A 15-lock desk? That&#x27;s way too bougie for me. Good. Why are we at this un-apartable bougie store? Good. She has bougie accessories.
+<span class="tutor">[Tutor]</span> Accessories.
+[Joey] I feel uncomfortable. This play is too bougie for me.
+<span class="tutor">[Tutor]</span> Okay. Let&#x27;s go back to the third sentence.
+[Joey] Okay.
+<span class="tutor">[Tutor]</span> And I&#x27;m going to get you to repeat that last word after me.
+<span class="tutor">[Tutor]</span> Accessories.
+[Joey] Accessory.
+<span class="tutor">[Tutor]</span> Accessory. Yeah.
+[Joey] Accessory.
+<span class="tutor">[Tutor]</span> Accessory. You just had the syllable, the wrong syllable stressed. That&#x27;s fine. You did good. All right. So let&#x27;s talk about the word &quot;bougie.&quot;
+[Joey] Bougie.
+<span class="tutor">[Tutor]</span> Yeah. From those sentences, what do you think &quot;bougie&quot; might mean?
+[Joey] That is too luxury. So I feel uncomfortable. So &quot;bougie&quot; is luxury but not adopt.
+<span class="tutor">[Tutor]</span> Yes. Right. Yes.
+[Joey] Expensive.
+<span class="tutor">[Tutor]</span> Expensive. Yeah, or high class. High class. You got it. You got it, Joey. Okay. All right. Let&#x27;s pop up to the first expression. What do you think &quot;on point&quot; means?
+[Joey] On point. That is the adopt and reasonable and right and good and nice.
+<span class="tutor">[Tutor]</span> You&#x27;re very close. Yes, appropriate, correct, perfect. Perfect. Yeah, this dish is perfect. Very good. All right, let&#x27;s move on to today&#x27;s question and the follow-up question. I&#x27;ll get you to read.
+[Joey] Uh-huh. Have you tried that spiral candy yet? Yeah, I had it last week and it was actually really good.
+[Joey] Not yet, but I keep seeing it everywhere.
+<span class="tutor">[Tutor]</span> Very good. I&#x27;ll get you to read the follow-up question and the response.
+[Joey] Why do you think it&#x27;s so popular? I think it&#x27;s just good marketing.
+<span class="tutor">[Tutor]</span> All right. Excellent start, sir. Now we&#x27;re going to go on to Part A, My Story. And as we&#x27;ve been practicing, this is where you fill in the yellow box or yellow area with a suggestion from underneath the four questions. And we&#x27;re just going to take it one sentence at a time.
+[Joey] I see. So, I imagine the situation and made some sentence. I finally tried the Dubai cookie after seeing it blow up. All right.
+[Joey] Okay. Before I try it, I expected it is to be melty and that to be... I expect it to be amazing. Or before I try it, I expected it is to be oily. Yeah, and oily. It turns out to be overrated. Yeah. Okay. Overrated. Okay. And if you want to try it, you should... This is the hype marketing.
+<span class="tutor">[Tutor]</span> Okay. You should definitely wait until the hype dies down, maybe.
+[Joey] Yeah, hype dies. Okay.
+<span class="tutor">[Tutor]</span> All right. That&#x27;s great. That was good, Joey. You did great. Word I want to help you with in number four. On the second line, that word, it&#x27;s a mouthful.
+[Joey] Definitely.
+<span class="tutor">[Tutor]</span> Definitely.
+<span class="tutor">[Tutor]</span> Very good.
+[Joey] Definitely.
+<span class="tutor">[Tutor]</span> Definitely. Yes. The I&#x27;s are both the &quot;if&quot; sound and then &quot;definitely,&quot; the E is silent.
+[Joey] Okay, definitely.
+[Joey] Definitely. Okay.
+[Joey] And can I read the subject? Because I just wonder.
+<span class="tutor">[Tutor]</span> Of course. What is the word? Yes, always. It&#x27;s vocabulary. Go for it.
+[Joey] Okay, food names.
+[Joey] Birria taco.
+<span class="tutor">[Tutor]</span> Birria taco. Birria taco is good, yeah.
+[Joey] Birria taco. Smashed burgers. Rainbow bagels.
+<span class="tutor">[Tutor]</span> Bagels. Yeah.
+[Joey] Pesto eggs.
+<span class="tutor">[Tutor]</span> Pesto? Pesto? Okay.
+<span class="tutor">[Tutor]</span> Pesto.
+[Joey] Pesto.
+<span class="tutor">[Tutor]</span> Pesto eggs.
+[Joey] Okay. A little weird.
+<span class="tutor">[Tutor]</span> Brand super. Yes, they are. Amazing.
+[Joey] Ah. Okay. Good. Opinion?
+[Joey] Opinion, overrated.
+<span class="tutor">[Tutor]</span> Overrated.
+[Joey] A little too salty. On point. Just okay. Recommendation, go to the nice place. Make at home. It is fresh. Wait until hype dies down. Okay. Okay.
+<span class="tutor">[Tutor]</span> The Birria taco and pesto eggs. Have you tried that?
+<span class="tutor">[Tutor]</span> Well, I&#x27;ve never had one, but I&#x27;ve heard of them. Birria tacos are a special Mexican food where you have a piece of flatbread. It&#x27;s called a tortilla, and it&#x27;s filled with meats and vegetables, and you can hold it and eat it in your hand.
+[Joey] Yes, I know the taco, but maybe...
+<span class="tutor">[Tutor]</span> Yeah, but Birria, you didn&#x27;t know.
+[Joey] Yeah.
+<span class="tutor">[Tutor]</span> Now, pesto eggs, I assume, are eggs which are prepared with an Italian sauce made of, oh, what is it, pine nuts and a certain herb. And it&#x27;s green. It&#x27;s very good. It&#x27;s an Italian type of...
+[Joey] Is that Mr. Boyd?
+<span class="tutor">[Tutor]</span> I have no idea. I would suggest write these names down and Google them on your local search engine.
+[Joey] I see. Okay. I see. I understand.
+<span class="tutor">[Tutor]</span> All right. Any other words I can help you with, or did you understand most of it?
+[Joey] It&#x27;s okay. Yes. I understand.
+<span class="tutor">[Tutor]</span> All right. Okay. Yeah. Wonderful. Okay. Okay, we are going to skip the mission if we have time. Now let&#x27;s go on to Part C, the social skills. Okay. And this is where we learn some new adjectives and some new vocabulary. Okay. All right. Now, I think this is the first time that we&#x27;ve done this. This is a two-page activity. On the first page, you&#x27;re going to see three pictures.
+[Joey] Okay.
+<span class="tutor">[Tutor]</span> And beside the pictures, there are five words.
+[Joey] Okay, I see.
+<span class="tutor">[Tutor]</span> Okay, you can see that? Okay. So what you&#x27;re going to do, or what I&#x27;m going to have you do, is I&#x27;m going to have you read each group of five words next to the picture.
+[Joey] Okay, no problem.
+<span class="tutor">[Tutor]</span> All right?
+[Joey] Okay.
+<span class="tutor">[Tutor]</span> So we&#x27;ll do that. And then when we finish the first five words, you&#x27;re going to go over to the next page. And they ask you to create a sentence using the words that you just read.
+[Joey] Okay. I see. That is the rule in this class. And first I read the word and then the next page I will make up my sentence and read the example.
+<span class="tutor">[Tutor]</span> Yeah, and you&#x27;re very good. We&#x27;re going to take it nice and slow. All right. So the first words are adjectives that appear to be used to describe noodles. I&#x27;ll get you to read those in English for me.
+[Joey] Yeah, that is a noodle category, and I read the flavors, different flavors. Chewy and savory.
+<span class="tutor">[Tutor]</span> Good.
+[Joey] Sticky. Infused with. Infused with. Fragrant. Fragrant. Wow, it is really...
+<span class="tutor">[Tutor]</span> Okay, let&#x27;s try that last word. You put an N after F-R-A. You said &quot;fragrant.&quot; Try &quot;fragrant.&quot;
+[Joey] Fragrant. Fragrant.
+<span class="tutor">[Tutor]</span> Very good.
+[Joey] Fragrant. Fragrant.
+<span class="tutor">[Tutor]</span> That&#x27;s better. Better. Okay. The example, these sticky noodles are infused with garlic and chili. Yeah, so you can see there that they&#x27;re trying, they&#x27;re asking you to use two of the adjectives of the words from the group and make your own sentence. Can you give it a try?
+[Joey] Okay, my sentence, this Vietnam rice noodle is savory and chewy.
+<span class="tutor">[Tutor]</span> Very good. Okay. Yeah. Savory and chewy. That&#x27;s good. Okay. Yep. You used them. Excellent. All right. So the next group appears to be talking about a cake or baked goods. And I&#x27;ll ask you to read those five words to me.
+[Joey] Okay. Fluffy. And moist. Fluffy. Good. Fluffy. And moist. And decadent. Yeah. Decadent. And dense. Ailing.
+<span class="tutor">[Tutor]</span> Very good. Okay.
+[Joey] It is a little difficult word, but I made my sample.
+<span class="tutor">[Tutor]</span> It&#x27;s a little harder. Yeah. Please take your time. Take your time. Okay. The example. This cupcake are so decadent and moist.
+<span class="tutor">[Tutor]</span> Okay. All right. I&#x27;d like to help you with the word in the sample sentence. You&#x27;re pronouncing it &quot;decadent.&quot; Try putting the stress on the last syllable.
+<span class="tutor">[Tutor]</span> Decadent.
+[Joey] Decadent.
+<span class="tutor">[Tutor]</span> Decadent.
+[Joey] Decadent.
+<span class="tutor">[Tutor]</span> Decadent. Very good.
+[Joey] Decadent. All right. Okay. This cheesecake is so fluffy and moist. I love that.
+<span class="tutor">[Tutor]</span> That&#x27;s wonderful. Yeah, you like cheesecake?
+[Joey] Oh, yes, with coffee.
+<span class="tutor">[Tutor]</span> Yeah, it&#x27;s nice, isn&#x27;t it? It&#x27;s a nice treat. I agree. Good job.
+[Joey] Good job.
+<span class="tutor">[Tutor]</span> All right. Our last group describes meat.
+[Joey] Meat. Okay. Can I read that? Marbled.
+<span class="tutor">[Tutor]</span> Marbled. Good.
+[Joey] Charcoal-kissed. It&#x27;s so important. Charcoal-kissed. Charred.
+<span class="tutor">[Tutor]</span> Charred.
+[Joey] Charred.
+[Joey] Tender.
+[Joey] Sear-crusted.
+<span class="tutor">[Tutor]</span> Sear-crusted.
+[Joey] Sear-crusted.
+<span class="tutor">[Tutor]</span> Sear-crusted. Excellent. My steak was perfectly charred and tender, just the way I like it. Very good.
+<span class="tutor">[Tutor]</span> Very nice. Yeah.
+[Joey] In Korea, the luxury meat usually marbles.
+<span class="tutor">[Tutor]</span> I bet. Yeah. Yes. That&#x27;s the thing that makes Korea a very unique place, because unlike other Asian countries, Koreans really enjoy meat. They enjoy all types of meat, beef, pork, chicken. Yeah. Yep. Right?
+[Joey] You&#x27;re right.
+<span class="tutor">[Tutor]</span> All right. Well, you did a great job, Joey. Very nice.
+[Joey] Oh.
+<span class="tutor">[Tutor]</span> Did you have any questions about the words, about the vocabulary?
+[Joey] Maybe I need more practice, but it&#x27;s okay. I understand almost.
+<span class="tutor">[Tutor]</span> Okay, sure. Yeah, this is the first time you&#x27;ve done this exercise and you&#x27;ve done a great job. We&#x27;ll get more to practice because each lesson will have these type of adjectives for us to practice.
+[Joey] Okay.
+<span class="tutor">[Tutor]</span> All right. We are going to move on to Part D, Digging in Deeper.
+[Joey] Digging in Deeper.
+<span class="tutor">[Tutor]</span> And it says, discuss the questions below in depth. First, I&#x27;m going to ask you to read the text in that post, the one that starts with hashtag food. Can you read that to me?
+[Joey] Okay, sure. Food is the most popular hashtag on 250 million Instagram posts are food. 38% users view food content on SNS.
+<span class="tutor">[Tutor]</span> Okay. So what they&#x27;re talking about is that food is something that people really seem to like to discuss on social media.
+[Joey] I see. Okay. Yeah, that is so popular category in Instagram.
+<span class="tutor">[Tutor]</span> It seems to be. Yes. Okay. We&#x27;re going to skip question number one. Could I ask you to read question number two and respond?
+[Joey] Ah, yes. Do you trust food recommendations you see on social media? Why or why not?
+[Joey] Maybe six months ago in Korea, the Dubai cookie is popular in Korea.
+<span class="tutor">[Tutor]</span> Oh, yeah?
+[Joey] Yeah, that is like the chocolate. But in this chocolate cookie, there is put in some pistachio. So, yeah, it is a little delicious. But that is so small, but the price is expensive, for example.
+<span class="tutor">[Tutor]</span> Big.
+[Joey] Yeah, it is.
+<span class="tutor">[Tutor]</span> Yeah, is it?
+[Joey] Yeah, the price is $6, $7 per price.
+<span class="tutor">[Tutor]</span> Wow.
+[Joey] Yeah, so expensive.
+<span class="tutor">[Tutor]</span> Expensive for a cookie.
+[Joey] Yeah, but Korea is small. If there&#x27;s success to advertisement, hype advertisement, the people buy them. So that is a similar situation. Everyone wants to buy and everyone wanted to have and buy it. So almost maybe I think in 50% more people in Korea, they have experience by them, have them the Dubai cookie. So I think that is the real, real, because I think that is going down, that interacting the people, from the people.
+<span class="tutor">[Tutor]</span> Sure.
+[Joey] I think that is the hype advertisement in SNS.
+<span class="tutor">[Tutor]</span> Yeah. Yeah. Well, and that&#x27;s how they sell their product. Most products, if there&#x27;s no advertising, there are no sales.
+[Joey] Yeah.
+<span class="tutor">[Tutor]</span> And that&#x27;s why advertisements are so hyped and products are always made new and improved and exciting. And sometimes they promise things that you wonder if they could really deliver.
+[Joey] Yeah.
+<span class="tutor">[Tutor]</span> I hear you. I like food recommendations myself for restaurants. And my daughter won&#x27;t go to a new restaurant unless she&#x27;s read the reviews for it. So, yeah, it&#x27;s become very popular. All right, my friend. And you&#x27;ve worked very hard today, but we&#x27;re all done. Did you have any questions or concerns?
+[Joey] Your class is on point to me, so I&#x27;m good. Thank you. Thank you for your class.
+<span class="tutor">[Tutor]</span> You were also on point, Joey.
+[Joey] Thank you so much.
+<span class="tutor">[Tutor]</span> You have a lovely, relaxing weekend, and I&#x27;ll talk to you next time. Take care.
+[Joey] Have a great weekend.
+[Joey] Bye-bye, teacher.
+<span class="tutor">[Tutor]</span> Bye-bye.</div>
+        </div>
+    </div>
+    <div class="toast" id="toast">✅ 프롬프트가 복사되었습니다!</div>
+    <script>
+        const REVIEW_PROMPT="너는 나의 영어 회화 복습 파트너야. 오늘 내 전화영어 수업 내용을 기반으로 대화하면서 복습을 도와줘.\n\n[오늘 수업 전사 내용]\n[Tutor] Hello there. Happy Friday.\n[Joey] Hi. Happy Friday. Oh my gosh. Sorry, teacher. Yes, yes, yes.\n[Tutor] It's okay. I look at this as kind of Friday, even though it's only Thursday for me. I get the next two days off. I'm happy.\n[Joey] Yeah. I'm so sorry.\n[Tutor] Yeah. No worries. Yeah. All right, sir. Are you ready to get your last bit of English for the weekend?\n[Joey] Uh-huh.\n[Tutor] All right. Did you need a moment to bring up the lesson or are you ready to go?\n[Joey] Yeah, I'm ready.\n[Tutor] Let's go.\n[Tutor] Fantastic.\n[Joey] Okay.\n[Tutor] So today's title is Hyped Bites.\n[Joey] Hyped Bites.\n[Tutor] Hyped Bites. Yeah, I'll get you to read today's goal to me.\n[Joey] Okay, no problem. Today's goal is to introduce a plant to a vital food trend and its plan is to appear.\n[Tutor] Okay, that was very good. Thank you. All right, we're going to move on to the next page, key expressions and key questions. Okay. Our first expression is \"on point\" and I'll have you read the four sentences.\n[Joey] Okay, that's four sentences. The seasoning on this dish is on point. Your output is on point. You look amazing. Your time is on point. I was just about to call you. The music at that party was on point.\n[Tutor] Very good. We're going to pause for a minute. Yeah. In the second sentence, I heard your \"out-pit\" with a P. Let's try with an F. \"Outfit.\"\n[Joey] Outfit.\n[Tutor] Outfit.\n[Tutor] Very good.\n[Joey] Outfit.\n[Tutor] Very good.\n[Joey] Your outfit.\n[Tutor] Is on point. Yes. Okay. Very good. Your...\n[Joey] Your feedback.\n[Tutor] Is on point. Thank you. All right. Now, this next word, the G makes a J sound. J sound. Yeah. So it's... So it's going to be pronounced \"bougie.\"\n[Joey] Bougie. Ah, bougie. Bougie. Bougie. Yes. Yes.\n[Tutor] All right. Let's get you to try those four sentences. Take your time.\n[Joey] No problem. A 15-lock desk? That's way too bougie for me. Good. Why are we at this un-apartable bougie store? Good. She has bougie accessories.\n[Tutor] Accessories.\n[Joey] I feel uncomfortable. This play is too bougie for me.\n[Tutor] Okay. Let's go back to the third sentence.\n[Joey] Okay.\n[Tutor] And I'm going to get you to repeat that last word after me.\n[Tutor] Accessories.\n[Joey] Accessory.\n[Tutor] Accessory. Yeah.\n[Joey] Accessory.\n[Tutor] Accessory. You just had the syllable, the wrong syllable stressed. That's fine. You did good. All right. So let's talk about the word \"bougie.\"\n[Joey] Bougie.\n[Tutor] Yeah. From those sentences, what do you think \"bougie\" might mean?\n[Joey] That is too luxury. So I feel uncomfortable. So \"bougie\" is luxury but not adopt.\n[Tutor] Yes. Right. Yes.\n[Joey] Expensive.\n[Tutor] Expensive. Yeah, or high class. High class. You got it. You got it, Joey. Okay. All right. Let's pop up to the first expression. What do you think \"on point\" means?\n[Joey] On point. That is the adopt and reasonable and right and good and nice.\n[Tutor] You're very close. Yes, appropriate, correct, perfect. Perfect. Yeah, this dish is perfect. Very good. All right, let's move on to today's question and the follow-up question. I'll get you to read.\n[Joey] Uh-huh. Have you tried that spiral candy yet? Yeah, I had it last week and it was actually really good.\n[Joey] Not yet, but I keep seeing it everywhere.\n[Tutor] Very good. I'll get you to read the follow-up question and the response.\n[Joey] Why do you think it's so popular? I think it's just good marketing.\n[Tutor] All right. Excellent start, sir. Now we're going to go on to Part A, My Story. And as we've been practicing, this is where you fill in the yellow box or yellow area with a suggestion from underneath the four questions. And we're just going to take it one sentence at a time.\n[Joey] I see. So, I imagine the situation and made some sentence. I finally tried the Dubai cookie after seeing it blow up. All right.\n[Joey] Okay. Before I try it, I expected it is to be melty and that to be... I expect it to be amazing. Or before I try it, I expected it is to be oily. Yeah, and oily. It turns out to be overrated. Yeah. Okay. Overrated. Okay. And if you want to try it, you should... This is the hype marketing.\n[Tutor] Okay. You should definitely wait until the hype dies down, maybe.\n[Joey] Yeah, hype dies. Okay.\n[Tutor] All right. That's great. That was good, Joey. You did great. Word I want to help you with in number four. On the second line, that word, it's a mouthful.\n[Joey] Definitely.\n[Tutor] Definitely.\n[Tutor] Very good.\n[Joey] Definitely.\n[Tutor] Definitely. Yes. The I's are both the \"if\" sound and then \"definitely,\" the E is silent.\n[Joey] Okay, definitely.\n[Joey] Definitely. Okay.\n[Joey] And can I read the subject? Because I just wonder.\n[Tutor] Of course. What is the word? Yes, always. It's vocabulary. Go for it.\n[Joey] Okay, food names.\n[Joey] Birria taco.\n[Tutor] Birria taco. Birria taco is good, yeah.\n[Joey] Birria taco. Smashed burgers. Rainbow bagels.\n[Tutor] Bagels. Yeah.\n[Joey] Pesto eggs.\n[Tutor] Pesto? Pesto? Okay.\n[Tutor] Pesto.\n[Joey] Pesto.\n[Tutor] Pesto eggs.\n[Joey] Okay. A little weird.\n[Tutor] Brand super. Yes, they are. Amazing.\n[Joey] Ah. Okay. Good. Opinion?\n[Joey] Opinion, overrated.\n[Tutor] Overrated.\n[Joey] A little too salty. On point. Just okay. Recommendation, go to the nice place. Make at home. It is fresh. Wait until hype dies down. Okay. Okay.\n[Tutor] The Birria taco and pesto eggs. Have you tried that?\n[Tutor] Well, I've never had one, but I've heard of them. Birria tacos are a special Mexican food where you have a piece of flatbread. It's called a tortilla, and it's filled with meats and vegetables, and you can hold it and eat it in your hand.\n[Joey] Yes, I know the taco, but maybe...\n[Tutor] Yeah, but Birria, you didn't know.\n[Joey] Yeah.\n[Tutor] Now, pesto eggs, I assume, are eggs which are prepared with an Italian sauce made of, oh, what is it, pine nuts and a certain herb. And it's green. It's very good. It's an Italian type of...\n[Joey] Is that Mr. Boyd?\n[Tutor] I have no idea. I would suggest write these names down and Google them on your local search engine.\n[Joey] I see. Okay. I see. I understand.\n[Tutor] All right. Any other words I can help you with, or did you understand most of it?\n[Joey] It's okay. Yes. I understand.\n[Tutor] All right. Okay. Yeah. Wonderful. Okay. Okay, we are going to skip the mission if we have time. Now let's go on to Part C, the social skills. Okay. And this is where we learn some new adjectives and some new vocabulary. Okay. All right. Now, I think this is the first time that we've done this. This is a two-page activity. On the first page, you're going to see three pictures.\n[Joey] Okay.\n[Tutor] And beside the pictures, there are five words.\n[Joey] Okay, I see.\n[Tutor] Okay, you can see that? Okay. So what you're going to do, or what I'm going to have you do, is I'm going to have you read each group of five words next to the picture.\n[Joey] Okay, no problem.\n[Tutor] All right?\n[Joey] Okay.\n[Tutor] So we'll do that. And then when we finish the first five words, you're going to go over to the next page. And they ask you to create a sentence using the words that you just read.\n[Joey] Okay. I see. That is the rule in this class. And first I read the word and then the next page I will make up my sentence and read the example.\n[Tutor] Yeah, and you're very good. We're going to take it nice and slow. All right. So the first words are adjectives that appear to be used to describe noodles. I'll get you to read those in English for me.\n[Joey] Yeah, that is a noodle category, and I read the flavors, different flavors. Chewy and savory.\n[Tutor] Good.\n[Joey] Sticky. Infused with. Infused with. Fragrant. Fragrant. Wow, it is really...\n[Tutor] Okay, let's try that last word. You put an N after F-R-A. You said \"fragrant.\" Try \"fragrant.\"\n[Joey] Fragrant. Fragrant.\n[Tutor] Very good.\n[Joey] Fragrant. Fragrant.\n[Tutor] That's better. Better. Okay. The example, these sticky noodles are infused with garlic and chili. Yeah, so you can see there that they're trying, they're asking you to use two of the adjectives of the words from the group and make your own sentence. Can you give it a try?\n[Joey] Okay, my sentence, this Vietnam rice noodle is savory and chewy.\n[Tutor] Very good. Okay. Yeah. Savory and chewy. That's good. Okay. Yep. You used them. Excellent. All right. So the next group appears to be talking about a cake or baked goods. And I'll ask you to read those five words to me.\n[Joey] Okay. Fluffy. And moist. Fluffy. Good. Fluffy. And moist. And decadent. Yeah. Decadent. And dense. Ailing.\n[Tutor] Very good. Okay.\n[Joey] It is a little difficult word, but I made my sample.\n[Tutor] It's a little harder. Yeah. Please take your time. Take your time. Okay. The example. This cupcake are so decadent and moist.\n[Tutor] Okay. All right. I'd like to help you with the word in the sample sentence. You're pronouncing it \"decadent.\" Try putting the stress on the last syllable.\n[Tutor] Decadent.\n[Joey] Decadent.\n[Tutor] Decadent.\n[Joey] Decadent.\n[Tutor] Decadent. Very good.\n[Joey] Decadent. All right. Okay. This cheesecake is so fluffy and moist. I love that.\n[Tutor] That's wonderful. Yeah, you like cheesecake?\n[Joey] Oh, yes, with coffee.\n[Tutor] Yeah, it's nice, isn't it? It's a nice treat. I agree. Good job.\n[Joey] Good job.\n[Tutor] All right. Our last group describes meat.\n[Joey] Meat. Okay. Can I read that? Marbled.\n[Tutor] Marbled. Good.\n[Joey] Charcoal-kissed. It's so important. Charcoal-kissed. Charred.\n[Tutor] Charred.\n[Joey] Charred.\n[Joey] Tender.\n[Joey] Sear-crusted.\n[Tutor] Sear-crusted.\n[Joey] Sear-crusted.\n[Tutor] Sear-crusted. Excellent. My steak was perfectly charred and tender, just the way I like it. Very good.\n[Tutor] Very nice. Yeah.\n[Joey] In Korea, the luxury meat usually marbles.\n[Tutor] I bet. Yeah. Yes. That's the thing that makes Korea a very unique place, because unlike other Asian countries, Koreans really enjoy meat. They enjoy all types of meat, beef, pork, chicken. Yeah. Yep. Right?\n[Joey] You're right.\n[Tutor] All right. Well, you did a great job, Joey. Very nice.\n[Joey] Oh.\n[Tutor] Did you have any questions about the words, about the vocabulary?\n[Joey] Maybe I need more practice, but it's okay. I understand almost.\n[Tutor] Okay, sure. Yeah, this is the first time you've done this exercise and you've done a great job. We'll get more to practice because each lesson will have these type of adjectives for us to practice.\n[Joey] Okay.\n[Tutor] All right. We are going to move on to Part D, Digging in Deeper.\n[Joey] Digging in Deeper.\n[Tutor] And it says, discuss the questions below in depth. First, I'm going to ask you to read the text in that post, the one that starts with hashtag food. Can you read that to me?\n[Joey] Okay, sure. Food is the most popular hashtag on 250 million Instagram posts are food. 38% users view food content on SNS.\n[Tutor] Okay. So what they're talking about is that food is something that people really seem to like to discuss on social media.\n[Joey] I see. Okay. Yeah, that is so popular category in Instagram.\n[Tutor] It seems to be. Yes. Okay. We're going to skip question number one. Could I ask you to read question number two and respond?\n[Joey] Ah, yes. Do you trust food recommendations you see on social media? Why or why not?\n[Joey] Maybe six months ago in Korea, the Dubai cookie is popular in Korea.\n[Tutor] Oh, yeah?\n[Joey] Yeah, that is like the chocolate. But in this chocolate cookie, there is put in some pistachio. So, yeah, it is a little delicious. But that is so small, but the price is expensive, for example.\n[Tutor] Big.\n[Joey] Yeah, it is.\n[Tutor] Yeah, is it?\n[Joey] Yeah, the price is $6, $7 per price.\n[Tutor] Wow.\n[Joey] Yeah, so expensive.\n[Tutor] Expensive for a cookie.\n[Joey] Yeah, but Korea is small. If there's success to advertisement, hype advertisement, the people buy them. So that is a similar situation. Everyone wants to buy and everyone wanted to have and buy it. So almost maybe I think in 50% more people in Korea, they have experience by them, have them the Dubai cookie. So I think that is the real, real, because I think that is going down, that interacting the people, from the people.\n[Tutor] Sure.\n[Joey] I think that is the hype advertisement in SNS.\n[Tutor] Yeah. Yeah. Well, and that's how they sell their product. Most products, if there's no advertising, there are no sales.\n[Joey] Yeah.\n[Tutor] And that's why advertisements are so hyped and products are always made new and improved and exciting. And sometimes they promise things that you wonder if they could really deliver.\n[Joey] Yeah.\n[Tutor] I hear you. I like food recommendations myself for restaurants. And my daughter won't go to a new restaurant unless she's read the reviews for it. So, yeah, it's become very popular. All right, my friend. And you've worked very hard today, but we're all done. Did you have any questions or concerns?\n[Joey] Your class is on point to me, so I'm good. Thank you. Thank you for your class.\n[Tutor] You were also on point, Joey.\n[Joey] Thank you so much.\n[Tutor] You have a lovely, relaxing weekend, and I'll talk to you next time. Take care.\n[Joey] Have a great weekend.\n[Joey] Bye-bye, teacher.\n[Tutor] Bye-bye.\n\n[AI 피드백]\n안녕하세요, Joey! 따뜻하고 실용적인 영어 코치입니다. 오늘 전화영어 수업 내용에 대한 분석과 피드백을 한국어로 정리해 드릴게요. 유창성과 정확성을 동시에 잡고, 입에 붙는 자연스러운 표현을 익히는 데 집중했습니다.\n\n---\n\n**0. 📌 Topic**\nTopic: Exploring Food Trends and Descriptive Vocabulary\n\n**1. 📊 오늘의 대화 요약 (Summary)**\n오늘 수업에서는 'Hyped Bites'라는 주제로, 푸드 트렌드와 관련된 다양한 형용사(예: bougie, on point, savory, decadent)를 익혔습니다. 또한, 소셜 미디어에서 음식 콘텐츠의 인기와 'hype' 마케팅 현상에 대해 이야기하며, 두바이 쿠키를 예시로 들어 가격 대비 가치와 과대 광고에 대한 의견을 나누었습니다.\n\n**2. 💬 유창성 업그레이드 (Fluency & Natural Flow)**\n\nJoey가 실제 말한 표현 중, 의미는 통하지만 조금 더 자연스럽거나 격식 있게 다듬을 수 있는 표현 3가지를 골라봤습니다.\n\n*   **첫 번째 표현**\n    *   ❌ 학습자 원문 (As Said): \"I finally tried the Dubai cookie after seeing it blow up.\"\n    *   ✅ 자연스러운 표현 (Natural): \"I finally tried the Dubai cookie after seeing it become so popular.\"\n    *   💎 비즈니스 표현 (Professional): \"I finally tried the Dubai cookie after it gained significant traction.\"\n    *   💡 코칭 포인트: The phrase \"blow up\" is quite informal and often implies something exploded or became famous very suddenly, sometimes negatively. Using \"become so popular\" or \"gained significant traction\" sounds more natural and professional in general conversation, especially in a business context.\n        → \"blow up\"은 매우 비격식적인 표현으로, 종종 무언가 갑자기 폭발하듯 유명해졌다는 의미로 쓰입니다. \"become so popular\" 또는 \"gained significant traction\"과 같은 표현은 일반적인 대화, 특히 비즈니스 맥락에서 더 자연스럽고 전문적으로 들립니다.\n\n*   **두 번째 표현**\n    *   ❌ 학습자 원문 (As Said): \"Before I try it, I expected it is to be melty and that to be...\"\n    *   ✅ 자연스러운 표현 (Natural): \"Before I try it, I expected it to be melty...\"\n    *   💎 비즈니스 표현 (Professional): \"Prior to trying it, I anticipated it would be melty...\"\n    *   💡 코칭 포인트: The structure \"I expected it is to be...\" is a bit awkward. In English, after \"expect,\" we usually follow with \"to + verb\" or a \"that\" clause with a subject and verb. \"I expected it to be...\" is the most common and natural way to express this.\n        → \"I expected it is to be...\"와 같은 구조는 다소 어색합니다. 영어에서 'expect' 다음에는 보통 'to + 동사원형' 또는 'that' 절을 사용합니다. \"I expected it to be...\"가 이를 표현하는 가장 일반적이고 자연스러운 방식입니다.\n\n*   **세 번째 표현**\n    *   ❌ 학습자 원문 (As Said): \"This play is too bougie for me.\"\n    *   ✅ 자연스러운 표현 (Natural): \"This place is too bougie for me.\"\n    *   💎 비즈니스 표현 (Professional): \"This establishment is a bit too upscale for my taste.\"\n    *   💡 코칭 포인트: It seems \"play\" might have been a mishearing or typo for \"place.\" The word \"bougie\" (short for bourgeois) implies something is high-class, fancy, or expensive, often in a way that's perceived as trying too hard or being out of reach. Using \"place\" is standard. For a more professional tone, \"establishment\" is a good alternative for a venue or business, and \"upscale\" is a synonym for high-class.\n        → \"play\"는 \"place\"의 오기이거나 잘못 들은 것 같습니다. \"bougie\"(bourgeois의 줄임말)는 종종 과시적이거나 손이 닿지 않는 방식으로 고급스럽고, 화려하거나, 비싸다는 것을 의미합니다. \"place\"를 사용하는 것이 일반적입니다. 더 전문적인 톤을 위해서는 장소나 사업체를 지칭할 때 \"establishment\"를 사용하고, 고급스러운이라는 의미로 \"upscale\"을 쓸 수 있습니다.\n\n**3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)**\n\n이번 대화에서 Joey가 반복적으로 보인 문법 패턴은 '주어-동사 수일치 오류'였습니다. 특히 복수형 주어에 단수형 동사를 사용하거나, 단수형 주어에 복수형 동사를 사용하는 경우가 있었습니다.\n\n*   **Category: Subject-Verb Agreement**\n*   **핵심 규칙**: 문장의 주어가 단수이면 동사도 단수 형태를, 주어가 복수이면 동사도 복수 형태를 사용해야 합니다. (단, 현재 시제 3인칭 단수 주어에는 동사에 '-s'나 '-es'를 붙입니다.)\n\n| ❌ 원문 (As Said)                                  | ✅ 교정 예시 (Correction)                               |\n| :------------------------------------------------- | :------------------------------------------------------ |\n| \"Today's goal is to introduce a plant to a vital food trend and its plan is to appear.\" | \"Today's goal is to introduce a plant to a vital food trend and its plan **appears**.\" (또는 \"and its appearance is planned.\") |\n| \"38% users view food content on SNS.\"              | \"38% **of** users view food content on SNS.\"            |\n| \"the people buy them. So that is a similar situation.\" | \"the people buy them. So that **is** a similar situation.\" (주어 'people'이 복수이므로 'are' 사용) |\n| \"almost maybe I think in 50% more people in Korea, they have experience by them, have them the Dubai cookie.\" | \"almost maybe I think more than 50% of people in Korea **have experienced buying** the Dubai cookie.\" |\n\n*   **🔁 따라 읽기 (Practice)**\n    1.  🗣️ \"Today's goal is to introduce a plant to a vital food trend and its plan **appears**.\"\n    2.  🗣️ \"38% **of** users view food content on SNS.\"\n    3.  🗣️ \"The people buy them. So that **is** a similar situation.\"\n    4.  🗣️ \"More than 50% of people in Korea **have experienced buying** the Dubai cookie.\"\n\n**4. 📗 어휘 확장 (Vocabulary Vault)**\n\n수업에서 나왔거나 맥락상 유용한 단어 5가지입니다.\n\n1.  **Bougie** /búːʒi/ (adjective)\n    *   뜻: (비격식) 속물적인, 고급인 체하는, 비싼\n    *   실전 예문: Our company's annual dinner is usually held at a rather bougie restaurant downtown.\n\n2.  **On point** /ɒn pɔɪnt/ (idiomatic expression)\n    *   뜻: 완벽한, 딱 맞는, 아주 좋은\n    *   실전 예문: The project proposal was well-researched and the presentation was on point.\n\n3.  **Savory** /séɪvəri/ (adjective)\n    *   뜻: 짭짤한, 맛있는 (단맛이 아닌)\n    *   실전 예문: I prefer savory snacks like nuts or chips over sweet ones.\n\n4.  **Decadent** /dékədənt/ (adjective)\n    *   뜻: 퇴폐적인, (음식이) 매우 풍부하고 달콤한, 고급스러운\n    *   실전 예문: The chocolate lava cake was incredibly decadent and rich.\n\n5.  **Hype** /haɪp/ (noun/verb)\n    *   뜻: (명사) 과대광고, 열광 / (동사) 과대광고하다, 열광시키다\n    *   실전 예문: The product launch was accompanied by a lot of hype from the marketing team.\n\n**5. 📝 실전 복습 챌린지 (Practice)**\n\n오늘 배운 표현과 문법을 활용하여 영작 연습을 해봅시다.\n\n1.  **쉬운 문제**: 친구에게 새로 산 옷이 정말 멋지다고 칭찬하고 싶을 때, \"on point\"를 사용하여 말해보세요.\n    *   *예시 답안*: Your new outfit is totally on point!\n\n2.  **중급 문제**: 최근에 아주 비싸지만 만족스러웠던 식당 경험에 대해 이야기하고 싶습니다. \"bougie\"와 \"establishment\"를 사용하여 문장을 만들어 보세요.\n    *   *예시 답안*: We went to a rather bougie establishment last night, and while it was expensive, the service was excellent.\n\n3.  **고급 문제**: 소셜 미디어에서 본 음식 광고가 과대광고(hype)일 뿐인지, 아니면 정말 맛있을지 고민하는 상황을 묘사해 보세요. \"hype\"를 명사로 사용하고, 주어-동사 수일치에 유의하여 작성하세요.\n    *   *예시 답안*: The extensive hype surrounding that new dessert makes me wonder if it's truly delicious or just a marketing tactic.\n\n**6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)**\n\n*   ✨ **Good Job**:\n    \"Your class is on point to me, so I'm good. Thank you. Thank you for your class.\"\n    Joey가 튜터에게 수업 내용이 자신에게 딱 맞고 좋다고 표현한 이 문장은 'on point'라는 표현을 맥락에 맞게 아주 잘 사용했습니다. 또한, 감사 표현을 두 번 반복하며 진심을 전달하는 모습이 인상적이었습니다.\n\n*   🚀 **내일의 한 문장**:\n    다음 수업 시작 시, 오늘 배운 'on point'와 'bougie'를 활용하여 튜터에게 이렇게 말해보세요.\n    \"Hi teacher! I hope you had a great weekend. My weekend was good, and I found a new restaurant that was surprisingly not too bougie, but the food was really on point!\"\n\n---\n\n**[성과 지표]**\n\n*   **유창성 점수**: 8/10\n    *   **근거**: Joey는 전반적으로 자신의 생각을 자연스럽게 표현하려는 노력을 많이 보였습니다. 'on point'와 같은 표현을 능숙하게 사용했고, 복잡한 주제에 대해서도 자신의 의견을 논리적으로 전개했습니다. 다만, 일부 표현(예: \"blow up\", \"it is to be\")에서 더 자연스러운 원어민 표현을 익히면 유창성이 더욱 향상될 것입니다.\n*   **다음 수업 '원포인트 액션 플랜'**:\n    이번 수업에서 다룬 'Subject-Verb Agreement' 오류를 다음 수업 시작 시 간단히 복습하고, Joey가 이 규칙을 적용하여 짧은 문장 2-3개를 직접 만들어 말해보는 연습을 하겠습니다.\n\n위 내용을 바탕으로:\n1. 먼저 오늘 수업에서 내가 틀렸거나 어색했던 표현을 하나 골라서, 관련된 상황을 영어로 질문해줘.\n2. 내가 영어로 대답하면, 자연스러운지 확인하고 더 나은 표현이 있으면 알려줘.\n3. 특히 \"반복 실수 패턴\"에서 지적된 부분을 집중적으로 연습시켜줘.\n4. 이런 식으로 오늘 배운 표현들을 하나씩 복습하자.\n5. 한국어 설명은 필요할 때만 간단히, 대화는 최대한 영어로 진행해줘.\n\n그럼 시작하자!";
+        function startReview(){navigator.clipboard.writeText(REVIEW_PROMPT).then(()=>{showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)}).catch(()=>{const t=document.createElement('textarea');t.value=REVIEW_PROMPT;document.body.appendChild(t);t.select();document.execCommand('copy');document.body.removeChild(t);showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)})}
+        function showToast(){const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500)}
+        function switchTab(n){document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',n==='feedback'?i===0:i===1));document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));document.getElementById('tab-'+n).classList.add('active')}
+    </script>
+</body>
+</html>
