@@ -1,0 +1,53 @@
+{
+ "date": "2026-09-21",
+ "iso": [
+  2026,
+  39
+ ],
+ "topic": "Discussing weekend plans, autumn traditions, and restaurant experiences.",
+ "grammar": "Verb Tense",
+ "grammar_norm": "Verb Tense",
+ "score": 7.0,
+ "pairs": [
+  {
+   "said": "Maybe how about your country's beauty?",
+   "natural": "What about the autumn in your country?"
+  },
+  {
+   "said": "my bag is old, almost three years more past",
+   "natural": "my bag is old, it's been over three years."
+  },
+  {
+   "said": "I can't win through my desire.",
+   "natural": "I can't resist my cravings."
+  }
+ ],
+ "vocab": [
+  {
+   "word": "spontaneously",
+   "pos": "부사",
+   "meaning": "즉흥적으로, 자발적으로"
+  },
+  {
+   "word": "craving",
+   "pos": "명사",
+   "meaning": "갈망, 열망 (특히 음식에 대한 강한 욕구)"
+  },
+  {
+   "word": "curated",
+   "pos": "형용사",
+   "meaning": "엄선된, 큐레이션 된"
+  },
+  {
+   "word": "ambiance",
+   "pos": "명사",
+   "meaning": "분위기 (특히 장소의 분위기)"
+  },
+  {
+   "word": "culinary",
+   "pos": "형용사",
+   "meaning": "요리의, 음식의"
+  }
+ ],
+ "_html_md5": "1ee6d839b1b9309a0a1805e9ddeb7ac8"
+}
