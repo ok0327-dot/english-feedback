@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#0f0f13"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="당근영어"><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="icon" type="image/png" sizes="192x192" href="icon-192.png"><script src="install-banner.js" defer></script><script src="sw-reg.js" defer></script>
+    <title>전화영어 복습 - 2026년 09월 22일</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Noto Sans KR',sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.75;min-height:100vh}
+        .header{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);border-bottom:1px solid rgba(255,255,255,.06);padding:48px 24px 40px;text-align:center}
+        .header-date{font-size:13px;color:#94a3b8;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+        .header h1{font-size:28px;font-weight:700;color:#f1f5f9;margin-bottom:16px}
+        .header-meta{display:flex;justify-content:center;gap:24px;font-size:14px;color:#64748b}
+        .header-meta span{display:flex;align-items:center;gap:6px}
+        .cta-section{text-align:center;padding:40px 24px}
+        .cta-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:linear-gradient(135deg,#38bdf8,#818cf8);color:#fff;font-size:16px;font-weight:600;font-family:'Noto Sans KR',sans-serif;border:none;border-radius:50px;cursor:pointer;transition:all .3s;text-decoration:none;box-shadow:0 4px 24px rgba(56,189,248,.25)}
+        .cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(56,189,248,.35)}
+        .cta-btn svg{width:20px;height:20px}
+        .cta-sub{margin-top:12px;font-size:13px;color:#64748b}
+        .toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#38bdf8;padding:14px 28px;border-radius:12px;font-size:14px;font-weight:500;border:1px solid rgba(56,189,248,.2);box-shadow:0 8px 32px rgba(0,0,0,.4);opacity:0;transition:all .4s cubic-bezier(.16,1,.3,1);z-index:1000}
+        .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+        .container{max-width:720px;margin:0 auto;padding:0 24px 80px}
+        .tabs{display:flex;gap:4px;background:#1a1a24;padding:4px;border-radius:12px;margin-bottom:32px}
+        .tab{flex:1;padding:12px;text-align:center;font-size:14px;font-weight:500;color:#64748b;background:0 0;border:none;border-radius:8px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all .2s}
+        .tab.active{background:#262636;color:#f1f5f9}
+        .tab-content{display:none}.tab-content.active{display:block}
+        .feedback h2{font-size:18px;font-weight:700;color:#f1f5f9;margin:36px 0 16px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.06)}
+        .feedback h2:first-child{margin-top:0}
+        .feedback p{margin:8px 0;color:#cbd5e1}
+        .feedback .item{padding:6px 0 6px 16px;border-left:2px solid #334155;margin:6px 0;color:#cbd5e1}
+        .feedback .numbered{padding:8px 0 8px 16px;color:#cbd5e1}
+        .feedback .numbered strong{color:#38bdf8}
+        .feedback strong{color:#f1f5f9}
+        .feedback code{background:#1e293b;padding:2px 8px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#38bdf8}
+        .feedback table{width:100%;border-collapse:collapse;margin:12px 0}
+        .feedback th,.feedback td{padding:10px 14px;text-align:left;border-bottom:1px solid #262636}
+        .feedback th{color:#94a3b8;font-weight:500;font-size:13px}
+        .feedback td{color:#cbd5e1}
+        .arrow{color:#38bdf8;font-weight:700}
+        .transcript{background:#1a1a24;border-radius:12px;padding:28px;font-size:14px;line-height:2;color:#94a3b8;white-space:pre-wrap;word-break:break-word;font-family:'JetBrains Mono','Noto Sans KR',monospace}
+        .transcript .tutor{color:#38bdf8}
+        .transcript .student{color:#a78bfa}
+        @media(max-width:640px){.header{padding:32px 16px}.header h1{font-size:22px}.cta-btn{padding:14px 28px;font-size:15px}.container{padding:0 16px 60px}}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-date">2026년 09월 22일</div>
+        <h1>📚 전화영어 복습</h1>
+        <div class="header-meta">
+            <span>⏱ 19분 59초</span>
+            <span>🎙 전화영어_025180304_20260922080032.m4a</span>
+        </div>
+    </div>
+    <div class="cta-section">
+        <button class="cta-btn" onclick="startReview()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Gemini에서 복습 대화 시작하기
+        </button>
+        <div class="cta-sub">클릭하면 프롬프트가 복사되고 Gemini가 열립니다</div>
+    </div>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('feedback')">📋 AI 피드백</button>
+            <button class="tab" onclick="switchTab('transcript')">🎙 수업 전사</button>
+        </div>
+        <div id="tab-feedback" class="tab-content active">
+            <div class="feedback"><p>안녕하세요, Joey! 오늘 수업도 정말 즐거웠습니다. 'go-to', 'hooked on' 같은 재미있는 표현들을 배우고, 한국의 음주 문화에 대한 깊이 있는 이야기도 나눌 수 있어서 좋았어요. Joey의 적극적인 질문 덕분에 저도 많은 것을 배울 수 있었습니다.</p>
+<br>
+<br>
+<h2><strong>0. 📌 Topic</strong></h2>
+<p>Topic: Discussing drink preferences, related expressions, and Korean drinking culture.</p>
+<br>
+<br>
+<h2><strong>1. 📊 오늘의 대화 요약 (Summary)</strong></h2>
+<p>오늘 Joey는 'go-to'와 'be hooked on' 같은 핵심 표현들을 활용하여 자신이 선호하는 음료에 대해 이야기했습니다. 또한, 'lightweight'와 'heavyweight' 같은 술과 관련된 어휘를 배우고, 한국의 독특한 음주 예절과 문화에 대해 자세히 설명해 주었습니다.</p>
+<br>
+<br>
+<h2><strong>2. 💬 유창성 업그레이드 (Fluency & Natural Flow)</strong></h2>
+<br>
+<p>Joey가 말한 문장 중 의미는 통하지만, 좀 더 자연스럽게 다듬을 수 있는 표현 3가지를 선정했습니다.</p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>❌ 학습자 원문 (As Said):</strong> "Today's topic is what you go to drink, right?"</div>
+<div class="item"><strong>✅ 자연스러운 표현 (Natural):</strong> "Today's topic is about 'go-to' drinks, right?"</div>
+<div class="item"><strong>💎 비즈니스 표현 (Professional):</strong> "Could you confirm if today's lesson will focus on 'go-to' drinks?"</div>
+<div class="item"><strong>💡 코칭 포인트:</strong> The phrase 'what you go to drink' is a part of the lesson's content, not the topic itself. To confirm the topic, it's more natural to say 'Today's topic is about [topic], right?' or 'Is today's topic [topic]?' <span class="arrow">→</span> 'what you go to drink'는 수업 내용의 일부이지, 그 자체로 토픽은 아닙니다. 수업 주제를 확인할 때는 'Today's topic is about [주제], right?' 또는 'Is today's topic [주제]?'라고 말하는 것이 더 자연스럽습니다.</div>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>❌ 학습자 원문 (As Said):</strong> "I was wondering about 'go-to' is the usual expression?"</div>
+<div class="item"><strong>✅ 자연스러운 표현 (Natural):</strong> "I was wondering if 'go-to' is a commonly used expression?"</div>
+<div class="item"><strong>💎 비즈니스 표현 (Professional):</strong> "Could you clarify if 'go-to' is a widely recognized or frequently used expression?"</div>
+<div class="item"><strong>💡 코칭 포인트:</strong> The phrase "if it is" or "if it's" is often used to introduce a question about whether something is true or common. "Commonly used" or "widely recognized" are good alternatives to "usual." <span class="arrow">→</span> '~인지 아닌지'를 물을 때 "if it is"나 "if it's"를 쓰는 것이 일반적입니다. 'usual' 대신 "commonly used"나 "widely recognized"를 쓰는 것이 더 자연스럽습니다.</div>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>❌ 학습자 원문 (As Said):</strong> "Because that is about to respect the mind." (한국 음주 예절 설명 중)</div>
+<div class="item"><strong>✅ 자연스러운 표현 (Natural):</strong> "Because it's a sign of respect."</div>
+<div class="item"><strong>💎 비즈니스 표현 (Professional):</strong> "This practice is rooted in showing deference and respect."</div>
+<div class="item"><strong>💡 코칭 포인트:</strong> "A sign of respect" is a very common and concise way to express that an action indicates respect. "About to respect the mind" is understandable but less idiomatic. <span class="arrow">→</span> 어떤 행동이 존경을 나타낸다고 말할 때 "a sign of respect"가 매우 흔하고 간결한 표현입니다. "About to respect the mind"는 이해는 되지만 원어민들이 자주 쓰는 표현은 아닙니다.</div>
+<br>
+<br>
+<h2><strong>3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)</strong></h2>
+<br>
+<p>Category: <strong>Incorrect use of articles (a/an/the)</strong></p>
+<br>
+<p>Joey는 명사 앞에 관사(a/an/the)를 사용할 때 종종 실수를 했습니다. 특정 명사를 지칭하는지, 아니면 일반적인 명사를 지칭하는지에 따라 관사 사용이 달라지므로, 이 부분을 꾸준히 연습하면 더 정확한 문장을 만들 수 있습니다.</p>
+<br>
+<table>
+<tr><th>❌ 원문 (As Said)</th><th>✅ 교정 예시 (Corrected)</th></tr>
+<tr><td>"I like to be sober when I drink with my <strong>client</strong>."</td><td>"I like to be sober when I drink with <strong>a client</strong>."</td></tr>
+<tr><td>"Yeah, especially <strong>one cup</strong> of cold beer."</td><td>"Yeah, especially <strong>a cup</strong> of cold beer."</td></tr>
+<tr><td>"And meantime, that we had to hold <strong>two hands</strong>, hold <strong>the bottle</strong> with <strong>two hands</strong>..."</td><td>"And meantime, we had to hold <strong>the bottle</strong> with <strong>two hands</strong>..."</td></tr>
+<tr><td>"But sometimes, some <strong>old person</strong> give their drink..."</td><td>"But sometimes, some <strong>older person</strong> gives their drink..."</td></tr>
+</table>
+<br>
+<p>📌 <strong>핵심 규칙:</strong> 명사를 처음 언급하거나 일반적인 대상을 말할 때는 부정관사 'a/an'을 사용하고, 이미 언급되었거나 특정 대상을 지칭할 때는 정관사 'the'를 사용합니다.</p>
+<br>
+<p>🔁 <strong>따라 읽기:</strong></p>
+<p>🗣️ "I like to be sober when I drink with a client."</p>
+<p>🗣️ "Yeah, especially a cup of cold beer."</p>
+<p>🗣️ "And meantime, we had to hold the bottle with two hands."</p>
+<br>
+<br>
+<h2><strong>4. 📗 어휘 확장 (Vocabulary Vault)</strong></h2>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>go-to</strong> /ɡoʊˈtuː/ (형용사)</div>
+<div class="item">뜻: (어떤 상황에서) 믿고 의지하는, 즐겨 찾는, 단골의</div>
+<div class="item">실전 예문: "This software is my <strong>go-to</strong> solution for project management."</div>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>hooked on</strong> /hʊkt ɒn/ (형용사구)</div>
+<div class="item">뜻: ~에 푹 빠진, ~에 중독된</div>
+<div class="item">실전 예문: "Many investors are <strong>hooked on</strong> the idea of passive income streams."</div>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>lightweight</strong> /ˈlaɪtˌweɪt/ (명사)</div>
+<div class="item">뜻: (술에) 약한 사람, (권투 등에서) 경량급 선수</div>
+<div class="item">실전 예문: "I'm a bit of a <strong>lightweight</strong>, so I stick to one glass of wine at business dinners."</div>
+<br>
+<div class="numbered"><strong>4.</strong> <strong>heavyweight</strong> /ˈhɛviˌweɪt/ (명사)</div>
+<div class="item">뜻: (술에) 강한 사람, (권투 등에서) 중량급 선수; 영향력 있는 사람</div>
+<div class="item">실전 예문: "He's a <strong>heavyweight</strong> in the industry, so his opinion carries a lot of weight."</div>
+<br>
+<div class="numbered"><strong>5.</strong> <strong>sober</strong> /ˈsoʊbər/ (형용사)</div>
+<div class="item">뜻: 술 취하지 않은, 맨정신의; 진지한, 냉철한</div>
+<div class="item">실전 예문: "It's important to stay <strong>sober</strong> when making critical financial decisions."</div>
+<br>
+<br>
+<h2><strong>5. 📝 실전 복습 챌린지 (Practice)</strong></h2>
+<br>
+<p>오늘 배운 표현과 문법을 활용하여 다음 문장들을 영작해 보세요.</p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>상황:</strong> 저는 보통 아침에 커피를 마시지만, 가끔 녹차를 즐겨 마십니다.</div>
+<div class="item"><strong>영작:</strong> (힌트: 'go-to' 활용)</div>
+<div class="item"><strong>모범 답안:</strong> My go-to morning drink is coffee, but sometimes I enjoy green tea.</div>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>상황:</strong> 저는 요즘 새로운 투자 전략에 푹 빠져서 관련 서적을 많이 읽고 있습니다.</div>
+<div class="item"><strong>영작:</strong> (힌트: 'hooked on' 활용)</div>
+<div class="item"><strong>모범 답안:</strong> I'm hooked on a new investment strategy these days, so I'm reading a lot of related books.</div>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>상황:</strong> 중요한 고객과의 저녁 식사에서는 항상 맨정신을 유지하려고 노력합니다. 저는 술에 좀 약한 편입니다.</div>
+<div class="item"><strong>영작:</strong> (힌트: 'sober', 'lightweight' 활용)</div>
+<div class="item"><strong>모범 답안:</strong> I always try to stay sober during dinner with an important client. I'm a bit of a lightweight when it comes to alcohol.</div>
+<br>
+<br>
+<h2><strong>6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)</strong></h2>
+<br>
+<p>✨ <strong>Good Job</strong>: Joey는 한국의 음주 문화를 설명할 때 이렇게 말했습니다:</p>
+<p>"And sometimes we pour in the alcohol in a cup. And meantime, that we had to hold two hands, hold the bottle with two hands, because two hands is also meaning the respect, the mind."</p>
+<p>이 문장은 조금 길지만, 한국의 복잡한 음주 예절을 아주 구체적이고 자세하게 설명해 주어서 튜터가 문화를 이해하는 데 큰 도움이 되었습니다. 'hold the bottle with two hands'처럼 핵심적인 동작을 정확히 전달한 점이 훌륭했습니다!</p>
+<br>
+<p>🚀 <strong>내일의 한 문장</strong>: 다음 수업 시작 시, 튜터에게 오늘 배운 표현을 활용하여 이렇게 말해보세요!</p>
+<p>"I'm hooked on learning new English expressions, especially those that are useful in business."</p>
+<br>
+<br>
+<h2><strong>[성과 지표]</strong></h2>
+<br>
+<p><strong>유창성 점수</strong>: 7.5/10</p>
+<br>
+<p><strong>근거</strong>: Joey는 다양한 주제에 대해 막힘없이 자신의 의견을 표현하고 질문을 던지는 데 매우 능숙합니다. 특히 한국 음주 문화를 설명할 때 복잡한 내용을 상세하게 전달하려는 노력이 돋보였습니다. 다만, 문장을 구성할 때 간혹 어순이나 전치사, 관사 사용에서 미세한 오류가 있어 문장의 자연스러움이 살짝 저해되는 경우가 있었습니다. 하지만 이는 꾸준한 연습으로 충분히 개선될 수 있는 부분입니다.</p>
+<br>
+<p><strong>다음 수업 '원포인트 액션 플랜'</strong>:</p>
+<p>다음 수업에서는 <strong>관사(a/an/the) 사용</strong>에 조금 더 신경 써서 문장을 만들어보는 연습을 해볼까요? 명사를 말하기 전에 '이것이 일반적인 것인지, 아니면 특정 대상을 가리키는 것인지' 한 번 더 생각해보는 습관을 들이면 좋습니다. 예를 들어, "I met a client." (어떤 고객)과 "I met the client." (그 특정 고객)의 차이를 의식하며 말해보는 거죠!</p></div>
+        </div>
+        <div id="tab-transcript" class="tab-content">
+            <div class="transcript"><span class="tutor">[Tutor]</span> Hello, good morning, Karin.
+<span class="student">[Student]</span> Good morning. How are you today?
+<span class="tutor">[Tutor]</span> I&#x27;m doing great. Yes, it&#x27;s a special day for the holiday.
+<span class="tutor">[Tutor]</span> It is? Yeah, it&#x27;s like a Friday instead of a Tuesday.
+<span class="student">[Student]</span> Yeah, it&#x27;s a Friday.
+<span class="tutor">[Tutor]</span> Yeah, I bet. I know that a lot of my clients have been very busy today, but do you have time for your lesson before the holiday?
+<span class="student">[Student]</span> A little busy, but it&#x27;s okay. Just 20-minute class.
+<span class="tutor">[Tutor]</span> Okay. We can have a shorter class if that helps you.
+<span class="student">[Student]</span> Oh, it&#x27;s okay. No problem. I take a normal class.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="tutor">[Tutor]</span> All right. Wonderful. All right. I&#x27;m ready to go. How about you?
+<span class="student">[Student]</span> I&#x27;m ready. Yeah, I&#x27;m ready.
+<span class="tutor">[Tutor]</span> All right. Very good.
+<span class="student">[Student]</span> Today&#x27;s topic is what you go to drink, right?
+<span class="tutor">[Tutor]</span> Excellent.
+<span class="tutor">[Tutor]</span> Very good.
+<span class="tutor">[Tutor]</span> I&#x27;ll get you to read today&#x27;s goal as well, please.
+<span class="student">[Student]</span> Okay.
+<span class="student">[Student]</span> Today&#x27;s goal: Tell someone what you like to drink and find out what they like.
+<span class="tutor">[Tutor]</span> Very nice.
+<span class="student">[Student]</span> Okay.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="tutor">[Tutor]</span> We&#x27;ll go to the next page and I&#x27;ll get you to read the four sentences for the first expression, &quot;go-to&quot;.
+<span class="student">[Student]</span> Okay.
+<span class="student">[Student]</span> The first key expression, &quot;go-to&quot;.
+<span class="student">[Student]</span> My go-to drink is beer.
+<span class="student">[Student]</span> Pizza is my go-to comfort food.
+<span class="student">[Student]</span> She&#x27;s the go-to guide for fixing computers.
+<span class="student">[Student]</span> Ice Americano is my go-to drink at a cafe.
+<span class="tutor">[Tutor]</span> Very good.
+<span class="tutor">[Tutor]</span> So what do you think that phrase of &quot;go-to&quot; means?
+<span class="student">[Student]</span> Usually I use something.
+<span class="student">[Student]</span> Drink or call the people.
+<span class="student">[Student]</span> Or usually I prefer something.
+<span class="tutor">[Tutor]</span> Prefer something.
+<span class="tutor">[Tutor]</span> Prefer?
+<span class="student">[Student]</span> Prefer.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="student">[Student]</span> Prefer.
+<span class="tutor">[Tutor]</span> Okay, yeah.
+<span class="tutor">[Tutor]</span> So a couple of synonyms would be, you could say, my favorite drink.
+<span class="tutor">[Tutor]</span> Like my go-to drink is beer.
+<span class="tutor">[Tutor]</span> You could say my favorite drink or my routine drink.
+<span class="tutor">[Tutor]</span> Routine means something you always order.
+<span class="tutor">[Tutor]</span> So, yeah, you got the right idea.
+<span class="tutor">[Tutor]</span> Your preferred, that works as well.
+<span class="tutor">[Tutor]</span> Very good.
+<span class="student">[Student]</span> Okay.
+<span class="tutor">[Tutor]</span> All right.
+<span class="student">[Student]</span> I have one question about this expression. I was wondering about &quot;go-to&quot; is the usual expression? Because in real English, it is used many times or not. I was wondering about the situation.
+<span class="tutor">[Tutor]</span> Okay. &quot;Go-to&quot; is usually a prepositional phrase. I go to the store. I go to work. But here, it&#x27;s being used as an adjective.
+<span class="tutor">[Tutor]</span> It&#x27;s being used to describe something that is your favorite, your preferred or your routine beverage, food or activity.
+<span class="student">[Student]</span> Yeah, you&#x27;re right.
+<span class="tutor">[Tutor]</span> So that&#x27;s why it&#x27;s used that way.
+<span class="tutor">[Tutor]</span> So that&#x27;s the best comparison that I can give you.
+<span class="tutor">[Tutor]</span> Normally it&#x27;s a prepositional phrase, but here it&#x27;s an adjective phrase.
+<span class="tutor">[Tutor]</span> Okay. That&#x27;s a very good question. Yeah, no problem. All right. Let&#x27;s get you to read the next key expression.
+<span class="student">[Student]</span> Okay. The &quot;be hooked on&quot;. I&#x27;m hooked on white wine. White wine.
+<span class="tutor">[Tutor]</span> Yes.
+<span class="student">[Student]</span> I&#x27;m hooked on this new drama series. They are hooked on game these days. I&#x27;m hooked on hiking on the weekend these days.
+<span class="tutor">[Tutor]</span> Very good. So, can you think of another phrase that we could use instead of &quot;hooked on&quot;?
+<span class="student">[Student]</span> I think it is through interest in these days.
+<span class="tutor">[Tutor]</span> Yes, interested.
+<span class="student">[Student]</span> Yes.
+<span class="tutor">[Tutor]</span> Uh-huh.
+<span class="student">[Student]</span> So, I try many times these days, or I&#x27;m interested in, or I&#x27;m researching more. Yeah.
+<span class="tutor">[Tutor]</span> Yes, it all has to do with intense interest. Very nice. Very nicely done, Joey. Thank you.
+<span class="tutor">[Tutor]</span> All right, let&#x27;s move on to today&#x27;s question and the follow-up question, and I&#x27;ll just get you to read the questions and their responses. Okay. Are you good with alcohol?
+<span class="student">[Student]</span> I&#x27;m a lightweight.
+<span class="student">[Student]</span> Better.
+<span class="student">[Student]</span> I&#x27;m a lightweight, so I usually try to stay sober.
+<span class="student">[Student]</span> I&#x27;m a heavyweight.
+<span class="tutor">[Tutor]</span> Very good. Very good.
+<span class="tutor">[Tutor]</span> I&#x27;ll get you to read the follow-up question in the form.
+<span class="student">[Student]</span> Before I read, could you explain the word &quot;sober&quot;?
+<span class="tutor">[Tutor]</span> Sober.
+<span class="student">[Student]</span> Yeah.
+<span class="tutor">[Tutor]</span> Sober is an adjective in English that describes someone who is not altered or affected by substances like alcohol or drugs.
+<span class="tutor">[Tutor]</span> Drugs, or medications.
+<span class="tutor">[Tutor]</span> So when they say, &quot;I try to stay sober,&quot;
+<span class="tutor">[Tutor]</span> that means they avoid alcohol, they avoid drugs,
+<span class="tutor">[Tutor]</span> because they want to have a clear mind, a clear brain.
+<span class="student">[Student]</span> I see, understand.
+<span class="tutor">[Tutor]</span> All right, very good, very good.
+<span class="tutor">[Tutor]</span> The last question, what is your drink of choice?
+<span class="student">[Student]</span> I like wine, especially red wine.
+<span class="tutor">[Tutor]</span> Okay, yeah.
+<span class="tutor">[Tutor]</span> So that&#x27;s when people ask, &quot;What&#x27;s your favorite drink?&quot;
+<span class="tutor">[Tutor]</span> You can say, &quot;my drink of choice.&quot;
+<span class="tutor">[Tutor]</span> Now that we&#x27;ve seen that, you could actually use that phrase, &quot;drink of choice,&quot; in the place of &quot;go-to.&quot;
+<span class="tutor">[Tutor]</span> You could say, &quot;My drink of choice is beer.&quot;
+<span class="tutor">[Tutor]</span> &quot;Pizza is my comfort food of choice.&quot;
+<span class="tutor">[Tutor]</span> So that&#x27;s another option.
+<span class="tutor">[Tutor]</span> I think what I&#x27;ll do is I&#x27;ll copy and paste that because that&#x27;s a good comparison phrase about how you can use it.
+<span class="tutor">[Tutor]</span> I always like to have new things for you.
+<span class="tutor">[Tutor]</span> All right.
+<span class="tutor">[Tutor]</span> Very good.
+<span class="student">[Student]</span> Okay.
+<span class="tutor">[Tutor]</span> Okay. Now, what I would like to ask you in the first today&#x27;s question, they use the terms &quot;lightweight&quot; and &quot;heavyweight.&quot; Do you understand what those mean or what they refer to?
+<span class="student">[Student]</span> Oh, yes. I guess that word, the word is, if I said the right way, I just drink a little because my body and condition is not enough to drink heavily. So the lightweight and heavyweight is the opposite word, right?
+<span class="tutor">[Tutor]</span> Yes, yes.
+<span class="tutor">[Tutor]</span> They originally, these two words originally come from the sport of boxing.
+<span class="student">[Student]</span> Yes, yes, yes, you&#x27;re right.
+<span class="tutor">[Tutor]</span> And people that participate in boxing are categorized by their weight class.
+<span class="student">[Student]</span> Yes, you&#x27;re right.
+<span class="tutor">[Tutor]</span> So a smaller man might be called a lightweight, while a big muscular man might be considered a heavyweight.
+<span class="tutor">[Tutor]</span> Okay, very good.
+<span class="student">[Student]</span> And teacher, I have one more question. Sorry, teacher.
+<span class="tutor">[Tutor]</span> No, no, don&#x27;t apologize. Go ahead.
+<span class="student">[Student]</span> Before I answer, &quot;opposite,&quot; is it right expression or right connotation?
+<span class="tutor">[Tutor]</span> Yes, absolutely. Light is the opposite of heavy. You&#x27;re absolutely right.
+<span class="tutor">[Tutor]</span> A lightweight means you don&#x27;t handle alcohol very well, and a heavyweight means you can hold your liquor.
+<span class="student">[Student]</span> Because usually I say &quot;the opposite,&quot; but I&#x27;m not sure that word is right or not.
+<span class="student">[Student]</span> Opposite.
+<span class="tutor">[Tutor]</span> O-P-P-O-S-I-T-E.
+<span class="student">[Student]</span> O-P-P-O-S-I-T-E.
+<span class="student">[Student]</span> Opposite.
+<span class="tutor">[Tutor]</span> I see.
+<span class="tutor">[Tutor]</span> I think what,
+<span class="tutor">[Tutor]</span> if you&#x27;ll allow me, Joey,
+<span class="tutor">[Tutor]</span> I&#x27;m going to send you
+<span class="tutor">[Tutor]</span> a YouTube video
+<span class="tutor">[Tutor]</span> that discusses
+<span class="tutor">[Tutor]</span> opposite vocabulary.
+<span class="tutor">[Tutor]</span> I think you would find that helpful.
+<span class="student">[Student]</span> Okay, good, good, yes.
+<span class="student">[Student]</span> All right, yeah, sure.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="tutor">[Tutor]</span> Okay, so I got that listed under teacher&#x27;s comment.
+<span class="tutor">[Tutor]</span> Let&#x27;s go on to the next page now.
+<span class="student">[Student]</span> Okay.
+<span class="tutor">[Tutor]</span> All right, we&#x27;re going on to &quot;My Story.&quot;
+<span class="tutor">[Tutor]</span> And what we&#x27;ve had you do is read the four sentences
+<span class="tutor">[Tutor]</span> and just fill in the yellow area from the suggestions below the four sentences. I know you try to make your own story and that&#x27;s wonderful.
+<span class="tutor">[Tutor]</span> But right now, if you just want to use the sentences and the suggestions, please go ahead.
+<span class="student">[Student]</span> Okay, no problem.
+<span class="student">[Student]</span> My go-to drink is cold beer.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="student">[Student]</span> Yeah, especially one cup of cold beer.
+<span class="student">[Student]</span> I&#x27;m hooked on this drink because it&#x27;s refreshing to my body.
+<span class="tutor">[Tutor]</span> Sure.
+<span class="student">[Student]</span> Yeah.
+<span class="student">[Student]</span> I&#x27;m a lightweight.
+<span class="tutor">[Tutor]</span> Lightweight.
+<span class="student">[Student]</span> Lightweight.
+<span class="student">[Student]</span> When it comes to alcohol.
+<span class="student">[Student]</span> I like to be sober when I drink with my client.
+<span class="tutor">[Tutor]</span> Oh, yes.
+<span class="tutor">[Tutor]</span> You like to be sober when you&#x27;re drinking with a client.
+<span class="student">[Student]</span> Yeah, I like to be sober.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="tutor">[Tutor]</span> Yeah, I think a lot of people in business do that.
+<span class="tutor">[Tutor]</span> They&#x27;ll have one drink or two, but after that, they have to stop.
+<span class="student">[Student]</span> I understand.
+<span class="tutor">[Tutor]</span> Very good.
+<span class="student">[Student]</span> Yeah.
+<span class="tutor">[Tutor]</span> What is your go-to drink?
+<span class="tutor">[Tutor]</span> Well, actually, I don&#x27;t drink alcohol.
+<span class="tutor">[Tutor]</span> But I would say that my go-to drink is Diet Cola.
+<span class="tutor">[Tutor]</span> Diet Coke.
+<span class="tutor">[Tutor]</span> I drink more of that than anything, especially when I&#x27;m working.
+<span class="tutor">[Tutor]</span> You know, the caffeine and everything.
+<span class="student">[Student]</span> Oh, Diet Coke.
+<span class="tutor">[Tutor]</span> Good.
+<span class="tutor">[Tutor]</span> Yeah, yeah.
+<span class="tutor">[Tutor]</span> All right.
+<span class="tutor">[Tutor]</span> Let&#x27;s see.
+<span class="tutor">[Tutor]</span> We&#x27;re going on.
+<span class="student">[Student]</span> Okay.
+<span class="tutor">[Tutor]</span> Next is part B, the mission.
+<span class="tutor">[Tutor]</span> We&#x27;re not going to do that unless we have time.
+<span class="tutor">[Tutor]</span> Let&#x27;s go to part C.
+<span class="student">[Student]</span> Okay.
+<span class="tutor">[Tutor]</span> And I want to work on the social skills and some adjectives.
+<span class="student">[Student]</span> Okay.
+<span class="student">[Student]</span> Yeah, no problem.
+<span class="student">[Student]</span> Can I grab a little?
+<span class="tutor">[Tutor]</span> Okay.
+<span class="tutor">[Tutor]</span> Go on.
+<span class="tutor">[Tutor]</span> Yeah, just to review.
+<span class="tutor">[Tutor]</span> I have you read each group of five adjectives.
+<span class="student">[Student]</span> Uh-huh.
+<span class="tutor">[Tutor]</span> And then I ask you to make a sentence.
+<span class="student">[Student]</span> Uh-huh.
+<span class="tutor">[Tutor]</span> Using one of them.
+<span class="tutor">[Tutor]</span> Okay. So the first group, we&#x27;re talking about beer. There&#x27;s a picture of a beer.
+<span class="tutor">[Tutor]</span> Yes. I&#x27;ll get you to read the five English words to me.
+<span class="student">[Student]</span> Okay. The beer: creamy, crispy, hoppy, malty, bitter.
+<span class="tutor">[Tutor]</span> Okay. Couple I&#x27;d like to help you with. On the second one, you&#x27;re saying &quot;crispy,&quot; but there&#x27;s no Y at the end.
+<span class="tutor">[Tutor]</span> Let&#x27;s try to stop at the P. Crisp.
+<span class="student">[Student]</span> Crisp.
+<span class="student">[Student]</span> Crisp.
+<span class="tutor">[Tutor]</span> Very good.
+<span class="student">[Student]</span> Crisp.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="tutor">[Tutor]</span> And then the second last one, you&#x27;re putting an E sound in there.
+<span class="tutor">[Tutor]</span> You&#x27;re saying &quot;melty.&quot;
+<span class="tutor">[Tutor]</span> There&#x27;s an A.
+<span class="tutor">[Tutor]</span> So try &quot;malty.&quot;
+<span class="student">[Student]</span> Malt.
+<span class="student">[Student]</span> Malt.
+<span class="student">[Student]</span> Malt.
+<span class="student">[Student]</span> Malt.
+<span class="tutor">[Tutor]</span> Very good.
+<span class="tutor">[Tutor]</span> Yeah, malty.
+<span class="tutor">[Tutor]</span> All right.
+<span class="student">[Student]</span> Okay.
+<span class="tutor">[Tutor]</span> If you go to the next page, they give you an example sentence.
+<span class="tutor">[Tutor]</span> You can use it or create your own.
+<span class="student">[Student]</span> Use that word and make it some...
+<span class="student">[Student]</span> Okay.
+<span class="student">[Student]</span> I like creamy and bitter beer in my sentence.
+<span class="student">[Student]</span> I like... I love to...
+<span class="student">[Student]</span> I like to drink crisp beer.
+<span class="tutor">[Tutor]</span> Good.
+<span class="tutor">[Tutor]</span> You did it.
+<span class="tutor">[Tutor]</span> Good job.
+<span class="tutor">[Tutor]</span> Good.
+<span class="student">[Student]</span> Yeah.
+<span class="student">[Student]</span> Okay.
+<span class="tutor">[Tutor]</span> All right.
+<span class="tutor">[Tutor]</span> The next group, these are adjectives for wine.
+<span class="student">[Student]</span> Yeah.
+<span class="tutor">[Tutor]</span> And again, I&#x27;ll get you to read them to me.
+<span class="student">[Student]</span> Tannin.
+<span class="student">[Student]</span> Tannic.
+<span class="student">[Student]</span> Tannic.
+<span class="student">[Student]</span> Tannic.
+<span class="student">[Student]</span> Tannic.
+<span class="student">[Student]</span> Full-bodied.
+<span class="student">[Student]</span> Full-bodied.
+<span class="student">[Student]</span> Crisp.
+<span class="student">[Student]</span> Crisp.
+<span class="student">[Student]</span> Crisp.
+<span class="student">[Student]</span> Crisp.
+<span class="student">[Student]</span> Yeah.
+<span class="student">[Student]</span> Could you repeat one more please, teacher?
+<span class="tutor">[Tutor]</span> Crisp.
+<span class="student">[Student]</span> Yes.
+<span class="student">[Student]</span> Crisp.
+<span class="student">[Student]</span> Crisp.
+<span class="student">[Student]</span> Crisp.
+<span class="student">[Student]</span> Dry.
+<span class="student">[Student]</span> Yeah.
+<span class="student">[Student]</span> Fruity.
+<span class="tutor">[Tutor]</span> Good.
+<span class="student">[Student]</span> Fruity.
+<span class="tutor">[Tutor]</span> You got them.
+<span class="student">[Student]</span> Yes, I see.
+<span class="student">[Student]</span> I like crisp and fruity wine, white wine.
+<span class="tutor">[Tutor]</span> Yeah, me too.
+<span class="student">[Student]</span> I love to, I love to fruity wine, fruity white wine.
+<span class="student">[Student]</span> Better than full-bodied red wine.
+<span class="tutor">[Tutor]</span> Yeah, some people like that. They like a prettier wine. All right, very good. Okay. Okay. Our last group is used to describe
+<span class="tutor">[Tutor]</span> hard liquor or
+<span class="tutor">[Tutor]</span> spirits. Okay.
+<span class="student">[Student]</span> Smoky, woody,
+<span class="student">[Student]</span> bold, thick,
+<span class="student">[Student]</span> intense.
+<span class="student">[Student]</span> That is kind of whiskey.
+<span class="tutor">[Tutor]</span> Yes.
+<span class="student">[Student]</span> I like smoky and...
+<span class="student">[Student]</span> Go on, teacher.
+<span class="tutor">[Tutor]</span> No, you said every word correctly.
+<span class="tutor">[Tutor]</span> Now you can go ahead and make your sentence.
+<span class="tutor">[Tutor]</span> Go ahead.
+<span class="student">[Student]</span> I like smoky and thick whiskey.
+<span class="student">[Student]</span> Yeah.
+<span class="student">[Student]</span> The Korean makgeolli is similar.
+<span class="student">[Student]</span> That is thick and intense, tasty.
+<span class="tutor">[Tutor]</span> Sure.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="tutor">[Tutor]</span> Yeah, people like a full-bodied whiskey.
+<span class="student">[Student]</span> I understand.
+<span class="tutor">[Tutor]</span> My father was that way.
+<span class="tutor">[Tutor]</span> All right.
+<span class="student">[Student]</span> Yes.
+<span class="tutor">[Tutor]</span> You did a great job.
+<span class="student">[Student]</span> Uh-huh.
+<span class="tutor">[Tutor]</span> So we finished the two pages.
+<span class="tutor">[Tutor]</span> Now we&#x27;re going on to part D, &quot;Digging in Deeper.&quot;
+<span class="student">[Student]</span> Yeah, &quot;Digging in Deeper.&quot;
+<span class="tutor">[Tutor]</span> All right.
+<span class="tutor">[Tutor]</span> And I&#x27;m going to ask you to read and respond to question number two at the bottom.
+<span class="student">[Student]</span> Okay.
+<span class="student">[Student]</span> Can I read the number two?
+<span class="tutor">[Tutor]</span> Yes, please.
+<span class="student">[Student]</span> Okay.
+<span class="student">[Student]</span> Is there a drink culture
+<span class="student">[Student]</span> or tradition in your country? What is it like?
+<span class="student">[Student]</span> Hmm... drink culture or tradition in my country?
+<span class="student">[Student]</span> Hmm... our society is so conservative.
+<span class="student">[Student]</span> So usually if we drink, the old people and young people,
+<span class="student">[Student]</span> and meantime, if they have cheers, and then if they drink some beer or soju, like the beer, at that time, they turn their head, the right or left.
+<span class="tutor">[Tutor]</span> Yes, I&#x27;ve heard about that.
+<span class="student">[Student]</span> Yeah, because that is about to respect the mind.
+<span class="student">[Student]</span> So usually if we drink with my father, with my mother,
+<span class="student">[Student]</span> and meantime we have to cheer and then we turn my head and then drink.
+<span class="tutor">[Tutor]</span> Oh, okay.
+<span class="student">[Student]</span> Yeah, that is a way.
+<span class="student">[Student]</span> And sometimes we pour in the alcohol in a cup.
+<span class="student">[Student]</span> And meantime, that we had to hold two hands, hold the bottle with two hands, because two hands is also meaning the respect, the mind.
+<span class="student">[Student]</span> So usually, yeah, that is our culture, drinking culture.
+<span class="tutor">[Tutor]</span> It&#x27;s also my understanding
+<span class="tutor">[Tutor]</span> that a sign of respect
+<span class="tutor">[Tutor]</span> is when a younger person
+<span class="tutor">[Tutor]</span> pours the drink for an older person.
+<span class="tutor">[Tutor]</span> Do you still do that?
+<span class="student">[Student]</span> Yeah, you&#x27;re right.
+<span class="student">[Student]</span> Sometimes.
+<span class="student">[Student]</span> Yeah, it&#x27;s right, usually.
+<span class="student">[Student]</span> But sometimes,
+<span class="student">[Student]</span> some
+<span class="student">[Student]</span> old person give their drink,
+<span class="student">[Student]</span> give the beer or the soju because that is give the some like the pleasure. Yeah, yes.
+<span class="tutor">[Tutor]</span> Okay, I understand. That&#x27;s great. All right, my friend. Um, it says to, uh, I&#x27;m, I&#x27;m not going to
+<span class="tutor">[Tutor]</span> ask you to recall the three expressions because we, we&#x27;ve done a lot of talking today. Yeah. Um, but
+<span class="tutor">[Tutor]</span> you did a good job.
+<span class="tutor">[Tutor]</span> Do you have a lot of traveling to do for Chuseok?
+<span class="tutor">[Tutor]</span> Are you having a big gathering with your family or a small gathering?
+<span class="student">[Student]</span> Maybe.
+<span class="tutor">[Tutor]</span> What are your plans for the rest of the week?
+<span class="student">[Student]</span> Yeah, Chuseok is short.
+<span class="student">[Student]</span> And after Chuseok, I will go to the business trip to Japan.
+<span class="tutor">[Tutor]</span> Oh, okay.
+<span class="student">[Student]</span> Yeah, just one week, maybe one week.
+<span class="student">[Student]</span> I will go to the business trip.
+<span class="tutor">[Tutor]</span> Okay. Now, as we&#x27;ve talked before, if you&#x27;re unable to take your classes, try calling Carrot today and rescheduling them, okay, because your business trip is very important and I appreciate that.
+<span class="tutor">[Tutor]</span> I hope you have a lovely holiday
+<span class="tutor">[Tutor]</span> and I&#x27;m going to let you go.
+<span class="tutor">[Tutor]</span> Enjoy the rest of your day
+<span class="tutor">[Tutor]</span> and I&#x27;ll talk to you next time.
+<span class="tutor">[Tutor]</span> Thank you, Joey. Good job.
+<span class="student">[Student]</span> Enjoy your day. Bye-bye, teacher.
+<span class="tutor">[Tutor]</span> Bye-bye.</div>
+        </div>
+    </div>
+    <div class="toast" id="toast">✅ 프롬프트가 복사되었습니다!</div>
+    <script>
+        const REVIEW_PROMPT="너는 나의 영어 회화 복습 파트너야. 오늘 내 전화영어 수업 내용을 기반으로 대화하면서 복습을 도와줘.\n\n[오늘 수업 전사 내용]\n[Tutor] Hello, good morning, Karin.\n[Student] Good morning. How are you today?\n[Tutor] I'm doing great. Yes, it's a special day for the holiday.\n[Tutor] It is? Yeah, it's like a Friday instead of a Tuesday.\n[Student] Yeah, it's a Friday.\n[Tutor] Yeah, I bet. I know that a lot of my clients have been very busy today, but do you have time for your lesson before the holiday?\n[Student] A little busy, but it's okay. Just 20-minute class.\n[Tutor] Okay. We can have a shorter class if that helps you.\n[Student] Oh, it's okay. No problem. I take a normal class.\n[Tutor] Okay.\n[Tutor] All right. Wonderful. All right. I'm ready to go. How about you?\n[Student] I'm ready. Yeah, I'm ready.\n[Tutor] All right. Very good.\n[Student] Today's topic is what you go to drink, right?\n[Tutor] Excellent.\n[Tutor] Very good.\n[Tutor] I'll get you to read today's goal as well, please.\n[Student] Okay.\n[Student] Today's goal: Tell someone what you like to drink and find out what they like.\n[Tutor] Very nice.\n[Student] Okay.\n[Tutor] Okay.\n[Tutor] We'll go to the next page and I'll get you to read the four sentences for the first expression, \"go-to\".\n[Student] Okay.\n[Student] The first key expression, \"go-to\".\n[Student] My go-to drink is beer.\n[Student] Pizza is my go-to comfort food.\n[Student] She's the go-to guide for fixing computers.\n[Student] Ice Americano is my go-to drink at a cafe.\n[Tutor] Very good.\n[Tutor] So what do you think that phrase of \"go-to\" means?\n[Student] Usually I use something.\n[Student] Drink or call the people.\n[Student] Or usually I prefer something.\n[Tutor] Prefer something.\n[Tutor] Prefer?\n[Student] Prefer.\n[Tutor] Okay.\n[Student] Prefer.\n[Tutor] Okay, yeah.\n[Tutor] So a couple of synonyms would be, you could say, my favorite drink.\n[Tutor] Like my go-to drink is beer.\n[Tutor] You could say my favorite drink or my routine drink.\n[Tutor] Routine means something you always order.\n[Tutor] So, yeah, you got the right idea.\n[Tutor] Your preferred, that works as well.\n[Tutor] Very good.\n[Student] Okay.\n[Tutor] All right.\n[Student] I have one question about this expression. I was wondering about \"go-to\" is the usual expression? Because in real English, it is used many times or not. I was wondering about the situation.\n[Tutor] Okay. \"Go-to\" is usually a prepositional phrase. I go to the store. I go to work. But here, it's being used as an adjective.\n[Tutor] It's being used to describe something that is your favorite, your preferred or your routine beverage, food or activity.\n[Student] Yeah, you're right.\n[Tutor] So that's why it's used that way.\n[Tutor] So that's the best comparison that I can give you.\n[Tutor] Normally it's a prepositional phrase, but here it's an adjective phrase.\n[Tutor] Okay. That's a very good question. Yeah, no problem. All right. Let's get you to read the next key expression.\n[Student] Okay. The \"be hooked on\". I'm hooked on white wine. White wine.\n[Tutor] Yes.\n[Student] I'm hooked on this new drama series. They are hooked on game these days. I'm hooked on hiking on the weekend these days.\n[Tutor] Very good. So, can you think of another phrase that we could use instead of \"hooked on\"?\n[Student] I think it is through interest in these days.\n[Tutor] Yes, interested.\n[Student] Yes.\n[Tutor] Uh-huh.\n[Student] So, I try many times these days, or I'm interested in, or I'm researching more. Yeah.\n[Tutor] Yes, it all has to do with intense interest. Very nice. Very nicely done, Joey. Thank you.\n[Tutor] All right, let's move on to today's question and the follow-up question, and I'll just get you to read the questions and their responses. Okay. Are you good with alcohol?\n[Student] I'm a lightweight.\n[Student] Better.\n[Student] I'm a lightweight, so I usually try to stay sober.\n[Student] I'm a heavyweight.\n[Tutor] Very good. Very good.\n[Tutor] I'll get you to read the follow-up question in the form.\n[Student] Before I read, could you explain the word \"sober\"?\n[Tutor] Sober.\n[Student] Yeah.\n[Tutor] Sober is an adjective in English that describes someone who is not altered or affected by substances like alcohol or drugs.\n[Tutor] Drugs, or medications.\n[Tutor] So when they say, \"I try to stay sober,\"\n[Tutor] that means they avoid alcohol, they avoid drugs,\n[Tutor] because they want to have a clear mind, a clear brain.\n[Student] I see, understand.\n[Tutor] All right, very good, very good.\n[Tutor] The last question, what is your drink of choice?\n[Student] I like wine, especially red wine.\n[Tutor] Okay, yeah.\n[Tutor] So that's when people ask, \"What's your favorite drink?\"\n[Tutor] You can say, \"my drink of choice.\"\n[Tutor] Now that we've seen that, you could actually use that phrase, \"drink of choice,\" in the place of \"go-to.\"\n[Tutor] You could say, \"My drink of choice is beer.\"\n[Tutor] \"Pizza is my comfort food of choice.\"\n[Tutor] So that's another option.\n[Tutor] I think what I'll do is I'll copy and paste that because that's a good comparison phrase about how you can use it.\n[Tutor] I always like to have new things for you.\n[Tutor] All right.\n[Tutor] Very good.\n[Student] Okay.\n[Tutor] Okay. Now, what I would like to ask you in the first today's question, they use the terms \"lightweight\" and \"heavyweight.\" Do you understand what those mean or what they refer to?\n[Student] Oh, yes. I guess that word, the word is, if I said the right way, I just drink a little because my body and condition is not enough to drink heavily. So the lightweight and heavyweight is the opposite word, right?\n[Tutor] Yes, yes.\n[Tutor] They originally, these two words originally come from the sport of boxing.\n[Student] Yes, yes, yes, you're right.\n[Tutor] And people that participate in boxing are categorized by their weight class.\n[Student] Yes, you're right.\n[Tutor] So a smaller man might be called a lightweight, while a big muscular man might be considered a heavyweight.\n[Tutor] Okay, very good.\n[Student] And teacher, I have one more question. Sorry, teacher.\n[Tutor] No, no, don't apologize. Go ahead.\n[Student] Before I answer, \"opposite,\" is it right expression or right connotation?\n[Tutor] Yes, absolutely. Light is the opposite of heavy. You're absolutely right.\n[Tutor] A lightweight means you don't handle alcohol very well, and a heavyweight means you can hold your liquor.\n[Student] Because usually I say \"the opposite,\" but I'm not sure that word is right or not.\n[Student] Opposite.\n[Tutor] O-P-P-O-S-I-T-E.\n[Student] O-P-P-O-S-I-T-E.\n[Student] Opposite.\n[Tutor] I see.\n[Tutor] I think what,\n[Tutor] if you'll allow me, Joey,\n[Tutor] I'm going to send you\n[Tutor] a YouTube video\n[Tutor] that discusses\n[Tutor] opposite vocabulary.\n[Tutor] I think you would find that helpful.\n[Student] Okay, good, good, yes.\n[Student] All right, yeah, sure.\n[Tutor] Okay.\n[Tutor] Okay, so I got that listed under teacher's comment.\n[Tutor] Let's go on to the next page now.\n[Student] Okay.\n[Tutor] All right, we're going on to \"My Story.\"\n[Tutor] And what we've had you do is read the four sentences\n[Tutor] and just fill in the yellow area from the suggestions below the four sentences. I know you try to make your own story and that's wonderful.\n[Tutor] But right now, if you just want to use the sentences and the suggestions, please go ahead.\n[Student] Okay, no problem.\n[Student] My go-to drink is cold beer.\n[Tutor] Okay.\n[Student] Yeah, especially one cup of cold beer.\n[Student] I'm hooked on this drink because it's refreshing to my body.\n[Tutor] Sure.\n[Student] Yeah.\n[Student] I'm a lightweight.\n[Tutor] Lightweight.\n[Student] Lightweight.\n[Student] When it comes to alcohol.\n[Student] I like to be sober when I drink with my client.\n[Tutor] Oh, yes.\n[Tutor] You like to be sober when you're drinking with a client.\n[Student] Yeah, I like to be sober.\n[Tutor] Okay.\n[Tutor] Yeah, I think a lot of people in business do that.\n[Tutor] They'll have one drink or two, but after that, they have to stop.\n[Student] I understand.\n[Tutor] Very good.\n[Student] Yeah.\n[Tutor] What is your go-to drink?\n[Tutor] Well, actually, I don't drink alcohol.\n[Tutor] But I would say that my go-to drink is Diet Cola.\n[Tutor] Diet Coke.\n[Tutor] I drink more of that than anything, especially when I'm working.\n[Tutor] You know, the caffeine and everything.\n[Student] Oh, Diet Coke.\n[Tutor] Good.\n[Tutor] Yeah, yeah.\n[Tutor] All right.\n[Tutor] Let's see.\n[Tutor] We're going on.\n[Student] Okay.\n[Tutor] Next is part B, the mission.\n[Tutor] We're not going to do that unless we have time.\n[Tutor] Let's go to part C.\n[Student] Okay.\n[Tutor] And I want to work on the social skills and some adjectives.\n[Student] Okay.\n[Student] Yeah, no problem.\n[Student] Can I grab a little?\n[Tutor] Okay.\n[Tutor] Go on.\n[Tutor] Yeah, just to review.\n[Tutor] I have you read each group of five adjectives.\n[Student] Uh-huh.\n[Tutor] And then I ask you to make a sentence.\n[Student] Uh-huh.\n[Tutor] Using one of them.\n[Tutor] Okay. So the first group, we're talking about beer. There's a picture of a beer.\n[Tutor] Yes. I'll get you to read the five English words to me.\n[Student] Okay. The beer: creamy, crispy, hoppy, malty, bitter.\n[Tutor] Okay. Couple I'd like to help you with. On the second one, you're saying \"crispy,\" but there's no Y at the end.\n[Tutor] Let's try to stop at the P. Crisp.\n[Student] Crisp.\n[Student] Crisp.\n[Tutor] Very good.\n[Student] Crisp.\n[Tutor] Okay.\n[Tutor] And then the second last one, you're putting an E sound in there.\n[Tutor] You're saying \"melty.\"\n[Tutor] There's an A.\n[Tutor] So try \"malty.\"\n[Student] Malt.\n[Student] Malt.\n[Student] Malt.\n[Student] Malt.\n[Tutor] Very good.\n[Tutor] Yeah, malty.\n[Tutor] All right.\n[Student] Okay.\n[Tutor] If you go to the next page, they give you an example sentence.\n[Tutor] You can use it or create your own.\n[Student] Use that word and make it some...\n[Student] Okay.\n[Student] I like creamy and bitter beer in my sentence.\n[Student] I like... I love to...\n[Student] I like to drink crisp beer.\n[Tutor] Good.\n[Tutor] You did it.\n[Tutor] Good job.\n[Tutor] Good.\n[Student] Yeah.\n[Student] Okay.\n[Tutor] All right.\n[Tutor] The next group, these are adjectives for wine.\n[Student] Yeah.\n[Tutor] And again, I'll get you to read them to me.\n[Student] Tannin.\n[Student] Tannic.\n[Student] Tannic.\n[Student] Tannic.\n[Student] Tannic.\n[Student] Full-bodied.\n[Student] Full-bodied.\n[Student] Crisp.\n[Student] Crisp.\n[Student] Crisp.\n[Student] Crisp.\n[Student] Yeah.\n[Student] Could you repeat one more please, teacher?\n[Tutor] Crisp.\n[Student] Yes.\n[Student] Crisp.\n[Student] Crisp.\n[Student] Crisp.\n[Student] Dry.\n[Student] Yeah.\n[Student] Fruity.\n[Tutor] Good.\n[Student] Fruity.\n[Tutor] You got them.\n[Student] Yes, I see.\n[Student] I like crisp and fruity wine, white wine.\n[Tutor] Yeah, me too.\n[Student] I love to, I love to fruity wine, fruity white wine.\n[Student] Better than full-bodied red wine.\n[Tutor] Yeah, some people like that. They like a prettier wine. All right, very good. Okay. Okay. Our last group is used to describe\n[Tutor] hard liquor or\n[Tutor] spirits. Okay.\n[Student] Smoky, woody,\n[Student] bold, thick,\n[Student] intense.\n[Student] That is kind of whiskey.\n[Tutor] Yes.\n[Student] I like smoky and...\n[Student] Go on, teacher.\n[Tutor] No, you said every word correctly.\n[Tutor] Now you can go ahead and make your sentence.\n[Tutor] Go ahead.\n[Student] I like smoky and thick whiskey.\n[Student] Yeah.\n[Student] The Korean makgeolli is similar.\n[Student] That is thick and intense, tasty.\n[Tutor] Sure.\n[Tutor] Okay.\n[Tutor] Yeah, people like a full-bodied whiskey.\n[Student] I understand.\n[Tutor] My father was that way.\n[Tutor] All right.\n[Student] Yes.\n[Tutor] You did a great job.\n[Student] Uh-huh.\n[Tutor] So we finished the two pages.\n[Tutor] Now we're going on to part D, \"Digging in Deeper.\"\n[Student] Yeah, \"Digging in Deeper.\"\n[Tutor] All right.\n[Tutor] And I'm going to ask you to read and respond to question number two at the bottom.\n[Student] Okay.\n[Student] Can I read the number two?\n[Tutor] Yes, please.\n[Student] Okay.\n[Student] Is there a drink culture\n[Student] or tradition in your country? What is it like?\n[Student] Hmm... drink culture or tradition in my country?\n[Student] Hmm... our society is so conservative.\n[Student] So usually if we drink, the old people and young people,\n[Student] and meantime, if they have cheers, and then if they drink some beer or soju, like the beer, at that time, they turn their head, the right or left.\n[Tutor] Yes, I've heard about that.\n[Student] Yeah, because that is about to respect the mind.\n[Student] So usually if we drink with my father, with my mother,\n[Student] and meantime we have to cheer and then we turn my head and then drink.\n[Tutor] Oh, okay.\n[Student] Yeah, that is a way.\n[Student] And sometimes we pour in the alcohol in a cup.\n[Student] And meantime, that we had to hold two hands, hold the bottle with two hands, because two hands is also meaning the respect, the mind.\n[Student] So usually, yeah, that is our culture, drinking culture.\n[Tutor] It's also my understanding\n[Tutor] that a sign of respect\n[Tutor] is when a younger person\n[Tutor] pours the drink for an older person.\n[Tutor] Do you still do that?\n[Student] Yeah, you're right.\n[Student] Sometimes.\n[Student] Yeah, it's right, usually.\n[Student] But sometimes,\n[Student] some\n[Student] old person give their drink,\n[Student] give the beer or the soju because that is give the some like the pleasure. Yeah, yes.\n[Tutor] Okay, I understand. That's great. All right, my friend. Um, it says to, uh, I'm, I'm not going to\n[Tutor] ask you to recall the three expressions because we, we've done a lot of talking today. Yeah. Um, but\n[Tutor] you did a good job.\n[Tutor] Do you have a lot of traveling to do for Chuseok?\n[Tutor] Are you having a big gathering with your family or a small gathering?\n[Student] Maybe.\n[Tutor] What are your plans for the rest of the week?\n[Student] Yeah, Chuseok is short.\n[Student] And after Chuseok, I will go to the business trip to Japan.\n[Tutor] Oh, okay.\n[Student] Yeah, just one week, maybe one week.\n[Student] I will go to the business trip.\n[Tutor] Okay. Now, as we've talked before, if you're unable to take your classes, try calling Carrot today and rescheduling them, okay, because your business trip is very important and I appreciate that.\n[Tutor] I hope you have a lovely holiday\n[Tutor] and I'm going to let you go.\n[Tutor] Enjoy the rest of your day\n[Tutor] and I'll talk to you next time.\n[Tutor] Thank you, Joey. Good job.\n[Student] Enjoy your day. Bye-bye, teacher.\n[Tutor] Bye-bye.\n\n[AI 피드백]\n안녕하세요, Joey! 오늘 수업도 정말 즐거웠습니다. 'go-to', 'hooked on' 같은 재미있는 표현들을 배우고, 한국의 음주 문화에 대한 깊이 있는 이야기도 나눌 수 있어서 좋았어요. Joey의 적극적인 질문 덕분에 저도 많은 것을 배울 수 있었습니다.\n\n---\n\n### **0. 📌 Topic**\nTopic: Discussing drink preferences, related expressions, and Korean drinking culture.\n\n---\n\n### **1. 📊 오늘의 대화 요약 (Summary)**\n오늘 Joey는 'go-to'와 'be hooked on' 같은 핵심 표현들을 활용하여 자신이 선호하는 음료에 대해 이야기했습니다. 또한, 'lightweight'와 'heavyweight' 같은 술과 관련된 어휘를 배우고, 한국의 독특한 음주 예절과 문화에 대해 자세히 설명해 주었습니다.\n\n---\n\n### **2. 💬 유창성 업그레이드 (Fluency & Natural Flow)**\n\nJoey가 말한 문장 중 의미는 통하지만, 좀 더 자연스럽게 다듬을 수 있는 표현 3가지를 선정했습니다.\n\n1.  **❌ 학습자 원문 (As Said):** \"Today's topic is what you go to drink, right?\"\n    *   **✅ 자연스러운 표현 (Natural):** \"Today's topic is about 'go-to' drinks, right?\"\n    *   **💎 비즈니스 표현 (Professional):** \"Could you confirm if today's lesson will focus on 'go-to' drinks?\"\n    *   **💡 코칭 포인트:** The phrase 'what you go to drink' is a part of the lesson's content, not the topic itself. To confirm the topic, it's more natural to say 'Today's topic is about [topic], right?' or 'Is today's topic [topic]?' → 'what you go to drink'는 수업 내용의 일부이지, 그 자체로 토픽은 아닙니다. 수업 주제를 확인할 때는 'Today's topic is about [주제], right?' 또는 'Is today's topic [주제]?'라고 말하는 것이 더 자연스럽습니다.\n\n2.  **❌ 학습자 원문 (As Said):** \"I was wondering about 'go-to' is the usual expression?\"\n    *   **✅ 자연스러운 표현 (Natural):** \"I was wondering if 'go-to' is a commonly used expression?\"\n    *   **💎 비즈니스 표현 (Professional):** \"Could you clarify if 'go-to' is a widely recognized or frequently used expression?\"\n    *   **💡 코칭 포인트:** The phrase \"if it is\" or \"if it's\" is often used to introduce a question about whether something is true or common. \"Commonly used\" or \"widely recognized\" are good alternatives to \"usual.\" → '~인지 아닌지'를 물을 때 \"if it is\"나 \"if it's\"를 쓰는 것이 일반적입니다. 'usual' 대신 \"commonly used\"나 \"widely recognized\"를 쓰는 것이 더 자연스럽습니다.\n\n3.  **❌ 학습자 원문 (As Said):** \"Because that is about to respect the mind.\" (한국 음주 예절 설명 중)\n    *   **✅ 자연스러운 표현 (Natural):** \"Because it's a sign of respect.\"\n    *   **💎 비즈니스 표현 (Professional):** \"This practice is rooted in showing deference and respect.\"\n    *   **💡 코칭 포인트:** \"A sign of respect\" is a very common and concise way to express that an action indicates respect. \"About to respect the mind\" is understandable but less idiomatic. → 어떤 행동이 존경을 나타낸다고 말할 때 \"a sign of respect\"가 매우 흔하고 간결한 표현입니다. \"About to respect the mind\"는 이해는 되지만 원어민들이 자주 쓰는 표현은 아닙니다.\n\n---\n\n### **3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)**\n\nCategory: **Incorrect use of articles (a/an/the)**\n\nJoey는 명사 앞에 관사(a/an/the)를 사용할 때 종종 실수를 했습니다. 특정 명사를 지칭하는지, 아니면 일반적인 명사를 지칭하는지에 따라 관사 사용이 달라지므로, 이 부분을 꾸준히 연습하면 더 정확한 문장을 만들 수 있습니다.\n\n| ❌ 원문 (As Said)                                         | ✅ 교정 예시 (Corrected)                                         |\n| :------------------------------------------------------- | :--------------------------------------------------------------- |\n| \"I like to be sober when I drink with my **client**.\"    | \"I like to be sober when I drink with **a client**.\"             |\n| \"Yeah, especially **one cup** of cold beer.\"             | \"Yeah, especially **a cup** of cold beer.\"                       |\n| \"And meantime, that we had to hold **two hands**, hold **the bottle** with **two hands**...\" | \"And meantime, we had to hold **the bottle** with **two hands**...\" |\n| \"But sometimes, some **old person** give their drink...\" | \"But sometimes, some **older person** gives their drink...\"      |\n\n📌 **핵심 규칙:** 명사를 처음 언급하거나 일반적인 대상을 말할 때는 부정관사 'a/an'을 사용하고, 이미 언급되었거나 특정 대상을 지칭할 때는 정관사 'the'를 사용합니다.\n\n🔁 **따라 읽기:**\n🗣️ \"I like to be sober when I drink with a client.\"\n🗣️ \"Yeah, especially a cup of cold beer.\"\n🗣️ \"And meantime, we had to hold the bottle with two hands.\"\n\n---\n\n### **4. 📗 어휘 확장 (Vocabulary Vault)**\n\n1.  **go-to** /ɡoʊˈtuː/ (형용사)\n    *   뜻: (어떤 상황에서) 믿고 의지하는, 즐겨 찾는, 단골의\n    *   실전 예문: \"This software is my **go-to** solution for project management.\"\n\n2.  **hooked on** /hʊkt ɒn/ (형용사구)\n    *   뜻: ~에 푹 빠진, ~에 중독된\n    *   실전 예문: \"Many investors are **hooked on** the idea of passive income streams.\"\n\n3.  **lightweight** /ˈlaɪtˌweɪt/ (명사)\n    *   뜻: (술에) 약한 사람, (권투 등에서) 경량급 선수\n    *   실전 예문: \"I'm a bit of a **lightweight**, so I stick to one glass of wine at business dinners.\"\n\n4.  **heavyweight** /ˈhɛviˌweɪt/ (명사)\n    *   뜻: (술에) 강한 사람, (권투 등에서) 중량급 선수; 영향력 있는 사람\n    *   실전 예문: \"He's a **heavyweight** in the industry, so his opinion carries a lot of weight.\"\n\n5.  **sober** /ˈsoʊbər/ (형용사)\n    *   뜻: 술 취하지 않은, 맨정신의; 진지한, 냉철한\n    *   실전 예문: \"It's important to stay **sober** when making critical financial decisions.\"\n\n---\n\n### **5. 📝 실전 복습 챌린지 (Practice)**\n\n오늘 배운 표현과 문법을 활용하여 다음 문장들을 영작해 보세요.\n\n1.  **상황:** 저는 보통 아침에 커피를 마시지만, 가끔 녹차를 즐겨 마십니다.\n    *   **영작:** (힌트: 'go-to' 활용)\n    *   **모범 답안:** My go-to morning drink is coffee, but sometimes I enjoy green tea.\n\n2.  **상황:** 저는 요즘 새로운 투자 전략에 푹 빠져서 관련 서적을 많이 읽고 있습니다.\n    *   **영작:** (힌트: 'hooked on' 활용)\n    *   **모범 답안:** I'm hooked on a new investment strategy these days, so I'm reading a lot of related books.\n\n3.  **상황:** 중요한 고객과의 저녁 식사에서는 항상 맨정신을 유지하려고 노력합니다. 저는 술에 좀 약한 편입니다.\n    *   **영작:** (힌트: 'sober', 'lightweight' 활용)\n    *   **모범 답안:** I always try to stay sober during dinner with an important client. I'm a bit of a lightweight when it comes to alcohol.\n\n---\n\n### **6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)**\n\n✨ **Good Job**: Joey는 한국의 음주 문화를 설명할 때 이렇게 말했습니다:\n\"And sometimes we pour in the alcohol in a cup. And meantime, that we had to hold two hands, hold the bottle with two hands, because two hands is also meaning the respect, the mind.\"\n이 문장은 조금 길지만, 한국의 복잡한 음주 예절을 아주 구체적이고 자세하게 설명해 주어서 튜터가 문화를 이해하는 데 큰 도움이 되었습니다. 'hold the bottle with two hands'처럼 핵심적인 동작을 정확히 전달한 점이 훌륭했습니다!\n\n🚀 **내일의 한 문장**: 다음 수업 시작 시, 튜터에게 오늘 배운 표현을 활용하여 이렇게 말해보세요!\n\"I'm hooked on learning new English expressions, especially those that are useful in business.\"\n\n---\n\n### **[성과 지표]**\n\n**유창성 점수**: 7.5/10\n\n**근거**: Joey는 다양한 주제에 대해 막힘없이 자신의 의견을 표현하고 질문을 던지는 데 매우 능숙합니다. 특히 한국 음주 문화를 설명할 때 복잡한 내용을 상세하게 전달하려는 노력이 돋보였습니다. 다만, 문장을 구성할 때 간혹 어순이나 전치사, 관사 사용에서 미세한 오류가 있어 문장의 자연스러움이 살짝 저해되는 경우가 있었습니다. 하지만 이는 꾸준한 연습으로 충분히 개선될 수 있는 부분입니다.\n\n**다음 수업 '원포인트 액션 플랜'**:\n다음 수업에서는 **관사(a/an/the) 사용**에 조금 더 신경 써서 문장을 만들어보는 연습을 해볼까요? 명사를 말하기 전에 '이것이 일반적인 것인지, 아니면 특정 대상을 가리키는 것인지' 한 번 더 생각해보는 습관을 들이면 좋습니다. 예를 들어, \"I met a client.\" (어떤 고객)과 \"I met the client.\" (그 특정 고객)의 차이를 의식하며 말해보는 거죠!\n\n위 내용을 바탕으로:\n1. 먼저 오늘 수업에서 내가 틀렸거나 어색했던 표현을 하나 골라서, 관련된 상황을 영어로 질문해줘.\n2. 내가 영어로 대답하면, 자연스러운지 확인하고 더 나은 표현이 있으면 알려줘.\n3. 특히 \"반복 실수 패턴\"에서 지적된 부분을 집중적으로 연습시켜줘.\n4. 이런 식으로 오늘 배운 표현들을 하나씩 복습하자.\n5. 한국어 설명은 필요할 때만 간단히, 대화는 최대한 영어로 진행해줘.\n\n그럼 시작하자!";
+        function startReview(){navigator.clipboard.writeText(REVIEW_PROMPT).then(()=>{showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)}).catch(()=>{const t=document.createElement('textarea');t.value=REVIEW_PROMPT;document.body.appendChild(t);t.select();document.execCommand('copy');document.body.removeChild(t);showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)})}
+        function showToast(){const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500)}
+        function switchTab(n){document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',n==='feedback'?i===0:i===1));document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));document.getElementById('tab-'+n).classList.add('active')}
+    </script>
+</body>
+</html>

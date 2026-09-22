@@ -4,13 +4,15 @@ This is a study digest from my one-on-one English phone lessons this week. Pleas
 
 ## Topics covered this week
 - Discussing weekend plans, autumn traditions, and restaurant experiences.
+- Discussing drink preferences, related expressions, and Korean drinking culture.
 
 ## Grammar focus this week
 - Verb Tense (1x)
+- Articles (a/an/the) (1x)
 
-## My all-time weak-point ranking (75 lessons since 2026-05-08)
+## My all-time weak-point ranking (76 lessons since 2026-05-08)
+- Articles (a/an/the) — 12 lessons
 - Subject–Verb Agreement — 11 lessons
-- Articles (a/an/the) — 11 lessons
 - Verb Tense — 11 lessons
 - Prepositions — 10 lessons
 - Verb Forms / Auxiliaries — 8 lessons
@@ -36,7 +38,7 @@ This is a study digest from my one-on-one English phone lessons this week. Pleas
 - 2026-W36: 6.5
 - 2026-W37: 7.6
 - 2026-W38: 7.3
-- 2026-W39: 7.0
+- 2026-W39: 7.2
 - Overall average: 7.1
 
 ## Corrections — what I said vs. the natural version
@@ -46,9 +48,15 @@ This is a study digest from my one-on-one English phone lessons this week. Pleas
    Natural: "my bag is old, it's been over three years."
 3. I said: "I can't win through my desire."
    Natural: "I can't resist my cravings."
+4. I said: "Today's topic is what you go to drink, right?"
+   Natural: "Today's topic is about 'go-to' drinks, right?"
+5. I said: "I was wondering about 'go-to' is the usual expression?"
+   Natural: "I was wondering if 'go-to' is a commonly used expression?"
+6. I said: "Because that is about to respect the mind."
+   Natural: "Because it's a sign of respect."
 
 ## Recurring mistakes from earlier weeks — my long-term habits
-My most repeated weak categories overall: Subject–Verb Agreement, Articles (a/an/the). These corrections are from earlier lessons in those categories. Please weave a few into the review so I revisit old mistakes.
+My most repeated weak categories overall: Articles (a/an/the), Subject–Verb Agreement. These corrections are from earlier lessons in those categories. Please weave a few into the review so I revisit old mistakes.
 1. (2026-09-18, Subject–Verb Agreement) I said: "I finally tried the Dubai cookie after seeing it blow up."
    Natural: "I finally tried the Dubai cookie after seeing it become so popular."
 2. (2026-09-18, Subject–Verb Agreement) I said: "Before I try it, I expected it is to be melty and that to be..."
@@ -76,6 +84,11 @@ My most repeated weak categories overall: Subject–Verb Agreement, Articles (a/
 - curated (형용사) — 엄선된, 큐레이션 된
 - ambiance (명사) — 분위기 (특히 장소의 분위기)
 - culinary (형용사) — 요리의, 음식의
+- go-to (형용사) — (어떤 상황에서) 믿고 의지하는, 즐겨 찾는, 단골의
+- hooked on (형용사구) — ~에 푹 빠진, ~에 중독된
+- lightweight (명사) — (술에) 약한 사람, (권투 등에서) 경량급 선수
+- heavyweight (명사) — (술에) 강한 사람, (권투 등에서) 중량급 선수; 영향력 있는 사람
+- sober (형용사) — 술 취하지 않은, 맨정신의; 진지한, 냉철한
 
 ## Please cover in the podcast
 - Pick my 1–2 most repeated mistakes (see the all-time ranking) and explain the rule with a memorable rule of thumb.

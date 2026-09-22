@@ -1,0 +1,53 @@
+{
+ "date": "2026-09-22",
+ "iso": [
+  2026,
+  39
+ ],
+ "topic": "Discussing drink preferences, related expressions, and Korean drinking culture.",
+ "grammar": "Incorrect use of articles",
+ "grammar_norm": "Articles (a/an/the)",
+ "score": 7.5,
+ "pairs": [
+  {
+   "said": "Today's topic is what you go to drink, right?",
+   "natural": "Today's topic is about 'go-to' drinks, right?"
+  },
+  {
+   "said": "I was wondering about 'go-to' is the usual expression?",
+   "natural": "I was wondering if 'go-to' is a commonly used expression?"
+  },
+  {
+   "said": "Because that is about to respect the mind.",
+   "natural": "Because it's a sign of respect."
+  }
+ ],
+ "vocab": [
+  {
+   "word": "go-to",
+   "pos": "형용사",
+   "meaning": "(어떤 상황에서) 믿고 의지하는, 즐겨 찾는, 단골의"
+  },
+  {
+   "word": "hooked on",
+   "pos": "형용사구",
+   "meaning": "~에 푹 빠진, ~에 중독된"
+  },
+  {
+   "word": "lightweight",
+   "pos": "명사",
+   "meaning": "(술에) 약한 사람, (권투 등에서) 경량급 선수"
+  },
+  {
+   "word": "heavyweight",
+   "pos": "명사",
+   "meaning": "(술에) 강한 사람, (권투 등에서) 중량급 선수; 영향력 있는 사람"
+  },
+  {
+   "word": "sober",
+   "pos": "형용사",
+   "meaning": "술 취하지 않은, 맨정신의; 진지한, 냉철한"
+  }
+ ],
+ "_html_md5": "243a4afa35a75f44ce9e01ff98fc46df"
+}
