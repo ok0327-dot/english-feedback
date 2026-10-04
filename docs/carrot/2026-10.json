@@ -1,0 +1,128 @@
+{
+ "success": true,
+ "code": 0,
+ "message": null,
+ "data": {
+  "list": [
+   {
+    "idxFeedback": 36177686,
+    "createDate": "2026-10-05",
+    "memo": "Today we reviewed the expressions \"hit a wall\" and \"power through\". Read and sounded out the pronunciation of [wall, strength, through, though, active-activity, inaccessibility, \"What do you relate to the most?\", lack of incentive]. Continue to review the use and meaning of the key expressions. Here are today's notes:",
+    "subList": [
+     {
+      "idxFeedbackSub": 62650223,
+      "original": "Afternoon I'll go back my office ",
+      "better": "In the afternoon I'll go back to my office ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 62650224,
+      "original": "Usually I work the every Tuesday and I struggle sometimes ",
+      "better": "Usually I workout every Tuesday and I struggle sometimes ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 62650225,
+      "original": "I don't want to do because it's so tired and not funny ",
+      "better": "I don't want to do because it's so tired and not funny ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 62650226,
+      "original": "I realize that want to go back my home after work ",
+      "better": "I realize that I want to go back (to my) home after work ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 62650227,
+      "original": "That is both important ",
+      "better": "Those are both important ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 62650228,
+      "original": "We want to every things eat but that is control ",
+      "better": "We want to eat everything but that needs to be controlled ",
+      "betterTrans": null,
+      "isSave": "N"
+     }
+    ]
+   },
+   {
+    "idxFeedback": 36169335,
+    "createDate": "2026-10-02",
+    "memo": "You worked extra hard today!  Please watch and practice with the video links below:\n1)  STRENGTHENING pronunciation • How to pronounce STRENGTHENING video:  https://youtu.be/NovhGPwX0Ec?si=Mug-FDptR3aEFPg6",
+    "subList": [
+     {
+      "idxFeedbackSub": 62613321,
+      "original": "I set the FAR high by training for a marathon.",
+      "better": "I set the BAR high by training for a marathon.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 62613322,
+      "original": "He set the bar high by committing to daily WORKOUTS.",
+      "better": "Alternatives:  He set the bar high by committing to daily EXERCISE/EXERCISING/TRAINING.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 62613323,
+      "original": "I WORK harder to break through a plateau.",
+      "better": "I WORKED (pronounced WORKT) harder to break through a plateau.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 62613324,
+      "original": "I'm trying to IMPROVE (pronounced IM=PRAUV) my ENDURANCE (pronounced EN-DRANCE)",
+      "better": "I'm trying to IMPROVE (pronounced IM=PROOV) my ENDURANCE (pronounced EN-DUR-ANS)",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 62613325,
+      "original": "I like CORE-STRAIGHTENING",
+      "better": "I like CORE-STRENGTHENING (please see video link in comments)",
+      "betterTrans": null,
+      "isSave": "N"
+     }
+    ]
+   },
+   {
+    "idxFeedback": 36159048,
+    "createDate": "2026-10-01",
+    "memo": "Very good class, you always work so hard :) \n Please watch and practice with the video link below: \n1)   English Pronunciation for b and v Difference: 10 Minute Tutorial video:  https://youtu.be/Q43gANZQKRg?si=Zh7czsfNtNEf4VDS",
+    "subList": [
+     {
+      "idxFeedbackSub": 62567349,
+      "original": "I feel like I'm with a commitment - PHOVE.\nPHOBIA describes irrationals fear of something or situation",
+      "better": "I feel like I'm with a commitment - PHOBE (pronounced FOBE)..\nPhobe describes the person with the PHOBIA.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 62567350,
+      "original": "How do you deal with JEALOUSY (pronounced JEH-LUH-SIS)",
+      "better": "How do you deal with JEALOUSY (pronounced JEH-LUH-SEE)",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 62567351,
+      "original": "I give an EXPIRATION",
+      "better": "I give an EXPLANATION (pronounced EX-PLAH-NAY-SHUN)",
+      "betterTrans": null,
+      "isSave": "N"
+     }
+    ]
+   }
+  ]
+ }
+}
