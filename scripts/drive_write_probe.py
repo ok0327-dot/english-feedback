@@ -41,23 +41,35 @@ def main():
     except Exception as e:
         print(f"폴더 조회 실패: {type(e).__name__}: {str(e)[:300]}")
 
-    body = json.dumps({"probe": True}).encode("utf-8")
-    media = MediaIoBaseUpload(io.BytesIO(body), mimetype="application/json", resumable=False)
-    try:
-        created = service.files().create(
-            body={"name": "_whisper_raw_probe.json", "parents": [folder]},
-            media_body=media, fields="id", supportsAllDrives=True,
-        ).execute()
-    except Exception as e:
-        print(f"CREATE_FAIL: {type(e).__name__}: {str(e)[:500]}")
-        return 1
-    print("CREATE_OK")
-    try:
-        service.files().delete(fileId=created["id"], supportsAllDrives=True).execute()
-        print("DELETE_OK")
-    except Exception as e:
-        print(f"DELETE_FAIL(시험 파일 '_whisper_raw_probe.json' 이 남았을 수 있음): {type(e).__name__}: {str(e)[:300]}")
-    return 0
+    def attempt(label, body, media=None):
+        """한 가지 방식으로 만들어 보고, 만들어졌으면 바로 지운다 / try one way, then clean up."""
+        try:
+            kw = {"body": body, "fields": "id", "supportsAllDrives": True}
+            if media is not None:
+                kw["media_body"] = media
+            created = service.files().create(**kw).execute()
+        except Exception as e:
+            print(f"{label}: FAIL {type(e).__name__}: {str(e)[:260]}")
+            return False
+        print(f"{label}: OK")
+        try:
+            service.files().delete(fileId=created["id"], supportsAllDrives=True).execute()
+        except Exception as e:
+            print(f"{label}: 삭제 실패 — 시험 항목이 남았을 수 있음: {str(e)[:200]}")
+        return True
+
+    payload = json.dumps({"probe": True}).encode("utf-8")
+    name = "_whisper_raw_probe"
+    r1 = attempt("A_json_file", {"name": name + ".json", "parents": [folder]},
+                 MediaIoBaseUpload(io.BytesIO(payload), mimetype="application/json", resumable=False))
+    r2 = attempt("B_google_doc_from_text", {"name": name, "parents": [folder],
+                                            "mimeType": "application/vnd.google-apps.document"},
+                 MediaIoBaseUpload(io.BytesIO(payload), mimetype="text/plain", resumable=False))
+    r3 = attempt("C_empty_google_doc", {"name": name, "parents": [folder],
+                                        "mimeType": "application/vnd.google-apps.document"})
+    r4 = attempt("D_folder", {"name": name, "parents": [folder],
+                              "mimeType": "application/vnd.google-apps.folder"})
+    return 0 if (r1 or r2 or r3 or r4) else 1
 
 
 if __name__ == "__main__":
