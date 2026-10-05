@@ -1,0 +1,23 @@
+name: 🔎 Drive 쓰기 점검 (임시)
+# 서비스 계정이 Drive '완료' 폴더에 파일을 새로 만들 수 있는지 확인하는 임시 점검.
+# Temporary probe: can the service account create a file in the Drive done folder?
+on:
+  push:
+    branches: [worktree-save-whisper-raw]
+    paths: ['scripts/drive_write_probe.py', '.github/workflows/drive-write-probe.yml']
+permissions:
+  contents: read
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -r requirements.txt
+      - run: python scripts/drive_write_probe.py
+        env:
+          GOOGLE_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIALS }}
+          DRIVE_DONE_FOLDER_ID: ${{ secrets.DRIVE_DONE_FOLDER_ID }}
