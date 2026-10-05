@@ -1,0 +1,21 @@
+name: 🗄️ 원본 보관 점검
+# Whisper 원본 보관 파일(whisper_raw.jsonl)이 준비됐는지, 서비스 계정이 고쳐 쓸 수 있는지 수동 확인.
+# Manual check that the raw-transcript archive file exists and is writable. 기록은 바뀌지 않는다.
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -r requirements.txt
+      - run: python scripts/check_raw_archive.py
+        env:
+          GOOGLE_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIALS }}
+          DRIVE_DONE_FOLDER_ID: ${{ secrets.DRIVE_DONE_FOLDER_ID }}

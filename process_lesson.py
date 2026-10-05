@@ -129,6 +129,15 @@ DRIVE_FOLDER_ID = os.environ.get("DRIVE_FOLDER_ID", "")
 # 처리 끝난 녹음 파일을 옮길 "완료" 폴더 ID (미설정 시 이동 건너뜀)
 DRIVE_DONE_FOLDER_ID = os.environ.get("DRIVE_DONE_FOLDER_ID", "")
 
+# Whisper 원본 전사를 덧붙여 보관할 Drive 파일 (옵션, best-effort — 실패해도 본 흐름에 영향 없음)
+# → 서비스 계정은 Drive 에 새 파일을 만들 수 없다(저장 용량 0, 2026-10-05 실측).
+#   그래서 "사용자가 한 번 만들어 둔 파일"에 수업마다 한 줄(JSON)씩 덧붙인다.
+# → 준비: 메모장으로 빈 파일 whisper_raw.jsonl 을 만들어 '완료' 폴더에 올려 두면 끝.
+#   파일이 없으면 조용히 건너뛴다. 끄려면 SAVE_RAW=0.
+DRIVE_RAW_FOLDER_ID = os.environ.get("DRIVE_RAW_FOLDER_ID", "").strip() or DRIVE_DONE_FOLDER_ID
+DRIVE_RAW_FILE_NAME = os.environ.get("DRIVE_RAW_FILE_NAME", "").strip() or "whisper_raw.jsonl"
+SAVE_RAW = os.environ.get("SAVE_RAW", "1").strip() != "0"
+
 # GitHub Pages 복습 페이지의 기본 URL
 # → 예: "https://myusername.github.io/english-feedback"
 # ⚠️ 시크릿명은 PAGES_URL(‘GITHUB_’ 접두사 시크릿은 GitHub이 금지) → 워크플로우가
@@ -370,6 +379,113 @@ def move_to_done_folder(file_id):
         print(f"📦 파일을 '완료' 폴더로 이동 완료")
     except Exception as e:
         print(f"⚠️ 파일 이동 실패 (치명적이지 않음): {e}")
+
+
+# 원본 보관 시 세그먼트에서 남길 항목 (토큰 배열 등 덩치 큰 값은 버려 한 줄을 작게 유지)
+_RAW_SEGMENT_KEYS = ("id", "start", "end", "text", "avg_logprob", "no_speech_prob", "compression_ratio")
+
+
+def _append_raw_record(service, record):
+    """
+    Drive 보관 파일 끝에 수업 1건(JSON 한 줄)을 덧붙인다. 결과를 상태 문자열로 반환.
+    비유: 새 공책을 살 수는 없으니, 이미 있는 공책 맨 뒤에 한 줄 적는 것.
+
+    덮어쓰기 사고 방지: 기존 내용을 끝까지 받았는지(크기 일치) 확인한 뒤에만 올린다.
+    """
+    from googleapiclient.http import MediaIoBaseUpload  # 이 함수에서만 쓰므로 여기서 불러옴
+
+    if not DRIVE_RAW_FOLDER_ID:
+        return "no_folder"
+    found = service.files().list(
+        q=(f"name = '{DRIVE_RAW_FILE_NAME}' and '{DRIVE_RAW_FOLDER_ID}' in parents "
+           "and trashed = false"),
+        pageSize=2,
+        fields="files(id, size)",
+    ).execute().get("files", [])
+    if not found:
+        return "no_file"
+    file_id = found[0]["id"]
+
+    old = service.files().get_media(fileId=file_id).execute() or b""
+    expected = found[0].get("size")
+    if expected is not None and int(expected) != len(old):
+        return "size_mismatch"  # 덜 받은 내용 위에 덮어쓰면 기록이 날아간다 → 중단
+
+    marker = json.dumps(record["drive_file_id"]).encode("utf-8")
+    if record["drive_file_id"] and marker in old:
+        return "duplicate"  # 같은 녹음을 이미 적어 둠 (재실행 대비)
+
+    line = json.dumps(record, ensure_ascii=False).encode("utf-8")
+    joiner = b"" if (not old or old.endswith(b"\n")) else b"\n"
+    new = old + joiner + line + b"\n"
+    service.files().update(
+        fileId=file_id,
+        media_body=MediaIoBaseUpload(io.BytesIO(new), mimetype="application/x-ndjson", resumable=False),
+        fields="id",
+    ).execute()
+    return "saved"
+
+
+def save_raw_transcript(filename, file_id, lesson_date, transcript_raw, duration, segments,
+                        timeout=60, service_factory=None):
+    """
+    Whisper 원본 전사(text + 세그먼트 시각)를 Drive 보관 파일에 남긴다. 상태 문자열 반환.
+    어떤 실패(예외·무응답)도 밖으로 내보내지 않는다 — 실패해도 전체 프로세스는 계속됨.
+    비유: 배송을 다 끝낸 뒤 송장 사본을 서랍에 넣어 두는 것. 서랍이 잠겨 있어도 배송은 이미 끝났다.
+
+    왜 남기나: 페이지에는 Gemini 가 손본 전사만 남아 원본을 알 수 없다(QUALITY_PLAN.md 1단계).
+    """
+    if not SAVE_RAW:
+        print("ℹ️ SAVE_RAW=0 → Whisper 원본 보관 건너뜀")
+        return "disabled"
+    try:
+        import threading
+
+        outcome = {}
+
+        def work():
+            try:
+                service = (service_factory or (lambda: get_drive_service(readonly=False)))()
+                record = {
+                    "schema": 1,
+                    "lesson_date": lesson_date.strftime("%Y-%m-%d") if lesson_date else "",
+                    "source_file": filename,
+                    "drive_file_id": file_id,
+                    "model": "whisper-large-v3",
+                    "language": "en",
+                    "duration": duration,
+                    "text": transcript_raw,
+                    "segments": [
+                        {k: seg[k] for k in _RAW_SEGMENT_KEYS if k in seg}
+                        for seg in (segments or []) if isinstance(seg, dict)
+                    ],
+                    "saved_at": datetime.now(KST).isoformat(timespec="seconds"),
+                }
+                outcome["status"] = _append_raw_record(service, record)
+            except Exception as e:
+                outcome["status"] = "error"
+                outcome["error"] = f"{type(e).__name__}: {str(e)[:200]}"
+
+        # 별도 스레드 + 시간 제한: Drive 가 응답하지 않아도 본 흐름이 멈추지 않게 한다
+        worker = threading.Thread(target=work, daemon=True)
+        worker.start()
+        worker.join(timeout)
+        status = "timeout" if worker.is_alive() else outcome.get("status", "error")
+
+        messages = {
+            "saved": f"🗄️ Whisper 원본 보관 완료 → Drive '{DRIVE_RAW_FILE_NAME}'",
+            "duplicate": "ℹ️ Whisper 원본이 이미 보관돼 있음 (건너뜀)",
+            "no_file": f"ℹ️ Drive 에 '{DRIVE_RAW_FILE_NAME}' 파일이 없어 원본 보관 건너뜀 (완료 폴더에 빈 파일을 올려 두면 동작)",
+            "no_folder": "ℹ️ 보관 폴더 미설정 → 원본 보관 건너뜀",
+            "size_mismatch": "⚠️ 보관 파일을 끝까지 받지 못해 원본 보관 건너뜀 (기존 기록 보호)",
+            "timeout": f"⚠️ 원본 보관이 {timeout}초 안에 끝나지 않아 건너뜀 (치명적이지 않음)",
+            "error": f"⚠️ 원본 보관 실패 (치명적이지 않음): {outcome.get('error', '')}",
+        }
+        print(messages.get(status, f"⚠️ 원본 보관 상태 불명: {status}"))
+        return status
+    except Exception as e:
+        print(f"⚠️ 원본 보관 실패 (치명적이지 않음): {e}")
+        return "error"
 
 
 # ╔══════════════════════════════════════════════════════════════════════════╗
@@ -1594,6 +1710,10 @@ def main():
             processed_count += 1
             print(f"\n✅ 처리 완료: {filename}")
             print(f"🌐 복습 페이지: {review_url}")
+
+            # ━━ [9단계] Whisper 원본 보관 (옵션, best-effort) ━━
+            # 페이지·이메일·알림·처리 기록이 전부 끝난 뒤에만 실행. 실패해도 위 결과는 그대로다.
+            save_raw_transcript(filename, file_id, lesson_date, transcript_raw, duration, segments)
 
         except Exception as e:
             error_count += 1
