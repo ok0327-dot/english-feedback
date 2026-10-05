@@ -1,0 +1,57 @@
+{
+ "date": "2026-10-05",
+ "iso": [
+  2026,
+  41
+ ],
+ "topic": "Discussing daily routines, health habits, and overcoming challenges to stay active.",
+ "grammar": "Incorrect use of infinitives and gerunds",
+ "grammar_norm": "Gerunds / Noun Phrases",
+ "score": 7.5,
+ "pairs": [
+  {
+   "said": "I'm a little afraid of something.",
+   "natural": "I'm a little worried about all the work waiting for me."
+  },
+  {
+   "said": "I do everything.",
+   "natural": "I'll handle everything ."
+  },
+  {
+   "said": "I have a problem but keep going something.",
+   "natural": "I have a problem, but I keep going ."
+  },
+  {
+   "said": "I moved to another area because I have to work tomorrow.",
+   "natural": "I'm staying in another area because I have to work tomorrow."
+  }
+ ],
+ "vocab": [
+  {
+   "word": "apprehensive",
+   "pos": "형용사",
+   "meaning": "걱정하는, 염려하는"
+  },
+  {
+   "word": "persevere",
+   "pos": "동사",
+   "meaning": "인내하다, 굴하지 않고 계속하다"
+  },
+  {
+   "word": "recalibrate",
+   "pos": "동사",
+   "meaning": "(계획, 시스템 등을) 재조정하다, 재측정하다"
+  },
+  {
+   "word": "inaccessibility",
+   "pos": "명사",
+   "meaning": "접근 불가능, 이용하기 어려움"
+  },
+  {
+   "word": "leisure time",
+   "pos": "명사",
+   "meaning": "여가 시간"
+  }
+ ],
+ "_html_md5": "dfba8ed3c0a68e951deca4eb0c958fdf"
+}

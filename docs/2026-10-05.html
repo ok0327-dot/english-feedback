@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#0f0f13"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="당근영어"><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="icon" type="image/png" sizes="192x192" href="icon-192.png"><script src="install-banner.js" defer></script><script src="sw-reg.js" defer></script>
+    <title>전화영어 복습 - 2026년 10월 05일</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Noto Sans KR',sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.75;min-height:100vh}
+        .header{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);border-bottom:1px solid rgba(255,255,255,.06);padding:48px 24px 40px;text-align:center}
+        .header-date{font-size:13px;color:#94a3b8;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+        .header h1{font-size:28px;font-weight:700;color:#f1f5f9;margin-bottom:16px}
+        .header-meta{display:flex;justify-content:center;gap:24px;font-size:14px;color:#64748b}
+        .header-meta span{display:flex;align-items:center;gap:6px}
+        .cta-section{text-align:center;padding:40px 24px}
+        .cta-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:linear-gradient(135deg,#38bdf8,#818cf8);color:#fff;font-size:16px;font-weight:600;font-family:'Noto Sans KR',sans-serif;border:none;border-radius:50px;cursor:pointer;transition:all .3s;text-decoration:none;box-shadow:0 4px 24px rgba(56,189,248,.25)}
+        .cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(56,189,248,.35)}
+        .cta-btn svg{width:20px;height:20px}
+        .cta-sub{margin-top:12px;font-size:13px;color:#64748b}
+        .toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#38bdf8;padding:14px 28px;border-radius:12px;font-size:14px;font-weight:500;border:1px solid rgba(56,189,248,.2);box-shadow:0 8px 32px rgba(0,0,0,.4);opacity:0;transition:all .4s cubic-bezier(.16,1,.3,1);z-index:1000}
+        .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+        .container{max-width:720px;margin:0 auto;padding:0 24px 80px}
+        .tabs{display:flex;gap:4px;background:#1a1a24;padding:4px;border-radius:12px;margin-bottom:32px}
+        .tab{flex:1;padding:12px;text-align:center;font-size:14px;font-weight:500;color:#64748b;background:0 0;border:none;border-radius:8px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all .2s}
+        .tab.active{background:#262636;color:#f1f5f9}
+        .tab-content{display:none}.tab-content.active{display:block}
+        .feedback h2{font-size:18px;font-weight:700;color:#f1f5f9;margin:36px 0 16px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.06)}
+        .feedback h2:first-child{margin-top:0}
+        .feedback p{margin:8px 0;color:#cbd5e1}
+        .feedback .item{padding:6px 0 6px 16px;border-left:2px solid #334155;margin:6px 0;color:#cbd5e1}
+        .feedback .numbered{padding:8px 0 8px 16px;color:#cbd5e1}
+        .feedback .numbered strong{color:#38bdf8}
+        .feedback strong{color:#f1f5f9}
+        .feedback code{background:#1e293b;padding:2px 8px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#38bdf8}
+        .feedback table{width:100%;border-collapse:collapse;margin:12px 0}
+        .feedback th,.feedback td{padding:10px 14px;text-align:left;border-bottom:1px solid #262636}
+        .feedback th{color:#94a3b8;font-weight:500;font-size:13px}
+        .feedback td{color:#cbd5e1}
+        .arrow{color:#38bdf8;font-weight:700}
+        .transcript{background:#1a1a24;border-radius:12px;padding:28px;font-size:14px;line-height:2;color:#94a3b8;white-space:pre-wrap;word-break:break-word;font-family:'JetBrains Mono','Noto Sans KR',monospace}
+        .transcript .tutor{color:#38bdf8}
+        .transcript .student{color:#a78bfa}
+        @media(max-width:640px){.header{padding:32px 16px}.header h1{font-size:22px}.cta-btn{padding:14px 28px;font-size:15px}.container{padding:0 16px 60px}}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-date">2026년 10월 05일</div>
+        <h1>📚 전화영어 복습</h1>
+        <div class="header-meta">
+            <span>⏱ 20분 26초</span>
+            <span>🎙 전화영어_025180304_20261005080045.m4a</span>
+        </div>
+    </div>
+    <div class="cta-section">
+        <button class="cta-btn" onclick="startReview()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Gemini에서 복습 대화 시작하기
+        </button>
+        <div class="cta-sub">클릭하면 프롬프트가 복사되고 Gemini가 열립니다</div>
+    </div>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('feedback')">📋 AI 피드백</button>
+            <button class="tab" onclick="switchTab('transcript')">🎙 수업 전사</button>
+        </div>
+        <div id="tab-feedback" class="tab-content active">
+            <div class="feedback"><p>Joey, 안녕하세요! 오늘 아침 대화도 활기차고 좋았습니다. 휴가 후 업무 복귀에 대한 걱정부터 운동 습관, 건강한 식단까지 다양한 이야기를 나누며 Joey의 일상과 생각을 엿볼 수 있었네요. 특히 'hit a wall'과 'power through' 같은 새로운 표현을 이해하고 자신의 상황에 적용하려는 노력이 돋보였습니다!</p>
+<br>
+<br>
+<p><strong>0. 📌 Topic</strong></p>
+<p>Topic: Discussing daily routines, health habits, and overcoming challenges to stay active.</p>
+<br>
+<br>
+<p><strong>1. 📊 오늘의 대화 요약 (Summary)</strong></p>
+<p>오늘은 Joey의 휴가 계획과 복귀 후 밀린 업무에 대한 이야기로 시작하여, 'hit a wall'과 'power through' 두 가지 핵심 표현을 학습했습니다. 이어서 운동 동기를 유지하는 방법, 건강을 위한 라이프스타일 변화, 그리고 운동을 거르는 이유 등에 대해 깊이 있는 대화를 나누며 Joey의 자기 관리 습관을 엿볼 수 있었습니다.</p>
+<br>
+<br>
+<p><strong>2. 💬 유창성 업그레이드 (Fluency & Natural Flow)</strong></p>
+<p>Joey가 말한 문장 중 의미는 통하지만, 원어민이 들었을 때 조금 더 자연스럽게 들릴 수 있는 표현들을 살펴볼까요?</p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>❌ 학습자 원문 (As Said):</strong> "I'm a little afraid of something." (밀린 업무에 대해 언급하며)</div>
+<div class="item"><strong>✅ 자연스러운 표현 (Natural):</strong> "I'm a little <strong>worried about</strong> all the work waiting for me."</div>
+<div class="item"><strong>💎 비즈니스 표현 (Professional):</strong> "I'm a bit <strong>apprehensive about</strong> the workload awaiting my return."</div>
+<div class="item"><strong>💡 코칭 포인트:</strong> Using 'worried about' is more natural when expressing concern about future tasks or situations, whereas 'afraid of' usually implies fear of danger or harm. <span class="arrow">→</span> 'worried about'은 미래의 일이나 상황에 대한 걱정을 표현할 때 더 자연스럽고, 'afraid of'는 보통 위험이나 해로움에 대한 두려움을 의미합니다.</div>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>❌ 학습자 원문 (As Said):</strong> "I do everything." (밀린 업무를 어떻게 처리할지에 대해)</div>
+<div class="item"><strong>✅ 자연스러운 표현 (Natural):</strong> "I'll <strong>handle everything</strong>." 또는 "I'll <strong>get it all done</strong>."</div>
+<div class="item"><strong>💎 비즈니스 표현 (Professional):</strong> "I'll <strong>manage all the tasks</strong>." 또는 "I'll <strong>take care of everything</strong>."</div>
+<div class="item"><strong>💡 코칭 포인트:</strong> 'I do everything'은 너무 직설적이거나 때로는 자랑처럼 들릴 수 있습니다. 'Handle everything' 또는 'get it all done'은 책임을 지고 업무를 완료하겠다는 의미를 더 자연스럽게 전달합니다.</div>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>❌ 학습자 원문 (As Said):</strong> "I have a problem but keep going something." ('power through'를 설명하며)</div>
+<div class="item"><strong>✅ 자연스러운 표현 (Natural):</strong> "I have a problem, but I <strong>keep going</strong>."</div>
+<div class="item"><strong>💎 비즈니스 표현 (Professional):</strong> "Despite facing an obstacle, I <strong>persevere</strong>."</div>
+<div class="item"><strong>💡 코칭 포인트:</strong> 'keep going something'이라고 하면 'something'이 불필요해서 어색하게 들립니다. 'Keep going' 자체가 완전하고 자연스러운 표현입니다. 'Persevere'는 훌륭한 비즈니스 대안입니다.</div>
+<br>
+<div class="numbered"><strong>4.</strong> <strong>❌ 학습자 원문 (As Said):</strong> "I moved to another area because I have to work tomorrow." (휴가 중 다른 지역에 머물고 있음을 설명하며)</div>
+<div class="item"><strong>✅ 자연스러운 표현 (Natural):</strong> "I'm <strong>staying in</strong> another area because I have to work tomorrow." 또는 "I <strong>traveled to</strong> another area because I have to work tomorrow."</div>
+<div class="item"><strong>💡 코칭 포인트:</strong> 'I moved to another area'는 영구적으로 이사했다는 의미로 들릴 수 있습니다. 일시적으로 다른 지역에 머무는 상황을 설명할 때는 'staying in' 또는 'traveled to'가 더 적절합니다. <span class="arrow">→</span> 'I moved to another area'는 영구적인 이사를 의미할 수 있습니다. 일시적으로 다른 지역에 머무는 상황에서는 'staying in' 또는 'traveled to'가 더 자연스럽습니다.</div>
+<br>
+<br>
+<p><strong>3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)</strong></p>
+<p>Category: <strong>Incorrect use of infinitives and gerunds (동명사와 부정사 혼동)</strong></p>
+<br>
+<p>Joey는 동사를 명사처럼 사용해야 할 때, to 부정사나 동명사 대신 동사 원형을 사용하거나, 동명사 형태를 어색하게 사용하는 경향이 있었습니다. 특히 문장의 주어나 전치사의 목적어로 동사를 쓸 때 이 패턴이 반복되었습니다.</p>
+<br>
+<table>
+<tr><th>❌ 원문 (Original)</th><th>✅ 교정 예시 (Corrected)</th></tr>
+<tr><td>"I realized that <strong>do exercise</strong> has been holding me back."</td><td>"I realized that <strong>doing exercise</strong> has been holding me back."</td></tr>
+<tr><td>"our <strong>body move</strong> is the good impact."</td><td>"our <strong>body moving</strong> has a good impact."</td></tr>
+<tr><td>"I think I can correct just one, <strong>two kinds ways</strong> important."</td><td>"I think I can select just one, <strong>both ways are</strong> important."</td></tr>
+<tr><td>"I'm somewhat apprehensive about <strong>handling</strong> the accumulated workload after my vacation."</td><td>(고급 영작 챌린지 모범 답안에 포함된 예시로, <code>handling</code>이 올바른 동명사 사용을 보여줍니다.)</td></tr>
+</table>
+<br>
+<p>📌 <strong>핵심 규칙:</strong> 동사를 명사처럼 주어나 목적어로 사용할 때는 동명사(-ing) 형태를 쓰거나, to 부정사를 활용하여 명사적 용법으로 사용해야 합니다.</p>
+<br>
+<p>🔁 <strong>따라 읽기:</strong></p>
+<p>🗣️ "I realized that <strong>doing exercise</strong> has been holding me back."</p>
+<p>🗣️ "Our <strong>body moving</strong> has a good impact."</p>
+<p>🗣️ "I think I can select just one, <strong>both ways are</strong> important."</p>
+<br>
+<br>
+<p><strong>4. 📗 어휘 확장 (Vocabulary Vault)</strong></p>
+<p>오늘 대화에서 Joey의 비즈니스 환경에 유용할 만한 어휘들을 정리해 보았습니다.</p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>apprehensive</strong> /ˌæprɪˈhɛnsɪv/ (형용사)</div>
+<div class="item">뜻: 걱정하는, 염려하는</div>
+<div class="item">실전 예문: I'm a bit <strong>apprehensive</strong> about presenting our new strategy to the board next week.</div>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>persevere</strong> /ˌpɜːrsɪˈvɪər/ (동사)</div>
+<div class="item">뜻: 인내하다, 굴하지 않고 계속하다</div>
+<div class="item">실전 예문: We must <strong>persevere</strong> through these market challenges to achieve our long-term goals.</div>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>recalibrate</strong> /ˌriːˈkælɪbreɪt/ (동사)</div>
+<div class="item">뜻: (계획, 시스템 등을) 재조정하다, 재측정하다</div>
+<div class="item">실전 예문: After reviewing the quarterly results, we need to <strong>recalibrate</strong> our sales targets.</div>
+<br>
+<div class="numbered"><strong>4.</strong> <strong>inaccessibility</strong> /ɪnˌæksɛsəˈbɪlɪti/ (명사)</div>
+<div class="item">뜻: 접근 불가능, 이용하기 어려움</div>
+<div class="item">실전 예문: The <strong>inaccessibility</strong> of raw materials has significantly impacted our production schedule.</div>
+<br>
+<div class="numbered"><strong>5.</strong> <strong>leisure time</strong> /ˈliːʒər taɪm/ (명사)</div>
+<div class="item">뜻: 여가 시간</div>
+<div class="item">실전 예문: Balancing work and <strong>leisure time</strong> is crucial for employee well-being and productivity.</div>
+<br>
+<br>
+<p><strong>5. 📝 실전 복습 챌린지 (Practice)</strong></p>
+<p>오늘 배운 표현과 문법을 활용하여 다음 문장들을 영작해 보세요.</p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>초급:</strong> 다음 주 회의에 대해 조금 걱정됩니다.</div>
+<div class="item">모범 답안: I'm a little <strong>worried about</strong> the meeting next week.</div>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>중급:</strong> 예상치 못한 문제에 부딪혔지만, 우리는 목표를 달성하기 위해 인내해야 합니다.</div>
+<div class="item">모범 답안: We <strong>hit a wall</strong> with an unexpected issue, but we must <strong>power through</strong> to achieve our goals.</div>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>고급:</strong> 저는 휴가 후 밀린 업무량을 처리하는 것에 대해 다소 염려하고 있지만, 모든 것을 잘 관리할 것이라고 확신합니다.</div>
+<div class="item">모범 답안: I'm somewhat <strong>apprehensive about</strong> <strong>handling</strong> the accumulated workload after my vacation, but I'm confident I'll <strong>manage everything</strong> well.</div>
+<br>
+<br>
+<p><strong>6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)</strong></p>
+<br>
+<p>✨ <strong>Good Job</strong>:</p>
+<p>Joey는 자신의 일상 루틴과 습관에 대해 설명할 때 매우 구체적이고 자연스럽게 표현했습니다.</p>
+<p>"Usually I use the calendar in my mobile phone and just usually I set the days. For example, every Tuesday I go to the gym and have to do exercise. And Saturday I will do yoga."</p>
+<p>이 문장은 Joey가 자신의 루틴을 얼마나 잘 지키고 있는지, 그리고 어떤 방식으로 관리하는지를 명확하고 유창하게 전달했습니다. 'set the days'라는 표현도 자신의 스케줄을 계획하는 의미로 아주 잘 사용했습니다!</p>
+<br>
+<p>🚀 <strong>내일의 한 문장</strong>:</p>
+<p>다음 수업 시작 시, 오늘 배운 표현을 활용하여 튜터에게 이렇게 말해보세요!</p>
+<p>"I'm ready to <strong>power through</strong> today's lesson, even if I <strong>hit a wall</strong>!"</p>
+<br>
+<br>
+<p><strong>[성과 지표]</strong></p>
+<p><strong>유창성 점수</strong>: 7.5/10</p>
+<br>
+<p><strong>근거</strong>: Joey는 자신의 생각을 비교적 막힘없이 전달하며 대화의 흐름을 잘 이어갔습니다. 새로운 표현의 의미를 파악하려는 적극적인 태도도 좋았습니다. 다만, 특정 문법 오류(특히 동명사/부정사 사용)와 어색한 표현들이 간헐적으로 나타나 유창성 점수에 약간 영향을 주었습니다. 자연스러운 표현을 위한 어휘 선택과 문장 구조를 조금 더 다듬는다면 훨씬 더 유창하게 들릴 것입니다.</p>
+<br>
+<p><strong>다음 수업 '원포인트 액션 플랜'</strong>:</p>
+<p>다음 수업에서는 <strong>동사를 명사처럼 사용할 때 동명사(-ing) 형태를 활용하는 연습</strong>에 집중해 봅시다. 예를 들어, "I enjoy <strong>reading</strong>"이나 "<strong>Learning</strong> English is fun"처럼 동명사를 주어나 목적어로 사용하는 문장을 의식적으로 만들어보는 연습을 해볼 거예요.</p></div>
+        </div>
+        <div id="tab-transcript" class="tab-content">
+            <div class="transcript"><span class="tutor">[Tutor]</span> Hello, good morning. Hi.
+<span class="tutor">[Tutor]</span> Good morning. How are you doing today?
+<span class="student">[Student]</span> Yeah, it&#x27;s a good day. It&#x27;s a fresh morning. How was your day?
+<span class="tutor">[Tutor]</span> Oh, pretty good. Yeah, nice day today too. Do you have any plans for today?
+<span class="student">[Student]</span> Today? Today is a holiday in Korea. Yesterday was my wife&#x27;s birthday, so we had a small party. And today, the weather is perfect, so maybe I will go to the park near my work. Yeah, a small picnic with my family. Yeah, that&#x27;s my plan. And in the afternoon, I go back to my office because, yeah, they expect me on Monday, Sunday night. So I will take a train and then go back. I moved to another area because I have to work tomorrow. Yeah, that&#x27;s my plan today.
+<span class="tutor">[Tutor]</span> Oh, okay. So you&#x27;ll start heading back to your work city.
+<span class="student">[Student]</span> Yeah, I have to get back to my work. You&#x27;re right. I&#x27;m a little afraid because I took off for almost 10 days. So, a lot of work is waiting for me. So, I&#x27;m a little afraid of something. But it&#x27;s okay. I do everything.
+<span class="tutor">[Tutor]</span> Okay. Well, nice break.
+<span class="student">[Student]</span> Yeah.
+<span class="tutor">[Tutor]</span> Hopefully not too much work when you come back.
+<span class="student">[Student]</span> Yes. Yes. Yes.
+<span class="tutor">[Tutor]</span> So did you want to look at the textbook today?
+<span class="student">[Student]</span> Okay. Just a moment, teacher. I can prepare. Just a moment.
+<span class="tutor">[Tutor]</span> Okay, &quot;How do you find the time,&quot; right? &quot;How do you find the time?&quot; This is the subject today. Right?
+<span class="tutor">[Tutor]</span> Yeah, &quot;How do you find the time?&quot; How do you make time? How do you find time? Is it a real question in your country? How do you find time to do something? Or how do you find time in your schedule?
+<span class="tutor">[Tutor]</span> Yes, the goal is to talk about overcoming challenges to stay active. Okay, so this, yeah, did you want to look at the key expressions?
+<span class="student">[Student]</span> Okay, there are two expressions. &quot;Hit a wall&quot; and &quot;power through.&quot; The &quot;hit a wall.&quot; I hit a wall during stress training class last week. She hit a wall halfway through her run and had to stop. He hit the wall but kept pushing forward. I hit the wall so I switched up my workout routine. Maybe it is the, I guess it is a little, I have a problem during the process. Yeah, but yeah, and people change some way and do something. &quot;Hit the wall.&quot;
+<span class="tutor">[Tutor]</span> &quot;Hit the wall,&quot; right?
+<span class="student">[Student]</span> Disturb something. So they hit the wall. So they say...
+<span class="tutor">[Tutor]</span> Something that stops them. And for the example, &quot;He hit a wall but he kept pushing forward.&quot; So he faced something that stopped him, but he kept working.
+<span class="student">[Student]</span> Maybe yeah, I understand a little. So limit something or disturb something. But through it, just disturb, disturb in front of me, right?
+<span class="tutor">[Tutor]</span> &quot;Hit the wall.&quot; But you can just say, &quot;I hit the wall and I had to quit. I had to stop.&quot;
+<span class="student">[Student]</span> Had to stop. Um, okay. &quot;She hit the wall halfway.&quot; I hit the wall during... Just a moment, teacher. I just searched something, &quot;hit the wall.&quot;
+<span class="tutor">[Tutor]</span> So it&#x27;s when you need to stop or when you want to stop.
+<span class="student">[Student]</span> Just a moment. Ah, limit something. Learning to breathe well. Learning to breathe well. Recalibrate. It&#x27;s a... I see. Understand? Okay.
+<span class="tutor">[Tutor]</span> How about the next one?
+<span class="student">[Student]</span> Okay, next expression. &quot;Power through.&quot;
+<span class="student">[Student]</span> &quot;Powers through.&quot; He powers through work even though he won&#x27;t, he wants to keep. He pre-powers through work even though he wants to keep. I was tired but I powered through and finished the race. She powered through the morning workouts. I power through the... So soon is and run anyway. Okay, maybe it is the, how can I say, win something. Maybe in front of the disturbing something, but I will do something. Yeah, even if I powered through, for example, this day I study AI, but I hit a wall, but I powered through. Used another device, right? Or not? Yeah, but I powered through. I kept going. Keep going something. Yeah, keep going. I have a problem but keep going something. Powers through. Hmm.
+<span class="tutor">[Tutor]</span> Okay, and here is today&#x27;s question.
+<span class="tutor">[Tutor]</span> Uh-huh. &quot;How do you stay motivated to exercise?&quot; Answer one, &quot;I remind myself of my goals.&quot; Answer two, &quot;I struggle sometimes, but I power through.&quot;
+<span class="student">[Student]</span> My answer is second. Usually, I work out every Tuesday and sometimes I struggle sometimes but just go to the gym. I power through.
+<span class="tutor">[Tutor]</span> Okay. Kind of making yourself do the routine.
+<span class="student">[Student]</span> Yeah. Because I keep my routine every day.
+<span class="tutor">[Tutor]</span> And how do you stay on track? Do you track your progress with your phone or smartwatch or calendar?
+<span class="student">[Student]</span> Usually I use the calendar in my mobile phone and just usually I set the days. For example, every Tuesday I go to the gym and have to do exercise. And Saturday I will do yoga. Yeah, and sometimes, yeah, I&#x27;m swimming near the beach. So usually my routine is through the day, correct day, and sometimes I write on my mobile phone on the schedule. Yeah, that&#x27;s my way.
+<span class="tutor">[Tutor]</span> So it&#x27;s just part of your routine. You just know it when you need to do it.
+<span class="student">[Student]</span> Yeah, because it is more easy to keep my routine.
+<span class="tutor">[Tutor]</span> Next, we have A, &quot;My story.&quot; Would you like to read and fill in the sentence?
+<span class="student">[Student]</span> Okay, I see. &quot;Sometimes I struggle to stay active because of...&quot; &quot;Sometimes I struggle to stay active because of...&quot; Because of inaccessibility to a gym. Is that right?
+<span class="tutor">[Tutor]</span> Can&#x27;t find a gym?
+<span class="student">[Student]</span> Can&#x27;t find a gym? Just...
+<span class="tutor">[Tutor]</span> Okay.
+<span class="student">[Student]</span> Just... How can I say? Just I don&#x27;t want to do that. How can I say, teacher? Because I&#x27;m tired? Not tired. Just that is the... I don&#x27;t have to go there or I don&#x27;t want to do something because that is so tired and not fun. How can I say? Not fun because every day is the same routine. That is not fun because that is not fun. Right?
+<span class="tutor">[Tutor]</span> Because I don&#x27;t want to.
+<span class="student">[Student]</span> Because I don&#x27;t feel like it. Ah, yes, it&#x27;s better. Because of...
+<span class="tutor">[Tutor]</span> &quot;Don&#x27;t feel like that.&quot;
+<span class="student">[Student]</span> Don&#x27;t feel like that. Well, anyway. I don&#x27;t want to. I don&#x27;t want to. Because of I don&#x27;t want to. Because of I don&#x27;t want to. I realized that do exercise has been holding me back.
+<span class="tutor">[Tutor]</span> I realize... So something that makes you stop working out.
+<span class="student">[Student]</span> Working out. I realize that... That wanting to go back to my home has been holding me back because usually I do exercise after work. So I wanted to go back to my home early, not to go to the gym. So I realized that going back to my home early has been holding me back. Right?
+<span class="tutor">[Tutor]</span> &quot;I realized that wanting to go home early.&quot;
+<span class="student">[Student]</span> Yeah, I realized that going back to my home early has been holding me back. Yeah, I want to go back home after work.
+<span class="tutor">[Tutor]</span> Okay, good.
+<span class="student">[Student]</span> Okay.
+<span class="tutor">[Tutor]</span> And how about number three?
+<span class="student">[Student]</span> &quot;Tracking my progress has made a huge difference in my motivation. It&#x27;s not always easy, but now I make sure to exercise every day, every week.&quot;
+<span class="tutor">[Tutor]</span> Okay. Yeah. Okay. So the next one, B, Mission one. &quot;Have you ever made a big lifestyle change to improve your health?&quot;
+<span class="student">[Student]</span> Maybe that is the section B?
+<span class="tutor">[Tutor]</span> Yes, section B. Mission 1.
+<span class="student">[Student]</span> Mission 1. Okay. Could you repeat the question? Sorry, teacher.
+<span class="tutor">[Tutor]</span> &quot;Have you ever made a big change in lifestyle to improve your health?&quot;
+<span class="student">[Student]</span> Yes, many times. Big change. I think I like the routine and I think the small habit gathering made a big change. So usually I want to keep my habit, good habit, like mind control or do exercise or study AI or some good habit. Usually every lunchtime I do work near the park and mind control, take up to everything, take up to my work. And then that is the gathering that habit, my mind is more peaceful and more wide, more large, more peaceful. So I think that is good, yeah, good change. The small habit made a good change.
+<span class="tutor">[Tutor]</span> Okay. Okay, so small habits over time. And so looking at C, &quot;Which do you prefer, working out or eating healthy?&quot;
+<span class="student">[Student]</span> That is both important because I think eating healthy is so important because these days there are so many foods and bad foods in my body. So we have to control our desire. Is there not limit? So we want to eat everything. And sometimes that is delicious like the trash food, but we will control because our body is so important. And I think I can correct just one, two kinds ways important. And working out is also important. Yeah, in the morning or in the night we will go to the exercise. That is breathe the good air, fresh air, and our body move is the good impact. Yeah, I can correct and I can select just one thing. Two kinds are also important.
+<span class="tutor">[Tutor]</span> And looking at the last one, D, &quot;Digging in deeper.&quot;
+<span class="student">[Student]</span> Yeah, digging in deeper. Okay.
+<span class="tutor">[Tutor]</span> So which reasons for skipping workouts do you relate to the most?
+<span class="student">[Student]</span> Which reasons, skip workouts, do you relate to most? In this paragraph, according to this paragraph, regular leisure time is the main reason because modern people don&#x27;t have enough time. They are so busy and they use the many schedules. So usually we don&#x27;t have enough time for leisure time. So we made some our time to leisure time. Yeah, that&#x27;s the main reason.
+<span class="tutor">[Tutor]</span> Um, yeah, and is that what you relate to? Do you feel a lack of leisure time too?
+<span class="student">[Student]</span> Ah, in my case, I think that is almost concern to my mind if I ever decide something. But sometimes my mind is weak. I just want to take a rest in my home. At that time, it is a little hard to go to the exercise, go to the study, or something. Yeah, just I know, I&#x27;m not sure. Yeah, just it is concern our mind, concern society. Mm-hmm.
+<span class="tutor">[Tutor]</span> The kind of routine you got bored with the routine.
+<span class="student">[Student]</span> Yeah, yeah, bored routine. Yeah, that is right.
+<span class="tutor">[Tutor]</span> And so the last bit, can you remember any expression from today? An explanation? Can you remember any word?
+<span class="student">[Student]</span> Any word. I see. Maybe I understand &quot;power through&quot; and &quot;hit a wall.&quot; Sometimes I&#x27;m hit a wall, blah blah blah, and power through. Yeah, two kinds of words, two kinds of expressions I learned today.
+<span class="tutor">[Tutor]</span> Okay, perfect. I will send you corrections here in just a moment. Have a good day.
+<span class="student">[Student]</span> You too. Have a great day, teacher. Bye-bye.</div>
+        </div>
+    </div>
+    <div class="toast" id="toast">✅ 프롬프트가 복사되었습니다!</div>
+    <script>
+        const REVIEW_PROMPT="너는 나의 영어 회화 복습 파트너야. 오늘 내 전화영어 수업 내용을 기반으로 대화하면서 복습을 도와줘.\n\n[오늘 수업 전사 내용]\n[Tutor] Hello, good morning. Hi.\n[Tutor] Good morning. How are you doing today?\n[Student] Yeah, it's a good day. It's a fresh morning. How was your day?\n[Tutor] Oh, pretty good. Yeah, nice day today too. Do you have any plans for today?\n[Student] Today? Today is a holiday in Korea. Yesterday was my wife's birthday, so we had a small party. And today, the weather is perfect, so maybe I will go to the park near my work. Yeah, a small picnic with my family. Yeah, that's my plan. And in the afternoon, I go back to my office because, yeah, they expect me on Monday, Sunday night. So I will take a train and then go back. I moved to another area because I have to work tomorrow. Yeah, that's my plan today.\n[Tutor] Oh, okay. So you'll start heading back to your work city.\n[Student] Yeah, I have to get back to my work. You're right. I'm a little afraid because I took off for almost 10 days. So, a lot of work is waiting for me. So, I'm a little afraid of something. But it's okay. I do everything.\n[Tutor] Okay. Well, nice break.\n[Student] Yeah.\n[Tutor] Hopefully not too much work when you come back.\n[Student] Yes. Yes. Yes.\n[Tutor] So did you want to look at the textbook today?\n[Student] Okay. Just a moment, teacher. I can prepare. Just a moment.\n[Tutor] Okay, \"How do you find the time,\" right? \"How do you find the time?\" This is the subject today. Right?\n[Tutor] Yeah, \"How do you find the time?\" How do you make time? How do you find time? Is it a real question in your country? How do you find time to do something? Or how do you find time in your schedule?\n[Tutor] Yes, the goal is to talk about overcoming challenges to stay active. Okay, so this, yeah, did you want to look at the key expressions?\n[Student] Okay, there are two expressions. \"Hit a wall\" and \"power through.\" The \"hit a wall.\" I hit a wall during stress training class last week. She hit a wall halfway through her run and had to stop. He hit the wall but kept pushing forward. I hit the wall so I switched up my workout routine. Maybe it is the, I guess it is a little, I have a problem during the process. Yeah, but yeah, and people change some way and do something. \"Hit the wall.\"\n[Tutor] \"Hit the wall,\" right?\n[Student] Disturb something. So they hit the wall. So they say...\n[Tutor] Something that stops them. And for the example, \"He hit a wall but he kept pushing forward.\" So he faced something that stopped him, but he kept working.\n[Student] Maybe yeah, I understand a little. So limit something or disturb something. But through it, just disturb, disturb in front of me, right?\n[Tutor] \"Hit the wall.\" But you can just say, \"I hit the wall and I had to quit. I had to stop.\"\n[Student] Had to stop. Um, okay. \"She hit the wall halfway.\" I hit the wall during... Just a moment, teacher. I just searched something, \"hit the wall.\"\n[Tutor] So it's when you need to stop or when you want to stop.\n[Student] Just a moment. Ah, limit something. Learning to breathe well. Learning to breathe well. Recalibrate. It's a... I see. Understand? Okay.\n[Tutor] How about the next one?\n[Student] Okay, next expression. \"Power through.\"\n[Student] \"Powers through.\" He powers through work even though he won't, he wants to keep. He pre-powers through work even though he wants to keep. I was tired but I powered through and finished the race. She powered through the morning workouts. I power through the... So soon is and run anyway. Okay, maybe it is the, how can I say, win something. Maybe in front of the disturbing something, but I will do something. Yeah, even if I powered through, for example, this day I study AI, but I hit a wall, but I powered through. Used another device, right? Or not? Yeah, but I powered through. I kept going. Keep going something. Yeah, keep going. I have a problem but keep going something. Powers through. Hmm.\n[Tutor] Okay, and here is today's question.\n[Tutor] Uh-huh. \"How do you stay motivated to exercise?\" Answer one, \"I remind myself of my goals.\" Answer two, \"I struggle sometimes, but I power through.\"\n[Student] My answer is second. Usually, I work out every Tuesday and sometimes I struggle sometimes but just go to the gym. I power through.\n[Tutor] Okay. Kind of making yourself do the routine.\n[Student] Yeah. Because I keep my routine every day.\n[Tutor] And how do you stay on track? Do you track your progress with your phone or smartwatch or calendar?\n[Student] Usually I use the calendar in my mobile phone and just usually I set the days. For example, every Tuesday I go to the gym and have to do exercise. And Saturday I will do yoga. Yeah, and sometimes, yeah, I'm swimming near the beach. So usually my routine is through the day, correct day, and sometimes I write on my mobile phone on the schedule. Yeah, that's my way.\n[Tutor] So it's just part of your routine. You just know it when you need to do it.\n[Student] Yeah, because it is more easy to keep my routine.\n[Tutor] Next, we have A, \"My story.\" Would you like to read and fill in the sentence?\n[Student] Okay, I see. \"Sometimes I struggle to stay active because of...\" \"Sometimes I struggle to stay active because of...\" Because of inaccessibility to a gym. Is that right?\n[Tutor] Can't find a gym?\n[Student] Can't find a gym? Just...\n[Tutor] Okay.\n[Student] Just... How can I say? Just I don't want to do that. How can I say, teacher? Because I'm tired? Not tired. Just that is the... I don't have to go there or I don't want to do something because that is so tired and not fun. How can I say? Not fun because every day is the same routine. That is not fun because that is not fun. Right?\n[Tutor] Because I don't want to.\n[Student] Because I don't feel like it. Ah, yes, it's better. Because of...\n[Tutor] \"Don't feel like that.\"\n[Student] Don't feel like that. Well, anyway. I don't want to. I don't want to. Because of I don't want to. Because of I don't want to. I realized that do exercise has been holding me back.\n[Tutor] I realize... So something that makes you stop working out.\n[Student] Working out. I realize that... That wanting to go back to my home has been holding me back because usually I do exercise after work. So I wanted to go back to my home early, not to go to the gym. So I realized that going back to my home early has been holding me back. Right?\n[Tutor] \"I realized that wanting to go home early.\"\n[Student] Yeah, I realized that going back to my home early has been holding me back. Yeah, I want to go back home after work.\n[Tutor] Okay, good.\n[Student] Okay.\n[Tutor] And how about number three?\n[Student] \"Tracking my progress has made a huge difference in my motivation. It's not always easy, but now I make sure to exercise every day, every week.\"\n[Tutor] Okay. Yeah. Okay. So the next one, B, Mission one. \"Have you ever made a big lifestyle change to improve your health?\"\n[Student] Maybe that is the section B?\n[Tutor] Yes, section B. Mission 1.\n[Student] Mission 1. Okay. Could you repeat the question? Sorry, teacher.\n[Tutor] \"Have you ever made a big change in lifestyle to improve your health?\"\n[Student] Yes, many times. Big change. I think I like the routine and I think the small habit gathering made a big change. So usually I want to keep my habit, good habit, like mind control or do exercise or study AI or some good habit. Usually every lunchtime I do work near the park and mind control, take up to everything, take up to my work. And then that is the gathering that habit, my mind is more peaceful and more wide, more large, more peaceful. So I think that is good, yeah, good change. The small habit made a good change.\n[Tutor] Okay. Okay, so small habits over time. And so looking at C, \"Which do you prefer, working out or eating healthy?\"\n[Student] That is both important because I think eating healthy is so important because these days there are so many foods and bad foods in my body. So we have to control our desire. Is there not limit? So we want to eat everything. And sometimes that is delicious like the trash food, but we will control because our body is so important. And I think I can correct just one, two kinds ways important. And working out is also important. Yeah, in the morning or in the night we will go to the exercise. That is breathe the good air, fresh air, and our body move is the good impact. Yeah, I can correct and I can select just one thing. Two kinds are also important.\n[Tutor] And looking at the last one, D, \"Digging in deeper.\"\n[Student] Yeah, digging in deeper. Okay.\n[Tutor] So which reasons for skipping workouts do you relate to the most?\n[Student] Which reasons, skip workouts, do you relate to most? In this paragraph, according to this paragraph, regular leisure time is the main reason because modern people don't have enough time. They are so busy and they use the many schedules. So usually we don't have enough time for leisure time. So we made some our time to leisure time. Yeah, that's the main reason.\n[Tutor] Um, yeah, and is that what you relate to? Do you feel a lack of leisure time too?\n[Student] Ah, in my case, I think that is almost concern to my mind if I ever decide something. But sometimes my mind is weak. I just want to take a rest in my home. At that time, it is a little hard to go to the exercise, go to the study, or something. Yeah, just I know, I'm not sure. Yeah, just it is concern our mind, concern society. Mm-hmm.\n[Tutor] The kind of routine you got bored with the routine.\n[Student] Yeah, yeah, bored routine. Yeah, that is right.\n[Tutor] And so the last bit, can you remember any expression from today? An explanation? Can you remember any word?\n[Student] Any word. I see. Maybe I understand \"power through\" and \"hit a wall.\" Sometimes I'm hit a wall, blah blah blah, and power through. Yeah, two kinds of words, two kinds of expressions I learned today.\n[Tutor] Okay, perfect. I will send you corrections here in just a moment. Have a good day.\n[Student] You too. Have a great day, teacher. Bye-bye.\n\n[AI 피드백]\nJoey, 안녕하세요! 오늘 아침 대화도 활기차고 좋았습니다. 휴가 후 업무 복귀에 대한 걱정부터 운동 습관, 건강한 식단까지 다양한 이야기를 나누며 Joey의 일상과 생각을 엿볼 수 있었네요. 특히 'hit a wall'과 'power through' 같은 새로운 표현을 이해하고 자신의 상황에 적용하려는 노력이 돋보였습니다!\n\n---\n\n**0. 📌 Topic**\nTopic: Discussing daily routines, health habits, and overcoming challenges to stay active.\n\n---\n\n**1. 📊 오늘의 대화 요약 (Summary)**\n오늘은 Joey의 휴가 계획과 복귀 후 밀린 업무에 대한 이야기로 시작하여, 'hit a wall'과 'power through' 두 가지 핵심 표현을 학습했습니다. 이어서 운동 동기를 유지하는 방법, 건강을 위한 라이프스타일 변화, 그리고 운동을 거르는 이유 등에 대해 깊이 있는 대화를 나누며 Joey의 자기 관리 습관을 엿볼 수 있었습니다.\n\n---\n\n**2. 💬 유창성 업그레이드 (Fluency & Natural Flow)**\nJoey가 말한 문장 중 의미는 통하지만, 원어민이 들었을 때 조금 더 자연스럽게 들릴 수 있는 표현들을 살펴볼까요?\n\n1.  **❌ 학습자 원문 (As Said):** \"I'm a little afraid of something.\" (밀린 업무에 대해 언급하며)\n    *   **✅ 자연스러운 표현 (Natural):** \"I'm a little **worried about** all the work waiting for me.\"\n    *   **💎 비즈니스 표현 (Professional):** \"I'm a bit **apprehensive about** the workload awaiting my return.\"\n    *   **💡 코칭 포인트:** Using 'worried about' is more natural when expressing concern about future tasks or situations, whereas 'afraid of' usually implies fear of danger or harm. → 'worried about'은 미래의 일이나 상황에 대한 걱정을 표현할 때 더 자연스럽고, 'afraid of'는 보통 위험이나 해로움에 대한 두려움을 의미합니다.\n\n2.  **❌ 학습자 원문 (As Said):** \"I do everything.\" (밀린 업무를 어떻게 처리할지에 대해)\n    *   **✅ 자연스러운 표현 (Natural):** \"I'll **handle everything**.\" 또는 \"I'll **get it all done**.\"\n    *   **💎 비즈니스 표현 (Professional):** \"I'll **manage all the tasks**.\" 또는 \"I'll **take care of everything**.\"\n    *   **💡 코칭 포인트:** 'I do everything'은 너무 직설적이거나 때로는 자랑처럼 들릴 수 있습니다. 'Handle everything' 또는 'get it all done'은 책임을 지고 업무를 완료하겠다는 의미를 더 자연스럽게 전달합니다.\n\n3.  **❌ 학습자 원문 (As Said):** \"I have a problem but keep going something.\" ('power through'를 설명하며)\n    *   **✅ 자연스러운 표현 (Natural):** \"I have a problem, but I **keep going**.\"\n    *   **💎 비즈니스 표현 (Professional):** \"Despite facing an obstacle, I **persevere**.\"\n    *   **💡 코칭 포인트:** 'keep going something'이라고 하면 'something'이 불필요해서 어색하게 들립니다. 'Keep going' 자체가 완전하고 자연스러운 표현입니다. 'Persevere'는 훌륭한 비즈니스 대안입니다.\n\n4.  **❌ 학습자 원문 (As Said):** \"I moved to another area because I have to work tomorrow.\" (휴가 중 다른 지역에 머물고 있음을 설명하며)\n    *   **✅ 자연스러운 표현 (Natural):** \"I'm **staying in** another area because I have to work tomorrow.\" 또는 \"I **traveled to** another area because I have to work tomorrow.\"\n    *   **💡 코칭 포인트:** 'I moved to another area'는 영구적으로 이사했다는 의미로 들릴 수 있습니다. 일시적으로 다른 지역에 머무는 상황을 설명할 때는 'staying in' 또는 'traveled to'가 더 적절합니다. → 'I moved to another area'는 영구적인 이사를 의미할 수 있습니다. 일시적으로 다른 지역에 머무는 상황에서는 'staying in' 또는 'traveled to'가 더 자연스럽습니다.\n\n---\n\n**3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)**\nCategory: **Incorrect use of infinitives and gerunds (동명사와 부정사 혼동)**\n\nJoey는 동사를 명사처럼 사용해야 할 때, to 부정사나 동명사 대신 동사 원형을 사용하거나, 동명사 형태를 어색하게 사용하는 경향이 있었습니다. 특히 문장의 주어나 전치사의 목적어로 동사를 쓸 때 이 패턴이 반복되었습니다.\n\n| ❌ 원문 (Original)                                   | ✅ 교정 예시 (Corrected)                                         |\n| :--------------------------------------------------- | :------------------------------------------------------------- |\n| \"I realized that **do exercise** has been holding me back.\" | \"I realized that **doing exercise** has been holding me back.\" |\n| \"our **body move** is the good impact.\"              | \"our **body moving** has a good impact.\"                       |\n| \"I think I can correct just one, **two kinds ways** important.\" | \"I think I can select just one, **both ways are** important.\" |\n| \"I'm somewhat apprehensive about **handling** the accumulated workload after my vacation.\" | (고급 영작 챌린지 모범 답안에 포함된 예시로, `handling`이 올바른 동명사 사용을 보여줍니다.) |\n\n📌 **핵심 규칙:** 동사를 명사처럼 주어나 목적어로 사용할 때는 동명사(-ing) 형태를 쓰거나, to 부정사를 활용하여 명사적 용법으로 사용해야 합니다.\n\n🔁 **따라 읽기:**\n🗣️ \"I realized that **doing exercise** has been holding me back.\"\n🗣️ \"Our **body moving** has a good impact.\"\n🗣️ \"I think I can select just one, **both ways are** important.\"\n\n---\n\n**4. 📗 어휘 확장 (Vocabulary Vault)**\n오늘 대화에서 Joey의 비즈니스 환경에 유용할 만한 어휘들을 정리해 보았습니다.\n\n1.  **apprehensive** /ˌæprɪˈhɛnsɪv/ (형용사)\n    *   뜻: 걱정하는, 염려하는\n    *   실전 예문: I'm a bit **apprehensive** about presenting our new strategy to the board next week.\n\n2.  **persevere** /ˌpɜːrsɪˈvɪər/ (동사)\n    *   뜻: 인내하다, 굴하지 않고 계속하다\n    *   실전 예문: We must **persevere** through these market challenges to achieve our long-term goals.\n\n3.  **recalibrate** /ˌriːˈkælɪbreɪt/ (동사)\n    *   뜻: (계획, 시스템 등을) 재조정하다, 재측정하다\n    *   실전 예문: After reviewing the quarterly results, we need to **recalibrate** our sales targets.\n\n4.  **inaccessibility** /ɪnˌæksɛsəˈbɪlɪti/ (명사)\n    *   뜻: 접근 불가능, 이용하기 어려움\n    *   실전 예문: The **inaccessibility** of raw materials has significantly impacted our production schedule.\n\n5.  **leisure time** /ˈliːʒər taɪm/ (명사)\n    *   뜻: 여가 시간\n    *   실전 예문: Balancing work and **leisure time** is crucial for employee well-being and productivity.\n\n---\n\n**5. 📝 실전 복습 챌린지 (Practice)**\n오늘 배운 표현과 문법을 활용하여 다음 문장들을 영작해 보세요.\n\n1.  **초급:** 다음 주 회의에 대해 조금 걱정됩니다.\n    *   모범 답안: I'm a little **worried about** the meeting next week.\n\n2.  **중급:** 예상치 못한 문제에 부딪혔지만, 우리는 목표를 달성하기 위해 인내해야 합니다.\n    *   모범 답안: We **hit a wall** with an unexpected issue, but we must **power through** to achieve our goals.\n\n3.  **고급:** 저는 휴가 후 밀린 업무량을 처리하는 것에 대해 다소 염려하고 있지만, 모든 것을 잘 관리할 것이라고 확신합니다.\n    *   모범 답안: I'm somewhat **apprehensive about** **handling** the accumulated workload after my vacation, but I'm confident I'll **manage everything** well.\n\n---\n\n**6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)**\n\n✨ **Good Job**:\nJoey는 자신의 일상 루틴과 습관에 대해 설명할 때 매우 구체적이고 자연스럽게 표현했습니다.\n\"Usually I use the calendar in my mobile phone and just usually I set the days. For example, every Tuesday I go to the gym and have to do exercise. And Saturday I will do yoga.\"\n이 문장은 Joey가 자신의 루틴을 얼마나 잘 지키고 있는지, 그리고 어떤 방식으로 관리하는지를 명확하고 유창하게 전달했습니다. 'set the days'라는 표현도 자신의 스케줄을 계획하는 의미로 아주 잘 사용했습니다!\n\n🚀 **내일의 한 문장**:\n다음 수업 시작 시, 오늘 배운 표현을 활용하여 튜터에게 이렇게 말해보세요!\n\"I'm ready to **power through** today's lesson, even if I **hit a wall**!\"\n\n---\n\n**[성과 지표]**\n**유창성 점수**: 7.5/10\n\n**근거**: Joey는 자신의 생각을 비교적 막힘없이 전달하며 대화의 흐름을 잘 이어갔습니다. 새로운 표현의 의미를 파악하려는 적극적인 태도도 좋았습니다. 다만, 특정 문법 오류(특히 동명사/부정사 사용)와 어색한 표현들이 간헐적으로 나타나 유창성 점수에 약간 영향을 주었습니다. 자연스러운 표현을 위한 어휘 선택과 문장 구조를 조금 더 다듬는다면 훨씬 더 유창하게 들릴 것입니다.\n\n**다음 수업 '원포인트 액션 플랜'**:\n다음 수업에서는 **동사를 명사처럼 사용할 때 동명사(-ing) 형태를 활용하는 연습**에 집중해 봅시다. 예를 들어, \"I enjoy **reading**\"이나 \"**Learning** English is fun\"처럼 동명사를 주어나 목적어로 사용하는 문장을 의식적으로 만들어보는 연습을 해볼 거예요.\n\n위 내용을 바탕으로:\n1. 먼저 오늘 수업에서 내가 틀렸거나 어색했던 표현을 하나 골라서, 관련된 상황을 영어로 질문해줘.\n2. 내가 영어로 대답하면, 자연스러운지 확인하고 더 나은 표현이 있으면 알려줘.\n3. 특히 \"반복 실수 패턴\"에서 지적된 부분을 집중적으로 연습시켜줘.\n4. 이런 식으로 오늘 배운 표현들을 하나씩 복습하자.\n5. 한국어 설명은 필요할 때만 간단히, 대화는 최대한 영어로 진행해줘.\n\n그럼 시작하자!";
+        function startReview(){navigator.clipboard.writeText(REVIEW_PROMPT).then(()=>{showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)}).catch(()=>{const t=document.createElement('textarea');t.value=REVIEW_PROMPT;document.body.appendChild(t);t.select();document.execCommand('copy');document.body.removeChild(t);showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)})}
+        function showToast(){const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500)}
+        function switchTab(n){document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',n==='feedback'?i===0:i===1));document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));document.getElementById('tab-'+n).classList.add('active')}
+    </script>
+</body>
+</html>
