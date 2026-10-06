@@ -1,0 +1,61 @@
+{
+ "date": "2026-10-06",
+ "iso": [
+  2026,
+  41
+ ],
+ "topic": "Discussing shopping preferences, buyer's remorse, and descriptive adjectives for stores.",
+ "grammar": "Noun/Adjective Form Confusion",
+ "grammar_norm": "Noun/Adjective Form Confusion",
+ "score": 7.5,
+ "pairs": [
+  {
+   "said": "I think that's meaning is buyer regret.",
+   "natural": "I think its meaning is buyer's regret."
+  },
+  {
+   "said": "Before the next go on, I have a question about the remorse.",
+   "natural": "Before we move on, I have a question about remorse."
+  },
+  {
+   "said": "I love the classic and upscale store because it gives comfort for me.",
+   "natural": "I love classic and upscale stores because they give me comfort."
+  },
+  {
+   "said": "I like shopping in store because I can try thing on.",
+   "natural": "I like shopping in-store because I can try things on."
+  },
+  {
+   "said": "I shop online most of the time. It save times.",
+   "natural": "I shop online most of the time. It saves time."
+  }
+ ],
+ "vocab": [
+  {
+   "word": "remorse",
+   "pos": "n",
+   "meaning": "후회, 회한"
+  },
+  {
+   "word": "bricks-and-mortar",
+   "pos": "adj",
+   "meaning": "(온라인과 대비되는) 오프라인의, 실제 건물이 있는"
+  },
+  {
+   "word": "upscale",
+   "pos": "adj",
+   "meaning": "고급의, 고품격의"
+  },
+  {
+   "word": "diverse",
+   "pos": "adj",
+   "meaning": "다양한"
+  },
+  {
+   "word": "competitive",
+   "pos": "adj",
+   "meaning": "경쟁력 있는, 경쟁적인"
+  }
+ ],
+ "_html_md5": "1bd8a98090a7cdb4f7302997778902d3"
+}
