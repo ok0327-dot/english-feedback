@@ -1,0 +1,48 @@
+{
+ "date": "2026-10-07",
+ "iso": [
+  2026,
+  41
+ ],
+ "topic": "Discussing personal desires and shopping habits using key expressions like \"been eyeing\" a",
+ "grammar": "Missing Articles",
+ "grammar_norm": "Articles (a/an/the)",
+ "score": 7.5,
+ "pairs": [
+  {
+   "said": "Because another room alarm woke me up. So I can't sleep after the alarm.",
+   "natural": "Another alarm from a different room woke me up, so I couldn't go back to sleep."
+  },
+  {
+   "said": "These days I have been eyeing the Mac Mini, an Apple product, because these days it is possible to turn on always in my home and possible to remote control AI.",
+   "natural": "These days, I've been eyeing the Mac Mini, an Apple product, because it can always be on at home and I can remotely control AI with it."
+  },
+  {
+   "said": "I need to figure out a little more. And I wait for the sale periods for this product, for this company.",
+   "natural": "I need to do a bit more research. I'm also waiting for this product to go on sale."
+  }
+ ],
+ "vocab": [
+  {
+   "word": "conduct",
+   "pos": "v.",
+   "meaning": "(특정한 활동을) 수행하다, 실시하다"
+  },
+  {
+   "word": "innovative",
+   "pos": "adj.",
+   "meaning": "혁신적인, 획기적인"
+  },
+  {
+   "word": "abandon",
+   "pos": "v.",
+   "meaning": "(계획, 생각 등을) 포기하다, (물건을) 버리다"
+  },
+  {
+   "word": "constraint",
+   "pos": "n.",
+   "meaning": "제약, 제한"
+  }
+ ],
+ "_html_md5": "19c04d4192b8346fbf683081054465e2"
+}

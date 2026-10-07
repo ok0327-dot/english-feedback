@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#0f0f13"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="당근영어"><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="icon" type="image/png" sizes="192x192" href="icon-192.png"><script src="install-banner.js" defer></script><script src="sw-reg.js" defer></script>
+    <title>전화영어 복습 - 2026년 10월 07일</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Noto Sans KR',sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.75;min-height:100vh}
+        .header{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);border-bottom:1px solid rgba(255,255,255,.06);padding:48px 24px 40px;text-align:center}
+        .header-date{font-size:13px;color:#94a3b8;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+        .header h1{font-size:28px;font-weight:700;color:#f1f5f9;margin-bottom:16px}
+        .header-meta{display:flex;justify-content:center;gap:24px;font-size:14px;color:#64748b}
+        .header-meta span{display:flex;align-items:center;gap:6px}
+        .cta-section{text-align:center;padding:40px 24px}
+        .cta-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:linear-gradient(135deg,#38bdf8,#818cf8);color:#fff;font-size:16px;font-weight:600;font-family:'Noto Sans KR',sans-serif;border:none;border-radius:50px;cursor:pointer;transition:all .3s;text-decoration:none;box-shadow:0 4px 24px rgba(56,189,248,.25)}
+        .cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(56,189,248,.35)}
+        .cta-btn svg{width:20px;height:20px}
+        .cta-sub{margin-top:12px;font-size:13px;color:#64748b}
+        .toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#38bdf8;padding:14px 28px;border-radius:12px;font-size:14px;font-weight:500;border:1px solid rgba(56,189,248,.2);box-shadow:0 8px 32px rgba(0,0,0,.4);opacity:0;transition:all .4s cubic-bezier(.16,1,.3,1);z-index:1000}
+        .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+        .container{max-width:720px;margin:0 auto;padding:0 24px 80px}
+        .tabs{display:flex;gap:4px;background:#1a1a24;padding:4px;border-radius:12px;margin-bottom:32px}
+        .tab{flex:1;padding:12px;text-align:center;font-size:14px;font-weight:500;color:#64748b;background:0 0;border:none;border-radius:8px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all .2s}
+        .tab.active{background:#262636;color:#f1f5f9}
+        .tab-content{display:none}.tab-content.active{display:block}
+        .feedback h2{font-size:18px;font-weight:700;color:#f1f5f9;margin:36px 0 16px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.06)}
+        .feedback h2:first-child{margin-top:0}
+        .feedback p{margin:8px 0;color:#cbd5e1}
+        .feedback .item{padding:6px 0 6px 16px;border-left:2px solid #334155;margin:6px 0;color:#cbd5e1}
+        .feedback .numbered{padding:8px 0 8px 16px;color:#cbd5e1}
+        .feedback .numbered strong{color:#38bdf8}
+        .feedback strong{color:#f1f5f9}
+        .feedback code{background:#1e293b;padding:2px 8px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#38bdf8}
+        .feedback table{width:100%;border-collapse:collapse;margin:12px 0}
+        .feedback th,.feedback td{padding:10px 14px;text-align:left;border-bottom:1px solid #262636}
+        .feedback th{color:#94a3b8;font-weight:500;font-size:13px}
+        .feedback td{color:#cbd5e1}
+        .arrow{color:#38bdf8;font-weight:700}
+        .transcript{background:#1a1a24;border-radius:12px;padding:28px;font-size:14px;line-height:2;color:#94a3b8;white-space:pre-wrap;word-break:break-word;font-family:'JetBrains Mono','Noto Sans KR',monospace}
+        .transcript .tutor{color:#38bdf8}
+        .transcript .student{color:#a78bfa}
+        @media(max-width:640px){.header{padding:32px 16px}.header h1{font-size:22px}.cta-btn{padding:14px 28px;font-size:15px}.container{padding:0 16px 60px}}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-date">2026년 10월 07일</div>
+        <h1>📚 전화영어 복습</h1>
+        <div class="header-meta">
+            <span>⏱ 20분 12초</span>
+            <span>🎙 전화영어_025180304_20261007080016.m4a</span>
+        </div>
+    </div>
+    <div class="cta-section">
+        <button class="cta-btn" onclick="startReview()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Gemini에서 복습 대화 시작하기
+        </button>
+        <div class="cta-sub">클릭하면 프롬프트가 복사되고 Gemini가 열립니다</div>
+    </div>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('feedback')">📋 AI 피드백</button>
+            <button class="tab" onclick="switchTab('transcript')">🎙 수업 전사</button>
+        </div>
+        <div id="tab-feedback" class="tab-content active">
+            <div class="feedback"><p>안녕하세요, Joey! 오늘도 활기찬 하루를 영어로 시작해주셔서 감사합니다. Mac Mini와 겨울 준비에 대한 이야기를 나누며, 'been eyeing'과 'fixated on' 같은 유용한 표현들을 자연스럽게 사용하시는 모습이 정말 인상 깊었어요. Joey의 영어 실력 향상을 위해 따뜻하고 실용적인 피드백을 준비했습니다. 함께 살펴볼까요?</p>
+<br>
+<br>
+<p><strong>0. 📌 Topic</strong></p>
+<p>Topic: Discussing personal desires and shopping habits using key expressions like "been eyeing" and "fixated on."</p>
+<br>
+<p><strong>1. 📊 오늘의 대화 요약 (Summary)</strong></p>
+<p>오늘 Joey는 최근 눈여겨보고 있는 Apple Mac Mini에 대한 이야기로 대화를 시작했어요. 이어서 'been eyeing'과 'fixated on'이라는 핵심 표현들을 활용하여 겨울 의류 쇼핑 계획, 가죽 지갑 구매 희망 등 다양한 쇼핑 경험과 선호도를 구체적으로 설명했습니다. 온라인 쇼핑과 오프라인 매장 쇼핑의 장단점도 비교하며 깊이 있는 대화를 나눴습니다.</p>
+<br>
+<p><strong>2. 💬 유창성 업그레이드 (Fluency & Natural Flow)</strong></p>
+<p>Joey가 말한 문장 중 의미는 통하지만, 원어민이 들었을 때 좀 더 자연스럽게 들릴 수 있는 표현들을 함께 다듬어 볼게요.</p>
+<br>
+<div class="numbered"><strong>1.</strong> ❌ <strong>As Said</strong>: "Because another room alarm woke me up. So I can't sleep after the alarm."</div>
+<p>✅ <strong>Natural</strong>: "Another alarm from a different room woke me up, so I couldn't go back to sleep."</p>
+<p>💎 <strong>Professional</strong>: "An alarm from an adjacent room disrupted my sleep, preventing me from returning to slumber."</p>
+<p>💡 <strong>코칭 포인트</strong>: Using "from a different room" clarifies the source of the alarm, and "couldn't go back to sleep" is a more natural way to express the inability to sleep further. (과거에 잠들지 못한 상황이므로 'can't' 대신 'couldn't'를 사용하는 것이 더 정확합니다.)</p>
+<p><span class="arrow">→</span> "from a different room"을 사용하면 알람의 출처가 더 명확해지고, "couldn't go back to sleep"은 더 이상 잠들 수 없었음을 자연스럽게 표현합니다. (과거 시제 사용에 유의하세요.)</p>
+<br>
+<div class="numbered"><strong>2.</strong> ❌ <strong>As Said</strong>: "These days I have been eyeing the Mac Mini, an Apple product, because these days it is possible to turn on always in my home and possible to remote control AI."</div>
+<p>✅ <strong>Natural</strong>: "These days, I've been eyeing the Mac Mini, an Apple product, because it can always be on at home and I can remotely control AI with it."</p>
+<p>💎 <strong>Professional</strong>: "I've recently been considering the Mac Mini, an Apple product, primarily due to its always-on capability and its potential for remote AI control within my home."</p>
+<p>💡 <strong>코칭 포인트</strong>: "It is possible to turn on always"는 다소 어색하게 들립니다. "It can always be on" 또는 "its always-on capability"가 더 간결하고 자연스럽습니다. 또한 "possible to remote control AI"보다 "remotely control AI"가 더 직접적인 표현입니다.</p>
+<p><span class="arrow">→</span> "it is possible to turn on always"는 다소 어색하게 들립니다. "it can always be on" 또는 "its always-on capability"가 더 간결하고 자연스럽습니다. 또한 "possible to remote control AI"보다 "remotely control AI"가 더 직접적인 표현입니다.</p>
+<br>
+<div class="numbered"><strong>3.</strong> ❌ <strong>As Said</strong>: "I need to figure out a little more. And I wait for the sale periods for this product, for this company."</div>
+<p>✅ <strong>Natural</strong>: "I need to do a bit more research. I'm also waiting for this product to go on sale."</p>
+<p>💎 <strong>Professional</strong>: "Further investigation is required. Additionally, I am anticipating a sales period for this particular product."</p>
+<p>💡 <strong>코칭 포인트</strong>: "Figure out a little more"도 좋지만, 구매 결정을 이야기할 때는 "do a bit more research"가 흔하고 자연스러운 대안입니다. "Wait for the sale periods for this product"도 이해는 되지만, "wait for this product to go on sale"이 더 일반적이고 자연스러운 표현입니다.</p>
+<p><span class="arrow">→</span> "figure out a little more"도 좋지만, 구매 결정을 이야기할 때는 "do a bit more research"가 흔하고 자연스러운 대안입니다. "wait for the sale periods for this product"도 이해는 되지만, "wait for this product to go on sale"이 더 일반적이고 자연스러운 표현입니다.</p>
+<br>
+<p><strong>3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)</strong></p>
+<p>Category: <strong>Missing Articles (a/an/the)</strong></p>
+<br>
+<p>Joey는 대화 중 명사 앞에 필요한 관사(a/an/the)를 종종 생략하는 경향이 있었습니다. 관사는 영어에서 명사의 특정성이나 일반성을 나타내는 중요한 요소이므로, 올바른 사용은 문장의 정확성을 높이는 데 필수적입니다.</p>
+<br>
+<table>
+<tr><th>❌ 원문 (As Said)</th><th>✅ 교정 예시 (Corrected)</th></tr>
+<tr><td>I prepare <strong>audit</strong>, internal audit for other companies.</td><td>I prepare <strong>an audit</strong>, <strong>an internal audit</strong> for other companies.</td></tr>
+<tr><td>I just abandon <strong>item</strong> in my cart.</td><td>I just abandon <strong>an item</strong> in my cart.</td></tr>
+<tr><td>design of new wallet</td><td><strong>the design</strong> of <strong>a new wallet</strong></td></tr>
+<tr><td>I will buy <strong>clothing</strong> and <strong>electronics</strong>.</td><td>I will buy <strong>clothing</strong> and <strong>electronics</strong>. (복수 명사 앞에는 관사가 필요 없지만, 단수였다면 'a piece of clothing' 또는 'an electronic device'가 필요)</td></tr>
+</table>
+<br>
+<p>📌 <strong>핵심 규칙</strong>: 셀 수 있는 명사(countable noun)가 단수로 쓰일 때는 반드시 관사(a/an/the)를 붙여주세요. 특정하지 않은 일반적인 것을 말할 때는 'a'나 'an'을, 특정하거나 이미 언급된 것을 말할 때는 'the'를 사용합니다.</p>
+<br>
+<p>🔁 <strong>따라 읽기</strong>:</p>
+<p>🗣️ "I prepare an audit, an internal audit for other companies."</p>
+<p>🗣️ "I just abandon an item in my cart."</p>
+<p>🗣️ "I'm fixated on the design of a new wallet."</p>
+<br>
+<p><strong>4. 📗 어휘 확장 (Vocabulary Vault)</strong></p>
+<p>오늘 대화에서 나왔거나 Joey의 비즈니스 환경에 유용할 어휘들을 살펴볼게요.</p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>conduct</strong> /kənˈdʌkt/ (v.)</div>
+<div class="item">뜻: (특정한 활동을) 수행하다, 실시하다</div>
+<div class="item">실전 예문: Our team needs to <strong>conduct</strong> a thorough market analysis before launching the new product.</div>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>innovative</strong> /ˈɪnəveɪtɪv/ (adj.)</div>
+<div class="item">뜻: 혁신적인, 획기적인</div>
+<div class="item">실전 예문: We are always looking for <strong>innovative</strong> solutions to improve our energy efficiency.</div>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>specifications (specs)</strong> /ˌspesɪfɪˈkeɪʃənz/ (n.)</div>
+<div class="item">뜻: 사양, 명세서 (주로 제품의 기술적 특성을 나타냄)</div>
+<div class="item">실전 예문: Please check the product <strong>specifications</strong> carefully to ensure it meets our requirements.</div>
+<br>
+<div class="numbered"><strong>4.</strong> <strong>abandon</strong> /əˈbændən/ (v.)</div>
+<div class="item">뜻: (계획, 생각 등을) 포기하다, (물건을) 버리다</div>
+<div class="item">실전 예문: We had to <strong>abandon</strong> the project due to unforeseen budget constraints.</div>
+<br>
+<div class="numbered"><strong>5.</strong> <strong>constraint</strong> /kənˈstreɪnt/ (n.)</div>
+<div class="item">뜻: 제약, 제한</div>
+<div class="item">실전 예문: Financial <strong>constraints</strong> often limit our investment opportunities.</div>
+<br>
+<p><strong>5. 📝 실전 복습 챌린지 (Practice)</strong></p>
+<p>오늘 배운 표현과 문법을 활용하여 영작 연습을 해볼까요?</p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>[쉬움]</strong> 저는 최근 새로운 투자 기회를 눈여겨보고 있습니다.</div>
+<div class="item">모범 답안: I've recently <strong>been eyeing</strong> new investment opportunities.</div>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>[중간]</strong> 우리는 다음 분기에 내부 감사를 실시할 계획이며, 이를 위해 철저한 준비가 필요합니다.</div>
+<div class="item">모범 답안: We plan to <strong>conduct an internal audit</strong> next quarter, and it requires thorough preparation.</div>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>[어려움]</strong> 예산 제약 때문에 그 혁신적인 프로젝트를 포기해야 했지만, 우리는 여전히 더 효율적인 솔루션을 찾고 있습니다.</div>
+<div class="item">모범 답안: We had to <strong>abandon</strong> that <strong>innovative</strong> project due to budget <strong>constraints</strong>, but we are still looking for more efficient solutions.</div>
+<br>
+<p><strong>6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)</strong></p>
+<br>
+<p>✨ <strong>Good Job</strong>:</p>
+<p>Joey가 오늘 가장 잘 표현한 문장은 바로 이것입니다:</p>
+<p>"I'm fixated on, I have been eyeing a new wallet. That is a leather wallet and design of new wallet, and that is so expensive."</p>
+<p>이 문장은 'fixated on'과 'been eyeing'이라는 핵심 표현을 자연스럽게 연결하여 Joey가 무엇에 관심을 가지고 있는지 명확하게 전달했습니다. 비록 관사 사용에 작은 오류가 있었지만, 두 표현을 동시에 활용하려는 시도와 의미 전달력은 매우 좋았습니다!</p>
+<br>
+<p>🚀 <strong>내일의 한 문장</strong>:</p>
+<p>다음 수업 시작 시, 오늘 배운 표현을 활용하여 튜터에게 이렇게 말해보세요.</p>
+<p>"I've been eyeing a new book on investment, and I'm quite fixated on finishing it this week."</p>
+<p>(새로운 투자 서적을 눈여겨보고 있는데, 이번 주에 끝내려고 마음먹고 있어요.)</p>
+<br>
+<br>
+<p><strong>[성과 지표]</strong></p>
+<p><strong>유창성 점수</strong>: 7.5/10</p>
+<br>
+<p><strong>근거</strong>: Joey는 수업 주제와 관련된 핵심 표현들('been eyeing', 'fixated on', 'obsessing over')을 잘 이해하고 대화에 적극적으로 활용했습니다. 전반적인 의사소통은 매우 원활하며, 자신의 생각과 경험을 구체적으로 설명하는 능력이 뛰어납니다. 다만, 문장 연결이나 일부 구문에서 한국어 직역투가 느껴지거나 반복적인 표현을 사용하는 경향이 있어 유창성의 자연스러움을 조금 더 높일 수 있습니다. 관사 사용과 전치사 선택에서 일부 오류가 있었지만, 이는 의미 전달에 큰 방해를 주지는 않았습니다.</p>
+<br>
+<p><strong>다음 수업 '원포인트 액션 플랜'</strong>:</p>
+<p>다음 수업에서는 <strong>"관사 (a/an/the) 사용"</strong>에 조금 더 집중하여 연습해볼까요? 특히 셀 수 있는 단수 명사 앞에 관사를 빠뜨리지 않고 사용하는 연습을 해보면 Joey의 문장이 훨씬 더 정확하고 자연스럽게 들릴 거예요. 오늘 배운 어휘와 표현들을 활용하여 문장을 만들 때 관사 사용에 한 번 더 신경 써보는 것을 추천합니다!</p>
+<br>
+<p>Joey, 오늘도 정말 수고 많으셨습니다! 꾸준히 노력하는 Joey의 모습이 정말 멋져요. 다음 수업에서 더 성장한 모습으로 만나요!</p></div>
+        </div>
+        <div id="tab-transcript" class="tab-content">
+            <div class="transcript"><span class="student">[Student]</span> Hello, Bell. Happy Wednesday.
+<span class="tutor">[Tutor]</span> Yeah, hi. How are you doing today?
+<span class="student">[Student]</span> I&#x27;m doing great. Yeah, I woke up a little early, so a little tired. Because another room alarm woke me up. So I can&#x27;t sleep after the alarm. So, yeah, a little tired, but it&#x27;s okay. It&#x27;s a fresh day. How was your day?
+<span class="tutor">[Tutor]</span> Oh, yeah, pretty good. Yeah, pretty nice weather, sunny today. Yeah, pretty nice. What&#x27;s the temperature these days? A little chilly?
+<span class="student">[Student]</span> About 18.
+<span class="tutor">[Tutor]</span> 18, I see. A little chilly.
+<span class="student">[Student]</span> Okay.
+<span class="tutor">[Tutor]</span> Any plans for today?
+<span class="student">[Student]</span> Today is a normal day. I will go to work and I prepare some new audits because this year I have to conduct an audit and the last audit has started, so I prepare the audit, internal audit for other companies. Yeah, that&#x27;s my plan.
+<span class="tutor">[Tutor]</span> Oh, okay. So, pretty busy with work with the audit.
+<span class="student">[Student]</span> Yeah, you&#x27;re right. You&#x27;re right. I prepare reports and interviews, etc. So, yeah, I prepare. I will prepare. Anyway.
+<span class="tutor">[Tutor]</span> So did you want to look at today&#x27;s topic or the textbook?
+<span class="student">[Student]</span> Oh yes, I prepared and today&#x27;s topic is &quot;How badly do you want it,&quot; right?
+<span class="tutor">[Tutor]</span> How badly do you want it?
+<span class="student">[Student]</span> Yeah, so kind of specific things that you want.
+<span class="tutor">[Tutor]</span> Yes, okay. So the first key expression, would you like to read?
+<span class="student">[Student]</span> Okay.
+<span class="tutor">[Tutor]</span> There&#x27;s two kinds of expressions. And first is &quot;been eyeing.&quot; &quot;I have been eyeing this designer bag for months.&quot; &quot;They have been eyeing a new apartment in their city.&quot; &quot;We have been eyeing a vacation spot for next summer.&quot; &quot;I have been eyeing two models, but I can&#x27;t decide.&quot;
+<span class="student">[Student]</span> Hmm. Been eyeing. Okay. That&#x27;s the first sentence. Hmm, hmm, hmm.
+<span class="tutor">[Tutor]</span> Yeah, so kind of looking at.
+<span class="student">[Student]</span> Yeah. Looking at. Yeah. Such something. Hmm, hmm.
+<span class="tutor">[Tutor]</span> Is there anything you have been eyeing or anything you want to buy?
+<span class="student">[Student]</span> These days I have been eyeing the Mac Mini, an Apple product, because these days it is possible to turn on always in my home and possible to remote control AI. So these days, I&#x27;ve been eyeing the Mac Mini and the Apple product.
+<span class="tutor">[Tutor]</span> Okay, definitely. Yeah, I&#x27;ve been looking at, wanting to buy it or thinking about buying it.
+<span class="student">[Student]</span> Yeah, you&#x27;re right. How about you? Have you been eyeing something?
+<span class="tutor">[Tutor]</span> No, I can&#x27;t really think of anything at the moment.
+<span class="student">[Student]</span> I see.
+<span class="tutor">[Tutor]</span> &quot;Family has fixated on.&quot; &quot;Fixated on.&quot; &quot;Fixated on.&quot; &quot;Fixated on.&quot; &quot;She&#x27;s fixated on finding a perfect winter coat.&quot; &quot;I&#x27;m fixated on wedding planning.&quot; &quot;She&#x27;s fixated on finishing the project by Friday.&quot; &quot;I have been fixated on the news coverage.&quot; &quot;Coverage.&quot;
+<span class="student">[Student]</span> Did you read the pronunciation? Fixated on, right?
+<span class="tutor">[Tutor]</span> Fixated on. Yeah, fixated on.
+<span class="student">[Student]</span> Fixated on. Okay.
+<span class="tutor">[Tutor]</span> How about you? What are you fixated on these days?
+<span class="student">[Student]</span> Not much, maybe planning, planning for winter. Ah, yes. Winter clothing. Yeah, the Canada winter is so long and we will prepare.
+<span class="tutor">[Tutor]</span> I see. Okay.
+<span class="tutor">[Tutor]</span> Okay. So next on today&#x27;s question.
+<span class="student">[Student]</span> Uh-huh.
+<span class="tutor">[Tutor]</span> Today&#x27;s question: &quot;How badly do you want it?&quot; The answer is one. &quot;I&#x27;ve been obsessing over it for weeks.&quot;
+<span class="student">[Student]</span> Teacher, is it right? Obsessing.
+<span class="tutor">[Tutor]</span> Obsessing. Yeah, obsessing.
+<span class="student">[Student]</span> Obsessing. What does it mean, obsessing?
+<span class="tutor">[Tutor]</span> Obsessing. To obsess, to think about it, so something you really want.
+<span class="student">[Student]</span> I have been desiring and thinking about it, obsessing over it for weeks. &quot;I want it, but I&#x27;m not sure I need it.&quot;
+<span class="tutor">[Tutor]</span> Yeah, usually that is my answer.
+<span class="student">[Student]</span> &quot;I want it, but I&#x27;m not sure I need it.&quot;
+<span class="tutor">[Tutor]</span> And the question, &quot;Do you think you&#x27;ll buy it soon?&quot;
+<span class="student">[Student]</span> Do you think you&#x27;ll buy it very soon?
+<span class="student">[Student]</span> I need to figure out a little more. And I wait for the sale periods for this product, for this company. Is it right, for this company, for this model? I wait for the sales period for this model. How about the &quot;in&quot; or something? Other?
+<span class="tutor">[Tutor]</span> So, &quot;I wait for this model to go on sale?&quot;
+<span class="student">[Student]</span> On sale.
+<span class="tutor">[Tutor]</span> For this model.
+<span class="student">[Student]</span> I&#x27;m waiting for this model in this, in this, in this period, in this season. Okay.
+<span class="tutor">[Tutor]</span> And so the next we have &quot;My Story.&quot; Would you like to read and fill in the sentence?
+<span class="student">[Student]</span> Okay, I see. &quot;How badly do you want it?&quot; Hmm. &quot;I had been eyeing a new AI computer for a long time. I was completely fixated on it because of the innovative quality of PC or laptop.&quot; &quot;Innovative spec of laptop. I finally decided to buy it when I found it on sale. It was totally worth it because I can study AI more.&quot;
+<span class="tutor">[Tutor]</span> Okay.
+<span class="tutor">[Tutor]</span> So any questions with this one?
+<span class="student">[Student]</span> Just a moment. &quot;Game console, designer handbag, leather jacket, pair of designer sunglasses.&quot; &quot;The innovative designs.&quot; &quot;I love the style.&quot; &quot;I keep the same around.&quot; &quot;My friends got one.&quot; &quot;I found it on sale.&quot; &quot;My store.&quot; Okay, I understand the almost sentence. I don&#x27;t have questions.
+<span class="tutor">[Tutor]</span> So looking at B, the mission. So, &quot;How much do you enjoy shopping for these items, clothing?&quot;
+<span class="student">[Student]</span> This is the mission one or another question?
+<span class="tutor">[Tutor]</span> Mission one. &quot;How much do you enjoy shopping for the following items?&quot; So on a scale of 1 to 10, do you enjoy shopping for clothing?
+<span class="student">[Student]</span> I think that depends on the product, and so I&#x27;m not sure, but usually this is autumn season. If I buy a new coat, it is so enjoyable because, yeah, we prepare for the winter and it is warm and nice design. It is so, yeah, enjoyable to shop, shopping for a new coat. Hmm. And sometimes I will buy new electronics, and these days the electronic devices have perfect specs, so usually it is also enjoyable to use the new function or something. Yeah, yeah, yeah. It&#x27;s your... So, and then shoes. Just a moment, shoes.
+<span class="tutor">[Tutor]</span> So the list here, so there&#x27;s clothing, electronics. So how about shoes?
+<span class="student">[Student]</span> Shoes, I don&#x27;t enjoy shopping for shoes because I think we, only the men, only wear the shoes, the running shoes or, or what is that, the &quot;suit shoes&quot;? How can I say, teacher? If I wear the suit and it is out of the shoes, what is that name? I forgot that. I just know shoes, formal shoes. The Korean said &quot;gudu.&quot; Just &quot;gudu,&quot; dress shoes. Yeah. The guys only have formal and dress shoes and running shoes. So that design is similar, just black and... So sometimes it&#x27;s comfortable, but I don&#x27;t enjoy shopping for shoes. And these days, interior is also expensive. If I do interior in my apartment, that is so expensive and that is a big event for myself. So during the interior in my apartment, I moved to another hotel or another apartment. So I don&#x27;t enjoy that also. And beauty? I&#x27;m not sure. I only buy the skincare, just the lotion and skin. So it is also not enjoyable for me. So usually I will buy clothing and... clothing and electronics is so enjoyable. But other thing is that just so-so. Yeah, not bad.
+<span class="tutor">[Tutor]</span> And if there is an item that you have been eyeing for a long time, why haven&#x27;t you bought it yet?
+<span class="student">[Student]</span> Yes, I just a moment. I&#x27;m fixated on, I have been eyeing a new wallet. That is a leather wallet and design of new wallet, and that is so expensive. So, but it has a nice and great design, so I&#x27;m fixated on it for two months, but that is so expensive. So I can&#x27;t buy because I&#x27;m not sure I need it or not. So just watching them. I forgot that name, brand name. Maybe that is a Europe design wallet, but I forgot that. How about you? What is the item for a long time?
+<span class="tutor">[Tutor]</span> I haven&#x27;t really been searching for anything, but I wanted a mouse and I bought a mouse. I guess so that item. I was eyeing a mouse for a computer and then I bought a mouse for my computer. I was eyeing a mouse and then I bought it. Okay. Okay, I see.
+<span class="tutor">[Tutor]</span> So the next one, C, &quot;Which do you prefer?&quot;
+<span class="student">[Student]</span> Shopping in-store or online?
+<span class="tutor">[Tutor]</span> In-store or online?
+<span class="student">[Student]</span> Usually if I buy groceries, something, I&#x27;m usually used to online shopping because that pattern is similar. The milk, egg, and meat, and fruit, etc. So it is similar item and that period also similar, so I usually use online for grocery shopping. But if I buy a new bag or a new suit, new coat, and meantime, I just go to the in-store. I forgot that name. The &quot;bricks,&quot; how can I say? &quot;Bricks store and mortar.&quot; Today I will learn that expression, but I forgot that. The &quot;bricks store.&quot; How can I say? Anyway, I usually in-store for my clothes because it is possible to put on, wear, try on the new product. So usually I will go there to in-store, department store and more.
+<span class="tutor">[Tutor]</span> Okay, kind of the big store in person.
+<span class="student">[Student]</span> And teacher, I have one question. Maybe two days ago I learned the new expression, the same meaning, the in-store. So that is the, I remember that is the &quot;brick,&quot; &quot;brick store&quot; and I forgot that. Is it &quot;brick and mortar store&quot;?
+<span class="tutor">[Tutor]</span> Ah, yeah, &quot;brick and mortar store.&quot;
+<span class="student">[Student]</span> Brick and mortar store.
+<span class="tutor">[Tutor]</span> Brick and mortar. Yeah, you&#x27;re right. Brick and mortar, right? Mortar.
+<span class="student">[Student]</span> Brick and mortar.
+<span class="tutor">[Tutor]</span> Mortar. Okay. Brick and mortar. Yes, you&#x27;re right.
+<span class="tutor">[Tutor]</span> So kind of a physical, yeah, in-person store.
+<span class="student">[Student]</span> In-person store. In-store. Okay.
+<span class="tutor">[Tutor]</span> And the next one, D, &quot;Digging deeper.&quot;
+<span class="tutor">[Tutor]</span> &quot;Do you often abandon shopping carts when shopping online?&quot;
+<span class="tutor">[Tutor]</span> You buy something, but then just... So you add something to the shopping cart when you&#x27;re shopping online, but you don&#x27;t buy it. So you just leave it or forget it.
+<span class="student">[Student]</span> Yeah, sometimes. For example, when I buy a grocery item, use the online, I just list up my cart, online cart. But that is only for one week, just for one week, a week. So usually I keep that item and then Saturday or Sunday I order online.
+<span class="tutor">[Tutor]</span> So this is talking about not buying it. So you might add it but then say, &quot;not buy it.&quot;
+<span class="student">[Student]</span> Sometimes I abandon. You&#x27;re right. Sometimes I list it off, but I think it is a little expensive or I don&#x27;t need anymore. And meantime I just abandon item in my cart, from my cart.
+<span class="tutor">[Tutor]</span> Yeah, yeah, sometimes you might, yeah, forget it or abandon it. Yeah, you&#x27;re right. Um, the last bit. Can you remember any expression from today?
+<span class="student">[Student]</span> Uh, yes. Maybe &quot;been eyeing&quot; and &quot;fixated on.&quot; This day I&#x27;m fixated on a new project, blah blah blah.
+<span class="tutor">[Tutor]</span> Yeah, &quot;been eyeing,&quot; &quot;fixated on.&quot; Well, I will send you corrections in just a moment. Any other questions before I go?
+<span class="student">[Student]</span> Oh, no, I don&#x27;t have questions, teacher. Thank you so much. Have a great day.
+<span class="tutor">[Tutor]</span> You too. You&#x27;re welcome, goodbye.</div>
+        </div>
+    </div>
+    <div class="toast" id="toast">✅ 프롬프트가 복사되었습니다!</div>
+    <script>
+        const REVIEW_PROMPT="너는 나의 영어 회화 복습 파트너야. 오늘 내 전화영어 수업 내용을 기반으로 대화하면서 복습을 도와줘.\n\n[오늘 수업 전사 내용]\n[Student] Hello, Bell. Happy Wednesday.\n[Tutor] Yeah, hi. How are you doing today?\n[Student] I'm doing great. Yeah, I woke up a little early, so a little tired. Because another room alarm woke me up. So I can't sleep after the alarm. So, yeah, a little tired, but it's okay. It's a fresh day. How was your day?\n[Tutor] Oh, yeah, pretty good. Yeah, pretty nice weather, sunny today. Yeah, pretty nice. What's the temperature these days? A little chilly?\n[Student] About 18.\n[Tutor] 18, I see. A little chilly.\n[Student] Okay.\n[Tutor] Any plans for today?\n[Student] Today is a normal day. I will go to work and I prepare some new audits because this year I have to conduct an audit and the last audit has started, so I prepare the audit, internal audit for other companies. Yeah, that's my plan.\n[Tutor] Oh, okay. So, pretty busy with work with the audit.\n[Student] Yeah, you're right. You're right. I prepare reports and interviews, etc. So, yeah, I prepare. I will prepare. Anyway.\n[Tutor] So did you want to look at today's topic or the textbook?\n[Student] Oh yes, I prepared and today's topic is \"How badly do you want it,\" right?\n[Tutor] How badly do you want it?\n[Student] Yeah, so kind of specific things that you want.\n[Tutor] Yes, okay. So the first key expression, would you like to read?\n[Student] Okay.\n[Tutor] There's two kinds of expressions. And first is \"been eyeing.\" \"I have been eyeing this designer bag for months.\" \"They have been eyeing a new apartment in their city.\" \"We have been eyeing a vacation spot for next summer.\" \"I have been eyeing two models, but I can't decide.\"\n[Student] Hmm. Been eyeing. Okay. That's the first sentence. Hmm, hmm, hmm.\n[Tutor] Yeah, so kind of looking at.\n[Student] Yeah. Looking at. Yeah. Such something. Hmm, hmm.\n[Tutor] Is there anything you have been eyeing or anything you want to buy?\n[Student] These days I have been eyeing the Mac Mini, an Apple product, because these days it is possible to turn on always in my home and possible to remote control AI. So these days, I've been eyeing the Mac Mini and the Apple product.\n[Tutor] Okay, definitely. Yeah, I've been looking at, wanting to buy it or thinking about buying it.\n[Student] Yeah, you're right. How about you? Have you been eyeing something?\n[Tutor] No, I can't really think of anything at the moment.\n[Student] I see.\n[Tutor] \"Family has fixated on.\" \"Fixated on.\" \"Fixated on.\" \"Fixated on.\" \"She's fixated on finding a perfect winter coat.\" \"I'm fixated on wedding planning.\" \"She's fixated on finishing the project by Friday.\" \"I have been fixated on the news coverage.\" \"Coverage.\"\n[Student] Did you read the pronunciation? Fixated on, right?\n[Tutor] Fixated on. Yeah, fixated on.\n[Student] Fixated on. Okay.\n[Tutor] How about you? What are you fixated on these days?\n[Student] Not much, maybe planning, planning for winter. Ah, yes. Winter clothing. Yeah, the Canada winter is so long and we will prepare.\n[Tutor] I see. Okay.\n[Tutor] Okay. So next on today's question.\n[Student] Uh-huh.\n[Tutor] Today's question: \"How badly do you want it?\" The answer is one. \"I've been obsessing over it for weeks.\"\n[Student] Teacher, is it right? Obsessing.\n[Tutor] Obsessing. Yeah, obsessing.\n[Student] Obsessing. What does it mean, obsessing?\n[Tutor] Obsessing. To obsess, to think about it, so something you really want.\n[Student] I have been desiring and thinking about it, obsessing over it for weeks. \"I want it, but I'm not sure I need it.\"\n[Tutor] Yeah, usually that is my answer.\n[Student] \"I want it, but I'm not sure I need it.\"\n[Tutor] And the question, \"Do you think you'll buy it soon?\"\n[Student] Do you think you'll buy it very soon?\n[Student] I need to figure out a little more. And I wait for the sale periods for this product, for this company. Is it right, for this company, for this model? I wait for the sales period for this model. How about the \"in\" or something? Other?\n[Tutor] So, \"I wait for this model to go on sale?\"\n[Student] On sale.\n[Tutor] For this model.\n[Student] I'm waiting for this model in this, in this, in this period, in this season. Okay.\n[Tutor] And so the next we have \"My Story.\" Would you like to read and fill in the sentence?\n[Student] Okay, I see. \"How badly do you want it?\" Hmm. \"I had been eyeing a new AI computer for a long time. I was completely fixated on it because of the innovative quality of PC or laptop.\" \"Innovative spec of laptop. I finally decided to buy it when I found it on sale. It was totally worth it because I can study AI more.\"\n[Tutor] Okay.\n[Tutor] So any questions with this one?\n[Student] Just a moment. \"Game console, designer handbag, leather jacket, pair of designer sunglasses.\" \"The innovative designs.\" \"I love the style.\" \"I keep the same around.\" \"My friends got one.\" \"I found it on sale.\" \"My store.\" Okay, I understand the almost sentence. I don't have questions.\n[Tutor] So looking at B, the mission. So, \"How much do you enjoy shopping for these items, clothing?\"\n[Student] This is the mission one or another question?\n[Tutor] Mission one. \"How much do you enjoy shopping for the following items?\" So on a scale of 1 to 10, do you enjoy shopping for clothing?\n[Student] I think that depends on the product, and so I'm not sure, but usually this is autumn season. If I buy a new coat, it is so enjoyable because, yeah, we prepare for the winter and it is warm and nice design. It is so, yeah, enjoyable to shop, shopping for a new coat. Hmm. And sometimes I will buy new electronics, and these days the electronic devices have perfect specs, so usually it is also enjoyable to use the new function or something. Yeah, yeah, yeah. It's your... So, and then shoes. Just a moment, shoes.\n[Tutor] So the list here, so there's clothing, electronics. So how about shoes?\n[Student] Shoes, I don't enjoy shopping for shoes because I think we, only the men, only wear the shoes, the running shoes or, or what is that, the \"suit shoes\"? How can I say, teacher? If I wear the suit and it is out of the shoes, what is that name? I forgot that. I just know shoes, formal shoes. The Korean said \"gudu.\" Just \"gudu,\" dress shoes. Yeah. The guys only have formal and dress shoes and running shoes. So that design is similar, just black and... So sometimes it's comfortable, but I don't enjoy shopping for shoes. And these days, interior is also expensive. If I do interior in my apartment, that is so expensive and that is a big event for myself. So during the interior in my apartment, I moved to another hotel or another apartment. So I don't enjoy that also. And beauty? I'm not sure. I only buy the skincare, just the lotion and skin. So it is also not enjoyable for me. So usually I will buy clothing and... clothing and electronics is so enjoyable. But other thing is that just so-so. Yeah, not bad.\n[Tutor] And if there is an item that you have been eyeing for a long time, why haven't you bought it yet?\n[Student] Yes, I just a moment. I'm fixated on, I have been eyeing a new wallet. That is a leather wallet and design of new wallet, and that is so expensive. So, but it has a nice and great design, so I'm fixated on it for two months, but that is so expensive. So I can't buy because I'm not sure I need it or not. So just watching them. I forgot that name, brand name. Maybe that is a Europe design wallet, but I forgot that. How about you? What is the item for a long time?\n[Tutor] I haven't really been searching for anything, but I wanted a mouse and I bought a mouse. I guess so that item. I was eyeing a mouse for a computer and then I bought a mouse for my computer. I was eyeing a mouse and then I bought it. Okay. Okay, I see.\n[Tutor] So the next one, C, \"Which do you prefer?\"\n[Student] Shopping in-store or online?\n[Tutor] In-store or online?\n[Student] Usually if I buy groceries, something, I'm usually used to online shopping because that pattern is similar. The milk, egg, and meat, and fruit, etc. So it is similar item and that period also similar, so I usually use online for grocery shopping. But if I buy a new bag or a new suit, new coat, and meantime, I just go to the in-store. I forgot that name. The \"bricks,\" how can I say? \"Bricks store and mortar.\" Today I will learn that expression, but I forgot that. The \"bricks store.\" How can I say? Anyway, I usually in-store for my clothes because it is possible to put on, wear, try on the new product. So usually I will go there to in-store, department store and more.\n[Tutor] Okay, kind of the big store in person.\n[Student] And teacher, I have one question. Maybe two days ago I learned the new expression, the same meaning, the in-store. So that is the, I remember that is the \"brick,\" \"brick store\" and I forgot that. Is it \"brick and mortar store\"?\n[Tutor] Ah, yeah, \"brick and mortar store.\"\n[Student] Brick and mortar store.\n[Tutor] Brick and mortar. Yeah, you're right. Brick and mortar, right? Mortar.\n[Student] Brick and mortar.\n[Tutor] Mortar. Okay. Brick and mortar. Yes, you're right.\n[Tutor] So kind of a physical, yeah, in-person store.\n[Student] In-person store. In-store. Okay.\n[Tutor] And the next one, D, \"Digging deeper.\"\n[Tutor] \"Do you often abandon shopping carts when shopping online?\"\n[Tutor] You buy something, but then just... So you add something to the shopping cart when you're shopping online, but you don't buy it. So you just leave it or forget it.\n[Student] Yeah, sometimes. For example, when I buy a grocery item, use the online, I just list up my cart, online cart. But that is only for one week, just for one week, a week. So usually I keep that item and then Saturday or Sunday I order online.\n[Tutor] So this is talking about not buying it. So you might add it but then say, \"not buy it.\"\n[Student] Sometimes I abandon. You're right. Sometimes I list it off, but I think it is a little expensive or I don't need anymore. And meantime I just abandon item in my cart, from my cart.\n[Tutor] Yeah, yeah, sometimes you might, yeah, forget it or abandon it. Yeah, you're right. Um, the last bit. Can you remember any expression from today?\n[Student] Uh, yes. Maybe \"been eyeing\" and \"fixated on.\" This day I'm fixated on a new project, blah blah blah.\n[Tutor] Yeah, \"been eyeing,\" \"fixated on.\" Well, I will send you corrections in just a moment. Any other questions before I go?\n[Student] Oh, no, I don't have questions, teacher. Thank you so much. Have a great day.\n[Tutor] You too. You're welcome, goodbye.\n\n[AI 피드백]\n안녕하세요, Joey! 오늘도 활기찬 하루를 영어로 시작해주셔서 감사합니다. Mac Mini와 겨울 준비에 대한 이야기를 나누며, 'been eyeing'과 'fixated on' 같은 유용한 표현들을 자연스럽게 사용하시는 모습이 정말 인상 깊었어요. Joey의 영어 실력 향상을 위해 따뜻하고 실용적인 피드백을 준비했습니다. 함께 살펴볼까요?\n\n---\n\n**0. 📌 Topic**\nTopic: Discussing personal desires and shopping habits using key expressions like \"been eyeing\" and \"fixated on.\"\n\n**1. 📊 오늘의 대화 요약 (Summary)**\n오늘 Joey는 최근 눈여겨보고 있는 Apple Mac Mini에 대한 이야기로 대화를 시작했어요. 이어서 'been eyeing'과 'fixated on'이라는 핵심 표현들을 활용하여 겨울 의류 쇼핑 계획, 가죽 지갑 구매 희망 등 다양한 쇼핑 경험과 선호도를 구체적으로 설명했습니다. 온라인 쇼핑과 오프라인 매장 쇼핑의 장단점도 비교하며 깊이 있는 대화를 나눴습니다.\n\n**2. 💬 유창성 업그레이드 (Fluency & Natural Flow)**\nJoey가 말한 문장 중 의미는 통하지만, 원어민이 들었을 때 좀 더 자연스럽게 들릴 수 있는 표현들을 함께 다듬어 볼게요.\n\n1.  ❌ **As Said**: \"Because another room alarm woke me up. So I can't sleep after the alarm.\"\n    ✅ **Natural**: \"Another alarm from a different room woke me up, so I couldn't go back to sleep.\"\n    💎 **Professional**: \"An alarm from an adjacent room disrupted my sleep, preventing me from returning to slumber.\"\n    💡 **코칭 포인트**: Using \"from a different room\" clarifies the source of the alarm, and \"couldn't go back to sleep\" is a more natural way to express the inability to sleep further. (과거에 잠들지 못한 상황이므로 'can't' 대신 'couldn't'를 사용하는 것이 더 정확합니다.)\n    → \"from a different room\"을 사용하면 알람의 출처가 더 명확해지고, \"couldn't go back to sleep\"은 더 이상 잠들 수 없었음을 자연스럽게 표현합니다. (과거 시제 사용에 유의하세요.)\n\n2.  ❌ **As Said**: \"These days I have been eyeing the Mac Mini, an Apple product, because these days it is possible to turn on always in my home and possible to remote control AI.\"\n    ✅ **Natural**: \"These days, I've been eyeing the Mac Mini, an Apple product, because it can always be on at home and I can remotely control AI with it.\"\n    💎 **Professional**: \"I've recently been considering the Mac Mini, an Apple product, primarily due to its always-on capability and its potential for remote AI control within my home.\"\n    💡 **코칭 포인트**: \"It is possible to turn on always\"는 다소 어색하게 들립니다. \"It can always be on\" 또는 \"its always-on capability\"가 더 간결하고 자연스럽습니다. 또한 \"possible to remote control AI\"보다 \"remotely control AI\"가 더 직접적인 표현입니다.\n    → \"it is possible to turn on always\"는 다소 어색하게 들립니다. \"it can always be on\" 또는 \"its always-on capability\"가 더 간결하고 자연스럽습니다. 또한 \"possible to remote control AI\"보다 \"remotely control AI\"가 더 직접적인 표현입니다.\n\n3.  ❌ **As Said**: \"I need to figure out a little more. And I wait for the sale periods for this product, for this company.\"\n    ✅ **Natural**: \"I need to do a bit more research. I'm also waiting for this product to go on sale.\"\n    💎 **Professional**: \"Further investigation is required. Additionally, I am anticipating a sales period for this particular product.\"\n    💡 **코칭 포인트**: \"Figure out a little more\"도 좋지만, 구매 결정을 이야기할 때는 \"do a bit more research\"가 흔하고 자연스러운 대안입니다. \"Wait for the sale periods for this product\"도 이해는 되지만, \"wait for this product to go on sale\"이 더 일반적이고 자연스러운 표현입니다.\n    → \"figure out a little more\"도 좋지만, 구매 결정을 이야기할 때는 \"do a bit more research\"가 흔하고 자연스러운 대안입니다. \"wait for the sale periods for this product\"도 이해는 되지만, \"wait for this product to go on sale\"이 더 일반적이고 자연스러운 표현입니다.\n\n**3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)**\nCategory: **Missing Articles (a/an/the)**\n\nJoey는 대화 중 명사 앞에 필요한 관사(a/an/the)를 종종 생략하는 경향이 있었습니다. 관사는 영어에서 명사의 특정성이나 일반성을 나타내는 중요한 요소이므로, 올바른 사용은 문장의 정확성을 높이는 데 필수적입니다.\n\n| ❌ 원문 (As Said)                                         | ✅ 교정 예시 (Corrected)                                      |\n| :------------------------------------------------------- | :----------------------------------------------------------- |\n| I prepare **audit**, internal audit for other companies. | I prepare **an audit**, **an internal audit** for other companies. |\n| I just abandon **item** in my cart.                      | I just abandon **an item** in my cart.                       |\n| design of new wallet                                     | **the design** of **a new wallet**                           |\n| I will buy **clothing** and **electronics**.             | I will buy **clothing** and **electronics**. (복수 명사 앞에는 관사가 필요 없지만, 단수였다면 'a piece of clothing' 또는 'an electronic device'가 필요) |\n\n📌 **핵심 규칙**: 셀 수 있는 명사(countable noun)가 단수로 쓰일 때는 반드시 관사(a/an/the)를 붙여주세요. 특정하지 않은 일반적인 것을 말할 때는 'a'나 'an'을, 특정하거나 이미 언급된 것을 말할 때는 'the'를 사용합니다.\n\n🔁 **따라 읽기**:\n🗣️ \"I prepare an audit, an internal audit for other companies.\"\n🗣️ \"I just abandon an item in my cart.\"\n🗣️ \"I'm fixated on the design of a new wallet.\"\n\n**4. 📗 어휘 확장 (Vocabulary Vault)**\n오늘 대화에서 나왔거나 Joey의 비즈니스 환경에 유용할 어휘들을 살펴볼게요.\n\n1.  **conduct** /kənˈdʌkt/ (v.)\n    *   뜻: (특정한 활동을) 수행하다, 실시하다\n    *   실전 예문: Our team needs to **conduct** a thorough market analysis before launching the new product.\n\n2.  **innovative** /ˈɪnəveɪtɪv/ (adj.)\n    *   뜻: 혁신적인, 획기적인\n    *   실전 예문: We are always looking for **innovative** solutions to improve our energy efficiency.\n\n3.  **specifications (specs)** /ˌspesɪfɪˈkeɪʃənz/ (n.)\n    *   뜻: 사양, 명세서 (주로 제품의 기술적 특성을 나타냄)\n    *   실전 예문: Please check the product **specifications** carefully to ensure it meets our requirements.\n\n4.  **abandon** /əˈbændən/ (v.)\n    *   뜻: (계획, 생각 등을) 포기하다, (물건을) 버리다\n    *   실전 예문: We had to **abandon** the project due to unforeseen budget constraints.\n\n5.  **constraint** /kənˈstreɪnt/ (n.)\n    *   뜻: 제약, 제한\n    *   실전 예문: Financial **constraints** often limit our investment opportunities.\n\n**5. 📝 실전 복습 챌린지 (Practice)**\n오늘 배운 표현과 문법을 활용하여 영작 연습을 해볼까요?\n\n1.  **[쉬움]** 저는 최근 새로운 투자 기회를 눈여겨보고 있습니다.\n    *   모범 답안: I've recently **been eyeing** new investment opportunities.\n\n2.  **[중간]** 우리는 다음 분기에 내부 감사를 실시할 계획이며, 이를 위해 철저한 준비가 필요합니다.\n    *   모범 답안: We plan to **conduct an internal audit** next quarter, and it requires thorough preparation.\n\n3.  **[어려움]** 예산 제약 때문에 그 혁신적인 프로젝트를 포기해야 했지만, 우리는 여전히 더 효율적인 솔루션을 찾고 있습니다.\n    *   모범 답안: We had to **abandon** that **innovative** project due to budget **constraints**, but we are still looking for more efficient solutions.\n\n**6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)**\n\n✨ **Good Job**:\nJoey가 오늘 가장 잘 표현한 문장은 바로 이것입니다:\n\"I'm fixated on, I have been eyeing a new wallet. That is a leather wallet and design of new wallet, and that is so expensive.\"\n이 문장은 'fixated on'과 'been eyeing'이라는 핵심 표현을 자연스럽게 연결하여 Joey가 무엇에 관심을 가지고 있는지 명확하게 전달했습니다. 비록 관사 사용에 작은 오류가 있었지만, 두 표현을 동시에 활용하려는 시도와 의미 전달력은 매우 좋았습니다!\n\n🚀 **내일의 한 문장**:\n다음 수업 시작 시, 오늘 배운 표현을 활용하여 튜터에게 이렇게 말해보세요.\n\"I've been eyeing a new book on investment, and I'm quite fixated on finishing it this week.\"\n(새로운 투자 서적을 눈여겨보고 있는데, 이번 주에 끝내려고 마음먹고 있어요.)\n\n---\n\n**[성과 지표]**\n**유창성 점수**: 7.5/10\n\n**근거**: Joey는 수업 주제와 관련된 핵심 표현들('been eyeing', 'fixated on', 'obsessing over')을 잘 이해하고 대화에 적극적으로 활용했습니다. 전반적인 의사소통은 매우 원활하며, 자신의 생각과 경험을 구체적으로 설명하는 능력이 뛰어납니다. 다만, 문장 연결이나 일부 구문에서 한국어 직역투가 느껴지거나 반복적인 표현을 사용하는 경향이 있어 유창성의 자연스러움을 조금 더 높일 수 있습니다. 관사 사용과 전치사 선택에서 일부 오류가 있었지만, 이는 의미 전달에 큰 방해를 주지는 않았습니다.\n\n**다음 수업 '원포인트 액션 플랜'**:\n다음 수업에서는 **\"관사 (a/an/the) 사용\"**에 조금 더 집중하여 연습해볼까요? 특히 셀 수 있는 단수 명사 앞에 관사를 빠뜨리지 않고 사용하는 연습을 해보면 Joey의 문장이 훨씬 더 정확하고 자연스럽게 들릴 거예요. 오늘 배운 어휘와 표현들을 활용하여 문장을 만들 때 관사 사용에 한 번 더 신경 써보는 것을 추천합니다!\n\nJoey, 오늘도 정말 수고 많으셨습니다! 꾸준히 노력하는 Joey의 모습이 정말 멋져요. 다음 수업에서 더 성장한 모습으로 만나요!\n\n위 내용을 바탕으로:\n1. 먼저 오늘 수업에서 내가 틀렸거나 어색했던 표현을 하나 골라서, 관련된 상황을 영어로 질문해줘.\n2. 내가 영어로 대답하면, 자연스러운지 확인하고 더 나은 표현이 있으면 알려줘.\n3. 특히 \"반복 실수 패턴\"에서 지적된 부분을 집중적으로 연습시켜줘.\n4. 이런 식으로 오늘 배운 표현들을 하나씩 복습하자.\n5. 한국어 설명은 필요할 때만 간단히, 대화는 최대한 영어로 진행해줘.\n\n그럼 시작하자!";
+        function startReview(){navigator.clipboard.writeText(REVIEW_PROMPT).then(()=>{showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)}).catch(()=>{const t=document.createElement('textarea');t.value=REVIEW_PROMPT;document.body.appendChild(t);t.select();document.execCommand('copy');document.body.removeChild(t);showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)})}
+        function showToast(){const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500)}
+        function switchTab(n){document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',n==='feedback'?i===0:i===1));document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));document.getElementById('tab-'+n).classList.add('active')}
+    </script>
+</body>
+</html>
