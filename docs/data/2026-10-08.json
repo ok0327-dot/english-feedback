@@ -4,50 +4,46 @@
   2026,
   41
  ],
- "topic": "Discussing social media usage, new vocabulary for online content, and the ethics of childr",
- "grammar": "Noun/Adjective Form Confusion",
- "grammar_norm": "Noun/Adjective Form Confusion",
+ "topic": "Resolving a technical issue before the lesson starts",
+ "grammar": "Precise Verb Choice",
+ "grammar_norm": "Precise Verb Choice",
  "score": 7.0,
  "pairs": [
   {
-   "said": "I will wait the long weekend and I prepare the textbook.",
-   "natural": "I'm looking forward to the long weekend and I've prepared the textbook."
+   "said": "do you hear my voice?",
+   "natural": "Can you hear me?"
   },
   {
-   "said": "That is the spread, urgently.",
-   "natural": "It spreads quickly/rapidly."
-  },
-  {
-   "said": "I usually I love the category of wholesome category because it give us some warm heart. It make me warm heart.",
-   "natural": "I usually love wholesome content because it gives us a warm feeling. It makes me feel warm-hearted."
+   "said": "I think I'm having an audio issue. Could you call me back, please?",
+   "natural": "I think I'm having an audio issue. Could you call me back, please?"
   }
  ],
  "vocab": [
   {
-   "word": "blow up",
-   "pos": "phrasal verb",
-   "meaning": "(인기 등이) 갑자기 폭발적으로 증가하다, 대박 나다"
+   "word": "audio",
+   "pos": "n.",
+   "meaning": "오디오, 음성"
   },
   {
-   "word": "doom scroll",
-   "pos": "verb",
-   "meaning": "(특히 나쁜 소식을 찾아) 끊임없이 소셜 미디어 등을 스크롤하며 시간을 보내다"
+   "word": "connection",
+   "pos": "n.",
+   "meaning": "연결, 접속"
   },
   {
-   "word": "wholesome",
-   "pos": "adjective",
-   "meaning": "(정신적·육체적으로) 건강에 좋은, 건전한, 유익한"
+   "word": "redial",
+   "pos": "v.",
+   "meaning": "(전화를) 다시 걸다, 재다이얼하다"
   },
   {
-   "word": "cringeworthy",
-   "pos": "adjective",
-   "meaning": "몹시 창피하거나 민망한, 오글거리는"
+   "word": "clarity",
+   "pos": "n.",
+   "meaning": "명확성, 선명도"
   },
   {
-   "word": "authentic",
-   "pos": "adjective",
-   "meaning": "진짜의, 진정한, 믿을 만한"
+   "word": "troubleshoot",
+   "pos": "v.",
+   "meaning": "문제 해결하다, 고장 원인을 찾아내다"
   }
  ],
- "_html_md5": "92ade57433602aa1a62bd5715c4f075f"
+ "_html_md5": "607c751c4c9aa2505b25a631f9f47ced"
 }
