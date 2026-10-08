@@ -6,12 +6,13 @@ This is a study digest from my one-on-one English phone lessons this week. Pleas
 - Discussing daily routines, health habits, and overcoming challenges to stay active.
 - Discussing shopping preferences, buyer's remorse, and descriptive adjectives for stores.
 - Discussing personal desires and shopping habits using key expressions like "been eyeing" a
-- Discussing social media usage, new vocabulary for online content, and the ethics of childr
+- Resolving a technical issue before the lesson starts
 
 ## Grammar focus this week
-- Noun/Adjective Form Confusion (2x)
 - Gerunds / Noun Phrases (1x)
+- Noun/Adjective Form Confusion (1x)
 - Articles (a/an/the) (1x)
+- Precise Verb Choice (1x)
 
 ## My all-time weak-point ranking (80 lessons since 2026-05-08)
 - Articles (a/an/the) — 13 lessons
@@ -70,12 +71,10 @@ This is a study digest from my one-on-one English phone lessons this week. Pleas
    Natural: "These days, I've been eyeing the Mac Mini, an Apple product, because it can always be on at home and I can remotely control AI with it."
 12. I said: "I need to figure out a little more. And I wait for the sale periods for this product, for this company."
    Natural: "I need to do a bit more research. I'm also waiting for this product to go on sale."
-13. I said: "I will wait the long weekend and I prepare the textbook."
-   Natural: "I'm looking forward to the long weekend and I've prepared the textbook."
-14. I said: "That is the spread, urgently."
-   Natural: "It spreads quickly/rapidly."
-15. I said: "I usually I love the category of wholesome category because it give us some warm heart. It make me warm heart."
-   Natural: "I usually love wholesome content because it gives us a warm feeling. It makes me feel warm-hearted."
+13. I said: "do you hear my voice?"
+   Natural: "Can you hear me?"
+14. I said: "I think I'm having an audio issue. Could you call me back, please?"
+   Natural: "I think I'm having an audio issue. Could you call me back, please?"
 
 ## Recurring mistakes from earlier weeks — my long-term habits
 My most repeated weak categories overall: Articles (a/an/the), Subject–Verb Agreement. These corrections are from earlier lessons in those categories. Please weave a few into the review so I revisit old mistakes.
@@ -122,11 +121,11 @@ My most repeated weak categories overall: Articles (a/an/the), Subject–Verb Ag
 - innovative (adj.) — 혁신적인, 획기적인
 - abandon (v.) — (계획, 생각 등을) 포기하다, (물건을) 버리다
 - constraint (n.) — 제약, 제한
-- blow up (phrasal verb) — (인기 등이) 갑자기 폭발적으로 증가하다, 대박 나다
-- doom scroll (verb) — (특히 나쁜 소식을 찾아) 끊임없이 소셜 미디어 등을 스크롤하며 시간을 보내다
-- wholesome (adjective) — (정신적·육체적으로) 건강에 좋은, 건전한, 유익한
-- cringeworthy (adjective) — 몹시 창피하거나 민망한, 오글거리는
-- authentic (adjective) — 진짜의, 진정한, 믿을 만한
+- audio (n.) — 오디오, 음성
+- connection (n.) — 연결, 접속
+- redial (v.) — (전화를) 다시 걸다, 재다이얼하다
+- clarity (n.) — 명확성, 선명도
+- troubleshoot (v.) — 문제 해결하다, 고장 원인을 찾아내다
 
 ## Please cover in the podcast
 - Pick my 1–2 most repeated mistakes (see the all-time ranking) and explain the rule with a memorable rule of thumb.
