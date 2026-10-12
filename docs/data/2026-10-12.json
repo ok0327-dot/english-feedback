@@ -1,0 +1,23 @@
+{
+ "date": "2026-10-12",
+ "iso": [
+  2026,
+  42
+ ],
+ "topic": "Discussing the impact of AI and social media on daily life and society.",
+ "grammar": "Incorrect use of present tense for ongoing actions",
+ "grammar_norm": "Verb Tense",
+ "score": null,
+ "pairs": [
+  {
+   "said": "Mexico is only summer, but it also has a winter time.",
+   "natural": "I thought Mexico was always summer, but it also has a winter season."
+  },
+  {
+   "said": "Usually I forbid them from gathering my cookies because my cookies are there, they use that and then they give us some biased information.",
+   "natural": "I usually prevent them from collecting my cookies because they use that data to provide biased information."
+  }
+ ],
+ "vocab": [],
+ "_html_md5": "d3d3a0561f24e8a018e79318f30e361d"
+}
