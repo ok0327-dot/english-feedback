@@ -1,0 +1,53 @@
+{
+ "date": "2026-10-13",
+ "iso": [
+  2026,
+  42
+ ],
+ "topic": "Addressing technical issues during a call and rescheduling a class.",
+ "grammar": "Incorrect Predicate Structure",
+ "grammar_norm": "Incorrect Predicate Structure",
+ "score": 7.0,
+ "pairs": [
+  {
+   "said": "Your voice is clear",
+   "natural": "Your voice is clear"
+  },
+  {
+   "said": "we're having trouble",
+   "natural": "we're having trouble"
+  },
+  {
+   "said": "No problem",
+   "natural": "No problem"
+  }
+ ],
+ "vocab": [
+  {
+   "word": "distort",
+   "pos": "동사",
+   "meaning": "왜곡하다, (소리 등을) 일그러뜨리다"
+  },
+  {
+   "word": "reschedule",
+   "pos": "동사",
+   "meaning": "일정을 변경하다, 다시 잡다"
+  },
+  {
+   "word": "penalize",
+   "pos": "동사",
+   "meaning": "벌칙을 가하다, 불이익을 주다"
+  },
+  {
+   "word": "clarification",
+   "pos": "명사",
+   "meaning": "설명, 해명, 명확화"
+  },
+  {
+   "word": "technical difficulties",
+   "pos": "명사구",
+   "meaning": "기술적인 문제, 기술적인 어려움"
+  }
+ ],
+ "_html_md5": "acb1e6b130f5ddb65499d4727b289f9e"
+}

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#0f0f13"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="당근영어"><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="icon" type="image/png" sizes="192x192" href="icon-192.png"><script src="install-banner.js" defer></script><script src="sw-reg.js" defer></script>
+    <title>전화영어 복습 - 2026년 10월 13일</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Noto Sans KR',sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.75;min-height:100vh}
+        .header{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);border-bottom:1px solid rgba(255,255,255,.06);padding:48px 24px 40px;text-align:center}
+        .header-date{font-size:13px;color:#94a3b8;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+        .header h1{font-size:28px;font-weight:700;color:#f1f5f9;margin-bottom:16px}
+        .header-meta{display:flex;justify-content:center;gap:24px;font-size:14px;color:#64748b}
+        .header-meta span{display:flex;align-items:center;gap:6px}
+        .cta-section{text-align:center;padding:40px 24px}
+        .cta-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:linear-gradient(135deg,#38bdf8,#818cf8);color:#fff;font-size:16px;font-weight:600;font-family:'Noto Sans KR',sans-serif;border:none;border-radius:50px;cursor:pointer;transition:all .3s;text-decoration:none;box-shadow:0 4px 24px rgba(56,189,248,.25)}
+        .cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(56,189,248,.35)}
+        .cta-btn svg{width:20px;height:20px}
+        .cta-sub{margin-top:12px;font-size:13px;color:#64748b}
+        .toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#38bdf8;padding:14px 28px;border-radius:12px;font-size:14px;font-weight:500;border:1px solid rgba(56,189,248,.2);box-shadow:0 8px 32px rgba(0,0,0,.4);opacity:0;transition:all .4s cubic-bezier(.16,1,.3,1);z-index:1000}
+        .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+        .container{max-width:720px;margin:0 auto;padding:0 24px 80px}
+        .tabs{display:flex;gap:4px;background:#1a1a24;padding:4px;border-radius:12px;margin-bottom:32px}
+        .tab{flex:1;padding:12px;text-align:center;font-size:14px;font-weight:500;color:#64748b;background:0 0;border:none;border-radius:8px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all .2s}
+        .tab.active{background:#262636;color:#f1f5f9}
+        .tab-content{display:none}.tab-content.active{display:block}
+        .feedback h2{font-size:18px;font-weight:700;color:#f1f5f9;margin:36px 0 16px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.06)}
+        .feedback h2:first-child{margin-top:0}
+        .feedback p{margin:8px 0;color:#cbd5e1}
+        .feedback .item{padding:6px 0 6px 16px;border-left:2px solid #334155;margin:6px 0;color:#cbd5e1}
+        .feedback .numbered{padding:8px 0 8px 16px;color:#cbd5e1}
+        .feedback .numbered strong{color:#38bdf8}
+        .feedback strong{color:#f1f5f9}
+        .feedback code{background:#1e293b;padding:2px 8px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#38bdf8}
+        .feedback table{width:100%;border-collapse:collapse;margin:12px 0}
+        .feedback th,.feedback td{padding:10px 14px;text-align:left;border-bottom:1px solid #262636}
+        .feedback th{color:#94a3b8;font-weight:500;font-size:13px}
+        .feedback td{color:#cbd5e1}
+        .arrow{color:#38bdf8;font-weight:700}
+        .transcript{background:#1a1a24;border-radius:12px;padding:28px;font-size:14px;line-height:2;color:#94a3b8;white-space:pre-wrap;word-break:break-word;font-family:'JetBrains Mono','Noto Sans KR',monospace}
+        .transcript .tutor{color:#38bdf8}
+        .transcript .student{color:#a78bfa}
+        @media(max-width:640px){.header{padding:32px 16px}.header h1{font-size:22px}.cta-btn{padding:14px 28px;font-size:15px}.container{padding:0 16px 60px}}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-date">2026년 10월 13일</div>
+        <h1>📚 전화영어 복습</h1>
+        <div class="header-meta">
+            <span>⏱ 1분 42초</span>
+            <span>🎙 전화영어_025180304_20261013080518.m4a</span>
+        </div>
+    </div>
+    <div class="cta-section">
+        <button class="cta-btn" onclick="startReview()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Gemini에서 복습 대화 시작하기
+        </button>
+        <div class="cta-sub">클릭하면 프롬프트가 복사되고 Gemini가 열립니다</div>
+    </div>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('feedback')">📋 AI 피드백</button>
+            <button class="tab" onclick="switchTab('transcript')">🎙 수업 전사</button>
+        </div>
+        <div id="tab-feedback" class="tab-content active">
+            <div class="feedback"><p>Joey, 안녕하세요! 오늘 수업은 전화 연결 문제로 아쉽게 짧게 마무리되었지만, 짧은 대화 속에서도 Joey님의 영어 실력을 엿볼 수 있었어요. 특히 어려운 상황에서도 차분하게 대처하고 소통하려는 모습이 정말 인상 깊었습니다. 오늘 배운 내용을 바탕으로 다음 수업에서는 더 자신감 있게 대화할 수 있도록 함께 연습해 봐요!</p>
+<br>
+<br>
+<p><strong>0. 📌 Topic</strong></p>
+<p>Topic: Addressing technical issues during a call and rescheduling a class.</p>
+<br>
+<p><strong>1. 📊 오늘의 대화 요약 (Summary)</strong></p>
+<p>오늘 수업은 전화 연결 상태가 좋지 않아 도중에 중단해야 했습니다. 튜터는 Joey님의 목소리가 왜곡되는 문제를 해결할 수 없어 수업을 종료하고 재조정할 것을 제안했고, Joey님은 이를 이해하고 수락했습니다.</p>
+<br>
+<p><strong>2. 💬 유창성 업그레이드 (Fluency & Natural Flow)</strong></p>
+<br>
+<p>아래 표현들을 익혀두시면 더 자연스럽고 유창하게 의견을 전달할 수 있을 거예요.</p>
+<br>
+<div class="numbered"><strong>1.</strong> ❌ <strong>학습자 원문 (As Said):</strong> <code>I'm clear your voice.</code></div>
+<p>✅ <strong>자연스러운 표현 (Natural):</strong> <code>I can hear your voice clearly.</code> / <code>Your voice is clear.</code></p>
+<p>💎 <strong>비즈니스 표현 (Professional):</strong> <code>Your audio quality is excellent on my end.</code></p>
+<p>💡 <strong>코칭 포인트:</strong> Using 'clear' as an adjective (e.g., "Your voice is clear") is correct, but to express the action of hearing, 'I can hear... clearly' is more natural.</p>
+<p><span class="arrow">→</span> 'clear'를 형용사로 사용하여 "Your voice is clear"라고 하는 것은 맞지만, '듣는 행위'를 표현할 때는 "I can hear... clearly"가 더 자연스럽습니다.</p>
+<br>
+<div class="numbered"><strong>2.</strong> ❌ <strong>학습자 원문 (As Said):</strong> <code>If you have a problem with the textbook, how about the free talking?</code></div>
+<p>✅ <strong>자연스러운 표현 (Natural):</strong> <code>If we're having trouble with the textbook (due to the connection), how about we just do some free talking?</code></p>
+<p>💎 <strong>비즈니스 표현 (Professional):</strong> <code>Given the technical difficulties, perhaps we could engage in free conversation instead of using the textbook?</code></p>
+<p>💡 <strong>코칭 포인트:</strong> Clarifying the subject of the problem (e.g., "we're having trouble" or "there's a problem with the connection") makes the suggestion clearer and more polite.</p>
+<p><span class="arrow">→</span> 문제의 주체("we're having trouble" 또는 "there's a problem with the connection")를 명확히 하면 제안이 더 분명하고 정중해집니다.</p>
+<br>
+<div class="numbered"><strong>3.</strong> ❌ <strong>학습자 원문 (As Said):</strong> <code>Okay, no problem.</code></div>
+<p>✅ <strong>자연스러운 표현 (Natural):</strong> <code>Okay, I understand.</code> / <code>No worries at all.</code></p>
+<p>💎 <strong>비즈니스 표현 (Professional):</strong> <code>Understood, thank you for the clarification.</code></p>
+<p>💡 <strong>코칭 포인트:</strong> While "No problem" is perfectly fine, phrases like "I understand" or "No worries" can convey more empathy and understanding of the situation.</p>
+<p><span class="arrow">→</span> "No problem"도 괜찮지만, "I understand"나 "No worries"와 같은 표현은 상황에 대한 더 많은 공감과 이해를 전달할 수 있습니다.</p>
+<br>
+<p><strong>3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)</strong></p>
+<br>
+<p>Category: <strong>Incorrect Predicate Structure (Adjective vs. Verb)</strong></p>
+<p>Joey님은 'clear'와 같은 형용사를 동사처럼 사용하거나, 형용사를 포함한 문장 구조를 만들 때 어색한 경우가 있었습니다. 이는 동사와 형용사의 역할 구분에 대한 이해를 높이면 자연스러워질 수 있습니다.</p>
+<br>
+<table>
+<tr><th>❌ <strong>원문 (As Said)</strong></th><th>✅ <strong>교정 예시 (Corrected)</strong></th></tr>
+<tr><td><code>I'm clear your voice.</code></td><td><code>Your voice is clear.</code> / <code>I can hear your voice clearly.</code></td></tr>
+<tr><td><code>it's clear your voice.</code></td><td><code>Your voice is clear.</code></td></tr>
+</table>
+<br>
+<p>📌 <strong>핵심 규칙:</strong> 상태를 나타내는 형용사(e.g., clear)는 주로 be동사와 함께 쓰여 주어의 상태를 설명하고, 동사는 주어의 동작이나 행위를 나타냅니다. 'clear'는 '깨끗한, 명확한'이라는 형용사이므로, '목소리가 명확하다'는 <code>Your voice is clear</code>로, '명확하게 들린다'는 <code>I can hear your voice clearly</code>로 표현해야 합니다.</p>
+<br>
+<p>🔁 <strong>따라 읽기:</strong></p>
+<p>🗣️ "Your voice is clear."</p>
+<p>🗣️ "I can hear your voice clearly."</p>
+<br>
+<p><strong>4. 📗 어휘 확장 (Vocabulary Vault)</strong></p>
+<br>
+<p>오늘 대화에서 유용하게 쓰일 수 있는 어휘들을 정리해 보았습니다.</p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>distort</strong> /dɪˈstɔːrt/ (동사)</div>
+<p>뜻: 왜곡하다, (소리 등을) 일그러뜨리다</p>
+<p>실전 예문: The poor signal quality can <strong>distort</strong> the audio during conference calls.</p>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>reschedule</strong> /ˌriːˈskedʒuːl/ (동사)</div>
+<p>뜻: 일정을 변경하다, 다시 잡다</p>
+<p>실전 예문: We had to <strong>reschedule</strong> the meeting due to an unexpected conflict.</p>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>penalize</strong> /ˈpiːnəlaɪz/ (동사)</div>
+<p>뜻: 벌칙을 가하다, 불이익을 주다</p>
+<p>실전 예문: You won't be <strong>penalized</strong> for canceling your subscription early.</p>
+<br>
+<div class="numbered"><strong>4.</strong> <strong>clarification</strong> /ˌklærəfɪˈkeɪʃn/ (명사)</div>
+<p>뜻: 설명, 해명, 명확화</p>
+<p>실전 예문: Could you provide some <strong>clarification</strong> on the project requirements?</p>
+<br>
+<div class="numbered"><strong>5.</strong> <strong>technical difficulties</strong> /ˈteknɪkl ˈdɪfɪkəltiz/ (명사구)</div>
+<p>뜻: 기술적인 문제, 기술적인 어려움</p>
+<p>실전 예문: We apologize for the interruption due to <strong>technical difficulties</strong>.</p>
+<br>
+<p><strong>5. 📝 실전 복습 챌린지 (Practice)</strong></p>
+<br>
+<p>오늘 배운 표현과 문법을 활용하여 다음 문장들을 영작해 보세요.</p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>상황:</strong> 회의 중 인터넷 연결이 좋지 않아 목소리가 잘 들리지 않습니다.</div>
+<p><strong>영작:</strong> "죄송하지만, 인터넷 연결이 좋지 않아서 선생님 목소리가 잘 들리지 않아요."</p>
+<p><strong>모범 답안:</strong> <code>I'm sorry, but I can't hear your voice clearly due to the poor internet connection.</code></p>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>상황:</strong> 중요한 보고서 마감일을 기술적인 문제로 인해 연기해야 합니다.</div>
+<p><strong>영작:</strong> "기술적인 문제 때문에 보고서 마감일을 다음 주 화요일로 변경해야 할 것 같습니다."</p>
+<p><strong>모범 답안:</strong> <code>I think we'll need to reschedule the report deadline to next Tuesday due to technical difficulties.</code></p>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>상황:</strong> 고객이 제품 사용법에 대해 질문했지만, 설명이 명확하지 않아 추가 설명이 필요합니다.</div>
+<p><strong>영작:</strong> "고객에게 더 명확한 설명이 필요합니다. 현재 설명이 약간 왜곡되어 이해하기 어렵습니다."</p>
+<p><strong>모범 답안:</strong> <code>The customer needs further clarification. The current explanation is a bit distorted and hard to understand.</code></p>
+<br>
+<p><strong>6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)</strong></p>
+<br>
+<p>✨ <strong>Good Job:</strong></p>
+<p><code>Okay, no problem. And how about the free talking, teacher, today? If you have a problem with the textbook, how about the free talking?</code></p>
+<p>Joey님은 전화 연결 문제로 인해 수업 진행이 어려울 수 있는 상황에서, 바로 "free talking"을 대안으로 제시하며 수업을 이어가려는 적극적인 모습을 보여주셨어요. 이는 유연한 사고와 문제 해결 능력을 보여주는 훌륭한 대처였습니다!</p>
+<br>
+<p>🚀 <strong>내일의 한 문장:</strong></p>
+<p>다음 수업 시작 시, 튜터에게 오늘 배운 표현을 활용하여 이렇게 말해보세요.</p>
+<p><code>I hope the connection is clear today, so we can have a smooth class!</code></p>
+<p>(오늘은 연결 상태가 명확해서 원활한 수업을 할 수 있기를 바랍니다!)</p>
+<br>
+<br>
+<p><strong>[성과 지표]</strong></p>
+<p><strong>유창성 점수:</strong> 7/10</p>
+<br>
+<p><strong>근거:</strong></p>
+<p>Joey님은 짧은 대화였음에도 불구하고 자신의 의사를 전달하는 데 큰 어려움이 없었습니다. 특히 문제 상황에서 대안을 제시하려는 적극적인 태도는 유창성에 긍정적인 영향을 주었습니다. 다만, 일부 문장 구조나 어휘 선택에서 원어민이 듣기에 다소 어색하게 느껴질 수 있는 부분이 있어 자연스러움을 더하는 연습이 필요합니다.</p>
+<br>
+<p><strong>다음 수업 '원포인트 액션 플랜':</strong></p>
+<p><strong>"동사-형용사 구별 및 자연스러운 문장 구조 익히기"</strong></p>
+<p>다음 수업에서는 오늘 다룬 'clear'와 같이 혼동하기 쉬운 동사와 형용사의 사용법을 집중적으로 연습하고, 상황에 맞는 자연스러운 문장 구조를 익히는 데 초점을 맞출 예정입니다. 예를 들어, "I'm clear your voice" 대신 "Your voice is clear" 또는 "I can hear your voice clearly"와 같이 정확하고 자연스러운 표현을 반복적으로 연습해 볼 거예요.</p></div>
+        </div>
+        <div id="tab-transcript" class="tab-content">
+            <div class="transcript"><span class="student">[Student]</span> Hello teacher, is it better? Hello?
+<span class="tutor">[Tutor]</span> Hi Joey.
+<span class="student">[Student]</span> Yes, I&#x27;m clear your voice. Yeah, it&#x27;s clear your voice.
+<span class="tutor">[Tutor]</span> Yeah, okay. Joey, I&#x27;m very sorry, but we&#x27;re having a problem with the phone that I cannot fix. What&#x27;s happening is it is distorting your voice, and I thought if I called you a second time, it might get better, but let&#x27;s try just a minute or two longer, okay?
+<span class="student">[Student]</span> Okay, no problem. And how about the free talking, teacher, today? If you have a problem with the textbook, how about the free talking?
+<span class="tutor">[Tutor]</span> No, no. Unfortunately, I have not had other problems today.
+<span class="student">[Student]</span> Okay, I see.
+<span class="tutor">[Tutor]</span> All right. Yeah.
+<span class="tutor">[Tutor]</span> So, Joey, unfortunately, it&#x27;s getting worse. I will contact Carrot and tell them that I ended your class, and then they will contact you, I believe, to reschedule. You won&#x27;t be penalized.
+<span class="student">[Student]</span> Okay, I see. Yeah, okay.
+<span class="tutor">[Tutor]</span> All right?
+<span class="student">[Student]</span> All right.
+<span class="tutor">[Tutor]</span> Okay, so I&#x27;m going to let you go. Hopefully tomorrow the phone will be working, okay?
+<span class="student">[Student]</span> Okay, have a nice day, teacher.
+<span class="tutor">[Tutor]</span> All right. Thank you. Bye-bye.</div>
+        </div>
+    </div>
+    <div class="toast" id="toast">✅ 프롬프트가 복사되었습니다!</div>
+    <script>
+        const REVIEW_PROMPT="너는 나의 영어 회화 복습 파트너야. 오늘 내 전화영어 수업 내용을 기반으로 대화하면서 복습을 도와줘.\n\n[오늘 수업 전사 내용]\n[Student] Hello teacher, is it better? Hello?\n[Tutor] Hi Joey.\n[Student] Yes, I'm clear your voice. Yeah, it's clear your voice.\n[Tutor] Yeah, okay. Joey, I'm very sorry, but we're having a problem with the phone that I cannot fix. What's happening is it is distorting your voice, and I thought if I called you a second time, it might get better, but let's try just a minute or two longer, okay?\n[Student] Okay, no problem. And how about the free talking, teacher, today? If you have a problem with the textbook, how about the free talking?\n[Tutor] No, no. Unfortunately, I have not had other problems today.\n[Student] Okay, I see.\n[Tutor] All right. Yeah.\n[Tutor] So, Joey, unfortunately, it's getting worse. I will contact Carrot and tell them that I ended your class, and then they will contact you, I believe, to reschedule. You won't be penalized.\n[Student] Okay, I see. Yeah, okay.\n[Tutor] All right?\n[Student] All right.\n[Tutor] Okay, so I'm going to let you go. Hopefully tomorrow the phone will be working, okay?\n[Student] Okay, have a nice day, teacher.\n[Tutor] All right. Thank you. Bye-bye.\n\n[AI 피드백]\nJoey, 안녕하세요! 오늘 수업은 전화 연결 문제로 아쉽게 짧게 마무리되었지만, 짧은 대화 속에서도 Joey님의 영어 실력을 엿볼 수 있었어요. 특히 어려운 상황에서도 차분하게 대처하고 소통하려는 모습이 정말 인상 깊었습니다. 오늘 배운 내용을 바탕으로 다음 수업에서는 더 자신감 있게 대화할 수 있도록 함께 연습해 봐요!\n\n---\n\n**0. 📌 Topic**\nTopic: Addressing technical issues during a call and rescheduling a class.\n\n**1. 📊 오늘의 대화 요약 (Summary)**\n오늘 수업은 전화 연결 상태가 좋지 않아 도중에 중단해야 했습니다. 튜터는 Joey님의 목소리가 왜곡되는 문제를 해결할 수 없어 수업을 종료하고 재조정할 것을 제안했고, Joey님은 이를 이해하고 수락했습니다.\n\n**2. 💬 유창성 업그레이드 (Fluency & Natural Flow)**\n\n아래 표현들을 익혀두시면 더 자연스럽고 유창하게 의견을 전달할 수 있을 거예요.\n\n1.  ❌ **학습자 원문 (As Said):** `I'm clear your voice.`\n    ✅ **자연스러운 표현 (Natural):** `I can hear your voice clearly.` / `Your voice is clear.`\n    💎 **비즈니스 표현 (Professional):** `Your audio quality is excellent on my end.`\n    💡 **코칭 포인트:** Using 'clear' as an adjective (e.g., \"Your voice is clear\") is correct, but to express the action of hearing, 'I can hear... clearly' is more natural.\n    → 'clear'를 형용사로 사용하여 \"Your voice is clear\"라고 하는 것은 맞지만, '듣는 행위'를 표현할 때는 \"I can hear... clearly\"가 더 자연스럽습니다.\n\n2.  ❌ **학습자 원문 (As Said):** `If you have a problem with the textbook, how about the free talking?`\n    ✅ **자연스러운 표현 (Natural):** `If we're having trouble with the textbook (due to the connection), how about we just do some free talking?`\n    💎 **비즈니스 표현 (Professional):** `Given the technical difficulties, perhaps we could engage in free conversation instead of using the textbook?`\n    💡 **코칭 포인트:** Clarifying the subject of the problem (e.g., \"we're having trouble\" or \"there's a problem with the connection\") makes the suggestion clearer and more polite.\n    → 문제의 주체(\"we're having trouble\" 또는 \"there's a problem with the connection\")를 명확히 하면 제안이 더 분명하고 정중해집니다.\n\n3.  ❌ **학습자 원문 (As Said):** `Okay, no problem.`\n    ✅ **자연스러운 표현 (Natural):** `Okay, I understand.` / `No worries at all.`\n    💎 **비즈니스 표현 (Professional):** `Understood, thank you for the clarification.`\n    💡 **코칭 포인트:** While \"No problem\" is perfectly fine, phrases like \"I understand\" or \"No worries\" can convey more empathy and understanding of the situation.\n    → \"No problem\"도 괜찮지만, \"I understand\"나 \"No worries\"와 같은 표현은 상황에 대한 더 많은 공감과 이해를 전달할 수 있습니다.\n\n**3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)**\n\nCategory: **Incorrect Predicate Structure (Adjective vs. Verb)**\nJoey님은 'clear'와 같은 형용사를 동사처럼 사용하거나, 형용사를 포함한 문장 구조를 만들 때 어색한 경우가 있었습니다. 이는 동사와 형용사의 역할 구분에 대한 이해를 높이면 자연스러워질 수 있습니다.\n\n| ❌ **원문 (As Said)**           | ✅ **교정 예시 (Corrected)**                                     |\n| :----------------------------- | :--------------------------------------------------------------- |\n| `I'm clear your voice.`        | `Your voice is clear.` / `I can hear your voice clearly.`        |\n| `it's clear your voice.`       | `Your voice is clear.`                                           |\n\n📌 **핵심 규칙:** 상태를 나타내는 형용사(e.g., clear)는 주로 be동사와 함께 쓰여 주어의 상태를 설명하고, 동사는 주어의 동작이나 행위를 나타냅니다. 'clear'는 '깨끗한, 명확한'이라는 형용사이므로, '목소리가 명확하다'는 `Your voice is clear`로, '명확하게 들린다'는 `I can hear your voice clearly`로 표현해야 합니다.\n\n🔁 **따라 읽기:**\n🗣️ \"Your voice is clear.\"\n🗣️ \"I can hear your voice clearly.\"\n\n**4. 📗 어휘 확장 (Vocabulary Vault)**\n\n오늘 대화에서 유용하게 쓰일 수 있는 어휘들을 정리해 보았습니다.\n\n1.  **distort** /dɪˈstɔːrt/ (동사)\n    뜻: 왜곡하다, (소리 등을) 일그러뜨리다\n    실전 예문: The poor signal quality can **distort** the audio during conference calls.\n\n2.  **reschedule** /ˌriːˈskedʒuːl/ (동사)\n    뜻: 일정을 변경하다, 다시 잡다\n    실전 예문: We had to **reschedule** the meeting due to an unexpected conflict.\n\n3.  **penalize** /ˈpiːnəlaɪz/ (동사)\n    뜻: 벌칙을 가하다, 불이익을 주다\n    실전 예문: You won't be **penalized** for canceling your subscription early.\n\n4.  **clarification** /ˌklærəfɪˈkeɪʃn/ (명사)\n    뜻: 설명, 해명, 명확화\n    실전 예문: Could you provide some **clarification** on the project requirements?\n\n5.  **technical difficulties** /ˈteknɪkl ˈdɪfɪkəltiz/ (명사구)\n    뜻: 기술적인 문제, 기술적인 어려움\n    실전 예문: We apologize for the interruption due to **technical difficulties**.\n\n**5. 📝 실전 복습 챌린지 (Practice)**\n\n오늘 배운 표현과 문법을 활용하여 다음 문장들을 영작해 보세요.\n\n1.  **상황:** 회의 중 인터넷 연결이 좋지 않아 목소리가 잘 들리지 않습니다.\n    **영작:** \"죄송하지만, 인터넷 연결이 좋지 않아서 선생님 목소리가 잘 들리지 않아요.\"\n    **모범 답안:** `I'm sorry, but I can't hear your voice clearly due to the poor internet connection.`\n\n2.  **상황:** 중요한 보고서 마감일을 기술적인 문제로 인해 연기해야 합니다.\n    **영작:** \"기술적인 문제 때문에 보고서 마감일을 다음 주 화요일로 변경해야 할 것 같습니다.\"\n    **모범 답안:** `I think we'll need to reschedule the report deadline to next Tuesday due to technical difficulties.`\n\n3.  **상황:** 고객이 제품 사용법에 대해 질문했지만, 설명이 명확하지 않아 추가 설명이 필요합니다.\n    **영작:** \"고객에게 더 명확한 설명이 필요합니다. 현재 설명이 약간 왜곡되어 이해하기 어렵습니다.\"\n    **모범 답안:** `The customer needs further clarification. The current explanation is a bit distorted and hard to understand.`\n\n**6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)**\n\n✨ **Good Job:**\n`Okay, no problem. And how about the free talking, teacher, today? If you have a problem with the textbook, how about the free talking?`\nJoey님은 전화 연결 문제로 인해 수업 진행이 어려울 수 있는 상황에서, 바로 \"free talking\"을 대안으로 제시하며 수업을 이어가려는 적극적인 모습을 보여주셨어요. 이는 유연한 사고와 문제 해결 능력을 보여주는 훌륭한 대처였습니다!\n\n🚀 **내일의 한 문장:**\n다음 수업 시작 시, 튜터에게 오늘 배운 표현을 활용하여 이렇게 말해보세요.\n`I hope the connection is clear today, so we can have a smooth class!`\n(오늘은 연결 상태가 명확해서 원활한 수업을 할 수 있기를 바랍니다!)\n\n---\n\n**[성과 지표]**\n**유창성 점수:** 7/10\n\n**근거:**\nJoey님은 짧은 대화였음에도 불구하고 자신의 의사를 전달하는 데 큰 어려움이 없었습니다. 특히 문제 상황에서 대안을 제시하려는 적극적인 태도는 유창성에 긍정적인 영향을 주었습니다. 다만, 일부 문장 구조나 어휘 선택에서 원어민이 듣기에 다소 어색하게 느껴질 수 있는 부분이 있어 자연스러움을 더하는 연습이 필요합니다.\n\n**다음 수업 '원포인트 액션 플랜':**\n**\"동사-형용사 구별 및 자연스러운 문장 구조 익히기\"**\n다음 수업에서는 오늘 다룬 'clear'와 같이 혼동하기 쉬운 동사와 형용사의 사용법을 집중적으로 연습하고, 상황에 맞는 자연스러운 문장 구조를 익히는 데 초점을 맞출 예정입니다. 예를 들어, \"I'm clear your voice\" 대신 \"Your voice is clear\" 또는 \"I can hear your voice clearly\"와 같이 정확하고 자연스러운 표현을 반복적으로 연습해 볼 거예요.\n\n위 내용을 바탕으로:\n1. 먼저 오늘 수업에서 내가 틀렸거나 어색했던 표현을 하나 골라서, 관련된 상황을 영어로 질문해줘.\n2. 내가 영어로 대답하면, 자연스러운지 확인하고 더 나은 표현이 있으면 알려줘.\n3. 특히 \"반복 실수 패턴\"에서 지적된 부분을 집중적으로 연습시켜줘.\n4. 이런 식으로 오늘 배운 표현들을 하나씩 복습하자.\n5. 한국어 설명은 필요할 때만 간단히, 대화는 최대한 영어로 진행해줘.\n\n그럼 시작하자!";
+        function startReview(){navigator.clipboard.writeText(REVIEW_PROMPT).then(()=>{showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)}).catch(()=>{const t=document.createElement('textarea');t.value=REVIEW_PROMPT;document.body.appendChild(t);t.select();document.execCommand('copy');document.body.removeChild(t);showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)})}
+        function showToast(){const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500)}
+        function switchTab(n){document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',n==='feedback'?i===0:i===1));document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));document.getElementById('tab-'+n).classList.add('active')}
+    </script>
+</body>
+</html>
