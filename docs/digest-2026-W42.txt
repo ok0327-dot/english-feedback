@@ -4,11 +4,13 @@ This is a study digest from my one-on-one English phone lessons this week. Pleas
 
 ## Topics covered this week
 - Discussing the impact of AI and social media on daily life and society.
+- Addressing technical issues during a call and rescheduling a class.
 
 ## Grammar focus this week
 - Verb Tense (1x)
+- Incorrect Predicate Structure (1x)
 
-## My all-time weak-point ranking (81 lessons since 2026-05-08)
+## My all-time weak-point ranking (82 lessons since 2026-05-08)
 - Articles (a/an/the) — 13 lessons
 - Verb Tense — 12 lessons
 - Subject–Verb Agreement — 11 lessons
@@ -38,6 +40,7 @@ This is a study digest from my one-on-one English phone lessons this week. Pleas
 - 2026-W38: 7.3
 - 2026-W39: 7.2
 - 2026-W41: 7.4
+- 2026-W42: 7.0
 - Overall average: 7.1
 
 ## Corrections — what I said vs. the natural version
@@ -45,6 +48,12 @@ This is a study digest from my one-on-one English phone lessons this week. Pleas
    Natural: "I thought Mexico was always summer, but it also has a winter season."
 2. I said: "Usually I forbid them from gathering my cookies because my cookies are there, they use that and then they give us some biased information."
    Natural: "I usually prevent them from collecting my cookies because they use that data to provide biased information."
+3. I said: "Your voice is clear"
+   Natural: "Your voice is clear"
+4. I said: "we're having trouble"
+   Natural: "we're having trouble"
+5. I said: "No problem"
+   Natural: "No problem"
 
 ## Recurring mistakes from earlier weeks — my long-term habits
 My most repeated weak categories overall: Articles (a/an/the), Verb Tense. These corrections are from earlier lessons in those categories. Please weave a few into the review so I revisit old mistakes.
@@ -68,6 +77,13 @@ My most repeated weak categories overall: Articles (a/an/the), Verb Tense. These
    Natural: "I can't resist my cravings."
 10. (2026-09-16, Articles (a/an/the)) I said: "After work, I will go to some dinner with my friends in Yeouido Park."
    Natural: "After work, I will have dinner with my friends in Yeouido Park."
+
+## Key vocabulary
+- distort (동사) — 왜곡하다, (소리 등을) 일그러뜨리다
+- reschedule (동사) — 일정을 변경하다, 다시 잡다
+- penalize (동사) — 벌칙을 가하다, 불이익을 주다
+- clarification (명사) — 설명, 해명, 명확화
+- technical difficulties (명사구) — 기술적인 문제, 기술적인 어려움
 
 ## Please cover in the podcast
 - Pick my 1–2 most repeated mistakes (see the all-time ranking) and explain the rule with a memorable rule of thumb.

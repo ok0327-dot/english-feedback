@@ -381,5 +381,9 @@
   "2026-10-12": {
     "topic": "Discussing the impact of AI and social media on daily life and society.",
     "target_grammar": "incorrect use of present tense for ongoing actions"
+  },
+  "2026-10-13": {
+    "topic": "Addressing technical issues during a call and rescheduling a class.",
+    "target_grammar": "incorrect predicate structure (adjective vs. verb)"
   }
 }
