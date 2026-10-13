@@ -4,50 +4,50 @@
   2026,
   42
  ],
- "topic": "Addressing technical issues during a call and rescheduling a class.",
- "grammar": "Incorrect Predicate Structure",
- "grammar_norm": "Incorrect Predicate Structure",
+ "topic": "Discussing the meaning of the idiom \"touch grass\" and daily routines.",
+ "grammar": "Gerunds after Prepositions",
+ "grammar_norm": "Prepositions",
  "score": 7.0,
  "pairs": [
   {
-   "said": "Your voice is clear",
-   "natural": "Your voice is clear"
+   "said": "I carefully to the outside because usually I take a bicycle.",
+   "natural": "I was careful going outside because I usually ride my bicycle."
   },
   {
-   "said": "we're having trouble",
-   "natural": "we're having trouble"
+   "said": "Just today I go walk.",
+   "natural": "Today I just walked."
   },
   {
-   "said": "No problem",
-   "natural": "No problem"
+   "said": "if I meet some difficult things, I need to refresh to go outside or just take a break to the work.",
+   "natural": "If I encounter difficulties, I need to refresh myself by going outside or just take a break from work."
   }
  ],
  "vocab": [
   {
-   "word": "distort",
+   "word": "vent",
    "pos": "동사",
-   "meaning": "왜곡하다, (소리 등을) 일그러뜨리다"
+   "meaning": "(감정 등을) 터뜨리다, 발산하다"
   },
   {
-   "word": "reschedule",
-   "pos": "동사",
-   "meaning": "일정을 변경하다, 다시 잡다"
+   "word": "frustrating",
+   "pos": "형용사",
+   "meaning": "좌절감을 주는, 불만스러운"
   },
   {
-   "word": "penalize",
-   "pos": "동사",
-   "meaning": "벌칙을 가하다, 불이익을 주다"
+   "word": "commute",
+   "pos": "동사/명사",
+   "meaning": "통근하다; 통근 (거리/시간)"
   },
   {
-   "word": "clarification",
+   "word": "encounter",
+   "pos": "동사",
+   "meaning": "(우연히) 마주치다, (어려움 등에) 직면하다"
+  },
+  {
+   "word": "respite",
    "pos": "명사",
-   "meaning": "설명, 해명, 명확화"
-  },
-  {
-   "word": "technical difficulties",
-   "pos": "명사구",
-   "meaning": "기술적인 문제, 기술적인 어려움"
+   "meaning": "짧은 휴식, 일시적인 중단"
   }
  ],
- "_html_md5": "acb1e6b130f5ddb65499d4727b289f9e"
+ "_html_md5": "b9ce217505f512d9926af74ad8a8d0af"
 }
