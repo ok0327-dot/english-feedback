@@ -1,0 +1,53 @@
+{
+ "date": "2026-10-14",
+ "iso": [
+  2026,
+  42
+ ],
+ "topic": "Discussing public transportation and travel in cities.",
+ "grammar": "Incorrect use of articles",
+ "grammar_norm": "Articles (a/an/the)",
+ "score": 7.0,
+ "pairs": [
+  {
+   "said": "Yeah, it's a good time for doing work.",
+   "natural": "Yeah, it's a good time to get work done."
+  },
+  {
+   "said": "Just I'm wondering that.",
+   "natural": "I was just wondering about that."
+  },
+  {
+   "said": "Emma wanted to drop her at the library, and she took the bus.",
+   "natural": "Emma wanted to be dropped off at the library, so she took the bus."
+  }
+ ],
+ "vocab": [
+  {
+   "word": "n",
+   "pos": "동사구",
+   "meaning": "(버스, 지하철 등)에 재빨리 타다/내리다"
+  },
+  {
+   "word": "n",
+   "pos": "동사구",
+   "meaning": "(교통 카드 등을) 단말기에 대고 승차/하차 처리하다"
+  },
+  {
+   "word": "flat fare",
+   "pos": "명사",
+   "meaning": "균일 요금 (거리나 정류장 수에 상관없이 동일한 요금)"
+  },
+  {
+   "word": "cramped",
+   "pos": "형용사",
+   "meaning": "비좁은, 답답한 (공간이 좁아 움직이기 불편한)"
+  },
+  {
+   "word": "serene",
+   "pos": "형용사",
+   "meaning": "고요한, 평화로운"
+  }
+ ],
+ "_html_md5": "6fb7d04ecbfd4d59b525351c53846fa8"
+}
