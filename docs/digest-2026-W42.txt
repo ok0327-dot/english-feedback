@@ -6,16 +6,18 @@ This is a study digest from my one-on-one English phone lessons this week. Pleas
 - Discussing the impact of AI and social media on daily life and society.
 - Discussing the meaning of the idiom "touch grass" and daily routines.
 - Discussing public transportation and travel in cities.
+- Discussing the Social Security Number application process and comparing national identific
 
 ## Grammar focus this week
 - Verb Tense (1x)
 - Prepositions (1x)
 - Articles (a/an/the) (1x)
+- Subject–Verb Agreement (1x)
 
-## My all-time weak-point ranking (83 lessons since 2026-05-08)
+## My all-time weak-point ranking (84 lessons since 2026-05-08)
 - Articles (a/an/the) — 14 lessons
+- Subject–Verb Agreement — 12 lessons
 - Verb Tense — 12 lessons
-- Subject–Verb Agreement — 11 lessons
 - Prepositions — 11 lessons
 - Verb Forms / Auxiliaries — 8 lessons
 - Missing Subjects / Verbs — 3 lessons
@@ -62,9 +64,15 @@ This is a study digest from my one-on-one English phone lessons this week. Pleas
    Natural: "I was just wondering about that."
 8. I said: "Emma wanted to drop her at the library, and she took the bus."
    Natural: "Emma wanted to be dropped off at the library, so she took the bus."
+9. I said: "I prepared already."
+   Natural: "I've already prepared."
+10. I said: "It helps determine benefit like retirement and disability."
+   Natural: "It helps determine benefits like retirement and disability."
+11. I said: "So if you get other people's Korean SSN, at that time you get that people's birthday."
+   Natural: "So if you get someone else's Korean resident registration number, you'll also know their birthday."
 
 ## Recurring mistakes from earlier weeks — my long-term habits
-My most repeated weak categories overall: Articles (a/an/the), Verb Tense. These corrections are from earlier lessons in those categories. Please weave a few into the review so I revisit old mistakes.
+My most repeated weak categories overall: Articles (a/an/the), Subject–Verb Agreement. These corrections are from earlier lessons in those categories. Please weave a few into the review so I revisit old mistakes.
 1. (2026-10-07, Articles (a/an/the)) I said: "Because another room alarm woke me up. So I can't sleep after the alarm."
    Natural: "Another alarm from a different room woke me up, so I couldn't go back to sleep."
 2. (2026-10-07, Articles (a/an/the)) I said: "These days I have been eyeing the Mac Mini, an Apple product, because these days it is possible to turn on always in my home and possible to remote control AI."
@@ -77,12 +85,12 @@ My most repeated weak categories overall: Articles (a/an/the), Verb Tense. These
    Natural: "I was wondering if 'go-to' is a commonly used expression?"
 6. (2026-09-22, Articles (a/an/the)) I said: "Because that is about to respect the mind."
    Natural: "Because it's a sign of respect."
-7. (2026-09-21, Verb Tense) I said: "Maybe how about your country's beauty?"
-   Natural: "What about the autumn in your country?"
-8. (2026-09-21, Verb Tense) I said: "my bag is old, almost three years more past"
-   Natural: "my bag is old, it's been over three years."
-9. (2026-09-21, Verb Tense) I said: "I can't win through my desire."
-   Natural: "I can't resist my cravings."
+7. (2026-09-18, Subject–Verb Agreement) I said: "I finally tried the Dubai cookie after seeing it blow up."
+   Natural: "I finally tried the Dubai cookie after seeing it become so popular."
+8. (2026-09-18, Subject–Verb Agreement) I said: "Before I try it, I expected it is to be melty and that to be..."
+   Natural: "Before I try it, I expected it to be melty..."
+9. (2026-09-18, Subject–Verb Agreement) I said: "This play is too bougie for me."
+   Natural: "This place is too bougie for me."
 10. (2026-09-16, Articles (a/an/the)) I said: "After work, I will go to some dinner with my friends in Yeouido Park."
    Natural: "After work, I will have dinner with my friends in Yeouido Park."
 
@@ -96,6 +104,11 @@ My most repeated weak categories overall: Articles (a/an/the), Verb Tense. These
 - flat fare (명사) — 균일 요금 (거리나 정류장 수에 상관없이 동일한 요금)
 - cramped (형용사) — 비좁은, 답답한 (공간이 좁아 움직이기 불편한)
 - serene (형용사) — 고요한, 평화로운
+- unique (형용사) — 독특한, 유일무이한
+- permanent (형용사) — 영구적인, 불변의
+- refugee (명사) — 난민
+- sequence (명사) — 연속, 순서, 일련의 숫자
+- authorize (동사) — 승인하다, 허가하다
 
 ## Please cover in the podcast
 - Pick my 1–2 most repeated mistakes (see the all-time ranking) and explain the rule with a memorable rule of thumb.

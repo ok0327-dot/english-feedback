@@ -389,5 +389,9 @@
   "2026-10-14": {
     "topic": "Discussing public transportation and travel in cities.",
     "target_grammar": "incorrect use of articles (a/an/the)"
+  },
+  "2026-10-15": {
+    "topic": "Discussing the Social Security Number application process and comparing national",
+    "target_grammar": "noun plurality & subject-verb agreement (명사의 단수/복수형 및 주어-동사 "
   }
 }
