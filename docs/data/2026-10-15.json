@@ -1,0 +1,53 @@
+{
+ "date": "2026-10-15",
+ "iso": [
+  2026,
+  42
+ ],
+ "topic": "Discussing the Social Security Number application process and comparing national identific",
+ "grammar": "Noun Plurality & Subject-Verb Agreement",
+ "grammar_norm": "Subject–Verb Agreement",
+ "score": 7.0,
+ "pairs": [
+  {
+   "said": "I prepared already.",
+   "natural": "I've already prepared."
+  },
+  {
+   "said": "It helps determine benefit like retirement and disability.",
+   "natural": "It helps determine benefits like retirement and disability."
+  },
+  {
+   "said": "So if you get other people's Korean SSN, at that time you get that people's birthday.",
+   "natural": "So if you get someone else's Korean resident registration number, you'll also know their birthday."
+  }
+ ],
+ "vocab": [
+  {
+   "word": "unique",
+   "pos": "형용사",
+   "meaning": "독특한, 유일무이한"
+  },
+  {
+   "word": "permanent",
+   "pos": "형용사",
+   "meaning": "영구적인, 불변의"
+  },
+  {
+   "word": "refugee",
+   "pos": "명사",
+   "meaning": "난민"
+  },
+  {
+   "word": "sequence",
+   "pos": "명사",
+   "meaning": "연속, 순서, 일련의 숫자"
+  },
+  {
+   "word": "authorize",
+   "pos": "동사",
+   "meaning": "승인하다, 허가하다"
+  }
+ ],
+ "_html_md5": "0f70c872300c2f3ead73a085a010473e"
+}

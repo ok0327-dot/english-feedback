@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#0f0f13"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="당근영어"><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="icon" type="image/png" sizes="192x192" href="icon-192.png"><script src="install-banner.js" defer></script><script src="sw-reg.js" defer></script>
+    <title>전화영어 복습 - 2026년 10월 15일</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Noto Sans KR',sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.75;min-height:100vh}
+        .header{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);border-bottom:1px solid rgba(255,255,255,.06);padding:48px 24px 40px;text-align:center}
+        .header-date{font-size:13px;color:#94a3b8;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+        .header h1{font-size:28px;font-weight:700;color:#f1f5f9;margin-bottom:16px}
+        .header-meta{display:flex;justify-content:center;gap:24px;font-size:14px;color:#64748b}
+        .header-meta span{display:flex;align-items:center;gap:6px}
+        .cta-section{text-align:center;padding:40px 24px}
+        .cta-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:linear-gradient(135deg,#38bdf8,#818cf8);color:#fff;font-size:16px;font-weight:600;font-family:'Noto Sans KR',sans-serif;border:none;border-radius:50px;cursor:pointer;transition:all .3s;text-decoration:none;box-shadow:0 4px 24px rgba(56,189,248,.25)}
+        .cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(56,189,248,.35)}
+        .cta-btn svg{width:20px;height:20px}
+        .cta-sub{margin-top:12px;font-size:13px;color:#64748b}
+        .toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#38bdf8;padding:14px 28px;border-radius:12px;font-size:14px;font-weight:500;border:1px solid rgba(56,189,248,.2);box-shadow:0 8px 32px rgba(0,0,0,.4);opacity:0;transition:all .4s cubic-bezier(.16,1,.3,1);z-index:1000}
+        .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+        .container{max-width:720px;margin:0 auto;padding:0 24px 80px}
+        .tabs{display:flex;gap:4px;background:#1a1a24;padding:4px;border-radius:12px;margin-bottom:32px}
+        .tab{flex:1;padding:12px;text-align:center;font-size:14px;font-weight:500;color:#64748b;background:0 0;border:none;border-radius:8px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all .2s}
+        .tab.active{background:#262636;color:#f1f5f9}
+        .tab-content{display:none}.tab-content.active{display:block}
+        .feedback h2{font-size:18px;font-weight:700;color:#f1f5f9;margin:36px 0 16px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.06)}
+        .feedback h2:first-child{margin-top:0}
+        .feedback p{margin:8px 0;color:#cbd5e1}
+        .feedback .item{padding:6px 0 6px 16px;border-left:2px solid #334155;margin:6px 0;color:#cbd5e1}
+        .feedback .numbered{padding:8px 0 8px 16px;color:#cbd5e1}
+        .feedback .numbered strong{color:#38bdf8}
+        .feedback strong{color:#f1f5f9}
+        .feedback code{background:#1e293b;padding:2px 8px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#38bdf8}
+        .feedback table{width:100%;border-collapse:collapse;margin:12px 0}
+        .feedback th,.feedback td{padding:10px 14px;text-align:left;border-bottom:1px solid #262636}
+        .feedback th{color:#94a3b8;font-weight:500;font-size:13px}
+        .feedback td{color:#cbd5e1}
+        .arrow{color:#38bdf8;font-weight:700}
+        .transcript{background:#1a1a24;border-radius:12px;padding:28px;font-size:14px;line-height:2;color:#94a3b8;white-space:pre-wrap;word-break:break-word;font-family:'JetBrains Mono','Noto Sans KR',monospace}
+        .transcript .tutor{color:#38bdf8}
+        .transcript .student{color:#a78bfa}
+        @media(max-width:640px){.header{padding:32px 16px}.header h1{font-size:22px}.cta-btn{padding:14px 28px;font-size:15px}.container{padding:0 16px 60px}}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-date">2026년 10월 15일</div>
+        <h1>📚 전화영어 복습</h1>
+        <div class="header-meta">
+            <span>⏱ 20분 54초</span>
+            <span>🎙 전화영어_025180304_20261015080038.m4a</span>
+        </div>
+    </div>
+    <div class="cta-section">
+        <button class="cta-btn" onclick="startReview()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Gemini에서 복습 대화 시작하기
+        </button>
+        <div class="cta-sub">클릭하면 프롬프트가 복사되고 Gemini가 열립니다</div>
+    </div>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('feedback')">📋 AI 피드백</button>
+            <button class="tab" onclick="switchTab('transcript')">🎙 수업 전사</button>
+        </div>
+        <div id="tab-feedback" class="tab-content active">
+            <div class="feedback"><p>Joey, 안녕하세요! 오늘도 활기찬 목소리로 수업에 참여해주셔서 감사합니다. SSN 신청이라는 실용적인 주제로 영어 표현을 익히고, 한국의 주민등록번호와 비교하며 문화적 차이까지 이야기 나눌 수 있어 정말 유익한 시간이었어요. 특히 발음 교정에 적극적으로 임하는 모습이 인상 깊었습니다!</p>
+<br>
+<br>
+<p><strong>0. 📌 Topic</strong></p>
+<p>Topic: Discussing the Social Security Number application process and comparing national identification systems.</p>
+<br>
+<br>
+<p><strong>1. 📊 오늘의 대화 요약 (Summary)</strong></p>
+<p>오늘 Joey는 미국 사회 보장 번호(SSN) 신청 절차와 관련된 어휘 및 표현을 학습했습니다. 특히 SSN이 필요한 상황, 발급 기관, 그리고 한국의 주민등록번호와의 차이점(생년월일, 성별 정보 포함 여부)에 대해 심도 있게 대화를 나누며 실제 비즈니스 상황에서 활용할 수 있는 실용적인 영어 표현들을 연습했습니다.</p>
+<br>
+<br>
+<p><strong>2. 💬 유창성 업그레이드 (Fluency & Natural Flow)</strong></p>
+<p>Joey가 실제 말한 문장 중 의미는 통하지만, 원어민이 들었을 때 더 자연스럽게 들릴 수 있는 표현 3가지를 선정했습니다.</p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>❌ 학습자 원문 (As Said):</strong> "I prepared already."</div>
+<div class="item"><strong>✅ 자연스러운 표현 (Natural):</strong> "I've already prepared." 또는 "I'm already prepared."</div>
+<div class="item"><strong>💎 비즈니스 표현 (Professional):</strong> "I have already completed the preparations."</div>
+<div class="item"><strong>💡 코칭 포인트:</strong> Using the present perfect "I've prepared" or the adjective "I'm prepared" sounds more natural for an action completed recently with a current relevance. "Already" typically comes before the main verb or between the auxiliary and main verb.</div>
+<p><span class="arrow">→</span> 현재 완료 "I've prepared"나 형용사 "I'm prepared"를 사용하면 최근에 완료되어 현재와 관련 있는 행동을 더 자연스럽게 표현할 수 있습니다. "Already"는 일반적으로 주동사 앞이나 조동사와 주동사 사이에 위치합니다.</p>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>❌ 학습자 원문 (As Said):</strong> "It helps determine benefit like retirement and disability."</div>
+<div class="item"><strong>✅ 자연스러운 표현 (Natural):</strong> "It helps determine benefits like retirement and disability."</div>
+<div class="item"><strong>💎 비즈니스 표현 (Professional):</strong> "It assists in determining eligibility for benefits such as retirement and disability."</div>
+<div class="item"><strong>💡 코칭 포인트:</strong> "Benefit"은 다양한 종류의 혜택이나 이점을 말할 때 주로 복수형("benefits")으로 사용됩니다. 예시를 들 때 "like" 대신 "such as"를 사용하면 좀 더 격식 있는 표현이 됩니다.</div>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>❌ 학습자 원문 (As Said):</strong> "So if you get other people's Korean SSN, at that time you get that people's birthday."</div>
+<div class="item"><strong>✅ 자연스러운 표현 (Natural):</strong> "So if you get someone else's Korean resident registration number, you'll also know their birthday."</div>
+<div class="item"><strong>💎 비즈니스 표현 (Professional):</strong> "Thus, possessing another individual's Korean resident registration number would also reveal their date of birth."</div>
+<div class="item"><strong>💡 코칭 포인트:</strong> "Other people's"도 문법적으로 맞지만, 캐주얼한 대화에서는 "someone else's"가 더 흔하게 사용됩니다. "At that time"은 "you'll also know"와 같이 더 직접적인 표현으로 대체하여 대화의 흐름을 개선할 수 있습니다. "That people's"는 "that person's" 또는 "their"로 고쳐야 합니다.</div>
+<br>
+<br>
+<p><strong>3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)</strong></p>
+<p>Category: Noun Plurality & Subject-Verb Agreement (명사의 단수/복수형 및 주어-동사 수일치)</p>
+<br>
+<p>Joey는 명사의 단수/복수형 사용과 이에 따른 주어-동사 수일치에서 실수가 반복되는 경향이 있습니다. 특히 셀 수 있는 명사를 단수형으로 사용하거나, 복수 주어 뒤에 단수 동사를 사용하는 경우가 보였습니다.</p>
+<br>
+<table>
+<tr><th>❌ 원문 (As Said)</th><th>✅ 교정 예시 (Corrected)</th></tr>
+<tr><td>"It helps determine <strong>benefit</strong> like retirement and disability."</td><td>"It helps determine <strong>benefits</strong> like retirement and disability."</td></tr>
+<tr><td>"SSNs <strong>are</strong> for green card holders, workers, students with work permissions and <strong>refuse</strong>."</td><td>"SSNs <strong>are</strong> for green card holders, workers, students with work <strong>permits</strong> and <strong>refugees</strong>."</td></tr>
+<tr><td>"But this day, after 20,000 year birthday, baby or children, they <strong>start</strong> the three and four."</td><td>"But <strong>these days</strong>, for babies or children born after the year 2000, their numbers <strong>start</strong> with three and four."</td></tr>
+</table>
+<br>
+<p>📌 <strong>핵심 규칙:</strong> 명사의 수(단수/복수)를 문맥에 맞게 정확히 사용하고, 이에 따라 동사의 형태(단수 동사/복수 동사)를 일치시켜야 합니다. 특히 셀 수 있는 명사는 복수형으로 사용해야 할 때 정확히 복수형을 써야 합니다.</p>
+<br>
+<p>🔁 <strong>따라 읽기:</strong></p>
+<p>🗣️ "It helps determine benefits like retirement and disability."</p>
+<p>🗣️ "SSNs are for green card holders, workers, students with work permits and refugees."</p>
+<p>🗣️ "But these days, for babies or children born after the year 2000, their numbers start with three and four."</p>
+<br>
+<br>
+<p><strong>4. 📗 어휘 확장 (Vocabulary Vault)</strong></p>
+<p>오늘 수업에서 다루었거나 비즈니스 환경에서 유용하게 쓰일 수 있는 어휘 5가지입니다.</p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>unique</strong> /juːˈniːk/ (형용사)</div>
+<div class="item">뜻: 독특한, 유일무이한</div>
+<div class="item">실전 예문: Our company offers a <strong>unique</strong> solution to energy storage challenges.</div>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>permanent</strong> /ˈpɜːrmənənt/ (형용사)</div>
+<div class="item">뜻: 영구적인, 불변의</div>
+<div class="item">실전 예문: We are looking for a <strong>permanent</strong> solution to reduce operational costs.</div>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>refugee</strong> /ˌrefjuˈdʒiː/ (명사)</div>
+<div class="item">뜻: 난민</div>
+<div class="item">실전 예문: Our organization provides support to <strong>refugees</strong> seeking new opportunities.</div>
+<br>
+<div class="numbered"><strong>4.</strong> <strong>sequence</strong> /ˈsiːkwəns/ (명사)</div>
+<div class="item">뜻: 연속, 순서, 일련의 숫자</div>
+<div class="item">실전 예문: The project timeline follows a logical <strong>sequence</strong> of tasks.</div>
+<br>
+<div class="numbered"><strong>5.</strong> <strong>authorize</strong> /ˈɔːθəraɪz/ (동사)</div>
+<div class="item">뜻: 승인하다, 허가하다</div>
+<div class="item">실전 예문: The board needs to <strong>authorize</strong> the budget for the new investment.</div>
+<br>
+<br>
+<p><strong>5. 📝 실전 복습 챌린지 (Practice)</strong></p>
+<p>오늘 배운 표현과 문법을 활용하여 다음 상황에 맞게 영작해 보세요.</p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>상황:</strong> 당신의 회사가 새로운 시장에 진출하기 위해 독특한 전략을 개발했습니다.</div>
+<div class="item"><strong>영작:</strong> 우리 회사는 새로운 시장 진출을 위한 독특한 전략을 개발했습니다.</div>
+<div class="item"><strong>모범 답안:</strong> Our company has developed a <strong>unique</strong> strategy for entering new markets.</div>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>상황:</strong> 당신은 업무 비자(work visa)로 해외에 체류 중이며, 영구적인 거주 허가를 신청하려고 합니다.</div>
+<div class="item"><strong>영작:</strong> 저는 현재 업무 비자로 체류 중이며, 영구적인 거주 허가를 신청하려고 합니다.</div>
+<div class="item"><strong>모범 답안:</strong> I am currently here on a work visa and plan to apply for <strong>permanent</strong> residency.</div>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>상황:</strong> 투자 유치를 위해 다음 주에 중요한 프레젠테이션이 있습니다. 프레젠테이션 자료를 미리 준비했고, 최종 승인을 기다리고 있습니다.</div>
+<div class="item"><strong>영작:</strong> 저는 이미 다음 주 프레젠테이션 자료를 준비했고, 이제 팀장의 승인을 기다리고 있습니다.</div>
+<div class="item"><strong>모범 답안:</strong> I've already prepared the materials for next week's presentation, and now I'm waiting for my team leader to <strong>authorize</strong> them.</div>
+<br>
+<br>
+<p><strong>6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)</strong></p>
+<br>
+<p>✨ <strong>Good Job:</strong></p>
+<p>"I would like to apply for a Social Security number for the first time."</p>
+<p>이 문장은 SSN 신청이라는 오늘의 주제에 가장 핵심적인 표현이었고, Joey가 아주 정확하고 유창하게 말해주었습니다. "I would like to apply for ~"는 비즈니스 환경에서 무언가를 요청할 때 매우 공손하고 적절하게 사용할 수 있는 표현이니, 잘 기억해두시면 좋습니다!</p>
+<br>
+<p>🚀 <strong>내일의 한 문장:</strong></p>
+<p>다음 수업 시작 시 튜터에게 오늘 배운 표현을 활용하여 이렇게 말해보세요.</p>
+<p>"I've already prepared for today's lesson, and I'm ready to discuss new vocabulary."</p>
+<p>(오늘 수업 준비는 이미 마쳤고, 새로운 어휘를 논의할 준비가 되었습니다.)</p>
+<br>
+<br>
+<p><strong>[성과 지표]</strong></p>
+<p><strong>유창성 점수:</strong> 7/10점</p>
+<p><strong>근거:</strong> Joey는 수업 주제를 이해하고 자신의 생각을 표현하는 데 큰 어려움이 없었습니다. 대화의 흐름도 전반적으로 자연스러웠습니다. 다만, 몇몇 단어의 발음(permanent, sequence, refugee 등)과 명사의 단수/복수형 사용에서 약간의 어색함이 있었지만, 튜터의 교정에 적극적으로 반응하며 개선하려는 노력이 돋보였습니다.</p>
+<br>
+<p><strong>다음 수업 '원포인트 액션 플랜':</strong></p>
+<p>다음 수업에서는 <strong>"명사의 단수/복수형을 정확히 사용하는 연습"</strong>에 집중해 봅시다. 특히 'benefit'이나 'permission'과 같이 문맥에 따라 단수 또는 복수형으로 쓰일 수 있는 명사들을 주의 깊게 살펴보고, 정확한 수일치 연습을 통해 더욱 정확하고 자연스러운 문장 구사를 목표로 할게요.</p></div>
+        </div>
+        <div id="tab-transcript" class="tab-content">
+            <div class="transcript">[Joey] Hello, teacher. Good morning.
+<span class="tutor">[Tutor]</span> Hi, Joey.
+<span class="tutor">[Tutor]</span> How are you doing today?
+[Joey] Yeah, happy Thursday.
+<span class="tutor">[Tutor]</span> Good. Yeah, one day closer to the weekend. Wonderful.
+<span class="tutor">[Tutor]</span> Do you have time for your class this morning?
+[Joey] Oh, yes. Yes.
+<span class="tutor">[Tutor]</span> Wonderful. Okay.
+<span class="tutor">[Tutor]</span> Do you have your lesson up and ready to go, or did you need a moment?
+[Joey] Oh, yeah, I prepared already.
+<span class="tutor">[Tutor]</span> Thank you. I appreciate that.
+<span class="tutor">[Tutor]</span> All right.
+<span class="tutor">[Tutor]</span> So today&#x27;s title is called, Can I Apply for an SSN?
+<span class="tutor">[Tutor]</span> I&#x27;m going to ask you to read today&#x27;s mission to me, please.
+[Joey] Okay, today&#x27;s mission is go to the Social Security Administration and make an application to get a Social Security number.
+<span class="tutor">[Tutor]</span> Okay, let&#x27;s just try that one word, security.
+[Joey] Security.
+<span class="tutor">[Tutor]</span> Very good, thank you.
+<span class="tutor">[Tutor]</span> Yes, very good.
+<span class="tutor">[Tutor]</span> All right. Let&#x27;s go on to the next page.
+<span class="tutor">[Tutor]</span> And we have a couple of expressions with that word.
+<span class="tutor">[Tutor]</span> I&#x27;ll get you to read the expression and its description.
+[Joey] Okay. Today, there are two sentences.
+[Joey] Okay. Social Security Number, SSN, a unique number need for jobs, tax, and banking.
+<span class="tutor">[Tutor]</span> Okay. I&#x27;ll get you to stop for a moment.
+<span class="tutor">[Tutor]</span> You said jobs, tax, and banking.
+<span class="tutor">[Tutor]</span> The second word is actually the plural form of tax.
+<span class="tutor">[Tutor]</span> Let&#x27;s add an extra part.
+<span class="tutor">[Tutor]</span> Taxes.
+[Joey] Taxes.
+[Joey] Oh.
+<span class="tutor">[Tutor]</span> Yes.
+<span class="tutor">[Tutor]</span> Very good.
+<span class="tutor">[Tutor]</span> And banking.
+[Joey] Jobs, taxes, and banking.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="tutor">[Tutor]</span> Excellent.
+<span class="tutor">[Tutor]</span> All right.
+<span class="tutor">[Tutor]</span> Let&#x27;s get you to go to the next one.
+[Joey] Okay.
+[Joey] Next one.
+[Joey] Social Security Administration.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="tutor">[Tutor]</span> That means it&#x27;s the U.S. government office that gives out the Social Security numbers.
+<span class="tutor">[Tutor]</span> Very good.
+<span class="tutor">[Tutor]</span> All right.
+<span class="tutor">[Tutor]</span> Excellent.
+<span class="tutor">[Tutor]</span> Let&#x27;s move on to the key phrases, and I will get you to read each of the example questions.
+[Joey] Okay.
+[Joey] The first sentence is, I like to apply for blah, blah.
+[Joey] I like to apply for Social Security numbers.
+<span class="tutor">[Tutor]</span> Okay.
+[Joey] And second, when can I expect the application to be processed?
+<span class="tutor">[Tutor]</span> All right.
+<span class="tutor">[Tutor]</span> Very well done.
+[Joey] Thank you.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="tutor">[Tutor]</span> We&#x27;re going to move on to Part 80, InfoBytes.
+[Joey] Okay.
+<span class="tutor">[Tutor]</span> And they&#x27;re showing you, which is, the picture they&#x27;re showing you is an American Social Security card.
+[Joey] Oh.
+<span class="tutor">[Tutor]</span> And we have four statements, four bullets, and I&#x27;ll get you to read them to me.
+<span class="tutor">[Tutor]</span> Please take your time.
+[Joey] Okay.
+[Joey] I see.
+[Joey] Okay.
+[Joey] That is the InfoBytes.
+[Joey] And the Social Security number is a permanent number used to track earnings.
+[Joey] It helps determine benefit like retirement and disability.
+[Joey] SSNs are for green card holders, workers, students with work permissions and refuse.
+<span class="tutor">[Tutor]</span> Okay, keep going. I&#x27;ll help you with corrections after.
+[Joey] Okay. And CAD, the UK, AUS, and New Zealand use the ID number like the SIN, NIN, and TFN for work, tax, and benefit, similar to the US SN.
+<span class="tutor">[Tutor]</span> Okay. I&#x27;m going to get you to stop there.
+<span class="tutor">[Tutor]</span> As you can see, they give us a lot of abbreviations.
+<span class="tutor">[Tutor]</span> We&#x27;ll talk about those in a minute.
+<span class="tutor">[Tutor]</span> All right.
+<span class="tutor">[Tutor]</span> In the first bulleted point, you said the Social Security number is A.
+<span class="tutor">[Tutor]</span> And the next word you pronounced in two syllables, you said permanent.
+<span class="tutor">[Tutor]</span> Now, this word has three syllables.
+<span class="tutor">[Tutor]</span> I&#x27;m going to get you to try repeating after me. Okay? Permanent. Permanent. Permanent. Permanent. Yeah. Permanent. Permanent. Okay.
+<span class="tutor">[Tutor]</span> Yeah. The stress of the word is on the last syllable. Right now, you&#x27;re saying permanent.
+<span class="tutor">[Tutor]</span> Let&#x27;s try permanent.
+[Joey] Permanent.
+<span class="tutor">[Tutor]</span> Better.
+<span class="tutor">[Tutor]</span> Very good.
+<span class="tutor">[Tutor]</span> All right.
+<span class="tutor">[Tutor]</span> Now, in this particular program, we&#x27;re going to have other pages like this where they give you these abbreviations, especially for countries.
+<span class="tutor">[Tutor]</span> So I&#x27;m going to get you to try and learn to pronounce these abbreviated countries by their full names.
+[Joey] Okay.
+<span class="tutor">[Tutor]</span> So CAD would be Canada, the UK, United Kingdom, AUS, Australia, and NZ, New Zealand.
+[Joey] Okay.
+[Joey] Okay.
+<span class="tutor">[Tutor]</span> And that&#x27;s something we&#x27;ll practice in each lesson.
+<span class="tutor">[Tutor]</span> All right.
+<span class="tutor">[Tutor]</span> One more word I want to help you with.
+<span class="tutor">[Tutor]</span> In the third bullet, they read that the SSNs are for blah, blah, students with work permission and the next word you said refuse.
+<span class="tutor">[Tutor]</span> Let&#x27;s try refugee.
+[Joey] Refugee.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="tutor">[Tutor]</span> You got it.
+<span class="tutor">[Tutor]</span> Yeah.
+[Joey] Refugees.
+<span class="tutor">[Tutor]</span> Very good.
+<span class="tutor">[Tutor]</span> And again, I&#x27;ll send it in the sentence, and I&#x27;ll break it into sound bites for you, okay?
+<span class="tutor">[Tutor]</span> You&#x27;re doing great.
+<span class="tutor">[Tutor]</span> Yes, good.
+<span class="tutor">[Tutor]</span> Wonderful.
+<span class="tutor">[Tutor]</span> Okay, let&#x27;s get you to read the question at the bottom and tell me about it.
+[Joey] Is there a unique sequence of numbers you use to identify your shape in your country?
+[Joey] How does it differ from the SSN? Yes, we have them similar. Yeah, in Korea we use
+[Joey] the list of the people number. So that number is the...
+<span class="tutor">[Tutor]</span> I understand it starts with your birth date?
+[Joey] Yeah, you&#x27;re right.
+[Joey] 13 and first day.
+[Joey] First is the year, month, first month and day.
+[Joey] And then the next line is the security number.
+[Joey] So usually we use that.
+[Joey] It is similar.
+[Joey] So if you get other people&#x27;s Korean SSN, at that time you get that people&#x27;s birthday.
+<span class="tutor">[Tutor]</span> Certainly, yeah.
+<span class="tutor">[Tutor]</span> Yes.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="tutor">[Tutor]</span> I also understand that there&#x27;s a number on your card that identifies whether you&#x27;re male or female.
+[Joey] Oh, yes, you&#x27;re right.
+[Joey] The second line, if you got that information, and if you start the first, that is a man, and two is the woman.
+[Joey] But this day, after 20,000 year birthday, baby or children, they start the three and four.
+<span class="tutor">[Tutor]</span> Oh, wow. Okay, so after the year 2000, they put in a 3X. Wonderful. They&#x27;re very interesting.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="tutor">[Tutor]</span> Okay, well, the difference that I can tell you about my social, we call them the SIN, Social Insurance Number.
+[Joey] Uh-huh.
+<span class="tutor">[Tutor]</span> Yeah, and on our card, it&#x27;s only nine numbers.
+[Joey] Nine numbers.
+<span class="tutor">[Tutor]</span> And the nine numbers are randomly assigned to you.
+<span class="tutor">[Tutor]</span> They don&#x27;t indicate your birthday.
+<span class="tutor">[Tutor]</span> They don&#x27;t indicate your gender.
+<span class="tutor">[Tutor]</span> It&#x27;s just nine numbers that you use when you apply for work or taxes.
+<span class="tutor">[Tutor]</span> And you use it all your life.
+<span class="tutor">[Tutor]</span> And I&#x27;m sure you use yours all your life.
+[Joey] I see.
+<span class="tutor">[Tutor]</span> All right.
+<span class="tutor">[Tutor]</span> Great.
+<span class="tutor">[Tutor]</span> Yeah.
+<span class="tutor">[Tutor]</span> In the question, there was a phrase that I&#x27;d like to help you with.
+<span class="tutor">[Tutor]</span> You said, is there a, and then the next two words you pronounced as unique, secure.
+<span class="tutor">[Tutor]</span> I&#x27;m going to get you to repeat after me.
+<span class="tutor">[Tutor]</span> Unique sequence.
+[Joey] Sequence.
+<span class="tutor">[Tutor]</span> Sequence.
+<span class="tutor">[Tutor]</span> You did it.
+<span class="tutor">[Tutor]</span> Unique sequence.
+<span class="tutor">[Tutor]</span> You did it.
+[Joey] Okay.
+<span class="tutor">[Tutor]</span> That Q-U can throw a person off because it makes the Q-A sound.
+<span class="tutor">[Tutor]</span> All right, very good work.
+<span class="tutor">[Tutor]</span> Excellent.
+<span class="tutor">[Tutor]</span> Let&#x27;s move on to the real-life talk, part B.
+<span class="tutor">[Tutor]</span> And as usual I&#x27;m going to ask you to read the conversation to me. And you&#x27;re reading for both the staff member and the applier. Okay?
+<span class="tutor">[Tutor]</span> Please take your time.
+[Joey] Okay.
+[Joey] Could you select one person?
+[Joey] And I give another person to you for you.
+<span class="tutor">[Tutor]</span> That&#x27;s what you&#x27;d rather do?
+<span class="tutor">[Tutor]</span> Okay.
+<span class="tutor">[Tutor]</span> I&#x27;ll make it easy on you.
+<span class="tutor">[Tutor]</span> All right.
+<span class="tutor">[Tutor]</span> I will be the staff member.
+<span class="tutor">[Tutor]</span> Okay?
+[Joey] Yes, great.
+<span class="tutor">[Tutor]</span> All right.
+<span class="tutor">[Tutor]</span> All right.
+<span class="tutor">[Tutor]</span> I&#x27;ll begin.
+<span class="tutor">[Tutor]</span> Hello.
+<span class="tutor">[Tutor]</span> How can I help you?
+[Joey] Hi.
+[Joey] I would like to apply for a Social Security number for the first time.
+<span class="tutor">[Tutor]</span> Sure.
+<span class="tutor">[Tutor]</span> Are you a U.S. citizen or applying as a non-citizen?
+[Joey] No.
+[Joey] I&#x27;m on work visa.
+<span class="tutor">[Tutor]</span> I&#x27;m on a work visa.
+<span class="tutor">[Tutor]</span> Very good.
+<span class="tutor">[Tutor]</span> All right.
+<span class="tutor">[Tutor]</span> Work visa, right? I&#x27;m on a work visa.
+<span class="tutor">[Tutor]</span> Yes, better.
+[Joey] Yes.
+<span class="tutor">[Tutor]</span> Okay, I&#x27;ll continue.
+<span class="tutor">[Tutor]</span> Please show your passport, I-94, and work authorization.
+<span class="tutor">[Tutor]</span> Also, please fill out this SS-5 form.
+<span class="tutor">[Tutor]</span> All right, next page.
+[Joey] Okay, here they are.
+[Joey] I will fill out now.
+[Joey] When can I expect to receive my SSN card?
+<span class="tutor">[Tutor]</span> Thanks.
+<span class="tutor">[Tutor]</span> You&#x27;ll get your card by mail in about two weeks.
+[Joey] All right.
+<span class="tutor">[Tutor]</span> You did very well.
+<span class="tutor">[Tutor]</span> Now, we&#x27;re going to do it one more time,
+<span class="tutor">[Tutor]</span> but this time you will be the staff member and I will be the applier.
+<span class="tutor">[Tutor]</span> Okay?
+[Joey] Okay.
+[Joey] Great. Yeah. Hello. All right. Hello. How can I help you? Hi. I&#x27;d like to apply for a
+[Joey] Social Security number for the first time. Sure. Are you a U.S. citizen or
+[Joey] applying for applying as a non-citizen? No, I&#x27;m on a work visa. Please show your
+[Joey] passport, I-94 and work authorizations. Also, please fill out this SS-5 form.
+<span class="tutor">[Tutor]</span> Here they are. I&#x27;ll fill it out now. When can I expect to receive my SSN card?
+[Joey] Thanks. You will get your card by email in about two weeks.
+<span class="tutor">[Tutor]</span> All right. That was very good. Very good.
+<span class="tutor">[Tutor]</span> All right.
+<span class="tutor">[Tutor]</span> First question we have, because they&#x27;re showing us some information vocabulary,
+<span class="tutor">[Tutor]</span> it says, what is an I-94?
+<span class="tutor">[Tutor]</span> Can you read the answer to me?
+[Joey] Okay. The I-94 is the arrival departure record issued to non-U.S. citizens when they enter.
+<span class="tutor">[Tutor]</span> Very good. The next question reads, what is Form SS-5? Can you read that answer to me?
+[Joey] Form SS-5 is the official application for a Social Security number.
+<span class="tutor">[Tutor]</span> Very good. All right. Let&#x27;s get you to read the question at the bottom and see if you can answer it from memory.
+[Joey] Okay, is the runner a U.S. citizen or non-citizen?
+<span class="tutor">[Tutor]</span> When or how will they receive their SSN?
+<span class="tutor">[Tutor]</span> Very good.
+[Joey] Is the runner a U.S. citizen or non-citizen?
+[Joey] This maybe this question about the upper conversation, right? And yes, my answer is
+[Joey] he is not he&#x27;s not a U.S. citizen. He&#x27;s a non-citizen. And maybe two weeks later
+[Joey] he will receive the SSN number from by email.
+<span class="tutor">[Tutor]</span> You got it. Yes. He is a
+<span class="tutor">[Tutor]</span> non-citizen. He is on a work visa. Yes. And he will receive his card by mail.
+[Joey] By mail.
+[Joey] Two weeks later.
+[Joey] Later.
+<span class="tutor">[Tutor]</span> Yeah, two weeks later.
+[Joey] Oh, yeah.
+[Joey] Okay.
+<span class="tutor">[Tutor]</span> Yeah, you&#x27;re saying R.
+<span class="tutor">[Tutor]</span> Let&#x27;s try la later. La later. Later. All right. Good try. I know it&#x27;s hard. You did fine. Very nice. Very nice.
+[Joey] Okay.
+<span class="tutor">[Tutor]</span> Good.
+<span class="tutor">[Tutor]</span> All right.
+<span class="tutor">[Tutor]</span> Let&#x27;s go on to the next page, and we&#x27;re going to look at some vocabulary.
+[Joey] Okay.
+<span class="tutor">[Tutor]</span> The first group is identity and document.
+<span class="tutor">[Tutor]</span> You&#x27;ll read the word, the description in each box.
+<span class="tutor">[Tutor]</span> And then I&#x27;ll have you read the question underneath.
+[Joey] Okay.
+[Joey] To identify a document, official, certified, approved, and original, original copy, legal,
+[Joey] legally acceptable, what kind of document do you usually need to apply for something
+[Joey] from the government?
+[Joey] Yeah, usually
+[Joey] if that is
+[Joey] from the government document
+[Joey] everything
+[Joey] because it is important
+[Joey] word official
+[Joey] and original and legal.
+[Joey] So usually if we
+[Joey] receive
+[Joey] some document from the government,
+[Joey] every document
+[Joey] is important and that is
+[Joey] also official and legally.
+<span class="tutor">[Tutor]</span> Yeah, yeah. Here in Canada, we have to apply for various documents. We have to apply for
+<span class="tutor">[Tutor]</span> our child, we have to apply for a birth certificate. If we get married, we have to get the marriage
+<span class="tutor">[Tutor]</span> certificate. If we want to work, we apply for the Social Insurance Number. If somebody dies,
+<span class="tutor">[Tutor]</span> we have to apply for a death certificate.
+[Joey] Yes.
+<span class="tutor">[Tutor]</span> So at all stages of life, there is documentation.
+[Joey] Okay.
+<span class="tutor">[Tutor]</span> All right.
+<span class="tutor">[Tutor]</span> Very good, Joey.
+<span class="tutor">[Tutor]</span> Let&#x27;s go on and read the next group, please.
+[Joey] Okay.
+[Joey] And the second group is about time and urgency.
+[Joey] The permanent, permanent, permanent, renting loan terms.
+[Joey] Immediate it.
+[Joey] That is done at once.
+[Joey] Delayed.
+[Joey] That is taking longer than expected.
+[Joey] Yes.
+<span class="tutor">[Tutor]</span> Okay, I&#x27;m going to get you to pause before the question.
+<span class="tutor">[Tutor]</span> Let&#x27;s practice that second word.
+<span class="tutor">[Tutor]</span> I&#x27;ll get you to repeat after me.
+<span class="tutor">[Tutor]</span> Immediate.
+[Joey] Immediate.
+[Joey] Immediate.
+<span class="tutor">[Tutor]</span> Better.
+[Joey] Immediate.
+[Joey] Immediate.
+[Joey] Immediate.
+<span class="tutor">[Tutor]</span> Yeah, you&#x27;re saying eight.
+<span class="tutor">[Tutor]</span> Immediate.
+<span class="tutor">[Tutor]</span> Yeah, we don&#x27;t want the 8 sound.
+<span class="tutor">[Tutor]</span> We want et.
+<span class="tutor">[Tutor]</span> Immediate.
+[Joey] Immediate.
+[Joey] Immediate.
+<span class="tutor">[Tutor]</span> Better.
+[Joey] Okay.
+<span class="tutor">[Tutor]</span> You got it.
+<span class="tutor">[Tutor]</span> Uh-huh.
+<span class="tutor">[Tutor]</span> All right.
+<span class="tutor">[Tutor]</span> And I&#x27;ll get you to read the question.
+<span class="tutor">[Tutor]</span> Now, it talks about an American Social Security number,
+<span class="tutor">[Tutor]</span> but just tell me about your Korean one.
+[Joey] Oh, yeah, forever.
+[Joey] When you will die, that number is removed, delayed.
+[Joey] Yeah.
+<span class="tutor">[Tutor]</span> Uh-huh.
+[Joey] If in Korea, the people, the baby, how can I say, started their life, we received some
+[Joey] number and still the people died then.
+[Joey] Yeah.
+<span class="tutor">[Tutor]</span> Oh, wow.
+<span class="tutor">[Tutor]</span> Yeah, birth to death.
+[Joey] Yeah, birth to death, we have that number.
+[Joey] Yeah.
+[Joey] Yeah.
+<span class="tutor">[Tutor]</span> Lots of documentation.
+[Joey] Yeah.
+<span class="tutor">[Tutor]</span> All right, my friend.
+<span class="tutor">[Tutor]</span> You&#x27;ve done a lot of reading and a lot of hard work today.
+[Joey] Uh-huh.
+<span class="tutor">[Tutor]</span> Let me just review with you some of the words we&#x27;ve worked on.
+<span class="tutor">[Tutor]</span> So today we had a word you pronounced as tax, which is singular.
+<span class="tutor">[Tutor]</span> We had to do it plural, taxes.
+[Joey] Taxes.
+[Joey] Okay.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="tutor">[Tutor]</span> We had a word that you pronounced in two syllables, per-ment, and we practiced in three, per-man-ent.
+[Joey] Permanent.
+[Joey] Okay.
+<span class="tutor">[Tutor]</span> We had a word that you pronounced as ref-use.
+<span class="tutor">[Tutor]</span> I had you practice re-fu-gees.
+[Joey] Re-fu-gees.
+[Joey] Okay.
+<span class="tutor">[Tutor]</span> And the last phrase was unique sequence, and I had you practice unique sequence.
+[Joey] Unique sequence.
+[Joey] Okay.
+<span class="tutor">[Tutor]</span> Very good.
+<span class="tutor">[Tutor]</span> So I&#x27;ll get that all typed up into sentences and questions.
+<span class="tutor">[Tutor]</span> I&#x27;m going to send you an R&amp;L practice video from YouTube.
+[Joey] Okay.
+<span class="tutor">[Tutor]</span> I&#x27;d like you to do some practice with your R&#x27;s and L&#x27;s, okay?
+[Joey] Okay.
+[Joey] Thank you so much, and have a nice day, teacher.
+<span class="tutor">[Tutor]</span> Take care.
+<span class="tutor">[Tutor]</span> Bye-bye.
+[Joey] Bye-bye.</div>
+        </div>
+    </div>
+    <div class="toast" id="toast">✅ 프롬프트가 복사되었습니다!</div>
+    <script>
+        const REVIEW_PROMPT="너는 나의 영어 회화 복습 파트너야. 오늘 내 전화영어 수업 내용을 기반으로 대화하면서 복습을 도와줘.\n\n[오늘 수업 전사 내용]\n[Joey] Hello, teacher. Good morning.\n[Tutor] Hi, Joey.\n[Tutor] How are you doing today?\n[Joey] Yeah, happy Thursday.\n[Tutor] Good. Yeah, one day closer to the weekend. Wonderful.\n[Tutor] Do you have time for your class this morning?\n[Joey] Oh, yes. Yes.\n[Tutor] Wonderful. Okay.\n[Tutor] Do you have your lesson up and ready to go, or did you need a moment?\n[Joey] Oh, yeah, I prepared already.\n[Tutor] Thank you. I appreciate that.\n[Tutor] All right.\n[Tutor] So today's title is called, Can I Apply for an SSN?\n[Tutor] I'm going to ask you to read today's mission to me, please.\n[Joey] Okay, today's mission is go to the Social Security Administration and make an application to get a Social Security number.\n[Tutor] Okay, let's just try that one word, security.\n[Joey] Security.\n[Tutor] Very good, thank you.\n[Tutor] Yes, very good.\n[Tutor] All right. Let's go on to the next page.\n[Tutor] And we have a couple of expressions with that word.\n[Tutor] I'll get you to read the expression and its description.\n[Joey] Okay. Today, there are two sentences.\n[Joey] Okay. Social Security Number, SSN, a unique number need for jobs, tax, and banking.\n[Tutor] Okay. I'll get you to stop for a moment.\n[Tutor] You said jobs, tax, and banking.\n[Tutor] The second word is actually the plural form of tax.\n[Tutor] Let's add an extra part.\n[Tutor] Taxes.\n[Joey] Taxes.\n[Joey] Oh.\n[Tutor] Yes.\n[Tutor] Very good.\n[Tutor] And banking.\n[Joey] Jobs, taxes, and banking.\n[Tutor] Okay.\n[Tutor] Excellent.\n[Tutor] All right.\n[Tutor] Let's get you to go to the next one.\n[Joey] Okay.\n[Joey] Next one.\n[Joey] Social Security Administration.\n[Tutor] Okay.\n[Tutor] That means it's the U.S. government office that gives out the Social Security numbers.\n[Tutor] Very good.\n[Tutor] All right.\n[Tutor] Excellent.\n[Tutor] Let's move on to the key phrases, and I will get you to read each of the example questions.\n[Joey] Okay.\n[Joey] The first sentence is, I like to apply for blah, blah.\n[Joey] I like to apply for Social Security numbers.\n[Tutor] Okay.\n[Joey] And second, when can I expect the application to be processed?\n[Tutor] All right.\n[Tutor] Very well done.\n[Joey] Thank you.\n[Tutor] Okay.\n[Tutor] We're going to move on to Part 80, InfoBytes.\n[Joey] Okay.\n[Tutor] And they're showing you, which is, the picture they're showing you is an American Social Security card.\n[Joey] Oh.\n[Tutor] And we have four statements, four bullets, and I'll get you to read them to me.\n[Tutor] Please take your time.\n[Joey] Okay.\n[Joey] I see.\n[Joey] Okay.\n[Joey] That is the InfoBytes.\n[Joey] And the Social Security number is a permanent number used to track earnings.\n[Joey] It helps determine benefit like retirement and disability.\n[Joey] SSNs are for green card holders, workers, students with work permissions and refuse.\n[Tutor] Okay, keep going. I'll help you with corrections after.\n[Joey] Okay. And CAD, the UK, AUS, and New Zealand use the ID number like the SIN, NIN, and TFN for work, tax, and benefit, similar to the US SN.\n[Tutor] Okay. I'm going to get you to stop there.\n[Tutor] As you can see, they give us a lot of abbreviations.\n[Tutor] We'll talk about those in a minute.\n[Tutor] All right.\n[Tutor] In the first bulleted point, you said the Social Security number is A.\n[Tutor] And the next word you pronounced in two syllables, you said permanent.\n[Tutor] Now, this word has three syllables.\n[Tutor] I'm going to get you to try repeating after me. Okay? Permanent. Permanent. Permanent. Permanent. Yeah. Permanent. Permanent. Okay.\n[Tutor] Yeah. The stress of the word is on the last syllable. Right now, you're saying permanent.\n[Tutor] Let's try permanent.\n[Joey] Permanent.\n[Tutor] Better.\n[Tutor] Very good.\n[Tutor] All right.\n[Tutor] Now, in this particular program, we're going to have other pages like this where they give you these abbreviations, especially for countries.\n[Tutor] So I'm going to get you to try and learn to pronounce these abbreviated countries by their full names.\n[Joey] Okay.\n[Tutor] So CAD would be Canada, the UK, United Kingdom, AUS, Australia, and NZ, New Zealand.\n[Joey] Okay.\n[Joey] Okay.\n[Tutor] And that's something we'll practice in each lesson.\n[Tutor] All right.\n[Tutor] One more word I want to help you with.\n[Tutor] In the third bullet, they read that the SSNs are for blah, blah, students with work permission and the next word you said refuse.\n[Tutor] Let's try refugee.\n[Joey] Refugee.\n[Tutor] Okay.\n[Tutor] You got it.\n[Tutor] Yeah.\n[Joey] Refugees.\n[Tutor] Very good.\n[Tutor] And again, I'll send it in the sentence, and I'll break it into sound bites for you, okay?\n[Tutor] You're doing great.\n[Tutor] Yes, good.\n[Tutor] Wonderful.\n[Tutor] Okay, let's get you to read the question at the bottom and tell me about it.\n[Joey] Is there a unique sequence of numbers you use to identify your shape in your country?\n[Joey] How does it differ from the SSN? Yes, we have them similar. Yeah, in Korea we use\n[Joey] the list of the people number. So that number is the...\n[Tutor] I understand it starts with your birth date?\n[Joey] Yeah, you're right.\n[Joey] 13 and first day.\n[Joey] First is the year, month, first month and day.\n[Joey] And then the next line is the security number.\n[Joey] So usually we use that.\n[Joey] It is similar.\n[Joey] So if you get other people's Korean SSN, at that time you get that people's birthday.\n[Tutor] Certainly, yeah.\n[Tutor] Yes.\n[Tutor] Okay.\n[Tutor] I also understand that there's a number on your card that identifies whether you're male or female.\n[Joey] Oh, yes, you're right.\n[Joey] The second line, if you got that information, and if you start the first, that is a man, and two is the woman.\n[Joey] But this day, after 20,000 year birthday, baby or children, they start the three and four.\n[Tutor] Oh, wow. Okay, so after the year 2000, they put in a 3X. Wonderful. They're very interesting.\n[Tutor] Okay.\n[Tutor] Okay, well, the difference that I can tell you about my social, we call them the SIN, Social Insurance Number.\n[Joey] Uh-huh.\n[Tutor] Yeah, and on our card, it's only nine numbers.\n[Joey] Nine numbers.\n[Tutor] And the nine numbers are randomly assigned to you.\n[Tutor] They don't indicate your birthday.\n[Tutor] They don't indicate your gender.\n[Tutor] It's just nine numbers that you use when you apply for work or taxes.\n[Tutor] And you use it all your life.\n[Tutor] And I'm sure you use yours all your life.\n[Joey] I see.\n[Tutor] All right.\n[Tutor] Great.\n[Tutor] Yeah.\n[Tutor] In the question, there was a phrase that I'd like to help you with.\n[Tutor] You said, is there a, and then the next two words you pronounced as unique, secure.\n[Tutor] I'm going to get you to repeat after me.\n[Tutor] Unique sequence.\n[Joey] Sequence.\n[Tutor] Sequence.\n[Tutor] You did it.\n[Tutor] Unique sequence.\n[Tutor] You did it.\n[Joey] Okay.\n[Tutor] That Q-U can throw a person off because it makes the Q-A sound.\n[Tutor] All right, very good work.\n[Tutor] Excellent.\n[Tutor] Let's move on to the real-life talk, part B.\n[Tutor] And as usual I'm going to ask you to read the conversation to me. And you're reading for both the staff member and the applier. Okay?\n[Tutor] Please take your time.\n[Joey] Okay.\n[Joey] Could you select one person?\n[Joey] And I give another person to you for you.\n[Tutor] That's what you'd rather do?\n[Tutor] Okay.\n[Tutor] I'll make it easy on you.\n[Tutor] All right.\n[Tutor] I will be the staff member.\n[Tutor] Okay?\n[Joey] Yes, great.\n[Tutor] All right.\n[Tutor] All right.\n[Tutor] I'll begin.\n[Tutor] Hello.\n[Tutor] How can I help you?\n[Joey] Hi.\n[Joey] I would like to apply for a Social Security number for the first time.\n[Tutor] Sure.\n[Tutor] Are you a U.S. citizen or applying as a non-citizen?\n[Joey] No.\n[Joey] I'm on work visa.\n[Tutor] I'm on a work visa.\n[Tutor] Very good.\n[Tutor] All right.\n[Tutor] Work visa, right? I'm on a work visa.\n[Tutor] Yes, better.\n[Joey] Yes.\n[Tutor] Okay, I'll continue.\n[Tutor] Please show your passport, I-94, and work authorization.\n[Tutor] Also, please fill out this SS-5 form.\n[Tutor] All right, next page.\n[Joey] Okay, here they are.\n[Joey] I will fill out now.\n[Joey] When can I expect to receive my SSN card?\n[Tutor] Thanks.\n[Tutor] You'll get your card by mail in about two weeks.\n[Joey] All right.\n[Tutor] You did very well.\n[Tutor] Now, we're going to do it one more time,\n[Tutor] but this time you will be the staff member and I will be the applier.\n[Tutor] Okay?\n[Joey] Okay.\n[Joey] Great. Yeah. Hello. All right. Hello. How can I help you? Hi. I'd like to apply for a\n[Joey] Social Security number for the first time. Sure. Are you a U.S. citizen or\n[Joey] applying for applying as a non-citizen? No, I'm on a work visa. Please show your\n[Joey] passport, I-94 and work authorizations. Also, please fill out this SS-5 form.\n[Tutor] Here they are. I'll fill it out now. When can I expect to receive my SSN card?\n[Joey] Thanks. You will get your card by email in about two weeks.\n[Tutor] All right. That was very good. Very good.\n[Tutor] All right.\n[Tutor] First question we have, because they're showing us some information vocabulary,\n[Tutor] it says, what is an I-94?\n[Tutor] Can you read the answer to me?\n[Joey] Okay. The I-94 is the arrival departure record issued to non-U.S. citizens when they enter.\n[Tutor] Very good. The next question reads, what is Form SS-5? Can you read that answer to me?\n[Joey] Form SS-5 is the official application for a Social Security number.\n[Tutor] Very good. All right. Let's get you to read the question at the bottom and see if you can answer it from memory.\n[Joey] Okay, is the runner a U.S. citizen or non-citizen?\n[Tutor] When or how will they receive their SSN?\n[Tutor] Very good.\n[Joey] Is the runner a U.S. citizen or non-citizen?\n[Joey] This maybe this question about the upper conversation, right? And yes, my answer is\n[Joey] he is not he's not a U.S. citizen. He's a non-citizen. And maybe two weeks later\n[Joey] he will receive the SSN number from by email.\n[Tutor] You got it. Yes. He is a\n[Tutor] non-citizen. He is on a work visa. Yes. And he will receive his card by mail.\n[Joey] By mail.\n[Joey] Two weeks later.\n[Joey] Later.\n[Tutor] Yeah, two weeks later.\n[Joey] Oh, yeah.\n[Joey] Okay.\n[Tutor] Yeah, you're saying R.\n[Tutor] Let's try la later. La later. Later. All right. Good try. I know it's hard. You did fine. Very nice. Very nice.\n[Joey] Okay.\n[Tutor] Good.\n[Tutor] All right.\n[Tutor] Let's go on to the next page, and we're going to look at some vocabulary.\n[Joey] Okay.\n[Tutor] The first group is identity and document.\n[Tutor] You'll read the word, the description in each box.\n[Tutor] And then I'll have you read the question underneath.\n[Joey] Okay.\n[Joey] To identify a document, official, certified, approved, and original, original copy, legal,\n[Joey] legally acceptable, what kind of document do you usually need to apply for something\n[Joey] from the government?\n[Joey] Yeah, usually\n[Joey] if that is\n[Joey] from the government document\n[Joey] everything\n[Joey] because it is important\n[Joey] word official\n[Joey] and original and legal.\n[Joey] So usually if we\n[Joey] receive\n[Joey] some document from the government,\n[Joey] every document\n[Joey] is important and that is\n[Joey] also official and legally.\n[Tutor] Yeah, yeah. Here in Canada, we have to apply for various documents. We have to apply for\n[Tutor] our child, we have to apply for a birth certificate. If we get married, we have to get the marriage\n[Tutor] certificate. If we want to work, we apply for the Social Insurance Number. If somebody dies,\n[Tutor] we have to apply for a death certificate.\n[Joey] Yes.\n[Tutor] So at all stages of life, there is documentation.\n[Joey] Okay.\n[Tutor] All right.\n[Tutor] Very good, Joey.\n[Tutor] Let's go on and read the next group, please.\n[Joey] Okay.\n[Joey] And the second group is about time and urgency.\n[Joey] The permanent, permanent, permanent, renting loan terms.\n[Joey] Immediate it.\n[Joey] That is done at once.\n[Joey] Delayed.\n[Joey] That is taking longer than expected.\n[Joey] Yes.\n[Tutor] Okay, I'm going to get you to pause before the question.\n[Tutor] Let's practice that second word.\n[Tutor] I'll get you to repeat after me.\n[Tutor] Immediate.\n[Joey] Immediate.\n[Joey] Immediate.\n[Tutor] Better.\n[Joey] Immediate.\n[Joey] Immediate.\n[Joey] Immediate.\n[Tutor] Yeah, you're saying eight.\n[Tutor] Immediate.\n[Tutor] Yeah, we don't want the 8 sound.\n[Tutor] We want et.\n[Tutor] Immediate.\n[Joey] Immediate.\n[Joey] Immediate.\n[Tutor] Better.\n[Joey] Okay.\n[Tutor] You got it.\n[Tutor] Uh-huh.\n[Tutor] All right.\n[Tutor] And I'll get you to read the question.\n[Tutor] Now, it talks about an American Social Security number,\n[Tutor] but just tell me about your Korean one.\n[Joey] Oh, yeah, forever.\n[Joey] When you will die, that number is removed, delayed.\n[Joey] Yeah.\n[Tutor] Uh-huh.\n[Joey] If in Korea, the people, the baby, how can I say, started their life, we received some\n[Joey] number and still the people died then.\n[Joey] Yeah.\n[Tutor] Oh, wow.\n[Tutor] Yeah, birth to death.\n[Joey] Yeah, birth to death, we have that number.\n[Joey] Yeah.\n[Joey] Yeah.\n[Tutor] Lots of documentation.\n[Joey] Yeah.\n[Tutor] All right, my friend.\n[Tutor] You've done a lot of reading and a lot of hard work today.\n[Joey] Uh-huh.\n[Tutor] Let me just review with you some of the words we've worked on.\n[Tutor] So today we had a word you pronounced as tax, which is singular.\n[Tutor] We had to do it plural, taxes.\n[Joey] Taxes.\n[Joey] Okay.\n[Tutor] Okay.\n[Tutor] We had a word that you pronounced in two syllables, per-ment, and we practiced in three, per-man-ent.\n[Joey] Permanent.\n[Joey] Okay.\n[Tutor] We had a word that you pronounced as ref-use.\n[Tutor] I had you practice re-fu-gees.\n[Joey] Re-fu-gees.\n[Joey] Okay.\n[Tutor] And the last phrase was unique sequence, and I had you practice unique sequence.\n[Joey] Unique sequence.\n[Joey] Okay.\n[Tutor] Very good.\n[Tutor] So I'll get that all typed up into sentences and questions.\n[Tutor] I'm going to send you an R&L practice video from YouTube.\n[Joey] Okay.\n[Tutor] I'd like you to do some practice with your R's and L's, okay?\n[Joey] Okay.\n[Joey] Thank you so much, and have a nice day, teacher.\n[Tutor] Take care.\n[Tutor] Bye-bye.\n[Joey] Bye-bye.\n\n[AI 피드백]\nJoey, 안녕하세요! 오늘도 활기찬 목소리로 수업에 참여해주셔서 감사합니다. SSN 신청이라는 실용적인 주제로 영어 표현을 익히고, 한국의 주민등록번호와 비교하며 문화적 차이까지 이야기 나눌 수 있어 정말 유익한 시간이었어요. 특히 발음 교정에 적극적으로 임하는 모습이 인상 깊었습니다!\n\n---\n\n**0. 📌 Topic**\nTopic: Discussing the Social Security Number application process and comparing national identification systems.\n\n---\n\n**1. 📊 오늘의 대화 요약 (Summary)**\n오늘 Joey는 미국 사회 보장 번호(SSN) 신청 절차와 관련된 어휘 및 표현을 학습했습니다. 특히 SSN이 필요한 상황, 발급 기관, 그리고 한국의 주민등록번호와의 차이점(생년월일, 성별 정보 포함 여부)에 대해 심도 있게 대화를 나누며 실제 비즈니스 상황에서 활용할 수 있는 실용적인 영어 표현들을 연습했습니다.\n\n---\n\n**2. 💬 유창성 업그레이드 (Fluency & Natural Flow)**\nJoey가 실제 말한 문장 중 의미는 통하지만, 원어민이 들었을 때 더 자연스럽게 들릴 수 있는 표현 3가지를 선정했습니다.\n\n1.  **❌ 학습자 원문 (As Said):** \"I prepared already.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"I've already prepared.\" 또는 \"I'm already prepared.\"\n    *   **💎 비즈니스 표현 (Professional):** \"I have already completed the preparations.\"\n    *   **💡 코칭 포인트:** Using the present perfect \"I've prepared\" or the adjective \"I'm prepared\" sounds more natural for an action completed recently with a current relevance. \"Already\" typically comes before the main verb or between the auxiliary and main verb.\n        → 현재 완료 \"I've prepared\"나 형용사 \"I'm prepared\"를 사용하면 최근에 완료되어 현재와 관련 있는 행동을 더 자연스럽게 표현할 수 있습니다. \"Already\"는 일반적으로 주동사 앞이나 조동사와 주동사 사이에 위치합니다.\n\n2.  **❌ 학습자 원문 (As Said):** \"It helps determine benefit like retirement and disability.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"It helps determine benefits like retirement and disability.\"\n    *   **💎 비즈니스 표현 (Professional):** \"It assists in determining eligibility for benefits such as retirement and disability.\"\n    *   **💡 코칭 포인트:** \"Benefit\"은 다양한 종류의 혜택이나 이점을 말할 때 주로 복수형(\"benefits\")으로 사용됩니다. 예시를 들 때 \"like\" 대신 \"such as\"를 사용하면 좀 더 격식 있는 표현이 됩니다.\n\n3.  **❌ 학습자 원문 (As Said):** \"So if you get other people's Korean SSN, at that time you get that people's birthday.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"So if you get someone else's Korean resident registration number, you'll also know their birthday.\"\n    *   **💎 비즈니스 표현 (Professional):** \"Thus, possessing another individual's Korean resident registration number would also reveal their date of birth.\"\n    *   **💡 코칭 포인트:** \"Other people's\"도 문법적으로 맞지만, 캐주얼한 대화에서는 \"someone else's\"가 더 흔하게 사용됩니다. \"At that time\"은 \"you'll also know\"와 같이 더 직접적인 표현으로 대체하여 대화의 흐름을 개선할 수 있습니다. \"That people's\"는 \"that person's\" 또는 \"their\"로 고쳐야 합니다.\n\n---\n\n**3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)**\nCategory: Noun Plurality & Subject-Verb Agreement (명사의 단수/복수형 및 주어-동사 수일치)\n\nJoey는 명사의 단수/복수형 사용과 이에 따른 주어-동사 수일치에서 실수가 반복되는 경향이 있습니다. 특히 셀 수 있는 명사를 단수형으로 사용하거나, 복수 주어 뒤에 단수 동사를 사용하는 경우가 보였습니다.\n\n| ❌ 원문 (As Said)                                                                  | ✅ 교정 예시 (Corrected)                                                              |\n| :--------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------ |\n| \"It helps determine **benefit** like retirement and disability.\"                   | \"It helps determine **benefits** like retirement and disability.\"                     |\n| \"SSNs **are** for green card holders, workers, students with work permissions and **refuse**.\" | \"SSNs **are** for green card holders, workers, students with work **permits** and **refugees**.\" |\n| \"But this day, after 20,000 year birthday, baby or children, they **start** the three and four.\" | \"But **these days**, for babies or children born after the year 2000, their numbers **start** with three and four.\" |\n\n📌 **핵심 규칙:** 명사의 수(단수/복수)를 문맥에 맞게 정확히 사용하고, 이에 따라 동사의 형태(단수 동사/복수 동사)를 일치시켜야 합니다. 특히 셀 수 있는 명사는 복수형으로 사용해야 할 때 정확히 복수형을 써야 합니다.\n\n🔁 **따라 읽기:**\n🗣️ \"It helps determine benefits like retirement and disability.\"\n🗣️ \"SSNs are for green card holders, workers, students with work permits and refugees.\"\n🗣️ \"But these days, for babies or children born after the year 2000, their numbers start with three and four.\"\n\n---\n\n**4. 📗 어휘 확장 (Vocabulary Vault)**\n오늘 수업에서 다루었거나 비즈니스 환경에서 유용하게 쓰일 수 있는 어휘 5가지입니다.\n\n1.  **unique** /juːˈniːk/ (형용사)\n    *   뜻: 독특한, 유일무이한\n    *   실전 예문: Our company offers a **unique** solution to energy storage challenges.\n\n2.  **permanent** /ˈpɜːrmənənt/ (형용사)\n    *   뜻: 영구적인, 불변의\n    *   실전 예문: We are looking for a **permanent** solution to reduce operational costs.\n\n3.  **refugee** /ˌrefjuˈdʒiː/ (명사)\n    *   뜻: 난민\n    *   실전 예문: Our organization provides support to **refugees** seeking new opportunities.\n\n4.  **sequence** /ˈsiːkwəns/ (명사)\n    *   뜻: 연속, 순서, 일련의 숫자\n    *   실전 예문: The project timeline follows a logical **sequence** of tasks.\n\n5.  **authorize** /ˈɔːθəraɪz/ (동사)\n    *   뜻: 승인하다, 허가하다\n    *   실전 예문: The board needs to **authorize** the budget for the new investment.\n\n---\n\n**5. 📝 실전 복습 챌린지 (Practice)**\n오늘 배운 표현과 문법을 활용하여 다음 상황에 맞게 영작해 보세요.\n\n1.  **상황:** 당신의 회사가 새로운 시장에 진출하기 위해 독특한 전략을 개발했습니다.\n    *   **영작:** 우리 회사는 새로운 시장 진출을 위한 독특한 전략을 개발했습니다.\n    *   **모범 답안:** Our company has developed a **unique** strategy for entering new markets.\n\n2.  **상황:** 당신은 업무 비자(work visa)로 해외에 체류 중이며, 영구적인 거주 허가를 신청하려고 합니다.\n    *   **영작:** 저는 현재 업무 비자로 체류 중이며, 영구적인 거주 허가를 신청하려고 합니다.\n    *   **모범 답안:** I am currently here on a work visa and plan to apply for **permanent** residency.\n\n3.  **상황:** 투자 유치를 위해 다음 주에 중요한 프레젠테이션이 있습니다. 프레젠테이션 자료를 미리 준비했고, 최종 승인을 기다리고 있습니다.\n    *   **영작:** 저는 이미 다음 주 프레젠테이션 자료를 준비했고, 이제 팀장의 승인을 기다리고 있습니다.\n    *   **모범 답안:** I've already prepared the materials for next week's presentation, and now I'm waiting for my team leader to **authorize** them.\n\n---\n\n**6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)**\n\n✨ **Good Job:**\n\"I would like to apply for a Social Security number for the first time.\"\n이 문장은 SSN 신청이라는 오늘의 주제에 가장 핵심적인 표현이었고, Joey가 아주 정확하고 유창하게 말해주었습니다. \"I would like to apply for ~\"는 비즈니스 환경에서 무언가를 요청할 때 매우 공손하고 적절하게 사용할 수 있는 표현이니, 잘 기억해두시면 좋습니다!\n\n🚀 **내일의 한 문장:**\n다음 수업 시작 시 튜터에게 오늘 배운 표현을 활용하여 이렇게 말해보세요.\n\"I've already prepared for today's lesson, and I'm ready to discuss new vocabulary.\"\n(오늘 수업 준비는 이미 마쳤고, 새로운 어휘를 논의할 준비가 되었습니다.)\n\n---\n\n**[성과 지표]**\n**유창성 점수:** 7/10점\n**근거:** Joey는 수업 주제를 이해하고 자신의 생각을 표현하는 데 큰 어려움이 없었습니다. 대화의 흐름도 전반적으로 자연스러웠습니다. 다만, 몇몇 단어의 발음(permanent, sequence, refugee 등)과 명사의 단수/복수형 사용에서 약간의 어색함이 있었지만, 튜터의 교정에 적극적으로 반응하며 개선하려는 노력이 돋보였습니다.\n\n**다음 수업 '원포인트 액션 플랜':**\n다음 수업에서는 **\"명사의 단수/복수형을 정확히 사용하는 연습\"**에 집중해 봅시다. 특히 'benefit'이나 'permission'과 같이 문맥에 따라 단수 또는 복수형으로 쓰일 수 있는 명사들을 주의 깊게 살펴보고, 정확한 수일치 연습을 통해 더욱 정확하고 자연스러운 문장 구사를 목표로 할게요.\n\n위 내용을 바탕으로:\n1. 먼저 오늘 수업에서 내가 틀렸거나 어색했던 표현을 하나 골라서, 관련된 상황을 영어로 질문해줘.\n2. 내가 영어로 대답하면, 자연스러운지 확인하고 더 나은 표현이 있으면 알려줘.\n3. 특히 \"반복 실수 패턴\"에서 지적된 부분을 집중적으로 연습시켜줘.\n4. 이런 식으로 오늘 배운 표현들을 하나씩 복습하자.\n5. 한국어 설명은 필요할 때만 간단히, 대화는 최대한 영어로 진행해줘.\n\n그럼 시작하자!";
+        function startReview(){navigator.clipboard.writeText(REVIEW_PROMPT).then(()=>{showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)}).catch(()=>{const t=document.createElement('textarea');t.value=REVIEW_PROMPT;document.body.appendChild(t);t.select();document.execCommand('copy');document.body.removeChild(t);showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)})}
+        function showToast(){const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500)}
+        function switchTab(n){document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',n==='feedback'?i===0:i===1));document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));document.getElementById('tab-'+n).classList.add('active')}
+    </script>
+</body>
+</html>
