@@ -1,0 +1,57 @@
+{
+ "date": "2026-10-20",
+ "iso": [
+  2026,
+  43
+ ],
+ "topic": "Discussing gas station services and fuel types.",
+ "grammar": "Incorrect Question Formation",
+ "grammar_norm": "Incorrect Question Formation",
+ "score": 7.0,
+ "pairs": [
+  {
+   "said": "Is the USA and Australia and United Kingdom and New Zealand gas station open have convenience stores?",
+   "natural": "Do gas stations in the USA, Australia, the UK, and New Zealand have convenience stores?"
+  },
+  {
+   "said": "And the cashier handle both gas payment and store purchase?",
+   "natural": "And do cashiers handle both gas payments and store purchases?"
+  },
+  {
+   "said": "I don't distinguish the quality of the gasoline.",
+   "natural": "I can't really tell the difference in gasoline quality."
+  },
+  {
+   "said": "It makes it more easier.",
+   "natural": "It makes it easier."
+  }
+ ],
+ "vocab": [
+  {
+   "word": "nozzle",
+   "pos": "명사",
+   "meaning": "(호스·파이프 등의) 선단, 분사구"
+  },
+  {
+   "word": "facility",
+   "pos": "명사",
+   "meaning": "시설, 설비 (복수형 facilities는 화장실, 편의 시설 등을 의미)"
+  },
+  {
+   "word": "premium",
+   "pos": "형용사",
+   "meaning": "고급의, 우수한; 할증의"
+  },
+  {
+   "word": "distinguish",
+   "pos": "동사",
+   "meaning": "구별하다, 식별하다"
+  },
+  {
+   "word": "strategy",
+   "pos": "명사",
+   "meaning": "전략, 전술"
+  }
+ ],
+ "_html_md5": "4595a88537c89abcdc4c647877f0d679"
+}
