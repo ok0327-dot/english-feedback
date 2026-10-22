@@ -6,14 +6,15 @@ This is a study digest from my one-on-one English phone lessons this week. Pleas
 - Discussing Travel Experiences and Traffic Regulations
 - Discussing gas station services and fuel types.
 - Comparing rental processes and property types in Korea and Canada, and discussing Airbnb b
+- Discussing how to set up utilities and manage related expenses.
 
 ## Grammar focus this week
-- Articles (a/an/the) (1x)
+- Articles (a/an/the) (2x)
 - Incorrect Question Formation (1x)
 - Prepositions (1x)
 
-## My all-time weak-point ranking (88 lessons since 2026-05-08)
-- Articles (a/an/the) — 15 lessons
+## My all-time weak-point ranking (89 lessons since 2026-05-08)
+- Articles (a/an/the) — 16 lessons
 - Subject–Verb Agreement — 12 lessons
 - Prepositions — 12 lessons
 - Verb Tense — 11 lessons
@@ -43,7 +44,7 @@ This is a study digest from my one-on-one English phone lessons this week. Pleas
 - 2026-W39: 7.2
 - 2026-W41: 7.4
 - 2026-W42: 7.1
-- 2026-W43: 7.0
+- 2026-W43: 7.1
 - Overall average: 7.1
 
 ## Corrections — what I said vs. the natural version
@@ -67,6 +68,12 @@ This is a study digest from my one-on-one English phone lessons this week. Pleas
    Natural: "I've only had experience renting a house in Korea."
 10. I said: "I like to do interior in some space."
    Natural: "I enjoy doing interior design in various spaces."
+11. I said: "because it will start autumn."
+   Natural: "because autumn is starting."
+12. I said: "every tree has changed color, changed leaves."
+   Natural: "the leaves on every tree have changed color."
+13. I said: "So usually the people gather and live in our apartment."
+   Natural: "So usually people live in apartment complexes."
 
 ## Recurring mistakes from earlier weeks — my long-term habits
 My most repeated weak categories overall: Articles (a/an/the), Subject–Verb Agreement. These corrections are from earlier lessons in those categories. Please weave a few into the review so I revisit old mistakes.
@@ -107,6 +114,10 @@ My most repeated weak categories overall: Articles (a/an/the), Subject–Verb Ag
 - real estate agent (명사) — 부동산 중개인
 - property (명사) — 재산, 부동산
 - lease (동사/명사) — 임대하다, 임대 계약
+- Utility (n) — 공공 서비스 (전기, 가스, 수도 등)
+- Registered (adj) — 등록된, 기명된
+- Fluctuating (adj) — 변동하는, 오르내리는
+- Lease Agreement (n) — 임대차 계약서
 
 ## Please cover in the podcast
 - Pick my 1–2 most repeated mistakes (see the all-time ranking) and explain the rule with a memorable rule of thumb.
