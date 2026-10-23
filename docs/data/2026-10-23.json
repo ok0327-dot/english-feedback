@@ -1,0 +1,53 @@
+{
+ "date": "2026-10-23",
+ "iso": [
+  2026,
+  43
+ ],
+ "topic": "Discussing supermarket shopping experiences and related vocabulary.",
+ "grammar": "Subject-Verb Agreement & Pluralization",
+ "grammar_norm": "Subject–Verb Agreement",
+ "score": 7.0,
+ "pairs": [
+  {
+   "said": "This weekend, ah, this day we traveled to a small shop, small restaurant near my house.",
+   "natural": "This past weekend, we traveled to a small shop..."
+  },
+  {
+   "said": "And other things, just buy, just look around and check that we need this item.",
+   "natural": "For other things, we just look around and buy what we need."
+  },
+  {
+   "said": "I guess he's the first time in this shopping center , a supermarket.",
+   "natural": "I guess it's his first time at this supermarket."
+  }
+ ],
+ "vocab": [
+  {
+   "word": "proceed",
+   "pos": "동사",
+   "meaning": "(어떤 일을) 진행하다, 나아가다"
+  },
+  {
+   "word": "patronage",
+   "pos": "명사",
+   "meaning": "(상점 등에 대한) 애용, 후원"
+  },
+  {
+   "word": "thrifty",
+   "pos": "형용사",
+   "meaning": "절약하는, 검소한"
+  },
+  {
+   "word": "streamlined",
+   "pos": "형용사",
+   "meaning": "능률적인, 간소화된"
+  },
+  {
+   "word": "impersonal",
+   "pos": "형용사",
+   "meaning": "비인간적인, 개인적인 감정이 없는"
+  }
+ ],
+ "_html_md5": "0f2fb05b07e1d8c0e6d4fea36637fdc0"
+}
