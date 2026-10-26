@@ -1,0 +1,53 @@
+{
+ "date": "2026-10-26",
+ "iso": [
+  2026,
+  44
+ ],
+ "topic": "Discussing refund and exchange policies and related vocabulary.",
+ "grammar": "Redundant Verbs/Words in Definitions",
+ "grammar_norm": "Redundant Verbs/Words In Definitions",
+ "score": 7.0,
+ "pairs": [
+  {
+   "said": "Yeah, it's getting more colder.",
+   "natural": "Yeah, it's getting colder."
+  },
+  {
+   "said": "And when I prepare the present for my wife, the earring or some gold product, that product usually have a warranty.",
+   "natural": "And when I buy presents for my wife, like earrings or other gold products, they usually come with a warranty."
+  },
+  {
+   "said": "The customer bought a vacuum cleaner, but two weeks later, the vacuum cleaner doesn't work anymore. So she wanted to need a refund.",
+   "natural": "The customer bought a vacuum cleaner, but it stopped working after two weeks, so she wanted a refund."
+  }
+ ],
+ "vocab": [
+  {
+   "word": "eligible",
+   "pos": "형용사",
+   "meaning": "~을 가질 자격이 있는, 적격의"
+  },
+  {
+   "word": "defective",
+   "pos": "형용사",
+   "meaning": "결함이 있는, 불량의"
+  },
+  {
+   "word": "malfunctioning",
+   "pos": "형용사",
+   "meaning": "오작동하는, 기능 불량의"
+  },
+  {
+   "word": "unresponsive",
+   "pos": "형용사",
+   "meaning": "반응이 없는, 응답하지 않는"
+  },
+  {
+   "word": "extended warranty",
+   "pos": "명사구",
+   "meaning": "연장 보증 (기본 보증 기간 이후 추가로 제공되는 보증)"
+  }
+ ],
+ "_html_md5": "bd38f9c33c9448321704c08f07a11649"
+}
