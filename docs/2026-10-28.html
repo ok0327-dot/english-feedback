@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#0f0f13"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="당근영어"><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="icon" type="image/png" sizes="192x192" href="icon-192.png"><script src="install-banner.js" defer></script><script src="sw-reg.js" defer></script>
+    <title>전화영어 복습 - 2026년 10월 28일</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Noto Sans KR',sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.75;min-height:100vh}
+        .header{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);border-bottom:1px solid rgba(255,255,255,.06);padding:48px 24px 40px;text-align:center}
+        .header-date{font-size:13px;color:#94a3b8;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+        .header h1{font-size:28px;font-weight:700;color:#f1f5f9;margin-bottom:16px}
+        .header-meta{display:flex;justify-content:center;gap:24px;font-size:14px;color:#64748b}
+        .header-meta span{display:flex;align-items:center;gap:6px}
+        .cta-section{text-align:center;padding:40px 24px}
+        .cta-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:linear-gradient(135deg,#38bdf8,#818cf8);color:#fff;font-size:16px;font-weight:600;font-family:'Noto Sans KR',sans-serif;border:none;border-radius:50px;cursor:pointer;transition:all .3s;text-decoration:none;box-shadow:0 4px 24px rgba(56,189,248,.25)}
+        .cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(56,189,248,.35)}
+        .cta-btn svg{width:20px;height:20px}
+        .cta-sub{margin-top:12px;font-size:13px;color:#64748b}
+        .toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#38bdf8;padding:14px 28px;border-radius:12px;font-size:14px;font-weight:500;border:1px solid rgba(56,189,248,.2);box-shadow:0 8px 32px rgba(0,0,0,.4);opacity:0;transition:all .4s cubic-bezier(.16,1,.3,1);z-index:1000}
+        .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+        .container{max-width:720px;margin:0 auto;padding:0 24px 80px}
+        .tabs{display:flex;gap:4px;background:#1a1a24;padding:4px;border-radius:12px;margin-bottom:32px}
+        .tab{flex:1;padding:12px;text-align:center;font-size:14px;font-weight:500;color:#64748b;background:0 0;border:none;border-radius:8px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all .2s}
+        .tab.active{background:#262636;color:#f1f5f9}
+        .tab-content{display:none}.tab-content.active{display:block}
+        .feedback h2{font-size:18px;font-weight:700;color:#f1f5f9;margin:36px 0 16px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.06)}
+        .feedback h2:first-child{margin-top:0}
+        .feedback p{margin:8px 0;color:#cbd5e1}
+        .feedback .item{padding:6px 0 6px 16px;border-left:2px solid #334155;margin:6px 0;color:#cbd5e1}
+        .feedback .numbered{padding:8px 0 8px 16px;color:#cbd5e1}
+        .feedback .numbered strong{color:#38bdf8}
+        .feedback strong{color:#f1f5f9}
+        .feedback code{background:#1e293b;padding:2px 8px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#38bdf8}
+        .feedback table{width:100%;border-collapse:collapse;margin:12px 0}
+        .feedback th,.feedback td{padding:10px 14px;text-align:left;border-bottom:1px solid #262636}
+        .feedback th{color:#94a3b8;font-weight:500;font-size:13px}
+        .feedback td{color:#cbd5e1}
+        .arrow{color:#38bdf8;font-weight:700}
+        .transcript{background:#1a1a24;border-radius:12px;padding:28px;font-size:14px;line-height:2;color:#94a3b8;white-space:pre-wrap;word-break:break-word;font-family:'JetBrains Mono','Noto Sans KR',monospace}
+        .transcript .tutor{color:#38bdf8}
+        .transcript .student{color:#a78bfa}
+        @media(max-width:640px){.header{padding:32px 16px}.header h1{font-size:22px}.cta-btn{padding:14px 28px;font-size:15px}.container{padding:0 16px 60px}}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-date">2026년 10월 28일</div>
+        <h1>📚 전화영어 복습</h1>
+        <div class="header-meta">
+            <span>⏱ 20분 4초</span>
+            <span>🎙 전화영어_025180304_20261028080014.m4a</span>
+        </div>
+    </div>
+    <div class="cta-section">
+        <button class="cta-btn" onclick="startReview()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Gemini에서 복습 대화 시작하기
+        </button>
+        <div class="cta-sub">클릭하면 프롬프트가 복사되고 Gemini가 열립니다</div>
+    </div>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('feedback')">📋 AI 피드백</button>
+            <button class="tab" onclick="switchTab('transcript')">🎙 수업 전사</button>
+        </div>
+        <div id="tab-feedback" class="tab-content active">
+            <div class="feedback"><p>안녕하세요, Joey! 가을이 깊어지는 계절, 공원 산책도 즐기시고 영어 공부도 꾸준히 하시는 모습 정말 멋지세요. 오늘도 활기찬 에너지로 수업에 참여해주셔서 감사해요!</p>
+<br>
+<br>
+<h2>0. 📌 Topic</h2>
+<p>Topic: Discussing laundry and dry cleaning services, including methods, products, and specific requests.</p>
+<br>
+<h2>1. 📊 오늘의 대화 요약 (Summary)</h2>
+<p>오늘은 세탁 및 드라이클리닝 서비스에 대한 다양한 이야기를 나누었습니다. 한국의 세탁 문화(코인 세탁, 세탁 서비스)를 다른 나라와 비교하고, 이불이나 겨울 코트처럼 부피가 큰 세탁물 처리 방법에 대해서도 이야기했어요. 특히, 세탁소에 특정 요청을 할 때 사용할 수 있는 핵심 표현들을 연습하며 실용적인 대화를 이어갔습니다.</p>
+<br>
+<h2>2. 💬 유창성 업그레이드 (Fluency & Natural Flow)</h2>
+<br>
+<p>Joey, 의미 전달은 충분히 잘 되지만, 조금 더 자연스럽고 원어민스러운 표현으로 다듬을 수 있는 문장들을 함께 살펴볼까요?</p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>❌ 학습자 원문 (As Said):</strong> "But sometimes they <strong>instruction to the little weak</strong>."</div>
+<div class="item"><strong>✅ 자연스러운 표현 (Natural):</strong> "But sometimes the <strong>instructions are a bit unclear</strong>."</div>
+<div class="item"><strong>💎 비즈니스 표현 (Professional):</strong> "However, the <strong>provided instructions can occasionally be ambiguous</strong>."</div>
+<div class="item"><strong>💡 코칭 포인트:</strong> 'Instruction'은 명사이므로 상태를 나타내는 'are'와 같은 동사가 필요합니다. 'weak'는 지시사항을 묘사할 때 잘 쓰이지 않으며, 'unclear'나 'vague'가 더 자연스럽습니다.</div>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>❌ 학습자 원문 (As Said):</strong> "Just <strong>to do many laundry</strong>. That is more easy for me anyway."</div>
+<div class="item"><strong>✅ 자연스러운 표현 (Natural):</strong> "It's just <strong>easier for me to do a larger load of laundry</strong>."</div>
+<div class="item"><strong>💎 비즈니스 표현 (Professional):</strong> "I find it <strong>more efficient to process a larger volume of laundry</strong> at once."</div>
+<div class="item"><strong>💡 코칭 포인트:</strong> 'Laundry'는 셀 수 없는 명사이므로 'many laundry' 대신 'a lot of laundry' 또는 'a large load of laundry'를 사용합니다. 또한, 'more easy'는 비교급 형태인 'easier'가 올바릅니다.</div>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>❌ 학습자 원문 (As Said):</strong> "If <strong>any</strong> has a stain, I ask them to treat with a gentle detergent."</div>
+<div class="item"><strong>✅ 자연스러운 표현 (Natural):</strong> "If <strong>anything</strong> has a stain, I ask them to treat it with a gentle detergent."</div>
+<div class="item"><strong>💎 비즈니스 표현 (Professional):</strong> "Should <strong>any item</strong> have a stain, I request that it be treated with a gentle detergent."</div>
+<div class="item"><strong>💡 코칭 포인트:</strong> 'Any'는 일반적으로 명사(예: 'any shirt', 'any clothes')가 뒤따라오거나, 불특정한 물건을 지칭할 때는 대명사 'anything'으로 사용해야 합니다.</div>
+<br>
+<h2>3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)</h2>
+<br>
+<p>Category: <strong>Incorrect Verb Form/Structure</strong></p>
+<br>
+<p>Joey, 오늘은 동사 형태나 문장 구조를 만들 때 조금 더 정확하게 표현하면 좋을 부분들을 집중적으로 살펴볼게요. 특히 수동태나 특정 동사 표현에서 실수가 반복되는 경향이 보였어요.</p>
+<br>
+<table>
+<tr><th>❌ 원문 (As Said)</th><th>✅ 교정 예시 (Corrected)</th></tr>
+<tr><td><code>I'm select the steps, start now.</code></td><td><code>I'll select the steps, let's start now.</code></td></tr>
+<tr><td><code>I'm not distinguished that verb used.</code></td><td><code>I couldn't distinguish which verb to use.</code></td></tr>
+<tr><td><code>Do irons more. Yeah, finish the iron. Yeah, yeah. Do iron, right?</code></td><td><code>Do more ironing. Yeah, finish the ironing. Yeah, yeah. Do the ironing, right?</code></td></tr>
+</table>
+<br>
+<p>📌 <strong>핵심 규칙:</strong> 동사를 사용할 때는 시제, 태(능동/수동), 그리고 문맥에 맞는 정확한 형태를 사용하는 것이 중요합니다. 특히 'be + -ing' (진행형), 'be + p.p.' (수동태), 그리고 동명사 형태를 정확히 구별하여 사용해야 합니다.</p>
+<br>
+<p>🔁 <strong>따라 읽기:</strong></p>
+<p>🗣️ "I'll select the steps, let's start now."</p>
+<p>🗣️ "I couldn't distinguish which verb to use."</p>
+<p>🗣️ "Do more ironing. Yeah, finish the ironing. Yeah, yeah. Do the ironing, right?"</p>
+<br>
+<h2>4. 📗 어휘 확장 (Vocabulary Vault)</h2>
+<br>
+<p>오늘 대화에서 유용하게 쓰일 수 있는 어휘들을 정리해 보았어요.</p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>detergent</strong> /dɪˈtɜːrdʒənt/ (명사)</div>
+<div class="item">뜻: 세제 (세탁용)</div>
+<div class="item">실전 예문: We need to order a new batch of <strong>detergent</strong> for the industrial washing machines.</div>
+<div class="numbered"><strong>2.</strong> <strong>delicate</strong> /ˈdelɪkət/ (형용사)</div>
+<div class="item">뜻: 섬세한, 약한 (옷감 등이)</div>
+<div class="item">실전 예문: This silk scarf is very <strong>delicate</strong>, so it requires hand washing.</div>
+<div class="numbered"><strong>3.</strong> <strong>stain</strong> /steɪn/ (명사)</div>
+<div class="item">뜻: 얼룩</div>
+<div class="item">실전 예문: I'm worried about this coffee <strong>stain</strong> on my report; I hope it comes out.</div>
+<div class="numbered"><strong>4.</strong> <strong>duvet</strong> /ˈduːveɪ/ (명사)</div>
+<div class="item">뜻: (솜이나 털을 넣어 만든) 이불, 덮개</div>
+<div class="item">실전 예문: Our hotel offers a professional cleaning service for large items like <strong>duvets</strong> and comforters.</div>
+<div class="numbered"><strong>5.</strong> <strong>coin-operated</strong> /ˈkɔɪn ˌɑːpəreɪtɪd/ (형용사)</div>
+<div class="item">뜻: 동전으로 작동되는</div>
+<div class="item">실전 예문: Many laundromats in urban areas are <strong>coin-operated</strong> for convenience.</div>
+<br>
+<h2>5. 📝 실전 복습 챌린지 (Practice)</h2>
+<br>
+<p>오늘 배운 표현과 문법을 활용하여 다음 상황에 맞는 문장을 영작해 보세요.</p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>상황:</strong> (쉬움) 중요한 회의 전에 셔츠에 얼룩이 생겼습니다. 세탁소 직원에게 이 얼룩을 제거해 달라고 정중하게 요청하고 싶습니다.</div>
+<div class="item"><strong>영작:</strong> 이 셔츠에 얼룩이 있는데, 제거해 주실 수 있을까요?</div>
+<div class="item"><strong>모범 답안:</strong> <code>This shirt has a stain. Could you please treat it for me?</code></div>
+<div class="numbered"><strong>2.</strong> <strong>상황:</strong> (중간) 고객사와의 저녁 식사 후, 양복 재킷에 음식 얼룩이 묻었습니다. 세탁소에 맡기며, 재킷이 섬세한 소재이니 부드러운 세제를 사용해 달라고 요청하고 싶습니다.</div>
+<div class="item"><strong>영작:</strong> 이 재킷에 얼룩이 있는데, 섬세한 소재이니 부드러운 세제를 사용해 주실 수 있을까요?</div>
+<div class="item"><strong>모범 답안:</strong> <code>This jacket has a stain. Is there any chance you could use a gentle detergent since the fabric is delicate?</code></div>
+<div class="numbered"><strong>3.</strong> <strong>상황:</strong> (어려움) 해외 출장 중 호텔 내 코인 세탁소를 이용했습니다. 세탁기 사용법이 조금 불분명해서 직원에게 도움을 요청하고 싶습니다.</div>
+<div class="item"><strong>영작:</strong> 세탁기 사용법을 잘 모르겠는데, 도와주실 수 있을까요?</div>
+<div class="item"><strong>모범 답안:</strong> <code>I'm not sure how to operate the washing machine. Could you let me know if you can help me?</code></div>
+<br>
+<h2>6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)</h2>
+<br>
+<p>✨ <strong>Good Job:</strong></p>
+<p>Joey, 오늘 수업 시작할 때 계절에 대한 묘사가 정말 좋았어요!</p>
+<p>"<strong>The trees have vivid colors and a little chilly, and that's a nice mood.</strong>"</p>
+<p>'vivid colors'라는 표현으로 가을의 아름다움을 생생하게 전달했고, 'a nice mood'로 전체적인 분위기를 잘 마무리했습니다. 자연스러운 흐름으로 계절감을 표현하는 능력이 돋보였습니다!</p>
+<br>
+<p>🚀 <strong>내일의 한 문장:</strong></p>
+<p>다음 수업 시작 시 튜터에게 오늘 배운 표현을 활용하여 이렇게 말해보세요.</p>
+<p>"I've been reviewing the vocabulary from our last class, especially words like 'detergent' and 'delicate'."</p>
+<br>
+<br>
+<h2>[성과 지표]</h2>
+<br>
+<p><strong>유창성 점수: 7/10</strong></p>
+<br>
+<p><strong>근거:</strong> Joey는 다양한 주제에 대해 막힘없이 자신의 의견을 표현하려는 노력이 돋보였습니다. 특히, 질문에 대한 답변이나 경험을 이야기할 때 문장 구성에 다소 오류가 있더라도 주저하지 않고 말을 이어가는 점이 매우 긍정적입니다. 'laundromat'과 같은 새로운 단어의 발음과 의미를 적극적으로 확인하려는 태도도 훌륭합니다. 다만, 복잡한 문장을 구사하려 할 때 동사 형태, 전치사, 가산/불가산 명사 사용에서 오류가 발생하여 문장의 자연스러움이 저해되는 경우가 있었습니다.</p>
+<br>
+<p><strong>다음 수업 '원포인트 액션 플랜':</strong></p>
+<p>다음 수업에서는 <strong>동사 형태(특히 수동태, 동명사)의 정확한 사용</strong>에 집중하여, 문법적 정확성을 높이면서도 유창한 흐름을 유지할 수 있도록 연습할 예정입니다. Joey가 자주 사용하는 문장 패턴에서 동사 오류를 교정하고, 자연스러운 문장으로 반복 연습하는 시간을 가질 것입니다.</p></div>
+        </div>
+        <div id="tab-transcript" class="tab-content">
+            <div class="transcript"><span class="tutor">[Tutor]</span> Hello, good morning. Good evening. Good morning. Yes. Hi, how are you?
+[Joey] Good. How are you today?
+<span class="tutor">[Tutor]</span> Yeah, I&#x27;m doing great. Yeah, it&#x27;s so nice. It&#x27;s a beautiful autumn season in Korea.
+<span class="tutor">[Tutor]</span> Is it getting chillier outside now?
+[Joey] Oh yeah, every lunchtime after lunch I walk near the park. But these days it&#x27;s so beautiful. The trees have vivid colors and a little chilly, and that&#x27;s a nice mood.
+<span class="tutor">[Tutor]</span> Yeah, it&#x27;s good.
+<span class="tutor">[Tutor]</span> Oh nice, yeah, kind of that fall season.
+[Joey] Yeah, it&#x27;s a beautiful season.
+<span class="tutor">[Tutor]</span> Okay. Joey, did you want to look at the textbook today?
+[Joey] Oh yes, today&#x27;s topic is doing laundry and using dry cleaning service, right?
+<span class="tutor">[Tutor]</span> Yeah, so laundry and dry cleaning.
+[Joey] Okay, laundry, dry cleaning. Okay.
+<span class="tutor">[Tutor]</span> Would you like to read the first key expression?
+[Joey] Key expression, okay. The first key expression is &quot;ring around the collar,&quot; dark, dirty stain around the inside of a shirt collar caused by sweat or oil. Ring around the collar.
+<span class="tutor">[Tutor]</span> It&#x27;s kind of that mark.
+[Joey] Mark, yes.
+[Joey] And the second, &quot;treat a stain.&quot; Use a product or method to remove a stain.
+<span class="tutor">[Tutor]</span> It&#x27;s like treat a chocolate stain or treat a...
+[Joey] Chocolate stain, okay.
+<span class="tutor">[Tutor]</span> Treat a coffee stain.
+<span class="tutor">[Tutor]</span> Yeah, coffee is a bad one, too.
+[Joey] Yes, and teacher, is your right pronunciation? &quot;Method,&quot; is it right? Or a little different?
+<span class="tutor">[Tutor]</span> Method.
+[Joey] Method.
+<span class="tutor">[Tutor]</span> Better?
+<span class="tutor">[Tutor]</span> Yeah, good, yes.
+[Joey] Method.
+<span class="tutor">[Tutor]</span> Okay, good. And the key phrases?
+[Joey] Key phrases, okay. &quot;Is there any chance you could...&quot;
+[Joey] Is there any chance you could treat the stain with a gentle product?
+[Joey] Is there any chance you could...
+[Joey] You could... treat the ring-around collar discharge?
+[Joey] Remove of ring-around collar discharge?
+<span class="tutor">[Tutor]</span> Okay. Remove the ring around the collar, yeah.
+[Joey] Okay, and second, &quot;When can I expect?&quot; &quot;Could you let me know if the stain come out?&quot;
+[Joey] Could you let me know if remove ring around collar of this shirt?
+<span class="tutor">[Tutor]</span> Yeah, yeah, could you let me know if you can or you can&#x27;t?
+<span class="tutor">[Tutor]</span> Yeah, could you let me know if your report is done?
+[Joey] Report done?
+[Joey] Report what?
+[Joey] Report done? Is done?
+<span class="tutor">[Tutor]</span> Okay.
+[Joey] Could you let me know if this report is done?
+<span class="tutor">[Tutor]</span> Oh, it&#x27;s a little bit different. Or could you let me know if this is done? Or could you let me know if it&#x27;s clean?
+[Joey] It&#x27;s clean. Okay. Yes.
+<span class="tutor">[Tutor]</span> So this, we have the InfoBytes, the next one. Would you like to read?
+[Joey] Okay. Are there any questions with these?
+[Joey] No, it&#x27;s okay. Yes. But the last sentence, &quot;Could you let me know if this report is done?&quot; Is that right?
+<span class="tutor">[Tutor]</span> I don&#x27;t get it. &quot;If the stain comes out.&quot;
+[Joey] Comes out. It&#x27;s the stain comes out. Okay, okay.
+[Joey] Okay, next.
+<span class="tutor">[Tutor]</span> Maybe you&#x27;re seeing a different sentence. So my sentence here is &quot;What can I expect?&quot; and &quot;Could you let me know if the stain comes out?&quot;
+[Joey] Comes out. The stain comes out. Okay. I see.
+<span class="tutor">[Tutor]</span> Okay. Yeah, so sometimes maybe they edit it or change it. Maybe it&#x27;s a different sentence. Yeah, just I was wondering, the &quot;if blah blah blah&quot; is the meaning the future?
+[Joey] So just say the verb, the stay verb or the past verb or future verb. I&#x27;m not distinguished that verb used. So just that is I was wondering.
+<span class="tutor">[Tutor]</span> Stain is the noun. &quot;Comes&quot; is the verb, like &quot;comes out.&quot; So if I change the sentence, &quot;Could you let me know if the report was... if the report is done,&quot; right? &quot;Is done,&quot; or &quot;if the report is done.&quot; &quot;Is done.&quot; I see that is just present verb.
+[Joey] Okay, yes, I see.
+<span class="tutor">[Tutor]</span> Okay, InfoBytes. Can I read that? Yep, okay. &quot;In the United Kingdom, the word &#x27;laundrette&#x27; is more commonly used than &#x27;laundromat&#x27;.&quot;
+[Joey] Laundromat. That is the place of the laundry, right?
+<span class="tutor">[Tutor]</span> Yes.
+[Joey] Okay.
+<span class="tutor">[Tutor]</span> Laundromat, yeah. &quot;Many dry cleaners in Canada and Australia now offer delivery and app-based pick-up service. In the US, laundromats are usually coin or card operated, commonly used in urban areas. In Australia, it is common to see combined laundromat cafe space where customers can enjoy coffee while doing laundry.&quot; That&#x27;s a good idea. Okay, how do people usually do their laundry in your country? Do they use the laundromat, home machine, or service?
+[Joey] Hmm, I see. Yeah, it is similar the UK or Canada, the other country. In Korea, we have a coin laundry room or some place has a laundry place. So if we go to the coin laundry place, we just prepare such as cash or credit card. Use the credit card and we change the coin or some card used card and put in card just use the that laundry machine the limit time. But if that is the not automatic service, just give a laundry service. At that time, we just take that my laundry or they they take our laundry in my home and then delivery my laundry and then clean service had a clean service and take them our home or just we will go to there and just take them our laundry. Hmm.
+<span class="tutor">[Tutor]</span> Yeah, maybe they might wash it for you, fold it, iron it. So, all-in-one service.
+[Joey] Ah, yes, yes, you&#x27;re right. There yeah, there every process of the clothes laundry, the clean wash, clean and irons. Do irons more. Yeah, finish the iron. Yeah, yeah. Do iron, right? Or is there any they can iron it? Can a verb?
+<span class="tutor">[Tutor]</span> Ironed.
+[Joey] Ironed. Okay, okay, good. Mm-hmm.
+<span class="tutor">[Tutor]</span> Yeah, so they get that all serviced for you. It&#x27;s pretty convenient.
+[Joey] Yeah, very convenient.
+[Joey] Yeah, it is convenient. But if we have a big laundry like the winter coat or winter... I forgot that word, teacher. What is that? Every in in our bed we usually get laundry, but because in our bed, what is that? Dump? How can I say? Duvet or comforter? Uh, duvet. Just a moment. I just a blanket. There are. Ah, blanket, blanket. The duvet. Ah, duvet.
+<span class="tutor">[Tutor]</span> Yeah, yeah, comforter, comfort.
+[Joey] Yeah, duvet.
+<span class="tutor">[Tutor]</span> Duvet, duvet.
+[Joey] Comforter.
+<span class="tutor">[Tutor]</span> Comforter, duvet, comforter.
+[Joey] Yeah, that is so big, so it is impossible to use coin washer. So we just take that duvet or comforter with the service.
+<span class="tutor">[Tutor]</span> Okay. And Joey, did you want to read B, Real Talk?
+[Joey] Oh, yes. I&#x27;m select the steps, start now.
+[Joey] Hello, how can I help you?
+<span class="tutor">[Tutor]</span> Hi, I have this dress shirt. It has a ring around the collar.
+[Joey] Oh, I see. That&#x27;s a common stain. We can treat it for you.
+<span class="tutor">[Tutor]</span> Is there any chance you could use a gentle detergent? The fabric is delicate.
+[Joey] Delicate. Of course. We will take extra care with it.
+<span class="tutor">[Tutor]</span> Great. Could you let me know if the stain comes out completely?
+[Joey] Sure. It will be ready for pick up tomorrow after 5 p.m.
+<span class="tutor">[Tutor]</span> Okay. Did you want to switch reading? Or move on to the question?
+[Joey] Just I have a question. Yeah. The customer say, &quot;Is there any chance you could use gentle detergent?&quot;
+[Joey] Detergent. Detergent. What&#x27;s mean the detergent? Soap. Soap. Ah. Gentle detergent. Soap. Laundry soap. So the fabric is delicate. It&#x27;s same. Soap. Delicate. Soap. Yeah. S-O-A-P.
+[Joey] Okay, I see. Thank you. &quot;Is there any chance you could use gentle detergent? The fabric is delicate.&quot; Okay.
+<span class="tutor">[Tutor]</span> Okay. Yeah, so kind of the laundry liquid.
+[Joey] Okay, I understand.
+<span class="tutor">[Tutor]</span> So what does the customer want the staff to do with the shirt?
+[Joey] He wanted to take a laundry and this laundry is the gentle detergent, soft and delicate. And he wanted to let me know about the finished washing clean service.
+<span class="tutor">[Tutor]</span> Yeah, he&#x27;s taking his shirt to the laundry. Next we have the &quot;Say It Right.&quot; Would you like to read the vocabulary for &quot;laundromat&quot;?
+[Joey] Laundromat.
+<span class="tutor">[Tutor]</span> Coin operated.
+[Joey] Coin operated.
+<span class="tutor">[Tutor]</span> Well maintained.
+[Joey] Well maintained. Well maintained.
+<span class="tutor">[Tutor]</span> Self service.
+[Joey] Self service. And teacher, is it right? The laundromat, laundromat, laundromat, laundromat is same the shop of laundry?
+<span class="tutor">[Tutor]</span> Laundromat.
+[Joey] Laundromat.
+<span class="tutor">[Tutor]</span> So it&#x27;s, yeah, laundromat. It&#x27;s when you can...
+[Joey] In your country, the same word, laundromat, laundromat, same word?
+<span class="tutor">[Tutor]</span> It&#x27;s one word, laundromat.
+[Joey] Laundromat. Usually your country use that word, right?
+<span class="tutor">[Tutor]</span> Laundromat. Yes.
+[Joey] Oh, I see. Laundromat.
+<span class="tutor">[Tutor]</span> Okay, the question. Can you describe the laundromat you usually use? How is it operated? Who does the washing and how organized is it?
+[Joey] It is. Three weeks ago, one month ago, I traveled to Japan in Sapporo and I need to wash my laundry because I take a just a few clothes, but the travel is so long. So in the middle of the day, I request in a hotel and they explain the laundromat in their hotel. So I used that laundromat laundry machine in their hotel and this machine used the coin. So I exchanged coin and then just put in the coin and just the laundry. Do laundry in their machine, use that machine and there is no put in some solution. Just just putting coin. Everything is there do in the laundry machine. So...
+<span class="tutor">[Tutor]</span> Okay, there&#x27;s no need for any laundry detergent or laundry soap.
+[Joey] Yeah, laundry soap. Yeah, there is no need. Maybe yeah, already they in this machine there is there already input. Yeah, the soap. Okay, maybe yeah, the soap. S-O-A-P. Uh-huh. S-O-A-P. S-O-A-P. So we pitch up soap. Yeah. Um, how about laundry products? Okay. Gentle, scented, gentle. The soft and delicate fabric.
+[Joey] Scent has a smell.
+<span class="tutor">[Tutor]</span> Scent or scent?
+[Joey] Scent, yeah. Scent.
+<span class="tutor">[Tutor]</span> Scented.
+[Joey] Scented. And eco-friendly.
+<span class="tutor">[Tutor]</span> Good for the environment. Good for the environment. Eco-friendly. What kind of detergent do you use? Do you follow washing instructions?
+[Joey] Oh, yes. Usually I follow the machine instruction because it is important. Yeah. But sometimes they instruction to the little weak. For example, if I do many laundry, but the machine indicate just a small laundry. Do some laundry, but I&#x27;m just ignore that indicator. Just to do many laundry. That is more easy for me anyway.
+<span class="tutor">[Tutor]</span> Oh yeah, they tell you to do little, yeah, light.
+[Joey] Light load. Yes, but...
+<span class="tutor">[Tutor]</span> Okay. How about the next one, the &quot;Speak Up&quot;? Did you want to read and fill in the sentence?
+[Joey] Okay, fast read. I will fast read. &quot;I usually do my laundry once a week. The machines in my building are modern, but sometimes they are confusing. For delicate fabric or large loads, I drop them off at dry cleaner. If any has a stain, I ask them to treat with a gentle detergent. I usually pick up everything the next day.&quot;
+<span class="tutor">[Tutor]</span> Yeah, any questions with this one?
+[Joey] Some words are a little difficult, but it&#x27;s okay. Yes, I understand almost.
+<span class="tutor">[Tutor]</span> And just a quick question. Do you prefer scented or unscented detergent?
+[Joey] Oh, yes, scented. If I dry in my laundry machine, I use the scented paper. It has a great scent.
+<span class="tutor">[Tutor]</span> And so last, can you remember any expression, any word from today?
+[Joey] Today expression, &quot;treat.&quot; &quot;Ring around the collar.&quot; &quot;Is there any chance you could blah blah blah?&quot; &quot;Can I expect?&quot; &quot;Can you let me know if blah blah blah?&quot; &quot;Can you let me know if blah blah blah?&quot; &quot;Can you let me know?&quot; &quot;Could you let me know?&quot; &quot;Can you let me know finish the class?&quot;
+<span class="tutor">[Tutor]</span> Okay. Yeah, I&#x27;ll finish. I&#x27;ll let you go. Have a great day.
+[Joey] You too. Have a great day.</div>
+        </div>
+    </div>
+    <div class="toast" id="toast">✅ 프롬프트가 복사되었습니다!</div>
+    <script>
+        const REVIEW_PROMPT="너는 나의 영어 회화 복습 파트너야. 오늘 내 전화영어 수업 내용을 기반으로 대화하면서 복습을 도와줘.\n\n[오늘 수업 전사 내용]\n[Tutor] Hello, good morning. Good evening. Good morning. Yes. Hi, how are you?\n[Joey] Good. How are you today?\n[Tutor] Yeah, I'm doing great. Yeah, it's so nice. It's a beautiful autumn season in Korea.\n[Tutor] Is it getting chillier outside now?\n[Joey] Oh yeah, every lunchtime after lunch I walk near the park. But these days it's so beautiful. The trees have vivid colors and a little chilly, and that's a nice mood.\n[Tutor] Yeah, it's good.\n[Tutor] Oh nice, yeah, kind of that fall season.\n[Joey] Yeah, it's a beautiful season.\n[Tutor] Okay. Joey, did you want to look at the textbook today?\n[Joey] Oh yes, today's topic is doing laundry and using dry cleaning service, right?\n[Tutor] Yeah, so laundry and dry cleaning.\n[Joey] Okay, laundry, dry cleaning. Okay.\n[Tutor] Would you like to read the first key expression?\n[Joey] Key expression, okay. The first key expression is \"ring around the collar,\" dark, dirty stain around the inside of a shirt collar caused by sweat or oil. Ring around the collar.\n[Tutor] It's kind of that mark.\n[Joey] Mark, yes.\n[Joey] And the second, \"treat a stain.\" Use a product or method to remove a stain.\n[Tutor] It's like treat a chocolate stain or treat a...\n[Joey] Chocolate stain, okay.\n[Tutor] Treat a coffee stain.\n[Tutor] Yeah, coffee is a bad one, too.\n[Joey] Yes, and teacher, is your right pronunciation? \"Method,\" is it right? Or a little different?\n[Tutor] Method.\n[Joey] Method.\n[Tutor] Better?\n[Tutor] Yeah, good, yes.\n[Joey] Method.\n[Tutor] Okay, good. And the key phrases?\n[Joey] Key phrases, okay. \"Is there any chance you could...\"\n[Joey] Is there any chance you could treat the stain with a gentle product?\n[Joey] Is there any chance you could...\n[Joey] You could... treat the ring-around collar discharge?\n[Joey] Remove of ring-around collar discharge?\n[Tutor] Okay. Remove the ring around the collar, yeah.\n[Joey] Okay, and second, \"When can I expect?\" \"Could you let me know if the stain come out?\"\n[Joey] Could you let me know if remove ring around collar of this shirt?\n[Tutor] Yeah, yeah, could you let me know if you can or you can't?\n[Tutor] Yeah, could you let me know if your report is done?\n[Joey] Report done?\n[Joey] Report what?\n[Joey] Report done? Is done?\n[Tutor] Okay.\n[Joey] Could you let me know if this report is done?\n[Tutor] Oh, it's a little bit different. Or could you let me know if this is done? Or could you let me know if it's clean?\n[Joey] It's clean. Okay. Yes.\n[Tutor] So this, we have the InfoBytes, the next one. Would you like to read?\n[Joey] Okay. Are there any questions with these?\n[Joey] No, it's okay. Yes. But the last sentence, \"Could you let me know if this report is done?\" Is that right?\n[Tutor] I don't get it. \"If the stain comes out.\"\n[Joey] Comes out. It's the stain comes out. Okay, okay.\n[Joey] Okay, next.\n[Tutor] Maybe you're seeing a different sentence. So my sentence here is \"What can I expect?\" and \"Could you let me know if the stain comes out?\"\n[Joey] Comes out. The stain comes out. Okay. I see.\n[Tutor] Okay. Yeah, so sometimes maybe they edit it or change it. Maybe it's a different sentence. Yeah, just I was wondering, the \"if blah blah blah\" is the meaning the future?\n[Joey] So just say the verb, the stay verb or the past verb or future verb. I'm not distinguished that verb used. So just that is I was wondering.\n[Tutor] Stain is the noun. \"Comes\" is the verb, like \"comes out.\" So if I change the sentence, \"Could you let me know if the report was... if the report is done,\" right? \"Is done,\" or \"if the report is done.\" \"Is done.\" I see that is just present verb.\n[Joey] Okay, yes, I see.\n[Tutor] Okay, InfoBytes. Can I read that? Yep, okay. \"In the United Kingdom, the word 'laundrette' is more commonly used than 'laundromat'.\"\n[Joey] Laundromat. That is the place of the laundry, right?\n[Tutor] Yes.\n[Joey] Okay.\n[Tutor] Laundromat, yeah. \"Many dry cleaners in Canada and Australia now offer delivery and app-based pick-up service. In the US, laundromats are usually coin or card operated, commonly used in urban areas. In Australia, it is common to see combined laundromat cafe space where customers can enjoy coffee while doing laundry.\" That's a good idea. Okay, how do people usually do their laundry in your country? Do they use the laundromat, home machine, or service?\n[Joey] Hmm, I see. Yeah, it is similar the UK or Canada, the other country. In Korea, we have a coin laundry room or some place has a laundry place. So if we go to the coin laundry place, we just prepare such as cash or credit card. Use the credit card and we change the coin or some card used card and put in card just use the that laundry machine the limit time. But if that is the not automatic service, just give a laundry service. At that time, we just take that my laundry or they they take our laundry in my home and then delivery my laundry and then clean service had a clean service and take them our home or just we will go to there and just take them our laundry. Hmm.\n[Tutor] Yeah, maybe they might wash it for you, fold it, iron it. So, all-in-one service.\n[Joey] Ah, yes, yes, you're right. There yeah, there every process of the clothes laundry, the clean wash, clean and irons. Do irons more. Yeah, finish the iron. Yeah, yeah. Do iron, right? Or is there any they can iron it? Can a verb?\n[Tutor] Ironed.\n[Joey] Ironed. Okay, okay, good. Mm-hmm.\n[Tutor] Yeah, so they get that all serviced for you. It's pretty convenient.\n[Joey] Yeah, very convenient.\n[Joey] Yeah, it is convenient. But if we have a big laundry like the winter coat or winter... I forgot that word, teacher. What is that? Every in in our bed we usually get laundry, but because in our bed, what is that? Dump? How can I say? Duvet or comforter? Uh, duvet. Just a moment. I just a blanket. There are. Ah, blanket, blanket. The duvet. Ah, duvet.\n[Tutor] Yeah, yeah, comforter, comfort.\n[Joey] Yeah, duvet.\n[Tutor] Duvet, duvet.\n[Joey] Comforter.\n[Tutor] Comforter, duvet, comforter.\n[Joey] Yeah, that is so big, so it is impossible to use coin washer. So we just take that duvet or comforter with the service.\n[Tutor] Okay. And Joey, did you want to read B, Real Talk?\n[Joey] Oh, yes. I'm select the steps, start now.\n[Joey] Hello, how can I help you?\n[Tutor] Hi, I have this dress shirt. It has a ring around the collar.\n[Joey] Oh, I see. That's a common stain. We can treat it for you.\n[Tutor] Is there any chance you could use a gentle detergent? The fabric is delicate.\n[Joey] Delicate. Of course. We will take extra care with it.\n[Tutor] Great. Could you let me know if the stain comes out completely?\n[Joey] Sure. It will be ready for pick up tomorrow after 5 p.m.\n[Tutor] Okay. Did you want to switch reading? Or move on to the question?\n[Joey] Just I have a question. Yeah. The customer say, \"Is there any chance you could use gentle detergent?\"\n[Joey] Detergent. Detergent. What's mean the detergent? Soap. Soap. Ah. Gentle detergent. Soap. Laundry soap. So the fabric is delicate. It's same. Soap. Delicate. Soap. Yeah. S-O-A-P.\n[Joey] Okay, I see. Thank you. \"Is there any chance you could use gentle detergent? The fabric is delicate.\" Okay.\n[Tutor] Okay. Yeah, so kind of the laundry liquid.\n[Joey] Okay, I understand.\n[Tutor] So what does the customer want the staff to do with the shirt?\n[Joey] He wanted to take a laundry and this laundry is the gentle detergent, soft and delicate. And he wanted to let me know about the finished washing clean service.\n[Tutor] Yeah, he's taking his shirt to the laundry. Next we have the \"Say It Right.\" Would you like to read the vocabulary for \"laundromat\"?\n[Joey] Laundromat.\n[Tutor] Coin operated.\n[Joey] Coin operated.\n[Tutor] Well maintained.\n[Joey] Well maintained. Well maintained.\n[Tutor] Self service.\n[Joey] Self service. And teacher, is it right? The laundromat, laundromat, laundromat, laundromat is same the shop of laundry?\n[Tutor] Laundromat.\n[Joey] Laundromat.\n[Tutor] So it's, yeah, laundromat. It's when you can...\n[Joey] In your country, the same word, laundromat, laundromat, same word?\n[Tutor] It's one word, laundromat.\n[Joey] Laundromat. Usually your country use that word, right?\n[Tutor] Laundromat. Yes.\n[Joey] Oh, I see. Laundromat.\n[Tutor] Okay, the question. Can you describe the laundromat you usually use? How is it operated? Who does the washing and how organized is it?\n[Joey] It is. Three weeks ago, one month ago, I traveled to Japan in Sapporo and I need to wash my laundry because I take a just a few clothes, but the travel is so long. So in the middle of the day, I request in a hotel and they explain the laundromat in their hotel. So I used that laundromat laundry machine in their hotel and this machine used the coin. So I exchanged coin and then just put in the coin and just the laundry. Do laundry in their machine, use that machine and there is no put in some solution. Just just putting coin. Everything is there do in the laundry machine. So...\n[Tutor] Okay, there's no need for any laundry detergent or laundry soap.\n[Joey] Yeah, laundry soap. Yeah, there is no need. Maybe yeah, already they in this machine there is there already input. Yeah, the soap. Okay, maybe yeah, the soap. S-O-A-P. Uh-huh. S-O-A-P. S-O-A-P. So we pitch up soap. Yeah. Um, how about laundry products? Okay. Gentle, scented, gentle. The soft and delicate fabric.\n[Joey] Scent has a smell.\n[Tutor] Scent or scent?\n[Joey] Scent, yeah. Scent.\n[Tutor] Scented.\n[Joey] Scented. And eco-friendly.\n[Tutor] Good for the environment. Good for the environment. Eco-friendly. What kind of detergent do you use? Do you follow washing instructions?\n[Joey] Oh, yes. Usually I follow the machine instruction because it is important. Yeah. But sometimes they instruction to the little weak. For example, if I do many laundry, but the machine indicate just a small laundry. Do some laundry, but I'm just ignore that indicator. Just to do many laundry. That is more easy for me anyway.\n[Tutor] Oh yeah, they tell you to do little, yeah, light.\n[Joey] Light load. Yes, but...\n[Tutor] Okay. How about the next one, the \"Speak Up\"? Did you want to read and fill in the sentence?\n[Joey] Okay, fast read. I will fast read. \"I usually do my laundry once a week. The machines in my building are modern, but sometimes they are confusing. For delicate fabric or large loads, I drop them off at dry cleaner. If any has a stain, I ask them to treat with a gentle detergent. I usually pick up everything the next day.\"\n[Tutor] Yeah, any questions with this one?\n[Joey] Some words are a little difficult, but it's okay. Yes, I understand almost.\n[Tutor] And just a quick question. Do you prefer scented or unscented detergent?\n[Joey] Oh, yes, scented. If I dry in my laundry machine, I use the scented paper. It has a great scent.\n[Tutor] And so last, can you remember any expression, any word from today?\n[Joey] Today expression, \"treat.\" \"Ring around the collar.\" \"Is there any chance you could blah blah blah?\" \"Can I expect?\" \"Can you let me know if blah blah blah?\" \"Can you let me know if blah blah blah?\" \"Can you let me know?\" \"Could you let me know?\" \"Can you let me know finish the class?\"\n[Tutor] Okay. Yeah, I'll finish. I'll let you go. Have a great day.\n[Joey] You too. Have a great day.\n\n[AI 피드백]\n안녕하세요, Joey! 가을이 깊어지는 계절, 공원 산책도 즐기시고 영어 공부도 꾸준히 하시는 모습 정말 멋지세요. 오늘도 활기찬 에너지로 수업에 참여해주셔서 감사해요!\n\n---\n\n### 0. 📌 Topic\nTopic: Discussing laundry and dry cleaning services, including methods, products, and specific requests.\n\n### 1. 📊 오늘의 대화 요약 (Summary)\n오늘은 세탁 및 드라이클리닝 서비스에 대한 다양한 이야기를 나누었습니다. 한국의 세탁 문화(코인 세탁, 세탁 서비스)를 다른 나라와 비교하고, 이불이나 겨울 코트처럼 부피가 큰 세탁물 처리 방법에 대해서도 이야기했어요. 특히, 세탁소에 특정 요청을 할 때 사용할 수 있는 핵심 표현들을 연습하며 실용적인 대화를 이어갔습니다.\n\n### 2. 💬 유창성 업그레이드 (Fluency & Natural Flow)\n\nJoey, 의미 전달은 충분히 잘 되지만, 조금 더 자연스럽고 원어민스러운 표현으로 다듬을 수 있는 문장들을 함께 살펴볼까요?\n\n1.  **❌ 학습자 원문 (As Said):** \"But sometimes they **instruction to the little weak**.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"But sometimes the **instructions are a bit unclear**.\"\n    *   **💎 비즈니스 표현 (Professional):** \"However, the **provided instructions can occasionally be ambiguous**.\"\n    *   **💡 코칭 포인트:** 'Instruction'은 명사이므로 상태를 나타내는 'are'와 같은 동사가 필요합니다. 'weak'는 지시사항을 묘사할 때 잘 쓰이지 않으며, 'unclear'나 'vague'가 더 자연스럽습니다.\n\n2.  **❌ 학습자 원문 (As Said):** \"Just **to do many laundry**. That is more easy for me anyway.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"It's just **easier for me to do a larger load of laundry**.\"\n    *   **💎 비즈니스 표현 (Professional):** \"I find it **more efficient to process a larger volume of laundry** at once.\"\n    *   **💡 코칭 포인트:** 'Laundry'는 셀 수 없는 명사이므로 'many laundry' 대신 'a lot of laundry' 또는 'a large load of laundry'를 사용합니다. 또한, 'more easy'는 비교급 형태인 'easier'가 올바릅니다.\n\n3.  **❌ 학습자 원문 (As Said):** \"If **any** has a stain, I ask them to treat with a gentle detergent.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"If **anything** has a stain, I ask them to treat it with a gentle detergent.\"\n    *   **💎 비즈니스 표현 (Professional):** \"Should **any item** have a stain, I request that it be treated with a gentle detergent.\"\n    *   **💡 코칭 포인트:** 'Any'는 일반적으로 명사(예: 'any shirt', 'any clothes')가 뒤따라오거나, 불특정한 물건을 지칭할 때는 대명사 'anything'으로 사용해야 합니다.\n\n### 3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)\n\nCategory: **Incorrect Verb Form/Structure**\n\nJoey, 오늘은 동사 형태나 문장 구조를 만들 때 조금 더 정확하게 표현하면 좋을 부분들을 집중적으로 살펴볼게요. 특히 수동태나 특정 동사 표현에서 실수가 반복되는 경향이 보였어요.\n\n| ❌ 원문 (As Said)                                         | ✅ 교정 예시 (Corrected)                                         |\n| :------------------------------------------------------- | :------------------------------------------------------------- |\n| `I'm select the steps, start now.`                         | `I'll select the steps, let's start now.`                      |\n| `I'm not distinguished that verb used.`                    | `I couldn't distinguish which verb to use.`                    |\n| `Do irons more. Yeah, finish the iron. Yeah, yeah. Do iron, right?` | `Do more ironing. Yeah, finish the ironing. Yeah, yeah. Do the ironing, right?` |\n\n📌 **핵심 규칙:** 동사를 사용할 때는 시제, 태(능동/수동), 그리고 문맥에 맞는 정확한 형태를 사용하는 것이 중요합니다. 특히 'be + -ing' (진행형), 'be + p.p.' (수동태), 그리고 동명사 형태를 정확히 구별하여 사용해야 합니다.\n\n🔁 **따라 읽기:**\n🗣️ \"I'll select the steps, let's start now.\"\n🗣️ \"I couldn't distinguish which verb to use.\"\n🗣️ \"Do more ironing. Yeah, finish the ironing. Yeah, yeah. Do the ironing, right?\"\n\n### 4. 📗 어휘 확장 (Vocabulary Vault)\n\n오늘 대화에서 유용하게 쓰일 수 있는 어휘들을 정리해 보았어요.\n\n1.  **detergent** /dɪˈtɜːrdʒənt/ (명사)\n    *   뜻: 세제 (세탁용)\n    *   실전 예문: We need to order a new batch of **detergent** for the industrial washing machines.\n2.  **delicate** /ˈdelɪkət/ (형용사)\n    *   뜻: 섬세한, 약한 (옷감 등이)\n    *   실전 예문: This silk scarf is very **delicate**, so it requires hand washing.\n3.  **stain** /steɪn/ (명사)\n    *   뜻: 얼룩\n    *   실전 예문: I'm worried about this coffee **stain** on my report; I hope it comes out.\n4.  **duvet** /ˈduːveɪ/ (명사)\n    *   뜻: (솜이나 털을 넣어 만든) 이불, 덮개\n    *   실전 예문: Our hotel offers a professional cleaning service for large items like **duvets** and comforters.\n5.  **coin-operated** /ˈkɔɪn ˌɑːpəreɪtɪd/ (형용사)\n    *   뜻: 동전으로 작동되는\n    *   실전 예문: Many laundromats in urban areas are **coin-operated** for convenience.\n\n### 5. 📝 실전 복습 챌린지 (Practice)\n\n오늘 배운 표현과 문법을 활용하여 다음 상황에 맞는 문장을 영작해 보세요.\n\n1.  **상황:** (쉬움) 중요한 회의 전에 셔츠에 얼룩이 생겼습니다. 세탁소 직원에게 이 얼룩을 제거해 달라고 정중하게 요청하고 싶습니다.\n    *   **영작:** 이 셔츠에 얼룩이 있는데, 제거해 주실 수 있을까요?\n    *   **모범 답안:** `This shirt has a stain. Could you please treat it for me?`\n2.  **상황:** (중간) 고객사와의 저녁 식사 후, 양복 재킷에 음식 얼룩이 묻었습니다. 세탁소에 맡기며, 재킷이 섬세한 소재이니 부드러운 세제를 사용해 달라고 요청하고 싶습니다.\n    *   **영작:** 이 재킷에 얼룩이 있는데, 섬세한 소재이니 부드러운 세제를 사용해 주실 수 있을까요?\n    *   **모범 답안:** `This jacket has a stain. Is there any chance you could use a gentle detergent since the fabric is delicate?`\n3.  **상황:** (어려움) 해외 출장 중 호텔 내 코인 세탁소를 이용했습니다. 세탁기 사용법이 조금 불분명해서 직원에게 도움을 요청하고 싶습니다.\n    *   **영작:** 세탁기 사용법을 잘 모르겠는데, 도와주실 수 있을까요?\n    *   **모범 답안:** `I'm not sure how to operate the washing machine. Could you let me know if you can help me?`\n\n### 6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)\n\n✨ **Good Job:**\nJoey, 오늘 수업 시작할 때 계절에 대한 묘사가 정말 좋았어요!\n\"**The trees have vivid colors and a little chilly, and that's a nice mood.**\"\n'vivid colors'라는 표현으로 가을의 아름다움을 생생하게 전달했고, 'a nice mood'로 전체적인 분위기를 잘 마무리했습니다. 자연스러운 흐름으로 계절감을 표현하는 능력이 돋보였습니다!\n\n🚀 **내일의 한 문장:**\n다음 수업 시작 시 튜터에게 오늘 배운 표현을 활용하여 이렇게 말해보세요.\n\"I've been reviewing the vocabulary from our last class, especially words like 'detergent' and 'delicate'.\"\n\n---\n\n### [성과 지표]\n\n**유창성 점수: 7/10**\n\n**근거:** Joey는 다양한 주제에 대해 막힘없이 자신의 의견을 표현하려는 노력이 돋보였습니다. 특히, 질문에 대한 답변이나 경험을 이야기할 때 문장 구성에 다소 오류가 있더라도 주저하지 않고 말을 이어가는 점이 매우 긍정적입니다. 'laundromat'과 같은 새로운 단어의 발음과 의미를 적극적으로 확인하려는 태도도 훌륭합니다. 다만, 복잡한 문장을 구사하려 할 때 동사 형태, 전치사, 가산/불가산 명사 사용에서 오류가 발생하여 문장의 자연스러움이 저해되는 경우가 있었습니다.\n\n**다음 수업 '원포인트 액션 플랜':**\n다음 수업에서는 **동사 형태(특히 수동태, 동명사)의 정확한 사용**에 집중하여, 문법적 정확성을 높이면서도 유창한 흐름을 유지할 수 있도록 연습할 예정입니다. Joey가 자주 사용하는 문장 패턴에서 동사 오류를 교정하고, 자연스러운 문장으로 반복 연습하는 시간을 가질 것입니다.\n\n위 내용을 바탕으로:\n1. 먼저 오늘 수업에서 내가 틀렸거나 어색했던 표현을 하나 골라서, 관련된 상황을 영어로 질문해줘.\n2. 내가 영어로 대답하면, 자연스러운지 확인하고 더 나은 표현이 있으면 알려줘.\n3. 특히 \"반복 실수 패턴\"에서 지적된 부분을 집중적으로 연습시켜줘.\n4. 이런 식으로 오늘 배운 표현들을 하나씩 복습하자.\n5. 한국어 설명은 필요할 때만 간단히, 대화는 최대한 영어로 진행해줘.\n\n그럼 시작하자!";
+        function startReview(){navigator.clipboard.writeText(REVIEW_PROMPT).then(()=>{showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)}).catch(()=>{const t=document.createElement('textarea');t.value=REVIEW_PROMPT;document.body.appendChild(t);t.select();document.execCommand('copy');document.body.removeChild(t);showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)})}
+        function showToast(){const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500)}
+        function switchTab(n){document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',n==='feedback'?i===0:i===1));document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));document.getElementById('tab-'+n).classList.add('active')}
+    </script>
+</body>
+</html>

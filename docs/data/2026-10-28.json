@@ -1,0 +1,53 @@
+{
+ "date": "2026-10-28",
+ "iso": [
+  2026,
+  44
+ ],
+ "topic": "Discussing laundry and dry cleaning services, including methods, products, and specific re",
+ "grammar": "Incorrect Verb Form/Structure",
+ "grammar_norm": "Verb Forms / Auxiliaries",
+ "score": 7.0,
+ "pairs": [
+  {
+   "said": "But sometimes they instruction to the little weak .",
+   "natural": "But sometimes the instructions are a bit unclear ."
+  },
+  {
+   "said": "Just to do many laundry . That is more easy for me anyway.",
+   "natural": "It's just easier for me to do a larger load of laundry ."
+  },
+  {
+   "said": "If any has a stain, I ask them to treat with a gentle detergent.",
+   "natural": "If anything has a stain, I ask them to treat it with a gentle detergent."
+  }
+ ],
+ "vocab": [
+  {
+   "word": "detergent",
+   "pos": "명사",
+   "meaning": "세제 (세탁용)"
+  },
+  {
+   "word": "delicate",
+   "pos": "형용사",
+   "meaning": "섬세한, 약한 (옷감 등이)"
+  },
+  {
+   "word": "stain",
+   "pos": "명사",
+   "meaning": "얼룩"
+  },
+  {
+   "word": "duvet",
+   "pos": "명사",
+   "meaning": "(솜이나 털을 넣어 만든) 이불, 덮개"
+  },
+  {
+   "word": "coin-operated",
+   "pos": "형용사",
+   "meaning": "동전으로 작동되는"
+  }
+ ],
+ "_html_md5": "d26d8162305bd58038759b527dc8e317"
+}
