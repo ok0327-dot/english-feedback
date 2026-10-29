@@ -1,0 +1,53 @@
+{
+ "date": "2026-10-21",
+ "iso": [
+  2026,
+  43
+ ],
+ "topic": "Comparing rental processes and property types in Korea and Canada, and discussing Airbnb b",
+ "grammar": "Prepositions",
+ "grammar_norm": "Prepositions",
+ "score": 7.0,
+ "pairs": [
+  {
+   "said": "Is it possible to pre-talk?",
+   "natural": "Can we just chat informally first?"
+  },
+  {
+   "said": "It is only I have experience to rent a house in Korea",
+   "natural": "I've only had experience renting a house in Korea."
+  },
+  {
+   "said": "I like to do interior in some space.",
+   "natural": "I enjoy doing interior design in various spaces."
+  }
+ ],
+ "vocab": [
+  {
+   "word": "audit",
+   "pos": "명사",
+   "meaning": "회계 감사"
+  },
+  {
+   "word": "deposit",
+   "pos": "명사",
+   "meaning": "보증금, 예치금"
+  },
+  {
+   "word": "real estate agent",
+   "pos": "명사",
+   "meaning": "부동산 중개인"
+  },
+  {
+   "word": "property",
+   "pos": "명사",
+   "meaning": "재산, 부동산"
+  },
+  {
+   "word": "lease",
+   "pos": "동사/명사",
+   "meaning": "임대하다, 임대 계약"
+  }
+ ],
+ "_html_md5": "7dc0ddbf5b76e0282855714ba538978e"
+}

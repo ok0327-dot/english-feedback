@@ -1,0 +1,53 @@
+{
+ "date": "2026-10-22",
+ "iso": [
+  2026,
+  43
+ ],
+ "topic": "Discussing how to set up utilities and manage related expenses.",
+ "grammar": "Using Nouns and Articles for General Statements",
+ "grammar_norm": "Articles (a/an/the)",
+ "score": 7.5,
+ "pairs": [
+  {
+   "said": "because it will start autumn.",
+   "natural": "because autumn is starting."
+  },
+  {
+   "said": "every tree has changed color, changed leaves.",
+   "natural": "the leaves on every tree have changed color."
+  },
+  {
+   "said": "So usually the people gather and live in our apartment.",
+   "natural": "So usually people live in apartment complexes."
+  }
+ ],
+ "vocab": [
+  {
+   "word": "Utility",
+   "pos": "n",
+   "meaning": "공공 서비스 (전기, 가스, 수도 등)"
+  },
+  {
+   "word": "Registered",
+   "pos": "adj",
+   "meaning": "등록된, 기명된"
+  },
+  {
+   "word": "Fluctuating",
+   "pos": "adj",
+   "meaning": "변동하는, 오르내리는"
+  },
+  {
+   "word": "Deposit",
+   "pos": "n",
+   "meaning": "보증금, 예치금"
+  },
+  {
+   "word": "Lease Agreement",
+   "pos": "n",
+   "meaning": "임대차 계약서"
+  }
+ ],
+ "_html_md5": "2d867509f5b7e285ffe707da8b2c3182"
+}

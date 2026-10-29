@@ -1,5 +1,26 @@
 [
  {
+  "week": "2026-W43",
+  "date": "2026-10-23",
+  "file": "ep-2026-W43.mp3",
+  "engine": "gemini",
+  "lines": 123
+ },
+ {
+  "week": "2026-W42",
+  "date": "2026-10-16",
+  "file": "ep-2026-W42.mp3",
+  "engine": "gemini",
+  "lines": 120
+ },
+ {
+  "week": "2026-W41",
+  "date": "2026-10-10",
+  "file": "ep-2026-W41.mp3",
+  "engine": "gemini",
+  "lines": 122
+ },
+ {
   "week": "2026-W39",
   "date": "2026-10-02",
   "file": "ep-2026-W39.mp3",
@@ -89,26 +110,5 @@
   "file": "ep-2026-W26.mp3",
   "engine": "gemini",
   "lines": 137
- },
- {
-  "week": "2026-W25",
-  "date": "2026-07-10",
-  "file": "ep-2026-W25.mp3",
-  "engine": "gemini",
-  "lines": 167
- },
- {
-  "week": "2026-W24",
-  "date": "2026-07-09",
-  "file": "ep-2026-W24.mp3",
-  "engine": "gemini",
-  "lines": 149
- },
- {
-  "week": "2026-W23",
-  "date": "2026-07-08",
-  "file": "ep-2026-W23.mp3",
-  "engine": "gemini",
-  "lines": 143
  }
 ]

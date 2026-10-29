@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#0f0f13"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="당근영어"><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="icon" type="image/png" sizes="192x192" href="icon-192.png"><script src="install-banner.js" defer></script><script src="sw-reg.js" defer></script>
+    <title>전화영어 복습 - 2026년 10월 26일</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Noto Sans KR',sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.75;min-height:100vh}
+        .header{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);border-bottom:1px solid rgba(255,255,255,.06);padding:48px 24px 40px;text-align:center}
+        .header-date{font-size:13px;color:#94a3b8;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+        .header h1{font-size:28px;font-weight:700;color:#f1f5f9;margin-bottom:16px}
+        .header-meta{display:flex;justify-content:center;gap:24px;font-size:14px;color:#64748b}
+        .header-meta span{display:flex;align-items:center;gap:6px}
+        .cta-section{text-align:center;padding:40px 24px}
+        .cta-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:linear-gradient(135deg,#38bdf8,#818cf8);color:#fff;font-size:16px;font-weight:600;font-family:'Noto Sans KR',sans-serif;border:none;border-radius:50px;cursor:pointer;transition:all .3s;text-decoration:none;box-shadow:0 4px 24px rgba(56,189,248,.25)}
+        .cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(56,189,248,.35)}
+        .cta-btn svg{width:20px;height:20px}
+        .cta-sub{margin-top:12px;font-size:13px;color:#64748b}
+        .toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#38bdf8;padding:14px 28px;border-radius:12px;font-size:14px;font-weight:500;border:1px solid rgba(56,189,248,.2);box-shadow:0 8px 32px rgba(0,0,0,.4);opacity:0;transition:all .4s cubic-bezier(.16,1,.3,1);z-index:1000}
+        .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+        .container{max-width:720px;margin:0 auto;padding:0 24px 80px}
+        .tabs{display:flex;gap:4px;background:#1a1a24;padding:4px;border-radius:12px;margin-bottom:32px}
+        .tab{flex:1;padding:12px;text-align:center;font-size:14px;font-weight:500;color:#64748b;background:0 0;border:none;border-radius:8px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all .2s}
+        .tab.active{background:#262636;color:#f1f5f9}
+        .tab-content{display:none}.tab-content.active{display:block}
+        .feedback h2{font-size:18px;font-weight:700;color:#f1f5f9;margin:36px 0 16px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.06)}
+        .feedback h2:first-child{margin-top:0}
+        .feedback p{margin:8px 0;color:#cbd5e1}
+        .feedback .item{padding:6px 0 6px 16px;border-left:2px solid #334155;margin:6px 0;color:#cbd5e1}
+        .feedback .numbered{padding:8px 0 8px 16px;color:#cbd5e1}
+        .feedback .numbered strong{color:#38bdf8}
+        .feedback strong{color:#f1f5f9}
+        .feedback code{background:#1e293b;padding:2px 8px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#38bdf8}
+        .feedback table{width:100%;border-collapse:collapse;margin:12px 0}
+        .feedback th,.feedback td{padding:10px 14px;text-align:left;border-bottom:1px solid #262636}
+        .feedback th{color:#94a3b8;font-weight:500;font-size:13px}
+        .feedback td{color:#cbd5e1}
+        .arrow{color:#38bdf8;font-weight:700}
+        .transcript{background:#1a1a24;border-radius:12px;padding:28px;font-size:14px;line-height:2;color:#94a3b8;white-space:pre-wrap;word-break:break-word;font-family:'JetBrains Mono','Noto Sans KR',monospace}
+        .transcript .tutor{color:#38bdf8}
+        .transcript .student{color:#a78bfa}
+        @media(max-width:640px){.header{padding:32px 16px}.header h1{font-size:22px}.cta-btn{padding:14px 28px;font-size:15px}.container{padding:0 16px 60px}}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-date">2026년 10월 26일</div>
+        <h1>📚 전화영어 복습</h1>
+        <div class="header-meta">
+            <span>⏱ 20분 17초</span>
+            <span>🎙 전화영어_025180304_20261026080012.m4a</span>
+        </div>
+    </div>
+    <div class="cta-section">
+        <button class="cta-btn" onclick="startReview()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Gemini에서 복습 대화 시작하기
+        </button>
+        <div class="cta-sub">클릭하면 프롬프트가 복사되고 Gemini가 열립니다</div>
+    </div>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('feedback')">📋 AI 피드백</button>
+            <button class="tab" onclick="switchTab('transcript')">🎙 수업 전사</button>
+        </div>
+        <div id="tab-feedback" class="tab-content active">
+            <div class="feedback"><p>따뜻하고 실용적인 영어 코치입니다. Joey, 오늘 수업도 정말 수고 많으셨습니다! 환불 및 교환이라는 실생활에 밀접한 주제로 다양한 표현과 문법을 익히고, AI를 활용해 어려운 상황을 해결했던 Joey님의 경험담까지 들을 수 있어서 아주 유익한 시간이었어요.</p>
+<br>
+<br>
+<h2>0. 📌 Topic</h2>
+<p>Topic: Discussing refund and exchange policies and related vocabulary.</p>
+<br>
+<h2>1. 📊 오늘의 대화 요약 (Summary)</h2>
+<p>오늘 Joey님은 환불 및 교환 요청이라는 주제로 수업을 진행했습니다. 'warranty'와 'store credit' 같은 핵심 표현들을 배우고, 제품 문제 상황에 대한 어휘를 확장했습니다. 특히, AI 번역기를 활용하여 스페인 호텔로부터 환불 대신 크레딧을 받아냈던 Joey님의 흥미로운 경험담을 공유하며 실제 비즈니스 상황에서의 영어 활용 능력을 엿볼 수 있었습니다.</p>
+<br>
+<h2>2. 💬 유창성 업그레이드 (Fluency & Natural Flow)</h2>
+<br>
+<p>Joey님께서 의미는 잘 전달했지만, 원어민들이 더 자연스럽게 쓰는 표현으로 다듬으면 좋을 문장들을 함께 살펴볼까요?</p>
+<br>
+<div class="numbered"><strong>1.</strong> ❌ <strong>학습자 원문 (As Said):</strong> "Yeah, it's getting more colder."</div>
+<p>✅ <strong>자연스러운 표현 (Natural):</strong> "Yeah, it's getting colder."</p>
+<p>💎 <strong>비즈니스 표현 (Professional):</strong> "Indeed, the temperature is noticeably decreasing."</p>
+<p>💡 <strong>코칭 포인트:</strong> "When forming comparative adjectives, 'colder' is already the comparative form of 'cold'. We don't need 'more' before it. For most one-syllable adjectives and two-syllable adjectives ending in -y, we add -er. For longer adjectives, we use 'more'."</p>
+<p><span class="arrow">→</span> 비교급 형용사를 만들 때, 'colder'는 이미 'cold'의 비교급 형태입니다. 그 앞에 'more'를 붙일 필요가 없어요. 대부분의 한 음절 형용사나 -y로 끝나는 두 음절 형용사에는 '-er'을 붙이고, 더 긴 형용사에는 'more'를 사용합니다.</p>
+<br>
+<div class="numbered"><strong>2.</strong> ❌ <strong>학습자 원문 (As Said):</strong> "And when I prepare the present for my wife, the earring or some gold product, that product usually have a warranty."</div>
+<p>✅ <strong>자연스러운 표현 (Natural):</strong> "And when I buy presents for my wife, like earrings or other gold products, they usually come with a warranty."</p>
+<p>💎 <strong>비즈니스 표현 (Professional):</strong> "When purchasing gifts for my wife, such as jewelry or other valuable items, a warranty is typically included."</p>
+<p>💡 <strong>코칭 포인트:</strong> "Using 'buy presents' is more common and natural than 'prepare the present'. Also, 'come with a warranty' is a very idiomatic and natural way to say a product includes a warranty. It highlights the idea that the warranty is an accompanying feature."</p>
+<p><span class="arrow">→</span> 'prepare the present'보다는 'buy presents'가 더 흔하고 자연스러운 표현입니다. 또한, 제품에 보증이 포함되어 있다는 것을 말할 때 'come with a warranty'라고 하면 훨씬 원어민스럽고 자연스럽습니다. 보증이 제품의 부속 기능이라는 뉘앙스를 강조해 줍니다.</p>
+<br>
+<div class="numbered"><strong>3.</strong> ❌ <strong>학습자 원문 (As Said):</strong> "The customer bought a vacuum cleaner, but two weeks later, the vacuum cleaner doesn't work anymore. So she wanted to need a refund."</div>
+<p>✅ <strong>자연스러운 표현 (Natural):</strong> "The customer bought a vacuum cleaner, but it stopped working after two weeks, so she wanted a refund."</p>
+<p>💎 <strong>비즈니스 표현 (Professional):</strong> "The customer purchased a vacuum cleaner, which ceased to function within two weeks, prompting her request for a refund."</p>
+<p>💡 <strong>코칭 포인트:</strong> "Using 'it stopped working' is more concise and natural than 'doesn't work anymore' when talking about a past event. Also, 'wanted a refund' is the correct and common phrasing. 'Wanted to need a refund' is redundant and grammatically awkward."</p>
+<p><span class="arrow">→</span> 과거에 발생한 일에 대해 말할 때는 'doesn't work anymore'보다 'it stopped working'이 더 간결하고 자연스럽습니다. 또한, '환불을 원했다'는 'wanted a refund'가 정확하고 흔한 표현입니다. 'wanted to need a refund'는 중복되고 문법적으로 어색합니다.</p>
+<br>
+<h2>3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)</h2>
+<br>
+<p>Category: <strong>Redundant Verbs/Words in Definitions</strong></p>
+<br>
+<p>Joey님은 무언가를 정의하거나 설명할 때 불필요한 동사나 단어를 반복해서 사용하는 경향이 있었습니다. 이는 문장을 장황하게 만들고 어색하게 들리게 할 수 있습니다.</p>
+<br>
+<table>
+<tr><th>❌ 원문 (As Said)</th><th>✅ 교정 예시 (Corrected)</th></tr>
+<tr><td>"The warranty means <strong>is</strong> a guarantee that a defective product will be repaired or replaced within a specific period."</td><td>"The warranty <strong>is</strong> a guarantee that a defective product will be repaired or replaced within a specific period."</td></tr>
+<tr><td>"The second expression is the store credit. <strong>That word means</strong> a value issued by retailers that customers can use for future purchase."</td><td>"The second expression is store credit, which <strong>means</strong> a value issued by retailers that customers can use for future purchase."</td></tr>
+<tr><td>"Maybe eligible <strong>means right</strong>. Right?"</td><td>"Maybe eligible <strong>means correct</strong>."</td></tr>
+</table>
+<br>
+<p>📌 <strong>핵심 규칙:</strong> 정의를 내릴 때는 "A means B" 또는 "A is B" 중 하나만 사용하여 간결하게 표현하세요. 불필요한 반복 동사나 단어는 피합니다.</p>
+<br>
+<p>🔁 <strong>따라 읽기:</strong></p>
+<p>🗣️ "The warranty is a guarantee that a defective product will be repaired or replaced within a specific period."</p>
+<p>🗣️ "Store credit means a value issued by retailers that customers can use for future purchase."</p>
+<p>🗣️ "Eligible means correct."</p>
+<br>
+<h2>4. 📗 어휘 확장 (Vocabulary Vault)</h2>
+<br>
+<p>오늘 배운 내용과 Joey님의 비즈니스 환경에 유용한 어휘 5가지입니다.</p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>eligible</strong> /élɪdʒəbəl/ (형용사)</div>
+<div class="item"><strong>뜻:</strong> ~을 가질 자격이 있는, 적격의</div>
+<div class="item"><strong>실전 예문:</strong> Employees who have worked for more than a year are <strong>eligible</strong> for the annual bonus.</div>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>defective</strong> /dɪˈfɛktɪv/ (형용사)</div>
+<div class="item"><strong>뜻:</strong> 결함이 있는, 불량의</div>
+<div class="item"><strong>실전 예문:</strong> We must recall the entire batch due to a <strong>defective</strong> component found in some units.</div>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>malfunctioning</strong> /mælˈfʌŋkʃənɪŋ/ (형용사)</div>
+<div class="item"><strong>뜻:</strong> 오작동하는, 기능 불량의</div>
+<div class="item"><strong>실전 예문:</strong> The system has been <strong>malfunctioning</strong> since the last software update, causing delays in data processing.</div>
+<br>
+<div class="numbered"><strong>4.</strong> <strong>unresponsive</strong> /ˌʌnrɪˈspɒnsɪv/ (형용사)</div>
+<div class="item"><strong>뜻:</strong> 반응이 없는, 응답하지 않는</div>
+<div class="item"><strong>실전 예문:</strong> My laptop became completely <strong>unresponsive</strong> after the unexpected power outage.</div>
+<br>
+<div class="numbered"><strong>5.</strong> <strong>extended warranty</strong> /ɪkˈstɛndɪd ˈwɔːrənti/ (명사구)</div>
+<div class="item"><strong>뜻:</strong> 연장 보증 (기본 보증 기간 이후 추가로 제공되는 보증)</div>
+<div class="item"><strong>실전 예문:</strong> We recommend purchasing an <strong>extended warranty</strong> for high-value electronics to ensure long-term protection.</div>
+<br>
+<h2>5. 📝 실전 복습 챌린지 (Practice)</h2>
+<br>
+<p>오늘 배운 표현과 문법을 활용하여 다음 상황을 영어로 작문해 보세요.</p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>상황:</strong> 이 노트북은 1년 보증 기간이 있습니다.</div>
+<div class="item"><strong>영작:</strong> (This laptop...)</div>
+<div class="item"><strong>모범 답안:</strong> This laptop comes with a one-year warranty.</div>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>상황:</strong> 저는 이 프로젝트에 지원할 자격이 있습니다. (eligible 활용)</div>
+<div class="item"><strong>영작:</strong> (I am...)</div>
+<div class="item"><strong>모범 답안:</strong> I am eligible to apply for this project.</div>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>상황:</strong> 지난주에 구매한 새 장비에 문제가 있는 것 같습니다. (There seems to be a problem with... 활용)</div>
+<div class="item"><strong>영작:</strong> (There seems to be...)</div>
+<div class="item"><strong>모범 답안:</strong> There seems to be a problem with the new equipment I purchased last week.</div>
+<br>
+<h2>6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)</h2>
+<br>
+<p>✨ <strong>Good Job:</strong></p>
+<p>Joey님은 AI를 활용해 스페인 호텔과 소통했던 경험을 이야기할 때, 다음과 같이 표현했습니다.</p>
+<p>"<strong>But at that time last year, the AI is developed. So I helped. How can I say? The AI helped me. So yeah, I made some letter for Spanish and sent email.</strong>"</p>
+<p>이 문장은 비록 문법적으로 완벽하진 않았지만, Joey님의 문제 해결 능력과 새로운 기술을 활용하는 적극적인 태도를 아주 잘 보여주었습니다. 특히, 'How can I say?'라고 스스로 질문하며 더 정확한 표현을 찾으려 노력하는 모습이 인상 깊었습니다. 이런 시도는 유창성 향상에 정말 중요합니다!</p>
+<br>
+<p>🚀 <strong>내일의 한 문장:</strong></p>
+<p>다음 수업 시작 시 튜터에게 오늘 배운 표현을 활용하여 이렇게 말해보세요.</p>
+<p>"I'm curious about how companies handle <strong>defective</strong> products according to their <strong>warranty</strong> policies."</p>
+<br>
+<h2>7. [성과 지표]</h2>
+<br>
+<p><strong>유창성 점수:</strong> 7/10</p>
+<br>
+<p><strong>근거:</strong> Joey님은 오늘 수업에서 다양한 주제에 대해 막힘없이 자신의 의견과 경험을 이야기하며 뛰어난 유창성을 보여주었습니다. 특히, 복잡한 상황을 설명할 때도 주저하지 않고 영어를 사용하려는 노력이 돋보였습니다. 다만, 문법적 정확성이나 더 자연스러운 표현을 선택하는 부분에서 개선의 여지가 있어 7점을 부여했습니다.</p>
+<br>
+<p><strong>다음 수업 '원포인트 액션 플랜':</strong></p>
+<p>다음 수업에서는 <strong>과거 시제와 현재 시제의 일관성</strong>에 집중하여 이야기할 때 시제 오류를 줄이는 연습을 해보겠습니다. 과거의 경험을 이야기할 때 현재 시제가 불쑥 튀어나오는 부분을 의식적으로 교정하는 훈련을 통해 정확성을 높일 수 있을 것입니다.</p></div>
+        </div>
+        <div id="tab-transcript" class="tab-content">
+            <div class="transcript">[Joey] Hello, Sibel. Good morning.
+[Sibel] Yeah, hello.
+[Sibel] Yes, hi.
+[Sibel] Good morning. How are you doing today?
+[Joey] Yeah, of course. It&#x27;s a nice Monday. It&#x27;s a fresh day.
+[Sibel] It is a little chilly and it&#x27;s fresh.
+[Joey] How are you today?
+[Sibel] Oh, pretty good. Do you know the temperature?
+[Joey] Maybe it is rainy and it is almost 17 degrees, or just I guess 17 degrees or 16 degrees outside.
+[Sibel] Oh, okay. So getting a lot colder in the mornings.
+[Joey] Yeah, it&#x27;s getting more colder.
+[Sibel] Yeah.
+[Joey] Yes.
+[Sibel] Well, today, did you want to look at the textbook?
+[Joey] Oh, yes.
+[Joey] I got the textbook.
+[Sibel] And today&#x27;s subject is requesting a refund or exchange.
+[Joey] Okay.
+[Sibel] So whenever you want to return something.
+[Joey] Okay.
+[Sibel] So did you want to read the first key expression?
+[Joey] Okay.
+[Joey] The first expression is the warranty.
+[Joey] The warranty means is a guarantee that a defective product will be repaired or replaced within a specific period.
+[Joey] And second expression is the store credit. That word means a value issued by retailers that customers can use for future purchase.
+[Joey] And key phrase?
+[Joey] Key phrase?
+[Joey] Is it right expression?
+[Sibel] Phrase.
+[Joey] Key phrase, yeah, the PHF phrase.
+[Sibel] Phrase, key phrase.
+[Joey] There seems to be a problem with.
+[Joey] There seems to be a problem with the item I bought last week.
+[Sibel] Okay.
+[Joey] Second, according to your return policy, I&#x27;m eligible for a refund.
+[Joey] Maybe eligible means right.
+[Joey] Right?
+[Sibel] Eligible means able.
+[Sibel] I am able to.
+[Joey] Able to.
+[Sibel] Eligible.
+[Joey] Able to.
+[Sibel] Okay. So like I meet the requirement, so like I&#x27;m eligible for this job. I&#x27;m able to apply.
+[Joey] Able to.
+[Joey] Eligible.
+[Sibel] Okay, do you ever get the warranty? Do you buy the extended warranty?
+[Joey] Oh, yes, so many times. Maybe if I got the new car or if I buy some new product, maybe you have some warranty about that. And when I prepare the present for my wife, the earring or some gold product, that product usually have a warranty.
+[Joey] Yeah, of a product because gold is so expensive and that is the then the that product need to warranty for the customer.
+[Sibel] Oh, yeah, so something really valuable like that, warranty or purchase receipt.
+[Joey] Yeah, you&#x27;re right.
+[Sibel] Yeah, did you want to look at A, the Infobytes?
+[Joey] Infobytes. Can I read the paragraph?
+[Sibel] Go whenever you&#x27;re ready.
+[Joey] Okay. In the US or Canada, people return worn shoes, used blenders, even open cosmetics as long as it&#x27;s within the return window.
+[Joey] Oh, yes, in English-speaking countries, return policies are clearly printed on receipts, signs and websites.
+[Joey] Refunds or exchanges usually require a receipt or order number.
+[Joey] Some stores may accept returns with a receipt, but only offer store credit.
+[Joey] Yes, I understand. When was the last time you returned or exchanged an item? Yes, I have some memory about the refund. Last year Christmas, I prepared to travel with my family and I made a reservation for some hotel. Yeah, and but before the departure, one day ago, my son was sick, so I canceled everything. And the Spain Barcelona hotel is there. I ordered, I sent my email to the hotel in Barcelona and that hotel refused my order. But I sent more email, they accepted my order and they gave us some credit for myself, for my family. So this year, I until the this year Christmas, so this year, yeah, I also plan, make a plan to travel to Barcelona in Spain because I got the credit for this hotel and I can use that. So maybe it&#x27;s possible to travel to Spain. Yeah, that is my experience.
+[Sibel] Oh, nice. So that credit, yeah, that hotel credit for your next stay.
+[Joey] Yeah, first time I sent the email to refund my hotel payment, but the hotel manager considered that situation and then they gave us some, yeah, hotel credit. That credit only used that hotel. So yeah, so yeah, I will go there this year.
+[Sibel] Okay, that&#x27;s yeah, pretty, pretty nice convenience, another trip.
+[Joey] Yeah, you&#x27;re right. That is good result and I&#x27;m not sure, I don&#x27;t learn Spanish, so it is difficult to make some email. But at that time last year, the AI is developed. So I helped. How can I say? The AI helped me. So yeah, I made some letter for Spanish and sent email.
+[Sibel] How easy is it, translator?
+[Joey] Yeah, translator. And and I&#x27;m not sure that situation because many Spanish hotels ignore some customer. Yeah, so I&#x27;m just yeah, study with the AI, the law of the, yeah, okay. I see the hotel and then sending me. Okay, yes. So and you were able to get that, that credit. Yes, finally, not full refund.
+[Sibel] Not a refund.
+[Sibel] Joey, do you want to read the next one, the B, customer and store staff?
+[Joey] Okay.
+[Joey] First, can I select the customer?
+[Sibel] Okay, I&#x27;ll first start.
+[Sibel] Hi, there is a problem with an item I recently purchased.
+[Joey] What seems to be the problem?
+[Sibel] I bought this vacuum cleaner and within two months, it stopped working.
+[Joey] According to warranty, I&#x27;m eligible for a full refund.
+[Sibel] Okay, do you have a receipt?
+[Joey] Oh, yes. Here we go.
+[Sibel] Would you like a store credit or a refund?
+[Joey] I would like a refund, please. Thank you.
+[Sibel] What did the customer purchase and why did they need a refund?
+[Joey] The customer bought a vacuum cleaner, but two weeks later, the vacuum cleaner doesn&#x27;t work anymore. So she wanted to need a refund. Yeah, she wants to get a refund. Wants to get a refund. Yeah, she wants to get a refund. She wants to get a refund. Okay.
+[Sibel] So the next one we have the C, say it right. Would you like to read the vocabulary?
+[Joey] Oh, yes. The first, electronic and machinery, the category. The first, faulty, right? Faulty.
+[Sibel] Faulty.
+[Joey] Malfunctioning, defective.
+[Joey] And guilty.
+[Sibel] Faulty.
+[Joey] Unusable.
+[Sibel] Unreliable.
+[Joey] Reliable.
+[Sibel] Unstable.
+[Joey] Unreliable.
+[Sibel] Reliable.
+[Joey] Unstable, unreliable, guilty, right? Guilty, glitchy, glitchy, unstable, unreliable, reliable. I&#x27;m unreliable, reliable, unreliable, guilty and unresponsive. Responsibly, unresponsively, frozen, not moving, right? Frozen, yeah, unresponsive. Teacher, could you say one more time because that word is a little difficult to pronunciation. Frozen, unresponsive.
+[Sibel] Unresponsive.
+[Joey] Unresponsive. Okay.
+[Sibel] Any other questions about this vocabulary?
+[Joey] Just I want to read, just I want to listen your native speaker speak. Is it possible to all the words?
+[Sibel] Yes, all the words. Faulty.
+[Joey] Faulty.
+[Sibel] Malfunctioning.
+[Joey] Not not functioning.
+[Sibel] Defective.
+[Joey] Defective.
+[Sibel] Glitchy.
+[Joey] Glitchy.
+[Sibel] Unstable.
+[Joey] Unstable.
+[Sibel] Unreliable.
+[Joey] Unreliable.
+[Sibel] Unresponsive.
+[Joey] Unresponsive.
+[Sibel] Frozen.
+[Joey] Frozen. Yeah, not moving. Number. Okay, thank you so much. I see. What is your worst experience with operating technology? I I think these days many people use the product and last year I bought a laptop computer to run AI, but that laptop computer is so small and that RAM and some spec is low. So it is hard to moving, hard to operate something in computer and laptop computer. So this day I changed the more better spec computer, but but the used product like this computer, there is no warranty. So if I have some problem, the IT device, I have to change for myself or buy new ones. It is a real problem, the used product, IT technology.
+[Sibel] Okay, yeah, the prices are trying to get more memory, more power, computing power.
+[Joey] Yes, computing power.
+[Joey] You&#x27;re right.
+[Sibel] Did you want to look at the warranty vocabulary?
+[Joey] Okay, limited, conditional, restricted, partial, full, complete, on the whole, extended, additional, prolonged.
+[Sibel] It&#x27;s good, yeah.
+[Joey] It&#x27;s good, yeah. Partial.
+[Sibel] Partial.
+[Joey] Partial.
+[Sibel] Just a moment. Oh, partial. Okay, partial, limited.
+[Sibel] Many appliances and electronics offer an extended warranty.
+[Sibel] Do you purchase extended warranties when possible?
+[Joey] Extended. Extended is for everything, right?
+[Sibel] Cover everything. So like additional, so maybe extra years or extra service.
+[Joey] Yes.
+[Sibel] Yes.
+[Joey] Yes, many. I&#x27;m not sure, but sometimes if we buy new ones, the vacuum cleaner or some IT device, we will use that device and sometimes it is put off, put some sticky warranty paper or sometime we use the keyboard, open the device. At that time, that is a little problem and we will fight the company, the selling company. Usually, if we got a warranty, the big company, like the Apple or some big company, is possible to change the product. But that is not 100%. Just, yeah, just case by case.
+[Sibel] Yeah, it kind of depends on the situation.
+[Joey] Yeah, depends on the situation.
+[Sibel] Looking at the next page, do you speak up?
+[Sibel] Did you want to read and fill in the sentences?
+[Joey] Okay.
+[Joey] Hello, last week I bought a new...
+[Joey] Hello, last year I bought a phone.
+[Joey] However, when it arrived, the size was different in real life.
+[Joey] I would like to exchange it for a smaller size.
+[Sibel] Maybe a smaller different one, more compact.
+[Joey] Yeah, more compact size.
+[Sibel] So looking at the wrap-up questions,
+[Sibel] if you are not satisfied with the product, what do you do?
+[Joey] First, I confirm what product and confirm the warranty of that product.
+[Joey] And then I just distinguish what problem.
+[Joey] Just design or just change my mind. And meantime, it is impossible to exchange or refund. But if that product has some functional product problem or doesn&#x27;t work anymore, I just call or send email for this company or for this store and then, yeah, I request the exchange or refund that product.
+[Sibel] Yeah, okay. Yeah, I just might send an email. Yeah, let them know about it. Yeah, depending on what the problem is.
+[Joey] Yeah, you&#x27;re right.
+[Sibel] And should it be required that all items come with a money-back guarantee?
+[Joey] I think it is impossible to all because the warranty is usually the paper and they write written something, the warranty, the periods and limited product and so many cases.
+[Joey] So every case is not adopted. Some cases adopt that situation. So maybe that depends on the situation. But and we will fight the store. We have argument with store and company.
+[Joey] But usually, I think half more is possible to exchange or refund, use the warranty.
+[Sibel] At least a little bit, yeah.
+[Sibel] Should give some options.
+[Joey] Yes.
+[Sibel] Okay, good.
+[Sibel] And so the last one, can you remember any expression from today?
+[Joey] Today&#x27;s expression?
+[Joey] Store credit, warranty.
+[Joey] There seems to be a problem with. According to, I&#x27;m eligible for blah blah blah.
+[Sibel] Okay.
+[Sibel] Okay, perfect.
+[Sibel] And I will send you corrections in just a bit.
+[Sibel] Have a great Monday.
+[Joey] You too.
+[Joey] Have a special Monday.
+[Sibel] Bye bye.
+[Joey] Thanks.
+[Sibel] Bye.</div>
+        </div>
+    </div>
+    <div class="toast" id="toast">✅ 프롬프트가 복사되었습니다!</div>
+    <script>
+        const REVIEW_PROMPT="너는 나의 영어 회화 복습 파트너야. 오늘 내 전화영어 수업 내용을 기반으로 대화하면서 복습을 도와줘.\n\n[오늘 수업 전사 내용]\n[Joey] Hello, Sibel. Good morning.\n[Sibel] Yeah, hello.\n[Sibel] Yes, hi.\n[Sibel] Good morning. How are you doing today?\n[Joey] Yeah, of course. It's a nice Monday. It's a fresh day.\n[Sibel] It is a little chilly and it's fresh.\n[Joey] How are you today?\n[Sibel] Oh, pretty good. Do you know the temperature?\n[Joey] Maybe it is rainy and it is almost 17 degrees, or just I guess 17 degrees or 16 degrees outside.\n[Sibel] Oh, okay. So getting a lot colder in the mornings.\n[Joey] Yeah, it's getting more colder.\n[Sibel] Yeah.\n[Joey] Yes.\n[Sibel] Well, today, did you want to look at the textbook?\n[Joey] Oh, yes.\n[Joey] I got the textbook.\n[Sibel] And today's subject is requesting a refund or exchange.\n[Joey] Okay.\n[Sibel] So whenever you want to return something.\n[Joey] Okay.\n[Sibel] So did you want to read the first key expression?\n[Joey] Okay.\n[Joey] The first expression is the warranty.\n[Joey] The warranty means is a guarantee that a defective product will be repaired or replaced within a specific period.\n[Joey] And second expression is the store credit. That word means a value issued by retailers that customers can use for future purchase.\n[Joey] And key phrase?\n[Joey] Key phrase?\n[Joey] Is it right expression?\n[Sibel] Phrase.\n[Joey] Key phrase, yeah, the PHF phrase.\n[Sibel] Phrase, key phrase.\n[Joey] There seems to be a problem with.\n[Joey] There seems to be a problem with the item I bought last week.\n[Sibel] Okay.\n[Joey] Second, according to your return policy, I'm eligible for a refund.\n[Joey] Maybe eligible means right.\n[Joey] Right?\n[Sibel] Eligible means able.\n[Sibel] I am able to.\n[Joey] Able to.\n[Sibel] Eligible.\n[Joey] Able to.\n[Sibel] Okay. So like I meet the requirement, so like I'm eligible for this job. I'm able to apply.\n[Joey] Able to.\n[Joey] Eligible.\n[Sibel] Okay, do you ever get the warranty? Do you buy the extended warranty?\n[Joey] Oh, yes, so many times. Maybe if I got the new car or if I buy some new product, maybe you have some warranty about that. And when I prepare the present for my wife, the earring or some gold product, that product usually have a warranty.\n[Joey] Yeah, of a product because gold is so expensive and that is the then the that product need to warranty for the customer.\n[Sibel] Oh, yeah, so something really valuable like that, warranty or purchase receipt.\n[Joey] Yeah, you're right.\n[Sibel] Yeah, did you want to look at A, the Infobytes?\n[Joey] Infobytes. Can I read the paragraph?\n[Sibel] Go whenever you're ready.\n[Joey] Okay. In the US or Canada, people return worn shoes, used blenders, even open cosmetics as long as it's within the return window.\n[Joey] Oh, yes, in English-speaking countries, return policies are clearly printed on receipts, signs and websites.\n[Joey] Refunds or exchanges usually require a receipt or order number.\n[Joey] Some stores may accept returns with a receipt, but only offer store credit.\n[Joey] Yes, I understand. When was the last time you returned or exchanged an item? Yes, I have some memory about the refund. Last year Christmas, I prepared to travel with my family and I made a reservation for some hotel. Yeah, and but before the departure, one day ago, my son was sick, so I canceled everything. And the Spain Barcelona hotel is there. I ordered, I sent my email to the hotel in Barcelona and that hotel refused my order. But I sent more email, they accepted my order and they gave us some credit for myself, for my family. So this year, I until the this year Christmas, so this year, yeah, I also plan, make a plan to travel to Barcelona in Spain because I got the credit for this hotel and I can use that. So maybe it's possible to travel to Spain. Yeah, that is my experience.\n[Sibel] Oh, nice. So that credit, yeah, that hotel credit for your next stay.\n[Joey] Yeah, first time I sent the email to refund my hotel payment, but the hotel manager considered that situation and then they gave us some, yeah, hotel credit. That credit only used that hotel. So yeah, so yeah, I will go there this year.\n[Sibel] Okay, that's yeah, pretty, pretty nice convenience, another trip.\n[Joey] Yeah, you're right. That is good result and I'm not sure, I don't learn Spanish, so it is difficult to make some email. But at that time last year, the AI is developed. So I helped. How can I say? The AI helped me. So yeah, I made some letter for Spanish and sent email.\n[Sibel] How easy is it, translator?\n[Joey] Yeah, translator. And and I'm not sure that situation because many Spanish hotels ignore some customer. Yeah, so I'm just yeah, study with the AI, the law of the, yeah, okay. I see the hotel and then sending me. Okay, yes. So and you were able to get that, that credit. Yes, finally, not full refund.\n[Sibel] Not a refund.\n[Sibel] Joey, do you want to read the next one, the B, customer and store staff?\n[Joey] Okay.\n[Joey] First, can I select the customer?\n[Sibel] Okay, I'll first start.\n[Sibel] Hi, there is a problem with an item I recently purchased.\n[Joey] What seems to be the problem?\n[Sibel] I bought this vacuum cleaner and within two months, it stopped working.\n[Joey] According to warranty, I'm eligible for a full refund.\n[Sibel] Okay, do you have a receipt?\n[Joey] Oh, yes. Here we go.\n[Sibel] Would you like a store credit or a refund?\n[Joey] I would like a refund, please. Thank you.\n[Sibel] What did the customer purchase and why did they need a refund?\n[Joey] The customer bought a vacuum cleaner, but two weeks later, the vacuum cleaner doesn't work anymore. So she wanted to need a refund. Yeah, she wants to get a refund. Wants to get a refund. Yeah, she wants to get a refund. She wants to get a refund. Okay.\n[Sibel] So the next one we have the C, say it right. Would you like to read the vocabulary?\n[Joey] Oh, yes. The first, electronic and machinery, the category. The first, faulty, right? Faulty.\n[Sibel] Faulty.\n[Joey] Malfunctioning, defective.\n[Joey] And guilty.\n[Sibel] Faulty.\n[Joey] Unusable.\n[Sibel] Unreliable.\n[Joey] Reliable.\n[Sibel] Unstable.\n[Joey] Unreliable.\n[Sibel] Reliable.\n[Joey] Unstable, unreliable, guilty, right? Guilty, glitchy, glitchy, unstable, unreliable, reliable. I'm unreliable, reliable, unreliable, guilty and unresponsive. Responsibly, unresponsively, frozen, not moving, right? Frozen, yeah, unresponsive. Teacher, could you say one more time because that word is a little difficult to pronunciation. Frozen, unresponsive.\n[Sibel] Unresponsive.\n[Joey] Unresponsive. Okay.\n[Sibel] Any other questions about this vocabulary?\n[Joey] Just I want to read, just I want to listen your native speaker speak. Is it possible to all the words?\n[Sibel] Yes, all the words. Faulty.\n[Joey] Faulty.\n[Sibel] Malfunctioning.\n[Joey] Not not functioning.\n[Sibel] Defective.\n[Joey] Defective.\n[Sibel] Glitchy.\n[Joey] Glitchy.\n[Sibel] Unstable.\n[Joey] Unstable.\n[Sibel] Unreliable.\n[Joey] Unreliable.\n[Sibel] Unresponsive.\n[Joey] Unresponsive.\n[Sibel] Frozen.\n[Joey] Frozen. Yeah, not moving. Number. Okay, thank you so much. I see. What is your worst experience with operating technology? I I think these days many people use the product and last year I bought a laptop computer to run AI, but that laptop computer is so small and that RAM and some spec is low. So it is hard to moving, hard to operate something in computer and laptop computer. So this day I changed the more better spec computer, but but the used product like this computer, there is no warranty. So if I have some problem, the IT device, I have to change for myself or buy new ones. It is a real problem, the used product, IT technology.\n[Sibel] Okay, yeah, the prices are trying to get more memory, more power, computing power.\n[Joey] Yes, computing power.\n[Joey] You're right.\n[Sibel] Did you want to look at the warranty vocabulary?\n[Joey] Okay, limited, conditional, restricted, partial, full, complete, on the whole, extended, additional, prolonged.\n[Sibel] It's good, yeah.\n[Joey] It's good, yeah. Partial.\n[Sibel] Partial.\n[Joey] Partial.\n[Sibel] Just a moment. Oh, partial. Okay, partial, limited.\n[Sibel] Many appliances and electronics offer an extended warranty.\n[Sibel] Do you purchase extended warranties when possible?\n[Joey] Extended. Extended is for everything, right?\n[Sibel] Cover everything. So like additional, so maybe extra years or extra service.\n[Joey] Yes.\n[Sibel] Yes.\n[Joey] Yes, many. I'm not sure, but sometimes if we buy new ones, the vacuum cleaner or some IT device, we will use that device and sometimes it is put off, put some sticky warranty paper or sometime we use the keyboard, open the device. At that time, that is a little problem and we will fight the company, the selling company. Usually, if we got a warranty, the big company, like the Apple or some big company, is possible to change the product. But that is not 100%. Just, yeah, just case by case.\n[Sibel] Yeah, it kind of depends on the situation.\n[Joey] Yeah, depends on the situation.\n[Sibel] Looking at the next page, do you speak up?\n[Sibel] Did you want to read and fill in the sentences?\n[Joey] Okay.\n[Joey] Hello, last week I bought a new...\n[Joey] Hello, last year I bought a phone.\n[Joey] However, when it arrived, the size was different in real life.\n[Joey] I would like to exchange it for a smaller size.\n[Sibel] Maybe a smaller different one, more compact.\n[Joey] Yeah, more compact size.\n[Sibel] So looking at the wrap-up questions,\n[Sibel] if you are not satisfied with the product, what do you do?\n[Joey] First, I confirm what product and confirm the warranty of that product.\n[Joey] And then I just distinguish what problem.\n[Joey] Just design or just change my mind. And meantime, it is impossible to exchange or refund. But if that product has some functional product problem or doesn't work anymore, I just call or send email for this company or for this store and then, yeah, I request the exchange or refund that product.\n[Sibel] Yeah, okay. Yeah, I just might send an email. Yeah, let them know about it. Yeah, depending on what the problem is.\n[Joey] Yeah, you're right.\n[Sibel] And should it be required that all items come with a money-back guarantee?\n[Joey] I think it is impossible to all because the warranty is usually the paper and they write written something, the warranty, the periods and limited product and so many cases.\n[Joey] So every case is not adopted. Some cases adopt that situation. So maybe that depends on the situation. But and we will fight the store. We have argument with store and company.\n[Joey] But usually, I think half more is possible to exchange or refund, use the warranty.\n[Sibel] At least a little bit, yeah.\n[Sibel] Should give some options.\n[Joey] Yes.\n[Sibel] Okay, good.\n[Sibel] And so the last one, can you remember any expression from today?\n[Joey] Today's expression?\n[Joey] Store credit, warranty.\n[Joey] There seems to be a problem with. According to, I'm eligible for blah blah blah.\n[Sibel] Okay.\n[Sibel] Okay, perfect.\n[Sibel] And I will send you corrections in just a bit.\n[Sibel] Have a great Monday.\n[Joey] You too.\n[Joey] Have a special Monday.\n[Sibel] Bye bye.\n[Joey] Thanks.\n[Sibel] Bye.\n\n[AI 피드백]\n따뜻하고 실용적인 영어 코치입니다. Joey, 오늘 수업도 정말 수고 많으셨습니다! 환불 및 교환이라는 실생활에 밀접한 주제로 다양한 표현과 문법을 익히고, AI를 활용해 어려운 상황을 해결했던 Joey님의 경험담까지 들을 수 있어서 아주 유익한 시간이었어요.\n\n---\n\n### 0. 📌 Topic\nTopic: Discussing refund and exchange policies and related vocabulary.\n\n### 1. 📊 오늘의 대화 요약 (Summary)\n오늘 Joey님은 환불 및 교환 요청이라는 주제로 수업을 진행했습니다. 'warranty'와 'store credit' 같은 핵심 표현들을 배우고, 제품 문제 상황에 대한 어휘를 확장했습니다. 특히, AI 번역기를 활용하여 스페인 호텔로부터 환불 대신 크레딧을 받아냈던 Joey님의 흥미로운 경험담을 공유하며 실제 비즈니스 상황에서의 영어 활용 능력을 엿볼 수 있었습니다.\n\n### 2. 💬 유창성 업그레이드 (Fluency & Natural Flow)\n\nJoey님께서 의미는 잘 전달했지만, 원어민들이 더 자연스럽게 쓰는 표현으로 다듬으면 좋을 문장들을 함께 살펴볼까요?\n\n1.  ❌ **학습자 원문 (As Said):** \"Yeah, it's getting more colder.\"\n    ✅ **자연스러운 표현 (Natural):** \"Yeah, it's getting colder.\"\n    💎 **비즈니스 표현 (Professional):** \"Indeed, the temperature is noticeably decreasing.\"\n    💡 **코칭 포인트:** \"When forming comparative adjectives, 'colder' is already the comparative form of 'cold'. We don't need 'more' before it. For most one-syllable adjectives and two-syllable adjectives ending in -y, we add -er. For longer adjectives, we use 'more'.\"\n    → 비교급 형용사를 만들 때, 'colder'는 이미 'cold'의 비교급 형태입니다. 그 앞에 'more'를 붙일 필요가 없어요. 대부분의 한 음절 형용사나 -y로 끝나는 두 음절 형용사에는 '-er'을 붙이고, 더 긴 형용사에는 'more'를 사용합니다.\n\n2.  ❌ **학습자 원문 (As Said):** \"And when I prepare the present for my wife, the earring or some gold product, that product usually have a warranty.\"\n    ✅ **자연스러운 표현 (Natural):** \"And when I buy presents for my wife, like earrings or other gold products, they usually come with a warranty.\"\n    💎 **비즈니스 표현 (Professional):** \"When purchasing gifts for my wife, such as jewelry or other valuable items, a warranty is typically included.\"\n    💡 **코칭 포인트:** \"Using 'buy presents' is more common and natural than 'prepare the present'. Also, 'come with a warranty' is a very idiomatic and natural way to say a product includes a warranty. It highlights the idea that the warranty is an accompanying feature.\"\n    → 'prepare the present'보다는 'buy presents'가 더 흔하고 자연스러운 표현입니다. 또한, 제품에 보증이 포함되어 있다는 것을 말할 때 'come with a warranty'라고 하면 훨씬 원어민스럽고 자연스럽습니다. 보증이 제품의 부속 기능이라는 뉘앙스를 강조해 줍니다.\n\n3.  ❌ **학습자 원문 (As Said):** \"The customer bought a vacuum cleaner, but two weeks later, the vacuum cleaner doesn't work anymore. So she wanted to need a refund.\"\n    ✅ **자연스러운 표현 (Natural):** \"The customer bought a vacuum cleaner, but it stopped working after two weeks, so she wanted a refund.\"\n    💎 **비즈니스 표현 (Professional):** \"The customer purchased a vacuum cleaner, which ceased to function within two weeks, prompting her request for a refund.\"\n    💡 **코칭 포인트:** \"Using 'it stopped working' is more concise and natural than 'doesn't work anymore' when talking about a past event. Also, 'wanted a refund' is the correct and common phrasing. 'Wanted to need a refund' is redundant and grammatically awkward.\"\n    → 과거에 발생한 일에 대해 말할 때는 'doesn't work anymore'보다 'it stopped working'이 더 간결하고 자연스럽습니다. 또한, '환불을 원했다'는 'wanted a refund'가 정확하고 흔한 표현입니다. 'wanted to need a refund'는 중복되고 문법적으로 어색합니다.\n\n### 3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)\n\nCategory: **Redundant Verbs/Words in Definitions**\n\nJoey님은 무언가를 정의하거나 설명할 때 불필요한 동사나 단어를 반복해서 사용하는 경향이 있었습니다. 이는 문장을 장황하게 만들고 어색하게 들리게 할 수 있습니다.\n\n| ❌ 원문 (As Said)                                                                                              | ✅ 교정 예시 (Corrected)                                                                                                 |\n| :------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------- |\n| \"The warranty means **is** a guarantee that a defective product will be repaired or replaced within a specific period.\" | \"The warranty **is** a guarantee that a defective product will be repaired or replaced within a specific period.\"            |\n| \"The second expression is the store credit. **That word means** a value issued by retailers that customers can use for future purchase.\" | \"The second expression is store credit, which **means** a value issued by retailers that customers can use for future purchase.\" |\n| \"Maybe eligible **means right**. Right?\"                                                                       | \"Maybe eligible **means correct**.\"                                                                                      |\n\n📌 **핵심 규칙:** 정의를 내릴 때는 \"A means B\" 또는 \"A is B\" 중 하나만 사용하여 간결하게 표현하세요. 불필요한 반복 동사나 단어는 피합니다.\n\n🔁 **따라 읽기:**\n🗣️ \"The warranty is a guarantee that a defective product will be repaired or replaced within a specific period.\"\n🗣️ \"Store credit means a value issued by retailers that customers can use for future purchase.\"\n🗣️ \"Eligible means correct.\"\n\n### 4. 📗 어휘 확장 (Vocabulary Vault)\n\n오늘 배운 내용과 Joey님의 비즈니스 환경에 유용한 어휘 5가지입니다.\n\n1.  **eligible** /élɪdʒəbəl/ (형용사)\n    *   **뜻:** ~을 가질 자격이 있는, 적격의\n    *   **실전 예문:** Employees who have worked for more than a year are **eligible** for the annual bonus.\n\n2.  **defective** /dɪˈfɛktɪv/ (형용사)\n    *   **뜻:** 결함이 있는, 불량의\n    *   **실전 예문:** We must recall the entire batch due to a **defective** component found in some units.\n\n3.  **malfunctioning** /mælˈfʌŋkʃənɪŋ/ (형용사)\n    *   **뜻:** 오작동하는, 기능 불량의\n    *   **실전 예문:** The system has been **malfunctioning** since the last software update, causing delays in data processing.\n\n4.  **unresponsive** /ˌʌnrɪˈspɒnsɪv/ (형용사)\n    *   **뜻:** 반응이 없는, 응답하지 않는\n    *   **실전 예문:** My laptop became completely **unresponsive** after the unexpected power outage.\n\n5.  **extended warranty** /ɪkˈstɛndɪd ˈwɔːrənti/ (명사구)\n    *   **뜻:** 연장 보증 (기본 보증 기간 이후 추가로 제공되는 보증)\n    *   **실전 예문:** We recommend purchasing an **extended warranty** for high-value electronics to ensure long-term protection.\n\n### 5. 📝 실전 복습 챌린지 (Practice)\n\n오늘 배운 표현과 문법을 활용하여 다음 상황을 영어로 작문해 보세요.\n\n1.  **상황:** 이 노트북은 1년 보증 기간이 있습니다.\n    *   **영작:** (This laptop...)\n    *   **모범 답안:** This laptop comes with a one-year warranty.\n\n2.  **상황:** 저는 이 프로젝트에 지원할 자격이 있습니다. (eligible 활용)\n    *   **영작:** (I am...)\n    *   **모범 답안:** I am eligible to apply for this project.\n\n3.  **상황:** 지난주에 구매한 새 장비에 문제가 있는 것 같습니다. (There seems to be a problem with... 활용)\n    *   **영작:** (There seems to be...)\n    *   **모범 답안:** There seems to be a problem with the new equipment I purchased last week.\n\n### 6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)\n\n✨ **Good Job:**\nJoey님은 AI를 활용해 스페인 호텔과 소통했던 경험을 이야기할 때, 다음과 같이 표현했습니다.\n\"**But at that time last year, the AI is developed. So I helped. How can I say? The AI helped me. So yeah, I made some letter for Spanish and sent email.**\"\n이 문장은 비록 문법적으로 완벽하진 않았지만, Joey님의 문제 해결 능력과 새로운 기술을 활용하는 적극적인 태도를 아주 잘 보여주었습니다. 특히, 'How can I say?'라고 스스로 질문하며 더 정확한 표현을 찾으려 노력하는 모습이 인상 깊었습니다. 이런 시도는 유창성 향상에 정말 중요합니다!\n\n🚀 **내일의 한 문장:**\n다음 수업 시작 시 튜터에게 오늘 배운 표현을 활용하여 이렇게 말해보세요.\n\"I'm curious about how companies handle **defective** products according to their **warranty** policies.\"\n\n### 7. [성과 지표]\n\n**유창성 점수:** 7/10\n\n**근거:** Joey님은 오늘 수업에서 다양한 주제에 대해 막힘없이 자신의 의견과 경험을 이야기하며 뛰어난 유창성을 보여주었습니다. 특히, 복잡한 상황을 설명할 때도 주저하지 않고 영어를 사용하려는 노력이 돋보였습니다. 다만, 문법적 정확성이나 더 자연스러운 표현을 선택하는 부분에서 개선의 여지가 있어 7점을 부여했습니다.\n\n**다음 수업 '원포인트 액션 플랜':**\n다음 수업에서는 **과거 시제와 현재 시제의 일관성**에 집중하여 이야기할 때 시제 오류를 줄이는 연습을 해보겠습니다. 과거의 경험을 이야기할 때 현재 시제가 불쑥 튀어나오는 부분을 의식적으로 교정하는 훈련을 통해 정확성을 높일 수 있을 것입니다.\n\n위 내용을 바탕으로:\n1. 먼저 오늘 수업에서 내가 틀렸거나 어색했던 표현을 하나 골라서, 관련된 상황을 영어로 질문해줘.\n2. 내가 영어로 대답하면, 자연스러운지 확인하고 더 나은 표현이 있으면 알려줘.\n3. 특히 \"반복 실수 패턴\"에서 지적된 부분을 집중적으로 연습시켜줘.\n4. 이런 식으로 오늘 배운 표현들을 하나씩 복습하자.\n5. 한국어 설명은 필요할 때만 간단히, 대화는 최대한 영어로 진행해줘.\n\n그럼 시작하자!";
+        function startReview(){navigator.clipboard.writeText(REVIEW_PROMPT).then(()=>{showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)}).catch(()=>{const t=document.createElement('textarea');t.value=REVIEW_PROMPT;document.body.appendChild(t);t.select();document.execCommand('copy');document.body.removeChild(t);showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)})}
+        function showToast(){const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500)}
+        function switchTab(n){document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',n==='feedback'?i===0:i===1));document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));document.getElementById('tab-'+n).classList.add('active')}
+    </script>
+</body>
+</html>

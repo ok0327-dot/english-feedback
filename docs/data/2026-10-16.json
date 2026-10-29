@@ -1,0 +1,53 @@
+{
+ "date": "2026-10-16",
+ "iso": [
+  2026,
+  42
+ ],
+ "topic": "Discussing opening a bank account and modern money transfer methods.",
+ "grammar": "Incorrect Past Participle Usage",
+ "grammar_norm": "Incorrect Past Participle Usage",
+ "score": 7.5,
+ "pairs": [
+  {
+   "said": "the financial technology is developed",
+   "natural": "financial technology has *advanced*"
+  },
+  {
+   "said": "if I send for you",
+   "natural": "if I send *money to* you"
+  },
+  {
+   "said": "You speak neutral speak between England and USA.",
+   "natural": "You have a *neutral accent*, somewhere between British and American English."
+  }
+ ],
+ "vocab": [
+  {
+   "word": "transaction",
+   "pos": "명사",
+   "meaning": "거래, 처리 (특히 은행 업무)"
+  },
+  {
+   "word": "withdraw",
+   "pos": "동사",
+   "meaning": "인출하다"
+  },
+  {
+   "word": "deposit",
+   "pos": "명사/동사",
+   "meaning": "예금(액), 보증금; 예금하다"
+  },
+  {
+   "word": "activate",
+   "pos": "동사",
+   "meaning": "활성화하다, 작동시키다"
+  },
+  {
+   "word": "transfer funds",
+   "pos": "동사구",
+   "meaning": "자금을 이체하다"
+  }
+ ],
+ "_html_md5": "142fff0fa39a631ab77a41b5c1b3a839"
+}

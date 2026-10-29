@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#0f0f13"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="당근영어"><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="icon" type="image/png" sizes="192x192" href="icon-192.png"><script src="install-banner.js" defer></script><script src="sw-reg.js" defer></script>
+    <title>전화영어 복습 - 2026년 10월 08일</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Noto Sans KR',sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.75;min-height:100vh}
+        .header{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);border-bottom:1px solid rgba(255,255,255,.06);padding:48px 24px 40px;text-align:center}
+        .header-date{font-size:13px;color:#94a3b8;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+        .header h1{font-size:28px;font-weight:700;color:#f1f5f9;margin-bottom:16px}
+        .header-meta{display:flex;justify-content:center;gap:24px;font-size:14px;color:#64748b}
+        .header-meta span{display:flex;align-items:center;gap:6px}
+        .cta-section{text-align:center;padding:40px 24px}
+        .cta-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:linear-gradient(135deg,#38bdf8,#818cf8);color:#fff;font-size:16px;font-weight:600;font-family:'Noto Sans KR',sans-serif;border:none;border-radius:50px;cursor:pointer;transition:all .3s;text-decoration:none;box-shadow:0 4px 24px rgba(56,189,248,.25)}
+        .cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(56,189,248,.35)}
+        .cta-btn svg{width:20px;height:20px}
+        .cta-sub{margin-top:12px;font-size:13px;color:#64748b}
+        .toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#38bdf8;padding:14px 28px;border-radius:12px;font-size:14px;font-weight:500;border:1px solid rgba(56,189,248,.2);box-shadow:0 8px 32px rgba(0,0,0,.4);opacity:0;transition:all .4s cubic-bezier(.16,1,.3,1);z-index:1000}
+        .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+        .container{max-width:720px;margin:0 auto;padding:0 24px 80px}
+        .tabs{display:flex;gap:4px;background:#1a1a24;padding:4px;border-radius:12px;margin-bottom:32px}
+        .tab{flex:1;padding:12px;text-align:center;font-size:14px;font-weight:500;color:#64748b;background:0 0;border:none;border-radius:8px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all .2s}
+        .tab.active{background:#262636;color:#f1f5f9}
+        .tab-content{display:none}.tab-content.active{display:block}
+        .feedback h2{font-size:18px;font-weight:700;color:#f1f5f9;margin:36px 0 16px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.06)}
+        .feedback h2:first-child{margin-top:0}
+        .feedback p{margin:8px 0;color:#cbd5e1}
+        .feedback .item{padding:6px 0 6px 16px;border-left:2px solid #334155;margin:6px 0;color:#cbd5e1}
+        .feedback .numbered{padding:8px 0 8px 16px;color:#cbd5e1}
+        .feedback .numbered strong{color:#38bdf8}
+        .feedback strong{color:#f1f5f9}
+        .feedback code{background:#1e293b;padding:2px 8px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#38bdf8}
+        .feedback table{width:100%;border-collapse:collapse;margin:12px 0}
+        .feedback th,.feedback td{padding:10px 14px;text-align:left;border-bottom:1px solid #262636}
+        .feedback th{color:#94a3b8;font-weight:500;font-size:13px}
+        .feedback td{color:#cbd5e1}
+        .arrow{color:#38bdf8;font-weight:700}
+        .transcript{background:#1a1a24;border-radius:12px;padding:28px;font-size:14px;line-height:2;color:#94a3b8;white-space:pre-wrap;word-break:break-word;font-family:'JetBrains Mono','Noto Sans KR',monospace}
+        .transcript .tutor{color:#38bdf8}
+        .transcript .student{color:#a78bfa}
+        @media(max-width:640px){.header{padding:32px 16px}.header h1{font-size:22px}.cta-btn{padding:14px 28px;font-size:15px}.container{padding:0 16px 60px}}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-date">2026년 10월 08일</div>
+        <h1>📚 전화영어 복습</h1>
+        <div class="header-meta">
+            <span>⏱ 0분 33초</span>
+            <span>🎙 전화영어_025180304_20261008080016.m4a</span>
+        </div>
+    </div>
+    <div class="cta-section">
+        <button class="cta-btn" onclick="startReview()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Gemini에서 복습 대화 시작하기
+        </button>
+        <div class="cta-sub">클릭하면 프롬프트가 복사되고 Gemini가 열립니다</div>
+    </div>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('feedback')">📋 AI 피드백</button>
+            <button class="tab" onclick="switchTab('transcript')">🎙 수업 전사</button>
+        </div>
+        <div id="tab-feedback" class="tab-content active">
+            <div class="feedback"><p>안녕하세요, Joey! 오늘도 활기찬 목소리로 수업을 시작해 주셔서 감사합니다. 잠깐의 연결 문제에도 침착하게 상황을 설명하고 해결을 요청하는 모습이 인상 깊었어요. 짧은 대화였지만, 이런 일상적인 상황에서 쓰는 표현들을 자연스럽게 다듬는 것도 유창성을 높이는 데 아주 중요하답니다.</p>
+<br>
+<p>오늘 피드백을 통해 배운 내용들을 잘 활용해서 다음 수업에서는 더 자신감 있게 대화해 봐요!</p>
+<br>
+<br>
+<p><strong>0. 📌 Topic</strong></p>
+<p>Topic: Resolving a technical issue before the lesson starts</p>
+<br>
+<p><strong>1. 📊 오늘의 대화 요약 (Summary)</strong></p>
+<p>오늘 대화는 수업 시작 전 오디오 연결 상태를 확인하고, 원활한 소통을 위해 튜터에게 재통화를 요청하는 내용으로 진행되었습니다. 기술적인 문제 해결에 필요한 기본적인 영어 표현들을 사용하며 대화를 시작했습니다.</p>
+<br>
+<p><strong>2. 💬 유창성 업그레이드 (Fluency & Natural Flow)</strong></p>
+<br>
+<table>
+<tr><th>구분</th><th>학습자 원문 (As Said)</th><th>자연스러운 표현 (Natural)</th><th>비즈니스 표현 (Professional)</th><th>💡 코칭 포인트 (Coaching Point)</th></tr>
+<tr><td>1</td><td>❌ "do you hear my voice?"</td><td>✅ "Can you hear me?"</td><td>💎 "Am I coming through clearly?"</td><td>Using "Can you hear me?" is the most common and direct way to check audio. "Am I coming through clearly?" is more formal and implies checking sound quality. <br> <span class="arrow">→</span> "Can you hear me?"는 오디오 확인에 가장 흔하고 직접적인 표현입니다. "Am I coming through clearly?"는 좀 더 격식 있고 음질까지 확인하는 뉘앙스를 줍니다.</td></tr>
+<tr><td>2</td><td>❌ (전체적인 요청)</td><td>✅ "I think I'm having an audio issue. Could you call me back, please?"</td><td>💎 "It seems there's an audio problem on my end. Would you be able to redial?"</td><td>Adding a brief explanation of the problem before the request makes it clearer and more polite. Using "I think I'm having..." or "It seems there's..." softens the statement. <br> <span class="arrow">→</span> 요청 전에 문제 상황을 간략하게 설명하면 더 명확하고 정중해집니다. "I think I'm having..." 또는 "It seems there's..."와 같은 표현은 말을 부드럽게 만듭니다.</td></tr>
+</table>
+<br>
+<p><strong>3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)</strong></p>
+<p>이번 짧은 대화에서는 반복적으로 나타나는 문법 오류 패턴이 명확하게 드러나지 않았습니다. Joey의 영어는 전반적으로 의사소통에 문제가 없었지만, 한 가지 어색했던 표현인 're-call'을 통해 <strong>'동사 선택의 정확성 (Precise Verb Choice)'</strong>에 대해 짚어보겠습니다. 이는 문법 오류라기보다는 더 자연스럽고 정확한 어휘 선택에 가깝습니다.</p>
+<br>
+<p>Category: Precise Verb Choice</p>
+<br>
+<table>
+<tr><th>❌ 원문 (As Said)</th><th>✅ 교정 예시 (Corrected)</th></tr>
+<tr><td>Could you <strong>re-call</strong> for me?</td><td>Could you <strong>call me back</strong>?</td></tr>
+<tr><td>Could you <strong>re-call</strong> for me?</td><td>Could you <strong>redial</strong>?</td></tr>
+<tr><td>Could you <strong>re-call</strong> for me?</td><td>Could you <strong>initiate the call again</strong>?</td></tr>
+</table>
+<br>
+<p>📌 핵심 규칙: 전화 관련 상황에서는 'call back' (다시 전화하다) 또는 'redial' (재다이얼하다)과 같은 정확한 동사를 사용하여 의미를 명확히 전달합니다. 're-call'은 주로 기억을 되살리거나 소환하는 의미로 사용됩니다.</p>
+<br>
+<p>🔁 따라 읽기:</p>
+<p>🗣️ "Could you call me back?"</p>
+<p>🗣️ "Could you redial?"</p>
+<p>🗣️ "Could you initiate the call again?"</p>
+<br>
+<p><strong>4. 📗 어휘 확장 (Vocabulary Vault)</strong></p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>audio</strong> /ˈɔːdiˌoʊ/ (n.)</div>
+<div class="item">뜻: 오디오, 음성</div>
+<div class="item">실전 예문: We need to check the <strong>audio</strong> quality for the upcoming online conference.</div>
+<div class="numbered"><strong>2.</strong> <strong>connection</strong> /kəˈnɛkʃən/ (n.)</div>
+<div class="item">뜻: 연결, 접속</div>
+<div class="item">실전 예문: I'm having some <strong>connection</strong> issues with my internet today.</div>
+<div class="numbered"><strong>3.</strong> <strong>redial</strong> /ˌriːˈdaɪəl/ (v.)</div>
+<div class="item">뜻: (전화를) 다시 걸다, 재다이얼하다</div>
+<div class="item">실전 예문: If the line is busy, please <strong>redial</strong> in a few minutes.</div>
+<div class="numbered"><strong>4.</strong> <strong>clarity</strong> /ˈklærəti/ (n.)</div>
+<div class="item">뜻: 명확성, 선명도</div>
+<div class="item">실전 예문: The <strong>clarity</strong> of the presentation slides was excellent.</div>
+<div class="numbered"><strong>5.</strong> <strong>troubleshoot</strong> /ˈtrʌbəlˌʃuːt/ (v.)</div>
+<div class="item">뜻: 문제 해결하다, 고장 원인을 찾아내다</div>
+<div class="item">실전 예문: Our IT team is working to <strong>troubleshoot</strong> the system error.</div>
+<br>
+<p><strong>5. 📝 실전 복습 챌린지 (Practice)</strong></p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>상황:</strong> 회의 중 갑자기 인터넷 연결이 끊겼습니다. 튜터에게 오디오 문제가 있는 것 같다고 말해보세요.</div>
+<div class="item">영작: I think I'm having an <strong>audio</strong> issue.</div>
+<div class="item">모범 답안: I think I'm having an audio issue. / It seems I'm experiencing an audio problem.</div>
+<div class="numbered"><strong>2.</strong> <strong>상황:</strong> 전화 통화 중 상대방의 목소리가 잘 들리지 않아, 다시 전화를 걸어달라고 정중하게 요청하고 싶습니다.</div>
+<div class="item">영작: Could you <strong>call me back</strong>, please?</div>
+<div class="item">모범 답안: Could you call me back, please? / Would you mind redialing?</div>
+<div class="numbered"><strong>3.</strong> <strong>상황:</strong> 중요한 온라인 미팅을 앞두고, 팀원들에게 오디오와 비디오 연결 상태를 미리 확인해 달라고 요청하는 이메일을 작성해야 합니다.</div>
+<div class="item">영작: Please check your <strong>audio</strong> and video <strong>connection</strong> for <strong>clarity</strong> before the meeting.</div>
+<div class="item">모범 답안: Please check your audio and video connection for clarity before the meeting. / Kindly ensure your audio and video connection is clear prior to the meeting.</div>
+<br>
+<p><strong>6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)</strong></p>
+<br>
+<div class="item">✨ <strong>Good Job</strong>: "Hello, do you hear my voice?"</div>
+<div class="item">Joey, 이 문장은 연결 문제를 확인하려는 의도를 명확하게 전달했어요. 비록 더 자연스러운 표현이 있지만, 핵심적인 메시지는 완벽하게 전달되었답니다. 이런 짧은 문장으로도 소통의 목적을 달성하는 것은 아주 훌륭한 능력이에요!</div>
+<div class="item">🚀 <strong>내일의 한 문장</strong>: 다음 수업 시작 시, 오늘 배운 표현을 활용하여 튜터에게 이렇게 말해보세요.</div>
+<p>"Hi [Tutor's Name], I hope my audio connection is clear today!"</p>
+<br>
+<br>
+<p><strong>[성과 지표]</strong></p>
+<p><strong>유창성 점수</strong>: 7/10점</p>
+<div class="item"><strong>근거</strong>: Joey는 짧은 대화였지만, 연결 문제를 인지하고 해결을 요청하는 데 필요한 기본적인 문장들을 막힘없이 구사했습니다. 'do you hear my voice?'나 'Could you re-call for me?'와 같은 표현은 의미 전달에 성공했지만, 원어민이 더 자주 쓰는 자연스러운 표현으로 다듬으면 유창성이 더욱 향상될 것입니다.</div>
+<div class="item"><strong>다음 수업 '원포인트 액션 플랜'</strong>: 다음 수업에서는 오늘 배운 'Can you hear me?'와 'call me back' 같은 자연스러운 표현들을 의식적으로 사용해 보세요. 특히, 기술적인 문제가 발생했을 때 당황하지 않고 오늘 배운 비즈니스 표현들을 활용하여 침착하게 상황을 설명하는 연습을 해보는 것도 좋습니다.</div></div>
+        </div>
+        <div id="tab-transcript" class="tab-content">
+            <div class="transcript"><span class="student">[Student]</span> Hello, teacher. Happy Thursday. Hi.
+<span class="tutor">[Tutor]</span> Oh, just a moment.
+<span class="tutor">[Tutor]</span> Hello.
+<span class="student">[Student]</span> Hello.
+<span class="student">[Student]</span> Hello, teacher.
+<span class="tutor">[Tutor]</span> Hi.
+<span class="student">[Student]</span> Hi. Hello, do you hear my voice? Could you re-call for me?</div>
+        </div>
+    </div>
+    <div class="toast" id="toast">✅ 프롬프트가 복사되었습니다!</div>
+    <script>
+        const REVIEW_PROMPT="너는 나의 영어 회화 복습 파트너야. 오늘 내 전화영어 수업 내용을 기반으로 대화하면서 복습을 도와줘.\n\n[오늘 수업 전사 내용]\n[Student] Hello, teacher. Happy Thursday. Hi.\n[Tutor] Oh, just a moment.\n[Tutor] Hello.\n[Student] Hello.\n[Student] Hello, teacher.\n[Tutor] Hi.\n[Student] Hi. Hello, do you hear my voice? Could you re-call for me?\n\n[AI 피드백]\n안녕하세요, Joey! 오늘도 활기찬 목소리로 수업을 시작해 주셔서 감사합니다. 잠깐의 연결 문제에도 침착하게 상황을 설명하고 해결을 요청하는 모습이 인상 깊었어요. 짧은 대화였지만, 이런 일상적인 상황에서 쓰는 표현들을 자연스럽게 다듬는 것도 유창성을 높이는 데 아주 중요하답니다.\n\n오늘 피드백을 통해 배운 내용들을 잘 활용해서 다음 수업에서는 더 자신감 있게 대화해 봐요!\n\n---\n\n**0. 📌 Topic**\nTopic: Resolving a technical issue before the lesson starts\n\n**1. 📊 오늘의 대화 요약 (Summary)**\n오늘 대화는 수업 시작 전 오디오 연결 상태를 확인하고, 원활한 소통을 위해 튜터에게 재통화를 요청하는 내용으로 진행되었습니다. 기술적인 문제 해결에 필요한 기본적인 영어 표현들을 사용하며 대화를 시작했습니다.\n\n**2. 💬 유창성 업그레이드 (Fluency & Natural Flow)**\n\n| 구분 | 학습자 원문 (As Said) | 자연스러운 표현 (Natural) | 비즈니스 표현 (Professional) | 💡 코칭 포인트 (Coaching Point) |\n|---|---|---|---|---|\n| 1 | ❌ \"do you hear my voice?\" | ✅ \"Can you hear me?\" | 💎 \"Am I coming through clearly?\" | Using \"Can you hear me?\" is the most common and direct way to check audio. \"Am I coming through clearly?\" is more formal and implies checking sound quality. <br> → \"Can you hear me?\"는 오디오 확인에 가장 흔하고 직접적인 표현입니다. \"Am I coming through clearly?\"는 좀 더 격식 있고 음질까지 확인하는 뉘앙스를 줍니다. |\n| 2 | ❌ (전체적인 요청) | ✅ \"I think I'm having an audio issue. Could you call me back, please?\" | 💎 \"It seems there's an audio problem on my end. Would you be able to redial?\" | Adding a brief explanation of the problem before the request makes it clearer and more polite. Using \"I think I'm having...\" or \"It seems there's...\" softens the statement. <br> → 요청 전에 문제 상황을 간략하게 설명하면 더 명확하고 정중해집니다. \"I think I'm having...\" 또는 \"It seems there's...\"와 같은 표현은 말을 부드럽게 만듭니다. |\n\n**3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)**\n이번 짧은 대화에서는 반복적으로 나타나는 문법 오류 패턴이 명확하게 드러나지 않았습니다. Joey의 영어는 전반적으로 의사소통에 문제가 없었지만, 한 가지 어색했던 표현인 're-call'을 통해 **'동사 선택의 정확성 (Precise Verb Choice)'**에 대해 짚어보겠습니다. 이는 문법 오류라기보다는 더 자연스럽고 정확한 어휘 선택에 가깝습니다.\n\nCategory: Precise Verb Choice\n\n| ❌ 원문 (As Said) | ✅ 교정 예시 (Corrected) |\n|---|---|\n| Could you **re-call** for me? | Could you **call me back**? |\n| Could you **re-call** for me? | Could you **redial**? |\n| Could you **re-call** for me? | Could you **initiate the call again**? |\n\n📌 핵심 규칙: 전화 관련 상황에서는 'call back' (다시 전화하다) 또는 'redial' (재다이얼하다)과 같은 정확한 동사를 사용하여 의미를 명확히 전달합니다. 're-call'은 주로 기억을 되살리거나 소환하는 의미로 사용됩니다.\n\n🔁 따라 읽기:\n🗣️ \"Could you call me back?\"\n🗣️ \"Could you redial?\"\n🗣️ \"Could you initiate the call again?\"\n\n**4. 📗 어휘 확장 (Vocabulary Vault)**\n\n1.  **audio** /ˈɔːdiˌoʊ/ (n.)\n    *   뜻: 오디오, 음성\n    *   실전 예문: We need to check the **audio** quality for the upcoming online conference.\n2.  **connection** /kəˈnɛkʃən/ (n.)\n    *   뜻: 연결, 접속\n    *   실전 예문: I'm having some **connection** issues with my internet today.\n3.  **redial** /ˌriːˈdaɪəl/ (v.)\n    *   뜻: (전화를) 다시 걸다, 재다이얼하다\n    *   실전 예문: If the line is busy, please **redial** in a few minutes.\n4.  **clarity** /ˈklærəti/ (n.)\n    *   뜻: 명확성, 선명도\n    *   실전 예문: The **clarity** of the presentation slides was excellent.\n5.  **troubleshoot** /ˈtrʌbəlˌʃuːt/ (v.)\n    *   뜻: 문제 해결하다, 고장 원인을 찾아내다\n    *   실전 예문: Our IT team is working to **troubleshoot** the system error.\n\n**5. 📝 실전 복습 챌린지 (Practice)**\n\n1.  **상황:** 회의 중 갑자기 인터넷 연결이 끊겼습니다. 튜터에게 오디오 문제가 있는 것 같다고 말해보세요.\n    *   영작: I think I'm having an **audio** issue.\n    *   모범 답안: I think I'm having an audio issue. / It seems I'm experiencing an audio problem.\n2.  **상황:** 전화 통화 중 상대방의 목소리가 잘 들리지 않아, 다시 전화를 걸어달라고 정중하게 요청하고 싶습니다.\n    *   영작: Could you **call me back**, please?\n    *   모범 답안: Could you call me back, please? / Would you mind redialing?\n3.  **상황:** 중요한 온라인 미팅을 앞두고, 팀원들에게 오디오와 비디오 연결 상태를 미리 확인해 달라고 요청하는 이메일을 작성해야 합니다.\n    *   영작: Please check your **audio** and video **connection** for **clarity** before the meeting.\n    *   모범 답안: Please check your audio and video connection for clarity before the meeting. / Kindly ensure your audio and video connection is clear prior to the meeting.\n\n**6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)**\n\n*   ✨ **Good Job**: \"Hello, do you hear my voice?\"\n    *   Joey, 이 문장은 연결 문제를 확인하려는 의도를 명확하게 전달했어요. 비록 더 자연스러운 표현이 있지만, 핵심적인 메시지는 완벽하게 전달되었답니다. 이런 짧은 문장으로도 소통의 목적을 달성하는 것은 아주 훌륭한 능력이에요!\n*   🚀 **내일의 한 문장**: 다음 수업 시작 시, 오늘 배운 표현을 활용하여 튜터에게 이렇게 말해보세요.\n    \"Hi [Tutor's Name], I hope my audio connection is clear today!\"\n\n---\n\n**[성과 지표]**\n**유창성 점수**: 7/10점\n*   **근거**: Joey는 짧은 대화였지만, 연결 문제를 인지하고 해결을 요청하는 데 필요한 기본적인 문장들을 막힘없이 구사했습니다. 'do you hear my voice?'나 'Could you re-call for me?'와 같은 표현은 의미 전달에 성공했지만, 원어민이 더 자주 쓰는 자연스러운 표현으로 다듬으면 유창성이 더욱 향상될 것입니다.\n*   **다음 수업 '원포인트 액션 플랜'**: 다음 수업에서는 오늘 배운 'Can you hear me?'와 'call me back' 같은 자연스러운 표현들을 의식적으로 사용해 보세요. 특히, 기술적인 문제가 발생했을 때 당황하지 않고 오늘 배운 비즈니스 표현들을 활용하여 침착하게 상황을 설명하는 연습을 해보는 것도 좋습니다.\n\n위 내용을 바탕으로:\n1. 먼저 오늘 수업에서 내가 틀렸거나 어색했던 표현을 하나 골라서, 관련된 상황을 영어로 질문해줘.\n2. 내가 영어로 대답하면, 자연스러운지 확인하고 더 나은 표현이 있으면 알려줘.\n3. 특히 \"반복 실수 패턴\"에서 지적된 부분을 집중적으로 연습시켜줘.\n4. 이런 식으로 오늘 배운 표현들을 하나씩 복습하자.\n5. 한국어 설명은 필요할 때만 간단히, 대화는 최대한 영어로 진행해줘.\n\n그럼 시작하자!";
+        function startReview(){navigator.clipboard.writeText(REVIEW_PROMPT).then(()=>{showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)}).catch(()=>{const t=document.createElement('textarea');t.value=REVIEW_PROMPT;document.body.appendChild(t);t.select();document.execCommand('copy');document.body.removeChild(t);showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)})}
+        function showToast(){const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500)}
+        function switchTab(n){document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',n==='feedback'?i===0:i===1));document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));document.getElementById('tab-'+n).classList.add('active')}
+    </script>
+</body>
+</html>

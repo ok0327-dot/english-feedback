@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#0f0f13"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="당근영어"><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="icon" type="image/png" sizes="192x192" href="icon-192.png"><script src="install-banner.js" defer></script><script src="sw-reg.js" defer></script>
+    <title>전화영어 복습 - 2026년 10월 22일</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Noto Sans KR',sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.75;min-height:100vh}
+        .header{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);border-bottom:1px solid rgba(255,255,255,.06);padding:48px 24px 40px;text-align:center}
+        .header-date{font-size:13px;color:#94a3b8;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+        .header h1{font-size:28px;font-weight:700;color:#f1f5f9;margin-bottom:16px}
+        .header-meta{display:flex;justify-content:center;gap:24px;font-size:14px;color:#64748b}
+        .header-meta span{display:flex;align-items:center;gap:6px}
+        .cta-section{text-align:center;padding:40px 24px}
+        .cta-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:linear-gradient(135deg,#38bdf8,#818cf8);color:#fff;font-size:16px;font-weight:600;font-family:'Noto Sans KR',sans-serif;border:none;border-radius:50px;cursor:pointer;transition:all .3s;text-decoration:none;box-shadow:0 4px 24px rgba(56,189,248,.25)}
+        .cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(56,189,248,.35)}
+        .cta-btn svg{width:20px;height:20px}
+        .cta-sub{margin-top:12px;font-size:13px;color:#64748b}
+        .toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#38bdf8;padding:14px 28px;border-radius:12px;font-size:14px;font-weight:500;border:1px solid rgba(56,189,248,.2);box-shadow:0 8px 32px rgba(0,0,0,.4);opacity:0;transition:all .4s cubic-bezier(.16,1,.3,1);z-index:1000}
+        .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+        .container{max-width:720px;margin:0 auto;padding:0 24px 80px}
+        .tabs{display:flex;gap:4px;background:#1a1a24;padding:4px;border-radius:12px;margin-bottom:32px}
+        .tab{flex:1;padding:12px;text-align:center;font-size:14px;font-weight:500;color:#64748b;background:0 0;border:none;border-radius:8px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all .2s}
+        .tab.active{background:#262636;color:#f1f5f9}
+        .tab-content{display:none}.tab-content.active{display:block}
+        .feedback h2{font-size:18px;font-weight:700;color:#f1f5f9;margin:36px 0 16px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.06)}
+        .feedback h2:first-child{margin-top:0}
+        .feedback p{margin:8px 0;color:#cbd5e1}
+        .feedback .item{padding:6px 0 6px 16px;border-left:2px solid #334155;margin:6px 0;color:#cbd5e1}
+        .feedback .numbered{padding:8px 0 8px 16px;color:#cbd5e1}
+        .feedback .numbered strong{color:#38bdf8}
+        .feedback strong{color:#f1f5f9}
+        .feedback code{background:#1e293b;padding:2px 8px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#38bdf8}
+        .feedback table{width:100%;border-collapse:collapse;margin:12px 0}
+        .feedback th,.feedback td{padding:10px 14px;text-align:left;border-bottom:1px solid #262636}
+        .feedback th{color:#94a3b8;font-weight:500;font-size:13px}
+        .feedback td{color:#cbd5e1}
+        .arrow{color:#38bdf8;font-weight:700}
+        .transcript{background:#1a1a24;border-radius:12px;padding:28px;font-size:14px;line-height:2;color:#94a3b8;white-space:pre-wrap;word-break:break-word;font-family:'JetBrains Mono','Noto Sans KR',monospace}
+        .transcript .tutor{color:#38bdf8}
+        .transcript .student{color:#a78bfa}
+        @media(max-width:640px){.header{padding:32px 16px}.header h1{font-size:22px}.cta-btn{padding:14px 28px;font-size:15px}.container{padding:0 16px 60px}}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-date">2026년 10월 22일</div>
+        <h1>📚 전화영어 복습</h1>
+        <div class="header-meta">
+            <span>⏱ 20분 56초</span>
+            <span>🎙 전화영어_025180304_20261022080053.m4a</span>
+        </div>
+    </div>
+    <div class="cta-section">
+        <button class="cta-btn" onclick="startReview()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Gemini에서 복습 대화 시작하기
+        </button>
+        <div class="cta-sub">클릭하면 프롬프트가 복사되고 Gemini가 열립니다</div>
+    </div>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('feedback')">📋 AI 피드백</button>
+            <button class="tab" onclick="switchTab('transcript')">🎙 수업 전사</button>
+        </div>
+        <div id="tab-feedback" class="tab-content active">
+            <div class="feedback"><p>안녕하세요, Joey! 오늘도 활기찬 목소리로 수업에 참여해 주셔서 감사합니다. 가을이 시작되어 나뭇잎이 물드는 한국의 아름다운 풍경을 이야기해 주셔서 저도 함께 가을을 느낄 수 있었어요. 유틸리티 계정 설정이라는 다소 딱딱할 수 있는 주제를 비즈니스 환경과 연결 지어 다양하게 이야기 나눈 점이 정말 좋았습니다.</p>
+<br>
+<br>
+<h2>0. 📌 Topic</h2>
+<p>Topic: Discussing how to set up utilities and manage related expenses.</p>
+<br>
+<h2>1. 📊 오늘의 대화 요약 (Summary)</h2>
+<p>오늘은 새로운 집에서 물, 가스, 전기와 같은 유틸리티 계정을 설정하는 방법에 대해 이야기 나누었습니다. 한국과 캐나다의 유틸리티 관리 방식의 차이를 비교하고, 계절 변화나 외부 요인(예: 유가 변동)이 유틸리티 비용에 미치는 영향과 그에 따른 예산 관리 전략에 대해서도 심도 깊은 대화를 나누었습니다.</p>
+<br>
+<h2>2. 💬 유창성 업그레이드 (Fluency & Natural Flow)</h2>
+<br>
+<p>Joey가 실제 말한 문장 중, 의미는 통하지만 더 자연스럽게 다듬을 수 있는 표현 3가지를 선정했습니다.</p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>❌ 학습자 원문 (As Said):</strong> "because it will start autumn."</div>
+<div class="item"><strong>✅ 자연스러운 표현 (Natural):</strong> "because autumn is starting."</div>
+<div class="item"><strong>💎 비즈니스 표현 (Professional):</strong> "as autumn begins."</div>
+<div class="item"><strong>💡 코칭 포인트:</strong> Using "start" as an intransitive verb (without an object) for seasons is more natural with a continuous or simple present tense. "It will start autumn" sounds a bit like autumn is an event that *something* will start. "Autumn is starting" or "as autumn begins" flows more smoothly. <span class="arrow">→</span> "start"를 자동사로 계절과 함께 사용할 때는 진행형이나 단순 현재형이 더 자연스럽습니다. "It will start autumn"은 마치 가을이 어떤 대상에 의해 시작되는 것처럼 들릴 수 있어요. "Autumn is starting" 또는 "as autumn begins"가 훨씬 자연스럽습니다.</div>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>❌ 학습자 원문 (As Said):</strong> "every tree has changed color, changed leaves."</div>
+<div class="item"><strong>✅ 자연스러운 표현 (Natural):</strong> "the leaves on every tree have changed color."</div>
+<div class="item"><strong>💎 비즈니스 표현 (Professional):</strong> "the foliage has changed color." (Foliage는 나뭇잎 전체를 의미하는 격식 있는 표현입니다.)</div>
+<div class="item"><strong>💡 코칭 포인트:</strong> When describing leaves changing, "changed color" is correct, but "changed leaves" is not a common phrase. We usually say "the leaves have changed color" or "the trees have shed their leaves." Focusing on "the leaves" as the subject makes the sentence clearer. <span class="arrow">→</span> 나뭇잎이 변하는 것을 묘사할 때 "changed color"는 맞지만, "changed leaves"는 흔히 쓰이는 표현이 아닙니다. 보통 "the leaves have changed color" 또는 "the trees have shed their leaves"라고 말합니다. "the leaves"를 주어로 삼는 것이 문장을 더 명확하게 만듭니다.</div>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>❌ 학습자 원문 (As Said):</strong> "So usually the people gather and live in our apartment."</div>
+<div class="item"><strong>✅ 자연스러운 표현 (Natural):</strong> "So usually people live in apartment complexes."</div>
+<div class="item"><strong>💎 비즈니스 표현 (Professional):</strong> "The majority of the population resides in apartment buildings."</div>
+<div class="item"><strong>💡 코칭 포인트:</strong> When referring to people in general, especially in a broad context, it's often more natural to omit "the." Also, "our apartment" implies a specific apartment you own or live in, rather than "apartments in our country." "Apartment complexes" or "apartment buildings" is a better general term. <span class="arrow">→</span> 일반적인 사람들을 언급할 때는 "the"를 생략하는 것이 더 자연스럽습니다. 또한 "our apartment"는 Joey가 살고 있는 특정 아파트를 의미하기 때문에, "우리나라의 아파트"를 일반화할 때는 "apartment complexes"나 "apartment buildings"와 같은 일반적인 용어가 더 적절합니다.</div>
+<br>
+<h2>3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)</h2>
+<br>
+<p>이번 수업에서는 일반적인 상황이나 집단을 설명할 때 명사와 관사를 사용하는 방식에서 조금 더 자연스러운 표현을 익혀보면 좋겠습니다.</p>
+<br>
+<p><strong>Category: Using Nouns and Articles for General Statements</strong></p>
+<br>
+<table>
+<tr><th>❌ 원문 (As Said)</th><th>✅ 교정 예시 (Corrected)</th></tr>
+<tr><td>So usually <strong>the people</strong> gather and live in <strong>our apartment</strong>.</td><td>So usually <strong>people</strong> live in <strong>apartment complexes</strong>.</td></tr>
+<tr><td>Just <strong>every people</strong> have a just a different account.</td><td>Just <strong>everyone</strong> has a separate account.</td></tr>
+<tr><td>Many <strong>Europe people</strong> are afraid in the wintertime.</td><td>Many <strong>Europeans</strong> are afraid/concerned in the wintertime.</td></tr>
+</table>
+<br>
+<p>📌 <strong>핵심 규칙:</strong> 일반적인 사람이나 사물을 지칭할 때는 특정 관사 'the'나 소유격 'our' 없이 명사 자체를 사용하거나, 'every' 뒤에는 단수 명사를 사용하고, 국가 이름을 활용한 형용사형 명사를 사용하는 것이 자연스럽습니다.</p>
+<br>
+<p>🔁 <strong>따라 읽기:</strong></p>
+<p>🗣️ "So usually people live in apartment complexes."</p>
+<p>🗣️ "Just everyone has a separate account."</p>
+<p>🗣️ "Many Europeans are concerned in the wintertime."</p>
+<br>
+<h2>4. 📗 어휘 확장 (Vocabulary Vault)</h2>
+<br>
+<p>오늘 수업에서 다루었거나 비즈니스 환경에서 유용하게 쓰일 수 있는 어휘 5가지입니다.</p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>Utility</strong> /juːˈtɪlɪti/ (n)</div>
+<div class="item"><strong>뜻:</strong> 공공 서비스 (전기, 가스, 수도 등)</div>
+<div class="item"><strong>실전 예문:</strong> We need to compare <strong>utility</strong> providers to find the most cost-effective option for our new office.</div>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>Registered</strong> /ˈrɛdʒɪstərd/ (adj)</div>
+<div class="item"><strong>뜻:</strong> 등록된, 기명된</div>
+<div class="item"><strong>실전 예문:</strong> The <strong>registered</strong> account holder is responsible for all charges.</div>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>Fluctuating</strong> /ˈflʌktʃueɪtɪŋ/ (adj)</div>
+<div class="item"><strong>뜻:</strong> 변동하는, 오르내리는</div>
+<div class="item"><strong>실전 예문:</strong> Due to <strong>fluctuating</strong> market prices, we need to regularly review our energy procurement strategy.</div>
+<br>
+<div class="numbered"><strong>4.</strong> <strong>Deposit</strong> /dɪˈpɒzɪt/ (n)</div>
+<div class="item"><strong>뜻:</strong> 보증금, 예치금</div>
+<div class="item"><strong>실전 예문:</strong> A security <strong>deposit</strong> is required to activate the new utility service.</div>
+<br>
+<div class="numbered"><strong>5.</strong> <strong>Lease Agreement</strong> /liːs əˈɡriːmənt/ (n)</div>
+<div class="item"><strong>뜻:</strong> 임대차 계약서</div>
+<div class="item"><strong>실전 예문:</strong> Please provide a copy of your <strong>lease agreement</strong> when setting up your internet service.</div>
+<br>
+<h2>5. 📝 실전 복습 챌린지 (Practice)</h2>
+<br>
+<p>오늘 배운 표현과 문법을 활용하여 다음 문장들을 영작해 보세요.</p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>한국어:</strong> 새로운 아파트로 이사 가서 수도와 전기 서비스를 신청해야 합니다.</div>
+<div class="item"><strong>영작:</strong> I need to set up water and electricity services for my new apartment.</div>
+<div class="item"><strong>모범 답안:</strong> I need to <strong>set up</strong> water and electricity <strong>utilities</strong> for my new apartment.</div>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>한국어:</strong> 계좌는 이미 등록되어 있고, 보증금은 계좌를 해지할 때 환불됩니다.</div>
+<div class="item"><strong>영작:</strong> The account is already registered, and the deposit will be refunded when you close the account.</div>
+<div class="item"><strong>모범 답안:</strong> The account is already <strong>registered</strong>, and the <strong>deposit</strong> will be refunded when you close the account.</div>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>한국어:</strong> 유가 변동이 심해서 많은 유럽인들이 올겨울 난방비에 대해 걱정하고 있습니다.</div>
+<div class="item"><strong>영작:</strong> Because of the fluctuating oil prices, many Europeans are concerned about heating costs this winter.</div>
+<div class="item"><strong>모범 답안:</strong> Due to <strong>fluctuating</strong> oil prices, many <strong>Europeans</strong> are concerned about heating costs this winter.</div>
+<br>
+<h2>6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)</h2>
+<br>
+<p>✨ <strong>Good Job:</strong></p>
+<p>Joey가 오늘 가장 잘 표현한 문장은 바로 이 문장이었습니다!</p>
+<p>"<strong>Can you tell me what I need to provide for gas service?</strong>"</p>
+<p>새로운 문장을 스스로 만들어 보라는 튜터의 요청에 즉시 응하며, 오늘 배운 핵심 표현인 'provide for ~ service'를 활용하여 정확하고 자연스러운 질문을 만들어냈습니다. 유틸리티 계정 설정이라는 주제에 완벽하게 부합하는 실용적인 문장이었어요!</p>
+<br>
+<p>🚀 <strong>내일의 한 문장:</strong></p>
+<p>다음 수업 시작 시 튜터에게 이렇게 말해보세요.</p>
+<p>"I've been thinking about how <strong>fluctuating</strong> energy prices impact our household <strong>budget</strong>."</p>
+<p>(오늘 배운 'fluctuating'과 'budget'을 활용하여 유틸리티 비용에 대한 관심을 표현해 보세요!)</p>
+<br>
+<br>
+<h2>[성과 지표]</h2>
+<br>
+<p><strong>유창성 점수: 7.5/10</strong></p>
+<br>
+<p><strong>근거:</strong> Joey는 다양한 주제에 대해 막힘없이 자신의 의견을 표현하며 대화를 이어나가는 능력이 뛰어납니다. 특히, 새로운 문장을 만들어내려는 적극적인 시도는 유창성 향상에 매우 긍정적인 영향을 미칩니다. 다만, 일부 단어의 발음(electricity, registered, private, fluctuating 등)에서 잠시 주저하거나, 일반적인 사실을 설명할 때 관사나 명사 사용에서 약간의 어색함이 있었습니다. 이는 꾸준한 연습을 통해 충분히 개선될 수 있는 부분입니다.</p>
+<br>
+<p><strong>다음 수업 '원포인트 액션 플랜':</strong></p>
+<p>다음 수업에서는 <strong>일반적인 사실이나 현상을 설명할 때 명사와 관사를 더욱 자연스럽게 사용하는 연습</strong>에 집중해 보겠습니다. 특히, 'the people' 대신 'people' 또는 'everyone'을 사용하거나, 'Europe people' 대신 'Europeans'와 같이 상황에 맞는 명사 형태를 활용하는 연습을 통해 더욱 유창하고 정확한 표현을 구사할 수 있도록 코칭하겠습니다.</p></div>
+        </div>
+        <div id="tab-transcript" class="tab-content">
+            <div class="transcript"><span class="tutor">[Tutor]</span> Hello, Karin. Good evening. Hi there. Hi, Joey. How are you today? How are you this morning?
+[Joey] Ah, it is a beautiful morning, yeah, in Korea. Oh, good. Yeah, now it&#x27;s beautiful. Yeah, because it will start autumn.
+[Joey] So, if I go, if I walk the street, every tree has changed color, changed leaves. Yeah. Yeah, it&#x27;s beautiful.
+<span class="tutor">[Tutor]</span> I agree. We&#x27;ve had lovely weather here for the last several days. It&#x27;s sunny. It&#x27;s about 14, so it&#x27;s not too cold. And you&#x27;re right, the leaves are beautiful.
+[Joey] Yeah, it&#x27;s so beautiful. Yeah.
+<span class="tutor">[Tutor]</span> It&#x27;ll be sad when we lose them in November.
+<span class="tutor">[Tutor]</span> All right, my friend, if you&#x27;re ready, let&#x27;s start your class, shall we?
+[Joey] Okay. Yes, I&#x27;m ready.
+<span class="tutor">[Tutor]</span> Okay. So the topic I have for you today is how do I set up utilities?
+<span class="tutor">[Tutor]</span> And I&#x27;ll ask you to read today&#x27;s mission to me, please.
+[Joey] Okay. Today&#x27;s mission is register for utilities like water, gas, or electricity in your new home.
+<span class="tutor">[Tutor]</span> Okay. That was a good start.
+<span class="tutor">[Tutor]</span> I&#x27;d like to help you with one word.
+<span class="tutor">[Tutor]</span> You said water, gas, and the next word I&#x27;m going to get you to practice.
+<span class="tutor">[Tutor]</span> Electricity.
+[Joey] Oh, my God.
+[Joey] Electrostick.
+[Joey] Electrostick tree.
+[Joey] Electrostick.
+<span class="tutor">[Tutor]</span> All right.
+<span class="tutor">[Tutor]</span> Let me say it for you again slower because it is a mouthful.
+<span class="tutor">[Tutor]</span> Electricity.
+<span class="tutor">[Tutor]</span> That&#x27;s better.
+[Joey] Yeah, electricity.
+[Joey] Electricity.
+<span class="tutor">[Tutor]</span> How about that?
+[Joey] No worry.
+<span class="tutor">[Tutor]</span> That was better.
+<span class="tutor">[Tutor]</span> I&#x27;ll put it in a sentence, and I&#x27;ll give you the sound bites so you can practice it.
+<span class="tutor">[Tutor]</span> Okay?
+<span class="tutor">[Tutor]</span> Good job.
+[Joey] Electricity.
+<span class="tutor">[Tutor]</span> Yes.
+<span class="tutor">[Tutor]</span> Good.
+[Joey] Electricity.
+<span class="tutor">[Tutor]</span> Okay.
+[Joey] Electricity.
+<span class="tutor">[Tutor]</span> It&#x27;s a mouthful.
+<span class="tutor">[Tutor]</span> Let&#x27;s go on to the next page, key expressions and key phrases.
+[Joey] Okay.
+<span class="tutor">[Tutor]</span> I&#x27;ll ask you to read the expression and the example sentence to me.
+[Joey] Okay.
+[Joey] The utility account or service account per household for water, gas, or electricity.
+[Joey] Electricity.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="tutor">[Tutor]</span> All right.
+<span class="tutor">[Tutor]</span> Let&#x27;s try the next expression and its sentence.
+[Joey] Okay.
+[Joey] Account holder, the person officially registered on account as responsible for it.
+<span class="tutor">[Tutor]</span> Okay. Let&#x27;s help you with that word.
+<span class="tutor">[Tutor]</span> Again, it was another mouthful.
+<span class="tutor">[Tutor]</span> Again, I&#x27;ll read it to you slowly.
+<span class="tutor">[Tutor]</span> Registered.
+[Joey] Registered.
+[Joey] Registered.
+<span class="tutor">[Tutor]</span> Yes.
+[Joey] Okay, registered.
+<span class="tutor">[Tutor]</span> That&#x27;s right.
+<span class="tutor">[Tutor]</span> Officially registered.
+[Joey] Okay.
+<span class="tutor">[Tutor]</span> Very good.
+<span class="tutor">[Tutor]</span> You got it.
+<span class="tutor">[Tutor]</span> All right.
+<span class="tutor">[Tutor]</span> Let&#x27;s get you to read the example key phrases.
+[Joey] Okay.
+[Joey] I&#x27;d like to set up a gas account.
+<span class="tutor">[Tutor]</span> Good.
+[Joey] Okay.
+[Joey] I&#x27;d like to set up the utility for my home.
+<span class="tutor">[Tutor]</span> That&#x27;s great.
+[Joey] Okay.
+[Joey] Can you tell me what I need to provide for gas service?
+[Joey] Can you tell me what I need to provide for electricity service?
+<span class="tutor">[Tutor]</span> Excellent.
+<span class="tutor">[Tutor]</span> I like how you&#x27;re challenging.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="tutor">[Tutor]</span> You did good.
+<span class="tutor">[Tutor]</span> I like that you&#x27;re challenging yourself to create new sentences.
+<span class="tutor">[Tutor]</span> That&#x27;s an excellent idea.
+<span class="tutor">[Tutor]</span> Keep it up.
+<span class="tutor">[Tutor]</span> All right.
+<span class="tutor">[Tutor]</span> We&#x27;re going to move on to Part A, the Info Byte.
+<span class="tutor">[Tutor]</span> And once again, I&#x27;ll get you to read the three bulleted sentences.
+<span class="tutor">[Tutor]</span> Again, you&#x27;re my last class, so take your time.
+[Joey] Okay.
+[Joey] In the USA, United Kingdom, Canada, Australia, and New Zealand, the tenant is usually responsible for setting up each utility by contacting the service provider directly.
+[Joey] Utilities are billed separately by each company, usually monthly or bimonthly, and sent by email or post. In USA and Canada, trash and recycling service are usually managed
+[Joey] by the city
+[Joey] or private company.
+[Joey] The fee is sometimes included
+[Joey] in property taxes.
+<span class="tutor">[Tutor]</span> That&#x27;s better.
+<span class="tutor">[Tutor]</span> Two syllables. All right. Very well done. Just a few things I want to help you with.
+<span class="tutor">[Tutor]</span> Okay. In the first sentence, you said Australia, and then the next country I heard you pronounce
+<span class="tutor">[Tutor]</span> as New Zealand. New Zealand. Let&#x27;s try New Zealand. Very good. New Zealand. New Zealand.
+<span class="tutor">[Tutor]</span> Very good.
+[Joey] Okay.
+<span class="tutor">[Tutor]</span> In the fourth sentence, you struggled a little bit with this word, and I&#x27;ll get you to repeat after me.
+<span class="tutor">[Tutor]</span> Private.
+[Joey] Private.
+[Joey] Private.
+<span class="tutor">[Tutor]</span> Yeah.
+<span class="tutor">[Tutor]</span> Yeah.
+<span class="tutor">[Tutor]</span> We&#x27;ve got an I and an A.
+<span class="tutor">[Tutor]</span> The I is long, but the A is just an A sound.
+<span class="tutor">[Tutor]</span> It&#x27;s short, so it&#x27;s private.
+[Joey] Private.
+<span class="tutor">[Tutor]</span> Okay.
+[Joey] Private company.
+[Joey] Private company.
+<span class="tutor">[Tutor]</span> Yeah.
+<span class="tutor">[Tutor]</span> And again, I&#x27;ll put that in a sentence for you, okay?
+<span class="tutor">[Tutor]</span> Good job.
+[Joey] Okay.
+<span class="tutor">[Tutor]</span> All right.
+<span class="tutor">[Tutor]</span> Let&#x27;s ask you to read the question at the bottom and respond.
+[Joey] Okay.
+<span class="tutor">[Tutor]</span> What kind of documents do you usually need to open a utility account in your country?
+<span class="tutor">[Tutor]</span> Are deposits common?
+[Joey] In our country, many people live in apartments because our country is small.
+[Joey] So usually the people gather and live in our apartment.
+[Joey] And if I contract my apartment, we just prepare the utility account.
+[Joey] But we don&#x27;t have an account.
+[Joey] Just every people have a just a different account, separated account, and just use them.
+[Joey] Yeah, we don&#x27;t have a process of the new account. Just it is also developed in apartment. So,
+[Joey] So just we contract apartment and go to their office and just use them.
+[Joey] And then their apartment service management office, they send to the post or something to the bill.
+[Joey] To the bill.
+[Joey] Yes.
+[Joey] And yeah.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="tutor">[Tutor]</span> Very good.
+<span class="tutor">[Tutor]</span> Now, so I think if I&#x27;m understanding you correctly, Joey, is that you have to pay for your utilities.
+<span class="tutor">[Tutor]</span> Is that correct?
+[Joey] Yeah, yeah, you&#x27;re right.
+[Joey] But usually the management office is prepared.
+[Joey] Every service is calculated, water bills, gas, or some electricity, etc.
+[Joey] So usually just we contact our management office and pay for bills.
+[Joey] And account is, yes, personal.
+[Joey] We don&#x27;t have any process to develop our account.
+[Joey] Just already that&#x27;s made the account.
+[Joey] Yes.
+<span class="tutor">[Tutor]</span> It&#x27;s already established.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="tutor">[Tutor]</span> Here in Canada, we also have a lot of apartment buildings.
+<span class="tutor">[Tutor]</span> And sometimes, depending on the owner of the building or the age of the building, sometimes utilities are included in the monthly rent.
+[Joey] Ah, yes, yes. You&#x27;re right.
+<span class="tutor">[Tutor]</span> It&#x27;s very helpful for people on a budget.
+<span class="tutor">[Tutor]</span> All right, my friend. Let&#x27;s go on to Part B, Real Life Talk.
+[Joey] Okay.
+<span class="tutor">[Tutor]</span> And we have a conversation, set up a new utility account.
+<span class="tutor">[Tutor]</span> Yeah. Would you like to read first for the company staff member or the service user?
+[Joey] Yeah, maybe I read both. So just I start. Hello. How can I help you?
+[Joey] Yeah. Hi, I&#x27;d like to set up electricity and gas service for my new apartment.
+[Joey] Sure. I need your name, address, and copy of your lease agreement.
+[Joey] Better. No problem. Do I need to pay a deposit? Oh, yes. There is a security deposit. It will be repaid when you close the account.
+[Joey] Got it. What documents do I need to submit?
+[Joey] A photo ID and proof of your lease are enough. You can upload them online.
+[Joey] Okay.
+<span class="tutor">[Tutor]</span> Okay. All right. Let&#x27;s go back to the first page.
+<span class="tutor">[Tutor]</span> And I thought I heard something, but I guess I didn&#x27;t.
+<span class="tutor">[Tutor]</span> Okay. So now I will read for the utility company and you&#x27;ll read for the service user.
+[Joey] Okay.
+<span class="tutor">[Tutor]</span> Hello. How can I help you?
+[Joey] Hi. I would like to set up electricity, electricity, electricity, electricity, and gas service for my new apartment.
+<span class="tutor">[Tutor]</span> Sure. I&#x27;ll need your name, address, and a copy of your lease agreement.
+[Joey] No problem. Do I need to pay a deposit?
+<span class="tutor">[Tutor]</span> Yes. There&#x27;s a $150 security deposit. It will be refunded when you close the account.
+[Joey] Got it. What document do I need to submit?
+<span class="tutor">[Tutor]</span> A photo ID and proof of your lease are enough. You can upload them online.
+<span class="tutor">[Tutor]</span> All right. I remembered the word I wanted to help you with.
+<span class="tutor">[Tutor]</span> When you were reading for the company staff person, in the second line, you said, it will be refund, but there&#x27;s an extra syllable.
+<span class="tutor">[Tutor]</span> So I&#x27;ll get you to try refunded.
+[Joey] Refunded.
+<span class="tutor">[Tutor]</span> There you go.
+[Joey] Yeah, refunded.
+[Joey] Okay, refunded.
+<span class="tutor">[Tutor]</span> And it&#x27;s that dreaded ED sound that I&#x27;ve been trying to teach you and you&#x27;ve been practicing.
+<span class="tutor">[Tutor]</span> So that was it.
+<span class="tutor">[Tutor]</span> That was the only thing that came to my mind.
+[Joey] Yeah.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="tutor">[Tutor]</span> All right.
+<span class="tutor">[Tutor]</span> I&#x27;ll get you to read the question at the bottom and respond.
+[Joey] Okay.
+<span class="tutor">[Tutor]</span> What two documents does the customer need to submit?
+<span class="tutor">[Tutor]</span> How much is the deposit?
+[Joey] Okay.
+[Joey] That question is separate too.
+[Joey] First, two separate.
+[Joey] The first,
+[Joey] we prepare the photo ID.
+[Joey] A photo ID as proof.
+[Joey] My
+[Joey] my lease.
+[Joey] My lease is enough.
+[Joey] About the document.
+[Joey] And the second,
+[Joey] the deposit
+[Joey] is the
+[Joey] $150.
+[Joey] Yeah.
+<span class="tutor">[Tutor]</span> Okay. All right. So just a couple of words I want to fine-tune with you. You said that the company needed a photo ID. Let&#x27;s try an F. Yeah, photo ID. Very good. Very good. Yeah, just a slip of the tongue.
+<span class="tutor">[Tutor]</span> And in the question, what does the customer need to,
+<span class="tutor">[Tutor]</span> the next word, you pronounced it as summit,
+<span class="tutor">[Tutor]</span> like the top of a mountain.
+<span class="tutor">[Tutor]</span> Yeah, we need to get that B in there, submit.
+[Joey] Submit, submit, submit.
+[Joey] Okay, submit, okay.
+<span class="tutor">[Tutor]</span> And that was it.
+<span class="tutor">[Tutor]</span> Good job, very nicely done.
+<span class="tutor">[Tutor]</span> These are very tiny things.
+[Joey] Usually in Korea, we use the Konglish.
+[Joey] Yeah, because it is the local English is a little different.
+[Joey] So sometimes I&#x27;m confused.
+[Joey] Yes, so confused by pronunciation.
+[Joey] But anyway.
+<span class="tutor">[Tutor]</span> It&#x27;s okay.
+<span class="tutor">[Tutor]</span> That&#x27;s why I&#x27;m here.
+[Joey] Okay.
+<span class="tutor">[Tutor]</span> So what I&#x27;m going to do is I&#x27;m going to send you a video
+<span class="tutor">[Tutor]</span> that gets you to practice the different letter combinations
+<span class="tutor">[Tutor]</span> that make the F sound in English.
+[Joey] Okay.
+<span class="tutor">[Tutor]</span> For example, P-H says F,
+<span class="tutor">[Tutor]</span> and there&#x27;s some other ones as well.
+<span class="tutor">[Tutor]</span> Okay?
+[Joey] Okay.
+<span class="tutor">[Tutor]</span> In terms of submit, there isn&#x27;t too much I can send you,
+<span class="tutor">[Tutor]</span> but if a word has a silent letter,
+<span class="tutor">[Tutor]</span> I will tell you ahead of time.
+<span class="tutor">[Tutor]</span> Okay?
+[Joey] Yes.
+<span class="tutor">[Tutor]</span> All right, you&#x27;re doing fine. Let&#x27;s move on to Part C, Say It Right.
+[Joey] Okay, Say It Right.
+<span class="tutor">[Tutor]</span> All right. So I&#x27;ll get you to read the title, the phrase, and the description for each of the three, and then we&#x27;ll look at the question, okay?
+[Joey] Okay. Yes. Can I read that? Please. Okay. Cost affordability.
+[Joey] Cost affordability.
+<span class="tutor">[Tutor]</span> Let&#x27;s try an F in there.
+[Joey] Affordability.
+[Joey] Affordability.
+[Joey] Cost affordability.
+[Joey] Affordable.
+[Joey] Reasonable price, affordable.
+[Joey] Budget-friendly, good for managing limited. Inflated, artificially high or rising quickly.
+[Joey] Inflated. What strategy do you use to keep utility expenses under control, especially when costs rise?
+[Joey] On its factory.
+[Joey] Hmm.
+<span class="tutor">[Tutor]</span> Okay.
+[Joey] Just I
+[Joey] suppose that
+[Joey] budget
+[Joey] and sometimes in winter
+[Joey] time, it is so cold,
+[Joey] so my gas
+[Joey] expense is so much.
+[Joey] So I&#x27;m just
+[Joey] gas and
+[Joey] I have a son, so I
+[Joey] don&#x27;t
+[Joey] limit my budget about the gas or electricity because it is useful and we
+[Joey] need to that. Okay. And second, seasonal and okay. And
+[Joey] seasonally, seasonally, seasonal and change.
+[Joey] Pluck tongue.
+[Joey] Pluck tongue.
+<span class="tutor">[Tutor]</span> May I help you?
+[Joey] Yes.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="tutor">[Tutor]</span> When you see a word that has a C and a T in it, that usually says ch.
+<span class="tutor">[Tutor]</span> So try fluctuating.
+[Joey] Ah, fluctuating.
+[Joey] Fluctuating.
+<span class="tutor">[Tutor]</span> Good.
+<span class="tutor">[Tutor]</span> Going up and down unpredictably.
+[Joey] Fluctuating.
+<span class="tutor">[Tutor]</span> One more time.
+[Joey] Fluctuating.
+[Joey] Fluctuating.
+<span class="tutor">[Tutor]</span> Let me do it one more time for you.
+<span class="tutor">[Tutor]</span> Fluctuating.
+[Joey] Fluctuating.
+[Joey] Fluctuating.
+<span class="tutor">[Tutor]</span> You did it.
+[Joey] Yeah, fluctuating.
+<span class="tutor">[Tutor]</span> Okay.
+[Joey] Spike.
+[Joey] Sudden and sharp increase.
+[Joey] Peak.
+[Joey] Reaching the
+[Joey] highest level.
+[Joey] Okay, fluctuating.
+<span class="tutor">[Tutor]</span> Read the question.
+[Joey] Can you describe how seasonal
+[Joey] change affect your utility
+[Joey] bills?
+[Joey] And when you notice
+[Joey] the biggest
+[Joey] fluctuation?
+[Joey] Fluctuation.
+[Joey] Fluctuation.
+[Joey] Fluctuation.
+[Joey] Fluctuation.
+[Joey] Fluctuation.
+[Joey] Okay.
+[Joey] Okay.
+[Joey] Yeah, this day it is a good example.
+[Joey] I have a good example.
+[Joey] The Donald Trump
+[Joey] was
+[Joey] in Middle Asia.
+[Joey] So
+[Joey] gas price is
+[Joey] going, getting higher.
+[Joey] So it is
+[Joey] peak gas
+[Joey] and
+[Joey] it spikes suddenly.
+[Joey] So nowadays, I&#x27;m a little afraid.
+[Joey] Many Europe people are afraid in the wintertime
+[Joey] because the gas price is still fluctuating
+[Joey] and peak of price.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="tutor">[Tutor]</span> Okay, I have a question for you.
+<span class="tutor">[Tutor]</span> Do you have forced air heating or floor heating? Forced air heating? Yeah, like for
+<span class="tutor">[Tutor]</span> instance, I have a device in my house called a furnace, and it heats the air
+<span class="tutor">[Tutor]</span> and then a fan pushes it through pipes in my house to warm it in the winter.
+<span class="tutor">[Tutor]</span> I&#x27;ve heard that in Korea that some people have heating in their floors.
+<span class="tutor">[Tutor]</span> So the floors are warm and the heat rises into the room.
+<span class="tutor">[Tutor]</span> I just wondered what type of heating you have.
+[Joey] Usually 90% more is connected to the line, the LNG.
+[Joey] So we supply the LNG, use the supply valve.
+<span class="tutor">[Tutor]</span> Yeah. Okay. Do you use fuel as well? Okay. I understand. All right. You&#x27;ve worked very hard
+<span class="tutor">[Tutor]</span> today. I can tell I need to let you go. You&#x27;re busy. I&#x27;m going to
+<span class="tutor">[Tutor]</span> send you some videos. Please try to practice them until I meet you again on Monday. Okay?
+[Joey] Okay. Talk to you Monday. All right. Thanks so much. Thank you, Joey. Take care. Bye-bye.
+[Joey] Have a nice day. Bye-bye.</div>
+        </div>
+    </div>
+    <div class="toast" id="toast">✅ 프롬프트가 복사되었습니다!</div>
+    <script>
+        const REVIEW_PROMPT="너는 나의 영어 회화 복습 파트너야. 오늘 내 전화영어 수업 내용을 기반으로 대화하면서 복습을 도와줘.\n\n[오늘 수업 전사 내용]\n[Tutor] Hello, Karin. Good evening. Hi there. Hi, Joey. How are you today? How are you this morning?\n[Joey] Ah, it is a beautiful morning, yeah, in Korea. Oh, good. Yeah, now it's beautiful. Yeah, because it will start autumn.\n[Joey] So, if I go, if I walk the street, every tree has changed color, changed leaves. Yeah. Yeah, it's beautiful.\n[Tutor] I agree. We've had lovely weather here for the last several days. It's sunny. It's about 14, so it's not too cold. And you're right, the leaves are beautiful.\n[Joey] Yeah, it's so beautiful. Yeah.\n[Tutor] It'll be sad when we lose them in November.\n[Tutor] All right, my friend, if you're ready, let's start your class, shall we?\n[Joey] Okay. Yes, I'm ready.\n[Tutor] Okay. So the topic I have for you today is how do I set up utilities?\n[Tutor] And I'll ask you to read today's mission to me, please.\n[Joey] Okay. Today's mission is register for utilities like water, gas, or electricity in your new home.\n[Tutor] Okay. That was a good start.\n[Tutor] I'd like to help you with one word.\n[Tutor] You said water, gas, and the next word I'm going to get you to practice.\n[Tutor] Electricity.\n[Joey] Oh, my God.\n[Joey] Electrostick.\n[Joey] Electrostick tree.\n[Joey] Electrostick.\n[Tutor] All right.\n[Tutor] Let me say it for you again slower because it is a mouthful.\n[Tutor] Electricity.\n[Tutor] That's better.\n[Joey] Yeah, electricity.\n[Joey] Electricity.\n[Tutor] How about that?\n[Joey] No worry.\n[Tutor] That was better.\n[Tutor] I'll put it in a sentence, and I'll give you the sound bites so you can practice it.\n[Tutor] Okay?\n[Tutor] Good job.\n[Joey] Electricity.\n[Tutor] Yes.\n[Tutor] Good.\n[Joey] Electricity.\n[Tutor] Okay.\n[Joey] Electricity.\n[Tutor] It's a mouthful.\n[Tutor] Let's go on to the next page, key expressions and key phrases.\n[Joey] Okay.\n[Tutor] I'll ask you to read the expression and the example sentence to me.\n[Joey] Okay.\n[Joey] The utility account or service account per household for water, gas, or electricity.\n[Joey] Electricity.\n[Tutor] Okay.\n[Tutor] All right.\n[Tutor] Let's try the next expression and its sentence.\n[Joey] Okay.\n[Joey] Account holder, the person officially registered on account as responsible for it.\n[Tutor] Okay. Let's help you with that word.\n[Tutor] Again, it was another mouthful.\n[Tutor] Again, I'll read it to you slowly.\n[Tutor] Registered.\n[Joey] Registered.\n[Joey] Registered.\n[Tutor] Yes.\n[Joey] Okay, registered.\n[Tutor] That's right.\n[Tutor] Officially registered.\n[Joey] Okay.\n[Tutor] Very good.\n[Tutor] You got it.\n[Tutor] All right.\n[Tutor] Let's get you to read the example key phrases.\n[Joey] Okay.\n[Joey] I'd like to set up a gas account.\n[Tutor] Good.\n[Joey] Okay.\n[Joey] I'd like to set up the utility for my home.\n[Tutor] That's great.\n[Joey] Okay.\n[Joey] Can you tell me what I need to provide for gas service?\n[Joey] Can you tell me what I need to provide for electricity service?\n[Tutor] Excellent.\n[Tutor] I like how you're challenging.\n[Tutor] Okay.\n[Tutor] You did good.\n[Tutor] I like that you're challenging yourself to create new sentences.\n[Tutor] That's an excellent idea.\n[Tutor] Keep it up.\n[Tutor] All right.\n[Tutor] We're going to move on to Part A, the Info Byte.\n[Tutor] And once again, I'll get you to read the three bulleted sentences.\n[Tutor] Again, you're my last class, so take your time.\n[Joey] Okay.\n[Joey] In the USA, United Kingdom, Canada, Australia, and New Zealand, the tenant is usually responsible for setting up each utility by contacting the service provider directly.\n[Joey] Utilities are billed separately by each company, usually monthly or bimonthly, and sent by email or post. In USA and Canada, trash and recycling service are usually managed\n[Joey] by the city\n[Joey] or private company.\n[Joey] The fee is sometimes included\n[Joey] in property taxes.\n[Tutor] That's better.\n[Tutor] Two syllables. All right. Very well done. Just a few things I want to help you with.\n[Tutor] Okay. In the first sentence, you said Australia, and then the next country I heard you pronounce\n[Tutor] as New Zealand. New Zealand. Let's try New Zealand. Very good. New Zealand. New Zealand.\n[Tutor] Very good.\n[Joey] Okay.\n[Tutor] In the fourth sentence, you struggled a little bit with this word, and I'll get you to repeat after me.\n[Tutor] Private.\n[Joey] Private.\n[Joey] Private.\n[Tutor] Yeah.\n[Tutor] Yeah.\n[Tutor] We've got an I and an A.\n[Tutor] The I is long, but the A is just an A sound.\n[Tutor] It's short, so it's private.\n[Joey] Private.\n[Tutor] Okay.\n[Joey] Private company.\n[Joey] Private company.\n[Tutor] Yeah.\n[Tutor] And again, I'll put that in a sentence for you, okay?\n[Tutor] Good job.\n[Joey] Okay.\n[Tutor] All right.\n[Tutor] Let's ask you to read the question at the bottom and respond.\n[Joey] Okay.\n[Tutor] What kind of documents do you usually need to open a utility account in your country?\n[Tutor] Are deposits common?\n[Joey] In our country, many people live in apartments because our country is small.\n[Joey] So usually the people gather and live in our apartment.\n[Joey] And if I contract my apartment, we just prepare the utility account.\n[Joey] But we don't have an account.\n[Joey] Just every people have a just a different account, separated account, and just use them.\n[Joey] Yeah, we don't have a process of the new account. Just it is also developed in apartment. So,\n[Joey] So just we contract apartment and go to their office and just use them.\n[Joey] And then their apartment service management office, they send to the post or something to the bill.\n[Joey] To the bill.\n[Joey] Yes.\n[Joey] And yeah.\n[Tutor] Okay.\n[Tutor] Okay.\n[Tutor] Very good.\n[Tutor] Now, so I think if I'm understanding you correctly, Joey, is that you have to pay for your utilities.\n[Tutor] Is that correct?\n[Joey] Yeah, yeah, you're right.\n[Joey] But usually the management office is prepared.\n[Joey] Every service is calculated, water bills, gas, or some electricity, etc.\n[Joey] So usually just we contact our management office and pay for bills.\n[Joey] And account is, yes, personal.\n[Joey] We don't have any process to develop our account.\n[Joey] Just already that's made the account.\n[Joey] Yes.\n[Tutor] It's already established.\n[Tutor] Okay.\n[Tutor] Okay.\n[Tutor] Here in Canada, we also have a lot of apartment buildings.\n[Tutor] And sometimes, depending on the owner of the building or the age of the building, sometimes utilities are included in the monthly rent.\n[Joey] Ah, yes, yes. You're right.\n[Tutor] It's very helpful for people on a budget.\n[Tutor] All right, my friend. Let's go on to Part B, Real Life Talk.\n[Joey] Okay.\n[Tutor] And we have a conversation, set up a new utility account.\n[Tutor] Yeah. Would you like to read first for the company staff member or the service user?\n[Joey] Yeah, maybe I read both. So just I start. Hello. How can I help you?\n[Joey] Yeah. Hi, I'd like to set up electricity and gas service for my new apartment.\n[Joey] Sure. I need your name, address, and copy of your lease agreement.\n[Joey] Better. No problem. Do I need to pay a deposit? Oh, yes. There is a security deposit. It will be repaid when you close the account.\n[Joey] Got it. What documents do I need to submit?\n[Joey] A photo ID and proof of your lease are enough. You can upload them online.\n[Joey] Okay.\n[Tutor] Okay. All right. Let's go back to the first page.\n[Tutor] And I thought I heard something, but I guess I didn't.\n[Tutor] Okay. So now I will read for the utility company and you'll read for the service user.\n[Joey] Okay.\n[Tutor] Hello. How can I help you?\n[Joey] Hi. I would like to set up electricity, electricity, electricity, electricity, and gas service for my new apartment.\n[Tutor] Sure. I'll need your name, address, and a copy of your lease agreement.\n[Joey] No problem. Do I need to pay a deposit?\n[Tutor] Yes. There's a $150 security deposit. It will be refunded when you close the account.\n[Joey] Got it. What document do I need to submit?\n[Tutor] A photo ID and proof of your lease are enough. You can upload them online.\n[Tutor] All right. I remembered the word I wanted to help you with.\n[Tutor] When you were reading for the company staff person, in the second line, you said, it will be refund, but there's an extra syllable.\n[Tutor] So I'll get you to try refunded.\n[Joey] Refunded.\n[Tutor] There you go.\n[Joey] Yeah, refunded.\n[Joey] Okay, refunded.\n[Tutor] And it's that dreaded ED sound that I've been trying to teach you and you've been practicing.\n[Tutor] So that was it.\n[Tutor] That was the only thing that came to my mind.\n[Joey] Yeah.\n[Tutor] Okay.\n[Tutor] All right.\n[Tutor] I'll get you to read the question at the bottom and respond.\n[Joey] Okay.\n[Tutor] What two documents does the customer need to submit?\n[Tutor] How much is the deposit?\n[Joey] Okay.\n[Joey] That question is separate too.\n[Joey] First, two separate.\n[Joey] The first,\n[Joey] we prepare the photo ID.\n[Joey] A photo ID as proof.\n[Joey] My\n[Joey] my lease.\n[Joey] My lease is enough.\n[Joey] About the document.\n[Joey] And the second,\n[Joey] the deposit\n[Joey] is the\n[Joey] $150.\n[Joey] Yeah.\n[Tutor] Okay. All right. So just a couple of words I want to fine-tune with you. You said that the company needed a photo ID. Let's try an F. Yeah, photo ID. Very good. Very good. Yeah, just a slip of the tongue.\n[Tutor] And in the question, what does the customer need to,\n[Tutor] the next word, you pronounced it as summit,\n[Tutor] like the top of a mountain.\n[Tutor] Yeah, we need to get that B in there, submit.\n[Joey] Submit, submit, submit.\n[Joey] Okay, submit, okay.\n[Tutor] And that was it.\n[Tutor] Good job, very nicely done.\n[Tutor] These are very tiny things.\n[Joey] Usually in Korea, we use the Konglish.\n[Joey] Yeah, because it is the local English is a little different.\n[Joey] So sometimes I'm confused.\n[Joey] Yes, so confused by pronunciation.\n[Joey] But anyway.\n[Tutor] It's okay.\n[Tutor] That's why I'm here.\n[Joey] Okay.\n[Tutor] So what I'm going to do is I'm going to send you a video\n[Tutor] that gets you to practice the different letter combinations\n[Tutor] that make the F sound in English.\n[Joey] Okay.\n[Tutor] For example, P-H says F,\n[Tutor] and there's some other ones as well.\n[Tutor] Okay?\n[Joey] Okay.\n[Tutor] In terms of submit, there isn't too much I can send you,\n[Tutor] but if a word has a silent letter,\n[Tutor] I will tell you ahead of time.\n[Tutor] Okay?\n[Joey] Yes.\n[Tutor] All right, you're doing fine. Let's move on to Part C, Say It Right.\n[Joey] Okay, Say It Right.\n[Tutor] All right. So I'll get you to read the title, the phrase, and the description for each of the three, and then we'll look at the question, okay?\n[Joey] Okay. Yes. Can I read that? Please. Okay. Cost affordability.\n[Joey] Cost affordability.\n[Tutor] Let's try an F in there.\n[Joey] Affordability.\n[Joey] Affordability.\n[Joey] Cost affordability.\n[Joey] Affordable.\n[Joey] Reasonable price, affordable.\n[Joey] Budget-friendly, good for managing limited. Inflated, artificially high or rising quickly.\n[Joey] Inflated. What strategy do you use to keep utility expenses under control, especially when costs rise?\n[Joey] On its factory.\n[Joey] Hmm.\n[Tutor] Okay.\n[Joey] Just I\n[Joey] suppose that\n[Joey] budget\n[Joey] and sometimes in winter\n[Joey] time, it is so cold,\n[Joey] so my gas\n[Joey] expense is so much.\n[Joey] So I'm just\n[Joey] gas and\n[Joey] I have a son, so I\n[Joey] don't\n[Joey] limit my budget about the gas or electricity because it is useful and we\n[Joey] need to that. Okay. And second, seasonal and okay. And\n[Joey] seasonally, seasonally, seasonal and change.\n[Joey] Pluck tongue.\n[Joey] Pluck tongue.\n[Tutor] May I help you?\n[Joey] Yes.\n[Tutor] Okay.\n[Tutor] When you see a word that has a C and a T in it, that usually says ch.\n[Tutor] So try fluctuating.\n[Joey] Ah, fluctuating.\n[Joey] Fluctuating.\n[Tutor] Good.\n[Tutor] Going up and down unpredictably.\n[Joey] Fluctuating.\n[Tutor] One more time.\n[Joey] Fluctuating.\n[Joey] Fluctuating.\n[Tutor] Let me do it one more time for you.\n[Tutor] Fluctuating.\n[Joey] Fluctuating.\n[Joey] Fluctuating.\n[Tutor] You did it.\n[Joey] Yeah, fluctuating.\n[Tutor] Okay.\n[Joey] Spike.\n[Joey] Sudden and sharp increase.\n[Joey] Peak.\n[Joey] Reaching the\n[Joey] highest level.\n[Joey] Okay, fluctuating.\n[Tutor] Read the question.\n[Joey] Can you describe how seasonal\n[Joey] change affect your utility\n[Joey] bills?\n[Joey] And when you notice\n[Joey] the biggest\n[Joey] fluctuation?\n[Joey] Fluctuation.\n[Joey] Fluctuation.\n[Joey] Fluctuation.\n[Joey] Fluctuation.\n[Joey] Fluctuation.\n[Joey] Okay.\n[Joey] Okay.\n[Joey] Yeah, this day it is a good example.\n[Joey] I have a good example.\n[Joey] The Donald Trump\n[Joey] was\n[Joey] in Middle Asia.\n[Joey] So\n[Joey] gas price is\n[Joey] going, getting higher.\n[Joey] So it is\n[Joey] peak gas\n[Joey] and\n[Joey] it spikes suddenly.\n[Joey] So nowadays, I'm a little afraid.\n[Joey] Many Europe people are afraid in the wintertime\n[Joey] because the gas price is still fluctuating\n[Joey] and peak of price.\n[Tutor] Okay.\n[Tutor] Okay, I have a question for you.\n[Tutor] Do you have forced air heating or floor heating? Forced air heating? Yeah, like for\n[Tutor] instance, I have a device in my house called a furnace, and it heats the air\n[Tutor] and then a fan pushes it through pipes in my house to warm it in the winter.\n[Tutor] I've heard that in Korea that some people have heating in their floors.\n[Tutor] So the floors are warm and the heat rises into the room.\n[Tutor] I just wondered what type of heating you have.\n[Joey] Usually 90% more is connected to the line, the LNG.\n[Joey] So we supply the LNG, use the supply valve.\n[Tutor] Yeah. Okay. Do you use fuel as well? Okay. I understand. All right. You've worked very hard\n[Tutor] today. I can tell I need to let you go. You're busy. I'm going to\n[Tutor] send you some videos. Please try to practice them until I meet you again on Monday. Okay?\n[Joey] Okay. Talk to you Monday. All right. Thanks so much. Thank you, Joey. Take care. Bye-bye.\n[Joey] Have a nice day. Bye-bye.\n\n[AI 피드백]\n안녕하세요, Joey! 오늘도 활기찬 목소리로 수업에 참여해 주셔서 감사합니다. 가을이 시작되어 나뭇잎이 물드는 한국의 아름다운 풍경을 이야기해 주셔서 저도 함께 가을을 느낄 수 있었어요. 유틸리티 계정 설정이라는 다소 딱딱할 수 있는 주제를 비즈니스 환경과 연결 지어 다양하게 이야기 나눈 점이 정말 좋았습니다.\n\n---\n\n### 0. 📌 Topic\nTopic: Discussing how to set up utilities and manage related expenses.\n\n### 1. 📊 오늘의 대화 요약 (Summary)\n오늘은 새로운 집에서 물, 가스, 전기와 같은 유틸리티 계정을 설정하는 방법에 대해 이야기 나누었습니다. 한국과 캐나다의 유틸리티 관리 방식의 차이를 비교하고, 계절 변화나 외부 요인(예: 유가 변동)이 유틸리티 비용에 미치는 영향과 그에 따른 예산 관리 전략에 대해서도 심도 깊은 대화를 나누었습니다.\n\n### 2. 💬 유창성 업그레이드 (Fluency & Natural Flow)\n\nJoey가 실제 말한 문장 중, 의미는 통하지만 더 자연스럽게 다듬을 수 있는 표현 3가지를 선정했습니다.\n\n1.  **❌ 학습자 원문 (As Said):** \"because it will start autumn.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"because autumn is starting.\"\n    *   **💎 비즈니스 표현 (Professional):** \"as autumn begins.\"\n    *   **💡 코칭 포인트:** Using \"start\" as an intransitive verb (without an object) for seasons is more natural with a continuous or simple present tense. \"It will start autumn\" sounds a bit like autumn is an event that *something* will start. \"Autumn is starting\" or \"as autumn begins\" flows more smoothly. → \"start\"를 자동사로 계절과 함께 사용할 때는 진행형이나 단순 현재형이 더 자연스럽습니다. \"It will start autumn\"은 마치 가을이 어떤 대상에 의해 시작되는 것처럼 들릴 수 있어요. \"Autumn is starting\" 또는 \"as autumn begins\"가 훨씬 자연스럽습니다.\n\n2.  **❌ 학습자 원문 (As Said):** \"every tree has changed color, changed leaves.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"the leaves on every tree have changed color.\"\n    *   **💎 비즈니스 표현 (Professional):** \"the foliage has changed color.\" (Foliage는 나뭇잎 전체를 의미하는 격식 있는 표현입니다.)\n    *   **💡 코칭 포인트:** When describing leaves changing, \"changed color\" is correct, but \"changed leaves\" is not a common phrase. We usually say \"the leaves have changed color\" or \"the trees have shed their leaves.\" Focusing on \"the leaves\" as the subject makes the sentence clearer. → 나뭇잎이 변하는 것을 묘사할 때 \"changed color\"는 맞지만, \"changed leaves\"는 흔히 쓰이는 표현이 아닙니다. 보통 \"the leaves have changed color\" 또는 \"the trees have shed their leaves\"라고 말합니다. \"the leaves\"를 주어로 삼는 것이 문장을 더 명확하게 만듭니다.\n\n3.  **❌ 학습자 원문 (As Said):** \"So usually the people gather and live in our apartment.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"So usually people live in apartment complexes.\"\n    *   **💎 비즈니스 표현 (Professional):** \"The majority of the population resides in apartment buildings.\"\n    *   **💡 코칭 포인트:** When referring to people in general, especially in a broad context, it's often more natural to omit \"the.\" Also, \"our apartment\" implies a specific apartment you own or live in, rather than \"apartments in our country.\" \"Apartment complexes\" or \"apartment buildings\" is a better general term. → 일반적인 사람들을 언급할 때는 \"the\"를 생략하는 것이 더 자연스럽습니다. 또한 \"our apartment\"는 Joey가 살고 있는 특정 아파트를 의미하기 때문에, \"우리나라의 아파트\"를 일반화할 때는 \"apartment complexes\"나 \"apartment buildings\"와 같은 일반적인 용어가 더 적절합니다.\n\n### 3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)\n\n이번 수업에서는 일반적인 상황이나 집단을 설명할 때 명사와 관사를 사용하는 방식에서 조금 더 자연스러운 표현을 익혀보면 좋겠습니다.\n\n**Category: Using Nouns and Articles for General Statements**\n\n| ❌ 원문 (As Said)                                   | ✅ 교정 예시 (Corrected)                                    |\n| :-------------------------------------------------- | :---------------------------------------------------------- |\n| So usually **the people** gather and live in **our apartment**. | So usually **people** live in **apartment complexes**.      |\n| Just **every people** have a just a different account. | Just **everyone** has a separate account.                   |\n| Many **Europe people** are afraid in the wintertime. | Many **Europeans** are afraid/concerned in the wintertime. |\n\n📌 **핵심 규칙:** 일반적인 사람이나 사물을 지칭할 때는 특정 관사 'the'나 소유격 'our' 없이 명사 자체를 사용하거나, 'every' 뒤에는 단수 명사를 사용하고, 국가 이름을 활용한 형용사형 명사를 사용하는 것이 자연스럽습니다.\n\n🔁 **따라 읽기:**\n🗣️ \"So usually people live in apartment complexes.\"\n🗣️ \"Just everyone has a separate account.\"\n🗣️ \"Many Europeans are concerned in the wintertime.\"\n\n### 4. 📗 어휘 확장 (Vocabulary Vault)\n\n오늘 수업에서 다루었거나 비즈니스 환경에서 유용하게 쓰일 수 있는 어휘 5가지입니다.\n\n1.  **Utility** /juːˈtɪlɪti/ (n)\n    *   **뜻:** 공공 서비스 (전기, 가스, 수도 등)\n    *   **실전 예문:** We need to compare **utility** providers to find the most cost-effective option for our new office.\n\n2.  **Registered** /ˈrɛdʒɪstərd/ (adj)\n    *   **뜻:** 등록된, 기명된\n    *   **실전 예문:** The **registered** account holder is responsible for all charges.\n\n3.  **Fluctuating** /ˈflʌktʃueɪtɪŋ/ (adj)\n    *   **뜻:** 변동하는, 오르내리는\n    *   **실전 예문:** Due to **fluctuating** market prices, we need to regularly review our energy procurement strategy.\n\n4.  **Deposit** /dɪˈpɒzɪt/ (n)\n    *   **뜻:** 보증금, 예치금\n    *   **실전 예문:** A security **deposit** is required to activate the new utility service.\n\n5.  **Lease Agreement** /liːs əˈɡriːmənt/ (n)\n    *   **뜻:** 임대차 계약서\n    *   **실전 예문:** Please provide a copy of your **lease agreement** when setting up your internet service.\n\n### 5. 📝 실전 복습 챌린지 (Practice)\n\n오늘 배운 표현과 문법을 활용하여 다음 문장들을 영작해 보세요.\n\n1.  **한국어:** 새로운 아파트로 이사 가서 수도와 전기 서비스를 신청해야 합니다.\n    *   **영작:** I need to set up water and electricity services for my new apartment.\n    *   **모범 답안:** I need to **set up** water and electricity **utilities** for my new apartment.\n\n2.  **한국어:** 계좌는 이미 등록되어 있고, 보증금은 계좌를 해지할 때 환불됩니다.\n    *   **영작:** The account is already registered, and the deposit will be refunded when you close the account.\n    *   **모범 답안:** The account is already **registered**, and the **deposit** will be refunded when you close the account.\n\n3.  **한국어:** 유가 변동이 심해서 많은 유럽인들이 올겨울 난방비에 대해 걱정하고 있습니다.\n    *   **영작:** Because of the fluctuating oil prices, many Europeans are concerned about heating costs this winter.\n    *   **모범 답안:** Due to **fluctuating** oil prices, many **Europeans** are concerned about heating costs this winter.\n\n### 6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)\n\n✨ **Good Job:**\nJoey가 오늘 가장 잘 표현한 문장은 바로 이 문장이었습니다!\n\"**Can you tell me what I need to provide for gas service?**\"\n새로운 문장을 스스로 만들어 보라는 튜터의 요청에 즉시 응하며, 오늘 배운 핵심 표현인 'provide for ~ service'를 활용하여 정확하고 자연스러운 질문을 만들어냈습니다. 유틸리티 계정 설정이라는 주제에 완벽하게 부합하는 실용적인 문장이었어요!\n\n🚀 **내일의 한 문장:**\n다음 수업 시작 시 튜터에게 이렇게 말해보세요.\n\"I've been thinking about how **fluctuating** energy prices impact our household **budget**.\"\n(오늘 배운 'fluctuating'과 'budget'을 활용하여 유틸리티 비용에 대한 관심을 표현해 보세요!)\n\n---\n\n### [성과 지표]\n\n**유창성 점수: 7.5/10**\n\n**근거:** Joey는 다양한 주제에 대해 막힘없이 자신의 의견을 표현하며 대화를 이어나가는 능력이 뛰어납니다. 특히, 새로운 문장을 만들어내려는 적극적인 시도는 유창성 향상에 매우 긍정적인 영향을 미칩니다. 다만, 일부 단어의 발음(electricity, registered, private, fluctuating 등)에서 잠시 주저하거나, 일반적인 사실을 설명할 때 관사나 명사 사용에서 약간의 어색함이 있었습니다. 이는 꾸준한 연습을 통해 충분히 개선될 수 있는 부분입니다.\n\n**다음 수업 '원포인트 액션 플랜':**\n다음 수업에서는 **일반적인 사실이나 현상을 설명할 때 명사와 관사를 더욱 자연스럽게 사용하는 연습**에 집중해 보겠습니다. 특히, 'the people' 대신 'people' 또는 'everyone'을 사용하거나, 'Europe people' 대신 'Europeans'와 같이 상황에 맞는 명사 형태를 활용하는 연습을 통해 더욱 유창하고 정확한 표현을 구사할 수 있도록 코칭하겠습니다.\n\n위 내용을 바탕으로:\n1. 먼저 오늘 수업에서 내가 틀렸거나 어색했던 표현을 하나 골라서, 관련된 상황을 영어로 질문해줘.\n2. 내가 영어로 대답하면, 자연스러운지 확인하고 더 나은 표현이 있으면 알려줘.\n3. 특히 \"반복 실수 패턴\"에서 지적된 부분을 집중적으로 연습시켜줘.\n4. 이런 식으로 오늘 배운 표현들을 하나씩 복습하자.\n5. 한국어 설명은 필요할 때만 간단히, 대화는 최대한 영어로 진행해줘.\n\n그럼 시작하자!";
+        function startReview(){navigator.clipboard.writeText(REVIEW_PROMPT).then(()=>{showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)}).catch(()=>{const t=document.createElement('textarea');t.value=REVIEW_PROMPT;document.body.appendChild(t);t.select();document.execCommand('copy');document.body.removeChild(t);showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)})}
+        function showToast(){const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500)}
+        function switchTab(n){document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',n==='feedback'?i===0:i===1));document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));document.getElementById('tab-'+n).classList.add('active')}
+    </script>
+</body>
+</html>

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#0f0f13"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="당근영어"><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="icon" type="image/png" sizes="192x192" href="icon-192.png"><script src="install-banner.js" defer></script><script src="sw-reg.js" defer></script>
+    <title>전화영어 복습 - 2026년 10월 12일</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Noto Sans KR',sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.75;min-height:100vh}
+        .header{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);border-bottom:1px solid rgba(255,255,255,.06);padding:48px 24px 40px;text-align:center}
+        .header-date{font-size:13px;color:#94a3b8;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+        .header h1{font-size:28px;font-weight:700;color:#f1f5f9;margin-bottom:16px}
+        .header-meta{display:flex;justify-content:center;gap:24px;font-size:14px;color:#64748b}
+        .header-meta span{display:flex;align-items:center;gap:6px}
+        .cta-section{text-align:center;padding:40px 24px}
+        .cta-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:linear-gradient(135deg,#38bdf8,#818cf8);color:#fff;font-size:16px;font-weight:600;font-family:'Noto Sans KR',sans-serif;border:none;border-radius:50px;cursor:pointer;transition:all .3s;text-decoration:none;box-shadow:0 4px 24px rgba(56,189,248,.25)}
+        .cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(56,189,248,.35)}
+        .cta-btn svg{width:20px;height:20px}
+        .cta-sub{margin-top:12px;font-size:13px;color:#64748b}
+        .toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#38bdf8;padding:14px 28px;border-radius:12px;font-size:14px;font-weight:500;border:1px solid rgba(56,189,248,.2);box-shadow:0 8px 32px rgba(0,0,0,.4);opacity:0;transition:all .4s cubic-bezier(.16,1,.3,1);z-index:1000}
+        .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+        .container{max-width:720px;margin:0 auto;padding:0 24px 80px}
+        .tabs{display:flex;gap:4px;background:#1a1a24;padding:4px;border-radius:12px;margin-bottom:32px}
+        .tab{flex:1;padding:12px;text-align:center;font-size:14px;font-weight:500;color:#64748b;background:0 0;border:none;border-radius:8px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all .2s}
+        .tab.active{background:#262636;color:#f1f5f9}
+        .tab-content{display:none}.tab-content.active{display:block}
+        .feedback h2{font-size:18px;font-weight:700;color:#f1f5f9;margin:36px 0 16px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.06)}
+        .feedback h2:first-child{margin-top:0}
+        .feedback p{margin:8px 0;color:#cbd5e1}
+        .feedback .item{padding:6px 0 6px 16px;border-left:2px solid #334155;margin:6px 0;color:#cbd5e1}
+        .feedback .numbered{padding:8px 0 8px 16px;color:#cbd5e1}
+        .feedback .numbered strong{color:#38bdf8}
+        .feedback strong{color:#f1f5f9}
+        .feedback code{background:#1e293b;padding:2px 8px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#38bdf8}
+        .feedback table{width:100%;border-collapse:collapse;margin:12px 0}
+        .feedback th,.feedback td{padding:10px 14px;text-align:left;border-bottom:1px solid #262636}
+        .feedback th{color:#94a3b8;font-weight:500;font-size:13px}
+        .feedback td{color:#cbd5e1}
+        .arrow{color:#38bdf8;font-weight:700}
+        .transcript{background:#1a1a24;border-radius:12px;padding:28px;font-size:14px;line-height:2;color:#94a3b8;white-space:pre-wrap;word-break:break-word;font-family:'JetBrains Mono','Noto Sans KR',monospace}
+        .transcript .tutor{color:#38bdf8}
+        .transcript .student{color:#a78bfa}
+        @media(max-width:640px){.header{padding:32px 16px}.header h1{font-size:22px}.cta-btn{padding:14px 28px;font-size:15px}.container{padding:0 16px 60px}}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-date">2026년 10월 12일</div>
+        <h1>📚 전화영어 복습</h1>
+        <div class="header-meta">
+            <span>⏱ 19분 26초</span>
+            <span>🎙 전화영어_025180304_20261012080115.m4a</span>
+        </div>
+    </div>
+    <div class="cta-section">
+        <button class="cta-btn" onclick="startReview()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Gemini에서 복습 대화 시작하기
+        </button>
+        <div class="cta-sub">클릭하면 프롬프트가 복사되고 Gemini가 열립니다</div>
+    </div>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('feedback')">📋 AI 피드백</button>
+            <button class="tab" onclick="switchTab('transcript')">🎙 수업 전사</button>
+        </div>
+        <div id="tab-feedback" class="tab-content active">
+            <div class="feedback"><p><strong>0. 📌 Topic</strong></p>
+<br>
+<p>Topic: Social media filter bubbles, privacy risks, and AI parenting challenges</p>
+<br>
+<h2>📊 오늘의 대화 요약 (Summary)</h2>
+<br>
+<p>조이는 감사팀에서 새 감사 첫 단계(정보 수집·인터뷰)를 진행하는 한편, 퇴근 후에는 AI 코딩을 독학 중이라고 소개했습니다. 강사와 멕시코의 날씨·문화 이야기로 분위기를 풀고, 한국에서 인기 있는 소셜 미디어(인스타그램)의 필터 버블·비교 함정·쿠키 추적 위험성에 대해 깊이 있는 토론을 나눴습니다. AI가 생성한 이미지로 진위를 구분하기 어려워진 현실, 그리고 10살 아들에게 평일 30분·주말 1시간의 스크린 타임 제한을 두면서 AI 리터러시를 길러주려는 부모로서의 고민도 솔직하게 나눴습니다.</p>
+<br>
+<h2>💬 유창성 업그레이드 (Fluency & Natural Flow)</h2>
+<br>
+<p><strong>1.</strong></p>
+<div class="item">❌ As Said: "I can't avoid the rabbit hole."</div>
+<div class="item">✅ Natural: "I keep falling down the rabbit hole."</div>
+<div class="item">💎 Professional: "It's all too easy to get pulled into that rabbit hole."</div>
+<div class="item">💡 코칭 포인트: "Can't avoid" suggests you have no choice at all. "Keep falling down" shows it happens repeatedly despite your awareness — more vivid and honest. (한국어: '어쩔 수 없이 빠진다'보다 '계속 빠져들게 된다'는 표현이 더 생생하고 솔직하게 들립니다.)</div>
+<br>
+<p><strong>2.</strong></p>
+<div class="item">❌ As Said: "I forbid them from gathering my cookies."</div>
+<div class="item">✅ Natural: "I block them from tracking my cookies."</div>
+<div class="item">💎 Professional: "I opt out of cookie tracking to protect my browsing privacy."</div>
+<div class="item">💡 코칭 포인트: "Forbid" is used for people — a parent forbids a child. For apps or websites, use "block," "restrict," or "opt out of." (한국어: 'forbid'는 사람에게 쓰는 표현이고, 웹사이트·앱에는 'block' 또는 'opt out of'가 더 자연스럽습니다.)</div>
+<br>
+<p><strong>3.</strong></p>
+<div class="item">❌ As Said: "Sometimes I feel the comparison trap is a little dangerous."</div>
+<div class="item">✅ Natural: "I find the comparison trap pretty harmful."</div>
+<div class="item">💎 Professional: "The comparison trap social media creates can really damage your self-esteem."</div>
+<div class="item">💡 코칭 포인트: "Feel + noun + is" sounds awkward. Use "find + noun + adjective" when expressing opinions about things. (한국어: 'I feel (명사)는...' 구조보다 'I find (명사) + 형용사'가 의견 표현에 훨씬 더 자연스럽습니다.)</div>
+<br>
+<h2>🔧 고질적 문법 '한 놈만 패기' (Target Grammar)</h2>
+<br>
+<p>Category: verb + noun collocations (fixed verb phrases)</p>
+<br>
+<table>
+<tr><th>❌ 원문</th><th>✅ 교정</th></tr>
+<tr><td>"We went to a small picnic."</td><td>"We went on a picnic." / "We had a picnic."</td></tr>
+<tr><td>"making interviews because that is the first step"</td><td>"conducting interviews as a first step"</td></tr>
+<tr><td>"my son is more easy to use AI and make coding"</td><td>"my son finds it easier to use AI and write code"</td></tr>
+</table>
+<br>
+<p>📌 핵심 규칙: 영어는 동사-명사 조합이 고정되어 있습니다. go <strong>on</strong> a picnic / <strong>conduct</strong> interviews / <strong>write</strong> code — 직역하지 말고 통째로 외우세요.</p>
+<br>
+<p>🔁 따라 읽기:</p>
+<p>🗣️ "We went on a picnic and did some light hiking."</p>
+<p>🗣️ "I'm currently conducting interviews to gather audit information."</p>
+<p>🗣️ "My son finds it easier to write code with the help of AI."</p>
+<br>
+<h2>📗 어휘 확장 (Vocabulary Vault)</h2>
+<br>
+<p><strong>1. filter bubble</strong> /ˈfɪltər ˈbʌb.əl/ (명사)</p>
+<div class="item">뜻: 알고리즘이 비슷한 정보만 노출해 생기는 정보 편향 고립 환경</div>
+<div class="item">실전 예문: "Social media algorithms create a filter bubble that limits your exposure to different viewpoints."</div>
+<br>
+<p><strong>2. opt out of</strong> /ɒpt aʊt/ (구동사)</p>
+<div class="item">뜻: ~에서 탈퇴하다, ~를 거부하다 (데이터 수집·구독 등)</div>
+<div class="item">실전 예문: "You can opt out of targeted ads in the privacy settings menu."</div>
+<br>
+<p><strong>3. conduct</strong> /kənˈdʌkt/ (동사)</p>
+<div class="item">뜻: (공식적 활동을) 수행하다, 실시하다</div>
+<div class="item">실전 예문: "Our team will conduct interviews with key stakeholders this week."</div>
+<br>
+<p><strong>4. screen time</strong> /skriːn taɪm/ (명사구)</p>
+<div class="item">뜻: 화면(스크린) 앞에서 보내는 시간</div>
+<div class="item">실전 예문: "We limit our son's screen time to thirty minutes on weekdays."</div>
+<br>
+<p><strong>5. AI literacy</strong> /ˌeɪ.aɪ ˈlɪt.ər.ə.si/ (명사구)</p>
+<div class="item">뜻: AI를 이해하고 활용하는 능력, AI 리터러시</div>
+<div class="item">실전 예문: "Building AI literacy early will give children a real advantage in the future."</div>
+<br>
+<h2>📝 실전 복습 챌린지 (Practice)</h2>
+<br>
+<p><strong>1. (쉬움)</strong> 지난 주말에 가족과 소풍을 다녀왔다고 말해보세요.</p>
+<div class="item">👉 모범 답안: "Last weekend, I went on a picnic with my family and we also did some light hiking."</div>
+<br>
+<p><strong>2. (중간)</strong> 소셜 미디어 알고리즘이 필터 버블을 만든다고 설명해보세요.</p>
+<div class="item">👉 모범 답안: "Social media algorithms create a filter bubble by only showing you content that matches your past behavior, which can make your worldview increasingly narrow."</div>
+<br>
+<p><strong>3. (어려움)</strong> 아이에게 스크린 타임을 제한하면서도 AI 리터러시를 키워주는 것이 어렵다고 표현해보세요.</p>
+<div class="item">👉 모범 답안: "It's a real challenge to limit my son's screen time while still making sure he builds the AI literacy he'll need in the future. For now, I've been setting a thirty-minute limit on weekdays as a balance."</div>
+<br>
+<h2>✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)</h2>
+<br>
+<p>✨ <strong>Good Job</strong>: "I can't avoid the rabbit hole. So sometimes it is a little dangerous." — 'rabbit hole'이라는 생생한 관용 표현을 자연스럽게 사용했습니다. 원어민도 즐겨 쓰는 표현을 정확한 맥락에서 망설임 없이 구사한 점이 훌륭합니다.</p>
+<br>
+<p>🚀 <strong>내일의 한 문장</strong>: "Have you ever fallen down a social media rabbit hole and regretted it later?"</p>
+<br>
+<br>
+<h2>[성과 지표]</h2>
+<br>
+<p>유창성 점수: 7/10</p>
+<br>
+<p><strong>근거</strong>: 소셜 미디어·AI·자녀 교육이라는 추상적이고 복잡한 주제를 구체적인 사례(쿠키 차단, 비교 함정, 스크린 타임 규칙)로 풀어낸 점이 인상적입니다. 'filter bubble', 'comparison trap', 'rabbit hole' 등 중급 이상의 어휘도 자연스럽게 활용했습니다. 다만 동사-명사 연어(make coding <span class="arrow">→</span> write code, went to a picnic <span class="arrow">→</span> went on a picnic, making interviews <span class="arrow">→</span> conducting interviews) 오류가 반복되었고, occasional tense slip도 있었습니다.</p>
+<br>
+<p><strong>원포인트 액션 플랜</strong>: 다음 수업 전에 "go on a picnic / conduct a meeting / write code / take a trip" 처럼 활동 명사와 함께 쓰는 동사를 3쌍씩 소리 내어 연습해 보세요. 고정 연어를 통째로 외우면 유창성 점수가 바로 올라갑니다.</p></div>
+        </div>
+        <div id="tab-transcript" class="tab-content">
+            <div class="transcript"><span class="tutor">[Tutor]</span> Hello, good morning. Good morning, hello. How are you today?
+[Joey] Yeah, I&#x27;m good, I&#x27;m good. Thank you for asking. How are you today, teacher?
+<span class="tutor">[Tutor]</span> Yeah, I&#x27;m very good, thank you. Yeah, I&#x27;m enjoying my last minutes of Sunday. I&#x27;m in Mexico, so it&#x27;s Sunday afternoon to me.
+[Joey] I see. What time is it now in Mexico?
+<span class="tutor">[Tutor]</span> It&#x27;s 5 p.m. on Sunday.
+[Joey] Oh, 5 p.m.?
+<span class="tutor">[Tutor]</span> 5 p.m. on Sunday.
+<span class="tutor">[Tutor]</span> I see. What about you? What time do you work?
+[Joey] Yes, in Korea, it is 8 o&#x27;clock in the morning, the Monday morning.
+<span class="tutor">[Tutor]</span> Right?
+[Joey] Yeah.
+<span class="tutor">[Tutor]</span> Early morning. How was the weekend? Did you have a good time?
+[Joey] Yes, I met my family and my son and my wife, so I enjoyed my time. Yeah. And we had a three-day break. So we went to a small picnic and just a small trekking. Yeah, well, etc. It was nice. It was nice.
+<span class="tutor">[Tutor]</span> Okay. Excellent. Okay. Well, good. So what do you have to do at work today? What&#x27;s the plan at work?
+[Joey] I work at the audit team, so I start a new audit at another company. So these days I&#x27;m gathering some information and papers and making interviews because that is the first step. So I gather information about that. So these days, yeah, first step of the audit in their office. And another thing is, these days I studied AI, so AI for coding. These days I studied AI and used my personal computer after work. Yeah, that is so interesting and enjoyable to me.
+<span class="tutor">[Tutor]</span> I think everybody should study AI, right?
+[Joey] Yeah, and how about you? Are you traveling now or do you live in Mexico?
+<span class="tutor">[Tutor]</span> No, I live in Mexico. I live here.
+[Joey] I see. When did you move to Mexico and why?
+<span class="tutor">[Tutor]</span> I&#x27;ve lived here for 13 years now. Yes, yes. 13 years now. My wife and I used to live in England, London. Yes, yes. But we decided that we wanted to find a new home, a new country, a new culture, and we found Mexico.
+[Joey] Oh, it&#x27;s so nice. It was nice. How is your life these days? Is it nice weather and nice food? How about that?
+<span class="tutor">[Tutor]</span> It&#x27;s nice weather. Right now, today the weather is great, but we&#x27;re in the winter season, so the weather is not always great. But today, it&#x27;s amazing.
+[Joey] Great. This is winter, right?
+<span class="tutor">[Tutor]</span> Exactly. Now is winter season in Mexico. But, you know, today is a good day. Today the sun is shining, right?
+[Joey] Uh-huh. My dear. I already imagine.
+<span class="tutor">[Tutor]</span> You&#x27;ve never been to Mexico?
+[Joey] Mexico is only summer, but it also has a winter time.
+<span class="tutor">[Tutor]</span> Okay. It also has a winter, yeah. You should come to visit.
+[Joey] When will you travel to Mexico? Oh, someday, because that is far away, and my son is so young. These days I travel to a nearby country, but someday, yeah, I will go to Mexico, because I heard that that country&#x27;s people are so kind and food is so nice. So, yeah, someday I will visit there.
+<span class="tutor">[Tutor]</span> No, most Mexican people are really kind.
+[Joey] Yes.
+<span class="tutor">[Tutor]</span> Most of the Mexican people are really nice.
+[Joey] Yeah. How about the...
+<span class="tutor">[Tutor]</span> Excellent. Uh-huh. Uh-huh. Go on. No, go ahead. Go ahead.
+[Joey] Ah, yes. I just, I was wondering about the security. Is it a little dangerous? I heard the security is a little dangerous. Yeah. Some places are a little dangerous. Is that right or just a little...
+<span class="tutor">[Tutor]</span> Some places. Yeah, I think, well, in any country there are dangerous places. So you&#x27;ve got to be careful. You have to be careful in Mexico. But Mexico is not more dangerous than Korea, for example. In Korea you have to be careful, and in Mexico you have to be careful.
+[Joey] I see. That&#x27;s a wise answer. You&#x27;re right. Every country has a special point.
+<span class="tutor">[Tutor]</span> They do, yeah. Okay. Good. So let&#x27;s open your book today. So we&#x27;re talking about social media. That&#x27;s our topic.
+[Joey] Social media. Okay, but I didn&#x27;t prepare. Is it possible to be talking?
+<span class="tutor">[Tutor]</span> Yeah, sure. So tell me about social media. Do you trust it?
+[Joey] Oh, social media. Oh, yes, sometimes I believe that, but sometimes I can&#x27;t avoid the rabbit hole. I can&#x27;t avoid the rabbit hole. So sometimes it is a little dangerous.
+<span class="tutor">[Tutor]</span> What&#x27;s the best social media in Korea?
+[Joey] Social media? Many Koreans use Instagram. So, they like the pictures. So, it is a nice social media, but sometimes the algorithm is the same because many people use only one kind of information. And that is the, how can I say, filter bubble, yes. It creates a filter bubble, and you can&#x27;t avoid the filter bubble. So it has some negative aspects, yeah.
+<span class="tutor">[Tutor]</span> Okay. Okay, yeah. Wow. So tell me about the news right now. What&#x27;s the news in Korea for this morning, Monday morning? Have you seen any news?
+[Joey] Oh, no. This is the early morning and I just woke up, so I don&#x27;t check the information or news. And these days, we don&#x27;t have any special news, just small and not big events. How about your country? How about Mexico? Is there big news in Mexico nowadays? Right now?
+<span class="tutor">[Tutor]</span> Yeah, right now there&#x27;s no big news in Mexico. Right now the biggest thing in Mexico is that we have problems. Donald Trump and Mexico are in a problem right now. They don&#x27;t have a... They are neighbors, but they don&#x27;t like each other.
+[Joey] Yeah, you&#x27;re right. He always causes problems. You&#x27;re right. It always makes problems, right?
+<span class="tutor">[Tutor]</span> Yeah. But can we trust social media? Do you think we can trust everything we hear? Or we should be careful?
+[Joey] We cannot trust everything. Yes, but I think social media is gathering personal information and then they give the information. So I can&#x27;t say believe it or not. It&#x27;s just social media, but the way they use our information is a little special because they gather our cookie information and then give us the same algorithm. That algorithm is a little dangerous because it makes me a biased person. For example, if I search some information on SNS and every information is the same. If I search for virus information or sexual information, social media gathers my cookies and then social media gives the same information. Yeah, so sometimes that is dangerous. So usually I forbid them from gathering my cookies because my cookies are there, they use that and then they give us some biased information. So yeah, it is a little problem.
+<span class="tutor">[Tutor]</span> Yes. So how do you, how do you protect yourself? Tell me, what do you do? How can you protect yourself from personal information, for the security?
+[Joey] I think I just believe my personal information is public information nowadays, so it is almost impossible to prevent them from using my information. So I don&#x27;t use Instagram or Facebook anymore. I just don&#x27;t use SNS. And sometimes I feel the comparison trap is a little dangerous because Instagram makes me always compare myself to rich guys, happy guys, or beautiful or healthy people. But usually Instagram posts are, how can I say, they post the rich group or some beautiful nice picture selection of the rich and beauty and nice. So it is not common daily life, but many people believe that. They always compare themselves to other people, so that makes me unhappy. So I also don&#x27;t use Instagram or SNS anymore nowadays because I think happiness comes from my mind. But if I compare myself to other people, I can&#x27;t make myself happy. Yeah, so it is a real problem.
+<span class="tutor">[Tutor]</span> Well, I mean, we&#x27;ve got to be careful because there&#x27;s a lot of dangers online. Yeah. Maybe you could believe something, but maybe it&#x27;s not true.
+[Joey] Yes, you&#x27;re right. It is sometimes true, but some news is not true. You&#x27;re right. We can&#x27;t distinguish true or not, but that is so, we can&#x27;t be correct. Yes, difficult and so difficult. Yes, you&#x27;re right. And today, AI started producing images. And in the past they made an ugly image. But these days, that image is so natural. So it is also hard to distinguish true or not. Yeah, that is also a problem.
+<span class="tutor">[Tutor]</span> Exactly. True. Exactly. Nowadays it&#x27;s hard to tell what is AI and what is regular, right?
+[Joey] Yes, yes, it is a little dangerous, dangerous and it is, we can&#x27;t distinguish true or not.
+<span class="tutor">[Tutor]</span> So what about your family? Do you have kids at home or just you and your wife?
+[Joey] Oh, I have a baby, my son, and he&#x27;s 10 years old. And that is also a problem because sometimes I give him my mobile phone or laptop because this generation uses AI, so it is important to use the computer or the mobile phone or some IT device. So I give some laptop computer to my son, but just if I just give him that laptop, it is really dangerous because he doesn&#x27;t have the power to distinguish true or not or just gathering information about another truth. So I&#x27;m a little afraid. And sometimes, yeah, it is tough. It is tough. So I just give him a time limit, for example, 30 minutes per day or on weekends one hour per day. I give the time, and I&#x27;m not sure how I can do it, just give a time. And yeah, because they live with AI, and he, yeah, if he grows up, he will live with AI. So he studies AI and IT devices, so it is impossible to forbid everything, just give a time. It&#x27;s impossible.
+<span class="tutor">[Tutor]</span> Yes, you have to, instead of &quot;it&#x27;s impossible, I can&#x27;t do anything,&quot; you have to try to find a way to work with it, right?
+[Joey] Yes, yes, you&#x27;re right. How about you? Do you have a son? What is your approach to IT devices? No kids.
+<span class="tutor">[Tutor]</span> Ah, yes. I&#x27;m lucky because I have no kids. Yes, okay, I see. Good. Yeah, for me, life is easy because no kids.
+[Joey] Yes, I understand. Kids, no problem, right? Yes.
+<span class="tutor">[Tutor]</span> But you know, kids today, they&#x27;re so smart. I mean, AI and the kids, it seems like they know more than we know, right? The kids today, they learn so quickly.
+[Joey] Okay. Teacher, could you repeat your question? I can&#x27;t understand perfectly.
+<span class="tutor">[Tutor]</span> No, no. So the kids today, children, they learn so quickly.
+[Joey] Ah, yes. Because that generation, the kid generation, just lives together with AI. So they were born, but anywhere there is AI. So it is easy to observe, to live with AI.
+<span class="tutor">[Tutor]</span> Yeah, and AI is built for the younger generation. You know, now AI is easier for them than it is for us.
+[Joey] Yes, you&#x27;re right. It is more easy. Maybe it could be easier for your son, yeah, than for you. Yes.
+<span class="tutor">[Tutor]</span> Yeah.
+[Joey] For example, these days I make coding using AI, and I teach that way to my son, but my son is more easy to use AI and make coding. So yeah, it is different because I&#x27;m not from that generation.
+<span class="tutor">[Tutor]</span> Yes, because he knows more than you. It&#x27;s kind of difficult, dangerous, because he knows more AI than you do, right?
+[Joey] Yes, yes. I&#x27;m not sure because it is a first experience for everyone. So yes, we don&#x27;t guess the future. Usually we can imagine the future because it is possible to scenario, but this AI is the first step and first experience for everyone. You can&#x27;t imagine the future. Yeah, it is a problem.
+<span class="tutor">[Tutor]</span> A huge problem. And as your boy grows, the problem grows, right?
+[Joey] Yeah, he grows up and he makes his way.
+<span class="tutor">[Tutor]</span> Exactly. Yeah. Okay. Well, nothing to worry about. It doesn&#x27;t make any sense to worry about it right now.
+[Joey] No?
+<span class="tutor">[Tutor]</span> Not yet.
+[Joey] Yes. Not yet. You&#x27;re right. Okay.
+<span class="tutor">[Tutor]</span> So tell me, it is 8 a.m. or 8:20. Do you have some time for breakfast or straight to work now?
+[Joey] Every lunch, after lunch, I go to work near a park. So at that time, just one hour, I break, break and take off just everything and just take a rest. So it is good time for, yeah, the work time. Take a rest. Yeah, take a rest.
+<span class="tutor">[Tutor]</span> Okay. Okay. All right. Excellent. Well, any questions for me today?
+[Joey] All right. Oh, yeah, no. I thank you for your class. And yeah, I don&#x27;t have questions. Thank you for your class.
+<span class="tutor">[Tutor]</span> Alrighty. Well, well done. Thank you as well. Okay. Okay.
+[Joey] Have a nice day, teacher.
+<span class="tutor">[Tutor]</span> All right. I&#x27;ll see you next time. Okay. You take care. Bye-bye.
+[Joey] Take care. Bye.</div>
+        </div>
+    </div>
+    <div class="toast" id="toast">✅ 프롬프트가 복사되었습니다!</div>
+    <script>
+        const REVIEW_PROMPT="너는 나의 영어 회화 복습 파트너야. 오늘 내 전화영어 수업 내용을 기반으로 대화하면서 복습을 도와줘.\n\n[오늘 수업 전사 내용]\n[Tutor] Hello, good morning. Good morning, hello. How are you today?\n[Joey] Yeah, I'm good, I'm good. Thank you for asking. How are you today, teacher?\n[Tutor] Yeah, I'm very good, thank you. Yeah, I'm enjoying my last minutes of Sunday. I'm in Mexico, so it's Sunday afternoon to me.\n[Joey] I see. What time is it now in Mexico?\n[Tutor] It's 5 p.m. on Sunday.\n[Joey] Oh, 5 p.m.?\n[Tutor] 5 p.m. on Sunday.\n[Tutor] I see. What about you? What time do you work?\n[Joey] Yes, in Korea, it is 8 o'clock in the morning, the Monday morning.\n[Tutor] Right?\n[Joey] Yeah.\n[Tutor] Early morning. How was the weekend? Did you have a good time?\n[Joey] Yes, I met my family and my son and my wife, so I enjoyed my time. Yeah. And we had a three-day break. So we went to a small picnic and just a small trekking. Yeah, well, etc. It was nice. It was nice.\n[Tutor] Okay. Excellent. Okay. Well, good. So what do you have to do at work today? What's the plan at work?\n[Joey] I work at the audit team, so I start a new audit at another company. So these days I'm gathering some information and papers and making interviews because that is the first step. So I gather information about that. So these days, yeah, first step of the audit in their office. And another thing is, these days I studied AI, so AI for coding. These days I studied AI and used my personal computer after work. Yeah, that is so interesting and enjoyable to me.\n[Tutor] I think everybody should study AI, right?\n[Joey] Yeah, and how about you? Are you traveling now or do you live in Mexico?\n[Tutor] No, I live in Mexico. I live here.\n[Joey] I see. When did you move to Mexico and why?\n[Tutor] I've lived here for 13 years now. Yes, yes. 13 years now. My wife and I used to live in England, London. Yes, yes. But we decided that we wanted to find a new home, a new country, a new culture, and we found Mexico.\n[Joey] Oh, it's so nice. It was nice. How is your life these days? Is it nice weather and nice food? How about that?\n[Tutor] It's nice weather. Right now, today the weather is great, but we're in the winter season, so the weather is not always great. But today, it's amazing.\n[Joey] Great. This is winter, right?\n[Tutor] Exactly. Now is winter season in Mexico. But, you know, today is a good day. Today the sun is shining, right?\n[Joey] Uh-huh. My dear. I already imagine.\n[Tutor] You've never been to Mexico?\n[Joey] Mexico is only summer, but it also has a winter time.\n[Tutor] Okay. It also has a winter, yeah. You should come to visit.\n[Joey] When will you travel to Mexico? Oh, someday, because that is far away, and my son is so young. These days I travel to a nearby country, but someday, yeah, I will go to Mexico, because I heard that that country's people are so kind and food is so nice. So, yeah, someday I will visit there.\n[Tutor] No, most Mexican people are really kind.\n[Joey] Yes.\n[Tutor] Most of the Mexican people are really nice.\n[Joey] Yeah. How about the...\n[Tutor] Excellent. Uh-huh. Uh-huh. Go on. No, go ahead. Go ahead.\n[Joey] Ah, yes. I just, I was wondering about the security. Is it a little dangerous? I heard the security is a little dangerous. Yeah. Some places are a little dangerous. Is that right or just a little...\n[Tutor] Some places. Yeah, I think, well, in any country there are dangerous places. So you've got to be careful. You have to be careful in Mexico. But Mexico is not more dangerous than Korea, for example. In Korea you have to be careful, and in Mexico you have to be careful.\n[Joey] I see. That's a wise answer. You're right. Every country has a special point.\n[Tutor] They do, yeah. Okay. Good. So let's open your book today. So we're talking about social media. That's our topic.\n[Joey] Social media. Okay, but I didn't prepare. Is it possible to be talking?\n[Tutor] Yeah, sure. So tell me about social media. Do you trust it?\n[Joey] Oh, social media. Oh, yes, sometimes I believe that, but sometimes I can't avoid the rabbit hole. I can't avoid the rabbit hole. So sometimes it is a little dangerous.\n[Tutor] What's the best social media in Korea?\n[Joey] Social media? Many Koreans use Instagram. So, they like the pictures. So, it is a nice social media, but sometimes the algorithm is the same because many people use only one kind of information. And that is the, how can I say, filter bubble, yes. It creates a filter bubble, and you can't avoid the filter bubble. So it has some negative aspects, yeah.\n[Tutor] Okay. Okay, yeah. Wow. So tell me about the news right now. What's the news in Korea for this morning, Monday morning? Have you seen any news?\n[Joey] Oh, no. This is the early morning and I just woke up, so I don't check the information or news. And these days, we don't have any special news, just small and not big events. How about your country? How about Mexico? Is there big news in Mexico nowadays? Right now?\n[Tutor] Yeah, right now there's no big news in Mexico. Right now the biggest thing in Mexico is that we have problems. Donald Trump and Mexico are in a problem right now. They don't have a... They are neighbors, but they don't like each other.\n[Joey] Yeah, you're right. He always causes problems. You're right. It always makes problems, right?\n[Tutor] Yeah. But can we trust social media? Do you think we can trust everything we hear? Or we should be careful?\n[Joey] We cannot trust everything. Yes, but I think social media is gathering personal information and then they give the information. So I can't say believe it or not. It's just social media, but the way they use our information is a little special because they gather our cookie information and then give us the same algorithm. That algorithm is a little dangerous because it makes me a biased person. For example, if I search some information on SNS and every information is the same. If I search for virus information or sexual information, social media gathers my cookies and then social media gives the same information. Yeah, so sometimes that is dangerous. So usually I forbid them from gathering my cookies because my cookies are there, they use that and then they give us some biased information. So yeah, it is a little problem.\n[Tutor] Yes. So how do you, how do you protect yourself? Tell me, what do you do? How can you protect yourself from personal information, for the security?\n[Joey] I think I just believe my personal information is public information nowadays, so it is almost impossible to prevent them from using my information. So I don't use Instagram or Facebook anymore. I just don't use SNS. And sometimes I feel the comparison trap is a little dangerous because Instagram makes me always compare myself to rich guys, happy guys, or beautiful or healthy people. But usually Instagram posts are, how can I say, they post the rich group or some beautiful nice picture selection of the rich and beauty and nice. So it is not common daily life, but many people believe that. They always compare themselves to other people, so that makes me unhappy. So I also don't use Instagram or SNS anymore nowadays because I think happiness comes from my mind. But if I compare myself to other people, I can't make myself happy. Yeah, so it is a real problem.\n[Tutor] Well, I mean, we've got to be careful because there's a lot of dangers online. Yeah. Maybe you could believe something, but maybe it's not true.\n[Joey] Yes, you're right. It is sometimes true, but some news is not true. You're right. We can't distinguish true or not, but that is so, we can't be correct. Yes, difficult and so difficult. Yes, you're right. And today, AI started producing images. And in the past they made an ugly image. But these days, that image is so natural. So it is also hard to distinguish true or not. Yeah, that is also a problem.\n[Tutor] Exactly. True. Exactly. Nowadays it's hard to tell what is AI and what is regular, right?\n[Joey] Yes, yes, it is a little dangerous, dangerous and it is, we can't distinguish true or not.\n[Tutor] So what about your family? Do you have kids at home or just you and your wife?\n[Joey] Oh, I have a baby, my son, and he's 10 years old. And that is also a problem because sometimes I give him my mobile phone or laptop because this generation uses AI, so it is important to use the computer or the mobile phone or some IT device. So I give some laptop computer to my son, but just if I just give him that laptop, it is really dangerous because he doesn't have the power to distinguish true or not or just gathering information about another truth. So I'm a little afraid. And sometimes, yeah, it is tough. It is tough. So I just give him a time limit, for example, 30 minutes per day or on weekends one hour per day. I give the time, and I'm not sure how I can do it, just give a time. And yeah, because they live with AI, and he, yeah, if he grows up, he will live with AI. So he studies AI and IT devices, so it is impossible to forbid everything, just give a time. It's impossible.\n[Tutor] Yes, you have to, instead of \"it's impossible, I can't do anything,\" you have to try to find a way to work with it, right?\n[Joey] Yes, yes, you're right. How about you? Do you have a son? What is your approach to IT devices? No kids.\n[Tutor] Ah, yes. I'm lucky because I have no kids. Yes, okay, I see. Good. Yeah, for me, life is easy because no kids.\n[Joey] Yes, I understand. Kids, no problem, right? Yes.\n[Tutor] But you know, kids today, they're so smart. I mean, AI and the kids, it seems like they know more than we know, right? The kids today, they learn so quickly.\n[Joey] Okay. Teacher, could you repeat your question? I can't understand perfectly.\n[Tutor] No, no. So the kids today, children, they learn so quickly.\n[Joey] Ah, yes. Because that generation, the kid generation, just lives together with AI. So they were born, but anywhere there is AI. So it is easy to observe, to live with AI.\n[Tutor] Yeah, and AI is built for the younger generation. You know, now AI is easier for them than it is for us.\n[Joey] Yes, you're right. It is more easy. Maybe it could be easier for your son, yeah, than for you. Yes.\n[Tutor] Yeah.\n[Joey] For example, these days I make coding using AI, and I teach that way to my son, but my son is more easy to use AI and make coding. So yeah, it is different because I'm not from that generation.\n[Tutor] Yes, because he knows more than you. It's kind of difficult, dangerous, because he knows more AI than you do, right?\n[Joey] Yes, yes. I'm not sure because it is a first experience for everyone. So yes, we don't guess the future. Usually we can imagine the future because it is possible to scenario, but this AI is the first step and first experience for everyone. You can't imagine the future. Yeah, it is a problem.\n[Tutor] A huge problem. And as your boy grows, the problem grows, right?\n[Joey] Yeah, he grows up and he makes his way.\n[Tutor] Exactly. Yeah. Okay. Well, nothing to worry about. It doesn't make any sense to worry about it right now.\n[Joey] No?\n[Tutor] Not yet.\n[Joey] Yes. Not yet. You're right. Okay.\n[Tutor] So tell me, it is 8 a.m. or 8:20. Do you have some time for breakfast or straight to work now?\n[Joey] Every lunch, after lunch, I go to work near a park. So at that time, just one hour, I break, break and take off just everything and just take a rest. So it is good time for, yeah, the work time. Take a rest. Yeah, take a rest.\n[Tutor] Okay. Okay. All right. Excellent. Well, any questions for me today?\n[Joey] All right. Oh, yeah, no. I thank you for your class. And yeah, I don't have questions. Thank you for your class.\n[Tutor] Alrighty. Well, well done. Thank you as well. Okay. Okay.\n[Joey] Have a nice day, teacher.\n[Tutor] All right. I'll see you next time. Okay. You take care. Bye-bye.\n[Joey] Take care. Bye.\n\n[AI 피드백]\n**0. 📌 Topic**\n\nTopic: Social media filter bubbles, privacy risks, and AI parenting challenges\n\n## 📊 오늘의 대화 요약 (Summary)\n\n조이는 감사팀에서 새 감사 첫 단계(정보 수집·인터뷰)를 진행하는 한편, 퇴근 후에는 AI 코딩을 독학 중이라고 소개했습니다. 강사와 멕시코의 날씨·문화 이야기로 분위기를 풀고, 한국에서 인기 있는 소셜 미디어(인스타그램)의 필터 버블·비교 함정·쿠키 추적 위험성에 대해 깊이 있는 토론을 나눴습니다. AI가 생성한 이미지로 진위를 구분하기 어려워진 현실, 그리고 10살 아들에게 평일 30분·주말 1시간의 스크린 타임 제한을 두면서 AI 리터러시를 길러주려는 부모로서의 고민도 솔직하게 나눴습니다.\n\n## 💬 유창성 업그레이드 (Fluency & Natural Flow)\n\n**1.**\n- ❌ As Said: \"I can't avoid the rabbit hole.\"\n- ✅ Natural: \"I keep falling down the rabbit hole.\"\n- 💎 Professional: \"It's all too easy to get pulled into that rabbit hole.\"\n- 💡 코칭 포인트: \"Can't avoid\" suggests you have no choice at all. \"Keep falling down\" shows it happens repeatedly despite your awareness — more vivid and honest. (한국어: '어쩔 수 없이 빠진다'보다 '계속 빠져들게 된다'는 표현이 더 생생하고 솔직하게 들립니다.)\n\n**2.**\n- ❌ As Said: \"I forbid them from gathering my cookies.\"\n- ✅ Natural: \"I block them from tracking my cookies.\"\n- 💎 Professional: \"I opt out of cookie tracking to protect my browsing privacy.\"\n- 💡 코칭 포인트: \"Forbid\" is used for people — a parent forbids a child. For apps or websites, use \"block,\" \"restrict,\" or \"opt out of.\" (한국어: 'forbid'는 사람에게 쓰는 표현이고, 웹사이트·앱에는 'block' 또는 'opt out of'가 더 자연스럽습니다.)\n\n**3.**\n- ❌ As Said: \"Sometimes I feel the comparison trap is a little dangerous.\"\n- ✅ Natural: \"I find the comparison trap pretty harmful.\"\n- 💎 Professional: \"The comparison trap social media creates can really damage your self-esteem.\"\n- 💡 코칭 포인트: \"Feel + noun + is\" sounds awkward. Use \"find + noun + adjective\" when expressing opinions about things. (한국어: 'I feel (명사)는...' 구조보다 'I find (명사) + 형용사'가 의견 표현에 훨씬 더 자연스럽습니다.)\n\n## 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)\n\nCategory: verb + noun collocations (fixed verb phrases)\n\n| ❌ 원문 | ✅ 교정 |\n|---|---|\n| \"We went to a small picnic.\" | \"We went on a picnic.\" / \"We had a picnic.\" |\n| \"making interviews because that is the first step\" | \"conducting interviews as a first step\" |\n| \"my son is more easy to use AI and make coding\" | \"my son finds it easier to use AI and write code\" |\n\n📌 핵심 규칙: 영어는 동사-명사 조합이 고정되어 있습니다. go **on** a picnic / **conduct** interviews / **write** code — 직역하지 말고 통째로 외우세요.\n\n🔁 따라 읽기:\n🗣️ \"We went on a picnic and did some light hiking.\"\n🗣️ \"I'm currently conducting interviews to gather audit information.\"\n🗣️ \"My son finds it easier to write code with the help of AI.\"\n\n## 📗 어휘 확장 (Vocabulary Vault)\n\n**1. filter bubble** /ˈfɪltər ˈbʌb.əl/ (명사)\n- 뜻: 알고리즘이 비슷한 정보만 노출해 생기는 정보 편향 고립 환경\n- 실전 예문: \"Social media algorithms create a filter bubble that limits your exposure to different viewpoints.\"\n\n**2. opt out of** /ɒpt aʊt/ (구동사)\n- 뜻: ~에서 탈퇴하다, ~를 거부하다 (데이터 수집·구독 등)\n- 실전 예문: \"You can opt out of targeted ads in the privacy settings menu.\"\n\n**3. conduct** /kənˈdʌkt/ (동사)\n- 뜻: (공식적 활동을) 수행하다, 실시하다\n- 실전 예문: \"Our team will conduct interviews with key stakeholders this week.\"\n\n**4. screen time** /skriːn taɪm/ (명사구)\n- 뜻: 화면(스크린) 앞에서 보내는 시간\n- 실전 예문: \"We limit our son's screen time to thirty minutes on weekdays.\"\n\n**5. AI literacy** /ˌeɪ.aɪ ˈlɪt.ər.ə.si/ (명사구)\n- 뜻: AI를 이해하고 활용하는 능력, AI 리터러시\n- 실전 예문: \"Building AI literacy early will give children a real advantage in the future.\"\n\n## 📝 실전 복습 챌린지 (Practice)\n\n**1. (쉬움)** 지난 주말에 가족과 소풍을 다녀왔다고 말해보세요.\n- 👉 모범 답안: \"Last weekend, I went on a picnic with my family and we also did some light hiking.\"\n\n**2. (중간)** 소셜 미디어 알고리즘이 필터 버블을 만든다고 설명해보세요.\n- 👉 모범 답안: \"Social media algorithms create a filter bubble by only showing you content that matches your past behavior, which can make your worldview increasingly narrow.\"\n\n**3. (어려움)** 아이에게 스크린 타임을 제한하면서도 AI 리터러시를 키워주는 것이 어렵다고 표현해보세요.\n- 👉 모범 답안: \"It's a real challenge to limit my son's screen time while still making sure he builds the AI literacy he'll need in the future. For now, I've been setting a thirty-minute limit on weekdays as a balance.\"\n\n## ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)\n\n✨ **Good Job**: \"I can't avoid the rabbit hole. So sometimes it is a little dangerous.\" — 'rabbit hole'이라는 생생한 관용 표현을 자연스럽게 사용했습니다. 원어민도 즐겨 쓰는 표현을 정확한 맥락에서 망설임 없이 구사한 점이 훌륭합니다.\n\n🚀 **내일의 한 문장**: \"Have you ever fallen down a social media rabbit hole and regretted it later?\"\n\n---\n\n## [성과 지표]\n\n유창성 점수: 7/10\n\n**근거**: 소셜 미디어·AI·자녀 교육이라는 추상적이고 복잡한 주제를 구체적인 사례(쿠키 차단, 비교 함정, 스크린 타임 규칙)로 풀어낸 점이 인상적입니다. 'filter bubble', 'comparison trap', 'rabbit hole' 등 중급 이상의 어휘도 자연스럽게 활용했습니다. 다만 동사-명사 연어(make coding → write code, went to a picnic → went on a picnic, making interviews → conducting interviews) 오류가 반복되었고, occasional tense slip도 있었습니다.\n\n**원포인트 액션 플랜**: 다음 수업 전에 \"go on a picnic / conduct a meeting / write code / take a trip\" 처럼 활동 명사와 함께 쓰는 동사를 3쌍씩 소리 내어 연습해 보세요. 고정 연어를 통째로 외우면 유창성 점수가 바로 올라갑니다.\n\n위 내용을 바탕으로:\n1. 먼저 오늘 수업에서 내가 틀렸거나 어색했던 표현을 하나 골라서, 관련된 상황을 영어로 질문해줘.\n2. 내가 영어로 대답하면, 자연스러운지 확인하고 더 나은 표현이 있으면 알려줘.\n3. 특히 \"반복 실수 패턴\"에서 지적된 부분을 집중적으로 연습시켜줘.\n4. 이런 식으로 오늘 배운 표현들을 하나씩 복습하자.\n5. 한국어 설명은 필요할 때만 간단히, 대화는 최대한 영어로 진행해줘.\n\n그럼 시작하자!";
+        function startReview(){navigator.clipboard.writeText(REVIEW_PROMPT).then(()=>{showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)}).catch(()=>{const t=document.createElement('textarea');t.value=REVIEW_PROMPT;document.body.appendChild(t);t.select();document.execCommand('copy');document.body.removeChild(t);showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)})}
+        function showToast(){const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500)}
+        function switchTab(n){document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',n==='feedback'?i===0:i===1));document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));document.getElementById('tab-'+n).classList.add('active')}
+    </script>
+</body>
+</html>
