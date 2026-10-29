@@ -24,6 +24,38 @@ from googleapiclient.http import MediaIoBaseUpload
 FILE_NAME = os.environ.get("DRIVE_RAW_FILE_NAME", "").strip() or "whisper_raw.jsonl"
 
 
+def explain_missing(service, folder):
+    """
+    못 찾았을 때 흔한 원인(다른 폴더에 올림 · 메모장이 .txt 를 붙임 · 이름 오타)을 짚어 준다.
+    Actions 로그는 공개이므로 폴더 ID 는 찍지 않고 '완료 폴더 / 수신 폴더 / 다른 폴더' 로만 말한다.
+    """
+    inbox = os.environ.get("DRIVE_FOLDER_ID", "").strip()
+    try:
+        name = service.files().get(fileId=folder, fields="name").execute().get("name")
+        print(f"   ℹ️ 완료 폴더 이름: '{name}' (처리 끝난 녹음 전화영어_….m4a 가 옮겨지는 곳)")
+    except Exception as e:  # noqa: BLE001 — 안내용이라 실패해도 점검 결과는 그대로
+        print(f"   ⚠️ 완료 폴더 정보를 읽지 못함: {type(e).__name__}")
+    stem = FILE_NAME.split("_")[0]  # 'whisper' — 이름 앞부분으로 넓게 찾는다(Drive 의 contains 는 앞부분 일치)
+    try:
+        near = service.files().list(
+            q=f"name contains '{stem}' and trashed = false",
+            pageSize=10,
+            fields="files(name, mimeType, parents, createdTime)",
+        ).execute().get("files", [])
+    except Exception as e:  # noqa: BLE001
+        print(f"   ⚠️ 비슷한 파일 찾기 실패: {type(e).__name__}")
+        return
+    if not near:
+        print(f"   ℹ️ 로봇 계정이 볼 수 있는 곳에 이름이 '{stem}' 으로 시작하는 파일이 없습니다 → "
+              "로봇과 공유되지 않은 폴더에 올렸거나, PC 의 Drive 앱 동기화가 아직 안 끝났을 수 있습니다")
+    for f in near:
+        parents = f.get("parents") or []
+        where = "완료 폴더" if folder in parents else "수신 폴더(녹음이 처음 올라오는 곳)" if inbox and inbox in parents else "다른 폴더"
+        print(f"   🔎 비슷한 파일: {f['name']!r} · {where} · 형식 {f.get('mimeType')} · 올린 시각 {f.get('createdTime', '')[:16]}Z")
+    if near:
+        print(f"   👉 이름을 정확히 '{FILE_NAME}' 로, 위치를 완료 폴더로 맞추면 됩니다")
+
+
 def main():
     creds_b64 = os.environ.get("GOOGLE_CREDENTIALS", "")
     folder = os.environ.get("DRIVE_RAW_FOLDER_ID", "").strip() or os.environ.get("DRIVE_DONE_FOLDER_ID", "").strip()
@@ -43,6 +75,7 @@ def main():
     ).execute().get("files", [])
     if not found:
         print(f"❌ '{FILE_NAME}' 파일이 완료 폴더에 없습니다. 빈 파일을 만들어 올려 주세요.")
+        explain_missing(service, folder)
         return 1
     if len(found) > 1:
         # 본 흐름(process_lesson.read_raw_archive)은 이 상태에서 아무 데도 쓰지 않는다
