@@ -34,6 +34,7 @@ jobs:
         env:
           GOOGLE_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIALS }}
           DRIVE_DONE_FOLDER_ID: ${{ secrets.DRIVE_DONE_FOLDER_ID }}
+          DRIVE_FOLDER_ID: ${{ secrets.DRIVE_FOLDER_ID }}  # 못 찾았을 때 '수신 폴더에 올렸는지' 안내용
       - name: 빠진 원본 목록 / 채우기
         if: always()
         run: |
