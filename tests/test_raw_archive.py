@@ -107,6 +107,37 @@ def _name(day):
     return f"전화영어_025180304_{day.replace('-', '')}080020.m4a"
 
 
+def fix_name_checks(check):
+    """점검 스크립트의 이름 바로잡기 — 메모장이 붙인 .txt 를, 완료 폴더에 딱 1개일 때만 고친다."""
+    sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "scripts"))
+    import check_raw_archive as C
+
+    class NameDrive:
+        def __init__(self, n_txt, fail=False):
+            self.n_txt, self.fail, self.renamed = n_txt, fail, []
+
+        def files(self):
+            return self
+
+        def list(self, q="", **_):
+            return _Call(lambda: {"files": [{"id": f"T{i}"} for i in range(self.n_txt)] if "jsonl.txt" in q else []})
+
+        def update(self, fileId=None, body=None, **_):
+            def run():
+                if self.fail:
+                    raise PermissionError("403")
+                self.renamed.append((fileId, body["name"]))
+                return {"id": fileId, "size": "0"}
+            return _Call(run)
+
+    d = NameDrive(1)
+    check("이름 바로잡기: .txt 1개면 고침", C.fix_txt_suffix(d, "DONE") == [{"id": "T0", "size": "0"}]
+          and d.renamed == [("T0", "whisper_raw.jsonl")])
+    d = NameDrive(2)
+    check("이름 바로잡기: 2개면 손대지 않음", C.fix_txt_suffix(d, "DONE") == [] and d.renamed == [])
+    check("이름 바로잡기: 권한 오류 흡수", C.fix_txt_suffix(NameDrive(1, fail=True), "DONE") == [])
+
+
 def backfill_checks(check):
     """빠진 원본 채우기(scripts/backfill_raw.py) — 처리 기록과 보관 파일을 맞춰 빠진 것만 채운다."""
     import tempfile
@@ -294,6 +325,7 @@ def main():
     check("앞 보관 끝나면 다시 동작", save(FakeDrive(content=b""), file_id="A3") == "saved")
 
     backfill_checks(check)
+    fix_name_checks(check)
 
     print(f"\n{'ALL PASS' if not failures else 'FAILED: ' + ', '.join(failures)}")
     return 1 if failures else 0
