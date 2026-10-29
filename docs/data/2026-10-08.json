@@ -1,0 +1,49 @@
+{
+ "date": "2026-10-08",
+ "iso": [
+  2026,
+  41
+ ],
+ "topic": "Resolving a technical issue before the lesson starts",
+ "grammar": "Precise Verb Choice",
+ "grammar_norm": "Precise Verb Choice",
+ "score": 7.0,
+ "pairs": [
+  {
+   "said": "do you hear my voice?",
+   "natural": "Can you hear me?"
+  },
+  {
+   "said": "I think I'm having an audio issue. Could you call me back, please?",
+   "natural": "I think I'm having an audio issue. Could you call me back, please?"
+  }
+ ],
+ "vocab": [
+  {
+   "word": "audio",
+   "pos": "n.",
+   "meaning": "오디오, 음성"
+  },
+  {
+   "word": "connection",
+   "pos": "n.",
+   "meaning": "연결, 접속"
+  },
+  {
+   "word": "redial",
+   "pos": "v.",
+   "meaning": "(전화를) 다시 걸다, 재다이얼하다"
+  },
+  {
+   "word": "clarity",
+   "pos": "n.",
+   "meaning": "명확성, 선명도"
+  },
+  {
+   "word": "troubleshoot",
+   "pos": "v.",
+   "meaning": "문제 해결하다, 고장 원인을 찾아내다"
+  }
+ ],
+ "_html_md5": "607c751c4c9aa2505b25a631f9f47ced"
+}

@@ -1,0 +1,53 @@
+{
+ "date": "2026-10-12",
+ "iso": [
+  2026,
+  42
+ ],
+ "topic": "Social media filter bubbles, privacy risks, and AI parenting challenges",
+ "grammar": "verb",
+ "grammar_norm": "Verb",
+ "score": 7.0,
+ "pairs": [
+  {
+   "said": "I can't avoid the rabbit hole.",
+   "natural": "I keep falling down the rabbit hole."
+  },
+  {
+   "said": "I forbid them from gathering my cookies.",
+   "natural": "I block them from tracking my cookies."
+  },
+  {
+   "said": "Sometimes I feel the comparison trap is a little dangerous.",
+   "natural": "I find the comparison trap pretty harmful."
+  }
+ ],
+ "vocab": [
+  {
+   "word": "filter bubble",
+   "pos": "명사",
+   "meaning": "알고리즘이 비슷한 정보만 노출해 생기는 정보 편향 고립 환경"
+  },
+  {
+   "word": "opt out of",
+   "pos": "구동사",
+   "meaning": "~에서 탈퇴하다, ~를 거부하다 (데이터 수집·구독 등)"
+  },
+  {
+   "word": "conduct",
+   "pos": "동사",
+   "meaning": "(공식적 활동을) 수행하다, 실시하다"
+  },
+  {
+   "word": "screen time",
+   "pos": "명사구",
+   "meaning": "화면(스크린) 앞에서 보내는 시간"
+  },
+  {
+   "word": "AI literacy",
+   "pos": "명사구",
+   "meaning": "AI를 이해하고 활용하는 능력, AI 리터러시"
+  }
+ ],
+ "_html_md5": "6838954989ac3a4b7afd14bc906bd1b0"
+}

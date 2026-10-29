@@ -1,0 +1,53 @@
+{
+ "date": "2026-10-27",
+ "iso": [
+  2026,
+  44
+ ],
+ "topic": "Discussing Asian food markets and cultural food experiences.",
+ "grammar": "Verb Tense and Form for Habitual Actions",
+ "grammar_norm": "Verb Tense",
+ "score": 7.0,
+ "pairs": [
+  {
+   "said": "I don't have experience visit the Asian market abroad",
+   "natural": "I haven't had the chance to visit an Asian market abroad."
+  },
+  {
+   "said": "usually if I travel to abroad, I just focus on their country.",
+   "natural": "Usually, when I travel abroad, I prefer to focus on experiencing the local culture."
+  },
+  {
+   "said": "If you want something spicy, try put in gochujang.",
+   "natural": "If you want something spicy, try putting in gochujang."
+  }
+ ],
+ "vocab": [
+  {
+   "word": "crave",
+   "pos": "동사",
+   "meaning": "~을 갈망하다, 간절히 바라다"
+  },
+  {
+   "word": "authentic",
+   "pos": "형용사",
+   "meaning": "진짜의, 진정한, 정통의"
+  },
+  {
+   "word": "exotic",
+   "pos": "형용사",
+   "meaning": "이국적인, 색다른"
+  },
+  {
+   "word": "immerse",
+   "pos": "동사",
+   "meaning": "몰두하다, 푹 빠지다 (주로 'immerse oneself in' 형태로 사용)"
+  },
+  {
+   "word": "assimilate",
+   "pos": "동사",
+   "meaning": "동화되다, 흡수하다"
+  }
+ ],
+ "_html_md5": "9b94eff85262fc38032fd99f502be40c"
+}

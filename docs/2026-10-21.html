@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#0f0f13"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="당근영어"><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="icon" type="image/png" sizes="192x192" href="icon-192.png"><script src="install-banner.js" defer></script><script src="sw-reg.js" defer></script>
+    <title>전화영어 복습 - 2026년 10월 21일</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Noto Sans KR',sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.75;min-height:100vh}
+        .header{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);border-bottom:1px solid rgba(255,255,255,.06);padding:48px 24px 40px;text-align:center}
+        .header-date{font-size:13px;color:#94a3b8;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+        .header h1{font-size:28px;font-weight:700;color:#f1f5f9;margin-bottom:16px}
+        .header-meta{display:flex;justify-content:center;gap:24px;font-size:14px;color:#64748b}
+        .header-meta span{display:flex;align-items:center;gap:6px}
+        .cta-section{text-align:center;padding:40px 24px}
+        .cta-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:linear-gradient(135deg,#38bdf8,#818cf8);color:#fff;font-size:16px;font-weight:600;font-family:'Noto Sans KR',sans-serif;border:none;border-radius:50px;cursor:pointer;transition:all .3s;text-decoration:none;box-shadow:0 4px 24px rgba(56,189,248,.25)}
+        .cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(56,189,248,.35)}
+        .cta-btn svg{width:20px;height:20px}
+        .cta-sub{margin-top:12px;font-size:13px;color:#64748b}
+        .toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#38bdf8;padding:14px 28px;border-radius:12px;font-size:14px;font-weight:500;border:1px solid rgba(56,189,248,.2);box-shadow:0 8px 32px rgba(0,0,0,.4);opacity:0;transition:all .4s cubic-bezier(.16,1,.3,1);z-index:1000}
+        .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+        .container{max-width:720px;margin:0 auto;padding:0 24px 80px}
+        .tabs{display:flex;gap:4px;background:#1a1a24;padding:4px;border-radius:12px;margin-bottom:32px}
+        .tab{flex:1;padding:12px;text-align:center;font-size:14px;font-weight:500;color:#64748b;background:0 0;border:none;border-radius:8px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all .2s}
+        .tab.active{background:#262636;color:#f1f5f9}
+        .tab-content{display:none}.tab-content.active{display:block}
+        .feedback h2{font-size:18px;font-weight:700;color:#f1f5f9;margin:36px 0 16px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.06)}
+        .feedback h2:first-child{margin-top:0}
+        .feedback p{margin:8px 0;color:#cbd5e1}
+        .feedback .item{padding:6px 0 6px 16px;border-left:2px solid #334155;margin:6px 0;color:#cbd5e1}
+        .feedback .numbered{padding:8px 0 8px 16px;color:#cbd5e1}
+        .feedback .numbered strong{color:#38bdf8}
+        .feedback strong{color:#f1f5f9}
+        .feedback code{background:#1e293b;padding:2px 8px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#38bdf8}
+        .feedback table{width:100%;border-collapse:collapse;margin:12px 0}
+        .feedback th,.feedback td{padding:10px 14px;text-align:left;border-bottom:1px solid #262636}
+        .feedback th{color:#94a3b8;font-weight:500;font-size:13px}
+        .feedback td{color:#cbd5e1}
+        .arrow{color:#38bdf8;font-weight:700}
+        .transcript{background:#1a1a24;border-radius:12px;padding:28px;font-size:14px;line-height:2;color:#94a3b8;white-space:pre-wrap;word-break:break-word;font-family:'JetBrains Mono','Noto Sans KR',monospace}
+        .transcript .tutor{color:#38bdf8}
+        .transcript .student{color:#a78bfa}
+        @media(max-width:640px){.header{padding:32px 16px}.header h1{font-size:22px}.cta-btn{padding:14px 28px;font-size:15px}.container{padding:0 16px 60px}}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-date">2026년 10월 21일</div>
+        <h1>📚 전화영어 복습</h1>
+        <div class="header-meta">
+            <span>⏱ 19분 3초</span>
+            <span>🎙 전화영어_025180304_20261021080036.m4a</span>
+        </div>
+    </div>
+    <div class="cta-section">
+        <button class="cta-btn" onclick="startReview()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Gemini에서 복습 대화 시작하기
+        </button>
+        <div class="cta-sub">클릭하면 프롬프트가 복사되고 Gemini가 열립니다</div>
+    </div>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('feedback')">📋 AI 피드백</button>
+            <button class="tab" onclick="switchTab('transcript')">🎙 수업 전사</button>
+        </div>
+        <div id="tab-feedback" class="tab-content active">
+            <div class="feedback"><h2>완성본</h2>
+<br>
+<p>Joey, 안녕하세요! 오늘 아침 일찍부터 감사 시즌 준비와 회의로 바쁘셨군요. 그래도 영어 수업에 집중하며 캐나다와 한국의 부동산 임대 문화 차이에 대해 깊이 있는 대화를 나눌 수 있어서 좋았습니다. 특히 Airbnb 사업 구상에 대한 열정이 인상 깊었어요!</p>
+<br>
+<br>
+<p><strong>0. 📌 Topic</strong></p>
+<p>Topic: Comparing rental processes and property types in Korea and Canada, and discussing Airbnb business plans.</p>
+<br>
+<br>
+<p><strong>1. 📊 오늘의 대화 요약 (Summary)</strong></p>
+<p>오늘은 한국과 캐나다의 주택 임대 과정과 보증금 제도 차이에 대해 상세히 비교했습니다. 또한 Joey의 Airbnb 사업 구상과 과거 숙소 공유 경험에 대해 이야기하며, 다양한 주택 유형과 임대 시장에 대한 흥미로운 대화를 이어갔습니다.</p>
+<br>
+<br>
+<p><strong>2. 💬 유창성 업그레이드 (Fluency & Natural Flow)</strong></p>
+<br>
+<p>Joey가 말한 문장 중 의미는 통하지만, 더 자연스럽게 다듬을 수 있는 표현들을 살펴볼게요.</p>
+<br>
+<div class="numbered"><strong>1.</strong> ❌ <strong>As Said</strong>: "Is it possible to pre-talk?"</div>
+<p>✅ <strong>Natural</strong>: "Can we just chat informally first?"</p>
+<p>💎 <strong>Professional</strong>: "Could we engage in some preliminary discussion?"</p>
+<p>💡 <strong>코칭 포인트</strong>: Using "pre-talk" is understandable but not a standard phrase. "Chat informally" or "free talk" are more common for casual conversation before a structured lesson. For a more formal context, "preliminary discussion" works well.</p>
+<p><span class="arrow">→</span> "pre-talk"는 이해는 되지만 일반적인 표현은 아닙니다. 격식 없이 대화할 때는 "chat informally"나 "free talk"가 더 자연스럽고, 격식 있는 상황에서는 "preliminary discussion"을 사용할 수 있습니다.</p>
+<br>
+<div class="numbered"><strong>2.</strong> ❌ <strong>As Said</strong>: "It is only I have experience to rent a house in Korea"</div>
+<p>✅ <strong>Natural</strong>: "I've only had experience renting a house in Korea."</p>
+<p>💎 <strong>Professional</strong>: "My experience is limited to renting properties within Korea."</p>
+<p>💡 <strong>코칭 포인트</strong>: The structure "It is only I have experience" is a bit clunky. Using "I've only had experience" or "My experience is limited to" creates a smoother, more natural flow.</p>
+<p><span class="arrow">→</span> "It is only I have experience"는 다소 어색한 구조입니다. "I've only had experience"나 "My experience is limited to"를 사용하면 훨씬 자연스럽고 유창하게 들립니다.</p>
+<br>
+<div class="numbered"><strong>3.</strong> ❌ <strong>As Said</strong>: "I like to do interior in some space."</div>
+<p>✅ <strong>Natural</strong>: "I enjoy doing interior design in various spaces."</p>
+<p>💎 <strong>Professional</strong>: "I derive satisfaction from interior design projects."</p>
+<p>💡 <strong>코칭 포인트</strong>: "Do interior" is not the most natural verb choice. "Do interior design" or simply "decorate" is more common. Adding "various spaces" or "different spaces" makes it sound more fluent.</p>
+<p><span class="arrow">→</span> "do interior"는 가장 자연스러운 동사 표현은 아닙니다. "do interior design"이나 "decorate"가 더 흔하며, "in some space" 대신 "in various spaces"를 사용하면 훨씬 자연스럽습니다.</p>
+<br>
+<br>
+<p><strong>3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)</strong></p>
+<br>
+<p>이번 대화에서는 <strong>전치사 (Prepositions)</strong> 사용에 있어서 아쉬운 점들이 발견되었습니다. 특히 시간, 장소, 목적 등을 나타내는 전치사를 조금 더 정확하게 사용하면 문장이 훨씬 깔끔해질 거예요.</p>
+<br>
+<p>Category: Prepositions</p>
+<br>
+<table>
+<tr><th>❌ 원문 (As Said)</th><th>✅ 교정 예시 (Corrected)</th></tr>
+<tr><td>"my communication is not good <strong>with</strong> you, so it is difficult to understand."</td><td>"my communication is not good <strong>to</strong> you, so it is difficult to understand." (또는 "My communication is unclear.")</td></tr>
+<tr><td>"I have a business to share my house <strong>to</strong> other people <strong>in</strong> my house."</td><td>"I had a business to share my house <strong>with</strong> other people." (또는 "I had a business renting out my house.")</td></tr>
+<tr><td>"I will pay the deposit <strong>per</strong> contract because some people change their mind."</td><td>"I will pay the deposit <strong>for</strong> the contract because some people change their mind."</td></tr>
+<tr><td>"Some people have wanted to do a big deposit, and that's not correct. Fixed <strong>their</strong> contract."</td><td>"Some people have wanted to do a big deposit, but that's not a fixed <strong>part of every</strong> contract."</td></tr>
+</table>
+<br>
+<p>📌 <strong>핵심 규칙</strong>: 전치사는 명사나 대명사 앞에 위치하여 시간, 장소, 방향, 목적 등 다양한 관계를 나타내므로, 문맥에 맞는 정확한 전치사를 사용하는 것이 중요합니다.</p>
+<br>
+<p>🔁 <strong>따라 읽기 (Read Aloud)</strong>:</p>
+<p>🗣️ "My communication is not good to you, so it is difficult to understand."</p>
+<p>🗣️ "I had a business to share my house with other people."</p>
+<p>🗣️ "I will pay the deposit for the contract because some people change their mind."</p>
+<br>
+<br>
+<p><strong>4. 📗 어휘 확장 (Vocabulary Vault)</strong></p>
+<br>
+<p>Joey의 비즈니스 환경과 관심사에 맞춰 유용한 어휘 5개를 선정했습니다.</p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>audit</strong> /ɔːdɪt/ (명사)</div>
+<p>뜻: 회계 감사</p>
+<p>실전 예문: Our company is currently undergoing an <strong>audit</strong> for the fiscal year.</p>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>deposit</strong> /dɪˈpɒzɪt/ (명사)</div>
+<p>뜻: 보증금, 예치금</p>
+<p>실전 예문: We require a security <strong>deposit</strong> equal to two months' rent.</p>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>real estate agent</strong> /ˈriːəl ɪˈsteɪt ˈeɪdʒənt/ (명사)</div>
+<p>뜻: 부동산 중개인</p>
+<p>실전 예문: We hired a <strong>real estate agent</strong> to help us find a commercial property.</p>
+<br>
+<div class="numbered"><strong>4.</strong> <strong>property</strong> /ˈprɒpərti/ (명사)</div>
+<p>뜻: 재산, 부동산</p>
+<p>실전 예문: Investing in rental <strong>property</strong> can be a good source of passive income.</p>
+<br>
+<div class="numbered"><strong>5.</strong> <strong>lease</strong> /liːs/ (동사/명사)</div>
+<p>뜻: 임대하다, 임대 계약</p>
+<p>실전 예문: We need to <strong>lease</strong> a new office space by next quarter. (동사) / The <strong>lease</strong> agreement specifies a two-year term. (명사)</p>
+<br>
+<br>
+<p><strong>5. 📝 실전 복습 챌린지 (Practice)</strong></p>
+<br>
+<p>오늘 배운 표현과 문법을 활용하여 영작 챌린지에 도전해 보세요!</p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>상황</strong>: 당신은 현재 회계 감사 시즌이라 매우 바쁩니다.</div>
+<p><strong>영작</strong>: (오늘의 대화 요약에서 배운 표현 활용)</p>
+<p><details></p>
+<p><summary>모범 답안</summary></p>
+<p>I'm quite busy these days because it's audit season.</p>
+<p></details></p>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>상황</strong>: 캐나다에서는 부동산 중개인 없이 직접 아파트에 신청하는 것이 가능하다고 들었습니다.</div>
+<p><strong>영작</strong>: (유창성 업그레이드에서 배운 표현과 Target Grammar 규칙 활용)</p>
+<p><details></p>
+<p><summary>모범 답안</summary></p>
+<p>I heard it's possible to apply directly to an apartment in Canada without a real estate agent.</p>
+<p></details></p>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>상황</strong>: 저는 해변 근처에 아파트를 사서 Airbnb 사업을 시작하려고 합니다. 예전에 집을 다른 사람들과 공유했던 경험이 있어서 인테리어 하는 것을 즐깁니다.</div>
+<p><strong>영작</strong>: (어휘 확장 및 유창성 업그레이드 표현 활용)</p>
+<p><details></p>
+<p><summary>모범 답안</summary></p>
+<p>I'm planning to buy an apartment near the beach to start an Airbnb business. I've had experience sharing my house with others before, and I enjoy doing interior design.</p>
+<p></details></p>
+<br>
+<br>
+<p><strong>6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)</strong></p>
+<br>
+<p>✨ <strong>Good Job</strong>:</p>
+<p>"I will buy some apartment near beach and then, yeah, start a small business, the side business, side job."</p>
+<p>Joey, 이 문장은 미래 계획을 구체적이고 명확하게 전달하는 데 아주 좋았습니다. 특히 "small business," "side business," "side job"과 같은 다양한 표현을 자연스럽게 사용하여 자신의 의도를 풍부하게 설명했어요. 비즈니스 환경에서 자신의 계획을 설명할 때 큰 도움이 될 표현입니다!</p>
+<br>
+<p>🚀 <strong>내일의 한 문장</strong>:</p>
+<p>다음 수업 시작 시, 튜터에게 오늘 배운 내용을 활용하여 이렇게 말해보세요.</p>
+<p>"I've been thinking more about the rental property market and my Airbnb business plan since our last discussion."</p>
+<br>
+<br>
+<p><strong>[성과 지표]</strong></p>
+<br>
+<p><strong>유창성 점수</strong>: 7/10</p>
+<br>
+<p><strong>근거</strong>: Joey는 다양한 주제에 대해 막힘없이 자신의 의견을 표현하려는 노력이 돋보였습니다. 특히 Airbnb 사업 구상과 같은 개인적인 관심사를 적극적으로 이야기하며 대화를 이끌어가는 능력이 좋았습니다. 다만, 문장을 구성할 때 어순이나 전치사 선택에서 다소 어색한 부분이 있어 원어민이 듣기에 자연스럽지 않은 표현들이 간혹 있었습니다. 이러한 부분들을 개선하면 훨씬 더 유창하게 소통할 수 있을 것입니다.</p>
+<br>
+<p><strong>다음 수업 '원포인트 액션 플랜'</strong>:</p>
+<p>다음 수업에서는 <strong>전치사 (Prepositions)</strong> 사용에 조금 더 신경 써서 문장을 만들어보는 연습을 해볼까요? 문맥에 맞는 정확한 전치사를 사용하면 문장의 의미가 더 명확해지고 유창성도 향상될 거예요.</p></div>
+        </div>
+        <div id="tab-transcript" class="tab-content">
+            <div class="transcript"><span class="tutor">[Tutor]</span> Hello. Oh yeah, hi, how are you doing today?
+[Joey] Oh, thank you so much. Yes, I don&#x27;t know. It&#x27;s 8 o&#x27;clock. Yeah, so yeah, I will wake up now. Oh, time flies. Yeah, good morning. Yeah, good morning. How are you today? Oh, pretty good.
+<span class="tutor">[Tutor]</span> Yeah, did you have any plans for today?
+[Joey] Today? Ah, today is the season of the audit, so I have to prepare a report and some interviews. So yeah, and I have a meeting, a work meeting. Yeah, so I also have something to do. Yeah, and yeah, usually that is almost normal work. Yes, nothing special.
+<span class="tutor">[Tutor]</span> Okay, so a little bit busy with audit season.
+[Joey] Yeah, how about you? How about your plan today or tomorrow?
+<span class="tutor">[Tutor]</span> Yeah, because it&#x27;s teaching, and it&#x27;s evening already here. Yes, it&#x27;s good. Yeah, okay. Yeah, did you want to look at the textbook today?
+[Joey] Is it possible to pre-talk? Because I can open my eyes just, yeah, because yeah, if I look at my textbook, first I open my application and then check the process and confirm my content. So it&#x27;s possible. Yeah, I want to do the pre-talking. How about that?
+<span class="tutor">[Tutor]</span> Okay, is there any topic in particular you wanted to talk about?
+[Joey] Oh, what&#x27;s the topic today in the textbook?
+<span class="tutor">[Tutor]</span> Renting a place to live.
+[Joey] Want place to live?
+<span class="tutor">[Tutor]</span> Renting a place to live.
+[Joey] Renting? Renting? Renting?
+<span class="tutor">[Tutor]</span> Rent. To rent. R-E-N-T.
+[Joey] Yes, because that is similar to the Airbnb or hotel or some place, rent a place to the traveler, for travel, right?
+<span class="tutor">[Tutor]</span> For an apartment or apartment building.
+[Joey] Ah, it is not for travel, just to live, to rent the place, the apartment or the officetel there or something, right?
+<span class="tutor">[Tutor]</span> Yeah, it&#x27;s for renting a place to live for long term.
+[Joey] How about that topic, the Airbnb or hotel or rent a house, etc.? Just, yeah.
+<span class="tutor">[Tutor]</span> How about that subject? Okay, this one. What is the process for renting like in Korea?
+[Joey] Rent, if I want to move my place, first I check the place, and then usually I go to the agent, the real estate agent, and then just first check what is a good apartment or a one-room or officetel there. Yes, and then yeah, and just look around with the agent staff, and then we will decide, and then just contact that real estate. Yeah, it is similar to your country or the other country? Hmm, because it is only I have experience to rent a house in Korea, so I&#x27;m not sure your country or another country. Is it different in your country? With this, you do not need a real estate agent. You can usually apply to the apartment or building directly.
+[Joey] Ah, it&#x27;s possible. Usually we just have to with the agent, but sometimes we have an application, yeah, buying a house or rent a house or yeah, so that application is to do, move, do our work near place. For example, it is connected to the near people, yeah, close people. So some people list their rent house, so we just check the rent, and then we just, we will go to, we will just contact that, that people, and then rent contract, contact over and rent. Yeah, it is, but that is, is it possible to reduce the agent fee? So nowadays many people use that application.
+<span class="tutor">[Tutor]</span> Also, when you apply for renting, the deposit is different than Korea. So usually you make a deposit of just first month, last month rent.
+[Joey] Yes.
+[Joey] If we look around that apartment, the officetel there, and then we will contract and we give the deposit, the small, not small money, just 10%. Yeah, for example, we will pay the deposit just one thousand dollars, one, ten thousand dollars, and meantime we just pay one thousand dollars as deposit for contract, or just we just pay the small money because, uh, yeah, it is a little difficult to explain that situation. But anyway, yeah.
+<span class="tutor">[Tutor]</span> Yeah, so for here renting, they can only charge half of one month&#x27;s rent as your deposit. So if you pay $1,000, your deposit is $500.
+[Joey] $500.
+<span class="tutor">[Tutor]</span> And usually people rent monthly.
+[Joey] That is a little difference, yes. Because my deposit is per contract, not the payment. So it is different every house, every owner, every people. So I&#x27;m not sure. There is no rule. Yeah. Just some people want to do a large deposit and small payment per month. And some people want to do total deposit and not want to do monthly payment. So, yeah, every contract is different kind of pay, pay, pay time.
+<span class="tutor">[Tutor]</span> But you pay the security deposit once in Canada?
+[Joey] Security?
+<span class="tutor">[Tutor]</span> It&#x27;s just, it&#x27;s only a one-time pay.
+[Joey] One-time pay. That pay is the per agent fee or per the rent house of the owner? Yeah.
+<span class="tutor">[Tutor]</span> Most places don&#x27;t use agents. So an apartment building, you will sign a contract with the apartment building and it costs no money to sign the contract. It&#x27;s just you start paying rent.
+[Joey] Oh, I see. I understand. In Korea, we will pay the deposit per contract because some people change their mind. So we have to prevent that situation. So if we wanted to contract, we will deposit for a rent house.
+<span class="tutor">[Tutor]</span> How much are you expected to deposit when you rent a home?
+[Joey] Deposit is two kinds. The first is for contract, and second it is for owner to the rent house. So usually for contract is the 10%. And some people want to rent a house. It is possible to destroy that house or some people run away, destroy that house and run away. So we will want to prevent that situation, so we pay the payment. But that is not fixed. Every contract is different deposit, so I&#x27;m not sure. Yeah, that&#x27;s...
+<span class="tutor">[Tutor]</span> Deposit in Canada. So for your rent, so if your rent is $500 or $1,000, your deposit would be $500. And if you move out early, you won&#x27;t get it back. But maybe if you move out after a year, you will get $500 back.
+[Joey] Oh, yeah. It&#x27;s the same in Korea. But that deposit amount is a little different. Some people have wanted to do a big deposit, and that&#x27;s not correct. Fixed their contract. Just every contract, different deposit. I&#x27;m not sure.
+<span class="tutor">[Tutor]</span> And most the rent is charged monthly in Canada.
+[Joey] What? Okay, I see. How about that price this day? The contract is that expensive to rent a house? The, the officetel or apartment or what kind of another style room, apartment, officetel?
+<span class="tutor">[Tutor]</span> I&#x27;m sorry.
+[Joey] What are you asking?
+<span class="tutor">[Tutor]</span> Ah, yes. I&#x27;m just asking for you. Yeah. There are so many house, kind of house, apartment, and officetel, but I know only the two kind of their style, real estate. So is there another style, their real estate, not the apartment and officetel?
+<span class="tutor">[Tutor]</span> I&#x27;m not sure what the second word you&#x27;re saying is.
+[Joey] Ah, officetel.
+<span class="tutor">[Tutor]</span> Officetel?
+[Joey] Okay, just I prepare. There are so many people live their house and usually in Korea, usually people live their apartment or officetel or one room. So I&#x27;m just asking for you, is there another style living place in Canada?
+<span class="tutor">[Tutor]</span> I have no idea what the word officetel is. I don&#x27;t understand.
+[Joey] I just live style.
+<span class="tutor">[Tutor]</span> I don&#x27;t know what you&#x27;re trying to say.
+[Joey] Living style, the apartment or the villa or just one of the house, etc.
+<span class="tutor">[Tutor]</span> I&#x27;m just saying I don&#x27;t understand what type of home you&#x27;re saying.
+[Joey] Okay, what type of home in Canada? Okay, but anyway, please go to next.
+<span class="tutor">[Tutor]</span> Okay. Well, I just, I don&#x27;t understand.
+[Joey] Yes, yes, okay.
+<span class="tutor">[Tutor]</span> So usually people rent apartments or condos?
+[Joey] Condo.
+<span class="tutor">[Tutor]</span> Condo, apartment.
+[Joey] Condominium.
+<span class="tutor">[Tutor]</span> Condominium.
+[Joey] And another place, condominium and apartment, the villa or okay, yeah, not, not, not really. Are you people rent a home?
+<span class="tutor">[Tutor]</span> Yes, you can have a detached home, a duplex.
+[Joey] Mm, duplex. Oh, I see. And this day, I will look around. I&#x27;m just searching for some apartment for Airbnb. Yeah, I live in Busan. And that city is beautiful and has a sea. So this day, I look around some apartment for Airbnb. Yeah. Yeah. So maybe next week, next, next week, I will go to that apartment and maybe it is possible to buy it. Yeah. Because it&#x27;s possible, it has, that apartment has a great view, the sea. And so if possible, I&#x27;m just buying that house and prepare the Airbnb the first time.
+<span class="tutor">[Tutor]</span> So are you buying it to make your own Airbnb or are you visiting the Airbnb?
+[Joey] Just that is for business. I will rent to other people. So, yeah, this day I will find some great apartment or some house for Airbnb. Yeah, because I prepare my business and that is the first time to Airbnb. So, besides job, yeah. So this day I will find that house and then next week I will buy a house or not.
+<span class="tutor">[Tutor]</span> Have you ever done Airbnb before or have you rented from an Airbnb home?
+[Joey] Maybe 15 years ago, there was no Airbnb. I have some condominium near beach and I have a business to share my house to other people in my house. So, yeah, that is so funny. So this day I want to make money more, so I will buy some apartment near beach and then, yeah, start a small business, the side business, side job. Yeah. Mm-hmm.
+<span class="tutor">[Tutor]</span> Okay, so you&#x27;ve had experience with renting vacation homes before.
+[Joey] Yeah, it is so funny. Yeah, yeah, I, I like to do interior in some space. So just at that time, my girlfriend and I just interior that house and rent to other people. That process is funny and I enjoy that process. So maybe it is possible to this similar situation.
+[Joey] Okay, and today I, okay, go on, teacher. Yes, go ahead. I am so sorry. Yeah, because my communication is not good with you, so it is difficult to understand. Sorry. Yes. Mm-hmm.
+<span class="tutor">[Tutor]</span> Oh, yeah, because sometimes you had different home types or names might not be used in different countries. Okay, yes. Okay. So with this one, yeah, I will send you some of the questions here in just a moment. Yes. Did you have any questions before I go?
+[Joey] Oh no, thank you for your class. Yeah, every day, and Monday and Wednesday, and yeah, have a nice day.
+<span class="tutor">[Tutor]</span> Thank you. Yeah, have a great day.
+[Joey] Bye bye, teacher.
+<span class="tutor">[Tutor]</span> Bye.</div>
+        </div>
+    </div>
+    <div class="toast" id="toast">✅ 프롬프트가 복사되었습니다!</div>
+    <script>
+        const REVIEW_PROMPT="너는 나의 영어 회화 복습 파트너야. 오늘 내 전화영어 수업 내용을 기반으로 대화하면서 복습을 도와줘.\n\n[오늘 수업 전사 내용]\n[Tutor] Hello. Oh yeah, hi, how are you doing today?\n[Joey] Oh, thank you so much. Yes, I don't know. It's 8 o'clock. Yeah, so yeah, I will wake up now. Oh, time flies. Yeah, good morning. Yeah, good morning. How are you today? Oh, pretty good.\n[Tutor] Yeah, did you have any plans for today?\n[Joey] Today? Ah, today is the season of the audit, so I have to prepare a report and some interviews. So yeah, and I have a meeting, a work meeting. Yeah, so I also have something to do. Yeah, and yeah, usually that is almost normal work. Yes, nothing special.\n[Tutor] Okay, so a little bit busy with audit season.\n[Joey] Yeah, how about you? How about your plan today or tomorrow?\n[Tutor] Yeah, because it's teaching, and it's evening already here. Yes, it's good. Yeah, okay. Yeah, did you want to look at the textbook today?\n[Joey] Is it possible to pre-talk? Because I can open my eyes just, yeah, because yeah, if I look at my textbook, first I open my application and then check the process and confirm my content. So it's possible. Yeah, I want to do the pre-talking. How about that?\n[Tutor] Okay, is there any topic in particular you wanted to talk about?\n[Joey] Oh, what's the topic today in the textbook?\n[Tutor] Renting a place to live.\n[Joey] Want place to live?\n[Tutor] Renting a place to live.\n[Joey] Renting? Renting? Renting?\n[Tutor] Rent. To rent. R-E-N-T.\n[Joey] Yes, because that is similar to the Airbnb or hotel or some place, rent a place to the traveler, for travel, right?\n[Tutor] For an apartment or apartment building.\n[Joey] Ah, it is not for travel, just to live, to rent the place, the apartment or the officetel there or something, right?\n[Tutor] Yeah, it's for renting a place to live for long term.\n[Joey] How about that topic, the Airbnb or hotel or rent a house, etc.? Just, yeah.\n[Tutor] How about that subject? Okay, this one. What is the process for renting like in Korea?\n[Joey] Rent, if I want to move my place, first I check the place, and then usually I go to the agent, the real estate agent, and then just first check what is a good apartment or a one-room or officetel there. Yes, and then yeah, and just look around with the agent staff, and then we will decide, and then just contact that real estate. Yeah, it is similar to your country or the other country? Hmm, because it is only I have experience to rent a house in Korea, so I'm not sure your country or another country. Is it different in your country? With this, you do not need a real estate agent. You can usually apply to the apartment or building directly.\n[Joey] Ah, it's possible. Usually we just have to with the agent, but sometimes we have an application, yeah, buying a house or rent a house or yeah, so that application is to do, move, do our work near place. For example, it is connected to the near people, yeah, close people. So some people list their rent house, so we just check the rent, and then we just, we will go to, we will just contact that, that people, and then rent contract, contact over and rent. Yeah, it is, but that is, is it possible to reduce the agent fee? So nowadays many people use that application.\n[Tutor] Also, when you apply for renting, the deposit is different than Korea. So usually you make a deposit of just first month, last month rent.\n[Joey] Yes.\n[Joey] If we look around that apartment, the officetel there, and then we will contract and we give the deposit, the small, not small money, just 10%. Yeah, for example, we will pay the deposit just one thousand dollars, one, ten thousand dollars, and meantime we just pay one thousand dollars as deposit for contract, or just we just pay the small money because, uh, yeah, it is a little difficult to explain that situation. But anyway, yeah.\n[Tutor] Yeah, so for here renting, they can only charge half of one month's rent as your deposit. So if you pay $1,000, your deposit is $500.\n[Joey] $500.\n[Tutor] And usually people rent monthly.\n[Joey] That is a little difference, yes. Because my deposit is per contract, not the payment. So it is different every house, every owner, every people. So I'm not sure. There is no rule. Yeah. Just some people want to do a large deposit and small payment per month. And some people want to do total deposit and not want to do monthly payment. So, yeah, every contract is different kind of pay, pay, pay time.\n[Tutor] But you pay the security deposit once in Canada?\n[Joey] Security?\n[Tutor] It's just, it's only a one-time pay.\n[Joey] One-time pay. That pay is the per agent fee or per the rent house of the owner? Yeah.\n[Tutor] Most places don't use agents. So an apartment building, you will sign a contract with the apartment building and it costs no money to sign the contract. It's just you start paying rent.\n[Joey] Oh, I see. I understand. In Korea, we will pay the deposit per contract because some people change their mind. So we have to prevent that situation. So if we wanted to contract, we will deposit for a rent house.\n[Tutor] How much are you expected to deposit when you rent a home?\n[Joey] Deposit is two kinds. The first is for contract, and second it is for owner to the rent house. So usually for contract is the 10%. And some people want to rent a house. It is possible to destroy that house or some people run away, destroy that house and run away. So we will want to prevent that situation, so we pay the payment. But that is not fixed. Every contract is different deposit, so I'm not sure. Yeah, that's...\n[Tutor] Deposit in Canada. So for your rent, so if your rent is $500 or $1,000, your deposit would be $500. And if you move out early, you won't get it back. But maybe if you move out after a year, you will get $500 back.\n[Joey] Oh, yeah. It's the same in Korea. But that deposit amount is a little different. Some people have wanted to do a big deposit, and that's not correct. Fixed their contract. Just every contract, different deposit. I'm not sure.\n[Tutor] And most the rent is charged monthly in Canada.\n[Joey] What? Okay, I see. How about that price this day? The contract is that expensive to rent a house? The, the officetel or apartment or what kind of another style room, apartment, officetel?\n[Tutor] I'm sorry.\n[Joey] What are you asking?\n[Tutor] Ah, yes. I'm just asking for you. Yeah. There are so many house, kind of house, apartment, and officetel, but I know only the two kind of their style, real estate. So is there another style, their real estate, not the apartment and officetel?\n[Tutor] I'm not sure what the second word you're saying is.\n[Joey] Ah, officetel.\n[Tutor] Officetel?\n[Joey] Okay, just I prepare. There are so many people live their house and usually in Korea, usually people live their apartment or officetel or one room. So I'm just asking for you, is there another style living place in Canada?\n[Tutor] I have no idea what the word officetel is. I don't understand.\n[Joey] I just live style.\n[Tutor] I don't know what you're trying to say.\n[Joey] Living style, the apartment or the villa or just one of the house, etc.\n[Tutor] I'm just saying I don't understand what type of home you're saying.\n[Joey] Okay, what type of home in Canada? Okay, but anyway, please go to next.\n[Tutor] Okay. Well, I just, I don't understand.\n[Joey] Yes, yes, okay.\n[Tutor] So usually people rent apartments or condos?\n[Joey] Condo.\n[Tutor] Condo, apartment.\n[Joey] Condominium.\n[Tutor] Condominium.\n[Joey] And another place, condominium and apartment, the villa or okay, yeah, not, not, not really. Are you people rent a home?\n[Tutor] Yes, you can have a detached home, a duplex.\n[Joey] Mm, duplex. Oh, I see. And this day, I will look around. I'm just searching for some apartment for Airbnb. Yeah, I live in Busan. And that city is beautiful and has a sea. So this day, I look around some apartment for Airbnb. Yeah. Yeah. So maybe next week, next, next week, I will go to that apartment and maybe it is possible to buy it. Yeah. Because it's possible, it has, that apartment has a great view, the sea. And so if possible, I'm just buying that house and prepare the Airbnb the first time.\n[Tutor] So are you buying it to make your own Airbnb or are you visiting the Airbnb?\n[Joey] Just that is for business. I will rent to other people. So, yeah, this day I will find some great apartment or some house for Airbnb. Yeah, because I prepare my business and that is the first time to Airbnb. So, besides job, yeah. So this day I will find that house and then next week I will buy a house or not.\n[Tutor] Have you ever done Airbnb before or have you rented from an Airbnb home?\n[Joey] Maybe 15 years ago, there was no Airbnb. I have some condominium near beach and I have a business to share my house to other people in my house. So, yeah, that is so funny. So this day I want to make money more, so I will buy some apartment near beach and then, yeah, start a small business, the side business, side job. Yeah. Mm-hmm.\n[Tutor] Okay, so you've had experience with renting vacation homes before.\n[Joey] Yeah, it is so funny. Yeah, yeah, I, I like to do interior in some space. So just at that time, my girlfriend and I just interior that house and rent to other people. That process is funny and I enjoy that process. So maybe it is possible to this similar situation.\n[Joey] Okay, and today I, okay, go on, teacher. Yes, go ahead. I am so sorry. Yeah, because my communication is not good with you, so it is difficult to understand. Sorry. Yes. Mm-hmm.\n[Tutor] Oh, yeah, because sometimes you had different home types or names might not be used in different countries. Okay, yes. Okay. So with this one, yeah, I will send you some of the questions here in just a moment. Yes. Did you have any questions before I go?\n[Joey] Oh no, thank you for your class. Yeah, every day, and Monday and Wednesday, and yeah, have a nice day.\n[Tutor] Thank you. Yeah, have a great day.\n[Joey] Bye bye, teacher.\n[Tutor] Bye.\n\n[AI 피드백]\n## 완성본\n\nJoey, 안녕하세요! 오늘 아침 일찍부터 감사 시즌 준비와 회의로 바쁘셨군요. 그래도 영어 수업에 집중하며 캐나다와 한국의 부동산 임대 문화 차이에 대해 깊이 있는 대화를 나눌 수 있어서 좋았습니다. 특히 Airbnb 사업 구상에 대한 열정이 인상 깊었어요!\n\n---\n\n**0. 📌 Topic**\nTopic: Comparing rental processes and property types in Korea and Canada, and discussing Airbnb business plans.\n\n---\n\n**1. 📊 오늘의 대화 요약 (Summary)**\n오늘은 한국과 캐나다의 주택 임대 과정과 보증금 제도 차이에 대해 상세히 비교했습니다. 또한 Joey의 Airbnb 사업 구상과 과거 숙소 공유 경험에 대해 이야기하며, 다양한 주택 유형과 임대 시장에 대한 흥미로운 대화를 이어갔습니다.\n\n---\n\n**2. 💬 유창성 업그레이드 (Fluency & Natural Flow)**\n\nJoey가 말한 문장 중 의미는 통하지만, 더 자연스럽게 다듬을 수 있는 표현들을 살펴볼게요.\n\n1.  ❌ **As Said**: \"Is it possible to pre-talk?\"\n    ✅ **Natural**: \"Can we just chat informally first?\"\n    💎 **Professional**: \"Could we engage in some preliminary discussion?\"\n    💡 **코칭 포인트**: Using \"pre-talk\" is understandable but not a standard phrase. \"Chat informally\" or \"free talk\" are more common for casual conversation before a structured lesson. For a more formal context, \"preliminary discussion\" works well.\n    → \"pre-talk\"는 이해는 되지만 일반적인 표현은 아닙니다. 격식 없이 대화할 때는 \"chat informally\"나 \"free talk\"가 더 자연스럽고, 격식 있는 상황에서는 \"preliminary discussion\"을 사용할 수 있습니다.\n\n2.  ❌ **As Said**: \"It is only I have experience to rent a house in Korea\"\n    ✅ **Natural**: \"I've only had experience renting a house in Korea.\"\n    💎 **Professional**: \"My experience is limited to renting properties within Korea.\"\n    💡 **코칭 포인트**: The structure \"It is only I have experience\" is a bit clunky. Using \"I've only had experience\" or \"My experience is limited to\" creates a smoother, more natural flow.\n    → \"It is only I have experience\"는 다소 어색한 구조입니다. \"I've only had experience\"나 \"My experience is limited to\"를 사용하면 훨씬 자연스럽고 유창하게 들립니다.\n\n3.  ❌ **As Said**: \"I like to do interior in some space.\"\n    ✅ **Natural**: \"I enjoy doing interior design in various spaces.\"\n    💎 **Professional**: \"I derive satisfaction from interior design projects.\"\n    💡 **코칭 포인트**: \"Do interior\" is not the most natural verb choice. \"Do interior design\" or simply \"decorate\" is more common. Adding \"various spaces\" or \"different spaces\" makes it sound more fluent.\n    → \"do interior\"는 가장 자연스러운 동사 표현은 아닙니다. \"do interior design\"이나 \"decorate\"가 더 흔하며, \"in some space\" 대신 \"in various spaces\"를 사용하면 훨씬 자연스럽습니다.\n\n---\n\n**3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)**\n\n이번 대화에서는 **전치사 (Prepositions)** 사용에 있어서 아쉬운 점들이 발견되었습니다. 특히 시간, 장소, 목적 등을 나타내는 전치사를 조금 더 정확하게 사용하면 문장이 훨씬 깔끔해질 거예요.\n\nCategory: Prepositions\n\n| ❌ 원문 (As Said)                                                                  | ✅ 교정 예시 (Corrected)                                                              |\n| :-------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------ |\n| \"my communication is not good **with** you, so it is difficult to understand.\"     | \"my communication is not good **to** you, so it is difficult to understand.\" (또는 \"My communication is unclear.\") |\n| \"I have a business to share my house **to** other people **in** my house.\"         | \"I had a business to share my house **with** other people.\" (또는 \"I had a business renting out my house.\") |\n| \"I will pay the deposit **per** contract because some people change their mind.\"   | \"I will pay the deposit **for** the contract because some people change their mind.\" |\n| \"Some people have wanted to do a big deposit, and that's not correct. Fixed **their** contract.\" | \"Some people have wanted to do a big deposit, but that's not a fixed **part of every** contract.\" |\n\n📌 **핵심 규칙**: 전치사는 명사나 대명사 앞에 위치하여 시간, 장소, 방향, 목적 등 다양한 관계를 나타내므로, 문맥에 맞는 정확한 전치사를 사용하는 것이 중요합니다.\n\n🔁 **따라 읽기 (Read Aloud)**:\n🗣️ \"My communication is not good to you, so it is difficult to understand.\"\n🗣️ \"I had a business to share my house with other people.\"\n🗣️ \"I will pay the deposit for the contract because some people change their mind.\"\n\n---\n\n**4. 📗 어휘 확장 (Vocabulary Vault)**\n\nJoey의 비즈니스 환경과 관심사에 맞춰 유용한 어휘 5개를 선정했습니다.\n\n1.  **audit** /ɔːdɪt/ (명사)\n    뜻: 회계 감사\n    실전 예문: Our company is currently undergoing an **audit** for the fiscal year.\n\n2.  **deposit** /dɪˈpɒzɪt/ (명사)\n    뜻: 보증금, 예치금\n    실전 예문: We require a security **deposit** equal to two months' rent.\n\n3.  **real estate agent** /ˈriːəl ɪˈsteɪt ˈeɪdʒənt/ (명사)\n    뜻: 부동산 중개인\n    실전 예문: We hired a **real estate agent** to help us find a commercial property.\n\n4.  **property** /ˈprɒpərti/ (명사)\n    뜻: 재산, 부동산\n    실전 예문: Investing in rental **property** can be a good source of passive income.\n\n5.  **lease** /liːs/ (동사/명사)\n    뜻: 임대하다, 임대 계약\n    실전 예문: We need to **lease** a new office space by next quarter. (동사) / The **lease** agreement specifies a two-year term. (명사)\n\n---\n\n**5. 📝 실전 복습 챌린지 (Practice)**\n\n오늘 배운 표현과 문법을 활용하여 영작 챌린지에 도전해 보세요!\n\n1.  **상황**: 당신은 현재 회계 감사 시즌이라 매우 바쁩니다.\n    **영작**: (오늘의 대화 요약에서 배운 표현 활용)\n    <details>\n    <summary>모범 답안</summary>\n    I'm quite busy these days because it's audit season.\n    </details>\n\n2.  **상황**: 캐나다에서는 부동산 중개인 없이 직접 아파트에 신청하는 것이 가능하다고 들었습니다.\n    **영작**: (유창성 업그레이드에서 배운 표현과 Target Grammar 규칙 활용)\n    <details>\n    <summary>모범 답안</summary>\n    I heard it's possible to apply directly to an apartment in Canada without a real estate agent.\n    </details>\n\n3.  **상황**: 저는 해변 근처에 아파트를 사서 Airbnb 사업을 시작하려고 합니다. 예전에 집을 다른 사람들과 공유했던 경험이 있어서 인테리어 하는 것을 즐깁니다.\n    **영작**: (어휘 확장 및 유창성 업그레이드 표현 활용)\n    <details>\n    <summary>모범 답안</summary>\n    I'm planning to buy an apartment near the beach to start an Airbnb business. I've had experience sharing my house with others before, and I enjoy doing interior design.\n    </details>\n\n---\n\n**6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)**\n\n✨ **Good Job**:\n\"I will buy some apartment near beach and then, yeah, start a small business, the side business, side job.\"\nJoey, 이 문장은 미래 계획을 구체적이고 명확하게 전달하는 데 아주 좋았습니다. 특히 \"small business,\" \"side business,\" \"side job\"과 같은 다양한 표현을 자연스럽게 사용하여 자신의 의도를 풍부하게 설명했어요. 비즈니스 환경에서 자신의 계획을 설명할 때 큰 도움이 될 표현입니다!\n\n🚀 **내일의 한 문장**:\n다음 수업 시작 시, 튜터에게 오늘 배운 내용을 활용하여 이렇게 말해보세요.\n\"I've been thinking more about the rental property market and my Airbnb business plan since our last discussion.\"\n\n---\n\n**[성과 지표]**\n\n**유창성 점수**: 7/10\n\n**근거**: Joey는 다양한 주제에 대해 막힘없이 자신의 의견을 표현하려는 노력이 돋보였습니다. 특히 Airbnb 사업 구상과 같은 개인적인 관심사를 적극적으로 이야기하며 대화를 이끌어가는 능력이 좋았습니다. 다만, 문장을 구성할 때 어순이나 전치사 선택에서 다소 어색한 부분이 있어 원어민이 듣기에 자연스럽지 않은 표현들이 간혹 있었습니다. 이러한 부분들을 개선하면 훨씬 더 유창하게 소통할 수 있을 것입니다.\n\n**다음 수업 '원포인트 액션 플랜'**:\n다음 수업에서는 **전치사 (Prepositions)** 사용에 조금 더 신경 써서 문장을 만들어보는 연습을 해볼까요? 문맥에 맞는 정확한 전치사를 사용하면 문장의 의미가 더 명확해지고 유창성도 향상될 거예요.\n\n위 내용을 바탕으로:\n1. 먼저 오늘 수업에서 내가 틀렸거나 어색했던 표현을 하나 골라서, 관련된 상황을 영어로 질문해줘.\n2. 내가 영어로 대답하면, 자연스러운지 확인하고 더 나은 표현이 있으면 알려줘.\n3. 특히 \"반복 실수 패턴\"에서 지적된 부분을 집중적으로 연습시켜줘.\n4. 이런 식으로 오늘 배운 표현들을 하나씩 복습하자.\n5. 한국어 설명은 필요할 때만 간단히, 대화는 최대한 영어로 진행해줘.\n\n그럼 시작하자!";
+        function startReview(){navigator.clipboard.writeText(REVIEW_PROMPT).then(()=>{showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)}).catch(()=>{const t=document.createElement('textarea');t.value=REVIEW_PROMPT;document.body.appendChild(t);t.select();document.execCommand('copy');document.body.removeChild(t);showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)})}
+        function showToast(){const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500)}
+        function switchTab(n){document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',n==='feedback'?i===0:i===1));document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));document.getElementById('tab-'+n).classList.add('active')}
+    </script>
+</body>
+</html>

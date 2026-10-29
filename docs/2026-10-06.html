@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#0f0f13"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="당근영어"><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="icon" type="image/png" sizes="192x192" href="icon-192.png"><script src="install-banner.js" defer></script><script src="sw-reg.js" defer></script>
+    <title>전화영어 복습 - 2026년 10월 06일</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Noto Sans KR',sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.75;min-height:100vh}
+        .header{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);border-bottom:1px solid rgba(255,255,255,.06);padding:48px 24px 40px;text-align:center}
+        .header-date{font-size:13px;color:#94a3b8;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+        .header h1{font-size:28px;font-weight:700;color:#f1f5f9;margin-bottom:16px}
+        .header-meta{display:flex;justify-content:center;gap:24px;font-size:14px;color:#64748b}
+        .header-meta span{display:flex;align-items:center;gap:6px}
+        .cta-section{text-align:center;padding:40px 24px}
+        .cta-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:linear-gradient(135deg,#38bdf8,#818cf8);color:#fff;font-size:16px;font-weight:600;font-family:'Noto Sans KR',sans-serif;border:none;border-radius:50px;cursor:pointer;transition:all .3s;text-decoration:none;box-shadow:0 4px 24px rgba(56,189,248,.25)}
+        .cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(56,189,248,.35)}
+        .cta-btn svg{width:20px;height:20px}
+        .cta-sub{margin-top:12px;font-size:13px;color:#64748b}
+        .toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#38bdf8;padding:14px 28px;border-radius:12px;font-size:14px;font-weight:500;border:1px solid rgba(56,189,248,.2);box-shadow:0 8px 32px rgba(0,0,0,.4);opacity:0;transition:all .4s cubic-bezier(.16,1,.3,1);z-index:1000}
+        .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+        .container{max-width:720px;margin:0 auto;padding:0 24px 80px}
+        .tabs{display:flex;gap:4px;background:#1a1a24;padding:4px;border-radius:12px;margin-bottom:32px}
+        .tab{flex:1;padding:12px;text-align:center;font-size:14px;font-weight:500;color:#64748b;background:0 0;border:none;border-radius:8px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all .2s}
+        .tab.active{background:#262636;color:#f1f5f9}
+        .tab-content{display:none}.tab-content.active{display:block}
+        .feedback h2{font-size:18px;font-weight:700;color:#f1f5f9;margin:36px 0 16px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.06)}
+        .feedback h2:first-child{margin-top:0}
+        .feedback p{margin:8px 0;color:#cbd5e1}
+        .feedback .item{padding:6px 0 6px 16px;border-left:2px solid #334155;margin:6px 0;color:#cbd5e1}
+        .feedback .numbered{padding:8px 0 8px 16px;color:#cbd5e1}
+        .feedback .numbered strong{color:#38bdf8}
+        .feedback strong{color:#f1f5f9}
+        .feedback code{background:#1e293b;padding:2px 8px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#38bdf8}
+        .feedback table{width:100%;border-collapse:collapse;margin:12px 0}
+        .feedback th,.feedback td{padding:10px 14px;text-align:left;border-bottom:1px solid #262636}
+        .feedback th{color:#94a3b8;font-weight:500;font-size:13px}
+        .feedback td{color:#cbd5e1}
+        .arrow{color:#38bdf8;font-weight:700}
+        .transcript{background:#1a1a24;border-radius:12px;padding:28px;font-size:14px;line-height:2;color:#94a3b8;white-space:pre-wrap;word-break:break-word;font-family:'JetBrains Mono','Noto Sans KR',monospace}
+        .transcript .tutor{color:#38bdf8}
+        .transcript .student{color:#a78bfa}
+        @media(max-width:640px){.header{padding:32px 16px}.header h1{font-size:22px}.cta-btn{padding:14px 28px;font-size:15px}.container{padding:0 16px 60px}}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-date">2026년 10월 06일</div>
+        <h1>📚 전화영어 복습</h1>
+        <div class="header-meta">
+            <span>⏱ 19분 14초</span>
+            <span>🎙 전화영어_025180304_20261006080029.m4a</span>
+        </div>
+    </div>
+    <div class="cta-section">
+        <button class="cta-btn" onclick="startReview()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Gemini에서 복습 대화 시작하기
+        </button>
+        <div class="cta-sub">클릭하면 프롬프트가 복사되고 Gemini가 열립니다</div>
+    </div>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('feedback')">📋 AI 피드백</button>
+            <button class="tab" onclick="switchTab('transcript')">🎙 수업 전사</button>
+        </div>
+        <div id="tab-feedback" class="tab-content active">
+            <div class="feedback"><p>Joey님, 안녕하세요! 오늘도 활기찬 수업 잘 마치셨습니다. 쇼핑 습관과 'buyer's remorse' 같은 흥미로운 주제로 이야기 나누며 Joey님의 생각과 경험을 공유해 주셔서 정말 즐거웠어요. 특히 다양한 어휘를 활용해 본인의 의견을 명확하게 표현하려는 노력이 돋보였습니다.</p>
+<br>
+<p>오늘 배운 표현들을 실생활과 비즈니스 상황에서 자연스럽게 활용하실 수 있도록 따뜻하고 실용적인 피드백을 준비했습니다. 함께 살펴볼까요?</p>
+<br>
+<br>
+<p><strong>0. 📌 Topic</strong></p>
+<p>Topic: Discussing shopping preferences, buyer's remorse, and descriptive adjectives for stores.</p>
+<br>
+<p><strong>1. 📊 오늘의 대화 요약 (Summary)</strong></p>
+<p>오늘은 온라인 쇼핑과 오프라인 쇼핑에 대한 선호도를 이야기하고, 'buyer's remorse(구매 후회)'와 'bricks-and-mortar store(오프라인 매장)' 같은 핵심 표현들을 학습했습니다. 또한, 다양한 상점의 특징을 묘사하는 형용사들을 익히고, 남녀의 쇼핑 습관 차이에 대해서도 토론하며 폭넓은 대화를 나눴습니다.</p>
+<br>
+<p><strong>2. 💬 유창성 업그레이드 (Fluency & Natural Flow)</strong></p>
+<p>Joey님이 말씀하신 문장들을 더 자연스럽고 유창하게 다듬어 볼까요?</p>
+<br>
+<div class="numbered"><strong>1.</strong> ❌ <strong>As Said</strong>: "I think that's meaning is buyer regret."</div>
+<p>✅ <strong>Natural</strong>: "I think its meaning is buyer's regret."</p>
+<p>💎 <strong>Professional</strong>: "I interpret its meaning as buyer's remorse/regret."</p>
+<p>💡 <strong>코칭 포인트</strong>: Using the possessive pronoun 'its' instead of 'that's' (that is) makes the sentence grammatically correct and more natural. Also, 'buyer's regret' is a common and clear phrase.</p>
+<p><span class="arrow">→</span> 'that's' 대신 소유 대명사 'its'를 사용하면 문법적으로 정확하고 더 자연스럽습니다. 'buyer's regret' 또한 흔하고 명확한 표현입니다.</p>
+<br>
+<div class="numbered"><strong>2.</strong> ❌ <strong>As Said</strong>: "Before the next go on, I have a question about the remorse."</div>
+<p>✅ <strong>Natural</strong>: "Before we move on, I have a question about remorse."</p>
+<p>💎 <strong>Professional</strong>: "Before we proceed, I have a clarification question regarding remorse."</p>
+<p>💡 <strong>코칭 포인트</strong>: 'Move on'은 다음 주제로 넘어갈 때 매우 흔하고 자연스럽게 쓰이는 구동사입니다. 'Go on'도 맞지만 이 맥락에서는 'move on'이 더 부드럽게 들립니다. 'the next' 뒤에 명사 없이 쓰는 것은 덜 흔하므로, 'the next one'이나 'the next topic'처럼 명사를 붙여주는 것이 좋습니다.</p>
+<br>
+<div class="numbered"><strong>3.</strong> ❌ <strong>As Said</strong>: "I love the classic and upscale store because it gives comfort for me."</div>
+<p>✅ <strong>Natural</strong>: "I love classic and upscale stores because they give me comfort."</p>
+<p>💎 <strong>Professional</strong>: "I appreciate classic and upscale establishments as they provide a comfortable shopping experience."</p>
+<p>💡 <strong>코칭 포인트</strong>: When talking about general preferences for a type of store, it's more natural to use the plural 'stores' and 'they'. Also, 'give me comfort' is a more direct and natural way to express the idea than 'gives comfort for me'.</p>
+<p><span class="arrow">→</span> 특정 종류의 상점에 대한 일반적인 선호를 말할 때는 복수형 'stores'와 'they'를 사용하는 것이 더 자연스럽습니다. 또한, 'gives comfort for me'보다 'give me comfort'가 더 직접적이고 자연스러운 표현입니다.</p>
+<br>
+<div class="numbered"><strong>4.</strong> ❌ <strong>As Said</strong>: "I like shopping in store because I can try thing on."</div>
+<p>✅ <strong>Natural</strong>: "I like shopping in-store because I can try things on."</p>
+<p>💡 <strong>코칭 포인트</strong>: 'thing'은 단수 명사로, 여러 가지 물건을 시도해 본다는 의미에서는 복수형 'things'를 사용하는 것이 자연스럽습니다. 또한, 'in-store'는 하이픈으로 연결하여 형용사처럼 사용하거나, 'in a store'처럼 전치사구를 사용하는 것이 좋습니다.</p>
+<p><span class="arrow">→</span> 'thing'은 단수 명사이므로, 여러 물건을 시도해 본다는 의미에서는 복수형 'things'를 사용해야 합니다. 'in-store'는 하이픈으로 연결하여 형용사처럼 쓰거나, 'in a store'처럼 전치사구를 쓰는 것이 더 자연스럽습니다.</p>
+<br>
+<div class="numbered"><strong>5.</strong> ❌ <strong>As Said</strong>: "I shop online most of the time. It save times."</div>
+<p>✅ <strong>Natural</strong>: "I shop online most of the time. It saves time."</p>
+<p>💡 <strong>코칭 포인트</strong>: 주어가 3인칭 단수 'It'일 때는 동사에 '-s'를 붙여 'saves'가 되어야 합니다. 또한, '시간을 절약하다'는 일반적으로 'save time'으로 단수형 'time'을 사용합니다.</p>
+<p><span class="arrow">→</span> 주어가 3인칭 단수 'It'이므로 동사는 'saves'가 되어야 합니다. '시간을 절약하다'는 보통 'save time'으로 단수형 'time'을 사용합니다.</p>
+<br>
+<p><strong>3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)</strong></p>
+<p>Category: <strong>Noun/Adjective Form Confusion</strong></p>
+<br>
+<p>Joey님은 명사와 형용사의 형태를 혼동하여 사용하는 경향이 있었습니다. 특히 '차이'나 '경험'과 같은 개념을 표현할 때 명사형이 아닌 다른 형태를 사용하거나, 문맥에 맞지 않는 품사를 사용하는 경우가 있었어요.</p>
+<br>
+<table>
+<tr><th>❌ 원문 (As Said)</th><th>✅ 교정 예시 (Corrected)</th></tr>
+<tr><td>"It is perfect. If I use the one sentence, remorse, is it the same to regret or <strong>difference</strong>?"</td><td>"Is it the same as regret or is there a <strong>difference</strong>?"</td></tr>
+<tr><td>"Yes, if I just one word is the same, regret, <strong>guilty</strong>, etc."</td><td>"Yes, if I just use one word, it's the same: regret, <strong>guilt</strong>, etc."</td></tr>
+<tr><td>"These days, the main factor is the <strong>influence</strong> in my shopping style."</td><td>"These days, the main factor <strong>influencing</strong> my shopping style is..."</td></tr>
+<tr><td>"it is a good point to new <strong>experience</strong>."</td><td>"it is a good opportunity for new <strong>experiences</strong>."</td></tr>
+</table>
+<br>
+<p>📌 <strong>핵심 규칙</strong>: 문장에서 명사가 필요한 자리에는 명사 형태를, 형용사가 필요한 자리에는 형용사 형태를 정확히 사용해야 합니다. 동사나 형용사를 명사로 착각하거나, 명사를 형용사로 혼동하는 경우가 자주 발생합니다.</p>
+<br>
+<p>🔁 <strong>따라 읽기 (Repeat after me):</strong></p>
+<p>🗣️ "Is it the same as regret or is there a <strong>difference</strong>?"</p>
+<p>🗣️ "Yes, if I just use one word, it's the same: regret, <strong>guilt</strong>, etc."</p>
+<p>🗣️ "These days, the main factor <strong>influencing</strong> my shopping style is experience."</p>
+<br>
+<p><strong>4. 📗 어휘 확장 (Vocabulary Vault)</strong></p>
+<p>오늘 대화에서 유용하게 쓰일 수 있는 어휘들을 정리해 보았습니다.</p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>remorse</strong> /rɪˈmɔːrs/ (n)</div>
+<p>뜻: 후회, 회한</p>
+<p>실전 예문: We should analyze customer feedback to minimize <strong>remorse</strong> after purchase.</p>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>bricks-and-mortar</strong> /ˈbrɪks ən ˈmɔːrtər/ (adj)</div>
+<p>뜻: (온라인과 대비되는) 오프라인의, 실제 건물이 있는</p>
+<p>실전 예문: Many <strong>bricks-and-mortar</strong> businesses are now expanding into e-commerce.</p>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>upscale</strong> /ˈʌpˌskeɪl/ (adj)</div>
+<p>뜻: 고급의, 고품격의</p>
+<p>실전 예문: Our target demographic prefers <strong>upscale</strong> products and services.</p>
+<br>
+<div class="numbered"><strong>4.</strong> <strong>diverse</strong> /daɪˈvɜːrs/ (adj)</div>
+<p>뜻: 다양한</p>
+<p>실전 예문: We need to offer a <strong>diverse</strong> range of investment options to our clients.</p>
+<br>
+<div class="numbered"><strong>5.</strong> <strong>competitive</strong> /kəmˈpetɪtɪv/ (adj)</div>
+<p>뜻: 경쟁력 있는, 경쟁적인</p>
+<p>실전 예문: To stay <strong>competitive</strong> in the market, we must constantly innovate.</p>
+<br>
+<p><strong>5. 📝 실전 복습 챌린지 (Practice)</strong></p>
+<p>오늘 배운 표현과 문법을 활용하여 영작해 보세요.</p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>상황</strong>: 당신은 비즈니스 미팅에서 새로운 프로젝트에 대한 제안을 논의하고 있습니다.</div>
+<p><strong>영작</strong>: "다음 단계로 넘어가기 전에, 이 제안에 대해 질문이 있습니다."</p>
+<p><details></p>
+<p><summary>모범 답안</summary></p>
+<p>"Before we <strong>move on</strong> to the next step, I have a question about this proposal."</p>
+<p></details></p>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>상황</strong>: 당신은 고객 만족도 설문조사 결과를 분석하고 있습니다.</div>
+<p><strong>영작</strong>: "고객들이 구매 후 후회하는 것을 최소화하는 것이 중요합니다."</p>
+<p><details></p>
+<p><summary>모범 답안</summary></p>
+<p>"It's crucial to minimize <strong>buyer's remorse</strong> among customers."</p>
+<p></details></p>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>상황</strong>: 당신은 회사의 마케팅 전략을 설명하고 있습니다.</div>
+<p><strong>영작</strong>: "우리는 온라인과 오프라인 매장 모두에서 고객에게 다양한 경험을 제공하여 경쟁력을 유지해야 합니다."</p>
+<p><details></p>
+<p><summary>모범 답안</summary></p>
+<p>"We need to remain <strong>competitive</strong> by offering <strong>diverse experiences</strong> to customers in both our online and <strong>bricks-and-mortar</strong> stores."</p>
+<p></details></p>
+<br>
+<p><strong>6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)</strong></p>
+<br>
+<p>✨ <strong>Good Job</strong>:</p>
+<p>Joey님이 오늘 가장 잘 표현한 문장은 바로 이것입니다.</p>
+<p>"I'm a minimalist. When it comes to buying clothes, I try to avoid buyer's remorse by making sure I really need something before making a purchase."</p>
+<p>이 문장은 Joey님의 쇼핑 철학을 'minimalist'라는 단어로 명확하게 표현하고, 'When it comes to ~ing'와 'by making sure ~'와 같은 연결 표현을 자연스럽게 사용하여 의미를 풍부하게 전달했습니다. 'buyer's remorse'라는 핵심 어휘도 정확하게 활용하여 인상 깊었습니다!</p>
+<br>
+<p>🚀 <strong>내일의 한 문장</strong>:</p>
+<p>다음 수업 시작 시, 튜터에게 오늘 배운 표현을 활용하여 이렇게 말해보세요.</p>
+<p>"I'm looking forward to our class today. I hope we can <strong>move on</strong> to some <strong>diverse</strong> and interesting topics!"</p>
+<br>
+<br>
+<p><strong>[성과 지표]</strong></p>
+<p><strong>유창성 점수</strong>: 7.5/10</p>
+<br>
+<p><strong>근거</strong>: Joey님은 오늘 수업에서 다양한 주제에 대해 자신의 의견을 적극적으로 표현하려는 의지가 매우 강했습니다. 새로운 어휘를 배우고 발음 연습을 할 때도 매우 집중하는 모습을 보여주셨고, 문장 구조를 활용하여 아이디어를 전달하는 능력도 뛰어났습니다. 다만, 몇몇 문장에서 명사/형용사 형태 혼동이나 동사 시제 및 수 일치, 전치사 사용의 어색함이 있었지만, 이는 지속적인 연습으로 충분히 개선될 수 있는 부분입니다. 전반적으로 대화 흐름을 끊기지 않고 이어가는 유창성이 돋보였습니다.</p>
+<br>
+<p><strong>다음 수업 '원포인트 액션 플랜'</strong>:</p>
+<p>다음 수업에서는 <strong>명사와 형용사의 정확한 사용</strong>에 조금 더 집중해 볼까요? 특히 'difference/different', 'guilt/guilty', 'experience/experienced'와 같이 형태가 비슷한 단어들을 문장에서 올바르게 활용하는 연습을 해보면 좋을 것 같습니다. 대화 중 이러한 단어들이 나올 때, 한 번 더 의식적으로 올바른 형태를 사용하려고 노력해 보세요!</p></div>
+        </div>
+        <div id="tab-transcript" class="tab-content">
+            <div class="transcript"><span class="tutor">[Tutor]</span> Hello, Joey. Good morning. Hi, how are you? I&#x27;m doing well. Do you have class this week? Yeah, you&#x27;re right. It is first class this week.
+<span class="tutor">[Tutor]</span> Oh, do you think you&#x27;ll be busy this week when we have one class? Really? That is the second class.
+<span class="tutor">[Tutor]</span> Well, you can take as many or as few as your schedule allows.
+<span class="student">[Student]</span> Okay, I see. Good.
+<span class="tutor">[Tutor]</span> Did you need a moment to bring up today&#x27;s lesson, or are you ready to start?
+<span class="student">[Student]</span> Just a moment. I need one minute.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="student">[Student]</span> Okay.
+<span class="tutor">[Tutor]</span> Not a problem.
+<span class="student">[Student]</span> Okay, I&#x27;m ready.
+<span class="tutor">[Tutor]</span> How do you avoid buyer remorse?
+<span class="tutor">[Tutor]</span> All right. Good.
+<span class="student">[Student]</span> Buyers.
+<span class="tutor">[Tutor]</span> Very good. All right. Let&#x27;s get you to read today&#x27;s goal at the bottom of the page.
+<span class="student">[Student]</span> Today&#x27;s goal is talk about your preference for online and in-store clothing shopping.
+<span class="tutor">[Tutor]</span> Very good. Okay. All right. Fantastic. Let&#x27;s go on to the next page, and we&#x27;re going to look at key expressions and key questions. Our first expression is buyer&#x27;s remorse. I&#x27;m going to ask you to read the four sentences for me. Please take your time.
+<span class="student">[Student]</span> Okay, I see. The first expression is the buyer&#x27;s remorse. That expensive dress gave me serious buyer&#x27;s remorse. I always check the reviews to avoid buyer&#x27;s remorse.
+<span class="student">[Student]</span> I had buyer&#x27;s remorse the moment I saw the strict return policy.
+<span class="student">[Student]</span> The sale price was great, but I still had buyer&#x27;s remorse.
+<span class="tutor">[Tutor]</span> Very good. Very good. So what do you think buyer&#x27;s remorse might mean in English?
+<span class="student">[Student]</span> I think that&#x27;s meaning is buyer regret.
+<span class="tutor">[Tutor]</span> Yes.
+<span class="student">[Student]</span> Right?
+<span class="tutor">[Tutor]</span> Yes, you got it. Absolutely correct. Regret or you&#x27;re double-guessing yourself. Very good. All right. Let&#x27;s get you to continue on to the next key expression, please.
+<span class="student">[Student]</span> Before the next go on, I have a question about the remorse.
+<span class="tutor">[Tutor]</span> Of course.
+<span class="student">[Student]</span> It is perfect. If I use the one sentence, remorse, is it the same to regret or difference?
+<span class="tutor">[Tutor]</span> It can be, but what I&#x27;m doing right now is I&#x27;m looking up synonyms for remorse. And the words that I come up with are regret, guilt, shame, or something called contrition, which is deep, deep regret. So remorse is synonymous with regret, guilt, second-guessing.
+<span class="student">[Student]</span> Yeah, it is.
+<span class="tutor">[Tutor]</span> It&#x27;s a good synonym.
+<span class="student">[Student]</span> It&#x27;s the same.
+<span class="student">[Student]</span> Yes, if I just one word is the same, regret, guilty, etc.
+<span class="student">[Student]</span> Okay, I understand.
+<span class="tutor">[Tutor]</span> Lovely, good question.
+<span class="student">[Student]</span> Okay, the next expression is the bricks-and-mortar store.
+<span class="student">[Student]</span> I still prefer shopping at a bricks-and-mortar store, of course.
+<span class="student">[Student]</span> How about the T, mortar or motar?
+<span class="tutor">[Tutor]</span> Mortar is better.
+<span class="student">[Student]</span> Mortar, okay.
+<span class="student">[Student]</span> Bricks-and-mortar store offer customer service you can&#x27;t get online.
+<span class="student">[Student]</span> Sometimes people still prefer the social aspect of bricks-and-mortar stores.
+<span class="student">[Student]</span> This brand only sells online without bricks-and-mortar stores.
+<span class="tutor">[Tutor]</span> Okay. All right. One word I&#x27;d like to get you to practice. I know it&#x27;s early in the morning. We&#x27;re having a little slip of the tongue. You&#x27;re saying &quot;on.&quot; Let&#x27;s try &quot;online.&quot; &quot;Online.&quot; &quot;Online.&quot; Better.
+<span class="student">[Student]</span> Online.
+<span class="tutor">[Tutor]</span> Nicely done, sir. Okay, good. You got it. All right. If you have no questions, let&#x27;s go on to the next page and I&#x27;ll get you to continue reading.
+<span class="student">[Student]</span> We have our questions. Okay. How do you avoid buyer&#x27;s remorse?
+<span class="student">[Student]</span> Okay. The question is, are you more of an online or an in-store shopper? The answer is 1. I like shopping in-store because I can try things on. Answer 2. I shop online most of the time. It saves time.
+<span class="student">[Student]</span> Okay. Okay.
+<span class="tutor">[Tutor]</span> And the follow-up question, when you&#x27;re ready.
+<span class="student">[Student]</span> Follow-up question.
+<span class="tutor">[Tutor]</span> What&#x27;s the appeal for you?
+<span class="student">[Student]</span> I like it because shopping online saved me time.
+<span class="student">[Student]</span> Saved me time.
+<span class="student">[Student]</span> Yeah. Okay.
+<span class="tutor">[Tutor]</span> What I noticed when you were reading this question is in some cases the word was a singular and you put an S or it had an S and you deleted it. For example, you said, &quot;I like shopping in store because I can try thing on.&quot; I can try things on. And then in response number two, you said, &quot;it save times.&quot; It saves time. So you just want to be careful with the S, okay? Otherwise, you&#x27;re doing great.
+<span class="student">[Student]</span> Okay, I see. Understand.
+<span class="tutor">[Tutor]</span> Very good. All right. We&#x27;re going to move on to part A, my story. And as usual, we&#x27;ve got those yellow boxes. And I&#x27;ll get you to complete each sentence. You can use your own suggestion or you can use the suggestions from underneath the fourth sentence.
+<span class="student">[Student]</span> Okay. I see. My story. I usually prefer to my clothing shopping as a bricks-and-mortar store. I prefer it because I can try all things on. I&#x27;m a minimalist. A minimalist. When it comes to buying clothes, I try to avoid buyer&#x27;s remorse by making sure I really need something before making a purchase.
+<span class="tutor">[Tutor]</span> Okay. That was excellent. I could hear how carefully you were reading. Excellent work.
+<span class="student">[Student]</span> Thank you.
+<span class="tutor">[Tutor]</span> Okay. All right. We&#x27;re going to skip B, the mission. Uh-huh. And we&#x27;re going to go on to C, the social skills. And we&#x27;re going to learn some adjective vocabulary.
+<span class="student">[Student]</span> Okay. The adjective. Right. Mm-hmm. Okay.
+<span class="tutor">[Tutor]</span> So just a reminder, this is where we read each group of five adjectives. And then they ask you to create a sentence.
+<span class="student">[Student]</span> Okay. Okay. Yeah.
+<span class="tutor">[Tutor]</span> So the title is Learn How to Describe Different Stores. I&#x27;ll ask you to read the first five adjectives, please.
+<span class="student">[Student]</span> Okay. There are five words, five sentences. The first is upscale, classic.
+<span class="student">[Student]</span> Special sauce.
+<span class="tutor">[Tutor]</span> Spacious.
+<span class="student">[Student]</span> Spacious.
+<span class="tutor">[Tutor]</span> Spacious. Yes.
+<span class="student">[Student]</span> Spacious.
+<span class="tutor">[Tutor]</span> Spacious. Wow. That&#x27;s so, it&#x27;s so spacious. It&#x27;s tricky. I agree. I agree. But you got it.
+<span class="student">[Student]</span> Okay. Spacious. Customer friendly.
+<span class="student">[Student]</span> Prestigious.
+<span class="tutor">[Tutor]</span> Prestigious.
+<span class="student">[Student]</span> Prestigious. Okay. Yes.
+<span class="tutor">[Tutor]</span> Prestigious.
+<span class="student">[Student]</span> Prestigious.
+<span class="tutor">[Tutor]</span> You got it.
+<span class="student">[Student]</span> Okay. I made some example sentence. And again, there&#x27;s an example on the next page you can look at. The example, I like the spacious and customer-friendly department stores. In my case, I love the classic and upscale store because it gives comfort for me.
+<span class="tutor">[Tutor]</span> Okay. Okay. Fair enough. Fair enough. All right. Let&#x27;s go on to the next group and I&#x27;ll get you to read those adjectives.
+<span class="student">[Student]</span> Uh-huh. Diverse. Diverse.
+<span class="student">[Student]</span> How can I read? 24/7?
+<span class="tutor">[Tutor]</span> 24/7. It&#x27;s fine. Yeah.
+<span class="student">[Student]</span> 24/7, right?
+<span class="tutor">[Tutor]</span> 24/7. Uh-huh.
+<span class="student">[Student]</span> Efficient.
+<span class="tutor">[Tutor]</span> Good.
+<span class="student">[Student]</span> Competitive.
+<span class="tutor">[Tutor]</span> Okay. The E at the end is silent. You&#x27;re very close. Competitive.
+<span class="student">[Student]</span> Competitive.
+<span class="tutor">[Tutor]</span> Better.
+<span class="student">[Student]</span> Competitive. Okay.
+<span class="student">[Student]</span> Non-face-to-face. Non-face-to-face. Non-face-to-face. Competitive.
+<span class="tutor">[Tutor]</span> Okay. I&#x27;d like to help you with the first word. You pronounced it &quot;deversed.&quot; Good try. There are two other ways that are better. We would either say diverse, short I, or diverse, long I.
+<span class="student">[Student]</span> Yeah, instead of the E sound?
+<span class="tutor">[Tutor]</span> Uh-huh.
+<span class="student">[Student]</span> Diverse. Okay. How about you?
+<span class="tutor">[Tutor]</span> So, diverse or diverse. Let&#x27;s use this word.
+<span class="student">[Student]</span> How can I say? Diverse or diverse?
+<span class="tutor">[Tutor]</span> I follow you. Yeah, don&#x27;t use... Yeah, you don&#x27;t want the E sound. You want to say diverse or diverse.
+<span class="student">[Student]</span> Diverse. How about you? If you use this sentence, you read the diverse, right?
+<span class="tutor">[Tutor]</span> I would say diverse.
+<span class="student">[Student]</span> Okay, I follow you. Diverse. Okay.
+<span class="tutor">[Tutor]</span> All right. And let&#x27;s just try that fourth one again. We&#x27;re going to do it real slow.
+<span class="student">[Student]</span> Competitive.
+<span class="student">[Student]</span> Competitive. Tive. Tive. Competitive. Yes.
+<span class="student">[Student]</span> Competitive.
+<span class="tutor">[Tutor]</span> The E is silent. Competitive.
+<span class="student">[Student]</span> Competitive.
+<span class="tutor">[Tutor]</span> There you go.
+<span class="student">[Student]</span> Okay, competitive. Competitive.
+<span class="tutor">[Tutor]</span> Yeah, I will make sure to send some sound bites or a video for you to practice, okay?
+<span class="student">[Student]</span> Okay.
+<span class="tutor">[Tutor]</span> Because it&#x27;s a mouthful. Competitive. All right. All right. Let&#x27;s take a look at the sample sentence for the second group.
+<span class="student">[Student]</span> Okay. The example, I prefer shopping at non-face-to-face online store with diverse range.
+<span class="tutor">[Tutor]</span> Good.
+<span class="student">[Student]</span> I prefer shopping at efficient and non-face-to-face online store.
+<span class="tutor">[Tutor]</span> Certainly. Very good. All right. Let&#x27;s go on to the last group when you&#x27;re ready.
+<span class="student">[Student]</span> Okay, I&#x27;m ready. The mass-produced, trendy, expensive, generic, intense.
+<span class="tutor">[Tutor]</span> Okay, intense was perfect. Let&#x27;s try the third word you said, &quot;expensive,&quot; but there are two letters at the beginning which make it the opposite. I&#x27;m going to get you to try after me.
+<span class="tutor">[Tutor]</span> Inexpensive.
+<span class="student">[Student]</span> Expensive.
+<span class="tutor">[Tutor]</span> Inexpensive. Yes.
+<span class="student">[Student]</span> Inexpensive. Yes.
+<span class="tutor">[Tutor]</span> Expensive.
+<span class="student">[Student]</span> Expensive. Expensive. Okay.
+<span class="tutor">[Tutor]</span> This is the opposite. Uh-huh. Uh-huh. Go on. Inexpensive is the opposite of expensive. Expensive means spend a lot of money. Inexpensive means cheap. Low price. Okay. And the next word I want to help you with, you pronounced like this, &quot;Generic,&quot; with the focus on the third syllable. Let&#x27;s do it on the second syllable. Generic. Generic. Generic. Excellent.
+<span class="tutor">[Tutor]</span> Much better.
+<span class="student">[Student]</span> And teacher, if you use the one sentence, expensive, you said expensive or expensive?
+<span class="tutor">[Tutor]</span> Expensive. Expensive. The sports car was expensive.
+<span class="student">[Student]</span> Maybe that is the English pronunciation. Expensive?
+<span class="tutor">[Tutor]</span> Yeah. Expensive. The bicycle was inexpensive. It was cheaper.
+<span class="student">[Student]</span> Expensive. Okay. I see.
+<span class="tutor">[Tutor]</span> Very good. All right. I&#x27;ll get you to look at the last sample sentence.
+<span class="student">[Student]</span> Okay. The sample sentence. Fast fashion stores are trendy but can be generic.
+<span class="student">[Student]</span> Uh-huh. Generic. Good. Generic.
+<span class="tutor">[Tutor]</span> All right. Excellent. Let&#x27;s try to make one more sentence from that group.
+<span class="student">[Student]</span> The SNS advertisement products are generic and intense. Just trendy and intense.
+<span class="tutor">[Tutor]</span> Sure. Very good. Very nice. All right. We are all done. Do you have any questions about the adjectives?
+<span class="student">[Student]</span> No, it&#x27;s all. I&#x27;m good.
+<span class="tutor">[Tutor]</span> All right, very good. Let&#x27;s go on now to part D, Digging in deeper. Digging in deeper. And it shows you that there are some factors that affect how men and women shop. So I&#x27;ll just go over it briefly. When it comes to discounts, men like—men are attracted to discounts more than women. Women are affected by marketing emails less than men. And then women use more coupons than men. Okay. All right. So let&#x27;s take a look at the questions. I&#x27;ll get you to read number one and respond.
+<span class="student">[Student]</span> Okay. Do you think the man and the woman have different shopping habits? Why or why not?
+<span class="student">[Student]</span> I think they are also like the discount, product of discount. And usually men is more like the discount. But in specific way, the woman used their coupon or gave their marketing email, their response. But the guys don&#x27;t like that. Just they like their discount, but they don&#x27;t use the coupon or marketing email. So I think we have two strategies of the marketing discount from gender.
+<span class="tutor">[Tutor]</span> I think that men don&#x27;t like to ask for discounts. They just want it listed on the price tag. If a woman gets an email or a coupon, she has no problem going up to the till and go, &quot;Look what I have. I have a coupon. I have a discount.&quot; Yeah, we have no problem with that.
+<span class="student">[Student]</span> Yeah, that is more detailed. It&#x27;s all right. Yeah, I like that. Uh-huh. Yeah. Yeah.
+<span class="tutor">[Tutor]</span> Okay. Last question. I will read. Which factors influence your shopping decisions the most? Price, convenience, or something else?
+<span class="student">[Student]</span> These days, the main factor is the influence in my shopping style. That is experience. Because I&#x27;m also MG generation, so it is a good point to new experience. For example, the new driver or new experience of the used device or more, etc. So I think there are so many factors, but this day main factor is the experience. Yeah.
+<span class="tutor">[Tutor]</span> Okay, fair enough. You want to have a pleasant experience. All right, sir. Excellent job again today. Thank you for joining me. I will talk to you next time.
+<span class="student">[Student]</span> Thank you. Bye-bye, teacher. Have a nice day.
+<span class="tutor">[Tutor]</span> Have a great day.</div>
+        </div>
+    </div>
+    <div class="toast" id="toast">✅ 프롬프트가 복사되었습니다!</div>
+    <script>
+        const REVIEW_PROMPT="너는 나의 영어 회화 복습 파트너야. 오늘 내 전화영어 수업 내용을 기반으로 대화하면서 복습을 도와줘.\n\n[오늘 수업 전사 내용]\n[Tutor] Hello, Joey. Good morning. Hi, how are you? I'm doing well. Do you have class this week? Yeah, you're right. It is first class this week.\n[Tutor] Oh, do you think you'll be busy this week when we have one class? Really? That is the second class.\n[Tutor] Well, you can take as many or as few as your schedule allows.\n[Student] Okay, I see. Good.\n[Tutor] Did you need a moment to bring up today's lesson, or are you ready to start?\n[Student] Just a moment. I need one minute.\n[Tutor] Okay.\n[Student] Okay.\n[Tutor] Not a problem.\n[Student] Okay, I'm ready.\n[Tutor] How do you avoid buyer remorse?\n[Tutor] All right. Good.\n[Student] Buyers.\n[Tutor] Very good. All right. Let's get you to read today's goal at the bottom of the page.\n[Student] Today's goal is talk about your preference for online and in-store clothing shopping.\n[Tutor] Very good. Okay. All right. Fantastic. Let's go on to the next page, and we're going to look at key expressions and key questions. Our first expression is buyer's remorse. I'm going to ask you to read the four sentences for me. Please take your time.\n[Student] Okay, I see. The first expression is the buyer's remorse. That expensive dress gave me serious buyer's remorse. I always check the reviews to avoid buyer's remorse.\n[Student] I had buyer's remorse the moment I saw the strict return policy.\n[Student] The sale price was great, but I still had buyer's remorse.\n[Tutor] Very good. Very good. So what do you think buyer's remorse might mean in English?\n[Student] I think that's meaning is buyer regret.\n[Tutor] Yes.\n[Student] Right?\n[Tutor] Yes, you got it. Absolutely correct. Regret or you're double-guessing yourself. Very good. All right. Let's get you to continue on to the next key expression, please.\n[Student] Before the next go on, I have a question about the remorse.\n[Tutor] Of course.\n[Student] It is perfect. If I use the one sentence, remorse, is it the same to regret or difference?\n[Tutor] It can be, but what I'm doing right now is I'm looking up synonyms for remorse. And the words that I come up with are regret, guilt, shame, or something called contrition, which is deep, deep regret. So remorse is synonymous with regret, guilt, second-guessing.\n[Student] Yeah, it is.\n[Tutor] It's a good synonym.\n[Student] It's the same.\n[Student] Yes, if I just one word is the same, regret, guilty, etc.\n[Student] Okay, I understand.\n[Tutor] Lovely, good question.\n[Student] Okay, the next expression is the bricks-and-mortar store.\n[Student] I still prefer shopping at a bricks-and-mortar store, of course.\n[Student] How about the T, mortar or motar?\n[Tutor] Mortar is better.\n[Student] Mortar, okay.\n[Student] Bricks-and-mortar store offer customer service you can't get online.\n[Student] Sometimes people still prefer the social aspect of bricks-and-mortar stores.\n[Student] This brand only sells online without bricks-and-mortar stores.\n[Tutor] Okay. All right. One word I'd like to get you to practice. I know it's early in the morning. We're having a little slip of the tongue. You're saying \"on.\" Let's try \"online.\" \"Online.\" \"Online.\" Better.\n[Student] Online.\n[Tutor] Nicely done, sir. Okay, good. You got it. All right. If you have no questions, let's go on to the next page and I'll get you to continue reading.\n[Student] We have our questions. Okay. How do you avoid buyer's remorse?\n[Student] Okay. The question is, are you more of an online or an in-store shopper? The answer is 1. I like shopping in-store because I can try things on. Answer 2. I shop online most of the time. It saves time.\n[Student] Okay. Okay.\n[Tutor] And the follow-up question, when you're ready.\n[Student] Follow-up question.\n[Tutor] What's the appeal for you?\n[Student] I like it because shopping online saved me time.\n[Student] Saved me time.\n[Student] Yeah. Okay.\n[Tutor] What I noticed when you were reading this question is in some cases the word was a singular and you put an S or it had an S and you deleted it. For example, you said, \"I like shopping in store because I can try thing on.\" I can try things on. And then in response number two, you said, \"it save times.\" It saves time. So you just want to be careful with the S, okay? Otherwise, you're doing great.\n[Student] Okay, I see. Understand.\n[Tutor] Very good. All right. We're going to move on to part A, my story. And as usual, we've got those yellow boxes. And I'll get you to complete each sentence. You can use your own suggestion or you can use the suggestions from underneath the fourth sentence.\n[Student] Okay. I see. My story. I usually prefer to my clothing shopping as a bricks-and-mortar store. I prefer it because I can try all things on. I'm a minimalist. A minimalist. When it comes to buying clothes, I try to avoid buyer's remorse by making sure I really need something before making a purchase.\n[Tutor] Okay. That was excellent. I could hear how carefully you were reading. Excellent work.\n[Student] Thank you.\n[Tutor] Okay. All right. We're going to skip B, the mission. Uh-huh. And we're going to go on to C, the social skills. And we're going to learn some adjective vocabulary.\n[Student] Okay. The adjective. Right. Mm-hmm. Okay.\n[Tutor] So just a reminder, this is where we read each group of five adjectives. And then they ask you to create a sentence.\n[Student] Okay. Okay. Yeah.\n[Tutor] So the title is Learn How to Describe Different Stores. I'll ask you to read the first five adjectives, please.\n[Student] Okay. There are five words, five sentences. The first is upscale, classic.\n[Student] Special sauce.\n[Tutor] Spacious.\n[Student] Spacious.\n[Tutor] Spacious. Yes.\n[Student] Spacious.\n[Tutor] Spacious. Wow. That's so, it's so spacious. It's tricky. I agree. I agree. But you got it.\n[Student] Okay. Spacious. Customer friendly.\n[Student] Prestigious.\n[Tutor] Prestigious.\n[Student] Prestigious. Okay. Yes.\n[Tutor] Prestigious.\n[Student] Prestigious.\n[Tutor] You got it.\n[Student] Okay. I made some example sentence. And again, there's an example on the next page you can look at. The example, I like the spacious and customer-friendly department stores. In my case, I love the classic and upscale store because it gives comfort for me.\n[Tutor] Okay. Okay. Fair enough. Fair enough. All right. Let's go on to the next group and I'll get you to read those adjectives.\n[Student] Uh-huh. Diverse. Diverse.\n[Student] How can I read? 24/7?\n[Tutor] 24/7. It's fine. Yeah.\n[Student] 24/7, right?\n[Tutor] 24/7. Uh-huh.\n[Student] Efficient.\n[Tutor] Good.\n[Student] Competitive.\n[Tutor] Okay. The E at the end is silent. You're very close. Competitive.\n[Student] Competitive.\n[Tutor] Better.\n[Student] Competitive. Okay.\n[Student] Non-face-to-face. Non-face-to-face. Non-face-to-face. Competitive.\n[Tutor] Okay. I'd like to help you with the first word. You pronounced it \"deversed.\" Good try. There are two other ways that are better. We would either say diverse, short I, or diverse, long I.\n[Student] Yeah, instead of the E sound?\n[Tutor] Uh-huh.\n[Student] Diverse. Okay. How about you?\n[Tutor] So, diverse or diverse. Let's use this word.\n[Student] How can I say? Diverse or diverse?\n[Tutor] I follow you. Yeah, don't use... Yeah, you don't want the E sound. You want to say diverse or diverse.\n[Student] Diverse. How about you? If you use this sentence, you read the diverse, right?\n[Tutor] I would say diverse.\n[Student] Okay, I follow you. Diverse. Okay.\n[Tutor] All right. And let's just try that fourth one again. We're going to do it real slow.\n[Student] Competitive.\n[Student] Competitive. Tive. Tive. Competitive. Yes.\n[Student] Competitive.\n[Tutor] The E is silent. Competitive.\n[Student] Competitive.\n[Tutor] There you go.\n[Student] Okay, competitive. Competitive.\n[Tutor] Yeah, I will make sure to send some sound bites or a video for you to practice, okay?\n[Student] Okay.\n[Tutor] Because it's a mouthful. Competitive. All right. All right. Let's take a look at the sample sentence for the second group.\n[Student] Okay. The example, I prefer shopping at non-face-to-face online store with diverse range.\n[Tutor] Good.\n[Student] I prefer shopping at efficient and non-face-to-face online store.\n[Tutor] Certainly. Very good. All right. Let's go on to the last group when you're ready.\n[Student] Okay, I'm ready. The mass-produced, trendy, expensive, generic, intense.\n[Tutor] Okay, intense was perfect. Let's try the third word you said, \"expensive,\" but there are two letters at the beginning which make it the opposite. I'm going to get you to try after me.\n[Tutor] Inexpensive.\n[Student] Expensive.\n[Tutor] Inexpensive. Yes.\n[Student] Inexpensive. Yes.\n[Tutor] Expensive.\n[Student] Expensive. Expensive. Okay.\n[Tutor] This is the opposite. Uh-huh. Uh-huh. Go on. Inexpensive is the opposite of expensive. Expensive means spend a lot of money. Inexpensive means cheap. Low price. Okay. And the next word I want to help you with, you pronounced like this, \"Generic,\" with the focus on the third syllable. Let's do it on the second syllable. Generic. Generic. Generic. Excellent.\n[Tutor] Much better.\n[Student] And teacher, if you use the one sentence, expensive, you said expensive or expensive?\n[Tutor] Expensive. Expensive. The sports car was expensive.\n[Student] Maybe that is the English pronunciation. Expensive?\n[Tutor] Yeah. Expensive. The bicycle was inexpensive. It was cheaper.\n[Student] Expensive. Okay. I see.\n[Tutor] Very good. All right. I'll get you to look at the last sample sentence.\n[Student] Okay. The sample sentence. Fast fashion stores are trendy but can be generic.\n[Student] Uh-huh. Generic. Good. Generic.\n[Tutor] All right. Excellent. Let's try to make one more sentence from that group.\n[Student] The SNS advertisement products are generic and intense. Just trendy and intense.\n[Tutor] Sure. Very good. Very nice. All right. We are all done. Do you have any questions about the adjectives?\n[Student] No, it's all. I'm good.\n[Tutor] All right, very good. Let's go on now to part D, Digging in deeper. Digging in deeper. And it shows you that there are some factors that affect how men and women shop. So I'll just go over it briefly. When it comes to discounts, men like—men are attracted to discounts more than women. Women are affected by marketing emails less than men. And then women use more coupons than men. Okay. All right. So let's take a look at the questions. I'll get you to read number one and respond.\n[Student] Okay. Do you think the man and the woman have different shopping habits? Why or why not?\n[Student] I think they are also like the discount, product of discount. And usually men is more like the discount. But in specific way, the woman used their coupon or gave their marketing email, their response. But the guys don't like that. Just they like their discount, but they don't use the coupon or marketing email. So I think we have two strategies of the marketing discount from gender.\n[Tutor] I think that men don't like to ask for discounts. They just want it listed on the price tag. If a woman gets an email or a coupon, she has no problem going up to the till and go, \"Look what I have. I have a coupon. I have a discount.\" Yeah, we have no problem with that.\n[Student] Yeah, that is more detailed. It's all right. Yeah, I like that. Uh-huh. Yeah. Yeah.\n[Tutor] Okay. Last question. I will read. Which factors influence your shopping decisions the most? Price, convenience, or something else?\n[Student] These days, the main factor is the influence in my shopping style. That is experience. Because I'm also MG generation, so it is a good point to new experience. For example, the new driver or new experience of the used device or more, etc. So I think there are so many factors, but this day main factor is the experience. Yeah.\n[Tutor] Okay, fair enough. You want to have a pleasant experience. All right, sir. Excellent job again today. Thank you for joining me. I will talk to you next time.\n[Student] Thank you. Bye-bye, teacher. Have a nice day.\n[Tutor] Have a great day.\n\n[AI 피드백]\nJoey님, 안녕하세요! 오늘도 활기찬 수업 잘 마치셨습니다. 쇼핑 습관과 'buyer's remorse' 같은 흥미로운 주제로 이야기 나누며 Joey님의 생각과 경험을 공유해 주셔서 정말 즐거웠어요. 특히 다양한 어휘를 활용해 본인의 의견을 명확하게 표현하려는 노력이 돋보였습니다.\n\n오늘 배운 표현들을 실생활과 비즈니스 상황에서 자연스럽게 활용하실 수 있도록 따뜻하고 실용적인 피드백을 준비했습니다. 함께 살펴볼까요?\n\n---\n\n**0. 📌 Topic**\nTopic: Discussing shopping preferences, buyer's remorse, and descriptive adjectives for stores.\n\n**1. 📊 오늘의 대화 요약 (Summary)**\n오늘은 온라인 쇼핑과 오프라인 쇼핑에 대한 선호도를 이야기하고, 'buyer's remorse(구매 후회)'와 'bricks-and-mortar store(오프라인 매장)' 같은 핵심 표현들을 학습했습니다. 또한, 다양한 상점의 특징을 묘사하는 형용사들을 익히고, 남녀의 쇼핑 습관 차이에 대해서도 토론하며 폭넓은 대화를 나눴습니다.\n\n**2. 💬 유창성 업그레이드 (Fluency & Natural Flow)**\nJoey님이 말씀하신 문장들을 더 자연스럽고 유창하게 다듬어 볼까요?\n\n1.  ❌ **As Said**: \"I think that's meaning is buyer regret.\"\n    ✅ **Natural**: \"I think its meaning is buyer's regret.\"\n    💎 **Professional**: \"I interpret its meaning as buyer's remorse/regret.\"\n    💡 **코칭 포인트**: Using the possessive pronoun 'its' instead of 'that's' (that is) makes the sentence grammatically correct and more natural. Also, 'buyer's regret' is a common and clear phrase.\n    → 'that's' 대신 소유 대명사 'its'를 사용하면 문법적으로 정확하고 더 자연스럽습니다. 'buyer's regret' 또한 흔하고 명확한 표현입니다.\n\n2.  ❌ **As Said**: \"Before the next go on, I have a question about the remorse.\"\n    ✅ **Natural**: \"Before we move on, I have a question about remorse.\"\n    💎 **Professional**: \"Before we proceed, I have a clarification question regarding remorse.\"\n    💡 **코칭 포인트**: 'Move on'은 다음 주제로 넘어갈 때 매우 흔하고 자연스럽게 쓰이는 구동사입니다. 'Go on'도 맞지만 이 맥락에서는 'move on'이 더 부드럽게 들립니다. 'the next' 뒤에 명사 없이 쓰는 것은 덜 흔하므로, 'the next one'이나 'the next topic'처럼 명사를 붙여주는 것이 좋습니다.\n\n3.  ❌ **As Said**: \"I love the classic and upscale store because it gives comfort for me.\"\n    ✅ **Natural**: \"I love classic and upscale stores because they give me comfort.\"\n    💎 **Professional**: \"I appreciate classic and upscale establishments as they provide a comfortable shopping experience.\"\n    💡 **코칭 포인트**: When talking about general preferences for a type of store, it's more natural to use the plural 'stores' and 'they'. Also, 'give me comfort' is a more direct and natural way to express the idea than 'gives comfort for me'.\n    → 특정 종류의 상점에 대한 일반적인 선호를 말할 때는 복수형 'stores'와 'they'를 사용하는 것이 더 자연스럽습니다. 또한, 'gives comfort for me'보다 'give me comfort'가 더 직접적이고 자연스러운 표현입니다.\n\n4.  ❌ **As Said**: \"I like shopping in store because I can try thing on.\"\n    ✅ **Natural**: \"I like shopping in-store because I can try things on.\"\n    💡 **코칭 포인트**: 'thing'은 단수 명사로, 여러 가지 물건을 시도해 본다는 의미에서는 복수형 'things'를 사용하는 것이 자연스럽습니다. 또한, 'in-store'는 하이픈으로 연결하여 형용사처럼 사용하거나, 'in a store'처럼 전치사구를 사용하는 것이 좋습니다.\n    → 'thing'은 단수 명사이므로, 여러 물건을 시도해 본다는 의미에서는 복수형 'things'를 사용해야 합니다. 'in-store'는 하이픈으로 연결하여 형용사처럼 쓰거나, 'in a store'처럼 전치사구를 쓰는 것이 더 자연스럽습니다.\n\n5.  ❌ **As Said**: \"I shop online most of the time. It save times.\"\n    ✅ **Natural**: \"I shop online most of the time. It saves time.\"\n    💡 **코칭 포인트**: 주어가 3인칭 단수 'It'일 때는 동사에 '-s'를 붙여 'saves'가 되어야 합니다. 또한, '시간을 절약하다'는 일반적으로 'save time'으로 단수형 'time'을 사용합니다.\n    → 주어가 3인칭 단수 'It'이므로 동사는 'saves'가 되어야 합니다. '시간을 절약하다'는 보통 'save time'으로 단수형 'time'을 사용합니다.\n\n**3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)**\nCategory: **Noun/Adjective Form Confusion**\n\nJoey님은 명사와 형용사의 형태를 혼동하여 사용하는 경향이 있었습니다. 특히 '차이'나 '경험'과 같은 개념을 표현할 때 명사형이 아닌 다른 형태를 사용하거나, 문맥에 맞지 않는 품사를 사용하는 경우가 있었어요.\n\n| ❌ 원문 (As Said)                                                                | ✅ 교정 예시 (Corrected)                                                              |\n| :-------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------ |\n| \"It is perfect. If I use the one sentence, remorse, is it the same to regret or **difference**?\" | \"Is it the same as regret or is there a **difference**?\"                              |\n| \"Yes, if I just one word is the same, regret, **guilty**, etc.\"                     | \"Yes, if I just use one word, it's the same: regret, **guilt**, etc.\"                 |\n| \"These days, the main factor is the **influence** in my shopping style.\"           | \"These days, the main factor **influencing** my shopping style is...\"                 |\n| \"it is a good point to new **experience**.\"                                       | \"it is a good opportunity for new **experiences**.\"                                   |\n\n📌 **핵심 규칙**: 문장에서 명사가 필요한 자리에는 명사 형태를, 형용사가 필요한 자리에는 형용사 형태를 정확히 사용해야 합니다. 동사나 형용사를 명사로 착각하거나, 명사를 형용사로 혼동하는 경우가 자주 발생합니다.\n\n🔁 **따라 읽기 (Repeat after me):**\n🗣️ \"Is it the same as regret or is there a **difference**?\"\n🗣️ \"Yes, if I just use one word, it's the same: regret, **guilt**, etc.\"\n🗣️ \"These days, the main factor **influencing** my shopping style is experience.\"\n\n**4. 📗 어휘 확장 (Vocabulary Vault)**\n오늘 대화에서 유용하게 쓰일 수 있는 어휘들을 정리해 보았습니다.\n\n1.  **remorse** /rɪˈmɔːrs/ (n)\n    뜻: 후회, 회한\n    실전 예문: We should analyze customer feedback to minimize **remorse** after purchase.\n\n2.  **bricks-and-mortar** /ˈbrɪks ən ˈmɔːrtər/ (adj)\n    뜻: (온라인과 대비되는) 오프라인의, 실제 건물이 있는\n    실전 예문: Many **bricks-and-mortar** businesses are now expanding into e-commerce.\n\n3.  **upscale** /ˈʌpˌskeɪl/ (adj)\n    뜻: 고급의, 고품격의\n    실전 예문: Our target demographic prefers **upscale** products and services.\n\n4.  **diverse** /daɪˈvɜːrs/ (adj)\n    뜻: 다양한\n    실전 예문: We need to offer a **diverse** range of investment options to our clients.\n\n5.  **competitive** /kəmˈpetɪtɪv/ (adj)\n    뜻: 경쟁력 있는, 경쟁적인\n    실전 예문: To stay **competitive** in the market, we must constantly innovate.\n\n**5. 📝 실전 복습 챌린지 (Practice)**\n오늘 배운 표현과 문법을 활용하여 영작해 보세요.\n\n1.  **상황**: 당신은 비즈니스 미팅에서 새로운 프로젝트에 대한 제안을 논의하고 있습니다.\n    **영작**: \"다음 단계로 넘어가기 전에, 이 제안에 대해 질문이 있습니다.\"\n    <details>\n    <summary>모범 답안</summary>\n    \"Before we **move on** to the next step, I have a question about this proposal.\"\n    </details>\n\n2.  **상황**: 당신은 고객 만족도 설문조사 결과를 분석하고 있습니다.\n    **영작**: \"고객들이 구매 후 후회하는 것을 최소화하는 것이 중요합니다.\"\n    <details>\n    <summary>모범 답안</summary>\n    \"It's crucial to minimize **buyer's remorse** among customers.\"\n    </details>\n\n3.  **상황**: 당신은 회사의 마케팅 전략을 설명하고 있습니다.\n    **영작**: \"우리는 온라인과 오프라인 매장 모두에서 고객에게 다양한 경험을 제공하여 경쟁력을 유지해야 합니다.\"\n    <details>\n    <summary>모범 답안</summary>\n    \"We need to remain **competitive** by offering **diverse experiences** to customers in both our online and **bricks-and-mortar** stores.\"\n    </details>\n\n**6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)**\n\n✨ **Good Job**:\nJoey님이 오늘 가장 잘 표현한 문장은 바로 이것입니다.\n\"I'm a minimalist. When it comes to buying clothes, I try to avoid buyer's remorse by making sure I really need something before making a purchase.\"\n이 문장은 Joey님의 쇼핑 철학을 'minimalist'라는 단어로 명확하게 표현하고, 'When it comes to ~ing'와 'by making sure ~'와 같은 연결 표현을 자연스럽게 사용하여 의미를 풍부하게 전달했습니다. 'buyer's remorse'라는 핵심 어휘도 정확하게 활용하여 인상 깊었습니다!\n\n🚀 **내일의 한 문장**:\n다음 수업 시작 시, 튜터에게 오늘 배운 표현을 활용하여 이렇게 말해보세요.\n\"I'm looking forward to our class today. I hope we can **move on** to some **diverse** and interesting topics!\"\n\n---\n\n**[성과 지표]**\n**유창성 점수**: 7.5/10\n\n**근거**: Joey님은 오늘 수업에서 다양한 주제에 대해 자신의 의견을 적극적으로 표현하려는 의지가 매우 강했습니다. 새로운 어휘를 배우고 발음 연습을 할 때도 매우 집중하는 모습을 보여주셨고, 문장 구조를 활용하여 아이디어를 전달하는 능력도 뛰어났습니다. 다만, 몇몇 문장에서 명사/형용사 형태 혼동이나 동사 시제 및 수 일치, 전치사 사용의 어색함이 있었지만, 이는 지속적인 연습으로 충분히 개선될 수 있는 부분입니다. 전반적으로 대화 흐름을 끊기지 않고 이어가는 유창성이 돋보였습니다.\n\n**다음 수업 '원포인트 액션 플랜'**:\n다음 수업에서는 **명사와 형용사의 정확한 사용**에 조금 더 집중해 볼까요? 특히 'difference/different', 'guilt/guilty', 'experience/experienced'와 같이 형태가 비슷한 단어들을 문장에서 올바르게 활용하는 연습을 해보면 좋을 것 같습니다. 대화 중 이러한 단어들이 나올 때, 한 번 더 의식적으로 올바른 형태를 사용하려고 노력해 보세요!\n\n위 내용을 바탕으로:\n1. 먼저 오늘 수업에서 내가 틀렸거나 어색했던 표현을 하나 골라서, 관련된 상황을 영어로 질문해줘.\n2. 내가 영어로 대답하면, 자연스러운지 확인하고 더 나은 표현이 있으면 알려줘.\n3. 특히 \"반복 실수 패턴\"에서 지적된 부분을 집중적으로 연습시켜줘.\n4. 이런 식으로 오늘 배운 표현들을 하나씩 복습하자.\n5. 한국어 설명은 필요할 때만 간단히, 대화는 최대한 영어로 진행해줘.\n\n그럼 시작하자!";
+        function startReview(){navigator.clipboard.writeText(REVIEW_PROMPT).then(()=>{showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)}).catch(()=>{const t=document.createElement('textarea');t.value=REVIEW_PROMPT;document.body.appendChild(t);t.select();document.execCommand('copy');document.body.removeChild(t);showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)})}
+        function showToast(){const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500)}
+        function switchTab(n){document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',n==='feedback'?i===0:i===1));document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));document.getElementById('tab-'+n).classList.add('active')}
+    </script>
+</body>
+</html>

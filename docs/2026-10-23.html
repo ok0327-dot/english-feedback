@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#0f0f13"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="당근영어"><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="icon" type="image/png" sizes="192x192" href="icon-192.png"><script src="install-banner.js" defer></script><script src="sw-reg.js" defer></script>
+    <title>전화영어 복습 - 2026년 10월 23일</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Noto Sans KR',sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.75;min-height:100vh}
+        .header{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);border-bottom:1px solid rgba(255,255,255,.06);padding:48px 24px 40px;text-align:center}
+        .header-date{font-size:13px;color:#94a3b8;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+        .header h1{font-size:28px;font-weight:700;color:#f1f5f9;margin-bottom:16px}
+        .header-meta{display:flex;justify-content:center;gap:24px;font-size:14px;color:#64748b}
+        .header-meta span{display:flex;align-items:center;gap:6px}
+        .cta-section{text-align:center;padding:40px 24px}
+        .cta-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:linear-gradient(135deg,#38bdf8,#818cf8);color:#fff;font-size:16px;font-weight:600;font-family:'Noto Sans KR',sans-serif;border:none;border-radius:50px;cursor:pointer;transition:all .3s;text-decoration:none;box-shadow:0 4px 24px rgba(56,189,248,.25)}
+        .cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(56,189,248,.35)}
+        .cta-btn svg{width:20px;height:20px}
+        .cta-sub{margin-top:12px;font-size:13px;color:#64748b}
+        .toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#38bdf8;padding:14px 28px;border-radius:12px;font-size:14px;font-weight:500;border:1px solid rgba(56,189,248,.2);box-shadow:0 8px 32px rgba(0,0,0,.4);opacity:0;transition:all .4s cubic-bezier(.16,1,.3,1);z-index:1000}
+        .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+        .container{max-width:720px;margin:0 auto;padding:0 24px 80px}
+        .tabs{display:flex;gap:4px;background:#1a1a24;padding:4px;border-radius:12px;margin-bottom:32px}
+        .tab{flex:1;padding:12px;text-align:center;font-size:14px;font-weight:500;color:#64748b;background:0 0;border:none;border-radius:8px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all .2s}
+        .tab.active{background:#262636;color:#f1f5f9}
+        .tab-content{display:none}.tab-content.active{display:block}
+        .feedback h2{font-size:18px;font-weight:700;color:#f1f5f9;margin:36px 0 16px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.06)}
+        .feedback h2:first-child{margin-top:0}
+        .feedback p{margin:8px 0;color:#cbd5e1}
+        .feedback .item{padding:6px 0 6px 16px;border-left:2px solid #334155;margin:6px 0;color:#cbd5e1}
+        .feedback .numbered{padding:8px 0 8px 16px;color:#cbd5e1}
+        .feedback .numbered strong{color:#38bdf8}
+        .feedback strong{color:#f1f5f9}
+        .feedback code{background:#1e293b;padding:2px 8px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#38bdf8}
+        .feedback table{width:100%;border-collapse:collapse;margin:12px 0}
+        .feedback th,.feedback td{padding:10px 14px;text-align:left;border-bottom:1px solid #262636}
+        .feedback th{color:#94a3b8;font-weight:500;font-size:13px}
+        .feedback td{color:#cbd5e1}
+        .arrow{color:#38bdf8;font-weight:700}
+        .transcript{background:#1a1a24;border-radius:12px;padding:28px;font-size:14px;line-height:2;color:#94a3b8;white-space:pre-wrap;word-break:break-word;font-family:'JetBrains Mono','Noto Sans KR',monospace}
+        .transcript .tutor{color:#38bdf8}
+        .transcript .student{color:#a78bfa}
+        @media(max-width:640px){.header{padding:32px 16px}.header h1{font-size:22px}.cta-btn{padding:14px 28px;font-size:15px}.container{padding:0 16px 60px}}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-date">2026년 10월 23일</div>
+        <h1>📚 전화영어 복습</h1>
+        <div class="header-meta">
+            <span>⏱ 20분 16초</span>
+            <span>🎙 전화영어_025180304_20261023080015.m4a</span>
+        </div>
+    </div>
+    <div class="cta-section">
+        <button class="cta-btn" onclick="startReview()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Gemini에서 복습 대화 시작하기
+        </button>
+        <div class="cta-sub">클릭하면 프롬프트가 복사되고 Gemini가 열립니다</div>
+    </div>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('feedback')">📋 AI 피드백</button>
+            <button class="tab" onclick="switchTab('transcript')">🎙 수업 전사</button>
+        </div>
+        <div id="tab-feedback" class="tab-content active">
+            <div class="feedback"><p>안녕하세요, Joey! 오늘 수업도 정말 즐거웠습니다. 마트 쇼핑이라는 일상적인 주제로 다양한 표현과 문화를 배울 수 있었어요. 특히 발음 교정에도 적극적으로 참여해 주셔서 감사했습니다!</p>
+<br>
+<br>
+<p><strong>0. 📌 Topic</strong></p>
+<p>Topic: Discussing supermarket shopping experiences and related vocabulary.</p>
+<br>
+<br>
+<p><strong>1. 📊 오늘의 대화 요약 (Summary)</strong></p>
+<p>오늘은 슈퍼마켓 쇼핑을 주제로 대화하며, 셀프 계산대, 로열티 카드, 그리고 다양한 계량 단위(파운드, 킬로그램)에 대해 이야기했습니다. 또한, 마트에서 물건을 찾거나 무게를 재는 상황을 연습하며 실용적인 표현들을 익혔습니다.</p>
+<br>
+<br>
+<p><strong>2. 💬 유창성 업그레이드 (Fluency & Natural Flow)</strong></p>
+<br>
+<p>Joey가 말한 문장 중, 의미는 통하지만 원어민이 들었을 때 조금 더 자연스럽게 들릴 수 있는 표현들을 살펴볼게요.</p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>❌ 학습자 원문 (As Said):</strong> "This weekend, ah, <strong>this day</strong> we traveled to a small shop, small restaurant near my house."</div>
+<div class="item"><strong>✅ 자연스러운 표현 (Natural):</strong> "This past weekend, we traveled to a small shop..."</div>
+<div class="item"><strong>💎 비즈니스 표현 (Professional):</strong> "Recently, we explored a new establishment..."</div>
+<div class="item"><strong>💡 코칭 포인트:</strong> Using "this day" is less common for past events. "This past weekend" or "the other day" are more natural for recent, specific past events. "Recently" is a good, general option for professional contexts. <span class="arrow">→</span> "this day"는 과거의 특정 사건을 지칭할 때 흔히 쓰이지 않습니다. "This past weekend"나 "the other day"가 최근의 특정 과거 사건에 더 자연스럽고, "recently"는 비즈니스 환경에서 쓸 수 있는 일반적인 표현입니다.</div>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>❌ 학습자 원문 (As Said):</strong> "And other things, <strong>just buy, just look around and check that we need this item.</strong>"</div>
+<div class="item"><strong>✅ 자연스러운 표현 (Natural):</strong> "For other things, we just look around and buy what we need."</div>
+<div class="item"><strong>💎 비즈니스 표현 (Professional):</strong> "Additionally, we assess other items on display and acquire those deemed essential."</div>
+<div class="item"><strong>💡 코칭 포인트:</strong> The original phrasing is a bit choppy. Combining the actions more smoothly and using "what we need" makes it flow better. "Assess" and "acquire" add a professional tone. <span class="arrow">→</span> 원문은 다소 끊기는 느낌이 있습니다. 행동들을 더 부드럽게 연결하고 "what we need"를 사용하면 훨씬 자연스럽습니다. "Assess"와 "acquire"는 전문적인 어조를 더해줍니다.</div>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>❌ 학습자 원문 (As Said):</strong> "I guess <strong>he's the first time in this shopping center</strong>, a supermarket."</div>
+<div class="item"><strong>✅ 자연스러운 표현 (Natural):</strong> "I guess it's his first time at this supermarket."</div>
+<div class="item"><strong>💎 비즈니스 표현 (Professional):</strong> "Given the shopper's inquiries, it appears to be their inaugural visit to this establishment."</div>
+<div class="item"><strong>💡 코칭 포인트:</strong> When talking about someone's first experience at a place, we usually say "It's their first time [at/in] a place" or "They are visiting a place for the first time." "He's the first time"은 문법적으로 맞지 않습니다. <span class="arrow">→</span> 특정 장소에서의 첫 경험을 말할 때는 보통 "It's their first time [at/in] a place" 또는 "They are visiting a place for the first time"이라고 합니다. "He's the first time"은 문법적으로 맞지 않습니다.</div>
+<br>
+<br>
+<p><strong>3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)</strong></p>
+<br>
+<p>Category: Subject-Verb Agreement & Pluralization</p>
+<br>
+<p>Joey는 문장에서 주어와 동사의 수 일치, 그리고 명사의 단수/복수 형태를 사용할 때 종종 혼동하는 경향이 있습니다. 특히 일반적인 사물을 지칭하거나 사람들을 묘사할 때 이런 패턴이 나타났습니다.</p>
+<br>
+<table>
+<tr><th>❌ 원문 (As Said)</th><th>✅ 교정 예시 (Corrected)</th></tr>
+<tr><td>"And our family usually <strong>buys</strong> some milk and cheese and yogurt and meat and fruit. Yeah, <strong>that is the necessary item</strong>."</td><td>"And our family usually <strong>buys</strong> some milk, cheese, yogurt, meat, and fruit. Yeah, <strong>those are necessary items</strong>."</td></tr>
+<tr><td>"sometimes if we visit the shopping center, we just buy BOGO <strong>item</strong>."</td><td>"sometimes if we visit the shopping center, we just buy BOGO <strong>items</strong>."</td></tr>
+<tr><td>"that is not wise <strong>purchase</strong>."</td><td>"that is not a wise <strong>purchase</strong>." (또는 "that is not wise to purchase.")</td></tr>
+<tr><td>"some old person or the children or the foreigner, <strong>it is difficult</strong> to use that process, self-checkout."</td><td>"some old <strong>people</strong>, children, or <strong>foreigners find it difficult</strong> to use that process, self-checkout." (또는 "it is difficult for some old people, children, or foreigners to use...")</td></tr>
+</table>
+<br>
+<p>📌 <strong>핵심 규칙:</strong> 명사의 단수/복수 형태를 정확히 사용하고, 주어와 동사의 수 일치를 올바르게 적용해야 합니다. 특히 'item'과 같이 여러 개를 지칭할 때는 복수형 'items'를 사용하고, 'person'의 복수형은 'people'임을 기억하세요.</p>
+<br>
+<p>🔁 <strong>따라 읽기:</strong></p>
+<p>🗣️ "Those are necessary items."</p>
+<p>🗣️ "We just buy BOGO items."</p>
+<p>🗣️ "That is not a wise purchase."</p>
+<br>
+<br>
+<p><strong>4. 📗 어휘 확장 (Vocabulary Vault)</strong></p>
+<br>
+<p>오늘 수업에서 나왔거나 비즈니스 환경에서 유용하게 쓸 수 있는 단어 5개를 골라봤습니다.</p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>proceed</strong> /prəˈsiːd/ (동사)</div>
+<div class="item">뜻: (어떤 일을) 진행하다, 나아가다</div>
+<div class="item">실전 예문: Please <strong>proceed</strong> to the next step of the project after reviewing the report.</div>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>patronage</strong> /ˈpeɪtrənɪdʒ/ (명사)</div>
+<div class="item">뜻: (상점 등에 대한) 애용, 후원</div>
+<div class="item">실전 예문: We greatly appreciate your continued <strong>patronage</strong> and loyalty to our services.</div>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>thrifty</strong> /ˈθrɪfti/ (형용사)</div>
+<div class="item">뜻: 절약하는, 검소한</div>
+<div class="item">실전 예문: Being a <strong>thrifty</strong> investor means carefully managing expenses and seeking value.</div>
+<br>
+<div class="numbered"><strong>4.</strong> <strong>streamlined</strong> /ˈstriːmlaɪnd/ (형용사)</div>
+<div class="item">뜻: 능률적인, 간소화된</div>
+<div class="item">실전 예문: We need to implement a more <strong>streamlined</strong> process to improve efficiency in our operations.</div>
+<br>
+<div class="numbered"><strong>5.</strong> <strong>impersonal</strong> /ɪmˈpɜːrsənl/ (형용사)</div>
+<div class="item">뜻: 비인간적인, 개인적인 감정이 없는</div>
+<div class="item">실전 예문: While self-checkout is efficient, some customers prefer a more personal interaction over an <strong>impersonal</strong> system.</div>
+<br>
+<br>
+<p><strong>5. 📝 실전 복습 챌린지 (Practice)</strong></p>
+<br>
+<p>오늘 배운 표현과 문법을 활용하여 다음 상황들을 영어로 작문해 보세요.</p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>상황:</strong> 지난 주말에 가족과 함께 새로 생긴 식당에 갔는데, 모두가 정말 즐거워했습니다.</div>
+<div class="item"><strong>영작:</strong> (This past weekend, my family and I went to a new restaurant, and everyone had so much fun.)</div>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>상황:</strong> 우리 회사는 고객들의 지속적인 애용에 감사하며, 더 효율적인 서비스를 제공하기 위해 노력하고 있습니다.</div>
+<div class="item"><strong>영작:</strong> (Our company appreciates our customers' continued patronage and strives to provide more streamlined services.)</div>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>상황:</strong> 예산이 빠듯해서, 이번 달에는 꼭 필요한 물건들만 구매하고 불필요한 지출을 줄이는 검소한 쇼핑 전략을 세워야 합니다.</div>
+<div class="item"><strong>영작:</strong> (With a tight budget, we need to adopt a thrifty shopping strategy this month, only purchasing necessary items and cutting down on unnecessary expenses.)</div>
+<br>
+<br>
+<p><strong>6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)</strong></p>
+<br>
+<p>✨ <strong>Good Job</strong>: Joey가 오늘 잘 표현한 문장 중 하나는 바로 이것입니다:</p>
+<p>"Usually I order the online shopping, but sometimes I visit the offline grocery shopping store."</p>
+<p>이 문장은 온라인 쇼핑과 오프라인 쇼핑에 대한 자신의 습관을 명확하고 자연스럽게 설명해 주었습니다. "order online shopping"이라는 표현도 아주 적절했고, "offline grocery shopping store"도 의미 전달이 잘 되었습니다. 아주 훌륭해요!</p>
+<br>
+<p>🚀 <strong>내일의 한 문장</strong>: 다음 수업 시작 시 튜터에게 오늘 배운 표현을 활용하여 이렇게 말해보세요.</p>
+<p>"I'm trying to be more <strong>thrifty</strong> with my spending these days. Do you have any tips for <strong>streamlined</strong> budgeting?"</p>
+<p>(요즘 지출에 좀 더 검소해지려고 노력 중이에요. 예산을 효율적으로 관리하는 팁이 있으신가요?)</p>
+<br>
+<br>
+<p><strong>[성과 지표]</strong></p>
+<p><strong>유창성 점수: 7/10</strong></p>
+<br>
+<p><strong>근거:</strong> Joey는 다양한 주제에 대해 막힘없이 자신의 의견을 표현하고, 수업 내용을 이해하는 데 어려움이 없었습니다. 발음 교정에도 적극적으로 참여하며 개선 의지를 보여주었습니다. 하지만 'this day'와 같은 시간 표현의 어색함, 주어-동사 수 일치 및 명사의 단수/복수 사용에서 반복적인 오류가 발견되어 자연스러운 흐름을 방해하는 경우가 있었습니다. 새로운 어휘를 배우는 속도는 빠르지만, 이를 문장으로 구성할 때 문법적 정확성이 조금 더 필요합니다.</p>
+<br>
+<p><strong>다음 수업 '원포인트 액션 플랜':</strong></p>
+<p>다음 수업에서는 <strong>"시간 표현의 정확성"</strong>에 집중하여, 과거 시제를 나타낼 때 'this past weekend', 'the other day', 'recently' 등 더 자연스러운 시간 부사구를 사용하는 연습을 해볼 예정입니다. 또한, 주어-동사 수 일치와 명사의 단수/복수 사용에 대한 정확성을 높이는 데 중점을 둘 것입니다.</p></div>
+        </div>
+        <div id="tab-transcript" class="tab-content">
+            <div class="transcript"><span class="tutor">[Tutor]</span> Hello, Joey. Happy Thursday night.
+[Joey] Thank you and happy Friday to you.
+<span class="tutor">[Tutor]</span> Do you have any plans for the weekend?
+[Joey] This weekend, ah, this day we traveled to a small shop, small restaurant near my house. Because, yeah, because usually we just visit our usual travel spots, but this day we just found a small restaurant or a coffee shop or new restaurant, so it is so fun for my family. Mm-hmm.
+<span class="tutor">[Tutor]</span> A nice way to spend some time. Well, good for you. I hope you found it pleasant.
+<span class="tutor">[Tutor]</span> All right. I&#x27;m ready to go. Or did you need a moment to bring up today&#x27;s lesson on your device?
+[Joey] Yes. Today&#x27;s topic is shopping at a supermarket.
+<span class="tutor">[Tutor]</span> Okay. First thing we&#x27;re going to do is help you with the title. You said shopping at the supermarket.
+[Joey] Supermarket.
+<span class="tutor">[Tutor]</span> Yeah. Now, what happens if you look at supermarket, there&#x27;s no H. So instead of saying super, try supermarket.
+[Joey] Supermarket.
+<span class="tutor">[Tutor]</span> Supermarket. There you go. Shopping at a supermarket.
+<span class="tutor">[Tutor]</span> Very good. I&#x27;ll ask you to read today&#x27;s mission to me.
+[Joey] Okay, no problem. Go to the supermarket, select the items you need, and proceed to the checkout to purchase them.
+<span class="tutor">[Tutor]</span> Okay. One word. You said pursued. Try proceed.
+[Joey] Proceed.
+<span class="tutor">[Tutor]</span> And proceed to the checkout.
+[Joey] Proceed.
+<span class="tutor">[Tutor]</span> Okay. Very nice. Let&#x27;s move on to the key expressions and phrases.
+[Joey] Okay.
+<span class="tutor">[Tutor]</span> I&#x27;ll get you to read the expression and its description, please.
+[Joey] Okay. Take your time. Okay. The first is self-checkout. System where customer can scan goods themselves and pay without a cashier in a store. The second.
+<span class="tutor">[Tutor]</span> Very good. Okay.
+[Joey] Loyalty card. Card issued by a business to reward customer for repeat purchases and encourage continued patronage.
+<span class="tutor">[Tutor]</span> I&#x27;d like to help you with two words, if I may, please. I&#x27;ll get you to repeat after me. Purchases.
+[Joey] Purchases.
+<span class="tutor">[Tutor]</span> Purchases.
+<span class="tutor">[Tutor]</span> A, yeah, very good.
+<span class="tutor">[Tutor]</span> And the other one, patronage.
+[Joey] Patronage.
+<span class="tutor">[Tutor]</span> Patronage.
+[Joey] Yes. Is it similar to consume, the meaning?
+<span class="tutor">[Tutor]</span> Patronage? Well, purchase means something you buy over and over again. Patronage means that you visit the same stores often. So they are connected.
+[Joey] Patrons. Okay.
+<span class="tutor">[Tutor]</span> Very good. All right. You did great. Let&#x27;s get you to read the example questions under the key phrases.
+[Joey] Okay. Which aisle is cereal in? Which aisle is blah blah in? Okay. Second.
+<span class="tutor">[Tutor]</span> I&#x27;ll get you to read. Yep.
+[Joey] Okay. Could you weigh for me? Could you weigh blah blah for me? Could you weigh this for me?
+<span class="tutor">[Tutor]</span> Okay, two words I&#x27;m going to help you with. In the first phrase you said islay, I&#x27;m going to get you to try aisle.
+[Joey] Aisle. Aisle.
+<span class="tutor">[Tutor]</span> Yeah, this is a very unusual word in English because we don&#x27;t say the S. It&#x27;s like island.
+[Joey] Aisle. Okay.
+<span class="tutor">[Tutor]</span> Aisle. Uh-huh. Good. In the second phrase, you said, could you wait? You&#x27;re very close. There&#x27;s no T, so try weigh.
+[Joey] Could you weigh for me? Weigh for me?
+<span class="tutor">[Tutor]</span> Yeah, so weigh means to measure something.
+[Joey] Weigh. Weigh. Without T. Weigh. Yeah, weigh. Do you weigh? Yeah. Do you know the weigh? Weigh. Okay.
+<span class="tutor">[Tutor]</span> Okay. Could you weigh this snack for me? Very good. Aisle. Aisle. Aisle. Aisle. Aisle. Aisle. Aisle. Let&#x27;s try it one more time.
+[Joey] Aisle. Aisle.
+<span class="tutor">[Tutor]</span> Aisle. Aisle. I will send them in sentences so you can see the sound bites and the pronunciation, okay? Aisle. Okay, good. All right. Let&#x27;s go on to part A, the infobytes. And once again, I&#x27;ll ask you to read the three bulleted sentences to me. Again, take your time.
+[Joey] Okay. In the USA, United Kingdom, Australia, and New Zealand, you are required to show a physical loyalty card to use it. This is often the case at supermarkets, clothing stores, cafes, and electronic stores. In the USA and United Kingdom, Australia, New Zealand, this often read BOGO. Buy one, get one free. Or buy one, get one 50% off.
+<span class="tutor">[Tutor]</span> Just a pause for a moment. Just a moment. Okay. In your country, you say one plus one.
+[Joey] Yeah, you&#x27;re right. One plus one.
+<span class="tutor">[Tutor]</span> So this is another variation of that phrase. Okay? Very good. Let&#x27;s get you to read the last one.
+[Joey] Okay. In the United Kingdom, Australia, New Zealand, and Canada, supermarkets usually must stop selling alcohol by 9 to 10 p.m. by law.
+<span class="tutor">[Tutor]</span> Is that right? Is that true?
+[Joey] Yes, it depends.
+<span class="tutor">[Tutor]</span> Yes. And what&#x27;s unique in Canada is that depending on the province you live in, some supermarkets sell alcohol, others do not. They have a separate store to buy alcohol. But yeah, and those separate stores, they can be open until 2 a.m., but in the supermarket it&#x27;s earlier, they close down earlier. So yeah, that&#x27;s how it is. Yeah, you can buy alcohol, no problem. All right, my friend, let&#x27;s get you to read the two questions at the bottom and respond.
+[Joey] Okay, the question, how often do you go grocery shopping? What item do you commonly buy? Usually I order the online shopping, but sometimes I visit the offline grocery shopping store. And just we, maybe that is twice per month or one time per month. And our family usually buys some milk and cheese and yogurt and meat and fruit. Yeah, that is the necessary item. And other things, just buy, just look around and check that we need this item. Yeah, it&#x27;s your...
+<span class="tutor">[Tutor]</span> Sounds very similar to how it is. My family and I, we shop at a supermarket every two weeks, and then we go to the store several times between the big shoppings to buy milk and bread and little things like basics.
+[Joey] Yes, very good.
+<span class="tutor">[Tutor]</span> Your country, you need bread, but my people need rice, right?
+<span class="tutor">[Tutor]</span> You&#x27;re absolutely right. Bread is very common here. Although we do eat a lot of rice, too. I know my family and I, we eat rice two, sometimes three times a week because, you know, and we eat also, we also eat potatoes. We eat pasta. But yeah, it&#x27;s a daily staple. Yes, I do. All right. Let&#x27;s move on to Part B, Real Life Talk.
+[Joey] Uh-huh.
+<span class="tutor">[Tutor]</span> And it&#x27;s called Navigate a Supermarket.
+[Joey] Uh-huh.
+<span class="tutor">[Tutor]</span> Now, would you like to read the entire conversation or have us go through it twice, changing the speakers between us?
+[Joey] Okay. Just I start. I select the shopper.
+<span class="tutor">[Tutor]</span> Okay. You go ahead.
+[Joey] Excuse me, what does this sign, &quot;avocado $1 each&quot; and &quot;3 packaged dollars&quot; mean?
+<span class="tutor">[Tutor]</span> Each individual avocado is $1. The pre-packaged avocados cost $3.17 per package.
+[Joey] What about this sign? Which is $2.83 per LB.
+<span class="tutor">[Tutor]</span> Okay. I&#x27;ll just let you know, LB means pound.
+[Joey] Pound. Okay.
+<span class="tutor">[Tutor]</span> In America, they use pounds and ounces. All right. I&#x27;ll continue. It means peaches are $2.83 per pound. If you have a loyalty card, they are only $2.50 per pound this week.
+[Joey] Great. Could you weigh this peach for me?
+<span class="tutor">[Tutor]</span> Okay. Try peaches.
+[Joey] Peaches for me.
+<span class="tutor">[Tutor]</span> Very good. All right. We&#x27;ll go on to the next page.
+[Joey] Sure. They&#x27;re 1 pound and 8 ounces. That&#x27;s 1.5 pounds.
+<span class="tutor">[Tutor]</span> Thank you. I have one final question. What aisle is ketchup in?
+[Joey] What aisle is ketchup in?
+<span class="tutor">[Tutor]</span> Good. Ketchup is in aisle five. Also, heads up, the self-checkout is currently down.
+[Joey] Oh. All right.
+<span class="tutor">[Tutor]</span> Before we continue reading, have you ever heard that phrase, &quot;heads up&quot;?
+[Joey] Head up. Yes. Head up. Careful.
+<span class="tutor">[Tutor]</span> Please remember. That means it means that someone is telling you something that&#x27;s important.
+[Joey] Tell the important. Yeah. Okay.
+<span class="tutor">[Tutor]</span> You need to know this. For example. All right. Heads up. Today&#x27;s class is canceled. Right?
+[Joey] Yes. Yeah, you&#x27;re right. That&#x27;s right. It&#x27;s like a notice.
+<span class="tutor">[Tutor]</span> All right. Let&#x27;s go back to the first page. I will read the shopper and you will read for the staff.
+[Joey] Okay. Excuse me. Excuse me, what does this sign, &quot;avocados $1 each&quot; slash &quot;$3.17 package&quot; mean?
+<span class="tutor">[Tutor]</span> Each individual avocado is $1. The pre-packaged avocados cost $3.17 per package.
+[Joey] What about this sign? &quot;Peaches, $2.83 per pound.&quot;
+<span class="tutor">[Tutor]</span> It means peaches are $2.83 per pound. If you have a loyalty card, they are only $2.50 per pound this week.
+[Joey] Great. Could you weigh these peaches for me?
+<span class="tutor">[Tutor]</span> Sure. They are 1 pound and 8 ounces. That&#x27;s 1.5 pounds.
+[Joey] Thank you. I have one final question. What aisle is ketchup in?
+<span class="tutor">[Tutor]</span> Ketchup is in aisle 5. Also, heads up, the self-checkout is currently down.
+<span class="tutor">[Tutor]</span> Very good. Very good. All right. So, it says what is a pound? And as we discussed, LB is an abbreviation for pound. And a kilogram, which the rest of the world uses, is about 2.2 pounds.
+[Joey] Okay, I understand. Yeah.
+<span class="tutor">[Tutor]</span> There are three countries in the world that use what we call imperial measurement. The U.S., Liberia in Africa, and Myanmar. They&#x27;re the only three countries that use the old style weights and measures.
+[Joey] Oh, okay. Okay. All right.
+<span class="tutor">[Tutor]</span> Let&#x27;s get you to read the question at the bottom and respond.
+[Joey] Okay. Do you think the shopper has been to this supermarket before? Why or why not? We can decide, but just there are so many questions from the shopper, so I guess he&#x27;s the first time in this shopping center, a supermarket.
+<span class="tutor">[Tutor]</span> I would have to say so. Yeah, definitely. She&#x27;s not used to the signage or anything. Yeah, she doesn&#x27;t know what a pound is. Yeah, no, you&#x27;re right. She&#x27;s definitely somewhere else. All right, very nicely done. Okay, we are at 15 past the hour. Let&#x27;s take a look at Part C, Say It Right. And I&#x27;ll get you to read the title, the phrase, each description, and then we&#x27;ll look at the question.
+[Joey] Okay. May I help you? Yes. Thrifty. Huh? Thrifty. Thrifty. Thrifty. Thrifty Shopping. On sale, reduced price. BOGO, buy one get one. On clearance, large discount, very cheap. Your friend is having a baby soon and needs to cut back on their spending. What are some tips to be a thrifty shopper?
+<span class="tutor">[Tutor]</span> Thrifty shopper.
+[Joey] Okay, I see, thrifty shopper. I think the BOGO is the marketing strategy. So sometimes if we visit the shopping center, we just buy BOGO item. But that is not wise purchase. I think, yeah, just we find what we need and then we just buy. But if we go just to go there just to be buying something just to a good design or look delicious or BOGO or discount, but that&#x27;s not good. Yeah, strategic to buy something.
+<span class="tutor">[Tutor]</span> Yeah, I know that when people regularly go to the grocery store, if they find basics that they buy like every trip, if it&#x27;s on sale, sometimes they will buy more. So in your country, if rice is on sale, you might buy an extra bag. If I want to buy beans and they&#x27;re on sale, I might buy two bags of beans because they&#x27;re cheap and they keep well. But yeah, some things, it doesn&#x27;t matter if it&#x27;s on sale, it might go bad quickly. All right, friend. Let&#x27;s look at the second group when you&#x27;re ready.
+[Joey] Okay. Self-checkout, efficient, streamlined, effective, impersonal, lacking human interaction, and frustrating, annoying, irritating, stressful. Self-checkout has become more common these days. What are the advantages and disadvantages of self-checkouts? Okay, I think if we just buy a few items, it is so easy to self-checkout. But if we buy a lot of items, and in the meantime, we just take a long time because that is not easy to handle many items. So usually the self-checkout is too easy, but some old person or the children or the foreigner, it is difficult to use that process, self-checkout.
+<span class="tutor">[Tutor]</span> I would agree. When Walmart brought in self-checkout here in North America, people would try to purchase two weeks&#x27; worth of groceries through the self-checkout. The self-checkout wasn&#x27;t made to handle those number of items. So now they have a sign that says self-checkout is limited to 25 items. And if you have a huge shopping cart full of food, they expect you to go to one of the human cashiers where it is just easier to get your groceries processed and bagged. I don&#x27;t know about you, but I try whenever possible to use the human cashiers because I want to help them keep their jobs. The auto checkouts don&#x27;t give humans jobs, and I favor the human interaction.
+[Joey] Yeah, you&#x27;re right, you&#x27;re right.
+<span class="tutor">[Tutor]</span> All right, my friend. We&#x27;re going to stop there. You&#x27;ve done a lot of hard work today. Did you have any questions or concerns?
+[Joey] Oh, no, I don&#x27;t have questions. Thank you for your class.
+<span class="tutor">[Tutor]</span> All right. You have a great weekend. I&#x27;ll talk to you next time.
+[Joey] Thank you. You too. You take care. Bye-bye, teacher.</div>
+        </div>
+    </div>
+    <div class="toast" id="toast">✅ 프롬프트가 복사되었습니다!</div>
+    <script>
+        const REVIEW_PROMPT="너는 나의 영어 회화 복습 파트너야. 오늘 내 전화영어 수업 내용을 기반으로 대화하면서 복습을 도와줘.\n\n[오늘 수업 전사 내용]\n[Tutor] Hello, Joey. Happy Thursday night.\n[Joey] Thank you and happy Friday to you.\n[Tutor] Do you have any plans for the weekend?\n[Joey] This weekend, ah, this day we traveled to a small shop, small restaurant near my house. Because, yeah, because usually we just visit our usual travel spots, but this day we just found a small restaurant or a coffee shop or new restaurant, so it is so fun for my family. Mm-hmm.\n[Tutor] A nice way to spend some time. Well, good for you. I hope you found it pleasant.\n[Tutor] All right. I'm ready to go. Or did you need a moment to bring up today's lesson on your device?\n[Joey] Yes. Today's topic is shopping at a supermarket.\n[Tutor] Okay. First thing we're going to do is help you with the title. You said shopping at the supermarket.\n[Joey] Supermarket.\n[Tutor] Yeah. Now, what happens if you look at supermarket, there's no H. So instead of saying super, try supermarket.\n[Joey] Supermarket.\n[Tutor] Supermarket. There you go. Shopping at a supermarket.\n[Tutor] Very good. I'll ask you to read today's mission to me.\n[Joey] Okay, no problem. Go to the supermarket, select the items you need, and proceed to the checkout to purchase them.\n[Tutor] Okay. One word. You said pursued. Try proceed.\n[Joey] Proceed.\n[Tutor] And proceed to the checkout.\n[Joey] Proceed.\n[Tutor] Okay. Very nice. Let's move on to the key expressions and phrases.\n[Joey] Okay.\n[Tutor] I'll get you to read the expression and its description, please.\n[Joey] Okay. Take your time. Okay. The first is self-checkout. System where customer can scan goods themselves and pay without a cashier in a store. The second.\n[Tutor] Very good. Okay.\n[Joey] Loyalty card. Card issued by a business to reward customer for repeat purchases and encourage continued patronage.\n[Tutor] I'd like to help you with two words, if I may, please. I'll get you to repeat after me. Purchases.\n[Joey] Purchases.\n[Tutor] Purchases.\n[Tutor] A, yeah, very good.\n[Tutor] And the other one, patronage.\n[Joey] Patronage.\n[Tutor] Patronage.\n[Joey] Yes. Is it similar to consume, the meaning?\n[Tutor] Patronage? Well, purchase means something you buy over and over again. Patronage means that you visit the same stores often. So they are connected.\n[Joey] Patrons. Okay.\n[Tutor] Very good. All right. You did great. Let's get you to read the example questions under the key phrases.\n[Joey] Okay. Which aisle is cereal in? Which aisle is blah blah in? Okay. Second.\n[Tutor] I'll get you to read. Yep.\n[Joey] Okay. Could you weigh for me? Could you weigh blah blah for me? Could you weigh this for me?\n[Tutor] Okay, two words I'm going to help you with. In the first phrase you said islay, I'm going to get you to try aisle.\n[Joey] Aisle. Aisle.\n[Tutor] Yeah, this is a very unusual word in English because we don't say the S. It's like island.\n[Joey] Aisle. Okay.\n[Tutor] Aisle. Uh-huh. Good. In the second phrase, you said, could you wait? You're very close. There's no T, so try weigh.\n[Joey] Could you weigh for me? Weigh for me?\n[Tutor] Yeah, so weigh means to measure something.\n[Joey] Weigh. Weigh. Without T. Weigh. Yeah, weigh. Do you weigh? Yeah. Do you know the weigh? Weigh. Okay.\n[Tutor] Okay. Could you weigh this snack for me? Very good. Aisle. Aisle. Aisle. Aisle. Aisle. Aisle. Aisle. Let's try it one more time.\n[Joey] Aisle. Aisle.\n[Tutor] Aisle. Aisle. I will send them in sentences so you can see the sound bites and the pronunciation, okay? Aisle. Okay, good. All right. Let's go on to part A, the infobytes. And once again, I'll ask you to read the three bulleted sentences to me. Again, take your time.\n[Joey] Okay. In the USA, United Kingdom, Australia, and New Zealand, you are required to show a physical loyalty card to use it. This is often the case at supermarkets, clothing stores, cafes, and electronic stores. In the USA and United Kingdom, Australia, New Zealand, this often read BOGO. Buy one, get one free. Or buy one, get one 50% off.\n[Tutor] Just a pause for a moment. Just a moment. Okay. In your country, you say one plus one.\n[Joey] Yeah, you're right. One plus one.\n[Tutor] So this is another variation of that phrase. Okay? Very good. Let's get you to read the last one.\n[Joey] Okay. In the United Kingdom, Australia, New Zealand, and Canada, supermarkets usually must stop selling alcohol by 9 to 10 p.m. by law.\n[Tutor] Is that right? Is that true?\n[Joey] Yes, it depends.\n[Tutor] Yes. And what's unique in Canada is that depending on the province you live in, some supermarkets sell alcohol, others do not. They have a separate store to buy alcohol. But yeah, and those separate stores, they can be open until 2 a.m., but in the supermarket it's earlier, they close down earlier. So yeah, that's how it is. Yeah, you can buy alcohol, no problem. All right, my friend, let's get you to read the two questions at the bottom and respond.\n[Joey] Okay, the question, how often do you go grocery shopping? What item do you commonly buy? Usually I order the online shopping, but sometimes I visit the offline grocery shopping store. And just we, maybe that is twice per month or one time per month. And our family usually buys some milk and cheese and yogurt and meat and fruit. Yeah, that is the necessary item. And other things, just buy, just look around and check that we need this item. Yeah, it's your...\n[Tutor] Sounds very similar to how it is. My family and I, we shop at a supermarket every two weeks, and then we go to the store several times between the big shoppings to buy milk and bread and little things like basics.\n[Joey] Yes, very good.\n[Tutor] Your country, you need bread, but my people need rice, right?\n[Tutor] You're absolutely right. Bread is very common here. Although we do eat a lot of rice, too. I know my family and I, we eat rice two, sometimes three times a week because, you know, and we eat also, we also eat potatoes. We eat pasta. But yeah, it's a daily staple. Yes, I do. All right. Let's move on to Part B, Real Life Talk.\n[Joey] Uh-huh.\n[Tutor] And it's called Navigate a Supermarket.\n[Joey] Uh-huh.\n[Tutor] Now, would you like to read the entire conversation or have us go through it twice, changing the speakers between us?\n[Joey] Okay. Just I start. I select the shopper.\n[Tutor] Okay. You go ahead.\n[Joey] Excuse me, what does this sign, \"avocado $1 each\" and \"3 packaged dollars\" mean?\n[Tutor] Each individual avocado is $1. The pre-packaged avocados cost $3.17 per package.\n[Joey] What about this sign? Which is $2.83 per LB.\n[Tutor] Okay. I'll just let you know, LB means pound.\n[Joey] Pound. Okay.\n[Tutor] In America, they use pounds and ounces. All right. I'll continue. It means peaches are $2.83 per pound. If you have a loyalty card, they are only $2.50 per pound this week.\n[Joey] Great. Could you weigh this peach for me?\n[Tutor] Okay. Try peaches.\n[Joey] Peaches for me.\n[Tutor] Very good. All right. We'll go on to the next page.\n[Joey] Sure. They're 1 pound and 8 ounces. That's 1.5 pounds.\n[Tutor] Thank you. I have one final question. What aisle is ketchup in?\n[Joey] What aisle is ketchup in?\n[Tutor] Good. Ketchup is in aisle five. Also, heads up, the self-checkout is currently down.\n[Joey] Oh. All right.\n[Tutor] Before we continue reading, have you ever heard that phrase, \"heads up\"?\n[Joey] Head up. Yes. Head up. Careful.\n[Tutor] Please remember. That means it means that someone is telling you something that's important.\n[Joey] Tell the important. Yeah. Okay.\n[Tutor] You need to know this. For example. All right. Heads up. Today's class is canceled. Right?\n[Joey] Yes. Yeah, you're right. That's right. It's like a notice.\n[Tutor] All right. Let's go back to the first page. I will read the shopper and you will read for the staff.\n[Joey] Okay. Excuse me. Excuse me, what does this sign, \"avocados $1 each\" slash \"$3.17 package\" mean?\n[Tutor] Each individual avocado is $1. The pre-packaged avocados cost $3.17 per package.\n[Joey] What about this sign? \"Peaches, $2.83 per pound.\"\n[Tutor] It means peaches are $2.83 per pound. If you have a loyalty card, they are only $2.50 per pound this week.\n[Joey] Great. Could you weigh these peaches for me?\n[Tutor] Sure. They are 1 pound and 8 ounces. That's 1.5 pounds.\n[Joey] Thank you. I have one final question. What aisle is ketchup in?\n[Tutor] Ketchup is in aisle 5. Also, heads up, the self-checkout is currently down.\n[Tutor] Very good. Very good. All right. So, it says what is a pound? And as we discussed, LB is an abbreviation for pound. And a kilogram, which the rest of the world uses, is about 2.2 pounds.\n[Joey] Okay, I understand. Yeah.\n[Tutor] There are three countries in the world that use what we call imperial measurement. The U.S., Liberia in Africa, and Myanmar. They're the only three countries that use the old style weights and measures.\n[Joey] Oh, okay. Okay. All right.\n[Tutor] Let's get you to read the question at the bottom and respond.\n[Joey] Okay. Do you think the shopper has been to this supermarket before? Why or why not? We can decide, but just there are so many questions from the shopper, so I guess he's the first time in this shopping center, a supermarket.\n[Tutor] I would have to say so. Yeah, definitely. She's not used to the signage or anything. Yeah, she doesn't know what a pound is. Yeah, no, you're right. She's definitely somewhere else. All right, very nicely done. Okay, we are at 15 past the hour. Let's take a look at Part C, Say It Right. And I'll get you to read the title, the phrase, each description, and then we'll look at the question.\n[Joey] Okay. May I help you? Yes. Thrifty. Huh? Thrifty. Thrifty. Thrifty. Thrifty Shopping. On sale, reduced price. BOGO, buy one get one. On clearance, large discount, very cheap. Your friend is having a baby soon and needs to cut back on their spending. What are some tips to be a thrifty shopper?\n[Tutor] Thrifty shopper.\n[Joey] Okay, I see, thrifty shopper. I think the BOGO is the marketing strategy. So sometimes if we visit the shopping center, we just buy BOGO item. But that is not wise purchase. I think, yeah, just we find what we need and then we just buy. But if we go just to go there just to be buying something just to a good design or look delicious or BOGO or discount, but that's not good. Yeah, strategic to buy something.\n[Tutor] Yeah, I know that when people regularly go to the grocery store, if they find basics that they buy like every trip, if it's on sale, sometimes they will buy more. So in your country, if rice is on sale, you might buy an extra bag. If I want to buy beans and they're on sale, I might buy two bags of beans because they're cheap and they keep well. But yeah, some things, it doesn't matter if it's on sale, it might go bad quickly. All right, friend. Let's look at the second group when you're ready.\n[Joey] Okay. Self-checkout, efficient, streamlined, effective, impersonal, lacking human interaction, and frustrating, annoying, irritating, stressful. Self-checkout has become more common these days. What are the advantages and disadvantages of self-checkouts? Okay, I think if we just buy a few items, it is so easy to self-checkout. But if we buy a lot of items, and in the meantime, we just take a long time because that is not easy to handle many items. So usually the self-checkout is too easy, but some old person or the children or the foreigner, it is difficult to use that process, self-checkout.\n[Tutor] I would agree. When Walmart brought in self-checkout here in North America, people would try to purchase two weeks' worth of groceries through the self-checkout. The self-checkout wasn't made to handle those number of items. So now they have a sign that says self-checkout is limited to 25 items. And if you have a huge shopping cart full of food, they expect you to go to one of the human cashiers where it is just easier to get your groceries processed and bagged. I don't know about you, but I try whenever possible to use the human cashiers because I want to help them keep their jobs. The auto checkouts don't give humans jobs, and I favor the human interaction.\n[Joey] Yeah, you're right, you're right.\n[Tutor] All right, my friend. We're going to stop there. You've done a lot of hard work today. Did you have any questions or concerns?\n[Joey] Oh, no, I don't have questions. Thank you for your class.\n[Tutor] All right. You have a great weekend. I'll talk to you next time.\n[Joey] Thank you. You too. You take care. Bye-bye, teacher.\n\n[AI 피드백]\n안녕하세요, Joey! 오늘 수업도 정말 즐거웠습니다. 마트 쇼핑이라는 일상적인 주제로 다양한 표현과 문화를 배울 수 있었어요. 특히 발음 교정에도 적극적으로 참여해 주셔서 감사했습니다!\n\n---\n\n**0. 📌 Topic**\nTopic: Discussing supermarket shopping experiences and related vocabulary.\n\n---\n\n**1. 📊 오늘의 대화 요약 (Summary)**\n오늘은 슈퍼마켓 쇼핑을 주제로 대화하며, 셀프 계산대, 로열티 카드, 그리고 다양한 계량 단위(파운드, 킬로그램)에 대해 이야기했습니다. 또한, 마트에서 물건을 찾거나 무게를 재는 상황을 연습하며 실용적인 표현들을 익혔습니다.\n\n---\n\n**2. 💬 유창성 업그레이드 (Fluency & Natural Flow)**\n\nJoey가 말한 문장 중, 의미는 통하지만 원어민이 들었을 때 조금 더 자연스럽게 들릴 수 있는 표현들을 살펴볼게요.\n\n1.  **❌ 학습자 원문 (As Said):** \"This weekend, ah, **this day** we traveled to a small shop, small restaurant near my house.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"This past weekend, we traveled to a small shop...\"\n    *   **💎 비즈니스 표현 (Professional):** \"Recently, we explored a new establishment...\"\n    *   **💡 코칭 포인트:** Using \"this day\" is less common for past events. \"This past weekend\" or \"the other day\" are more natural for recent, specific past events. \"Recently\" is a good, general option for professional contexts. → \"this day\"는 과거의 특정 사건을 지칭할 때 흔히 쓰이지 않습니다. \"This past weekend\"나 \"the other day\"가 최근의 특정 과거 사건에 더 자연스럽고, \"recently\"는 비즈니스 환경에서 쓸 수 있는 일반적인 표현입니다.\n\n2.  **❌ 학습자 원문 (As Said):** \"And other things, **just buy, just look around and check that we need this item.**\"\n    *   **✅ 자연스러운 표현 (Natural):** \"For other things, we just look around and buy what we need.\"\n    *   **💎 비즈니스 표현 (Professional):** \"Additionally, we assess other items on display and acquire those deemed essential.\"\n    *   **💡 코칭 포인트:** The original phrasing is a bit choppy. Combining the actions more smoothly and using \"what we need\" makes it flow better. \"Assess\" and \"acquire\" add a professional tone. → 원문은 다소 끊기는 느낌이 있습니다. 행동들을 더 부드럽게 연결하고 \"what we need\"를 사용하면 훨씬 자연스럽습니다. \"Assess\"와 \"acquire\"는 전문적인 어조를 더해줍니다.\n\n3.  **❌ 학습자 원문 (As Said):** \"I guess **he's the first time in this shopping center**, a supermarket.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"I guess it's his first time at this supermarket.\"\n    *   **💎 비즈니스 표현 (Professional):** \"Given the shopper's inquiries, it appears to be their inaugural visit to this establishment.\"\n    *   **💡 코칭 포인트:** When talking about someone's first experience at a place, we usually say \"It's their first time [at/in] a place\" or \"They are visiting a place for the first time.\" \"He's the first time\"은 문법적으로 맞지 않습니다. → 특정 장소에서의 첫 경험을 말할 때는 보통 \"It's their first time [at/in] a place\" 또는 \"They are visiting a place for the first time\"이라고 합니다. \"He's the first time\"은 문법적으로 맞지 않습니다.\n\n---\n\n**3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)**\n\nCategory: Subject-Verb Agreement & Pluralization\n\nJoey는 문장에서 주어와 동사의 수 일치, 그리고 명사의 단수/복수 형태를 사용할 때 종종 혼동하는 경향이 있습니다. 특히 일반적인 사물을 지칭하거나 사람들을 묘사할 때 이런 패턴이 나타났습니다.\n\n| ❌ 원문 (As Said)                                                                  | ✅ 교정 예시 (Corrected)                                                                                                    |\n| :--------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------- |\n| \"And our family usually **buys** some milk and cheese and yogurt and meat and fruit. Yeah, **that is the necessary item**.\" | \"And our family usually **buys** some milk, cheese, yogurt, meat, and fruit. Yeah, **those are necessary items**.\"         |\n| \"sometimes if we visit the shopping center, we just buy BOGO **item**.\"            | \"sometimes if we visit the shopping center, we just buy BOGO **items**.\"                                                    |\n| \"that is not wise **purchase**.\"                                                   | \"that is not a wise **purchase**.\" (또는 \"that is not wise to purchase.\")                                                   |\n| \"some old person or the children or the foreigner, **it is difficult** to use that process, self-checkout.\" | \"some old **people**, children, or **foreigners find it difficult** to use that process, self-checkout.\" (또는 \"it is difficult for some old people, children, or foreigners to use...\") |\n\n📌 **핵심 규칙:** 명사의 단수/복수 형태를 정확히 사용하고, 주어와 동사의 수 일치를 올바르게 적용해야 합니다. 특히 'item'과 같이 여러 개를 지칭할 때는 복수형 'items'를 사용하고, 'person'의 복수형은 'people'임을 기억하세요.\n\n🔁 **따라 읽기:**\n🗣️ \"Those are necessary items.\"\n🗣️ \"We just buy BOGO items.\"\n🗣️ \"That is not a wise purchase.\"\n\n---\n\n**4. 📗 어휘 확장 (Vocabulary Vault)**\n\n오늘 수업에서 나왔거나 비즈니스 환경에서 유용하게 쓸 수 있는 단어 5개를 골라봤습니다.\n\n1.  **proceed** /prəˈsiːd/ (동사)\n    *   뜻: (어떤 일을) 진행하다, 나아가다\n    *   실전 예문: Please **proceed** to the next step of the project after reviewing the report.\n\n2.  **patronage** /ˈpeɪtrənɪdʒ/ (명사)\n    *   뜻: (상점 등에 대한) 애용, 후원\n    *   실전 예문: We greatly appreciate your continued **patronage** and loyalty to our services.\n\n3.  **thrifty** /ˈθrɪfti/ (형용사)\n    *   뜻: 절약하는, 검소한\n    *   실전 예문: Being a **thrifty** investor means carefully managing expenses and seeking value.\n\n4.  **streamlined** /ˈstriːmlaɪnd/ (형용사)\n    *   뜻: 능률적인, 간소화된\n    *   실전 예문: We need to implement a more **streamlined** process to improve efficiency in our operations.\n\n5.  **impersonal** /ɪmˈpɜːrsənl/ (형용사)\n    *   뜻: 비인간적인, 개인적인 감정이 없는\n    *   실전 예문: While self-checkout is efficient, some customers prefer a more personal interaction over an **impersonal** system.\n\n---\n\n**5. 📝 실전 복습 챌린지 (Practice)**\n\n오늘 배운 표현과 문법을 활용하여 다음 상황들을 영어로 작문해 보세요.\n\n1.  **상황:** 지난 주말에 가족과 함께 새로 생긴 식당에 갔는데, 모두가 정말 즐거워했습니다.\n    *   **영작:** (This past weekend, my family and I went to a new restaurant, and everyone had so much fun.)\n\n2.  **상황:** 우리 회사는 고객들의 지속적인 애용에 감사하며, 더 효율적인 서비스를 제공하기 위해 노력하고 있습니다.\n    *   **영작:** (Our company appreciates our customers' continued patronage and strives to provide more streamlined services.)\n\n3.  **상황:** 예산이 빠듯해서, 이번 달에는 꼭 필요한 물건들만 구매하고 불필요한 지출을 줄이는 검소한 쇼핑 전략을 세워야 합니다.\n    *   **영작:** (With a tight budget, we need to adopt a thrifty shopping strategy this month, only purchasing necessary items and cutting down on unnecessary expenses.)\n\n---\n\n**6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)**\n\n✨ **Good Job**: Joey가 오늘 잘 표현한 문장 중 하나는 바로 이것입니다:\n\"Usually I order the online shopping, but sometimes I visit the offline grocery shopping store.\"\n이 문장은 온라인 쇼핑과 오프라인 쇼핑에 대한 자신의 습관을 명확하고 자연스럽게 설명해 주었습니다. \"order online shopping\"이라는 표현도 아주 적절했고, \"offline grocery shopping store\"도 의미 전달이 잘 되었습니다. 아주 훌륭해요!\n\n🚀 **내일의 한 문장**: 다음 수업 시작 시 튜터에게 오늘 배운 표현을 활용하여 이렇게 말해보세요.\n\"I'm trying to be more **thrifty** with my spending these days. Do you have any tips for **streamlined** budgeting?\"\n(요즘 지출에 좀 더 검소해지려고 노력 중이에요. 예산을 효율적으로 관리하는 팁이 있으신가요?)\n\n---\n\n**[성과 지표]**\n**유창성 점수: 7/10**\n\n**근거:** Joey는 다양한 주제에 대해 막힘없이 자신의 의견을 표현하고, 수업 내용을 이해하는 데 어려움이 없었습니다. 발음 교정에도 적극적으로 참여하며 개선 의지를 보여주었습니다. 하지만 'this day'와 같은 시간 표현의 어색함, 주어-동사 수 일치 및 명사의 단수/복수 사용에서 반복적인 오류가 발견되어 자연스러운 흐름을 방해하는 경우가 있었습니다. 새로운 어휘를 배우는 속도는 빠르지만, 이를 문장으로 구성할 때 문법적 정확성이 조금 더 필요합니다.\n\n**다음 수업 '원포인트 액션 플랜':**\n다음 수업에서는 **\"시간 표현의 정확성\"**에 집중하여, 과거 시제를 나타낼 때 'this past weekend', 'the other day', 'recently' 등 더 자연스러운 시간 부사구를 사용하는 연습을 해볼 예정입니다. 또한, 주어-동사 수 일치와 명사의 단수/복수 사용에 대한 정확성을 높이는 데 중점을 둘 것입니다.\n\n위 내용을 바탕으로:\n1. 먼저 오늘 수업에서 내가 틀렸거나 어색했던 표현을 하나 골라서, 관련된 상황을 영어로 질문해줘.\n2. 내가 영어로 대답하면, 자연스러운지 확인하고 더 나은 표현이 있으면 알려줘.\n3. 특히 \"반복 실수 패턴\"에서 지적된 부분을 집중적으로 연습시켜줘.\n4. 이런 식으로 오늘 배운 표현들을 하나씩 복습하자.\n5. 한국어 설명은 필요할 때만 간단히, 대화는 최대한 영어로 진행해줘.\n\n그럼 시작하자!";
+        function startReview(){navigator.clipboard.writeText(REVIEW_PROMPT).then(()=>{showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)}).catch(()=>{const t=document.createElement('textarea');t.value=REVIEW_PROMPT;document.body.appendChild(t);t.select();document.execCommand('copy');document.body.removeChild(t);showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)})}
+        function showToast(){const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500)}
+        function switchTab(n){document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',n==='feedback'?i===0:i===1));document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));document.getElementById('tab-'+n).classList.add('active')}
+    </script>
+</body>
+</html>

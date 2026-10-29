@@ -1,0 +1,53 @@
+{
+ "date": "2026-10-19",
+ "iso": [
+  2026,
+  43
+ ],
+ "topic": "Discussing Travel Experiences and Traffic Regulations",
+ "grammar": "Incorrect use of articles",
+ "grammar_norm": "Articles (a/an/the)",
+ "score": 7.0,
+ "pairs": [
+  {
+   "said": "Yeah, it's a start, starting everything.",
+   "natural": "It's the start of a new week."
+  },
+  {
+   "said": "You were able to transfer your tickets or change it to something?",
+   "natural": "Were you able to transfer or change your tickets?"
+  },
+  {
+   "said": "I think it's from British, from the UK, from there.",
+   "natural": "I think it's from British influence / from the UK."
+  }
+ ],
+ "vocab": [
+  {
+   "word": "regulation",
+   "pos": "명사",
+   "meaning": "규정, 규제"
+  },
+  {
+   "word": "enforce",
+   "pos": "동사",
+   "meaning": "(법률 등을) 시행하다, 집행하다"
+  },
+  {
+   "word": "clarify",
+   "pos": "동사",
+   "meaning": "명확히 하다, 분명히 설명하다"
+  },
+  {
+   "word": "pedestrian",
+   "pos": "명사",
+   "meaning": "보행자"
+  },
+  {
+   "word": "distracted",
+   "pos": "형용사",
+   "meaning": "주의가 산만한, 집중하지 못하는"
+  }
+ ],
+ "_html_md5": "888ac6230a5f8b247a98e4232743de7f"
+}
