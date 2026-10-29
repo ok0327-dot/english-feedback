@@ -1,0 +1,52 @@
+{
+ "date": "2026-10-29",
+ "iso": [
+  2026,
+  44
+ ],
+ "topic": "Discussing pharmacy visits, common medications, and related vocabulary.",
+ "grammar": "Articles",
+ "grammar_norm": "Articles (a/an/the)",
+ "score": 8.0,
+ "pairs": [
+  {
+   "said": "This day is awesome season.",
+   "natural": "It's an awesome season today."
+  },
+  {
+   "said": "So spring and autumn season is short in Korea. So, if we don't enjoy that season, it passes fast.",
+   "natural": "Spring and autumn are short in Korea. So, if we don't enjoy those seasons, they pass quickly."
+  },
+  {
+   "said": "And I'm just middle-aged in life.",
+   "natural": "I'm middle-aged."
+  },
+  {
+   "said": "Because she works too late, so she wanted the non-drowsy medicine.",
+   "natural": "Because she will be working later, she needed the non-drowsy medicine."
+  }
+ ],
+ "vocab": [
+  {
+   "word": "audit",
+   "pos": "n, v",
+   "meaning": "(회계) 감사; 감사하다"
+  },
+  {
+   "word": "drowsiness",
+   "pos": "n",
+   "meaning": "졸음, 나른함"
+  },
+  {
+   "word": "symptoms",
+   "pos": "n",
+   "meaning": "(병의) 증상"
+  },
+  {
+   "word": "hygienic",
+   "pos": "adj",
+   "meaning": "위생적인"
+  }
+ ],
+ "_html_md5": "842aee28defb27fbb6335b06204aa950"
+}
