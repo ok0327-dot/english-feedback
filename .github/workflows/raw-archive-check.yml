@@ -1,0 +1,50 @@
+name: 🗄️ 원본 보관 점검
+# Whisper 원본 보관 파일(whisper_raw.jsonl)이 준비됐는지, 서비스 계정이 고쳐 쓸 수 있는지 수동 확인.
+# 이어서 빠진 수업 목록을 보여 주고, backfill_max 를 주면 그만큼 다시 받아써 채운다.
+# Manual check that the archive exists and is writable, then list (or backfill) missing lessons.
+on:
+  workflow_dispatch:
+    inputs:
+      backfill_max:
+        description: '다시 받아써 채울 최대 건수 (0 = 목록만 보기, 수업 1건 ≈ 20분 음성)'
+        required: false
+        default: '0'
+      since:
+        description: '이 날짜 이후 수업만 (YYYY-MM-DD, all = 전체, 비우면 2026-10-05)'
+        required: false
+        default: ''
+permissions:
+  contents: read
+# 매일 흐름과 같은 그룹 → 보관 파일에 동시에 쓰지 않는다 (이쪽은 앞선 실행을 취소하지 않고 기다린다)
+concurrency:
+  group: english-feedback
+  cancel-in-progress: false
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -r requirements.txt
+      - name: 보관 파일 점검
+        run: python scripts/check_raw_archive.py
+        env:
+          GOOGLE_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIALS }}
+          DRIVE_DONE_FOLDER_ID: ${{ secrets.DRIVE_DONE_FOLDER_ID }}
+      - name: 빠진 원본 목록 / 채우기
+        if: always()
+        run: |
+          if [ "${MAX:-0}" = "0" ]; then
+            python scripts/backfill_raw.py --dry-run ${SINCE:+--since "$SINCE"}
+          else
+            python scripts/backfill_raw.py --max "$MAX" ${SINCE:+--since "$SINCE"}
+          fi
+        env:
+          MAX: ${{ inputs.backfill_max }}
+          SINCE: ${{ inputs.since }}
+          GOOGLE_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIALS }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          DRIVE_DONE_FOLDER_ID: ${{ secrets.DRIVE_DONE_FOLDER_ID }}
