@@ -56,6 +56,17 @@ jobs:
           KNH_SEND_SECRET: ${{ secrets.KNH_SEND_SECRET }}
           KNH_CHANNEL: telegram
 
+      # 빠진 Whisper 원본 채우기 (best-effort): 원본 보관이 실패한 날을 다음 실행이 메운다.
+      # 위 단계의 페이지·메일·알림은 이미 끝났고, 이 단계가 실패해도 작업은 성공으로 남는다.
+      - name: 🗄️ 빠진 원본 채우기
+        continue-on-error: true
+        timeout-minutes: 6
+        run: python scripts/backfill_raw.py --max 2
+        env:
+          GOOGLE_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIALS }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          DRIVE_DONE_FOLDER_ID: ${{ secrets.DRIVE_DONE_FOLDER_ID }}
+
       # 처리 실패 시 텔레그램으로 알림 (조용히 죽는 것 방지)
       - name: 🔔 실패 시 텔레그램 알림
         if: failure()

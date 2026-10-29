@@ -385,6 +385,54 @@ def move_to_done_folder(file_id):
 _RAW_SEGMENT_KEYS = ("id", "start", "end", "text", "avg_logprob", "no_speech_prob", "compression_ratio")
 
 
+def read_raw_archive(service):
+    """
+    Drive 보관 파일을 찾아 전체 내용을 읽는다. (상태, 파일 ID, 내용 bytes) 반환.
+    상태: ok / no_folder / no_file / ambiguous(같은 이름 2개 이상) / size_mismatch(끝까지 못 받음)
+    → ok 가 아니면 그 파일에 쓰면 안 된다. 원본 채우기(scripts/backfill_raw.py)도 이 함수를 쓴다.
+    """
+    if not DRIVE_RAW_FOLDER_ID:
+        return "no_folder", None, b""
+    found = service.files().list(
+        q=(f"name = '{DRIVE_RAW_FILE_NAME}' and '{DRIVE_RAW_FOLDER_ID}' in parents "
+           "and trashed = false"),
+        pageSize=2,
+        fields="files(id, size)",
+    ).execute().get("files", [])
+    if not found:
+        return "no_file", None, b""
+    if len(found) > 1:
+        return "ambiguous", None, b""  # 어느 쪽이 진짜 기록인지 모름 → 아무 데도 쓰지 않는다
+    file_id = found[0]["id"]
+
+    old = service.files().get_media(fileId=file_id).execute() or b""
+    expected = found[0].get("size")
+    if expected is not None and int(expected) != len(old):
+        return "size_mismatch", None, b""  # 덜 받은 내용 위에 덮어쓰면 기록이 날아간다 → 중단
+    return "ok", file_id, old
+
+
+def _build_raw_record(filename, file_id, lesson_date, transcript_raw, duration, segments, **extra):
+    """보관 파일 한 줄(수업 1건)의 내용을 만든다. extra 는 그대로 덧붙는다 (예: backfill=True)."""
+    record = {
+        "schema": 1,
+        "lesson_date": lesson_date.strftime("%Y-%m-%d") if lesson_date else "",
+        "source_file": filename,
+        "drive_file_id": file_id,
+        "model": "whisper-large-v3",
+        "language": "en",
+        "duration": duration,
+        "text": transcript_raw,
+        "segments": [
+            {k: seg[k] for k in _RAW_SEGMENT_KEYS if k in seg}
+            for seg in (segments or []) if isinstance(seg, dict)
+        ],
+        "saved_at": datetime.now(KST).isoformat(timespec="seconds"),
+    }
+    record.update(extra)
+    return record
+
+
 def _append_raw_record(service, record):
     """
     Drive 보관 파일 끝에 수업 1건(JSON 한 줄)을 덧붙인다. 결과를 상태 문자열로 반환.
@@ -394,22 +442,9 @@ def _append_raw_record(service, record):
     """
     from googleapiclient.http import MediaIoBaseUpload  # 이 함수에서만 쓰므로 여기서 불러옴
 
-    if not DRIVE_RAW_FOLDER_ID:
-        return "no_folder"
-    found = service.files().list(
-        q=(f"name = '{DRIVE_RAW_FILE_NAME}' and '{DRIVE_RAW_FOLDER_ID}' in parents "
-           "and trashed = false"),
-        pageSize=2,
-        fields="files(id, size)",
-    ).execute().get("files", [])
-    if not found:
-        return "no_file"
-    file_id = found[0]["id"]
-
-    old = service.files().get_media(fileId=file_id).execute() or b""
-    expected = found[0].get("size")
-    if expected is not None and int(expected) != len(old):
-        return "size_mismatch"  # 덜 받은 내용 위에 덮어쓰면 기록이 날아간다 → 중단
+    status, file_id, old = read_raw_archive(service)
+    if status != "ok":
+        return status
 
     marker = json.dumps(record["drive_file_id"]).encode("utf-8")
     if record["drive_file_id"] and marker in old:
@@ -446,21 +481,7 @@ def save_raw_transcript(filename, file_id, lesson_date, transcript_raw, duration
         def work():
             try:
                 service = (service_factory or (lambda: get_drive_service(readonly=False)))()
-                record = {
-                    "schema": 1,
-                    "lesson_date": lesson_date.strftime("%Y-%m-%d") if lesson_date else "",
-                    "source_file": filename,
-                    "drive_file_id": file_id,
-                    "model": "whisper-large-v3",
-                    "language": "en",
-                    "duration": duration,
-                    "text": transcript_raw,
-                    "segments": [
-                        {k: seg[k] for k in _RAW_SEGMENT_KEYS if k in seg}
-                        for seg in (segments or []) if isinstance(seg, dict)
-                    ],
-                    "saved_at": datetime.now(KST).isoformat(timespec="seconds"),
-                }
+                record = _build_raw_record(filename, file_id, lesson_date, transcript_raw, duration, segments)
                 outcome["status"] = _append_raw_record(service, record)
             except Exception as e:
                 outcome["status"] = "error"
@@ -478,6 +499,7 @@ def save_raw_transcript(filename, file_id, lesson_date, transcript_raw, duration
             "no_file": f"ℹ️ Drive 에 '{DRIVE_RAW_FILE_NAME}' 파일이 없어 원본 보관 건너뜀 (완료 폴더에 빈 파일을 올려 두면 동작)",
             "no_folder": "ℹ️ 보관 폴더 미설정 → 원본 보관 건너뜀",
             "size_mismatch": "⚠️ 보관 파일을 끝까지 받지 못해 원본 보관 건너뜀 (기존 기록 보호)",
+            "ambiguous": f"⚠️ 완료 폴더에 '{DRIVE_RAW_FILE_NAME}' 이 2개 이상이라 원본 보관 건너뜀 (하나만 남기세요)",
             "timeout": f"⚠️ 원본 보관이 {timeout}초 안에 끝나지 않아 건너뜀 (치명적이지 않음)",
             "error": f"⚠️ 원본 보관 실패 (치명적이지 않음): {outcome.get('error', '')}",
         }

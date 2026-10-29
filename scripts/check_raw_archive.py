@@ -45,7 +45,9 @@ def main():
         print(f"❌ '{FILE_NAME}' 파일이 완료 폴더에 없습니다. 빈 파일을 만들어 올려 주세요.")
         return 1
     if len(found) > 1:
-        print(f"⚠️ 같은 이름의 파일이 {len(found)}개입니다. 첫 번째 것만 씁니다 — 하나만 남기세요.")
+        # 본 흐름(process_lesson.read_raw_archive)은 이 상태에서 아무 데도 쓰지 않는다
+        print(f"❌ 같은 이름의 파일이 {len(found)}개입니다. 어느 쪽에도 기록하지 않으니 하나만 남기세요.")
+        return 1
     f = found[0]
     print(f"✅ 파일 발견: 크기 {f.get('size')} bytes · 서비스 계정 소유={f.get('ownedByMe')} · "
           f"편집 가능={f.get('capabilities', {}).get('canEdit')}")
