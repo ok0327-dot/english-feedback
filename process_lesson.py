@@ -461,6 +461,9 @@ def _append_raw_record(service, record):
     return "saved"
 
 
+_RAW_WORKER = None  # 마지막 원본 보관 스레드 (시간 초과 뒤에도 살아 있을 수 있어 겹쳐 쓰기를 막는 데 쓴다)
+
+
 def save_raw_transcript(filename, file_id, lesson_date, transcript_raw, duration, segments,
                         timeout=60, service_factory=None):
     """
@@ -470,9 +473,15 @@ def save_raw_transcript(filename, file_id, lesson_date, transcript_raw, duration
 
     왜 남기나: 페이지에는 Gemini 가 손본 전사만 남아 원본을 알 수 없다(QUALITY_PLAN.md 1단계).
     """
+    global _RAW_WORKER
     if not SAVE_RAW:
         print("ℹ️ SAVE_RAW=0 → Whisper 원본 보관 건너뜀")
         return "disabled"
+    if _RAW_WORKER is not None and _RAW_WORKER.is_alive():
+        # 앞 녹음의 보관이 시간 초과 후에도 뒤에서 도는 중 → 같이 쓰면 한쪽 줄이 사라진다(읽고-덧붙여-통째 올리기).
+        # 이번 것은 쓰지 않는다. 다음 단계 '빠진 원본 채우기'(scripts/backfill_raw.py)가 채운다.
+        print("⚠️ 앞 원본 보관이 아직 진행 중이라 이번 보관 건너뜀 (빠진 원본 채우기가 이어서 채움)")
+        return "busy"
     try:
         import threading
 
@@ -489,6 +498,7 @@ def save_raw_transcript(filename, file_id, lesson_date, transcript_raw, duration
 
         # 별도 스레드 + 시간 제한: Drive 가 응답하지 않아도 본 흐름이 멈추지 않게 한다
         worker = threading.Thread(target=work, daemon=True)
+        _RAW_WORKER = worker
         worker.start()
         worker.join(timeout)
         status = "timeout" if worker.is_alive() else outcome.get("status", "error")

@@ -267,6 +267,7 @@ def main():
     t0 = time.time()
     status = save(d, timeout=1)
     check("무응답 시 시간 제한", status == "timeout" and time.time() - t0 < 3)
+    pl._RAW_WORKER.join(10)  # 뒤에서 도는 보관이 끝나야 다음 보관이 'busy' 로 막히지 않는다
 
     # 10) 끄는 스위치
     pl.SAVE_RAW = False
@@ -283,6 +284,14 @@ def main():
     # 12) 같은 이름 보관 파일이 2개 → 어느 쪽에도 쓰지 않음
     d = FakeDrive(content=old, dupes=True)
     check("중복 보관 파일이면 쓰지 않음", save(d) == "ambiguous" and d.updates == 0)
+
+    # 13) 앞 보관이 시간 초과 뒤에도 도는 중 → 겹쳐 쓰지 않고 건너뜀 (겹치면 한쪽 줄이 사라진다)
+    d = FakeDrive(content=b"", hang_on="get")
+    first = save(d, file_id="A1", timeout=0.2)
+    second = save(d, file_id="A2", timeout=0.2)
+    check("앞 보관 진행 중이면 건너뜀", first == "timeout" and second == "busy")
+    pl._RAW_WORKER.join(10)
+    check("앞 보관 끝나면 다시 동작", save(FakeDrive(content=b""), file_id="A3") == "saved")
 
     backfill_checks(check)
 
