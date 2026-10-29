@@ -24,6 +24,33 @@ from googleapiclient.http import MediaIoBaseUpload
 FILE_NAME = os.environ.get("DRIVE_RAW_FILE_NAME", "").strip() or "whisper_raw.jsonl"
 
 
+def fix_txt_suffix(service, folder):
+    """
+    메모장이 이름 끝에 .txt 를 붙인 흔한 경우(whisper_raw.jsonl.txt)만 바로잡는다 — 완료 폴더에 딱 1개일 때만.
+    이름만 바꾸고 내용은 건드리지 않는다(Drive 에서 언제든 되돌릴 수 있음). 매일 흐름은 정확한 이름만 쓴다.
+    고쳤으면 [파일 정보], 아니면 [] 반환.
+    """
+    wrong = f"{FILE_NAME}.txt"
+    try:
+        hits = service.files().list(
+            q=f"name = '{wrong}' and '{folder}' in parents and trashed = false",
+            pageSize=2,
+            fields="files(id)",
+        ).execute().get("files", [])
+        if len(hits) != 1:
+            return []
+        fixed = service.files().update(
+            fileId=hits[0]["id"],
+            body={"name": FILE_NAME},
+            fields="id, size, ownedByMe, capabilities(canEdit)",
+        ).execute()
+    except Exception as e:  # noqa: BLE001 — 못 고치면 아래 안내로 넘어간다
+        print(f"⚠️ '{wrong}' 이름 바로잡기 실패: {type(e).__name__}: {str(e)[:200]}")
+        return []
+    print(f"🔧 '{wrong}' → '{FILE_NAME}' 로 이름을 바로잡았습니다 (메모장이 .txt 를 붙인 경우)")
+    return [fixed]
+
+
 def explain_missing(service, folder):
     """
     못 찾았을 때 흔한 원인(다른 폴더에 올림 · 메모장이 .txt 를 붙임 · 이름 오타)을 짚어 준다.
@@ -73,6 +100,8 @@ def main():
         pageSize=5,
         fields="files(id, size, ownedByMe, capabilities(canEdit))",
     ).execute().get("files", [])
+    if not found:
+        found = fix_txt_suffix(service, folder)
     if not found:
         print(f"❌ '{FILE_NAME}' 파일이 완료 폴더에 없습니다. 빈 파일을 만들어 올려 주세요.")
         explain_missing(service, folder)
