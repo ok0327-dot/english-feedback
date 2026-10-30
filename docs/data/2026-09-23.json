@@ -1,0 +1,53 @@
+{
+ "date": "2026-09-23",
+ "iso": [
+  2026,
+  39
+ ],
+ "topic": "Discussing holiday travel, alcohol tolerance, and quitting habits.",
+ "grammar": "Noun Forms & Article Usage",
+ "grammar_norm": "Articles (a/an/the)",
+ "score": 7.0,
+ "pairs": [
+  {
+   "said": "I wake up in my home, not at the office time.",
+   "natural": "I woke up at home, not at the office."
+  },
+  {
+   "said": "it was possible to buy them yesterday night because that is not a holiday ticket.",
+   "natural": "I was able to buy them last night because they weren't considered holiday tickets."
+  },
+  {
+   "said": "So this day, just I drink a cup of a big 500cc beer. Just I'm tipsy.",
+   "natural": "These days, if I just drink one big 500cc beer, I get tipsy."
+  }
+ ],
+ "vocab": [
+  {
+   "word": "secure",
+   "pos": "v",
+   "meaning": "(어렵게) 확보하다, 얻어내다"
+  },
+  {
+   "word": "commute",
+   "pos": "v",
+   "meaning": "통근하다"
+  },
+  {
+   "word": "categorize",
+   "pos": "v",
+   "meaning": "분류하다, 범주에 넣다"
+  },
+  {
+   "word": "intoxication",
+   "pos": "n",
+   "meaning": "취함, 중독 (공식적인 표현)"
+  },
+  {
+   "word": "fluctuate",
+   "pos": "v",
+   "meaning": "(가격, 수치 등이) 변동하다, 오르내리다"
+  }
+ ],
+ "_html_md5": "a45b958b4877946f4b9f6562d9ecf96b"
+}
