@@ -4,46 +4,50 @@
   2026,
   41
  ],
- "topic": "Resolving a technical issue before the lesson starts",
- "grammar": "Precise Verb Choice",
- "grammar_norm": "Precise Verb Choice",
- "score": 7.0,
+ "topic": "Discussing social media trends and online content types.",
+ "grammar": "Incorrect Preposition Usage",
+ "grammar_norm": "Prepositions",
+ "score": 7.5,
  "pairs": [
   {
-   "said": "do you hear my voice?",
-   "natural": "Can you hear me?"
+   "said": "I will wait the long weekend and I prepare the textbook.",
+   "natural": "I'm looking forward to the long weekend, and I've prepared the textbook."
   },
   {
-   "said": "I think I'm having an audio issue. Could you call me back, please?",
-   "natural": "I think I'm having an audio issue. Could you call me back, please?"
+   "said": "That is the spread, urgently. So, yeah, spread, urgently, something.",
+   "natural": "It spreads very quickly."
+  },
+  {
+   "said": "I usually, I love the category of wholesome category because it give us some warm heart. It make me warm heart.",
+   "natural": "I usually love wholesome content because it warms my heart."
   }
  ],
  "vocab": [
   {
-   "word": "audio",
-   "pos": "n.",
-   "meaning": "오디오, 음성"
+   "word": "blow up",
+   "pos": "phrasal verb",
+   "meaning": "(온라인 콘텐츠 등이) 갑자기 인기를 얻다, 급속도로 퍼지다."
   },
   {
-   "word": "connection",
-   "pos": "n.",
-   "meaning": "연결, 접속"
+   "word": "doom scroll",
+   "pos": "verb",
+   "meaning": "(주로 소셜 미디어에서) 부정적인 뉴스나 콘텐츠를 끊임없이 찾아보는 행위."
   },
   {
-   "word": "redial",
-   "pos": "v.",
-   "meaning": "(전화를) 다시 걸다, 재다이얼하다"
+   "word": "wholesome",
+   "pos": "adjective",
+   "meaning": "건전한, 유익한, 건강에 좋은 (정신적, 도덕적으로)."
   },
   {
-   "word": "clarity",
-   "pos": "n.",
-   "meaning": "명확성, 선명도"
+   "word": "aspirational",
+   "pos": "adjective",
+   "meaning": "열망을 불러일으키는, 포부를 자극하는."
   },
   {
-   "word": "troubleshoot",
-   "pos": "v.",
-   "meaning": "문제 해결하다, 고장 원인을 찾아내다"
+   "word": "sensationalized",
+   "pos": "adjective",
+   "meaning": "선정적으로 과장된, 자극적으로 보도된."
   }
  ],
- "_html_md5": "607c751c4c9aa2505b25a631f9f47ced"
+ "_html_md5": "a61bae19cec8c9c2061094c763f5656d"
 }
