@@ -89,12 +89,14 @@ def main():
     # ① 수신 폴더
     in_files = sorted(list_audio(service, inbox), key=lambda f: f["name"])
     todo = [f for f in in_files if f["id"] not in ids and f["name"] not in names]
-    stuck = [f for f in in_files if f not in todo]
-    print(f"📥 수신 폴더 녹음 {len(in_files)}개 — 처리 안 됨 {len(todo)} · 처리됐는데 안 옮겨짐 {len(stuck)}")
+    copies = len(in_files) - len(todo)
+    nostamp = sum(1 for f in in_files if not stamp(f["name"])[0])
+    # 처리된 녹음은 완료 폴더로 옮겨지는데, 폰 동기화 앱(FolderSync)이 '사라진' 파일을 다시 올려
+    # 같은 이름의 사본이 수신 폴더에 쌓인다(새 ID). 본 흐름은 파일명으로 걸러내므로 해는 없다.
+    print(f"📥 수신 폴더 녹음 {len(in_files)}개 — 처리 안 됨 {len(todo)} · 이미 처리된 수업의 사본 {copies}"
+          + (f" · 파일명에 날짜가 없는 녹음 {nostamp}개(이름은 공개 로그라 생략)" if nostamp else ""))
     for f in todo:
         print(f"   🔴 처리 안 됨: {describe(f)}")
-    for f in stuck:
-        print(f"   ⚪ 옮기기만 실패: {describe(f)}")
 
     # ② 강사 기록은 있는데 페이지가 없는 날 → 그 날짜 녹음이 어디 있나
     done_files = list_audio(service, done) if done else []
