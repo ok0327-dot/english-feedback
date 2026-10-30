@@ -24,7 +24,11 @@ concurrency:
 jobs:
   process-lesson:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20   # 본 처리 12분 + 원본 채우기 6분 + 알림 여유
+    env:
+      # 출력을 모아 두지 않고 바로 찍는다 — 시간 초과로 강제 종료돼도 어디서 멈췄는지 로그에 남는다
+      # (2026-09-23 실행은 15분 동안 한 줄도 안 남기고 취소됐다)
+      PYTHONUNBUFFERED: "1"
     steps:
       - name: 📥 체크아웃
         uses: actions/checkout@v4
@@ -37,6 +41,8 @@ jobs:
       - name: 📦 의존성 설치
         run: pip install -r requirements.txt
       - name: 🚀 피드백 생성 및 발송
+        # 단계 자체에 시간 제한 → 넘기면 '실패'로 끝나 아래 알림이 확실히 돈다(작업 전체 취소면 알림도 못 돌 수 있다)
+        timeout-minutes: 12
         run: python process_lesson.py
         env:
           GOOGLE_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIALS }}
@@ -67,12 +73,13 @@ jobs:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
           DRIVE_DONE_FOLDER_ID: ${{ secrets.DRIVE_DONE_FOLDER_ID }}
 
-      # 처리 실패 시 텔레그램으로 알림 (조용히 죽는 것 방지)
+      # 처리 실패·시간 초과(취소) 시 텔레그램으로 알림 (조용히 죽는 것 방지)
+      # failure() 만으로는 15분 시간 초과로 '취소'된 실행에 알림이 가지 않았다 (08-05·08-17·08-21·09-23 수업 누락)
       - name: 🔔 실패 시 텔레그램 알림
-        if: failure()
+        if: failure() || cancelled()
         run: |
           curl -s -X POST "https://telegram-notify-hub.dk0327.workers.dev/send" \
             -H "X-Notify-Secret: $KNH_SEND_SECRET" -H "Content-Type: application/json" \
-            -d '{"channel":"telegram","text":"❌ 전화영어 피드백 자동화 실패 — GitHub Actions 로그 확인 필요"}' || true
+            -d '{"channel":"telegram","text":"❌ 전화영어 피드백 자동화 실패 또는 시간 초과 — GitHub Actions 로그 확인 필요"}' || true
         env:
           KNH_SEND_SECRET: ${{ secrets.KNH_SEND_SECRET }}
