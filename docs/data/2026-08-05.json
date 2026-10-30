@@ -1,0 +1,53 @@
+{
+ "date": "2026-08-05",
+ "iso": [
+  2026,
+  32
+ ],
+ "topic": "Discussing summer activities, online habits, and digital hobbies like AI development.",
+ "grammar": "Verb Tense and Form",
+ "grammar_norm": "Verb Tense",
+ "score": 7.0,
+ "pairs": [
+  {
+   "said": "So usually these days I'm thankful for my environment to the work.",
+   "natural": "These days, I'm really thankful for my work environment."
+  },
+  {
+   "said": "But our country people are popular to watch shows like the Olympics or play games in a train or in a metro.",
+   "natural": "People in our country often enjoy watching shows like the Olympics or playing games on the train or subway."
+  },
+  {
+   "said": "So yeah, two kinds of ways is a good way to in online my country people.",
+   "natural": "So, there are two main ways people in my country enjoy spending time online."
+  }
+ ],
+ "vocab": [
+  {
+   "word": "prevalent",
+   "pos": "형용사",
+   "meaning": "널리 퍼져 있는, 일반적인"
+  },
+  {
+   "word": "engagement",
+   "pos": "명사",
+   "meaning": "참여, 몰입도 (특히 온라인 콘텐츠에 대한)"
+  },
+  {
+   "word": "detrimental",
+   "pos": "형용사",
+   "meaning": "해로운, 손해를 입히는"
+  },
+  {
+   "word": "curiosity",
+   "pos": "명사",
+   "meaning": "호기심"
+  },
+  {
+   "word": "commute",
+   "pos": "명사/동사",
+   "meaning": "통근 (명사); 통근하다 (동사)"
+  }
+ ],
+ "_html_md5": "adf1dcd2009661ce7732aec957fc9d3b"
+}
