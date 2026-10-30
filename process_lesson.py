@@ -318,14 +318,15 @@ def group_into_lessons(recs):
 def select_lessons(lessons, dates_mode=False):
     """
     이번 실행에서 처리할 수업을 고른다.
-    - 평소: 처리 안 된 조각이 있는 수업만, 최근 수업부터 MAX_LESSONS_PER_RUN 개 (나머지는 다음 실행).
+    - 평소: 처리 안 된 조각이 있는 수업만, **오래된 수업부터** MAX_LESSONS_PER_RUN 개 (나머지는 다음 실행).
+      최근 것부터 고르면 밀린 오래된 수업이 그사이 RETRY_DAYS 창 밖으로 밀려나 영영 빠진다(코덱스 리뷰).
     - 다시 만들기: 처리 안 된 조각이 있거나 조각이 2개 이상인 수업(조각 하나로 만든 페이지를 묶음으로 다시 만든다).
       이미 제대로 처리된 단일 녹음 수업(8/17 09:01 등)은 건드리지 않는다.
     """
     if dates_mode:
         return [g for g in lessons if any(not p["processed"] for p in g) or len(g) > 1]
     todo = [g for g in lessons if any(not p["processed"] for p in g)]
-    return sorted(todo, key=lambda g: g[0]["start"], reverse=True)[:MAX_LESSONS_PER_RUN]
+    return sorted(todo, key=lambda g: g[0]["start"])[:MAX_LESSONS_PER_RUN]
 
 
 def join_transcripts(pieces):
