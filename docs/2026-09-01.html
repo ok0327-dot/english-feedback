@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#0f0f13"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="당근영어"><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="icon" type="image/png" sizes="192x192" href="icon-192.png"><script src="install-banner.js" defer></script><script src="sw-reg.js" defer></script>
+    <title>전화영어 복습 - 2026년 09월 01일</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Noto Sans KR',sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.75;min-height:100vh}
+        .header{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);border-bottom:1px solid rgba(255,255,255,.06);padding:48px 24px 40px;text-align:center}
+        .header-date{font-size:13px;color:#94a3b8;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+        .header h1{font-size:28px;font-weight:700;color:#f1f5f9;margin-bottom:16px}
+        .header-meta{display:flex;justify-content:center;gap:24px;font-size:14px;color:#64748b}
+        .header-meta span{display:flex;align-items:center;gap:6px}
+        .cta-section{text-align:center;padding:40px 24px}
+        .cta-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:linear-gradient(135deg,#38bdf8,#818cf8);color:#fff;font-size:16px;font-weight:600;font-family:'Noto Sans KR',sans-serif;border:none;border-radius:50px;cursor:pointer;transition:all .3s;text-decoration:none;box-shadow:0 4px 24px rgba(56,189,248,.25)}
+        .cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(56,189,248,.35)}
+        .cta-btn svg{width:20px;height:20px}
+        .cta-sub{margin-top:12px;font-size:13px;color:#64748b}
+        .toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#38bdf8;padding:14px 28px;border-radius:12px;font-size:14px;font-weight:500;border:1px solid rgba(56,189,248,.2);box-shadow:0 8px 32px rgba(0,0,0,.4);opacity:0;transition:all .4s cubic-bezier(.16,1,.3,1);z-index:1000}
+        .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+        .container{max-width:720px;margin:0 auto;padding:0 24px 80px}
+        .tabs{display:flex;gap:4px;background:#1a1a24;padding:4px;border-radius:12px;margin-bottom:32px}
+        .tab{flex:1;padding:12px;text-align:center;font-size:14px;font-weight:500;color:#64748b;background:0 0;border:none;border-radius:8px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all .2s}
+        .tab.active{background:#262636;color:#f1f5f9}
+        .tab-content{display:none}.tab-content.active{display:block}
+        .feedback h2{font-size:18px;font-weight:700;color:#f1f5f9;margin:36px 0 16px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.06)}
+        .feedback h2:first-child{margin-top:0}
+        .feedback p{margin:8px 0;color:#cbd5e1}
+        .feedback .item{padding:6px 0 6px 16px;border-left:2px solid #334155;margin:6px 0;color:#cbd5e1}
+        .feedback .numbered{padding:8px 0 8px 16px;color:#cbd5e1}
+        .feedback .numbered strong{color:#38bdf8}
+        .feedback strong{color:#f1f5f9}
+        .feedback code{background:#1e293b;padding:2px 8px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#38bdf8}
+        .feedback table{width:100%;border-collapse:collapse;margin:12px 0}
+        .feedback th,.feedback td{padding:10px 14px;text-align:left;border-bottom:1px solid #262636}
+        .feedback th{color:#94a3b8;font-weight:500;font-size:13px}
+        .feedback td{color:#cbd5e1}
+        .arrow{color:#38bdf8;font-weight:700}
+        .transcript{background:#1a1a24;border-radius:12px;padding:28px;font-size:14px;line-height:2;color:#94a3b8;white-space:pre-wrap;word-break:break-word;font-family:'JetBrains Mono','Noto Sans KR',monospace}
+        .transcript .tutor{color:#38bdf8}
+        .transcript .student{color:#a78bfa}
+        @media(max-width:640px){.header{padding:32px 16px}.header h1{font-size:22px}.cta-btn{padding:14px 28px;font-size:15px}.container{padding:0 16px 60px}}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-date">2026년 09월 01일</div>
+        <h1>📚 전화영어 복습</h1>
+        <div class="header-meta">
+            <span>⏱ 20분 8초</span>
+            <span>🎙 전화영어_025180304_20260901080029.m4a</span>
+        </div>
+    </div>
+    <div class="cta-section">
+        <button class="cta-btn" onclick="startReview()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Gemini에서 복습 대화 시작하기
+        </button>
+        <div class="cta-sub">클릭하면 프롬프트가 복사되고 Gemini가 열립니다</div>
+    </div>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('feedback')">📋 AI 피드백</button>
+            <button class="tab" onclick="switchTab('transcript')">🎙 수업 전사</button>
+        </div>
+        <div id="tab-feedback" class="tab-content active">
+            <div class="feedback"><h2>완성본</h2>
+<br>
+<p>따뜻하고 실용적인 영어 코치 Bella입니다. Joey, 긴 연휴 후에 다시 루틴으로 돌아오셨다니 정말 반가워요! 오늘 수업에서 한국의 명절 문화와 연휴 계획에 대해 정말 풍성한 이야기를 나눠주셔서 저도 즐거웠습니다. 특히 명절에 현금을 선물하는 문화나, 연휴 마지막 날에는 매콤한 음식을 찾는다는 이야기는 정말 흥미로웠어요!</p>
+<br>
+<br>
+<h2><strong>0. 📌 Topic</strong></h2>
+<p>Topic: Discussing holiday traditions, plans, and preferences in Korea and abroad.</p>
+<br>
+<h2><strong>1. 📊 오늘의 대화 요약 (Summary)</strong></h2>
+<p>오늘 Joey는 한국의 주요 명절인 추석과 설날의 전통(세배, 현금 선물)에 대해 이야기 나누고, 명절 음식 준비 시 전통 요리와 새로운 레시피 중 무엇을 선호하는지에 대해 토론했습니다. 해외여행 중 현지 명절로 인해 겪었던 경험과 선호하는 휴일, 그리고 다른 나라에서 경험하고 싶은 휴일에 대해서도 깊이 있는 대화를 나눴습니다.</p>
+<br>
+<h2><strong>2. 💬 유창성 업그레이드 (Fluency & Natural Flow)</strong></h2>
+<p>Joey가 말한 문장 중 의미는 통하지만, 원어민이 들었을 때 더 자연스럽게 들릴 수 있는 표현들을 함께 살펴볼까요?</p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>❌ 학습자 원문 (As Said):</strong> "From Monday I started my routine and I feel happy with my routine."</div>
+<div class="item"><strong>✅ 자연스러운 표현 (Natural):</strong> "I got back into my routine on Monday, and I'm happy with it."</div>
+<div class="item"><strong>💎 비즈니스 표현 (Professional):</strong> "I resumed my routine on Monday, and I'm content with it."</div>
+<div class="item"><strong>💡 코칭 포인트:</strong> Using "get back into" or "resume" sounds more natural for returning to a routine after a break. "Happy with it" is a concise way to express satisfaction. <span class="arrow">→</span> "get back into" 또는 "resume"는 휴식 후 루틴으로 돌아올 때 더 자연스럽습니다. "Happy with it"은 만족감을 간결하게 표현하는 방법입니다.</div>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>❌ 학습자 원문 (As Said):</strong> "So usually we give the cash for gift."</div>
+<div class="item"><strong>✅ 자연스러운 표현 (Natural):</strong> "So usually we give cash as a gift."</div>
+<div class="item"><strong>💎 비즈니스 표현 (Professional):</strong> "Cash is a common form of gifting."</div>
+<div class="item"><strong>💡 코칭 포인트:</strong> "As a gift" is the correct prepositional phrase when describing the purpose or role of something given. "For gift" is less common. <span class="arrow">→</span> "As a gift"는 무언가를 주는 목적이나 역할을 설명할 때 올바른 전치사 구입니다. "For gift"는 덜 흔합니다.</div>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>❌ 학습자 원문 (As Said):</strong> "I'm salary."</div>
+<div class="item"><strong>✅ 자연스러운 표현 (Natural):</strong> "I'm a salaried employee." / "I'm on salary."</div>
+<div class="item"><strong>💎 비즈니스 표현 (Professional):</strong> "I am a salaried professional."</div>
+<div class="item"><strong>💡 코칭 포인트:</strong> "Salary" is a noun referring to the payment itself. To describe your employment status, you need to use "salaried" (an adjective) or the phrase "on salary." <span class="arrow">→</span> "Salary"는 급여 자체를 나타내는 명사입니다. 고용 상태를 설명하려면 "salaried"(형용사) 또는 "on salary"라는 구를 사용해야 합니다.</div>
+<br>
+<h2><strong>3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)</strong></h2>
+<p>Category: <strong>Incorrect use of 'no person' vs. 'no people' / 'nobody'</strong></p>
+<br>
+<p>Joey는 대화 중 '사람이 없다'는 의미를 표현할 때 "no person"이라고 말하는 경우가 있었습니다. 'person'은 단수 명사로, 'no person'이라고 하면 '단 한 명의 사람도 없다'는 의미가 되지만, 일반적으로 '사람들이 없다'는 의미로 말할 때는 복수형 'people'을 사용하여 "no people" 또는 더 자연스러운 "nobody" 또는 "no one"을 사용하는 것이 좋습니다.</p>
+<br>
+<table>
+<tr><th>❌ 원문 (As Said)</th><th>✅ 교정 예시 (Corrected)</th></tr>
+<tr><td>"there is <strong>no person</strong> in our viewpoint"</td><td>"there are <strong>no people</strong> at our viewpoint" / "there's <strong>nobody</strong> at our viewpoint"</td></tr>
+<tr><td>"there is <strong>no person</strong> to travel place."</td><td>"there are <strong>no people</strong> at the travel destination." / "there's <strong>nobody</strong> at the travel destination."</td></tr>
+<tr><td>"Chinese have so many <strong>people</strong>" (문맥상 '사람이 많다'는 의미로 'people' 사용은 맞으나, 'no person' 오류와 연결하여 '사람'에 대한 표현을 다룹니다.)</td><td>"China has so many <strong>people</strong>" (이 문장 자체는 'people' 사용이 맞습니다.)</td></tr>
+</table>
+<br>
+<p>📌 <strong>핵심 규칙:</strong> '사람들이 없다'는 의미로 말할 때는 "no people" 또는 "nobody/no one"을 사용하세요. "No person"은 문법적으로 틀린 것은 아니지만, 자연스러운 대화에서는 거의 사용되지 않습니다.</p>
+<br>
+<p>🔁 <strong>따라 읽기:</strong></p>
+<p>🗣️ "There are no people at our viewpoint."</p>
+<p>🗣️ "There's nobody at the travel destination."</p>
+<p>🗣️ "China has so many people, so we have to postpone our holiday plans."</p>
+<br>
+<h2><strong>4. 📗 어휘 확장 (Vocabulary Vault)</strong></h2>
+<p>오늘 대화에서 나온 표현과 Joey의 비즈니스 환경에 유용한 어휘들을 확장해 볼까요?</p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>custom</strong> /kʌstəm/ (명사)</div>
+<div class="item">뜻: 관습, 풍습</div>
+<div class="item">실전 예문: It's a <strong>custom</strong> in our company to have a team dinner after a major project completion.</div>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>attraction</strong> /əˈtrækʃən/ (명사)</div>
+<div class="item">뜻: 관광 명소, 흥미로운 장소</div>
+<div class="item">실전 예문: We need to highlight the unique <strong>attractions</strong> of our investment portfolio to potential clients.</div>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>postpone</strong> /poʊˈspoʊn/ (동사)</div>
+<div class="item">뜻: 연기하다, 미루다</div>
+<div class="item">실전 예문: Due to unforeseen circumstances, we had to <strong>postpone</strong> the meeting until next week.</div>
+<br>
+<div class="numbered"><strong>4.</strong> <strong>flavorful</strong> /ˈfleɪvərfəl/ (형용사)</div>
+<div class="item">뜻: 풍미 가득한, 맛있는</div>
+<div class="item">실전 예문: Our new product line offers a more <strong>flavorful</strong> experience compared to its competitors.</div>
+<br>
+<div class="numbered"><strong>5.</strong> <strong>salaried</strong> /ˈsælərid/ (형용사)</div>
+<div class="item">뜻: 봉급을 받는, 월급을 받는</div>
+<div class="item">실전 예문: As a <strong>salaried</strong> employee, I appreciate the stability of a fixed income.</div>
+<br>
+<h2><strong>5. 📝 실전 복습 챌린지 (Practice)</strong></h2>
+<p>오늘 배운 표현과 문법을 활용해서 다음 상황들을 영어로 말해보세요.</p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>상황:</strong> 긴 휴가 후에 다시 일상으로 돌아와서 만족스럽다고 말하고 싶어요.</div>
+<div class="item"><strong>영작:</strong> (힌트: 'get back into' 또는 'resume' 사용)</div>
+<div class="item"><strong>모범 답안:</strong> I got back into my routine after the long holiday, and I'm quite happy with it.</div>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>상황:</strong> 저희 회사는 성과가 좋으면 직원들에게 현금을 보너스로 주는 것이 관례입니다.</div>
+<div class="item"><strong>영작:</strong> (힌트: 'custom', 'cash as a bonus' 사용)</div>
+<div class="item"><strong>모범 답안:</strong> It's a custom in our company to give cash as a bonus when performance is good.</div>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>상황:</strong> 설날 연휴에는 사람들이 많아서 여행 계획을 미뤄야 했습니다.</div>
+<div class="item"><strong>영작:</strong> (힌트: 'Lunar New Year holiday', 'no people' 대신 자연스러운 표현, 'postpone' 사용)</div>
+<div class="item"><strong>모범 답안:</strong> We had to postpone our travel plans during the Lunar New Year holiday because there were so many people everywhere.</div>
+<br>
+<h2><strong>6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)</strong></h2>
+<br>
+<p>✨ <strong>Good Job</strong>: "My favorite holiday is Christmas because, yeah, because every holiday we go to the abroad and we go to the travel so that is so nice holiday for our family and and I love to that mood of the Christmas, the winter time and snow and music and food. Yeah, everything is good. So I love that."</p>
+<p>Joey, 이 문장은 크리스마스를 좋아하는 이유를 정말 풍부하고 생생하게 묘사해 주었어요. 'mood of Christmas', 'winter time and snow and music and food'처럼 구체적인 단어들을 사용해서 듣는 사람이 Joey의 감정을 그대로 느낄 수 있었습니다. 아주 훌륭한 표현이었어요!</p>
+<br>
+<p>🚀 <strong>내일의 한 문장</strong>: 다음 수업 시작 시 튜터에게 던질 수 있는 대화 시작 문장 (오늘 배운 표현 활용)</p>
+<p>"I'm happy to be back into my routine, and I'm looking forward to our next topic."</p>
+<br>
+<br>
+<h2><strong>[성과 지표]</strong></h2>
+<p><strong>유창성 점수(10점 만점): 7.5점</strong></p>
+<br>
+<p><strong>근거:</strong> Joey는 다양한 주제에 대해 막힘없이 자신의 의견을 표현하며 대화의 흐름을 잘 이어갔습니다. 특히, 복잡한 상황 설명이나 감정 표현에서도 주저함 없이 말을 이어나가는 모습이 인상 깊었습니다. 다만, 일부 문장에서 어순이나 전치사 사용이 다소 어색하거나, 'no person'과 같은 표현에서 자연스러움이 부족한 부분이 있었지만, 이는 의미 전달에 큰 방해가 되지 않는 수준이었습니다. 어휘력은 풍부하며, 튜터의 질문에 대한 이해도도 높았습니다.</p>
+<br>
+<p><strong>다음 수업 '원포인트 액션 플랜':</strong></p>
+<p>다음 수업에서는 <strong>'no people'과 같은 자연스러운 복수 표현 사용하기</strong>에 집중해 볼까요? 'There are no people', 'nobody', 'everyone's closed' 등 '사람' 또는 '모든 것'을 지칭할 때 더 자연스러운 표현들을 의식적으로 사용해 보는 연습을 해봅시다.</p></div>
+        </div>
+        <div id="tab-transcript" class="tab-content">
+            <div class="transcript"><span class="student">[Student]</span> Hello, hello teacher. Good morning.
+<span class="tutor">[Tutor]</span> Hi, Joey. How are you?
+<span class="student">[Student]</span> Hi, long time no see, teacher. I&#x27;m good.
+<span class="tutor">[Tutor]</span> Uh-huh. Yeah, you went on a holiday, I recall.
+<span class="student">[Student]</span> Ah, yes. Maybe it was a long holiday and I came back to my office. Yeah. How are you today?
+<span class="tutor">[Tutor]</span> I&#x27;m doing well. Thank you for asking. Are you ready to get back into your routine?
+<span class="student">[Student]</span> Ah, yes. From Monday I started my routine and I feel happy with my routine.
+<span class="tutor">[Tutor]</span> Yeah, it&#x27;s good to have a holiday break, but it&#x27;s good to get back to a normal routine.
+<span class="student">[Student]</span> Yeah.
+<span class="tutor">[Tutor]</span> Okay, so I see that we are on page 19 or topic 17, &quot;What&#x27;s the tradition here?&quot; And as usual, I&#x27;ll have us go to the bottom and I&#x27;ll have you start with the useful vocabulary, alright?
+<span class="student">[Student]</span> Alright, alright, yes. The useful vocabulary. Custom. Cultural. Practice or habit. Oh my god. My printer misprinted. Some problem.
+<span class="tutor">[Tutor]</span> Do you have access to a device or a computer? We talked about you bringing up the PDF on your device if you have these problems.
+<span class="student">[Student]</span> Oh, it&#x27;s okay. Yes, I can read that. It&#x27;s a custom to bow on New Year&#x27;s Day. It&#x27;s custom to bow, bow, bow, bow.
+<span class="tutor">[Tutor]</span> Okay. All right. In English, actually, we pronounce the word &quot;bow.&quot;
+<span class="student">[Student]</span> Bow. Ah, yes.
+<span class="tutor">[Tutor]</span> Yeah. Rhymes with cow.
+<span class="student">[Student]</span> Cow. Bow.
+<span class="tutor">[Tutor]</span> Yeah. Yeah. No problem. It&#x27;s very common. Okay.
+<span class="student">[Student]</span> Okay.
+<span class="tutor">[Tutor]</span> All right. Very good. Let&#x27;s continue onward.
+<span class="student">[Student]</span> Okay. Public holiday. A day when businesses are closed for celebration. Public holiday. Christmas is public holiday in many...
+<span class="tutor">[Tutor]</span> Countries.
+<span class="student">[Student]</span> Ah, countries. Yes, countries. Christmas is a public holiday in many countries.
+<span class="tutor">[Tutor]</span> Okay. Okay. The only thing you missed, and again, it might be your printing, we say Christmas is a public holiday.
+<span class="student">[Student]</span> Just a moment. Christmas is a public holiday in many countries. Yeah.
+<span class="tutor">[Tutor]</span> I know that articles aren&#x27;t part of your language very much. So you said &quot;Christmas is public holiday.&quot; Just a slip of the tongue. No problem.
+<span class="student">[Student]</span> Okay. Yeah.
+<span class="tutor">[Tutor]</span> Good. All right. Let&#x27;s try the third one.
+<span class="student">[Student]</span> Holiday rush. Holiday rush. A busy shopping season before major holidays. I avoid the store during a holiday rush.
+<span class="tutor">[Tutor]</span> Yeah. It&#x27;s a problem.
+<span class="student">[Student]</span> It is. It is. It&#x27;s a problem.
+<span class="tutor">[Tutor]</span> I don&#x27;t know if I ever told you, but in my community, we have one of the largest malls, shopping malls in North America. And hundreds of thousands of people go there during the holiday rush. It&#x27;s scary.
+<span class="student">[Student]</span> It&#x27;s scary. Yes, I understand.
+<span class="tutor">[Tutor]</span> All right, sir. You&#x27;ve done quite well. Let&#x27;s go on to the useful expressions. Okay. &quot;Are you doing anything special for blah, blah, blah?&quot; Used to ask about someone&#x27;s holiday plan. &quot;Are you doing anything special for...&quot;
+<span class="student">[Student]</span> Chuseok, the Lunar New Year. Are you doing anything special for Christmas?
+<span class="tutor">[Tutor]</span> Are you doing anything special for Christmas? Oh, yes. Yeah, that&#x27;s what a lot of people will ask. Very good. Let&#x27;s go on to the next one.
+<span class="student">[Student]</span> &quot;It&#x27;s time for Christmas.&quot;
+<span class="tutor">[Tutor]</span> Yes, you got it. No problem. Used when describing the meaning of the holiday. &quot;It&#x27;s a time for travel.&quot; &quot;Are you doing anything specific for summer vacation?&quot; Yeah, you can use those for a variety of things. Now, I just want to talk a little bit about that last expression. It says, &quot;used when describing the meaning of a holiday.&quot; Um, actually, it doesn&#x27;t really describe the meaning of the holiday, but it, um, describes the time period of the holiday, like what part of the year, what part of the season. Um, so yeah, um, that one&#x27;s kind of, I might have to do some research and send you some information on that one, so I don&#x27;t want to get you confused. All right. Very good, Joey. Let&#x27;s go up to the top of page 19. Okay. And I&#x27;ll get you to read the part A warm-up question, please. Okay.
+<span class="student">[Student]</span> What&#x27;s a common gift during family holiday in your country? Our country has a big holiday, Chuseok and New Year&#x27;s. Chinese New Year Day. That is the biggest holiday in Korea. Big two. Big two holiday in Korea. And usually the New Year, Chinese New Year Day, we bow in a custom, in traditional custom. So, bow to parents. So children bow to parents. And parents give the cash and that cash is in a pocket, in beautiful pocket, and that is their small pocket money. So that is a traditional way. So usually we give the cash for gift. And Thanksgiving Day in Korea, we give some other present. That is so many kind of presents. Sometimes that is the honey or some beautiful clothes. Everything is different. It is according to the person. Yes.
+<span class="tutor">[Tutor]</span> It depends on the person.
+<span class="student">[Student]</span> So usually we give some various variety of gifts in Korea.
+<span class="tutor">[Tutor]</span> Sure. Yeah. I know that both for the Lunar New Year and for Chuseok, there are certain dishes or foods that are made that may be given as gifts to someone. Because sometimes people don&#x27;t have time to bake or make food for themselves. So, yeah, I can appreciate that wholeheartedly. All right. Let&#x27;s go on to Part B. &quot;Which do you prefer?&quot; Okay. &quot;Which do you prefer when planning a holiday meal and why? The making traditional dish versus trying new recipes.&quot;
+<span class="student">[Student]</span> Okay. That is the big issue.
+<span class="tutor">[Tutor]</span> It can be.
+<span class="student">[Student]</span> Because it is more the people like the more making traditional dish because that is a traditional food so usually our recipe is the same but sometimes we feel that is so normal, normal so it is not delicious anymore. It&#x27;s not special. Yeah, so sometimes we need to try special recipe because the traditional food is not spicy. That is the sweet and oily and sometimes that is a little oily. So if we spend three-day or four-day holiday, we want more spicy food. Yes. So the last day.
+<span class="tutor">[Tutor]</span> Flavorful.
+<span class="student">[Student]</span> Yeah, flavorful. So usually the last day of holiday we try the new recipe, the spicy food.
+<span class="tutor">[Tutor]</span> Sure, I can appreciate that wholeheartedly. As you well know, for Thanksgiving, Christmas, New Year&#x27;s, we have many different traditional foods in Western culture. But I think people are starting to try foods from other cultures. Um, on occasion, I will make a, um, some sort of Mexican dish and it&#x27;s a, it&#x27;s a nice change up or, um, you know, or if there&#x27;s something else that I can do, then I will. Um, like you said, when you make the traditional dishes, the fact that you do it for special occasions keeps them special, and if you do them every week, then they&#x27;re not special anymore. So, it&#x27;s nice to keep the history, but it&#x27;s good to make new memories or new experiences. All right. Very good, Joey. You&#x27;re doing great. Let&#x27;s go on to Part C, Problem Solving. I&#x27;ll get you to read the situation and the question.
+<span class="student">[Student]</span> Okay. No problem. The situation. You booked a cheap trip abroad without realizing it&#x27;s a major holiday in that country. Oh my God. Most stores, restaurants, and attractions will be closed for several days. Would you get a partial refund or pay more to change the date? Ah, I see. Partial, partial. Teacher, I have some question. What is the middle, partial, partial? Okay. And attraction.
+<span class="tutor">[Tutor]</span> Well, first of all, okay, let me help you with the pronunciation. You&#x27;re reading it the way you see it, &quot;partio.&quot; But this word is very unique because the T-I make the &quot;sh&quot; sound. So I&#x27;m going to get you to repeat after me. Partial.
+<span class="student">[Student]</span> Partial.
+<span class="tutor">[Tutor]</span> Partial.
+<span class="student">[Student]</span> Partial.
+<span class="tutor">[Tutor]</span> Partial. And part, yeah, so, and partial means a part of or a portion of. So in this question, they&#x27;re asking, would you get a part of a refund and not a full refund, but maybe half?
+<span class="student">[Student]</span> Yes, I want the part of some refund, not a total refund. And what is attraction? Teacher, sorry.
+<span class="tutor">[Tutor]</span> Attraction. Uh-huh. Okay. Attraction is a word in English for somewhere you go to see something or be entertained.
+<span class="student">[Student]</span> Everland.
+<span class="tutor">[Tutor]</span> Everland.
+<span class="student">[Student]</span> Regal.
+<span class="tutor">[Tutor]</span> Disney in Japan. Those are attractions. Yeah, Universal Studios, right?
+<span class="student">[Student]</span> That&#x27;s right. You got it. Disneyland.
+<span class="student">[Student]</span> Okay, I see. I understand that question and my answer. I have some experience with that situation and we have stayed holiday in, you know, Japan and from the Christmas and to the holiday New Year holiday, every store is closed and everyone closed. So that is a big problem but inside of we have some great find great plus nice thing. For example, there is no person in our viewpoint and there is no person to travel place. So sometimes it&#x27;s good but some big problem is that we can&#x27;t find this but we can&#x27;t find some restaurant. So it is some problem but usually in Asia is to have a same holiday. So we can avoid that holiday because I&#x27;m salary. So usually my holiday is the same holiday in Korea and in Asia holiday. So I just go, yeah, no refund. Just go travel and just reset that situation and just have a plan to without the restaurant or some, yeah, the plan. Yeah, that&#x27;s my answer.
+<span class="tutor">[Tutor]</span> I understand. That&#x27;s nice. No, that it&#x27;s, it&#x27;s, it sounds like it&#x27;s not too much of a disruption for you if there is a holiday because it&#x27;s similar in your part of the world. I spent a couple of spring vacations with a teaching partner and we would go to Mexico. We would go to the west coast or east coast of Mexico. Huh. Well, we found out that when it is a holiday like Easter, you know, it&#x27;s springtime, uh-huh, that many Mexican families go to the beaches where the tourists start.
+<span class="student">[Student]</span> Oh my god.
+<span class="tutor">[Tutor]</span> So for that weekend, your hotel is full of locals.
+<span class="student">[Student]</span> Oh my god.
+<span class="tutor">[Tutor]</span> It didn&#x27;t turn out, yeah, it wasn&#x27;t a big deal. It was just a lot busier for that weekend at the hotel. And then once Easter was over, everyone went back to work.
+<span class="student">[Student]</span> Okay, I postponed my travel reference. That is a big problem. And if they&#x27;re same to Chinese, Chinese holiday, I avoid them because it is impossible, but Chinese have so many people so we have to postpone that holiday plans.
+<span class="tutor">[Tutor]</span> Oh, sure. And that&#x27;s the thing. When I was taking those spring vacations, they were based on a school holiday, not a religious one. So, you know, sometimes we&#x27;d end up during Easter and other times we didn&#x27;t. So it wasn&#x27;t a big deal. It was just interesting to learn how all these people suddenly come as a family to the hotels to stay for three days and enjoy the beach. It was just kind of fun. All right. We got less than three minutes. Let&#x27;s go to the warm down. And it says, &quot;What&#x27;s your favorite holiday to celebrate and why?&quot;
+<span class="student">[Student]</span> My favorite holiday is Christmas because, yeah, because every holiday we go to the abroad and we go to the travel so that is so nice holiday for our family and and I love to that mood of the Christmas, the winter time and snow and music and food. Yeah, everything is good. So I love that.
+<span class="tutor">[Tutor]</span> Yes, I can appreciate that. I know that Korea does get some snow from time to time. But if you get to go to other places where it&#x27;s more common, then you get a white Christmas, which can make it lots of fun. I haven&#x27;t taken a holiday at Christmas time, so I don&#x27;t know anything other than a white Christmas, you know, snow and cold temperatures. All right, from, from Canada to Mexico. So you can, well, yeah, it&#x27;s interesting there too. Um, I remember it being, um, I was in Mexico until the end of November and it was still 19 degrees in the daytime. Okay. And it was, there was no snow. So, okay, let&#x27;s wrap up with the last question. &quot;What is one holiday you&#x27;d love to experience in another country?&quot;
+<span class="student">[Student]</span> New experience? Oh, yes. Maybe just to see the winter moment, because like the snow moment, very snow moment, because I live in Busan, it is similar to Mexico. We can&#x27;t see the snow every season in years.
+<span class="tutor">[Tutor]</span> So yeah, that is a good moment too. Yeah, so you get snow on the coast then. Well, that&#x27;s interesting. Okay, that, no, I was, I&#x27;m surprised if you get snow on the east coast of Korea. Usually, um, we find if snow falls on the coast, it&#x27;s heavy snow, but then it melts. Is that what it&#x27;s like in Korea? Does it come heavy and then melts away?
+<span class="student">[Student]</span> Yes, it is different region. Yes.
+<span class="tutor">[Tutor]</span> Okay. Yeah. Yeah. It doesn&#x27;t do that here. Once the snow is here, it&#x27;s here for a good six months. All right, Joey. It was nice to have you back. You worked hard today. I&#x27;ll send along some sentences and suggestions. You have a great day. I&#x27;ll talk to you next time.
+<span class="student">[Student]</span> Thank you. Have a nice day. Bye-bye.
+<span class="tutor">[Tutor]</span> Bye-bye.</div>
+        </div>
+    </div>
+    <div class="toast" id="toast">✅ 프롬프트가 복사되었습니다!</div>
+    <script>
+        const REVIEW_PROMPT="너는 나의 영어 회화 복습 파트너야. 오늘 내 전화영어 수업 내용을 기반으로 대화하면서 복습을 도와줘.\n\n[오늘 수업 전사 내용]\n[Student] Hello, hello teacher. Good morning.\n[Tutor] Hi, Joey. How are you?\n[Student] Hi, long time no see, teacher. I'm good.\n[Tutor] Uh-huh. Yeah, you went on a holiday, I recall.\n[Student] Ah, yes. Maybe it was a long holiday and I came back to my office. Yeah. How are you today?\n[Tutor] I'm doing well. Thank you for asking. Are you ready to get back into your routine?\n[Student] Ah, yes. From Monday I started my routine and I feel happy with my routine.\n[Tutor] Yeah, it's good to have a holiday break, but it's good to get back to a normal routine.\n[Student] Yeah.\n[Tutor] Okay, so I see that we are on page 19 or topic 17, \"What's the tradition here?\" And as usual, I'll have us go to the bottom and I'll have you start with the useful vocabulary, alright?\n[Student] Alright, alright, yes. The useful vocabulary. Custom. Cultural. Practice or habit. Oh my god. My printer misprinted. Some problem.\n[Tutor] Do you have access to a device or a computer? We talked about you bringing up the PDF on your device if you have these problems.\n[Student] Oh, it's okay. Yes, I can read that. It's a custom to bow on New Year's Day. It's custom to bow, bow, bow, bow.\n[Tutor] Okay. All right. In English, actually, we pronounce the word \"bow.\"\n[Student] Bow. Ah, yes.\n[Tutor] Yeah. Rhymes with cow.\n[Student] Cow. Bow.\n[Tutor] Yeah. Yeah. No problem. It's very common. Okay.\n[Student] Okay.\n[Tutor] All right. Very good. Let's continue onward.\n[Student] Okay. Public holiday. A day when businesses are closed for celebration. Public holiday. Christmas is public holiday in many...\n[Tutor] Countries.\n[Student] Ah, countries. Yes, countries. Christmas is a public holiday in many countries.\n[Tutor] Okay. Okay. The only thing you missed, and again, it might be your printing, we say Christmas is a public holiday.\n[Student] Just a moment. Christmas is a public holiday in many countries. Yeah.\n[Tutor] I know that articles aren't part of your language very much. So you said \"Christmas is public holiday.\" Just a slip of the tongue. No problem.\n[Student] Okay. Yeah.\n[Tutor] Good. All right. Let's try the third one.\n[Student] Holiday rush. Holiday rush. A busy shopping season before major holidays. I avoid the store during a holiday rush.\n[Tutor] Yeah. It's a problem.\n[Student] It is. It is. It's a problem.\n[Tutor] I don't know if I ever told you, but in my community, we have one of the largest malls, shopping malls in North America. And hundreds of thousands of people go there during the holiday rush. It's scary.\n[Student] It's scary. Yes, I understand.\n[Tutor] All right, sir. You've done quite well. Let's go on to the useful expressions. Okay. \"Are you doing anything special for blah, blah, blah?\" Used to ask about someone's holiday plan. \"Are you doing anything special for...\"\n[Student] Chuseok, the Lunar New Year. Are you doing anything special for Christmas?\n[Tutor] Are you doing anything special for Christmas? Oh, yes. Yeah, that's what a lot of people will ask. Very good. Let's go on to the next one.\n[Student] \"It's time for Christmas.\"\n[Tutor] Yes, you got it. No problem. Used when describing the meaning of the holiday. \"It's a time for travel.\" \"Are you doing anything specific for summer vacation?\" Yeah, you can use those for a variety of things. Now, I just want to talk a little bit about that last expression. It says, \"used when describing the meaning of a holiday.\" Um, actually, it doesn't really describe the meaning of the holiday, but it, um, describes the time period of the holiday, like what part of the year, what part of the season. Um, so yeah, um, that one's kind of, I might have to do some research and send you some information on that one, so I don't want to get you confused. All right. Very good, Joey. Let's go up to the top of page 19. Okay. And I'll get you to read the part A warm-up question, please. Okay.\n[Student] What's a common gift during family holiday in your country? Our country has a big holiday, Chuseok and New Year's. Chinese New Year Day. That is the biggest holiday in Korea. Big two. Big two holiday in Korea. And usually the New Year, Chinese New Year Day, we bow in a custom, in traditional custom. So, bow to parents. So children bow to parents. And parents give the cash and that cash is in a pocket, in beautiful pocket, and that is their small pocket money. So that is a traditional way. So usually we give the cash for gift. And Thanksgiving Day in Korea, we give some other present. That is so many kind of presents. Sometimes that is the honey or some beautiful clothes. Everything is different. It is according to the person. Yes.\n[Tutor] It depends on the person.\n[Student] So usually we give some various variety of gifts in Korea.\n[Tutor] Sure. Yeah. I know that both for the Lunar New Year and for Chuseok, there are certain dishes or foods that are made that may be given as gifts to someone. Because sometimes people don't have time to bake or make food for themselves. So, yeah, I can appreciate that wholeheartedly. All right. Let's go on to Part B. \"Which do you prefer?\" Okay. \"Which do you prefer when planning a holiday meal and why? The making traditional dish versus trying new recipes.\"\n[Student] Okay. That is the big issue.\n[Tutor] It can be.\n[Student] Because it is more the people like the more making traditional dish because that is a traditional food so usually our recipe is the same but sometimes we feel that is so normal, normal so it is not delicious anymore. It's not special. Yeah, so sometimes we need to try special recipe because the traditional food is not spicy. That is the sweet and oily and sometimes that is a little oily. So if we spend three-day or four-day holiday, we want more spicy food. Yes. So the last day.\n[Tutor] Flavorful.\n[Student] Yeah, flavorful. So usually the last day of holiday we try the new recipe, the spicy food.\n[Tutor] Sure, I can appreciate that wholeheartedly. As you well know, for Thanksgiving, Christmas, New Year's, we have many different traditional foods in Western culture. But I think people are starting to try foods from other cultures. Um, on occasion, I will make a, um, some sort of Mexican dish and it's a, it's a nice change up or, um, you know, or if there's something else that I can do, then I will. Um, like you said, when you make the traditional dishes, the fact that you do it for special occasions keeps them special, and if you do them every week, then they're not special anymore. So, it's nice to keep the history, but it's good to make new memories or new experiences. All right. Very good, Joey. You're doing great. Let's go on to Part C, Problem Solving. I'll get you to read the situation and the question.\n[Student] Okay. No problem. The situation. You booked a cheap trip abroad without realizing it's a major holiday in that country. Oh my God. Most stores, restaurants, and attractions will be closed for several days. Would you get a partial refund or pay more to change the date? Ah, I see. Partial, partial. Teacher, I have some question. What is the middle, partial, partial? Okay. And attraction.\n[Tutor] Well, first of all, okay, let me help you with the pronunciation. You're reading it the way you see it, \"partio.\" But this word is very unique because the T-I make the \"sh\" sound. So I'm going to get you to repeat after me. Partial.\n[Student] Partial.\n[Tutor] Partial.\n[Student] Partial.\n[Tutor] Partial. And part, yeah, so, and partial means a part of or a portion of. So in this question, they're asking, would you get a part of a refund and not a full refund, but maybe half?\n[Student] Yes, I want the part of some refund, not a total refund. And what is attraction? Teacher, sorry.\n[Tutor] Attraction. Uh-huh. Okay. Attraction is a word in English for somewhere you go to see something or be entertained.\n[Student] Everland.\n[Tutor] Everland.\n[Student] Regal.\n[Tutor] Disney in Japan. Those are attractions. Yeah, Universal Studios, right?\n[Student] That's right. You got it. Disneyland.\n[Student] Okay, I see. I understand that question and my answer. I have some experience with that situation and we have stayed holiday in, you know, Japan and from the Christmas and to the holiday New Year holiday, every store is closed and everyone closed. So that is a big problem but inside of we have some great find great plus nice thing. For example, there is no person in our viewpoint and there is no person to travel place. So sometimes it's good but some big problem is that we can't find this but we can't find some restaurant. So it is some problem but usually in Asia is to have a same holiday. So we can avoid that holiday because I'm salary. So usually my holiday is the same holiday in Korea and in Asia holiday. So I just go, yeah, no refund. Just go travel and just reset that situation and just have a plan to without the restaurant or some, yeah, the plan. Yeah, that's my answer.\n[Tutor] I understand. That's nice. No, that it's, it's, it sounds like it's not too much of a disruption for you if there is a holiday because it's similar in your part of the world. I spent a couple of spring vacations with a teaching partner and we would go to Mexico. We would go to the west coast or east coast of Mexico. Huh. Well, we found out that when it is a holiday like Easter, you know, it's springtime, uh-huh, that many Mexican families go to the beaches where the tourists start.\n[Student] Oh my god.\n[Tutor] So for that weekend, your hotel is full of locals.\n[Student] Oh my god.\n[Tutor] It didn't turn out, yeah, it wasn't a big deal. It was just a lot busier for that weekend at the hotel. And then once Easter was over, everyone went back to work.\n[Student] Okay, I postponed my travel reference. That is a big problem. And if they're same to Chinese, Chinese holiday, I avoid them because it is impossible, but Chinese have so many people so we have to postpone that holiday plans.\n[Tutor] Oh, sure. And that's the thing. When I was taking those spring vacations, they were based on a school holiday, not a religious one. So, you know, sometimes we'd end up during Easter and other times we didn't. So it wasn't a big deal. It was just interesting to learn how all these people suddenly come as a family to the hotels to stay for three days and enjoy the beach. It was just kind of fun. All right. We got less than three minutes. Let's go to the warm down. And it says, \"What's your favorite holiday to celebrate and why?\"\n[Student] My favorite holiday is Christmas because, yeah, because every holiday we go to the abroad and we go to the travel so that is so nice holiday for our family and and I love to that mood of the Christmas, the winter time and snow and music and food. Yeah, everything is good. So I love that.\n[Tutor] Yes, I can appreciate that. I know that Korea does get some snow from time to time. But if you get to go to other places where it's more common, then you get a white Christmas, which can make it lots of fun. I haven't taken a holiday at Christmas time, so I don't know anything other than a white Christmas, you know, snow and cold temperatures. All right, from, from Canada to Mexico. So you can, well, yeah, it's interesting there too. Um, I remember it being, um, I was in Mexico until the end of November and it was still 19 degrees in the daytime. Okay. And it was, there was no snow. So, okay, let's wrap up with the last question. \"What is one holiday you'd love to experience in another country?\"\n[Student] New experience? Oh, yes. Maybe just to see the winter moment, because like the snow moment, very snow moment, because I live in Busan, it is similar to Mexico. We can't see the snow every season in years.\n[Tutor] So yeah, that is a good moment too. Yeah, so you get snow on the coast then. Well, that's interesting. Okay, that, no, I was, I'm surprised if you get snow on the east coast of Korea. Usually, um, we find if snow falls on the coast, it's heavy snow, but then it melts. Is that what it's like in Korea? Does it come heavy and then melts away?\n[Student] Yes, it is different region. Yes.\n[Tutor] Okay. Yeah. Yeah. It doesn't do that here. Once the snow is here, it's here for a good six months. All right, Joey. It was nice to have you back. You worked hard today. I'll send along some sentences and suggestions. You have a great day. I'll talk to you next time.\n[Student] Thank you. Have a nice day. Bye-bye.\n[Tutor] Bye-bye.\n\n[AI 피드백]\n## 완성본\n\n따뜻하고 실용적인 영어 코치 Bella입니다. Joey, 긴 연휴 후에 다시 루틴으로 돌아오셨다니 정말 반가워요! 오늘 수업에서 한국의 명절 문화와 연휴 계획에 대해 정말 풍성한 이야기를 나눠주셔서 저도 즐거웠습니다. 특히 명절에 현금을 선물하는 문화나, 연휴 마지막 날에는 매콤한 음식을 찾는다는 이야기는 정말 흥미로웠어요!\n\n---\n\n### **0. 📌 Topic**\nTopic: Discussing holiday traditions, plans, and preferences in Korea and abroad.\n\n### **1. 📊 오늘의 대화 요약 (Summary)**\n오늘 Joey는 한국의 주요 명절인 추석과 설날의 전통(세배, 현금 선물)에 대해 이야기 나누고, 명절 음식 준비 시 전통 요리와 새로운 레시피 중 무엇을 선호하는지에 대해 토론했습니다. 해외여행 중 현지 명절로 인해 겪었던 경험과 선호하는 휴일, 그리고 다른 나라에서 경험하고 싶은 휴일에 대해서도 깊이 있는 대화를 나눴습니다.\n\n### **2. 💬 유창성 업그레이드 (Fluency & Natural Flow)**\nJoey가 말한 문장 중 의미는 통하지만, 원어민이 들었을 때 더 자연스럽게 들릴 수 있는 표현들을 함께 살펴볼까요?\n\n1.  **❌ 학습자 원문 (As Said):** \"From Monday I started my routine and I feel happy with my routine.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"I got back into my routine on Monday, and I'm happy with it.\"\n    *   **💎 비즈니스 표현 (Professional):** \"I resumed my routine on Monday, and I'm content with it.\"\n    *   **💡 코칭 포인트:** Using \"get back into\" or \"resume\" sounds more natural for returning to a routine after a break. \"Happy with it\" is a concise way to express satisfaction. → \"get back into\" 또는 \"resume\"는 휴식 후 루틴으로 돌아올 때 더 자연스럽습니다. \"Happy with it\"은 만족감을 간결하게 표현하는 방법입니다.\n\n2.  **❌ 학습자 원문 (As Said):** \"So usually we give the cash for gift.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"So usually we give cash as a gift.\"\n    *   **💎 비즈니스 표현 (Professional):** \"Cash is a common form of gifting.\"\n    *   **💡 코칭 포인트:** \"As a gift\" is the correct prepositional phrase when describing the purpose or role of something given. \"For gift\" is less common. → \"As a gift\"는 무언가를 주는 목적이나 역할을 설명할 때 올바른 전치사 구입니다. \"For gift\"는 덜 흔합니다.\n\n3.  **❌ 학습자 원문 (As Said):** \"I'm salary.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"I'm a salaried employee.\" / \"I'm on salary.\"\n    *   **💎 비즈니스 표현 (Professional):** \"I am a salaried professional.\"\n    *   **💡 코칭 포인트:** \"Salary\" is a noun referring to the payment itself. To describe your employment status, you need to use \"salaried\" (an adjective) or the phrase \"on salary.\" → \"Salary\"는 급여 자체를 나타내는 명사입니다. 고용 상태를 설명하려면 \"salaried\"(형용사) 또는 \"on salary\"라는 구를 사용해야 합니다.\n\n### **3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)**\nCategory: **Incorrect use of 'no person' vs. 'no people' / 'nobody'**\n\nJoey는 대화 중 '사람이 없다'는 의미를 표현할 때 \"no person\"이라고 말하는 경우가 있었습니다. 'person'은 단수 명사로, 'no person'이라고 하면 '단 한 명의 사람도 없다'는 의미가 되지만, 일반적으로 '사람들이 없다'는 의미로 말할 때는 복수형 'people'을 사용하여 \"no people\" 또는 더 자연스러운 \"nobody\" 또는 \"no one\"을 사용하는 것이 좋습니다.\n\n| ❌ 원문 (As Said)                                         | ✅ 교정 예시 (Corrected)                                          |\n| :--------------------------------------------------------- | :---------------------------------------------------------------- |\n| \"there is **no person** in our viewpoint\"                  | \"there are **no people** at our viewpoint\" / \"there's **nobody** at our viewpoint\" |\n| \"there is **no person** to travel place.\"                  | \"there are **no people** at the travel destination.\" / \"there's **nobody** at the travel destination.\" |\n| \"Chinese have so many **people**\" (문맥상 '사람이 많다'는 의미로 'people' 사용은 맞으나, 'no person' 오류와 연결하여 '사람'에 대한 표현을 다룹니다.) | \"China has so many **people**\" (이 문장 자체는 'people' 사용이 맞습니다.) |\n\n📌 **핵심 규칙:** '사람들이 없다'는 의미로 말할 때는 \"no people\" 또는 \"nobody/no one\"을 사용하세요. \"No person\"은 문법적으로 틀린 것은 아니지만, 자연스러운 대화에서는 거의 사용되지 않습니다.\n\n🔁 **따라 읽기:**\n🗣️ \"There are no people at our viewpoint.\"\n🗣️ \"There's nobody at the travel destination.\"\n🗣️ \"China has so many people, so we have to postpone our holiday plans.\"\n\n### **4. 📗 어휘 확장 (Vocabulary Vault)**\n오늘 대화에서 나온 표현과 Joey의 비즈니스 환경에 유용한 어휘들을 확장해 볼까요?\n\n1.  **custom** /kʌstəm/ (명사)\n    *   뜻: 관습, 풍습\n    *   실전 예문: It's a **custom** in our company to have a team dinner after a major project completion.\n\n2.  **attraction** /əˈtrækʃən/ (명사)\n    *   뜻: 관광 명소, 흥미로운 장소\n    *   실전 예문: We need to highlight the unique **attractions** of our investment portfolio to potential clients.\n\n3.  **postpone** /poʊˈspoʊn/ (동사)\n    *   뜻: 연기하다, 미루다\n    *   실전 예문: Due to unforeseen circumstances, we had to **postpone** the meeting until next week.\n\n4.  **flavorful** /ˈfleɪvərfəl/ (형용사)\n    *   뜻: 풍미 가득한, 맛있는\n    *   실전 예문: Our new product line offers a more **flavorful** experience compared to its competitors.\n\n5.  **salaried** /ˈsælərid/ (형용사)\n    *   뜻: 봉급을 받는, 월급을 받는\n    *   실전 예문: As a **salaried** employee, I appreciate the stability of a fixed income.\n\n### **5. 📝 실전 복습 챌린지 (Practice)**\n오늘 배운 표현과 문법을 활용해서 다음 상황들을 영어로 말해보세요.\n\n1.  **상황:** 긴 휴가 후에 다시 일상으로 돌아와서 만족스럽다고 말하고 싶어요.\n    *   **영작:** (힌트: 'get back into' 또는 'resume' 사용)\n    *   **모범 답안:** I got back into my routine after the long holiday, and I'm quite happy with it.\n\n2.  **상황:** 저희 회사는 성과가 좋으면 직원들에게 현금을 보너스로 주는 것이 관례입니다.\n    *   **영작:** (힌트: 'custom', 'cash as a bonus' 사용)\n    *   **모범 답안:** It's a custom in our company to give cash as a bonus when performance is good.\n\n3.  **상황:** 설날 연휴에는 사람들이 많아서 여행 계획을 미뤄야 했습니다.\n    *   **영작:** (힌트: 'Lunar New Year holiday', 'no people' 대신 자연스러운 표현, 'postpone' 사용)\n    *   **모범 답안:** We had to postpone our travel plans during the Lunar New Year holiday because there were so many people everywhere.\n\n### **6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)**\n\n✨ **Good Job**: \"My favorite holiday is Christmas because, yeah, because every holiday we go to the abroad and we go to the travel so that is so nice holiday for our family and and I love to that mood of the Christmas, the winter time and snow and music and food. Yeah, everything is good. So I love that.\"\nJoey, 이 문장은 크리스마스를 좋아하는 이유를 정말 풍부하고 생생하게 묘사해 주었어요. 'mood of Christmas', 'winter time and snow and music and food'처럼 구체적인 단어들을 사용해서 듣는 사람이 Joey의 감정을 그대로 느낄 수 있었습니다. 아주 훌륭한 표현이었어요!\n\n🚀 **내일의 한 문장**: 다음 수업 시작 시 튜터에게 던질 수 있는 대화 시작 문장 (오늘 배운 표현 활용)\n\"I'm happy to be back into my routine, and I'm looking forward to our next topic.\"\n\n---\n\n### **[성과 지표]**\n**유창성 점수(10점 만점): 7.5점**\n\n**근거:** Joey는 다양한 주제에 대해 막힘없이 자신의 의견을 표현하며 대화의 흐름을 잘 이어갔습니다. 특히, 복잡한 상황 설명이나 감정 표현에서도 주저함 없이 말을 이어나가는 모습이 인상 깊었습니다. 다만, 일부 문장에서 어순이나 전치사 사용이 다소 어색하거나, 'no person'과 같은 표현에서 자연스러움이 부족한 부분이 있었지만, 이는 의미 전달에 큰 방해가 되지 않는 수준이었습니다. 어휘력은 풍부하며, 튜터의 질문에 대한 이해도도 높았습니다.\n\n**다음 수업 '원포인트 액션 플랜':**\n다음 수업에서는 **'no people'과 같은 자연스러운 복수 표현 사용하기**에 집중해 볼까요? 'There are no people', 'nobody', 'everyone's closed' 등 '사람' 또는 '모든 것'을 지칭할 때 더 자연스러운 표현들을 의식적으로 사용해 보는 연습을 해봅시다.\n\n위 내용을 바탕으로:\n1. 먼저 오늘 수업에서 내가 틀렸거나 어색했던 표현을 하나 골라서, 관련된 상황을 영어로 질문해줘.\n2. 내가 영어로 대답하면, 자연스러운지 확인하고 더 나은 표현이 있으면 알려줘.\n3. 특히 \"반복 실수 패턴\"에서 지적된 부분을 집중적으로 연습시켜줘.\n4. 이런 식으로 오늘 배운 표현들을 하나씩 복습하자.\n5. 한국어 설명은 필요할 때만 간단히, 대화는 최대한 영어로 진행해줘.\n\n그럼 시작하자!";
+        function startReview(){navigator.clipboard.writeText(REVIEW_PROMPT).then(()=>{showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)}).catch(()=>{const t=document.createElement('textarea');t.value=REVIEW_PROMPT;document.body.appendChild(t);t.select();document.execCommand('copy');document.body.removeChild(t);showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)})}
+        function showToast(){const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500)}
+        function switchTab(n){document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',n==='feedback'?i===0:i===1));document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));document.getElementById('tab-'+n).classList.add('active')}
+    </script>
+</body>
+</html>
