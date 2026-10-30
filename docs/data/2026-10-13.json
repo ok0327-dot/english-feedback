@@ -4,50 +4,54 @@
   2026,
   42
  ],
- "topic": "Discussing the meaning of the idiom \"touch grass\" and daily routines.",
- "grammar": "Gerunds after Prepositions",
- "grammar_norm": "Prepositions",
+ "topic": "Discussing \"touch grass\" and dealing with frustrating workdays, despite technical difficul",
+ "grammar": "Verb Tense for Specific, Non-Habitual Actions",
+ "grammar_norm": "Verb Tense",
  "score": 7.0,
  "pairs": [
   {
-   "said": "I carefully to the outside because usually I take a bicycle.",
-   "natural": "I was careful going outside because I usually ride my bicycle."
+   "said": "Outside, it's raining.",
+   "natural": "It's raining outside."
   },
   {
-   "said": "Just today I go walk.",
+   "said": "Just today I walk.",
    "natural": "Today I just walked."
   },
   {
-   "said": "if I meet some difficult things, I need to refresh to go outside or just take a break to the work.",
-   "natural": "If I encounter difficulties, I need to refresh myself by going outside or just take a break from work."
+   "said": "if I meet some difficult things",
+   "natural": "if I encounter some difficulties"
+  },
+  {
+   "said": "Vent about a frustrating day at work without sound too negative.",
+   "natural": "Vent about a frustrating day at work without sounding too negative."
   }
  ],
  "vocab": [
   {
    "word": "vent",
-   "pos": "동사",
-   "meaning": "(감정 등을) 터뜨리다, 발산하다"
+   "pos": "v",
+   "meaning": "(감정, 불만 등을) 터뜨리다, 털어놓다"
   },
   {
    "word": "frustrating",
-   "pos": "형용사",
-   "meaning": "좌절감을 주는, 불만스러운"
+   "pos": "adj",
+   "meaning": "좌절감을 주는, 답답한"
   },
   {
-   "word": "commute",
-   "pos": "동사/명사",
-   "meaning": "통근하다; 통근 (거리/시간)"
+   "word": "distort",
+   "pos": "v",
+   "meaning": "(소리, 이미지 등을) 왜곡하다, 비틀다"
   },
   {
-   "word": "encounter",
-   "pos": "동사",
-   "meaning": "(우연히) 마주치다, (어려움 등에) 직면하다"
+   "word": "reschedule",
+   "pos": "v",
+   "meaning": "일정을 변경하다, 다시 잡다"
   },
   {
-   "word": "respite",
-   "pos": "명사",
-   "meaning": "짧은 휴식, 일시적인 중단"
+   "word": "penalize",
+   "pos": "v",
+   "meaning": "불이익을 주다, 벌칙을 부과하다"
   }
  ],
- "_html_md5": "b9ce217505f512d9926af74ad8a8d0af"
+ "_html_md5": "e07351d712b723f1ea0c952df40ef976"
 }
