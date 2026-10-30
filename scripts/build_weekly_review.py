@@ -118,8 +118,9 @@ def cached_lesson(path):
     HTML이 바뀌면(md5 불일치) 재파싱 후 캐시 갱신.
     → 집계기는 매번 HTML 정규식 재스크랩 대신 JSON을 읽는다(presentation=HTML, data=JSON 분리).
       대용량/짤린 페이지도 생성 시점에 쓴 JSON이 있으면 누락되지 않는다."""
-    date = os.path.basename(path)[:10]
-    jpath = os.path.join(DATA_DIR, date + ".json")
+    # 페이지 이름 그대로 저장 — 같은 날 두 번째 수업(YYYY-MM-DD-2)이 첫 수업 데이터를 덮지 않게
+    stem = os.path.splitext(os.path.basename(path))[0]
+    jpath = os.path.join(DATA_DIR, stem + ".json")
     cur = _html_md5(path)
     if os.path.exists(jpath):
         try:

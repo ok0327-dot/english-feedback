@@ -80,7 +80,7 @@ def extract_filename(t):
 
 
 def date_to_str(date):
-    y, m, d = date.split("-")
+    y, m, d = date[:10].split("-")  # 같은 날 두 번째 수업 페이지(YYYY-MM-DD-2)도 날짜만 쓴다
     return f"{y}년 {m}월 {d}일"
 
 
@@ -90,7 +90,7 @@ def cmd_list():
         if os.path.basename(f) in SKIP:
             continue
         if is_truncated(open(f, encoding="utf-8").read()):
-            found.append(os.path.basename(f)[:10])
+            found.append(os.path.basename(f)[:-5])  # 페이지 이름 그대로 (YYYY-MM-DD 또는 YYYY-MM-DD-2)
     print("\n".join(found) if found else "(짤린 페이지 없음)")
     return found
 
