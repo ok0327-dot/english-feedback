@@ -1,0 +1,53 @@
+{
+ "date": "2026-09-01",
+ "iso": [
+  2026,
+  36
+ ],
+ "topic": "Discussing holiday traditions, plans, and preferences in Korea and abroad.",
+ "grammar": "Incorrect use of 'no person' vs. 'no people' / 'nobody'",
+ "grammar_norm": "Incorrect Use Of 'No Person' Vs. 'No People' / 'Nobody'",
+ "score": null,
+ "pairs": [
+  {
+   "said": "From Monday I started my routine and I feel happy with my routine.",
+   "natural": "I got back into my routine on Monday, and I'm happy with it."
+  },
+  {
+   "said": "So usually we give the cash for gift.",
+   "natural": "So usually we give cash as a gift."
+  },
+  {
+   "said": "I'm salary.",
+   "natural": "I'm a salaried employee."
+  }
+ ],
+ "vocab": [
+  {
+   "word": "custom",
+   "pos": "명사",
+   "meaning": "관습, 풍습"
+  },
+  {
+   "word": "attraction",
+   "pos": "명사",
+   "meaning": "관광 명소, 흥미로운 장소"
+  },
+  {
+   "word": "postpone",
+   "pos": "동사",
+   "meaning": "연기하다, 미루다"
+  },
+  {
+   "word": "flavorful",
+   "pos": "형용사",
+   "meaning": "풍미 가득한, 맛있는"
+  },
+  {
+   "word": "salaried",
+   "pos": "형용사",
+   "meaning": "봉급을 받는, 월급을 받는"
+  }
+ ],
+ "_html_md5": "206cd6d87080bbf1101e27998c9d15c2"
+}
