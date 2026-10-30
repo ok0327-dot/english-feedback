@@ -110,10 +110,12 @@ def main():
           got == [("20261028080014", "done", True), ("20261028080505", "inbox", False), ("20261030080012", "inbox", False)])
     check("쪽 넘김: 수신 폴더 두 번째 쪽도 읽음", any(r["id"] == "LATE28" for r in found))
     lessons = pl.select_lessons(pl.group_into_lessons(found))
-    check("평소: 최근 수업부터, 10/28 은 두 조각 묶음",
-          [[p["id"] for p in g] for g in lessons] == [["N30"], ["D28", "LATE28"]])
-    capped = pl.select_lessons([[rec(f"2026102{i}080000", 20, fid=str(i))] for i in range(5)])
-    check(f"평소: 한 번에 최대 {pl.MAX_LESSONS_PER_RUN}수업", len(capped) == pl.MAX_LESSONS_PER_RUN and capped[0][0]["id"] == "4")
+    check("평소: 오래된 수업부터, 10/28 은 두 조각 묶음",
+          [[p["id"] for p in g] for g in lessons] == [["D28", "LATE28"], ["N30"]])
+    # 밀린 8일(10/23~30) 중 오래된 3개부터 — 최근 것부터 고르면 10/23 이 다음 날 7일 창 밖으로 빠진다
+    capped = pl.select_lessons([[rec(f"202610{d}080000", 20, fid=str(d))] for d in range(23, 31)])
+    check(f"평소: 한 번에 최대 {pl.MAX_LESSONS_PER_RUN}수업, 오래된 것부터",
+          [g[0]["id"] for g in capped] == ["23", "24", "25"])
 
     # 4) 다시 만들기 모드 — 지정 날짜 전부, 이미 제대로 처리된 단일 수업은 제외
     with open(pl.PROCESSED_FILE, "w", encoding="utf-8") as fh:
