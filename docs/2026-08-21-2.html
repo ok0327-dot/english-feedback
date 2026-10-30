@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#0f0f13"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="당근영어"><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="icon" type="image/png" sizes="192x192" href="icon-192.png"><script src="install-banner.js" defer></script><script src="sw-reg.js" defer></script>
+    <title>전화영어 복습 - 2026년 08월 21일</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Noto Sans KR',sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.75;min-height:100vh}
+        .header{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);border-bottom:1px solid rgba(255,255,255,.06);padding:48px 24px 40px;text-align:center}
+        .header-date{font-size:13px;color:#94a3b8;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+        .header h1{font-size:28px;font-weight:700;color:#f1f5f9;margin-bottom:16px}
+        .header-meta{display:flex;justify-content:center;gap:24px;font-size:14px;color:#64748b}
+        .header-meta span{display:flex;align-items:center;gap:6px}
+        .cta-section{text-align:center;padding:40px 24px}
+        .cta-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:linear-gradient(135deg,#38bdf8,#818cf8);color:#fff;font-size:16px;font-weight:600;font-family:'Noto Sans KR',sans-serif;border:none;border-radius:50px;cursor:pointer;transition:all .3s;text-decoration:none;box-shadow:0 4px 24px rgba(56,189,248,.25)}
+        .cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(56,189,248,.35)}
+        .cta-btn svg{width:20px;height:20px}
+        .cta-sub{margin-top:12px;font-size:13px;color:#64748b}
+        .toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#38bdf8;padding:14px 28px;border-radius:12px;font-size:14px;font-weight:500;border:1px solid rgba(56,189,248,.2);box-shadow:0 8px 32px rgba(0,0,0,.4);opacity:0;transition:all .4s cubic-bezier(.16,1,.3,1);z-index:1000}
+        .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+        .container{max-width:720px;margin:0 auto;padding:0 24px 80px}
+        .tabs{display:flex;gap:4px;background:#1a1a24;padding:4px;border-radius:12px;margin-bottom:32px}
+        .tab{flex:1;padding:12px;text-align:center;font-size:14px;font-weight:500;color:#64748b;background:0 0;border:none;border-radius:8px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all .2s}
+        .tab.active{background:#262636;color:#f1f5f9}
+        .tab-content{display:none}.tab-content.active{display:block}
+        .feedback h2{font-size:18px;font-weight:700;color:#f1f5f9;margin:36px 0 16px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.06)}
+        .feedback h2:first-child{margin-top:0}
+        .feedback p{margin:8px 0;color:#cbd5e1}
+        .feedback .item{padding:6px 0 6px 16px;border-left:2px solid #334155;margin:6px 0;color:#cbd5e1}
+        .feedback .numbered{padding:8px 0 8px 16px;color:#cbd5e1}
+        .feedback .numbered strong{color:#38bdf8}
+        .feedback strong{color:#f1f5f9}
+        .feedback code{background:#1e293b;padding:2px 8px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#38bdf8}
+        .feedback table{width:100%;border-collapse:collapse;margin:12px 0}
+        .feedback th,.feedback td{padding:10px 14px;text-align:left;border-bottom:1px solid #262636}
+        .feedback th{color:#94a3b8;font-weight:500;font-size:13px}
+        .feedback td{color:#cbd5e1}
+        .arrow{color:#38bdf8;font-weight:700}
+        .transcript{background:#1a1a24;border-radius:12px;padding:28px;font-size:14px;line-height:2;color:#94a3b8;white-space:pre-wrap;word-break:break-word;font-family:'JetBrains Mono','Noto Sans KR',monospace}
+        .transcript .tutor{color:#38bdf8}
+        .transcript .student{color:#a78bfa}
+        @media(max-width:640px){.header{padding:32px 16px}.header h1{font-size:22px}.cta-btn{padding:14px 28px;font-size:15px}.container{padding:0 16px 60px}}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-date">2026년 08월 21일</div>
+        <h1>📚 전화영어 복습</h1>
+        <div class="header-meta">
+            <span>⏱ 20분 1초</span>
+            <span>🎙 전화영어_025180304_20260821073033.m4a</span>
+        </div>
+    </div>
+    <div class="cta-section">
+        <button class="cta-btn" onclick="startReview()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Gemini에서 복습 대화 시작하기
+        </button>
+        <div class="cta-sub">클릭하면 프롬프트가 복사되고 Gemini가 열립니다</div>
+    </div>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('feedback')">📋 AI 피드백</button>
+            <button class="tab" onclick="switchTab('transcript')">🎙 수업 전사</button>
+        </div>
+        <div id="tab-feedback" class="tab-content active">
+            <div class="feedback"><h2>완성본</h2>
+<br>
+<p>따뜻하고 실용적인 영어 코치 Bell입니다. Joey, 안녕하세요! 오늘 Mia 튜터님과의 수업 내용 정말 잘 들었습니다. AI와 스마트 기기에 대한 대화에서 Joey님의 적극적인 참여와 에너지 넘치는 모습이 인상 깊었어요. 특히 AI를 활용해 직접 프로그램을 만드신다는 이야기는 정말 멋졌습니다!</p>
+<br>
+<p>오늘 대화에서 Joey님이 보여주신 유창함과 더불어, 몇 가지 표현을 더 자연스럽고 정확하게 다듬을 수 있는 부분들을 함께 살펴볼게요. 비즈니스 환경에서도 자신감 있게 활용할 수 있는 표현들을 익히는 데 도움이 될 거예요.</p>
+<br>
+<br>
+<h2>0. 📌 Topic</h2>
+<p>Topic: Discussing AI's capabilities and smart home technology.</p>
+<br>
+<h2>1. 📊 오늘의 대화 요약 (Summary)</h2>
+<p>오늘 수업에서는 AI가 할 수 없는 일과 스마트 홈 기기에 대해 깊이 있는 대화를 나눴습니다. 한국의 스마트 아파트 환경과 AI를 활용한 개인적인 프로젝트 경험을 공유했으며, 음성 명령과 앱 사용의 장단점에 대해서도 토론했습니다.</p>
+<br>
+<h2>2. 💬 유창성 업그레이드 (Fluency & Natural Flow)</h2>
+<br>
+<p>Joey님이 실제 말한 문장 중, 의미는 통하지만 원어민이 들었을 때 더 자연스럽게 들릴 수 있는 표현 3가지를 선정했습니다.</p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>❌ 학습자 원문 (As Said):</strong> "Ah, yes, in Korea this is the summertime and nowadays it's going into the autumn season."</div>
+<div class="item"><strong>✅ 자연스러운 표현 (Natural):</strong> "Korea is currently in summer, but it's transitioning into autumn."</div>
+<div class="item"><strong>💎 비즈니스 표현 (Professional):</strong> "Korea is currently experiencing summer, with temperatures gradually transitioning into the autumn season."</div>
+<div class="item"><strong>💡 코칭 포인트:</strong> Using "transitioning into" or "heading into" sounds more natural for seasonal changes than "going into."</div>
+<p><span class="arrow">→</span> "transitioning into" 또는 "heading into"를 사용하면 계절 변화를 더 자연스럽게 표현할 수 있습니다.</p>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>❌ 학습자 원문 (As Said):</strong> "But I don't hear that news." (이어지는 문맥: "Some people died from the heat, heatwave.")</div>
+<div class="item"><strong>✅ 자연스러운 표현 (Natural):</strong> "I haven't heard that news."</div>
+<div class="item"><strong>💎 비즈니스 표현 (Professional):</strong> "I was unaware of those specific reports."</div>
+<div class="item"><strong>💡 코칭 포인트:</strong> When talking about news or information you haven't received or encountered up to the present moment, "haven't heard" (present perfect) is more appropriate than "don't hear" (simple present).</div>
+<p><span class="arrow">→</span> 현재까지 어떤 소식이나 정보를 접하지 못했을 때는 "don't hear" (현재 시제)보다 "haven't heard" (현재 완료)가 더 적절합니다.</p>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>❌ 학습자 원문 (As Said):</strong> "if I wash dishes in my kitchen and it is impossible to use my hand, yeah, it's better to use voice commands because just call out to AI and then just recommend something."</div>
+<div class="item"><strong>✅ 자연스러운 표현 (Natural):</strong> "If my hands are full while washing dishes, it's better to use voice commands because I can just call out to AI and it can assist me."</div>
+<div class="item"><strong>💎 비즈니스 표현 (Professional):</strong> "When my hands are occupied, for instance, while performing kitchen tasks, utilizing voice commands is preferable as it allows for hands-free interaction with AI for assistance."</div>
+<div class="item"><strong>💡 코칭 포인트:</strong> "Impossible to use my hand" sounds a bit too strong. "My hands are full" or "my hands are occupied" are more common and natural ways to express that you can't use your hands because they are busy.</div>
+<p><span class="arrow">→</span> "impossible to use my hand"는 너무 강하게 들릴 수 있어요. "My hands are full" 또는 "my hands are occupied"는 손을 쓸 수 없을 정도로 바쁘다는 것을 표현하는 더 자연스러운 방법입니다.</p>
+<br>
+<h2>3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)</h2>
+<br>
+<p>Category: <strong>Incorrect use of singular/plural nouns with quantifiers and determiners</strong></p>
+<br>
+<p>Joey님은 "so many things", "all kind of the sentence", "so many news"와 같이 명사의 단수/복수 형태와 수량사(quantifier)를 연결하는 부분에서 반복적으로 실수를 하셨습니다. 특히 'news'는 불가산 명사인데 복수형으로 사용하시거나, 'kind'를 단수로 사용하면서 'all'과 연결하는 등의 패턴이 보였습니다.</p>
+<br>
+<table>
+<tr><th>❌ 원문 (As Said)</th><th>✅ 교정 예시 (Corrected)</th></tr>
+<tr><td>[Student] There is all kind of the sentence and the first is smart thermostat.</td><td>There are all kinds of sentences, and the first is a smart thermostat.</td></tr>
+<tr><td>[Student] Yeah, maybe. There are so many articles and there are so many news.</td><td>Yeah, maybe. There are so many articles and so much news.</td></tr>
+<tr><td>[Student] I think the voice command is the limited order AI.</td><td>I think voice commands are a limited way to interact with AI. (or: Voice commands offer limited AI interaction.)</td></tr>
+</table>
+<br>
+<p>📌 <strong>핵심 규칙:</strong> 수량사(quantifier)와 함께 명사를 사용할 때는 해당 명사가 가산 명사인지 불가산 명사인지, 그리고 단수/복수 형태가 올바른지 주의해야 합니다. 'all kinds of + 복수 명사', 'so much + 불가산 명사', 'so many + 복수 명사'와 같이 사용합니다.</p>
+<br>
+<p>🔁 <strong>따라 읽기:</strong></p>
+<p>🗣️ "There are all kinds of sentences, and the first is a smart thermostat."</p>
+<p>🗣️ "Yeah, maybe. There are so many articles and so much news."</p>
+<p>🗣️ "I think voice commands are a limited way to interact with AI."</p>
+<br>
+<h2>4. 📗 어휘 확장 (Vocabulary Vault)</h2>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>compatible</strong> /kəmˈpætəbəl/ (형용사)</div>
+<div class="item">뜻: 호환되는, 양립할 수 있는</div>
+<div class="item">실전 예문: We need to ensure that the new software is <strong>compatible</strong> with our existing systems before deployment.</div>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>transition</strong> /trænˈzɪʃən/ (동사/명사)</div>
+<div class="item">뜻: 전환하다, 이행하다 / 전환, 이행</div>
+<div class="item">실전 예문: Our company is planning to <strong>transition</strong> to renewable energy sources over the next five years.</div>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>leverage</strong> /ˈlɛvərɪdʒ/ (동사)</div>
+<div class="item">뜻: (영향력 등을) 활용하다, 지렛대 효과를 얻다</div>
+<div class="item">실전 예문: We should <strong>leverage</strong> our strong market position to negotiate better terms with suppliers.</div>
+<br>
+<div class="numbered"><strong>4.</strong> <strong>inquiry</strong> /ˈɪnkwəri/ (명사)</div>
+<div class="item">뜻: 문의, 질문, 조사</div>
+<div class="item">실전 예문: Thank you for your <strong>inquiry</strong> regarding our latest investment opportunities.</div>
+<br>
+<div class="numbered"><strong>5.</strong> <strong>facilitate</strong> /fəˈsɪlɪteɪt/ (동사)</div>
+<div class="item">뜻: 용이하게 하다, 촉진하다</div>
+<div class="item">실전 예문: The new AI tool will <strong>facilitate</strong> data analysis, allowing us to make quicker decisions.</div>
+<br>
+<h2>5. 📝 실전 복습 챌린지 (Practice)</h2>
+<br>
+<p>오늘 배운 표현과 문법을 활용하여 다음 상황을 영어로 작문해 보세요.</p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>상황:</strong> 한국은 여름에서 가을로 계절이 바뀌고 있습니다.</div>
+<div class="item"><strong>영작:</strong> (힌트: 'transitioning into' 사용)</div>
+<div class="item"><strong>모범 답안:</strong> Korea is transitioning from summer into autumn.</div>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>상황:</strong> 이 새로운 시스템이 우리 기존 장비와 호환되는지 확인해야 합니다.</div>
+<div class="item"><strong>영작:</strong> (힌트: 'compatible' 사용)</div>
+<div class="item"><strong>모범 답안:</strong> We need to check if this new system is compatible with our existing equipment.</div>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>상황:</strong> 최근에 저는 AI를 활용하여 여러 자동화된 프로그램을 개발해 왔습니다. 이 기술을 활용하면 우리의 업무 효율성을 크게 높일 수 있습니다.</div>
+<div class="item"><strong>영작:</strong> (힌트: 'leverage', 'automated programs', 'efficiency' 사용)</div>
+<div class="item"><strong>모범 답안:</strong> Recently, I've been developing several automated programs by leveraging AI. This technology can significantly enhance our operational efficiency.</div>
+<br>
+<h2>6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)</h2>
+<br>
+<p>✨ <strong>Good Job:</strong></p>
+<p>Joey님이 "I think the mobile phone is more expensive than a smart speaker. So, if I change something, I would choose to replace the speaker or change the speaker." 라고 말씀하신 부분은 아주 좋았습니다.</p>
+<p>자신의 의견을 명확하게 제시하고, 그 이유를 논리적으로 설명하는 능력이 돋보였습니다. 특히 <code>if I change something, I would choose to replace...</code> 와 같은 조건문 사용도 자연스러웠습니다.</p>
+<br>
+<p>🚀 <strong>내일의 한 문장:</strong></p>
+<p>다음 수업 시작 시, 튜터에게 오늘 배운 내용을 활용하여 이렇게 질문해 보세요!</p>
+<p>🗣️ "I've been thinking about how AI could help us leverage our data more effectively. Do you have any thoughts on that?"</p>
+<p>(AI가 데이터를 더 효과적으로 활용하는 데 어떻게 도움이 될지 생각해 봤어요. 이에 대해 어떻게 생각하시나요?)</p>
+<br>
+<br>
+<h2>[성과 지표]</h2>
+<p><strong>유창성 점수 (Fluency Score): 8/10</strong></p>
+<br>
+<p><strong>근거:</strong> Joey님은 전반적으로 매우 유창하게 자신의 생각을 표현하며 대화를 이어갔습니다. 다양한 주제에 대해 적극적으로 의견을 개진하고 질문하는 모습이 인상 깊었습니다. 다만, 일부 문장에서 단어 선택이나 문장 구조가 다소 어색하게 느껴지는 부분이 있었고, 이는 자연스러운 표현으로 다듬으면 더욱 완벽한 유창성을 갖출 수 있을 것입니다. 발음도 전반적으로 좋았으나, 몇몇 단어에서 정확한 강세나 발음 연습이 필요해 보였습니다.</p>
+<br>
+<p><strong>다음 수업 '원포인트 액션 플랜':</strong></p>
+<p>다음 수업에서는 <strong>"명사(특히 불가산 명사)의 올바른 수량 표현"</strong>에 집중해 봅시다. 'much'와 'many'의 사용, 그리고 'news', 'information', 'advice'와 같은 불가산 명사의 올바른 활용에 대해 더 연습해 볼 거예요. 대화 중 이러한 명사들을 사용할 때 잠시 멈춰서 '이게 셀 수 있는 명사인가? 어떤 수량사를 써야 할까?'라고 한번 더 생각하는 습관을 들여보세요!</p></div>
+        </div>
+        <div id="tab-transcript" class="tab-content">
+            <div class="transcript"><span class="student">[Student]</span> Oh, Teacher. Good morning. Hi.
+<span class="tutor">[Tutor]</span> Good morning, Joey. How are you?
+<span class="student">[Student]</span> Yeah, I&#x27;m good. I&#x27;m good. How are you today, Teacher?
+<span class="tutor">[Tutor]</span> I&#x27;m doing well, thank you. I&#x27;m pretty happy. Happy Friday.
+<span class="student">[Student]</span> Ah, yes, but maybe it&#x27;s Friday night for you, right? Thursday night, not Friday, right?
+<span class="tutor">[Tutor]</span> Yes, Thursday night, so it&#x27;s early Friday morning.
+<span class="student">[Student]</span> Okay.
+<span class="tutor">[Tutor]</span> Yeah, but I&#x27;m still really excited.
+<span class="tutor">[Tutor]</span> The weekend is almost here.
+<span class="student">[Student]</span> Ah, yes, almost here.
+<span class="student">[Student]</span> Yeah, Friday.
+<span class="student">[Student]</span> Yeah, you&#x27;re right.
+<span class="tutor">[Tutor]</span> Exactly.
+<span class="tutor">[Tutor]</span> So Joey, I&#x27;m Mia.
+<span class="student">[Student]</span> Nice to meet you.
+<span class="tutor">[Tutor]</span> Nice to meet you.
+<span class="student">[Student]</span> Yeah.
+<span class="tutor">[Tutor]</span> Just to quickly introduce myself to you.
+<span class="tutor">[Tutor]</span> So I&#x27;ve been with Carrot for three and a half years and I majored in financial accounting and auditing.
+<span class="tutor">[Tutor]</span> Great. So do you have any questions before we begin today?
+<span class="student">[Student]</span> Oh, yes. I&#x27;m Joey. Nice to meet you.
+<span class="student">[Student]</span> And I don&#x27;t have cash anymore anyway. Yeah, okay. Yeah, yeah. Where are you from?
+<span class="tutor">[Tutor]</span> I am originally from England, but I live in South Africa.
+<span class="student">[Student]</span> South Africa. You were born in the UK and nowadays you live there, South Africa. It&#x27;s wintertime, right?
+<span class="tutor">[Tutor]</span> Yes, it is winter, but I live on the coast so it&#x27;s not that bad.
+<span class="student">[Student]</span> Ah, you live there near the coast. But usually the coast or beach is windy, right? So I feel a little chilly in wintertime. How about you?
+<span class="tutor">[Tutor]</span> Yes, that&#x27;s a major problem in winter, but in terms of the temperature, it&#x27;s not that bad.
+<span class="student">[Student]</span> Ah, yes, I see. Okay, in wintertime in Korea. Oh, yes, in Korea this is the summertime and nowadays it&#x27;s going into the autumn season. So the temperature is 30 degrees in daytime and in the night 22 or 23 degrees. It&#x27;s not hot, so but August is the peak of the summer, so maybe it is going down the temperature and going to the autumn season.
+<span class="tutor">[Tutor]</span> Actually, I was reading an article about people dying in South Korea.
+<span class="student">[Student]</span> People dying?
+<span class="tutor">[Tutor]</span> Yeah, because of the heatwave.
+<span class="student">[Student]</span> Ah, yeah, maybe it&#x27;s possible.
+<span class="student">[Student]</span> Yeah, I don&#x27;t see that article, but maybe this summer is so hot.
+<span class="student">[Student]</span> Yeah, it is such a historical temperature in summer.
+<span class="student">[Student]</span> So almost 40 degrees.
+<span class="student">[Student]</span> So that is so hot.
+<span class="student">[Student]</span> But I don&#x27;t hear that news.
+<span class="student">[Student]</span> Some people died from the heat, heatwave.
+<span class="student">[Student]</span> It is, I&#x27;ve heard that, that is the Europeans.
+<span class="student">[Student]</span> Some people&#x27;s deaths caused by the heatwave, the hot weather.
+<span class="tutor">[Tutor]</span> Oh, really?
+<span class="student">[Student]</span> Yeah, yeah.
+<span class="tutor">[Tutor]</span> You haven&#x27;t heard about the deaths?
+<span class="tutor">[Tutor]</span> So it happened in, do you know, Yongsan?
+<span class="student">[Student]</span> Yongsan?
+<span class="student">[Student]</span> I&#x27;m not sure.
+<span class="student">[Student]</span> Yeah, I don&#x27;t know.
+<span class="student">[Student]</span> Yeah, maybe. There are so many articles and there are so many news. I don&#x27;t know. Yes. But it&#x27;s true. It is really, really hot this summer. But I&#x27;m not sure that articles have or have not.
+<span class="tutor">[Tutor]</span> Yeah, it was actually old people that died because they could not handle the heat.
+<span class="student">[Student]</span> Yeah, I see. Yeah, it&#x27;s possible. But I&#x27;m not sure.
+<span class="student">[Student]</span> Anyway.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="tutor">[Tutor]</span> Well, Joey, we&#x27;re on page 17 today.
+<span class="student">[Student]</span> Uh-huh.
+<span class="tutor">[Tutor]</span> Yeah.
+<span class="tutor">[Tutor]</span> Today&#x27;s subject is what can&#x27;t AI do?
+<span class="student">[Student]</span> Yeah, exactly.
+<span class="student">[Student]</span> So many things.
+<span class="student">[Student]</span> Okay.
+<span class="student">[Student]</span> What can&#x27;t AI do? AI can&#x27;t give us money.
+<span class="tutor">[Tutor]</span> Yeah.
+<span class="tutor">[Tutor]</span> Yeah.
+<span class="tutor">[Tutor]</span> Yeah, I want that. I want AI to give us money.
+<span class="tutor">[Tutor]</span> Then all our problems would be solved.
+<span class="student">[Student]</span> I think it is possible.
+<span class="student">[Student]</span> But usually we ask some normal questions,
+<span class="student">[Student]</span> questions not specific and not expert, and if we do some try to order to AI, yeah, it&#x27;s possible.
+<span class="tutor">[Tutor]</span> Okay, so let&#x27;s go to your vocabulary.
+<span class="student">[Student]</span> Uh-huh. Yes, the useful vocabulary. Can I read that?
+<span class="tutor">[Tutor]</span> Yes, please.
+<span class="student">[Student]</span> Okay.
+<span class="student">[Student]</span> Voice recognition.
+<span class="tutor">[Tutor]</span> A system that responds to spoken commands.
+<span class="student">[Student]</span> The application adds voice recognition.
+<span class="student">[Student]</span> Teacher, is it right?
+<span class="student">[Student]</span> Pronunciation?
+<span class="tutor">[Tutor]</span> Recognition.
+<span class="tutor">[Tutor]</span> It&#x27;s voice recognition.
+<span class="student">[Student]</span> Recognition.
+<span class="student">[Student]</span> Recognition.
+<span class="student">[Student]</span> Is it right?
+<span class="tutor">[Tutor]</span> Recognition.
+<span class="tutor">[Tutor]</span> Recognition.
+<span class="student">[Student]</span> Recognition.
+<span class="student">[Student]</span> Recognition.
+<span class="student">[Student]</span> Recognition.
+<span class="tutor">[Tutor]</span> Yeah, recognition.
+<span class="student">[Student]</span> The voice recognition.
+<span class="student">[Student]</span> Voice recognition.
+<span class="student">[Student]</span> Okay, the next.
+<span class="student">[Student]</span> Automate.
+<span class="student">[Student]</span> Setting up system to
+<span class="student">[Student]</span> run by themselves.
+<span class="student">[Student]</span> It&#x27;s easy to automate
+<span class="student">[Student]</span> cleaning with
+<span class="student">[Student]</span> a robot vacuum.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="student">[Student]</span> And next, smart dashboards.
+<span class="tutor">[Tutor]</span> A screen that shows the state of a smart device.
+<span class="tutor">[Tutor]</span> A smart dashboard makes it easy to manage my home.
+<span class="student">[Student]</span> Yes.
+<span class="tutor">[Tutor]</span> Yes.
+<span class="student">[Student]</span> Yeah, okay.
+<span class="tutor">[Tutor]</span> So, do you understand these words?
+<span class="student">[Student]</span> Oh, yes.
+<span class="student">[Student]</span> It is not difficult, so I understand this kind of vocabulary.
+<span class="tutor">[Tutor]</span> Well done. Let&#x27;s move to the right, useful expression.
+<span class="student">[Student]</span> Yeah, no problem. Useful expression.
+<span class="student">[Student]</span> It&#x27;s not responding.
+<span class="student">[Student]</span> It&#x27;s not responding.
+<span class="tutor">[Tutor]</span> Used when a smart device isn&#x27;t doing anything.
+<span class="tutor">[Tutor]</span> It&#x27;s not responding.
+<span class="tutor">[Tutor]</span> It&#x27;s not working.
+<span class="student">[Student]</span> It&#x27;s not responding.
+<span class="student">[Student]</span> Okay.
+<span class="student">[Student]</span> Can you walk me through it from the beginning?
+<span class="student">[Student]</span> Can you walk me through it from the beginning?
+<span class="student">[Student]</span> Beginning.
+<span class="tutor">[Tutor]</span> Used to ask step by step
+<span class="tutor">[Tutor]</span> instructions to use a device.
+<span class="student">[Student]</span> Okay. Could you explain more detail?
+<span class="tutor">[Tutor]</span> Uh-huh. That sentence? Can you walk me through it from the beginning?
+<span class="student">[Student]</span> Is it possible to start the step-by-step to basic, from the basic?
+<span class="tutor">[Tutor]</span> Yes, it means can you show me how to do this from the start?
+<span class="student">[Student]</span> Start, okay. Can you show me?
+<span class="tutor">[Tutor]</span> From step one, right?
+<span class="student">[Student]</span> From the step one. Okay, I see. Good.
+<span class="tutor">[Tutor]</span> Okay, great. So let&#x27;s do one more question. Back to the top. Which smart home feature is most popular in your country?
+<span class="student">[Student]</span> Okay, I see.
+<span class="student">[Student]</span> Usually in Korea, many people live in their apartments.
+<span class="student">[Student]</span> And because our country
+<span class="student">[Student]</span> is a little small, but the population is a lot.
+<span class="student">[Student]</span> So we live in apartments and usually it is installed the wall pad. That wall pad is possible to control our home,
+<span class="student">[Student]</span> the temperature, or send post,
+<span class="student">[Student]</span> or some watch the visitor and recording something.
+<span class="student">[Student]</span> So it is possible to use smart pad,
+<span class="student">[Student]</span> and it is a virtual application. So in Korea, usually use the smart appliances and control with their mobile device.
+<span class="student">[Student]</span> And...
+<span class="student">[Student]</span> And I&#x27;m not sure it&#x27;s the right answer to your question.
+<span class="student">[Student]</span> Which smart home?
+<span class="tutor">[Tutor]</span> No, it is. It is.
+<span class="student">[Student]</span> It is? Okay.
+<span class="student">[Student]</span> And Teacher, I have one more question. There is all kind of the sentence and the first is smart thermostat.
+<span class="tutor">[Tutor]</span> Thermostat.
+<span class="student">[Student]</span> Come on, please.
+<span class="tutor">[Tutor]</span> Thermostat.
+<span class="student">[Student]</span> Thermostat. What does it mean, the thermostat, smart thermostat?
+<span class="tutor">[Tutor]</span> A thermostat is something that controls the temperature of the room.
+<span class="student">[Student]</span> Temperature.
+<span class="student">[Student]</span> Usually the
+<span class="student">[Student]</span> air conditioner
+<span class="student">[Student]</span> or some
+<span class="tutor">[Tutor]</span> Yeah.
+<span class="student">[Student]</span> Ah,
+<span class="student">[Student]</span> I see.
+<span class="tutor">[Tutor]</span> That controller.
+<span class="tutor">[Tutor]</span> This is a smart.
+<span class="student">[Student]</span> Huh?
+<span class="tutor">[Tutor]</span> This is a smart one.
+<span class="tutor">[Tutor]</span> So you can
+<span class="tutor">[Tutor]</span> control the
+<span class="tutor">[Tutor]</span> temperature
+<span class="tutor">[Tutor]</span> maybe on your phone
+<span class="tutor">[Tutor]</span> or
+<span class="student">[Student]</span> Yes.
+<span class="student">[Student]</span> I see.
+<span class="tutor">[Tutor]</span> You can just talk
+<span class="tutor">[Tutor]</span> to it. Yeah.
+<span class="student">[Student]</span> And the second question, what is the appliance, smart appliance? Because
+<span class="student">[Student]</span> it is explained that in Korea, under the Korea. So what does &quot;smart appliance&quot; mean? Appliances.
+<span class="student">[Student]</span> Appliance. So applied to many devices, the mobile phone or some machine or some robot cleaner, etc. Smart appliance. So yeah, so an appliance. Appliance. Appliance.
+<span class="tutor">[Tutor]</span> Appliance is a big machine that does something. It uses electricity to help us with
+<span class="tutor">[Tutor]</span> cooking and cleaning.
+<span class="student">[Student]</span> That is as the AI, the refrigerator and as the AI and
+<span class="student">[Student]</span> it&#x27;s possible to control more smart, right? Appliance, Appliance.
+<span class="student">[Student]</span> It&#x27;s smart. Ah, yes, I understand. I understand.
+<span class="tutor">[Tutor]</span> Yeah, great. How about you? Do you use AI these days?
+<span class="student">[Student]</span> You mean like just generally or in general?
+<span class="tutor">[Tutor]</span> Generally, not in appliance, just generally in your computer.
+<span class="student">[Student]</span> Do you use AI?
+<span class="tutor">[Tutor]</span> Yes, I do.
+<span class="student">[Student]</span> Yeah, how do you use?
+<span class="tutor">[Tutor]</span> Yes, I do.
+<span class="tutor">[Tutor]</span> How do you use?
+<span class="tutor">[Tutor]</span> Sometimes I use AI to give me advice on my gym routine.
+<span class="tutor">[Tutor]</span> So I really like fitness. I work out for two hours every day.
+<span class="student">[Student]</span> Oh, I see. Usually the AI gives advice to you, like the exercise or routine, etc.
+<span class="tutor">[Tutor]</span> Yes.
+<span class="student">[Student]</span> Oh, so nice.
+<span class="tutor">[Tutor]</span> So AI is my best friend.
+<span class="student">[Student]</span> These days so many people believe that.
+<span class="student">[Student]</span> Yeah, sometimes it&#x27;s me too.
+<span class="student">[Student]</span> Yeah, it&#x27;s possible.
+<span class="tutor">[Tutor]</span> Exactly.
+<span class="tutor">[Tutor]</span> What about you?
+<span class="tutor">[Tutor]</span> How do you use AI?
+<span class="student">[Student]</span> These days I study AI.
+<span class="student">[Student]</span> These days I made some program using AI.
+<span class="student">[Student]</span> Survive coding because I&#x27;m not a technical technician, just a major in
+<span class="student">[Student]</span> economy, but these days it&#x27;s possible to make the automatic program use the AI. So these
+<span class="student">[Student]</span> days I made some application or some process or some research, yeah, through AI. Yeah. So it&#x27;s so nice. Yeah, it&#x27;s so nice. Great. Yeah, okay. So let&#x27;s go to part B. Which do you prefer when controlling
+<span class="student">[Student]</span> devices? Voice commands versus phone apps? Hmm, that that depends on the situation.
+<span class="student">[Student]</span> If I&#x27;m busy, for example, if I wash dishes in my kitchen and it is impossible to use my hand,
+<span class="student">[Student]</span> yeah, it&#x27;s better to use voice commands because just call out to AI and then just recommend something.
+<span class="student">[Student]</span> But if I use more detail and it&#x27;s possible to use my hand,
+<span class="student">[Student]</span> I use my phone application because it&#x27;s more correct.
+<span class="student">[Student]</span> And sometimes it gets confused by my voice.
+<span class="student">[Student]</span> But if I type something to my application, it is more correct.
+<span class="student">[Student]</span> So, yeah, it&#x27;s better.
+<span class="student">[Student]</span> So, yeah, it depends on the situation.
+<span class="student">[Student]</span> And I think the voice command is the limited order AI.
+<span class="student">[Student]</span> Yeah, they answer shortly.
+<span class="student">[Student]</span> Yeah, so usually it is possible to use simple conversation, simple advice.
+<span class="student">[Student]</span> But if I need some more detail and more specific and expert comment, yeah, I think it is better to use the phone application.
+<span class="tutor">[Tutor]</span> I agree.
+<span class="student">[Student]</span> Yeah.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="tutor">[Tutor]</span> So let&#x27;s go to part C, problem solving.
+<span class="tutor">[Tutor]</span> So please, can you read?
+<span class="student">[Student]</span> No problem.
+<span class="tutor">[Tutor]</span> You bought a new smart speaker for your home.
+<span class="student">[Student]</span> Smart speaker.
+<span class="tutor">[Tutor]</span> But it doesn&#x27;t connect well with your phone,
+<span class="tutor">[Tutor]</span> which is about three years old.
+<span class="tutor">[Tutor]</span> Some features don&#x27;t work properly,
+<span class="tutor">[Tutor]</span> and it&#x27;s getting frustrating.
+<span class="tutor">[Tutor]</span> You are not sure whether to return the speaker or upgrade your phone.
+<span class="tutor">[Tutor]</span> Would you return the speaker or get a new phone?
+<span class="student">[Student]</span> Understand that situation.
+<span class="student">[Student]</span> Yes.
+<span class="student">[Student]</span> I think the mobile phone is more expensive than a smart speaker.
+<span class="student">[Student]</span> So, if I change something, I would choose to replace the speaker or change the speaker.
+<span class="student">[Student]</span> And if I consider that my mobile phone is a little older and in other environments, it doesn&#x27;t work well.
+<span class="student">[Student]</span> In the meantime, I consider changing my mobile phone.
+<span class="student">[Student]</span> Yeah, yeah, it&#x27;s your... How about you? Oh, yeah, it&#x27;s almost time. Yes, okay.
+<span class="tutor">[Tutor]</span> Yeah, it&#x27;s almost time, but I would, um, I would return the speaker and try to
+<span class="tutor">[Tutor]</span> find a speaker that is compatible.
+<span class="student">[Student]</span> Oh, compatible. Yes, it&#x27;s a better choice.
+<span class="student">[Student]</span> Yeah, okay. So do you have any questions on today&#x27;s class?
+<span class="student">[Student]</span> Oh, no, I don&#x27;t have questions.
+<span class="student">[Student]</span> Thanks for your class, Teacher.
+<span class="tutor">[Tutor]</span> No, you&#x27;re welcome. I, I just want to say, Joey, I, I think you&#x27;re a
+<span class="tutor">[Tutor]</span> really nice person. Yeah, you&#x27;re really kind and you have good energy.
+<span class="student">[Student]</span> Oh, thanks so much.
+<span class="student">[Student]</span> Yeah.
+<span class="tutor">[Tutor]</span> Yeah.
+<span class="tutor">[Tutor]</span> Actually, I speak to many students in a day.
+<span class="tutor">[Tutor]</span> So I have about 25.
+<span class="student">[Student]</span> Oh.
+<span class="student">[Student]</span> Thank you, students.
+<span class="tutor">[Tutor]</span> Yes.
+<span class="student">[Student]</span> I see.
+<span class="tutor">[Tutor]</span> And not everyone sounds so energetic and alive.
+<span class="student">[Student]</span> Ah, yeah.
+<span class="student">[Student]</span> So that&#x27;s so...
+<span class="student">[Student]</span> Huh?
+<span class="student">[Student]</span> Because it is morning.
+<span class="student">[Student]</span> I&#x27;m very comfortable.
+<span class="student">[Student]</span> So I&#x27;m energetic.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="student">[Student]</span> Yeah.
+<span class="tutor">[Tutor]</span> And you have a very good vibe to yourself.
+<span class="tutor">[Tutor]</span> You&#x27;re really positive.
+<span class="student">[Student]</span> Oh, yes.
+<span class="student">[Student]</span> Thank you so much.
+<span class="tutor">[Tutor]</span> You&#x27;re welcome, Joey.
+<span class="tutor">[Tutor]</span> Have a good weekend.
+<span class="student">[Student]</span> Okay, you too.
+<span class="student">[Student]</span> Have a nice weekend.
+<span class="tutor">[Tutor]</span> Bye-bye.
+<span class="student">[Student]</span> Bye.</div>
+        </div>
+    </div>
+    <div class="toast" id="toast">✅ 프롬프트가 복사되었습니다!</div>
+    <script>
+        const REVIEW_PROMPT="너는 나의 영어 회화 복습 파트너야. 오늘 내 전화영어 수업 내용을 기반으로 대화하면서 복습을 도와줘.\n\n[오늘 수업 전사 내용]\n[Student] Oh, Teacher. Good morning. Hi.\n[Tutor] Good morning, Joey. How are you?\n[Student] Yeah, I'm good. I'm good. How are you today, Teacher?\n[Tutor] I'm doing well, thank you. I'm pretty happy. Happy Friday.\n[Student] Ah, yes, but maybe it's Friday night for you, right? Thursday night, not Friday, right?\n[Tutor] Yes, Thursday night, so it's early Friday morning.\n[Student] Okay.\n[Tutor] Yeah, but I'm still really excited.\n[Tutor] The weekend is almost here.\n[Student] Ah, yes, almost here.\n[Student] Yeah, Friday.\n[Student] Yeah, you're right.\n[Tutor] Exactly.\n[Tutor] So Joey, I'm Mia.\n[Student] Nice to meet you.\n[Tutor] Nice to meet you.\n[Student] Yeah.\n[Tutor] Just to quickly introduce myself to you.\n[Tutor] So I've been with Carrot for three and a half years and I majored in financial accounting and auditing.\n[Tutor] Great. So do you have any questions before we begin today?\n[Student] Oh, yes. I'm Joey. Nice to meet you.\n[Student] And I don't have cash anymore anyway. Yeah, okay. Yeah, yeah. Where are you from?\n[Tutor] I am originally from England, but I live in South Africa.\n[Student] South Africa. You were born in the UK and nowadays you live there, South Africa. It's wintertime, right?\n[Tutor] Yes, it is winter, but I live on the coast so it's not that bad.\n[Student] Ah, you live there near the coast. But usually the coast or beach is windy, right? So I feel a little chilly in wintertime. How about you?\n[Tutor] Yes, that's a major problem in winter, but in terms of the temperature, it's not that bad.\n[Student] Ah, yes, I see. Okay, in wintertime in Korea. Oh, yes, in Korea this is the summertime and nowadays it's going into the autumn season. So the temperature is 30 degrees in daytime and in the night 22 or 23 degrees. It's not hot, so but August is the peak of the summer, so maybe it is going down the temperature and going to the autumn season.\n[Tutor] Actually, I was reading an article about people dying in South Korea.\n[Student] People dying?\n[Tutor] Yeah, because of the heatwave.\n[Student] Ah, yeah, maybe it's possible.\n[Student] Yeah, I don't see that article, but maybe this summer is so hot.\n[Student] Yeah, it is such a historical temperature in summer.\n[Student] So almost 40 degrees.\n[Student] So that is so hot.\n[Student] But I don't hear that news.\n[Student] Some people died from the heat, heatwave.\n[Student] It is, I've heard that, that is the Europeans.\n[Student] Some people's deaths caused by the heatwave, the hot weather.\n[Tutor] Oh, really?\n[Student] Yeah, yeah.\n[Tutor] You haven't heard about the deaths?\n[Tutor] So it happened in, do you know, Yongsan?\n[Student] Yongsan?\n[Student] I'm not sure.\n[Student] Yeah, I don't know.\n[Student] Yeah, maybe. There are so many articles and there are so many news. I don't know. Yes. But it's true. It is really, really hot this summer. But I'm not sure that articles have or have not.\n[Tutor] Yeah, it was actually old people that died because they could not handle the heat.\n[Student] Yeah, I see. Yeah, it's possible. But I'm not sure.\n[Student] Anyway.\n[Tutor] Okay.\n[Tutor] Well, Joey, we're on page 17 today.\n[Student] Uh-huh.\n[Tutor] Yeah.\n[Tutor] Today's subject is what can't AI do?\n[Student] Yeah, exactly.\n[Student] So many things.\n[Student] Okay.\n[Student] What can't AI do? AI can't give us money.\n[Tutor] Yeah.\n[Tutor] Yeah.\n[Tutor] Yeah, I want that. I want AI to give us money.\n[Tutor] Then all our problems would be solved.\n[Student] I think it is possible.\n[Student] But usually we ask some normal questions,\n[Student] questions not specific and not expert, and if we do some try to order to AI, yeah, it's possible.\n[Tutor] Okay, so let's go to your vocabulary.\n[Student] Uh-huh. Yes, the useful vocabulary. Can I read that?\n[Tutor] Yes, please.\n[Student] Okay.\n[Student] Voice recognition.\n[Tutor] A system that responds to spoken commands.\n[Student] The application adds voice recognition.\n[Student] Teacher, is it right?\n[Student] Pronunciation?\n[Tutor] Recognition.\n[Tutor] It's voice recognition.\n[Student] Recognition.\n[Student] Recognition.\n[Student] Is it right?\n[Tutor] Recognition.\n[Tutor] Recognition.\n[Student] Recognition.\n[Student] Recognition.\n[Student] Recognition.\n[Tutor] Yeah, recognition.\n[Student] The voice recognition.\n[Student] Voice recognition.\n[Student] Okay, the next.\n[Student] Automate.\n[Student] Setting up system to\n[Student] run by themselves.\n[Student] It's easy to automate\n[Student] cleaning with\n[Student] a robot vacuum.\n[Tutor] Okay.\n[Student] And next, smart dashboards.\n[Tutor] A screen that shows the state of a smart device.\n[Tutor] A smart dashboard makes it easy to manage my home.\n[Student] Yes.\n[Tutor] Yes.\n[Student] Yeah, okay.\n[Tutor] So, do you understand these words?\n[Student] Oh, yes.\n[Student] It is not difficult, so I understand this kind of vocabulary.\n[Tutor] Well done. Let's move to the right, useful expression.\n[Student] Yeah, no problem. Useful expression.\n[Student] It's not responding.\n[Student] It's not responding.\n[Tutor] Used when a smart device isn't doing anything.\n[Tutor] It's not responding.\n[Tutor] It's not working.\n[Student] It's not responding.\n[Student] Okay.\n[Student] Can you walk me through it from the beginning?\n[Student] Can you walk me through it from the beginning?\n[Student] Beginning.\n[Tutor] Used to ask step by step\n[Tutor] instructions to use a device.\n[Student] Okay. Could you explain more detail?\n[Tutor] Uh-huh. That sentence? Can you walk me through it from the beginning?\n[Student] Is it possible to start the step-by-step to basic, from the basic?\n[Tutor] Yes, it means can you show me how to do this from the start?\n[Student] Start, okay. Can you show me?\n[Tutor] From step one, right?\n[Student] From the step one. Okay, I see. Good.\n[Tutor] Okay, great. So let's do one more question. Back to the top. Which smart home feature is most popular in your country?\n[Student] Okay, I see.\n[Student] Usually in Korea, many people live in their apartments.\n[Student] And because our country\n[Student] is a little small, but the population is a lot.\n[Student] So we live in apartments and usually it is installed the wall pad. That wall pad is possible to control our home,\n[Student] the temperature, or send post,\n[Student] or some watch the visitor and recording something.\n[Student] So it is possible to use smart pad,\n[Student] and it is a virtual application. So in Korea, usually use the smart appliances and control with their mobile device.\n[Student] And...\n[Student] And I'm not sure it's the right answer to your question.\n[Student] Which smart home?\n[Tutor] No, it is. It is.\n[Student] It is? Okay.\n[Student] And Teacher, I have one more question. There is all kind of the sentence and the first is smart thermostat.\n[Tutor] Thermostat.\n[Student] Come on, please.\n[Tutor] Thermostat.\n[Student] Thermostat. What does it mean, the thermostat, smart thermostat?\n[Tutor] A thermostat is something that controls the temperature of the room.\n[Student] Temperature.\n[Student] Usually the\n[Student] air conditioner\n[Student] or some\n[Tutor] Yeah.\n[Student] Ah,\n[Student] I see.\n[Tutor] That controller.\n[Tutor] This is a smart.\n[Student] Huh?\n[Tutor] This is a smart one.\n[Tutor] So you can\n[Tutor] control the\n[Tutor] temperature\n[Tutor] maybe on your phone\n[Tutor] or\n[Student] Yes.\n[Student] I see.\n[Tutor] You can just talk\n[Tutor] to it. Yeah.\n[Student] And the second question, what is the appliance, smart appliance? Because\n[Student] it is explained that in Korea, under the Korea. So what does \"smart appliance\" mean? Appliances.\n[Student] Appliance. So applied to many devices, the mobile phone or some machine or some robot cleaner, etc. Smart appliance. So yeah, so an appliance. Appliance. Appliance.\n[Tutor] Appliance is a big machine that does something. It uses electricity to help us with\n[Tutor] cooking and cleaning.\n[Student] That is as the AI, the refrigerator and as the AI and\n[Student] it's possible to control more smart, right? Appliance, Appliance.\n[Student] It's smart. Ah, yes, I understand. I understand.\n[Tutor] Yeah, great. How about you? Do you use AI these days?\n[Student] You mean like just generally or in general?\n[Tutor] Generally, not in appliance, just generally in your computer.\n[Student] Do you use AI?\n[Tutor] Yes, I do.\n[Student] Yeah, how do you use?\n[Tutor] Yes, I do.\n[Tutor] How do you use?\n[Tutor] Sometimes I use AI to give me advice on my gym routine.\n[Tutor] So I really like fitness. I work out for two hours every day.\n[Student] Oh, I see. Usually the AI gives advice to you, like the exercise or routine, etc.\n[Tutor] Yes.\n[Student] Oh, so nice.\n[Tutor] So AI is my best friend.\n[Student] These days so many people believe that.\n[Student] Yeah, sometimes it's me too.\n[Student] Yeah, it's possible.\n[Tutor] Exactly.\n[Tutor] What about you?\n[Tutor] How do you use AI?\n[Student] These days I study AI.\n[Student] These days I made some program using AI.\n[Student] Survive coding because I'm not a technical technician, just a major in\n[Student] economy, but these days it's possible to make the automatic program use the AI. So these\n[Student] days I made some application or some process or some research, yeah, through AI. Yeah. So it's so nice. Yeah, it's so nice. Great. Yeah, okay. So let's go to part B. Which do you prefer when controlling\n[Student] devices? Voice commands versus phone apps? Hmm, that that depends on the situation.\n[Student] If I'm busy, for example, if I wash dishes in my kitchen and it is impossible to use my hand,\n[Student] yeah, it's better to use voice commands because just call out to AI and then just recommend something.\n[Student] But if I use more detail and it's possible to use my hand,\n[Student] I use my phone application because it's more correct.\n[Student] And sometimes it gets confused by my voice.\n[Student] But if I type something to my application, it is more correct.\n[Student] So, yeah, it's better.\n[Student] So, yeah, it depends on the situation.\n[Student] And I think the voice command is the limited order AI.\n[Student] Yeah, they answer shortly.\n[Student] Yeah, so usually it is possible to use simple conversation, simple advice.\n[Student] But if I need some more detail and more specific and expert comment, yeah, I think it is better to use the phone application.\n[Tutor] I agree.\n[Student] Yeah.\n[Tutor] Okay.\n[Tutor] So let's go to part C, problem solving.\n[Tutor] So please, can you read?\n[Student] No problem.\n[Tutor] You bought a new smart speaker for your home.\n[Student] Smart speaker.\n[Tutor] But it doesn't connect well with your phone,\n[Tutor] which is about three years old.\n[Tutor] Some features don't work properly,\n[Tutor] and it's getting frustrating.\n[Tutor] You are not sure whether to return the speaker or upgrade your phone.\n[Tutor] Would you return the speaker or get a new phone?\n[Student] Understand that situation.\n[Student] Yes.\n[Student] I think the mobile phone is more expensive than a smart speaker.\n[Student] So, if I change something, I would choose to replace the speaker or change the speaker.\n[Student] And if I consider that my mobile phone is a little older and in other environments, it doesn't work well.\n[Student] In the meantime, I consider changing my mobile phone.\n[Student] Yeah, yeah, it's your... How about you? Oh, yeah, it's almost time. Yes, okay.\n[Tutor] Yeah, it's almost time, but I would, um, I would return the speaker and try to\n[Tutor] find a speaker that is compatible.\n[Student] Oh, compatible. Yes, it's a better choice.\n[Student] Yeah, okay. So do you have any questions on today's class?\n[Student] Oh, no, I don't have questions.\n[Student] Thanks for your class, Teacher.\n[Tutor] No, you're welcome. I, I just want to say, Joey, I, I think you're a\n[Tutor] really nice person. Yeah, you're really kind and you have good energy.\n[Student] Oh, thanks so much.\n[Student] Yeah.\n[Tutor] Yeah.\n[Tutor] Actually, I speak to many students in a day.\n[Tutor] So I have about 25.\n[Student] Oh.\n[Student] Thank you, students.\n[Tutor] Yes.\n[Student] I see.\n[Tutor] And not everyone sounds so energetic and alive.\n[Student] Ah, yeah.\n[Student] So that's so...\n[Student] Huh?\n[Student] Because it is morning.\n[Student] I'm very comfortable.\n[Student] So I'm energetic.\n[Tutor] Okay.\n[Student] Yeah.\n[Tutor] And you have a very good vibe to yourself.\n[Tutor] You're really positive.\n[Student] Oh, yes.\n[Student] Thank you so much.\n[Tutor] You're welcome, Joey.\n[Tutor] Have a good weekend.\n[Student] Okay, you too.\n[Student] Have a nice weekend.\n[Tutor] Bye-bye.\n[Student] Bye.\n\n[AI 피드백]\n## 완성본\n\n따뜻하고 실용적인 영어 코치 Bell입니다. Joey, 안녕하세요! 오늘 Mia 튜터님과의 수업 내용 정말 잘 들었습니다. AI와 스마트 기기에 대한 대화에서 Joey님의 적극적인 참여와 에너지 넘치는 모습이 인상 깊었어요. 특히 AI를 활용해 직접 프로그램을 만드신다는 이야기는 정말 멋졌습니다!\n\n오늘 대화에서 Joey님이 보여주신 유창함과 더불어, 몇 가지 표현을 더 자연스럽고 정확하게 다듬을 수 있는 부분들을 함께 살펴볼게요. 비즈니스 환경에서도 자신감 있게 활용할 수 있는 표현들을 익히는 데 도움이 될 거예요.\n\n---\n\n### 0. 📌 Topic\nTopic: Discussing AI's capabilities and smart home technology.\n\n### 1. 📊 오늘의 대화 요약 (Summary)\n오늘 수업에서는 AI가 할 수 없는 일과 스마트 홈 기기에 대해 깊이 있는 대화를 나눴습니다. 한국의 스마트 아파트 환경과 AI를 활용한 개인적인 프로젝트 경험을 공유했으며, 음성 명령과 앱 사용의 장단점에 대해서도 토론했습니다.\n\n### 2. 💬 유창성 업그레이드 (Fluency & Natural Flow)\n\nJoey님이 실제 말한 문장 중, 의미는 통하지만 원어민이 들었을 때 더 자연스럽게 들릴 수 있는 표현 3가지를 선정했습니다.\n\n1.  **❌ 학습자 원문 (As Said):** \"Ah, yes, in Korea this is the summertime and nowadays it's going into the autumn season.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"Korea is currently in summer, but it's transitioning into autumn.\"\n    *   **💎 비즈니스 표현 (Professional):** \"Korea is currently experiencing summer, with temperatures gradually transitioning into the autumn season.\"\n    *   **💡 코칭 포인트:** Using \"transitioning into\" or \"heading into\" sounds more natural for seasonal changes than \"going into.\"\n        → \"transitioning into\" 또는 \"heading into\"를 사용하면 계절 변화를 더 자연스럽게 표현할 수 있습니다.\n\n2.  **❌ 학습자 원문 (As Said):** \"But I don't hear that news.\" (이어지는 문맥: \"Some people died from the heat, heatwave.\")\n    *   **✅ 자연스러운 표현 (Natural):** \"I haven't heard that news.\"\n    *   **💎 비즈니스 표현 (Professional):** \"I was unaware of those specific reports.\"\n    *   **💡 코칭 포인트:** When talking about news or information you haven't received or encountered up to the present moment, \"haven't heard\" (present perfect) is more appropriate than \"don't hear\" (simple present).\n        → 현재까지 어떤 소식이나 정보를 접하지 못했을 때는 \"don't hear\" (현재 시제)보다 \"haven't heard\" (현재 완료)가 더 적절합니다.\n\n3.  **❌ 학습자 원문 (As Said):** \"if I wash dishes in my kitchen and it is impossible to use my hand, yeah, it's better to use voice commands because just call out to AI and then just recommend something.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"If my hands are full while washing dishes, it's better to use voice commands because I can just call out to AI and it can assist me.\"\n    *   **💎 비즈니스 표현 (Professional):** \"When my hands are occupied, for instance, while performing kitchen tasks, utilizing voice commands is preferable as it allows for hands-free interaction with AI for assistance.\"\n    *   **💡 코칭 포인트:** \"Impossible to use my hand\" sounds a bit too strong. \"My hands are full\" or \"my hands are occupied\" are more common and natural ways to express that you can't use your hands because they are busy.\n        → \"impossible to use my hand\"는 너무 강하게 들릴 수 있어요. \"My hands are full\" 또는 \"my hands are occupied\"는 손을 쓸 수 없을 정도로 바쁘다는 것을 표현하는 더 자연스러운 방법입니다.\n\n### 3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)\n\nCategory: **Incorrect use of singular/plural nouns with quantifiers and determiners**\n\nJoey님은 \"so many things\", \"all kind of the sentence\", \"so many news\"와 같이 명사의 단수/복수 형태와 수량사(quantifier)를 연결하는 부분에서 반복적으로 실수를 하셨습니다. 특히 'news'는 불가산 명사인데 복수형으로 사용하시거나, 'kind'를 단수로 사용하면서 'all'과 연결하는 등의 패턴이 보였습니다.\n\n| ❌ 원문 (As Said)                                                                  | ✅ 교정 예시 (Corrected)                                                                           |\n| :---------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------- |\n| [Student] There is all kind of the sentence and the first is smart thermostat.      | There are all kinds of sentences, and the first is a smart thermostat.                             |\n| [Student] Yeah, maybe. There are so many articles and there are so many news.       | Yeah, maybe. There are so many articles and so much news.                                          |\n| [Student] I think the voice command is the limited order AI.                        | I think voice commands are a limited way to interact with AI. (or: Voice commands offer limited AI interaction.) |\n\n📌 **핵심 규칙:** 수량사(quantifier)와 함께 명사를 사용할 때는 해당 명사가 가산 명사인지 불가산 명사인지, 그리고 단수/복수 형태가 올바른지 주의해야 합니다. 'all kinds of + 복수 명사', 'so much + 불가산 명사', 'so many + 복수 명사'와 같이 사용합니다.\n\n🔁 **따라 읽기:**\n🗣️ \"There are all kinds of sentences, and the first is a smart thermostat.\"\n🗣️ \"Yeah, maybe. There are so many articles and so much news.\"\n🗣️ \"I think voice commands are a limited way to interact with AI.\"\n\n### 4. 📗 어휘 확장 (Vocabulary Vault)\n\n1.  **compatible** /kəmˈpætəbəl/ (형용사)\n    *   뜻: 호환되는, 양립할 수 있는\n    *   실전 예문: We need to ensure that the new software is **compatible** with our existing systems before deployment.\n\n2.  **transition** /trænˈzɪʃən/ (동사/명사)\n    *   뜻: 전환하다, 이행하다 / 전환, 이행\n    *   실전 예문: Our company is planning to **transition** to renewable energy sources over the next five years.\n\n3.  **leverage** /ˈlɛvərɪdʒ/ (동사)\n    *   뜻: (영향력 등을) 활용하다, 지렛대 효과를 얻다\n    *   실전 예문: We should **leverage** our strong market position to negotiate better terms with suppliers.\n\n4.  **inquiry** /ˈɪnkwəri/ (명사)\n    *   뜻: 문의, 질문, 조사\n    *   실전 예문: Thank you for your **inquiry** regarding our latest investment opportunities.\n\n5.  **facilitate** /fəˈsɪlɪteɪt/ (동사)\n    *   뜻: 용이하게 하다, 촉진하다\n    *   실전 예문: The new AI tool will **facilitate** data analysis, allowing us to make quicker decisions.\n\n### 5. 📝 실전 복습 챌린지 (Practice)\n\n오늘 배운 표현과 문법을 활용하여 다음 상황을 영어로 작문해 보세요.\n\n1.  **상황:** 한국은 여름에서 가을로 계절이 바뀌고 있습니다.\n    *   **영작:** (힌트: 'transitioning into' 사용)\n    *   **모범 답안:** Korea is transitioning from summer into autumn.\n\n2.  **상황:** 이 새로운 시스템이 우리 기존 장비와 호환되는지 확인해야 합니다.\n    *   **영작:** (힌트: 'compatible' 사용)\n    *   **모범 답안:** We need to check if this new system is compatible with our existing equipment.\n\n3.  **상황:** 최근에 저는 AI를 활용하여 여러 자동화된 프로그램을 개발해 왔습니다. 이 기술을 활용하면 우리의 업무 효율성을 크게 높일 수 있습니다.\n    *   **영작:** (힌트: 'leverage', 'automated programs', 'efficiency' 사용)\n    *   **모범 답안:** Recently, I've been developing several automated programs by leveraging AI. This technology can significantly enhance our operational efficiency.\n\n### 6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)\n\n✨ **Good Job:**\nJoey님이 \"I think the mobile phone is more expensive than a smart speaker. So, if I change something, I would choose to replace the speaker or change the speaker.\" 라고 말씀하신 부분은 아주 좋았습니다.\n자신의 의견을 명확하게 제시하고, 그 이유를 논리적으로 설명하는 능력이 돋보였습니다. 특히 `if I change something, I would choose to replace...` 와 같은 조건문 사용도 자연스러웠습니다.\n\n🚀 **내일의 한 문장:**\n다음 수업 시작 시, 튜터에게 오늘 배운 내용을 활용하여 이렇게 질문해 보세요!\n🗣️ \"I've been thinking about how AI could help us leverage our data more effectively. Do you have any thoughts on that?\"\n(AI가 데이터를 더 효과적으로 활용하는 데 어떻게 도움이 될지 생각해 봤어요. 이에 대해 어떻게 생각하시나요?)\n\n---\n\n### [성과 지표]\n**유창성 점수 (Fluency Score): 8/10**\n\n**근거:** Joey님은 전반적으로 매우 유창하게 자신의 생각을 표현하며 대화를 이어갔습니다. 다양한 주제에 대해 적극적으로 의견을 개진하고 질문하는 모습이 인상 깊었습니다. 다만, 일부 문장에서 단어 선택이나 문장 구조가 다소 어색하게 느껴지는 부분이 있었고, 이는 자연스러운 표현으로 다듬으면 더욱 완벽한 유창성을 갖출 수 있을 것입니다. 발음도 전반적으로 좋았으나, 몇몇 단어에서 정확한 강세나 발음 연습이 필요해 보였습니다.\n\n**다음 수업 '원포인트 액션 플랜':**\n다음 수업에서는 **\"명사(특히 불가산 명사)의 올바른 수량 표현\"**에 집중해 봅시다. 'much'와 'many'의 사용, 그리고 'news', 'information', 'advice'와 같은 불가산 명사의 올바른 활용에 대해 더 연습해 볼 거예요. 대화 중 이러한 명사들을 사용할 때 잠시 멈춰서 '이게 셀 수 있는 명사인가? 어떤 수량사를 써야 할까?'라고 한번 더 생각하는 습관을 들여보세요!\n\n위 내용을 바탕으로:\n1. 먼저 오늘 수업에서 내가 틀렸거나 어색했던 표현을 하나 골라서, 관련된 상황을 영어로 질문해줘.\n2. 내가 영어로 대답하면, 자연스러운지 확인하고 더 나은 표현이 있으면 알려줘.\n3. 특히 \"반복 실수 패턴\"에서 지적된 부분을 집중적으로 연습시켜줘.\n4. 이런 식으로 오늘 배운 표현들을 하나씩 복습하자.\n5. 한국어 설명은 필요할 때만 간단히, 대화는 최대한 영어로 진행해줘.\n\n그럼 시작하자!";
+        function startReview(){navigator.clipboard.writeText(REVIEW_PROMPT).then(()=>{showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)}).catch(()=>{const t=document.createElement('textarea');t.value=REVIEW_PROMPT;document.body.appendChild(t);t.select();document.execCommand('copy');document.body.removeChild(t);showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)})}
+        function showToast(){const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500)}
+        function switchTab(n){document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',n==='feedback'?i===0:i===1));document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));document.getElementById('tab-'+n).classList.add('active')}
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+{
+ "date": "2026-08-21",
+ "iso": [
+  2026,
+  34
+ ],
+ "topic": "Discussing AI's capabilities and smart home technology.",
+ "grammar": "Incorrect use of singular/plural nouns with quantifiers",
+ "grammar_norm": "Subject–Verb Agreement",
+ "score": null,
+ "pairs": [
+  {
+   "said": "Ah, yes, in Korea this is the summertime and nowadays it's going into the autumn season.",
+   "natural": "Korea is currently in summer, but it's transitioning into autumn."
+  },
+  {
+   "said": "But I don't hear that news.",
+   "natural": "I haven't heard that news."
+  },
+  {
+   "said": "if I wash dishes in my kitchen and it is impossible to use my hand, yeah, it's better to use voice commands because just call out to AI and then just recommend something.",
+   "natural": "If my hands are full while washing dishes, it's better to use voice commands because I can just call out to AI and it can assist me."
+  }
+ ],
+ "vocab": [
+  {
+   "word": "compatible",
+   "pos": "형용사",
+   "meaning": "호환되는, 양립할 수 있는"
+  },
+  {
+   "word": "transition",
+   "pos": "동사/명사",
+   "meaning": "전환하다, 이행하다 / 전환, 이행"
+  },
+  {
+   "word": "leverage",
+   "pos": "동사",
+   "meaning": "(영향력 등을) 활용하다, 지렛대 효과를 얻다"
+  },
+  {
+   "word": "inquiry",
+   "pos": "명사",
+   "meaning": "문의, 질문, 조사"
+  },
+  {
+   "word": "facilitate",
+   "pos": "동사",
+   "meaning": "용이하게 하다, 촉진하다"
+  }
+ ],
+ "_html_md5": "a64fe8fca6dfde977fa6442c180906c0"
+}
