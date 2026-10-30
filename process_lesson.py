@@ -138,6 +138,18 @@ DRIVE_RAW_FOLDER_ID = os.environ.get("DRIVE_RAW_FOLDER_ID", "").strip() or DRIVE
 DRIVE_RAW_FILE_NAME = os.environ.get("DRIVE_RAW_FILE_NAME", "").strip() or "whisper_raw.jsonl"
 SAVE_RAW = os.environ.get("SAVE_RAW", "1").strip() != "0"
 
+# 나뉜 녹음 묶기 · 놓친 수업 재시도 (2026-10-30)
+# → 연결이 끊기면 한 수업이 녹음 2~3개로 나뉜다(10/08: 33초 + 21분). 앞 녹음이 끝나고 3분 안에 시작한
+#   녹음은 같은 수업으로 묶어 피드백 하나를 만든다. 고정 시간대(08:00~08:20)로 묶지 않는 이유:
+#   07:30·09:01·17:00 에 따로 들은 수업(8/17, 8/19~21)까지 버리게 된다.
+# → 실행이 실패·시간 초과로 끝난 날의 녹음은 '오늘 올라온 것'만 찾으면 영영 처리되지 않았다(8/05·8/17·8/21·9/01·9/23).
+#   그래서 수신 폴더의 처리 안 된 녹음 중 최근 RETRY_DAYS 일 수업을 매일 다시 찾는다.
+RETRY_DAYS = int(os.environ.get("RETRY_DAYS", "").strip() or 7)
+SPLIT_GAP_SEC = 180          # 앞 녹음 끝 → 다음 녹음 시작이 이 안이면 같은 수업
+MIN_LESSON_SEC = 180         # 묶어도 이보다 짧으면 피드백을 만들지 않는다(끊긴 조각)
+MAX_LESSONS_PER_RUN = 3      # 평소 실행 1회에 처리할 최대 수업 수 (12분 단계 제한 안에 끝나도록)
+AUDIO_BYTES_PER_SEC = 15500  # 녹음 길이 추정용 (실측 18.6MB ≈ 1,202초) — 묶기에만 쓴다
+
 # GitHub Pages 복습 페이지의 기본 URL
 # → 예: "https://myusername.github.io/english-feedback"
 # ⚠️ 시크릿명은 PAGES_URL(‘GITHUB_’ 접두사 시크릿은 GitHub이 금지) → 워크플로우가
@@ -203,51 +215,164 @@ def extract_lesson_date(filename):
     return None
 
 
-def find_todays_recordings(service):
-    """
-    Google Drive에서 "오늘"에 올라온 녹음 파일 목록을 검색.
-    파일이 없으면 빈 리스트 반환 → 프로그램이 조용히 종료됨.
-    비유: 창고에서 오늘 도착한 택배 목록을 확인하는 것 (아직 꺼내진 않음).
+_STAMP_RE = re.compile(r"(20\d{2})(0[1-9]|1[0-2])(0[1-9]|[12]\d|3[01])([01]\d|2[0-3])([0-5]\d)([0-5]\d)")
 
-    🔁 backfill 지원: 환경변수 TARGET_DATE(YYYY-MM-DD)가 지정되면 그 날짜에
-       업로드된 녹음만 검색한다. 일시 장애로 놓친 과거 수업을 수동 재처리할 때 사용.
-       (수업 날짜 자체는 파일명에서 추출되므로 결과 HTML 날짜는 항상 정확하다.)
+
+def recording_start(filename):
     """
-    target = os.environ.get("TARGET_DATE", "").strip()
-    if target:
-        # 지정 날짜 하루 범위 [target 00:00, 다음날 00:00)
-        start_dt = datetime.strptime(target, "%Y-%m-%d").replace(tzinfo=KST)
-        end_dt = start_dt + timedelta(days=1)
-        day_start = start_dt.strftime("%Y-%m-%dT00:00:00+09:00")
-        day_end = end_dt.strftime("%Y-%m-%dT00:00:00+09:00")
-        print(f"🔁 backfill 모드: {target} 업로드분만 검색")
-        time_filter = [f"createdTime >= '{day_start}'", f"createdTime < '{day_end}'"]
+    녹음 파일명 → 녹음 시작 시각(KST). 못 읽으면 None.
+    예: "전화영어_025180304_20261008080106.m4a" → 2026-10-08 08:01:06
+    """
+    m = _STAMP_RE.search(filename or "")
+    if not m:
+        return None
+    try:
+        return datetime(*map(int, m.groups()), tzinfo=KST)
+    except ValueError:
+        return None
+
+
+def _list_audio(service, folder_id):
+    """폴더 안 녹음 전부 (쪽 넘김 포함). folder_id 가 없으면 볼 수 있는 녹음 전부."""
+    q = ["trashed = false", "(mimeType contains 'audio/' or mimeType contains 'video/mp4')"]
+    if folder_id:
+        q.append(f"'{folder_id}' in parents")
+    files, token = [], None
+    while True:
+        r = service.files().list(
+            q=" and ".join(q), pageSize=1000, pageToken=token,
+            fields="nextPageToken, files(id, name, size, createdTime)",
+        ).execute()
+        files += r.get("files", [])
+        token = r.get("nextPageToken")
+        if not token:
+            return files
+
+
+def find_lesson_recordings(service, lesson_dates=None, now=None):
+    """
+    처리할 녹음 후보를 모은다. 반환: 녹음 dict 목록 (id, name, size, folder, start, processed), 시작 시각 순.
+    비유: 택배 창고 두 곳(수신·완료)을 둘러보고, 아직 안 뜯은 상자가 있는 날의 상자를 전부 꺼내 오는 것.
+
+    - 평소: 수신 폴더의 '처리 안 된' 녹음 중 수업일이 최근 RETRY_DAYS 일 안인 것이 있는 날 → 그 날 녹음 전부.
+      (그 날 이미 처리된 조각도 함께 가져와야 늦게 올라온 조각이 앞 조각과 한 수업으로 묶인다)
+    - lesson_dates 지정(수동 다시 만들기): 그 날짜 녹음 전부.
+    폰 동기화 앱(FolderSync)이 완료 폴더로 옮겨진 파일을 수신 폴더에 다시 올리므로 같은 파일명은 하나로 친다.
+    파일명에 녹음 시각이 없는 파일은 수업으로 묶을 수 없어 건너뛴다.
+    """
+    now = now or datetime.now(KST)
+    ids, names = load_processed_records()
+    by_name = {}
+    for folder, folder_id in (("inbox", DRIVE_FOLDER_ID), ("done", DRIVE_DONE_FOLDER_ID)):
+        if folder == "done" and not folder_id:
+            continue
+        for f in _list_audio(service, folder_id):
+            start = recording_start(f["name"])
+            if not start:
+                continue
+            rec = {
+                "id": f["id"], "name": f["name"], "size": int(f.get("size") or 0),
+                "folder": folder, "start": start,
+                "processed": f["id"] in ids or f["name"] in names,
+            }
+            old = by_name.get(f["name"])
+            # 같은 이름이 둘이면: 처리 기록에 ID 가 있는 원본 > 완료 폴더 > 수신 폴더
+            rank = lambda r: (r["id"] in ids, r["folder"] == "done")  # noqa: E731
+            if old is None or rank(rec) > rank(old):
+                by_name[f["name"]] = rec
+    recs = list(by_name.values())
+    day = lambda r: r["start"].strftime("%Y-%m-%d")  # noqa: E731
+    if lesson_dates:
+        days = set(lesson_dates)
+        print(f"🔁 다시 만들기 모드: {', '.join(sorted(days))} 수업 녹음 검색")
     else:
-        today = datetime.now(KST).strftime("%Y-%m-%d")
-        time_filter = [f"createdTime >= '{today}T00:00:00+09:00'"]
+        cutoff = (now - timedelta(days=RETRY_DAYS)).strftime("%Y-%m-%d")
+        days = {day(r) for r in recs if r["folder"] == "inbox" and not r["processed"] and day(r) >= cutoff}
+    found = sorted((r for r in recs if day(r) in days), key=lambda r: r["start"])
+    if found:
+        print(f"📁 녹음 {len(found)}개 발견:")
+        for r in found:
+            state = "처리됨" if r["processed"] else "새 녹음"
+            print(f"   - {r['name']} ({r['folder']}, {state}, {r['size'] / 1e6:.1f}MB)")
+    return found
 
-    # 검색 조건: (오늘 또는 지정일) 생성 + 휴지통 아님 + 오디오 파일
-    query_parts = [
-        *time_filter,
-        "trashed = false",
-        "(mimeType contains 'audio/' or mimeType contains 'video/mp4')",
-    ]
-    if DRIVE_FOLDER_ID:
-        query_parts.append(f"'{DRIVE_FOLDER_ID}' in parents")
 
-    results = service.files().list(
-        q=" and ".join(query_parts),
-        orderBy="createdTime desc",   # 최신순 정렬
-        pageSize=10,
-        fields="files(id, name, mimeType, createdTime)",
-    ).execute()
+def group_into_lessons(recs):
+    """
+    녹음을 수업 단위로 묶는다 — '이어짐' 기준.
+    앞 녹음이 끝나고(시작 + 크기로 추정한 길이) SPLIT_GAP_SEC 안에 시작한 녹음은 같은 수업이다.
+    예) 08:00:16(33초) → 08:01:06 = 한 수업 / 07:30(20분) → 08:00 = 다른 수업(9분 틈)
+    """
+    lessons = []
+    for r in sorted(recs, key=lambda r: r["start"]):
+        if lessons:
+            last = lessons[-1]
+            end = max(p["start"] + timedelta(seconds=p["size"] / AUDIO_BYTES_PER_SEC) for p in last)
+            if r["start"].date() == last[0]["start"].date() and r["start"] <= end + timedelta(seconds=SPLIT_GAP_SEC):
+                last.append(r)
+                continue
+        lessons.append([r])
+    return lessons
 
-    files = results.get("files", [])
-    if files:
-        print(f"📁 파일 {len(files)}개 발견:")
-        for f in files:
-            print(f"   - {f['name']} ({f['createdTime']})")
-    return [(f["name"], f["id"]) for f in files]
+
+def select_lessons(lessons, dates_mode=False):
+    """
+    이번 실행에서 처리할 수업을 고른다.
+    - 평소: 처리 안 된 조각이 있는 수업만, 최근 수업부터 MAX_LESSONS_PER_RUN 개 (나머지는 다음 실행).
+    - 다시 만들기: 처리 안 된 조각이 있거나 조각이 2개 이상인 수업(조각 하나로 만든 페이지를 묶음으로 다시 만든다).
+      이미 제대로 처리된 단일 녹음 수업(8/17 09:01 등)은 건드리지 않는다.
+    """
+    if dates_mode:
+        return [g for g in lessons if any(not p["processed"] for p in g) or len(g) > 1]
+    todo = [g for g in lessons if any(not p["processed"] for p in g)]
+    return sorted(todo, key=lambda g: g[0]["start"], reverse=True)[:MAX_LESSONS_PER_RUN]
+
+
+def join_transcripts(pieces):
+    """
+    조각별 (원문, 길이, 구간) 을 시간 순으로 이어 붙인다 → (원문, 총 길이, 구간).
+    뒤 조각의 구간 시각은 앞 조각 길이만큼 민다(끊긴 동안의 공백은 녹음에 없으므로 이어진 것으로 본다).
+    """
+    texts, segs, offset = [], [], 0.0
+    for text, dur, segments in pieces:
+        if (text or "").strip():
+            texts.append(text.strip())
+        for s in segments or []:
+            if not isinstance(s, dict):
+                continue
+            s = dict(s)
+            for k in ("start", "end"):
+                if isinstance(s.get(k), (int, float)):
+                    s[k] = s[k] + offset
+            segs.append(s)
+        offset += dur or 0
+    return "\n".join(texts), offset, segs
+
+
+def _page_recording(path):
+    """복습 페이지에 적힌 (첫) 녹음 파일명. 없으면 ''."""
+    try:
+        t = open(path, encoding="utf-8").read()
+    except OSError:
+        return ""
+    m = re.search(r"🎙\s*([^<]+?\.m4a)", t)
+    return m.group(1).strip() if m else ""
+
+
+def choose_page_slug(docs_dir, lesson_date, part_names):
+    """
+    복습 페이지 이름을 정한다. 같은 날 따로 들은 두 번째 수업은 YYYY-MM-DD-2 (세 번째 -3 …).
+    이 수업의 녹음으로 만든 페이지가 이미 있으면 그 이름을 다시 쓴다(조각 페이지를 묶음 페이지로 덮어쓰기).
+    """
+    base = lesson_date.strftime("%Y-%m-%d")
+    slugs = [base] + [f"{base}-{i}" for i in range(2, 10)]
+    for s in slugs:
+        if _page_recording(os.path.join(docs_dir, f"{s}.html")) in part_names:
+            return s
+    for s in slugs:
+        if not os.path.exists(os.path.join(docs_dir, f"{s}.html")):
+            return s
+    return slugs[-1]
 
 
 def download_recording(service, file_id, filename):
@@ -319,22 +444,6 @@ def save_processed_id(file_id, filename=""):
     with open(PROCESSED_FILE, "a") as f:
         f.write(f"{file_id}|{filename}\n")
     print(f"📋 처리 완료 기록 추가: {file_id} ({filename})")
-
-
-def is_already_processed(file_id, filename=""):
-    """
-    이 파일이 이미 처리되었는지 확인.
-    파일 ID 또는 파일명 중 하나라도 일치하면 중복으로 판단.
-    → FolderSync가 같은 파일을 새 ID로 재업로드해도 파일명으로 잡아냄.
-    """
-    processed_ids, processed_names = load_processed_records()
-    if file_id in processed_ids:
-        print(f"ℹ️ 이미 처리된 파일입니다 (ID: {file_id[:20]}...). 건너뜁니다.")
-        return True
-    if filename and filename in processed_names:
-        print(f"ℹ️ 이미 처리된 파일명입니다 ({filename}). 건너뜁니다.")
-        return True
-    return False
 
 
 def commit_processed_record():
@@ -1307,7 +1416,7 @@ def _write_lesson_json(filepath):
         import build_weekly_review as _W
         rec = _W.cached_lesson(filepath)
         if rec:
-            print(f"📦 구조화 데이터 저장: docs/data/{os.path.basename(filepath)[:10]}.json")
+            print(f"📦 구조화 데이터 저장: docs/data/{os.path.splitext(os.path.basename(filepath))[0]}.json")
         else:
             print("⚠️ 구조화 데이터 추출 실패(페이지 파싱 불가) — 집계기가 폴백 처리")
     except Exception as e:
@@ -1331,17 +1440,18 @@ def _rebuild_derived_pages():
             print(f"⚠️ {modname} 재생성 실패(비치명): {e}")
 
 
-def deploy_review_page(page_html, date_str, lesson_date=None):
+def deploy_review_page(page_html, date_str, lesson_date=None, slug=None):
     """
     HTML을 docs/ 폴더에 저장 → 인덱스 갱신 → git push → GitHub Pages에 자동 배포.
     비유: 학습지를 인쇄 → 게시판 목차 갱신 → 게시판에 핀으로 꽂기.
     lesson_date가 주어지면 해당 날짜로 파일명 생성, 없으면 현재 날짜 사용.
+    slug 를 주면 그 이름을 쓴다 (같은 날 두 번째 수업: YYYY-MM-DD-2, choose_page_slug 참고).
     """
     print("🌐 복습 페이지 배포 중...")
     docs_dir = "docs"
     os.makedirs(docs_dir, exist_ok=True)
 
-    slug = (lesson_date or datetime.now(KST)).strftime("%Y-%m-%d")
+    slug = slug or (lesson_date or datetime.now(KST)).strftime("%Y-%m-%d")
     filename = f"{slug}.html"
     filepath = os.path.join(docs_dir, filename)
 
@@ -1362,7 +1472,8 @@ def deploy_review_page(page_html, date_str, lesson_date=None):
     subprocess.run(["git", "config", "user.name", "github-actions"], check=True)
     subprocess.run(["git", "config", "user.email", "actions@github.com"], check=True)
     subprocess.run(["git", "add", "docs/"], check=True)
-    subprocess.run(["git", "commit", "-m", f"📚 Add review page: {date_str}"], check=True)
+    suffix = f" (#{slug[11:]})" if len(slug) > 10 else ""
+    subprocess.run(["git", "commit", "-m", f"📚 Add review page: {date_str}{suffix}"], check=True)
     subprocess.run(["git", "push"], check=True)
 
     page_url = f"{GITHUB_PAGES_URL}/{filename}" if GITHUB_PAGES_URL else filename
@@ -1656,6 +1767,130 @@ def send_email(feedback, filename, duration, review_url, date_str=None):
 # ║  에러 처리: 파일 없음→조용히 종료(exit 0) / API 오류→빨간X(exit 1)     ║
 # ╚══════════════════════════════════════════════════════════════════════════╝
 
+def _finish_parts(pieces, lesson_date):
+    """
+    [7·8·9단계] 수업 1개의 조각들을 마무리: 수신 폴더 조각은 '완료' 폴더로 옮기고 → 처리 기록 → 원본 보관.
+    이미 처리된 조각(다시 만들기·늦게 온 조각과 묶인 앞 조각)은 옮기거나 다시 기록하지 않는다.
+    """
+    new = [p for p, *_ in pieces if not p["processed"]]
+    for p in new:
+        if p["folder"] == "inbox":
+            move_to_done_folder(p["id"])
+    for p in new:
+        save_processed_id(p["id"], p["name"])
+    if new:
+        commit_processed_record()
+    # 원본 보관은 맨 마지막 (best-effort). 조각마다 한 줄 — 같은 녹음은 다시 적지 않는다.
+    for p, text, dur, segs in pieces:
+        save_raw_transcript(p["name"], p["id"], lesson_date, text, dur, segs)
+
+
+def process_lesson_group(service, parts, notify=True):
+    """
+    수업 1개(녹음 조각 1개 이상)를 처리한다. 반환: 복습 페이지 주소, 너무 짧아 건너뛰면 None.
+    비유: 끊겨서 두세 장으로 나뉜 받아쓰기 종이를 순서대로 이어 붙인 뒤, 한 번에 첨삭하는 것.
+    notify=False(다시 만들기)면 페이지만 만들고 메일·알림은 보내지 않는다.
+    """
+    now = datetime.now(KST)
+    names = [p["name"] for p in parts]
+    lesson_date = extract_lesson_date(names[0])
+    date_str = (lesson_date or now).strftime("%Y년 %m월 %d일")
+    if len(parts) > 1:
+        print(f"✂️ 나뉜 수업 {len(parts)}조각을 한 수업으로 묶음: "
+              + ", ".join(p["start"].strftime("%H:%M:%S") for p in parts))
+
+    # ━━ 다운로드 + [2단계] 음성 → 텍스트 (Groq Whisper, 조각마다) ━━
+    pieces = []  # (녹음 dict, 원문, 길이, 구간)
+    for p in parts:
+        audio_path = download_recording(service, p["id"], p["name"])
+        try:
+            text, dur, segs = transcribe_audio(audio_path)
+        finally:
+            if audio_path and os.path.exists(audio_path):
+                os.remove(audio_path)
+        pieces.append((p, text, dur, segs))
+    transcript_raw, duration, segments = join_transcripts([(t, d, s) for _, t, d, s in pieces])
+
+    # ━━ 끊긴 조각뿐이면 피드백을 만들지 않는다 (예: 6/02 1분, 8/05 7초짜리 페이지) ━━
+    if not transcript_raw.strip() or duration < MIN_LESSON_SEC:
+        print(f"⏭️ {date_str} 녹음이 {duration:.0f}초뿐이거나 비어 있어 피드백을 만들지 않음")
+        if notify:
+            notify_kakao(f"⏭️ {date_str} 녹음이 {duration:.0f}초뿐이라 피드백을 만들지 않았어요 (연결이 끊긴 조각)")
+        _finish_parts(pieces, lesson_date)
+        return None
+    print(f"\n📝 원본 전사 (첫 200자):\n{transcript_raw[:200]}...\n")
+
+    # ━━ [3단계] 전사 보정 (화자 분리 + 오인식 수정) ━━
+    transcript = clean_transcript(transcript_raw, segments)
+
+    # ━━ [3.5단계] 화자 라벨 검증 (Tutor↔Student 뒤바뀜 방지) ━━
+    transcript = verify_speaker_labels(transcript)
+
+    # ━━ [4단계] AI 피드백 생성 ━━
+    # 직전 5회 Target Grammar 카테고리를 회피 목록으로 전달 (다양성 확보)
+    existing_meta = load_metadata("docs")
+    recent_cats = [
+        existing_meta[d].get("target_grammar")
+        for d in sorted(existing_meta.keys(), reverse=True)[:5]
+        if existing_meta.get(d, {}).get("target_grammar")
+    ]
+    feedback = generate_feedback(transcript, recent_categories=recent_cats)
+
+    # ━━ [4.5단계] 피드백 품질 검토 (인용 정확성, 화자 혼동, 누락 보완) ━━
+    feedback = review_feedback(transcript, feedback)
+
+    # ━━ [4.6단계] 인덱스용 메타데이터 추출 & 저장 ━━
+    meta = extract_metadata(feedback)
+    slug = choose_page_slug("docs", lesson_date or now, names)
+    save_metadata("docs", slug, meta)
+
+    # ━━ [5단계] 복습 페이지 생성 & 배포 ━━
+    shown = names[0] + (f" 외 {len(names) - 1}개" if len(names) > 1 else "")
+    page_html = generate_review_page(transcript, feedback, shown, duration, date_str)
+    review_url = deploy_review_page(page_html, date_str, lesson_date, slug=slug)
+
+    if notify:
+        # ━━ [6단계] 이메일 발송 ━━
+        send_email(feedback, shown, duration, review_url, date_str)
+
+        # ━━ [6.5단계] 카카오 알림 (옵션, best-effort) ━━
+        cat = meta.get("target_grammar")
+        teaser = f"📚 오늘의 전화영어 피드백 도착! ({date_str})"
+        if cat:
+            teaser += f"\n🎯 포인트: {cat}"
+        notify_kakao(teaser, review_url)
+    else:
+        print("ℹ️ 다시 만들기 모드 — 페이지만 만들고 메일·알림은 보내지 않음")
+
+    # ━━ [7·8·9단계] 완료 폴더 이동 · 처리 기록 · Whisper 원본 보관 ━━
+    _finish_parts(pieces, lesson_date)
+
+    print(f"\n✅ 처리 완료: {shown}")
+    print(f"🌐 복습 페이지: {review_url}")
+    return review_url
+
+
+def _lesson_dates_from_env():
+    """LESSON_DATES (또는 예전 이름 TARGET_DATE) → ['YYYY-MM-DD', …]. 형식이 틀리면 종료."""
+    raw = os.environ.get("LESSON_DATES", "").strip() or os.environ.get("TARGET_DATE", "").strip()
+    dates = [d for d in re.split(r"[,\s]+", raw) if d]
+    bad = [d for d in dates if not re.fullmatch(r"20\d{2}-\d{2}-\d{2}", d)]
+    if bad:
+        print(f"❌ 날짜 형식 오류 (YYYY-MM-DD): {', '.join(bad)}")
+        sys.exit(1)
+    return dates
+
+
+def _notify_from_env(dates_mode):
+    """메일·알림을 보낼지. NOTIFY=yes/no 가 우선, 비었거나 auto 면 평소엔 보내고 다시 만들기(날짜 지정)엔 안 보낸다."""
+    v = os.environ.get("NOTIFY", "").strip().lower()
+    if v in ("yes", "true", "1"):
+        return True
+    if v in ("no", "false", "0"):
+        return False
+    return not dates_mode
+
+
 def main():
     print("=" * 50)
     print("🚀 전화영어 피드백 자동화 v2 시작")
@@ -1663,108 +1898,42 @@ def main():
     print(f"📅 {now.strftime('%Y-%m-%d %H:%M KST')}")
     print("=" * 50)
 
-    # ━━ [1단계] Google Drive에서 오늘 녹음 파일 목록 검색 ━━
-    service = get_drive_service()
-    recordings = find_todays_recordings(service)
+    lesson_dates = _lesson_dates_from_env()
+    notify = _notify_from_env(dates_mode=bool(lesson_dates))
 
-    if not recordings:
-        print("ℹ️ 오늘 녹음 파일이 없습니다. 수업이 없는 날이거나 동기화 지연일 수 있습니다.")
+    # ━━ [1단계] Google Drive에서 처리할 녹음 찾기 → 수업 단위로 묶기 ━━
+    service = get_drive_service()
+    recordings = find_lesson_recordings(service, lesson_dates or None)
+    lessons = select_lessons(group_into_lessons(recordings), dates_mode=bool(lesson_dates))
+
+    if not lessons:
+        if lesson_dates:
+            print("ℹ️ 지정한 날짜에 다시 만들 수업이 없습니다.")
+        else:
+            print(f"ℹ️ 처리할 새 녹음이 없습니다 (최근 {RETRY_DAYS}일). 수업이 없는 날이거나 동기화 지연일 수 있습니다.")
         sys.exit(0)
 
     processed_count = 0
     error_count = 0
-
-    for filename, file_id in recordings:
-        # ━━ [중복 체크] 이미 처리한 파일인지 확인 (ID + 파일명 이중 체크) ━━
-        if is_already_processed(file_id, filename):
-            continue
-
-        lesson_date = extract_lesson_date(filename)
-        date_str = (lesson_date or now).strftime("%Y년 %m월 %d일")
-        audio_path = None
-
+    for parts in lessons:
+        label = parts[0]["name"] + (f" 외 {len(parts) - 1}개" if len(parts) > 1 else "")
         try:
-            # ━━ 다운로드 ━━
-            audio_path = download_recording(service, file_id, filename)
-
-            # ━━ [2단계] 음성 → 텍스트 (Groq Whisper) ━━
-            transcript_raw, duration, segments = transcribe_audio(audio_path)
-            if not transcript_raw.strip():
-                print(f"❌ 전사 결과가 비어있습니다: {filename}")
-                continue
-            print(f"\n📝 원본 전사 (첫 200자):\n{transcript_raw[:200]}...\n")
-
-            # ━━ [3단계] 전사 보정 (화자 분리 + 오인식 수정) ━━
-            transcript = clean_transcript(transcript_raw, segments)
-
-            # ━━ [3.5단계] 화자 라벨 검증 (Tutor↔Student 뒤바뀜 방지) ━━
-            transcript = verify_speaker_labels(transcript)
-
-            # ━━ [4단계] AI 피드백 생성 ━━
-            # 직전 5회 Target Grammar 카테고리를 회피 목록으로 전달 (다양성 확보)
-            existing_meta = load_metadata("docs")
-            recent_cats = [
-                existing_meta[d].get("target_grammar")
-                for d in sorted(existing_meta.keys(), reverse=True)[:5]
-                if existing_meta.get(d, {}).get("target_grammar")
-            ]
-            feedback = generate_feedback(transcript, recent_categories=recent_cats)
-
-            # ━━ [4.5단계] 피드백 품질 검토 (인용 정확성, 화자 혼동, 누락 보완) ━━
-            feedback = review_feedback(transcript, feedback)
-
-            # ━━ [4.6단계] 인덱스용 메타데이터 추출 & 저장 ━━
-            meta = extract_metadata(feedback)
-            slug = (lesson_date or now).strftime("%Y-%m-%d")
-            save_metadata("docs", slug, meta)
-
-            # ━━ [5단계] 복습 페이지 생성 & 배포 ━━
-            page_html = generate_review_page(transcript, feedback, filename, duration, date_str)
-            review_url = deploy_review_page(page_html, date_str, lesson_date)
-
-            # ━━ [6단계] 이메일 발송 ━━
-            send_email(feedback, filename, duration, review_url, date_str)
-
-            # ━━ [6.5단계] 카카오 알림 (옵션, best-effort) ━━
-            cat = meta.get("target_grammar")
-            teaser = f"📚 오늘의 전화영어 피드백 도착! ({date_str})"
-            if cat:
-                teaser += f"\n🎯 포인트: {cat}"
-            notify_kakao(teaser, review_url)
-
-            # ━━ [7단계] 완료 파일 이동 ━━
-            move_to_done_folder(file_id)
-
-            # ━━ [8단계] 처리 완료 기록 저장 ━━
-            save_processed_id(file_id, filename)
-            commit_processed_record()
-
-            processed_count += 1
-            print(f"\n✅ 처리 완료: {filename}")
-            print(f"🌐 복습 페이지: {review_url}")
-
-            # ━━ [9단계] Whisper 원본 보관 (옵션, best-effort) ━━
-            # 페이지·이메일·알림·처리 기록이 전부 끝난 뒤에만 실행. 실패해도 위 결과는 그대로다.
-            save_raw_transcript(filename, file_id, lesson_date, transcript_raw, duration, segments)
-
+            if process_lesson_group(service, parts, notify=notify):
+                processed_count += 1
         except Exception as e:
             error_count += 1
-            print(f"❌ 파일 처리 실패 ({filename}): {e}")
-            continue
-
-        finally:
-            if audio_path and os.path.exists(audio_path):
-                os.remove(audio_path)
+            print(f"❌ 수업 처리 실패 ({label}): {e}")
 
     # ━━ 결과 요약 ━━
     print("\n" + "=" * 50)
     if processed_count > 0:
-        print(f"✅ 총 {processed_count}개 파일 처리 완료!")
-    elif error_count > 0:
-        print(f"❌ {error_count}개 파일 처리 실패")
+        print(f"✅ 총 {processed_count}개 수업 처리 완료!")
+    if error_count > 0:
+        # 실패한 수업은 처리 기록이 남지 않아 다음 실행이 다시 시도한다(최근 RETRY_DAYS 일)
+        print(f"❌ {error_count}개 수업 처리 실패 — 다음 실행이 다시 시도합니다")
         sys.exit(1)
-    else:
-        print("ℹ️ 새로 처리할 파일이 없습니다.")
+    if processed_count == 0:
+        print("ℹ️ 새로 만든 피드백이 없습니다 (짧은 조각만 있었음).")
     print("=" * 50)
 
 
