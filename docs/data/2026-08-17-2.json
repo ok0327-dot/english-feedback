@@ -1,0 +1,53 @@
+{
+ "date": "2026-08-17",
+ "iso": [
+  2026,
+  34
+ ],
+ "topic": "Discussing holiday plans, upcoming travel preparations, and airport experiences.",
+ "grammar": "Verb Tense and Aspect",
+ "grammar_norm": "Verb Tense",
+ "score": 7.0,
+ "pairs": [
+  {
+   "said": "So, yeah, every people feel a little respect day.",
+   "natural": "So, yeah, everyone feels a sense of respect on this day."
+  },
+  {
+   "said": "Usually my plane not departs on time.",
+   "natural": "Usually my plane doesn't depart on time."
+  },
+  {
+   "said": "I think usually the nervous and afraid from the we don't know that fact.",
+   "natural": "I think usually nervousness and fear come from not knowing the facts."
+  }
+ ],
+ "vocab": [
+  {
+   "word": "punctual",
+   "pos": "형용사",
+   "meaning": "시간을 엄수하는, 정확한"
+  },
+  {
+   "word": "apprehension",
+   "pos": "명사",
+   "meaning": "불안, 우려, 염려"
+  },
+  {
+   "word": "splurge",
+   "pos": "동사",
+   "meaning": "돈을 물 쓰듯 쓰다, 사치를 부리다 (주로 특정 품목에 큰돈을 쓰는 것)"
+  },
+  {
+   "word": "reverence",
+   "pos": "명사",
+   "meaning": "숭배, 경외심"
+  },
+  {
+   "word": "stem from",
+   "pos": "동사구",
+   "meaning": "~에서 유래하다, ~에서 비롯되다"
+  }
+ ],
+ "_html_md5": "e1192da4285e8ae1679045b4c3c30dbf"
+}
