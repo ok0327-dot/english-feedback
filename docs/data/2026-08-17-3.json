@@ -1,0 +1,53 @@
+{
+ "date": "2026-08-17",
+ "iso": [
+  2026,
+  34
+ ],
+ "topic": "Discussing travel plans, family trips, and interesting animal behaviors.",
+ "grammar": "Incorrect Comparative Forms",
+ "grammar_norm": "Incorrect Comparative Forms",
+ "score": 7.5,
+ "pairs": [
+  {
+   "said": "My son and me and my wife.",
+   "natural": "My son, my wife, and I."
+  },
+  {
+   "said": "Is it possible to free talking?",
+   "natural": "Is free talking possible?"
+  },
+  {
+   "said": "we will go twice travel abroad per year.",
+   "natural": "we will travel abroad twice a year."
+  }
+ ],
+ "vocab": [
+  {
+   "word": "depart",
+   "pos": "동사",
+   "meaning": "(어떤 곳을) 떠나다, 출발하다"
+  },
+  {
+   "word": "destination",
+   "pos": "명사",
+   "meaning": "목적지, 행선지"
+  },
+  {
+   "word": "adjust",
+   "pos": "동사",
+   "meaning": "적응하다, 조절하다, 조정하다"
+  },
+  {
+   "word": "trade",
+   "pos": "동사, 명사",
+   "meaning": "(동) 거래하다, 교환하다; (명) 거래, 교역"
+  },
+  {
+   "word": "precious",
+   "pos": "형용사",
+   "meaning": "귀중한, 소중한"
+  }
+ ],
+ "_html_md5": "0d601859405fb36e83b685f3c71c609e"
+}

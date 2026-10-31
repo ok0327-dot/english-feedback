@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#0f0f13"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="당근영어"><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="icon" type="image/png" sizes="192x192" href="icon-192.png"><script src="install-banner.js" defer></script><script src="sw-reg.js" defer></script>
+    <title>전화영어 복습 - 2026년 08월 17일</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Noto Sans KR',sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.75;min-height:100vh}
+        .header{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);border-bottom:1px solid rgba(255,255,255,.06);padding:48px 24px 40px;text-align:center}
+        .header-date{font-size:13px;color:#94a3b8;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+        .header h1{font-size:28px;font-weight:700;color:#f1f5f9;margin-bottom:16px}
+        .header-meta{display:flex;justify-content:center;gap:24px;font-size:14px;color:#64748b}
+        .header-meta span{display:flex;align-items:center;gap:6px}
+        .cta-section{text-align:center;padding:40px 24px}
+        .cta-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:linear-gradient(135deg,#38bdf8,#818cf8);color:#fff;font-size:16px;font-weight:600;font-family:'Noto Sans KR',sans-serif;border:none;border-radius:50px;cursor:pointer;transition:all .3s;text-decoration:none;box-shadow:0 4px 24px rgba(56,189,248,.25)}
+        .cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(56,189,248,.35)}
+        .cta-btn svg{width:20px;height:20px}
+        .cta-sub{margin-top:12px;font-size:13px;color:#64748b}
+        .toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#38bdf8;padding:14px 28px;border-radius:12px;font-size:14px;font-weight:500;border:1px solid rgba(56,189,248,.2);box-shadow:0 8px 32px rgba(0,0,0,.4);opacity:0;transition:all .4s cubic-bezier(.16,1,.3,1);z-index:1000}
+        .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+        .container{max-width:720px;margin:0 auto;padding:0 24px 80px}
+        .tabs{display:flex;gap:4px;background:#1a1a24;padding:4px;border-radius:12px;margin-bottom:32px}
+        .tab{flex:1;padding:12px;text-align:center;font-size:14px;font-weight:500;color:#64748b;background:0 0;border:none;border-radius:8px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all .2s}
+        .tab.active{background:#262636;color:#f1f5f9}
+        .tab-content{display:none}.tab-content.active{display:block}
+        .feedback h2{font-size:18px;font-weight:700;color:#f1f5f9;margin:36px 0 16px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.06)}
+        .feedback h2:first-child{margin-top:0}
+        .feedback p{margin:8px 0;color:#cbd5e1}
+        .feedback .item{padding:6px 0 6px 16px;border-left:2px solid #334155;margin:6px 0;color:#cbd5e1}
+        .feedback .numbered{padding:8px 0 8px 16px;color:#cbd5e1}
+        .feedback .numbered strong{color:#38bdf8}
+        .feedback strong{color:#f1f5f9}
+        .feedback code{background:#1e293b;padding:2px 8px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#38bdf8}
+        .feedback table{width:100%;border-collapse:collapse;margin:12px 0}
+        .feedback th,.feedback td{padding:10px 14px;text-align:left;border-bottom:1px solid #262636}
+        .feedback th{color:#94a3b8;font-weight:500;font-size:13px}
+        .feedback td{color:#cbd5e1}
+        .arrow{color:#38bdf8;font-weight:700}
+        .transcript{background:#1a1a24;border-radius:12px;padding:28px;font-size:14px;line-height:2;color:#94a3b8;white-space:pre-wrap;word-break:break-word;font-family:'JetBrains Mono','Noto Sans KR',monospace}
+        .transcript .tutor{color:#38bdf8}
+        .transcript .student{color:#a78bfa}
+        @media(max-width:640px){.header{padding:32px 16px}.header h1{font-size:22px}.cta-btn{padding:14px 28px;font-size:15px}.container{padding:0 16px 60px}}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-date">2026년 08월 17일</div>
+        <h1>📚 전화영어 복습</h1>
+        <div class="header-meta">
+            <span>⏱ 20분 11초</span>
+            <span>🎙 전화영어_025180304_20260817170028.m4a</span>
+        </div>
+    </div>
+    <div class="cta-section">
+        <button class="cta-btn" onclick="startReview()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Gemini에서 복습 대화 시작하기
+        </button>
+        <div class="cta-sub">클릭하면 프롬프트가 복사되고 Gemini가 열립니다</div>
+    </div>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('feedback')">📋 AI 피드백</button>
+            <button class="tab" onclick="switchTab('transcript')">🎙 수업 전사</button>
+        </div>
+        <div id="tab-feedback" class="tab-content active">
+            <div class="feedback"><h2>따뜻하고 실용적인 영어 코칭: Joey님, 멋진 대화였습니다!</h2>
+<br>
+<p>Joey님, 안녕하세요! 바쁜 스케줄 속에서도 전화영어를 놓치지 않고 꾸준히 노력하시는 모습에 정말 큰 박수를 보내드립니다. 특히 아드님과의 세계 여행이라는 멋진 목표를 위해 영어 공부를 하시는 스토리가 인상 깊었어요. 오늘 대화도 아주 즐거웠습니다!</p>
+<br>
+<br>
+<h2>0. 📌 Topic</h2>
+<p>Topic: Discussing travel plans, family trips, and interesting animal behaviors.</p>
+<br>
+<br>
+<h2>1. 📊 오늘의 대화 요약 (Summary)</h2>
+<p>오늘은 Joey님의 가족 여행 계획에 대한 이야기로 시작했습니다. 아드님의 생일을 맞아 시안으로 떠나는 여행과 10년 후 아드님과 함께 세계 여행을 하겠다는 멋진 목표에 대해 대화했죠. 이어서 이상적인 여행지에 대한 생각과 발리에서의 원숭이 에피소드, 그리고 원숭이들이 스마트폰을 음식과 '거래'한다는 흥미로운 이야기도 나누었습니다.</p>
+<br>
+<br>
+<h2>2. 💬 유창성 업그레이드 (Fluency & Natural Flow)</h2>
+<br>
+<p>Joey님이 말씀하신 표현들을 더 자연스럽고 유창하게 다듬어 보아요.</p>
+<br>
+<div class="numbered"><strong>1.</strong> ❌ <strong>As Said</strong>: "My son and me and my wife."</div>
+<p>✅ <strong>Natural</strong>: "My son, my wife, and I."</p>
+<p>💎 <strong>Professional</strong>: "My family, including my son, my wife, and I."</p>
+<p>💡 <strong>코칭 포인트</strong>: 문장의 주어로 자신과 다른 사람들을 나열할 때는 항상 'I'를 마지막에 둡니다.</p>
+<br>
+<div class="numbered"><strong>2.</strong> ❌ <strong>As Said</strong>: "Is it possible to free talking?"</div>
+<p>✅ <strong>Natural</strong>: "Is free talking possible?" or "Can we just chat?"</p>
+<p>💎 <strong>Professional</strong>: "Would it be possible to have an open discussion?"</p>
+<p>💡 <strong>코칭 포인트</strong>: "Free talking"은 콩글리시입니다. 격식 없는 대화를 요청할 때는 "Is free talking possible?"처럼 명사구로 질문할 수도 있지만, "Can we just chat?" 또는 "Can we have a free conversation?"이 더 자연스럽습니다.</p>
+<br>
+<div class="numbered"><strong>3.</strong> ❌ <strong>As Said</strong>: "we will go twice travel abroad per year."</div>
+<p>✅ <strong>Natural</strong>: "we will travel abroad twice a year."</p>
+<p>💎 <strong>Professional</strong>: "we plan to take two international trips annually."</p>
+<p>💡 <strong>코칭 포인트</strong>: 빈도를 말할 때는 "per year"보다 "a year"가 더 흔합니다. 또한 "go travel"은 보통 "travel"로 간단히 줄여서 사용합니다.</p>
+<br>
+<br>
+<h2>3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)</h2>
+<br>
+<p>이번 대화에서 Joey님이 반복적으로 사용한 문법 패턴은 <strong>부적절한 비교급 표현 (Incorrect Comparative Forms)</strong> 입니다.</p>
+<br>
+<p>Category: Incorrect Comparative Forms</p>
+<br>
+<table>
+<tr><th>❌ 학습자 원문 (As Said)</th><th>✅ 교정 예시 (Corrected)</th></tr>
+<tr><td>"That is <strong>more better</strong>."</td><td>"That is <strong>much better</strong>." 또는 "That's <strong>better</strong>."</td></tr>
+<tr><td>"So usually if we pay it a low, but the quality is so great."</td><td>"So usually if we pay <strong>a low price</strong>, the quality is so great."</td></tr>
+</table>
+<br>
+<p>📌 <strong>핵심 규칙</strong>: 'more'는 형용사나 부사의 비교급을 만들 때 사용하지만, 이미 비교급 형태인 'better' 앞에는 붙이지 않습니다. 'better'는 'good'의 비교급입니다. 또한, 'low'는 형용사이므로 명사(price)와 함께 쓰거나 부사(lowly)로 사용해야 합니다.</p>
+<br>
+<p>🔁 <strong>따라 읽기 (Read Aloud)</strong>:</p>
+<p>🗣️ "That is much better."</p>
+<p>🗣️ "Usually, if we pay a low price, the quality is great."</p>
+<br>
+<br>
+<h2>4. 📗 어휘 확장 (Vocabulary Vault)</h2>
+<br>
+<p>업무 환경에서도 유용하게 쓸 수 있는 어휘들을 배워볼까요?</p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>depart</strong> /dɪˈpɑːrt/ (동사)</div>
+<p>뜻: (어떤 곳을) 떠나다, 출발하다</p>
+<p>실전 예문: Our team will <strong>depart</strong> for the client meeting at 9 AM tomorrow.</p>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>destination</strong> /ˌdɛstɪˈneɪʃən/ (명사)</div>
+<p>뜻: 목적지, 행선지</p>
+<p>실전 예문: Our ultimate <strong>destination</strong> for this project is market leadership.</p>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>adjust</strong> /əˈdʒʌst/ (동사)</div>
+<p>뜻: 적응하다, 조절하다, 조정하다</p>
+<p>실전 예문: We need to <strong>adjust</strong> our strategy to the changing market conditions.</p>
+<br>
+<div class="numbered"><strong>4.</strong> <strong>trade</strong> /treɪd/ (동사, 명사)</div>
+<p>뜻: (동) 거래하다, 교환하다; (명) 거래, 교역</p>
+<p>실전 예문: We often <strong>trade</strong> insights with our international partners to foster innovation.</p>
+<br>
+<div class="numbered"><strong>5.</strong> <strong>precious</strong> /ˈprɛʃəs/ (형용사)</div>
+<p>뜻: 귀중한, 소중한</p>
+<p>실전 예문: Time is a <strong>precious</strong> commodity in project management, so we must use it wisely.</p>
+<br>
+<br>
+<h2>5. 📝 실전 복습 챌린지 (Practice)</h2>
+<br>
+<p>오늘 배운 표현과 문법을 활용하여 영작해 보세요!</p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>상황</strong>: 당신은 다음 주에 해외 출장을 갈 예정이며, 이를 위해 몇 가지 준비물이 필요합니다.</div>
+<p><strong>영작</strong>: "다음 주에 해외 출장을 가기 위해 몇 가지 준비물이 필요해요."</p>
+<p><details></p>
+<p><summary>모범 답안</summary></p>
+<p>I need some supplies for my overseas business trip next week.</p>
+<p></details></p>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>상황</strong>: 회의가 끝난 후, 당신은 동료들에게 다음 프로젝트에 대해 논의하기 위해 잠시 시간을 내달라고 요청합니다.</div>
+<p><strong>영작</strong>: "회의 후에 다음 프로젝트에 대해 잠시 논의할 수 있을까요?"</p>
+<p><details></p>
+<p><summary>모범 답안</summary></p>
+<p>After the meeting, can we chat briefly about the next project?</p>
+<p></details></p>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>상황</strong>: 당신은 현재 진행 중인 프로젝트의 목표를 설명하며, 시장 변화에 따라 전략을 조정해야 한다고 강조합니다.</div>
+<p><strong>영작</strong>: "이 프로젝트의 궁극적인 목적지는 성공적인 시장 진출이며, 우리는 시장 변화에 맞춰 전략을 조정해야 합니다."</p>
+<p><details></p>
+<p><summary>모범 답안</summary></p>
+<p>The ultimate destination for this project is successful market entry, and we must adjust our strategy according to market changes.</p>
+<p></details></p>
+<br>
+<br>
+<h2>6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)</h2>
+<br>
+<p>✨ <strong>Good Job</strong>: "Every city has pros and cons."</p>
+<p>Joey님, 이 문장은 정말 간결하고 명확하게 자신의 생각을 전달했습니다. 'pros and cons'라는 표현도 아주 정확하게 사용하셨고, 원어민처럼 자연스러운 문장이었어요. 어떤 상황에서든 자신의 의견을 자신감 있게 표현하는 데 큰 도움이 될 겁니다!</p>
+<br>
+<p>🚀 <strong>내일의 한 문장</strong>: 다음 수업 시작 시, 튜터에게 오늘 배운 표현을 활용하여 이렇게 말해보세요.</p>
+<p>"I'm excited to <strong>depart</strong> for my trip soon. What's your dream <strong>destination</strong>?"</p>
+<p>(곧 여행을 떠날 생각에 설레네요. 튜터님의 꿈의 목적지는 어디인가요?)</p>
+<br>
+<br>
+<h2>[성과 지표]</h2>
+<br>
+<p><strong>유창성 점수</strong>: 7.5/10</p>
+<br>
+<p><strong>근거</strong>: Joey님은 다양한 주제에 대해 막힘없이 자신의 생각을 표현할 수 있는 좋은 유창성을 가지고 있습니다. 대화의 흐름을 잘 이어갔고, 복잡한 아이디어도 설명하려는 노력이 돋보였습니다. 다만, 몇몇 문장에서 어색한 어순이나 콩글리시 표현, 그리고 반복적인 문법 오류(예: 비교급)가 나타나 더 자연스러운 흐름을 방해하는 경우가 있었습니다. 하지만 이는 꾸준한 연습으로 충분히 개선될 수 있는 부분입니다.</p>
+<br>
+<p><strong>다음 수업 '원포인트 액션 플랜'</strong>:</p>
+<p>다음 수업에서는 <strong>"부적절한 비교급 표현"</strong> 교정에 집중하여, 'more better'와 같은 이중 비교급 오류를 줄이고, 형용사/부사의 올바른 비교급 형태를 사용하는 연습을 해보겠습니다. 또한, 문장 내에서 동사나 명사를 더 자연스럽게 연결하는 방법을 함께 고민해 볼 예정입니다.</p></div>
+        </div>
+        <div id="tab-transcript" class="tab-content">
+            <div class="transcript"><span class="tutor">[Tutor]</span> Hello?
+<span class="tutor">[Tutor]</span> Hi, how are you?
+[Joey] It&#x27;s just a moment, please.
+[Joey] Is it just a normal day?
+<span class="tutor">[Tutor]</span> Hello, can you hear me?
+[Joey] Hello, sorry.
+<span class="tutor">[Tutor]</span> Hi.
+[Joey] Yeah, sorry to share.
+[Joey] Yeah, it is a temporary place, so I can prepare for my class.
+<span class="tutor">[Tutor]</span> Ah, okay.
+<span class="tutor">[Tutor]</span> So are you outside?
+[Joey] Ah, yes, you&#x27;re right.
+[Joey] Yeah, I&#x27;m shopping for my clothes for travel.
+[Joey] But it&#x27;s okay.
+[Joey] Yeah, I moved the place, so it&#x27;s okay and it&#x27;s possible to take a class.
+<span class="tutor">[Tutor]</span> How are you today?
+<span class="tutor">[Tutor]</span> Oh, that&#x27;s...
+[Joey] I&#x27;m good, thanks.
+[Joey] And how are you?
+<span class="tutor">[Tutor]</span> Yeah, of course. I&#x27;m good. I&#x27;m good. Yeah, it&#x27;s the holiday in Korea, so I&#x27;m good.
+<span class="tutor">[Tutor]</span> That&#x27;s good. That&#x27;s good. So you&#x27;re enjoying your holiday by going shopping?
+[Joey] Ah, yes, yes, because this weekend, this week is my son&#x27;s birthday week, so I have a plan to travel with my family, so I need some clothes for travel.
+<span class="tutor">[Tutor]</span> Oh, that&#x27;s good.
+<span class="tutor">[Tutor]</span> That&#x27;s good. Do you know where you&#x27;re traveling to?
+[Joey] Ah, yes. That place is China, in Xi&#x27;an.
+[Joey] That is the oldest capital city in China.
+[Joey] So we will go together with my family.
+[Joey] My son and me and my wife.
+[Joey] Yeah, that is the...
+<span class="tutor">[Tutor]</span> Wow.
+<span class="tutor">[Tutor]</span> This is because it&#x27;s his birthday?
+[Joey] Yeah, because tomorrow is my son&#x27;s birthday, but I will go back to my office, so I can&#x27;t see my son. So we had some small party in the lunch, and then in the weekend we will depart to Xi&#x27;an in China.
+<span class="tutor">[Tutor]</span> Wow, I like that. I like that. Why do you like that? Wonderful.
+<span class="tutor">[Tutor]</span> Okay, why do I like that? Uh-huh. I think it&#x27;s a great thing that, you know, your child can get to travel and explore from a young age, you know? Yeah, so this also teaches him that when he grows up and he has children, he can travel and explore with his children.
+[Joey] You&#x27;re right, you&#x27;re right. Good. The child memory is so important.
+<span class="tutor">[Tutor]</span> Yeah, you&#x27;re right. True, true, true. I like that. I like that. Wonderful.
+<span class="tutor">[Tutor]</span> So thank you so much for coming, for taking the lesson, Joey. My name is Cynthia. I&#x27;ve been teaching English for over four years now, and I&#x27;m happy to have you in the lesson. It&#x27;s so nice to meet you.
+[Joey] Oh, nice to meet you. My name is Joey. Yeah, I&#x27;m Korean.
+<span class="tutor">[Tutor]</span> You&#x27;re Korean.
+[Joey] And these days, I learn English because 10 years later, my son becomes 20 years old. And we had a promise to go travel in the world. So that&#x27;s why I practice English to use the global English.
+<span class="tutor">[Tutor]</span> So you think in 10 years?
+[Joey] Yes, now he&#x27;s 10 years old. And 10 years later, he becomes 20 years old. And then we will go to travel in the world together.
+<span class="tutor">[Tutor]</span> I like that.
+[Joey] Yes, yes.
+<span class="tutor">[Tutor]</span> I like that so much for him.
+<span class="tutor">[Tutor]</span> So in this case, you&#x27;re going to say 10 years from now.
+[Joey] Yes.
+[Joey] Yes.
+[Joey] My son will be 20.
+<span class="tutor">[Tutor]</span> Will be 20.
+[Joey] Ah, yes. That is more better.
+<span class="tutor">[Tutor]</span> Yeah, it&#x27;s better.
+[Joey] Yeah.
+[Joey] Thank you.
+<span class="tutor">[Tutor]</span> Thank you.
+<span class="tutor">[Tutor]</span> So before we carry on, I know that you&#x27;re shopping right now. So I just want to know from you, would you like us to have a conversation for this lesson? Or will you be able to access the textbook? What would you like us to do?
+[Joey] Is it possible to free talking? Because it is impossible to check my mobile phone. So if possible, I want to free talking.
+<span class="tutor">[Tutor]</span> That&#x27;s good.
+<span class="tutor">[Tutor]</span> That&#x27;s good. All right.
+<span class="tutor">[Tutor]</span> So let&#x27;s go back to you said 10 years from now, your son will be 20 and you made a promise to each other that when he is 20, you&#x27;re going to travel the world.
+[Joey] Yes, yes, you&#x27;re right. My son and me promised together, but nowadays he thinks it is a little difficult because if he grows up, he has some relationship to other people and he also studies in university. So I think it is difficult. So we have different appointments, different promise.
+[Joey] Yeah, we will go twice travel abroad per year. And then 10 years later, we visit 20 cities in the world. So that is plan B.
+[Joey] Yeah.
+[Joey] That is plan B.
+<span class="tutor">[Tutor]</span> I like that.
+<span class="tutor">[Tutor]</span> So you have a plan A and a plan B.
+[Joey] Yeah, we mix them.
+[Joey] Yeah, plan A is to go together, yes, for one year, travel in the world 10 years later. And plan B is to travel twice per year. So we visit twice per year, travel, you know, abroad. Yeah, so, yeah, that travel also includes that plan B, to go to Xi&#x27;an.
+<span class="tutor">[Tutor]</span> I think that&#x27;s amazing. And when you are, when you travel to this place, my question is, do you plan to travel? Okay, let me ask you this. Where is the place that you would say you really, really want to travel to? What&#x27;s your dream destination?
+[Joey] My dream destination? I think there is no fantasy of the land. Every city has pros and cons. If we visit Hawaii, that environment is great, but that price is expensive and it is similar weather and there are so many bugs in the land. So, I think every place has pros and cons. I think the best destination is just we will go to every place is the best place to travel.
+<span class="tutor">[Tutor]</span> I like that.
+[Joey] And December, yeah, we will go to Spain. And that is our plan. But my son is young, so usually we travel to nearby country, usually Asia or some Middle Asia. So it is first time to Europe. So I&#x27;m a little excited and a little oppressed to go far away with my son.
+<span class="tutor">[Tutor]</span> I can definitely understand that. It does make sense because you are moving into a whole different territory than your own. You are going into places that you, like a whole new place that you&#x27;ve never been to outside of your continent.
+[Joey] Yeah, you&#x27;re right. It&#x27;s correct. And the Spanish also use the Spanish, so not the English. So, it is more difficult to adjust to using language. So, yeah, I need more information and practice more English. Yeah.
+[Joey] How about you?
+[Joey] Okay, go on, teacher. Sorry.
+<span class="tutor">[Tutor]</span> Yes, you can ask.
+[Joey] Ah, yes. I was wondering if you had a travel this summer or this year.
+<span class="tutor">[Tutor]</span> Right now, we&#x27;re still in winter in my country. I&#x27;m from South Africa.
+[Joey] Ah, yeah. It&#x27;s nice.
+<span class="tutor">[Tutor]</span> So we&#x27;re still in winter, but even if the summer comes, I will not be traveling because I don&#x27;t have that kind of money to go traveling.
+[Joey] Ah, yes. I see, I see. When I was young, it was a similar situation. So if I traveled to a close country, I always moved some luggage to other people and made money.
+<span class="tutor">[Tutor]</span> So yeah, yeah, so right. So I, when I get the chance or when I get the opportunity to make money, I will, the first place that I want to go to actually is I want, I want to visit an island, maybe Bali, maybe Mauritius. Um, yeah, I want to either go to Bali or Mauritius. Those are my first places.
+[Joey] Yes, you want to go to a beautiful beach.
+[Joey] And nice sand.
+[Joey] And cocktails.
+<span class="tutor">[Tutor]</span> Yes, it&#x27;s beautiful.
+<span class="tutor">[Tutor]</span> Bali is such a great place.
+[Joey] You&#x27;ve been there?
+[Joey] Oh, yes, yes. Maybe two, three years ago, my family visited there and stayed one week, just a short time. But it is so nice and amazing because it has a low price in the product and beautiful scene, yeah, in a beach. And resort is great because there are so many resorts in Bali, Island. So there are competition to service and quality of the service and price. So usually if we pay it a low, but the quality is so great. So I love that place, Bali.
+<span class="tutor">[Tutor]</span> I am so jealous of you.
+[Joey] And there are so many monkeys in that city.
+[Joey] Yeah, so it is a little dangerous.
+<span class="tutor">[Tutor]</span> Okay, then I don&#x27;t like.
+[Joey] Yeah, except them.
+<span class="tutor">[Tutor]</span> I don&#x27;t like monkeys.
+[Joey] Do you like monkeys or not?
+<span class="tutor">[Tutor]</span> No, no, no, no, no. I don&#x27;t like monkeys. So what you&#x27;re telling me is that when I&#x27;m in Bali, I always have to be chasing away monkeys?
+[Joey] Uh-huh.
+<span class="tutor">[Tutor]</span> Oh.
+[Joey] Oh, yes.
+<span class="tutor">[Tutor]</span> I don&#x27;t want to do that.
+[Joey] When I visit there, I said to my son, &quot;Please be careful to monkeys.&quot; &quot;Please be careful of my monkeys.&quot; But 10 minutes later, when I back to see my son, he fought with a monkey.
+<span class="tutor">[Tutor]</span> Oh my goodness.
+[Joey] Yeah, so easy. So I will run to him, run to them and prepare that situation.
+<span class="tutor">[Tutor]</span> So you&#x27;re going to teach him.
+[Joey] Yeah, that&#x27;s dangerous.
+[Joey] Yeah, monkey.
+<span class="tutor">[Tutor]</span> Yes, monkeys are actually dangerous because I remember one day we went to our national park.
+[Joey] National park, yeah.
+<span class="tutor">[Tutor]</span> Because we have one of the best national parks in the world.
+[Joey] Yeah, yeah.
+<span class="tutor">[Tutor]</span> So as we were driving in the park, there are these places because the National Park is so big. There are these stops where you can use the bathroom. There are restaurants. You can sit down and relax and sometimes watch the animals. So we were in one of these resting places, and we were just outside looking at things, you know. So we were standing in front of something that looks like a bridge. So when you&#x27;re standing on that bridge, it&#x27;s like a balcony, a natural balcony.
+[Joey] Balcony, yes.
+<span class="tutor">[Tutor]</span> Yeah, you could see the elephants down below.
+[Joey] Wow.
+<span class="tutor">[Tutor]</span> So as we were sitting there, my nephew is in the car. He was probably eating chips or something. Out of nowhere, I just hear him scream, like we hear him scream, we run to the car, we find that there&#x27;s a monkey in the car with him, and the monkey took his chips and ran away. And he was actually, he was just actually scared that this animal came into the car and took my food. So I know monkeys are very... Yeah, monkeys are not the best animals. I don&#x27;t like them.
+[Joey] Yes, I see. I understand. Yeah. When I see the monkeys, some smart monkey is to steal some smartphone from the people.
+[Joey] So...
+[Joey] And then...
+[Joey] Yeah, steal their every smartphone. And then they are traded for the food. The smartphone and the food.
+<span class="tutor">[Tutor]</span> So that is so smart. They are so smart. Stealing smartphones. But what are they doing with the smartphone?
+[Joey] I don&#x27;t know. Just taken them and then he wanted to replace, he plays, uh, how can I say, replace to put and smartphone for example. Yeah, the monkey wanted to put, but the people wanted to smartphone, so they are, yeah, this place, how can I say that the words that replace? Mmm, if I want to buy, buy, I forgot that word. Yes.
+<span class="tutor">[Tutor]</span> Purchase?
+[Joey] For example, if we go to the market and then we, long time ago, if we don&#x27;t have money at the time, I have an apple, you have the peach, we have some replace. How can I say?
+<span class="tutor">[Tutor]</span> Oh, trade.
+[Joey] Yeah, they trade. The monkey trades smartphone for food. That is so smart monkey.
+<span class="tutor">[Tutor]</span> Oh wow, they actually have the thought to trade food?
+[Joey] Yeah, the first they are stealing the human smartphone and then he trades the food for that smartphone. Yeah, it&#x27;s real.
+<span class="tutor">[Tutor]</span> These things are actually smart.
+[Joey] Yeah, that is smart.
+<span class="tutor">[Tutor]</span> So he decided, hey, listen, I&#x27;m going to trade some food with the smartphone.
+[Joey] Yeah, smartphone.
+<span class="tutor">[Tutor]</span> That is actually pretty funny.
+[Joey] Yes, maybe they learned the experience when they stole the tourist&#x27;s smartphone. And then every people, every tourist is there, are afraid of that situation and they want to trade something, the food or the precious thing. So they want the monkey trade, they want the experience of that situation. And then they only, yeah, stealing the smartphone nowadays.
+<span class="tutor">[Tutor]</span> That does make sense. Yes.
+<span class="tutor">[Tutor]</span> I mean, but it&#x27;s crazy and it&#x27;s interesting. How would a monkey think to steal a smartphone and trade it for food?
+[Joey] Yeah.
+<span class="tutor">[Tutor]</span> You know?
+[Joey] I don&#x27;t know.
+<span class="tutor">[Tutor]</span> I don&#x27;t even know how they think, first of all. That&#x27;s very smart. But I do believe that every animal has a form of communication.
+<span class="tutor">[Tutor]</span> But to think that they can think of trading, that&#x27;s just another level of interesting for me.
+[Joey] Yeah, you&#x27;re right. Me too.
+<span class="tutor">[Tutor]</span> I would never think that that would be the case. All I know is that they aren&#x27;t scared of people. They don&#x27;t care about the fact that you are there. They just want to get something to eat always. That&#x27;s one thing that I know.
+[Joey] I see.
+[Joey] Yes.
+[Joey] Okay.
+[Joey] Okay.
+<span class="tutor">[Tutor]</span> All right. So, how are you going to spend the rest of your day today? What are you going to do to finish your day?
+[Joey] Yeah, I will have some shopping, my clothes for travel. And then go back to my home. And then I will go back to my office. Because I only stay weekend in my home. And normal day, I work in another city. So, tonight I will go back to my workplace.
+<span class="tutor">[Tutor]</span> That&#x27;s good.
+[Joey] Yes?
+<span class="tutor">[Tutor]</span> Yes, it&#x27;s finished. That&#x27;s it, wonderful. So thank you so much for the beautiful conversation, Joey. I wish you all the best on your travels. And it was actually very good because you were able to express yourself well. I was able to understand everything you were saying. So that&#x27;s a good thing. My advice is continue learning more vocabulary to help you express yourself better. But thank you so much. Have a great evening, and I hope to talk to you next time.
+[Joey] Thank you for your class. Have a nice day. Bye bye, teacher.
+<span class="tutor">[Tutor]</span> Thank you. Bye bye. Take care.</div>
+        </div>
+    </div>
+    <div class="toast" id="toast">✅ 프롬프트가 복사되었습니다!</div>
+    <script>
+        const REVIEW_PROMPT="너는 나의 영어 회화 복습 파트너야. 오늘 내 전화영어 수업 내용을 기반으로 대화하면서 복습을 도와줘.\n\n[오늘 수업 전사 내용]\n[Tutor] Hello?\n[Tutor] Hi, how are you?\n[Joey] It's just a moment, please.\n[Joey] Is it just a normal day?\n[Tutor] Hello, can you hear me?\n[Joey] Hello, sorry.\n[Tutor] Hi.\n[Joey] Yeah, sorry to share.\n[Joey] Yeah, it is a temporary place, so I can prepare for my class.\n[Tutor] Ah, okay.\n[Tutor] So are you outside?\n[Joey] Ah, yes, you're right.\n[Joey] Yeah, I'm shopping for my clothes for travel.\n[Joey] But it's okay.\n[Joey] Yeah, I moved the place, so it's okay and it's possible to take a class.\n[Tutor] How are you today?\n[Tutor] Oh, that's...\n[Joey] I'm good, thanks.\n[Joey] And how are you?\n[Tutor] Yeah, of course. I'm good. I'm good. Yeah, it's the holiday in Korea, so I'm good.\n[Tutor] That's good. That's good. So you're enjoying your holiday by going shopping?\n[Joey] Ah, yes, yes, because this weekend, this week is my son's birthday week, so I have a plan to travel with my family, so I need some clothes for travel.\n[Tutor] Oh, that's good.\n[Tutor] That's good. Do you know where you're traveling to?\n[Joey] Ah, yes. That place is China, in Xi'an.\n[Joey] That is the oldest capital city in China.\n[Joey] So we will go together with my family.\n[Joey] My son and me and my wife.\n[Joey] Yeah, that is the...\n[Tutor] Wow.\n[Tutor] This is because it's his birthday?\n[Joey] Yeah, because tomorrow is my son's birthday, but I will go back to my office, so I can't see my son. So we had some small party in the lunch, and then in the weekend we will depart to Xi'an in China.\n[Tutor] Wow, I like that. I like that. Why do you like that? Wonderful.\n[Tutor] Okay, why do I like that? Uh-huh. I think it's a great thing that, you know, your child can get to travel and explore from a young age, you know? Yeah, so this also teaches him that when he grows up and he has children, he can travel and explore with his children.\n[Joey] You're right, you're right. Good. The child memory is so important.\n[Tutor] Yeah, you're right. True, true, true. I like that. I like that. Wonderful.\n[Tutor] So thank you so much for coming, for taking the lesson, Joey. My name is Cynthia. I've been teaching English for over four years now, and I'm happy to have you in the lesson. It's so nice to meet you.\n[Joey] Oh, nice to meet you. My name is Joey. Yeah, I'm Korean.\n[Tutor] You're Korean.\n[Joey] And these days, I learn English because 10 years later, my son becomes 20 years old. And we had a promise to go travel in the world. So that's why I practice English to use the global English.\n[Tutor] So you think in 10 years?\n[Joey] Yes, now he's 10 years old. And 10 years later, he becomes 20 years old. And then we will go to travel in the world together.\n[Tutor] I like that.\n[Joey] Yes, yes.\n[Tutor] I like that so much for him.\n[Tutor] So in this case, you're going to say 10 years from now.\n[Joey] Yes.\n[Joey] Yes.\n[Joey] My son will be 20.\n[Tutor] Will be 20.\n[Joey] Ah, yes. That is more better.\n[Tutor] Yeah, it's better.\n[Joey] Yeah.\n[Joey] Thank you.\n[Tutor] Thank you.\n[Tutor] So before we carry on, I know that you're shopping right now. So I just want to know from you, would you like us to have a conversation for this lesson? Or will you be able to access the textbook? What would you like us to do?\n[Joey] Is it possible to free talking? Because it is impossible to check my mobile phone. So if possible, I want to free talking.\n[Tutor] That's good.\n[Tutor] That's good. All right.\n[Tutor] So let's go back to you said 10 years from now, your son will be 20 and you made a promise to each other that when he is 20, you're going to travel the world.\n[Joey] Yes, yes, you're right. My son and me promised together, but nowadays he thinks it is a little difficult because if he grows up, he has some relationship to other people and he also studies in university. So I think it is difficult. So we have different appointments, different promise.\n[Joey] Yeah, we will go twice travel abroad per year. And then 10 years later, we visit 20 cities in the world. So that is plan B.\n[Joey] Yeah.\n[Joey] That is plan B.\n[Tutor] I like that.\n[Tutor] So you have a plan A and a plan B.\n[Joey] Yeah, we mix them.\n[Joey] Yeah, plan A is to go together, yes, for one year, travel in the world 10 years later. And plan B is to travel twice per year. So we visit twice per year, travel, you know, abroad. Yeah, so, yeah, that travel also includes that plan B, to go to Xi'an.\n[Tutor] I think that's amazing. And when you are, when you travel to this place, my question is, do you plan to travel? Okay, let me ask you this. Where is the place that you would say you really, really want to travel to? What's your dream destination?\n[Joey] My dream destination? I think there is no fantasy of the land. Every city has pros and cons. If we visit Hawaii, that environment is great, but that price is expensive and it is similar weather and there are so many bugs in the land. So, I think every place has pros and cons. I think the best destination is just we will go to every place is the best place to travel.\n[Tutor] I like that.\n[Joey] And December, yeah, we will go to Spain. And that is our plan. But my son is young, so usually we travel to nearby country, usually Asia or some Middle Asia. So it is first time to Europe. So I'm a little excited and a little oppressed to go far away with my son.\n[Tutor] I can definitely understand that. It does make sense because you are moving into a whole different territory than your own. You are going into places that you, like a whole new place that you've never been to outside of your continent.\n[Joey] Yeah, you're right. It's correct. And the Spanish also use the Spanish, so not the English. So, it is more difficult to adjust to using language. So, yeah, I need more information and practice more English. Yeah.\n[Joey] How about you?\n[Joey] Okay, go on, teacher. Sorry.\n[Tutor] Yes, you can ask.\n[Joey] Ah, yes. I was wondering if you had a travel this summer or this year.\n[Tutor] Right now, we're still in winter in my country. I'm from South Africa.\n[Joey] Ah, yeah. It's nice.\n[Tutor] So we're still in winter, but even if the summer comes, I will not be traveling because I don't have that kind of money to go traveling.\n[Joey] Ah, yes. I see, I see. When I was young, it was a similar situation. So if I traveled to a close country, I always moved some luggage to other people and made money.\n[Tutor] So yeah, yeah, so right. So I, when I get the chance or when I get the opportunity to make money, I will, the first place that I want to go to actually is I want, I want to visit an island, maybe Bali, maybe Mauritius. Um, yeah, I want to either go to Bali or Mauritius. Those are my first places.\n[Joey] Yes, you want to go to a beautiful beach.\n[Joey] And nice sand.\n[Joey] And cocktails.\n[Tutor] Yes, it's beautiful.\n[Tutor] Bali is such a great place.\n[Joey] You've been there?\n[Joey] Oh, yes, yes. Maybe two, three years ago, my family visited there and stayed one week, just a short time. But it is so nice and amazing because it has a low price in the product and beautiful scene, yeah, in a beach. And resort is great because there are so many resorts in Bali, Island. So there are competition to service and quality of the service and price. So usually if we pay it a low, but the quality is so great. So I love that place, Bali.\n[Tutor] I am so jealous of you.\n[Joey] And there are so many monkeys in that city.\n[Joey] Yeah, so it is a little dangerous.\n[Tutor] Okay, then I don't like.\n[Joey] Yeah, except them.\n[Tutor] I don't like monkeys.\n[Joey] Do you like monkeys or not?\n[Tutor] No, no, no, no, no. I don't like monkeys. So what you're telling me is that when I'm in Bali, I always have to be chasing away monkeys?\n[Joey] Uh-huh.\n[Tutor] Oh.\n[Joey] Oh, yes.\n[Tutor] I don't want to do that.\n[Joey] When I visit there, I said to my son, \"Please be careful to monkeys.\" \"Please be careful of my monkeys.\" But 10 minutes later, when I back to see my son, he fought with a monkey.\n[Tutor] Oh my goodness.\n[Joey] Yeah, so easy. So I will run to him, run to them and prepare that situation.\n[Tutor] So you're going to teach him.\n[Joey] Yeah, that's dangerous.\n[Joey] Yeah, monkey.\n[Tutor] Yes, monkeys are actually dangerous because I remember one day we went to our national park.\n[Joey] National park, yeah.\n[Tutor] Because we have one of the best national parks in the world.\n[Joey] Yeah, yeah.\n[Tutor] So as we were driving in the park, there are these places because the National Park is so big. There are these stops where you can use the bathroom. There are restaurants. You can sit down and relax and sometimes watch the animals. So we were in one of these resting places, and we were just outside looking at things, you know. So we were standing in front of something that looks like a bridge. So when you're standing on that bridge, it's like a balcony, a natural balcony.\n[Joey] Balcony, yes.\n[Tutor] Yeah, you could see the elephants down below.\n[Joey] Wow.\n[Tutor] So as we were sitting there, my nephew is in the car. He was probably eating chips or something. Out of nowhere, I just hear him scream, like we hear him scream, we run to the car, we find that there's a monkey in the car with him, and the monkey took his chips and ran away. And he was actually, he was just actually scared that this animal came into the car and took my food. So I know monkeys are very... Yeah, monkeys are not the best animals. I don't like them.\n[Joey] Yes, I see. I understand. Yeah. When I see the monkeys, some smart monkey is to steal some smartphone from the people.\n[Joey] So...\n[Joey] And then...\n[Joey] Yeah, steal their every smartphone. And then they are traded for the food. The smartphone and the food.\n[Tutor] So that is so smart. They are so smart. Stealing smartphones. But what are they doing with the smartphone?\n[Joey] I don't know. Just taken them and then he wanted to replace, he plays, uh, how can I say, replace to put and smartphone for example. Yeah, the monkey wanted to put, but the people wanted to smartphone, so they are, yeah, this place, how can I say that the words that replace? Mmm, if I want to buy, buy, I forgot that word. Yes.\n[Tutor] Purchase?\n[Joey] For example, if we go to the market and then we, long time ago, if we don't have money at the time, I have an apple, you have the peach, we have some replace. How can I say?\n[Tutor] Oh, trade.\n[Joey] Yeah, they trade. The monkey trades smartphone for food. That is so smart monkey.\n[Tutor] Oh wow, they actually have the thought to trade food?\n[Joey] Yeah, the first they are stealing the human smartphone and then he trades the food for that smartphone. Yeah, it's real.\n[Tutor] These things are actually smart.\n[Joey] Yeah, that is smart.\n[Tutor] So he decided, hey, listen, I'm going to trade some food with the smartphone.\n[Joey] Yeah, smartphone.\n[Tutor] That is actually pretty funny.\n[Joey] Yes, maybe they learned the experience when they stole the tourist's smartphone. And then every people, every tourist is there, are afraid of that situation and they want to trade something, the food or the precious thing. So they want the monkey trade, they want the experience of that situation. And then they only, yeah, stealing the smartphone nowadays.\n[Tutor] That does make sense. Yes.\n[Tutor] I mean, but it's crazy and it's interesting. How would a monkey think to steal a smartphone and trade it for food?\n[Joey] Yeah.\n[Tutor] You know?\n[Joey] I don't know.\n[Tutor] I don't even know how they think, first of all. That's very smart. But I do believe that every animal has a form of communication.\n[Tutor] But to think that they can think of trading, that's just another level of interesting for me.\n[Joey] Yeah, you're right. Me too.\n[Tutor] I would never think that that would be the case. All I know is that they aren't scared of people. They don't care about the fact that you are there. They just want to get something to eat always. That's one thing that I know.\n[Joey] I see.\n[Joey] Yes.\n[Joey] Okay.\n[Joey] Okay.\n[Tutor] All right. So, how are you going to spend the rest of your day today? What are you going to do to finish your day?\n[Joey] Yeah, I will have some shopping, my clothes for travel. And then go back to my home. And then I will go back to my office. Because I only stay weekend in my home. And normal day, I work in another city. So, tonight I will go back to my workplace.\n[Tutor] That's good.\n[Joey] Yes?\n[Tutor] Yes, it's finished. That's it, wonderful. So thank you so much for the beautiful conversation, Joey. I wish you all the best on your travels. And it was actually very good because you were able to express yourself well. I was able to understand everything you were saying. So that's a good thing. My advice is continue learning more vocabulary to help you express yourself better. But thank you so much. Have a great evening, and I hope to talk to you next time.\n[Joey] Thank you for your class. Have a nice day. Bye bye, teacher.\n[Tutor] Thank you. Bye bye. Take care.\n\n[AI 피드백]\n## 따뜻하고 실용적인 영어 코칭: Joey님, 멋진 대화였습니다!\n\nJoey님, 안녕하세요! 바쁜 스케줄 속에서도 전화영어를 놓치지 않고 꾸준히 노력하시는 모습에 정말 큰 박수를 보내드립니다. 특히 아드님과의 세계 여행이라는 멋진 목표를 위해 영어 공부를 하시는 스토리가 인상 깊었어요. 오늘 대화도 아주 즐거웠습니다!\n\n---\n\n### 0. 📌 Topic\nTopic: Discussing travel plans, family trips, and interesting animal behaviors.\n\n---\n\n### 1. 📊 오늘의 대화 요약 (Summary)\n오늘은 Joey님의 가족 여행 계획에 대한 이야기로 시작했습니다. 아드님의 생일을 맞아 시안으로 떠나는 여행과 10년 후 아드님과 함께 세계 여행을 하겠다는 멋진 목표에 대해 대화했죠. 이어서 이상적인 여행지에 대한 생각과 발리에서의 원숭이 에피소드, 그리고 원숭이들이 스마트폰을 음식과 '거래'한다는 흥미로운 이야기도 나누었습니다.\n\n---\n\n### 2. 💬 유창성 업그레이드 (Fluency & Natural Flow)\n\nJoey님이 말씀하신 표현들을 더 자연스럽고 유창하게 다듬어 보아요.\n\n1.  ❌ **As Said**: \"My son and me and my wife.\"\n    ✅ **Natural**: \"My son, my wife, and I.\"\n    💎 **Professional**: \"My family, including my son, my wife, and I.\"\n    💡 **코칭 포인트**: 문장의 주어로 자신과 다른 사람들을 나열할 때는 항상 'I'를 마지막에 둡니다.\n\n2.  ❌ **As Said**: \"Is it possible to free talking?\"\n    ✅ **Natural**: \"Is free talking possible?\" or \"Can we just chat?\"\n    💎 **Professional**: \"Would it be possible to have an open discussion?\"\n    💡 **코칭 포인트**: \"Free talking\"은 콩글리시입니다. 격식 없는 대화를 요청할 때는 \"Is free talking possible?\"처럼 명사구로 질문할 수도 있지만, \"Can we just chat?\" 또는 \"Can we have a free conversation?\"이 더 자연스럽습니다.\n\n3.  ❌ **As Said**: \"we will go twice travel abroad per year.\"\n    ✅ **Natural**: \"we will travel abroad twice a year.\"\n    💎 **Professional**: \"we plan to take two international trips annually.\"\n    💡 **코칭 포인트**: 빈도를 말할 때는 \"per year\"보다 \"a year\"가 더 흔합니다. 또한 \"go travel\"은 보통 \"travel\"로 간단히 줄여서 사용합니다.\n\n---\n\n### 3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)\n\n이번 대화에서 Joey님이 반복적으로 사용한 문법 패턴은 **부적절한 비교급 표현 (Incorrect Comparative Forms)** 입니다.\n\nCategory: Incorrect Comparative Forms\n\n| ❌ 학습자 원문 (As Said)                 | ✅ 교정 예시 (Corrected)                                |\n| :------------------------------------- | :----------------------------------------------------- |\n| \"That is **more better**.\"             | \"That is **much better**.\" 또는 \"That's **better**.\" |\n| \"So usually if we pay it a low, but the quality is so great.\" | \"So usually if we pay **a low price**, the quality is so great.\" |\n\n📌 **핵심 규칙**: 'more'는 형용사나 부사의 비교급을 만들 때 사용하지만, 이미 비교급 형태인 'better' 앞에는 붙이지 않습니다. 'better'는 'good'의 비교급입니다. 또한, 'low'는 형용사이므로 명사(price)와 함께 쓰거나 부사(lowly)로 사용해야 합니다.\n\n🔁 **따라 읽기 (Read Aloud)**:\n🗣️ \"That is much better.\"\n🗣️ \"Usually, if we pay a low price, the quality is great.\"\n\n---\n\n### 4. 📗 어휘 확장 (Vocabulary Vault)\n\n업무 환경에서도 유용하게 쓸 수 있는 어휘들을 배워볼까요?\n\n1.  **depart** /dɪˈpɑːrt/ (동사)\n    뜻: (어떤 곳을) 떠나다, 출발하다\n    실전 예문: Our team will **depart** for the client meeting at 9 AM tomorrow.\n\n2.  **destination** /ˌdɛstɪˈneɪʃən/ (명사)\n    뜻: 목적지, 행선지\n    실전 예문: Our ultimate **destination** for this project is market leadership.\n\n3.  **adjust** /əˈdʒʌst/ (동사)\n    뜻: 적응하다, 조절하다, 조정하다\n    실전 예문: We need to **adjust** our strategy to the changing market conditions.\n\n4.  **trade** /treɪd/ (동사, 명사)\n    뜻: (동) 거래하다, 교환하다; (명) 거래, 교역\n    실전 예문: We often **trade** insights with our international partners to foster innovation.\n\n5.  **precious** /ˈprɛʃəs/ (형용사)\n    뜻: 귀중한, 소중한\n    실전 예문: Time is a **precious** commodity in project management, so we must use it wisely.\n\n---\n\n### 5. 📝 실전 복습 챌린지 (Practice)\n\n오늘 배운 표현과 문법을 활용하여 영작해 보세요!\n\n1.  **상황**: 당신은 다음 주에 해외 출장을 갈 예정이며, 이를 위해 몇 가지 준비물이 필요합니다.\n    **영작**: \"다음 주에 해외 출장을 가기 위해 몇 가지 준비물이 필요해요.\"\n    <details>\n    <summary>모범 답안</summary>\n    I need some supplies for my overseas business trip next week.\n    </details>\n\n2.  **상황**: 회의가 끝난 후, 당신은 동료들에게 다음 프로젝트에 대해 논의하기 위해 잠시 시간을 내달라고 요청합니다.\n    **영작**: \"회의 후에 다음 프로젝트에 대해 잠시 논의할 수 있을까요?\"\n    <details>\n    <summary>모범 답안</summary>\n    After the meeting, can we chat briefly about the next project?\n    </details>\n\n3.  **상황**: 당신은 현재 진행 중인 프로젝트의 목표를 설명하며, 시장 변화에 따라 전략을 조정해야 한다고 강조합니다.\n    **영작**: \"이 프로젝트의 궁극적인 목적지는 성공적인 시장 진출이며, 우리는 시장 변화에 맞춰 전략을 조정해야 합니다.\"\n    <details>\n    <summary>모범 답안</summary>\n    The ultimate destination for this project is successful market entry, and we must adjust our strategy according to market changes.\n    </details>\n\n---\n\n### 6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)\n\n✨ **Good Job**: \"Every city has pros and cons.\"\nJoey님, 이 문장은 정말 간결하고 명확하게 자신의 생각을 전달했습니다. 'pros and cons'라는 표현도 아주 정확하게 사용하셨고, 원어민처럼 자연스러운 문장이었어요. 어떤 상황에서든 자신의 의견을 자신감 있게 표현하는 데 큰 도움이 될 겁니다!\n\n🚀 **내일의 한 문장**: 다음 수업 시작 시, 튜터에게 오늘 배운 표현을 활용하여 이렇게 말해보세요.\n\"I'm excited to **depart** for my trip soon. What's your dream **destination**?\"\n(곧 여행을 떠날 생각에 설레네요. 튜터님의 꿈의 목적지는 어디인가요?)\n\n---\n\n### [성과 지표]\n\n**유창성 점수**: 7.5/10\n\n**근거**: Joey님은 다양한 주제에 대해 막힘없이 자신의 생각을 표현할 수 있는 좋은 유창성을 가지고 있습니다. 대화의 흐름을 잘 이어갔고, 복잡한 아이디어도 설명하려는 노력이 돋보였습니다. 다만, 몇몇 문장에서 어색한 어순이나 콩글리시 표현, 그리고 반복적인 문법 오류(예: 비교급)가 나타나 더 자연스러운 흐름을 방해하는 경우가 있었습니다. 하지만 이는 꾸준한 연습으로 충분히 개선될 수 있는 부분입니다.\n\n**다음 수업 '원포인트 액션 플랜'**:\n다음 수업에서는 **\"부적절한 비교급 표현\"** 교정에 집중하여, 'more better'와 같은 이중 비교급 오류를 줄이고, 형용사/부사의 올바른 비교급 형태를 사용하는 연습을 해보겠습니다. 또한, 문장 내에서 동사나 명사를 더 자연스럽게 연결하는 방법을 함께 고민해 볼 예정입니다.\n\n위 내용을 바탕으로:\n1. 먼저 오늘 수업에서 내가 틀렸거나 어색했던 표현을 하나 골라서, 관련된 상황을 영어로 질문해줘.\n2. 내가 영어로 대답하면, 자연스러운지 확인하고 더 나은 표현이 있으면 알려줘.\n3. 특히 \"반복 실수 패턴\"에서 지적된 부분을 집중적으로 연습시켜줘.\n4. 이런 식으로 오늘 배운 표현들을 하나씩 복습하자.\n5. 한국어 설명은 필요할 때만 간단히, 대화는 최대한 영어로 진행해줘.\n\n그럼 시작하자!";
+        function startReview(){navigator.clipboard.writeText(REVIEW_PROMPT).then(()=>{showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)}).catch(()=>{const t=document.createElement('textarea');t.value=REVIEW_PROMPT;document.body.appendChild(t);t.select();document.execCommand('copy');document.body.removeChild(t);showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)})}
+        function showToast(){const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500)}
+        function switchTab(n){document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',n==='feedback'?i===0:i===1));document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));document.getElementById('tab-'+n).classList.add('active')}
+    </script>
+</body>
+</html>
