@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#0f0f13"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="당근영어"><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="icon" type="image/png" sizes="192x192" href="icon-192.png"><script src="install-banner.js" defer></script><script src="sw-reg.js" defer></script>
+    <title>전화영어 복습 - 2026년 08월 17일</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Noto Sans KR',sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.75;min-height:100vh}
+        .header{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);border-bottom:1px solid rgba(255,255,255,.06);padding:48px 24px 40px;text-align:center}
+        .header-date{font-size:13px;color:#94a3b8;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+        .header h1{font-size:28px;font-weight:700;color:#f1f5f9;margin-bottom:16px}
+        .header-meta{display:flex;justify-content:center;gap:24px;font-size:14px;color:#64748b}
+        .header-meta span{display:flex;align-items:center;gap:6px}
+        .cta-section{text-align:center;padding:40px 24px}
+        .cta-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:linear-gradient(135deg,#38bdf8,#818cf8);color:#fff;font-size:16px;font-weight:600;font-family:'Noto Sans KR',sans-serif;border:none;border-radius:50px;cursor:pointer;transition:all .3s;text-decoration:none;box-shadow:0 4px 24px rgba(56,189,248,.25)}
+        .cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(56,189,248,.35)}
+        .cta-btn svg{width:20px;height:20px}
+        .cta-sub{margin-top:12px;font-size:13px;color:#64748b}
+        .toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#38bdf8;padding:14px 28px;border-radius:12px;font-size:14px;font-weight:500;border:1px solid rgba(56,189,248,.2);box-shadow:0 8px 32px rgba(0,0,0,.4);opacity:0;transition:all .4s cubic-bezier(.16,1,.3,1);z-index:1000}
+        .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+        .container{max-width:720px;margin:0 auto;padding:0 24px 80px}
+        .tabs{display:flex;gap:4px;background:#1a1a24;padding:4px;border-radius:12px;margin-bottom:32px}
+        .tab{flex:1;padding:12px;text-align:center;font-size:14px;font-weight:500;color:#64748b;background:0 0;border:none;border-radius:8px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all .2s}
+        .tab.active{background:#262636;color:#f1f5f9}
+        .tab-content{display:none}.tab-content.active{display:block}
+        .feedback h2{font-size:18px;font-weight:700;color:#f1f5f9;margin:36px 0 16px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.06)}
+        .feedback h2:first-child{margin-top:0}
+        .feedback p{margin:8px 0;color:#cbd5e1}
+        .feedback .item{padding:6px 0 6px 16px;border-left:2px solid #334155;margin:6px 0;color:#cbd5e1}
+        .feedback .numbered{padding:8px 0 8px 16px;color:#cbd5e1}
+        .feedback .numbered strong{color:#38bdf8}
+        .feedback strong{color:#f1f5f9}
+        .feedback code{background:#1e293b;padding:2px 8px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#38bdf8}
+        .feedback table{width:100%;border-collapse:collapse;margin:12px 0}
+        .feedback th,.feedback td{padding:10px 14px;text-align:left;border-bottom:1px solid #262636}
+        .feedback th{color:#94a3b8;font-weight:500;font-size:13px}
+        .feedback td{color:#cbd5e1}
+        .arrow{color:#38bdf8;font-weight:700}
+        .transcript{background:#1a1a24;border-radius:12px;padding:28px;font-size:14px;line-height:2;color:#94a3b8;white-space:pre-wrap;word-break:break-word;font-family:'JetBrains Mono','Noto Sans KR',monospace}
+        .transcript .tutor{color:#38bdf8}
+        .transcript .student{color:#a78bfa}
+        @media(max-width:640px){.header{padding:32px 16px}.header h1{font-size:22px}.cta-btn{padding:14px 28px;font-size:15px}.container{padding:0 16px 60px}}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-date">2026년 08월 17일</div>
+        <h1>📚 전화영어 복습</h1>
+        <div class="header-meta">
+            <span>⏱ 19분 33초</span>
+            <span>🎙 전화영어_025180304_20260817080037.m4a</span>
+        </div>
+    </div>
+    <div class="cta-section">
+        <button class="cta-btn" onclick="startReview()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Gemini에서 복습 대화 시작하기
+        </button>
+        <div class="cta-sub">클릭하면 프롬프트가 복사되고 Gemini가 열립니다</div>
+    </div>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('feedback')">📋 AI 피드백</button>
+            <button class="tab" onclick="switchTab('transcript')">🎙 수업 전사</button>
+        </div>
+        <div id="tab-feedback" class="tab-content active">
+            <div class="feedback"><p>안녕하세요, Joey! 오늘 독립기념일 휴일 잘 보내셨나요? 아드님 생일까지 겹쳐서 더욱 특별한 하루였겠어요. 중국 여행 준비하시면서 지도 앱 문제로 고생하신 이야기도 흥미로웠습니다. 여행 준비부터 공항에서의 경험까지, 다양한 이야기를 나눌 수 있어서 즐거웠어요.</p>
+<br>
+<p>그럼 오늘 대화에 대한 피드백을 드릴게요!</p>
+<br>
+<br>
+<h2>0. 📌 Topic</h2>
+<p>Topic: Discussing holiday plans, upcoming travel preparations, and airport experiences.</p>
+<br>
+<h2>1. 📊 오늘의 대화 요약 (Summary)</h2>
+<p>오늘은 한국의 독립기념일과 Joey 아드님의 생일 파티 계획으로 대화를 시작했습니다. 이어서 곧 떠날 중국 여행을 위해 구글 지도 등 특정 앱 사용 불가에 대한 대비책을 논의했고, 교재를 통해 공항에서의 탑승 수속, 경유, 그리고 비행 중 승무원과 관련된 어휘를 학습하며 공항 이용 경험에 대해 이야기 나누었습니다.</p>
+<br>
+<h2>2. 💬 유창성 업그레이드 (Fluency & Natural Flow)</h2>
+<br>
+<p>Joey가 실제 말한 문장 중, 의미는 통하지만 더 자연스럽게 다듬을 수 있는 표현 3가지를 살펴볼게요.</p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>❌ 학습자 원문 (As Said):</strong> "So, yeah, <strong>every people</strong> feel a little respect day."</div>
+<div class="item"><strong>✅ 자연스러운 표현 (Natural):</strong> "So, yeah, <strong>everyone</strong> feels a sense of respect on this day."</div>
+<div class="item"><strong>💎 비즈니스 표현 (Professional):</strong> "Indeed, <strong>the public</strong> generally observes this day with a sense of reverence."</div>
+<div class="item"><strong>💡 코칭 포인트:</strong> 'Every' 다음에는 보통 단수 명사(예: 'every person')가 오거나, 'everyone' 또는 'all people'을 사용할 수 있습니다. 'everyone'을 사용하면 문장이 더 간결하고 자연스러워집니다.</div>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>❌ 학습자 원문 (As Said):</strong> "Usually my plane <strong>not departs</strong> on time."</div>
+<div class="item"><strong>✅ 자연스러운 표현 (Natural):</strong> "Usually my plane <strong>doesn't depart</strong> on time."</div>
+<div class="item"><strong>💎 비즈니스 표현 (Professional):</strong> "Typically, our flights <strong>do not depart</strong> punctually."</div>
+<div class="item"><strong>💡 코칭 포인트:</strong> 단순 현재 시제 부정문에서는 동사 원형 앞에 'do not' 또는 'does not'을 사용합니다. 'not'만으로는 동사를 부정할 수 없습니다.</div>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>❌ 학습자 원문 (As Said):</strong> "I think usually the nervous and afraid from the we don't know that fact."</div>
+<div class="item"><strong>✅ 자연스러운 표현 (Natural):</strong> "I think usually <strong>nervousness and fear come from</strong> not knowing the facts."</div>
+<div class="item"><strong>💎 비즈니스 표현 (Professional):</strong> "I believe <strong>apprehension often stems from</strong> a lack of familiarity with the situation."</div>
+<div class="item"><strong>💡 코칭 포인트:</strong> 긴장하거나 두려워하는 일반적인 감정을 표현할 때는 명사형인 'nervousness'와 'fear'를 사용하는 것이 더 자연스럽습니다. 또한, 감정이나 문제의 원인을 표현할 때 'come from'을 흔히 사용합니다.</div>
+<br>
+<h2>3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)</h2>
+<br>
+<p>이번 대화에서 Joey가 반복적으로 보인 문법 패턴은 <strong>시제 및 동사 형태의 혼동</strong>입니다. 특히 미래 시제, 과거 시제, 그리고 현재 시제에서의 동사 형태 사용에서 오류가 발견되었습니다.</p>
+<br>
+<p><strong>Category: Verb Tense and Aspect</strong></p>
+<br>
+<table>
+<tr><th>❌ 원문 (As Said)</th><th>✅ 교정 예시 (Corrected)</th></tr>
+<tr><td>So today <strong>I will have</strong> some party with my family.</td><td>So today <strong>I am having</strong> a party with my family. (또는 I am going to have)</td></tr>
+<tr><td>So last night <strong>I will install</strong> my applications.</td><td>So last night <strong>I installed</strong> my applications.</td></tr>
+<tr><td>So some group of people <strong>eating</strong> because they are hungry...</td><td>So some group of people <strong>eat</strong> because they are hungry... (또는 are eating)</td></tr>
+</table>
+<br>
+<p>📌 <strong>핵심 규칙:</strong> 동사의 시제와 형태는 문장이 나타내는 시간(과거, 현재, 미래)과 동작의 진행(완료, 진행 중)에 맞춰 정확하게 사용해야 합니다. 특히, 이미 계획된 미래는 현재 진행형이나 'be going to'를, 과거에 완료된 일은 과거 시제를, 일반적인 사실이나 습관은 단순 현재 시제를 사용합니다.</p>
+<br>
+<p>🔁 <strong>따라 읽기:</strong></p>
+<p>🗣️ "So today I am having a party with my family."</p>
+<p>🗣️ "So last night I installed my applications."</p>
+<p>🗣️ "So some group of people eat because they are hungry."</p>
+<br>
+<h2>4. 📗 어휘 확장 (Vocabulary Vault)</h2>
+<br>
+<p>학습자의 업무 환경에서 바로 쓸 수 있는 유용한 단어 5개를 소개합니다.</p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>punctual</strong> /pʌŋkˈtʃuəl/ (형용사)</div>
+<div class="item">뜻: 시간을 엄수하는, 정확한</div>
+<div class="item">실전 예문: Being <strong>punctual</strong> for meetings is crucial for international business relations.</div>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>apprehension</strong> /ˌæprɪˈhɛnʃən/ (명사)</div>
+<div class="item">뜻: 불안, 우려, 염려</div>
+<div class="item">실전 예문: There is some <strong>apprehension</strong> among investors regarding the new market regulations.</div>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>splurge</strong> /splɜːrdʒ/ (동사)</div>
+<div class="item">뜻: 돈을 물 쓰듯 쓰다, 사치를 부리다 (주로 특정 품목에 큰돈을 쓰는 것)</div>
+<div class="item">실전 예문: We decided to <strong>splurge</strong> on a premium software package to enhance our team's productivity.</div>
+<br>
+<div class="numbered"><strong>4.</strong> <strong>reverence</strong> /ˈrɛvərəns/ (명사)</div>
+<div class="item">뜻: 숭배, 경외심</div>
+<div class="item">실전 예문: The team holds a deep <strong>reverence</strong> for the founder's vision and legacy.</div>
+<br>
+<div class="numbered"><strong>5.</strong> <strong>stem from</strong> /stɛm frʌm/ (동사구)</div>
+<div class="item">뜻: ~에서 유래하다, ~에서 비롯되다</div>
+<div class="item">실전 예문: The current market challenges <strong>stem from</strong> unexpected shifts in global supply chains.</div>
+<br>
+<h2>5. 📝 실전 복습 챌린지 (Practice)</h2>
+<br>
+<p>오늘 배운 표현과 문법을 활용하여 다음 상황을 영어로 작문해 보세요.</p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>[쉬움]</strong> "저는 보통 회의에 늦지 않으려고 노력합니다." (힌트: punctual)</div>
+<div class="item">_모범 답안:_ I usually try to be punctual for meetings.</div>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>[중간]</strong> "새로운 프로젝트에 대한 약간의 우려가 있지만, 우리는 잘 극복할 것이라고 믿습니다." (힌트: apprehension)</div>
+<div class="item">_모범 답안:_ There's some apprehension about the new project, but I believe we'll overcome it well.</div>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>[어려움]</strong> "작년에 우리는 회사 창립 10주년을 기념하기 위해 특별한 저녁 식사에 큰돈을 썼습니다." (힌트: splurge, 과거 시제)</div>
+<div class="item">_모범 답안:_ Last year, we splurged on a special dinner to celebrate our company's 10th anniversary.</div>
+<br>
+<h2>6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)</h2>
+<br>
+<p>✨ <strong>Good Job!</strong></p>
+<p>Joey, 오늘 대화에서 특히 좋았던 문장은 바로 이 부분이에요:</p>
+<p>"When I travel with my family, I just relax in a lounge because I consider my son's health and my wife's health."</p>
+<p>이 문장은 'When I travel with my family'로 상황을 명확히 제시하고, 'I just relax in a lounge'로 자신의 행동을 설명한 뒤, 'because I consider my son's health and my wife's health'로 이유까지 깔끔하게 설명해 주셨어요. 가족을 생각하는 마음이 느껴지는 동시에, 문장 구조도 아주 자연스럽고 정확했습니다!</p>
+<br>
+<p>🚀 <strong>내일의 한 문장:</strong></p>
+<p>다음 수업 시작 시 튜터에게 오늘 배운 표현을 활용하여 이렇게 말해보세요.</p>
+<p>"I'm trying to be more punctual with my tasks, as I believe it helps reduce apprehension for the team."</p>
+<p>(저는 업무에 더 시간을 잘 지키려고 노력하고 있어요. 팀의 불안감을 줄이는 데 도움이 된다고 생각하거든요.)</p>
+<br>
+<br>
+<h2>[성과 지표]</h2>
+<br>
+<p><strong>유창성 점수: 7/10</strong></p>
+<br>
+<p><strong>근거:</strong> Joey는 다양한 주제에 대해 막힘없이 자신의 의견을 표현하고, 질문에 대한 답변도 빠르게 이어갔습니다. 대화의 흐름을 끊지 않고 적극적으로 참여하는 모습이 인상 깊었습니다. 하지만 일부 문법적 오류(특히 시제와 동사 형태)와 다소 어색한 표현들이 자연스러운 흐름을 방해하는 경우가 있었습니다. 그럼에도 불구하고 의사소통에는 전혀 문제가 없었으며, 주제를 확장하고 설명을 덧붙이는 능력은 훌륭했습니다.</p>
+<br>
+<p><strong>다음 수업 '원포인트 액션 플랜':</strong></p>
+<p>다음 수업에서는 <strong>동사의 시제와 형태</strong>에 조금 더 신경 써서 말하는 연습을 해볼까요? 특히 과거에 일어난 일이나 이미 계획된 미래의 일에 대해 말할 때, 어떤 시제를 사용해야 가장 적절할지 한 번 더 생각하고 말하는 습관을 들여보세요. 예를 들어, "Last night I installed..." 또는 "Tomorrow I am meeting..." 과 같이요.</p></div>
+        </div>
+        <div id="tab-transcript" class="tab-content">
+            <div class="transcript">[Joey] Hello, hello, teacher.
+<span class="tutor">[Tutor]</span> Yeah, hi, how are you doing today?
+[Joey] Yeah, it&#x27;s a holiday. I&#x27;m good.
+[Joey] Yeah, how are you today, teacher?
+<span class="tutor">[Tutor]</span> Oh, good. Have you been enjoying your holiday so far?
+[Joey] Yeah, yeah, yeah. It&#x27;s so nice.
+[Joey] It was a nice, yeah, that is Independence Day of Korea from Japan.
+[Joey] So, yeah, every people feel a little respect day. And some people enjoy that day. In my case, August 18th is my son&#x27;s birthday.
+[Joey] So today I will have some party with my family.
+<span class="tutor">[Tutor]</span> Okay, so also a birthday party on the long weekend.
+[Joey] Yeah, that is a long weekend and it&#x27;s a big party.
+[Joey] And this weekend I will go to travel with my family to Xi&#x27;an in China.
+[Joey] So we prepare also.
+<span class="tutor">[Tutor]</span> Okay, you&#x27;re getting ready for a trip to China?
+[Joey] Yeah, before the trip, before the leave, we will prepare some applications
+[Joey] because it doesn&#x27;t work. Some applications like Gemini, Google, or YouTube,
+[Joey] some main applications, so we replace some other applications, prepare. Yeah, so last
+[Joey] night I will install my applications.
+<span class="tutor">[Tutor]</span> Okay, so kind of the ones that you can use in China.
+[Joey] Yes, it&#x27;s the main problem is, though, we can&#x27;t use Google Maps because when I travel
+[Joey] abroad, I use Google Maps, and usually the map points before the leave, I made
+[Joey] some map points, some restaurants or some viewpoints, etc., and hotels, but it is
+[Joey] impossible, so I requested other maps, the Gaode map or some A map. Yeah, that&#x27;s
+[Joey] made from China, so I use that this travel.
+<span class="tutor">[Tutor]</span> Hmm, okay. Yeah, getting your trip planned on the app you can use in China instead of, yeah, being stuck. Yeah, the Google Maps.
+<span class="tutor">[Tutor]</span> Yeah, the Google one. So did you want to take a look at the textbook today?
+[Joey] Oh yes, it&#x27;s possible, but I need more time because I don&#x27;t have the printed textbook.
+[Joey] So just I&#x27;m checking my application textbook. Just a moment, please.
+<span class="tutor">[Tutor]</span> Okay.
+[Joey] Oh, teacher, just a moment.
+<span class="tutor">[Tutor]</span> Yeah.
+[Joey] Okay, I&#x27;m ready.
+<span class="tutor">[Tutor]</span> Okay.
+[Joey] Yes.
+<span class="tutor">[Tutor]</span> So do you want to look at the vocab first?
+[Joey] Vocab first and say is the...
+<span class="tutor">[Tutor]</span> Page 10.
+[Joey] Page 10.
+[Joey] Oh, yes.
+[Joey] Just a moment. At the airport, yes, the vocabulary. Boarding group. Yeah, the order
+[Joey] in which or in which first passengers get on the plane. They just called for boarding
+[Joey] group two. Ah yes, when you enter the airplanes, some airlines divide some groups. A, B, C, D.
+[Joey] Yeah, usually specific ticket is the A, yeah, and B, C, D. I see, boarding group.
+<span class="tutor">[Tutor]</span> Yeah, yeah, on the ticket, yeah, might see your section, yeah, everyone in D can board.
+[Joey] Yes, you&#x27;re right.
+[Joey] And through, through-checked.
+[Joey] Is it right, teacher?
+<span class="tutor">[Tutor]</span> Through-checked.
+[Joey] Through-checked.
+<span class="tutor">[Tutor]</span> Through-checked.
+[Joey] Through-checked.
+<span class="tutor">[Tutor]</span> Yeah.
+[Joey] Okay.
+<span class="tutor">[Tutor]</span> Through-checked.
+<span class="tutor">[Tutor]</span> When your bags are sent straight to your final destination.
+[Joey] Through-checked.
+[Joey] When your bags are sent straight to your final destination.
+[Joey] Let&#x27;s check if our baggage is through-checked.
+[Joey] Through-checked.
+[Joey] Could you through-check my baggage, my luggage?
+<span class="tutor">[Tutor]</span> Okay.
+[Joey] Final leg.
+<span class="tutor">[Tutor]</span> Final leg.
+<span class="tutor">[Tutor]</span> The last part of your journey after your transfer.
+[Joey] We almost missed the final leg. The last part of your journey after your transfer.
+[Joey] We almost missed final leg. We almost missed the final leg. Teacher, could you
+[Joey] explain more detail? I can understand perfectly.
+<span class="tutor">[Tutor]</span> Just the final part of your trip. So if you missed the final leg, it means I missed my last the bus I needed
+<span class="tutor">[Tutor]</span> to take or I missed the plane or the last part of your trip. So if you have a
+[Joey] layover. If I use the layover, at that time the last part, the final part in
+[Joey] in the airport, right?
+<span class="tutor">[Tutor]</span> Or even if you&#x27;re leaving the airport and you need to catch a bus,
+<span class="tutor">[Tutor]</span> oh, you missed the bus, oh, I missed the final leg.
+[Joey] That was maybe the final travel.
+<span class="tutor">[Tutor]</span> Final leg.
+[Joey] Okay.
+[Joey] And it is used not only the airport.
+[Joey] It is the...
+<span class="tutor">[Tutor]</span> Yeah.
+[Joey] Oh, yes.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="tutor">[Tutor]</span> Just the final part of your trip, the final thing you needed to get home.
+[Joey] Final part of my travel, my journey.
+<span class="tutor">[Tutor]</span> Okay, good.
+<span class="tutor">[Tutor]</span> And your specific questions?
+[Joey] Can I read that?
+<span class="tutor">[Tutor]</span> Yeah, go ahead.
+[Joey] Do I need to go through security again?
+[Joey] Asked during the transfer between flights.
+[Joey] Do I need to go through security again?
+[Joey] How long is the delay? Asked when your flight is not on time.
+[Joey] Hmm, how long is the delay? I see. Usually my plane not departs on time.
+[Joey] And I asked some people, how long is the delay?
+<span class="tutor">[Tutor]</span> Yeah, usually they leave a little late.
+<span class="tutor">[Tutor]</span> Yeah, there&#x27;s always a delay sometimes.
+[Joey] And I forgot the name or word.
+[Joey] When I take the plane
+[Joey] and that is divided
+[Joey] the passenger and
+[Joey] the one group of
+[Joey] stewards.
+[Joey] Is that right expression?
+<span class="tutor">[Tutor]</span> Stewards.
+[Joey] Or economy class
+[Joey] or business class.
+[Joey] I mean
+[Joey] steward or flight attendant
+[Joey] or flight assistant.
+[Joey] The people
+[Joey] working on the airplane.
+[Joey] Stewards, right?
+<span class="tutor">[Tutor]</span> Stewardess or flight attendant.
+[Joey] Yeah, is it person
+[Joey] work on the plane? Is it right? It&#x27;s the job. Yeah, the server on the plane. Steward, steward, stewardess or steward, stewardess.
+[Joey] Yeah, I see. It is a different pronunciation. Or flight attendant.
+[Joey] Attendant. Flight attendant is more easy. More common.
+[Joey] Flight attendant.
+<span class="tutor">[Tutor]</span> Okay. So the first question here, part A. What do people usually do
+<span class="tutor">[Tutor]</span> while waiting to board their flights?
+[Joey] Oh, it&#x27;s a little different. Just a moment.
+[Joey] Ah, yes, yes, yes. Okay. In our country, in our people of Korea, we usually wait to
+[Joey] board our flight, usually eating or just shop at the duty-free. I think it
+[Joey] depends on the person. So some group of people eating because they are
+[Joey] hungry, so they prepare, they went to a restaurant and then eating
+[Joey] something or some people waiting in bakery, drink coffee and with the bakery. And other
+[Joey] people usually shopping at duty-free because it is an opportunity to buy duty-free products.
+[Joey] And yeah, and some people sitting at the gate and they just wait and reading a book
+[Joey] or talk to other people. And some people just walk around. Yeah, that is when I
+[Joey] when I travel alone, at that time I love to walk around because it is so enjoyable
+[Joey] to travel.
+<span class="tutor">[Tutor]</span> Yeah, maybe have a look at the different flights or different
+<span class="tutor">[Tutor]</span> places and stores.
+[Joey] Yeah, because if I look around that different store, I can, I have some hint
+[Joey] to some product or some, yeah, duty-free product or shop design.
+<span class="tutor">[Tutor]</span> Yeah, you can compare it when you arrive at the other airport and see, okay, should I buy it now
+<span class="tutor">[Tutor]</span> or do I buy it on the way back home maybe?
+<span class="tutor">[Tutor]</span> If you&#x27;re waiting to go on a trip, right?
+<span class="tutor">[Tutor]</span> If you&#x27;re waiting to go on a trip, you look at the duty-free first
+<span class="tutor">[Tutor]</span> and then when you arrive, check the other airport.
+<span class="tutor">[Tutor]</span> Do you compare airport duty-free?
+[Joey] Usually I don&#x27;t use the airplane duty-free
+[Joey] because that is more expensive.
+[Joey] So usually when I wait for my airplane, at that time, just to use the duty-free.
+[Joey] But airplane duty-free system is really expensive and that is so short time.
+[Joey] So I can&#x27;t use that.
+[Joey] And so I can compare the different company to airplane.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="tutor">[Tutor]</span> Yeah.
+<span class="tutor">[Tutor]</span> Then that is the time when you compare.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="tutor">[Tutor]</span> Which do you prefer during a layover and why?
+<span class="tutor">[Tutor]</span> Relaxing at a lounge or exploring the airport?
+[Joey] That is divided.
+[Joey] Two kinds. When I travel with my family, I just relax in a lounge because I consider my son&#x27;s health and my wife&#x27;s health.
+[Joey] So usually I take a relaxing in a lounge and lounge place. Yeah. Sometimes we drink a coffee or have a meal in a lounge. Yeah. Just have a little short sleep.
+[Joey] But when I travel alone, I explore the airport.
+[Joey] Yeah, just walking around some airport and check the shop and product and some system.
+[Joey] Yeah, I think that is also process of travel.
+[Joey] So I love that.
+<span class="tutor">[Tutor]</span> Okay, yeah, it definitely depends on what kind of trip, who you&#x27;re with, what you&#x27;re doing.
+[Joey] Yeah, you&#x27;re right, you&#x27;re right.
+<span class="tutor">[Tutor]</span> So are you able to read the problem solving?
+[Joey] Oh, yes, no problem.
+[Joey] You have a six-hour layover after one overnight flight.
+[Joey] You are exhausted and just want to rest.
+[Joey] The airport lounge has food, drink, and shower, but the entry fee is high.
+<span class="tutor">[Tutor]</span> Would you splurge for the comfort or stay in the public area?
+[Joey] I see.
+<span class="tutor">[Tutor]</span> Yeah, that&#x27;s splurge or spend a lot.
+[Joey] Spend a lot.
+[Joey] I see.
+[Joey] That is also divided who with travel together. So that travel is for my family.
+[Joey] At that time, I just pay and then go to the lounge because it is possible to take a sleep and take a shower.
+[Joey] Yeah, more comfortable.
+[Joey] So, yeah, I give some pay.
+[Joey] It&#x27;s okay because it is for my family.
+[Joey] But if I travel alone, at that time I think usually my credit card
+[Joey] gives us some lounge use ticket, but if it is impossible, at that time I use
+[Joey] only the airport, yeah, just the chair or some restaurant and some place. But if I
+[Joey] compare, it is not common and maybe one person 100 more pay I can use, yeah,
+[Joey] because I can use the indoor travel place, not airport.
+<span class="tutor">[Tutor]</span> And so what&#x27;s the best
+<span class="tutor">[Tutor]</span> airport you&#x27;ve been to?
+[Joey] I love Middle East airports like Qatar
+[Joey] Airlines or Arab Emirates, etc. That&#x27;s the best airport. It is so luxury, so I love
+[Joey] that and that service also good. So usually if I travel to Dubai or some
+[Joey] East Asia, I take them. And also if I go to Europe, some tickets are so cheap
+[Joey] because it is the layover to Dubai or some East or Middle East. So
+[Joey] yeah, I use that airplane.
+<span class="tutor">[Tutor]</span> And what advice would you give to someone who is
+<span class="tutor">[Tutor]</span> nervous about flying?
+[Joey] I think usually the nervous and afraid from the we don&#x27;t
+[Joey] know that fact. We don&#x27;t know, we don&#x27;t know use that system. So yeah, it is
+[Joey] similar. We are afraid of that because we don&#x27;t know after that. So just one use
+[Joey] them and then you can use it more easily and it is not nervous anymore.
+[Joey] Yeah, just you one use and then yeah, it is more easier.
+<span class="tutor">[Tutor]</span> Okay, you just get used to
+<span class="tutor">[Tutor]</span> it. Once you do it a few times, it becomes routine.
+[Joey] Yeah, you&#x27;re right.
+<span class="tutor">[Tutor]</span> So that&#x27;s getting about it for time and I will send you corrections here in just a moment.
+<span class="tutor">[Tutor]</span> Any questions before I go?
+[Joey] No, thank you so much, teacher.
+<span class="tutor">[Tutor]</span> Yeah, well, enjoy your trip.
+[Joey] Just one question, teacher, sorry.
+<span class="tutor">[Tutor]</span> Ah, yeah, it&#x27;s time over.
+[Joey] Yeah, talk to you next time. Bye bye, teacher. Have a nice day.
+<span class="tutor">[Tutor]</span> Yeah, enjoy your vacation. Bye.
+[Joey] Bye bye.</div>
+        </div>
+    </div>
+    <div class="toast" id="toast">✅ 프롬프트가 복사되었습니다!</div>
+    <script>
+        const REVIEW_PROMPT="너는 나의 영어 회화 복습 파트너야. 오늘 내 전화영어 수업 내용을 기반으로 대화하면서 복습을 도와줘.\n\n[오늘 수업 전사 내용]\n[Joey] Hello, hello, teacher.\n[Tutor] Yeah, hi, how are you doing today?\n[Joey] Yeah, it's a holiday. I'm good.\n[Joey] Yeah, how are you today, teacher?\n[Tutor] Oh, good. Have you been enjoying your holiday so far?\n[Joey] Yeah, yeah, yeah. It's so nice.\n[Joey] It was a nice, yeah, that is Independence Day of Korea from Japan.\n[Joey] So, yeah, every people feel a little respect day. And some people enjoy that day. In my case, August 18th is my son's birthday.\n[Joey] So today I will have some party with my family.\n[Tutor] Okay, so also a birthday party on the long weekend.\n[Joey] Yeah, that is a long weekend and it's a big party.\n[Joey] And this weekend I will go to travel with my family to Xi'an in China.\n[Joey] So we prepare also.\n[Tutor] Okay, you're getting ready for a trip to China?\n[Joey] Yeah, before the trip, before the leave, we will prepare some applications\n[Joey] because it doesn't work. Some applications like Gemini, Google, or YouTube,\n[Joey] some main applications, so we replace some other applications, prepare. Yeah, so last\n[Joey] night I will install my applications.\n[Tutor] Okay, so kind of the ones that you can use in China.\n[Joey] Yes, it's the main problem is, though, we can't use Google Maps because when I travel\n[Joey] abroad, I use Google Maps, and usually the map points before the leave, I made\n[Joey] some map points, some restaurants or some viewpoints, etc., and hotels, but it is\n[Joey] impossible, so I requested other maps, the Gaode map or some A map. Yeah, that's\n[Joey] made from China, so I use that this travel.\n[Tutor] Hmm, okay. Yeah, getting your trip planned on the app you can use in China instead of, yeah, being stuck. Yeah, the Google Maps.\n[Tutor] Yeah, the Google one. So did you want to take a look at the textbook today?\n[Joey] Oh yes, it's possible, but I need more time because I don't have the printed textbook.\n[Joey] So just I'm checking my application textbook. Just a moment, please.\n[Tutor] Okay.\n[Joey] Oh, teacher, just a moment.\n[Tutor] Yeah.\n[Joey] Okay, I'm ready.\n[Tutor] Okay.\n[Joey] Yes.\n[Tutor] So do you want to look at the vocab first?\n[Joey] Vocab first and say is the...\n[Tutor] Page 10.\n[Joey] Page 10.\n[Joey] Oh, yes.\n[Joey] Just a moment. At the airport, yes, the vocabulary. Boarding group. Yeah, the order\n[Joey] in which or in which first passengers get on the plane. They just called for boarding\n[Joey] group two. Ah yes, when you enter the airplanes, some airlines divide some groups. A, B, C, D.\n[Joey] Yeah, usually specific ticket is the A, yeah, and B, C, D. I see, boarding group.\n[Tutor] Yeah, yeah, on the ticket, yeah, might see your section, yeah, everyone in D can board.\n[Joey] Yes, you're right.\n[Joey] And through, through-checked.\n[Joey] Is it right, teacher?\n[Tutor] Through-checked.\n[Joey] Through-checked.\n[Tutor] Through-checked.\n[Joey] Through-checked.\n[Tutor] Yeah.\n[Joey] Okay.\n[Tutor] Through-checked.\n[Tutor] When your bags are sent straight to your final destination.\n[Joey] Through-checked.\n[Joey] When your bags are sent straight to your final destination.\n[Joey] Let's check if our baggage is through-checked.\n[Joey] Through-checked.\n[Joey] Could you through-check my baggage, my luggage?\n[Tutor] Okay.\n[Joey] Final leg.\n[Tutor] Final leg.\n[Tutor] The last part of your journey after your transfer.\n[Joey] We almost missed the final leg. The last part of your journey after your transfer.\n[Joey] We almost missed final leg. We almost missed the final leg. Teacher, could you\n[Joey] explain more detail? I can understand perfectly.\n[Tutor] Just the final part of your trip. So if you missed the final leg, it means I missed my last the bus I needed\n[Tutor] to take or I missed the plane or the last part of your trip. So if you have a\n[Joey] layover. If I use the layover, at that time the last part, the final part in\n[Joey] in the airport, right?\n[Tutor] Or even if you're leaving the airport and you need to catch a bus,\n[Tutor] oh, you missed the bus, oh, I missed the final leg.\n[Joey] That was maybe the final travel.\n[Tutor] Final leg.\n[Joey] Okay.\n[Joey] And it is used not only the airport.\n[Joey] It is the...\n[Tutor] Yeah.\n[Joey] Oh, yes.\n[Tutor] Okay.\n[Tutor] Just the final part of your trip, the final thing you needed to get home.\n[Joey] Final part of my travel, my journey.\n[Tutor] Okay, good.\n[Tutor] And your specific questions?\n[Joey] Can I read that?\n[Tutor] Yeah, go ahead.\n[Joey] Do I need to go through security again?\n[Joey] Asked during the transfer between flights.\n[Joey] Do I need to go through security again?\n[Joey] How long is the delay? Asked when your flight is not on time.\n[Joey] Hmm, how long is the delay? I see. Usually my plane not departs on time.\n[Joey] And I asked some people, how long is the delay?\n[Tutor] Yeah, usually they leave a little late.\n[Tutor] Yeah, there's always a delay sometimes.\n[Joey] And I forgot the name or word.\n[Joey] When I take the plane\n[Joey] and that is divided\n[Joey] the passenger and\n[Joey] the one group of\n[Joey] stewards.\n[Joey] Is that right expression?\n[Tutor] Stewards.\n[Joey] Or economy class\n[Joey] or business class.\n[Joey] I mean\n[Joey] steward or flight attendant\n[Joey] or flight assistant.\n[Joey] The people\n[Joey] working on the airplane.\n[Joey] Stewards, right?\n[Tutor] Stewardess or flight attendant.\n[Joey] Yeah, is it person\n[Joey] work on the plane? Is it right? It's the job. Yeah, the server on the plane. Steward, steward, stewardess or steward, stewardess.\n[Joey] Yeah, I see. It is a different pronunciation. Or flight attendant.\n[Joey] Attendant. Flight attendant is more easy. More common.\n[Joey] Flight attendant.\n[Tutor] Okay. So the first question here, part A. What do people usually do\n[Tutor] while waiting to board their flights?\n[Joey] Oh, it's a little different. Just a moment.\n[Joey] Ah, yes, yes, yes. Okay. In our country, in our people of Korea, we usually wait to\n[Joey] board our flight, usually eating or just shop at the duty-free. I think it\n[Joey] depends on the person. So some group of people eating because they are\n[Joey] hungry, so they prepare, they went to a restaurant and then eating\n[Joey] something or some people waiting in bakery, drink coffee and with the bakery. And other\n[Joey] people usually shopping at duty-free because it is an opportunity to buy duty-free products.\n[Joey] And yeah, and some people sitting at the gate and they just wait and reading a book\n[Joey] or talk to other people. And some people just walk around. Yeah, that is when I\n[Joey] when I travel alone, at that time I love to walk around because it is so enjoyable\n[Joey] to travel.\n[Tutor] Yeah, maybe have a look at the different flights or different\n[Tutor] places and stores.\n[Joey] Yeah, because if I look around that different store, I can, I have some hint\n[Joey] to some product or some, yeah, duty-free product or shop design.\n[Tutor] Yeah, you can compare it when you arrive at the other airport and see, okay, should I buy it now\n[Tutor] or do I buy it on the way back home maybe?\n[Tutor] If you're waiting to go on a trip, right?\n[Tutor] If you're waiting to go on a trip, you look at the duty-free first\n[Tutor] and then when you arrive, check the other airport.\n[Tutor] Do you compare airport duty-free?\n[Joey] Usually I don't use the airplane duty-free\n[Joey] because that is more expensive.\n[Joey] So usually when I wait for my airplane, at that time, just to use the duty-free.\n[Joey] But airplane duty-free system is really expensive and that is so short time.\n[Joey] So I can't use that.\n[Joey] And so I can compare the different company to airplane.\n[Tutor] Okay.\n[Tutor] Yeah.\n[Tutor] Then that is the time when you compare.\n[Tutor] Okay.\n[Tutor] Which do you prefer during a layover and why?\n[Tutor] Relaxing at a lounge or exploring the airport?\n[Joey] That is divided.\n[Joey] Two kinds. When I travel with my family, I just relax in a lounge because I consider my son's health and my wife's health.\n[Joey] So usually I take a relaxing in a lounge and lounge place. Yeah. Sometimes we drink a coffee or have a meal in a lounge. Yeah. Just have a little short sleep.\n[Joey] But when I travel alone, I explore the airport.\n[Joey] Yeah, just walking around some airport and check the shop and product and some system.\n[Joey] Yeah, I think that is also process of travel.\n[Joey] So I love that.\n[Tutor] Okay, yeah, it definitely depends on what kind of trip, who you're with, what you're doing.\n[Joey] Yeah, you're right, you're right.\n[Tutor] So are you able to read the problem solving?\n[Joey] Oh, yes, no problem.\n[Joey] You have a six-hour layover after one overnight flight.\n[Joey] You are exhausted and just want to rest.\n[Joey] The airport lounge has food, drink, and shower, but the entry fee is high.\n[Tutor] Would you splurge for the comfort or stay in the public area?\n[Joey] I see.\n[Tutor] Yeah, that's splurge or spend a lot.\n[Joey] Spend a lot.\n[Joey] I see.\n[Joey] That is also divided who with travel together. So that travel is for my family.\n[Joey] At that time, I just pay and then go to the lounge because it is possible to take a sleep and take a shower.\n[Joey] Yeah, more comfortable.\n[Joey] So, yeah, I give some pay.\n[Joey] It's okay because it is for my family.\n[Joey] But if I travel alone, at that time I think usually my credit card\n[Joey] gives us some lounge use ticket, but if it is impossible, at that time I use\n[Joey] only the airport, yeah, just the chair or some restaurant and some place. But if I\n[Joey] compare, it is not common and maybe one person 100 more pay I can use, yeah,\n[Joey] because I can use the indoor travel place, not airport.\n[Tutor] And so what's the best\n[Tutor] airport you've been to?\n[Joey] I love Middle East airports like Qatar\n[Joey] Airlines or Arab Emirates, etc. That's the best airport. It is so luxury, so I love\n[Joey] that and that service also good. So usually if I travel to Dubai or some\n[Joey] East Asia, I take them. And also if I go to Europe, some tickets are so cheap\n[Joey] because it is the layover to Dubai or some East or Middle East. So\n[Joey] yeah, I use that airplane.\n[Tutor] And what advice would you give to someone who is\n[Tutor] nervous about flying?\n[Joey] I think usually the nervous and afraid from the we don't\n[Joey] know that fact. We don't know, we don't know use that system. So yeah, it is\n[Joey] similar. We are afraid of that because we don't know after that. So just one use\n[Joey] them and then you can use it more easily and it is not nervous anymore.\n[Joey] Yeah, just you one use and then yeah, it is more easier.\n[Tutor] Okay, you just get used to\n[Tutor] it. Once you do it a few times, it becomes routine.\n[Joey] Yeah, you're right.\n[Tutor] So that's getting about it for time and I will send you corrections here in just a moment.\n[Tutor] Any questions before I go?\n[Joey] No, thank you so much, teacher.\n[Tutor] Yeah, well, enjoy your trip.\n[Joey] Just one question, teacher, sorry.\n[Tutor] Ah, yeah, it's time over.\n[Joey] Yeah, talk to you next time. Bye bye, teacher. Have a nice day.\n[Tutor] Yeah, enjoy your vacation. Bye.\n[Joey] Bye bye.\n\n[AI 피드백]\n안녕하세요, Joey! 오늘 독립기념일 휴일 잘 보내셨나요? 아드님 생일까지 겹쳐서 더욱 특별한 하루였겠어요. 중국 여행 준비하시면서 지도 앱 문제로 고생하신 이야기도 흥미로웠습니다. 여행 준비부터 공항에서의 경험까지, 다양한 이야기를 나눌 수 있어서 즐거웠어요.\n\n그럼 오늘 대화에 대한 피드백을 드릴게요!\n\n---\n\n### 0. 📌 Topic\nTopic: Discussing holiday plans, upcoming travel preparations, and airport experiences.\n\n### 1. 📊 오늘의 대화 요약 (Summary)\n오늘은 한국의 독립기념일과 Joey 아드님의 생일 파티 계획으로 대화를 시작했습니다. 이어서 곧 떠날 중국 여행을 위해 구글 지도 등 특정 앱 사용 불가에 대한 대비책을 논의했고, 교재를 통해 공항에서의 탑승 수속, 경유, 그리고 비행 중 승무원과 관련된 어휘를 학습하며 공항 이용 경험에 대해 이야기 나누었습니다.\n\n### 2. 💬 유창성 업그레이드 (Fluency & Natural Flow)\n\nJoey가 실제 말한 문장 중, 의미는 통하지만 더 자연스럽게 다듬을 수 있는 표현 3가지를 살펴볼게요.\n\n1.  **❌ 학습자 원문 (As Said):** \"So, yeah, **every people** feel a little respect day.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"So, yeah, **everyone** feels a sense of respect on this day.\"\n    *   **💎 비즈니스 표현 (Professional):** \"Indeed, **the public** generally observes this day with a sense of reverence.\"\n    *   **💡 코칭 포인트:** 'Every' 다음에는 보통 단수 명사(예: 'every person')가 오거나, 'everyone' 또는 'all people'을 사용할 수 있습니다. 'everyone'을 사용하면 문장이 더 간결하고 자연스러워집니다.\n\n2.  **❌ 학습자 원문 (As Said):** \"Usually my plane **not departs** on time.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"Usually my plane **doesn't depart** on time.\"\n    *   **💎 비즈니스 표현 (Professional):** \"Typically, our flights **do not depart** punctually.\"\n    *   **💡 코칭 포인트:** 단순 현재 시제 부정문에서는 동사 원형 앞에 'do not' 또는 'does not'을 사용합니다. 'not'만으로는 동사를 부정할 수 없습니다.\n\n3.  **❌ 학습자 원문 (As Said):** \"I think usually the nervous and afraid from the we don't know that fact.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"I think usually **nervousness and fear come from** not knowing the facts.\"\n    *   **💎 비즈니스 표현 (Professional):** \"I believe **apprehension often stems from** a lack of familiarity with the situation.\"\n    *   **💡 코칭 포인트:** 긴장하거나 두려워하는 일반적인 감정을 표현할 때는 명사형인 'nervousness'와 'fear'를 사용하는 것이 더 자연스럽습니다. 또한, 감정이나 문제의 원인을 표현할 때 'come from'을 흔히 사용합니다.\n\n### 3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)\n\n이번 대화에서 Joey가 반복적으로 보인 문법 패턴은 **시제 및 동사 형태의 혼동**입니다. 특히 미래 시제, 과거 시제, 그리고 현재 시제에서의 동사 형태 사용에서 오류가 발견되었습니다.\n\n**Category: Verb Tense and Aspect**\n\n| ❌ 원문 (As Said)                                  | ✅ 교정 예시 (Corrected)                                    |\n| :------------------------------------------------ | :---------------------------------------------------------- |\n| So today **I will have** some party with my family. | So today **I am having** a party with my family. (또는 I am going to have) |\n| So last night **I will install** my applications.   | So last night **I installed** my applications.              |\n| So some group of people **eating** because they are hungry... | So some group of people **eat** because they are hungry... (또는 are eating) |\n\n📌 **핵심 규칙:** 동사의 시제와 형태는 문장이 나타내는 시간(과거, 현재, 미래)과 동작의 진행(완료, 진행 중)에 맞춰 정확하게 사용해야 합니다. 특히, 이미 계획된 미래는 현재 진행형이나 'be going to'를, 과거에 완료된 일은 과거 시제를, 일반적인 사실이나 습관은 단순 현재 시제를 사용합니다.\n\n🔁 **따라 읽기:**\n🗣️ \"So today I am having a party with my family.\"\n🗣️ \"So last night I installed my applications.\"\n🗣️ \"So some group of people eat because they are hungry.\"\n\n### 4. 📗 어휘 확장 (Vocabulary Vault)\n\n학습자의 업무 환경에서 바로 쓸 수 있는 유용한 단어 5개를 소개합니다.\n\n1.  **punctual** /pʌŋkˈtʃuəl/ (형용사)\n    *   뜻: 시간을 엄수하는, 정확한\n    *   실전 예문: Being **punctual** for meetings is crucial for international business relations.\n\n2.  **apprehension** /ˌæprɪˈhɛnʃən/ (명사)\n    *   뜻: 불안, 우려, 염려\n    *   실전 예문: There is some **apprehension** among investors regarding the new market regulations.\n\n3.  **splurge** /splɜːrdʒ/ (동사)\n    *   뜻: 돈을 물 쓰듯 쓰다, 사치를 부리다 (주로 특정 품목에 큰돈을 쓰는 것)\n    *   실전 예문: We decided to **splurge** on a premium software package to enhance our team's productivity.\n\n4.  **reverence** /ˈrɛvərəns/ (명사)\n    *   뜻: 숭배, 경외심\n    *   실전 예문: The team holds a deep **reverence** for the founder's vision and legacy.\n\n5.  **stem from** /stɛm frʌm/ (동사구)\n    *   뜻: ~에서 유래하다, ~에서 비롯되다\n    *   실전 예문: The current market challenges **stem from** unexpected shifts in global supply chains.\n\n### 5. 📝 실전 복습 챌린지 (Practice)\n\n오늘 배운 표현과 문법을 활용하여 다음 상황을 영어로 작문해 보세요.\n\n1.  **[쉬움]** \"저는 보통 회의에 늦지 않으려고 노력합니다.\" (힌트: punctual)\n    *   _모범 답안:_ I usually try to be punctual for meetings.\n\n2.  **[중간]** \"새로운 프로젝트에 대한 약간의 우려가 있지만, 우리는 잘 극복할 것이라고 믿습니다.\" (힌트: apprehension)\n    *   _모범 답안:_ There's some apprehension about the new project, but I believe we'll overcome it well.\n\n3.  **[어려움]** \"작년에 우리는 회사 창립 10주년을 기념하기 위해 특별한 저녁 식사에 큰돈을 썼습니다.\" (힌트: splurge, 과거 시제)\n    *   _모범 답안:_ Last year, we splurged on a special dinner to celebrate our company's 10th anniversary.\n\n### 6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)\n\n✨ **Good Job!**\nJoey, 오늘 대화에서 특히 좋았던 문장은 바로 이 부분이에요:\n\"When I travel with my family, I just relax in a lounge because I consider my son's health and my wife's health.\"\n이 문장은 'When I travel with my family'로 상황을 명확히 제시하고, 'I just relax in a lounge'로 자신의 행동을 설명한 뒤, 'because I consider my son's health and my wife's health'로 이유까지 깔끔하게 설명해 주셨어요. 가족을 생각하는 마음이 느껴지는 동시에, 문장 구조도 아주 자연스럽고 정확했습니다!\n\n🚀 **내일의 한 문장:**\n다음 수업 시작 시 튜터에게 오늘 배운 표현을 활용하여 이렇게 말해보세요.\n\"I'm trying to be more punctual with my tasks, as I believe it helps reduce apprehension for the team.\"\n(저는 업무에 더 시간을 잘 지키려고 노력하고 있어요. 팀의 불안감을 줄이는 데 도움이 된다고 생각하거든요.)\n\n---\n\n### [성과 지표]\n\n**유창성 점수: 7/10**\n\n**근거:** Joey는 다양한 주제에 대해 막힘없이 자신의 의견을 표현하고, 질문에 대한 답변도 빠르게 이어갔습니다. 대화의 흐름을 끊지 않고 적극적으로 참여하는 모습이 인상 깊었습니다. 하지만 일부 문법적 오류(특히 시제와 동사 형태)와 다소 어색한 표현들이 자연스러운 흐름을 방해하는 경우가 있었습니다. 그럼에도 불구하고 의사소통에는 전혀 문제가 없었으며, 주제를 확장하고 설명을 덧붙이는 능력은 훌륭했습니다.\n\n**다음 수업 '원포인트 액션 플랜':**\n다음 수업에서는 **동사의 시제와 형태**에 조금 더 신경 써서 말하는 연습을 해볼까요? 특히 과거에 일어난 일이나 이미 계획된 미래의 일에 대해 말할 때, 어떤 시제를 사용해야 가장 적절할지 한 번 더 생각하고 말하는 습관을 들여보세요. 예를 들어, \"Last night I installed...\" 또는 \"Tomorrow I am meeting...\" 과 같이요.\n\n위 내용을 바탕으로:\n1. 먼저 오늘 수업에서 내가 틀렸거나 어색했던 표현을 하나 골라서, 관련된 상황을 영어로 질문해줘.\n2. 내가 영어로 대답하면, 자연스러운지 확인하고 더 나은 표현이 있으면 알려줘.\n3. 특히 \"반복 실수 패턴\"에서 지적된 부분을 집중적으로 연습시켜줘.\n4. 이런 식으로 오늘 배운 표현들을 하나씩 복습하자.\n5. 한국어 설명은 필요할 때만 간단히, 대화는 최대한 영어로 진행해줘.\n\n그럼 시작하자!";
+        function startReview(){navigator.clipboard.writeText(REVIEW_PROMPT).then(()=>{showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)}).catch(()=>{const t=document.createElement('textarea');t.value=REVIEW_PROMPT;document.body.appendChild(t);t.select();document.execCommand('copy');document.body.removeChild(t);showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)})}
+        function showToast(){const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500)}
+        function switchTab(n){document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',n==='feedback'?i===0:i===1));document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));document.getElementById('tab-'+n).classList.add('active')}
+    </script>
+</body>
+</html>
