@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#0f0f13"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="당근영어"><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="icon" type="image/png" sizes="192x192" href="icon-192.png"><script src="install-banner.js" defer></script><script src="sw-reg.js" defer></script>
+    <title>전화영어 복습 - 2026년 11월 02일</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Noto Sans KR',sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.75;min-height:100vh}
+        .header{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);border-bottom:1px solid rgba(255,255,255,.06);padding:48px 24px 40px;text-align:center}
+        .header-date{font-size:13px;color:#94a3b8;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+        .header h1{font-size:28px;font-weight:700;color:#f1f5f9;margin-bottom:16px}
+        .header-meta{display:flex;justify-content:center;gap:24px;font-size:14px;color:#64748b}
+        .header-meta span{display:flex;align-items:center;gap:6px}
+        .cta-section{text-align:center;padding:40px 24px}
+        .cta-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:linear-gradient(135deg,#38bdf8,#818cf8);color:#fff;font-size:16px;font-weight:600;font-family:'Noto Sans KR',sans-serif;border:none;border-radius:50px;cursor:pointer;transition:all .3s;text-decoration:none;box-shadow:0 4px 24px rgba(56,189,248,.25)}
+        .cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(56,189,248,.35)}
+        .cta-btn svg{width:20px;height:20px}
+        .cta-sub{margin-top:12px;font-size:13px;color:#64748b}
+        .toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#38bdf8;padding:14px 28px;border-radius:12px;font-size:14px;font-weight:500;border:1px solid rgba(56,189,248,.2);box-shadow:0 8px 32px rgba(0,0,0,.4);opacity:0;transition:all .4s cubic-bezier(.16,1,.3,1);z-index:1000}
+        .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+        .container{max-width:720px;margin:0 auto;padding:0 24px 80px}
+        .tabs{display:flex;gap:4px;background:#1a1a24;padding:4px;border-radius:12px;margin-bottom:32px}
+        .tab{flex:1;padding:12px;text-align:center;font-size:14px;font-weight:500;color:#64748b;background:0 0;border:none;border-radius:8px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all .2s}
+        .tab.active{background:#262636;color:#f1f5f9}
+        .tab-content{display:none}.tab-content.active{display:block}
+        .feedback h2{font-size:18px;font-weight:700;color:#f1f5f9;margin:36px 0 16px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.06)}
+        .feedback h2:first-child{margin-top:0}
+        .feedback p{margin:8px 0;color:#cbd5e1}
+        .feedback .item{padding:6px 0 6px 16px;border-left:2px solid #334155;margin:6px 0;color:#cbd5e1}
+        .feedback .numbered{padding:8px 0 8px 16px;color:#cbd5e1}
+        .feedback .numbered strong{color:#38bdf8}
+        .feedback strong{color:#f1f5f9}
+        .feedback code{background:#1e293b;padding:2px 8px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#38bdf8}
+        .feedback table{width:100%;border-collapse:collapse;margin:12px 0}
+        .feedback th,.feedback td{padding:10px 14px;text-align:left;border-bottom:1px solid #262636}
+        .feedback th{color:#94a3b8;font-weight:500;font-size:13px}
+        .feedback td{color:#cbd5e1}
+        .arrow{color:#38bdf8;font-weight:700}
+        .transcript{background:#1a1a24;border-radius:12px;padding:28px;font-size:14px;line-height:2;color:#94a3b8;white-space:pre-wrap;word-break:break-word;font-family:'JetBrains Mono','Noto Sans KR',monospace}
+        .transcript .tutor{color:#38bdf8}
+        .transcript .student{color:#a78bfa}
+        @media(max-width:640px){.header{padding:32px 16px}.header h1{font-size:22px}.cta-btn{padding:14px 28px;font-size:15px}.container{padding:0 16px 60px}}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-date">2026년 11월 02일</div>
+        <h1>📚 전화영어 복습</h1>
+        <div class="header-meta">
+            <span>⏱ 19분 59초</span>
+            <span>🎙 전화영어_025180304_20261102103023.m4a</span>
+        </div>
+    </div>
+    <div class="cta-section">
+        <button class="cta-btn" onclick="startReview()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Gemini에서 복습 대화 시작하기
+        </button>
+        <div class="cta-sub">클릭하면 프롬프트가 복사되고 Gemini가 열립니다</div>
+    </div>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('feedback')">📋 AI 피드백</button>
+            <button class="tab" onclick="switchTab('transcript')">🎙 수업 전사</button>
+        </div>
+        <div id="tab-feedback" class="tab-content active">
+            <div class="feedback"><p>안녕하세요, Joey! 오늘도 활기찬 목소리로 수업에 참여해주셔서 감사합니다. 비즈니스 미팅 때문에 바쁜 와중에도 영어 공부를 놓지 않는 Joey의 열정에 박수를 보냅니다! 오늘 Ulsan 출장과 911 응급 상황 대처법에 대해 이야기 나누면서, Joey의 경험과 생각들을 많이 공유해주셔서 정말 흥미로웠어요.</p>
+<br>
+<br>
+<h2><strong>0. 📌 Topic</strong></h2>
+<p>Topic: Discussing emergency situations and sharing personal experiences with accidents and business travel.</p>
+<br>
+<h2><strong>1. 📊 오늘의 대화 요약 (Summary)</strong></h2>
+<p>오늘은 Joey의 울산 출장 이야기로 대화를 시작하여, 비즈니스 미팅과 관련된 스케줄 변경 및 기밀 유지의 중요성에 대해 이야기 나누었습니다. 이어서 교재의 핵심 주제인 911 응급 상황 대처법을 다루며, 다양한 국가의 응급 전화번호와 구급차 비용, 그리고 Joey의 과거 자전거 사고 경험을 공유하며 실제 응급 상황 대처에 대해 토론했습니다.</p>
+<br>
+<h2><strong>2. 💬 유창성 업그레이드 (Fluency & Natural Flow)</strong></h2>
+<br>
+<p>Joey가 말한 문장 중 의미는 잘 전달되었지만, 원어민들이 더 자연스럽게 쓰는 표현으로 다듬을 수 있는 세 가지를 골라봤어요.</p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>❌ 학습자 원문 (As Said):</strong> "I have to interview at dinner time, so yeah, so I need to change my schedule."</div>
+<div class="item"><strong>✅ 자연스러운 표현 (Natural):</strong> "I have an interview scheduled for dinner time, so I need to change my schedule."</div>
+<div class="item"><strong>💎 비즈니스 표현 (Professional):</strong> "I have a meeting scheduled for this evening, which required me to adjust my schedule."</div>
+<div class="item"><strong>💡 코칭 포인트:</strong> "have an interview scheduled"나 "a meeting scheduled"를 사용하는 것이 "interview at dinner time"보다 더 정확하고 전문적입니다. "need to change"는 문법적으로 맞지만, "have an interview scheduled"와 함께 사용하면 문장이 더 자연스럽게 연결됩니다.</div>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>❌ 학습자 원문 (As Said):</strong> "After work, if we have an interview, at that time it is kept secret to the investor or research."</div>
+<div class="item"><strong>✅ 자연스러운 표현 (Natural):</strong> "If we conduct an interview after work, it's kept confidential from investors or for research purposes."</div>
+<div class="item"><strong>💎 비즈니스 표현 (Professional):</strong> "To maintain confidentiality, interviews are often conducted after hours, particularly when sensitive information pertains to investors or research."</div>
+<div class="item"><strong>💡 코칭 포인트:</strong> "kept secret to"는 "kept confidential from" 또는 "kept confidential for"보다 덜 흔합니다. 또한, "research"는 기밀 유지의 이유를 나타낼 때 "research purposes"로 구체화하는 경우가 많습니다.</div>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>❌ 학습자 원문 (As Said):</strong> "Do you have an experience to take an ambulance or a helicopter?"</div>
+<div class="item"><strong>✅ 자연스러운 표현 (Natural):</strong> "Have you ever taken an ambulance or a helicopter?"</div>
+<div class="item"><strong>💎 비즈니스 표현 (Professional):</strong> "Have you ever utilized emergency medical transport, such as an ambulance or helicopter?"</div>
+<div class="item"><strong>💡 코칭 포인트:</strong> 과거의 경험에 대해 물을 때는 "Have you ever + 과거 분사"가 가장 자연스럽고 일반적인 구조입니다. "experience"는 일반적인 지식이나 기술을 말할 때는 셀 수 없는 명사로 사용되며, "an experience"는 특정하고 셀 수 있는 사건에 사용됩니다.</div>
+<br>
+<h2><strong>3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)</strong></h2>
+<br>
+<p>오늘 Joey의 대화에서 <strong>전치사(Prepositions)</strong> 사용에 있어서 조금 더 다듬을 수 있는 부분이 반복적으로 보였습니다. 특히 시간이나 장소, 목적 등을 나타내는 전치사 선택에서 원어민들이 더 선호하는 표현들이 있어요.</p>
+<br>
+<p><strong>Category: Prepositions (전치사)</strong></p>
+<br>
+<table>
+<tr><th>❌ 원문 (As Said)</th><th>✅ 교정 예시 (Corrected)</th></tr>
+<tr><td>"I have to interview <strong>at dinner time</strong>"</td><td>"I have to interview <strong>during dinner time</strong>" / "I have a dinner interview"</td></tr>
+<tr><td>"because <strong>in the working time</strong>, it is not secret."</td><td>"because <strong>during working hours</strong>, it is not confidential."</td></tr>
+<tr><td>"it is kept secret <strong>to the investor or research</strong>."</td><td>"it is kept confidential <strong>from investors or for research purposes</strong>."</td></tr>
+<tr><td>"If I get lost <strong>in the mountain</strong> and call a helicopter, it is so expensive"</td><td>"If I get lost <strong>in the mountains</strong> (or <strong>on a mountain</strong>) and call a helicopter, it is so expensive"</td></tr>
+<tr><td>"Just I call <strong>to my friend or to my boss</strong>."</td><td>"I just call <strong>my friend or my boss</strong>."</td></tr>
+</table>
+<br>
+<p>📌 <strong>핵심 규칙:</strong> 시간, 장소, 목적을 나타내는 전치사는 문맥에 따라 가장 자연스러운 표현을 선택해야 합니다. 동사 'call' 뒤에는 전치사 'to' 없이 바로 목적어가 오는 것이 자연스럽습니다.</p>
+<br>
+<p>🔁 <strong>따라 읽기 (Repeat After Me):</strong></p>
+<p>🗣️ "I have an interview scheduled during dinner time."</p>
+<p>🗣️ "During working hours, it is not confidential."</p>
+<p>🗣️ "I just call my friend or my boss."</p>
+<br>
+<h2><strong>4. 📗 어휘 확장 (Vocabulary Vault)</strong></h2>
+<br>
+<p>Joey의 업무 환경에서 유용하게 쓰일 수 있는 어휘 5가지를 골라봤습니다.</p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>audit</strong> /ˈɔːdɪt/ (명사, 동사)</div>
+<div class="item">뜻: 회계 감사, 심사; (장부 등을) 감사하다, 심사하다</div>
+<div class="item">실전 예문: We need to prepare all financial documents for the <strong>annual audit</strong>.</div>
+<div class="numbered"><strong>2.</strong> <strong>confidential</strong> /ˌkɒnfɪˈdenʃl/ (형용사)</div>
+<div class="item">뜻: 기밀의, 비밀의</div>
+<div class="item">실전 예문: Please keep this information <strong>confidential</strong> as it pertains to our new investment strategy.</div>
+<div class="numbered"><strong>3.</strong> <strong>reschedule</strong> /ˌriːˈʃedʒuːl/ (동사)</div>
+<div class="item">뜻: 일정을 변경하다, 다시 잡다</div>
+<div class="item">실전 예문: Due to an unexpected conflict, we had to <strong>reschedule</strong> the client meeting for next week.</div>
+<div class="numbered"><strong>4.</strong> <strong>utilize</strong> /ˈjuːtəlaɪz/ (동사)</div>
+<div class="item">뜻: 활용하다, 이용하다 (use보다 격식 있는 표현)</div>
+<div class="item">실전 예문: We should <strong>utilize</strong> all available resources to optimize our project timeline.</div>
+<div class="numbered"><strong>5.</strong> <strong>responsive</strong> /rɪˈspɒnsɪv/ (형용사)</div>
+<div class="item">뜻: 즉각 반응하는, 반응이 빠른; (요구에) 부응하는</div>
+<div class="item">실전 예문: Our customer support team is highly <strong>responsive</strong> to client inquiries, ensuring quick resolution.</div>
+<br>
+<h2><strong>5. 📝 실전 복습 챌린지 (Practice)</strong></h2>
+<br>
+<p>오늘 배운 표현과 문법을 활용해서 영작 챌린지를 해볼까요?</p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>상황:</strong> 회사의 중요한 투자자 미팅 일정을 변경해야 합니다.</div>
+<div class="item"><strong>영작:</strong> "우리는 중요한 투자자 미팅 일정을 다음 주로 변경해야 했습니다."</div>
+<div class="item"><strong>모범 답안:</strong> "We had to <strong>reschedule</strong> the crucial investor meeting for next week."</div>
+<div class="numbered"><strong>2.</strong> <strong>상황:</strong> 새로운 프로젝트에 대한 정보는 철저히 기밀로 유지되어야 합니다.</div>
+<div class="item"><strong>영작:</strong> "새로운 프로젝트에 대한 모든 정보는 철저히 기밀로 유지되어야 합니다."</div>
+<div class="item"><strong>모범 답안:</strong> "All information regarding the new project must be kept strictly <strong>confidential</strong>."</div>
+<div class="numbered"><strong>3.</strong> <strong>상황:</strong> 긴급 상황 발생 시, 911 교환원은 당신에게 전화 끊지 말고 계속 통화 상태를 유지하라고 요청할 것입니다.</div>
+<div class="item"><strong>영작:</strong> "긴급 상황 발생 시, 911 교환원은 당신에게 전화 끊지 말고 계속 통화 상태를 유지하라고 요청할 것입니다."</div>
+<div class="item"><strong>모범 답안:</strong> "In an emergency, the 911 operator will ask you to <strong>stay on the line</strong>."</div>
+<br>
+<h2><strong>6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)</strong></h2>
+<br>
+<p>✨ <strong>Good Job:</strong></p>
+<p>Joey가 오늘 가장 잘 표현한 문장 중 하나는 바로 이것입니다:</p>
+<p>"<strong>I remember thinking how responsive and much better they were.</strong>"</p>
+<p>이 문장은 Joey가 롤플레이 상황에서 다른 사람의 대처 능력을 평가하며 자신의 생각을 아주 자연스럽게 표현한 부분입니다. 'responsive'라는 어휘를 정확한 맥락에서 사용하고, 'much better'와 같은 비교 표현도 유창하게 구사하여 인상 깊었습니다!</p>
+<br>
+<p>🚀 <strong>내일의 한 문장:</strong></p>
+<p>다음 수업 시작 시, 튜터에게 오늘 배운 내용을 활용하여 이렇게 말해보는 건 어떨까요?</p>
+<p>"I <strong>rescheduled</strong> my meeting today, and it reminded me of the importance of keeping certain information <strong>confidential</strong>."</p>
+<p>(오늘 미팅 일정을 변경했는데, 특정 정보를 기밀로 유지하는 것의 중요성을 다시 한번 생각하게 됐어요.)</p>
+<br>
+<br>
+<h2><strong>[성과 지표]</strong></h2>
+<div class="item"><strong>유창성 점수:</strong> 7/10</div>
+<div class="item"><strong>근거:</strong> Joey는 다양한 주제에 대해 자신의 의견과 경험을 비교적 막힘없이 표현할 수 있으며, 특히 비즈니스 관련 상황을 설명할 때 적절한 어휘를 사용하려는 노력이 돋보였습니다. 하지만 전치사 사용, 동사 형태, 그리고 일부 문장 구조에서 원어민이 더 자연스럽게 사용하는 표현으로 다듬을 수 있는 부분들이 있었습니다. 이는 유창성을 더 높이고 정확성을 향상시키는 데 도움이 될 것입니다.</div>
+<div class="item"><strong>다음 수업 '원포인트 액션 플랜':</strong> 다음 수업에서는 오늘 배운 <strong>전치사 사용</strong>에 유의하며, 특히 시간, 장소, 그리고 동사 'call'과 함께 쓰이는 전치사 표현에 더 신경 써서 말해보는 것을 목표로 삼아봅시다.</div></div>
+        </div>
+        <div id="tab-transcript" class="tab-content">
+            <div class="transcript">[Joey] Hello, hello Val. Good morning.
+<span class="tutor">[Tutor]</span> Oh, yeah, good morning. How are you doing today?
+[Joey] Yeah, it&#x27;s all right. I&#x27;m good. Yeah. How are you?
+<span class="tutor">[Tutor]</span> Oh, pretty good. So did you have to change your schedule today?
+[Joey] Yeah, because today I&#x27;m working in another place, another city, because I have to interview at dinner time, so yeah, so I need to change my schedule.
+<span class="tutor">[Tutor]</span> Okay, how is the city so far? Are you able to look around or just business?
+[Joey] That is business and it is kind of the audit, and this city&#x27;s name is Ulsan. Ulsan is... Yeah, there are so many factories in this city. So, yeah, this city, we have some important office in this city. So I have to interview with my coworker in another company. Yeah, at dinner time, because in the working time, it is not secret. For example, if we interview the team leader, the other team members know about that. After work, if we have an interview, at that time it is kept secret to the investor or research. So, yeah, I need to change the time and have an interview.
+<span class="tutor">[Tutor]</span> Kind of like a surprise, yeah.
+[Joey] Yeah.
+<span class="tutor">[Tutor]</span> Sudden interview.
+[Joey] Yeah, sudden surprise and keep the secret. And, yeah, it is so I need to change the schedule. How about you? And how about you? How about your schedule and time? It is a late time, right? In Canada?
+<span class="tutor">[Tutor]</span> It&#x27;s 6:30 p.m.
+[Joey] Ah, 6:30. Not late. Dinner, okay.
+<span class="tutor">[Tutor]</span> It&#x27;s not too late.
+[Joey] Did you have dinner?
+<span class="tutor">[Tutor]</span> Yes, I already ate.
+[Joey] Ah, yes, good.
+<span class="tutor">[Tutor]</span> Good. Well, did you want to have a look at the textbook today?
+[Joey] Oh, yes, just a moment. I&#x27;m searching for the textbook. Just a moment.
+<span class="tutor">[Tutor]</span> I was going to say Ulsan, a very industrial city, right? Just factories.
+[Joey] Yeah, very much. Yes, you&#x27;re right. Okay, today is the... just a moment, teacher. I&#x27;m so sorry, but the textbook is not... Oh, just a moment. I found it. Yes.
+<span class="tutor">[Tutor]</span> Sometimes, yeah, it&#x27;s a little weird, some network stuff.
+[Joey] Yes.
+<span class="tutor">[Tutor]</span> Maybe the Wi-Fi connection is not working.
+<span class="tutor">[Tutor]</span> Are you in a hotel or a different workplace?
+[Joey] This is my home. My home is located in Busan. It is close to Ulsan. I work in my hometown, and then after 2 p.m. I will go to Ulsan, and then I have an interview with my another coworker. I checked my Wi-Fi, but it is impossible to... It&#x27;s possible. Just a moment. Sorry.
+[Joey] Okay, I found it. Handle emergency situations, right?
+<span class="tutor">[Tutor]</span> Yeah, yeah, what to do. Calling 911.
+<span class="tutor">[Tutor]</span> Yes, today&#x27;s mission, handle an emergency by calling 911, describing what happens and giving your location.
+<span class="tutor">[Tutor]</span> So, do you want to look at the key expressions here?
+[Joey] Okay, yes, no problem. And seizure, seizure, seizure. How about that? Seizure. Yeah, seizure, a sudden uncontrolled shaking or loss of body control caused by brain. Oh, that&#x27;s a serious situation. Seizure. And second, stay on the line.
+<span class="tutor">[Tutor]</span> Stay on the line.
+[Joey] To keep talking on the phone without hanging up. When I connect to 911, the 911 member usually says, &quot;Stay on the line.&quot; Right?
+<span class="tutor">[Tutor]</span> Yeah, they usually say that.
+<span class="tutor">[Tutor]</span> Yeah, keep talking to them.
+[Joey] Keep talking. Stay on the line. Stay on the line. Okay, stay on the phone. Yes, stay on the line. Oh, stay on the line. Blah, blah, blah. Okay. And keep playing. Okay, how can I tell if it is serious enough to call 911? How can I tell if it is... Is it serious enough to call 911? How can I tell?
+<span class="tutor">[Tutor]</span> Okay, so maybe, yeah, you&#x27;re not sure, like, &quot;Ah, do I go? Maybe I can drive to the doctor, go later.&quot; I&#x27;m not sure how to do that situation, right? How can I tell?
+[Joey] Yeah, or maybe... Okay, go on, teacher.
+<span class="tutor">[Tutor]</span> Or like maybe if your stomach hurts, but you&#x27;re like, &quot;I don&#x27;t know if it&#x27;s serious enough. Maybe like, can it wait or should I go to the hospital?&quot; How can I tell if it is serious enough to call 911?
+[Joey] What should I do if she&#x27;s not breathing? Oh, yes, what should I do if blah, blah, blah, blah, blah? What should I do? Okay. And how about the next one, the Infobytes?
+[Joey] Infobytes. Okay. Read. Okay. The U.S., United Kingdom, Canada, Australia, and New Zealand use a single emergency number for police, fire, and medical help. It&#x27;s the same, just one number, 911, right?
+<span class="tutor">[Tutor]</span> Yes.
+[Joey] Oh, 911, 000, 111, 999. Okay.
+<span class="tutor">[Tutor]</span> Different countries.
+[Joey] Yeah, different country. In the U.S., United Kingdom, Canada, Australia, and New Zealand, non-urgent ER patients often wait hours as serious cases go first.
+[Joey] It is same in Korea.
+<span class="tutor">[Tutor]</span> And ambulance rides are free in the United Kingdom, but can cost hundreds or thousands in the U.S., Canada, and some parts of Australia.
+[Joey] In Korea, it is similar. We will pay some ambulance fee.
+<span class="tutor">[Tutor]</span> Uh-huh. Go on.
+<span class="tutor">[Tutor]</span> In Canada, it&#x27;s only like $80.
+[Joey] $80? $80. Oh, yes.
+<span class="tutor">[Tutor]</span> $150 for a helicopter.
+[Joey] Oh, yes. If I get lost in the mountain and call a helicopter, it is so expensive, right?
+<span class="tutor">[Tutor]</span> $150.
+<span class="tutor">[Tutor]</span> $100.
+<span class="tutor">[Tutor]</span> If you&#x27;re a resident, yeah.
+[Joey] Oh, $150. $100 or $50? $150.
+<span class="tutor">[Tutor]</span> $100. Yeah, $150. Not too bad for a helicopter.
+[Joey] Yeah, it&#x27;s a helicopter. Not expensive.
+<span class="tutor">[Tutor]</span> For a resident, but maybe for a visitor, it&#x27;s very expensive.
+[Joey] But if I just jokingly call and call the helicopter, is it the same price, $150?
+<span class="tutor">[Tutor]</span> I think you might get in trouble if you&#x27;re kidding.
+[Joey] Yeah, same or I pay more?
+<span class="tutor">[Tutor]</span> You might get criminal charges if you&#x27;re lying about using it and they find out you&#x27;re lying. Yeah.
+[Joey] Do you have an experience to take an ambulance or a helicopter?
+<span class="tutor">[Tutor]</span> Yeah, I&#x27;ve taken an ambulance and I know someone who took a helicopter because of their skiing. Oh, I see. Okay. Okay, last sentence. Emergency care is free for residents in United Kingdom, Canada, Australia, and New Zealand, but costly in the U.S. without insurance.
+[Joey] Okay, it is expensive in the USA. Yeah.
+<span class="tutor">[Tutor]</span> Have you ever been involved in a medical emergency?
+[Joey] Uh, maybe, uh, yes. Maybe 10 years ago, I had an accident on the road. So 10 years ago, I was riding a bicycle and I fell into some hole, and suddenly I had an accident and I broke my shoulder.
+<span class="tutor">[Tutor]</span> Oh, wow.
+[Joey] Oh, wow. Yes, I injured some muscles and bones, so I moved to my hospital. So I just called my boss, not an ambulance, and he took me to the hospital and I stayed in the hospital maybe three weeks. But I don&#x27;t have experience to take an ambulance or a helicopter, etc. Just I call to my friend or to my boss. It is easier for me.
+<span class="tutor">[Tutor]</span> So the pain was kind of okay? You&#x27;re kind of thinking, &quot;Oh, should I go to the hospital?&quot; So did it hurt too much or was the pain okay?
+[Joey] That was the pain, and that was a terrible situation. And I just called my boss because I remember that was the way he goes back home. So maybe 9 p.m. and work regularly and then go back home. And my boss and I go back home, and that&#x27;s his home. So I remember that situation, and I just called my boss. But it is not... it is a different situation. I called the ambulance, and the Korean ambulance number is 119. It is different from the USA.
+<span class="tutor">[Tutor]</span> Yeah, it was 119 in a few countries too, I think.
+[Joey] Yes, yes, you&#x27;re right.
+<span class="tutor">[Tutor]</span> Yeah, definitely. Okay, so you knew your boss was leaving at the same time as you, so it would probably be around, right?
+[Joey] Yes. He came back, he took the car, and I took a bicycle. So, yeah, it is a fast way to move my body to the hospital. And this one, the caller and operator. Who would you like to read?
+[Joey] Okay, I first. I&#x27;m the caller. Hello, I think someone just collapsed in the park. Collapsed, is it right?
+<span class="tutor">[Tutor]</span> Collapsed, yeah.
+[Joey] Hello, I think someone just collapsed in the park.
+<span class="tutor">[Tutor]</span> Okay, I need you to stay on the line. Can you tell me what happened?
+[Joey] Oh, she suddenly fell down and started shaking. How can I tell if it is a seizure?
+<span class="tutor">[Tutor]</span> If he&#x27;s shaking uncontrollably and not responding, it could be a seizure. Is he conscious now?
+[Joey] No, he&#x27;s not responding. What should I do if he&#x27;s having a seizure?
+<span class="tutor">[Tutor]</span> Stay calm. Don&#x27;t try to hold him down. Move anything dangerous away and put him on his side if you can.
+[Joey] Okay. I&#x27;m doing that now. Please hurry. He&#x27;s still not responding.
+<span class="tutor">[Tutor]</span> What kind of emergency is the caller reporting?
+[Joey] Okay, in the park, someone just collapsed, and he&#x27;s just shaking and having a seizure. And he&#x27;s not responding.
+<span class="tutor">[Tutor]</span> Any questions about the vocabulary?
+[Joey] Oh, no, I don&#x27;t have a question about that.
+<span class="tutor">[Tutor]</span> So next page, yeah, we have the &quot;Say It Right.&quot;
+[Joey] Okay. Would you like to read? Yeah. Okay, I see. Just a moment, teacher. Okay, I&#x27;m sorry. The medical emergency, life-threatening. Unpredictable. Unpredictable. Urgent. And response to situation. Composed, composed, composed, calm, and focused, and responsive, responsive, and courteous, courteous. Is it right?
+<span class="tutor">[Tutor]</span> Courteous. Courteous. Courteous. Courteous. Courteous. Composed, responsive, cordial.
+[Joey] Okay. Okay, I see.
+<span class="tutor">[Tutor]</span> What kind of emergency would you describe as life-threatening or urgent?
+[Joey] What kind of emergency? Emergency? I don&#x27;t have experience to call the SOS or 911, but maybe if I call the emergency situation and explain about that, I just explain the situation and how urgent the situation and the location, etc. The time, location, and where, when, and how, blah, blah, blah. I&#x27;m explaining that situation.
+<span class="tutor">[Tutor]</span> Can you give an example? Like a stroke, a seizure, also like a car accident.
+[Joey] Yes, the situation of the body, the patient, and yeah, I just explain about that situation.
+<span class="tutor">[Tutor]</span> Use the 5Ws, yes, 6Ws, yes. All the questions, yeah, the question words. So the second question, imagine you witness a car accident. What kind of person would you want to be there to help, and how would they act?
+[Joey] Usually, if it is a little accident, a small accident, nobody is unconscious, and just a car accident, and just a broken car, I just call the insurance company. But if that accident is so serious and somebody is having a heart attack, at that time I call the police or 911. Because I would move him to the hospital. And I call the police and record the situation. Because usually if we have a car accident, we move our car&#x27;s location. So if we don&#x27;t have a recording, we need some recording about that situation.
+<span class="tutor">[Tutor]</span> Definitely someone recording or kind of taking a record of it.
+[Joey] Yes, because sometimes we have argued about whose fault or the payment of the hospital fee or some broken car, fixed payment. Yeah, we have to, how can I say, anyway.
+<span class="tutor">[Tutor]</span> Kind of sort it out. Yeah, you want to get the record for it.
+[Joey] Yes, we need a record.
+<span class="tutor">[Tutor]</span> And this one, do you want to read the last one?
+[Joey] Do you want me to speed up?
+<span class="tutor">[Tutor]</span> Okay, I&#x27;ll speed up.
+[Joey] I was at the grocery store when something suddenly happened. It felt urgent and completely overwhelming. Someone nearby stayed composed and took action right away. I remember thinking how responsive and much better they were.
+<span class="tutor">[Tutor]</span> Any questions about these terms?
+[Joey] No, thank you for your class today.
+<span class="tutor">[Tutor]</span> Yeah, I&#x27;ll let you go. Have a great day. I&#x27;ll send you corrections in just a moment.
+[Joey] Okay, I see. Thank you so much. Bye-bye, teacher.
+<span class="tutor">[Tutor]</span> You&#x27;re welcome. Goodbye.</div>
+        </div>
+    </div>
+    <div class="toast" id="toast">✅ 프롬프트가 복사되었습니다!</div>
+    <script>
+        const REVIEW_PROMPT="너는 나의 영어 회화 복습 파트너야. 오늘 내 전화영어 수업 내용을 기반으로 대화하면서 복습을 도와줘.\n\n[오늘 수업 전사 내용]\n[Joey] Hello, hello Val. Good morning.\n[Tutor] Oh, yeah, good morning. How are you doing today?\n[Joey] Yeah, it's all right. I'm good. Yeah. How are you?\n[Tutor] Oh, pretty good. So did you have to change your schedule today?\n[Joey] Yeah, because today I'm working in another place, another city, because I have to interview at dinner time, so yeah, so I need to change my schedule.\n[Tutor] Okay, how is the city so far? Are you able to look around or just business?\n[Joey] That is business and it is kind of the audit, and this city's name is Ulsan. Ulsan is... Yeah, there are so many factories in this city. So, yeah, this city, we have some important office in this city. So I have to interview with my coworker in another company. Yeah, at dinner time, because in the working time, it is not secret. For example, if we interview the team leader, the other team members know about that. After work, if we have an interview, at that time it is kept secret to the investor or research. So, yeah, I need to change the time and have an interview.\n[Tutor] Kind of like a surprise, yeah.\n[Joey] Yeah.\n[Tutor] Sudden interview.\n[Joey] Yeah, sudden surprise and keep the secret. And, yeah, it is so I need to change the schedule. How about you? And how about you? How about your schedule and time? It is a late time, right? In Canada?\n[Tutor] It's 6:30 p.m.\n[Joey] Ah, 6:30. Not late. Dinner, okay.\n[Tutor] It's not too late.\n[Joey] Did you have dinner?\n[Tutor] Yes, I already ate.\n[Joey] Ah, yes, good.\n[Tutor] Good. Well, did you want to have a look at the textbook today?\n[Joey] Oh, yes, just a moment. I'm searching for the textbook. Just a moment.\n[Tutor] I was going to say Ulsan, a very industrial city, right? Just factories.\n[Joey] Yeah, very much. Yes, you're right. Okay, today is the... just a moment, teacher. I'm so sorry, but the textbook is not... Oh, just a moment. I found it. Yes.\n[Tutor] Sometimes, yeah, it's a little weird, some network stuff.\n[Joey] Yes.\n[Tutor] Maybe the Wi-Fi connection is not working.\n[Tutor] Are you in a hotel or a different workplace?\n[Joey] This is my home. My home is located in Busan. It is close to Ulsan. I work in my hometown, and then after 2 p.m. I will go to Ulsan, and then I have an interview with my another coworker. I checked my Wi-Fi, but it is impossible to... It's possible. Just a moment. Sorry.\n[Joey] Okay, I found it. Handle emergency situations, right?\n[Tutor] Yeah, yeah, what to do. Calling 911.\n[Tutor] Yes, today's mission, handle an emergency by calling 911, describing what happens and giving your location.\n[Tutor] So, do you want to look at the key expressions here?\n[Joey] Okay, yes, no problem. And seizure, seizure, seizure. How about that? Seizure. Yeah, seizure, a sudden uncontrolled shaking or loss of body control caused by brain. Oh, that's a serious situation. Seizure. And second, stay on the line.\n[Tutor] Stay on the line.\n[Joey] To keep talking on the phone without hanging up. When I connect to 911, the 911 member usually says, \"Stay on the line.\" Right?\n[Tutor] Yeah, they usually say that.\n[Tutor] Yeah, keep talking to them.\n[Joey] Keep talking. Stay on the line. Stay on the line. Okay, stay on the phone. Yes, stay on the line. Oh, stay on the line. Blah, blah, blah. Okay. And keep playing. Okay, how can I tell if it is serious enough to call 911? How can I tell if it is... Is it serious enough to call 911? How can I tell?\n[Tutor] Okay, so maybe, yeah, you're not sure, like, \"Ah, do I go? Maybe I can drive to the doctor, go later.\" I'm not sure how to do that situation, right? How can I tell?\n[Joey] Yeah, or maybe... Okay, go on, teacher.\n[Tutor] Or like maybe if your stomach hurts, but you're like, \"I don't know if it's serious enough. Maybe like, can it wait or should I go to the hospital?\" How can I tell if it is serious enough to call 911?\n[Joey] What should I do if she's not breathing? Oh, yes, what should I do if blah, blah, blah, blah, blah? What should I do? Okay. And how about the next one, the Infobytes?\n[Joey] Infobytes. Okay. Read. Okay. The U.S., United Kingdom, Canada, Australia, and New Zealand use a single emergency number for police, fire, and medical help. It's the same, just one number, 911, right?\n[Tutor] Yes.\n[Joey] Oh, 911, 000, 111, 999. Okay.\n[Tutor] Different countries.\n[Joey] Yeah, different country. In the U.S., United Kingdom, Canada, Australia, and New Zealand, non-urgent ER patients often wait hours as serious cases go first.\n[Joey] It is same in Korea.\n[Tutor] And ambulance rides are free in the United Kingdom, but can cost hundreds or thousands in the U.S., Canada, and some parts of Australia.\n[Joey] In Korea, it is similar. We will pay some ambulance fee.\n[Tutor] Uh-huh. Go on.\n[Tutor] In Canada, it's only like $80.\n[Joey] $80? $80. Oh, yes.\n[Tutor] $150 for a helicopter.\n[Joey] Oh, yes. If I get lost in the mountain and call a helicopter, it is so expensive, right?\n[Tutor] $150.\n[Tutor] $100.\n[Tutor] If you're a resident, yeah.\n[Joey] Oh, $150. $100 or $50? $150.\n[Tutor] $100. Yeah, $150. Not too bad for a helicopter.\n[Joey] Yeah, it's a helicopter. Not expensive.\n[Tutor] For a resident, but maybe for a visitor, it's very expensive.\n[Joey] But if I just jokingly call and call the helicopter, is it the same price, $150?\n[Tutor] I think you might get in trouble if you're kidding.\n[Joey] Yeah, same or I pay more?\n[Tutor] You might get criminal charges if you're lying about using it and they find out you're lying. Yeah.\n[Joey] Do you have an experience to take an ambulance or a helicopter?\n[Tutor] Yeah, I've taken an ambulance and I know someone who took a helicopter because of their skiing. Oh, I see. Okay. Okay, last sentence. Emergency care is free for residents in United Kingdom, Canada, Australia, and New Zealand, but costly in the U.S. without insurance.\n[Joey] Okay, it is expensive in the USA. Yeah.\n[Tutor] Have you ever been involved in a medical emergency?\n[Joey] Uh, maybe, uh, yes. Maybe 10 years ago, I had an accident on the road. So 10 years ago, I was riding a bicycle and I fell into some hole, and suddenly I had an accident and I broke my shoulder.\n[Tutor] Oh, wow.\n[Joey] Oh, wow. Yes, I injured some muscles and bones, so I moved to my hospital. So I just called my boss, not an ambulance, and he took me to the hospital and I stayed in the hospital maybe three weeks. But I don't have experience to take an ambulance or a helicopter, etc. Just I call to my friend or to my boss. It is easier for me.\n[Tutor] So the pain was kind of okay? You're kind of thinking, \"Oh, should I go to the hospital?\" So did it hurt too much or was the pain okay?\n[Joey] That was the pain, and that was a terrible situation. And I just called my boss because I remember that was the way he goes back home. So maybe 9 p.m. and work regularly and then go back home. And my boss and I go back home, and that's his home. So I remember that situation, and I just called my boss. But it is not... it is a different situation. I called the ambulance, and the Korean ambulance number is 119. It is different from the USA.\n[Tutor] Yeah, it was 119 in a few countries too, I think.\n[Joey] Yes, yes, you're right.\n[Tutor] Yeah, definitely. Okay, so you knew your boss was leaving at the same time as you, so it would probably be around, right?\n[Joey] Yes. He came back, he took the car, and I took a bicycle. So, yeah, it is a fast way to move my body to the hospital. And this one, the caller and operator. Who would you like to read?\n[Joey] Okay, I first. I'm the caller. Hello, I think someone just collapsed in the park. Collapsed, is it right?\n[Tutor] Collapsed, yeah.\n[Joey] Hello, I think someone just collapsed in the park.\n[Tutor] Okay, I need you to stay on the line. Can you tell me what happened?\n[Joey] Oh, she suddenly fell down and started shaking. How can I tell if it is a seizure?\n[Tutor] If he's shaking uncontrollably and not responding, it could be a seizure. Is he conscious now?\n[Joey] No, he's not responding. What should I do if he's having a seizure?\n[Tutor] Stay calm. Don't try to hold him down. Move anything dangerous away and put him on his side if you can.\n[Joey] Okay. I'm doing that now. Please hurry. He's still not responding.\n[Tutor] What kind of emergency is the caller reporting?\n[Joey] Okay, in the park, someone just collapsed, and he's just shaking and having a seizure. And he's not responding.\n[Tutor] Any questions about the vocabulary?\n[Joey] Oh, no, I don't have a question about that.\n[Tutor] So next page, yeah, we have the \"Say It Right.\"\n[Joey] Okay. Would you like to read? Yeah. Okay, I see. Just a moment, teacher. Okay, I'm sorry. The medical emergency, life-threatening. Unpredictable. Unpredictable. Urgent. And response to situation. Composed, composed, composed, calm, and focused, and responsive, responsive, and courteous, courteous. Is it right?\n[Tutor] Courteous. Courteous. Courteous. Courteous. Courteous. Composed, responsive, cordial.\n[Joey] Okay. Okay, I see.\n[Tutor] What kind of emergency would you describe as life-threatening or urgent?\n[Joey] What kind of emergency? Emergency? I don't have experience to call the SOS or 911, but maybe if I call the emergency situation and explain about that, I just explain the situation and how urgent the situation and the location, etc. The time, location, and where, when, and how, blah, blah, blah. I'm explaining that situation.\n[Tutor] Can you give an example? Like a stroke, a seizure, also like a car accident.\n[Joey] Yes, the situation of the body, the patient, and yeah, I just explain about that situation.\n[Tutor] Use the 5Ws, yes, 6Ws, yes. All the questions, yeah, the question words. So the second question, imagine you witness a car accident. What kind of person would you want to be there to help, and how would they act?\n[Joey] Usually, if it is a little accident, a small accident, nobody is unconscious, and just a car accident, and just a broken car, I just call the insurance company. But if that accident is so serious and somebody is having a heart attack, at that time I call the police or 911. Because I would move him to the hospital. And I call the police and record the situation. Because usually if we have a car accident, we move our car's location. So if we don't have a recording, we need some recording about that situation.\n[Tutor] Definitely someone recording or kind of taking a record of it.\n[Joey] Yes, because sometimes we have argued about whose fault or the payment of the hospital fee or some broken car, fixed payment. Yeah, we have to, how can I say, anyway.\n[Tutor] Kind of sort it out. Yeah, you want to get the record for it.\n[Joey] Yes, we need a record.\n[Tutor] And this one, do you want to read the last one?\n[Joey] Do you want me to speed up?\n[Tutor] Okay, I'll speed up.\n[Joey] I was at the grocery store when something suddenly happened. It felt urgent and completely overwhelming. Someone nearby stayed composed and took action right away. I remember thinking how responsive and much better they were.\n[Tutor] Any questions about these terms?\n[Joey] No, thank you for your class today.\n[Tutor] Yeah, I'll let you go. Have a great day. I'll send you corrections in just a moment.\n[Joey] Okay, I see. Thank you so much. Bye-bye, teacher.\n[Tutor] You're welcome. Goodbye.\n\n[AI 피드백]\n안녕하세요, Joey! 오늘도 활기찬 목소리로 수업에 참여해주셔서 감사합니다. 비즈니스 미팅 때문에 바쁜 와중에도 영어 공부를 놓지 않는 Joey의 열정에 박수를 보냅니다! 오늘 Ulsan 출장과 911 응급 상황 대처법에 대해 이야기 나누면서, Joey의 경험과 생각들을 많이 공유해주셔서 정말 흥미로웠어요.\n\n---\n\n### **0. 📌 Topic**\nTopic: Discussing emergency situations and sharing personal experiences with accidents and business travel.\n\n### **1. 📊 오늘의 대화 요약 (Summary)**\n오늘은 Joey의 울산 출장 이야기로 대화를 시작하여, 비즈니스 미팅과 관련된 스케줄 변경 및 기밀 유지의 중요성에 대해 이야기 나누었습니다. 이어서 교재의 핵심 주제인 911 응급 상황 대처법을 다루며, 다양한 국가의 응급 전화번호와 구급차 비용, 그리고 Joey의 과거 자전거 사고 경험을 공유하며 실제 응급 상황 대처에 대해 토론했습니다.\n\n### **2. 💬 유창성 업그레이드 (Fluency & Natural Flow)**\n\nJoey가 말한 문장 중 의미는 잘 전달되었지만, 원어민들이 더 자연스럽게 쓰는 표현으로 다듬을 수 있는 세 가지를 골라봤어요.\n\n1.  **❌ 학습자 원문 (As Said):** \"I have to interview at dinner time, so yeah, so I need to change my schedule.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"I have an interview scheduled for dinner time, so I need to change my schedule.\"\n    *   **💎 비즈니스 표현 (Professional):** \"I have a meeting scheduled for this evening, which required me to adjust my schedule.\"\n    *   **💡 코칭 포인트:** \"have an interview scheduled\"나 \"a meeting scheduled\"를 사용하는 것이 \"interview at dinner time\"보다 더 정확하고 전문적입니다. \"need to change\"는 문법적으로 맞지만, \"have an interview scheduled\"와 함께 사용하면 문장이 더 자연스럽게 연결됩니다.\n\n2.  **❌ 학습자 원문 (As Said):** \"After work, if we have an interview, at that time it is kept secret to the investor or research.\"\n    *   **✅ 자연스러운 표현 (Natural):** \"If we conduct an interview after work, it's kept confidential from investors or for research purposes.\"\n    *   **💎 비즈니스 표현 (Professional):** \"To maintain confidentiality, interviews are often conducted after hours, particularly when sensitive information pertains to investors or research.\"\n    *   **💡 코칭 포인트:** \"kept secret to\"는 \"kept confidential from\" 또는 \"kept confidential for\"보다 덜 흔합니다. 또한, \"research\"는 기밀 유지의 이유를 나타낼 때 \"research purposes\"로 구체화하는 경우가 많습니다.\n\n3.  **❌ 학습자 원문 (As Said):** \"Do you have an experience to take an ambulance or a helicopter?\"\n    *   **✅ 자연스러운 표현 (Natural):** \"Have you ever taken an ambulance or a helicopter?\"\n    *   **💎 비즈니스 표현 (Professional):** \"Have you ever utilized emergency medical transport, such as an ambulance or helicopter?\"\n    *   **💡 코칭 포인트:** 과거의 경험에 대해 물을 때는 \"Have you ever + 과거 분사\"가 가장 자연스럽고 일반적인 구조입니다. \"experience\"는 일반적인 지식이나 기술을 말할 때는 셀 수 없는 명사로 사용되며, \"an experience\"는 특정하고 셀 수 있는 사건에 사용됩니다.\n\n### **3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)**\n\n오늘 Joey의 대화에서 **전치사(Prepositions)** 사용에 있어서 조금 더 다듬을 수 있는 부분이 반복적으로 보였습니다. 특히 시간이나 장소, 목적 등을 나타내는 전치사 선택에서 원어민들이 더 선호하는 표현들이 있어요.\n\n**Category: Prepositions (전치사)**\n\n| ❌ 원문 (As Said)                                                                  | ✅ 교정 예시 (Corrected)                                                                                              |\n| :-------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------- |\n| \"I have to interview **at dinner time**\"                                          | \"I have to interview **during dinner time**\" / \"I have a dinner interview\"                                           |\n| \"because **in the working time**, it is not secret.\"                              | \"because **during working hours**, it is not confidential.\"                                                          |\n| \"it is kept secret **to the investor or research**.\"                              | \"it is kept confidential **from investors or for research purposes**.\"                                               |\n| \"If I get lost **in the mountain** and call a helicopter, it is so expensive\"    | \"If I get lost **in the mountains** (or **on a mountain**) and call a helicopter, it is so expensive\"                |\n| \"Just I call **to my friend or to my boss**.\"                                     | \"I just call **my friend or my boss**.\"                                                                              |\n\n📌 **핵심 규칙:** 시간, 장소, 목적을 나타내는 전치사는 문맥에 따라 가장 자연스러운 표현을 선택해야 합니다. 동사 'call' 뒤에는 전치사 'to' 없이 바로 목적어가 오는 것이 자연스럽습니다.\n\n🔁 **따라 읽기 (Repeat After Me):**\n🗣️ \"I have an interview scheduled during dinner time.\"\n🗣️ \"During working hours, it is not confidential.\"\n🗣️ \"I just call my friend or my boss.\"\n\n### **4. 📗 어휘 확장 (Vocabulary Vault)**\n\nJoey의 업무 환경에서 유용하게 쓰일 수 있는 어휘 5가지를 골라봤습니다.\n\n1.  **audit** /ˈɔːdɪt/ (명사, 동사)\n    *   뜻: 회계 감사, 심사; (장부 등을) 감사하다, 심사하다\n    *   실전 예문: We need to prepare all financial documents for the **annual audit**.\n2.  **confidential** /ˌkɒnfɪˈdenʃl/ (형용사)\n    *   뜻: 기밀의, 비밀의\n    *   실전 예문: Please keep this information **confidential** as it pertains to our new investment strategy.\n3.  **reschedule** /ˌriːˈʃedʒuːl/ (동사)\n    *   뜻: 일정을 변경하다, 다시 잡다\n    *   실전 예문: Due to an unexpected conflict, we had to **reschedule** the client meeting for next week.\n4.  **utilize** /ˈjuːtəlaɪz/ (동사)\n    *   뜻: 활용하다, 이용하다 (use보다 격식 있는 표현)\n    *   실전 예문: We should **utilize** all available resources to optimize our project timeline.\n5.  **responsive** /rɪˈspɒnsɪv/ (형용사)\n    *   뜻: 즉각 반응하는, 반응이 빠른; (요구에) 부응하는\n    *   실전 예문: Our customer support team is highly **responsive** to client inquiries, ensuring quick resolution.\n\n### **5. 📝 실전 복습 챌린지 (Practice)**\n\n오늘 배운 표현과 문법을 활용해서 영작 챌린지를 해볼까요?\n\n1.  **상황:** 회사의 중요한 투자자 미팅 일정을 변경해야 합니다.\n    *   **영작:** \"우리는 중요한 투자자 미팅 일정을 다음 주로 변경해야 했습니다.\"\n    *   **모범 답안:** \"We had to **reschedule** the crucial investor meeting for next week.\"\n2.  **상황:** 새로운 프로젝트에 대한 정보는 철저히 기밀로 유지되어야 합니다.\n    *   **영작:** \"새로운 프로젝트에 대한 모든 정보는 철저히 기밀로 유지되어야 합니다.\"\n    *   **모범 답안:** \"All information regarding the new project must be kept strictly **confidential**.\"\n3.  **상황:** 긴급 상황 발생 시, 911 교환원은 당신에게 전화 끊지 말고 계속 통화 상태를 유지하라고 요청할 것입니다.\n    *   **영작:** \"긴급 상황 발생 시, 911 교환원은 당신에게 전화 끊지 말고 계속 통화 상태를 유지하라고 요청할 것입니다.\"\n    *   **모범 답안:** \"In an emergency, the 911 operator will ask you to **stay on the line**.\"\n\n### **6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)**\n\n✨ **Good Job:**\nJoey가 오늘 가장 잘 표현한 문장 중 하나는 바로 이것입니다:\n\"**I remember thinking how responsive and much better they were.**\"\n이 문장은 Joey가 롤플레이 상황에서 다른 사람의 대처 능력을 평가하며 자신의 생각을 아주 자연스럽게 표현한 부분입니다. 'responsive'라는 어휘를 정확한 맥락에서 사용하고, 'much better'와 같은 비교 표현도 유창하게 구사하여 인상 깊었습니다!\n\n🚀 **내일의 한 문장:**\n다음 수업 시작 시, 튜터에게 오늘 배운 내용을 활용하여 이렇게 말해보는 건 어떨까요?\n\"I **rescheduled** my meeting today, and it reminded me of the importance of keeping certain information **confidential**.\"\n(오늘 미팅 일정을 변경했는데, 특정 정보를 기밀로 유지하는 것의 중요성을 다시 한번 생각하게 됐어요.)\n\n---\n\n### **[성과 지표]**\n*   **유창성 점수:** 7/10\n*   **근거:** Joey는 다양한 주제에 대해 자신의 의견과 경험을 비교적 막힘없이 표현할 수 있으며, 특히 비즈니스 관련 상황을 설명할 때 적절한 어휘를 사용하려는 노력이 돋보였습니다. 하지만 전치사 사용, 동사 형태, 그리고 일부 문장 구조에서 원어민이 더 자연스럽게 사용하는 표현으로 다듬을 수 있는 부분들이 있었습니다. 이는 유창성을 더 높이고 정확성을 향상시키는 데 도움이 될 것입니다.\n*   **다음 수업 '원포인트 액션 플랜':** 다음 수업에서는 오늘 배운 **전치사 사용**에 유의하며, 특히 시간, 장소, 그리고 동사 'call'과 함께 쓰이는 전치사 표현에 더 신경 써서 말해보는 것을 목표로 삼아봅시다.\n\n위 내용을 바탕으로:\n1. 먼저 오늘 수업에서 내가 틀렸거나 어색했던 표현을 하나 골라서, 관련된 상황을 영어로 질문해줘.\n2. 내가 영어로 대답하면, 자연스러운지 확인하고 더 나은 표현이 있으면 알려줘.\n3. 특히 \"반복 실수 패턴\"에서 지적된 부분을 집중적으로 연습시켜줘.\n4. 이런 식으로 오늘 배운 표현들을 하나씩 복습하자.\n5. 한국어 설명은 필요할 때만 간단히, 대화는 최대한 영어로 진행해줘.\n\n그럼 시작하자!";
+        function startReview(){navigator.clipboard.writeText(REVIEW_PROMPT).then(()=>{showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)}).catch(()=>{const t=document.createElement('textarea');t.value=REVIEW_PROMPT;document.body.appendChild(t);t.select();document.execCommand('copy');document.body.removeChild(t);showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)})}
+        function showToast(){const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500)}
+        function switchTab(n){document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',n==='feedback'?i===0:i===1));document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));document.getElementById('tab-'+n).classList.add('active')}
+    </script>
+</body>
+</html>

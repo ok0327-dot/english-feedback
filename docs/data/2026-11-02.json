@@ -1,0 +1,53 @@
+{
+ "date": "2026-11-02",
+ "iso": [
+  2026,
+  45
+ ],
+ "topic": "Discussing emergency situations and sharing personal experiences with accidents and busine",
+ "grammar": "Prepositions",
+ "grammar_norm": "Prepositions",
+ "score": 7.0,
+ "pairs": [
+  {
+   "said": "I have to interview at dinner time, so yeah, so I need to change my schedule.",
+   "natural": "I have an interview scheduled for dinner time, so I need to change my schedule."
+  },
+  {
+   "said": "After work, if we have an interview, at that time it is kept secret to the investor or research.",
+   "natural": "If we conduct an interview after work, it's kept confidential from investors or for research purposes."
+  },
+  {
+   "said": "Do you have an experience to take an ambulance or a helicopter?",
+   "natural": "Have you ever taken an ambulance or a helicopter?"
+  }
+ ],
+ "vocab": [
+  {
+   "word": "audit",
+   "pos": "명사, 동사",
+   "meaning": "회계 감사, 심사; (장부 등을) 감사하다, 심사하다"
+  },
+  {
+   "word": "confidential",
+   "pos": "형용사",
+   "meaning": "기밀의, 비밀의"
+  },
+  {
+   "word": "reschedule",
+   "pos": "동사",
+   "meaning": "일정을 변경하다, 다시 잡다"
+  },
+  {
+   "word": "utilize",
+   "pos": "동사",
+   "meaning": "활용하다, 이용하다 (use보다 격식 있는 표현)"
+  },
+  {
+   "word": "responsive",
+   "pos": "형용사",
+   "meaning": "즉각 반응하는, 반응이 빠른; (요구에) 부응하는"
+  }
+ ],
+ "_html_md5": "f54931a66220baaa799fd3512e6551cd"
+}
