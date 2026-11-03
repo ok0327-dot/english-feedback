@@ -1,0 +1,27 @@
+{
+ "date": "2026-11-03",
+ "iso": [
+  2026,
+  45
+ ],
+ "topic": "Discussing health insurance plans and related vocabulary.",
+ "grammar": "Missing Verbs and Incorrect Verb Forms",
+ "grammar_norm": "Verb Forms / Auxiliaries",
+ "score": null,
+ "pairs": [
+  {
+   "said": "I'm doing traveling.",
+   "natural": "I'm traveling."
+  },
+  {
+   "said": "That name is the gathering factory.",
+   "natural": "That city is known for its factories."
+  },
+  {
+   "said": "It is possible to pre-talking if you need to just recover your time, your eyes at the time. You just pre-talking. Yeah. And close your eyes and talking to me.",
+   "natural": "It's possible to talk beforehand if you need time to recover. You can just close your eyes and talk to me."
+  }
+ ],
+ "vocab": [],
+ "_html_md5": "abcf59af3745fe06fb60452a3f9149b2"
+}
