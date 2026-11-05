@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#0f0f13"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="당근영어"><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="icon" type="image/png" sizes="192x192" href="icon-192.png"><script src="install-banner.js" defer></script><script src="sw-reg.js" defer></script>
+    <title>전화영어 복습 - 2026년 11월 04일</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Noto Sans KR',sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.75;min-height:100vh}
+        .header{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);border-bottom:1px solid rgba(255,255,255,.06);padding:48px 24px 40px;text-align:center}
+        .header-date{font-size:13px;color:#94a3b8;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+        .header h1{font-size:28px;font-weight:700;color:#f1f5f9;margin-bottom:16px}
+        .header-meta{display:flex;justify-content:center;gap:24px;font-size:14px;color:#64748b}
+        .header-meta span{display:flex;align-items:center;gap:6px}
+        .cta-section{text-align:center;padding:40px 24px}
+        .cta-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:linear-gradient(135deg,#38bdf8,#818cf8);color:#fff;font-size:16px;font-weight:600;font-family:'Noto Sans KR',sans-serif;border:none;border-radius:50px;cursor:pointer;transition:all .3s;text-decoration:none;box-shadow:0 4px 24px rgba(56,189,248,.25)}
+        .cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(56,189,248,.35)}
+        .cta-btn svg{width:20px;height:20px}
+        .cta-sub{margin-top:12px;font-size:13px;color:#64748b}
+        .toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#38bdf8;padding:14px 28px;border-radius:12px;font-size:14px;font-weight:500;border:1px solid rgba(56,189,248,.2);box-shadow:0 8px 32px rgba(0,0,0,.4);opacity:0;transition:all .4s cubic-bezier(.16,1,.3,1);z-index:1000}
+        .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+        .container{max-width:720px;margin:0 auto;padding:0 24px 80px}
+        .tabs{display:flex;gap:4px;background:#1a1a24;padding:4px;border-radius:12px;margin-bottom:32px}
+        .tab{flex:1;padding:12px;text-align:center;font-size:14px;font-weight:500;color:#64748b;background:0 0;border:none;border-radius:8px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all .2s}
+        .tab.active{background:#262636;color:#f1f5f9}
+        .tab-content{display:none}.tab-content.active{display:block}
+        .feedback h2{font-size:18px;font-weight:700;color:#f1f5f9;margin:36px 0 16px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.06)}
+        .feedback h2:first-child{margin-top:0}
+        .feedback p{margin:8px 0;color:#cbd5e1}
+        .feedback .item{padding:6px 0 6px 16px;border-left:2px solid #334155;margin:6px 0;color:#cbd5e1}
+        .feedback .numbered{padding:8px 0 8px 16px;color:#cbd5e1}
+        .feedback .numbered strong{color:#38bdf8}
+        .feedback strong{color:#f1f5f9}
+        .feedback code{background:#1e293b;padding:2px 8px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#38bdf8}
+        .feedback table{width:100%;border-collapse:collapse;margin:12px 0}
+        .feedback th,.feedback td{padding:10px 14px;text-align:left;border-bottom:1px solid #262636}
+        .feedback th{color:#94a3b8;font-weight:500;font-size:13px}
+        .feedback td{color:#cbd5e1}
+        .arrow{color:#38bdf8;font-weight:700}
+        .transcript{background:#1a1a24;border-radius:12px;padding:28px;font-size:14px;line-height:2;color:#94a3b8;white-space:pre-wrap;word-break:break-word;font-family:'JetBrains Mono','Noto Sans KR',monospace}
+        .transcript .tutor{color:#38bdf8}
+        .transcript .student{color:#a78bfa}
+        @media(max-width:640px){.header{padding:32px 16px}.header h1{font-size:22px}.cta-btn{padding:14px 28px;font-size:15px}.container{padding:0 16px 60px}}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-date">2026년 11월 04일</div>
+        <h1>📚 전화영어 복습</h1>
+        <div class="header-meta">
+            <span>⏱ 20분 21초</span>
+            <span>🎙 전화영어_025180304_20261104080010.m4a</span>
+        </div>
+    </div>
+    <div class="cta-section">
+        <button class="cta-btn" onclick="startReview()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Gemini에서 복습 대화 시작하기
+        </button>
+        <div class="cta-sub">클릭하면 프롬프트가 복사되고 Gemini가 열립니다</div>
+    </div>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('feedback')">📋 AI 피드백</button>
+            <button class="tab" onclick="switchTab('transcript')">🎙 수업 전사</button>
+        </div>
+        <div id="tab-feedback" class="tab-content active">
+            <div class="feedback"><p>안녕하세요, Joey! 오늘 수업도 정말 즐거웠습니다. 신분증과 관련된 흥미로운 주제로 다양한 이야기를 나누었네요. 특히 모바일 신분증에 대한 Joey의 의견이 인상 깊었습니다.</p>
+<br>
+<br>
+<h2><strong>0. 📌 Topic</strong></h2>
+<p>Topic: Discussing official identification documents, their application processes, and usage across different regions.</p>
+<br>
+<h2><strong>1. 📊 오늘의 대화 요약 (Summary)</strong></h2>
+<p>오늘 Joey는 미국 주 신분증(State ID) 신청에 필요한 서류와 절차에 대해 학습했습니다. 한국의 신분증 종류와 사용처, 그리고 모바일 신분증에 대한 개인적인 견해를 공유했으며, 더 나아가 여러 나라의 신분증 체계와 이민자들이 겪을 수 있는 어려움에 대해서도 폭넓게 토론했습니다.</p>
+<br>
+<h2><strong>2. 💬 유창성 업그레이드 (Fluency & Natural Flow)</strong></h2>
+<p>Joey가 말한 문장 중 의미는 통하지만, 원어민들이 더 자연스럽게 쓰는 표현으로 다듬어 볼 세 가지를 선정했습니다.</p>
+<br>
+<div class="numbered"><strong>1.</strong> ❌ <strong>학습자 원문 (As Said)</strong>: "I came back to my office and finished my work travel. So it's good and I came back to normal days, the routine days."</div>
+<p>✅ <strong>자연스러운 표현 (Natural)</strong>: "I'm back in the office after my work trip, so I'm glad to be back to my usual routine."</p>
+<p>💎 <strong>비즈니스 표현 (Professional)</strong>: "I've returned to the office following my business travel, and I'm pleased to resume my regular routine."</p>
+<p>💡 <strong>코칭 포인트</strong>: "Back to normal days, the routine days"는 다소 반복적입니다. "Back to my usual routine"이 더 간결하고 자연스럽습니다. "Resume my regular routine"은 일상적인 업무 패턴으로 돌아왔음을 표현하는 전문적인 방식입니다.</p>
+<br>
+<div class="numbered"><strong>2.</strong> ❌ <strong>학습자 원문 (As Said)</strong>: "my son doesn't have a residency proof, so usually use the passport in local or abroad."</div>
+<p>✅ <strong>자연스러운 표현 (Natural)</strong>: "My son doesn't have proof of residency, so he usually uses his passport both locally and abroad."</p>
+<p>💎 <strong>비즈니스 표현 (Professional)</strong>: "My son lacks a formal proof of residency, so his passport serves as his primary identification document for both domestic and international use."</p>
+<p>💡 <strong>코칭 포인트</strong>: "Residency proof"는 "proof of residency"가 맞습니다. 또한 "use the passport"에는 주어(he uses)가 필요하며, "in local or abroad"는 부사 형태인 "locally and abroad" 또는 "in local areas or abroad"로 쓰는 것이 자연스럽습니다.</p>
+<br>
+<div class="numbered"><strong>3.</strong> ❌ <strong>학습자 원문 (As Said)</strong>: "So they check the same person or not. Is it fake ID? Is it fake passport? So they confirm everything. So it is wrong, better wrong."</div>
+<p>✅ <strong>자연스러운 표현 (Natural)</strong>: "So they check to see if it's the same person and if the ID or passport is fake. They confirm everything, which often takes a long time."</p>
+<p>💎 <strong>비즈니스 표현 (Professional)</strong>: "Therefore, they meticulously verify the individual's identity and the authenticity of the identification documents, which can often lead to a protracted verification process."</p>
+<p>💡 <strong>코칭 포인트</strong>: "Wrong, better wrong"은 의미가 불분명합니다. 어떤 과정이 오래 걸린다는 것을 표현할 때는 "it takes a long time" 또는 "it's a lengthy process"라고 말할 수 있습니다. "Meticulously verify"와 "authenticity"는 전문적인 표현으로 좋습니다.</p>
+<br>
+<h2><strong>3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)</strong></h2>
+<p>이번 수업에서는 <strong>단수/복수 명사 및 형용사 사용의 혼동 (Confusion in Singular/Plural Nouns and Adjectives)</strong> 패턴이 눈에 띄었습니다. 특정 명사를 단수로 써야 할 자리에 복수를 쓰거나, 형용사 형태를 명사처럼 사용하는 경향이 있었습니다.</p>
+<br>
+<p><strong>Category: Confusion in Singular/Plural Nouns and Adjectives</strong></p>
+<br>
+<table>
+<tr><th>❌ 원문 (As Said)</th><th>✅ 교정 예시 (Corrected)</th></tr>
+<tr><td>"that card gives us some birthday and residency <strong>place</strong> and the number of the <strong>residency</strong>."</td><td>"that card shows our <strong>date of birth</strong>, <strong>place of residence</strong>, and <strong>resident registration number</strong>."</td></tr>
+<tr><td>"So it is wrong, <strong>better wrong</strong>."</td><td>"So it takes <strong>longer</strong>, often <strong>much longer</strong>."</td></tr>
+<tr><td>"Because it is so close, <strong>have a large country</strong>."</td><td>"Because it is such a large country."</td></tr>
+<tr><td>"So it is <strong>more easy</strong>."</td><td>"So it is <strong>easier</strong>."</td></tr>
+</table>
+<br>
+<p>📌 <strong>핵심 규칙</strong>: 명사의 단수/복수 형태를 정확히 사용하고, 명사를 수식할 때는 형용사를 활용하며, 불필요한 명사화 대신 자연스러운 표현을 익히는 것이 중요합니다. 특히 비교급 형용사를 사용할 때 "more + 형용사" 대신 "형용사-er" 형태를 쓰는 것이 자연스럽습니다.</p>
+<br>
+<p>🔁 <strong>따라 읽기 (Read Aloud)</strong>:</p>
+<p>🗣️ "That card shows our date of birth, place of residence, and resident registration number."</p>
+<p>🗣️ "It takes longer, often much longer."</p>
+<p>🗣️ "Because it is such a large country."</p>
+<p>🗣️ "So it is easier."</p>
+<br>
+<h2><strong>4. 📗 어휘 확장 (Vocabulary Vault)</strong></h2>
+<p>오늘 수업에서 나왔거나 맥락상 유용한 비즈니스 관련 어휘 5개를 소개합니다.</p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>residency</strong> /rézɪdənsi/ (명사)</div>
+<div class="item">뜻: 거주, 거주지</div>
+<div class="item">실전 예문: We need to confirm your <strong>residency</strong> for tax purposes. (세금 목적으로 귀하의 거주지를 확인해야 합니다.)</div>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>valid</strong> /vǽlɪd/ (형용사)</div>
+<div class="item">뜻: 유효한, 타당한</div>
+<div class="item">실전 예문: Please ensure all submitted documents are <strong>valid</strong> and up-to-date. (제출된 모든 서류가 유효하고 최신 정보인지 확인해 주십시오.)</div>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>streamlined</strong> /stríːmlaɪnd/ (형용사)</div>
+<div class="item">뜻: 간소화된, 능률적인</div>
+<div class="item">실전 예문: We are working to make our application process more <strong>streamlined</strong> for customers. (고객을 위해 신청 절차를 더욱 간소화하기 위해 노력하고 있습니다.)</div>
+<br>
+<div class="numbered"><strong>4.</strong> <strong>bureaucratic</strong> /bjùərəkrǽtɪk/ (형용사)</div>
+<div class="item">뜻: 관료주의적인, 번거로운</div>
+<div class="item">실전 예문: The new regulations have made the approval process quite <strong>bureaucratic</strong>. (새로운 규정으로 인해 승인 절차가 상당히 관료적으로 변했습니다.)</div>
+<br>
+<div class="numbered"><strong>5.</strong> <strong>illegible</strong> /ɪléʤəbəl/ (형용사)</div>
+<div class="item">뜻: 읽기 어려운, 판독 불가능한</div>
+<div class="item">실전 예문: The handwriting on the old contract was almost <strong>illegible</strong>. (오래된 계약서의 필체가 거의 판독 불가능했습니다.)</div>
+<br>
+<h2><strong>5. 📝 실전 복습 챌린지 (Practice)</strong></h2>
+<p>오늘 배운 표현과 문법을 활용하여 다음 한국어 상황을 영어로 영작해 보세요.</p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>쉬운 문제</strong>:</div>
+<div class="item"><strong>상황</strong>: 저는 출장을 마치고 사무실로 돌아와 평소의 일상으로 돌아와서 기쁩니다.</div>
+<div class="item"><strong>영작 요청</strong>: 위 상황을 오늘 배운 '자연스러운 표현'을 활용하여 한 문장으로 작성해 보세요.</div>
+<div class="item"><strong>모범 답안</strong>: I'm back in the office after my business trip, so I'm glad to be back to my usual routine.</div>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>중간 문제</strong>:</div>
+<div class="item"><strong>상황</strong>: 이 신청 절차는 너무 관료적이고 서류도 읽기 어려워서 시간이 오래 걸릴 것 같아요.</div>
+<div class="item"><strong>영작 요청</strong>: 'bureaucratic', 'illegible', 'takes a long time'을 사용하여 한 문장으로 작성해 보세요.</div>
+<div class="item"><strong>모범 답안</strong>: This application process seems too bureaucratic, and the documents are illegible, so I expect it will take a long time.</div>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>어려운 문제</strong>:</div>
+<div class="item"><strong>상황</strong>: 저희 회사는 고객 경험을 향상시키기 위해 모든 서류가 유효한지 확인하고, 신청 절차를 간소화하려고 노력하고 있습니다.</div>
+<div class="item"><strong>영작 요청</strong>: 'valid', 'streamlined', 'enhance customer experience'를 사용하여 한 문장으로 작성해 보세요.</div>
+<div class="item"><strong>모범 답안</strong>: Our company is striving to ensure all documents are valid and to streamline the application process to enhance the customer experience.</div>
+<br>
+<h2><strong>6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)</strong></h2>
+<br>
+<p>✨ <strong>Good Job</strong>:</p>
+<p>Joey가 오늘 정말 잘 표현한 문장은 바로 이겁니다:</p>
+<p>"I'd like to find out what I need to apply for a state ID."</p>
+<p>이 문장은 교재에 있는 표현을 정확하게 인용했을 뿐만 아니라, 실제 상황에서 자신의 의도를 명확하고 자연스럽게 전달하는 데 아주 적합한 표현이었습니다. 완벽하게 구사했어요!</p>
+<br>
+<p>🚀 <strong>내일의 한 문장</strong>:</p>
+<p>다음 수업 시작 시, 튜터에게 이렇게 말하며 대화를 시작해 보세요. 오늘 배운 'streamlined'와 'bureaucratic'을 활용해 본다면 더욱 좋습니다.</p>
+<p>"Last time, we talked about applying for IDs. I hope the process for getting a new ID will be more streamlined and less bureaucratic in the future."</p>
+<br>
+<br>
+<h2><strong>[성과 지표]</strong></h2>
+<p><strong>유창성 점수</strong>: 7.5/10</p>
+<p><strong>근거</strong>: Joey는 다양한 주제에 대해 막힘없이 자신의 의견을 표현하며 대화를 이어나가는 데 전혀 문제가 없었습니다. 특히 복잡한 개념도 설명하려는 노력이 돋보였습니다. 다만, 일부 표현에서 단어 선택의 반복이나 어색한 구문이 있었고, 문법적으로 단수/복수 형태나 전치사 사용에서 미세한 오류가 발견되어 자연스러운 흐름을 약간 방해하는 경우가 있었습니다. 하지만 전반적으로 의사소통 능력은 매우 훌륭합니다.</p>
+<br>
+<p><strong>다음 수업 '원포인트 액션 플랜'</strong>:</p>
+<p>다음 수업에서는 <strong>명사와 형용사의 정확한 사용 (Precision in Noun and Adjective Usage)</strong>에 집중해 봅시다. 특히, "residency proof" 대신 "proof of residency"처럼 명사구를 더 자연스럽게 만들거나, "more easy" 대신 "easier"와 같이 형용사의 비교급을 올바르게 사용하는 연습을 해볼 거예요. Joey의 유창성에 정확성을 더하는 데 큰 도움이 될 겁니다!</p></div>
+        </div>
+        <div id="tab-transcript" class="tab-content">
+            <div class="transcript"><span class="student">[Student]</span> Hello, Bell. Good morning. Happy Wednesday.
+<span class="tutor">[Tutor]</span> Yeah, good morning. How&#x27;s your Wednesday so far?
+<span class="student">[Student]</span> It&#x27;s good. I came back to my office and finished my work travel. So it&#x27;s good and I came back to normal days, the routine days. Yeah, I&#x27;m good.
+<span class="tutor">[Tutor]</span> So kind of back to usual?
+<span class="student">[Student]</span> Yeah, I&#x27;m back to usual.
+<span class="tutor">[Tutor]</span> Yeah.
+<span class="student">[Student]</span> How about your Tuesday night?
+<span class="tutor">[Tutor]</span> Yeah, still evening, so about 4 p.m. or afternoon.
+<span class="student">[Student]</span> Ah, 4 p.m. afternoon. So nice.
+<span class="tutor">[Tutor]</span> Yeah, nice and sunny.
+<span class="student">[Student]</span> Okay.
+<span class="tutor">[Tutor]</span> Did you want to look at the topic today?
+<span class="student">[Student]</span> Ah, yes. I found my textbook, and today&#x27;s topic is applying for a state ID.
+<span class="tutor">[Tutor]</span> Yeah, applying for an ID. So, looking at the key expressions and key phrases, did you want to read?
+<span class="student">[Student]</span> Okay. The first key expression, proof of residency. A document that shows where you live, proof of residency. And second expression, valid identification. Valid identification, an official document that confirms your identity. And key phrase, I&#x27;d like to find out what I need to... I would like to find out what I need to apply for a state ID. Could you let me know if a bank statement is acceptable? Could you let me know if a bank statement is acceptable?
+<span class="tutor">[Tutor]</span> Ah, yes, I see, I understand. Yeah, you might use a bank statement if you want to validate your ID. Yes. So he just asks if this document is possible or not.
+<span class="student">[Student]</span> Could you let me know if a bank statement is acceptable? Okay.
+<span class="tutor">[Tutor]</span> Do you have any proof of residency?
+<span class="student">[Student]</span> Yes, in the local area we use the resident card we call the 주민등록증. Card is their ID card, the basic ID card. And sometimes it is possible to use the driver&#x27;s license. It is also possible to prove the residency. And abroad, we use their passport. And my son doesn&#x27;t have a residency proof, so usually use the passport in local or abroad.
+<span class="tutor">[Tutor]</span> Yeah, yeah, if you don&#x27;t have a driver&#x27;s license, yeah, it&#x27;s handy. Yes. This, do you want to look at the A info bytes?
+<span class="student">[Student]</span> Okay, I will read that. New York State, State ID, blah blah blah, my photo, blah blah blah blah blah, and date of birth, blah blah blah, sex, female, and expired date, expired date, and eye, oh, eye colors, oh, and maybe it is the how tall he is, that is the 50 feet. How can I say 50?
+<span class="student">[Student]</span> Because we use the centimeters, so I can read that five feet and six, five foot six inches, or five inch?
+<span class="tutor">[Tutor]</span> 5&#x27;6&quot;. Yeah, 5&#x27;6&quot;.
+<span class="student">[Student]</span> 5 foot? 6 inches? 5&#x27;6&quot;? One more please, teacher. 5 foot? 5 foot?
+<span class="tutor">[Tutor]</span> Foot. F-O-O-T. So like feet.
+<span class="student">[Student]</span> Ah, 5 feet? 5 foot 6. Foot. Why use the foot? F-O-O-T-E-T.
+<span class="tutor">[Tutor]</span> Because this is an American... And they measure things. Five foot. Five foot and six inch. Five foot six inch. Five foot six inch.
+<span class="student">[Student]</span> Organ donor.
+<span class="tutor">[Tutor]</span> Organ donor.
+<span class="student">[Student]</span> Organ donor.
+<span class="student">[Student]</span> Ah, he had to give some of their organs for donation.
+<span class="tutor">[Tutor]</span> Okay, I see.
+<span class="student">[Student]</span> I read that. In the USA, each state gives its own ID or driver&#x27;s license. It&#x27;s used for ID, age check, and domestic flight. In the United Kingdom, people use the driver&#x27;s license, passport, or pass card for ID. In Australia, states and territories give out driver&#x27;s license and a card like a key pass. In New Zealand, there is no required ID. Common ID includes a driver&#x27;s license, passport, and the Kiwi access card used for age checks.
+<span class="tutor">[Tutor]</span> And question, what kind of official ID do people use in your home country and when do they usually need to show it?
+<span class="student">[Student]</span> Ah, I see. In our country, people use the 주민등록증, that is the ID card, the personal ID card. And that card gives us some birthday and residency place and the number of the residency. And we distinguish female or male and photo. So usually we use that card in a domestic airport, or if we apply to the exam place, like the TOEIC or TOEFL place, or go to have an exam to the drive license, apply drive license. And meantime, yeah, we use that card. Yeah, because the people want to distinguish if this person is right or not. And sometimes we use that card in our... if we need some document, public document, yeah, we use that card.
+<span class="tutor">[Tutor]</span> Those are common times, yeah, when you might need them.
+<span class="student">[Student]</span> Yeah, common times. And these days, some people use their mobile ID card. That is same card but it is possible to list up in my mobile. So in application, use application. So these people don&#x27;t use their ID card. Just they use their mobile phone application, ID application.
+<span class="tutor">[Tutor]</span> Have you signed up for mobile ID?
+<span class="student">[Student]</span> In my case, I don&#x27;t believe that. So it is possible to steal them, some guys. So I don&#x27;t use the ID card in my mobile phones. I think it is a little dangerous because these days AI is developed and it&#x27;s possible to access many people in my mobile phone. So I&#x27;m afraid to use their ID card in my mobile phone.
+<span class="tutor">[Tutor]</span> Okay, that&#x27;s good.
+<span class="student">[Student]</span> Yeah, we go online, yeah, link to the internet. Yeah, yeah, it&#x27;s possible.
+<span class="tutor">[Tutor]</span> Did you want to look at B, the real life talk?
+<span class="student">[Student]</span> Okay, I&#x27;ll start the step.
+<span class="student">[Student]</span> Hi there, how can I help you today?
+<span class="student">[Student]</span> Hi, I&#x27;d like to find out what I need to apply for a state ID.
+<span class="tutor">[Tutor]</span> Sure. You will need a valid form of ID, proof of address, and your social security number if you have one.
+<span class="student">[Student]</span> Got it. Could you let me know if a utility bill is acceptable as a proof of address?
+<span class="tutor">[Tutor]</span> Yes, that is acceptable. A lease agreement or bank statement would also work.
+<span class="student">[Student]</span> Thanks. Is there a form I need to fill out before I come back?
+<span class="tutor">[Tutor]</span> Yes, you can fill it out online or here at the office before your appointment.
+<span class="student">[Student]</span> What documents does the applicant need to apply for a state ID?
+<span class="student">[Student]</span> Yes, the steps say it is possible to use a lease apartment or bank statement. Yeah, proof of their ID. Right?
+<span class="tutor">[Tutor]</span> Yeah, they can use a bill.
+<span class="student">[Student]</span> Yeah.
+<span class="tutor">[Tutor]</span> Okay.
+<span class="student">[Student]</span> Utility bill.
+<span class="tutor">[Tutor]</span> Yes.
+<span class="tutor">[Tutor]</span> And did you want to look at C, the say it right?
+<span class="student">[Student]</span> Okay. I read the first word.
+<span class="student">[Student]</span> Valid. Not expired, accepted, valid.
+<span class="student">[Student]</span> Illegible. Illegible. Hard to read.
+<span class="student">[Student]</span> Ah.
+<span class="student">[Student]</span> Eligible, eligible, hard to read.
+<span class="student">[Student]</span> Eligible, eligible, certificate, yeah, illegible, right? Illegible.
+<span class="tutor">[Tutor]</span> Illegible.
+<span class="student">[Student]</span> And second, certified. Certified. Certified, officially. Certified. Certified, officially valid. Valid. Verified. Verified or approved. Certified better, right?
+<span class="tutor">[Tutor]</span> Yes, yes, yeah. Certified. Certified. Okay, if you had to apply for a state ID tomorrow, which document would you bring that are original or valid in Korea? Right?
+<span class="student">[Student]</span> In Korea, just to bring the 주민등록증, that is ID card, or yeah, we bring the passport. It is possible to use in domestic. And in my case, I use my drive license. Yeah, yeah, it&#x27;s a pretty common. So, yeah.
+<span class="tutor">[Tutor]</span> Oh, yes, common. And what about the application process?
+<span class="student">[Student]</span> Application process. Streamlined. Streamlined, right? Streamlined. Efficient. Stream...
+<span class="tutor">[Tutor]</span> Streamlined. Efficient. Well organized. Efficient. Streamlined. Drawn out. Longer than expected. Drawn out.
+<span class="student">[Student]</span> Bureaucratic.
+<span class="tutor">[Tutor]</span> Bureaucratic.
+<span class="student">[Student]</span> Bureaucratic. Right?
+<span class="tutor">[Tutor]</span> Bureaucratic.
+<span class="student">[Student]</span> Bureaucratic. Bureaucratic. Bureaucratic. Bureaucratic. Pool of rules. Wow, this word is really difficult. And illegible. Illegible. Oh, shit.
+<span class="tutor">[Tutor]</span> Illegible, yeah.
+<span class="tutor">[Tutor]</span> Bureaucratic, yeah, illegible.
+<span class="student">[Student]</span> Bureaucratic and illegible. Okay. Thank you.
+<span class="tutor">[Tutor]</span> Question. Think about a time you applied for something at a government office. What was the process like?
+<span class="student">[Student]</span> Okay. The first step, I went to my ID card. And then he said, what do you need? What do you need the document? So and purpose, usually I tell him why I need that document and when and where this document is used. And he confirmed my ID card and he made some document for me. Yeah, that is process. Mm-hmm.
+<span class="tutor">[Tutor]</span> Oh, yeah, usually they inquire like, why do you need it? Yeah, what&#x27;s... why did you need it? Yes, you&#x27;re right. Mm-hmm. And how about the D, speak up? Would you like to read and fill in the sentence?
+<span class="student">[Student]</span> Okay. When I applied for a state ID, I brought a certified birth certificate. I brought my original passport, made sure everything was clearly legible, and hoped the process would be streamlined. I was unsure about confusing requirements and whether certain documents would be... I find the application process...
+<span class="student">[Student]</span> Bureaucratic. Oh my god, confusing. Yes. How can I read that?
+<span class="tutor">[Tutor]</span> Bureaucratic.
+<span class="student">[Student]</span> Bureaucratic. Bureaucratic. Bureaucratic. Bureaucratic. Today&#x27;s word is so difficult. And...
+<span class="tutor">[Tutor]</span> Illegible. Illegible. Illegible. Illegible. Illegible. Okay.
+<span class="tutor">[Tutor]</span> This one, did you want to look at the questions, E?
+<span class="student">[Student]</span> Okay, question one. What challenges might immigrants or international residents face when trying to get a state ID? Hmm, what challenge? Hmm, I&#x27;m not sure but maybe the staff wanted so many documents to prove their international residence because they don&#x27;t have information. So I bring my ID or some passport. And usually that process is so long and difficult because that is not a local information, that is about global information. So sometimes that process is long and more hard and difficulty.
+<span class="tutor">[Tutor]</span> Yeah, they might take longer to verify everything or...
+<span class="student">[Student]</span> Passport. Yeah. And usually the passport is the valid date is so wrong and the picture is a little different. His or her or himself. So they check the same person or not. Is it fake ID? Is it fake passport? So they confirm everything. So it is wrong, better wrong.
+<span class="tutor">[Tutor]</span> Yeah, it&#x27;s not a quick process.
+<span class="student">[Student]</span> Yeah. And how is applying for a state ID different from getting an official ID in your home country? Oh, our country is the same. Maybe your state area and the size is similar. So we just union one ID card. Another local ID, another state ID. Just in Korea, we just use the one ID card. So it is more easy. Every place is same.
+<span class="tutor">[Tutor]</span> Yeah, my area is provincial, so different provinces have different IDs.
+<span class="student">[Student]</span> Is it fact? Your statement has different IDs, right?
+<span class="tutor">[Tutor]</span> My provinces, our provinces have different IDs, our areas.
+<span class="student">[Student]</span> Wow, I&#x27;m boo. Okay.
+<span class="tutor">[Tutor]</span> Or it&#x27;s more paperwork, yeah, getting that approved.
+<span class="student">[Student]</span> Because it is so close, have a large country.
+<span class="tutor">[Tutor]</span> Yeah.
+<span class="student">[Student]</span> Anyway.
+<span class="tutor">[Tutor]</span> And the last question. Can you remember any expressions from today?
+<span class="student">[Student]</span> Yes. I learned about proof of residence and valid identification. I&#x27;d like to find out what I need to blah blah blah. Could you let me know if blah blah blah is acceptable? Okay.
+<span class="tutor">[Tutor]</span> Okay, and I will send corrections in a bit. Any other questions before I go?
+<span class="student">[Student]</span> Oh no, thank you for your class today. Yeah, have a nice day. Have a great day, teacher.
+<span class="tutor">[Tutor]</span> You too. Goodbye.</div>
+        </div>
+    </div>
+    <div class="toast" id="toast">✅ 프롬프트가 복사되었습니다!</div>
+    <script>
+        const REVIEW_PROMPT="너는 나의 영어 회화 복습 파트너야. 오늘 내 전화영어 수업 내용을 기반으로 대화하면서 복습을 도와줘.\n\n[오늘 수업 전사 내용]\n[Student] Hello, Bell. Good morning. Happy Wednesday.\n[Tutor] Yeah, good morning. How's your Wednesday so far?\n[Student] It's good. I came back to my office and finished my work travel. So it's good and I came back to normal days, the routine days. Yeah, I'm good.\n[Tutor] So kind of back to usual?\n[Student] Yeah, I'm back to usual.\n[Tutor] Yeah.\n[Student] How about your Tuesday night?\n[Tutor] Yeah, still evening, so about 4 p.m. or afternoon.\n[Student] Ah, 4 p.m. afternoon. So nice.\n[Tutor] Yeah, nice and sunny.\n[Student] Okay.\n[Tutor] Did you want to look at the topic today?\n[Student] Ah, yes. I found my textbook, and today's topic is applying for a state ID.\n[Tutor] Yeah, applying for an ID. So, looking at the key expressions and key phrases, did you want to read?\n[Student] Okay. The first key expression, proof of residency. A document that shows where you live, proof of residency. And second expression, valid identification. Valid identification, an official document that confirms your identity. And key phrase, I'd like to find out what I need to... I would like to find out what I need to apply for a state ID. Could you let me know if a bank statement is acceptable? Could you let me know if a bank statement is acceptable?\n[Tutor] Ah, yes, I see, I understand. Yeah, you might use a bank statement if you want to validate your ID. Yes. So he just asks if this document is possible or not.\n[Student] Could you let me know if a bank statement is acceptable? Okay.\n[Tutor] Do you have any proof of residency?\n[Student] Yes, in the local area we use the resident card we call the 주민등록증. Card is their ID card, the basic ID card. And sometimes it is possible to use the driver's license. It is also possible to prove the residency. And abroad, we use their passport. And my son doesn't have a residency proof, so usually use the passport in local or abroad.\n[Tutor] Yeah, yeah, if you don't have a driver's license, yeah, it's handy. Yes. This, do you want to look at the A info bytes?\n[Student] Okay, I will read that. New York State, State ID, blah blah blah, my photo, blah blah blah blah blah, and date of birth, blah blah blah, sex, female, and expired date, expired date, and eye, oh, eye colors, oh, and maybe it is the how tall he is, that is the 50 feet. How can I say 50?\n[Student] Because we use the centimeters, so I can read that five feet and six, five foot six inches, or five inch?\n[Tutor] 5'6\". Yeah, 5'6\".\n[Student] 5 foot? 6 inches? 5'6\"? One more please, teacher. 5 foot? 5 foot?\n[Tutor] Foot. F-O-O-T. So like feet.\n[Student] Ah, 5 feet? 5 foot 6. Foot. Why use the foot? F-O-O-T-E-T.\n[Tutor] Because this is an American... And they measure things. Five foot. Five foot and six inch. Five foot six inch. Five foot six inch.\n[Student] Organ donor.\n[Tutor] Organ donor.\n[Student] Organ donor.\n[Student] Ah, he had to give some of their organs for donation.\n[Tutor] Okay, I see.\n[Student] I read that. In the USA, each state gives its own ID or driver's license. It's used for ID, age check, and domestic flight. In the United Kingdom, people use the driver's license, passport, or pass card for ID. In Australia, states and territories give out driver's license and a card like a key pass. In New Zealand, there is no required ID. Common ID includes a driver's license, passport, and the Kiwi access card used for age checks.\n[Tutor] And question, what kind of official ID do people use in your home country and when do they usually need to show it?\n[Student] Ah, I see. In our country, people use the 주민등록증, that is the ID card, the personal ID card. And that card gives us some birthday and residency place and the number of the residency. And we distinguish female or male and photo. So usually we use that card in a domestic airport, or if we apply to the exam place, like the TOEIC or TOEFL place, or go to have an exam to the drive license, apply drive license. And meantime, yeah, we use that card. Yeah, because the people want to distinguish if this person is right or not. And sometimes we use that card in our... if we need some document, public document, yeah, we use that card.\n[Tutor] Those are common times, yeah, when you might need them.\n[Student] Yeah, common times. And these days, some people use their mobile ID card. That is same card but it is possible to list up in my mobile. So in application, use application. So these people don't use their ID card. Just they use their mobile phone application, ID application.\n[Tutor] Have you signed up for mobile ID?\n[Student] In my case, I don't believe that. So it is possible to steal them, some guys. So I don't use the ID card in my mobile phones. I think it is a little dangerous because these days AI is developed and it's possible to access many people in my mobile phone. So I'm afraid to use their ID card in my mobile phone.\n[Tutor] Okay, that's good.\n[Student] Yeah, we go online, yeah, link to the internet. Yeah, yeah, it's possible.\n[Tutor] Did you want to look at B, the real life talk?\n[Student] Okay, I'll start the step.\n[Student] Hi there, how can I help you today?\n[Student] Hi, I'd like to find out what I need to apply for a state ID.\n[Tutor] Sure. You will need a valid form of ID, proof of address, and your social security number if you have one.\n[Student] Got it. Could you let me know if a utility bill is acceptable as a proof of address?\n[Tutor] Yes, that is acceptable. A lease agreement or bank statement would also work.\n[Student] Thanks. Is there a form I need to fill out before I come back?\n[Tutor] Yes, you can fill it out online or here at the office before your appointment.\n[Student] What documents does the applicant need to apply for a state ID?\n[Student] Yes, the steps say it is possible to use a lease apartment or bank statement. Yeah, proof of their ID. Right?\n[Tutor] Yeah, they can use a bill.\n[Student] Yeah.\n[Tutor] Okay.\n[Student] Utility bill.\n[Tutor] Yes.\n[Tutor] And did you want to look at C, the say it right?\n[Student] Okay. I read the first word.\n[Student] Valid. Not expired, accepted, valid.\n[Student] Illegible. Illegible. Hard to read.\n[Student] Ah.\n[Student] Eligible, eligible, hard to read.\n[Student] Eligible, eligible, certificate, yeah, illegible, right? Illegible.\n[Tutor] Illegible.\n[Student] And second, certified. Certified. Certified, officially. Certified. Certified, officially valid. Valid. Verified. Verified or approved. Certified better, right?\n[Tutor] Yes, yes, yeah. Certified. Certified. Okay, if you had to apply for a state ID tomorrow, which document would you bring that are original or valid in Korea? Right?\n[Student] In Korea, just to bring the 주민등록증, that is ID card, or yeah, we bring the passport. It is possible to use in domestic. And in my case, I use my drive license. Yeah, yeah, it's a pretty common. So, yeah.\n[Tutor] Oh, yes, common. And what about the application process?\n[Student] Application process. Streamlined. Streamlined, right? Streamlined. Efficient. Stream...\n[Tutor] Streamlined. Efficient. Well organized. Efficient. Streamlined. Drawn out. Longer than expected. Drawn out.\n[Student] Bureaucratic.\n[Tutor] Bureaucratic.\n[Student] Bureaucratic. Right?\n[Tutor] Bureaucratic.\n[Student] Bureaucratic. Bureaucratic. Bureaucratic. Bureaucratic. Pool of rules. Wow, this word is really difficult. And illegible. Illegible. Oh, shit.\n[Tutor] Illegible, yeah.\n[Tutor] Bureaucratic, yeah, illegible.\n[Student] Bureaucratic and illegible. Okay. Thank you.\n[Tutor] Question. Think about a time you applied for something at a government office. What was the process like?\n[Student] Okay. The first step, I went to my ID card. And then he said, what do you need? What do you need the document? So and purpose, usually I tell him why I need that document and when and where this document is used. And he confirmed my ID card and he made some document for me. Yeah, that is process. Mm-hmm.\n[Tutor] Oh, yeah, usually they inquire like, why do you need it? Yeah, what's... why did you need it? Yes, you're right. Mm-hmm. And how about the D, speak up? Would you like to read and fill in the sentence?\n[Student] Okay. When I applied for a state ID, I brought a certified birth certificate. I brought my original passport, made sure everything was clearly legible, and hoped the process would be streamlined. I was unsure about confusing requirements and whether certain documents would be... I find the application process...\n[Student] Bureaucratic. Oh my god, confusing. Yes. How can I read that?\n[Tutor] Bureaucratic.\n[Student] Bureaucratic. Bureaucratic. Bureaucratic. Bureaucratic. Today's word is so difficult. And...\n[Tutor] Illegible. Illegible. Illegible. Illegible. Illegible. Okay.\n[Tutor] This one, did you want to look at the questions, E?\n[Student] Okay, question one. What challenges might immigrants or international residents face when trying to get a state ID? Hmm, what challenge? Hmm, I'm not sure but maybe the staff wanted so many documents to prove their international residence because they don't have information. So I bring my ID or some passport. And usually that process is so long and difficult because that is not a local information, that is about global information. So sometimes that process is long and more hard and difficulty.\n[Tutor] Yeah, they might take longer to verify everything or...\n[Student] Passport. Yeah. And usually the passport is the valid date is so wrong and the picture is a little different. His or her or himself. So they check the same person or not. Is it fake ID? Is it fake passport? So they confirm everything. So it is wrong, better wrong.\n[Tutor] Yeah, it's not a quick process.\n[Student] Yeah. And how is applying for a state ID different from getting an official ID in your home country? Oh, our country is the same. Maybe your state area and the size is similar. So we just union one ID card. Another local ID, another state ID. Just in Korea, we just use the one ID card. So it is more easy. Every place is same.\n[Tutor] Yeah, my area is provincial, so different provinces have different IDs.\n[Student] Is it fact? Your statement has different IDs, right?\n[Tutor] My provinces, our provinces have different IDs, our areas.\n[Student] Wow, I'm boo. Okay.\n[Tutor] Or it's more paperwork, yeah, getting that approved.\n[Student] Because it is so close, have a large country.\n[Tutor] Yeah.\n[Student] Anyway.\n[Tutor] And the last question. Can you remember any expressions from today?\n[Student] Yes. I learned about proof of residence and valid identification. I'd like to find out what I need to blah blah blah. Could you let me know if blah blah blah is acceptable? Okay.\n[Tutor] Okay, and I will send corrections in a bit. Any other questions before I go?\n[Student] Oh no, thank you for your class today. Yeah, have a nice day. Have a great day, teacher.\n[Tutor] You too. Goodbye.\n\n[AI 피드백]\n안녕하세요, Joey! 오늘 수업도 정말 즐거웠습니다. 신분증과 관련된 흥미로운 주제로 다양한 이야기를 나누었네요. 특히 모바일 신분증에 대한 Joey의 의견이 인상 깊었습니다.\n\n---\n\n### **0. 📌 Topic**\nTopic: Discussing official identification documents, their application processes, and usage across different regions.\n\n### **1. 📊 오늘의 대화 요약 (Summary)**\n오늘 Joey는 미국 주 신분증(State ID) 신청에 필요한 서류와 절차에 대해 학습했습니다. 한국의 신분증 종류와 사용처, 그리고 모바일 신분증에 대한 개인적인 견해를 공유했으며, 더 나아가 여러 나라의 신분증 체계와 이민자들이 겪을 수 있는 어려움에 대해서도 폭넓게 토론했습니다.\n\n### **2. 💬 유창성 업그레이드 (Fluency & Natural Flow)**\nJoey가 말한 문장 중 의미는 통하지만, 원어민들이 더 자연스럽게 쓰는 표현으로 다듬어 볼 세 가지를 선정했습니다.\n\n1.  ❌ **학습자 원문 (As Said)**: \"I came back to my office and finished my work travel. So it's good and I came back to normal days, the routine days.\"\n    ✅ **자연스러운 표현 (Natural)**: \"I'm back in the office after my work trip, so I'm glad to be back to my usual routine.\"\n    💎 **비즈니스 표현 (Professional)**: \"I've returned to the office following my business travel, and I'm pleased to resume my regular routine.\"\n    💡 **코칭 포인트**: \"Back to normal days, the routine days\"는 다소 반복적입니다. \"Back to my usual routine\"이 더 간결하고 자연스럽습니다. \"Resume my regular routine\"은 일상적인 업무 패턴으로 돌아왔음을 표현하는 전문적인 방식입니다.\n\n2.  ❌ **학습자 원문 (As Said)**: \"my son doesn't have a residency proof, so usually use the passport in local or abroad.\"\n    ✅ **자연스러운 표현 (Natural)**: \"My son doesn't have proof of residency, so he usually uses his passport both locally and abroad.\"\n    💎 **비즈니스 표현 (Professional)**: \"My son lacks a formal proof of residency, so his passport serves as his primary identification document for both domestic and international use.\"\n    💡 **코칭 포인트**: \"Residency proof\"는 \"proof of residency\"가 맞습니다. 또한 \"use the passport\"에는 주어(he uses)가 필요하며, \"in local or abroad\"는 부사 형태인 \"locally and abroad\" 또는 \"in local areas or abroad\"로 쓰는 것이 자연스럽습니다.\n\n3.  ❌ **학습자 원문 (As Said)**: \"So they check the same person or not. Is it fake ID? Is it fake passport? So they confirm everything. So it is wrong, better wrong.\"\n    ✅ **자연스러운 표현 (Natural)**: \"So they check to see if it's the same person and if the ID or passport is fake. They confirm everything, which often takes a long time.\"\n    💎 **비즈니스 표현 (Professional)**: \"Therefore, they meticulously verify the individual's identity and the authenticity of the identification documents, which can often lead to a protracted verification process.\"\n    💡 **코칭 포인트**: \"Wrong, better wrong\"은 의미가 불분명합니다. 어떤 과정이 오래 걸린다는 것을 표현할 때는 \"it takes a long time\" 또는 \"it's a lengthy process\"라고 말할 수 있습니다. \"Meticulously verify\"와 \"authenticity\"는 전문적인 표현으로 좋습니다.\n\n### **3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)**\n이번 수업에서는 **단수/복수 명사 및 형용사 사용의 혼동 (Confusion in Singular/Plural Nouns and Adjectives)** 패턴이 눈에 띄었습니다. 특정 명사를 단수로 써야 할 자리에 복수를 쓰거나, 형용사 형태를 명사처럼 사용하는 경향이 있었습니다.\n\n**Category: Confusion in Singular/Plural Nouns and Adjectives**\n\n| ❌ 원문 (As Said)                                                                  | ✅ 교정 예시 (Corrected)                                                                                             |\n| :-------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------- |\n| \"that card gives us some birthday and residency **place** and the number of the **residency**.\" | \"that card shows our **date of birth**, **place of residence**, and **resident registration number**.\" |\n| \"So it is wrong, **better wrong**.\"                                               | \"So it takes **longer**, often **much longer**.\"                                                                     |\n| \"Because it is so close, **have a large country**.\"                               | \"Because it is such a large country.\"                                                                                |\n| \"So it is **more easy**.\"                                                         | \"So it is **easier**.\"                                                                                               |\n\n📌 **핵심 규칙**: 명사의 단수/복수 형태를 정확히 사용하고, 명사를 수식할 때는 형용사를 활용하며, 불필요한 명사화 대신 자연스러운 표현을 익히는 것이 중요합니다. 특히 비교급 형용사를 사용할 때 \"more + 형용사\" 대신 \"형용사-er\" 형태를 쓰는 것이 자연스럽습니다.\n\n🔁 **따라 읽기 (Read Aloud)**:\n🗣️ \"That card shows our date of birth, place of residence, and resident registration number.\"\n🗣️ \"It takes longer, often much longer.\"\n🗣️ \"Because it is such a large country.\"\n🗣️ \"So it is easier.\"\n\n### **4. 📗 어휘 확장 (Vocabulary Vault)**\n오늘 수업에서 나왔거나 맥락상 유용한 비즈니스 관련 어휘 5개를 소개합니다.\n\n1.  **residency** /rézɪdənsi/ (명사)\n    *   뜻: 거주, 거주지\n    *   실전 예문: We need to confirm your **residency** for tax purposes. (세금 목적으로 귀하의 거주지를 확인해야 합니다.)\n\n2.  **valid** /vǽlɪd/ (형용사)\n    *   뜻: 유효한, 타당한\n    *   실전 예문: Please ensure all submitted documents are **valid** and up-to-date. (제출된 모든 서류가 유효하고 최신 정보인지 확인해 주십시오.)\n\n3.  **streamlined** /stríːmlaɪnd/ (형용사)\n    *   뜻: 간소화된, 능률적인\n    *   실전 예문: We are working to make our application process more **streamlined** for customers. (고객을 위해 신청 절차를 더욱 간소화하기 위해 노력하고 있습니다.)\n\n4.  **bureaucratic** /bjùərəkrǽtɪk/ (형용사)\n    *   뜻: 관료주의적인, 번거로운\n    *   실전 예문: The new regulations have made the approval process quite **bureaucratic**. (새로운 규정으로 인해 승인 절차가 상당히 관료적으로 변했습니다.)\n\n5.  **illegible** /ɪléʤəbəl/ (형용사)\n    *   뜻: 읽기 어려운, 판독 불가능한\n    *   실전 예문: The handwriting on the old contract was almost **illegible**. (오래된 계약서의 필체가 거의 판독 불가능했습니다.)\n\n### **5. 📝 실전 복습 챌린지 (Practice)**\n오늘 배운 표현과 문법을 활용하여 다음 한국어 상황을 영어로 영작해 보세요.\n\n1.  **쉬운 문제**:\n    *   **상황**: 저는 출장을 마치고 사무실로 돌아와 평소의 일상으로 돌아와서 기쁩니다.\n    *   **영작 요청**: 위 상황을 오늘 배운 '자연스러운 표현'을 활용하여 한 문장으로 작성해 보세요.\n    *   **모범 답안**: I'm back in the office after my business trip, so I'm glad to be back to my usual routine.\n\n2.  **중간 문제**:\n    *   **상황**: 이 신청 절차는 너무 관료적이고 서류도 읽기 어려워서 시간이 오래 걸릴 것 같아요.\n    *   **영작 요청**: 'bureaucratic', 'illegible', 'takes a long time'을 사용하여 한 문장으로 작성해 보세요.\n    *   **모범 답안**: This application process seems too bureaucratic, and the documents are illegible, so I expect it will take a long time.\n\n3.  **어려운 문제**:\n    *   **상황**: 저희 회사는 고객 경험을 향상시키기 위해 모든 서류가 유효한지 확인하고, 신청 절차를 간소화하려고 노력하고 있습니다.\n    *   **영작 요청**: 'valid', 'streamlined', 'enhance customer experience'를 사용하여 한 문장으로 작성해 보세요.\n    *   **모범 답안**: Our company is striving to ensure all documents are valid and to streamline the application process to enhance the customer experience.\n\n### **6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)**\n\n✨ **Good Job**:\nJoey가 오늘 정말 잘 표현한 문장은 바로 이겁니다:\n\"I'd like to find out what I need to apply for a state ID.\"\n이 문장은 교재에 있는 표현을 정확하게 인용했을 뿐만 아니라, 실제 상황에서 자신의 의도를 명확하고 자연스럽게 전달하는 데 아주 적합한 표현이었습니다. 완벽하게 구사했어요!\n\n🚀 **내일의 한 문장**:\n다음 수업 시작 시, 튜터에게 이렇게 말하며 대화를 시작해 보세요. 오늘 배운 'streamlined'와 'bureaucratic'을 활용해 본다면 더욱 좋습니다.\n\"Last time, we talked about applying for IDs. I hope the process for getting a new ID will be more streamlined and less bureaucratic in the future.\"\n\n---\n\n### **[성과 지표]**\n**유창성 점수**: 7.5/10\n**근거**: Joey는 다양한 주제에 대해 막힘없이 자신의 의견을 표현하며 대화를 이어나가는 데 전혀 문제가 없었습니다. 특히 복잡한 개념도 설명하려는 노력이 돋보였습니다. 다만, 일부 표현에서 단어 선택의 반복이나 어색한 구문이 있었고, 문법적으로 단수/복수 형태나 전치사 사용에서 미세한 오류가 발견되어 자연스러운 흐름을 약간 방해하는 경우가 있었습니다. 하지만 전반적으로 의사소통 능력은 매우 훌륭합니다.\n\n**다음 수업 '원포인트 액션 플랜'**:\n다음 수업에서는 **명사와 형용사의 정확한 사용 (Precision in Noun and Adjective Usage)**에 집중해 봅시다. 특히, \"residency proof\" 대신 \"proof of residency\"처럼 명사구를 더 자연스럽게 만들거나, \"more easy\" 대신 \"easier\"와 같이 형용사의 비교급을 올바르게 사용하는 연습을 해볼 거예요. Joey의 유창성에 정확성을 더하는 데 큰 도움이 될 겁니다!\n\n위 내용을 바탕으로:\n1. 먼저 오늘 수업에서 내가 틀렸거나 어색했던 표현을 하나 골라서, 관련된 상황을 영어로 질문해줘.\n2. 내가 영어로 대답하면, 자연스러운지 확인하고 더 나은 표현이 있으면 알려줘.\n3. 특히 \"반복 실수 패턴\"에서 지적된 부분을 집중적으로 연습시켜줘.\n4. 이런 식으로 오늘 배운 표현들을 하나씩 복습하자.\n5. 한국어 설명은 필요할 때만 간단히, 대화는 최대한 영어로 진행해줘.\n\n그럼 시작하자!";
+        function startReview(){navigator.clipboard.writeText(REVIEW_PROMPT).then(()=>{showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)}).catch(()=>{const t=document.createElement('textarea');t.value=REVIEW_PROMPT;document.body.appendChild(t);t.select();document.execCommand('copy');document.body.removeChild(t);showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)})}
+        function showToast(){const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500)}
+        function switchTab(n){document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',n==='feedback'?i===0:i===1));document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));document.getElementById('tab-'+n).classList.add('active')}
+    </script>
+</body>
+</html>
