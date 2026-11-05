@@ -1,0 +1,53 @@
+{
+ "date": "2026-11-04",
+ "iso": [
+  2026,
+  45
+ ],
+ "topic": "Discussing official identification documents, their application processes, and usage acros",
+ "grammar": "Confusion in Singular/Plural Nouns and Adjectives",
+ "grammar_norm": "Subject–Verb Agreement",
+ "score": 7.5,
+ "pairs": [
+  {
+   "said": "I came back to my office and finished my work travel. So it's good and I came back to normal days, the routine days.",
+   "natural": "I'm back in the office after my work trip, so I'm glad to be back to my usual routine."
+  },
+  {
+   "said": "my son doesn't have a residency proof, so usually use the passport in local or abroad.",
+   "natural": "My son doesn't have proof of residency, so he usually uses his passport both locally and abroad."
+  },
+  {
+   "said": "So they check the same person or not. Is it fake ID? Is it fake passport? So they confirm everything. So it is wrong, better wrong.",
+   "natural": "So they check to see if it's the same person and if the ID or passport is fake. They confirm everything, which often takes a long time."
+  }
+ ],
+ "vocab": [
+  {
+   "word": "residency",
+   "pos": "명사",
+   "meaning": "거주, 거주지"
+  },
+  {
+   "word": "valid",
+   "pos": "형용사",
+   "meaning": "유효한, 타당한"
+  },
+  {
+   "word": "streamlined",
+   "pos": "형용사",
+   "meaning": "간소화된, 능률적인"
+  },
+  {
+   "word": "bureaucratic",
+   "pos": "형용사",
+   "meaning": "관료주의적인, 번거로운"
+  },
+  {
+   "word": "illegible",
+   "pos": "형용사",
+   "meaning": "읽기 어려운, 판독 불가능한"
+  }
+ ],
+ "_html_md5": "f576bcdcebdae775ade6f1a0800a9da0"
+}
