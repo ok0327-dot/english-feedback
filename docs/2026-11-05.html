@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#0f0f13"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="당근영어"><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="icon" type="image/png" sizes="192x192" href="icon-192.png"><script src="install-banner.js" defer></script><script src="sw-reg.js" defer></script>
+    <title>전화영어 복습 - 2026년 11월 05일</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Noto Sans KR',sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.75;min-height:100vh}
+        .header{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);border-bottom:1px solid rgba(255,255,255,.06);padding:48px 24px 40px;text-align:center}
+        .header-date{font-size:13px;color:#94a3b8;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+        .header h1{font-size:28px;font-weight:700;color:#f1f5f9;margin-bottom:16px}
+        .header-meta{display:flex;justify-content:center;gap:24px;font-size:14px;color:#64748b}
+        .header-meta span{display:flex;align-items:center;gap:6px}
+        .cta-section{text-align:center;padding:40px 24px}
+        .cta-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:linear-gradient(135deg,#38bdf8,#818cf8);color:#fff;font-size:16px;font-weight:600;font-family:'Noto Sans KR',sans-serif;border:none;border-radius:50px;cursor:pointer;transition:all .3s;text-decoration:none;box-shadow:0 4px 24px rgba(56,189,248,.25)}
+        .cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(56,189,248,.35)}
+        .cta-btn svg{width:20px;height:20px}
+        .cta-sub{margin-top:12px;font-size:13px;color:#64748b}
+        .toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#38bdf8;padding:14px 28px;border-radius:12px;font-size:14px;font-weight:500;border:1px solid rgba(56,189,248,.2);box-shadow:0 8px 32px rgba(0,0,0,.4);opacity:0;transition:all .4s cubic-bezier(.16,1,.3,1);z-index:1000}
+        .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+        .container{max-width:720px;margin:0 auto;padding:0 24px 80px}
+        .tabs{display:flex;gap:4px;background:#1a1a24;padding:4px;border-radius:12px;margin-bottom:32px}
+        .tab{flex:1;padding:12px;text-align:center;font-size:14px;font-weight:500;color:#64748b;background:0 0;border:none;border-radius:8px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all .2s}
+        .tab.active{background:#262636;color:#f1f5f9}
+        .tab-content{display:none}.tab-content.active{display:block}
+        .feedback h2{font-size:18px;font-weight:700;color:#f1f5f9;margin:36px 0 16px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.06)}
+        .feedback h2:first-child{margin-top:0}
+        .feedback p{margin:8px 0;color:#cbd5e1}
+        .feedback .item{padding:6px 0 6px 16px;border-left:2px solid #334155;margin:6px 0;color:#cbd5e1}
+        .feedback .numbered{padding:8px 0 8px 16px;color:#cbd5e1}
+        .feedback .numbered strong{color:#38bdf8}
+        .feedback strong{color:#f1f5f9}
+        .feedback code{background:#1e293b;padding:2px 8px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#38bdf8}
+        .feedback table{width:100%;border-collapse:collapse;margin:12px 0}
+        .feedback th,.feedback td{padding:10px 14px;text-align:left;border-bottom:1px solid #262636}
+        .feedback th{color:#94a3b8;font-weight:500;font-size:13px}
+        .feedback td{color:#cbd5e1}
+        .arrow{color:#38bdf8;font-weight:700}
+        .transcript{background:#1a1a24;border-radius:12px;padding:28px;font-size:14px;line-height:2;color:#94a3b8;white-space:pre-wrap;word-break:break-word;font-family:'JetBrains Mono','Noto Sans KR',monospace}
+        .transcript .tutor{color:#38bdf8}
+        .transcript .student{color:#a78bfa}
+        @media(max-width:640px){.header{padding:32px 16px}.header h1{font-size:22px}.cta-btn{padding:14px 28px;font-size:15px}.container{padding:0 16px 60px}}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-date">2026년 11월 05일</div>
+        <h1>📚 전화영어 복습</h1>
+        <div class="header-meta">
+            <span>⏱ 19분 55초</span>
+            <span>🎙 전화영어_025180304_20261105080042.m4a</span>
+        </div>
+    </div>
+    <div class="cta-section">
+        <button class="cta-btn" onclick="startReview()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Gemini에서 복습 대화 시작하기
+        </button>
+        <div class="cta-sub">클릭하면 프롬프트가 복사되고 Gemini가 열립니다</div>
+    </div>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('feedback')">📋 AI 피드백</button>
+            <button class="tab" onclick="switchTab('transcript')">🎙 수업 전사</button>
+        </div>
+        <div id="tab-feedback" class="tab-content active">
+            <div class="feedback"><p>안녕하세요, Joey! 오늘도 활기찬 목소리로 수업에 참여해주셔서 감사합니다. 복잡하게 느껴질 수 있는 세금 신고(tax filing)라는 주제를 침착하게 잘 이끌어 가셨어요. 특히 어려운 발음도 튜터의 코칭에 따라 여러 번 반복하며 정확하게 고쳐나가려는 모습이 정말 인상 깊었습니다.</p>
+<br>
+<br>
+<h2>0. 📌 Topic</h2>
+<p>Topic: Discussing tax filing processes and related terminology.</p>
+<br>
+<br>
+<h2>1. 📊 오늘의 대화 요약 (Summary)</h2>
+<p>오늘은 세금 신고(tax filing)와 관련된 핵심 표현들을 배우고, W-2 양식, 세금 공제(tax deduction) 등 세금 관련 용어들을 자세히 살펴보았습니다. 한국, 미국, 캐나다의 세금 신고 방식 차이에 대해서도 이야기 나누며 유용한 어휘와 발음을 연습했습니다.</p>
+<br>
+<br>
+<h2>2. 💬 유창성 업그레이드 (Fluency & Natural Flow)</h2>
+<p>Joey가 말한 문장 중 의미는 통하지만, 원어민이 들었을 때 더 자연스럽게 느껴질 수 있는 표현들을 살펴볼게요.</p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>❌ 학습자 원문 (As Said):</strong> <code>That is the routine of my day.</code></div>
+<div class="item"><strong>✅ 자연스러운 표현 (Natural):</strong> <code>It's part of my daily routine.</code></div>
+<div class="item"><strong>💎 비즈니스 표현 (Professional):</strong> <code>It's an integral part of my daily schedule.</code></div>
+<div class="item"><strong>💡 코칭 포인트:</strong> Using 'part of' makes the phrase sound more natural when referring to a regular activity. 'The routine of my day' is grammatically correct but less common. <span class="arrow">→</span> "'part of'를 사용하면 일상적인 활동을 언급할 때 더 자연스럽습니다. 'The routine of my day'는 문법적으로 맞지만 덜 흔한 표현입니다."</div>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>❌ 학습자 원문 (As Said):</strong> <code>I need to help filing documents of audit.</code></div>
+<div class="item"><strong>✅ 자연스러운 표현 (Natural):</strong> <code>I need help filing audit documents.</code></div>
+<div class="item"><strong>💎 비즈니스 표현 (Professional):</strong> <code>I require assistance with the submission of audit-related documentation.</code></div>
+<div class="item"><strong>💡 코칭 포인트:</strong> Using 'audit documents' as a compound noun is more concise and natural. 'Documents of audit' is less common. <span class="arrow">→</span> "'audit documents'처럼 복합 명사를 사용하는 것이 더 간결하고 자연스럽습니다. 'Documents of audit'는 덜 흔한 표현입니다."</div>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>❌ 학습자 원문 (As Said):</strong> <code>Because if he is a visitor, she is a visitor, and if she admits to tax deduction, he returns money more. So he prepared the school expenses.</code></div>
+<div class="item"><strong>✅ 자연스러운 표현 (Natural):</strong> <code>Because if they qualify for a tax deduction, they'll get more money back.</code></div>
+<div class="item"><strong>💎 비즈니스 표현 (Professional):</strong> <code>Because if they are eligible for a tax deduction, their refund amount will increase.</code></div>
+<div class="item"><strong>💡 코칭 포인트:</strong> Using 'qualify for' or 'be eligible for' is the correct way to express eligibility for a deduction. 'Returns money'는 'get money back' 또는 'receive a refund'로 바꾸면 더 명확합니다. 또한, 성별을 특정하기보다 'they'를 사용하는 것이 더 자연스럽습니다.</div>
+<br>
+<div class="numbered"><strong>4.</strong> <strong>❌ 학습자 원문 (As Said):</strong> <code>And usually the salaryman, the employer usually reports their income and outcomes.</code></div>
+<div class="item"><strong>✅ 자연스러운 표현 (Natural):</strong> <code>And usually, the employer reports their employees' income and expenses.</code></div>
+<div class="item"><strong>💎 비즈니스 표현 (Professional):</strong> <code>Typically, employers are responsible for reporting their employees' income and associated expenditures.</code></div>
+<div class="item"><strong>💡 코칭 포인트:</strong> 세금 관련 문맥에서는 'outcomes' 대신 'expenses' 또는 'deductions'를 사용하는 것이 더 적절합니다. 'salaryman'은 한국식 영어 표현이므로 'employees'로 바꾸는 것이 좋습니다.</div>
+<br>
+<br>
+<h2>3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)</h2>
+<p>Category: <strong>Verb structure after 'need help'</strong></p>
+<br>
+<p>Joey는 "도움이 필요하다"는 의미를 전달할 때 <code>I need to help [V-ing]</code>와 같이 표현하는 경향이 있었습니다. 'need help' 뒤에 동명사(V-ing)가 올 때는 <code>to</code> 없이 <code>I need help [V-ing]</code> 또는 <code>I need help with [V-ing/Noun]</code> 형태로 쓰는 것이 자연스럽습니다.</p>
+<br>
+<table>
+<tr><th>❌ 원문 (As Said)</th><th>✅ 교정 예시 (Corrected)</th></tr>
+<tr><td><code>I need to help filing my taxes because I don't understand the forms.</code></td><td><code>I need help filing my taxes because I don't understand the forms.</code></td></tr>
+<tr><td><code>I need to help filing documents of audit.</code></td><td><code>I need help filing audit documents.</code></td></tr>
+<tr><td><code>I need to help filing.</code></td><td><code>I need help filing.</code></td></tr>
+</table>
+<br>
+<p>📌 <strong>핵심 규칙:</strong> '도움이 필요하다'고 말할 때는 <code>need help</code> 뒤에 바로 동명사(V-ing)를 붙이거나 <code>with + (동명사/명사)</code>를 사용합니다. <code>to help</code>는 '누군가를 돕기 위해'라는 의미가 됩니다.</p>
+<br>
+<p>🔁 <strong>따라 읽기:</strong></p>
+<p>🗣️ "I need help filing my taxes because I don't understand the forms."</p>
+<p>🗣️ "I need help filing audit documents."</p>
+<p>🗣️ "I need help filing."</p>
+<br>
+<br>
+<h2>4. 📗 어휘 확장 (Vocabulary Vault)</h2>
+<p>오늘 수업 중 등장했거나 Joey의 업무 환경에서 유용하게 쓰일 수 있는 어휘들을 정리해 보았습니다.</p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>deduction</strong> /dɪˈdʌkʃən/ (명사)</div>
+<div class="item">뜻: 공제, 삭감 (세금 등에서 금액을 줄이는 것)</div>
+<div class="item">실전 예문: <code>We need to review all eligible deductions to minimize our corporate tax.</code> (우리는 법인세를 최소화하기 위해 모든 적격 공제 항목을 검토해야 합니다.)</div>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>refund</strong> /ˈriːfʌnd/ (명사, 동사)</div>
+<div class="item">뜻: 환급, 환불 (명사); 환급하다, 환불하다 (동사)</div>
+<div class="item">실전 예문: <code>The company offers a full refund if the product is returned within 30 days.</code> (회사는 제품이 30일 이내에 반품되면 전액 환불해 드립니다.)</div>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>reputable</strong> /ˈrɛpjʊtəbəl/ (형용사)</div>
+<div class="item">뜻: 평판이 좋은, 신뢰할 수 있는</div>
+<div class="item">실전 예문: <code>We only partner with reputable suppliers to ensure product quality.</code> (우리는 제품 품질을 보장하기 위해 평판 좋은 공급업체와만 협력합니다.)</div>
+<br>
+<div class="numbered"><strong>4.</strong> <strong>tedious</strong> /ˈtiːdiəs/ (형용사)</div>
+<div class="item">뜻: 지루한, 싫증 나는 (반복적이고 오래 걸려서)</div>
+<div class="item">실전 예문: <code>Data entry can be a tedious task, but accuracy is crucial.</code> (데이터 입력은 지루한 작업일 수 있지만, 정확성이 매우 중요합니다.)</div>
+<br>
+<div class="numbered"><strong>5.</strong> <strong>obligatory</strong> /əˈblɪɡətɔːri/ (형용사)</div>
+<div class="item">뜻: 의무적인, 필수의</div>
+<div class="item">실전 예문: <code>Attending the quarterly review meeting is obligatory for all department heads.</code> (분기별 검토 회의 참석은 모든 부서장에게 의무적입니다.)</div>
+<br>
+<br>
+<h2>5. 📝 실전 복습 챌린지 (Practice)</h2>
+<p>오늘 배운 표현과 문법을 활용하여 다음 한국어 상황을 영어로 영작해 보세요.</p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>상황:</strong> 새로운 소프트웨어 사용법을 배우는 데 도움이 필요하다고 말하고 싶습니다.</div>
+<div class="item"><strong>영작:</strong> <code>(I need help _______ the new software.)</code></div>
+<div class="item"><strong>모범 답안:</strong> <code>I need help learning the new software.</code></div>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>상황:</strong> 우리 회사는 고객 만족을 위해 항상 환불 정책을 명확하게 안내한다고 설명하고 싶습니다. (오늘 배운 단어 'refund'와 'reputable'을 활용해 보세요.)</div>
+<div class="item"><strong>영작:</strong> <code>(Our company always clearly communicates its _______ policy to ensure customer satisfaction, maintaining its _______ image.)</code></div>
+<div class="item"><strong>모범 답안:</strong> <code>Our company always clearly communicates its refund policy to ensure customer satisfaction, maintaining its reputable image.</code></div>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>상황:</strong> 세금 신고는 다소 지루하고 의무적인 과정이지만, 정확한 공제(deduction)를 통해 환급액(refund)을 늘릴 수 있다고 말하고 싶습니다. (오늘 배운 단어 'tedious', 'obligatory', 'deduction', 'refund'를 모두 활용해 보세요.)</div>
+<div class="item"><strong>영작:</strong> <code>(Tax filing can be a somewhat _______ and _______ process, but you can increase your _______ through accurate _______.)</code></div>
+<div class="item"><strong>모범 답안:</strong> <code>Tax filing can be a somewhat tedious and obligatory process, but you can increase your refund through accurate deductions.</code></div>
+<br>
+<br>
+<h2>6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)</h2>
+<p>✨ <strong>Good Job:</strong></p>
+<p>Joey가 오늘 가장 잘 표현한 문장은 바로 이겁니다!</p>
+<p><code>"In Korea, people usually prepare the document until February. And usually the salaryman, the employer usually reports their income and outcomes. That process is automatic. So, if we just press one button, that is the automatically reported income and outcomes information. And then the tax is to make the amount. Yeah. That is our process. It's automatic."</code></p>
+<p>한국의 세금 신고 시스템에 대해 설명할 때, 다소 복잡한 내용을 막힘없이 논리적으로 잘 전달해 주셨어요. 'automatic'이라는 핵심 키워드를 반복하며 한국 시스템의 특징을 명확하게 강조한 점도 아주 좋았습니다.</p>
+<br>
+<p>🚀 <strong>내일의 한 문장:</strong></p>
+<p>다음 수업 시작 시 튜터에게 오늘 배운 내용을 활용하여 다음과 같이 말해보세요.</p>
+<p><code>"I've been reviewing the vocabulary from our last class, especially 'reputable' and 'deduction'. They seem very useful for business discussions."</code></p>
+<p>(지난 수업에서 배운 어휘, 특히 'reputable'과 'deduction'을 복습하고 있었는데, 비즈니스 토론에 매우 유용할 것 같아요.)</p>
+<br>
+<br>
+<h2>[성과 지표]</h2>
+<p><strong>유창성 점수:</strong> 8/10</p>
+<br>
+<p><strong>근거:</strong> Joey는 오늘 다소 복잡한 주제인 세금 신고에 대해 자신의 의견과 한국의 상황을 비교적 막힘없이 설명하며 높은 유창성을 보여주었습니다. 특히 새로운 어휘와 발음을 익히려는 적극적인 태도가 돋보였습니다. 다만, 일부 문장 구조에서 한국어식 표현이 섞이거나 특정 동사 뒤의 전치사/구조 선택에서 어색함이 있었지만, 이는 지속적인 연습으로 충분히 개선될 수 있는 부분입니다.</p>
+<br>
+<p><strong>다음 수업 '원포인트 액션 플랜':</strong></p>
+<p>다음 수업에서는 <strong>"need help + V-ing" 패턴을 정확히 사용하기</strong>에 집중해 봅시다. 도움이 필요하다고 말할 때 <code>to</code>를 넣지 않고 자연스럽게 표현하는 연습을 해볼 거예요. "I need help understanding this report." (이 보고서를 이해하는 데 도움이 필요해요.)와 같은 문장을 만들면서 입에 익숙해지도록 해봅시다!</p></div>
+        </div>
+        <div id="tab-transcript" class="tab-content">
+            <div class="transcript"><span class="tutor">[Tutor]</span> Hello, Karin. Good morning. Hi again, Joey. Good evening. Hi. Do you have time for your class today?
+[Joey] Ah, yes, of course. That is the routine of my day.
+<span class="tutor">[Tutor]</span> Very good. Did you need a moment to bring up today&#x27;s lesson? I can wait.
+[Joey] Oh, yes. I found the subject. Today&#x27;s topic is talking about taxes.
+<span class="tutor">[Tutor]</span> Oh, yeah. Taxes. Very good. Can I get you to read today&#x27;s mission to me?
+[Joey] Oh, yes. Of course. Learn how to file taxes, ask about your W-2, and understand the tax terms like refund and deduction.
+<span class="tutor">[Tutor]</span> All right. I&#x27;m just going to get you to try that one word again. Refund.
+[Joey] Refund. Refund.
+<span class="tutor">[Tutor]</span> Very good. Yeah. Still kind of early in the morning. All right. Thank you. All right. Let&#x27;s go on to the first page, key expressions and phrases. I&#x27;ll get you to read the expression and its description for the first one.
+[Joey] Okay. The first expression, tax returns. The form you file to report income and pay taxes.
+<span class="tutor">[Tutor]</span> Yes. Taxes. It&#x27;s a tax return. Very good. All right. Let&#x27;s get you to read the second expression.
+[Joey] Okay. The tax deduction. Good. Tax deduction. An amount that&#x27;s lower, how much tax you owe?
+<span class="tutor">[Tutor]</span> Okay, only thing we need to do is add an S to lowers. Try that. Lowers.
+[Joey] Lowers. Lowers.
+<span class="tutor">[Tutor]</span> Very good. Very good. Okay, we&#x27;re going on to the key phrases. I&#x27;ll ask you to read each of the examples to me.
+[Joey] I need help filing. I need to help filing. I need to help filing my taxes because I don&#x27;t understand the forms.
+<span class="tutor">[Tutor]</span> Okay, let&#x27;s try F for forms.
+[Joey] Forms. Very good. I need to help filing documents of audit.
+<span class="tutor">[Tutor]</span> Okay. And second, can you explain what blah blah means on blah blah blah? Can you explain what federal tax withhold means on my W-2?
+<span class="tutor">[Tutor]</span> All right. Very good. Now, I&#x27;m assuming that this W-2 form that they&#x27;re speaking of is an American tax form. You probably have something similar in Korea, just like I do in Canada. Okay?
+[Joey] Yeah, it&#x27;s similar in Korea. Yes.
+<span class="tutor">[Tutor]</span> All right. Let&#x27;s move on to Part A, InfoBytes. And they&#x27;re showing us an example of what a W-2 looks like. And it is for the states. And you can see it has places where you put in your income, your deductions, things like that. I&#x27;m going to get you to move on and read to me the four bulleted statements. Please take your time.
+[Joey] Okay. In the U.S. and Canada, people must file taxes every year, even if their employer already took out taxes. Most people in the U.S. must file if they earn some money. The deadline is usually April 15. In the U.S., the W-2 form shows how much you earned and how much tax you paid. Employers send it by January 31. In the United Kingdom, most workers don&#x27;t file taxes. Employers send the information automatically through a system called payer. Or payee. Yeah, I&#x27;m not sure. Yeah, that&#x27;s all right.
+<span class="tutor">[Tutor]</span> Let&#x27;s try a couple of things. You said employer singular. Let&#x27;s try adding an S. Employers. Employers.
+[Joey] All right.
+<span class="tutor">[Tutor]</span> And then we said sent it by you said January 31. I&#x27;m going to get you to repeat this phrase. 31st. 31st.
+<span class="tutor">[Tutor]</span> Excellent. Very good. Okay. All right. Let&#x27;s get you to Okay.
+[Joey] Yeah. And teacher, I have a question more. If I wanted to say 21, can I say the 21st, 22nd, 23rd?
+<span class="tutor">[Tutor]</span> Yes. Yes. Those are called, I think they&#x27;re cardinal or ordinal numbers where they show someone&#x27;s place or number in line. I will get a video for you that describes them, and it&#x27;ll give you some more information about their pronunciation as well. Okay?
+[Joey] How about the 28? It&#x27;s the 20 and I don&#x27;t know the 8. How can I say?
+<span class="tutor">[Tutor]</span> Okay, well, what happens is when we&#x27;re talking about dates like that, we take the number word and we add the TH to the end of it. So instead of saying 28, we would say 28th.
+[Joey] I see. 28th.
+<span class="tutor">[Tutor]</span> So this is why I&#x27;ll send you a video and you can see it and practice it.
+[Joey] Okay, I see. Yeah.
+<span class="tutor">[Tutor]</span> Lovely. Let&#x27;s get you to read the question at the bottom and respond. In your country, do most people file their own taxes or is it automatic?
+[Joey] Yes. In Korea, people usually prepare the document until February. And usually the salaryman, the employer usually reports their income and outcomes. That process is automatic. So, if we just press one button, that is the automatically reported income and outcomes information. And then the tax is to make the amount. Yeah. That is our process. It&#x27;s automatic.
+<span class="tutor">[Tutor]</span> Interesting. Here in Canada, our employers issue a special tax form and we use it along with any other tax documentation and we have to submit our own taxes. If we don&#x27;t do our own taxes, then we get someone like an accountant to do it for us so that all the numbers are correct. All the numbers are correct. But it&#x27;s not done automatically, although it sounds like a really nice idea.
+[Joey] Yes.
+<span class="tutor">[Tutor]</span> All right. Let&#x27;s go on to Part B, Joey, real-life talk. And again, we have a conversation. The title is Get Help with W-2s and Tax Filing. We&#x27;re going to read this twice. Would you like to start as the visitor or as the staff?
+[Joey] Okay, I will start visitor. Hi, I need help filing my taxes because I&#x27;m new to the U.S.
+<span class="tutor">[Tutor]</span> Of course. Do you have your W-2 and any other documents?
+[Joey] Yes. Can you explain what federal tax withhold means on my W-2?
+<span class="tutor">[Tutor]</span> Okay, let&#x27;s pause. Let&#x27;s try withheld.
+[Joey] Withheld. Withheld.
+<span class="tutor">[Tutor]</span> Very good. Sure. That&#x27;s the tax your employer has already sent to the IRS. Next page.
+[Joey] Also, someone said I might get a tax deduction for school expenses.
+<span class="tutor">[Tutor]</span> You might. Let&#x27;s check if you qualify when we do your tax return.
+[Joey] Great. I just want to make sure I filed everything correctly.
+<span class="tutor">[Tutor]</span> All right. Very good. So in this conversation, Joey, this person is visiting a certain person who does tax preparation. They prepare all the forms and they have all the knowledge about the different deductions or penalties. In Canada we have a number of businesses that, well, I have one business that&#x27;s been doing my taxes every year for the last 35 years.
+[Joey] Ah, I see.
+<span class="tutor">[Tutor]</span> I just take them the documents and they do all the paperwork. All right. Let&#x27;s go back to the first page. I will read as the visitor and you will be the staff.
+[Joey] Okay. No problem. All right.
+<span class="tutor">[Tutor]</span> Hi. I need help filing my taxes because I&#x27;m new to the U.S.
+[Joey] Of course. Do you have your W-2 and any other documents?
+<span class="tutor">[Tutor]</span> Yes. Can you explain what federal tax withheld means on my W-2?
+[Joey] Sure. That&#x27;s the tax your employer already sent to the IRS.
+<span class="tutor">[Tutor]</span> Also, someone said I might get a tax deduction on school expenses.
+[Joey] You might. Let&#x27;s check if you qualify when we do your tax returns.
+<span class="tutor">[Tutor]</span> Great. I just want to make sure I file everything correctly.
+[Joey] All right. Good job. Okay.
+<span class="tutor">[Tutor]</span> All right. So, underneath the conversation, we have the question, And what is an IRS? I&#x27;ll get you to read that answer to me.
+[Joey] Okay. It&#x27;s short for Internal Revenue Service, which is the U.S. government agency responsible for collecting taxes and enforcing tax laws.
+<span class="tutor">[Tutor]</span> Okay. Very nice. All right. Let&#x27;s get you to read the question at the bottom and see if you can remember the answer.
+[Joey] Okay, why does the visitor think they might get a tax deduction?
+[Joey] Because if he is a visitor, she is a visitor, and if she admits to tax deduction, he returns money more. So he prepared the school expenses.
+<span class="tutor">[Tutor]</span> Okay, that was a good effort. This person, because they&#x27;ve never filed taxes in the U.S. before, they may be what we call a foreign student. And as a foreign student, they have to submit a tax form, but sometimes they get a deduction for school expenses, tuition fees, as a foreign student, which they can put on their tax return to see if they get a deduction. Okay?
+[Joey] Okay.
+<span class="tutor">[Tutor]</span> We have a lot of foreign students in Canada. We get a lot of them from India, China. We get quite a few from Korea and from Europe. So, yeah, a lot of people like to come here to learn. All right. Excellent work. Let&#x27;s move on to part C, Say It Right. Let&#x27;s look at some adjective vocabulary. All right, the first group is titled Tax Filing Services. I&#x27;ll ask you to read the phrase and the description for each of the words. And then read the question, okay?
+[Joey] Okay. Always this part is hard for me, but please take your time. Okay. Tax filing service, reputable. Reputable. Reputable. That&#x27;s better. Yeah. Go on. Reputable. Reputable. Well-known for qualified. Quality. Quality. Quality. Good. Okay. Tedious. Slow and repetitive. Repetitive. May I help you? Okay. Repetitive. Repetitive. Repetitive. Repetitive. Repetitive. Repetitive. Repetitive. Slow and repetitive. Tedious. Better. Procedural. Procedural. Step by step. Close. Okay. Impersonal. Procedural. Okay.
+<span class="tutor">[Tutor]</span> Let me help you with that. Procedural. Procedural. Procedural. Procedural. Procedural. Procedural. That&#x27;s a good effort. I&#x27;m going to take all the three of these words. I&#x27;ll break them into sound bites. And if I can find pronunciation videos, I&#x27;ll include them in the teacher comments. Okay?
+[Joey] Okay, okay, yes. Great. Teacher, can you send my text message? Because usually I don&#x27;t check my application of the Carol English.
+<span class="tutor">[Tutor]</span> Oh, really? Okay. Real information is always good, but sometimes I&#x27;m lost. You&#x27;re not getting it.
+[Joey] Because I don&#x27;t check my Carol English. But it&#x27;s okay, yes. Just that is possible. Okay.
+<span class="tutor">[Tutor]</span> Okay, well, let me tell you. I do have the ability to send an SMS to your phone number and it&#x27;s limited as to what I can send you, but if you&#x27;d like me to send the video links, I can put those in as a text message. Would that help?
+[Joey] Yes, it&#x27;s helpful, but if you read hard, it is okay. Just check the Carol English review. Yes, it&#x27;s better.
+<span class="tutor">[Tutor]</span> It&#x27;s always very good for you to check your class report because I can put more information on your class feedback than I can in a text message. In a text message, I only have 90 characters.
+[Joey] Okay, I see. It&#x27;s better to check more the Carol English review. Yes. Okay, okay. I see. I try them. All right. Thank you. Okay.
+<span class="tutor">[Tutor]</span> Let&#x27;s get you to read the first question.
+[Joey] Okay. Your friends feel nervous about the tax service you used. How would you share your experience? I&#x27;m just suggesting, I&#x27;m just imagining the situation, some my foreigner friends come to Korea and he&#x27;s the first he needs to report to the tax department. Just I would say it is easy. Don&#x27;t be nervous. Just turn on the just access the internet and then yeah, if you put this link, it is made automatically. And I&#x27;m just to check the empty place or error of the system. Yeah. And then you that that report is filling automatically. Don&#x27;t operate. Yeah. I would say that that yeah, situation. Oh.
+<span class="tutor">[Tutor]</span> Oh, yeah, certainly. Uh-huh. Yeah. Basically, what you&#x27;re sharing with your friends is that you&#x27;re telling them about your experience. Uh-huh. If you had a good experience or the person helping you did a great job. Okay. And then, yeah, and then you give them the link or the name of the business so that they can call and get more information. Yep. Very good. Very good. Good. Okay. All right. We&#x27;re going to finish class with the next group of words. And the title is tax season feelings. I&#x27;ll get you to read the adjectives and their descriptions.
+[Joey] Okay. Obligatory. Obligatory. Required by law. Obligatory. Okay.
+<span class="tutor">[Tutor]</span> Let&#x27;s get you to pause. Let&#x27;s try this.
+[Joey] Obligatory. Obligatory. Obligatory.
+<span class="tutor">[Tutor]</span> Better.
+[Joey] Obligatory. Intimidating. Intimidating. Good. Make you nervous. Validating. Emotionally rewarding. Give pride. Okay.
+<span class="tutor">[Tutor]</span> All right. And It says you survived filing taxes in the U.S. What was that like? I have a feeling you&#x27;ve never filed taxes in the U.S., have you, Joey?
+[Joey] Okay, I see. Someday. Yeah, I&#x27;m trying. I haven&#x27;t either.
+<span class="tutor">[Tutor]</span> Yeah, that&#x27;s fine. Okay. All right, my friend, we are done for another day. Any questions or concerns?
+[Joey] Oh, thank you for your class. Yes. Have a great day, teacher. I&#x27;ll talk to you next time. Take care. Bye-bye.
+<span class="tutor">[Tutor]</span> You too. Bye-bye.</div>
+        </div>
+    </div>
+    <div class="toast" id="toast">✅ 프롬프트가 복사되었습니다!</div>
+    <script>
+        const REVIEW_PROMPT="너는 나의 영어 회화 복습 파트너야. 오늘 내 전화영어 수업 내용을 기반으로 대화하면서 복습을 도와줘.\n\n[오늘 수업 전사 내용]\n[Tutor] Hello, Karin. Good morning. Hi again, Joey. Good evening. Hi. Do you have time for your class today?\n[Joey] Ah, yes, of course. That is the routine of my day.\n[Tutor] Very good. Did you need a moment to bring up today's lesson? I can wait.\n[Joey] Oh, yes. I found the subject. Today's topic is talking about taxes.\n[Tutor] Oh, yeah. Taxes. Very good. Can I get you to read today's mission to me?\n[Joey] Oh, yes. Of course. Learn how to file taxes, ask about your W-2, and understand the tax terms like refund and deduction.\n[Tutor] All right. I'm just going to get you to try that one word again. Refund.\n[Joey] Refund. Refund.\n[Tutor] Very good. Yeah. Still kind of early in the morning. All right. Thank you. All right. Let's go on to the first page, key expressions and phrases. I'll get you to read the expression and its description for the first one.\n[Joey] Okay. The first expression, tax returns. The form you file to report income and pay taxes.\n[Tutor] Yes. Taxes. It's a tax return. Very good. All right. Let's get you to read the second expression.\n[Joey] Okay. The tax deduction. Good. Tax deduction. An amount that's lower, how much tax you owe?\n[Tutor] Okay, only thing we need to do is add an S to lowers. Try that. Lowers.\n[Joey] Lowers. Lowers.\n[Tutor] Very good. Very good. Okay, we're going on to the key phrases. I'll ask you to read each of the examples to me.\n[Joey] I need help filing. I need to help filing. I need to help filing my taxes because I don't understand the forms.\n[Tutor] Okay, let's try F for forms.\n[Joey] Forms. Very good. I need to help filing documents of audit.\n[Tutor] Okay. And second, can you explain what blah blah means on blah blah blah? Can you explain what federal tax withhold means on my W-2?\n[Tutor] All right. Very good. Now, I'm assuming that this W-2 form that they're speaking of is an American tax form. You probably have something similar in Korea, just like I do in Canada. Okay?\n[Joey] Yeah, it's similar in Korea. Yes.\n[Tutor] All right. Let's move on to Part A, InfoBytes. And they're showing us an example of what a W-2 looks like. And it is for the states. And you can see it has places where you put in your income, your deductions, things like that. I'm going to get you to move on and read to me the four bulleted statements. Please take your time.\n[Joey] Okay. In the U.S. and Canada, people must file taxes every year, even if their employer already took out taxes. Most people in the U.S. must file if they earn some money. The deadline is usually April 15. In the U.S., the W-2 form shows how much you earned and how much tax you paid. Employers send it by January 31. In the United Kingdom, most workers don't file taxes. Employers send the information automatically through a system called payer. Or payee. Yeah, I'm not sure. Yeah, that's all right.\n[Tutor] Let's try a couple of things. You said employer singular. Let's try adding an S. Employers. Employers.\n[Joey] All right.\n[Tutor] And then we said sent it by you said January 31. I'm going to get you to repeat this phrase. 31st. 31st.\n[Tutor] Excellent. Very good. Okay. All right. Let's get you to Okay.\n[Joey] Yeah. And teacher, I have a question more. If I wanted to say 21, can I say the 21st, 22nd, 23rd?\n[Tutor] Yes. Yes. Those are called, I think they're cardinal or ordinal numbers where they show someone's place or number in line. I will get a video for you that describes them, and it'll give you some more information about their pronunciation as well. Okay?\n[Joey] How about the 28? It's the 20 and I don't know the 8. How can I say?\n[Tutor] Okay, well, what happens is when we're talking about dates like that, we take the number word and we add the TH to the end of it. So instead of saying 28, we would say 28th.\n[Joey] I see. 28th.\n[Tutor] So this is why I'll send you a video and you can see it and practice it.\n[Joey] Okay, I see. Yeah.\n[Tutor] Lovely. Let's get you to read the question at the bottom and respond. In your country, do most people file their own taxes or is it automatic?\n[Joey] Yes. In Korea, people usually prepare the document until February. And usually the salaryman, the employer usually reports their income and outcomes. That process is automatic. So, if we just press one button, that is the automatically reported income and outcomes information. And then the tax is to make the amount. Yeah. That is our process. It's automatic.\n[Tutor] Interesting. Here in Canada, our employers issue a special tax form and we use it along with any other tax documentation and we have to submit our own taxes. If we don't do our own taxes, then we get someone like an accountant to do it for us so that all the numbers are correct. All the numbers are correct. But it's not done automatically, although it sounds like a really nice idea.\n[Joey] Yes.\n[Tutor] All right. Let's go on to Part B, Joey, real-life talk. And again, we have a conversation. The title is Get Help with W-2s and Tax Filing. We're going to read this twice. Would you like to start as the visitor or as the staff?\n[Joey] Okay, I will start visitor. Hi, I need help filing my taxes because I'm new to the U.S.\n[Tutor] Of course. Do you have your W-2 and any other documents?\n[Joey] Yes. Can you explain what federal tax withhold means on my W-2?\n[Tutor] Okay, let's pause. Let's try withheld.\n[Joey] Withheld. Withheld.\n[Tutor] Very good. Sure. That's the tax your employer has already sent to the IRS. Next page.\n[Joey] Also, someone said I might get a tax deduction for school expenses.\n[Tutor] You might. Let's check if you qualify when we do your tax return.\n[Joey] Great. I just want to make sure I filed everything correctly.\n[Tutor] All right. Very good. So in this conversation, Joey, this person is visiting a certain person who does tax preparation. They prepare all the forms and they have all the knowledge about the different deductions or penalties. In Canada we have a number of businesses that, well, I have one business that's been doing my taxes every year for the last 35 years.\n[Joey] Ah, I see.\n[Tutor] I just take them the documents and they do all the paperwork. All right. Let's go back to the first page. I will read as the visitor and you will be the staff.\n[Joey] Okay. No problem. All right.\n[Tutor] Hi. I need help filing my taxes because I'm new to the U.S.\n[Joey] Of course. Do you have your W-2 and any other documents?\n[Tutor] Yes. Can you explain what federal tax withheld means on my W-2?\n[Joey] Sure. That's the tax your employer already sent to the IRS.\n[Tutor] Also, someone said I might get a tax deduction on school expenses.\n[Joey] You might. Let's check if you qualify when we do your tax returns.\n[Tutor] Great. I just want to make sure I file everything correctly.\n[Joey] All right. Good job. Okay.\n[Tutor] All right. So, underneath the conversation, we have the question, And what is an IRS? I'll get you to read that answer to me.\n[Joey] Okay. It's short for Internal Revenue Service, which is the U.S. government agency responsible for collecting taxes and enforcing tax laws.\n[Tutor] Okay. Very nice. All right. Let's get you to read the question at the bottom and see if you can remember the answer.\n[Joey] Okay, why does the visitor think they might get a tax deduction?\n[Joey] Because if he is a visitor, she is a visitor, and if she admits to tax deduction, he returns money more. So he prepared the school expenses.\n[Tutor] Okay, that was a good effort. This person, because they've never filed taxes in the U.S. before, they may be what we call a foreign student. And as a foreign student, they have to submit a tax form, but sometimes they get a deduction for school expenses, tuition fees, as a foreign student, which they can put on their tax return to see if they get a deduction. Okay?\n[Joey] Okay.\n[Tutor] We have a lot of foreign students in Canada. We get a lot of them from India, China. We get quite a few from Korea and from Europe. So, yeah, a lot of people like to come here to learn. All right. Excellent work. Let's move on to part C, Say It Right. Let's look at some adjective vocabulary. All right, the first group is titled Tax Filing Services. I'll ask you to read the phrase and the description for each of the words. And then read the question, okay?\n[Joey] Okay. Always this part is hard for me, but please take your time. Okay. Tax filing service, reputable. Reputable. Reputable. That's better. Yeah. Go on. Reputable. Reputable. Well-known for qualified. Quality. Quality. Quality. Good. Okay. Tedious. Slow and repetitive. Repetitive. May I help you? Okay. Repetitive. Repetitive. Repetitive. Repetitive. Repetitive. Repetitive. Repetitive. Slow and repetitive. Tedious. Better. Procedural. Procedural. Step by step. Close. Okay. Impersonal. Procedural. Okay.\n[Tutor] Let me help you with that. Procedural. Procedural. Procedural. Procedural. Procedural. Procedural. That's a good effort. I'm going to take all the three of these words. I'll break them into sound bites. And if I can find pronunciation videos, I'll include them in the teacher comments. Okay?\n[Joey] Okay, okay, yes. Great. Teacher, can you send my text message? Because usually I don't check my application of the Carol English.\n[Tutor] Oh, really? Okay. Real information is always good, but sometimes I'm lost. You're not getting it.\n[Joey] Because I don't check my Carol English. But it's okay, yes. Just that is possible. Okay.\n[Tutor] Okay, well, let me tell you. I do have the ability to send an SMS to your phone number and it's limited as to what I can send you, but if you'd like me to send the video links, I can put those in as a text message. Would that help?\n[Joey] Yes, it's helpful, but if you read hard, it is okay. Just check the Carol English review. Yes, it's better.\n[Tutor] It's always very good for you to check your class report because I can put more information on your class feedback than I can in a text message. In a text message, I only have 90 characters.\n[Joey] Okay, I see. It's better to check more the Carol English review. Yes. Okay, okay. I see. I try them. All right. Thank you. Okay.\n[Tutor] Let's get you to read the first question.\n[Joey] Okay. Your friends feel nervous about the tax service you used. How would you share your experience? I'm just suggesting, I'm just imagining the situation, some my foreigner friends come to Korea and he's the first he needs to report to the tax department. Just I would say it is easy. Don't be nervous. Just turn on the just access the internet and then yeah, if you put this link, it is made automatically. And I'm just to check the empty place or error of the system. Yeah. And then you that that report is filling automatically. Don't operate. Yeah. I would say that that yeah, situation. Oh.\n[Tutor] Oh, yeah, certainly. Uh-huh. Yeah. Basically, what you're sharing with your friends is that you're telling them about your experience. Uh-huh. If you had a good experience or the person helping you did a great job. Okay. And then, yeah, and then you give them the link or the name of the business so that they can call and get more information. Yep. Very good. Very good. Good. Okay. All right. We're going to finish class with the next group of words. And the title is tax season feelings. I'll get you to read the adjectives and their descriptions.\n[Joey] Okay. Obligatory. Obligatory. Required by law. Obligatory. Okay.\n[Tutor] Let's get you to pause. Let's try this.\n[Joey] Obligatory. Obligatory. Obligatory.\n[Tutor] Better.\n[Joey] Obligatory. Intimidating. Intimidating. Good. Make you nervous. Validating. Emotionally rewarding. Give pride. Okay.\n[Tutor] All right. And It says you survived filing taxes in the U.S. What was that like? I have a feeling you've never filed taxes in the U.S., have you, Joey?\n[Joey] Okay, I see. Someday. Yeah, I'm trying. I haven't either.\n[Tutor] Yeah, that's fine. Okay. All right, my friend, we are done for another day. Any questions or concerns?\n[Joey] Oh, thank you for your class. Yes. Have a great day, teacher. I'll talk to you next time. Take care. Bye-bye.\n[Tutor] You too. Bye-bye.\n\n[AI 피드백]\n안녕하세요, Joey! 오늘도 활기찬 목소리로 수업에 참여해주셔서 감사합니다. 복잡하게 느껴질 수 있는 세금 신고(tax filing)라는 주제를 침착하게 잘 이끌어 가셨어요. 특히 어려운 발음도 튜터의 코칭에 따라 여러 번 반복하며 정확하게 고쳐나가려는 모습이 정말 인상 깊었습니다.\n\n---\n\n### 0. 📌 Topic\nTopic: Discussing tax filing processes and related terminology.\n\n---\n\n### 1. 📊 오늘의 대화 요약 (Summary)\n오늘은 세금 신고(tax filing)와 관련된 핵심 표현들을 배우고, W-2 양식, 세금 공제(tax deduction) 등 세금 관련 용어들을 자세히 살펴보았습니다. 한국, 미국, 캐나다의 세금 신고 방식 차이에 대해서도 이야기 나누며 유용한 어휘와 발음을 연습했습니다.\n\n---\n\n### 2. 💬 유창성 업그레이드 (Fluency & Natural Flow)\nJoey가 말한 문장 중 의미는 통하지만, 원어민이 들었을 때 더 자연스럽게 느껴질 수 있는 표현들을 살펴볼게요.\n\n1.  **❌ 학습자 원문 (As Said):** `That is the routine of my day.`\n    *   **✅ 자연스러운 표현 (Natural):** `It's part of my daily routine.`\n    *   **💎 비즈니스 표현 (Professional):** `It's an integral part of my daily schedule.`\n    *   **💡 코칭 포인트:** Using 'part of' makes the phrase sound more natural when referring to a regular activity. 'The routine of my day' is grammatically correct but less common. → \"'part of'를 사용하면 일상적인 활동을 언급할 때 더 자연스럽습니다. 'The routine of my day'는 문법적으로 맞지만 덜 흔한 표현입니다.\"\n\n2.  **❌ 학습자 원문 (As Said):** `I need to help filing documents of audit.`\n    *   **✅ 자연스러운 표현 (Natural):** `I need help filing audit documents.`\n    *   **💎 비즈니스 표현 (Professional):** `I require assistance with the submission of audit-related documentation.`\n    *   **💡 코칭 포인트:** Using 'audit documents' as a compound noun is more concise and natural. 'Documents of audit' is less common. → \"'audit documents'처럼 복합 명사를 사용하는 것이 더 간결하고 자연스럽습니다. 'Documents of audit'는 덜 흔한 표현입니다.\"\n\n3.  **❌ 학습자 원문 (As Said):** `Because if he is a visitor, she is a visitor, and if she admits to tax deduction, he returns money more. So he prepared the school expenses.`\n    *   **✅ 자연스러운 표현 (Natural):** `Because if they qualify for a tax deduction, they'll get more money back.`\n    *   **💎 비즈니스 표현 (Professional):** `Because if they are eligible for a tax deduction, their refund amount will increase.`\n    *   **💡 코칭 포인트:** Using 'qualify for' or 'be eligible for' is the correct way to express eligibility for a deduction. 'Returns money'는 'get money back' 또는 'receive a refund'로 바꾸면 더 명확합니다. 또한, 성별을 특정하기보다 'they'를 사용하는 것이 더 자연스럽습니다.\n\n4.  **❌ 학습자 원문 (As Said):** `And usually the salaryman, the employer usually reports their income and outcomes.`\n    *   **✅ 자연스러운 표현 (Natural):** `And usually, the employer reports their employees' income and expenses.`\n    *   **💎 비즈니스 표현 (Professional):** `Typically, employers are responsible for reporting their employees' income and associated expenditures.`\n    *   **💡 코칭 포인트:** 세금 관련 문맥에서는 'outcomes' 대신 'expenses' 또는 'deductions'를 사용하는 것이 더 적절합니다. 'salaryman'은 한국식 영어 표현이므로 'employees'로 바꾸는 것이 좋습니다.\n\n---\n\n### 3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)\nCategory: **Verb structure after 'need help'**\n\nJoey는 \"도움이 필요하다\"는 의미를 전달할 때 `I need to help [V-ing]`와 같이 표현하는 경향이 있었습니다. 'need help' 뒤에 동명사(V-ing)가 올 때는 `to` 없이 `I need help [V-ing]` 또는 `I need help with [V-ing/Noun]` 형태로 쓰는 것이 자연스럽습니다.\n\n| ❌ 원문 (As Said)                                         | ✅ 교정 예시 (Corrected)                                     |\n| :--------------------------------------------------------- | :----------------------------------------------------------- |\n| `I need to help filing my taxes because I don't understand the forms.` | `I need help filing my taxes because I don't understand the forms.` |\n| `I need to help filing documents of audit.`                | `I need help filing audit documents.`                        |\n| `I need to help filing.`                                   | `I need help filing.`                                        |\n\n📌 **핵심 규칙:** '도움이 필요하다'고 말할 때는 `need help` 뒤에 바로 동명사(V-ing)를 붙이거나 `with + (동명사/명사)`를 사용합니다. `to help`는 '누군가를 돕기 위해'라는 의미가 됩니다.\n\n🔁 **따라 읽기:**\n🗣️ \"I need help filing my taxes because I don't understand the forms.\"\n🗣️ \"I need help filing audit documents.\"\n🗣️ \"I need help filing.\"\n\n---\n\n### 4. 📗 어휘 확장 (Vocabulary Vault)\n오늘 수업 중 등장했거나 Joey의 업무 환경에서 유용하게 쓰일 수 있는 어휘들을 정리해 보았습니다.\n\n1.  **deduction** /dɪˈdʌkʃən/ (명사)\n    *   뜻: 공제, 삭감 (세금 등에서 금액을 줄이는 것)\n    *   실전 예문: `We need to review all eligible deductions to minimize our corporate tax.` (우리는 법인세를 최소화하기 위해 모든 적격 공제 항목을 검토해야 합니다.)\n\n2.  **refund** /ˈriːfʌnd/ (명사, 동사)\n    *   뜻: 환급, 환불 (명사); 환급하다, 환불하다 (동사)\n    *   실전 예문: `The company offers a full refund if the product is returned within 30 days.` (회사는 제품이 30일 이내에 반품되면 전액 환불해 드립니다.)\n\n3.  **reputable** /ˈrɛpjʊtəbəl/ (형용사)\n    *   뜻: 평판이 좋은, 신뢰할 수 있는\n    *   실전 예문: `We only partner with reputable suppliers to ensure product quality.` (우리는 제품 품질을 보장하기 위해 평판 좋은 공급업체와만 협력합니다.)\n\n4.  **tedious** /ˈtiːdiəs/ (형용사)\n    *   뜻: 지루한, 싫증 나는 (반복적이고 오래 걸려서)\n    *   실전 예문: `Data entry can be a tedious task, but accuracy is crucial.` (데이터 입력은 지루한 작업일 수 있지만, 정확성이 매우 중요합니다.)\n\n5.  **obligatory** /əˈblɪɡətɔːri/ (형용사)\n    *   뜻: 의무적인, 필수의\n    *   실전 예문: `Attending the quarterly review meeting is obligatory for all department heads.` (분기별 검토 회의 참석은 모든 부서장에게 의무적입니다.)\n\n---\n\n### 5. 📝 실전 복습 챌린지 (Practice)\n오늘 배운 표현과 문법을 활용하여 다음 한국어 상황을 영어로 영작해 보세요.\n\n1.  **상황:** 새로운 소프트웨어 사용법을 배우는 데 도움이 필요하다고 말하고 싶습니다.\n    *   **영작:** `(I need help _______ the new software.)`\n    *   **모범 답안:** `I need help learning the new software.`\n\n2.  **상황:** 우리 회사는 고객 만족을 위해 항상 환불 정책을 명확하게 안내한다고 설명하고 싶습니다. (오늘 배운 단어 'refund'와 'reputable'을 활용해 보세요.)\n    *   **영작:** `(Our company always clearly communicates its _______ policy to ensure customer satisfaction, maintaining its _______ image.)`\n    *   **모범 답안:** `Our company always clearly communicates its refund policy to ensure customer satisfaction, maintaining its reputable image.`\n\n3.  **상황:** 세금 신고는 다소 지루하고 의무적인 과정이지만, 정확한 공제(deduction)를 통해 환급액(refund)을 늘릴 수 있다고 말하고 싶습니다. (오늘 배운 단어 'tedious', 'obligatory', 'deduction', 'refund'를 모두 활용해 보세요.)\n    *   **영작:** `(Tax filing can be a somewhat _______ and _______ process, but you can increase your _______ through accurate _______.)`\n    *   **모범 답안:** `Tax filing can be a somewhat tedious and obligatory process, but you can increase your refund through accurate deductions.`\n\n---\n\n### 6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)\n✨ **Good Job:**\nJoey가 오늘 가장 잘 표현한 문장은 바로 이겁니다!\n`\"In Korea, people usually prepare the document until February. And usually the salaryman, the employer usually reports their income and outcomes. That process is automatic. So, if we just press one button, that is the automatically reported income and outcomes information. And then the tax is to make the amount. Yeah. That is our process. It's automatic.\"`\n한국의 세금 신고 시스템에 대해 설명할 때, 다소 복잡한 내용을 막힘없이 논리적으로 잘 전달해 주셨어요. 'automatic'이라는 핵심 키워드를 반복하며 한국 시스템의 특징을 명확하게 강조한 점도 아주 좋았습니다.\n\n🚀 **내일의 한 문장:**\n다음 수업 시작 시 튜터에게 오늘 배운 내용을 활용하여 다음과 같이 말해보세요.\n`\"I've been reviewing the vocabulary from our last class, especially 'reputable' and 'deduction'. They seem very useful for business discussions.\"`\n(지난 수업에서 배운 어휘, 특히 'reputable'과 'deduction'을 복습하고 있었는데, 비즈니스 토론에 매우 유용할 것 같아요.)\n\n---\n\n### [성과 지표]\n**유창성 점수:** 8/10\n\n**근거:** Joey는 오늘 다소 복잡한 주제인 세금 신고에 대해 자신의 의견과 한국의 상황을 비교적 막힘없이 설명하며 높은 유창성을 보여주었습니다. 특히 새로운 어휘와 발음을 익히려는 적극적인 태도가 돋보였습니다. 다만, 일부 문장 구조에서 한국어식 표현이 섞이거나 특정 동사 뒤의 전치사/구조 선택에서 어색함이 있었지만, 이는 지속적인 연습으로 충분히 개선될 수 있는 부분입니다.\n\n**다음 수업 '원포인트 액션 플랜':**\n다음 수업에서는 **\"need help + V-ing\" 패턴을 정확히 사용하기**에 집중해 봅시다. 도움이 필요하다고 말할 때 `to`를 넣지 않고 자연스럽게 표현하는 연습을 해볼 거예요. \"I need help understanding this report.\" (이 보고서를 이해하는 데 도움이 필요해요.)와 같은 문장을 만들면서 입에 익숙해지도록 해봅시다!\n\n위 내용을 바탕으로:\n1. 먼저 오늘 수업에서 내가 틀렸거나 어색했던 표현을 하나 골라서, 관련된 상황을 영어로 질문해줘.\n2. 내가 영어로 대답하면, 자연스러운지 확인하고 더 나은 표현이 있으면 알려줘.\n3. 특히 \"반복 실수 패턴\"에서 지적된 부분을 집중적으로 연습시켜줘.\n4. 이런 식으로 오늘 배운 표현들을 하나씩 복습하자.\n5. 한국어 설명은 필요할 때만 간단히, 대화는 최대한 영어로 진행해줘.\n\n그럼 시작하자!";
+        function startReview(){navigator.clipboard.writeText(REVIEW_PROMPT).then(()=>{showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)}).catch(()=>{const t=document.createElement('textarea');t.value=REVIEW_PROMPT;document.body.appendChild(t);t.select();document.execCommand('copy');document.body.removeChild(t);showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)})}
+        function showToast(){const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500)}
+        function switchTab(n){document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',n==='feedback'?i===0:i===1));document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));document.getElementById('tab-'+n).classList.add('active')}
+    </script>
+</body>
+</html>

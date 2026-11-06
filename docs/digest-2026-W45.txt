@@ -6,13 +6,15 @@ This is a study digest from my one-on-one English phone lessons this week. Pleas
 - Discussing emergency situations and sharing personal experiences with accidents and busine
 - Discussing health insurance plans and related vocabulary.
 - Discussing official identification documents, their application processes, and usage acros
+- Discussing tax filing processes and related terminology.
 
 ## Grammar focus this week
 - Prepositions (1x)
 - Verb Forms / Auxiliaries (1x)
 - Subject–Verb Agreement (1x)
+- Verb Structure After 'Need Help' (1x)
 
-## My all-time weak-point ranking (103 lessons since 2026-05-08)
+## My all-time weak-point ranking (104 lessons since 2026-05-08)
 - Articles (a/an/the) — 18 lessons
 - Subject–Verb Agreement — 15 lessons
 - Verb Tense — 15 lessons
@@ -45,7 +47,7 @@ This is a study digest from my one-on-one English phone lessons this week. Pleas
 - 2026-W42: 7.1
 - 2026-W43: 7.1
 - 2026-W44: 7.2
-- 2026-W45: 7.2
+- 2026-W45: 7.5
 - Overall average: 7.2
 
 ## Corrections — what I said vs. the natural version
@@ -67,6 +69,10 @@ This is a study digest from my one-on-one English phone lessons this week. Pleas
    Natural: "My son doesn't have proof of residency, so he usually uses his passport both locally and abroad."
 9. I said: "So they check the same person or not. Is it fake ID? Is it fake passport? So they confirm everything. So it is wrong, better wrong."
    Natural: "So they check to see if it's the same person and if the ID or passport is fake. They confirm everything, which often takes a long time."
+10. I said: "'part of'를 사용하면 일상적인 활동을 언급할 때 더 자연스럽습니다. 'The routine of my day'는 문법적으로 맞지만 덜 흔한 표현입니다."
+   Natural: "'part of'를 사용하면 일상적인 활동을 언급할 때 더 자연스럽습니다. 'The routine of my day'는 문법적으로 맞지만 덜 흔한 표현입니다."
+11. I said: "'audit documents'처럼 복합 명사를 사용하는 것이 더 간결하고 자연스럽습니다. 'Documents of audit'는 덜 흔한 표현입니다."
+   Natural: "'audit documents'처럼 복합 명사를 사용하는 것이 더 간결하고 자연스럽습니다. 'Documents of audit'는 덜 흔한 표현입니다."
 
 ## Recurring mistakes from earlier weeks — my long-term habits
 My most repeated weak categories overall: Articles (a/an/the), Subject–Verb Agreement. These corrections are from earlier lessons in those categories. Please weave a few into the review so I revisit old mistakes.
@@ -102,6 +108,11 @@ My most repeated weak categories overall: Articles (a/an/the), Subject–Verb Ag
 - streamlined (형용사) — 간소화된, 능률적인
 - bureaucratic (형용사) — 관료주의적인, 번거로운
 - illegible (형용사) — 읽기 어려운, 판독 불가능한
+- deduction (명사) — 공제, 삭감 (세금 등에서 금액을 줄이는 것)
+- refund (명사, 동사) — 환급, 환불 (명사); 환급하다, 환불하다 (동사)
+- reputable (형용사) — 평판이 좋은, 신뢰할 수 있는
+- tedious (형용사) — 지루한, 싫증 나는 (반복적이고 오래 걸려서)
+- obligatory (형용사) — 의무적인, 필수의
 
 ## Please cover in the podcast
 - Pick my 1–2 most repeated mistakes (see the all-time ranking) and explain the rule with a memorable rule of thumb.

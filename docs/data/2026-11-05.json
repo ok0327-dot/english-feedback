@@ -1,0 +1,49 @@
+{
+ "date": "2026-11-05",
+ "iso": [
+  2026,
+  45
+ ],
+ "topic": "Discussing tax filing processes and related terminology.",
+ "grammar": "Verb structure after 'need help'",
+ "grammar_norm": "Verb Structure After 'Need Help'",
+ "score": 8.0,
+ "pairs": [
+  {
+   "said": "'part of'를 사용하면 일상적인 활동을 언급할 때 더 자연스럽습니다. 'The routine of my day'는 문법적으로 맞지만 덜 흔한 표현입니다.",
+   "natural": "'part of'를 사용하면 일상적인 활동을 언급할 때 더 자연스럽습니다. 'The routine of my day'는 문법적으로 맞지만 덜 흔한 표현입니다."
+  },
+  {
+   "said": "'audit documents'처럼 복합 명사를 사용하는 것이 더 간결하고 자연스럽습니다. 'Documents of audit'는 덜 흔한 표현입니다.",
+   "natural": "'audit documents'처럼 복합 명사를 사용하는 것이 더 간결하고 자연스럽습니다. 'Documents of audit'는 덜 흔한 표현입니다."
+  }
+ ],
+ "vocab": [
+  {
+   "word": "deduction",
+   "pos": "명사",
+   "meaning": "공제, 삭감 (세금 등에서 금액을 줄이는 것)"
+  },
+  {
+   "word": "refund",
+   "pos": "명사, 동사",
+   "meaning": "환급, 환불 (명사); 환급하다, 환불하다 (동사)"
+  },
+  {
+   "word": "reputable",
+   "pos": "형용사",
+   "meaning": "평판이 좋은, 신뢰할 수 있는"
+  },
+  {
+   "word": "tedious",
+   "pos": "형용사",
+   "meaning": "지루한, 싫증 나는 (반복적이고 오래 걸려서)"
+  },
+  {
+   "word": "obligatory",
+   "pos": "형용사",
+   "meaning": "의무적인, 필수의"
+  }
+ ],
+ "_html_md5": "79727bc4f496af77f7525dbdf38a7eb8"
+}
