@@ -1,0 +1,87 @@
+name: 🌗 그림자 실행 (Claude 고품질판)
+# 품질 개선 계획 2단계. 매일 실행이 끝나면 이어서, Claude(구독 토큰)가 Whisper 원본으로 고품질판을 만들어
+# shadow 브랜치에만 저장한다. main·복습 페이지·메일·알림은 건드리지 않는다 (scripts/shadow_feedback.py).
+on:
+  workflow_run:
+    workflows: ["📚 English Lesson Feedback"]
+    types: [completed]
+  workflow_dispatch:
+    inputs:
+      days:
+        description: '최근 며칠의 수업을 볼지 (그림자판이 없는 것만 만든다)'
+        required: false
+        default: '3'
+permissions:
+  contents: write   # shadow 브랜치에 쓰기 (main 에는 쓰지 않는다)
+# 매일 흐름(english-feedback 그룹)과 따로 — 서로 취소하지 않는다. 그림자 실행끼리는 줄 서서 하나씩.
+concurrency:
+  group: shadow-feedback
+  cancel-in-progress: false
+jobs:
+  shadow:
+    if: github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: 📥 main 체크아웃 (코드·복습 페이지)
+        uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: 🔐 구독 토큰 확인
+        id: token
+        run: |
+          if [ -z "$CLAUDE_CODE_OAUTH_TOKEN" ]; then
+            echo "::warning title=그림자 실행 미설정::CLAUDE_CODE_OAUTH_TOKEN 시크릿이 없어 건너뜁니다 (claude setup-token → 저장소 Secrets)"
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+          fi
+        env:
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+      - uses: actions/setup-python@v5
+        if: steps.token.outputs.ready == 'true'
+        with:
+          python-version: '3.11'
+      - uses: actions/setup-node@v4
+        if: steps.token.outputs.ready == 'true'
+        with:
+          node-version: '20'
+      - name: 📦 의존성 (Claude Code CLI 는 버전 고정)
+        if: steps.token.outputs.ready == 'true'
+        run: |
+          pip install -r requirements.txt
+          npm install -g @anthropic-ai/claude-code@2.1.318
+      - name: 🌿 shadow 브랜치 준비
+        if: steps.token.outputs.ready == 'true'
+        run: |
+          git config --global user.name github-actions
+          git config --global user.email actions@github.com
+          if git ls-remote --exit-code --heads origin shadow >/dev/null; then
+            git fetch --depth=1 origin shadow:shadow
+            git worktree add shadow-wt shadow
+          else
+            git worktree add --detach shadow-wt
+            git -C shadow-wt switch --orphan shadow
+            # 빈 브랜치에 main 파일이 남지 않게 한 번 더 비운다 (git 2.43 은 switch --orphan 이 이미 비우지만 방어)
+            git -C shadow-wt rm -rfq --cached . 2>/dev/null || true
+            git -C shadow-wt clean -fdxq
+          fi
+      - name: 🌗 고품질판 만들기
+        if: steps.token.outputs.ready == 'true'
+        run: python scripts/shadow_feedback.py --shadow-dir shadow-wt --days "${DAYS:-3}"
+        env:
+          DAYS: ${{ inputs.days }}
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          GOOGLE_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIALS }}
+          DRIVE_DONE_FOLDER_ID: ${{ secrets.DRIVE_DONE_FOLDER_ID }}
+          SHADOW_MODEL: ${{ vars.SHADOW_MODEL }}
+      - name: 💾 shadow 브랜치에 저장
+        if: always() && steps.token.outputs.ready == 'true'
+        run: |
+          cd shadow-wt
+          # 결과 폴더만, 무시 규칙과 상관없이 (shadow/<날짜>.json 이 '이미 만든 수업' 표시라 빠지면 매번 다시 만든다)
+          mkdir -p shadow docs-shadow
+          git add -A -f shadow docs-shadow
+          if git diff --cached --quiet; then echo "변경 없음"; exit 0; fi
+          git commit -q -m "🌗 그림자판 갱신 ($(date -u +%Y-%m-%d))"
+          git push origin shadow
