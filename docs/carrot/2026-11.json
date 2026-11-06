@@ -1,0 +1,212 @@
+{
+ "success": true,
+ "code": 0,
+ "message": null,
+ "data": {
+  "list": [
+   {
+    "idxFeedback": 36454262,
+    "createDate": "2026-11-06",
+    "memo": "Happy Friday! You worked hard this week :)  Please watch and study the video links below:\n1)   Prompt Definition (English with Nate) video:  https://youtu.be/sHH0CAMl_Xs?si=Z-k25_G3Q536pWQj\n2)   How to Pronounce Recipient? (CORRECTLY) video:  https://youtu.be/HVBDaJCgDRE?si=jPFF3KWy1Kn7Jjih",
+    "subList": [
+     {
+      "idxFeedbackSub": 63865598,
+      "original": "Tracking number: code used to POLLOW a package's location.",
+      "better": "Tracking number: code used to FOLLOW  (pronounced FAW-LOH) a package's location.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 63865599,
+      "original": "POSTAGE (pronounced POS-TAYJ, long a sound): Money paid to send a letter or package.",
+      "better": "POSTAGE (pronounced POH-STAHJ)",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 63865600,
+      "original": "In US, the main postal service is USPS.",
+      "better": "Alternative:  In US, the main postal service is United States Postal Service.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 63865601,
+      "original": "You need a CUSTOM (pronounced CUSTOMER) form.",
+      "better": "You need a CUSTOM (pronounced CUS-TUM) form.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 63865602,
+      "original": "My package is FRAGILE (pronounced FRAH-JIL) but BULKY (pronounced BUL-K).",
+      "better": "My package is FRAGILE (pronounced FRAH-JILE, long i sound)) but BULKY (pronounced BUL-KEE).",
+      "betterTrans": null,
+      "isSave": "N"
+     }
+    ]
+   },
+   {
+    "idxFeedback": 36443767,
+    "createDate": "2026-11-05",
+    "memo": "A very productive class! Here are the practice videos I mentioned. I have also sent them via SMS to you:\n\n1)   Cardinal and Ordinal Numbers in English: FIRST, SECOND, THIRD, FOURTH.. video:  https://youtu.be/e3WZ-0-CwtY?si=S5YsUe_JvvLgCIJH\n2)    How to Pronounce Obligatory (CORRECTLY!) video:   https://youtu.be/Lh_Cjgt8g4k?si=3Q9DzwD157P0-oWZ",
+    "subList": [
+     {
+      "idxFeedbackSub": 63819257,
+      "original": "Learn how to understand tax terms like REFUND (pronounced RE-PUND) and deduction.",
+      "better": "Learn how to understand tax terms like REFUND (pronounced RE-FUND) and deduction.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 63819258,
+      "original": "Tax deduction: An amount DAT LOWER how much tax you owe.",
+      "better": "Tax deduction: An amount THAT LOWER(S) how much tax you owe.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 63819259,
+      "original": "Tifffany's is a REPUTABLE (pronounced REH-PYOO-TAY-BUL) jewellery store in New York.",
+      "better": "Tifffany's is a REPUTABLE (pronounced REH-PYOO-TAH-BUL) jewellery store in New York.",
+      "betterTrans": null,
+      "isSave": "N"
+     }
+    ]
+   },
+   {
+    "idxFeedback": 36431580,
+    "createDate": "2026-11-04",
+    "memo": "This lesson we discussed identification and personal information. Reviewed the expressions \"proof of residency\" and \"calid identification\". Read and sounded out the pronunciation of [valid, illegible /i·LEH·juh·bl/, streamlined, bureaucratic /byur·uh·KRA·tuhk/]. Here are today's notes:",
+    "subList": [
+     {
+      "idxFeedbackSub": 63766186,
+      "original": "I come back my office and finished my work travel ",
+      "better": "I came back to my office and finished my work travel/trip ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 63766187,
+      "original": "An official document that confirms your identify ",
+      "better": "An official document that confirms your identity ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 63766188,
+      "original": "It is also used to proof the residency ",
+      "better": "It is also used as proof of residency ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 63766189,
+      "original": "That card is give us some birthday ",
+      "better": "That card shows us the birth date. ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 63766190,
+      "original": "Usually that process is so long and difficulty ",
+      "better": "Usually that process is so long and difficult",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 63766191,
+      "original": "It is more hard",
+      "better": "It is much harder. ",
+      "betterTrans": null,
+      "isSave": "N"
+     }
+    ]
+   },
+   {
+    "idxFeedback": 36420999,
+    "createDate": "2026-11-03",
+    "memo": "Have a safe trip!  Here is a video link about health insurance cards I thought you might find interesting as well as pronunciation videos:\n1)   Understanding Your Health Insurance Card | Health Insurance 101 | GoodRx video: \nhttps://youtu.be/wC6ssXrsGCA?si=bHY_tjwFWCqvQ8rm\n2)   DEDUCTIBLE pronunciation | Improve your language with bab.la video:  https://youtu.be/yR4-kyA3iN8?si=oYr8mLu29iYL5k7f\n3)   Pronunciation Tips With Quiz - Words Ending In -ATE video:  https://youtu.be/jhGNh5pzngE?si=eGzUK7g0Agfn6QrE",
+    "subList": [
+     {
+      "idxFeedbackSub": 63719140,
+      "original": "DEDUCTIBLE (pronounced DE-DOOK-TIH-BUL): The amount you pay before insurance starts to cover costs.",
+      "better": "DEDUCTIBLE (pronounced DE-DUCK-TIH-BUL): ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 63719141,
+      "original": "After finish, I move to city.",
+      "better": "I will GO TO ULSAN after class.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 63719142,
+      "original": "What HELP you decide?",
+      "better": "What HELPED (pronounced HELP-T) you decide?",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 63719143,
+      "original": "Private  (pronounced PRY-VAIT)insurance is optional and used for faster ACCESS ( pronounced AH-SESS)",
+      "better": "Private  (pronounced PRY-VET) insurance is optional and used for faster ACCESS ( pronounced ACK-SESS)",
+      "betterTrans": null,
+      "isSave": "N"
+     }
+    ]
+   },
+   {
+    "idxFeedback": 36409292,
+    "createDate": "2026-11-02",
+    "memo": "Today we discussed emergency situations and calling emergency services. Reviewed the meaning and pronunciation of [surprise/random interview, seizure, collapsed /kuh·LAPST/, courageous /kuh·RAY·juhs/ ]. Here are today's notes:",
+    "subList": [
+     {
+      "idxFeedbackSub": 63667073,
+      "original": "That is so many factory in this city ",
+      "better": "This is a factory city.\n",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 63667074,
+      "original": "The 911 member usually say stay on line ",
+      "better": "The 911 operator usually says stay on line ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 63667075,
+      "original": "It is same to Korea ",
+      "better": "It is the same as Korea ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 63667076,
+      "original": "That is so pain ",
+      "better": "That is painful. ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 63667077,
+      "original": "Sometimes we have argue about who is fault ",
+      "better": "Sometimes we have an argument about who is at fault.\nSometimes we argue about whose fault it is. \nSometimes we argue about who is liable ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 63667078,
+      "original": "I'm just call my boss not an ambulance",
+      "better": "I just called my boss, not an ambulance. \nI got in touch with my boss. ",
+      "betterTrans": null,
+      "isSave": "N"
+     }
+    ]
+   }
+  ]
+ }
+}
