@@ -100,13 +100,15 @@ GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
 
 # Gemini 모델 폴백 사다리 (앞에서부터 순서대로 시도; 모두 무료 티어 Flash 계열)
 # - 주력: gemini-2.5-flash (무료 티어 1,500 RPD / 1M TPM)
-# - 대체: gemini-2.5-flash-lite — 주력이 'high demand 503'으로 과부하일 때
-#         혼잡이 덜한 형제 모델로 자동 전환 (둘 다 thinking 지원 → thinkingConfig 호환)
+# - 2순위: gemini-3.5-flash — 2.5-flash 하루 무료 한도가 바닥난 날(2026-11 주 2회) 대신 쓴다.
+#          무료 한도는 모델마다 따로라 막힌 날에도 flash-lite 보다 좋은 모델이 쓴다 (2026-10-30 응답 확인).
+# - 3순위: gemini-2.5-flash-lite — 위 둘이 'high demand 503'·한도로 막힐 때
+#   (모두 thinking 지원 → thinkingConfig 호환)
 #   ※ 2.0-flash / 2.0-flash-lite 는 2026-06-01 deprecated 되어 폴백에서 제외.
-#   ※ 환경변수 GEMINI_MODELS(쉼표구분)로 재정의 가능 (예: 신규 3.x 모델 추가 시).
+#   ※ 환경변수 GEMINI_MODELS(쉼표구분)로 재정의 가능.
 GEMINI_MODELS = [
     m.strip() for m in os.environ.get(
-        "GEMINI_MODELS", "gemini-2.5-flash,gemini-2.5-flash-lite"
+        "GEMINI_MODELS", "gemini-2.5-flash,gemini-3.5-flash,gemini-2.5-flash-lite"
     ).split(",") if m.strip()
 ]
 
@@ -672,6 +674,26 @@ def transcribe_audio(audio_path):
 # ║  왜 필요? 전화 음질 한계 + 한국인 발음 특성 → 오인식 발생              ║
 # ╚══════════════════════════════════════════════════════════════════════════╝
 
+def _is_daily_quota(response):
+    """
+    429 응답이 '하루 한도 소진'인지. Gemini 는 오류 본문 details 의 QuotaFailure.violations[].quotaId 에
+    어느 한도인지 적는다 (예: GenerateRequestsPerDayPerProjectPerModel-FreeTier / …PerMinute…).
+    분당 한도는 잠깐 기다리면 풀리지만 하루 한도는 안 풀린다. 못 읽으면 False(기존처럼 재시도).
+    """
+    return "PerDay" in _quota_ids(response)
+
+
+def _quota_ids(response):
+    """429 응답 본문에서 넘은 한도 이름(quotaId)들을 쉼표로. 못 읽으면 '?'."""
+    try:
+        details = (response.json().get("error") or {}).get("details") or []
+    except ValueError:
+        return "?"
+    ids = [str(v.get("quotaId", "")) for d in details if isinstance(d, dict)
+           for v in (d.get("violations") or []) if isinstance(v, dict)]
+    return ",".join(i for i in ids if i) or "?"
+
+
 def gemini_request(prompt, max_tokens=4096, temperature=0.3, timeout=120, system_msg=None, thinking_budget=2048, model=None):
     """
     Google Gemini API 호출 (기본 Gemini 2.5 Flash 모델).
@@ -765,13 +787,20 @@ def gemini_request(prompt, max_tokens=4096, temperature=0.3, timeout=120, system
                 if not part.get("thought", False):
                     return part["text"]
             return parts[-1]["text"]  # fallback
+        # 하루 한도를 다 쓴 429 는 기다려도 안 풀린다 → 바로 다음 모델로 (11/04·11/05: 30+60+90+90초 헛대기로 12분 초과)
+        elif response.status_code == 429 and _is_daily_quota(response):
+            raise Exception(f"Gemini 하루 무료 한도 소진 [{model}] → 다음 모델로")
+        # 하루 한도로 읽히지 않는 429 도 두 번(30+60초)까지만 기다린다 — 분당 한도는 그 안에 풀리고,
+        # 더 기다리면 한 수업의 여러 호출이 겹쳐 12분 단계 제한을 넘긴다. 어느 한도였는지는 로그에 남긴다.
+        elif response.status_code == 429 and attempt >= 2:
+            raise Exception(f"Gemini 429 재시도 2회 초과 [{model}] ({_quota_ids(response)}) → 다음 모델로")
         # 429(속도 제한) 또는 5xx(서버 과부하·일시 장애) → 지수 백오프 재시도
         elif response.status_code == 429 or response.status_code >= 500:
             if attempt < MAX_ATTEMPTS - 1:
                 # 503(과부하)은 짧게, 429(속도 제한)는 길게 대기
                 base = 30 if response.status_code == 429 else 10
                 wait = min(90, base * (2 ** attempt))
-                kind = "속도 제한(429)" if response.status_code == 429 else f"서버 과부하/장애({response.status_code})"
+                kind = f"속도 제한(429, {_quota_ids(response)})" if response.status_code == 429 else f"서버 과부하/장애({response.status_code})"
                 print(f"⏳ Gemini {kind}. {wait}초 대기 후 재시도... ({attempt+1}/{MAX_ATTEMPTS}) [{model}]")
                 time.sleep(wait)
             else:
