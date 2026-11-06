@@ -1,6 +1,6 @@
 # 🔬 0단계 진단 설계서 (DIAGNOSIS PLAN) — 초안
 
-> 작성 2026-10-30 · 상태: **v4 — 지시문 전문·실행 도구 고정, 입력 파일 대기** · 상위 문서: [`QUALITY_PLAN.md`](QUALITY_PLAN.md) 0단계
+> 작성 2026-10-30 · 상태: **보류 — 2026-11-06 사용자 결정으로 건너뜀**(입력 파일 옮기기가 번거로움). 고른 방식은 QUALITY_PLAN.md 10절의 그림자 실행으로 바로 검증한다. 도구(`diagnosis/`)와 기준표는 남겨 둔다 · 상위 문서: [`QUALITY_PLAN.md`](QUALITY_PLAN.md) 0단계
 > 원칙: **판정 기준은 결과를 보기 전에 이 문서에서 고정한다.** 실행 뒤에 기준을 바꾸면 그 사실과 이유를 아래 "변경 기록"에 남긴다.
 > *Criteria are fixed here before any output is seen; any later change is logged with a reason.*
 
