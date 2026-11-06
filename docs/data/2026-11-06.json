@@ -1,0 +1,53 @@
+{
+ "date": "2026-11-06",
+ "iso": [
+  2026,
+  45
+ ],
+ "topic": "Discussing post office services and package delivery options.",
+ "grammar": "Missing Articles and Noun Forms",
+ "grammar_norm": "Articles (a/an/the)",
+ "score": null,
+ "pairs": [
+  {
+   "said": "offer",
+   "natural": "offer"
+  },
+  {
+   "said": "Staying outside",
+   "natural": "Staying outside"
+  },
+  {
+   "said": "Not smooth",
+   "natural": "Not smooth"
+  }
+ ],
+ "vocab": [
+  {
+   "word": "recipient",
+   "pos": "명사",
+   "meaning": "수령인, 받는 사람"
+  },
+  {
+   "word": "prompt",
+   "pos": "형용사",
+   "meaning": "신속한, 즉각적인"
+  },
+  {
+   "word": "fragile",
+   "pos": "형용사",
+   "meaning": "깨지기 쉬운, 손상되기 쉬운"
+  },
+  {
+   "word": "trackable",
+   "pos": "형용사",
+   "meaning": "추적 가능한"
+  },
+  {
+   "word": "bulky",
+   "pos": "형용사",
+   "meaning": "부피가 큰, 다루기 힘든"
+  }
+ ],
+ "_html_md5": "4c6a39062852d069cd04c41f9be18135"
+}

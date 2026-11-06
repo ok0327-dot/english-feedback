@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#0f0f13"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="당근영어"><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="icon" type="image/png" sizes="192x192" href="icon-192.png"><script src="install-banner.js" defer></script><script src="sw-reg.js" defer></script>
+    <title>전화영어 복습 - 2026년 11월 06일</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Noto Sans KR',sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.75;min-height:100vh}
+        .header{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);border-bottom:1px solid rgba(255,255,255,.06);padding:48px 24px 40px;text-align:center}
+        .header-date{font-size:13px;color:#94a3b8;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+        .header h1{font-size:28px;font-weight:700;color:#f1f5f9;margin-bottom:16px}
+        .header-meta{display:flex;justify-content:center;gap:24px;font-size:14px;color:#64748b}
+        .header-meta span{display:flex;align-items:center;gap:6px}
+        .cta-section{text-align:center;padding:40px 24px}
+        .cta-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:linear-gradient(135deg,#38bdf8,#818cf8);color:#fff;font-size:16px;font-weight:600;font-family:'Noto Sans KR',sans-serif;border:none;border-radius:50px;cursor:pointer;transition:all .3s;text-decoration:none;box-shadow:0 4px 24px rgba(56,189,248,.25)}
+        .cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(56,189,248,.35)}
+        .cta-btn svg{width:20px;height:20px}
+        .cta-sub{margin-top:12px;font-size:13px;color:#64748b}
+        .toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#38bdf8;padding:14px 28px;border-radius:12px;font-size:14px;font-weight:500;border:1px solid rgba(56,189,248,.2);box-shadow:0 8px 32px rgba(0,0,0,.4);opacity:0;transition:all .4s cubic-bezier(.16,1,.3,1);z-index:1000}
+        .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+        .container{max-width:720px;margin:0 auto;padding:0 24px 80px}
+        .tabs{display:flex;gap:4px;background:#1a1a24;padding:4px;border-radius:12px;margin-bottom:32px}
+        .tab{flex:1;padding:12px;text-align:center;font-size:14px;font-weight:500;color:#64748b;background:0 0;border:none;border-radius:8px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all .2s}
+        .tab.active{background:#262636;color:#f1f5f9}
+        .tab-content{display:none}.tab-content.active{display:block}
+        .feedback h2{font-size:18px;font-weight:700;color:#f1f5f9;margin:36px 0 16px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.06)}
+        .feedback h2:first-child{margin-top:0}
+        .feedback p{margin:8px 0;color:#cbd5e1}
+        .feedback .item{padding:6px 0 6px 16px;border-left:2px solid #334155;margin:6px 0;color:#cbd5e1}
+        .feedback .numbered{padding:8px 0 8px 16px;color:#cbd5e1}
+        .feedback .numbered strong{color:#38bdf8}
+        .feedback strong{color:#f1f5f9}
+        .feedback code{background:#1e293b;padding:2px 8px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#38bdf8}
+        .feedback table{width:100%;border-collapse:collapse;margin:12px 0}
+        .feedback th,.feedback td{padding:10px 14px;text-align:left;border-bottom:1px solid #262636}
+        .feedback th{color:#94a3b8;font-weight:500;font-size:13px}
+        .feedback td{color:#cbd5e1}
+        .arrow{color:#38bdf8;font-weight:700}
+        .transcript{background:#1a1a24;border-radius:12px;padding:28px;font-size:14px;line-height:2;color:#94a3b8;white-space:pre-wrap;word-break:break-word;font-family:'JetBrains Mono','Noto Sans KR',monospace}
+        .transcript .tutor{color:#38bdf8}
+        .transcript .student{color:#a78bfa}
+        @media(max-width:640px){.header{padding:32px 16px}.header h1{font-size:22px}.cta-btn{padding:14px 28px;font-size:15px}.container{padding:0 16px 60px}}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-date">2026년 11월 06일</div>
+        <h1>📚 전화영어 복습</h1>
+        <div class="header-meta">
+            <span>⏱ 21분 35초</span>
+            <span>🎙 전화영어_025180304_20261106080034.m4a</span>
+        </div>
+    </div>
+    <div class="cta-section">
+        <button class="cta-btn" onclick="startReview()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Gemini에서 복습 대화 시작하기
+        </button>
+        <div class="cta-sub">클릭하면 프롬프트가 복사되고 Gemini가 열립니다</div>
+    </div>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('feedback')">📋 AI 피드백</button>
+            <button class="tab" onclick="switchTab('transcript')">🎙 수업 전사</button>
+        </div>
+        <div id="tab-feedback" class="tab-content active">
+            <div class="feedback"><p>따뜻하고 실용적인 영어 코치 Bell입니다. Joey, 오늘 수업도 정말 수고 많으셨습니다! 바쁜 하루의 마무리였는데도 집중해서 참여해주셔서 감사해요. 특히 발음 교정에 적극적으로 임하는 모습과 궁금한 점을 바로 질문하는 모습이 인상 깊었습니다.</p>
+<br>
+<p>오늘 배운 우체국 및 배송 관련 표현들이 Joey의 비즈니스 환경에서도 유용하게 활용될 수 있도록, 오늘 대화 내용을 바탕으로 맞춤 피드백을 드릴게요.</p>
+<br>
+<br>
+<p><strong>0. 📌 Topic</strong></p>
+<p>Topic: Discussing post office services and package delivery options.</p>
+<br>
+<p><strong>1. 📊 오늘의 대화 요약 (Summary)</strong></p>
+<p>오늘 수업에서는 우체국과 배송 서비스 이용에 대해 이야기 나누었습니다. 특히 각국의 우편 서비스 특징을 비교하고, 소포 발송 시 필요한 절차와 배송 옵션에 대한 어휘와 표현들을 익히며 고객과 직원 간의 역할극을 진행했습니다.</p>
+<br>
+<p><strong>2. 💬 유창성 업그레이드 (Fluency & Natural Flow)</strong></p>
+<p>Joey가 말한 문장 중 의미는 통하지만, 원어민이 들었을 때 좀 더 자연스럽게 들릴 수 있는 표현들을 함께 살펴볼게요.</p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>❌ 학습자 원문 (As Said):</strong> <code>Sometimes post offices have a financial service, so I visit there.</code></div>
+<div class="item"><strong>✅ 자연스러운 표현 (Natural):</strong> <code>Sometimes post offices offer financial services, so I visit them for that.</code></div>
+<div class="item"><strong>💎 비즈니스 표현 (Professional):</strong> <code>Certain postal branches provide financial services, which occasionally necessitates my visit.</code></div>
+<div class="item"><strong>💡 코칭 포인트:</strong> Using "offer"는 기관이 서비스를 제공할 때 더 자연스럽습니다. "visit them for that"은 반복 없이 목적을 명확히 합니다.</div>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>❌ 학습자 원문 (As Said):</strong> <code>What should I do? Yeah, if I am staying outside. Outside, I'm not home when you are calling me.</code></div>
+<div class="item"><strong>✅ 자연스러운 표현 (Natural):</strong> <code>What should I do if I'm not home when the package arrives?</code></div>
+<div class="item"><strong>💎 비즈니스 표현 (Professional):</strong> <code>What protocol should I follow if I am unavailable to receive the package upon its arrival?</code></div>
+<div class="item"><strong>💡 코칭 포인트:</strong> 원문은 다소 단편적이었습니다. 소포 배송에 대한 하나의 명확한 질문으로 합치는 것이 더 직접적이고 일반적입니다. "Staying outside"는 외출 중임을 나타내는 "not home"보다 덜 관용적입니다.</div>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>❌ 학습자 원문 (As Said):</strong> <code>Yes, I think it is not smooth because the customer question and clerk answer is a little different.</code></div>
+<div class="item"><strong>✅ 자연스러운 표현 (Natural):</strong> <code>Yes, I think the flow was a bit off because the customer's question and the clerk's answer didn't quite match.</code></div>
+<div class="item"><strong>💎 비즈니스 표현 (Professional):</strong> <code>Indeed, the dialogue lacked coherence due to a misalignment between the customer's query and the clerk's response.</code></div>
+<div class="item"><strong>💡 코칭 포인트:</strong> "Not smooth"도 이해 가능하지만, 대화의 흐름을 이야기할 때는 "the flow was a bit off" 또는 "didn't quite match"가 더 자연스럽습니다. "Customer's question"과 "clerk's answer"는 소유격을 사용하여 명확하게 연결합니다.</div>
+<br>
+<p><strong>3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)</strong></p>
+<p>Category: <strong>Missing Articles and Noun Forms</strong></p>
+<br>
+<p>Joey는 명사 앞에 필요한 관사(a/an/the)를 빠뜨리거나, 명사의 형태(단수/복수)를 적절히 사용하지 않는 경향이 있습니다. 특히 일반적인 개념이나 특정 대상을 지칭할 때 관사를 놓치는 경우가 많았습니다.</p>
+<br>
+<table>
+<tr><th>❌ 원문 (As Said)</th><th>✅ 교정 예시 (Corrected)</th></tr>
+<tr><td><code>And in Korea, post service system is similar to United Kingdom or Canada or USA.</code></td><td><code>And in Korea, <strong>the</strong> post service system is similar to <strong>the</strong> United Kingdom or Canada or <strong>the</strong> USA.</code></td></tr>
+<tr><td><code>That is so important package.</code></td><td><code>That is <strong>such an</strong> important package.</code> (또는 <code>That is <strong>a very</strong> important package.</code>)</td></tr>
+<tr><td><code>The Jeju Island produces so many mandarins, so I used the online service and received a box of the mandarin.</code></td><td><code>Jeju Island produces so many mandarins, so I used <strong>an</strong> online service and received a box of mandarins.</code> (또는 <code>a box of <strong>the</strong> mandarin oranges.</code>)</td></tr>
+</table>
+<br>
+<p>📌 <strong>핵심 규칙:</strong> 특정 명사(국가명, 고유명사) 앞이나 일반적인 명사(셀 수 있는 명사) 앞에는 종종 관사(a/an/the)가 필요하며, 명사의 수(단수/복수)를 문맥에 맞게 사용하는 것이 중요합니다.</p>
+<br>
+<p>🔁 <strong>따라 읽기:</strong></p>
+<p>🗣️ "And in Korea, the post service system is similar to the United Kingdom or Canada or the USA."</p>
+<p>🗣️ "That is such an important package."</p>
+<p>🗣️ "Jeju Island produces so many mandarins, so I used an online service and received a box of mandarins."</p>
+<br>
+<p><strong>4. 📗 어휘 확장 (Vocabulary Vault)</strong></p>
+<p>오늘 수업에서 다룬 내용과 Joey의 업무 환경에 유용할 어휘 5가지를 소개합니다.</p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>recipient</strong> /rɪˈsɪpiənt/ (명사)</div>
+<div class="item">뜻: 수령인, 받는 사람</div>
+<div class="item">실전 예문: Please ensure the <strong>recipient</strong> confirms receipt of the confidential documents.</div>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>prompt</strong> /prɒmpt/ (형용사)</div>
+<div class="item">뜻: 신속한, 즉각적인</div>
+<div class="item">실전 예문: We expect a <strong>prompt</strong> response to our proposal by the end of the week.</div>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>fragile</strong> /ˈfrædʒaɪl/ (형용사)</div>
+<div class="item">뜻: 깨지기 쉬운, 손상되기 쉬운</div>
+<div class="item">실전 예문: All electronic components are <strong>fragile</strong> and require careful handling during shipment.</div>
+<br>
+<div class="numbered"><strong>4.</strong> <strong>trackable</strong> /ˈtrækəbl/ (형용사)</div>
+<div class="item">뜻: 추적 가능한</div>
+<div class="item">실전 예문: For high-value items, we always recommend using a <strong>trackable</strong> delivery service.</div>
+<br>
+<div class="numbered"><strong>5.</strong> <strong>bulky</strong> /ˈbʌlki/ (형용사)</div>
+<div class="item">뜻: 부피가 큰, 다루기 힘든</div>
+<div class="item">실전 예문: Shipping <strong>bulky</strong> equipment overseas can significantly increase logistics costs.</div>
+<br>
+<p><strong>5. 📝 실전 복습 챌린지 (Practice)</strong></p>
+<p>오늘 배운 표현과 문법을 활용하여 다음 상황에 맞는 문장을 영어로 만들어 보세요.</p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>상황:</strong> 중요한 서류를 보냈는데, 수령인이 제대로 받았는지 확인하고 싶어요.</div>
+<div class="item"><strong>영작:</strong> (trackable, recipient 활용)</div>
+<div class="item"><strong>모범 답안:</strong> I need to ensure the <strong>recipient</strong> received the important documents. Was the package <strong>trackable</strong>?</div>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>상황:</strong> 이 소포는 깨지기 쉬운 물건이 들어있어서 신속하게 배송되어야 합니다.</div>
+<div class="item"><strong>영작:</strong> (fragile, prompt 활용)</div>
+<div class="item"><strong>모범 답안:</strong> This package contains <strong>fragile</strong> items, so it requires <strong>prompt</strong> delivery.</div>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>상황:</strong> 부피가 큰 이 장비를 해외로 보내려면 어떤 배송 옵션이 가장 효율적일까요?</div>
+<div class="item"><strong>영작:</strong> (bulky, delivery options 활용)</div>
+<div class="item"><strong>모범 답안:</strong> What are the most efficient <strong>delivery options</strong> for sending this <strong>bulky</strong> equipment overseas?</div>
+<br>
+<p><strong>6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)</strong></p>
+<br>
+<p>✨ <strong>Good Job</strong>: <code>It's okay, because the Carol English Review also sends emails for me. Your review always arrives at my email.</code></p>
+<p>Joey, 이 문장은 정말 자연스럽고 명확하게 의사를 전달했습니다. 특히 "Your review always arrives at my email"이라는 표현은 일상적인 상황에서 자주 쓰이는 표현으로, 문법적으로도 완벽하고 유창하게 들렸어요. 아주 훌륭합니다!</p>
+<br>
+<p>🚀 <strong>내일의 한 문장</strong>: 다음 수업 시작 시, 오늘 배운 표현을 활용하여 튜터에게 이렇게 말해보세요.</p>
+<p>"I've been reviewing the <strong>trackable</strong> and <strong>fragile</strong> concepts from our last class. I found them quite useful!"</p>
+<br>
+<br>
+<p><strong>[성과 지표]</strong></p>
+<p><strong>유창성 점수(10점 만점): 7/10</strong></p>
+<br>
+<p><strong>근거:</strong> Joey는 수업 전반에 걸쳐 적극적으로 대화에 참여하며 자신의 의견을 표현하는 데 주저함이 없었습니다. 특히 궁금한 점을 바로 질문하고, 발음 교정에 성실하게 임하는 모습은 유창성 향상에 매우 긍정적인 영향을 미칩니다. 그러나 문장이 길어지거나 복잡한 아이디어를 표현할 때, 때때로 문장 구조가 다소 단편적이거나 어색한 표현을 사용하는 경향이 있었습니다. 특히 관사 사용이나 명사 형태에서 반복적인 오류가 발견되어 자연스러운 흐름을 방해하는 요소가 되기도 했습니다.</p>
+<br>
+<p><strong>다음 수업 '원포인트 액션 플랜':</strong></p>
+<p>다음 수업에서는 <strong>"명사 앞에 필요한 관사(a/an/the)와 명사의 올바른 형태(단수/복수) 사용"</strong>에 더 집중하여 연습해볼 예정입니다. 특히 비즈니스 환경에서 자주 사용되는 명사들을 중심으로 정확한 관사 사용 습관을 기를 수 있도록 코칭하겠습니다.</p></div>
+        </div>
+        <div id="tab-transcript" class="tab-content">
+            <div class="transcript"><span class="tutor">[Tutor]</span> Hello, Joey. Good morning.
+[Joey] Hi there, Karin. Happy Friday.
+<span class="tutor">[Tutor]</span> Finally, happy Friday. How are you today?
+[Joey] Oh, well, it&#x27;s been a busy day, but this is the end of it, so it&#x27;s okay.
+<span class="tutor">[Tutor]</span> Do you have time for your class?
+[Joey] Yes, of course. Why not?
+<span class="tutor">[Tutor]</span> All right, wonderful. Did you need a moment to bring today&#x27;s lesson up on your device?
+[Joey] Okay, it&#x27;s okay, yes. I&#x27;m prepared and today&#x27;s topic is using the post office and delivery, right?
+<span class="tutor">[Tutor]</span> Yeah.
+[Joey] Okay.
+<span class="tutor">[Tutor]</span> When was the last time you visited a post office, Joey?
+[Joey] Oh my god, maybe last year?
+<span class="tutor">[Tutor]</span> Yeah.
+[Joey] Yeah, post office. Sometimes post offices have a financial service, so I visit there.
+<span class="tutor">[Tutor]</span> Sure. Okay.
+[Joey] Yeah.
+<span class="tutor">[Tutor]</span> So, ideally, most of the time, people don&#x27;t use the post office as often as they used to, but we&#x27;ll definitely learn some new phrases and vocabulary today, okay?
+[Joey] Okay, good. Yes.
+<span class="tutor">[Tutor]</span> All right. I&#x27;m going to ask you to read today&#x27;s mission to me, please.
+[Joey] Okay. Today&#x27;s mission is,
+<span class="tutor">[Tutor]</span> That was a very good start. Thank you.
+[Joey] Okay.
+<span class="tutor">[Tutor]</span> All right. Let&#x27;s move on to the next page. I&#x27;ll get you to read the first expression and its description.
+[Joey] Okay. The first expression, first key expression is tracking number. It means code used to follow a package location&#x27;s tracking number.
+<span class="tutor">[Tutor]</span> Okay. And second?
+[Joey] I just want to...
+<span class="tutor">[Tutor]</span> Okay. You did good. I just want you to practice your F on this word.
+<span class="tutor">[Tutor]</span> Follow.
+[Joey] Follow.
+<span class="tutor">[Tutor]</span> Follow, follow, follow.
+<span class="tutor">[Tutor]</span> Better. Very good.
+[Joey] Yeah, used to follow a package location.
+<span class="tutor">[Tutor]</span> Very good.
+[Joey] Okay.
+<span class="tutor">[Tutor]</span> All right, let&#x27;s get you to try the next expression.
+[Joey] Okay, second, postage. It means money paid to send a letter or package. Postage.
+<span class="tutor">[Tutor]</span> Okay, okay. Now, with this word, you&#x27;re very close. You pronounced it post-age with a long A. I&#x27;m going to get you to try it with a short A or even a U sound.
+<span class="tutor">[Tutor]</span> Postage.
+[Joey] Postage.
+<span class="tutor">[Tutor]</span> Postage.
+[Joey] Better?
+<span class="tutor">[Tutor]</span> Yeah.
+[Joey] Postage.
+<span class="tutor">[Tutor]</span> Yeah. So it&#x27;s a short vowel sound. Very good.
+[Joey] Postage.
+<span class="tutor">[Tutor]</span> Postage.
+[Joey] Okay.
+<span class="tutor">[Tutor]</span> Good.
+[Joey] Good.
+<span class="tutor">[Tutor]</span> All right. Let&#x27;s get you to go on and read the examples for the key phrases.
+[Joey] Okay. Could you tell me what&#x27;s required to send? Could you tell me what&#x27;s required to send a care package to France? Could you tell me what&#x27;s required to send this package to Korea, to South Korea? Good. Okay. And second, what should I do if blah blah blah what should I do if I&#x27;m not home when the package arrives? What should I do? Yeah, if I am staying outside. Outside, I&#x27;m not home when you are calling me.
+<span class="tutor">[Tutor]</span> When you call me.
+[Joey] Calling me.
+<span class="tutor">[Tutor]</span> Okay. Yeah, that was a good second example.
+[Joey] Thank you.
+<span class="tutor">[Tutor]</span> Okay. All right. Let&#x27;s move on to part A, the info bite. And as usual, I&#x27;ll ask you to read the four bulleted sentences, please.
+[Joey] Okay, I see.
+<span class="tutor">[Tutor]</span> Okay.
+[Joey] In the U.S., the main postal service, USPS. In Canada, it&#x27;s Canada Post.
+<span class="tutor">[Tutor]</span> Very good.
+[Joey] Maybe the first thing, the Blue Robins, right?
+<span class="tutor">[Tutor]</span> USPS.
+[Joey] Yeah, that stands for United States Postal Service. Ah, that is different. That is the US Postal Service, USPS, and Canada Post is just Canada Post, right? Just like that. Yeah, yeah, right side, the red, red for polite, right? Anyway, yes. And second, in the United Kingdom, Royal Mail handles most mail and small parcels. You can drop them at a post box or post office. Maybe Royal Mail, maybe there is no Wellington, ah, Angie, Angie Post, right? That is the oh, the difference Royal Mail handler. Anyway.
+<span class="tutor">[Tutor]</span> Yeah, so in the UK, it&#x27;s called the Royal Mail because it was originally a department of the king or queen. But now it&#x27;s just called the Royal Mail.
+[Joey] Royal Mail. Oh. Okay. First, in the US, Canada, and United Kingdom, shipping costs more, shipping costs more and priced very widely based on weight, speed, and distance.
+[Joey] The last thing, in English-speaking countries, standard delivery can take several days, and express service costs a lot more.
+<span class="tutor">[Tutor]</span> Okay. The question, do people still send letters or packages often in your home country? Why or why not?
+[Joey] Yeah. I see. These days, there are so many delivery services. So, usually, if we buy online products, and then, usually, they send using delivery service, not post office. So nowadays, that is a little used, but sometimes if we send so important paper or letter, yeah, at that time we use that post service. And in Korea, post service system is similar to United Kingdom or Canada or USA.
+<span class="tutor">[Tutor]</span> Similar. Yeah, you know, it&#x27;s been a long time, but we&#x27;ve had delivery services for at least 30 to 40 years in most countries. Originally, the regular person didn&#x27;t have access to courier or delivery services, but now, especially after the pandemic, delivery services bring you everything: prescriptions, food, purchases.
+[Joey] Yeah.
+<span class="tutor">[Tutor]</span> And so the post office is not just the only way. There was a time when that was the only way you could ship or move products.
+[Joey] Yeah.
+<span class="tutor">[Tutor]</span> And now, yeah, not so much.
+[Joey] Yeah, I agree with you. Yeah.
+<span class="tutor">[Tutor]</span> All right. Very nice. Okay. All right. Let&#x27;s move on to the real-life talk part B.
+[Joey] Okay.
+<span class="tutor">[Tutor]</span> Would you like to read as the customer or the clerk for the first time?
+[Joey] Okay. I&#x27;ll start. I&#x27;m customer. Hi. I would like to send this package to Japan. Could you tell me what&#x27;s required to send it?
+<span class="tutor">[Tutor]</span> You&#x27;ll need a customs form. We will also weigh it to calculate postage.
+[Joey] What are the delivery options?
+<span class="tutor">[Tutor]</span> Standard airmail, express, or overnight.
+[Joey] I&#x27;d like it to arrive quickly, but overnight is really expensive. What should I do if I need it tracked and delivered fast but don&#x27;t want to pay for overnight?
+<span class="tutor">[Tutor]</span> Okay. Now, we have a bit of a typo here because it looks to me as though they missed a clerk&#x27;s comment. And so what the clerk is saying on the screen is, that sounds great. Let&#x27;s do that. And I&#x27;ll get you to read the last comment.
+[Joey] What word is it? Yes.
+<span class="tutor">[Tutor]</span> You&#x27;re reading for the customer. I&#x27;ll get you to do the last comment.
+[Joey] Last comment. Okay.
+[Joey] What should I do if I need it tracked and delivered fast but don&#x27;t want to pay for overnight?
+<span class="tutor">[Tutor]</span> That sounds great. Let&#x27;s do that.
+[Joey] Okay. Ah, yes.
+<span class="tutor">[Tutor]</span> You&#x27;re all set. Here&#x27;s your tracking number.
+<span class="tutor">[Tutor]</span> I understand that you&#x27;re right. Your conversation, &quot;That sounds great. Let&#x27;s do that.&quot; Yeah, they missed a comment in there somewhere. All right, let&#x27;s go back to page one. I&#x27;ll be the customer and you&#x27;ll be the clerk, okay?
+[Joey] Okay, yes, no problem.
+<span class="tutor">[Tutor]</span> All right. Hi, I&#x27;d like to send this package to Japan. Could you tell me what&#x27;s required to send it?
+[Joey] You will need a customs form. You will also weigh it to calculate for postage. What are the delivery options?
+<span class="tutor">[Tutor]</span> Standard airmail, express, or overnight?
+[Joey] I&#x27;d like it to arrive quickly, but overnight is really expensive. What should I do if I need it tracked and delivered fast, but don&#x27;t want to pay overnight?
+<span class="tutor">[Tutor]</span> Oh, that sounds great. Let&#x27;s do that.
+[Joey] You&#x27;re all set. Here&#x27;s your tracking number.
+<span class="tutor">[Tutor]</span> Okay, you did a great job.
+[Joey] Yes, I think it is not smooth because the customer question and clerk answer is a little different.
+<span class="tutor">[Tutor]</span> Yes, yes. Like I would have expected the clerk to say something like an option. Let&#x27;s try standard airmail. And then the customer would say, that sounds great. Let&#x27;s do that. And then the clerk would make the last comment. Yeah. So it&#x27;s confusing. I apologize, but you read great.
+[Joey] Okay. Yes. Good. Yes.
+<span class="tutor">[Tutor]</span> All right. Now.
+[Joey] Okay. We can&#x27;t answer. Yeah. Go ahead and read it. Yeah. What delivery option did the customer choose and why?
+<span class="tutor">[Tutor]</span> We don&#x27;t know.
+[Joey] Yeah, we don&#x27;t know. But I suggest to him to express. Yes. So it&#x27;s a secret.
+<span class="tutor">[Tutor]</span> Yeah, that is secret. All right, good reading. Good reading. All right, let&#x27;s go on to part C, say it right. And our first group of adjectives discuss package delivery. I&#x27;ll get you to read the word and the description for the three words and then the question.
+[Joey] Okay. The prompt. Prompt. Quickly and on time. Prompt.
+<span class="tutor">[Tutor]</span> Good.
+[Joey] Is this similar to prompt?
+<span class="tutor">[Tutor]</span> Prompt. Prompt means right away, immediately.
+[Joey] Immediately. So if we use the AI, we say the prompt. So is it the same?
+<span class="tutor">[Tutor]</span> Oh, okay. I get your question. Okay. Prompt can be used as an adjective as it&#x27;s being done now. But a prompt is like something on your computer screen that tells you to push a button or click to make something happen.
+[Joey] How about the character? Is the same character prompt?
+<span class="tutor">[Tutor]</span> Prompt. That&#x27;s a good question. I&#x27;m going to try and find a video that discusses the difference between prompt as an adjective and prompt as a noun. And I&#x27;ll try to explain that some more, okay?
+[Joey] Okay, yes. And second, crushed. Crushed. Very good. Okay, damaged or squished. Squished.
+<span class="tutor">[Tutor]</span> All right, let&#x27;s try those two words with T endings. No, first one&#x27;s a D.
+[Joey] Damaged. Damaged. Damaged. Squished. Squished. Squished. Squished.
+<span class="tutor">[Tutor]</span> Better.
+[Joey] Squished.
+<span class="tutor">[Tutor]</span> Very good. All right, try the third one.
+[Joey] Squished. Okay, fragile. Frugal. Easily broken or damaged. Frugal. Frugal.
+<span class="tutor">[Tutor]</span> Okay, let&#x27;s try that. We&#x27;re going to do a little stronger I sound. Fragile. Fragile. Fragile. Yeah. Fragile. Fragile. Okay. You got it. All right. Let&#x27;s get you to read the question.
+[Joey] Okay. Talk about the last time you received a package. What was the condition and how smooth was delivery? Maybe last week I received a box from Jeju Island because these days the mandarin is there. The Jeju Island produces so many mandarins, so I used the online service and received a box of the mandarin. Yeah.
+<span class="tutor">[Tutor]</span> Okay, when you say mandarin, are you speaking about like a mandarin orange?
+[Joey] Yeah, mandarin orange. Orange.
+<span class="tutor">[Tutor]</span> You got a delivery of oranges. That&#x27;s good. Very nice.
+[Joey] Yeah, that is very nice. I love them.
+<span class="tutor">[Tutor]</span> All right. Yes, I bet. Fresh fruit is always wonderful. Okay, our next group is called mail options. Once again, I&#x27;ll get you to read the adjectives and their description.
+[Joey] Okay. Time-sensitive. Need to arrive quickly. Okay. Trackable. Trackable. Trackable. Can be followed online. Bulky. Big and awkward. Awkward.
+<span class="tutor">[Tutor]</span> Okay. If you&#x27;ll allow me, I&#x27;m going to help you with the last two words.
+[Joey] Uh-huh.
+<span class="tutor">[Tutor]</span> The second one, I heard you put in a hard G sound. I heard tra-ga-ble. Let&#x27;s try the K sound.
+[Joey] Uh-huh. Trackable. Trackable.
+<span class="tutor">[Tutor]</span> Trackable. That&#x27;s better. Trackable. Trackable. Yeah. Okay. Okay. And the next one, I&#x27;m going to get, it&#x27;s two syllables. Try this. Bulky. Bulky. Bulky. Trackable. Yeah. Bulky. Bulky. Yeah. We&#x27;ve got, we&#x27;ve got that L in there. So once again, I&#x27;ll, I&#x27;ll get these words typed up or send pronunciation videos. Okay, let&#x27;s get you to look at the question.
+[Joey] Okay, you forgot to send an important package and now it must arrive quickly. What would you do? That is so important package. I think if we go to the post office, the post office sells some packages like the small box, medium box, and large box. So I&#x27;m just purchasing that box and then send their package service, use their, yeah, post office.
+<span class="tutor">[Tutor]</span> Yes, if you were going to do the post office, you would pick the fastest service they could give you.
+[Joey] Yes, you&#x27;re right.
+<span class="tutor">[Tutor]</span> Or nowadays, people don&#x27;t use the postal service. They send it by courier like Federal Express, DHL, and other delivery services that have express courier service.
+[Joey] Yes, you&#x27;re right. If I use the online service, I just use the application and just put on the front of my door and then if I used that application, they take it down.
+<span class="tutor">[Tutor]</span> Yep, they come and get it. Yes. Yeah, you&#x27;re right. I used to use a lot of courier services when I worked in retail, so I know what you&#x27;re talking about. All right, my friend, let&#x27;s wrap up your class with part D, speak up. Uh-huh. And as we&#x27;ve been doing, where you see a number, there are corresponding suggestions under the paragraph. You&#x27;re going to choose something to fill in each number to complete the sentence, okay?
+[Joey] Okay, I see. Is it possible your time? Maybe 20 minutes?
+<span class="tutor">[Tutor]</span> Well, if you have time for this, we could, or we can say goodbye if you&#x27;re pressed for your schedule.
+[Joey] Okay. I have time.
+[Joey] Okay, I see. I mailed a package using an express option to Canada last week. The clerk said it looks fragile. I also asked for a tracking number to make sure everything was in order. The recipient said the delivery was prompt and the box looked crushed.
+<span class="tutor">[Tutor]</span> Yeah. Okay, very good. One word in that last sentence. You pronounced the word the reshipment. I&#x27;ll get you to repeat after me.
+<span class="tutor">[Tutor]</span> Recipient.
+[Joey] Recipient.
+<span class="tutor">[Tutor]</span> Recipient. Yeah, it&#x27;s an F sound. Once again, I&#x27;ll break it down into sound bites or send you a video so you can practice. Okay. Now, one more thing, Joey. I tried sending an SMS to you yesterday, but it didn&#x27;t go through. If you&#x27;d like, I&#x27;m going to send you my email address. If you reply to me using your email, then I can send the practice video links to your email.
+[Joey] It&#x27;s okay, because the Carol English Review also sends emails for me. Your review always arrives at my email.
+<span class="tutor">[Tutor]</span> Okay, so you got it. Wonderful. We&#x27;re done today, sir. Excellent work. Have a great weekend.
+[Joey] Thank you. Have a special weekend. Thank you so much, teacher. Bye-bye, teacher.
+<span class="tutor">[Tutor]</span> Bye-bye.</div>
+        </div>
+    </div>
+    <div class="toast" id="toast">✅ 프롬프트가 복사되었습니다!</div>
+    <script>
+        const REVIEW_PROMPT="너는 나의 영어 회화 복습 파트너야. 오늘 내 전화영어 수업 내용을 기반으로 대화하면서 복습을 도와줘.\n\n[오늘 수업 전사 내용]\n[Tutor] Hello, Joey. Good morning.\n[Joey] Hi there, Karin. Happy Friday.\n[Tutor] Finally, happy Friday. How are you today?\n[Joey] Oh, well, it's been a busy day, but this is the end of it, so it's okay.\n[Tutor] Do you have time for your class?\n[Joey] Yes, of course. Why not?\n[Tutor] All right, wonderful. Did you need a moment to bring today's lesson up on your device?\n[Joey] Okay, it's okay, yes. I'm prepared and today's topic is using the post office and delivery, right?\n[Tutor] Yeah.\n[Joey] Okay.\n[Tutor] When was the last time you visited a post office, Joey?\n[Joey] Oh my god, maybe last year?\n[Tutor] Yeah.\n[Joey] Yeah, post office. Sometimes post offices have a financial service, so I visit there.\n[Tutor] Sure. Okay.\n[Joey] Yeah.\n[Tutor] So, ideally, most of the time, people don't use the post office as often as they used to, but we'll definitely learn some new phrases and vocabulary today, okay?\n[Joey] Okay, good. Yes.\n[Tutor] All right. I'm going to ask you to read today's mission to me, please.\n[Joey] Okay. Today's mission is,\n[Tutor] That was a very good start. Thank you.\n[Joey] Okay.\n[Tutor] All right. Let's move on to the next page. I'll get you to read the first expression and its description.\n[Joey] Okay. The first expression, first key expression is tracking number. It means code used to follow a package location's tracking number.\n[Tutor] Okay. And second?\n[Joey] I just want to...\n[Tutor] Okay. You did good. I just want you to practice your F on this word.\n[Tutor] Follow.\n[Joey] Follow.\n[Tutor] Follow, follow, follow.\n[Tutor] Better. Very good.\n[Joey] Yeah, used to follow a package location.\n[Tutor] Very good.\n[Joey] Okay.\n[Tutor] All right, let's get you to try the next expression.\n[Joey] Okay, second, postage. It means money paid to send a letter or package. Postage.\n[Tutor] Okay, okay. Now, with this word, you're very close. You pronounced it post-age with a long A. I'm going to get you to try it with a short A or even a U sound.\n[Tutor] Postage.\n[Joey] Postage.\n[Tutor] Postage.\n[Joey] Better?\n[Tutor] Yeah.\n[Joey] Postage.\n[Tutor] Yeah. So it's a short vowel sound. Very good.\n[Joey] Postage.\n[Tutor] Postage.\n[Joey] Okay.\n[Tutor] Good.\n[Joey] Good.\n[Tutor] All right. Let's get you to go on and read the examples for the key phrases.\n[Joey] Okay. Could you tell me what's required to send? Could you tell me what's required to send a care package to France? Could you tell me what's required to send this package to Korea, to South Korea? Good. Okay. And second, what should I do if blah blah blah what should I do if I'm not home when the package arrives? What should I do? Yeah, if I am staying outside. Outside, I'm not home when you are calling me.\n[Tutor] When you call me.\n[Joey] Calling me.\n[Tutor] Okay. Yeah, that was a good second example.\n[Joey] Thank you.\n[Tutor] Okay. All right. Let's move on to part A, the info bite. And as usual, I'll ask you to read the four bulleted sentences, please.\n[Joey] Okay, I see.\n[Tutor] Okay.\n[Joey] In the U.S., the main postal service, USPS. In Canada, it's Canada Post.\n[Tutor] Very good.\n[Joey] Maybe the first thing, the Blue Robins, right?\n[Tutor] USPS.\n[Joey] Yeah, that stands for United States Postal Service. Ah, that is different. That is the US Postal Service, USPS, and Canada Post is just Canada Post, right? Just like that. Yeah, yeah, right side, the red, red for polite, right? Anyway, yes. And second, in the United Kingdom, Royal Mail handles most mail and small parcels. You can drop them at a post box or post office. Maybe Royal Mail, maybe there is no Wellington, ah, Angie, Angie Post, right? That is the oh, the difference Royal Mail handler. Anyway.\n[Tutor] Yeah, so in the UK, it's called the Royal Mail because it was originally a department of the king or queen. But now it's just called the Royal Mail.\n[Joey] Royal Mail. Oh. Okay. First, in the US, Canada, and United Kingdom, shipping costs more, shipping costs more and priced very widely based on weight, speed, and distance.\n[Joey] The last thing, in English-speaking countries, standard delivery can take several days, and express service costs a lot more.\n[Tutor] Okay. The question, do people still send letters or packages often in your home country? Why or why not?\n[Joey] Yeah. I see. These days, there are so many delivery services. So, usually, if we buy online products, and then, usually, they send using delivery service, not post office. So nowadays, that is a little used, but sometimes if we send so important paper or letter, yeah, at that time we use that post service. And in Korea, post service system is similar to United Kingdom or Canada or USA.\n[Tutor] Similar. Yeah, you know, it's been a long time, but we've had delivery services for at least 30 to 40 years in most countries. Originally, the regular person didn't have access to courier or delivery services, but now, especially after the pandemic, delivery services bring you everything: prescriptions, food, purchases.\n[Joey] Yeah.\n[Tutor] And so the post office is not just the only way. There was a time when that was the only way you could ship or move products.\n[Joey] Yeah.\n[Tutor] And now, yeah, not so much.\n[Joey] Yeah, I agree with you. Yeah.\n[Tutor] All right. Very nice. Okay. All right. Let's move on to the real-life talk part B.\n[Joey] Okay.\n[Tutor] Would you like to read as the customer or the clerk for the first time?\n[Joey] Okay. I'll start. I'm customer. Hi. I would like to send this package to Japan. Could you tell me what's required to send it?\n[Tutor] You'll need a customs form. We will also weigh it to calculate postage.\n[Joey] What are the delivery options?\n[Tutor] Standard airmail, express, or overnight.\n[Joey] I'd like it to arrive quickly, but overnight is really expensive. What should I do if I need it tracked and delivered fast but don't want to pay for overnight?\n[Tutor] Okay. Now, we have a bit of a typo here because it looks to me as though they missed a clerk's comment. And so what the clerk is saying on the screen is, that sounds great. Let's do that. And I'll get you to read the last comment.\n[Joey] What word is it? Yes.\n[Tutor] You're reading for the customer. I'll get you to do the last comment.\n[Joey] Last comment. Okay.\n[Joey] What should I do if I need it tracked and delivered fast but don't want to pay for overnight?\n[Tutor] That sounds great. Let's do that.\n[Joey] Okay. Ah, yes.\n[Tutor] You're all set. Here's your tracking number.\n[Tutor] I understand that you're right. Your conversation, \"That sounds great. Let's do that.\" Yeah, they missed a comment in there somewhere. All right, let's go back to page one. I'll be the customer and you'll be the clerk, okay?\n[Joey] Okay, yes, no problem.\n[Tutor] All right. Hi, I'd like to send this package to Japan. Could you tell me what's required to send it?\n[Joey] You will need a customs form. You will also weigh it to calculate for postage. What are the delivery options?\n[Tutor] Standard airmail, express, or overnight?\n[Joey] I'd like it to arrive quickly, but overnight is really expensive. What should I do if I need it tracked and delivered fast, but don't want to pay overnight?\n[Tutor] Oh, that sounds great. Let's do that.\n[Joey] You're all set. Here's your tracking number.\n[Tutor] Okay, you did a great job.\n[Joey] Yes, I think it is not smooth because the customer question and clerk answer is a little different.\n[Tutor] Yes, yes. Like I would have expected the clerk to say something like an option. Let's try standard airmail. And then the customer would say, that sounds great. Let's do that. And then the clerk would make the last comment. Yeah. So it's confusing. I apologize, but you read great.\n[Joey] Okay. Yes. Good. Yes.\n[Tutor] All right. Now.\n[Joey] Okay. We can't answer. Yeah. Go ahead and read it. Yeah. What delivery option did the customer choose and why?\n[Tutor] We don't know.\n[Joey] Yeah, we don't know. But I suggest to him to express. Yes. So it's a secret.\n[Tutor] Yeah, that is secret. All right, good reading. Good reading. All right, let's go on to part C, say it right. And our first group of adjectives discuss package delivery. I'll get you to read the word and the description for the three words and then the question.\n[Joey] Okay. The prompt. Prompt. Quickly and on time. Prompt.\n[Tutor] Good.\n[Joey] Is this similar to prompt?\n[Tutor] Prompt. Prompt means right away, immediately.\n[Joey] Immediately. So if we use the AI, we say the prompt. So is it the same?\n[Tutor] Oh, okay. I get your question. Okay. Prompt can be used as an adjective as it's being done now. But a prompt is like something on your computer screen that tells you to push a button or click to make something happen.\n[Joey] How about the character? Is the same character prompt?\n[Tutor] Prompt. That's a good question. I'm going to try and find a video that discusses the difference between prompt as an adjective and prompt as a noun. And I'll try to explain that some more, okay?\n[Joey] Okay, yes. And second, crushed. Crushed. Very good. Okay, damaged or squished. Squished.\n[Tutor] All right, let's try those two words with T endings. No, first one's a D.\n[Joey] Damaged. Damaged. Damaged. Squished. Squished. Squished. Squished.\n[Tutor] Better.\n[Joey] Squished.\n[Tutor] Very good. All right, try the third one.\n[Joey] Squished. Okay, fragile. Frugal. Easily broken or damaged. Frugal. Frugal.\n[Tutor] Okay, let's try that. We're going to do a little stronger I sound. Fragile. Fragile. Fragile. Yeah. Fragile. Fragile. Okay. You got it. All right. Let's get you to read the question.\n[Joey] Okay. Talk about the last time you received a package. What was the condition and how smooth was delivery? Maybe last week I received a box from Jeju Island because these days the mandarin is there. The Jeju Island produces so many mandarins, so I used the online service and received a box of the mandarin. Yeah.\n[Tutor] Okay, when you say mandarin, are you speaking about like a mandarin orange?\n[Joey] Yeah, mandarin orange. Orange.\n[Tutor] You got a delivery of oranges. That's good. Very nice.\n[Joey] Yeah, that is very nice. I love them.\n[Tutor] All right. Yes, I bet. Fresh fruit is always wonderful. Okay, our next group is called mail options. Once again, I'll get you to read the adjectives and their description.\n[Joey] Okay. Time-sensitive. Need to arrive quickly. Okay. Trackable. Trackable. Trackable. Can be followed online. Bulky. Big and awkward. Awkward.\n[Tutor] Okay. If you'll allow me, I'm going to help you with the last two words.\n[Joey] Uh-huh.\n[Tutor] The second one, I heard you put in a hard G sound. I heard tra-ga-ble. Let's try the K sound.\n[Joey] Uh-huh. Trackable. Trackable.\n[Tutor] Trackable. That's better. Trackable. Trackable. Yeah. Okay. Okay. And the next one, I'm going to get, it's two syllables. Try this. Bulky. Bulky. Bulky. Trackable. Yeah. Bulky. Bulky. Yeah. We've got, we've got that L in there. So once again, I'll, I'll get these words typed up or send pronunciation videos. Okay, let's get you to look at the question.\n[Joey] Okay, you forgot to send an important package and now it must arrive quickly. What would you do? That is so important package. I think if we go to the post office, the post office sells some packages like the small box, medium box, and large box. So I'm just purchasing that box and then send their package service, use their, yeah, post office.\n[Tutor] Yes, if you were going to do the post office, you would pick the fastest service they could give you.\n[Joey] Yes, you're right.\n[Tutor] Or nowadays, people don't use the postal service. They send it by courier like Federal Express, DHL, and other delivery services that have express courier service.\n[Joey] Yes, you're right. If I use the online service, I just use the application and just put on the front of my door and then if I used that application, they take it down.\n[Tutor] Yep, they come and get it. Yes. Yeah, you're right. I used to use a lot of courier services when I worked in retail, so I know what you're talking about. All right, my friend, let's wrap up your class with part D, speak up. Uh-huh. And as we've been doing, where you see a number, there are corresponding suggestions under the paragraph. You're going to choose something to fill in each number to complete the sentence, okay?\n[Joey] Okay, I see. Is it possible your time? Maybe 20 minutes?\n[Tutor] Well, if you have time for this, we could, or we can say goodbye if you're pressed for your schedule.\n[Joey] Okay. I have time.\n[Joey] Okay, I see. I mailed a package using an express option to Canada last week. The clerk said it looks fragile. I also asked for a tracking number to make sure everything was in order. The recipient said the delivery was prompt and the box looked crushed.\n[Tutor] Yeah. Okay, very good. One word in that last sentence. You pronounced the word the reshipment. I'll get you to repeat after me.\n[Tutor] Recipient.\n[Joey] Recipient.\n[Tutor] Recipient. Yeah, it's an F sound. Once again, I'll break it down into sound bites or send you a video so you can practice. Okay. Now, one more thing, Joey. I tried sending an SMS to you yesterday, but it didn't go through. If you'd like, I'm going to send you my email address. If you reply to me using your email, then I can send the practice video links to your email.\n[Joey] It's okay, because the Carol English Review also sends emails for me. Your review always arrives at my email.\n[Tutor] Okay, so you got it. Wonderful. We're done today, sir. Excellent work. Have a great weekend.\n[Joey] Thank you. Have a special weekend. Thank you so much, teacher. Bye-bye, teacher.\n[Tutor] Bye-bye.\n\n[AI 피드백]\n따뜻하고 실용적인 영어 코치 Bell입니다. Joey, 오늘 수업도 정말 수고 많으셨습니다! 바쁜 하루의 마무리였는데도 집중해서 참여해주셔서 감사해요. 특히 발음 교정에 적극적으로 임하는 모습과 궁금한 점을 바로 질문하는 모습이 인상 깊었습니다.\n\n오늘 배운 우체국 및 배송 관련 표현들이 Joey의 비즈니스 환경에서도 유용하게 활용될 수 있도록, 오늘 대화 내용을 바탕으로 맞춤 피드백을 드릴게요.\n\n---\n\n**0. 📌 Topic**\nTopic: Discussing post office services and package delivery options.\n\n**1. 📊 오늘의 대화 요약 (Summary)**\n오늘 수업에서는 우체국과 배송 서비스 이용에 대해 이야기 나누었습니다. 특히 각국의 우편 서비스 특징을 비교하고, 소포 발송 시 필요한 절차와 배송 옵션에 대한 어휘와 표현들을 익히며 고객과 직원 간의 역할극을 진행했습니다.\n\n**2. 💬 유창성 업그레이드 (Fluency & Natural Flow)**\nJoey가 말한 문장 중 의미는 통하지만, 원어민이 들었을 때 좀 더 자연스럽게 들릴 수 있는 표현들을 함께 살펴볼게요.\n\n1.  **❌ 학습자 원문 (As Said):** `Sometimes post offices have a financial service, so I visit there.`\n    *   **✅ 자연스러운 표현 (Natural):** `Sometimes post offices offer financial services, so I visit them for that.`\n    *   **💎 비즈니스 표현 (Professional):** `Certain postal branches provide financial services, which occasionally necessitates my visit.`\n    *   **💡 코칭 포인트:** Using \"offer\"는 기관이 서비스를 제공할 때 더 자연스럽습니다. \"visit them for that\"은 반복 없이 목적을 명확히 합니다.\n\n2.  **❌ 학습자 원문 (As Said):** `What should I do? Yeah, if I am staying outside. Outside, I'm not home when you are calling me.`\n    *   **✅ 자연스러운 표현 (Natural):** `What should I do if I'm not home when the package arrives?`\n    *   **💎 비즈니스 표현 (Professional):** `What protocol should I follow if I am unavailable to receive the package upon its arrival?`\n    *   **💡 코칭 포인트:** 원문은 다소 단편적이었습니다. 소포 배송에 대한 하나의 명확한 질문으로 합치는 것이 더 직접적이고 일반적입니다. \"Staying outside\"는 외출 중임을 나타내는 \"not home\"보다 덜 관용적입니다.\n\n3.  **❌ 학습자 원문 (As Said):** `Yes, I think it is not smooth because the customer question and clerk answer is a little different.`\n    *   **✅ 자연스러운 표현 (Natural):** `Yes, I think the flow was a bit off because the customer's question and the clerk's answer didn't quite match.`\n    *   **💎 비즈니스 표현 (Professional):** `Indeed, the dialogue lacked coherence due to a misalignment between the customer's query and the clerk's response.`\n    *   **💡 코칭 포인트:** \"Not smooth\"도 이해 가능하지만, 대화의 흐름을 이야기할 때는 \"the flow was a bit off\" 또는 \"didn't quite match\"가 더 자연스럽습니다. \"Customer's question\"과 \"clerk's answer\"는 소유격을 사용하여 명확하게 연결합니다.\n\n**3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)**\nCategory: **Missing Articles and Noun Forms**\n\nJoey는 명사 앞에 필요한 관사(a/an/the)를 빠뜨리거나, 명사의 형태(단수/복수)를 적절히 사용하지 않는 경향이 있습니다. 특히 일반적인 개념이나 특정 대상을 지칭할 때 관사를 놓치는 경우가 많았습니다.\n\n| ❌ 원문 (As Said)                                                                  | ✅ 교정 예시 (Corrected)                                                                                             |\n| :---------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------- |\n| `And in Korea, post service system is similar to United Kingdom or Canada or USA.` | `And in Korea, **the** post service system is similar to **the** United Kingdom or Canada or **the** USA.`          |\n| `That is so important package.`                                                     | `That is **such an** important package.` (또는 `That is **a very** important package.`)                               |\n| `The Jeju Island produces so many mandarins, so I used the online service and received a box of the mandarin.` | `Jeju Island produces so many mandarins, so I used **an** online service and received a box of mandarins.` (또는 `a box of **the** mandarin oranges.`) |\n\n📌 **핵심 규칙:** 특정 명사(국가명, 고유명사) 앞이나 일반적인 명사(셀 수 있는 명사) 앞에는 종종 관사(a/an/the)가 필요하며, 명사의 수(단수/복수)를 문맥에 맞게 사용하는 것이 중요합니다.\n\n🔁 **따라 읽기:**\n🗣️ \"And in Korea, the post service system is similar to the United Kingdom or Canada or the USA.\"\n🗣️ \"That is such an important package.\"\n🗣️ \"Jeju Island produces so many mandarins, so I used an online service and received a box of mandarins.\"\n\n**4. 📗 어휘 확장 (Vocabulary Vault)**\n오늘 수업에서 다룬 내용과 Joey의 업무 환경에 유용할 어휘 5가지를 소개합니다.\n\n1.  **recipient** /rɪˈsɪpiənt/ (명사)\n    *   뜻: 수령인, 받는 사람\n    *   실전 예문: Please ensure the **recipient** confirms receipt of the confidential documents.\n\n2.  **prompt** /prɒmpt/ (형용사)\n    *   뜻: 신속한, 즉각적인\n    *   실전 예문: We expect a **prompt** response to our proposal by the end of the week.\n\n3.  **fragile** /ˈfrædʒaɪl/ (형용사)\n    *   뜻: 깨지기 쉬운, 손상되기 쉬운\n    *   실전 예문: All electronic components are **fragile** and require careful handling during shipment.\n\n4.  **trackable** /ˈtrækəbl/ (형용사)\n    *   뜻: 추적 가능한\n    *   실전 예문: For high-value items, we always recommend using a **trackable** delivery service.\n\n5.  **bulky** /ˈbʌlki/ (형용사)\n    *   뜻: 부피가 큰, 다루기 힘든\n    *   실전 예문: Shipping **bulky** equipment overseas can significantly increase logistics costs.\n\n**5. 📝 실전 복습 챌린지 (Practice)**\n오늘 배운 표현과 문법을 활용하여 다음 상황에 맞는 문장을 영어로 만들어 보세요.\n\n1.  **상황:** 중요한 서류를 보냈는데, 수령인이 제대로 받았는지 확인하고 싶어요.\n    *   **영작:** (trackable, recipient 활용)\n    *   **모범 답안:** I need to ensure the **recipient** received the important documents. Was the package **trackable**?\n\n2.  **상황:** 이 소포는 깨지기 쉬운 물건이 들어있어서 신속하게 배송되어야 합니다.\n    *   **영작:** (fragile, prompt 활용)\n    *   **모범 답안:** This package contains **fragile** items, so it requires **prompt** delivery.\n\n3.  **상황:** 부피가 큰 이 장비를 해외로 보내려면 어떤 배송 옵션이 가장 효율적일까요?\n    *   **영작:** (bulky, delivery options 활용)\n    *   **모범 답안:** What are the most efficient **delivery options** for sending this **bulky** equipment overseas?\n\n**6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)**\n\n✨ **Good Job**: `It's okay, because the Carol English Review also sends emails for me. Your review always arrives at my email.`\nJoey, 이 문장은 정말 자연스럽고 명확하게 의사를 전달했습니다. 특히 \"Your review always arrives at my email\"이라는 표현은 일상적인 상황에서 자주 쓰이는 표현으로, 문법적으로도 완벽하고 유창하게 들렸어요. 아주 훌륭합니다!\n\n🚀 **내일의 한 문장**: 다음 수업 시작 시, 오늘 배운 표현을 활용하여 튜터에게 이렇게 말해보세요.\n\"I've been reviewing the **trackable** and **fragile** concepts from our last class. I found them quite useful!\"\n\n---\n\n**[성과 지표]**\n**유창성 점수(10점 만점): 7/10**\n\n**근거:** Joey는 수업 전반에 걸쳐 적극적으로 대화에 참여하며 자신의 의견을 표현하는 데 주저함이 없었습니다. 특히 궁금한 점을 바로 질문하고, 발음 교정에 성실하게 임하는 모습은 유창성 향상에 매우 긍정적인 영향을 미칩니다. 그러나 문장이 길어지거나 복잡한 아이디어를 표현할 때, 때때로 문장 구조가 다소 단편적이거나 어색한 표현을 사용하는 경향이 있었습니다. 특히 관사 사용이나 명사 형태에서 반복적인 오류가 발견되어 자연스러운 흐름을 방해하는 요소가 되기도 했습니다.\n\n**다음 수업 '원포인트 액션 플랜':**\n다음 수업에서는 **\"명사 앞에 필요한 관사(a/an/the)와 명사의 올바른 형태(단수/복수) 사용\"**에 더 집중하여 연습해볼 예정입니다. 특히 비즈니스 환경에서 자주 사용되는 명사들을 중심으로 정확한 관사 사용 습관을 기를 수 있도록 코칭하겠습니다.\n\n위 내용을 바탕으로:\n1. 먼저 오늘 수업에서 내가 틀렸거나 어색했던 표현을 하나 골라서, 관련된 상황을 영어로 질문해줘.\n2. 내가 영어로 대답하면, 자연스러운지 확인하고 더 나은 표현이 있으면 알려줘.\n3. 특히 \"반복 실수 패턴\"에서 지적된 부분을 집중적으로 연습시켜줘.\n4. 이런 식으로 오늘 배운 표현들을 하나씩 복습하자.\n5. 한국어 설명은 필요할 때만 간단히, 대화는 최대한 영어로 진행해줘.\n\n그럼 시작하자!";
+        function startReview(){navigator.clipboard.writeText(REVIEW_PROMPT).then(()=>{showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)}).catch(()=>{const t=document.createElement('textarea');t.value=REVIEW_PROMPT;document.body.appendChild(t);t.select();document.execCommand('copy');document.body.removeChild(t);showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)})}
+        function showToast(){const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500)}
+        function switchTab(n){document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',n==='feedback'?i===0:i===1));document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));document.getElementById('tab-'+n).classList.add('active')}
+    </script>
+</body>
+</html>
