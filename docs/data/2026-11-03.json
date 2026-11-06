@@ -4,24 +4,50 @@
   2026,
   45
  ],
- "topic": "Discussing health insurance plans and related vocabulary.",
- "grammar": "Missing Verbs and Incorrect Verb Forms",
- "grammar_norm": "Verb Forms / Auxiliaries",
- "score": null,
+ "topic": "Understanding Health Insurance — Deductibles, Copays, and Global Healthcare Comparisons",
+ "grammar": "subject-verb agreement",
+ "grammar_norm": "Subject–Verb Agreement",
+ "score": 6.0,
  "pairs": [
   {
    "said": "I'm doing traveling.",
    "natural": "I'm traveling."
   },
   {
-   "said": "That name is the gathering factory.",
-   "natural": "That city is known for its factories."
+   "said": "After your class, finished your class, I moved to the city, to Ulsan.",
+   "natural": "After your class, I'm heading to Ulsan."
   },
   {
-   "said": "It is possible to pre-talking if you need to just recover your time, your eyes at the time. You just pre-talking. Yeah. And close your eyes and talking to me.",
-   "natural": "It's possible to talk beforehand if you need time to recover. You can just close your eyes and talk to me."
+   "said": "It hard to understand it clearly.",
+   "natural": "It's hard to understand it clearly."
   }
  ],
- "vocab": [],
- "_html_md5": "abcf59af3745fe06fb60452a3f9149b2"
+ "vocab": [
+  {
+   "word": "deductible",
+   "pos": "명사",
+   "meaning": "본인부담금 (보험이 적용되기 전 환자가 먼저 내야 하는 금액)"
+  },
+  {
+   "word": "copay",
+   "pos": "명사",
+   "meaning": "정액 본인부담금 (진료·처방 때마다 내는 고정 금액)"
+  },
+  {
+   "word": "coverage",
+   "pos": "명사",
+   "meaning": "보장 범위"
+  },
+  {
+   "word": "universal health care",
+   "pos": "명사구",
+   "meaning": "전 국민 의료보험 체계 (국가가 모든 국민에게 제공하는 의료 서비스)"
+  },
+  {
+   "word": "out of pocket",
+   "pos": "형용사/부사",
+   "meaning": "보험 적용 없이 본인이 직접 부담하는"
+  }
+ ],
+ "_html_md5": "ea1015d5dc103c9096b9042287a0a373"
 }
