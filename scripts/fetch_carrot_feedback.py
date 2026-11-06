@@ -209,10 +209,16 @@ def _login_once(email, password):
         # Pin the Korean UI: the site now follows the browser locale and the English UI broke the selectors.
         page = browser.new_context(locale="ko-KR", extra_http_headers={"Accept-Language": "ko-KR,ko;q=0.9"}).new_page()
 
-        # 세션 리플레이 비콘(replays.carrotsolutions.co.kr)은 스트리밍이라 요청이 끝나지 않는다.
+        # 세션 리플레이 비콘(replays.carrotsolutions.co.kr → 2026-11 부터 replay.…)은 스트리밍이라 요청이 끝나지 않는다.
         # 수집에 불필요하므로 아예 차단해 페이지 로드를 가볍게 만든다.
         # The session-replay beacon streams and never completes; it is irrelevant here, so block it.
-        page.route(re.compile(r"replays\.carrotsolutions\.co\.kr"), lambda r: r.abort())
+        page.route(re.compile(r"replays?\.carrotsolutions\.co\.kr"), lambda r: r.abort())
+
+        # 로그인 API 응답 코드를 로그에 남긴다 — 다음 실패 때 '눌렀는데 안 넘어감'의 원인을 바로 보게.
+        def on_response(res):
+            if "homeapi.carrotenglish.com/app/auth" in res.url:
+                print(f"   ↳ 로그인 API / auth API {res.url.split('/app/auth/')[-1].split('?')[0]} → {res.status}")
+        page.on("response", on_response)
 
         def on_request(req):
             # allFeedback 우선, 없으면 homeapi 로 가는 인증 요청에서라도 확보
@@ -232,22 +238,40 @@ def _login_once(email, password):
             # ⚠️ Never use networkidle here: a never-ending analytics request makes it time out
             #    deterministically. Wait for the DOM, then poll for the element we actually need.
             page.goto(LOGIN_URL, wait_until="domcontentloaded", timeout=45000)
-
-            print("✍️ [2/6] 이메일 입력 / fill email")
-            _resolve(page, [
-                lambda: page.get_by_placeholder("이메일"),
-                lambda: page.locator("input[type=email]"),
-                lambda: page.locator("input[name*=email i], input[id*=email i]"),
-                lambda: page.get_by_role("textbox"),
-            ], "이메일 입력칸 / email field").fill(email)
-
-            print("➡️ [3/6] '다음' 진행 / submit email step")
+            # 화면 프로그램(Vue)이 붙기 전에 입력하면 값이 지워져 '다음'을 눌러도 넘어가지 않는다
+            # (2026-11-06: CI 에서 '다음' 클릭 후에도 이메일 화면에 머묾, 3초 기다린 로컬은 정상) → load 까지 기다린다.
             try:
-                _resolve(page, next_candidates(page), "다음 버튼 / next button", timeout_ms=8000).click()
-            except LoginError:
-                # 최후 수단: Enter 키 제출 / last resort: submit with Enter
-                print("   ↳ 버튼 없음 → Enter 키로 제출 / falling back to Enter")
-                page.keyboard.press("Enter")
+                page.wait_for_load_state("load", timeout=20000)
+            except Exception:  # noqa: BLE001 — 분석 스크립트가 늦어도 아래 폴링이 요소를 기다린다
+                pass
+            page.wait_for_timeout(1500)
+
+            for attempt in (1, 2):  # '다음'을 눌렀는데 그대로면 한 번 더
+                print(f"✍️ [2/6] 이메일 입력 / fill email ({attempt})")
+                box = _resolve(page, [
+                    lambda: page.get_by_placeholder("이메일"),
+                    lambda: page.locator("input[type=email]"),
+                    lambda: page.locator("input[name*=email i], input[id*=email i]"),
+                    lambda: page.get_by_role("textbox"),
+                ], "이메일 입력칸 / email field")
+                box.fill(email)
+                if box.input_value() != email:  # 값이 안 남았으면 한 글자씩 다시
+                    print("   ↳ 입력값이 남지 않음 → 한 글자씩 다시 입력 / retyping")
+                    box.fill("")
+                    box.press_sequentially(email, delay=40)
+
+                print("➡️ [3/6] '다음' 진행 / submit email step")
+                try:
+                    _resolve(page, next_candidates(page), "다음 버튼 / next button", timeout_ms=8000).click()
+                except LoginError:
+                    # 최후 수단: Enter 키 제출 / last resort: submit with Enter
+                    print("   ↳ 버튼 없음 → Enter 키로 제출 / falling back to Enter")
+                    page.keyboard.press("Enter")
+                try:
+                    page.locator("input[type=password]").first.wait_for(state="visible", timeout=12000)
+                    break
+                except Exception:  # noqa: BLE001
+                    print(f"   ↳ '다음' 뒤에도 비밀번호 화면이 안 나옴 (url={page.url}) / still on email step")
 
             print("🔑 [4/6] 비밀번호 입력 / fill password")
             _resolve(page, [
