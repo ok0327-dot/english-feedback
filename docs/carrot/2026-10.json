@@ -5,6 +5,517 @@
  "data": {
   "list": [
    {
+    "idxFeedback": 36386639,
+    "createDate": "2026-10-29",
+    "memo": "Wonderful work in class today! Take a moment to review your sentences and feedback below.",
+    "subList": [
+     {
+      "idxFeedbackSub": 63569449,
+      "original": "I'm so drowsiness.",
+      "better": "I'm so drowsy. ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 63569450,
+      "original": "Do you have anything for headache?",
+      "better": "Do you have anything for headaches?",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 63569451,
+      "original": "Some medicine like for stomachache, that medicine they need the prescription.",
+      "better": "Some medicines, like those for a stomachache, require a prescription.",
+      "betterTrans": null,
+      "isSave": "N"
+     }
+    ]
+   },
+   {
+    "idxFeedback": 36374869,
+    "createDate": "2026-10-28",
+    "memo": "Today we discussed doing laundry and requesting services. Reviewed the expressions \"Ring around the collar\" and \"treat (a stain)\" ex. Treat the coffee stain with baking soda. Practiced the vocabulary, [comforter/duvet, laundry soap, scented  laundromat, iron (verb/noun)] I am ironing my shirt. Continue to practice sounding out the pronunciation of the new phrases.\nHere are today's notes:",
+    "subList": [
+     {
+      "idxFeedbackSub": 63517550,
+      "original": "Could you remove the ring around the collar this shirt ",
+      "better": "Could you remove the ring around the collar (of this shirt)?",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 63517551,
+      "original": "Could you let me know if this report is done ",
+      "better": "Could you let me know [if/when] this report is done ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 63517552,
+      "original": "Some place has a laundry place ",
+      "better": "Some places have laundry machines. \nIt's a [laundromat/laundrette]",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 63517553,
+      "original": "He want to take laundry ",
+      "better": "He wants his shirt laundered. He is taking his shirt to the laundry. ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 63517554,
+      "original": "There is no put in some solution ",
+      "better": "There is no need to put in laundry detergent/soap.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 63517555,
+      "original": "Sometimes they instruction to the little weak ",
+      "better": "Sometimes the instructions tell you to wash a smaller load ",
+      "betterTrans": null,
+      "isSave": "N"
+     }
+    ]
+   },
+   {
+    "idxFeedback": 36363478,
+    "createDate": "2026-10-27",
+    "memo": "Another very productive class!  Great work!",
+    "subList": [
+     {
+      "idxFeedbackSub": 63465802,
+      "original": "I'm looking for INGREDIENTS (pronounced IN-DREE-GEE-ENTS) for kimbap.",
+      "better": "I'm looking for INGREDIENTS (pronounced IN-GREE-DEE-ENTS) for kimbap.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 63465803,
+      "original": "We have pork LOIN (pronounced LONE) and chicken THIGHS (pronounced TIES).",
+      "better": "We have pork LOIN (pronounced L-OI-N) and chicken THIGH (pronounced TH-EYE.).",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 63465804,
+      "original": "DESE items are sold in most Western SHUPERMARKETS.",
+      "better": "THESE items are sold in most Western SUPERMARKETS. (pronounced SOO=PUR=MAR-KETS)",
+      "betterTrans": null,
+      "isSave": "N"
+     }
+    ]
+   },
+   {
+    "idxFeedback": 36349810,
+    "createDate": "2026-10-26",
+    "memo": "This lesson we discussed making big purchases and getting an extended warrantee. Also talked about your experiences  asking for an exchange and refund. Practiced sounding out the pronunciation of [eligible, glitchy, unstable, unreliable, frozen, partial]. \nGreat job practicing pronunciation and enunciation [/f/, /g/, /t/+/ch/].\nHere are today's notes:",
+    "subList": [
+     {
+      "idxFeedbackSub": 63406112,
+      "original": "That product usually have a warranty of a product ",
+      "better": "That product usually has a warranty of a product ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 63406113,
+      "original": "I reservation some hotel ",
+      "better": "I reserved some/a hotel ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 63406114,
+      "original": "I don't learn to the Spanish but this time last year ai was developed ",
+      "better": "I haven't learned Spanish but this time last year ai had been developed ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 63406115,
+      "original": "Two week later the vacuum cleaner don't work ",
+      "better": "Two weeks later the vacuum cleaner doesn't work ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 63406116,
+      "original": "I'm just distinguish what problem ",
+      "better": "I just distinguish what is the problem ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 63406117,
+      "original": "These day many people use the product ",
+      "better": "These days many people use the product ",
+      "betterTrans": null,
+      "isSave": "N"
+     }
+    ]
+   },
+   {
+    "idxFeedback": 36339324,
+    "createDate": "2026-10-23",
+    "memo": "Good strong effort for the end of the week!  Have a pleasant weekend!",
+    "subList": [
+     {
+      "idxFeedbackSub": 63360993,
+      "original": "Title:  Go to the SHUPERMARKET.",
+      "better": "Go to the SUPERMARKET.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 63360994,
+      "original": "What AISLE (pronounced IS-LAY) is cereal in?",
+      "better": "What AISLE (pronounced EYE-UL) is cereal in?",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 63360995,
+      "original": "BUY ONE -GET ONE (FREE)",
+      "better": "Alternative:  ONE PLUS ONE",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 63360996,
+      "original": "What are some tips to be a THRIFTY shopper?",
+      "better": "What are some tips to be a THRIFTY  (pronounced THRIF-TEE) shopper?   Alternatives:  CAREFUL/FRUGAL/ECONOMICAL",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 63360997,
+      "original": "Could you WEIGHT  (pronounced WAIT) DESE PEACH (singular)  for me?",
+      "better": "Could you WEIGH (pronounced WAY) THESE PEACH-ES (plural)  for me?",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 63360998,
+      "original": "Impersonal:  lacking in HUMOR interaction.",
+      "better": "Impersonal:  lacking in HUMAN interaction.",
+      "betterTrans": null,
+      "isSave": "N"
+     }
+    ]
+   },
+   {
+    "idxFeedback": 36327187,
+    "createDate": "2026-10-22",
+    "memo": "Excellent class again today!  You worked hard!  Please watch, study and practice with the video links below:\n1)   How to Pronounce the letters F, FF, PH, GH as the F Sound - American English Pronunciation video:  https://youtu.be/EbC1M3IJTtI?si=9GJ6D1SZB4IVY3lS\n2)   How to Pronounce F and P Consonant Sounds | Learn English Pronunciation Course video:  https://youtu.be/jF9GJUBD-aU?si=a0J41CG1HZ-1i6f8\n3)   How to Pronounce Afford and Affordable video:  https://youtu.be/UskFGUPd2Gg?si=bqIgLu4bnco7m6sQ\n4)  FLUCTUATION pronunciation | Improve your language with bab.la video:  https://youtu.be/pK2bqU50r-c?si=4ez2p-Ol73Dl1iuj",
+    "subList": [
+     {
+      "idxFeedbackSub": 63307742,
+      "original": "Utility Account: a service account for water, gas or ELECTRICITY.",
+      "better": "Utility Account: a service account for water, gas or ELECTRICITY (pronounced EH-LEK-TRIH-SIH-TEE).",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 63307743,
+      "original": "It will be REFUND when you close the account.",
+      "better": "It will be REFUND-ED when you close the account.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 63307744,
+      "original": "Every PEOPLE HAVE a separate account.",
+      "better": "Every HOUSEHOLD HAS a separate account.",
+      "betterTrans": null,
+      "isSave": "N"
+     }
+    ]
+   },
+   {
+    "idxFeedback": 36313519,
+    "createDate": "2026-10-21",
+    "memo": "Today we talked about renting a place to live in Korea. Reviewed the terms [rent- rental, renting, apartment, condominium, townhouse, suite]. Here are today's notes:",
+    "subList": [
+     {
+      "idxFeedbackSub": 63247061,
+      "original": "If I want to move my place first I'm check that place ",
+      "better": "If I want to move to a new place first I check new homes ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 63247062,
+      "original": "Usually we just have to with agent ",
+      "better": "Usually we just have to [use/find a home with] an agent ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 63247063,
+      "original": "The deposit is the two kind ",
+      "better": "There are two kinds of deposits ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 63247064,
+      "original": "There are so many kind of house ",
+      "better": "There are so many kind of home ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 63247065,
+      "original": "I'm just search the apartment for air b&b",
+      "better": "I'm just searching for an air b&b apartment ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 63247066,
+      "original": "My communication is the not good well ",
+      "better": "My communication is not good",
+      "betterTrans": null,
+      "isSave": "N"
+     }
+    ]
+   },
+   {
+    "idxFeedback": 36301440,
+    "createDate": "2026-10-20",
+    "memo": "Lots of hard work today!  Please watch, study and practice with the video links below:\n1)   How to Pronounce Gasoline (CORRECTLY!) video:  https://youtu.be/kmA_MINFTaI?si=tbyxMDoCaK2SAa8D\n2)   Pronunciation Tips With Quiz - Words Ending In -ATE video:  https://youtu.be/jhGNh5pzngE?si=4pok2Z7f1Qn2Sszq\n3)   Pronunciation - QU video:  https://youtu.be/xHPvCJyfsbw?si=J3uKYZi1Vxq_HZfZ",
+    "subList": [
+     {
+      "idxFeedbackSub": 63192417,
+      "original": "To make something full, especially with LIQUID (pronounced RIH-KID)",
+      "better": "To make something full, especially with LIQUID (pronounced LIH-KWID).",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 63192418,
+      "original": "Cashiers handle both gas payments and store PURCHASE.",
+      "better": "Cashiers handle both gas payments and store PURCHASES (pronounced PUR-CHAH-SEZ).",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 63192419,
+      "original": "US gas stations may have a small shop and a SEPARATE (pronounced SEH=PAR=ATE) restaurant.",
+      "better": "US gas stations may have a small shop and a SEPARATE (pronounced SEH=PAR=ET) restaurant.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 63192420,
+      "original": "What HAS it like?",
+      "better": "What WAS it like?",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 63192421,
+      "original": "It makes it MORE EASIER.",
+      "better": "It makes it EASIER.",
+      "betterTrans": null,
+      "isSave": "N"
+     }
+    ]
+   },
+   {
+    "idxFeedback": 36287531,
+    "createDate": "2026-10-19",
+    "memo": "Today we talked about getting a flu shot as well driving in other countries and related expressions. Reviewed the terms \"traffic regulation\" and \"right of way\". Also practiced practiced the pronunciation of [clarify /KLA·ruh·fai/, visible, enforce, methods, pedestrian / puh·DEH·stree·uhn/]. \nContinue to review the new expression [distracted, jaywalking]. Here are today's notes>",
+    "subList": [
+     {
+      "idxFeedbackSub": 63132443,
+      "original": "Last year we had a plan to travel Spain, but before one day ago departure my son was sick ",
+      "better": "Last year we had a plan to travel to Spain, but one day before departure my son got sick ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 63132444,
+      "original": "The police officer give me a fine. ",
+      "better": "The police office ticketed me. \nThe officer gave me a ticket ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 63132445,
+      "original": "When I travel Japan is a similar situation ",
+      "better": "When I travel Japan, it is a similar situation ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 63132446,
+      "original": "The driver confused who has the on the turning right ",
+      "better": "The driver confused who about permission to turn right on a red light",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 63132447,
+      "original": "A car is like the dangerous ",
+      "better": "A car is like the dangerous weapon",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 63132448,
+      "original": "Some people is so cross the dangerous ",
+      "better": "Some people cross the road dangerously. ",
+      "betterTrans": null,
+      "isSave": "N"
+     }
+    ]
+   },
+   {
+    "idxFeedback": 36276979,
+    "createDate": "2026-10-16",
+    "memo": "Happy Friday!   Very good class! \nThank you for your questions and concerns that we discussed today!  Please don't hesitate to ask any questions you may have.  As we discussed, it is very common that my students can't watch practice videos at work but please try to watch them on your personal device or during off-work hours. Practice is important, Thank you!",
+    "subList": [
+     {
+      "idxFeedbackSub": 63086695,
+      "original": "Please fill out this APPLICATION FORM (pronounced AH-FLIK-SHUN PORM).",
+      "better": "Please fill out this APPLICATION FORM (pronounced AH-FLIK-KAY-SHUN FORM).",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 63086696,
+      "original": "You need a minimum deposit to open an COUNT.",
+      "better": "You need a minimum deposit to open an ACCOUNT (pronounced AH-COUNT).",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 63086697,
+      "original": "DAT'S a personal cheque, not a bank cheque.",
+      "better": "THAT'S a personal cheque, not a bank cheque.",
+      "betterTrans": null,
+      "isSave": "N"
+     }
+    ]
+   },
+   {
+    "idxFeedback": 36265120,
+    "createDate": "2026-10-15",
+    "memo": "Excellent work again today!  Please watch, study and practice with the video link below, thank you:\n1)   L vs R Consonant Sounds | Learn English Pronunciation Course | 158 Words | Minimal Pairs video:   https://youtu.be/KT0EzC7TZo4?si=BPpBm8ydddQWT1ck",
+    "subList": [
+     {
+      "idxFeedbackSub": 63033831,
+      "original": "A UNIQUE (pronounced YOU-NICK) number needed for jobs, TAX and banking.",
+      "better": "A UNIQUE (pronounced YOU-NEEK) number needed for jobs, TAX-ES and banking.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 63033832,
+      "original": "I'd like to apply POR Social Security number.",
+      "better": "I'd like to apply FOR  Social Security number.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 63033833,
+      "original": "The SSN is a PERMANENT (pronounced PER-MENT) number used to track earnings.",
+      "better": "The SSN is a PERMANENT (pronounced PER-MAH-NENT)  number used to track earnings.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 63033834,
+      "original": "SSNs are for green card holders, working students or REFUGESS (pronounced REFUSE)",
+      "better": "SSNs are for green card holders, working students or REFUGESS (pronounced REH-FYU-JEES).",
+      "betterTrans": null,
+      "isSave": "N"
+     }
+    ]
+   },
+   {
+    "idxFeedback": 36251691,
+    "createDate": "2026-10-14",
+    "memo": "Today we reviewed the expressions \"Hop on/off\"  and \"Tap in/out\" as well as the phrases \"Could you drop me off at ..?\" and \"Which line should I take to get to ..\". Discussed taking public transportation in other countries and compared to Korea. \nRead and sounded out [reliable, unavailable, cramped, serene, traffic jam, rush hour ]. Practiced the patterns and phrases. Here are today's notes:",
+    "subList": [
+     {
+      "idxFeedbackSub": 62975593,
+      "original": "If I go back my home I take a hop on bus ",
+      "better": "If I [return/go back to] my home I take a hop on bus ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 62975594,
+      "original": "Every place is the use the signal sign ",
+      "better": "Every place uses the walk signal sign ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 62975595,
+      "original": "Our country some place is adopt the walk ",
+      "better": "In our country some places adopt walking",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 62975596,
+      "original": "In Korea there is only use the Hangul ",
+      "better": "In Korea, only Hangul is used ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 62975597,
+      "original": "Emma want to drop her at the library ",
+      "better": "Emma wants to be dropped off at the library ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 62975598,
+      "original": "At that place is silent. In the China everyone is talk something ",
+      "better": "That place is silent. In the China everyone is talking something ",
+      "betterTrans": null,
+      "isSave": "N"
+     }
+    ]
+   },
+   {
+    "idxFeedback": 36227667,
+    "createDate": "2026-10-12",
+    "memo": "Joey,  It was such a pleasure to meet you today, thank you so much for your preparation and participation in today's class, you did really well, here are a few notes from our class, please have a look when you can.\nKEEP UP THE FANTASTIC EFFORT, well done.\nI hope to see you again soon.",
+    "subList": [
+     {
+      "idxFeedbackSub": 62868779,
+      "original": "I work at the audit team my company. ",
+      "better": "I work in the audit team of my company. ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 62868780,
+      "original": "I don't prepared to book today, can we free talking. ",
+      "better": "I didn't prepare our class material today, so could we just have free talk today. ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 62868781,
+      "original": "these days the AI made the false image. ",
+      "better": "these days AI produces a lot of false material. ",
+      "betterTrans": null,
+      "isSave": "N"
+     }
+    ]
+   },
+   {
     "idxFeedback": 36215059,
     "createDate": "2026-10-08",
     "memo": "Lots of hard work today!  Please watch and practice with the video link below:\n1)   'al', 'all, 'alk' words | how to pronounce al, alk words video:  \nhttps://youtu.be/6WhVCmYB_Ok?si=NAwIDEcvjPHx8Smn",
