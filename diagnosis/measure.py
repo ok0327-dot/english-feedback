@@ -92,6 +92,20 @@ def m1_changes(raw, final):
     return {"grammar_like": gram, "other": other}
 
 
+def source_text(variant, date, result, whisper):
+    """그 판이 1단계에서 실제로 읽은 글 — V7 은 받아쓰기 원문, V7′ 은 화자 표시를 지운 받아쓰기, 나머지는 Whisper.
+    결과 파일에 적힌 값에 기대지 않고 원래 입력에서 다시 만든다 (코덱스 리뷰: V7 판 M4 가 Whisper 로 대신 비교되던 문제)."""
+    if variant in ("V7", "V7p"):
+        ears = (read_json(os.path.join(OUT, "V7ears", f"{date}.json")) or {}).get("text")
+        if not ears:
+            raise SystemExit(f"❌ {variant} {date}: V7 받아쓰기 원문이 없어 M4 를 잴 수 없음")
+        if variant == "V7p":
+            from diagnosis.tasks import strip_diarization
+            return strip_diarization(ears)
+        return ears
+    return result.get("source_text") or whisper
+
+
 def tokens(calls):
     t = {"in": 0, "out": 0}
     for c in calls or []:
@@ -124,7 +138,7 @@ def main():
                     blind.append({"item": it["id"], "original": it["original"], "better": it["better"],
                                   "feedback_pairs": pairs, "_variant": v})
                 s["m7_" + m7_preserved(it, r["transcript"])] += 1
-            s["m4_fabricated"] += len(m4_fabricated(pairs, r.get("source_text") or raw.get(d, ""), raw.get(d, "")))
+            s["m4_fabricated"] += len(m4_fabricated(pairs, source_text(v, d, r, raw.get(d, "")), raw.get(d, "")))
             for k, n in m1_changes(raw.get(d, ""), r["transcript"]).items():
                 s["m1"][k] += n
             for k, n in tokens(r.get("calls")).items():

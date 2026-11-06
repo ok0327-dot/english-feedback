@@ -77,9 +77,25 @@ def upload(data, mime, name, key):
 
 def delete(name, key):
     """지우고, 정말 없어졌는지(404) 확인한다."""
-    requests.delete(f"{API}/v1beta/{name}", headers={"x-goog-api-key": key}, timeout=30)
-    gone = requests.get(f"{API}/v1beta/{name}", headers={"x-goog-api-key": key}, timeout=30).status_code in (403, 404)
-    return gone
+    d = requests.delete(f"{API}/v1beta/{name}", headers={"x-goog-api-key": key}, timeout=30)
+    if getattr(d, "status_code", None) not in (200, 204):
+        return False
+    # 지운 파일 조회는 404 가 아니라 403("권한 없음 또는 없음")으로 온다(2026-11-06 실측) → 403 만으로는 모호하다(코덱스 리뷰).
+    # 그래서 '내 파일 목록에 더는 없음'으로 확인한다.
+    if requests.get(f"{API}/v1beta/{name}", headers={"x-goog-api-key": key}, timeout=30).status_code == 200:
+        return False
+    token = None
+    while True:
+        r = requests.get(f"{API}/v1beta/files", params={"pageSize": 100, **({"pageToken": token} if token else {})},
+                         headers={"x-goog-api-key": key}, timeout=30)
+        if r.status_code != 200:
+            return False
+        j = r.json()
+        if any(f.get("name") == name for f in j.get("files", [])):
+            return False
+        token = j.get("nextPageToken")
+        if not token:
+            return True
 
 
 def transcribe(f, key, max_tokens=16384):
