@@ -174,6 +174,29 @@ def _resolve(page, factories, label, timeout_ms=15000):
     raise LoginError(f"{label} 요소를 찾지 못함 / element not found ({last})")
 
 
+# '다음'·'로그인' 은 <button> 이 아니라 클릭되는 글자(<p class="cursor-pointer">)다 (2026-11-06 실측, 한국어·영어 화면 모두).
+# 그래서 버튼 역할보다 '정확히 그 글자'를 먼저 찾고, 한국어·영어 둘 다 받는다. Enter 키는 form 이 없어 아무 일도 안 한다.
+# The "Next"/"Log in" controls are clickable <p> text, not buttons — match the exact text first, in both languages.
+NEXT_TEXT = re.compile(r"^\s*(다음|next|continue)\s*$", re.I)
+LOGIN_TEXT = re.compile(r"^\s*(로그인(\s*하기)?|log\s?in|sign\s?in)\s*$", re.I)
+
+
+def next_candidates(page):
+    return [
+        lambda: page.get_by_text(NEXT_TEXT),
+        lambda: page.get_by_role("button", name=NEXT_TEXT),
+        lambda: page.locator("button[type=submit], input[type=submit]"),
+    ]
+
+
+def login_candidates(page):
+    return [
+        lambda: page.get_by_text(LOGIN_TEXT),
+        lambda: page.get_by_role("button", name=LOGIN_TEXT),
+        lambda: page.locator("button[type=submit], input[type=submit]"),
+    ]
+
+
 def _login_once(email, password):
     """로그인 1회 시도 → accesstoken 반환 / one login attempt returning the token."""
     from playwright.sync_api import sync_playwright
@@ -181,7 +204,10 @@ def _login_once(email, password):
     captured = {"token": None}
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=True)
-        page = browser.new_context().new_page()
+        # 한국어 화면으로 고정 — 2026-10 부터 사이트가 브라우저 언어를 따라 영어 화면("Next")을 주는데,
+        # GitHub 실행 환경은 영어라서 '다음' 을 못 찾고 3주 연속 로그인 실패했다(10/18·10/25·11/02).
+        # Pin the Korean UI: the site now follows the browser locale and the English UI broke the selectors.
+        page = browser.new_context(locale="ko-KR", extra_http_headers={"Accept-Language": "ko-KR,ko;q=0.9"}).new_page()
 
         # 세션 리플레이 비콘(replays.carrotsolutions.co.kr)은 스트리밍이라 요청이 끝나지 않는다.
         # 수집에 불필요하므로 아예 차단해 페이지 로드를 가볍게 만든다.
@@ -217,12 +243,7 @@ def _login_once(email, password):
 
             print("➡️ [3/6] '다음' 진행 / submit email step")
             try:
-                _resolve(page, [
-                    lambda: page.get_by_role("button", name=re.compile("다음|next", re.I)),
-                    lambda: page.get_by_text("다음", exact=True),
-                    lambda: page.locator("button[type=submit], input[type=submit]"),
-                    lambda: page.get_by_role("button"),
-                ], "다음 버튼 / next button", timeout_ms=8000).click()
+                _resolve(page, next_candidates(page), "다음 버튼 / next button", timeout_ms=8000).click()
             except LoginError:
                 # 최후 수단: Enter 키 제출 / last resort: submit with Enter
                 print("   ↳ 버튼 없음 → Enter 키로 제출 / falling back to Enter")
@@ -237,12 +258,7 @@ def _login_once(email, password):
 
             print("🚪 [5/6] '로그인 하기' 클릭 / submit login")
             try:
-                _resolve(page, [
-                    lambda: page.get_by_role("button", name=re.compile("로그인|log ?in|sign ?in", re.I)),
-                    lambda: page.get_by_text(re.compile("로그인")),
-                    lambda: page.locator("button[type=submit], input[type=submit]"),
-                    lambda: page.get_by_role("button"),
-                ], "로그인 버튼 / login button", timeout_ms=8000).click()
+                _resolve(page, login_candidates(page), "로그인 버튼 / login button", timeout_ms=8000).click()
             except LoginError:
                 print("   ↳ 버튼 없음 → Enter 키로 제출 / falling back to Enter")
                 page.keyboard.press("Enter")
