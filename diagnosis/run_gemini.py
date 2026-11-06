@@ -57,15 +57,24 @@ def preflight():
     if read_json(MODELS_PATH):
         print(f"ℹ️ 이미 고정됨: {read_json(MODELS_PATH)}")
         return
+    # 본 흐름의 gemini_request 는 네트워크 오류를 5번까지 재시도해 무응답 모델 하나에 9분 가까이 쓴다 →
+    # 여기서는 모델마다 한 번만, 60초 안에 묻는다 (3.8-flash 무응답: 2026-10-30·11-06).
     for m in LATEST_CANDIDATES:
+        t0 = time.time()
         try:
-            t0 = time.time()
-            pl.gemini_request("Reply with exactly: OK", max_tokens=1024, thinking_budget=1024, model=m, timeout=90)
+            r = pl.requests.post(
+                f"https://generativelanguage.googleapis.com/v1beta/models/{m}:generateContent",
+                headers={"x-goog-api-key": pl.GEMINI_API_KEY, "Content-Type": "application/json"}, timeout=60,
+                json={"contents": [{"parts": [{"text": "Reply with exactly: OK"}]}],
+                      "generationConfig": {"maxOutputTokens": 1024, "thinkingConfig": {"thinkingBudget": 1024}}})
+            ok = r.status_code == 200 and (r.json().get("candidates") or [])
+        except Exception as e:  # noqa: BLE001
+            ok, r = False, e
+        if ok:
             atomic_write_json(MODELS_PATH, {"latest": m, "tried": LATEST_CANDIDATES, "seconds": round(time.time() - t0)})
             print(f"🔒 V3·V4 모델 고정: {m}")
             return
-        except Exception as e:  # noqa: BLE001
-            print(f"   {m}: 실패 ({str(e)[:120]})")
+        print(f"   {m}: 실패 ({str(getattr(r, 'status_code', r))[:120]})")
     raise SystemExit("❌ 최신 무료 Flash 가 모두 응답 없음 — V3·V4 는 빼고 기록 (DIAGNOSIS_PLAN)")
 
 
