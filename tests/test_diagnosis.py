@@ -119,6 +119,37 @@ def main():
     check("화자 찾기", L.speaker_of("I went there last week", "[Tutor] how was it\n[Student] I went there last week") == "Student")
     check("AUC", L.auc([-1.0, -0.9], [-0.1, -0.2]) == 1.0 and L.auc([], [1]) is None)
 
+    # 업로드 삭제 확인 — 삭제 요청 성공 + 내 파일 목록에서 사라짐 (코덱스 리뷰 P1, 403 은 모호해서 단독 근거로 안 씀)
+    from diagnosis import run_transcribe as R
+    R_del, R_get = R.requests.delete, R.requests.get
+
+    class Resp:
+        def __init__(self, c, body=None):
+            self.status_code, self._b = c, body or {}
+
+        def json(self):
+            return self._b
+
+    def fake_get(listing, single=403):
+        return lambda url, *a, **k: Resp(200, {"files": listing}) if url.endswith("/files") else Resp(single)
+    try:
+        R.requests.delete, R.requests.get = (lambda *a, **k: Resp(200)), fake_get([{"name": "files/x"}])
+        check("삭제 확인: 목록에 남아 있으면 아님(403 이어도)", R.delete("files/x", "k") is False)
+        R.requests.delete, R.requests.get = (lambda *a, **k: Resp(500)), fake_get([])
+        check("삭제 확인: 삭제 요청 실패면 아님", R.delete("files/x", "k") is False)
+        R.requests.delete, R.requests.get = (lambda *a, **k: Resp(200)), fake_get([], single=200)
+        check("삭제 확인: 아직 조회되면 아님", R.delete("files/x", "k") is False)
+        R.requests.delete, R.requests.get = (lambda *a, **k: Resp(200)), fake_get([{"name": "files/other"}])
+        check("삭제 확인: 삭제 성공 + 목록에 없으면 없어짐", R.delete("files/x", "k") is True)
+    finally:
+        R.requests.delete, R.requests.get = R_del, R_get
+
+    # V7 판 M4 는 V7 받아쓰기를 기준으로 (코덱스 리뷰 P2)
+    C.atomic_write_json(C.out_path("V7ears", "2026-10-07"), {"text": "[00:01] Speaker A: Hi Joey.\nSpeaker B: I go Sapporo."})
+    check("M4 기준: V7 은 받아쓰기 원문", "Speaker A" in M.source_text("V7", "2026-10-07", {}, "whisper"))
+    check("M4 기준: V7′ 은 화자 표시 지운 받아쓰기", M.source_text("V7p", "2026-10-07", {}, "whisper") == "Hi Joey.\nI go Sapporo.")
+    check("M4 기준: 그 밖은 Whisper", M.source_text("V1", "2026-10-07", {}, "whisper") == "whisper")
+
     from diagnosis import tasks as TK
     check("V7′: 화자·시각 표시 지우기",
           TK.strip_diarization("[00:01] Speaker A: Hi Joey.\n[00:03] Speaker B: I go to Sapporo.") == "Hi Joey.\nI go to Sapporo.")
