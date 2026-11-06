@@ -62,6 +62,9 @@ jobs:
           else
             git worktree add --detach shadow-wt
             git -C shadow-wt switch --orphan shadow
+            # 빈 브랜치에 main 파일이 남지 않게 한 번 더 비운다 (git 2.43 은 switch --orphan 이 이미 비우지만 방어)
+            git -C shadow-wt rm -rfq --cached . 2>/dev/null || true
+            git -C shadow-wt clean -fdxq
           fi
       - name: 🌗 고품질판 만들기
         if: steps.token.outputs.ready == 'true'
@@ -76,7 +79,9 @@ jobs:
         if: always() && steps.token.outputs.ready == 'true'
         run: |
           cd shadow-wt
-          git add -A
+          # 결과 폴더만, 무시 규칙과 상관없이 (shadow/<날짜>.json 이 '이미 만든 수업' 표시라 빠지면 매번 다시 만든다)
+          mkdir -p shadow docs-shadow
+          git add -A -f shadow docs-shadow
           if git diff --cached --quiet; then echo "변경 없음"; exit 0; fi
           git commit -q -m "🌗 그림자판 갱신 ($(date -u +%Y-%m-%d))"
           git push origin shadow
