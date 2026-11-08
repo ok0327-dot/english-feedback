@@ -1559,6 +1559,7 @@ def _update_index_page(docs_dir):
     <a class="weekly-btn" href="review-index.html">📊 주간 복습 리포트 보기 →</a>
     <a class="weekly-btn" style="background:linear-gradient(135deg,#fb923c,#f59e0b);box-shadow:0 4px 20px rgba(251,146,60,.25)" href="carrot.html">🎓 강사 공식 피드백 보기 →</a>
     <a class="weekly-btn" style="background:linear-gradient(135deg,#a78bfa,#818cf8);box-shadow:0 4px 20px rgba(167,139,250,.25)" href="radio.html">🎙️ 영어 주간 라디오 듣기 →</a>
+    <a class="weekly-btn" id="shadow-card" style="background:linear-gradient(135deg,#4338ca,#312e81);box-shadow:0 4px 20px rgba(99,102,241,.25)" href="compare.html">🌗 그림자판 비교 (판본 가림) →</a>
     <div class="list" id="list">
 {items_html if items_html else '        <p style="text-align:center;color:#64748b">아직 복습 기록이 없습니다.</p>'}
     </div>
@@ -1573,6 +1574,13 @@ def _update_index_page(docs_dir):
     function applyHidden(){{const h=getHidden();document.querySelectorAll('.item').forEach(el=>{{if(h.includes(el.dataset.date))el.style.display='none'}});updateRestore()}}
     function showToast(msg){{const t=document.getElementById('toast');t.textContent=msg;t.className='toast show';setTimeout(()=>t.classList.remove('show'),3000)}}
     applyHidden();
+    </script>
+    <script src="shadow-compare.js"></script>
+    <script>
+    // 🌗 그림자판 비교 카드: 비교일(D-day)·준비된 쌍 수를 shadow 브랜치의 실행 기록으로 계산 (실패하면 기본 문구 그대로)
+    (function(){{try{{var S=window.ShadowCompare,c=document.getElementById('shadow-card');if(!S||!c)return;
+    fetch(S.RAW+'shadow/runs.jsonl?t='+Date.now(),{{cache:'no-store'}}).then(function(r){{return r.ok?r.text():''}}).then(function(t){{
+    var st=S.cardState(t);c.textContent=st.text;if(st.ready){{c.style.background='linear-gradient(135deg,#f59e0b,#ef4444)';c.style.boxShadow='0 4px 24px rgba(245,158,11,.45)'}}}}).catch(function(){{}})}}catch(e){{}}}})();
     </script>
 </body>
 </html>"""
