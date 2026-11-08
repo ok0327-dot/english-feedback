@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0f0f13">
+<link rel="manifest" href="manifest.webmanifest"><link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
+<title>그림자판 비교</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;600;700&display=swap" rel="stylesheet">
+<!-- 손으로 쓴 정적 페이지 — 어떤 생성기도 다시 쓰지 않는다. 같은 수업의 main판·그림자판을 A/B 로 가려서 보여 주고 투표받는다 (QUALITY_PLAN.md 10절 G1). -->
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Noto Sans KR',sans-serif;background:#0f0f13;color:#e4e4e7;min-height:100vh;padding:24px 16px 64px}
+.wrap{max-width:860px;margin:0 auto}
+h1{font-size:22px;margin-bottom:8px;color:#f1f5f9}
+.nav{margin-bottom:16px}.nav a{color:#94a3b8;font-size:14px}
+.guide{background:#1a1a24;border-radius:12px;padding:14px 16px;font-size:14px;line-height:1.7;color:#cbd5e1;margin-bottom:16px}
+.guide b{color:#f1f5f9}
+.status{font-size:14px;color:#94a3b8;margin-bottom:12px}
+.dots{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px}
+.dot{min-width:34px;height:34px;border-radius:8px;border:1px solid #334155;background:#1a1a24;color:#94a3b8;font-size:13px;cursor:pointer}
+.dot.voted{background:#1e3a5f;color:#e2e8f0;border-color:#38bdf8}
+.dot.cur{outline:2px solid #a78bfa}
+.lesson{font-size:15px;color:#cbd5e1;margin-bottom:10px}
+.tabs{display:flex;gap:8px;margin-bottom:10px}
+.tab{flex:1;padding:12px;border-radius:10px;border:1px solid #334155;background:#1a1a24;color:#cbd5e1;font-size:16px;font-weight:700;cursor:pointer}
+.tab.on{background:#312e81;border-color:#818cf8;color:#fff}
+.pane{display:none;background:#14141c;border-radius:12px;padding:4px 0;min-height:200px}
+.pane.on{display:block}
+.vote{display:flex;gap:8px;margin:16px 0 8px;flex-wrap:wrap}
+.vote button{flex:1;min-width:30%;padding:14px 8px;border-radius:10px;border:1px solid #334155;background:#1a1a24;color:#e2e8f0;font-size:15px;cursor:pointer}
+.vote button.chosen{background:#14532d;border-color:#22c55e}
+.small{font-size:13px;color:#64748b;line-height:1.6}
+.reveal{margin-top:20px;padding:16px;border-radius:12px;background:#1a1a24}
+.reveal button,.btn{padding:12px 16px;border-radius:10px;border:0;background:linear-gradient(135deg,#6366f1,#8b5cf6);color:#fff;font-size:15px;font-weight:600;cursor:pointer}
+.reveal button:disabled{background:#334155;color:#94a3b8;cursor:default}
+table.res{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+table.res td,table.res th{border-bottom:1px solid #262636;padding:6px;text-align:left}
+.pass{color:#22c55e;font-weight:700}.fail{color:#f87171;font-weight:700}
+.err{color:#f87171;font-size:14px;margin:8px 0}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="nav"><a href="index.html">← 홈</a></div>
+  <h1>🌗 그림자판 비교 (판본 가림)</h1>
+  <div class="guide">
+    같은 수업의 피드백이 <b>A</b>·<b>B</b> 두 개 있습니다. 하나는 지금 쓰는 판(main), 하나는 Claude 가 만든 그림자판인데 <b>어느 쪽인지는 숨겨져 있어요.</b><br>
+    ① A·B 를 눌러 둘 다 읽고 ② 더 도움이 되는 쪽을 고르세요 (<b>비슷</b>도 괜찮아요). 수업마다 한 표, 바꾸고 싶으면 다시 누르면 됩니다.<br>
+    ③ <b>10쌍</b>을 모두 고르면 <b>결과 공개</b>가 열립니다. 그림자판이 <b>7번 이상</b> 뽑히면 합격이에요.
+    <div class="small" style="margin-top:6px">투표는 이 브라우저에만 저장됩니다 — 한 기기에서 끝까지 해 주세요. 결과는 '결과 복사'로 Claude 에게 알려 주세요.</div>
+  </div>
+  <div class="status" id="status">불러오는 중…</div>
+  <div class="dots" id="dots"></div>
+  <div id="stage" style="display:none">
+    <div class="lesson" id="lesson"></div>
+    <div class="tabs"><button class="tab on" data-k="A">A</button><button class="tab" data-k="B">B</button></div>
+    <div class="pane on" id="pane-A"></div>
+    <div class="pane" id="pane-B"></div>
+    <div class="vote">
+      <button data-v="A">A가 더 좋다</button><button data-v="same">비슷하다</button><button data-v="B">B가 더 좋다</button>
+    </div>
+    <div class="small">두 판 모두 Whisper 로 받아 적은 같은 녹음에서 만들었습니다. 전사(받아 적은 대화)도 각 판 아래 '전사 보기'로 비교할 수 있어요.</div>
+  </div>
+  <div class="reveal" id="reveal">
+    <button id="reveal-btn" disabled>결과 공개</button>
+    <span class="small" id="reveal-note"></span>
+    <div id="result"></div>
+  </div>
+</div>
+<script src="shadow-compare.js"></script>
+<script>
+(function () {
+  "use strict";
+  var S = window.ShadowCompare, KEY = "shadowCompareVotes.v1";
+  var pairs = [], cur = 0, votes = load(), revealed = false;
+
+  function load() { try { return JSON.parse(localStorage.getItem(KEY) || "{}") || {}; } catch (e) { return {}; } }
+  function save() { try { localStorage.setItem(KEY, JSON.stringify(votes)); } catch (e) {} }
+  function $(id) { return document.getElementById(id); }
+
+  // 끼워 넣을 조각 소독 — 실행되는 것(스크립트·이벤트·javascript: 주소)과 바깥 자원은 뺀다
+  function clean(el) {
+    el.querySelectorAll("script,iframe,object,embed,link,meta,style,form,base").forEach(function (n) { n.remove(); });
+    [el].concat([].slice.call(el.querySelectorAll("*"))).forEach(function (n) {
+      [].slice.call(n.attributes).forEach(function (a) {
+        var name = a.name.toLowerCase(), v = (a.value || "").trim().toLowerCase();
+        if (name.indexOf("on") === 0 || ((name === "href" || name === "src" || name === "xlink:href") && v.indexOf("javascript:") === 0)) n.removeAttribute(a.name);
+      });
+    });
+    return el;
+  }
+
+  function fetchText(url) {
+    return fetch(url, { cache: "no-store" }).then(function (r) { if (!r.ok) throw new Error(r.status + " " + url); return r.text(); });
+  }
+
+  // 한 수업: main판(같은 사이트)·그림자판(shadow 브랜치) 을 받아 피드백·전사 블록만 꺼낸다. 하나라도 없으면 비교 대상에서 뺀다.
+  function loadPair(slug) {
+    return Promise.all([fetchText(slug + ".html"), fetchText(S.RAW + "docs-shadow/" + slug + ".html")]).then(function (t) {
+      var P = new DOMParser(), m = P.parseFromString(t[0], "text/html"), s = P.parseFromString(t[1], "text/html");
+      var get = function (d, sel) { var a = d.querySelectorAll(sel); return a.length === 1 ? clean(a[0]) : null; };
+      var mf = get(m, "div.feedback"), sf = get(s, "div.feedback"), mt = get(m, "div.transcript"), st = get(s, "div.transcript");
+      if (!mf || !sf) return null;
+      // 두 판 모두 main 페이지의 스타일을 똑같이 적용 (body 규칙은 칸 자체에)
+      var css = [].map.call(m.querySelectorAll("style"), function (x) { return x.textContent; }).join("\n")
+        .replace(/(^|[}\s,])body(?=\s*[{,])/g, "$1:host");
+      return { slug: slug, css: css, main: { fb: mf, tr: mt }, shadow: { fb: sf, tr: st } };
+    }).catch(function () { return null; });
+  }
+
+  function fill(pane, css, v) {
+    var root = pane.shadowRoot || pane.attachShadow({ mode: "open" });
+    root.innerHTML = "<style>" + css + "\n:host{display:block;padding:12px 16px;min-height:0;background:transparent}" +
+      ".tr-btn{margin:16px 0 8px;padding:10px 14px;border-radius:8px;border:1px solid #334155;background:#1a1a24;color:#cbd5e1;font-size:14px;cursor:pointer}</style>";
+    root.appendChild(document.importNode(v.fb, true));
+    if (v.tr) {
+      var b = document.createElement("button"), tr = document.importNode(v.tr, true);
+      b.className = "tr-btn"; b.textContent = "전사 보기"; tr.style.display = "none";
+      b.onclick = function () { var hide = tr.style.display !== "none"; tr.style.display = hide ? "none" : "block"; b.textContent = hide ? "전사 보기" : "전사 접기"; };
+      root.appendChild(b); root.appendChild(tr);
+    }
+  }
+
+  function show(i) {
+    cur = i; var p = pairs[i], side = S.shadowSide(p.slug);
+    $("lesson").textContent = "수업 " + (i + 1) + " / " + pairs.length + " · " + p.slug;
+    fill($("pane-A"), p.css, side === "A" ? p.shadow : p.main);
+    fill($("pane-B"), p.css, side === "B" ? p.shadow : p.main);
+    tab("A");
+    document.querySelectorAll(".vote button").forEach(function (b) { b.classList.toggle("chosen", votes[p.slug] === b.dataset.v); });
+    dots(); window.scrollTo({ top: $("stage").offsetTop - 12, behavior: "smooth" });
+  }
+
+  function tab(k) {
+    document.querySelectorAll(".tab").forEach(function (t) { t.classList.toggle("on", t.dataset.k === k); });
+    $("pane-A").classList.toggle("on", k === "A"); $("pane-B").classList.toggle("on", k === "B");
+  }
+
+  function dots() {
+    $("dots").innerHTML = "";
+    pairs.forEach(function (p, i) {
+      var d = document.createElement("button");
+      d.className = "dot" + (votes[p.slug] ? " voted" : "") + (i === cur ? " cur" : "");
+      d.textContent = i + 1; d.title = p.slug; d.onclick = function () { show(i); };
+      $("dots").appendChild(d);
+    });
+    var t = S.tally(votes, pairs.map(function (p) { return p.slug; }));
+    $("status").textContent = "준비된 쌍 " + pairs.length + "/" + S.GOAL + " · 투표 " + t.voted + "/" + S.GOAL;
+    var all = pairs.length > 0 && t.voted === pairs.length;
+    $("reveal-btn").disabled = revealed || !all;
+    $("reveal-note").textContent = revealed ? "" : (t.complete ? " 10쌍을 모두 골랐어요!" :
+      (all ? " (아직 " + pairs.length + "쌍뿐 — 지금 공개하면 앞으로의 비교에 선입견이 생겨요)" : " 모든 쌍을 고르면 열립니다"));
+  }
+
+  function reveal() {
+    var t = S.tally(votes, pairs.map(function (p) { return p.slug; }));
+    if (!t.complete && !confirm("아직 " + S.GOAL + "쌍이 안 됐어요. 지금 공개하면 정식 판정이 아니고, 남은 비교에서 어느 쪽이 그림자판인지 짐작하게 될 수 있어요. 그래도 볼까요?")) return;
+    revealed = true;
+    var rows = pairs.map(function (p) {
+      var v = votes[p.slug], sd = S.shadowSide(p.slug);
+      var who = v === "same" ? "비슷" : (v === sd ? "그림자판" : "main판");
+      return "<tr><td>" + p.slug + "</td><td>그림자판 = " + sd + "</td><td>" + (v === "same" ? "비슷" : v) + "</td><td>" + who + "</td></tr>";
+    }).join("");
+    var verdict = t.complete ? (t.pass ? '<span class="pass">합격 (G1 통과)</span>' : '<span class="fail">불합격 (G1 미달)</span>') : "참고용 (정식 판정 아님)";
+    $("result").innerHTML = '<p style="margin-top:12px">그림자판 <b>' + t.shadow + "</b> · main판 <b>" + t.main + "</b> · 비슷 <b>" + t.same +
+      "</b> — 합격선 그림자판 " + S.PASS + "/" + S.GOAL + " 이상 → " + verdict + "</p>" +
+      '<table class="res"><tr><th>수업</th><th>배정</th><th>내 선택</th><th>뽑힌 판</th></tr>' + rows + "</table>" +
+      '<button class="btn" id="copy-btn">결과 복사 (Claude 에게 붙여넣기)</button>';
+    $("copy-btn").onclick = function () {
+      var txt = "그림자판 비교 결과: 그림자판 " + t.shadow + " / main " + t.main + " / 비슷 " + t.same + " (투표 " + t.voted + "쌍)\n" +
+        pairs.map(function (p) { return p.slug + " 그림자=" + S.shadowSide(p.slug) + " 선택=" + votes[p.slug]; }).join("\n");
+      (navigator.clipboard ? navigator.clipboard.writeText(txt) : Promise.reject()).then(function () { alert("복사했어요"); }, function () { prompt("아래 글을 복사하세요", txt); });
+    };
+    dots();
+  }
+
+  document.querySelectorAll(".tab").forEach(function (t) { t.onclick = function () { tab(t.dataset.k); }; });
+  document.querySelectorAll(".vote button").forEach(function (b) {
+    b.onclick = function () {
+      votes[pairs[cur].slug] = b.dataset.v; save();
+      var next = pairs.findIndex(function (p, i) { return i > cur && !votes[p.slug]; });
+      if (next < 0) next = pairs.findIndex(function (p) { return !votes[p.slug]; });
+      if (next >= 0) show(next); else show(cur);
+    };
+  });
+  $("reveal-btn").onclick = reveal;
+
+  fetchText(S.RAW + "shadow/runs.jsonl?t=" + Date.now()).then(function (txt) {
+    var slugs = S.parseRuns(txt).slugs;
+    $("status").textContent = "그림자판 " + slugs.length + "개 확인 중…";
+    return Promise.all(slugs.map(loadPair));
+  }).then(function (list) {
+    pairs = list.filter(Boolean).slice(0, S.GOAL);   // 실제로 두 판을 다 꺼낼 수 있는 수업만, 앞의 10쌍
+    if (!pairs.length) { $("status").textContent = "아직 비교할 수 있는 수업이 없어요. 매일 수업 뒤 그림자판이 하나씩 쌓입니다."; return; }
+    $("stage").style.display = "block";
+    var first = pairs.findIndex(function (p) { return !votes[p.slug]; });
+    show(first < 0 ? 0 : first);
+  }).catch(function (e) {
+    $("status").innerHTML = '<span class="err">그림자판 목록을 불러오지 못했어요 (' + String(e.message || e).slice(0, 80) + '). 잠시 뒤 새로고침해 주세요.</span>';
+  });
+})();
+</script>
+</body>
+</html>
