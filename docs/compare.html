@@ -148,21 +148,21 @@ table.res td,table.res th{border-bottom:1px solid #262636;padding:6px;text-align
     var t = S.tally(votes, pairs.map(function (p) { return p.slug; }));
     $("status").textContent = "준비된 쌍 " + pairs.length + "/" + S.GOAL + " · 투표 " + t.voted + "/" + S.GOAL;
     var all = pairs.length > 0 && t.voted === pairs.length;
-    $("reveal-btn").disabled = revealed || !all;
+    $("reveal-btn").disabled = revealed || !t.complete;   // 정식 10쌍 전에는 절대 공개 안 함 (판본 가림 유지)
     $("reveal-note").textContent = revealed ? "" : (t.complete ? " 10쌍을 모두 골랐어요!" :
-      (all ? " (아직 " + pairs.length + "쌍뿐 — 지금 공개하면 앞으로의 비교에 선입견이 생겨요)" : " 모든 쌍을 고르면 열립니다"));
+      (all ? " 지금까지 " + pairs.length + "쌍 모두 골랐어요 — 새 수업이 쌓이면 이어서 고르세요 (" + S.GOAL + "쌍이 되면 열려요)" : " " + S.GOAL + "쌍을 모두 고르면 열립니다"));
   }
 
   function reveal() {
     var t = S.tally(votes, pairs.map(function (p) { return p.slug; }));
-    if (!t.complete && !confirm("아직 " + S.GOAL + "쌍이 안 됐어요. 지금 공개하면 정식 판정이 아니고, 남은 비교에서 어느 쪽이 그림자판인지 짐작하게 될 수 있어요. 그래도 볼까요?")) return;
+    if (!t.complete) return;
     revealed = true;
     var rows = pairs.map(function (p) {
       var v = votes[p.slug], sd = S.shadowSide(p.slug);
       var who = v === "same" ? "비슷" : (v === sd ? "그림자판" : "main판");
       return "<tr><td>" + p.slug + "</td><td>그림자판 = " + sd + "</td><td>" + (v === "same" ? "비슷" : v) + "</td><td>" + who + "</td></tr>";
     }).join("");
-    var verdict = t.complete ? (t.pass ? '<span class="pass">합격 (G1 통과)</span>' : '<span class="fail">불합격 (G1 미달)</span>') : "참고용 (정식 판정 아님)";
+    var verdict = t.pass ? '<span class="pass">합격 (G1 통과)</span>' : '<span class="fail">불합격 (G1 미달)</span>';
     $("result").innerHTML = '<p style="margin-top:12px">그림자판 <b>' + t.shadow + "</b> · main판 <b>" + t.main + "</b> · 비슷 <b>" + t.same +
       "</b> — 합격선 그림자판 " + S.PASS + "/" + S.GOAL + " 이상 → " + verdict + "</p>" +
       '<table class="res"><tr><th>수업</th><th>배정</th><th>내 선택</th><th>뽑힌 판</th></tr>' + rows + "</table>" +

@@ -110,6 +110,9 @@ def main():
           "function clean" in cmp_html and "localStorage.getItem" in cmp_html and "try {" in cmp_html)
     check("비교 페이지: 정답은 공개 전까지 숨김 (배정은 공개 함수에서만 글자로)",
           cmp_html.count("그림자판 = ") == 1 and "function reveal" in cmp_html)
+    check("비교 페이지: 10쌍 전에는 결과 공개 잠금 (코덱스 리뷰)",
+          '$("reveal-btn").disabled = revealed || !t.complete;' in cmp_html and "if (!t.complete) return;" in cmp_html
+          and "confirm(" not in cmp_html)
     check("생성기가 비교 파일을 하루 페이지로 착각하지 않음",
           not os.path.basename("compare.html").startswith("2") and not os.path.basename("shadow-compare.js").startswith("2"))
 
