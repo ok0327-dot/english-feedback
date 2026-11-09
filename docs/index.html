@@ -33,7 +33,6 @@
     <a class="weekly-btn" href="review-index.html">📊 주간 복습 리포트 보기 →</a>
     <a class="weekly-btn" style="background:linear-gradient(135deg,#fb923c,#f59e0b);box-shadow:0 4px 20px rgba(251,146,60,.25)" href="carrot.html">🎓 강사 공식 피드백 보기 →</a>
     <a class="weekly-btn" style="background:linear-gradient(135deg,#a78bfa,#818cf8);box-shadow:0 4px 20px rgba(167,139,250,.25)" href="radio.html">🎙️ 영어 주간 라디오 듣기 →</a>
-    <a class="weekly-btn" id="shadow-card" style="background:linear-gradient(135deg,#4338ca,#312e81);box-shadow:0 4px 20px rgba(99,102,241,.25)" href="compare.html">🌗 그림자판 비교 (판본 가림) →</a>
     <div class="list" id="list">
         <div class="item" data-date="2026-11-09"><a href="2026-11-09.html" class="link"><span class="date">2026-11-09</span><span class="topic">Discussing local community events and volunteering opportunities.</span></a><button class="del-btn" onclick="hideReview('2026-11-09',this)" title="숨기기">✕</button></div>
         <div class="item" data-date="2026-11-06"><a href="2026-11-06.html" class="link"><span class="date">2026-11-06</span><span class="topic">Discussing post office services and package delivery options.</span></a><button class="del-btn" onclick="hideReview('2026-11-06',this)" title="숨기기">✕</button></div>
@@ -191,12 +190,6 @@
     function showToast(msg){const t=document.getElementById('toast');t.textContent=msg;t.className='toast show';setTimeout(()=>t.classList.remove('show'),3000)}
     applyHidden();
     </script>
-    <script src="shadow-compare.js"></script>
-    <script>
-    // 🌗 그림자판 비교 카드: 비교일(D-day)·준비된 쌍 수를 shadow 브랜치의 실행 기록으로 계산 (실패하면 기본 문구 그대로)
-    (function(){try{var S=window.ShadowCompare,c=document.getElementById('shadow-card');if(!S||!c)return;
-    fetch(S.RAW+'shadow/runs.jsonl?t='+Date.now(),{cache:'no-store'}).then(function(r){return r.ok?r.text():''}).then(function(t){
-    var st=S.cardState(t);c.textContent=st.text;if(st.ready){c.style.background='linear-gradient(135deg,#f59e0b,#ef4444)';c.style.boxShadow='0 4px 24px rgba(245,158,11,.45)'}}).catch(function(){})}catch(e){}})();
-    </script>
+    <!-- 🌗 그림자판 비교 카드는 2026-11-10 승격(Claude 가 주 엔진)으로 내림. compare.html 은 주소로 계속 열린다. -->
 </body>
 </html>

@@ -20,6 +20,8 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import shadow_feedback as S  # noqa: E402
 
 pl = S.pl
+# 오늘 날짜와 상관없이 11/06 은 들고 10/01 은 빠지는 기간 (예전엔 days=3 고정이라 11/10 부터 깨졌다)
+DAYS = (datetime.now(S.pl.KST).date() - datetime(2026, 11, 6).date()).days + 1
 SECRET_RAW = "I go to Sapporo last week with my friend zxqv"  # 로그에 찍히면 안 되는 원본 문장
 
 
@@ -71,7 +73,7 @@ def main():
 
     buf = io.StringIO()
     with contextlib.redirect_stdout(buf):
-        r = S.run(shadow, days=3, service="svc", runner=fake_claude)
+        r = S.run(shadow, days=DAYS, service="svc", runner=fake_claude)
     check("실행: 1건 완료", r == {"done": 1, "failed": 0})
     check("1단계: 원본 + 개선 지시문", SECRET_RAW in calls[0] and "고치지 마세요" in calls[0]
           and "영문법 실수가 있는 쪽이 [Student]" not in calls[0])
@@ -91,7 +93,7 @@ def main():
 
     # 4) 다시 돌리면 건너뜀 (중복 0)
     with contextlib.redirect_stdout(io.StringIO()):
-        r = S.run(shadow, days=3, service="svc", runner=fake_claude)
+        r = S.run(shadow, days=DAYS, service="svc", runner=fake_claude)
     check("중복 없음: 다시 돌리면 할 일 0", r == {"done": 0, "failed": 0} and len(calls) == 4)
 
     # 5) 실패 — 기록만, 반쯤 만든 결과는 남기지 않음, 다음 실행이 다시 시도
@@ -104,7 +106,7 @@ def main():
         calls.append(prompt)
         return "x", {"in": 1, "out": 1}
     with contextlib.redirect_stdout(io.StringIO()):
-        r = S.run(shadow, days=3, service="svc", runner=broken)
+        r = S.run(shadow, days=DAYS, service="svc", runner=broken)
     runs = [json.loads(x) for x in open(os.path.join(shadow, "shadow", "runs.jsonl"), encoding="utf-8")]
     check("실패: 기록되고 결과 파일 없음(다음에 다시)", r["failed"] == 1 and runs[-1]["status"] == "failed"
           and not os.path.exists(os.path.join(shadow, "shadow", "2026-11-06.json")))
@@ -112,7 +114,7 @@ def main():
     # 6) 원본이 아직 없으면 건너뜀
     pl.read_raw_archive = lambda service: ("ok", "ARCH", b"")
     with contextlib.redirect_stdout(io.StringIO()):
-        S.run(shadow, days=3, service="svc", runner=fake_claude)
+        S.run(shadow, days=DAYS, service="svc", runner=fake_claude)
     runs = [json.loads(x) for x in open(os.path.join(shadow, "shadow", "runs.jsonl"), encoding="utf-8")]
     check("원본 없음: no_raw 기록", runs[-1]["status"] == "no_raw")
 

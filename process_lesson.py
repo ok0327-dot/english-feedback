@@ -58,6 +58,7 @@ import subprocess  # 터미널 명령어를 실행하는 도구 (git push 등)
 import requests    # 인터넷 API에 요청을 보내는 도구 (Groq, Gemini와 통신)
 import re          # 텍스트 패턴을 찾고 바꾸는 도구 (마크다운→HTML 변환에 사용)
 import glob        # 파일 목록을 검색하는 도구 (복습 페이지 목록 생성에 사용)
+import shutil      # 프로그램 설치 여부 확인 (claude 명령이 있는지)
 import html as html_module  # HTML 특수문자를 안전하게 처리하는 도구
 from datetime import datetime, timezone, timedelta  # 날짜/시간을 다루는 도구
 from email.mime.text import MIMEText                # 이메일 본문을 만드는 도구
@@ -111,6 +112,21 @@ GEMINI_MODELS = [
         "GEMINI_MODELS", "gemini-2.5-flash,gemini-3.5-flash,gemini-2.5-flash-lite"
     ).split(",") if m.strip()
 ]
+
+# 🌗 주 엔진 = Claude (구독) — 품질 개선 계획 4단계 승격 (2026-11-10, 사용자 결정: 그림자판이 훨씬 낫다)
+# Main engine = Claude via the subscription token (`claude -p`, no tools). Gemini → Groq stay as the fallback ladder.
+# - CLAUDE_CODE_OAUTH_TOKEN 이 있고 claude 명령이 설치돼 있으면 Claude 를 먼저 부른다. 없으면 예전처럼 Gemini.
+# - Claude 가 한 번 실패하면(토큰 만료·한도·시간 초과) 그 실행의 나머지는 바로 Gemini 사다리로 간다(시간 낭비 방지).
+# - 끄기: 저장소 변수 LLM_ENGINE=gemini. 모델: 저장소 변수 CLAUDE_MODEL (기본 opus — 그림자판과 같음).
+LLM_ENGINE = (os.environ.get("LLM_ENGINE", "").strip().lower()
+              or ("claude" if os.environ.get("CLAUDE_CODE_OAUTH_TOKEN", "").strip() else "gemini"))
+CLAUDE_MODEL = os.environ.get("CLAUDE_MODEL", "").strip() or "opus"
+CLAUDE_TIMEOUT = int(os.environ.get("CLAUDE_TIMEOUT", "").strip() or 480)  # 호출 1번 (그림자판 실측 30~90초)
+# 실행 1번에서 Claude 에 쓸 수 있는 총 시간(초). 다 쓰면 나머지는 Gemini — 느리지만 성공하는 호출이 쌓여
+# 단계 제한(32분)을 넘기는 일을 막는다 (코덱스 리뷰 2026-11-10). 그림자 실측: 수업당 약 200초.
+CLAUDE_BUDGET = int(os.environ.get("CLAUDE_BUDGET", "").strip() or 1200)
+CLAUDE_SYSTEM = ("You are an expert English-speaking tutor's assistant for a Korean adult learner. "
+                 "Follow the user's instructions exactly and output only what they ask for — no preamble.")
 
 # 이메일을 보내는 데 사용할 Gmail 주소 (예: "myname@gmail.com")
 GMAIL_ADDRESS = os.environ["GMAIL_ADDRESS"].strip()
@@ -854,9 +870,42 @@ def groq_llm_request(prompt, max_tokens=4096, temperature=0.3, timeout=120, syst
     raise Exception(f"Groq LLM 재시도 초과")
 
 
+_CLAUDE_DOWN = None   # Claude 가 이 실행에서 실패한 이유 (한 번 실패하면 나머지는 Gemini 로)
+_CLAUDE_SPENT = 0.0   # 이 실행에서 Claude 호출에 쓴 초 (CLAUDE_BUDGET 과 비교)
+LLM_TRACE = []        # 이번 수업의 단계별 (엔진, 사용량) — 로그·메타데이터용 (내용은 담지 않는다)
+
+
+def claude_request(prompt, system_msg=None, timeout=None):
+    """Claude(구독) 한 번 호출 → (본문, 사용량 dict). `claude -p --tools ""` — 도구 없이 글만 주고받는다.
+    Call Claude once through the CLI with all tools disabled; returns (text, usage)."""
+    system = CLAUDE_SYSTEM + ("\n\n" + system_msg if system_msg else "")
+    t0 = time.time()
+    r = subprocess.run(["claude", "-p", "--tools", "", "--output-format", "json", "--model", CLAUDE_MODEL,
+                        "--system-prompt", system], input=prompt, capture_output=True, text=True,
+                       timeout=timeout or CLAUDE_TIMEOUT)
+    try:
+        d = json.loads(r.stdout)
+    except ValueError:
+        # stderr 끝부분만 — 전사·피드백 내용은 로그에 남기지 않는다 (공개 저장소)
+        raise RuntimeError(f"claude 출력 해석 실패 (exit {r.returncode}): {r.stderr[-300:]}")
+    if d.get("is_error") or not (d.get("result") or "").strip():
+        raise RuntimeError(f"claude 오류: {d.get('subtype')} {d.get('api_error_status') or ''}")
+    u = d.get("usage") or {}
+    return d["result"], {"model": ",".join((d.get("modelUsage") or {}).keys()) or CLAUDE_MODEL,
+                         "in": u.get("input_tokens", 0) + u.get("cache_creation_input_tokens", 0)
+                         + u.get("cache_read_input_tokens", 0),
+                         "out": u.get("output_tokens", 0), "seconds": round(time.time() - t0)}
+
+
+def _claude_ready():
+    """Claude 를 먼저 부를지: 엔진 설정 + claude 명령 설치 + 이번 실행에서 아직 실패하지 않음."""
+    return LLM_ENGINE == "claude" and _CLAUDE_DOWN is None and shutil.which("claude") is not None
+
+
 def llm_request(prompt, max_tokens=4096, temperature=0.3, timeout=120, system_msg=None, thinking_budget=2048):
     """
-    LLM 호출 (Gemini 모델 사다리 우선 → 최후에 Groq).
+    LLM 호출 (Claude 구독 우선 → Gemini 모델 사다리 → 최후에 Groq).
+    Claude 단계는 _claude_ready() 일 때만. 실패하면 경고 한 줄 남기고 아래 Gemini 사다리로 그대로 이어진다.
     무료 한도 초과, 503 과부하, 네트워크 오류 등 장애 시에도 파이프라인이 중단되지 않음.
 
     동작:
@@ -868,10 +917,28 @@ def llm_request(prompt, max_tokens=4096, temperature=0.3, timeout=120, system_ms
            어디까지나 마지막 안전망. Gemini 사다리가 1차 방어선.
     thinking_budget: Gemini 추론 토큰 한도 (Groq fallback 시에는 미사용)
     """
+    global _CLAUDE_DOWN, _CLAUDE_SPENT
+    left = CLAUDE_BUDGET - _CLAUDE_SPENT
+    if _claude_ready() and left < 60:
+        _CLAUDE_DOWN = f"이번 실행의 Claude 시간 예산 {CLAUDE_BUDGET}초를 다 씀"
+        print(f"⚠️ {_CLAUDE_DOWN} → 나머지는 Gemini 사다리")
+    if _claude_ready():
+        t0 = time.time()
+        try:
+            result, usage = claude_request(prompt, system_msg, timeout=min(CLAUDE_TIMEOUT, left))
+            _CLAUDE_SPENT += time.time() - t0
+            LLM_TRACE.append(("claude", usage))
+            print(f"  (🟣 Claude: {usage['model']} · {usage['seconds']}초 · 입력 {usage['in']} / 출력 {usage['out']} 토큰)")
+            return result
+        except Exception as e:  # noqa: BLE001 — 어떤 실패든 Gemini 로 넘어간다 (본 흐름 보호)
+            _CLAUDE_SPENT += time.time() - t0
+            _CLAUDE_DOWN = str(e)[:200]
+            print(f"⚠️ Claude 실패 ({_CLAUDE_DOWN}) → 이번 실행은 Gemini 사다리로 전환")
     last_err = None
     for i, model in enumerate(GEMINI_MODELS):
         try:
             result = gemini_request(prompt, max_tokens, temperature, timeout, system_msg, thinking_budget, model=model)
+            LLM_TRACE.append((model, None))
             print(f"  (🟢 Gemini: {model})")
             return result
         except Exception as e:
@@ -881,6 +948,7 @@ def llm_request(prompt, max_tokens=4096, temperature=0.3, timeout=120, system_ms
 
     try:
         result = groq_llm_request(prompt, max_tokens, temperature, timeout, system_msg)
+        LLM_TRACE.append(("groq", None))
         print("  (🟡 Groq fallback)")
         return result
     except Exception as e:
@@ -917,10 +985,49 @@ def _format_segments_with_gaps(segments):
     return "\n".join(lines)
 
 
-def clean_transcript(raw_transcript, segments=None):
+# ── 전사 보정 지시문 조각 / transcript-cleaning prompt parts ──
+# 개선판(IMPROVED_*)이 기본 — 그림자 실행(2026-11-05~09)에서 쓰였고 사용자가 더 낫다고 판정(2026-11-10).
+# 예전판(LEGACY_*)은 diagnosis/ 의 현행판(V1·V3) 재현용으로만 남긴다.
+LEGACY_SKILL_HINT = '- **영어 실력 차이**: 어떤 발화들이 문법적으로 완벽하고, 어떤 발화들에 실수가 있는가?\n'
+LEGACY_STEP2 = '## STEP 2: 전사 오류 보정\n\n- 문맥상 맞지 않는 단어를 올바른 단어로 수정\n- 한국인 발음 특성 고려 (r/l, p/f, v/b, th/s 혼동 등)\n- 소음으로 인한 잡음 텍스트 제거\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n'
+LEGACY_STEP3 = '## STEP 3: 화자 분리\n\n각 발화 앞에 [Tutor] 또는 [Student]를 표시하세요.\n\n⚠️ **화자 식별 규칙 (우선순위 순)**:\n\n🥇 **1순위 — 영어 실수 여부 (가장 강력한 단서)**:\n   - **영문법 실수가 있는 쪽이 [Student]입니다** (이것이 가장 확실한 판별 기준!)\n   - 관사 누락/오용 (a/an/the), 전치사 오류, 시제 불일치, 어색한 어순 등\n   - 더듬거림, "hmm", "ah", "uh" 등 망설임이 많은 쪽\n   - 문법적으로 완벽하고 유창한 쪽이 [Tutor]입니다\n\n🥈 **2순위 — 대화 맥락과 역할**:\n   - 질문을 던지며 대화를 이끄는 쪽 → [Tutor]\n   - 질문에 대답하는 쪽 → [Student]\n   - 리액션/칭찬("That sounds nice!", "Oh really?", "Good job!") → [Tutor]\n   - 교정하거나 되묻는 쪽("You mean...?", "Did you say...?") → [Tutor]\n   - 한국 관련 자기 이야기를 하는 쪽 → [Student]\n   - "teacher"라고 부르는 쪽 → [Student]\n   - **"Joey"라고 상대를 호명하는 쪽** → [Tutor] (학생은 자기 이름을 부르지 않음)\n   - **튜터 이름(Bell/Joanna 등)으로 상대를 호명하는 쪽** → [Student]\n\n🥉 **3순위 — 타임스탬프 기반 화자 전환**:\n   - 세그먼트 사이 **1.5초 이상 침묵**이 있으면 화자가 바뀔 가능성이 높음\n   - 전화 통화는 한 사람이 말하면 다른 사람이 듣는 구조\n   - 짧은 침묵(0.5초 미만)은 같은 화자의 쉼\n\n📌 **일관성 검증**:\n   - 한번 [Student]로 판단한 화자의 영어 수준이 갑자기 유창해지면 화자를 잘못 배정한 것!\n   - 질문한 사람과 대답한 사람은 반드시 다른 화자여야 함\n   - 학습자의 문법 오류는 그대로 유지 (나중에 피드백에서 교정하므로)\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n'
+IMPROVED_STEP2 = """## STEP 2: 전사 오류 보정 (학생이 한 말은 그대로)
+
+- [Student] 발화의 단어·문법은 **고치지 마세요.** 틀린 문법·어색한 표현도 학생이 실제로 말한 그대로 둡니다 (피드백 단계에서 교정합니다).
+- 소리가 비슷해 STT가 **잘못 들은 것이 확실할 때만** 고치고, 고친 단어 바로 뒤에 `[?원래단어]` 를 붙이세요. 예: "I went to Sapporo [?Supporo]"
+- 잘못 들은 건지 실제로 틀리게 말한 건지 확신이 없으면 **고치지 말고** 그 줄 끝에 `[?]` 를 붙이세요.
+- [Tutor] 발화의 명백한 오인식은 고쳐도 됩니다.
+- 소음으로 인한 잡음 텍스트는 제거합니다.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+"""
+IMPROVED_STEP3 = """## STEP 3: 화자 분리
+
+각 발화 앞에 [Tutor] 또는 [Student]를 표시하세요.
+
+⚠️ **문법 실수가 있다/없다는 화자 판단에 쓰지 마세요.** 그렇게 하면 학생이 잘 말한 문장이 튜터 것으로 넘어갑니다.
+
+화자 식별 단서 (우선순위 순):
+1순위 — 이름 호명: "Joey"라고 상대를 부르는 쪽 → [Tutor] / 튜터 이름(Bell, Joanna 등)으로 부르는 쪽 → [Student]
+2순위 — 대화 역할: 질문·리액션·칭찬·교정·되묻기 → [Tutor] / 대답·한국 생활·업무 등 자기 경험 이야기 → [Student] / "teacher"라고 부르는 쪽 → [Student]
+3순위 — 타임스탬프: 세그먼트 사이 1.5초 이상 침묵은 화자 전환 가능성이 높음, 0.5초 미만은 같은 화자의 쉼
+
+📌 일관성 검증: 질문한 사람과 대답한 사람은 다른 화자여야 합니다. 화자를 확신할 수 없는 줄은 끝에 `[?]` 를 붙이세요 (지어내지 않습니다).
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+"""
+LEGACY_VERIFY_RULE = '1. **영어 실력 일관성**: [Student]로 표시된 발화가 갑자기 완벽한 문법으로 유창해지거나, [Tutor]로 표시된 발화에 문법 실수가 많으면 라벨이 바뀐 것'
+IMPROVED_VERIFY_RULE = ("1. **실수 여부로 판단 금지**: 문법이 완벽한지/틀렸는지는 화자 단서로 쓰지 말 것 "
+                        "(학생이 잘 말한 문장도 [Student]). 확신 없는 줄은 끝에 [?]")
+
+
+def clean_transcript(raw_transcript, segments=None, improved=True):
     """
-    Whisper 원본 전사를 Gemini로 보정: 오인식 수정 + 화자 분리.
+    Whisper 원본 전사를 보정: 오인식 수정 + 화자 분리.
     학생의 문법 오류는 일부러 유지 (피드백에서 교정하므로).
+
+    improved=True (기본, 2026-11-10 승격): 학생 말은 고치지 않고 '실수 있는 쪽 = 학생' 규칙을 쓰지 않는다.
+    improved=False: 예전 지시문 (diagnosis/ 의 현행판 비교용으로만 남김).
     보정 실패 시 → 원본 그대로 사용 (안전장치).
 
     ※ v2.2 업데이트: 세그먼트 타임스탬프 기반 화자 분리 강화
@@ -932,7 +1039,10 @@ def clean_transcript(raw_transcript, segments=None):
     # 세그먼트 타임스탬프 정보를 텍스트로 변환
     segments_text = _format_segments_with_gaps(segments) if segments else ""
 
-    # Gemini에게 보내는 "교정 의뢰서"
+    skill_hint = "" if improved else LEGACY_SKILL_HINT
+    step2, step3 = (IMPROVED_STEP2, IMPROVED_STEP3) if improved else (LEGACY_STEP2, LEGACY_STEP3)
+
+    # LLM 에게 보내는 "교정 의뢰서"
     prompt = f"""아래는 한국인 학습자와 원어민 튜터 간의 전화영어 수업을 STT(음성→텍스트)로 전사한 원본입니다.
 전화 통화 특성상 음질이 완벽하지 않아 오인식이 포함되어 있을 수 있습니다.
 
@@ -948,53 +1058,12 @@ def clean_transcript(raw_transcript, segments=None):
 결과를 출력하기 전에, 전사 전체를 끝까지 읽고 다음을 파악하세요:
 - **대화 주제**: 오늘 수업에서 무슨 이야기를 했는가? (여행, 주말, 업무, 취미 등)
 - **대화 흐름**: 누가 질문하고 누가 대답하는 패턴인가?
-- **영어 실력 차이**: 어떤 발화들이 문법적으로 완벽하고, 어떤 발화들에 실수가 있는가?
-- **역할 구조**: 전화영어 수업은 "튜터가 질문 → 학생이 대답 → 튜터가 리액션/추가질문"의 패턴이 반복됨
+{skill_hint}- **역할 구조**: 전화영어 수업은 "튜터가 질문 → 학생이 대답 → 튜터가 리액션/추가질문"의 패턴이 반복됨
 
 이 맥락을 바탕으로 화자를 배정하세요. 개별 문장만 보지 말고 대화 전체 흐름을 고려하세요.
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-## STEP 2: 전사 오류 보정
-
-- 문맥상 맞지 않는 단어를 올바른 단어로 수정
-- 한국인 발음 특성 고려 (r/l, p/f, v/b, th/s 혼동 등)
-- 소음으로 인한 잡음 텍스트 제거
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-## STEP 3: 화자 분리
-
-각 발화 앞에 [Tutor] 또는 [Student]를 표시하세요.
-
-⚠️ **화자 식별 규칙 (우선순위 순)**:
-
-🥇 **1순위 — 영어 실수 여부 (가장 강력한 단서)**:
-   - **영문법 실수가 있는 쪽이 [Student]입니다** (이것이 가장 확실한 판별 기준!)
-   - 관사 누락/오용 (a/an/the), 전치사 오류, 시제 불일치, 어색한 어순 등
-   - 더듬거림, "hmm", "ah", "uh" 등 망설임이 많은 쪽
-   - 문법적으로 완벽하고 유창한 쪽이 [Tutor]입니다
-
-🥈 **2순위 — 대화 맥락과 역할**:
-   - 질문을 던지며 대화를 이끄는 쪽 → [Tutor]
-   - 질문에 대답하는 쪽 → [Student]
-   - 리액션/칭찬("That sounds nice!", "Oh really?", "Good job!") → [Tutor]
-   - 교정하거나 되묻는 쪽("You mean...?", "Did you say...?") → [Tutor]
-   - 한국 관련 자기 이야기를 하는 쪽 → [Student]
-   - "teacher"라고 부르는 쪽 → [Student]
-   - **"Joey"라고 상대를 호명하는 쪽** → [Tutor] (학생은 자기 이름을 부르지 않음)
-   - **튜터 이름(Bell/Joanna 등)으로 상대를 호명하는 쪽** → [Student]
-
-🥉 **3순위 — 타임스탬프 기반 화자 전환**:
-   - 세그먼트 사이 **1.5초 이상 침묵**이 있으면 화자가 바뀔 가능성이 높음
-   - 전화 통화는 한 사람이 말하면 다른 사람이 듣는 구조
-   - 짧은 침묵(0.5초 미만)은 같은 화자의 쉼
-
-📌 **일관성 검증**:
-   - 한번 [Student]로 판단한 화자의 영어 수준이 갑자기 유창해지면 화자를 잘못 배정한 것!
-   - 질문한 사람과 대답한 사람은 반드시 다른 화자여야 함
-   - 학습자의 문법 오류는 그대로 유지 (나중에 피드백에서 교정하므로)
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-## 출력 포맷
+{step2}{step3}## 출력 포맷
 - 화자가 바뀔 때마다 줄바꿈
 - 타임스탬프는 최종 결과에 포함하지 마세요"""
 
@@ -1030,12 +1099,13 @@ def clean_transcript(raw_transcript, segments=None):
 # ║  - 2차 검증으로 화자 일관성을 확보한 뒤 피드백을 생성해야 정확          ║
 # ╚══════════════════════════════════════════════════════════════════════════╝
 
-def verify_speaker_labels(transcript):
+def verify_speaker_labels(transcript, improved=True):
     """
     화자 라벨 검증: [Tutor]↔[Student]가 뒤바뀐 구간을 찾아 교정.
     전사 보정(3단계) 결과를 입력받아, 화자만 재검토한 결과를 반환.
     """
     print("🔍 화자 라벨 검증 중...")
+    rule1 = IMPROVED_VERIFY_RULE if improved else LEGACY_VERIFY_RULE
 
     prompt = f"""아래는 전화영어 수업의 전사 내용입니다. [Tutor]와 [Student] 라벨이 올바른지 검증해주세요.
 
@@ -1043,7 +1113,7 @@ def verify_speaker_labels(transcript):
 
 ## 검증 기준
 
-1. **영어 실력 일관성**: [Student]로 표시된 발화가 갑자기 완벽한 문법으로 유창해지거나, [Tutor]로 표시된 발화에 문법 실수가 많으면 라벨이 바뀐 것
+{rule1}
 2. **대화 흐름**: 질문→대답 쌍에서 같은 화자가 질문과 대답을 모두 하고 있으면 오류
 3. **역할 일관성**: [Tutor]는 수업을 이끌고 교정하는 역할, [Student]는 대답하고 연습하는 역할
 4. **한국 관련 자기 이야기**: 한국 생활/업무를 자기 경험으로 말하는 쪽은 [Student]
@@ -1066,6 +1136,22 @@ def verify_speaker_labels(transcript):
     except Exception as e:
         print(f"⚠️ 화자 검증 실패 ({e}), 원본 사용")
         return transcript
+
+
+# 🗣️ 쉬운 말 문법 설명 규칙 (2026-11-10 사용자 요청) — 피드백·검토 지시문과 scripts/feedback_spec.md 가 같이 쓴다.
+# Plain-language grammar rule: explain by sound/feeling/chunks, not Korean grammar-book jargon (과거분사 p.p. 등).
+PLAIN_GRAMMAR_RULE = """🗣️ **설명 말투 — 문법책 용어 대신 쉬운 말 (매우 중요)**
+학습자는 한국 영어 문법책 용어(과거분사·p.p., 현재분사, to부정사, 동명사, 동사원형, 3인칭 단수, 가산/불가산 명사, 관계대명사, 선행사, 목적어, 보어, 수동태, 현재완료, 가정법, 조동사, 구동사 등)를 들으면 오히려 머리가 굳습니다.
+원어민 아이가 말을 배우듯 **소리·느낌·통째 덩어리(chunk)** 로 익히게 설명하세요. 한국어 설명과 영어 코칭 포인트 모두 같은 원칙입니다.
+- 규칙 이름 대신 **눈에 보이는 모양**으로: "to 뒤에는 사전에 나오는 모양 그대로(teach, go)" / "'벌써 해 둔 일'은 have + done 모양"
+- **들리는 느낌**으로: "이렇게 말하면 원어민 귀엔 ~처럼 들려요" / "끝에 s가 없으면 어색하게 툭 끊겨 들려요"
+- **통째로 외울 덩어리** 로: "love to + 하다", "good at + -ing", "I'm interested in ~" 처럼 입에 붙일 묶음을 준다
+- **한국어 말과 나란히**: "'~한 지 3년 됐어요' = I've been ~ing for 3 years 한 덩어리"
+- 꼭 용어가 필요하면 쉬운 설명을 먼저 하고 용어는 괄호 속에 **한 번만** (예: "be + done 모양(이른바 수동태)")
+예시 — ❌ "to부정사 뒤에는 동사원형이 옵니다" → ✅ "to 뒤에는 teach, gather 처럼 사전 모양 그대로 붙여요. love to teach = 가르치는 걸 좋아해"
+예시 — ❌ "news는 불가산 명사라 단수 취급" → ✅ "news는 한 개·두 개로 세지 않는 말이라 is와 짝이에요: Is there any good news?"
+예시 — ❌ "3인칭 단수 현재에는 -s" → ✅ "주인공이 나·너가 아닌 '그 사람 하나·그것 하나'면 동사 끝에 s: She works / It looks"
+예시 — ❌ "과거분사(p.p.)를 쓴 수동태" → ✅ "내가 한 게 아니라 '된·당한' 일이면 was + done 모양: The report was done yesterday." """
 
 
 # ╔══════════════════════════════════════════════════════════════════════════╗
@@ -1100,7 +1186,9 @@ def generate_feedback(transcript, recent_categories=None):
 ⚠️ 중요 규칙:
 - 전사 내용에 **실제로 있는 [Student] 발화만** 인용하세요. 없는 문장을 만들어내지 마세요.
 - 각 섹션은 서로 다른 관점을 다뤄야 합니다. 같은 예문을 여러 섹션에서 반복하지 마세요.
-- 표준 영어만 가르치세요. 비표준 표현(funner 등)은 포함하지 마세요."""
+- 표준 영어만 가르치세요. 비표준 표현(funner 등)은 포함하지 마세요.
+
+""" + PLAIN_GRAMMAR_RULE
 
     # 카테고리 다양성 블록 (직전 N회 회피)
     avoid_block = ""
@@ -1144,10 +1232,11 @@ def generate_feedback(transcript, recent_categories=None):
   → 가장 빈번한 1개를 고르세요. **특정 카테고리(특히 '관사')에 편향되지 마세요.**{avoid_block}
 이번 대화에서 [Student]가 반복한 문법 실수 **딱 1가지 패턴**만 골라주세요.
 - **귀납적 접근**: 먼저 [Student]의 실제 오류 문장들을 모은 뒤, 그 중 가장 빈번한 패턴을 찾아 카테고리 라벨을 부여하세요. **카테고리를 먼저 정하고 예문을 끼워맞추는 것은 금지**.
-- **첫 줄에 반드시** `Category: <영어 카테고리 라벨>` 형식으로 명시 (예: `Category: subject-verb agreement`, `Category: verb tense`).
+- **첫 줄에 반드시** `Category: <영어 카테고리 라벨>` 형식으로 명시 (예: `Category: subject-verb agreement`, `Category: verb tense`). 이 줄은 통계용 꼬리표라 표준 영어 라벨 그대로 둡니다.
+- **바로 다음 줄**에 `🎯 오늘의 패턴: <쉬운 한국어 한 줄>` — 문법 용어 없이 무슨 습관인지 (예: `🎯 오늘의 패턴: "~하는 걸 좋아해"는 love to + 사전 모양 그대로`)
 - 전사 내용에서 해당 문법 오류가 나타난 실제 문장 3개 이상을 인용
 - 각각 ❌ 원문 / ✅ 교정 예시를 표로 정리
-- 📌 핵심 규칙을 한 줄로 정리
+- 📌 핵심 규칙을 한 줄로 정리 — **문법책 용어 없이**, 소리·모양·덩어리로 (위 '설명 말투' 규칙)
 - 🔁 따라 읽기: 교정된 문장 3개를 별도로 정리 (🗣️ "...")
 
 **4. 📗 어휘 확장 (Vocabulary Vault)**
@@ -1208,6 +1297,9 @@ def review_feedback(transcript, feedback):
 3. **내용 누락**: 학생의 주요 실수나 잘한 점 중 빠진 것이 없는가?
 4. **표현 자연스러움**: 한국어 설명이 학습자 입장에서 이해하기 쉬운가?
 5. **섹션 중복**: 같은 예문이 여러 섹션에서 반복되지 않는가?
+6. **쉬운 말**: 문법책 용어(과거분사·p.p., to부정사, 동사원형, 3인칭 단수, 불가산 명사, 목적어, 수동태 등)로 설명한 곳이 있으면 아래 '설명 말투' 규칙대로 쉬운 말로 바꿨는가? (`Category:` 줄의 영어 라벨은 통계용이라 그대로 둔다)
+
+{PLAIN_GRAMMAR_RULE}
 
 ## 작업
 
@@ -1559,7 +1651,6 @@ def _update_index_page(docs_dir):
     <a class="weekly-btn" href="review-index.html">📊 주간 복습 리포트 보기 →</a>
     <a class="weekly-btn" style="background:linear-gradient(135deg,#fb923c,#f59e0b);box-shadow:0 4px 20px rgba(251,146,60,.25)" href="carrot.html">🎓 강사 공식 피드백 보기 →</a>
     <a class="weekly-btn" style="background:linear-gradient(135deg,#a78bfa,#818cf8);box-shadow:0 4px 20px rgba(167,139,250,.25)" href="radio.html">🎙️ 영어 주간 라디오 듣기 →</a>
-    <a class="weekly-btn" id="shadow-card" style="background:linear-gradient(135deg,#4338ca,#312e81);box-shadow:0 4px 20px rgba(99,102,241,.25)" href="compare.html">🌗 그림자판 비교 (판본 가림) →</a>
     <div class="list" id="list">
 {items_html if items_html else '        <p style="text-align:center;color:#64748b">아직 복습 기록이 없습니다.</p>'}
     </div>
@@ -1575,13 +1666,7 @@ def _update_index_page(docs_dir):
     function showToast(msg){{const t=document.getElementById('toast');t.textContent=msg;t.className='toast show';setTimeout(()=>t.classList.remove('show'),3000)}}
     applyHidden();
     </script>
-    <script src="shadow-compare.js"></script>
-    <script>
-    // 🌗 그림자판 비교 카드: 비교일(D-day)·준비된 쌍 수를 shadow 브랜치의 실행 기록으로 계산 (실패하면 기본 문구 그대로)
-    (function(){{try{{var S=window.ShadowCompare,c=document.getElementById('shadow-card');if(!S||!c)return;
-    fetch(S.RAW+'shadow/runs.jsonl?t='+Date.now(),{{cache:'no-store'}}).then(function(r){{return r.ok?r.text():''}}).then(function(t){{
-    var st=S.cardState(t);c.textContent=st.text;if(st.ready){{c.style.background='linear-gradient(135deg,#f59e0b,#ef4444)';c.style.boxShadow='0 4px 24px rgba(245,158,11,.45)'}}}}).catch(function(){{}})}}catch(e){{}}}})();
-    </script>
+    <!-- 🌗 그림자판 비교 카드는 2026-11-10 승격(Claude 가 주 엔진)으로 내림. compare.html 은 주소로 계속 열린다. -->
 </body>
 </html>"""
     with open(os.path.join(docs_dir, "index.html"), "w", encoding="utf-8") as f:
@@ -1859,6 +1944,7 @@ def process_lesson_group(service, parts, notify=True):
     print(f"\n📝 원본 전사 (첫 200자):\n{transcript_raw[:200]}...\n")
 
     # ━━ [3단계] 전사 보정 (화자 분리 + 오인식 수정) ━━
+    LLM_TRACE.clear()   # 이 수업의 단계별 엔진·사용량 (메타데이터 'engine' 과 로그 한 줄용)
     transcript = clean_transcript(transcript_raw, segments)
 
     # ━━ [3.5단계] 화자 라벨 검증 (Tutor↔Student 뒤바뀜 방지) ━━
@@ -1872,6 +1958,7 @@ def process_lesson_group(service, parts, notify=True):
         for d in sorted(existing_meta.keys(), reverse=True)[:5]
         if existing_meta.get(d, {}).get("target_grammar")
     ]
+    fb_at = len(LLM_TRACE)   # 다음 기록 = 피드백 단계
     feedback = generate_feedback(transcript, recent_categories=recent_cats)
 
     # ━━ [4.5단계] 피드백 품질 검토 (인용 정확성, 화자 혼동, 누락 보완) ━━
@@ -1879,6 +1966,13 @@ def process_lesson_group(service, parts, notify=True):
 
     # ━━ [4.6단계] 인덱스용 메타데이터 추출 & 저장 ━━
     meta = extract_metadata(feedback)
+    # 피드백 단계를 쓴 엔진 — 예: claude / gemini-2.5-flash (보정 단계가 실패해 기록이 빠져도 위치로 정확히 집는다)
+    engines = [e for e, _ in LLM_TRACE]
+    meta["engine"] = engines[fb_at] if len(engines) > fb_at else ""
+    cu = [u for _, u in LLM_TRACE if u]
+    if cu:
+        print(f"🟣 Claude 사용량 (이 수업): 호출 {len(cu)}번 · 입력 {sum(u['in'] for u in cu)} · "
+              f"출력 {sum(u['out'] for u in cu)} 토큰 · {sum(u['seconds'] for u in cu)}초 · 단계별 엔진 {engines}")
     slug = choose_page_slug("docs", lesson_date or now, names)
     save_metadata("docs", slug, meta)
 
