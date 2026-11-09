@@ -1,0 +1,57 @@
+{
+ "date": "2026-11-09",
+ "iso": [
+  2026,
+  46
+ ],
+ "topic": "Discussing local community events and volunteering opportunities.",
+ "grammar": "Incorrect Verb Forms or Missing Verbs",
+ "grammar_norm": "Verb Forms / Auxiliaries",
+ "score": 7.0,
+ "pairs": [
+  {
+   "said": "if this apartment have a so big event, the apartment show the community board and we obtain something.",
+   "natural": "If this apartment has a big event, it's usually posted on the community board, and we get information from there."
+  },
+  {
+   "said": "everything has no, no, yeah, in the community board.",
+   "natural": "Everything is available on the community board."
+  },
+  {
+   "said": "I love to child and children.",
+   "natural": "I love children."
+  },
+  {
+   "said": "I'm putting and gathering trash in riverside.",
+   "natural": "I'm picking up trash by the riverside."
+  }
+ ],
+ "vocab": [
+  {
+   "word": "community board",
+   "pos": "명사",
+   "meaning": "지역 주민들을 위한 공지 게시판 (아파트, 회사 등)"
+  },
+  {
+   "word": "give back",
+   "pos": "동사구",
+   "meaning": "(지역 사회 등에) 환원하다, 봉사하다"
+  },
+  {
+   "word": "get involved with",
+   "pos": "동사구",
+   "meaning": "~에 참여하다, ~와 관계를 맺다"
+  },
+  {
+   "word": "enriching",
+   "pos": "형용사",
+   "meaning": "풍요롭게 하는, 유익한"
+  },
+  {
+   "word": "purposeful",
+   "pos": "형용사",
+   "meaning": "목적이 있는, 의미 있는"
+  }
+ ],
+ "_html_md5": "6f51609b01019ce0a6d5d70b35273460"
+}
