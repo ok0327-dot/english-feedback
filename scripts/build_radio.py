@@ -59,37 +59,52 @@ def carrot_pairs_for_dates(carrot_map, dates):
 # ───────── 카테고리별 '왜 / 문화 / 팁' 인사이트 (규칙기반 심층화) ─────────
 # 정규화 라벨(build_weekly_review.norm_grammar)에 substring 매칭.
 # why_ko 는 한국어 음성으로 읽혀 '왜 그런지'를 학습자가 확실히 이해하게 한다.
+# ⚠️ 2026-11-10: 문법책 용어(관사·전치사·3인칭 단수·조동사·동사원형·셀 수 있는 명사…) 없이 소리·그림·덩어리로 설명한다.
+#    nick = 대본에서 카테고리 이름 대신 부르는 쉬운 별명.
 INSIGHTS = [
     ("Article", {
-        "why_en": "Korean has no a, an, or the, so articles feel optional. But in English they quietly tell the listener whether you mean one-of-many or the specific one we both already know.",
-        "why_ko": "한국어에는 관사가 없어서 a, an, the가 사소해 보여요. 하지만 영어에서는 '여럿 중 하나'인지, '우리 둘 다 아는 바로 그것'인지를 관사가 정해 줍니다.",
+        "nick": "the little a and the habit",
+        "why_en": "Korean has no a, an, or the, so these tiny words feel optional. But in English they quietly tell the listener: is this any one, or the one we both already know?",
+        "why_ko": "한국어에는 a, an, the 같은 말이 없어서 빼먹기 쉬워요. 영어에서는 이 작은 말이 '아무거나 하나'인지 '우리 둘 다 아는 바로 그거'인지 알려 줘요.",
         "tip_en": "Quick test: a brand-new thing gets a or an. A thing we both already know gets the."}),
     ("Preposition", {
-        "why_en": "Prepositions almost never map one-to-one between Korean and English, so the same Korean ending can become in, on, at, or to depending on the picture in your head.",
-        "why_ko": "전치사는 한국어와 일대일로 안 맞아요. 같은 '에, 에서'가 머릿속 그림에 따라 in, on, at, to로 갈립니다.",
-        "tip_en": "Picture it: a point gets at, a surface gets on, an enclosed space gets in."}),
+        "nick": "the in, on, at picture",
+        "why_en": "Small words like in, on, and at never match Korean one-to-one. The same Korean ending can become in, on, at, or to, depending on the picture in your head.",
+        "why_ko": "in, on, at 같은 작은 말은 한국어와 하나씩 딱 안 맞아요. 같은 '에, 에서'도 머릿속 그림에 따라 in, on, at, to로 갈려요.",
+        "tip_en": "Picture it: a point gets at, a surface gets on, a box around you gets in."}),
+    ("Missing", {  # Missing Subjects / Verbs — 'Subject' 보다 먼저 (같은 글자가 들어 있어 잘못 매칭되지 않게)
+        "nick": "the who-and-do habit",
+        "why_en": "Korean happily drops who did it, and sometimes even the action word, because the listener can guess. English almost always wants both: who, then what they do.",
+        "why_ko": "한국어는 '누가'를 자주 빼도 다 알아들어요. 영어는 거의 항상 '누가 + 무엇을 한다'를 둘 다 말해요: (I) went there, It is good.",
+        "tip_en": "Start every sentence with who, then the action: I went. It is. They said."}),
     ("Subject", {  # Subject–Verb Agreement / Missing Subjects
-        "why_en": "Korean verbs don't change for he, she, or it, and Korean often drops the subject entirely. English keeps the subject and adds an s for he, she, it.",
-        "why_ko": "한국어 동사는 그, 그녀, 그것이어도 형태가 안 변하고 주어를 자주 생략하죠. 영어는 주어를 꼭 두고 3인칭 단수엔 s를 붙여요.",
-        "tip_en": "He, she, it — add an s. Say it like a reflex every single time."}),
+        "nick": "the little s habit",
+        "why_en": "In Korean the action word never changes for he or she, and you often skip who did it. In English, you say who, and when it's he, she, or it, the action word gets a tiny s.",
+        "why_ko": "한국어는 '그가'든 '그녀가'든 '간다'가 그대로고, 누가 했는지도 자주 빼요. 영어는 누가인지 꼭 말하고, 나·너가 아닌 '그 사람 하나'면 끝에 s를 붙여요: she works, it looks.",
+        "tip_en": "He, she, it — add an s. She works. It looks. Say it like a reflex."}),
     ("Verb Form", {
-        "why_en": "English packs a lot into the verb — tense, the helper do or have, the right ending. Korean spreads that meaning across other words, so the English verb form is easy to slip on.",
-        "why_ko": "영어는 동사 하나에 시제, do나 have 같은 조동사, 어미까지 다 담아요. 한국어는 그 의미를 여러 단어로 나눠서, 영어 동사 형태에서 자주 실수가 나요.",
-        "tip_en": "Lock the helper first — do, does, did, have — then the main verb just stays simple."}),
+        "nick": "the do, did, have helper",
+        "why_en": "English loves little helper words in front, like do, did, and have. Once the helper carries the time, the main word just stays plain.",
+        "why_ko": "영어는 do, did, have 같은 작은 도우미 말을 앞에 세워요. 도우미가 '언제'를 맡으면 뒤의 말은 그냥 사전 모양 그대로 두면 돼요: Did you go? (Did you went? ✗)",
+        "tip_en": "Let the helper do the work: did you go, does it work, have you seen."}),
     ("Tense", {
-        "why_en": "Korean often shows time with words like yesterday or already, while English bakes the time right into the verb itself.",
-        "why_ko": "한국어는 '어제, 이미' 같은 시간 단어로 때를 나타내지만, 영어는 동사 자체에 시제를 넣습니다.",
-        "tip_en": "If it's finished and past, let the verb show it: go becomes went, eat becomes ate."}),
+        "nick": "the time in the verb",
+        "why_en": "Korean often shows time with words like yesterday or already, while English puts the time right inside the action word itself.",
+        "why_ko": "한국어는 '어제, 벌써' 같은 말로 때를 알려 주지만, 영어는 말 자체의 모양을 바꿔서 때를 알려 줘요: go는 어제면 went.",
+        "tip_en": "If it's finished and past, let the word show it: go becomes went, eat becomes ate."}),
     ("Gerund", {
-        "why_en": "After certain verbs and all prepositions, English wants the -ing form, not the dictionary verb. There's no equivalent rule in Korean, so it feels random until you hear it enough.",
-        "why_ko": "특정 동사 뒤와 모든 전치사 뒤에서 영어는 동사원형이 아니라 -ing 형을 원해요. 한국어엔 없는 규칙이라 많이 들어야 익숙해져요.",
-        "tip_en": "After a preposition, always -ing: good at cooking, interested in learning."}),
+        "nick": "the -ing after little words",
+        "why_en": "After little words like at, in, about, and of, English wants the -ing shape: good at cooking, interested in learning. There's no Korean rule like this, so it just needs lots of hearing.",
+        "why_ko": "at, in, about, of 같은 작은 말 뒤에는 -ing 모양이 와요: good at cooking, interested in learning. 한국어엔 없는 습관이라 덩어리로 많이 들어야 익숙해져요.",
+        "tip_en": "Learn it as one chunk: good at cooking, thinking about going, interested in learning."}),
     ("Determiner", {
-        "why_en": "Much, many, some, any, a few — English changes the word depending on whether you can count the noun. Korean doesn't force that choice, so it's an easy place to wobble.",
-        "why_ko": "much, many, some, any처럼 영어는 셀 수 있는 명사냐 아니냐에 따라 단어를 바꿔요. 한국어는 그 구분을 강요하지 않아서 흔들리기 쉬워요.",
-        "tip_en": "Can you count it? Use many. Can't count it, like water or time? Use much."}),
+        "nick": "the much or many choice",
+        "why_en": "Much, many, a few, a little — English picks a different word depending on whether you can count the thing one by one. Korean doesn't make you choose, so it's an easy place to wobble.",
+        "why_ko": "much, many처럼 영어는 하나, 둘 셀 수 있는 거냐 아니냐에 따라 말을 바꿔요. 사과는 many apples, 물이나 시간은 much time. 한국어는 그 구분이 없어서 흔들리기 쉬워요.",
+        "tip_en": "Can you count it, one, two, three? Use many. Can't count it, like water or time? Use much."}),
 ]
 DEFAULT_INSIGHT = {
+    "nick": "",
     "why_en": "Most repeated mistakes aren't about vocabulary — they're tiny habits from translating Korean word-for-word. The fix is noticing the pattern, which you're doing right now.",
     "why_ko": "반복되는 실수는 대부분 단어 문제가 아니라, 한국어를 그대로 직역하는 작은 습관에서 나와요. 해결책은 패턴을 알아채는 것 — 지금 하고 있는 그거예요.",
     "tip_en": "Pick one pattern a week and hunt for it. Awareness alone fixes half of it."}
@@ -134,6 +149,11 @@ def build_script(wk_iso, wk, lessons, carrot_map):
     second = weak[1][0] if len(weak) > 1 else None
     avg = W.avg_score(lessons)
     ins = _insight_for(top)
+    # 대본에서는 문법 이름 대신 쉬운 별명으로 부른다 (없으면 원래 이름)
+    top_say = ins.get("nick") or top
+    second_say = (_insight_for(second).get("nick") or second) if second else None
+    if second_say == top_say:
+        second_say = second
     fun_en, fun_ko = FUN_FACTS[(wk_iso[1] if isinstance(wk_iso, tuple) else 0) % len(FUN_FACTS)]
 
     L = []
@@ -143,7 +163,7 @@ def build_script(wk_iso, wk, lessons, carrot_map):
     # 1) 인트로 — 이번 주를 '이야기'로 연다
     add("민지", "en", "Hello and welcome back to your Weekly English Radio. I'm Minji, your host.")
     add("알렉스", "en", f"And I'm Alex, your coach. This is {wl}, and you spoke in {len(wk)} lessons this week. Let's not just list your mistakes today, let's understand them.")
-    add("민지", "en", f"Our headline pattern is {top}. It has shown up {topn} times so far. Alex, why does this one keep coming back?")
+    add("민지", "en", f"Our headline pattern is {top_say}. It has shown up {topn} times so far. Alex, why does this one keep coming back?")
 
     # 2) Why It Happens — 깊이 1단(왜 + 한국어 설명 + 문화 대비 + 팁)
     add("알렉스", "en", "Great question. " + ins["why_en"])
@@ -186,9 +206,9 @@ def build_script(wk_iso, wk, lessons, carrot_map):
     # 7) Recap + Mission + Outro
     trend = "climbing" if avg >= 7.5 else ("steady" if avg >= 6.5 else "warming up")
     add("알렉스", "en", f"Quick recap. Your fluency average is {avg:.1f} out of ten, and it's {trend}. That's real progress.")
-    mission = f"This week, hunt for {top} every time you speak"
+    mission = f"This week, hunt for {top_say} every time you speak"
     if second:
-        mission += f", and keep half an eye on {second}"
+        mission += f", and keep half an eye on {second_say}"
     add("민지", "en", mission + ". Awareness first, perfection later.")
     add("알렉스", "en", "That's all for this episode. Have a wonderful week, keep talking, and don't fear mistakes.")
     add("민지", "en", "They're just English habits waiting to click. See you next Friday. Bye for now!")

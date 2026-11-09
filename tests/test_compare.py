@@ -81,16 +81,16 @@ def main():
     check("집계: 이상한 표는 무시 · 10표 전엔 판정 없음", tp.get("voted") == 1 and not tp.get("complete") and not tp.get("pass"))
     check("집계: 비교 대상 밖 수업의 표는 안 셈", o.get("tOther", {}).get("voted") == 10)
 
-    # 2) 홈페이지: 매일 다시 만들어도 카드가 남는다
+    # 2) 홈페이지: 2026-11-10 승격으로 🌗 카드는 내렸다 (새 쌍이 더 생기지 않아 10쌍 잠금이 안 풀림). 비교 페이지는 남는다.
     d = tempfile.mkdtemp()
     open(os.path.join(d, "2026-11-06.html"), "w").write("<html></html>")
     pl._update_index_page(d)
     idx = open(os.path.join(d, "index.html"), encoding="utf-8").read()
-    check("홈페이지: 🌗 카드 → compare.html", 'id="shadow-card"' in idx and 'href="compare.html"' in idx)
-    check("홈페이지: 계산 스크립트 + 카드 갱신 코드", '<script src="shadow-compare.js"></script>' in idx and "S.cardState(t)" in idx)
+    check("홈페이지: 🌗 카드·계산 스크립트 없음 (승격 후)", 'id="shadow-card"' not in idx and "shadow-compare.js" not in idx)
     check("홈페이지: 기존 목록 그대로", 'data-date="2026-11-06"' in idx and "hideReview" in idx)
     live = open(os.path.join(ROOT, "docs", "index.html"), encoding="utf-8").read()
-    check("지금 사이트의 홈페이지에도 카드 반영", 'id="shadow-card"' in live)
+    check("지금 사이트의 홈페이지에도 카드 내림 반영", 'id="shadow-card"' not in live)
+    check("비교 페이지는 주소로 계속 열림", os.path.exists(os.path.join(ROOT, "docs", "compare.html")))
 
     # 3) 하루 페이지 구조 — 비교 페이지가 꺼내는 블록이 정확히 하나씩
     page = pl.generate_review_page("[Tutor] Hi.\n[Student] Hello.", "## 피드백\n- 좋아요", "a.m4a", 1200, "2026년 11월 06일")
