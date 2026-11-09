@@ -35,6 +35,15 @@
 7. **Recap + Mission + Outro** — 유창성 평균과 추세, 다음 주 사냥할 패턴 1~2개("awareness first,
    perfection later"), 따뜻한 마무리.
 
+## 🗣️ 문법은 쉬운 말로 (2026-11-10 사용자 요청)
+- **한국 문법책 용어를 쓰지 않는다** — 과거분사·p.p., to부정사, 동명사, 동사원형, 3인칭 단수, 가산/불가산,
+  관계대명사, 목적어, 수동태, 현재완료, 조동사 등. 영어 줄에서도 past participle, infinitive, third-person singular,
+  uncountable noun 같은 문법 이름 대신 **소리·느낌·통째 덩어리·눈에 보이는 모양**으로 말한다.
+  - ❌ "After to, use the base form of the verb." → ✅ "After to, just use the plain dictionary word: love to teach, want to go."
+  - ❌ "news는 불가산 명사라서…" → ✅ "news는 하나, 둘 세지 않는 말이라 is랑 짝이에요."
+- '덩어리로 입에 붙이기'를 권한다: 민지가 따라 말하고 알렉스가 덩어리를 두세 번 리듬 있게 반복.
+- 약점 카테고리 이름(Subject–Verb Agreement 등)은 대본에서 **쉬운 별명**으로 부른다 (예: "the little s habit", "the to-plus-plain-word pattern").
+
 ## 톤
 - 격려·유머·호기심. 실수는 '고칠 흠'이 아니라 '곧 익을 영어 습관'으로 프레이밍.
 - 두 진행자가 서로 질문/리액션하며 대화가 살아 있게(민지가 묻고 알렉스가 설명하는 식).
