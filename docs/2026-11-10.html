@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#0f0f13"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="당근영어"><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="icon" type="image/png" sizes="192x192" href="icon-192.png"><script src="install-banner.js" defer></script><script src="sw-reg.js" defer></script>
+    <title>전화영어 복습 - 2026년 11월 10일</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Noto Sans KR',sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.75;min-height:100vh}
+        .header{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);border-bottom:1px solid rgba(255,255,255,.06);padding:48px 24px 40px;text-align:center}
+        .header-date{font-size:13px;color:#94a3b8;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+        .header h1{font-size:28px;font-weight:700;color:#f1f5f9;margin-bottom:16px}
+        .header-meta{display:flex;justify-content:center;gap:24px;font-size:14px;color:#64748b}
+        .header-meta span{display:flex;align-items:center;gap:6px}
+        .cta-section{text-align:center;padding:40px 24px}
+        .cta-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:linear-gradient(135deg,#38bdf8,#818cf8);color:#fff;font-size:16px;font-weight:600;font-family:'Noto Sans KR',sans-serif;border:none;border-radius:50px;cursor:pointer;transition:all .3s;text-decoration:none;box-shadow:0 4px 24px rgba(56,189,248,.25)}
+        .cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(56,189,248,.35)}
+        .cta-btn svg{width:20px;height:20px}
+        .cta-sub{margin-top:12px;font-size:13px;color:#64748b}
+        .toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#38bdf8;padding:14px 28px;border-radius:12px;font-size:14px;font-weight:500;border:1px solid rgba(56,189,248,.2);box-shadow:0 8px 32px rgba(0,0,0,.4);opacity:0;transition:all .4s cubic-bezier(.16,1,.3,1);z-index:1000}
+        .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+        .container{max-width:720px;margin:0 auto;padding:0 24px 80px}
+        .tabs{display:flex;gap:4px;background:#1a1a24;padding:4px;border-radius:12px;margin-bottom:32px}
+        .tab{flex:1;padding:12px;text-align:center;font-size:14px;font-weight:500;color:#64748b;background:0 0;border:none;border-radius:8px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all .2s}
+        .tab.active{background:#262636;color:#f1f5f9}
+        .tab-content{display:none}.tab-content.active{display:block}
+        .feedback h2{font-size:18px;font-weight:700;color:#f1f5f9;margin:36px 0 16px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.06)}
+        .feedback h2:first-child{margin-top:0}
+        .feedback p{margin:8px 0;color:#cbd5e1}
+        .feedback .item{padding:6px 0 6px 16px;border-left:2px solid #334155;margin:6px 0;color:#cbd5e1}
+        .feedback .numbered{padding:8px 0 8px 16px;color:#cbd5e1}
+        .feedback .numbered strong{color:#38bdf8}
+        .feedback strong{color:#f1f5f9}
+        .feedback code{background:#1e293b;padding:2px 8px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#38bdf8}
+        .feedback table{width:100%;border-collapse:collapse;margin:12px 0}
+        .feedback th,.feedback td{padding:10px 14px;text-align:left;border-bottom:1px solid #262636}
+        .feedback th{color:#94a3b8;font-weight:500;font-size:13px}
+        .feedback td{color:#cbd5e1}
+        .arrow{color:#38bdf8;font-weight:700}
+        .transcript{background:#1a1a24;border-radius:12px;padding:28px;font-size:14px;line-height:2;color:#94a3b8;white-space:pre-wrap;word-break:break-word;font-family:'JetBrains Mono','Noto Sans KR',monospace}
+        .transcript .tutor{color:#38bdf8}
+        .transcript .student{color:#a78bfa}
+        @media(max-width:640px){.header{padding:32px 16px}.header h1{font-size:22px}.cta-btn{padding:14px 28px;font-size:15px}.container{padding:0 16px 60px}}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-date">2026년 11월 10일</div>
+        <h1>📚 전화영어 복습</h1>
+        <div class="header-meta">
+            <span>⏱ 21분 12초</span>
+            <span>🎙 전화영어_025180304_20261110080110.m4a</span>
+        </div>
+    </div>
+    <div class="cta-section">
+        <button class="cta-btn" onclick="startReview()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Gemini에서 복습 대화 시작하기
+        </button>
+        <div class="cta-sub">클릭하면 프롬프트가 복사되고 Gemini가 열립니다</div>
+    </div>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('feedback')">📋 AI 피드백</button>
+            <button class="tab" onclick="switchTab('transcript')">🎙 수업 전사</button>
+        </div>
+        <div id="tab-feedback" class="tab-content active">
+            <div class="feedback"><p><strong>0. 📌 Topic</strong></p>
+<br>
+<p>Topic: Understanding Building Notices and Politely Declining Neighbors' Invitations</p>
+<br>
+<br>
+<p><strong>1. 📊 오늘의 대화 요약 (Summary)</strong></p>
+<br>
+<div class="item">이웃끼리 쓰는 표현 <strong>drop by, heads up, rain check</strong>와 "Did you happen to see the notice posted about ~?" 패턴을 익히고, 롤플레이로 <strong>이웃의 바비큐 초대를 정중히 거절</strong>하는 연습을 했습니다.</div>
+<div class="item">북미 아파트 공지 문화(우편함·엘리베이터 게시, 퀘벡의 영·불 이중 공지)와 <strong>garage sale, block party</strong>의 뜻을 배웠습니다. 한국 엘리베이터 공지에 주민들이 손글씨 답글을 다는 경험도 이야기했습니다.</div>
+<div class="item">공지 관련 형용사 <strong>approachable, misleading, outdated, overlooked</strong>를 배웠습니다. 발음은 L/R(misleading), P/F(happen), 끝소리 -ed(posted, outdated, overlooked), 끝소리 -s(notices, mailboxes, elevators)를 집중 교정했습니다. 사람을 말할 때는 <strong>neighbors</strong>(이웃 사람들), 동네를 말할 때는 <strong>neighborhood</strong>라는 구분도 연습했습니다.</div>
+<br>
+<br>
+<p><strong>2. 💬 유창성 업그레이드 (Fluency & Natural Flow)</strong></p>
+<br>
+<p><strong>① 'rain check'를 본 적 있는지 답할 때</strong></p>
+<div class="item">❌ 학습자 원문 (As Said): "Maybe some email. Yeah, I have experience to read that."</div>
+<div class="item">✅ 자연스러운 표현 (Natural): "Yeah, I think I've seen it in some emails."</div>
+<div class="item">💎 비즈니스 표현 (Professional): "I've come across that phrase in business emails before."</div>
+<div class="item">💡 코칭 포인트: To say you've seen or read something before, native speakers use "I've seen it" or "I've come across it." "I have experience" sounds like a job skill.</div>
+<p><span class="arrow">→</span> 전에 보거나 읽은 적이 있다고 말할 때 원어민은 "I've seen it"이나 "I've come across it"을 씁니다. "I have experience"라고 하면 이력서에 쓰는 '업무 경력'처럼 들려요. <strong>"~ 본 적 있어요" = I've seen ~</strong>을 한 덩어리로 기억하세요.</p>
+<br>
+<p><strong>② 오래되거나 헷갈리는 공지를 보면 어떻게 할지 답할 때</strong></p>
+<div class="item">❌ 학습자 원문 (As Said): "First, I don't accept that information, and second, I'm just called the control office in apartment because they usually post an announcement in elevator."</div>
+<div class="item">✅ 자연스러운 표현 (Natural): "First, I wouldn't trust it. Then I'd just call the management office, because they're the ones who post the notices."</div>
+<div class="item">💎 비즈니스 표현 (Professional): "I wouldn't rely on that information. I'd contact the building management office to confirm whether it's still valid."</div>
+<div class="item">💡 코칭 포인트: When you answer a "What would you do?" question, start with "I'd..." ("I would"). Also, the office that runs an apartment building is called the "management office," not the "control office."</div>
+<p><span class="arrow">→</span> "What would you do?"(~라면 어떻게 하겠어요?) 질문에는 <strong>I'd + 하다</strong>로 답하세요: I'd call, I'd check. 이렇게 답하면 원어민 귀에 질문과 딱 맞게 들립니다. "I'm just called"라고 하면 '내가 불렸다'처럼 들리니 주의하세요. 그리고 '관리사무소'는 <strong>management office</strong>입니다. control office라고 하면 '통제실'처럼 들려요.</p>
+<br>
+<p><strong>③ 롤플레이에서 초대를 거절하며 이유를 말할 때</strong></p>
+<div class="item">❌ 학습자 원문 (As Said): "I really appreciate the invitation, but my sister coming into town that day, rain check?"</div>
+<div class="item">✅ 자연스러운 표현 (Natural): "I really appreciate the invitation, but my sister's coming into town that day. Rain check?"</div>
+<div class="item">💎 비즈니스 표현 (Professional): "Thank you so much for the invitation, but I have family visiting that day. Could we do it another time?"</div>
+<div class="item">💡 코칭 포인트: "My sister coming" is missing a small sound. Say "my sister's coming". The 's is short for "is," and it glues the sentence together.</div>
+<p><span class="arrow">→</span> "my sister coming"이라고만 하면 문장이 중간에 툭 끊겨 들려요. <strong>'~가 올 거예요 / 오는 중이에요' = 사람 + is coming</strong> 한 덩어리입니다. 말할 때는 is를 앞 단어에 붙여 <strong>sister's coming</strong>, <strong>he's coming</strong>처럼 짧게 발음하면 원어민처럼 자연스러워요.</p>
+<br>
+<p><strong>④ 질문이 있는지 물었을 때 답하는 말</strong></p>
+<div class="item">❌ 학습자 원문 (As Said): "Oh, no. It's possible to continue."</div>
+<div class="item">✅ 자연스러운 표현 (Natural): "No, I'm good. Let's keep going."</div>
+<div class="item">💎 비즈니스 표현 (Professional): "No questions for now. Please go ahead."</div>
+<div class="item">💡 코칭 포인트: "It's possible to continue" sounds like a technical report. In conversation, "I'm good" plus "Let's keep going" sounds relaxed and natural.</div>
+<p><span class="arrow">→</span> "It's possible to continue"는 기계 설명서처럼 딱딱하게 들려요. 대화에서는 <strong>"I'm good. Let's keep going."</strong>이 편안하고 자연스럽습니다. 회의에서 질문이 있냐고 물을 때도 그대로 쓸 수 있어요.</p>
+<br>
+<br>
+<p><strong>3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)</strong></p>
+<br>
+<p>Category: prepositions</p>
+<br>
+<p>🎯 오늘의 패턴: 장소·역할·시간을 이어 주는 작은 단어(in, into, as, on)를 빼먹거나 엉뚱한 걸 붙이는 습관</p>
+<br>
+<p>Joey의 실제 문장을 모아 보면, <strong>"어디로 / 무엇으로서 / 언제 / 어디 위에"를 이어 주는 작은 단어</strong>가 자주 빠지거나 바뀌어 있었습니다.</p>
+<br>
+<table>
+<tr><th>❌ 원문 (As Said)</th><th>✅ 교정 (Corrected)</th><th>포인트</th></tr>
+<tr><td>"I have a travel plan in this Christmas."</td><td>I have travel plans <strong>this</strong> Christmas.</td><td>this·next·last가 붙은 시간 앞에는 in을 붙이지 않아요</td></tr>
+<tr><td>"Yes, if I move some new apartment, …"</td><td>If I move <strong>into</strong> a new apartment, …</td><td>'이사 들어가다'는 move <strong>into</strong> 한 덩어리</td></tr>
+<tr><td>"Okay, I will start neighbor one."</td><td>Okay, I'll start <strong>as</strong> Neighbor One.</td><td>'~ 역할로 / ~로서'는 <strong>as</strong></td></tr>
+<tr><td>"This homepage usually heads up in front of page."</td><td>This website usually posts heads-ups <strong>on the front</strong> page.</td><td>화면·페이지·게시판 '위에' 있는 건 <strong>on</strong></td></tr>
+</table>
+<br>
+<p>📌 핵심 규칙: <strong>this / next / last + 시간</strong> 앞에는 아무것도 붙이지 않아요. 이사 들어가는 건 <strong>move into</strong>, 역할은 <strong>as</strong>, 페이지·게시판은 <strong>on</strong>을 통째로 입에 붙이세요.</p>
+<br>
+<p>🔁 따라 읽기</p>
+<div class="item">🗣️ "I'm going to Jeju next weekend."</div>
+<div class="item">🗣️ "If I move into a new apartment, I want to be approachable."</div>
+<div class="item">🗣️ "The notice is posted on the board in the elevator."</div>
+<br>
+<br>
+<p><strong>4. 📗 어휘 확장 (Vocabulary Vault)</strong></p>
+<br>
+<p><strong>① rain check</strong> /ˈreɪn tʃek/ (noun)</p>
+<div class="item">뜻: 다음 기회로 미루기, 나중에 하자는 약속</div>
+<div class="item">실전 예문: "I'm swamped with the audit this week. Can I take a rain check on dinner?"</div>
+<br>
+<p><strong>② approachable</strong> /əˈproʊtʃəbəl/ (adjective)</p>
+<div class="item">뜻: 말 걸기 편한, 다가가기 쉬운 (※ approach-able 두 조각으로 끊지 말고 한 단어로 이어서)</div>
+<div class="item">실전 예문: "Our new team leader is very approachable, so junior auditors ask her questions freely."</div>
+<br>
+<p><strong>③ misleading</strong> /ˌmɪsˈliːdɪŋ/ (adjective)</p>
+<div class="item">뜻: 오해를 불러일으키는, 잘못 이끄는 (※ L 발음 주의: mis-<strong>L</strong>eading. misreading은 '잘못 읽기'라는 다른 말이에요)</div>
+<div class="item">실전 예문: "This chart is misleading because it leaves out last year's import costs."</div>
+<br>
+<p><strong>④ outdated</strong> /ˌaʊtˈdeɪtɪd/ (adjective)</p>
+<div class="item">뜻: 시대에 뒤떨어진, 더 이상 최신이 아닌 (※ 끝을 '-데이티드'로 한 박자 더)</div>
+<div class="item">실전 예문: "We can't use these LNG price forecasts. They're already outdated."</div>
+<br>
+<p><strong>⑤ overlooked</strong> /ˌoʊvərˈlʊkt/ (adjective)</p>
+<div class="item">뜻: 간과된, 놓친 (※ 끝을 '-룩트'로 짧게 끊기)</div>
+<div class="item">실전 예문: "This risk was overlooked in the last audit, so let's check it carefully this time."</div>
+<br>
+<p><strong>⑥ neighbors vs. neighborhood</strong> /ˈneɪbərz/ · /ˈneɪbərhʊd/ (noun)</p>
+<div class="item">뜻: neighbors = 옆집·같은 층에 사는 <strong>이웃 사람들</strong> / neighborhood = 사람들이 사는 <strong>동네</strong></div>
+<div class="item">실전 예문: "I want to make a good impression on my new neighbors. It's a quiet neighborhood."</div>
+<br>
+<br>
+<p><strong>5. 📝 실전 복습 챌린지 (Practice)</strong></p>
+<br>
+<p><strong>Q1. (쉬움)</strong> 동료가 다음 주에 뭐 하냐고 묻습니다. "다음 주 금요일에 가족 모임이 있어요."라고 말해 보세요.</p>
+<div class="item">모범 답안: <strong>"I have a family gathering next Friday."</strong></div>
+<br>
+<p><strong>Q2. (보통)</strong> 거래처 담당자가 금요일 저녁 식사에 초대했지만 그날 출장이 있습니다. 감사 인사를 하고 정중히 다음으로 미뤄 보세요.</p>
+<div class="item">모범 답안: <strong>"I really appreciate the invitation, but I'm on a business trip that day. Rain check?"</strong></div>
+<br>
+<p><strong>Q3. (어려움)</strong> 팀원에게 감사(audit) 일정 공지를 봤는지 묻고, 다음 주 월요일에 팀이 새 사무실로 이사한다고 미리 알려 주세요.</p>
+<div class="item">모범 답안: <strong>"Did you happen to see the notice posted about the audit schedule? Also, heads up: our team is moving into the new office next Monday."</strong></div>
+<br>
+<br>
+<p><strong>6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)</strong></p>
+<br>
+<p>✨ <strong>Good Job</strong></p>
+<p>> "Oh, heads up. The elevator doesn't work today."</p>
+<br>
+<p>튜터의 힌트를 듣자마자 Joey가 <strong>바로 자기 문장으로 다시 만들어 낸</strong> 표현입니다. "heads up" 뒤에 알릴 내용을 짧은 한 문장으로 붙였어요. 엘리베이터 하나가 주인공일 때 쓰는 <strong>doesn't work</strong> 모양도 정확했습니다. 튜터가 "That's what we say"라고 했을 만큼 <strong>원어민이 실제로 쓰는 그대로</strong>입니다. 배운 표현을 내 상황에 바로 적용하는 이 능력이 Joey의 가장 큰 강점이에요.</p>
+<br>
+<p>🚀 <strong>내일의 한 문장</strong></p>
+<p>> 🗣️ "Hi! Just a heads up: my sister's coming into town next weekend, so I might need a rain check on our class."</p>
+<br>
+<p>(오늘 배운 <strong>heads up</strong>, <strong>rain check</strong>, <strong>sister's coming</strong>, 그리고 in 없이 쓰는 <strong>next weekend</strong>를 한 번에 연습할 수 있어요.)</p>
+<br>
+<br>
+<p><strong>[성과 지표]</strong></p>
+<br>
+<p><strong>유창성 점수: 6 / 10</strong></p>
+<br>
+<p><strong>근거</strong></p>
+<div class="item">👍 <strong>강점</strong>: 예문 만들기에서 "Did you happen to see the notice posted about the Sunday class, Sunday English class?"처럼 배운 틀에 내 상황을 빠르게 끼워 넣었습니다. InfoBytes를 읽을 때는 스스로 실수를 바로잡아 튜터에게 "Good self-correction" 칭찬도 받았어요. 모르는 표현(block party, rain check)도 피하지 않고 추측해서 끝까지 말해 보는 태도가 훌륭합니다. 특히 rain check는 '미루기, 일정 다시 잡기'라고 정확히 맞혔습니다.</div>
+<div class="item">📉 <strong>보완점</strong>: 자유 대화(엘리베이터 공지, 새 아파트 첫인상)로 넘어가면 문장이 길어지면서 흐름이 끊겼습니다. 예: "So some apartment is possible, but it is not impossible." 또한 L/R(misleading), P/F(happen), 끝소리 -ed(posted, outdated, overlooked) 발음이 알아듣기 어렵게 만들었습니다.</div>
+<br>
+<p><strong>🎯 다음 수업 원포인트 액션 플랜</strong></p>
+<p>👉 <strong>"짧게 끊어 말하기 + I'd로 시작하기"</strong></p>
+<p>의견이나 "만약 ~라면?" 질문을 받으면 긴 한 문장으로 이어 붙이지 마세요. <strong>"I'd ~. Because ~."처럼 두 문장으로 짧게 끊어</strong> 답해 보세요. 수업 전에 *misleading / happen / outdated / overlooked* 네 단어를 각각 5번씩 소리 내어 읽으면 발음까지 함께 잡을 수 있습니다.</p></div>
+        </div>
+        <div id="tab-transcript" class="tab-content">
+            <div class="transcript"><span class="student">[Student]</span> Hello, good evening teacher.
+
+<span class="tutor">[Tutor]</span> Hi. How are you?
+
+<span class="student">[Student]</span> Yeah, everything&#x27;s good. How was your day?
+
+<span class="tutor">[Tutor]</span> Oh, so far so good. Yeah, we&#x27;ve been really lucky. We&#x27;ve had sunshine and the temperatures are averaging about 10 degrees. So it&#x27;s quite balmy for November in Canada. All the snow has melted away. I&#x27;m sure we&#x27;ll get more at Christmas time.
+
+<span class="student">[Student]</span> Do you have time for your... Is it? Yeah. Anything you have is melted too. [?]
+
+<span class="tutor">[Tutor]</span> Oh, wow. Okay. All right. Shall we start your day with your lesson, yes?
+
+<span class="student">[Student]</span> Oh, yes, of course.
+
+<span class="tutor">[Tutor]</span> Today&#x27;s topic is working with neighbors [?neighborhood] and reading notices. [?]
+
+<span class="student">[Student]</span> Okay.
+
+<span class="tutor">[Tutor]</span> Can you read today&#x27;s mission to me?
+
+<span class="student">[Student]</span> Okay, of course. Learn how to understand the post-it, building notice, and respond politely to invitations or announcements. [?]
+
+<span class="tutor">[Tutor]</span> All right. Very good. Let us move on to the first page.
+
+<span class="student">[Student]</span> Okay.
+
+<span class="tutor">[Tutor]</span> And I&#x27;ll get you to read the first expression and its description, please.
+
+<span class="student">[Student]</span> Okay. The first expression is drop by. Visit someone casually without an appointment or formal invitation. Can I drop by your office? [?]
+
+<span class="tutor">[Tutor]</span> In your office? Drop by your office?
+
+<span class="student">[Student]</span> Teacher, in your office or your office?
+
+<span class="tutor">[Tutor]</span> Can I drop by your office? Yeah, that would be better.
+
+<span class="student">[Student]</span> Can I drop by your office?
+
+<span class="tutor">[Tutor]</span> Your office.
+
+<span class="student">[Student]</span> Okay, I see. The second, heads up. A short warning or helpful advance notice. My elevator usually, ah, just a moment. This homepage usually heads up in front of page. How about that?
+
+<span class="tutor">[Tutor]</span> That was a good effort. I liked where you were going with the elevator. You could say to somebody, oh, heads up. One of the elevators is not working.
+
+<span class="student">[Student]</span> Ah, yes, I see. Oh, heads up. Blah, blah, blah. Oh, heads up. The elevator doesn&#x27;t work today.
+
+<span class="tutor">[Tutor]</span> Yes. That&#x27;s what we say, very casual. But it means just to let you know. All right, let&#x27;s go on to the key phrases. And we have two of them. I&#x27;ll have you just read the example sentences that have the bullet.
+
+<span class="student">[Student]</span> Okay. I really appreciate the invitation, but I already have plans. I really appreciate the invitation, but I have a travel plan in this Christmas.
+
+<span class="tutor">[Tutor]</span> Good.
+
+<span class="student">[Student]</span> Okay.
+
+<span class="tutor">[Tutor]</span> That works. Let&#x27;s try the next one.
+
+<span class="student">[Student]</span> Did you happen to see the notice post about the fire drill? Did you happen to see the notice posted about the Sunday class, Sunday English class?
+
+<span class="tutor">[Tutor]</span> I&#x27;m going to get you to try one word. You said, &quot;did you haffen [?happen]?&quot;
+
+<span class="student">[Student]</span> Happen. [?]
+
+<span class="tutor">[Tutor]</span> With an F. Let&#x27;s try a P. Happen.
+
+<span class="student">[Student]</span> Happen.
+
+<span class="tutor">[Tutor]</span> Very good.
+
+<span class="student">[Student]</span> Did you happen to see notice post about the fire drill [?fire ring]? [?]
+
+<span class="tutor">[Tutor]</span> Happen.
+
+<span class="student">[Student]</span> Okay.
+
+<span class="tutor">[Tutor]</span> And there&#x27;s one more word. You said, &quot;did you happen to see the notice post?&quot; Post. About. So, yeah, let&#x27;s try posted.
+
+<span class="student">[Student]</span> Posted.
+
+<span class="tutor">[Tutor]</span> Posted. Very good.
+
+<span class="student">[Student]</span> Posted. Happened. [?]
+
+<span class="tutor">[Tutor]</span> Yep.
+
+<span class="student">[Student]</span> Okay.
+
+<span class="tutor">[Tutor]</span> Good work. All right. Let us move on to the next page, InfoBytes. And again, you&#x27;re going to read for me. So, take your time and you can start when you&#x27;re ready.
+
+<span class="student">[Student]</span> Okay. I&#x27;m ready. In the U.S., apartment notices are often posted near mailboxes or elevators or sent by email or applications.
+
+<span class="tutor">[Tutor]</span> Okay, I&#x27;m going to get you to pause, if you don&#x27;t mind, because we&#x27;ve got to practice the S ending on some of these words. Okay, so repeat after me. Notices.
+
+<span class="student">[Student]</span> Notices.
+
+<span class="tutor">[Tutor]</span> Good. Mailboxes.
+
+<span class="student">[Student]</span> Mailboxes.
+
+<span class="tutor">[Tutor]</span> Notice it. Mailboxes. [?]
+
+<span class="tutor">[Tutor]</span> Okay, one more. Elevators.
+
+<span class="student">[Student]</span> Elevators.
+
+<span class="tutor">[Tutor]</span> All right, please continue.
+
+<span class="student">[Student]</span> Okay. In the United Kingdom, USA, Canada, Australia and New Zealand, it&#x27;s polite to respond to neighborhood invitations even if you can&#x27;t go.
+
+<span class="tutor">[Tutor]</span> Good self-correction. Let&#x27;s try the third one.
+
+<span class="student">[Student]</span> Okay. In Canada, buildings post notice in English and French, especially in Quebec. Is that true?
+
+<span class="tutor">[Tutor]</span> Yes. And it really depends on whether the notice is a government notice or depending if it&#x27;s in a certain part of Canada. For instance, in most of central and western Canada, everything is posted in English first and then maybe posted in French. But in Quebec and eastern Canada, the first language is French and then it&#x27;s English. Because in this place they call Quebec, their first language is French. They&#x27;re a special society.
+
+<span class="student">[Student]</span> Oh, I see. Can you speak the French also?
+
+<span class="tutor">[Tutor]</span> Oh, gosh, no. No. No. Unfortunately, I leaned more towards Spanish, but they teach French in our schools now. So, you know, sometimes I can listen to it on TV or see signs, and I have an idea of what they mean, but I couldn&#x27;t have a conversation to save my life. Give me the mind English. [?] Let&#x27;s try the final statement.
+
+<span class="student">[Student]</span> Okay, I see. It&#x27;s common for neighborhood to organize garage sales [?garages, sales], clean up days, or block parties. Open shares through flyers or Facebook groups. [?]
+
+<span class="tutor">[Tutor]</span> Oh, right. Have you ever heard about these things? [?]
+
+<span class="student">[Student]</span> Sorry [?Always]. [?]
+
+<span class="tutor">[Tutor]</span> No, you&#x27;re doing fine. You&#x27;re doing fine. Okay, so let&#x27;s talk about these events for a minute. Have you ever heard of a garage sale?
+
+<span class="student">[Student]</span> Garage sale? Maybe it&#x27;s a small market in a neighborhood market, right?
+
+<span class="tutor">[Tutor]</span> Actually, a garage sale is where someone uses their garage and their driveway to sell items they&#x27;re trying to get rid of.
+
+<span class="student">[Student]</span> I see. It is so small flea market [?pre-market]?
+
+<span class="tutor">[Tutor]</span> It&#x27;s even smaller than that. It&#x27;s usually one household. And you go by and they have clothing and household items on tables, and you go up and they have prices on them, and you can buy them and take them home.
+
+<span class="student">[Student]</span> Oh, it&#x27;s so interesting. Yeah, I understand that.
+
+<span class="tutor">[Tutor]</span> It is, it can be. You can find a lot of things at garage sales.
+
+<span class="student">[Student]</span> Yeah.
+
+<span class="tutor">[Tutor]</span> Okay, now clean-up days is pretty self-explanatory. That&#x27;s when they clean up the neighborhood. But have you ever heard of a block party?
+
+<span class="student">[Student]</span> Uh-huh. Block. Block party.
+
+<span class="tutor">[Tutor]</span> Oh, good. Block party. Can you tell me what it means?
+
+<span class="student">[Student]</span> I&#x27;m not sure, but maybe I guess this is the, maybe that is put off their name, just conversation without the name. Right? The blind date.
+
+<span class="tutor">[Tutor]</span> That is a good try.
+
+<span class="student">[Student]</span> Uh-huh.
+
+<span class="tutor">[Tutor]</span> What will happen is a certain neighborhood will block the street on either end of a block, and the neighbors in that particular block on the street will have a party with all the neighbors, all the neighbors that live there. Yeah, it&#x27;s called a block party. Very popular in cities in the United States.
+
+<span class="student">[Student]</span> I see. Understand.
+
+<span class="tutor">[Tutor]</span> Good. All right. Let&#x27;s get you to read the question at the bottom, and we&#x27;ll talk about it.
+
+<span class="student">[Student]</span> Okay. What&#x27;s the funniest or most unexpected sign or notice you have seen in a shared space? Usually in Korea, people live in apartment and they use the elevator, so usually the apartment notice is the post in elevator, and some people writing reply in their hand, reply and...
+
+<span class="tutor">[Tutor]</span> Oh, wow.
+
+<span class="student">[Student]</span> Some keys writing something in there below. [?] So yeah, that is forbid, but sometimes it funny because I don&#x27;t agree that much. Or let go there. [?] So that is so many interesting reply, so it is funny, but usually that is covered plastic or some, yeah, something. So some apartment is possible, but it is not impossible.
+
+<span class="tutor">[Tutor]</span> Yeah, the notices are to give information, not to initiate a conversation. I get it.
+
+<span class="student">[Student]</span> Yes.
+
+<span class="tutor">[Tutor]</span> All right, Joey. Let&#x27;s move on to B, real-life talk.
+
+<span class="student">[Student]</span> Okay.
+
+<span class="tutor">[Tutor]</span> The title we have is, &quot;Ask if your neighbor saw a notice and politely decline an invitation.&quot;
+
+<span class="student">[Student]</span> Okay.
+
+<span class="tutor">[Tutor]</span> We&#x27;re going to read this twice. Do you want to be neighbor number one or neighbor number two for the first reading?
+
+<span class="student">[Student]</span> Okay, I will start neighbor one [?once]. Hey, fancy meeting you here. I was just going to drop by your apartment.
+
+<span class="tutor">[Tutor]</span> Oh, really? What&#x27;s up?
+
+<span class="student">[Student]</span> Did you happen to see the notice posted about the water shut off this Friday?
+
+<span class="tutor">[Tutor]</span> Yes, I did. Thanks for the heads up, though. Also, I&#x27;m having a little barbecue Saturday afternoon. If you&#x27;re free, you should come by.
+
+<span class="student">[Student]</span> Oh, you&#x27;re so kind. I really appreciate the invitation, but my sister coming into town that day, rain check?
+
+<span class="tutor">[Tutor]</span> Of course. Let me know if you change your mind. Always good to catch up. Okay, good. All right. You did very good. I just want to help with one thing. The last comment for neighbor number one, you said, &quot;but my sister coming.&quot; Here, they&#x27;ve taken the word sister and is, made it into a contraction. So you would say, &quot;my sister&#x27;s coming.&quot;
+
+<span class="student">[Student]</span> My sister&#x27;s coming. My sister&#x27;s coming.
+
+<span class="tutor">[Tutor]</span> Okay. All right. Let&#x27;s go back and I&#x27;ll read neighbor number one this time. Hey, fancy meeting you here. I was just going to drop by your apartment.
+
+<span class="student">[Student]</span> Oh, really? What&#x27;s up?
+
+<span class="tutor">[Tutor]</span> Did you happen to see the notice posted about the water shut off this Friday?
+
+<span class="student">[Student]</span> Yes, I did. Thanks for the heads up, though. Also, I&#x27;m having a little barbecue Saturday afternoon. If you are free, you should come by.
+
+<span class="tutor">[Tutor]</span> I really appreciate the invitation. But my sister&#x27;s coming into town that day. Rain check?
+
+<span class="student">[Student]</span> Of course. Let me know if you change your mind. Always good to catch up.
+
+<span class="tutor">[Tutor]</span> Very nice. Now, let&#x27;s talk about one phrase in neighbor number one. She says at the end of her comment, she says, &quot;rain check?&quot; Have you ever heard this phrase before? Rain check?
+
+<span class="student">[Student]</span> Maybe some email. Yeah, I have experience to read that.
+
+<span class="tutor">[Tutor]</span> What do you think it means, Joey?
+
+<span class="student">[Student]</span> Post of something. Maybe the rescheduling or post of. [?]
+
+<span class="tutor">[Tutor]</span> Yes, you got it. It means to meet at a different time and date. &quot;I will take a rain check.&quot;
+
+<span class="student">[Student]</span> Okay.
+
+<span class="tutor">[Tutor]</span> Yeah, you got it. Very good. I will send that with some synonyms in a sentence for you, okay?
+
+<span class="student">[Student]</span> All right.
+
+<span class="tutor">[Tutor]</span> Great. Excellent. Okay. Let&#x27;s read the question at the bottom and see what you remember.
+
+<span class="student">[Student]</span> Okay. What is notice about and when is it happening? The apartment notice is about water shut up this Friday. [?]
+
+<span class="tutor">[Tutor]</span> Yeah. Very good. You got it. Okay. All right. Did you have any questions about the conversation, Joey?
+
+<span class="student">[Student]</span> Oh, no. It&#x27;s possible to continue.
+
+<span class="tutor">[Tutor]</span> All right. Okay. Lovely. Okay. We&#x27;re going to move on now to part C, Say It Right. And we&#x27;re going to look at some adjective vocabulary. The first group is titled &quot;First Impressions.&quot; And once again, I&#x27;ll have you read the word and the description for all three, and then read the question to me. Again, take your time. You&#x27;re my last class.
+
+<span class="student">[Student]</span> Okay. Approach. Approach able. Easy to talk to. Welcome.
+
+<span class="tutor">[Tutor]</span> Yeah. Okay. Hold on. Okay. Try approachable.
+
+<span class="student">[Student]</span> Approach able.
+
+<span class="tutor">[Tutor]</span> Approachable.
+
+<span class="student">[Student]</span> Approach able. Easy to talk to.
+
+<span class="tutor">[Tutor]</span> Yeah. Approachable. Okay. Keep going.
+
+<span class="student">[Student]</span> Okay. Welcoming, friendly and inviting. Polite, shows good manners. You just moved into a new apartment building. What kind of impression do you want to give your neighborhoods?
+
+<span class="tutor">[Tutor]</span> Your neighbors.
+
+<span class="student">[Student]</span> Your neighbors.
+
+<span class="tutor">[Tutor]</span> Very good.
+
+<span class="student">[Student]</span> Yes. Yes. Yes, if I move some new apartment, I&#x27;m impression about the polite and welcoming the neighborhood saying or notice. Because I&#x27;m newbie and everything is new, so I&#x27;m not used to that situation. But some people or some environment is polite and welcoming. Yeah, my mind is more relaxed and kind. So it is a good way.
+
+<span class="tutor">[Tutor]</span> Yeah, sure. One thing that I find that people have told me about in Korea is that when you live in those huge high-rise apartment buildings, you know, the ones with 30 floors, sometimes it&#x27;s hard to get to know your neighbors, even on the floor you live on. Which is sad, because here in Canada, we have those buildings too, but we also have smaller apartments that are only 12 to 16 units. It&#x27;s so much easier to get to know your neighbors.
+
+<span class="student">[Student]</span> I understand.
+
+<span class="tutor">[Tutor]</span> All right. Very good. All right. The second group we&#x27;re going to look at is &quot;Notices and Announcements.&quot; Let&#x27;s get you to try that vocabulary.
+
+<span class="student">[Student]</span> Okay. Misreading, gives the wrong idea. Outdate [?Outdated], no longer current. Overlooked, easily missed or ignore.
+
+<span class="tutor">[Tutor]</span> Ignored. [?]
+
+<span class="student">[Student]</span> Ignore. There are so many questions. [?] If you seen an old or unclear flyer [?prior] on the notice board, what would you do? First, I don&#x27;t accept that information, and second, I&#x27;m just called the control office in apartment because they usually post an announcement in elevator.
+
+<span class="tutor">[Tutor]</span> Yeah.
+
+<span class="student">[Student]</span> And maybe if I call that situation, the office is changed or noticed. Maybe. We&#x27;ll be made a choice. [?]
+
+<span class="tutor">[Tutor]</span> Yes. Yeah. Okay.
+
+<span class="student">[Student]</span> Okay.
+
+<span class="tutor">[Tutor]</span> All right. What we&#x27;re going to do now is I will help you with some corrections, okay?
+
+<span class="student">[Student]</span> Okay.
+
+<span class="tutor">[Tutor]</span> You said &quot;misreading.&quot;
+
+<span class="student">[Student]</span> Misreading.
+
+<span class="tutor">[Tutor]</span> Uh-huh. Yeah. We need an L instead of an R. Misleading.
+
+<span class="student">[Student]</span> Misleading.
+
+<span class="tutor">[Tutor]</span> Misleading.
+
+<span class="student">[Student]</span> Misleading.
+
+<span class="tutor">[Tutor]</span> Yes.
+
+<span class="student">[Student]</span> Okay.
+
+<span class="tutor">[Tutor]</span> The next one, you pronounced &quot;outdate.&quot;
+
+<span class="student">[Student]</span> Uh-huh.
+
+<span class="tutor">[Tutor]</span> But we have an extra syllable, so I&#x27;ll get you to try after me. Outdated.
+
+<span class="student">[Student]</span> Outdated. Oh, outdated [?OutdateTat].
+
+<span class="tutor">[Tutor]</span> Outdated [?OutdateTat]. Excellent.
+
+<span class="student">[Student]</span> Oh, outdated [?OutdateTat].
+
+<span class="tutor">[Tutor]</span> Yes. I believe that I may have sent you a video in the past that ED has three different sounds for words. I&#x27;ll double check as to whether I&#x27;ve sent it. If I haven&#x27;t, I&#x27;ll include it in today&#x27;s comments, okay?
+
+<span class="student">[Student]</span> Awesome, yeah.
+
+<span class="tutor">[Tutor]</span> Now, the last word is showing another way to say ED. In this word, we say &quot;overlooked.&quot;
+
+<span class="student">[Student]</span> Overlooked.
+
+<span class="tutor">[Tutor]</span> Okay.
+
+<span class="student">[Student]</span> Overlooked.
+
+<span class="tutor">[Tutor]</span> Yeah, you got it. Overlooked.
+
+<span class="student">[Student]</span> Yeah.
+
+<span class="tutor">[Tutor]</span> I&#x27;ll definitely see if I can find that ED video, and then I encourage you to give a watch to it. I know you&#x27;re busy. All right, my friend.
+
+<span class="student">[Student]</span> We are done?
+
+<span class="tutor">[Tutor]</span> Yeah, you&#x27;re done. We&#x27;ve worked on the phrase &quot;heads up&quot; and what that means. You know what it means. We worked on the three words we just talked about. We worked on the P in &quot;happen.&quot; We discussed &quot;rain check&quot; and what that means. You know what that was. And we worked on the words &quot;approachable&quot; and &quot;neighbors.&quot; Neighborhood versus neighbors. So, lots of hard work today. Any questions or concerns?
+
+<span class="student">[Student]</span> Oh, no. Thanks for your feedback and your class.
+
+<span class="tutor">[Tutor]</span> Yeah. You&#x27;re doing great. Have a great day. Talk to you next time.
+
+<span class="student">[Student]</span> Bye-bye.
+
+<span class="tutor">[Tutor]</span> Take care.</div>
+        </div>
+    </div>
+    <div class="toast" id="toast">✅ 프롬프트가 복사되었습니다!</div>
+    <script>
+        const REVIEW_PROMPT="너는 나의 영어 회화 복습 파트너야. 오늘 내 전화영어 수업 내용을 기반으로 대화하면서 복습을 도와줘.\n\n[오늘 수업 전사 내용]\n[Student] Hello, good evening teacher.\n\n[Tutor] Hi. How are you?\n\n[Student] Yeah, everything's good. How was your day?\n\n[Tutor] Oh, so far so good. Yeah, we've been really lucky. We've had sunshine and the temperatures are averaging about 10 degrees. So it's quite balmy for November in Canada. All the snow has melted away. I'm sure we'll get more at Christmas time.\n\n[Student] Do you have time for your... Is it? Yeah. Anything you have is melted too. [?]\n\n[Tutor] Oh, wow. Okay. All right. Shall we start your day with your lesson, yes?\n\n[Student] Oh, yes, of course.\n\n[Tutor] Today's topic is working with neighbors [?neighborhood] and reading notices. [?]\n\n[Student] Okay.\n\n[Tutor] Can you read today's mission to me?\n\n[Student] Okay, of course. Learn how to understand the post-it, building notice, and respond politely to invitations or announcements. [?]\n\n[Tutor] All right. Very good. Let us move on to the first page.\n\n[Student] Okay.\n\n[Tutor] And I'll get you to read the first expression and its description, please.\n\n[Student] Okay. The first expression is drop by. Visit someone casually without an appointment or formal invitation. Can I drop by your office? [?]\n\n[Tutor] In your office? Drop by your office?\n\n[Student] Teacher, in your office or your office?\n\n[Tutor] Can I drop by your office? Yeah, that would be better.\n\n[Student] Can I drop by your office?\n\n[Tutor] Your office.\n\n[Student] Okay, I see. The second, heads up. A short warning or helpful advance notice. My elevator usually, ah, just a moment. This homepage usually heads up in front of page. How about that?\n\n[Tutor] That was a good effort. I liked where you were going with the elevator. You could say to somebody, oh, heads up. One of the elevators is not working.\n\n[Student] Ah, yes, I see. Oh, heads up. Blah, blah, blah. Oh, heads up. The elevator doesn't work today.\n\n[Tutor] Yes. That's what we say, very casual. But it means just to let you know. All right, let's go on to the key phrases. And we have two of them. I'll have you just read the example sentences that have the bullet.\n\n[Student] Okay. I really appreciate the invitation, but I already have plans. I really appreciate the invitation, but I have a travel plan in this Christmas.\n\n[Tutor] Good.\n\n[Student] Okay.\n\n[Tutor] That works. Let's try the next one.\n\n[Student] Did you happen to see the notice post about the fire drill? Did you happen to see the notice posted about the Sunday class, Sunday English class?\n\n[Tutor] I'm going to get you to try one word. You said, \"did you haffen [?happen]?\"\n\n[Student] Happen. [?]\n\n[Tutor] With an F. Let's try a P. Happen.\n\n[Student] Happen.\n\n[Tutor] Very good.\n\n[Student] Did you happen to see notice post about the fire drill [?fire ring]? [?]\n\n[Tutor] Happen.\n\n[Student] Okay.\n\n[Tutor] And there's one more word. You said, \"did you happen to see the notice post?\" Post. About. So, yeah, let's try posted.\n\n[Student] Posted.\n\n[Tutor] Posted. Very good.\n\n[Student] Posted. Happened. [?]\n\n[Tutor] Yep.\n\n[Student] Okay.\n\n[Tutor] Good work. All right. Let us move on to the next page, InfoBytes. And again, you're going to read for me. So, take your time and you can start when you're ready.\n\n[Student] Okay. I'm ready. In the U.S., apartment notices are often posted near mailboxes or elevators or sent by email or applications.\n\n[Tutor] Okay, I'm going to get you to pause, if you don't mind, because we've got to practice the S ending on some of these words. Okay, so repeat after me. Notices.\n\n[Student] Notices.\n\n[Tutor] Good. Mailboxes.\n\n[Student] Mailboxes.\n\n[Tutor] Notice it. Mailboxes. [?]\n\n[Tutor] Okay, one more. Elevators.\n\n[Student] Elevators.\n\n[Tutor] All right, please continue.\n\n[Student] Okay. In the United Kingdom, USA, Canada, Australia and New Zealand, it's polite to respond to neighborhood invitations even if you can't go.\n\n[Tutor] Good self-correction. Let's try the third one.\n\n[Student] Okay. In Canada, buildings post notice in English and French, especially in Quebec. Is that true?\n\n[Tutor] Yes. And it really depends on whether the notice is a government notice or depending if it's in a certain part of Canada. For instance, in most of central and western Canada, everything is posted in English first and then maybe posted in French. But in Quebec and eastern Canada, the first language is French and then it's English. Because in this place they call Quebec, their first language is French. They're a special society.\n\n[Student] Oh, I see. Can you speak the French also?\n\n[Tutor] Oh, gosh, no. No. No. Unfortunately, I leaned more towards Spanish, but they teach French in our schools now. So, you know, sometimes I can listen to it on TV or see signs, and I have an idea of what they mean, but I couldn't have a conversation to save my life. Give me the mind English. [?] Let's try the final statement.\n\n[Student] Okay, I see. It's common for neighborhood to organize garage sales [?garages, sales], clean up days, or block parties. Open shares through flyers or Facebook groups. [?]\n\n[Tutor] Oh, right. Have you ever heard about these things? [?]\n\n[Student] Sorry [?Always]. [?]\n\n[Tutor] No, you're doing fine. You're doing fine. Okay, so let's talk about these events for a minute. Have you ever heard of a garage sale?\n\n[Student] Garage sale? Maybe it's a small market in a neighborhood market, right?\n\n[Tutor] Actually, a garage sale is where someone uses their garage and their driveway to sell items they're trying to get rid of.\n\n[Student] I see. It is so small flea market [?pre-market]?\n\n[Tutor] It's even smaller than that. It's usually one household. And you go by and they have clothing and household items on tables, and you go up and they have prices on them, and you can buy them and take them home.\n\n[Student] Oh, it's so interesting. Yeah, I understand that.\n\n[Tutor] It is, it can be. You can find a lot of things at garage sales.\n\n[Student] Yeah.\n\n[Tutor] Okay, now clean-up days is pretty self-explanatory. That's when they clean up the neighborhood. But have you ever heard of a block party?\n\n[Student] Uh-huh. Block. Block party.\n\n[Tutor] Oh, good. Block party. Can you tell me what it means?\n\n[Student] I'm not sure, but maybe I guess this is the, maybe that is put off their name, just conversation without the name. Right? The blind date.\n\n[Tutor] That is a good try.\n\n[Student] Uh-huh.\n\n[Tutor] What will happen is a certain neighborhood will block the street on either end of a block, and the neighbors in that particular block on the street will have a party with all the neighbors, all the neighbors that live there. Yeah, it's called a block party. Very popular in cities in the United States.\n\n[Student] I see. Understand.\n\n[Tutor] Good. All right. Let's get you to read the question at the bottom, and we'll talk about it.\n\n[Student] Okay. What's the funniest or most unexpected sign or notice you have seen in a shared space? Usually in Korea, people live in apartment and they use the elevator, so usually the apartment notice is the post in elevator, and some people writing reply in their hand, reply and...\n\n[Tutor] Oh, wow.\n\n[Student] Some keys writing something in there below. [?] So yeah, that is forbid, but sometimes it funny because I don't agree that much. Or let go there. [?] So that is so many interesting reply, so it is funny, but usually that is covered plastic or some, yeah, something. So some apartment is possible, but it is not impossible.\n\n[Tutor] Yeah, the notices are to give information, not to initiate a conversation. I get it.\n\n[Student] Yes.\n\n[Tutor] All right, Joey. Let's move on to B, real-life talk.\n\n[Student] Okay.\n\n[Tutor] The title we have is, \"Ask if your neighbor saw a notice and politely decline an invitation.\"\n\n[Student] Okay.\n\n[Tutor] We're going to read this twice. Do you want to be neighbor number one or neighbor number two for the first reading?\n\n[Student] Okay, I will start neighbor one [?once]. Hey, fancy meeting you here. I was just going to drop by your apartment.\n\n[Tutor] Oh, really? What's up?\n\n[Student] Did you happen to see the notice posted about the water shut off this Friday?\n\n[Tutor] Yes, I did. Thanks for the heads up, though. Also, I'm having a little barbecue Saturday afternoon. If you're free, you should come by.\n\n[Student] Oh, you're so kind. I really appreciate the invitation, but my sister coming into town that day, rain check?\n\n[Tutor] Of course. Let me know if you change your mind. Always good to catch up. Okay, good. All right. You did very good. I just want to help with one thing. The last comment for neighbor number one, you said, \"but my sister coming.\" Here, they've taken the word sister and is, made it into a contraction. So you would say, \"my sister's coming.\"\n\n[Student] My sister's coming. My sister's coming.\n\n[Tutor] Okay. All right. Let's go back and I'll read neighbor number one this time. Hey, fancy meeting you here. I was just going to drop by your apartment.\n\n[Student] Oh, really? What's up?\n\n[Tutor] Did you happen to see the notice posted about the water shut off this Friday?\n\n[Student] Yes, I did. Thanks for the heads up, though. Also, I'm having a little barbecue Saturday afternoon. If you are free, you should come by.\n\n[Tutor] I really appreciate the invitation. But my sister's coming into town that day. Rain check?\n\n[Student] Of course. Let me know if you change your mind. Always good to catch up.\n\n[Tutor] Very nice. Now, let's talk about one phrase in neighbor number one. She says at the end of her comment, she says, \"rain check?\" Have you ever heard this phrase before? Rain check?\n\n[Student] Maybe some email. Yeah, I have experience to read that.\n\n[Tutor] What do you think it means, Joey?\n\n[Student] Post of something. Maybe the rescheduling or post of. [?]\n\n[Tutor] Yes, you got it. It means to meet at a different time and date. \"I will take a rain check.\"\n\n[Student] Okay.\n\n[Tutor] Yeah, you got it. Very good. I will send that with some synonyms in a sentence for you, okay?\n\n[Student] All right.\n\n[Tutor] Great. Excellent. Okay. Let's read the question at the bottom and see what you remember.\n\n[Student] Okay. What is notice about and when is it happening? The apartment notice is about water shut up this Friday. [?]\n\n[Tutor] Yeah. Very good. You got it. Okay. All right. Did you have any questions about the conversation, Joey?\n\n[Student] Oh, no. It's possible to continue.\n\n[Tutor] All right. Okay. Lovely. Okay. We're going to move on now to part C, Say It Right. And we're going to look at some adjective vocabulary. The first group is titled \"First Impressions.\" And once again, I'll have you read the word and the description for all three, and then read the question to me. Again, take your time. You're my last class.\n\n[Student] Okay. Approach. Approach able. Easy to talk to. Welcome.\n\n[Tutor] Yeah. Okay. Hold on. Okay. Try approachable.\n\n[Student] Approach able.\n\n[Tutor] Approachable.\n\n[Student] Approach able. Easy to talk to.\n\n[Tutor] Yeah. Approachable. Okay. Keep going.\n\n[Student] Okay. Welcoming, friendly and inviting. Polite, shows good manners. You just moved into a new apartment building. What kind of impression do you want to give your neighborhoods?\n\n[Tutor] Your neighbors.\n\n[Student] Your neighbors.\n\n[Tutor] Very good.\n\n[Student] Yes. Yes. Yes, if I move some new apartment, I'm impression about the polite and welcoming the neighborhood saying or notice. Because I'm newbie and everything is new, so I'm not used to that situation. But some people or some environment is polite and welcoming. Yeah, my mind is more relaxed and kind. So it is a good way.\n\n[Tutor] Yeah, sure. One thing that I find that people have told me about in Korea is that when you live in those huge high-rise apartment buildings, you know, the ones with 30 floors, sometimes it's hard to get to know your neighbors, even on the floor you live on. Which is sad, because here in Canada, we have those buildings too, but we also have smaller apartments that are only 12 to 16 units. It's so much easier to get to know your neighbors.\n\n[Student] I understand.\n\n[Tutor] All right. Very good. All right. The second group we're going to look at is \"Notices and Announcements.\" Let's get you to try that vocabulary.\n\n[Student] Okay. Misreading, gives the wrong idea. Outdate [?Outdated], no longer current. Overlooked, easily missed or ignore.\n\n[Tutor] Ignored. [?]\n\n[Student] Ignore. There are so many questions. [?] If you seen an old or unclear flyer [?prior] on the notice board, what would you do? First, I don't accept that information, and second, I'm just called the control office in apartment because they usually post an announcement in elevator.\n\n[Tutor] Yeah.\n\n[Student] And maybe if I call that situation, the office is changed or noticed. Maybe. We'll be made a choice. [?]\n\n[Tutor] Yes. Yeah. Okay.\n\n[Student] Okay.\n\n[Tutor] All right. What we're going to do now is I will help you with some corrections, okay?\n\n[Student] Okay.\n\n[Tutor] You said \"misreading.\"\n\n[Student] Misreading.\n\n[Tutor] Uh-huh. Yeah. We need an L instead of an R. Misleading.\n\n[Student] Misleading.\n\n[Tutor] Misleading.\n\n[Student] Misleading.\n\n[Tutor] Yes.\n\n[Student] Okay.\n\n[Tutor] The next one, you pronounced \"outdate.\"\n\n[Student] Uh-huh.\n\n[Tutor] But we have an extra syllable, so I'll get you to try after me. Outdated.\n\n[Student] Outdated. Oh, outdated [?OutdateTat].\n\n[Tutor] Outdated [?OutdateTat]. Excellent.\n\n[Student] Oh, outdated [?OutdateTat].\n\n[Tutor] Yes. I believe that I may have sent you a video in the past that ED has three different sounds for words. I'll double check as to whether I've sent it. If I haven't, I'll include it in today's comments, okay?\n\n[Student] Awesome, yeah.\n\n[Tutor] Now, the last word is showing another way to say ED. In this word, we say \"overlooked.\"\n\n[Student] Overlooked.\n\n[Tutor] Okay.\n\n[Student] Overlooked.\n\n[Tutor] Yeah, you got it. Overlooked.\n\n[Student] Yeah.\n\n[Tutor] I'll definitely see if I can find that ED video, and then I encourage you to give a watch to it. I know you're busy. All right, my friend.\n\n[Student] We are done?\n\n[Tutor] Yeah, you're done. We've worked on the phrase \"heads up\" and what that means. You know what it means. We worked on the three words we just talked about. We worked on the P in \"happen.\" We discussed \"rain check\" and what that means. You know what that was. And we worked on the words \"approachable\" and \"neighbors.\" Neighborhood versus neighbors. So, lots of hard work today. Any questions or concerns?\n\n[Student] Oh, no. Thanks for your feedback and your class.\n\n[Tutor] Yeah. You're doing great. Have a great day. Talk to you next time.\n\n[Student] Bye-bye.\n\n[Tutor] Take care.\n\n[AI 피드백]\n**0. 📌 Topic**\n\nTopic: Understanding Building Notices and Politely Declining Neighbors' Invitations\n\n---\n\n**1. 📊 오늘의 대화 요약 (Summary)**\n\n- 이웃끼리 쓰는 표현 **drop by, heads up, rain check**와 \"Did you happen to see the notice posted about ~?\" 패턴을 익히고, 롤플레이로 **이웃의 바비큐 초대를 정중히 거절**하는 연습을 했습니다.\n- 북미 아파트 공지 문화(우편함·엘리베이터 게시, 퀘벡의 영·불 이중 공지)와 **garage sale, block party**의 뜻을 배웠습니다. 한국 엘리베이터 공지에 주민들이 손글씨 답글을 다는 경험도 이야기했습니다.\n- 공지 관련 형용사 **approachable, misleading, outdated, overlooked**를 배웠습니다. 발음은 L/R(misleading), P/F(happen), 끝소리 -ed(posted, outdated, overlooked), 끝소리 -s(notices, mailboxes, elevators)를 집중 교정했습니다. 사람을 말할 때는 **neighbors**(이웃 사람들), 동네를 말할 때는 **neighborhood**라는 구분도 연습했습니다.\n\n---\n\n**2. 💬 유창성 업그레이드 (Fluency & Natural Flow)**\n\n**① 'rain check'를 본 적 있는지 답할 때**\n- ❌ 학습자 원문 (As Said): \"Maybe some email. Yeah, I have experience to read that.\"\n- ✅ 자연스러운 표현 (Natural): \"Yeah, I think I've seen it in some emails.\"\n- 💎 비즈니스 표현 (Professional): \"I've come across that phrase in business emails before.\"\n- 💡 코칭 포인트: To say you've seen or read something before, native speakers use \"I've seen it\" or \"I've come across it.\" \"I have experience\" sounds like a job skill.\n  → 전에 보거나 읽은 적이 있다고 말할 때 원어민은 \"I've seen it\"이나 \"I've come across it\"을 씁니다. \"I have experience\"라고 하면 이력서에 쓰는 '업무 경력'처럼 들려요. **\"~ 본 적 있어요\" = I've seen ~**을 한 덩어리로 기억하세요.\n\n**② 오래되거나 헷갈리는 공지를 보면 어떻게 할지 답할 때**\n- ❌ 학습자 원문 (As Said): \"First, I don't accept that information, and second, I'm just called the control office in apartment because they usually post an announcement in elevator.\"\n- ✅ 자연스러운 표현 (Natural): \"First, I wouldn't trust it. Then I'd just call the management office, because they're the ones who post the notices.\"\n- 💎 비즈니스 표현 (Professional): \"I wouldn't rely on that information. I'd contact the building management office to confirm whether it's still valid.\"\n- 💡 코칭 포인트: When you answer a \"What would you do?\" question, start with \"I'd...\" (\"I would\"). Also, the office that runs an apartment building is called the \"management office,\" not the \"control office.\"\n  → \"What would you do?\"(~라면 어떻게 하겠어요?) 질문에는 **I'd + 하다**로 답하세요: I'd call, I'd check. 이렇게 답하면 원어민 귀에 질문과 딱 맞게 들립니다. \"I'm just called\"라고 하면 '내가 불렸다'처럼 들리니 주의하세요. 그리고 '관리사무소'는 **management office**입니다. control office라고 하면 '통제실'처럼 들려요.\n\n**③ 롤플레이에서 초대를 거절하며 이유를 말할 때**\n- ❌ 학습자 원문 (As Said): \"I really appreciate the invitation, but my sister coming into town that day, rain check?\"\n- ✅ 자연스러운 표현 (Natural): \"I really appreciate the invitation, but my sister's coming into town that day. Rain check?\"\n- 💎 비즈니스 표현 (Professional): \"Thank you so much for the invitation, but I have family visiting that day. Could we do it another time?\"\n- 💡 코칭 포인트: \"My sister coming\" is missing a small sound. Say \"my sister's coming\". The 's is short for \"is,\" and it glues the sentence together.\n  → \"my sister coming\"이라고만 하면 문장이 중간에 툭 끊겨 들려요. **'~가 올 거예요 / 오는 중이에요' = 사람 + is coming** 한 덩어리입니다. 말할 때는 is를 앞 단어에 붙여 **sister's coming**, **he's coming**처럼 짧게 발음하면 원어민처럼 자연스러워요.\n\n**④ 질문이 있는지 물었을 때 답하는 말**\n- ❌ 학습자 원문 (As Said): \"Oh, no. It's possible to continue.\"\n- ✅ 자연스러운 표현 (Natural): \"No, I'm good. Let's keep going.\"\n- 💎 비즈니스 표현 (Professional): \"No questions for now. Please go ahead.\"\n- 💡 코칭 포인트: \"It's possible to continue\" sounds like a technical report. In conversation, \"I'm good\" plus \"Let's keep going\" sounds relaxed and natural.\n  → \"It's possible to continue\"는 기계 설명서처럼 딱딱하게 들려요. 대화에서는 **\"I'm good. Let's keep going.\"**이 편안하고 자연스럽습니다. 회의에서 질문이 있냐고 물을 때도 그대로 쓸 수 있어요.\n\n---\n\n**3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)**\n\nCategory: prepositions\n\n🎯 오늘의 패턴: 장소·역할·시간을 이어 주는 작은 단어(in, into, as, on)를 빼먹거나 엉뚱한 걸 붙이는 습관\n\nJoey의 실제 문장을 모아 보면, **\"어디로 / 무엇으로서 / 언제 / 어디 위에\"를 이어 주는 작은 단어**가 자주 빠지거나 바뀌어 있었습니다.\n\n| ❌ 원문 (As Said) | ✅ 교정 (Corrected) | 포인트 |\n|---|---|---|\n| \"I have a travel plan in this Christmas.\" | I have travel plans **this** Christmas. | this·next·last가 붙은 시간 앞에는 in을 붙이지 않아요 |\n| \"Yes, if I move some new apartment, …\" | If I move **into** a new apartment, … | '이사 들어가다'는 move **into** 한 덩어리 |\n| \"Okay, I will start neighbor one.\" | Okay, I'll start **as** Neighbor One. | '~ 역할로 / ~로서'는 **as** |\n| \"This homepage usually heads up in front of page.\" | This website usually posts heads-ups **on the front** page. | 화면·페이지·게시판 '위에' 있는 건 **on** |\n\n📌 핵심 규칙: **this / next / last + 시간** 앞에는 아무것도 붙이지 않아요. 이사 들어가는 건 **move into**, 역할은 **as**, 페이지·게시판은 **on**을 통째로 입에 붙이세요.\n\n🔁 따라 읽기\n- 🗣️ \"I'm going to Jeju next weekend.\"\n- 🗣️ \"If I move into a new apartment, I want to be approachable.\"\n- 🗣️ \"The notice is posted on the board in the elevator.\"\n\n---\n\n**4. 📗 어휘 확장 (Vocabulary Vault)**\n\n**① rain check** /ˈreɪn tʃek/ (noun)\n- 뜻: 다음 기회로 미루기, 나중에 하자는 약속\n- 실전 예문: \"I'm swamped with the audit this week. Can I take a rain check on dinner?\"\n\n**② approachable** /əˈproʊtʃəbəl/ (adjective)\n- 뜻: 말 걸기 편한, 다가가기 쉬운 (※ approach-able 두 조각으로 끊지 말고 한 단어로 이어서)\n- 실전 예문: \"Our new team leader is very approachable, so junior auditors ask her questions freely.\"\n\n**③ misleading** /ˌmɪsˈliːdɪŋ/ (adjective)\n- 뜻: 오해를 불러일으키는, 잘못 이끄는 (※ L 발음 주의: mis-**L**eading. misreading은 '잘못 읽기'라는 다른 말이에요)\n- 실전 예문: \"This chart is misleading because it leaves out last year's import costs.\"\n\n**④ outdated** /ˌaʊtˈdeɪtɪd/ (adjective)\n- 뜻: 시대에 뒤떨어진, 더 이상 최신이 아닌 (※ 끝을 '-데이티드'로 한 박자 더)\n- 실전 예문: \"We can't use these LNG price forecasts. They're already outdated.\"\n\n**⑤ overlooked** /ˌoʊvərˈlʊkt/ (adjective)\n- 뜻: 간과된, 놓친 (※ 끝을 '-룩트'로 짧게 끊기)\n- 실전 예문: \"This risk was overlooked in the last audit, so let's check it carefully this time.\"\n\n**⑥ neighbors vs. neighborhood** /ˈneɪbərz/ · /ˈneɪbərhʊd/ (noun)\n- 뜻: neighbors = 옆집·같은 층에 사는 **이웃 사람들** / neighborhood = 사람들이 사는 **동네**\n- 실전 예문: \"I want to make a good impression on my new neighbors. It's a quiet neighborhood.\"\n\n---\n\n**5. 📝 실전 복습 챌린지 (Practice)**\n\n**Q1. (쉬움)** 동료가 다음 주에 뭐 하냐고 묻습니다. \"다음 주 금요일에 가족 모임이 있어요.\"라고 말해 보세요.\n- 모범 답안: **\"I have a family gathering next Friday.\"**\n\n**Q2. (보통)** 거래처 담당자가 금요일 저녁 식사에 초대했지만 그날 출장이 있습니다. 감사 인사를 하고 정중히 다음으로 미뤄 보세요.\n- 모범 답안: **\"I really appreciate the invitation, but I'm on a business trip that day. Rain check?\"**\n\n**Q3. (어려움)** 팀원에게 감사(audit) 일정 공지를 봤는지 묻고, 다음 주 월요일에 팀이 새 사무실로 이사한다고 미리 알려 주세요.\n- 모범 답안: **\"Did you happen to see the notice posted about the audit schedule? Also, heads up: our team is moving into the new office next Monday.\"**\n\n---\n\n**6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)**\n\n✨ **Good Job**\n> \"Oh, heads up. The elevator doesn't work today.\"\n\n튜터의 힌트를 듣자마자 Joey가 **바로 자기 문장으로 다시 만들어 낸** 표현입니다. \"heads up\" 뒤에 알릴 내용을 짧은 한 문장으로 붙였어요. 엘리베이터 하나가 주인공일 때 쓰는 **doesn't work** 모양도 정확했습니다. 튜터가 \"That's what we say\"라고 했을 만큼 **원어민이 실제로 쓰는 그대로**입니다. 배운 표현을 내 상황에 바로 적용하는 이 능력이 Joey의 가장 큰 강점이에요.\n\n🚀 **내일의 한 문장**\n> 🗣️ \"Hi! Just a heads up: my sister's coming into town next weekend, so I might need a rain check on our class.\"\n\n(오늘 배운 **heads up**, **rain check**, **sister's coming**, 그리고 in 없이 쓰는 **next weekend**를 한 번에 연습할 수 있어요.)\n\n---\n\n**[성과 지표]**\n\n**유창성 점수: 6 / 10**\n\n**근거**\n- 👍 **강점**: 예문 만들기에서 \"Did you happen to see the notice posted about the Sunday class, Sunday English class?\"처럼 배운 틀에 내 상황을 빠르게 끼워 넣었습니다. InfoBytes를 읽을 때는 스스로 실수를 바로잡아 튜터에게 \"Good self-correction\" 칭찬도 받았어요. 모르는 표현(block party, rain check)도 피하지 않고 추측해서 끝까지 말해 보는 태도가 훌륭합니다. 특히 rain check는 '미루기, 일정 다시 잡기'라고 정확히 맞혔습니다.\n- 📉 **보완점**: 자유 대화(엘리베이터 공지, 새 아파트 첫인상)로 넘어가면 문장이 길어지면서 흐름이 끊겼습니다. 예: \"So some apartment is possible, but it is not impossible.\" 또한 L/R(misleading), P/F(happen), 끝소리 -ed(posted, outdated, overlooked) 발음이 알아듣기 어렵게 만들었습니다.\n\n**🎯 다음 수업 원포인트 액션 플랜**\n👉 **\"짧게 끊어 말하기 + I'd로 시작하기\"**\n의견이나 \"만약 ~라면?\" 질문을 받으면 긴 한 문장으로 이어 붙이지 마세요. **\"I'd ~. Because ~.\"처럼 두 문장으로 짧게 끊어** 답해 보세요. 수업 전에 *misleading / happen / outdated / overlooked* 네 단어를 각각 5번씩 소리 내어 읽으면 발음까지 함께 잡을 수 있습니다.\n\n위 내용을 바탕으로:\n1. 먼저 오늘 수업에서 내가 틀렸거나 어색했던 표현을 하나 골라서, 관련된 상황을 영어로 질문해줘.\n2. 내가 영어로 대답하면, 자연스러운지 확인하고 더 나은 표현이 있으면 알려줘.\n3. 특히 \"반복 실수 패턴\"에서 지적된 부분을 집중적으로 연습시켜줘.\n4. 이런 식으로 오늘 배운 표현들을 하나씩 복습하자.\n5. 한국어 설명은 필요할 때만 간단히, 대화는 최대한 영어로 진행해줘.\n\n그럼 시작하자!";
+        function startReview(){navigator.clipboard.writeText(REVIEW_PROMPT).then(()=>{showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)}).catch(()=>{const t=document.createElement('textarea');t.value=REVIEW_PROMPT;document.body.appendChild(t);t.select();document.execCommand('copy');document.body.removeChild(t);showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)})}
+        function showToast(){const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500)}
+        function switchTab(n){document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',n==='feedback'?i===0:i===1));document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));document.getElementById('tab-'+n).classList.add('active')}
+    </script>
+</body>
+</html>
