@@ -1,0 +1,57 @@
+{
+ "date": "2026-11-10",
+ "iso": [
+  2026,
+  46
+ ],
+ "topic": "Understanding Building Notices and Politely Declining Neighbors' Invitations",
+ "grammar": "prepositions",
+ "grammar_norm": "Prepositions",
+ "score": 6.0,
+ "pairs": [
+  {
+   "said": "Maybe some email. Yeah, I have experience to read that.",
+   "natural": "Yeah, I think I've seen it in some emails."
+  },
+  {
+   "said": "First, I don't accept that information, and second, I'm just called the control office in apartment because they usually post an announcement in elevator.",
+   "natural": "First, I wouldn't trust it. Then I'd just call the management office, because they're the ones who post the notices."
+  },
+  {
+   "said": "I really appreciate the invitation, but my sister coming into town that day, rain check?",
+   "natural": "I really appreciate the invitation, but my sister's coming into town that day. Rain check?"
+  },
+  {
+   "said": "Oh, no. It's possible to continue.",
+   "natural": "No, I'm good. Let's keep going."
+  }
+ ],
+ "vocab": [
+  {
+   "word": "rain check",
+   "pos": "noun",
+   "meaning": "다음 기회로 미루기, 나중에 하자는 약속"
+  },
+  {
+   "word": "approachable",
+   "pos": "adjective",
+   "meaning": "말 걸기 편한, 다가가기 쉬운 (※ approach-able 두 조각으로 끊지 말고 한 단어로 이어서)"
+  },
+  {
+   "word": "misleading",
+   "pos": "adjective",
+   "meaning": "오해를 불러일으키는, 잘못 이끄는 (※ L 발음 주의: mis- L eading. misreading은 '잘못 읽기'라는 다른 말이에요)"
+  },
+  {
+   "word": "outdated",
+   "pos": "adjective",
+   "meaning": "시대에 뒤떨어진, 더 이상 최신이 아닌 (※ 끝을 '-데이티드'로 한 박자 더)"
+  },
+  {
+   "word": "overlooked",
+   "pos": "adjective",
+   "meaning": "간과된, 놓친 (※ 끝을 '-룩트'로 짧게 끊기)"
+  }
+ ],
+ "_html_md5": "fda2c11f43d6805ff0807e54209fc2d7"
+}

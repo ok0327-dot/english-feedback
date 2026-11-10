@@ -477,5 +477,10 @@
   "2026-11-09": {
     "topic": "Discussing local community events and volunteering opportunities.",
     "target_grammar": "incorrect verb forms or missing verbs"
+  },
+  "2026-11-10": {
+    "topic": "Understanding Building Notices and Politely Declining Neighbors' Invitations",
+    "target_grammar": "prepositions",
+    "engine": "claude"
   }
 }
