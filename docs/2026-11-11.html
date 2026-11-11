@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#0f0f13"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="당근영어"><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="icon" type="image/png" sizes="192x192" href="icon-192.png"><script src="install-banner.js" defer></script><script src="sw-reg.js" defer></script>
+    <title>전화영어 복습 - 2026년 11월 11일</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Noto Sans KR',sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.75;min-height:100vh}
+        .header{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);border-bottom:1px solid rgba(255,255,255,.06);padding:48px 24px 40px;text-align:center}
+        .header-date{font-size:13px;color:#94a3b8;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+        .header h1{font-size:28px;font-weight:700;color:#f1f5f9;margin-bottom:16px}
+        .header-meta{display:flex;justify-content:center;gap:24px;font-size:14px;color:#64748b}
+        .header-meta span{display:flex;align-items:center;gap:6px}
+        .cta-section{text-align:center;padding:40px 24px}
+        .cta-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:linear-gradient(135deg,#38bdf8,#818cf8);color:#fff;font-size:16px;font-weight:600;font-family:'Noto Sans KR',sans-serif;border:none;border-radius:50px;cursor:pointer;transition:all .3s;text-decoration:none;box-shadow:0 4px 24px rgba(56,189,248,.25)}
+        .cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(56,189,248,.35)}
+        .cta-btn svg{width:20px;height:20px}
+        .cta-sub{margin-top:12px;font-size:13px;color:#64748b}
+        .toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#38bdf8;padding:14px 28px;border-radius:12px;font-size:14px;font-weight:500;border:1px solid rgba(56,189,248,.2);box-shadow:0 8px 32px rgba(0,0,0,.4);opacity:0;transition:all .4s cubic-bezier(.16,1,.3,1);z-index:1000}
+        .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+        .container{max-width:720px;margin:0 auto;padding:0 24px 80px}
+        .tabs{display:flex;gap:4px;background:#1a1a24;padding:4px;border-radius:12px;margin-bottom:32px}
+        .tab{flex:1;padding:12px;text-align:center;font-size:14px;font-weight:500;color:#64748b;background:0 0;border:none;border-radius:8px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all .2s}
+        .tab.active{background:#262636;color:#f1f5f9}
+        .tab-content{display:none}.tab-content.active{display:block}
+        .feedback h2{font-size:18px;font-weight:700;color:#f1f5f9;margin:36px 0 16px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.06)}
+        .feedback h2:first-child{margin-top:0}
+        .feedback p{margin:8px 0;color:#cbd5e1}
+        .feedback .item{padding:6px 0 6px 16px;border-left:2px solid #334155;margin:6px 0;color:#cbd5e1}
+        .feedback .numbered{padding:8px 0 8px 16px;color:#cbd5e1}
+        .feedback .numbered strong{color:#38bdf8}
+        .feedback strong{color:#f1f5f9}
+        .feedback code{background:#1e293b;padding:2px 8px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#38bdf8}
+        .feedback table{width:100%;border-collapse:collapse;margin:12px 0}
+        .feedback th,.feedback td{padding:10px 14px;text-align:left;border-bottom:1px solid #262636}
+        .feedback th{color:#94a3b8;font-weight:500;font-size:13px}
+        .feedback td{color:#cbd5e1}
+        .arrow{color:#38bdf8;font-weight:700}
+        .transcript{background:#1a1a24;border-radius:12px;padding:28px;font-size:14px;line-height:2;color:#94a3b8;white-space:pre-wrap;word-break:break-word;font-family:'JetBrains Mono','Noto Sans KR',monospace}
+        .transcript .tutor{color:#38bdf8}
+        .transcript .student{color:#a78bfa}
+        @media(max-width:640px){.header{padding:32px 16px}.header h1{font-size:22px}.cta-btn{padding:14px 28px;font-size:15px}.container{padding:0 16px 60px}}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-date">2026년 11월 11일</div>
+        <h1>📚 전화영어 복습</h1>
+        <div class="header-meta">
+            <span>⏱ 19분 58초</span>
+            <span>🎙 전화영어_025180304_20261111080012.m4a</span>
+        </div>
+    </div>
+    <div class="cta-section">
+        <button class="cta-btn" onclick="startReview()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Gemini에서 복습 대화 시작하기
+        </button>
+        <div class="cta-sub">클릭하면 프롬프트가 복사되고 Gemini가 열립니다</div>
+    </div>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('feedback')">📋 AI 피드백</button>
+            <button class="tab" onclick="switchTab('transcript')">🎙 수업 전사</button>
+        </div>
+        <div id="tab-feedback" class="tab-content active">
+            <div class="feedback"><p>Below is the edited version of the feedback, carefully reviewed and revised according to all the given instructions.</p>
+<br>
+<br>
+<p>안녕하세요, Joey!/Tutor_NAME!/님, 오늘도 [Tutor] 튜터님과 함께 쓰레기 분리수거와 재활용에 대해 유용한 대화를 나누으셨네요. 환경 보호에 관한 생각과 행동을 나누며 즐겁게 참여하시는 모습이 매우 인상적이었습니다. 특히 어휘나 발음을 다듬으려고 적극적으로 질문해 주신 점이 보기 좋았어요!</p>
+<br>
+<br>
+<p><strong>0. 📌 Topic</strong></p>
+<p>Topic: Discussing waste separation and recycling systems</p>
+<br>
+<p><strong>1. 📊 백서기 및 핵심 내용 요약 (Summary)</strong></p>
+<p>이번 수업에서는 한국과 해외(미국, 영국 등)의 쓰레기 배출 시스템을 비교하며 다양한 표현을 학습했습니다. 쓰레기 슈트, 3가지 색상 분리수거함, 대형/유해 폐기물 처리 요령과 함께 재활용품 세척에 대한 유용한 대화를 나누었습니다.</p>
+<br>
+<br>
+<p><strong>2. 💬 유창성 업그레이드 (Fluency & Natural Flow)</strong></p>
+<br>
+<div class="numbered"><strong>1.</strong> ❌ <strong>As Said</strong>: <code>Just one more month after.</code></div>
+<p>✅ <strong>Natural</strong>: <code>Just one more month left.</code></p>
+<p>💎 <strong>Professional</strong>: <code>There's only one month remaining.</code></p>
+<p>💡 <strong>코칭 포인트</strong>: 남은 시간을 말할 때는 'after'보다 'left'나 'remaining'을 사용하면 훨씬 자연스러워요. 'after'는 보통 어떤 일 이후를 뜻합니다.</p>
+<br>
+<div class="numbered"><strong>2.</strong> ❌ <strong>As Said</strong>: <code>Oh, it so uncomfortable.</code></div>
+<p>✅ <strong>Natural</strong>: <code>Oh, that's so inconvenient.</code></p>
+<p>💎 <strong>Professional</strong>: <code>That's quite a hassle.</code></p>
+<p>💡 <strong>코칭 포인트</strong>: 'uncomfortable'은 신체적·정신적으로 찌뿌둥하거나 불편할 때 주로 쓰여요. 절차나 상황이 번거롭고 성가실 때는 'inconvenient'나 'a hassle'이라는 단어가 훨씬 어울립니다.</p>
+<br>
+<div class="numbered"><strong>3.</strong> ❌ <strong>As Said</strong>: <code>The company have to gather in recycling and they take them because the clothes and electronic some device and battery is there make money for this company.</code></div>
+<p>✅ <strong>Natural</strong>: <code>The company collects recyclables because items like clothes, electronics, and batteries can be profitable for them.</code></p>
+<p>💎 <strong>Professional</strong>: <code>The company profits from collecting recyclables such as clothing, electronics, and batteries.</code></p>
+<p>💡 <strong>코칭 포인트</strong>: 'gather in'보다는 'collect'가 수거한다는 의미에 딱 맞아요! 또한, 문장 끝부분은 'can be profitable(이득이 될 수 있다)'로 엮어 주면 훨씬 깔끔하게 완성됩니다.</p>
+<br>
+<br>
+<p><strong>3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)</strong></p>
+<p>Category: Noun Forms and Articles</p>
+<p>🎯 <strong>오늘의 단짝 찾기</strong>: 하나인지 여러 개인지 말할 때, 명사의 단수·복수 짝을 맞춰주세요!</p>
+<br>
+<p>이번 대화에서 명사 단어 뒤에 -s를 붙여 여러 개로 나타내거나, 문장 속 명사의 짝을 맞추는 부분에서 살짝 헷갈려 하시는 모습이 보였어요. 원어민 귀에는 명사의 수(단수/복수)가 맞지 않으면 어색하게 들릴 수 있답니다.</p>
+<br>
+<p>몇 가지 예시로 연습해 볼까요?</p>
+<br>
+<div class="item"><strong>'다른 유형들'이라고 여러 개를 말할 땐 끝에 -s 붙이기</strong></div>
+<div class="item">❌ <code>different type of rubbish</code></div>
+<div class="item">✅ <code>different types of rubbish</code></div>
+<div class="item">💡 'different' 뒤에 오는 세어지는 말에는 s를 붙여서 짝을 맞춰주세요!</div>
+<br>
+<div class="item"><strong>'세 가지 종류'를 나타낼 땐 kind 뒤에도 -s 붙이기</strong></div>
+<div class="item">❌ <code>distinguish three kind of the trash</code></div>
+<div class="item">✅ <code>distinguish three kinds of trash</code></div>
+<div class="item">💡 숫자 3(three) 다음에는 'kind'가 아니라 'kinds'로 짝을 맞춰야 듣는 사람이 편안하게 느낍니다.</div>
+<br>
+<div class="item"><strong>단수/복수 스위치 맞추기</strong></div>
+<div class="item">❌ <code>electronic some device and battery is...</code></div>
+<div class="item">✅ <code>some electronic devices and batteries are...</code></div>
+<div class="item">💡 물건이 여러 개(devices, batteries)일 때는 뒤에 오는 말도 'is'가 아니라 'are'로 짝을 맞춰주어야 소리가 매끄럽게 연결돼요!</div>
+<br>
+<p>다음 대화에서는 명사를 쓸 때 '하나인지 여러 개인지' 떠올려 보며 천천히 입으로 뱉어보세요!</p></div>
+        </div>
+        <div id="tab-transcript" class="tab-content">
+            <div class="transcript">[Joey] Hello, Bell. Good evening. Hi.
+<span class="tutor">[Tutor]</span> Yeah, how are you doing today?
+[Joey] Yeah, it&#x27;s a nice day. Yeah, it&#x27;s a great day of winter.
+<span class="tutor">[Tutor]</span> Oh my gosh. It&#x27;s the fall season.
+[Joey] Autumn?
+<span class="tutor">[Tutor]</span> Yeah, autumn season. Yes. How are you today?
+[Joey] Oh, pretty good. Yeah. Does it feel like wintertime? Is it really cold?
+<span class="tutor">[Tutor]</span> Yes. When I get up in my bed, it&#x27;s a little hard because the outside is a little cold and my bed is a little warm. So, yeah, it is a little hard to wake up nowadays. But it&#x27;s okay. Yeah, it&#x27;s coming the winter.
+[Joey] Okay, the weather is changing pretty quickly.
+<span class="tutor">[Tutor]</span> Yeah, it&#x27;s okay, Corey [?].
+[Joey] This year is almost gone.
+<span class="tutor">[Tutor]</span> Yeah, it&#x27;s already November.
+[Joey] Just one more month after.
+<span class="tutor">[Tutor]</span> You&#x27;re right. Did you want to have a look at the textbook today?
+[Joey] Oh, yes, I prepared and today&#x27;s topic is rubbish and recycling. How about that pronunciation, the rubbish? Is it right?
+<span class="tutor">[Tutor]</span> Yeah, rubbish.
+[Joey] Rubbish and recycling.
+<span class="tutor">[Tutor]</span> Rubbish and recycling.
+[Joey] Okay. And today&#x27;s mission.
+<span class="tutor">[Tutor]</span> Go ahead.
+[Joey] Learn how to separate trash, recycling, and food waste. Check pickup days and know how to throw away dangerous or electronic items.
+<span class="tutor">[Tutor]</span> Okay, this one has some good tips here. And did you want to look at the next page key expression?
+[Joey] Okay, I see. First expression is the distinguish between.
+<span class="tutor">[Tutor]</span> To recognize or show difference between two or more things.
+[Joey] Distinguish between trash and recycling. And household waste.
+<span class="tutor">[Tutor]</span> Regular trash from daily life at home.
+[Joey] Household waste. And keep parish [?]. Keep parish [?].
+<span class="tutor">[Tutor]</span> When is the next pickup for recycling? How should I dispose of leftover paint? When is the next pickup for household waste? And how should I dispose of...
+[Joey] So food waste. Yeah, how should I dispose of the food waste?
+<span class="tutor">[Tutor]</span> Food waste, yes. So here are the other key phrases.
+[Joey] Key phrases. Key phrases. Okay. Sometimes my pronunciation is a little ugly and different and please check that pronunciation for me. Because I don&#x27;t know. I&#x27;m not sure how can I say that. Yeah, expression and word and phrase.
+<span class="tutor">[Tutor]</span> Okay. Yeah, so the PH makes an F, F sound.
+[Joey] Yeah, F sound. Okay. Phrase.
+<span class="tutor">[Tutor]</span> Yeah, F, the letter like fish, phrase.
+[Joey] Fish, phrase. Okay.
+<span class="tutor">[Tutor]</span> Would you like to read A, Infobytes?
+[Joey] Infobytes. I can see there a picture of a household recycling bin. Okay. And in the USA and United Kingdom, Canada, Australia, and New Zealand, many apartments have a trash cut [?chute] for throwing away rubbish.
+<span class="tutor">[Tutor]</span> Chute?
+[Joey] Chute, trash chute for throwing away rubbish. Teacher, I have a question about this sentence. Chute and rubbish means, what does chute and rubbish mean?
+<span class="tutor">[Tutor]</span> So rubbish is trash, garbage. Garbage, trash, rubbish. And chute is just kind of a steep, like a tube.
+[Joey] Oh my please [?].
+<span class="tutor">[Tutor]</span> A tube, like a slide.
+[Joey] Slide.
+<span class="tutor">[Tutor]</span> A slide. If it&#x27;s on the top floor and it goes, it&#x27;s just a big metal...
+[Joey] Yeah, cut off, right? Cut off, trash, slide, slide, cut off, slide. Okay.
+<span class="tutor">[Tutor]</span> Slide, yeah. Right. Okay, next. In the United Kingdom, Australia, and New Zealand, homes usually get three bins from the city council for trash, recycling, for food scraps. Each household needs to put this bin out the night before the designated collection day.
+[Joey] Yeah, I understand. It is similar in Korea.
+<span class="tutor">[Tutor]</span> So this sounds like the chute is like you&#x27;re on the sixth floor, you just open up a little door and throw the trash down and it falls down six floors.
+[Joey] Six floor?
+<span class="tutor">[Tutor]</span> Yeah, so if you&#x27;re on the top floor, you don&#x27;t have to go down any stairs, you just throw it and it falls down into the basement.
+[Joey] So your sentence means is there if I leave the top floor just go down in the base floor and and correct the trash, right?
+<span class="tutor">[Tutor]</span> So you use a garbage chute which you don&#x27;t have to go downstairs. You stay on your floor and it falls down to the basement or falls down to the garbage. Some buildings have a system that is connected.
+[Joey] Every household is possible, trash is possible in their house, right?
+<span class="tutor">[Tutor]</span> Well, it&#x27;s usually each floor has the garbage chute. So you walk to the garbage chute.
+[Joey] I understand. So what types of waste are collected separately in Korea?
+<span class="student">[Student]</span> Oh yeah, it is similar. Usually many Koreans people live in apartment and usually the garbage collection system is there in basement in their apartment so usually we separate the three type of trash, the food trash and recycling and just normal trash so usually we distinguish three kind of the trash and then separate that trash and some apartment have a great system if we if they just trash their home in their home that is connect and gathering the the trash system so it is more convenient yeah so it is different to each apartment.
+<span class="tutor">[Tutor]</span> Okay, and looking at the next one, would you like to read the &quot;U for the staff&quot;?
+[Joey] Okay, ask about sorting, kick up [?pickup] days, and hazardous, hazardous, hazardous wasting. Did you write it? Hazardous? Hazardous? Hazardous? Hazardous. Okay. I start. Hi, I&#x27;m still trying to distinguish between the different type of rubbish. It is it&#x27;s a bit confusing. No problem. We divide waste into categories. Household waste goes in the black bin. Recyclables like plastic, glass, and paper go in the blue bin. That&#x27;s helpful. When is next pick up for recycling?
+<span class="tutor">[Tutor]</span> The recycling is collected every Thursday morning. Just make sure to put your bin out by 7 a.m.
+[Joey] Got it. And how should I dispose of things like old battery or broken electronics?
+<span class="tutor">[Tutor]</span> That hazardous waste. You can bring them to the city drop center this Saturday.
+[Joey] Oh, it so uncomfortable. Oh my god. Harder to do. Yes, it is so hard to deal the trash.
+<span class="tutor">[Tutor]</span> So the question here, what should you do with old batteries?
+[Joey] Okay, usually we bring them to the city drop-off center every Saturday and this Saturday. Yeah, it is so uncomfortable.
+<span class="tutor">[Tutor]</span> So not very convenient?
+[Joey] Not inconvenient, yes, yes.
+<span class="tutor">[Tutor]</span> And so in your apartment, do you have to take hazardous waste separately?
+<span class="student">[Student]</span> Oh, yes. Usually apartment has a system of their gathering trash and garbage. So anytime it is possible to trash the recycling and food and just the normal general waste. So yeah, it is so convenient and I think the recycling system is connect to the some company. The company have to gather in recycling and they take them because the clothes and electronic some device and battery is there make money for this company. So I think that is a winning strategy to trash over the recycling and battery and other things, garbage.
+<span class="tutor">[Tutor]</span> Yes. Can that bonus, yeah.
+[Joey] Yeah, can be bonus. Mm-mm-mm. Next one, yeah.
+<span class="tutor">[Tutor]</span> Would you like to look at C, the &quot;Say it right&quot;?
+[Joey] Okay, say it right. Okay, the first category is the waste items.
+<span class="tutor">[Tutor]</span> Oversized, too large to fit. Hazardous, could be dangerous. Leaky, liquid coming out.
+[Joey] Okay, the question. You are helping a plant clean. You find old paint and a broken table. What are they and how do you throw them away? Okay, I see. I find the broken table and old paint. First, in Korea, the paint is the distinguish the general waste so I&#x27;m just packaging the normal garbage plastic bag and throw away but the broken table is the bigger so I called the company. The company is the pick up the garbage, the big garbage like the broken table and chair, big television. So if I pay some fee, they take them. So first I call them and take out the correct place.
+<span class="tutor">[Tutor]</span> Yeah, it&#x27;s your... You can just call for pickup.
+[Joey] Yeah, that&#x27;s convenient. Yeah, call the pickup company.
+<span class="tutor">[Tutor]</span> And what about recycling rules?
+[Joey] Okay, the second group word is recycling rules. The flattened, flattened, flattened, fresh down flat, flattened, flattened, contain [?contaminated], contaminate, contaminate, dirty or spoiled, contaminate.
+<span class="tutor">[Tutor]</span> Contaminated.
+[Joey] Ah, contaminated, contaminated, contaminated, contaminated, better?
+<span class="tutor">[Tutor]</span> So contaminated.
+[Joey] Ah, contaminated, contaminated, contaminated. Okay, biodegradable, biodegradable, biodegradable, break it down naturally.
+<span class="tutor">[Tutor]</span> Right, yeah. Biodegradable, biodegradable.
+[Joey] Okay, okay, question. You see a grass [?greasy] container of biodegradable ones and clean one. Which can be recycled and what what about the others? I see. If the recycle product is a pet bottle, plastic bottle, I think it is too wash to contain and trash them. And biograde is possible to trash just easily so just gather thing and the pattern is the gathering something because it is spread over the place so I&#x27;m gathering them and then gathering and put in the small plastic bag and and trash away the recycling bin.
+<span class="tutor">[Tutor]</span> So kind of throw it away in the recycling bin?
+[Joey] Yeah.
+<span class="tutor">[Tutor]</span> You kind of throw it in the trash, yeah.
+[Joey] Yeah.
+<span class="tutor">[Tutor]</span> And how about the next one, D, speak up? If you want to read and fill in the sentence.
+[Joey] Okay, no problem. I noticed the recycling bin behind our building was causing a problem. It was overfilled and sometimes unusable. Especially after it rains, someone throws out an oversized item that should have gone elsewhere. Also, people aren&#x27;t making sure things are clean before tossing them. I think the city should require everything to be recyclable. How about that?
+<span class="tutor">[Tutor]</span> Yeah, recyclable.
+[Joey] Okay, recyclable. And the next question one. What should you do if you&#x27;re not sure how to throw something away? Just throw something away. Just if sometimes I can have an idea how this product how can I trash how to throw away the trash bin at that time I&#x27;m just trash that trash the general trash bin because that is a general and usually that is burn out there some place so yeah I&#x27;m just should the trash should trash and teach how can I say the that expression if I throw away the trash is a right expression?
+<span class="tutor">[Tutor]</span> Yeah, so we would say I throw it in the trash, right?
+[Joey] Ah, throw it away. Throw away, right? Throw away trash. Yes, throw away trash. Throw away trash. Yeah, throw away trash the general beans [?bins], trash bin. And the last picture, can you remember any expression from today? Oh, I can remember but yeah I find that distinguish between household waste and when is the next pickup for blah blah. How should I dispose of blah blah.
+<span class="tutor">[Tutor]</span> Yeah, and yeah, I will send you corrections in just a moment. Have a great day.
+[Joey] Okay, have a special day. Bye bye teacher. Thanks you too. Bye.</div>
+        </div>
+    </div>
+    <div class="toast" id="toast">✅ 프롬프트가 복사되었습니다!</div>
+    <script>
+        const REVIEW_PROMPT="너는 나의 영어 회화 복습 파트너야. 오늘 내 전화영어 수업 내용을 기반으로 대화하면서 복습을 도와줘.\n\n[오늘 수업 전사 내용]\n[Joey] Hello, Bell. Good evening. Hi.\n[Tutor] Yeah, how are you doing today?\n[Joey] Yeah, it's a nice day. Yeah, it's a great day of winter.\n[Tutor] Oh my gosh. It's the fall season.\n[Joey] Autumn?\n[Tutor] Yeah, autumn season. Yes. How are you today?\n[Joey] Oh, pretty good. Yeah. Does it feel like wintertime? Is it really cold?\n[Tutor] Yes. When I get up in my bed, it's a little hard because the outside is a little cold and my bed is a little warm. So, yeah, it is a little hard to wake up nowadays. But it's okay. Yeah, it's coming the winter.\n[Joey] Okay, the weather is changing pretty quickly.\n[Tutor] Yeah, it's okay, Corey [?].\n[Joey] This year is almost gone.\n[Tutor] Yeah, it's already November.\n[Joey] Just one more month after.\n[Tutor] You're right. Did you want to have a look at the textbook today?\n[Joey] Oh, yes, I prepared and today's topic is rubbish and recycling. How about that pronunciation, the rubbish? Is it right?\n[Tutor] Yeah, rubbish.\n[Joey] Rubbish and recycling.\n[Tutor] Rubbish and recycling.\n[Joey] Okay. And today's mission.\n[Tutor] Go ahead.\n[Joey] Learn how to separate trash, recycling, and food waste. Check pickup days and know how to throw away dangerous or electronic items.\n[Tutor] Okay, this one has some good tips here. And did you want to look at the next page key expression?\n[Joey] Okay, I see. First expression is the distinguish between.\n[Tutor] To recognize or show difference between two or more things.\n[Joey] Distinguish between trash and recycling. And household waste.\n[Tutor] Regular trash from daily life at home.\n[Joey] Household waste. And keep parish [?]. Keep parish [?].\n[Tutor] When is the next pickup for recycling? How should I dispose of leftover paint? When is the next pickup for household waste? And how should I dispose of...\n[Joey] So food waste. Yeah, how should I dispose of the food waste?\n[Tutor] Food waste, yes. So here are the other key phrases.\n[Joey] Key phrases. Key phrases. Okay. Sometimes my pronunciation is a little ugly and different and please check that pronunciation for me. Because I don't know. I'm not sure how can I say that. Yeah, expression and word and phrase.\n[Tutor] Okay. Yeah, so the PH makes an F, F sound.\n[Joey] Yeah, F sound. Okay. Phrase.\n[Tutor] Yeah, F, the letter like fish, phrase.\n[Joey] Fish, phrase. Okay.\n[Tutor] Would you like to read A, Infobytes?\n[Joey] Infobytes. I can see there a picture of a household recycling bin. Okay. And in the USA and United Kingdom, Canada, Australia, and New Zealand, many apartments have a trash cut [?chute] for throwing away rubbish.\n[Tutor] Chute?\n[Joey] Chute, trash chute for throwing away rubbish. Teacher, I have a question about this sentence. Chute and rubbish means, what does chute and rubbish mean?\n[Tutor] So rubbish is trash, garbage. Garbage, trash, rubbish. And chute is just kind of a steep, like a tube.\n[Joey] Oh my please [?].\n[Tutor] A tube, like a slide.\n[Joey] Slide.\n[Tutor] A slide. If it's on the top floor and it goes, it's just a big metal...\n[Joey] Yeah, cut off, right? Cut off, trash, slide, slide, cut off, slide. Okay.\n[Tutor] Slide, yeah. Right. Okay, next. In the United Kingdom, Australia, and New Zealand, homes usually get three bins from the city council for trash, recycling, for food scraps. Each household needs to put this bin out the night before the designated collection day.\n[Joey] Yeah, I understand. It is similar in Korea.\n[Tutor] So this sounds like the chute is like you're on the sixth floor, you just open up a little door and throw the trash down and it falls down six floors.\n[Joey] Six floor?\n[Tutor] Yeah, so if you're on the top floor, you don't have to go down any stairs, you just throw it and it falls down into the basement.\n[Joey] So your sentence means is there if I leave the top floor just go down in the base floor and and correct the trash, right?\n[Tutor] So you use a garbage chute which you don't have to go downstairs. You stay on your floor and it falls down to the basement or falls down to the garbage. Some buildings have a system that is connected.\n[Joey] Every household is possible, trash is possible in their house, right?\n[Tutor] Well, it's usually each floor has the garbage chute. So you walk to the garbage chute.\n[Joey] I understand. So what types of waste are collected separately in Korea?\n[Student] Oh yeah, it is similar. Usually many Koreans people live in apartment and usually the garbage collection system is there in basement in their apartment so usually we separate the three type of trash, the food trash and recycling and just normal trash so usually we distinguish three kind of the trash and then separate that trash and some apartment have a great system if we if they just trash their home in their home that is connect and gathering the the trash system so it is more convenient yeah so it is different to each apartment.\n[Tutor] Okay, and looking at the next one, would you like to read the \"U for the staff\"?\n[Joey] Okay, ask about sorting, kick up [?pickup] days, and hazardous, hazardous, hazardous wasting. Did you write it? Hazardous? Hazardous? Hazardous? Hazardous. Okay. I start. Hi, I'm still trying to distinguish between the different type of rubbish. It is it's a bit confusing. No problem. We divide waste into categories. Household waste goes in the black bin. Recyclables like plastic, glass, and paper go in the blue bin. That's helpful. When is next pick up for recycling?\n[Tutor] The recycling is collected every Thursday morning. Just make sure to put your bin out by 7 a.m.\n[Joey] Got it. And how should I dispose of things like old battery or broken electronics?\n[Tutor] That hazardous waste. You can bring them to the city drop center this Saturday.\n[Joey] Oh, it so uncomfortable. Oh my god. Harder to do. Yes, it is so hard to deal the trash.\n[Tutor] So the question here, what should you do with old batteries?\n[Joey] Okay, usually we bring them to the city drop-off center every Saturday and this Saturday. Yeah, it is so uncomfortable.\n[Tutor] So not very convenient?\n[Joey] Not inconvenient, yes, yes.\n[Tutor] And so in your apartment, do you have to take hazardous waste separately?\n[Student] Oh, yes. Usually apartment has a system of their gathering trash and garbage. So anytime it is possible to trash the recycling and food and just the normal general waste. So yeah, it is so convenient and I think the recycling system is connect to the some company. The company have to gather in recycling and they take them because the clothes and electronic some device and battery is there make money for this company. So I think that is a winning strategy to trash over the recycling and battery and other things, garbage.\n[Tutor] Yes. Can that bonus, yeah.\n[Joey] Yeah, can be bonus. Mm-mm-mm. Next one, yeah.\n[Tutor] Would you like to look at C, the \"Say it right\"?\n[Joey] Okay, say it right. Okay, the first category is the waste items.\n[Tutor] Oversized, too large to fit. Hazardous, could be dangerous. Leaky, liquid coming out.\n[Joey] Okay, the question. You are helping a plant clean. You find old paint and a broken table. What are they and how do you throw them away? Okay, I see. I find the broken table and old paint. First, in Korea, the paint is the distinguish the general waste so I'm just packaging the normal garbage plastic bag and throw away but the broken table is the bigger so I called the company. The company is the pick up the garbage, the big garbage like the broken table and chair, big television. So if I pay some fee, they take them. So first I call them and take out the correct place.\n[Tutor] Yeah, it's your... You can just call for pickup.\n[Joey] Yeah, that's convenient. Yeah, call the pickup company.\n[Tutor] And what about recycling rules?\n[Joey] Okay, the second group word is recycling rules. The flattened, flattened, flattened, fresh down flat, flattened, flattened, contain [?contaminated], contaminate, contaminate, dirty or spoiled, contaminate.\n[Tutor] Contaminated.\n[Joey] Ah, contaminated, contaminated, contaminated, contaminated, better?\n[Tutor] So contaminated.\n[Joey] Ah, contaminated, contaminated, contaminated. Okay, biodegradable, biodegradable, biodegradable, break it down naturally.\n[Tutor] Right, yeah. Biodegradable, biodegradable.\n[Joey] Okay, okay, question. You see a grass [?greasy] container of biodegradable ones and clean one. Which can be recycled and what what about the others? I see. If the recycle product is a pet bottle, plastic bottle, I think it is too wash to contain and trash them. And biograde is possible to trash just easily so just gather thing and the pattern is the gathering something because it is spread over the place so I'm gathering them and then gathering and put in the small plastic bag and and trash away the recycling bin.\n[Tutor] So kind of throw it away in the recycling bin?\n[Joey] Yeah.\n[Tutor] You kind of throw it in the trash, yeah.\n[Joey] Yeah.\n[Tutor] And how about the next one, D, speak up? If you want to read and fill in the sentence.\n[Joey] Okay, no problem. I noticed the recycling bin behind our building was causing a problem. It was overfilled and sometimes unusable. Especially after it rains, someone throws out an oversized item that should have gone elsewhere. Also, people aren't making sure things are clean before tossing them. I think the city should require everything to be recyclable. How about that?\n[Tutor] Yeah, recyclable.\n[Joey] Okay, recyclable. And the next question one. What should you do if you're not sure how to throw something away? Just throw something away. Just if sometimes I can have an idea how this product how can I trash how to throw away the trash bin at that time I'm just trash that trash the general trash bin because that is a general and usually that is burn out there some place so yeah I'm just should the trash should trash and teach how can I say the that expression if I throw away the trash is a right expression?\n[Tutor] Yeah, so we would say I throw it in the trash, right?\n[Joey] Ah, throw it away. Throw away, right? Throw away trash. Yes, throw away trash. Throw away trash. Yeah, throw away trash the general beans [?bins], trash bin. And the last picture, can you remember any expression from today? Oh, I can remember but yeah I find that distinguish between household waste and when is the next pickup for blah blah. How should I dispose of blah blah.\n[Tutor] Yeah, and yeah, I will send you corrections in just a moment. Have a great day.\n[Joey] Okay, have a special day. Bye bye teacher. Thanks you too. Bye.\n\n[AI 피드백]\nBelow is the edited version of the feedback, carefully reviewed and revised according to all the given instructions.\n\n***\n\n안녕하세요, Joey!/Tutor_NAME!/님, 오늘도 [Tutor] 튜터님과 함께 쓰레기 분리수거와 재활용에 대해 유용한 대화를 나누으셨네요. 환경 보호에 관한 생각과 행동을 나누며 즐겁게 참여하시는 모습이 매우 인상적이었습니다. 특히 어휘나 발음을 다듬으려고 적극적으로 질문해 주신 점이 보기 좋았어요!\n\n---\n\n**0. 📌 Topic**\nTopic: Discussing waste separation and recycling systems\n\n**1. 📊 백서기 및 핵심 내용 요약 (Summary)**\n이번 수업에서는 한국과 해외(미국, 영국 등)의 쓰레기 배출 시스템을 비교하며 다양한 표현을 학습했습니다. 쓰레기 슈트, 3가지 색상 분리수거함, 대형/유해 폐기물 처리 요령과 함께 재활용품 세척에 대한 유용한 대화를 나누었습니다.\n\n---\n\n**2. 💬 유창성 업그레이드 (Fluency & Natural Flow)**\n\n1.  ❌ **As Said**: `Just one more month after.`\n    ✅ **Natural**: `Just one more month left.`\n    💎 **Professional**: `There's only one month remaining.`\n    💡 **코칭 포인트**: 남은 시간을 말할 때는 'after'보다 'left'나 'remaining'을 사용하면 훨씬 자연스러워요. 'after'는 보통 어떤 일 이후를 뜻합니다.\n\n2.  ❌ **As Said**: `Oh, it so uncomfortable.`\n    ✅ **Natural**: `Oh, that's so inconvenient.`\n    💎 **Professional**: `That's quite a hassle.`\n    💡 **코칭 포인트**: 'uncomfortable'은 신체적·정신적으로 찌뿌둥하거나 불편할 때 주로 쓰여요. 절차나 상황이 번거롭고 성가실 때는 'inconvenient'나 'a hassle'이라는 단어가 훨씬 어울립니다.\n\n3.  ❌ **As Said**: `The company have to gather in recycling and they take them because the clothes and electronic some device and battery is there make money for this company.`\n    ✅ **Natural**: `The company collects recyclables because items like clothes, electronics, and batteries can be profitable for them.`\n    💎 **Professional**: `The company profits from collecting recyclables such as clothing, electronics, and batteries.`\n    💡 **코칭 포인트**: 'gather in'보다는 'collect'가 수거한다는 의미에 딱 맞아요! 또한, 문장 끝부분은 'can be profitable(이득이 될 수 있다)'로 엮어 주면 훨씬 깔끔하게 완성됩니다.\n\n---\n\n**3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)**\nCategory: Noun Forms and Articles\n🎯 **오늘의 단짝 찾기**: 하나인지 여러 개인지 말할 때, 명사의 단수·복수 짝을 맞춰주세요!\n\n이번 대화에서 명사 단어 뒤에 -s를 붙여 여러 개로 나타내거나, 문장 속 명사의 짝을 맞추는 부분에서 살짝 헷갈려 하시는 모습이 보였어요. 원어민 귀에는 명사의 수(단수/복수)가 맞지 않으면 어색하게 들릴 수 있답니다. \n\n몇 가지 예시로 연습해 볼까요?\n\n*   **'다른 유형들'이라고 여러 개를 말할 땐 끝에 -s 붙이기**\n    *   ❌ `different type of rubbish`\n    *   ✅ `different types of rubbish`\n    *   💡 'different' 뒤에 오는 세어지는 말에는 s를 붙여서 짝을 맞춰주세요!\n\n*   **'세 가지 종류'를 나타낼 땐 kind 뒤에도 -s 붙이기**\n    *   ❌ `distinguish three kind of the trash`\n    *   ✅ `distinguish three kinds of trash`\n    *   💡 숫자 3(three) 다음에는 'kind'가 아니라 'kinds'로 짝을 맞춰야 듣는 사람이 편안하게 느낍니다.\n\n*   **단수/복수 스위치 맞추기**\n    *   ❌ `electronic some device and battery is...`\n    *   ✅ `some electronic devices and batteries are...`\n    *   💡 물건이 여러 개(devices, batteries)일 때는 뒤에 오는 말도 'is'가 아니라 'are'로 짝을 맞춰주어야 소리가 매끄럽게 연결돼요!\n\n다음 대화에서는 명사를 쓸 때 '하나인지 여러 개인지' 떠올려 보며 천천히 입으로 뱉어보세요!\n\n위 내용을 바탕으로:\n1. 먼저 오늘 수업에서 내가 틀렸거나 어색했던 표현을 하나 골라서, 관련된 상황을 영어로 질문해줘.\n2. 내가 영어로 대답하면, 자연스러운지 확인하고 더 나은 표현이 있으면 알려줘.\n3. 특히 \"반복 실수 패턴\"에서 지적된 부분을 집중적으로 연습시켜줘.\n4. 이런 식으로 오늘 배운 표현들을 하나씩 복습하자.\n5. 한국어 설명은 필요할 때만 간단히, 대화는 최대한 영어로 진행해줘.\n\n그럼 시작하자!";
+        function startReview(){navigator.clipboard.writeText(REVIEW_PROMPT).then(()=>{showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)}).catch(()=>{const t=document.createElement('textarea');t.value=REVIEW_PROMPT;document.body.appendChild(t);t.select();document.execCommand('copy');document.body.removeChild(t);showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)})}
+        function showToast(){const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500)}
+        function switchTab(n){document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',n==='feedback'?i===0:i===1));document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));document.getElementById('tab-'+n).classList.add('active')}
+    </script>
+</body>
+</html>
