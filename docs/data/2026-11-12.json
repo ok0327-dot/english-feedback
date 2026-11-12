@@ -1,0 +1,52 @@
+{
+ "date": "2026-11-12",
+ "iso": [
+  2026,
+  46
+ ],
+ "topic": "Avoiding Cultural Misunderstandings in Communication",
+ "grammar": "comparatives",
+ "grammar_norm": "Comparatives",
+ "score": 6.5,
+ "pairs": [
+  {
+   "said": "So last night I fell asleep at 10 p.m. and during almost 10 o'clock or 9 o'clock, I sleep, good sleep.",
+   "natural": "Last night I fell asleep at 10 and slept for almost 9 or 10 hours. I slept really well."
+  },
+  {
+   "said": "It is same Asia, but if they are speaking, they don't speak directly.",
+   "natural": "We're both in Asia, but Japanese people tend not to say things directly."
+  },
+  {
+   "said": "I think my communication style is the middle, the indirectly and or blunt, the middle.",
+   "natural": "I'd say my communication style is somewhere in the middle. Not too indirect, not too blunt."
+  },
+  {
+   "said": "I usually, I talk to eye contact, during eye contact, and if he, I feel there he is the misunderstanding",
+   "natural": "I usually make eye contact, and if I feel he's misunderstood me, I explain in more detail."
+  }
+ ],
+ "vocab": [
+  {
+   "word": "bias",
+   "pos": "명사",
+   "meaning": "편견, 한쪽으로 치우친 생각"
+  },
+  {
+   "word": "blunt",
+   "pos": "형용사",
+   "meaning": "직설적인, 돌려 말하지 않는 (가끔 무례하게 들릴 정도로)"
+  },
+  {
+   "word": "courteous",
+   "pos": "형용사",
+   "meaning": "예의 바른, 정중한"
+  },
+  {
+   "word": "common ground",
+   "pos": "명사구",
+   "meaning": "공통점, 서로 합의할 수 있는 부분 (오늘 튜터가 알려 준 표현)"
+  }
+ ],
+ "_html_md5": "9b1466757654bff2a1d563119b0e2098"
+}
