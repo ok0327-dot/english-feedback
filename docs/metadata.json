@@ -487,5 +487,10 @@
     "topic": "Discussing waste separation and recycling systems",
     "target_grammar": "noun forms and articles",
     "engine": "gemini-2.5-flash"
+  },
+  "2026-11-12": {
+    "topic": "Avoiding Cultural Misunderstandings in Communication",
+    "target_grammar": "comparatives",
+    "engine": "claude"
   }
 }
