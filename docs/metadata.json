@@ -484,9 +484,8 @@
     "engine": "claude"
   },
   "2026-11-11": {
-    "topic": "Discussing waste separation and recycling systems",
-    "target_grammar": "noun forms and articles",
-    "engine": "gemini-2.5-flash"
+    "topic": "Rubbish, Recycling, and Waste Disposal in Daily Life",
+    "target_grammar": "prepositions (with / in / into)"
   },
   "2026-11-12": {
     "topic": "Avoiding Cultural Misunderstandings in Communication",
