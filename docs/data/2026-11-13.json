@@ -1,0 +1,57 @@
+{
+ "date": "2026-11-13",
+ "iso": [
+  2026,
+  46
+ ],
+ "topic": "Daily Routines, a Self-Built AI English Assistant, and Life at a Korean Conglomerate",
+ "grammar": "verb tense",
+ "grammar_norm": "Verb Tense",
+ "score": 6.0,
+ "pairs": [
+  {
+   "said": "So is it possible to just pre-talking?",
+   "natural": "Could we just do some free talking today?"
+  },
+  {
+   "said": "Oh yeah, it's similar because I'm salary man, so my work time is correct, so usually my routine is also same",
+   "natural": "My routine is pretty much the same every day because I work regular hours at a company."
+  },
+  {
+   "said": "But usually it is easy to make some program, but it is difficult to listen to radio or read my homepage and read my email.",
+   "natural": "Building the program is the easy part. Actually listening to it and reading the emails is the hard part."
+  },
+  {
+   "said": "So if I compare two companies, this SK is more have a well system. So every and people is the more smart, smarter.",
+   "natural": "Compared to my old company, SK has better systems, and the people are really smart."
+  }
+ ],
+ "vocab": [
+  {
+   "word": "sunset",
+   "pos": "noun",
+   "meaning": "해 질 녘, 일몰 (오늘 Joey가 \"sun going down times\"라고 했던 말)"
+  },
+  {
+   "word": "commute",
+   "pos": "verb / noun",
+   "meaning": "통근하다 / 통근길 (오늘 \"take a bicycle during their work\"는 \"I bike to work\"라고 하면 간단해요)"
+  },
+  {
+   "word": "automate",
+   "pos": "verb",
+   "meaning": "자동화하다"
+  },
+  {
+   "word": "auditor",
+   "pos": "noun",
+   "meaning": "감사인, 감사 담당자 (오늘 \"auditor in my computer\"는 \"auditor at my company\"로 말하면 됩니다)"
+  },
+  {
+   "word": "conglomerate",
+   "pos": "noun",
+   "meaning": "대기업 그룹, 복합기업 (재벌을 영어로 설명할 때 유용)"
+  }
+ ],
+ "_html_md5": "1194eccee2370f7117cb04a7f218b909"
+}
