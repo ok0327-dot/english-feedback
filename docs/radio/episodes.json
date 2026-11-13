@@ -1,5 +1,12 @@
 [
  {
+  "week": "2026-W46",
+  "date": "2026-11-14",
+  "file": "ep-2026-W46.mp3",
+  "engine": "gemini",
+  "lines": 120
+ },
+ {
   "week": "2026-W45",
   "date": "2026-11-07",
   "file": "ep-2026-W45.mp3",
@@ -101,13 +108,6 @@
   "week": "2026-W29",
   "date": "2026-07-17",
   "file": "ep-2026-W29.mp3",
-  "engine": "gemini",
-  "lines": 121
- },
- {
-  "week": "2026-W28",
-  "date": "2026-07-10",
-  "file": "ep-2026-W28.mp3",
   "engine": "gemini",
   "lines": 121
  }
