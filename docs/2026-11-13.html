@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#0f0f13"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="당근영어"><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="icon" type="image/png" sizes="192x192" href="icon-192.png"><script src="install-banner.js" defer></script><script src="sw-reg.js" defer></script>
+    <title>전화영어 복습 - 2026년 11월 13일</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Noto Sans KR',sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.75;min-height:100vh}
+        .header{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);border-bottom:1px solid rgba(255,255,255,.06);padding:48px 24px 40px;text-align:center}
+        .header-date{font-size:13px;color:#94a3b8;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+        .header h1{font-size:28px;font-weight:700;color:#f1f5f9;margin-bottom:16px}
+        .header-meta{display:flex;justify-content:center;gap:24px;font-size:14px;color:#64748b}
+        .header-meta span{display:flex;align-items:center;gap:6px}
+        .cta-section{text-align:center;padding:40px 24px}
+        .cta-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:linear-gradient(135deg,#38bdf8,#818cf8);color:#fff;font-size:16px;font-weight:600;font-family:'Noto Sans KR',sans-serif;border:none;border-radius:50px;cursor:pointer;transition:all .3s;text-decoration:none;box-shadow:0 4px 24px rgba(56,189,248,.25)}
+        .cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(56,189,248,.35)}
+        .cta-btn svg{width:20px;height:20px}
+        .cta-sub{margin-top:12px;font-size:13px;color:#64748b}
+        .toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#38bdf8;padding:14px 28px;border-radius:12px;font-size:14px;font-weight:500;border:1px solid rgba(56,189,248,.2);box-shadow:0 8px 32px rgba(0,0,0,.4);opacity:0;transition:all .4s cubic-bezier(.16,1,.3,1);z-index:1000}
+        .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+        .container{max-width:720px;margin:0 auto;padding:0 24px 80px}
+        .tabs{display:flex;gap:4px;background:#1a1a24;padding:4px;border-radius:12px;margin-bottom:32px}
+        .tab{flex:1;padding:12px;text-align:center;font-size:14px;font-weight:500;color:#64748b;background:0 0;border:none;border-radius:8px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all .2s}
+        .tab.active{background:#262636;color:#f1f5f9}
+        .tab-content{display:none}.tab-content.active{display:block}
+        .feedback h2{font-size:18px;font-weight:700;color:#f1f5f9;margin:36px 0 16px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.06)}
+        .feedback h2:first-child{margin-top:0}
+        .feedback p{margin:8px 0;color:#cbd5e1}
+        .feedback .item{padding:6px 0 6px 16px;border-left:2px solid #334155;margin:6px 0;color:#cbd5e1}
+        .feedback .numbered{padding:8px 0 8px 16px;color:#cbd5e1}
+        .feedback .numbered strong{color:#38bdf8}
+        .feedback strong{color:#f1f5f9}
+        .feedback code{background:#1e293b;padding:2px 8px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#38bdf8}
+        .feedback table{width:100%;border-collapse:collapse;margin:12px 0}
+        .feedback th,.feedback td{padding:10px 14px;text-align:left;border-bottom:1px solid #262636}
+        .feedback th{color:#94a3b8;font-weight:500;font-size:13px}
+        .feedback td{color:#cbd5e1}
+        .arrow{color:#38bdf8;font-weight:700}
+        .transcript{background:#1a1a24;border-radius:12px;padding:28px;font-size:14px;line-height:2;color:#94a3b8;white-space:pre-wrap;word-break:break-word;font-family:'JetBrains Mono','Noto Sans KR',monospace}
+        .transcript .tutor{color:#38bdf8}
+        .transcript .student{color:#a78bfa}
+        @media(max-width:640px){.header{padding:32px 16px}.header h1{font-size:22px}.cta-btn{padding:14px 28px;font-size:15px}.container{padding:0 16px 60px}}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-date">2026년 11월 13일</div>
+        <h1>📚 전화영어 복습</h1>
+        <div class="header-meta">
+            <span>⏱ 22분 14초</span>
+            <span>🎙 전화영어_025180304_20261113080019.m4a</span>
+        </div>
+    </div>
+    <div class="cta-section">
+        <button class="cta-btn" onclick="startReview()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Gemini에서 복습 대화 시작하기
+        </button>
+        <div class="cta-sub">클릭하면 프롬프트가 복사되고 Gemini가 열립니다</div>
+    </div>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('feedback')">📋 AI 피드백</button>
+            <button class="tab" onclick="switchTab('transcript')">🎙 수업 전사</button>
+        </div>
+        <div id="tab-feedback" class="tab-content active">
+            <div class="feedback"><p><strong>Topic: Daily Routines, a Self-Built AI English Assistant, and Life at a Korean Conglomerate</strong></p>
+<br>
+<br>
+<p><strong>1. 📊 오늘의 대화 요약 (Summary)</strong></p>
+<br>
+<p>Joey는 전날 눈이 아파서 교재를 준비하지 못했어요. 그래서 교재 대신 프리토킹을 제안하고, 주제도 <strong>'하루 루틴'</strong>으로 직접 골랐습니다. 아침 7시 기상, 샤워, 자전거 출퇴근, 매일 똑같은 아침 메뉴(삶은 달걀 두 개와 우유)를 이야기했고, 튜터네 일요일 베이컨·시나몬롤 전통도 들었습니다.</p>
+<p>이어서 평일 저녁 기숙사에서 직접 만든 <strong>'나만의 AI 영어 비서'</strong>를 소개했어요. 수업 녹음을 자동으로 요약하고, 이메일·홈페이지·라디오 콘텐츠로 만들어 주는 프로그램으로, 1년째 쓰고 있다고 했습니다. 마지막으로 SK Gas 내부감사(internal audit) 업무, 재벌 구조, 그리고 언젠가 내 사업을 하고 싶다는 꿈까지 이야기했습니다.</p>
+<br>
+<br>
+<p><strong>2. 💬 유창성 업그레이드 (Fluency & Natural Flow)</strong></p>
+<br>
+<p><strong>① 프리토킹 요청하기</strong></p>
+<div class="item">❌ <strong>As Said</strong>: "So is it possible to just pre-talking?"</div>
+<div class="item">✅ <strong>Natural</strong>: "Could we just do some free talking today?"</div>
+<div class="item">💎 <strong>Professional</strong>: "Would it be alright if we just had a free conversation today instead?"</div>
+<div class="item">💡 <strong>코칭 포인트</strong>: "Free talking" is a Korean-style phrase, and "pre-talking" sounds like "talking before something." Native speakers usually say "just chat" or "have a free conversation." Starting with "Could we…" makes a request sound soft and polite.</div>
+<p><span class="arrow">→</span> 'Free talking'은 한국식 표현이고, 'pre-talking'은 '미리 하는 대화'처럼 들립니다. 원어민은 보통 "just chat"이나 "have a free conversation"이라고 해요. 부탁할 때 "Could we…"로 시작하면 부드럽고 공손하게 들립니다.</p>
+<br>
+<p><strong>② 루틴이 일정하다고 말하기</strong></p>
+<div class="item">❌ <strong>As Said</strong>: "Oh yeah, it's similar because I'm salary man, so my work time is correct, so usually my routine is also same"</div>
+<div class="item">✅ <strong>Natural</strong>: "My routine is pretty much the same every day because I work regular hours at a company."</div>
+<div class="item">💎 <strong>Professional</strong>: "Since I work fixed hours as a corporate employee, my daily routine stays fairly consistent."</div>
+<div class="item">💡 <strong>코칭 포인트</strong>: "Salaryman" isn't really used in English (your tutor even asked about it!), so "employee" or "office worker" is clearer. "My work time is correct" sounds like the time is "right or wrong." Say "regular hours" or "fixed hours" instead. "Pretty much the same every day" is an easy chunk to keep on your tongue.</div>
+<p><span class="arrow">→</span> 'Salaryman'은 영어권에서 잘 안 쓰는 말이에요. 튜터도 무슨 뜻이냐고 되물었죠! "employee"나 "office worker"라고 하면 더 분명합니다. "My work time is correct"는 시간이 '맞다/틀리다'라는 말처럼 들려요. 대신 "regular hours"나 "fixed hours"라고 하면 됩니다. "pretty much the same every day"는 통째로 입에 붙여두기 좋은 덩어리예요.</p>
+<br>
+<p><strong>③ 만드는 건 쉬운데, 쓰는 게 어렵다</strong></p>
+<div class="item">❌ <strong>As Said</strong>: "But usually it is easy to make some program, but it is difficult to listen to radio or read my homepage and read my email."</div>
+<div class="item">✅ <strong>Natural</strong>: "Building the program is the easy part. Actually listening to it and reading the emails is the hard part."</div>
+<div class="item">💎 <strong>Professional</strong>: "Developing the tool is straightforward; the real challenge is using it consistently."</div>
+<div class="item">💡 <strong>코칭 포인트</strong>: Using "but" twice in one sentence makes the contrast blurry. The chunk "~ is the easy part, ~ is the hard part" makes your point sharp and natural. Adding "actually" stresses the part that really matters.</div>
+<p><span class="arrow">→</span> 한 문장에 "but"이 두 번 나오면 무엇과 무엇을 비교하는지 흐려집니다. "~ is the easy part, ~ is the hard part" 덩어리를 쓰면 하고 싶은 말이 딱 살아나요. "actually"를 넣으면 '실제로 쓰는 게' 어렵다는 느낌이 강조됩니다.</p>
+<br>
+<p><strong>④ 두 회사 비교하기</strong></p>
+<div class="item">❌ <strong>As Said</strong>: "So if I compare two companies, this SK is more have a well system. So every and people is the more smart, smarter."</div>
+<div class="item">✅ <strong>Natural</strong>: "Compared to my old company, SK has better systems, and the people are really smart."</div>
+<div class="item">💎 <strong>Professional</strong>: "Compared to my previous employer, SK has much more established systems, and my colleagues are very capable."</div>
+<div class="item">💡 <strong>코칭 포인트</strong>: To say "더 좋은," just use one word: "better." No need for "more" or "well." Short words get "-er" at the end (smart <span class="arrow">→</span> smarter). "Compared to ~" is a handy chunk for starting any comparison.</div>
+<p><span class="arrow">→</span> '더 좋은'은 "better" 한 단어면 끝이에요. "more"나 "well"을 붙일 필요가 없어요. smart처럼 짧은 말은 끝에 -er만 붙이면 됩니다(smart <span class="arrow">→</span> smarter). 비교를 시작할 때는 "Compared to ~"를 통째로 쓰면 편해요. 앞서 Joey가 직접 "smarter"로 고쳐 말한 것도 아주 좋았어요!</p>
+<br>
+<br>
+<p><strong>3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)</strong></p>
+<br>
+<p>Category: verb tense</p>
+<p>🎯 오늘의 패턴: <strong>'어제 일 / 요즘 늘 하는 일 / ~한 지 몇 년째'에 따라 동사 모양을 바꿔주기</strong></p>
+<br>
+<p>Joey는 오늘 <strong>어제 일은 지금 모양으로, 요즘 늘 하는 일은 지난 일 모양으로</strong> 거꾸로 말하는 경우가 많았어요. 그러면 원어민은 "언제 일이야?" 하고 시간이 헷갈립니다.</p>
+<br>
+<table>
+<tr><th>❌ 원문 (As Said)</th><th>✅ 교정 (Corrected)</th><th>시간 신호</th></tr>
+<tr><td>"Yesterday, my eye is so sick."</td><td><strong>Yesterday, my eyes were really sore.</strong></td><td>yesterday <span class="arrow">→</span> was/were</td></tr>
+<tr><td>"Because I don't prepare my textbook today."</td><td><strong>I didn't prepare my textbook today.</strong></td><td>이미 지나간 준비 <span class="arrow">→</span> didn't</td></tr>
+<tr><td>"Yeah, so usually, this day I studied AI, use my personal computer."</td><td><strong>These days, I study AI on my personal computer.</strong></td><td>these days <span class="arrow">→</span> study</td></tr>
+<tr><td>"So, yeah, so usually I made some program for me"</td><td><strong>Usually, I make programs for myself.</strong></td><td>usually <span class="arrow">→</span> make</td></tr>
+<tr><td>"Maybe 11 years, 12 years I work here."</td><td><strong>I've worked here for about 11 or 12 years.</strong></td><td>~한 지 N년 <span class="arrow">→</span> I've worked … for</td></tr>
+</table>
+<br>
+<p>📌 <strong>핵심 규칙</strong>: 말하기 전에 문장 속 시간 단어를 먼저 보세요.</p>
+<div class="item"><strong>yesterday / last week</strong> <span class="arrow">→</span> 지난 일 모양 (was, did, made)</div>
+<div class="item"><strong>usually / these days / every day</strong> <span class="arrow">→</span> 사전에 나오는 모양 그대로 (study, make, ride)</div>
+<div class="item"><strong>"~한 지 N년째"</strong> <span class="arrow">→</span> <strong>I've + done + for N years</strong>를 한 덩어리로</div>
+<br>
+<p>🔁 <strong>따라 읽기</strong></p>
+<p>🗣️ "Yesterday, my eyes were really sore."</p>
+<p>🗣️ "These days, I study AI on my personal computer."</p>
+<p>🗣️ "I've worked here for about 11 or 12 years."</p>
+<br>
+<br>
+<p><strong>4. 📗 어휘 확장 (Vocabulary Vault)</strong></p>
+<br>
+<p><strong>1. sunset</strong> /ˈsʌnset/ (noun)</p>
+<div class="item">뜻: 해 질 녘, 일몰 (오늘 Joey가 "sun going down times"라고 했던 말)</div>
+<div class="item">실전 예문: *Sunset is around 5:30 these days, so I ride home in the dark.*</div>
+<br>
+<p><strong>2. commute</strong> /kəˈmjuːt/ (verb / noun)</p>
+<div class="item">뜻: 통근하다 / 통근길 (오늘 "take a bicycle during their work"는 "I bike to work"라고 하면 간단해요)</div>
+<div class="item">실전 예문: *I commute by bike, so I don't worry about traffic jams.*</div>
+<br>
+<p><strong>3. automate</strong> /ˈɔːtəmeɪt/ (verb)</p>
+<div class="item">뜻: 자동화하다</div>
+<div class="item">실전 예문: *I automated our weekly audit report with AI.*</div>
+<br>
+<p><strong>4. auditor</strong> /ˈɔːdɪtər/ (noun)</p>
+<div class="item">뜻: 감사인, 감사 담당자 (오늘 "auditor in my computer"는 "auditor at my company"로 말하면 됩니다)</div>
+<div class="item">실전 예문: *I'm an internal auditor at SK Gas.*</div>
+<br>
+<p><strong>5. conglomerate</strong> /kənˈɡlɑːmərət/ (noun)</p>
+<div class="item">뜻: 대기업 그룹, 복합기업 (재벌을 영어로 설명할 때 유용)</div>
+<div class="item">실전 예문: *SK is one of the largest conglomerates in Korea.*</div>
+<br>
+<p><strong>6. listed company</strong> (noun phrase)</p>
+<div class="item">뜻: 상장회사 (오늘 "the list of stock company"라고 했던 말)</div>
+<div class="item">실전 예문: *SK Gas is a listed company on the Korean stock market.*</div>
+<br>
+<br>
+<p><strong>5. 📝 실전 복습 챌린지 (Practice)</strong></p>
+<br>
+<p><strong>Q1. (쉬움)</strong> 튜터에게 어제 코딩하느라 바빠서 교재 준비를 못 했다고 말해보세요.</p>
+<p>> ✅ <strong>모범 답안</strong>: *I was busy coding yesterday, so I didn't prepare my textbook.*</p>
+<br>
+<p><strong>Q2. (보통)</strong> 요즘 퇴근 후에 AI를 공부하고, 보통 저녁마다 작은 프로그램을 만든다고 말해보세요. 그리고 예전 회사보다 SK의 시스템이 더 좋다고 덧붙여 보세요.</p>
+<p>> ✅ <strong>모범 답안</strong>: *These days, I study AI after work, and I usually build small programs in the evening. Compared to my old company, SK has better systems.*</p>
+<br>
+<p><strong>Q3. (어려움)</strong> 비즈니스 자리에서 자기소개를 해보세요. SK Gas에서 내부감사 담당으로 11년째 일하고 있고, 근무 시간이 일정해서 루틴도 꽤 일정하지만, 언젠가는 내 사업을 시작하고 싶다는 내용입니다.</p>
+<p>> ✅ <strong>모범 답안</strong>: *I've worked at SK Gas as an internal auditor for about 11 years. Since I work fixed hours, my daily routine stays fairly consistent, but someday I'd like to start my own business.*</p>
+<br>
+<br>
+<p><strong>6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)</strong></p>
+<br>
+<p>✨ <strong>Good Job</strong></p>
+<p>> 🗣️ "Before this company, I worked at another company."</p>
+<br>
+<p>Joey, 이 문장은 <strong>시간 감각이 완벽</strong>했어요! "Before this company"라는 지난 시간 신호에 맞춰 <strong>worked</strong>를 정확히 썼습니다. 오늘의 Target Grammar를 이미 몸으로 할 줄 안다는 증거예요. 이 감각을 yesterday와 these days에도 그대로 옮기기만 하면 됩니다.</p>
+<br>
+<p>또 하나 칭찬할 점은, 교재가 없는 날인데도 <strong>"How about the routine of the day?"</strong>라고 먼저 주제를 제안한 거예요. 튜터가 "Look at you, you're so innovative."라고 할 만큼 대화를 이끄는 태도가 정말 좋았습니다. "Sometimes you have to break out of the routine"에 가까운 말로 튜터의 일요일 전통에 맞장구친 것도 아주 자연스러웠어요. 👏</p>
+<br>
+<p>🚀 <strong>내일의 한 문장</strong></p>
+<p>> 🗣️ *"Happy Monday! Over the weekend, I worked on my AI English program. It still has a few bugs, but I really enjoy it!"*</p>
+<br>
+<p>(튜터가 오늘 Joey의 AI 프로그램에 큰 관심을 보였으니, 이 문장으로 시작하면 대화가 자연스럽게 이어질 거예요. 'Over the weekend'라는 지난 시간 신호에 맞춰 <strong>worked</strong>를 쓰는 연습도 됩니다.)</p>
+<br>
+<br>
+<p><strong>[성과 지표]</strong></p>
+<br>
+<p>📈 <strong>유창성 점수: 6 / 10</strong></p>
+<br>
+<p><strong>근거</strong></p>
+<div class="item">➕ <strong>강점</strong>: 교재 없이도 수업 내내 대화를 이어갔고, AI 자동화 시스템이나 감사 업무처럼 복잡한 주제도 끝까지 설명하려고 했습니다. 모르는 말이 나오면 바로 되묻는 능력도 좋았어요("Gone down?", "Sunset time, right?"). "I was wondering, your meal is always similar or different?"처럼 튜터에게 거꾸로 질문하며 대화를 주고받은 점도 좋았습니다.</div>
+<div class="item">➖ <strong>개선점</strong>: 시간 신호와 동사 모양이 자주 어긋났습니다. 긴 설명에서는 "so, yeah, and then"이 반복되면서 문장이 길게 엉켰고, 튜터가 "So if I'm understanding you correctly…"라고 다시 정리해야 하는 순간이 있었어요.</div>
+<br>
+<p>🎯 <strong>다음 수업 원포인트 액션 플랜</strong></p>
+<p>> <strong>"말하기 전에 시간 단어부터 꽂기!"</strong></p>
+<p>> 문장을 시작할 때 <strong>Yesterday / These days / For 11 years</strong> 중 하나를 먼저 말하고, 그 시간 단어에 맞는 동사 모양을 붙이세요. 긴 설명은 <strong>"짧은 문장 2~3개"로 끊어서</strong> 말하면 튜터가 되묻는 횟수가 확 줄어들 거예요.</p></div>
+        </div>
+        <div id="tab-transcript" class="tab-content">
+            <div class="transcript"><span class="student">[Student]</span> Hello, hello teacher.
+
+<span class="tutor">[Tutor]</span> Hi there. Happy Friday. How are you?
+
+<span class="student">[Student]</span> Finally, happy Friday. How are you today?
+
+<span class="tutor">[Tutor]</span> I&#x27;m not too bad, thank you. Oh, yes. It is five o&#x27;clock in my country right now, and the sun has gone down.
+
+<span class="student">[Student]</span> Gone down? Sorry. [?]
+
+<span class="tutor">[Tutor]</span> Do you find the days are getting shorter in Korea as well?
+
+<span class="student">[Student]</span> Yeah, it is similar. It is similar five or six Easter sunrise, sun going down times. [?]
+
+<span class="tutor">[Tutor]</span> Yeah. Sunset time.
+
+<span class="student">[Student]</span> Thank you. Sunset time, right?
+
+<span class="tutor">[Tutor]</span> Yeah. Yep, and then it&#x27;s not up until eight or nine o&#x27;clock in the morning. Oh, gosh. All right. Well, if you&#x27;re ready, sir, we have a really interesting topic today. Understanding holidays and traditions.
+
+<span class="student">[Student]</span> Oh, yes, that is so interesting. But is it possible to pre-talking? Because I don&#x27;t prepare my textbook today. Yesterday, my eye is so sick. [?]
+
+<span class="tutor">[Tutor]</span> Oh, dear.
+
+<span class="student">[Student]</span> Because, yeah, this day I&#x27;m having some coding. So, yeah, I focus on my mode. [?]
+
+<span class="tutor">[Tutor]</span> So, are you having problems with your eyesight this morning, or you just feel unprepared?
+
+<span class="student">[Student]</span> Yes, it&#x27;s possible to take a class, but it is a little uncomfortable to textbook. So is it possible to just pre-talking? [?]
+
+<span class="tutor">[Tutor]</span> Okay. Okay. Sure. Yeah, good. What I&#x27;m going to do is I&#x27;m just going to take a moment if you&#x27;ll bear with me. And as I think I&#x27;ve mentioned to you before, I have dozens of conversation topics.
+
+<span class="student">[Student]</span> Okay.
+
+<span class="tutor">[Tutor]</span> So I&#x27;m just going to see what I can find here. And we&#x27;ll do some chatting about that. That&#x27;s not a problem.
+
+<span class="student">[Student]</span> Okay. Yes. [?]
+
+<span class="tutor">[Tutor]</span> All right. Let&#x27;s see.
+
+<span class="student">[Student]</span> How about maybe it is difficult to select subject. How about the routine of the day?
+
+<span class="tutor">[Tutor]</span> Okay.
+
+<span class="student">[Student]</span> Yeah. That is my suggestion.
+
+<span class="tutor">[Tutor]</span> Routine of the day? Routine of the day? Oh yes, routine, your daily routine. Yeah, sure. Look at you, you&#x27;re so innovative. Very good. Okay. Okay, so we&#x27;ll work with that, and I also have a topic called habits. So that&#x27;s like habits and routines, okay?
+
+<span class="student">[Student]</span> Maybe two routines. [?]
+
+<span class="tutor">[Tutor]</span> All right. Okay. So, um, okay, so, um, do you have a morning and an evening routine that you follow?
+
+<span class="student">[Student]</span> Oh yeah, it&#x27;s similar because I&#x27;m salary man, so my work time is correct, so usually my routine is also same, but yeah, it&#x27;s after, yeah, we can, so usually I will get up six, uh, seven o&#x27;clock, and then, yeah, and then that is the normal, so I&#x27;m so ambi, I&#x27;m so shy to talk, just a normal routine. Just to wake up 7 o&#x27;clock and take a, yeah, take a shower, and then take a bicycle during their work. [?]
+
+<span class="tutor">[Tutor]</span> Oh, you ride a bicycle. That&#x27;s wonderful. You don&#x27;t have to worry about traffic or the subway. And I imagine the weather is cooperating, so it&#x27;s not a hardship to ride your bike. That sounds great.
+
+<span class="student">[Student]</span> I only worry about the rain or snow. The other thing is okay. The traffic jam. But usually it&#x27;s the rain time or snow time. I just go to work. Go for work.
+
+<span class="tutor">[Tutor]</span> I see. Okay, that makes sense. Um, okay, fair enough. Um, I also have a similar habit. Um, my family starts waking up at 5:30 in the morning, um, but yeah, but, but I stay in bed until seven. I get up and then, um, my daughter and I have a routine that we watch a favorite program of hers, and then after that, um, I have breakfast, I do some chores, and then I figure out what to do the rest of the day. Sometimes in the mornings I run errands, sometimes I just work on my hobbies, and then lunch comes, you make lunch, and then you get ready to teach. So that&#x27;s my morning routine. It&#x27;s a lot quieter.
+
+<span class="student">[Student]</span> Yeah, nice.
+
+<span class="tutor">[Tutor]</span> I don&#x27;t have to leave the house to work.
+
+<span class="student">[Student]</span> Ah, yeah. I was wondering, your meal is always similar or different? Yeah, my morning meal is same, always same. Just two boiled eggs and one milk. So I just wondering your every morning meal.
+
+<span class="tutor">[Tutor]</span> Every morning meal? Yeah, actually, it&#x27;s pretty routine. And that&#x27;s something that I only learned about 10 years ago, is that many people eat the very same food almost every morning. So on the weekdays, I have a certain routine in my meal. And then on the weekends, especially on Sundays, my husband&#x27;s been doing this for over 25 years. Every Sunday, my husband gets up and makes bacon.
+
+<span class="student">[Student]</span> Bacon.
+
+<span class="tutor">[Tutor]</span> And we make cinnamon rolls. So every Sunday we have something different or special.
+
+<span class="student">[Student]</span> Oh, yes. I see. Understand. That is good way.
+
+<span class="tutor">[Tutor]</span> Yeah. Yeah. It&#x27;s something that he really enjoys doing, and it&#x27;s something that we look forward to. So it&#x27;s all good.
+
+<span class="student">[Student]</span> Yeah. Sometimes you have to break it, break the break out the routine.
+
+<span class="tutor">[Tutor]</span> Yeah. Because indeed. Yeah. Yeah. You&#x27;re right. Okay. All right. So you bicycle to work, you do your job, and you come home in the evening. What do you like to do to relax after a long day of work?
+
+<span class="student">[Student]</span> First, Monday to Friday, I live alone without my family.
+
+<span class="tutor">[Tutor]</span> That&#x27;s right. You&#x27;re in the dormitory. Okay.
+
+<span class="student">[Student]</span> Yeah, so usually, this day I studied AI, use my personal computer. So, yeah, so usually I made some program for me, or sometimes I made some automatic program, use the AI. And usually I work near park the lunch time, but if I have some lunch, lunch, lunch with my coworker, and meantime I work there near, near park, yeah. In my, my office near has a river, so usually I work the side work river with the river. [?]
+
+<span class="tutor">[Tutor]</span> So are you close to the Han River Park then?
+
+<span class="student">[Student]</span> Yeah, just it&#x27;s three minutes.
+
+<span class="tutor">[Tutor]</span> Close to your work?
+
+<span class="student">[Student]</span> Yeah, three minutes.
+
+<span class="tutor">[Tutor]</span> Wow, that&#x27;s nice.
+
+<span class="student">[Student]</span> It&#x27;s close.
+
+<span class="tutor">[Tutor]</span> Yes. Uh-huh. Uh-huh. Wow, that sounds very nice. For me, if I want to go walk by our local river, it&#x27;s about a 40-minute walk, but it&#x27;s very scenic. It&#x27;s through trees and trails and things like that. So, yeah, I have to do that more on the weekends because the 40 minutes in and the 40 minutes out takes a long time. Okay. Now, you mentioned that you&#x27;ve been studying AI technology. Now, are you doing this as a personal hobby, or is this something you&#x27;re learning to help you at work?
+
+<span class="student">[Student]</span> I think my personal work is 70%, and 30% is making some device for my company, because I think it is similar to assets. If I made something in my company, it is more easy to work in daily routine work. So usually I make asset, use the AI.
+
+<span class="tutor">[Tutor]</span> Interesting. Well, I was going to say, please, if you would tell me more, are you programming the AI to do specific instructions or to respond to certain prompts?
+
+<span class="student">[Student]</span> For example, we have a class every morning, English class, right? And my recording is transferred to my computer automatically. And then you and me, your conversation and my conversation is the recording. And Anarsi is my AI. [?] And then the AI is my conversation style and some cons about my government grammar word and pronunciation, that is summary. [?] And then he, the AI, is to make some email and then send email automatically. And also, so, that AI made my homepage to my English class. And that records every class. And if that made some period content, that content made the conversation radio.
+
+<span class="tutor">[Tutor]</span> Yeah.
+
+<span class="student">[Student]</span> So I can listen that radio. For example.
+
+<span class="tutor">[Tutor]</span> That&#x27;s amazing.
+
+<span class="student">[Student]</span> Yeah. If we have a conversation one week, that one week made some content, the English class. And then the AI made some radio, that conversation. And sometimes I&#x27;ve listened to that radio.
+
+<span class="tutor">[Tutor]</span> Yeah.
+
+<span class="student">[Student]</span> But usually it is easy to make some program, but it is difficult to listen to radio or read my homepage and read my email. Yeah, it is difficult.
+
+<span class="tutor">[Tutor]</span> Oh, okay. So if I&#x27;m understanding you correctly, Joey, you basically programmed AI to be your English teaching assistant.
+
+<span class="student">[Student]</span> Yeah, you&#x27;re right. You&#x27;re right.
+
+<span class="tutor">[Tutor]</span> And that&#x27;s awesome.
+
+<span class="student">[Student]</span> It is almost one year. We have a content one year. And the AI knows my English ability and some points of my grammar or pronunciation.
+
+<span class="tutor">[Tutor]</span> Yeah?
+
+<span class="student">[Student]</span> Yeah, yeah.
+
+<span class="tutor">[Tutor]</span> Oh, my goodness. And you&#x27;ve created this all on your own. That is amazing. As you may know, many language platforms or language websites are starting to create AI versions of their practice programs. And you&#x27;ve got your own, specialized just for you. That&#x27;s crazy. Wow.
+
+<span class="student">[Student]</span> But it is a little difficult to use the app for many people. It is easy to only once for myself. [?]
+
+<span class="tutor">[Tutor]</span> Yeah, because it&#x27;s that specialized. It&#x27;s just for you.
+
+<span class="student">[Student]</span> Yeah, yeah, you&#x27;re right.
+
+<span class="tutor">[Tutor]</span> Oh, okay. Okay. Well, you know, I&#x27;ve always, as we&#x27;ve gotten to know each other, I&#x27;ve always noticed how enthusiastic and how committed you are to learning English. And the fact that you&#x27;ve created your own AI program, like, wow. Like, I just, I&#x27;m really, really impressed, Joey. That is just amazing.
+
+<span class="student">[Student]</span> It&#x27;s a problem, too.
+
+<span class="tutor">[Tutor]</span> Yeah.
+
+<span class="student">[Student]</span> I made some programs.
+
+<span class="tutor">[Tutor]</span> Yeah, but you&#x27;re working on some bugs.
+
+<span class="student">[Student]</span> I don&#x27;t use that program.
+
+<span class="tutor">[Tutor]</span> Yeah.
+
+<span class="student">[Student]</span> The plain country because I don&#x27;t have time. [?] But anyway, it is so funny for me.
+
+<span class="tutor">[Tutor]</span> Well, you know, if you enjoy it, that&#x27;s all that matters.
+
+<span class="student">[Student]</span> Ah, yeah, you&#x27;re right.
+
+<span class="tutor">[Tutor]</span> Because basically, one of the things that I tell people is, if you like to do something and it doesn&#x27;t hurt anybody or anyone, then just do it. If it gives you joy, if it makes you happy, especially since you&#x27;re away from your family all week long.
+
+<span class="student">[Student]</span> I see.
+
+<span class="tutor">[Tutor]</span> Okay. So I&#x27;m looking at your file, and as I know, as you&#x27;ve mentioned, you are in the dormitory during the week. And I just wanted to ask you, as a salaryman, this is a new word for me. In English, we don&#x27;t use it as you would. What do you mean when you say you&#x27;re a salaryman?
+
+<span class="student">[Student]</span> That is the work in a company. Employee. [?]
+
+<span class="tutor">[Tutor]</span> Yes, that&#x27;s right. You&#x27;re an employee.
+
+<span class="student">[Student]</span> Yeah, I&#x27;m an employee.
+
+<span class="tutor">[Tutor]</span> Yeah, it&#x27;s better. [?]
+
+<span class="student">[Student]</span> I&#x27;m an employee.
+
+<span class="tutor">[Tutor]</span> So, okay. So, is it just a general term for an employee of a company?
+
+<span class="student">[Student]</span> Ah, yes. Employee of my company.
+
+<span class="tutor">[Tutor]</span> Or do you have a specific job description or job title?
+
+<span class="student">[Student]</span> My job title is the auditor in my computer. Yeah, auditor. [?]
+
+<span class="tutor">[Tutor]</span> Okay, is that in accounting?
+
+<span class="student">[Student]</span> Uh-huh.
+
+<span class="tutor">[Tutor]</span> Accounting?
+
+<span class="student">[Student]</span> Oh, that is not financial. Just the internal audit.
+
+<span class="tutor">[Tutor]</span> Oh, okay.
+
+<span class="student">[Student]</span> And, yeah, usually we check the problem, our system.
+
+<span class="tutor">[Tutor]</span> So you&#x27;re talking computer systems?
+
+<span class="student">[Student]</span> Oh no, no, no.
+
+<span class="tutor">[Tutor]</span> Just regular?
+
+<span class="student">[Student]</span> Yeah, regular, illegal or some problem or financial problem or system problem. Every problem we receive and give us some solution.
+
+<span class="tutor">[Tutor]</span> I see. So does your company, SK Gas, do you find yourself interacting or sharing information with other Korean companies or with international companies where you have to check things like this?
+
+<span class="student">[Student]</span> My company is the list of stock company, and I not sure about the international company. Maybe what the international company, like Amazon. [?]
+
+<span class="tutor">[Tutor]</span> Well, from what you described to me about an audit, is that you are working to make sure that systems, procedures are working properly. And I just wondered, these audits, are they done because of interaction with other companies or just the day-to-day activities of the company?
+
+<span class="student">[Student]</span> I understand. My group name is SK. So this group has so many companies. And my company role is to sell or buy the gas in domestic and abroad. And in SK group there are so many companies, so usually the audit group is the also interaction, so usually yes made us some the energy group or some manufacturer group or some more, some, yeah, the construction group is the interaction each other, the audit group. So we started together and yeah. [?]
+
+<span class="tutor">[Tutor]</span> I just, of course, I&#x27;ve just taken the liberty of googling SK Korea. It&#x27;s the second largest chaebol in Seoul, in Korea.
+
+<span class="student">[Student]</span> Ah yes, the Samsung and then the SK [?Sko]. You&#x27;re right. SK is a big group.
+
+<span class="tutor">[Tutor]</span> And the group has over 100,000 employees globally.
+
+<span class="student">[Student]</span> Yeah, that is group.
+
+<span class="tutor">[Tutor]</span> That blows my mind.
+
+<span class="student">[Student]</span> My company name is SK Gas. That is more small.
+
+<span class="tutor">[Tutor]</span> Yes, I see that. It says here the energy and chemicals division, the industry, petroleum refining, green energy, battery manufacturing.
+
+<span class="student">[Student]</span> Yeah. It&#x27;s so funny.
+
+<span class="tutor">[Tutor]</span> How long have you been with SK, Joey?
+
+<span class="student">[Student]</span> On my place?
+
+<span class="tutor">[Tutor]</span> How long? How many years?
+
+<span class="student">[Student]</span> Maybe 11 years, 12 years I work here.
+
+<span class="tutor">[Tutor]</span> Yeah.
+
+<span class="student">[Student]</span> It&#x27;s so long. [?]
+
+<span class="tutor">[Tutor]</span> How do you feel about working for such a huge conglomerate?
+
+<span class="student">[Student]</span> Before this company, I worked at another company. So if I compare two companies, this SK is more have a well system. So every and people is the more smart, smarter. So I think, yeah, good chance to work here.
+
+<span class="tutor">[Tutor]</span> Yeah.
+
+<span class="student">[Student]</span> For myself.
+
+<span class="tutor">[Tutor]</span> Yeah. Yeah. That&#x27;s amazing. Yeah. It&#x27;s talking about SK Hynix, telecommunications, energy and chemicals, life sciences and biotech, and artificial intelligence.
+
+<span class="student">[Student]</span> Yeah.
+
+<span class="tutor">[Tutor]</span> Wow. That is so good. I&#x27;m just a little overwhelmed because, as you may know, these type of companies, there&#x27;s not as many companies or conglomerates like this in the Western Hemisphere. So the chaebols that are in South Korea are considered very, very unique institutions.
+
+<span class="student">[Student]</span> You&#x27;re right. Our system is so unique. So big group is almost share the market. Samsung, Hynix, LG, Hyundai. The four group is the share almost market.
+
+<span class="tutor">[Tutor]</span> I bet you feel a sense of pride working for such a large company or group of companies, yes?
+
+<span class="student">[Student]</span> But I want to make my own business.
+
+<span class="tutor">[Tutor]</span> Oh, eventually you want to be independent [?in it]. Oh, that&#x27;s nice. Yeah, there&#x27;s nothing wrong with that. Yeah, absolutely. I can appreciate that. You spend enough years working for someone else, and then you want to work for yourself. And that&#x27;s kind of what I did as an English teacher. I was working for other, like, I was working for public education, I was working for private companies, and I&#x27;m still working for a private company, Carrot, but, um, you know, I&#x27;m, I&#x27;m, I&#x27;m what they call an independent contractor. So I like the freedom of, of choosing when and where I work. So I totally could appreciate that. Okay, good. Well, Joey, you have definitely shared a lot of information with me today. Thank you so much. I&#x27;m honored. Okay, I hope you have a lovely weekend, and I will look forward to us continuing your class on Monday. Okay, talk to you next week.
+
+<span class="student">[Student]</span> Thank you. Have a nice day, teacher. Bye-bye.</div>
+        </div>
+    </div>
+    <div class="toast" id="toast">✅ 프롬프트가 복사되었습니다!</div>
+    <script>
+        const REVIEW_PROMPT="너는 나의 영어 회화 복습 파트너야. 오늘 내 전화영어 수업 내용을 기반으로 대화하면서 복습을 도와줘.\n\n[오늘 수업 전사 내용]\n[Student] Hello, hello teacher.\n\n[Tutor] Hi there. Happy Friday. How are you?\n\n[Student] Finally, happy Friday. How are you today?\n\n[Tutor] I'm not too bad, thank you. Oh, yes. It is five o'clock in my country right now, and the sun has gone down.\n\n[Student] Gone down? Sorry. [?]\n\n[Tutor] Do you find the days are getting shorter in Korea as well?\n\n[Student] Yeah, it is similar. It is similar five or six Easter sunrise, sun going down times. [?]\n\n[Tutor] Yeah. Sunset time.\n\n[Student] Thank you. Sunset time, right?\n\n[Tutor] Yeah. Yep, and then it's not up until eight or nine o'clock in the morning. Oh, gosh. All right. Well, if you're ready, sir, we have a really interesting topic today. Understanding holidays and traditions.\n\n[Student] Oh, yes, that is so interesting. But is it possible to pre-talking? Because I don't prepare my textbook today. Yesterday, my eye is so sick. [?]\n\n[Tutor] Oh, dear.\n\n[Student] Because, yeah, this day I'm having some coding. So, yeah, I focus on my mode. [?]\n\n[Tutor] So, are you having problems with your eyesight this morning, or you just feel unprepared?\n\n[Student] Yes, it's possible to take a class, but it is a little uncomfortable to textbook. So is it possible to just pre-talking? [?]\n\n[Tutor] Okay. Okay. Sure. Yeah, good. What I'm going to do is I'm just going to take a moment if you'll bear with me. And as I think I've mentioned to you before, I have dozens of conversation topics.\n\n[Student] Okay.\n\n[Tutor] So I'm just going to see what I can find here. And we'll do some chatting about that. That's not a problem.\n\n[Student] Okay. Yes. [?]\n\n[Tutor] All right. Let's see.\n\n[Student] How about maybe it is difficult to select subject. How about the routine of the day?\n\n[Tutor] Okay.\n\n[Student] Yeah. That is my suggestion.\n\n[Tutor] Routine of the day? Routine of the day? Oh yes, routine, your daily routine. Yeah, sure. Look at you, you're so innovative. Very good. Okay. Okay, so we'll work with that, and I also have a topic called habits. So that's like habits and routines, okay?\n\n[Student] Maybe two routines. [?]\n\n[Tutor] All right. Okay. So, um, okay, so, um, do you have a morning and an evening routine that you follow?\n\n[Student] Oh yeah, it's similar because I'm salary man, so my work time is correct, so usually my routine is also same, but yeah, it's after, yeah, we can, so usually I will get up six, uh, seven o'clock, and then, yeah, and then that is the normal, so I'm so ambi, I'm so shy to talk, just a normal routine. Just to wake up 7 o'clock and take a, yeah, take a shower, and then take a bicycle during their work. [?]\n\n[Tutor] Oh, you ride a bicycle. That's wonderful. You don't have to worry about traffic or the subway. And I imagine the weather is cooperating, so it's not a hardship to ride your bike. That sounds great.\n\n[Student] I only worry about the rain or snow. The other thing is okay. The traffic jam. But usually it's the rain time or snow time. I just go to work. Go for work.\n\n[Tutor] I see. Okay, that makes sense. Um, okay, fair enough. Um, I also have a similar habit. Um, my family starts waking up at 5:30 in the morning, um, but yeah, but, but I stay in bed until seven. I get up and then, um, my daughter and I have a routine that we watch a favorite program of hers, and then after that, um, I have breakfast, I do some chores, and then I figure out what to do the rest of the day. Sometimes in the mornings I run errands, sometimes I just work on my hobbies, and then lunch comes, you make lunch, and then you get ready to teach. So that's my morning routine. It's a lot quieter.\n\n[Student] Yeah, nice.\n\n[Tutor] I don't have to leave the house to work.\n\n[Student] Ah, yeah. I was wondering, your meal is always similar or different? Yeah, my morning meal is same, always same. Just two boiled eggs and one milk. So I just wondering your every morning meal.\n\n[Tutor] Every morning meal? Yeah, actually, it's pretty routine. And that's something that I only learned about 10 years ago, is that many people eat the very same food almost every morning. So on the weekdays, I have a certain routine in my meal. And then on the weekends, especially on Sundays, my husband's been doing this for over 25 years. Every Sunday, my husband gets up and makes bacon.\n\n[Student] Bacon.\n\n[Tutor] And we make cinnamon rolls. So every Sunday we have something different or special.\n\n[Student] Oh, yes. I see. Understand. That is good way.\n\n[Tutor] Yeah. Yeah. It's something that he really enjoys doing, and it's something that we look forward to. So it's all good.\n\n[Student] Yeah. Sometimes you have to break it, break the break out the routine.\n\n[Tutor] Yeah. Because indeed. Yeah. Yeah. You're right. Okay. All right. So you bicycle to work, you do your job, and you come home in the evening. What do you like to do to relax after a long day of work?\n\n[Student] First, Monday to Friday, I live alone without my family.\n\n[Tutor] That's right. You're in the dormitory. Okay.\n\n[Student] Yeah, so usually, this day I studied AI, use my personal computer. So, yeah, so usually I made some program for me, or sometimes I made some automatic program, use the AI. And usually I work near park the lunch time, but if I have some lunch, lunch, lunch with my coworker, and meantime I work there near, near park, yeah. In my, my office near has a river, so usually I work the side work river with the river. [?]\n\n[Tutor] So are you close to the Han River Park then?\n\n[Student] Yeah, just it's three minutes.\n\n[Tutor] Close to your work?\n\n[Student] Yeah, three minutes.\n\n[Tutor] Wow, that's nice.\n\n[Student] It's close.\n\n[Tutor] Yes. Uh-huh. Uh-huh. Wow, that sounds very nice. For me, if I want to go walk by our local river, it's about a 40-minute walk, but it's very scenic. It's through trees and trails and things like that. So, yeah, I have to do that more on the weekends because the 40 minutes in and the 40 minutes out takes a long time. Okay. Now, you mentioned that you've been studying AI technology. Now, are you doing this as a personal hobby, or is this something you're learning to help you at work?\n\n[Student] I think my personal work is 70%, and 30% is making some device for my company, because I think it is similar to assets. If I made something in my company, it is more easy to work in daily routine work. So usually I make asset, use the AI.\n\n[Tutor] Interesting. Well, I was going to say, please, if you would tell me more, are you programming the AI to do specific instructions or to respond to certain prompts?\n\n[Student] For example, we have a class every morning, English class, right? And my recording is transferred to my computer automatically. And then you and me, your conversation and my conversation is the recording. And Anarsi is my AI. [?] And then the AI is my conversation style and some cons about my government grammar word and pronunciation, that is summary. [?] And then he, the AI, is to make some email and then send email automatically. And also, so, that AI made my homepage to my English class. And that records every class. And if that made some period content, that content made the conversation radio.\n\n[Tutor] Yeah.\n\n[Student] So I can listen that radio. For example.\n\n[Tutor] That's amazing.\n\n[Student] Yeah. If we have a conversation one week, that one week made some content, the English class. And then the AI made some radio, that conversation. And sometimes I've listened to that radio.\n\n[Tutor] Yeah.\n\n[Student] But usually it is easy to make some program, but it is difficult to listen to radio or read my homepage and read my email. Yeah, it is difficult.\n\n[Tutor] Oh, okay. So if I'm understanding you correctly, Joey, you basically programmed AI to be your English teaching assistant.\n\n[Student] Yeah, you're right. You're right.\n\n[Tutor] And that's awesome.\n\n[Student] It is almost one year. We have a content one year. And the AI knows my English ability and some points of my grammar or pronunciation.\n\n[Tutor] Yeah?\n\n[Student] Yeah, yeah.\n\n[Tutor] Oh, my goodness. And you've created this all on your own. That is amazing. As you may know, many language platforms or language websites are starting to create AI versions of their practice programs. And you've got your own, specialized just for you. That's crazy. Wow.\n\n[Student] But it is a little difficult to use the app for many people. It is easy to only once for myself. [?]\n\n[Tutor] Yeah, because it's that specialized. It's just for you.\n\n[Student] Yeah, yeah, you're right.\n\n[Tutor] Oh, okay. Okay. Well, you know, I've always, as we've gotten to know each other, I've always noticed how enthusiastic and how committed you are to learning English. And the fact that you've created your own AI program, like, wow. Like, I just, I'm really, really impressed, Joey. That is just amazing.\n\n[Student] It's a problem, too.\n\n[Tutor] Yeah.\n\n[Student] I made some programs.\n\n[Tutor] Yeah, but you're working on some bugs.\n\n[Student] I don't use that program.\n\n[Tutor] Yeah.\n\n[Student] The plain country because I don't have time. [?] But anyway, it is so funny for me.\n\n[Tutor] Well, you know, if you enjoy it, that's all that matters.\n\n[Student] Ah, yeah, you're right.\n\n[Tutor] Because basically, one of the things that I tell people is, if you like to do something and it doesn't hurt anybody or anyone, then just do it. If it gives you joy, if it makes you happy, especially since you're away from your family all week long.\n\n[Student] I see.\n\n[Tutor] Okay. So I'm looking at your file, and as I know, as you've mentioned, you are in the dormitory during the week. And I just wanted to ask you, as a salaryman, this is a new word for me. In English, we don't use it as you would. What do you mean when you say you're a salaryman?\n\n[Student] That is the work in a company. Employee. [?]\n\n[Tutor] Yes, that's right. You're an employee.\n\n[Student] Yeah, I'm an employee.\n\n[Tutor] Yeah, it's better. [?]\n\n[Student] I'm an employee.\n\n[Tutor] So, okay. So, is it just a general term for an employee of a company?\n\n[Student] Ah, yes. Employee of my company.\n\n[Tutor] Or do you have a specific job description or job title?\n\n[Student] My job title is the auditor in my computer. Yeah, auditor. [?]\n\n[Tutor] Okay, is that in accounting?\n\n[Student] Uh-huh.\n\n[Tutor] Accounting?\n\n[Student] Oh, that is not financial. Just the internal audit.\n\n[Tutor] Oh, okay.\n\n[Student] And, yeah, usually we check the problem, our system.\n\n[Tutor] So you're talking computer systems?\n\n[Student] Oh no, no, no.\n\n[Tutor] Just regular?\n\n[Student] Yeah, regular, illegal or some problem or financial problem or system problem. Every problem we receive and give us some solution.\n\n[Tutor] I see. So does your company, SK Gas, do you find yourself interacting or sharing information with other Korean companies or with international companies where you have to check things like this?\n\n[Student] My company is the list of stock company, and I not sure about the international company. Maybe what the international company, like Amazon. [?]\n\n[Tutor] Well, from what you described to me about an audit, is that you are working to make sure that systems, procedures are working properly. And I just wondered, these audits, are they done because of interaction with other companies or just the day-to-day activities of the company?\n\n[Student] I understand. My group name is SK. So this group has so many companies. And my company role is to sell or buy the gas in domestic and abroad. And in SK group there are so many companies, so usually the audit group is the also interaction, so usually yes made us some the energy group or some manufacturer group or some more, some, yeah, the construction group is the interaction each other, the audit group. So we started together and yeah. [?]\n\n[Tutor] I just, of course, I've just taken the liberty of googling SK Korea. It's the second largest chaebol in Seoul, in Korea.\n\n[Student] Ah yes, the Samsung and then the SK [?Sko]. You're right. SK is a big group.\n\n[Tutor] And the group has over 100,000 employees globally.\n\n[Student] Yeah, that is group.\n\n[Tutor] That blows my mind.\n\n[Student] My company name is SK Gas. That is more small.\n\n[Tutor] Yes, I see that. It says here the energy and chemicals division, the industry, petroleum refining, green energy, battery manufacturing.\n\n[Student] Yeah. It's so funny.\n\n[Tutor] How long have you been with SK, Joey?\n\n[Student] On my place?\n\n[Tutor] How long? How many years?\n\n[Student] Maybe 11 years, 12 years I work here.\n\n[Tutor] Yeah.\n\n[Student] It's so long. [?]\n\n[Tutor] How do you feel about working for such a huge conglomerate?\n\n[Student] Before this company, I worked at another company. So if I compare two companies, this SK is more have a well system. So every and people is the more smart, smarter. So I think, yeah, good chance to work here.\n\n[Tutor] Yeah.\n\n[Student] For myself.\n\n[Tutor] Yeah. Yeah. That's amazing. Yeah. It's talking about SK Hynix, telecommunications, energy and chemicals, life sciences and biotech, and artificial intelligence.\n\n[Student] Yeah.\n\n[Tutor] Wow. That is so good. I'm just a little overwhelmed because, as you may know, these type of companies, there's not as many companies or conglomerates like this in the Western Hemisphere. So the chaebols that are in South Korea are considered very, very unique institutions.\n\n[Student] You're right. Our system is so unique. So big group is almost share the market. Samsung, Hynix, LG, Hyundai. The four group is the share almost market.\n\n[Tutor] I bet you feel a sense of pride working for such a large company or group of companies, yes?\n\n[Student] But I want to make my own business.\n\n[Tutor] Oh, eventually you want to be independent [?in it]. Oh, that's nice. Yeah, there's nothing wrong with that. Yeah, absolutely. I can appreciate that. You spend enough years working for someone else, and then you want to work for yourself. And that's kind of what I did as an English teacher. I was working for other, like, I was working for public education, I was working for private companies, and I'm still working for a private company, Carrot, but, um, you know, I'm, I'm, I'm what they call an independent contractor. So I like the freedom of, of choosing when and where I work. So I totally could appreciate that. Okay, good. Well, Joey, you have definitely shared a lot of information with me today. Thank you so much. I'm honored. Okay, I hope you have a lovely weekend, and I will look forward to us continuing your class on Monday. Okay, talk to you next week.\n\n[Student] Thank you. Have a nice day, teacher. Bye-bye.\n\n[AI 피드백]\n**Topic: Daily Routines, a Self-Built AI English Assistant, and Life at a Korean Conglomerate**\n\n---\n\n**1. 📊 오늘의 대화 요약 (Summary)**\n\nJoey는 전날 눈이 아파서 교재를 준비하지 못했어요. 그래서 교재 대신 프리토킹을 제안하고, 주제도 **'하루 루틴'**으로 직접 골랐습니다. 아침 7시 기상, 샤워, 자전거 출퇴근, 매일 똑같은 아침 메뉴(삶은 달걀 두 개와 우유)를 이야기했고, 튜터네 일요일 베이컨·시나몬롤 전통도 들었습니다.\n이어서 평일 저녁 기숙사에서 직접 만든 **'나만의 AI 영어 비서'**를 소개했어요. 수업 녹음을 자동으로 요약하고, 이메일·홈페이지·라디오 콘텐츠로 만들어 주는 프로그램으로, 1년째 쓰고 있다고 했습니다. 마지막으로 SK Gas 내부감사(internal audit) 업무, 재벌 구조, 그리고 언젠가 내 사업을 하고 싶다는 꿈까지 이야기했습니다.\n\n---\n\n**2. 💬 유창성 업그레이드 (Fluency & Natural Flow)**\n\n**① 프리토킹 요청하기**\n- ❌ **As Said**: \"So is it possible to just pre-talking?\"\n- ✅ **Natural**: \"Could we just do some free talking today?\"\n- 💎 **Professional**: \"Would it be alright if we just had a free conversation today instead?\"\n- 💡 **코칭 포인트**: \"Free talking\" is a Korean-style phrase, and \"pre-talking\" sounds like \"talking before something.\" Native speakers usually say \"just chat\" or \"have a free conversation.\" Starting with \"Could we…\" makes a request sound soft and polite.\n  → 'Free talking'은 한국식 표현이고, 'pre-talking'은 '미리 하는 대화'처럼 들립니다. 원어민은 보통 \"just chat\"이나 \"have a free conversation\"이라고 해요. 부탁할 때 \"Could we…\"로 시작하면 부드럽고 공손하게 들립니다.\n\n**② 루틴이 일정하다고 말하기**\n- ❌ **As Said**: \"Oh yeah, it's similar because I'm salary man, so my work time is correct, so usually my routine is also same\"\n- ✅ **Natural**: \"My routine is pretty much the same every day because I work regular hours at a company.\"\n- 💎 **Professional**: \"Since I work fixed hours as a corporate employee, my daily routine stays fairly consistent.\"\n- 💡 **코칭 포인트**: \"Salaryman\" isn't really used in English (your tutor even asked about it!), so \"employee\" or \"office worker\" is clearer. \"My work time is correct\" sounds like the time is \"right or wrong.\" Say \"regular hours\" or \"fixed hours\" instead. \"Pretty much the same every day\" is an easy chunk to keep on your tongue.\n  → 'Salaryman'은 영어권에서 잘 안 쓰는 말이에요. 튜터도 무슨 뜻이냐고 되물었죠! \"employee\"나 \"office worker\"라고 하면 더 분명합니다. \"My work time is correct\"는 시간이 '맞다/틀리다'라는 말처럼 들려요. 대신 \"regular hours\"나 \"fixed hours\"라고 하면 됩니다. \"pretty much the same every day\"는 통째로 입에 붙여두기 좋은 덩어리예요.\n\n**③ 만드는 건 쉬운데, 쓰는 게 어렵다**\n- ❌ **As Said**: \"But usually it is easy to make some program, but it is difficult to listen to radio or read my homepage and read my email.\"\n- ✅ **Natural**: \"Building the program is the easy part. Actually listening to it and reading the emails is the hard part.\"\n- 💎 **Professional**: \"Developing the tool is straightforward; the real challenge is using it consistently.\"\n- 💡 **코칭 포인트**: Using \"but\" twice in one sentence makes the contrast blurry. The chunk \"~ is the easy part, ~ is the hard part\" makes your point sharp and natural. Adding \"actually\" stresses the part that really matters.\n  → 한 문장에 \"but\"이 두 번 나오면 무엇과 무엇을 비교하는지 흐려집니다. \"~ is the easy part, ~ is the hard part\" 덩어리를 쓰면 하고 싶은 말이 딱 살아나요. \"actually\"를 넣으면 '실제로 쓰는 게' 어렵다는 느낌이 강조됩니다.\n\n**④ 두 회사 비교하기**\n- ❌ **As Said**: \"So if I compare two companies, this SK is more have a well system. So every and people is the more smart, smarter.\"\n- ✅ **Natural**: \"Compared to my old company, SK has better systems, and the people are really smart.\"\n- 💎 **Professional**: \"Compared to my previous employer, SK has much more established systems, and my colleagues are very capable.\"\n- 💡 **코칭 포인트**: To say \"더 좋은,\" just use one word: \"better.\" No need for \"more\" or \"well.\" Short words get \"-er\" at the end (smart → smarter). \"Compared to ~\" is a handy chunk for starting any comparison.\n  → '더 좋은'은 \"better\" 한 단어면 끝이에요. \"more\"나 \"well\"을 붙일 필요가 없어요. smart처럼 짧은 말은 끝에 -er만 붙이면 됩니다(smart → smarter). 비교를 시작할 때는 \"Compared to ~\"를 통째로 쓰면 편해요. 앞서 Joey가 직접 \"smarter\"로 고쳐 말한 것도 아주 좋았어요!\n\n---\n\n**3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)**\n\nCategory: verb tense\n🎯 오늘의 패턴: **'어제 일 / 요즘 늘 하는 일 / ~한 지 몇 년째'에 따라 동사 모양을 바꿔주기**\n\nJoey는 오늘 **어제 일은 지금 모양으로, 요즘 늘 하는 일은 지난 일 모양으로** 거꾸로 말하는 경우가 많았어요. 그러면 원어민은 \"언제 일이야?\" 하고 시간이 헷갈립니다.\n\n| ❌ 원문 (As Said) | ✅ 교정 (Corrected) | 시간 신호 |\n|---|---|---|\n| \"Yesterday, my eye is so sick.\" | **Yesterday, my eyes were really sore.** | yesterday → was/were |\n| \"Because I don't prepare my textbook today.\" | **I didn't prepare my textbook today.** | 이미 지나간 준비 → didn't |\n| \"Yeah, so usually, this day I studied AI, use my personal computer.\" | **These days, I study AI on my personal computer.** | these days → study |\n| \"So, yeah, so usually I made some program for me\" | **Usually, I make programs for myself.** | usually → make |\n| \"Maybe 11 years, 12 years I work here.\" | **I've worked here for about 11 or 12 years.** | ~한 지 N년 → I've worked … for |\n\n📌 **핵심 규칙**: 말하기 전에 문장 속 시간 단어를 먼저 보세요.\n- **yesterday / last week** → 지난 일 모양 (was, did, made)\n- **usually / these days / every day** → 사전에 나오는 모양 그대로 (study, make, ride)\n- **\"~한 지 N년째\"** → **I've + done + for N years**를 한 덩어리로\n\n🔁 **따라 읽기**\n🗣️ \"Yesterday, my eyes were really sore.\"\n🗣️ \"These days, I study AI on my personal computer.\"\n🗣️ \"I've worked here for about 11 or 12 years.\"\n\n---\n\n**4. 📗 어휘 확장 (Vocabulary Vault)**\n\n**1. sunset** /ˈsʌnset/ (noun)\n- 뜻: 해 질 녘, 일몰 (오늘 Joey가 \"sun going down times\"라고 했던 말)\n- 실전 예문: *Sunset is around 5:30 these days, so I ride home in the dark.*\n\n**2. commute** /kəˈmjuːt/ (verb / noun)\n- 뜻: 통근하다 / 통근길 (오늘 \"take a bicycle during their work\"는 \"I bike to work\"라고 하면 간단해요)\n- 실전 예문: *I commute by bike, so I don't worry about traffic jams.*\n\n**3. automate** /ˈɔːtəmeɪt/ (verb)\n- 뜻: 자동화하다\n- 실전 예문: *I automated our weekly audit report with AI.*\n\n**4. auditor** /ˈɔːdɪtər/ (noun)\n- 뜻: 감사인, 감사 담당자 (오늘 \"auditor in my computer\"는 \"auditor at my company\"로 말하면 됩니다)\n- 실전 예문: *I'm an internal auditor at SK Gas.*\n\n**5. conglomerate** /kənˈɡlɑːmərət/ (noun)\n- 뜻: 대기업 그룹, 복합기업 (재벌을 영어로 설명할 때 유용)\n- 실전 예문: *SK is one of the largest conglomerates in Korea.*\n\n**6. listed company** (noun phrase)\n- 뜻: 상장회사 (오늘 \"the list of stock company\"라고 했던 말)\n- 실전 예문: *SK Gas is a listed company on the Korean stock market.*\n\n---\n\n**5. 📝 실전 복습 챌린지 (Practice)**\n\n**Q1. (쉬움)** 튜터에게 어제 코딩하느라 바빠서 교재 준비를 못 했다고 말해보세요.\n> ✅ **모범 답안**: *I was busy coding yesterday, so I didn't prepare my textbook.*\n\n**Q2. (보통)** 요즘 퇴근 후에 AI를 공부하고, 보통 저녁마다 작은 프로그램을 만든다고 말해보세요. 그리고 예전 회사보다 SK의 시스템이 더 좋다고 덧붙여 보세요.\n> ✅ **모범 답안**: *These days, I study AI after work, and I usually build small programs in the evening. Compared to my old company, SK has better systems.*\n\n**Q3. (어려움)** 비즈니스 자리에서 자기소개를 해보세요. SK Gas에서 내부감사 담당으로 11년째 일하고 있고, 근무 시간이 일정해서 루틴도 꽤 일정하지만, 언젠가는 내 사업을 시작하고 싶다는 내용입니다.\n> ✅ **모범 답안**: *I've worked at SK Gas as an internal auditor for about 11 years. Since I work fixed hours, my daily routine stays fairly consistent, but someday I'd like to start my own business.*\n\n---\n\n**6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)**\n\n✨ **Good Job**\n> 🗣️ \"Before this company, I worked at another company.\"\n\nJoey, 이 문장은 **시간 감각이 완벽**했어요! \"Before this company\"라는 지난 시간 신호에 맞춰 **worked**를 정확히 썼습니다. 오늘의 Target Grammar를 이미 몸으로 할 줄 안다는 증거예요. 이 감각을 yesterday와 these days에도 그대로 옮기기만 하면 됩니다.\n\n또 하나 칭찬할 점은, 교재가 없는 날인데도 **\"How about the routine of the day?\"**라고 먼저 주제를 제안한 거예요. 튜터가 \"Look at you, you're so innovative.\"라고 할 만큼 대화를 이끄는 태도가 정말 좋았습니다. \"Sometimes you have to break out of the routine\"에 가까운 말로 튜터의 일요일 전통에 맞장구친 것도 아주 자연스러웠어요. 👏\n\n🚀 **내일의 한 문장**\n> 🗣️ *\"Happy Monday! Over the weekend, I worked on my AI English program. It still has a few bugs, but I really enjoy it!\"*\n\n(튜터가 오늘 Joey의 AI 프로그램에 큰 관심을 보였으니, 이 문장으로 시작하면 대화가 자연스럽게 이어질 거예요. 'Over the weekend'라는 지난 시간 신호에 맞춰 **worked**를 쓰는 연습도 됩니다.)\n\n---\n\n**[성과 지표]**\n\n📈 **유창성 점수: 6 / 10**\n\n**근거**\n- ➕ **강점**: 교재 없이도 수업 내내 대화를 이어갔고, AI 자동화 시스템이나 감사 업무처럼 복잡한 주제도 끝까지 설명하려고 했습니다. 모르는 말이 나오면 바로 되묻는 능력도 좋았어요(\"Gone down?\", \"Sunset time, right?\"). \"I was wondering, your meal is always similar or different?\"처럼 튜터에게 거꾸로 질문하며 대화를 주고받은 점도 좋았습니다.\n- ➖ **개선점**: 시간 신호와 동사 모양이 자주 어긋났습니다. 긴 설명에서는 \"so, yeah, and then\"이 반복되면서 문장이 길게 엉켰고, 튜터가 \"So if I'm understanding you correctly…\"라고 다시 정리해야 하는 순간이 있었어요.\n\n🎯 **다음 수업 원포인트 액션 플랜**\n> **\"말하기 전에 시간 단어부터 꽂기!\"**\n> 문장을 시작할 때 **Yesterday / These days / For 11 years** 중 하나를 먼저 말하고, 그 시간 단어에 맞는 동사 모양을 붙이세요. 긴 설명은 **\"짧은 문장 2~3개\"로 끊어서** 말하면 튜터가 되묻는 횟수가 확 줄어들 거예요.\n\n위 내용을 바탕으로:\n1. 먼저 오늘 수업에서 내가 틀렸거나 어색했던 표현을 하나 골라서, 관련된 상황을 영어로 질문해줘.\n2. 내가 영어로 대답하면, 자연스러운지 확인하고 더 나은 표현이 있으면 알려줘.\n3. 특히 \"반복 실수 패턴\"에서 지적된 부분을 집중적으로 연습시켜줘.\n4. 이런 식으로 오늘 배운 표현들을 하나씩 복습하자.\n5. 한국어 설명은 필요할 때만 간단히, 대화는 최대한 영어로 진행해줘.\n\n그럼 시작하자!";
+        function startReview(){navigator.clipboard.writeText(REVIEW_PROMPT).then(()=>{showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)}).catch(()=>{const t=document.createElement('textarea');t.value=REVIEW_PROMPT;document.body.appendChild(t);t.select();document.execCommand('copy');document.body.removeChild(t);showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)})}
+        function showToast(){const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500)}
+        function switchTab(n){document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',n==='feedback'?i===0:i===1));document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));document.getElementById('tab-'+n).classList.add('active')}
+    </script>
+</body>
+</html>
