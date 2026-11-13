@@ -4,11 +4,50 @@
   2026,
   46
  ],
- "topic": "Discussing waste separation and recycling systems",
- "grammar": "Noun Forms and Articles",
- "grammar_norm": "Articles (a/an/the)",
- "score": null,
- "pairs": [],
- "vocab": [],
- "_html_md5": "638dc680fa269acfabb099f5f2f4deee"
+ "topic": "Rubbish, Recycling, and Waste Disposal in Daily Life",
+ "grammar": "prepositions",
+ "grammar_norm": "Prepositions",
+ "score": 6.0,
+ "pairs": [
+  {
+   "said": "It is so hard to deal the trash.",
+   "natural": "Dealing with trash here is such a hassle."
+  },
+  {
+   "said": "I'm just trash that trash the general trash bin.",
+   "natural": "If I'm not sure, I just toss it in the regular trash bin."
+  },
+  {
+   "said": "Sometimes I can have an idea how this product how can I trash.",
+   "natural": "Sometimes I'm not sure how to get rid of it, so I just put it in the general bin."
+  }
+ ],
+ "vocab": [
+  {
+   "word": "rubbish",
+   "pos": "명사",
+   "meaning": "쓰레기 (영국·호주 영어; 미국 영어는 trash/garbage)"
+  },
+  {
+   "word": "hazardous",
+   "pos": "형용사",
+   "meaning": "위험한, 유해한"
+  },
+  {
+   "word": "contaminated",
+   "pos": "형용사",
+   "meaning": "오염된, 더럽혀진"
+  },
+  {
+   "word": "biodegradable",
+   "pos": "형용사",
+   "meaning": "생분해 가능한 (자연 분해되는)"
+  },
+  {
+   "word": "dispose of",
+   "pos": "구동사",
+   "meaning": "처리하다, 폐기하다"
+  }
+ ],
+ "_html_md5": "346f708a62ef49ca6afcebd2fa4b4617"
 }
