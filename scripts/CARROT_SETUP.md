@@ -2,7 +2,7 @@
 
 > 이 문서 하나만 따라 하면 강사 공식 피드백 자동 수집이 되살아납니다.
 > Follow this runbook end-to-end to restore the weekly tutor-feedback sync.
-> (작성 기준일 / as of: **2026-08-19**)
+> (작성 기준일 / as of: **2026-08-19**, 로그인 방식·자가 복구 갱신 **2026-11-15** → 9장)
 
 ---
 
@@ -122,8 +122,9 @@ Actions 로그 맨 아래 `Process completed with exit code N` 을 보세요.
 |:--:|---|---|
 | **0** | ✅ 성공 | `docs/carrot/_meta.json` 의 `months` · `counts` 확인. 할 일 없음. |
 | **2** | 🔑 자격증명 미설정 (`CARROT_EMAIL`/`CARROT_PASSWORD` 없음) **또는 잘못된 인자** (`months`/`--since` 가 `YYYY-MM` 형식이 아님) | **설정 문제.** 위 2·3장대로 Secret 등록. 이름 오타(`CAROT_`, 소문자) 주의. 로컬이면 `.env` 로드 여부 확인. 수동 실행이었다면 입력한 월 형식(`2026-07`) 확인. |
-| **3** | 🚪 로그인 / accesstoken 캡처 실패 | **비밀번호가 틀렸거나 Carrot 사이트 UI 가 바뀜.** ① 브라우저로 직접 로그인해 비밀번호 확인 → 맞으면 Secret 재등록. ② 로그인은 되는데 실패하면 로그인 폼/토큰 구조 변경 → 6장 디버그 아티팩트의 스크린샷·HTML 확인. ③ 계정 잠김·CAPTCHA 여부 확인. |
-| **4** | 📡 API 호출 실패 | 로그인은 성공. Carrot 서버 오류·점검·응답 형식 변경. 잠시 후 재실행(`gh workflow run ...`). 반복되면 API 응답 스키마 변경 의심 → 스크립트의 파싱부 점검. |
+| **3** | 🚪 로그인 실패 — **API 로그인과 브라우저 로그인 둘 다** | 알림의 `이유:` 에 두 원인(`API: … \| 브라우저: …`)이 함께 온다. API 쪽이 HTTP 오류·응답 모양 변경이면 **로그인 API 가 바뀐 것** → 10장 확인 방법으로 사이트 공개 코드의 로그인 호출을 다시 본다. 브라우저 쪽은 6장 디버그 아티팩트(스크린샷·HTML). |
+| **4** | 📡 API 호출 실패 | 로그인은 성공. Carrot 서버 오류·점검·응답 형식 변경, 또는 **요청한 달과 다른 달 자료가 와서 저장을 거부**(`다른 달 자료 N건 섞임`). 잠시 후 재실행(`gh workflow run ...`). 반복되면 API 응답 스키마 변경 의심 → 스크립트의 파싱부 점검. |
+| **5** | 🔑 **서버가 로그인을 거절** (HTTP 200 + `success:false`, 또는 HTTP 401) | 알림에 서버 문구가 그대로 온다(예: `This account is not valid.`). **비밀번호를 바꿨다면 `CARROT_PASSWORD` Secret 재등록.** 계정 잠김을 막으려고 이때는 브라우저로 같은 비밀번호를 다시 보내지 않는다. 문구가 비밀번호와 무관하면(점검·약관 등) 사이트에 직접 로그인해 확인. |
 
 ---
 
@@ -172,11 +173,37 @@ Actions 로그 맨 아래 `Process completed with exit code N` 을 보세요.
 
 ---
 
-## 9. 참고 파일 (Related files)
+## 9. 로그인 방식과 자가 복구 (2026-11-15~) / How login and self-healing work
+
+**왜 바꿨나.** 2026-09-13 · 09-20 · 10-18 · 10-25 · 11-02 · 11-06(시험) 실패 6건이 전부 같은 증상이었다 —
+화면에서 이메일을 넣고 '다음'을 눌러도 비밀번호 칸이 안 나옴(`password field element not found` → exit 3).
+원인은 매번 달랐지만(화면 준비 전 클릭 · 영어 화면 · 화면 프로그램 늦은 로딩) 뿌리는 하나, **화면을 사람처럼 누르는 방식 자체가 깨지기 쉽다**는 것.
+
+**지금 순서.**
+1. **API 로그인(기본)** — 사이트 화면이 내부적으로 부르는 `POST https://homeapi.carrotenglish.com/app/auth/login`
+   에 `{uid: 이메일, password: 비밀번호}` 를 직접 보내 `data.accessToken` 을 받는다. 화면 글자·언어·로딩과 무관.
+   받은 토큰은 이번 달 `allFeedback` 1회 호출로 검증한다(무효 토큰은 HTTP 200 + `success:false` 로 구별됨, 11-15 실측).
+2. **브라우저 로그인(예비)** — 1이 거절 이외의 이유(연결·HTTP 오류·응답 모양 변경·토큰 검증 실패)로 안 되면 기존 Playwright 로그인.
+   이때 Actions 화면에 노란 경고 `Carrot 브라우저 예비 경로` 가 뜨고 `_meta.json` 의 `login_via` 가 `"browser"` 가 된다
+   → **수집은 성공했어도 API 경로가 깨졌다는 신호**이니 다음 확인 방법으로 원인을 본다.
+3. **서버 거절이면 즉시 종료(exit 5)** — 같은 비밀번호를 브라우저로 또 보내지 않는다.
+
+**로그인 API 가 바뀌었는지 확인하는 법.** 로그인 화면 HTML 의 `/assets/index.*.js` → 그 안의 `startEmailAlready.*.js`
+조각에서 `/app/auth/login` 호출의 본문(`uid`, `password`)과 응답(`data.accessToken`)을 본다. 자격증명은 필요 없다.
+
+**덜 받은 달 자동 복구.** `_meta.json` 의 `fetched_on` 에 달별 마지막 수집일을 남기고, 백필은
+'파일 없는 달' + **'그 달 말일 + 7일 이전에 받은 달'** 을 다시 받는다. (전에는 실패가 달을 넘기면 덜 받은 달이 그대로 굳었다 —
+2026-06 은 06-26 에 받은 뒤 갱신되지 않았다.) 이 기록이 없는 달은 미완결로 보므로 **도입 직후 첫 실행은 모든 달을 1회 다시 받는다**(약 10회 호출).
+안전장치 두 가지: 다시 받은 일수가 저장된 것보다 **적으면 덮어쓰지 않고** 노란 경고, 응답에 **다른 달 날짜가 섞이면 저장 거부**(exit 4).
+
+---
+
+## 10. 참고 파일 (Related files)
 
 | 파일 | 역할 |
 |---|---|
-| `scripts/fetch_carrot_feedback.py` | 로그인 → API 수집 → `docs/carrot/*.json` · `_fetched.txt` · `_meta.json` 기록 |
+| `scripts/fetch_carrot_feedback.py` | 로그인(API 우선·브라우저 예비) → API 수집 → `docs/carrot/*.json` · `_fetched.txt` · `_meta.json` 기록 |
+| `tests/test_carrot_api_login.py` | API 로그인·예비 경로·거절(exit 5)·달 완결성·덮어쓰기 안전장치 검사 (네트워크 미사용) |
 | `scripts/build_carrot_page.py` | 수집된 JSON → `docs/carrot.html` 렌더링 |
 | `.github/workflows/carrot-feedback.yml` | 매주 월 06:00 KST cron + 수동 실행(`months` / `backfill` 입력) |
 | `.env.example` | 로컬 실행용 환경변수 템플릿 (`CARROT_EMAIL` / `CARROT_PASSWORD` 포함) |
