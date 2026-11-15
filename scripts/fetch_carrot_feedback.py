@@ -3,11 +3,17 @@
 """
 🥕 Carrot English 강사 공식 피드백 수집기 / fetcher.
 
-이메일+비밀번호로 로그인(Playwright headless) → 앱이 보내는 요청의 accesstoken
-헤더를 가로채 → 그 토큰으로 allFeedback API를 월별 호출 → docs/carrot/YYYY-MM.json 저장.
-(저장소 토큰 스캐닝이 아니라 '앱 자신의 요청 헤더'를 캡처하는 방식.)
-Login with email+password (headless Playwright), intercept the `accesstoken` header the
-app itself sends, then call the monthly allFeedback API with that token.
+로그인은 두 갈래다 / two login paths:
+  ① API 우선(기본) — 사이트 화면이 내부적으로 부르는 로그인 API(POST /app/auth/login
+     {uid, password})를 직접 불러 data.accessToken 을 받는다. 화면 글자·언어·로딩 타이밍과
+     무관하므로, 2026-09~11 의 '다음 눌러도 안 넘어감' 실패 6건이 구조적으로 생기지 않는다.
+  ② 브라우저 예비(fallback) — ①이 거절 외의 이유(네트워크·HTTP 오류·응답 모양 변경·토큰 검증
+     실패)로 안 되면 기존 Playwright 로그인으로 앱 요청의 accesstoken 헤더를 가로챈다.
+  서버가 비밀번호를 명시적으로 거절하면(success=false) 브라우저로 같은 비밀번호를 다시 보내지
+  않고 바로 끝낸다(exit 5) — 틀린 비밀번호 반복 제출로 계정이 잠기는 것을 막는다.
+그 토큰으로 allFeedback API 를 월별 호출 → docs/carrot/YYYY-MM.json 저장.
+① API-first: call the login API the web app itself uses; ② fall back to the headless-browser
+flow only for non-rejection failures. An explicit credential rejection exits 5 immediately.
 
 자격증명은 환경변수로만 받는다(절대 하드코딩/커밋 금지):
 Credentials come from env vars only — never hardcode or commit them:
@@ -23,9 +29,15 @@ CLI:
 
 종료 코드 / exit codes:
   0 성공(success) / 2 자격증명 미설정(missing credentials)
-  3 로그인·토큰 캡처 실패(login or token capture failed) / 4 API 호출 실패(API call failed)
+  3 로그인·토큰 캡처 실패 — API·브라우저 둘 다(login failed on both paths)
+  4 API 호출 실패(API call failed)
+  5 서버가 이메일·비밀번호를 거절(credentials rejected by the server)
 
-의존성: pip install playwright requests 후 python -m playwright install chromium
+백필은 '빠진 달' + '그 달이 끝나기 전에(말일+7일 전) 받은 달'을 다시 받는다 — 실패가 길어져
+달을 넘기면 덜 받은 달이 그대로 굳던 문제(2026-06: 06-26 에 받은 뒤 갱신 안 됨) 방지.
+Backfill also re-fetches months that were last fetched before they were over.
+
+의존성: pip install requests (브라우저 예비 경로용: playwright + python -m playwright install chromium)
 """
 import os, sys, re, json, glob, html, datetime, time, argparse
 import requests
@@ -38,18 +50,37 @@ KST = datetime.timezone(datetime.timedelta(hours=9))
 LOGIN_URL = "https://carrotfarm.carrotenglish.com/auth/startEmail"
 FEEDBACK_PAGE = "https://carrotfarm.carrotenglish.com/myClassroom/feedback?idxLecture=0"
 API = "https://homeapi.carrotenglish.com/app/myclass/allFeedback?searchYM={ym}"
+# 사이트 공개 코드(assets/startEmailAlready.*.js, 2026-11-15 확인)의 로그인 호출과 같은 주소·본문.
+# Same endpoint/body as the site's own login call (public bundle, checked 2026-11-15).
+LOGIN_API = "https://homeapi.carrotenglish.com/app/auth/login"
 
 # 종료 코드 상수 / exit code constants
-EXIT_OK, EXIT_NO_CREDS, EXIT_LOGIN, EXIT_API = 0, 2, 3, 4
+EXIT_OK, EXIT_NO_CREDS, EXIT_LOGIN, EXIT_API, EXIT_REJECTED = 0, 2, 3, 4, 5
 
 DEFAULT_SINCE = "2026-02"          # 백필 기본 시작 월 / default backfill start
 LOGIN_ATTEMPTS = 3                 # 최초 1회 + 재시도 2회 / initial + 2 retries
 API_ATTEMPTS = 3                   # 네트워크 오류 시 재시도 포함 / incl. retries
+# 강사가 피드백을 며칠 늦게 쓰기도 하므로, '다음 달 1일 + 7일' 이후에 받은 파일만 그 달의 완결본으로 본다.
+# A month counts as final only if fetched on/after the 1st of the next month + this grace.
+FINAL_GRACE_DAYS = 7
+# Carrot API 는 약 6개월 지난 피드백을 내려 버린다(2026-11-15 실측: 5월 18→9일, 2~4월 0일).
+# 그래서 '덜 받은 달 다시 받기'는 서버가 아직 들고 있는 최근 몇 달에만 한다 — 그보다 오래된 달은
+# 다시 받아도 줄어든 자료만 오므로 매주 헛걸음·경고만 남는다. 저장소 파일이 유일한 영구 기록이다.
+# The API drops feedback older than ~6 months, so completeness re-fetches stay inside this window.
+REFRESH_WINDOW_MONTHS = 4
 YM_RE = re.compile(r"^\d{4}-(0[1-9]|1[0-2])$")
 
 
 class LoginError(RuntimeError):
     """로그인/토큰 캡처 단계 실패 / login or token-capture failure."""
+
+
+class CredentialsRejected(RuntimeError):
+    """
+    서버가 이메일·비밀번호를 명시적으로 거절(success=false). LoginError 와 일부러 별개 —
+    재시도·브라우저 예비 경로가 이걸 잡아 같은 비밀번호를 또 보내면 안 된다.
+    Explicit rejection; deliberately NOT a LoginError so no retry path resends the password.
+    """
 
 
 class ApiError(RuntimeError):
@@ -97,7 +128,36 @@ def existing_months():
     return found
 
 
-def plan_months(args):
+def load_meta():
+    """기존 _meta.json(없거나 깨졌으면 빈 dict) / previous meta, or {} if absent/broken."""
+    try:
+        with open(os.path.join(CARROT, "_meta.json"), encoding="utf-8") as f:
+            meta = json.load(f)
+        return meta if isinstance(meta, dict) else {}
+    except (OSError, ValueError):
+        return {}
+
+
+def month_final_date(ym):
+    """이 날짜 이후에 받았다면 그 달은 완결본 / fetched on/after this date ⇒ month is final."""
+    y, m = (int(x) for x in ym.split("-"))
+    first_of_next = datetime.date(y + (m == 12), m % 12 + 1, 1)
+    return first_of_next + datetime.timedelta(days=FINAL_GRACE_DAYS)
+
+
+def is_final(ym, fetched_on):
+    """
+    fetched_on[ym](YYYY-MM-DD)이 그 달 완결 기준일 이후인가. 기록이 없으면 미완결로 본다
+    → 이 기능 도입 직후 한 번은 모든 달을 다시 받는다(약 10회 호출, 덜 받은 달 자가 복구).
+    No record ⇒ not final, so the first run after rollout re-fetches every month once.
+    """
+    try:
+        return datetime.date.fromisoformat(str(fetched_on.get(ym))) >= month_final_date(ym)
+    except (TypeError, ValueError):
+        return False
+
+
+def plan_months(args, have=None, fetched_on=None):
     """수집 대상 월 목록을 최신순으로 계산 / resolve target months, newest first."""
     cur, prev = current_and_previous_month()
 
@@ -105,10 +165,19 @@ def plan_months(args):
         return list(args.months)
 
     if args.backfill:
-        have = existing_months()
-        # 파일이 없는 달 + 진행 중인 이번/지난 달(있어도 항상 갱신)
-        # missing months + the two in-flight months (always refreshed)
-        wanted = [ym for ym in month_range(args.since, cur) if ym not in have]
+        have = existing_months() if have is None else have
+        if fetched_on is None:
+            fetched_on = load_meta().get("fetched_on") or {}
+        # 파일이 없는 달 + (최근 REFRESH_WINDOW_MONTHS 개월 안에서) 끝나기 전에 받은 달
+        # + 진행 중인 이번/지난 달(있어도 항상 갱신)
+        # missing + recent fetched-before-it-ended months + the two in-flight months
+        y, m = (int(x) for x in cur.split("-"))
+        m -= REFRESH_WINDOW_MONTHS
+        while m < 1:
+            y, m = y - 1, m + 12
+        window_start = f"{y:04d}-{m:02d}"
+        wanted = [ym for ym in month_range(args.since, cur)
+                  if ym not in have or (ym >= window_start and not is_final(ym, fetched_on))]
         for ym in (cur, prev):
             if ym >= args.since:
                 wanted.append(ym)
@@ -128,6 +197,19 @@ def _mask(text, secrets):
     # 안전망: 모든 <input ... value="..."> 를 마스킹 / safety net for input values
     text = re.sub(r'(<input\b[^>]*?\bvalue=")[^"]*(")', r"\1***\2", text, flags=re.I)
     return text
+
+
+def write_reason(text):
+    """
+    실패 이유 한 줄을 DEBUG_DIR/reason.txt 에 — 워크플로가 텔레그램 알림에 붙인다(마스킹된 값만 넘길 것).
+    One-line failure reason for the workflow's alert (callers pass already-masked text).
+    """
+    try:
+        os.makedirs(DEBUG_DIR, exist_ok=True)
+        with open(os.path.join(DEBUG_DIR, "reason.txt"), "w", encoding="utf-8") as f:
+            f.write(" ".join(str(text).split())[:300] + "\n")
+    except OSError as e:
+        err(f"⚠️ reason.txt 기록 실패 / could not write reason: {e}")
 
 
 def dump_debug(page, secrets, tag="login-failure"):
@@ -199,11 +281,20 @@ def login_candidates(page):
 
 def _login_once(email, password):
     """로그인 1회 시도 → accesstoken 반환 / one login attempt returning the token."""
-    from playwright.sync_api import sync_playwright
+    # 워크플로의 브라우저 설치 단계는 실패해도 계속 간다(API 경로엔 불필요). 그래서 여기서 없으면
+    # 잡히지 않는 예외(exit 1) 대신 LoginError 로 바꿔 종료 코드 계약(3)을 지킨다.
+    # The workflow's browser install may fail softly; keep the exit-code contract if it did.
+    try:
+        from playwright.sync_api import sync_playwright
+    except ImportError as e:
+        raise LoginError(f"playwright 미설치 / not installed ({e})") from e
 
     captured = {"token": None}
     with sync_playwright() as p:
-        browser = p.chromium.launch(headless=True)
+        try:
+            browser = p.chromium.launch(headless=True)
+        except Exception as e:  # noqa: BLE001 — 예: chromium 미설치 / e.g. browser binary missing
+            raise LoginError(f"chromium 실행 실패 / launch failed: {type(e).__name__}: {e}") from e
         # 한국어 화면으로 고정 — 2026-10 부터 사이트가 브라우저 언어를 따라 영어 화면("Next")을 주는데,
         # GitHub 실행 환경은 영어라서 '다음' 을 못 찾고 3주 연속 로그인 실패했다(10/18·10/25·11/02).
         # Pin the Korean UI: the site now follows the browser locale and the English UI broke the selectors.
@@ -328,6 +419,86 @@ def login_and_get_token(email, password):
     raise LoginError(str(last))
 
 
+def _short(text, secrets, limit=200):
+    """서버 메시지를 알림에 실을 수 있게: 자격증명 가리고 한 줄로 자르기 / mask + one line + trim."""
+    text = _mask(str(text or ""), secrets)
+    return " ".join(text.split())[:limit]
+
+
+def api_login(email, password):
+    """
+    화면을 거치지 않고 사이트의 로그인 API 를 직접 부른다(1회, 재시도 없음).
+    Call the site's login API directly — once, no retry (never resend a password blindly).
+
+    성공 → accessToken / 서버 거절(HTTP 200·success=false) → CredentialsRejected
+    그 밖의 모든 이상(연결·HTTP·JSON·토큰 없음) → LoginError (→ 브라우저 예비 경로)
+    """
+    try:
+        r = requests.post(
+            LOGIN_API,
+            json={"uid": email, "password": password},
+            headers={"accept": "application/json"},
+            timeout=30,
+        )
+    except requests.RequestException as e:
+        raise LoginError(f"로그인 API 연결 실패 / connection failed: {type(e).__name__}") from e
+    if r.status_code == 401:
+        # 인증 거절을 HTTP 로 알린 경우 — 브라우저로 같은 비밀번호를 또 보내지 않는다(코덱스 검토 반영).
+        # 403 은 봇 차단(WAF)일 수 있어 브라우저 예비 경로로 보낸다. 403 may be a bot wall → fallback.
+        raise CredentialsRejected("Carrot 로그인 API HTTP 401 / unauthorized")
+    if r.status_code != 200:
+        raise LoginError(f"로그인 API HTTP {r.status_code}")
+    try:
+        j = r.json()
+    except ValueError as e:
+        raise LoginError("로그인 API 응답이 JSON 이 아님 / non-JSON response") from e
+    if not isinstance(j, dict):
+        raise LoginError("로그인 API 응답 모양이 다름 / unexpected response shape")
+    if j.get("success") is False:
+        msg = _short(j.get("message"), [email, password]) or "message 없음"
+        raise CredentialsRejected(f"Carrot 서버가 로그인을 거절 / rejected: {msg}")
+    data = j.get("data") if isinstance(j.get("data"), dict) else {}
+    token = data.get("accessToken")
+    if j.get("success") is not True or not isinstance(token, str) or not token:
+        raise LoginError("로그인 API 응답에 accessToken 없음 / no accessToken in response")
+    return token
+
+
+def _gh_warning(title, msg):
+    """Actions 실행 화면에 노란 경고로 띄운다(로컬에선 그냥 한 줄) / yellow annotation on Actions."""
+    if os.environ.get("GITHUB_ACTIONS") == "true":
+        print(f"::warning title={title}::{msg}")
+    else:
+        print(f"⚠️ {title}: {msg}")
+
+
+def get_token(email, password):
+    """
+    API 로그인 우선, 안 되면 브라우저 → (token, "api" | "browser").
+    API first; fall back to the browser flow on any non-rejection failure.
+    CredentialsRejected 는 그대로 올려 보낸다(브라우저로 같은 비밀번호 재전송 금지).
+    """
+    cur, _ = current_and_previous_month()
+    try:
+        print("🔐 API 로그인 / API login")
+        token = api_login(email, password)
+        try:
+            fetch_month(token, cur)  # 실제 수집 API 로 토큰 검증 / verify on the real data API
+            print("✅ API 로그인 성공 — 브라우저 불필요 / API login ok, browser not needed")
+            return token, "api"
+        except ApiError as e:
+            reason = f"API 토큰 검증 실패 / token rejected by data API: {e}"
+    except LoginError as e:
+        reason = str(e)
+    _gh_warning("Carrot 브라우저 예비 경로", f"{reason} → 브라우저 로그인으로 전환 / falling back to browser")
+    try:
+        return login_and_get_token(email, password), "browser"
+    except LoginError as e:
+        # 브라우저 쪽 이유(예: playwright 미설치)가 API 쪽 진짜 원인을 가리지 않게 둘 다 싣는다.
+        # Report both causes so a browser-side error never hides the API-side one.
+        raise LoginError(f"API: {reason} | 브라우저/browser: {e}") from e
+
+
 # ────────────────────────────── API ──────────────────────────────
 def fetch_month(token, ym):
     """한 달치 피드백을 받아온다(네트워크 오류 시 재시도) / fetch one month with retries."""
@@ -346,6 +517,14 @@ def fetch_month(token, ym):
             j = r.json()
             if not j.get("success"):
                 raise ApiError(f"{ym}: API success=false ({j.get('message')})")
+            # 요청한 달의 자료가 맞는지 확인 — 서버가 searchYM 을 무시하고 다른 달을 주면, 백필이 지난 달
+            # 파일들을 엉뚱한 자료로 덮어쓴다. 저장 전에 막는다(코덱스 검토 반영).
+            # Refuse data whose createDate is outside the requested month before it overwrites a file.
+            items = (j.get("data") or {}).get("list") or []
+            stray = [x for x in items if not str((x or {}).get("createDate") or "").startswith(ym)]
+            if stray:
+                raise ApiError(f"{ym}: 다른 달 자료 {len(stray)}건 섞임 / {len(stray)} item(s) outside the month "
+                               f"(예: {str((stray[0] or {}).get('createDate'))[:10]})")
             return j
         except ApiError:
             raise
@@ -368,12 +547,23 @@ def month_day_count(path):
         return 0
 
 
-def write_stamps(fetched_months):
-    """_fetched.txt(기존 호환) + _meta.json 기록 / write both stamp files."""
+def write_stamps(fetched_months, login_via=None, accepted=None):
+    """
+    _fetched.txt(기존 호환) + _meta.json 기록 / write both stamp files.
+    fetched_months = 이번 실행이 API 로 받아 온 달(months) · accepted = 그중 파일에 실제로 반영한 달.
+    fetched_on 은 accepted 에만 찍는다 — 일수가 줄어 버린 응답으로 '완결' 도장을 찍으면
+    덜 받은 달이 다시는 재수집되지 않는다(코덱스 리뷰 P1).
+    """
+    accepted = list(fetched_months) if accepted is None else list(accepted)
     now = datetime.datetime.now(KST)
     stamp = now.strftime("%Y-%m-%d")
     with open(os.path.join(CARROT, "_fetched.txt"), "w", encoding="utf-8") as f:
         f.write(stamp)
+
+    # 달별 마지막 수집일 — 백필이 '끝나기 전에 받은 달'을 알아보는 근거 / per-month last accepted fetch date
+    fetched_on = dict(load_meta().get("fetched_on") or {})
+    for ym in accepted:
+        fetched_on[ym] = stamp
 
     # docs/carrot/ 전체를 스캔해 월별 일수·총계 산출 / scan the whole dir for counts
     counts = {ym: month_day_count(os.path.join(CARROT, f"{ym}.json"))
@@ -384,6 +574,10 @@ def write_stamps(fetched_months):
         "months": list(fetched_months),
         "counts": counts,
         "total_days": sum(counts.values()),
+        "fetched_on": dict(sorted(fetched_on.items())),
+        # 어느 로그인 경로로 받았나 — "browser" 가 보이면 API 경로가 조용히 깨진 것
+        # which login path worked; "browser" here means the API path silently broke
+        "login_via": login_via,
     }
     with open(os.path.join(CARROT, "_meta.json"), "w", encoding="utf-8") as f:
         json.dump(meta, f, ensure_ascii=False, indent=1)
@@ -431,16 +625,23 @@ def main(argv=None):
     print(f"📅 대상 월 / target months: {', '.join(months)}")
 
     try:
-        token = login_and_get_token(email, password)
+        token, via = get_token(email, password)
+    except CredentialsRejected as e:
+        err(f"❌ {e}")
+        err("   → 비밀번호를 바꿨다면 CARROT_PASSWORD 시크릿을 새 값으로 다시 등록하세요.")
+        err("   → If you changed the password, re-set the CARROT_PASSWORD secret.")
+        err("   → 계정 잠김을 막으려고 브라우저로 다시 시도하지 않았습니다 / not retried to avoid a lockout.")
+        write_reason(str(e))
+        return EXIT_REJECTED
     except LoginError as e:
-        err(f"❌ 로그인/accesstoken 캡처 실패 / login failed: {e}")
-        err("   → 비밀번호가 틀렸거나 Carrot 로그인 UI가 바뀌었을 수 있습니다.")
-        err("   → Wrong password, or the Carrot login UI changed.")
+        err(f"❌ 로그인/accesstoken 캡처 실패(API·브라우저 모두) / login failed on both paths: {e}")
+        err("   → Carrot 로그인 API 또는 화면이 바뀌었을 수 있습니다 / the login API or UI changed.")
         err(f"   → 덤프 확인 / check dump: {DEBUG_DIR}")
+        write_reason(_short(e, [email, password]))
         return EXIT_LOGIN
-    print("✅ accesstoken 확보 / token acquired")
+    print(f"✅ accesstoken 확보({via}) / token acquired via {via}")
 
-    saved, failed = [], []
+    saved, accepted, failed = [], [], []
     for ym in months:
         try:
             data = fetch_month(token, ym)
@@ -450,15 +651,27 @@ def main(argv=None):
             continue
         n = len((data.get("data") or {}).get("list") or [])
         path = os.path.join(CARROT, f"{ym}.json")
+        old_n = month_day_count(path) if os.path.exists(path) else 0
+        saved.append(ym)
+        if n < old_n:
+            # 다시 받았더니 일수가 줄었다 → 서버 보관 기간(약 6개월) 밖이거나 일시 이상. 기록을 잃지 않게
+            # 기존 파일을 지키고, '완결' 도장도 찍지 않는다(최근 달이면 다음 주에 다시 시도).
+            # Fewer days than stored (retention or glitch): keep the richer file and do not stamp it final.
+            _gh_warning("Carrot 일수 감소",
+                        f"{ym}: 새로 받은 {n}일 < 저장된 {old_n}일 — 기존 파일 유지(서버는 약 6개월 지난 피드백을 내림) "
+                        f"/ kept existing")
+            continue
         with open(path, "w", encoding="utf-8") as f:
             json.dump(data, f, ensure_ascii=False, indent=1)
-        saved.append(ym)
+        accepted.append(ym)
         if n == 0:
             print(f"⚠️ {ym}: 0일 — 수업이 없었거나 아직 미등록 / empty month (not an error)")
-        print(f"💾 {ym}: {n}일 → docs/carrot/{ym}.json")
+        dates = sorted(str(x.get("createDate"))[5:10] for x in (data.get("data") or {}).get("list") or [])
+        span = f" [{dates[0]}~{dates[-1]}]" if dates else ""
+        print(f"💾 {ym}: {n}일{span} → docs/carrot/{ym}.json" + (f" (이전 {old_n}일)" if n != old_n else ""))
 
     if saved:
-        write_stamps(saved)
+        write_stamps(saved, via, accepted)
 
     if failed:
         err(f"❌ 실패한 달 / failed months: {', '.join(failed)}")
