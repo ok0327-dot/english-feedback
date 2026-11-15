@@ -5,6 +5,160 @@
  "data": {
   "list": [
    {
+    "idxFeedback": 36511364,
+    "createDate": "2026-11-13",
+    "memo": "You did a great job with free talk today!  I am very impressed with your skills with AI!",
+    "subList": [
+     {
+      "idxFeedbackSub": 64118058,
+      "original": "POR example...",
+      "better": "For example...",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 64118059,
+      "original": "My eyes so sick.",
+      "better": "I have been suffering from EYESTRAIN.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 64118060,
+      "original": "I am SALARYMAN.",
+      "better": "I am AN EMPLOYEE.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 64118061,
+      "original": "I TAKE a bicycle.",
+      "better": "I RIDE a bicycle TO WORK.",
+      "betterTrans": null,
+      "isSave": "N"
+     }
+    ]
+   },
+   {
+    "idxFeedback": 36500146,
+    "createDate": "2026-11-12",
+    "memo": "Today's class was fantastic! We worked on including the s sound for plural nouns and verbs.  Please watch and practice with the video links below:\n1)   Singular and Plural Nouns - s, es, and ies endings video:  https://youtu.be/UJNsuNMTvgE?si=gAj9F7jSEZJszX5m\n2)   Spelling - Rules for Third Person 'S video:  https://youtu.be/HzYuhkC4brg?si=y8ojqHrR_M4c3a2E\n3)   How to Use the Verb \"To Mean\" | English Grammar for Beginners video:  https://youtu.be/jw9FxmygRkw?si=Uo9ZZv0E4bWZEozt\n\nOur goal:  to consistently voice the \"s\" sound at the end of nouns and verbs, you can do it!",
+    "subList": [
+     {
+      "idxFeedbackSub": 64068355,
+      "original": "Practice recognizing cultural DIFFERENCE in communication",
+      "better": "Practice recognizing cultural DIFFERENCE  (pronounced DIH-FER-REN=SEZ) in communication",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 64068356,
+      "original": "Sorry, I thought you MEANT (pronounced MEENT) the meeting was cancelled.",
+      "better": "Sorry, I thought you MEANT (pronounced MENT, short e sound) the meeting was cancelled.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 64068357,
+      "original": "Countries RIKE the US, UK, CAN are individualistis cultures.",
+      "better": "Countries LIKE the US, UK, CAN are individualistic cultures.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 64068358,
+      "original": "In Japan, people speak in a very INDIRECT (pronounced IN-DUH-RECT) manner.",
+      "better": "Alternative:  In Japan, people speak in a very INDIRECT (pronounced IN-DEAR-RECT) manner.",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 64068359,
+      "original": "PATIENT:  able to stay CALM (pronounced CLAM).",
+      "better": "PATIENT:  able to stay CALM (pronounced COM, the L is silent).",
+      "betterTrans": null,
+      "isSave": "N"
+     }
+    ]
+   },
+   {
+    "idxFeedback": 36487726,
+    "createDate": "2026-11-11",
+    "memo": "This lesson we reviewed recycling in Korea and related vocabulary. Reviewed the expressions [fall/autumn, chutes /shoots/ ] and sounded out the pronunciation of [rubbish /RUH·buhsh, ph- /f/, hazardous /HA·zr·duhs/, contaminated, biodegradable  ]. Answered questions about how you usually recycle and described the typical procedure for waste pick-up. Here are today's notes:",
+    "subList": [
+     {
+      "idxFeedbackSub": 64013839,
+      "original": "Some building a system it connect ",
+      "better": "Some buildings have a system that connects ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 64013840,
+      "original": "Usually we distinguish three kind of trash ",
+      "better": "Usually we separate into three ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 64013841,
+      "original": "(Recycling batteries) It is uncomfortable ",
+      "better": "It is inconvenient ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 64013842,
+      "original": "If the recycle product is a plastic bottle I think it is to wash to contain to trash them ",
+      "better": "If the recycled product is a plastic bottle I think it is best to wash and throw the contaminated one in the trash ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 64013843,
+      "original": "Trash away the recycling bin ",
+      "better": "Throw it away in the recycling bin ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 64013844,
+      "original": "I just trash the general trash bin ",
+      "better": "I just throw trash in the general bin ",
+      "betterTrans": null,
+      "isSave": "N"
+     }
+    ]
+   },
+   {
+    "idxFeedback": 36476868,
+    "createDate": "2026-11-10",
+    "memo": "You worked hard again today!  We worked on alternative phrases, the pronunciation of p vs. f,  and \"ed\" endings. Please watch and practice with the video link below:\n1)   ED ENDING WORDS | How to pronounce words ending in ED | /id/ /d/ /t/ sound | Learn with examples video:  https://youtu.be/hZ2vQXEW3fw?si=iXYkkWI9SflVja-k",
+    "subList": [
+     {
+      "idxFeedbackSub": 63964724,
+      "original": "Heads UP!",
+      "better": "Alternative:  Just to let you know...",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 63964725,
+      "original": "Did you HAPPEN (pronounced HAF-FEN)  to see the notice POST  about the fire drill?",
+      "better": "Did you HAPPEN (pronounced HAP-PEN)  to see the notice POSTED (pronounced POH-STED) about the fire drill?",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 63964726,
+      "original": "Rain check?",
+      "better": "Alternatives:  Can I take a rain check/ Can we reschedule for later?",
+      "betterTrans": null,
+      "isSave": "N"
+     }
+    ]
+   },
+   {
     "idxFeedback": 36463798,
     "createDate": "2026-11-09",
     "memo": "This lesson we discussed participating in local events in the community. Reviewed the use and meaning of the expressions [celebrations, bad news, sign up, watching out for ex. \"Watch our for danger.\", stop by-visit  ]. Sounded out the pronunciation of [suspicious, interactive, enriching ]. Answered questions about volunteering and events in your area. Here are today's notes:",
