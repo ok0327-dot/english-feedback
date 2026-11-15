@@ -63,6 +63,11 @@ API_ATTEMPTS = 3                   # 네트워크 오류 시 재시도 포함 / 
 # 강사가 피드백을 며칠 늦게 쓰기도 하므로, '다음 달 1일 + 7일' 이후에 받은 파일만 그 달의 완결본으로 본다.
 # A month counts as final only if fetched on/after the 1st of the next month + this grace.
 FINAL_GRACE_DAYS = 7
+# Carrot API 는 약 6개월 지난 피드백을 내려 버린다(2026-11-15 실측: 5월 18→9일, 2~4월 0일).
+# 그래서 '덜 받은 달 다시 받기'는 서버가 아직 들고 있는 최근 몇 달에만 한다 — 그보다 오래된 달은
+# 다시 받아도 줄어든 자료만 오므로 매주 헛걸음·경고만 남는다. 저장소 파일이 유일한 영구 기록이다.
+# The API drops feedback older than ~6 months, so completeness re-fetches stay inside this window.
+REFRESH_WINDOW_MONTHS = 4
 YM_RE = re.compile(r"^\d{4}-(0[1-9]|1[0-2])$")
 
 
@@ -163,10 +168,16 @@ def plan_months(args, have=None, fetched_on=None):
         have = existing_months() if have is None else have
         if fetched_on is None:
             fetched_on = load_meta().get("fetched_on") or {}
-        # 파일이 없는 달 + 끝나기 전에 받은 달 + 진행 중인 이번/지난 달(있어도 항상 갱신)
-        # missing + fetched-before-it-ended + the two in-flight months (always refreshed)
+        # 파일이 없는 달 + (최근 REFRESH_WINDOW_MONTHS 개월 안에서) 끝나기 전에 받은 달
+        # + 진행 중인 이번/지난 달(있어도 항상 갱신)
+        # missing + recent fetched-before-it-ended months + the two in-flight months
+        y, m = (int(x) for x in cur.split("-"))
+        m -= REFRESH_WINDOW_MONTHS
+        while m < 1:
+            y, m = y - 1, m + 12
+        window_start = f"{y:04d}-{m:02d}"
         wanted = [ym for ym in month_range(args.since, cur)
-                  if ym not in have or not is_final(ym, fetched_on)]
+                  if ym not in have or (ym >= window_start and not is_final(ym, fetched_on))]
         for ym in (cur, prev):
             if ym >= args.since:
                 wanted.append(ym)
@@ -536,16 +547,22 @@ def month_day_count(path):
         return 0
 
 
-def write_stamps(fetched_months, login_via=None):
-    """_fetched.txt(기존 호환) + _meta.json 기록 / write both stamp files."""
+def write_stamps(fetched_months, login_via=None, accepted=None):
+    """
+    _fetched.txt(기존 호환) + _meta.json 기록 / write both stamp files.
+    fetched_months = 이번 실행이 API 로 받아 온 달(months) · accepted = 그중 파일에 실제로 반영한 달.
+    fetched_on 은 accepted 에만 찍는다 — 일수가 줄어 버린 응답으로 '완결' 도장을 찍으면
+    덜 받은 달이 다시는 재수집되지 않는다(코덱스 리뷰 P1).
+    """
+    accepted = list(fetched_months) if accepted is None else list(accepted)
     now = datetime.datetime.now(KST)
     stamp = now.strftime("%Y-%m-%d")
     with open(os.path.join(CARROT, "_fetched.txt"), "w", encoding="utf-8") as f:
         f.write(stamp)
 
-    # 달별 마지막 수집일 — 백필이 '끝나기 전에 받은 달'을 알아보는 근거 / per-month last fetch date
+    # 달별 마지막 수집일 — 백필이 '끝나기 전에 받은 달'을 알아보는 근거 / per-month last accepted fetch date
     fetched_on = dict(load_meta().get("fetched_on") or {})
-    for ym in fetched_months:
+    for ym in accepted:
         fetched_on[ym] = stamp
 
     # docs/carrot/ 전체를 스캔해 월별 일수·총계 산출 / scan the whole dir for counts
@@ -624,7 +641,7 @@ def main(argv=None):
         return EXIT_LOGIN
     print(f"✅ accesstoken 확보({via}) / token acquired via {via}")
 
-    saved, failed = [], []
+    saved, accepted, failed = [], [], []
     for ym in months:
         try:
             data = fetch_month(token, ym)
@@ -637,12 +654,16 @@ def main(argv=None):
         old_n = month_day_count(path) if os.path.exists(path) else 0
         saved.append(ym)
         if n < old_n:
-            # 다시 받았더니 일수가 줄었다 → 서버 쪽 일시 이상일 수 있으니 기록을 잃지 않게 기존 파일 유지
-            # Fewer days than what we already have — keep the richer file rather than lose records.
-            _gh_warning("Carrot 일수 감소", f"{ym}: 새로 받은 {n}일 < 저장된 {old_n}일 — 기존 파일 유지 / kept existing")
+            # 다시 받았더니 일수가 줄었다 → 서버 보관 기간(약 6개월) 밖이거나 일시 이상. 기록을 잃지 않게
+            # 기존 파일을 지키고, '완결' 도장도 찍지 않는다(최근 달이면 다음 주에 다시 시도).
+            # Fewer days than stored (retention or glitch): keep the richer file and do not stamp it final.
+            _gh_warning("Carrot 일수 감소",
+                        f"{ym}: 새로 받은 {n}일 < 저장된 {old_n}일 — 기존 파일 유지(서버는 약 6개월 지난 피드백을 내림) "
+                        f"/ kept existing")
             continue
         with open(path, "w", encoding="utf-8") as f:
             json.dump(data, f, ensure_ascii=False, indent=1)
+        accepted.append(ym)
         if n == 0:
             print(f"⚠️ {ym}: 0일 — 수업이 없었거나 아직 미등록 / empty month (not an error)")
         dates = sorted(str(x.get("createDate"))[5:10] for x in (data.get("data") or {}).get("list") or [])
@@ -650,7 +671,7 @@ def main(argv=None):
         print(f"💾 {ym}: {n}일{span} → docs/carrot/{ym}.json" + (f" (이전 {old_n}일)" if n != old_n else ""))
 
     if saved:
-        write_stamps(saved, via)
+        write_stamps(saved, via, accepted)
 
     if failed:
         err(f"❌ 실패한 달 / failed months: {', '.join(failed)}")

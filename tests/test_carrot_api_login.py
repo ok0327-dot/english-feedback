@@ -202,19 +202,26 @@ def test_completeness():
     have = {f"2026-{m:02d}" for m in range(2, 12)}
     with Patch(F, current_and_previous_month=lambda: ("2026-11", "2026-10")):
         allm = F.plan_months(args, have=have, fetched_on={})
-        check("기록 없으면 2~11월 전부 1회 재수집", allm == sorted(have, reverse=True))
+        check("기록 없으면 최근 4개월 창(07~11)만 1회 재수집 — 서버가 내린 2~6월은 안 건드림",
+              allm == ["2026-11", "2026-10", "2026-09", "2026-08", "2026-07"])
         fo = {ym: "2026-11-09" for ym in have}
-        fo["2026-06"] = "2026-06-26"
-        check("완결 기록이 있으면 6월(덜 받은 달)+이번·지난 달만",
-              F.plan_months(args, have=have, fetched_on=fo) == ["2026-11", "2026-10", "2026-06"])
-        check("빠진 달(파일 없음)은 여전히 채움",
+        fo["2026-08"] = "2026-08-23"   # 8월이 끝나기 전에 받고 굳은 경우 / fetched before August ended
+        fo["2026-06"] = "2026-06-26"   # 창 밖 / outside the window
+        check("창 안의 덜 받은 달(8월)+이번·지난 달만, 창 밖 6월은 제외",
+              F.plan_months(args, have=have, fetched_on=fo) == ["2026-11", "2026-10", "2026-08"])
+        check("빠진 달(파일 없음)은 창 밖이어도 여전히 채움",
               "2026-03" in F.plan_months(args, have=have - {"2026-03"}, fetched_on=fo))
         args2 = types.SimpleNamespace(months=[], backfill=False, since="2026-02")
         check("백필 아닌 기본 실행은 이번·지난 달 그대로", F.plan_months(args2) == ["2026-11", "2026-10"])
+    with Patch(F, current_and_previous_month=lambda: ("2027-02", "2027-01")):
+        have2 = {"2026-09", "2026-10", "2026-11", "2026-12", "2027-01", "2027-02"}
+        args3 = types.SimpleNamespace(months=[], backfill=True, since="2026-09")
+        check("해 넘김 창: 2027-02 기준 2026-10~2027-02 (2026-09 는 창 밖)",
+              F.plan_months(args3, have=have2, fetched_on={}) == ["2027-02", "2027-01", "2026-12", "2026-11", "2026-10"])
 
 
 # ───────────────────────────── main() 전체 경로 / end-to-end paths ─────────────────────────────
-def run_main(argv, api_login, browser, counts, seed=None, meta=None):
+def run_main(argv, api_login, browser, counts, seed=None, meta=None, calls=None):
     tmp = tempfile.mkdtemp()
     carrot, debug = os.path.join(tmp, "carrot"), os.path.join(tmp, "debug")
     os.makedirs(carrot)
@@ -227,7 +234,7 @@ def run_main(argv, api_login, browser, counts, seed=None, meta=None):
     os.environ["CARROT_EMAIL"], os.environ["CARROT_PASSWORD"] = EMAIL, PASSWORD
     with Patch(F, CARROT=carrot, DEBUG_DIR=debug, api_login=api_login, login_and_get_token=browser,
                current_and_previous_month=lambda: ("2026-11", "2026-10")), \
-            Patch(F.requests, get=fake_get_factory(counts)), Patch(F.time, sleep=lambda s: None):
+            Patch(F.requests, get=fake_get_factory(counts, calls)), Patch(F.time, sleep=lambda s: None):
         code = F.main(argv)
     return code, tmp, carrot, debug
 
@@ -247,30 +254,37 @@ def test_main():
     def api_reject(e, p):
         raise F.CredentialsRejected(F._short(f"rejected for {EMAIL}/{PASSWORD}", [EMAIL, PASSWORD]))
 
-    # ① API 경로 + 덜 받은 6월 다시 받기(20 → 22일) / API path refreshes the partial June
-    code, tmp, carrot, _ = run_main(["--backfill"], lambda e, p: "tok", browser,
-                                    {"2026-06": 22, "2026-11": 6, "2026-10": 19},
-                                    seed={"2026-06": 20, "2026-10": 19, "2026-11": 6},
+    # ① API 경로 + 창 안의 덜 받은 8월 다시 받기(18 → 20일), 창 밖 6월은 요청조차 안 함
+    seed = {f"2026-{m:02d}": 20 for m in range(2, 12)}
+    seed["2026-08"] = 18
+    fo = {ym: "2026-11-09" for ym in seed}
+    fo["2026-08"], fo["2026-06"] = "2026-08-23", "2026-06-26"
+    counts = dict(seed, **{"2026-08": 20})
+    calls = []
+    code, tmp, carrot, _ = run_main(["--backfill"], lambda e, p: "tok", browser, counts, seed=seed, calls=calls,
                                     meta={"fetched_at": "2026-11-09", "months": ["2026-11", "2026-10"],
-                                          "fetched_on": {"2026-06": "2026-06-26", "2026-10": "2026-11-09",
-                                                         "2026-11": "2026-11-09"}})
+                                          "fetched_on": fo})
     meta = read_json(os.path.join(carrot, "_meta.json"))
     check("API 경로 exit 0 · 브라우저 안 씀", code == 0 and not browser_calls)
-    check("6월 20 → 22일로 갱신", F.month_day_count(os.path.join(carrot, "2026-06.json")) == 22)
-    check("_meta: login_via=api · fetched_on 갱신 · 기존 fetched_at/months 키 유지",
-          meta.get("login_via") == "api" and meta["fetched_on"]["2026-06"] == meta["fetched_at"]
-          and "months" in meta and "2026-06" in meta["months"])
+    check("창 안의 8월 18 → 20일로 갱신", F.month_day_count(os.path.join(carrot, "2026-08.json")) == 20)
+    check("창 밖 6월·5월은 수집 API 를 부르지도 않음", "2026-06" not in calls and "2026-05" not in calls)
+    check("_meta: login_via=api · 8월 fetched_on 갱신 · 6월 기록 보존 · 기존 키 유지",
+          meta.get("login_via") == "api" and meta["fetched_on"]["2026-08"] == meta["fetched_at"]
+          and meta["fetched_on"]["2026-06"] == "2026-06-26" and "2026-08" in meta["months"])
     with Patch(B, CARROT=carrot):
         fa, src, est = B.read_freshness()
         check("페이지 생성기가 새 _meta 를 그대로 읽음(신선도·수집 월)",
-              fa == meta["fetched_at"] and src == "_meta.json" and not est and "2026-06" in B.fetched_months())
+              fa == meta["fetched_at"] and src == "_meta.json" and not est and "2026-08" in B.fetched_months())
     shutil.rmtree(tmp)
 
-    # ② 다시 받았더니 일수가 줄면 기존 파일 유지 / never shrink an existing month
+    # ② 다시 받았더니 일수가 줄면 기존 파일 유지 + '완결' 도장 안 찍음(코덱스 리뷰 P1 재현 케이스)
     code, tmp, carrot, _ = run_main(["2026-06"], lambda e, p: "tok", browser, {"2026-06": 18, "2026-11": 6},
                                     seed={"2026-06": 20})
+    meta = read_json(os.path.join(carrot, "_meta.json"))
     check("일수 감소(20→18) → 기존 파일 유지 · exit 0",
           code == 0 and F.month_day_count(os.path.join(carrot, "2026-06.json")) == 20)
+    check("일수 감소한 달은 fetched_on 에 안 찍힘(다음 백필 때 다시 시도) · months 에는 남음",
+          "2026-06" not in (meta.get("fetched_on") or {}) and "2026-06" in meta["months"])
     shutil.rmtree(tmp)
 
     # ③ 서버 거절 → exit 5 · 브라우저 안 씀 · 알림용 이유에 비밀번호 없음
