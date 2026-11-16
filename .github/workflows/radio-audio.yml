@@ -48,7 +48,14 @@ jobs:
             echo "변경 없음"
           else
             git commit -m "chore(radio): 주간 라디오 오디오 갱신 ($EPISODE_WEEK)"
-            git push origin HEAD:main
+            # TTS 도중 main 이 앞서 나가면(루틴·일일 파이프라인·PR 병합) push 가 'fetch first' 로 거절된다.
+            # 이 커밋은 docs/radio/ 만 건드리므로 최신 main 위로 rebase 후 재시도 (2026-11-16 실제 유실 사례).
+            for i in 1 2 3; do
+              if git push origin HEAD:main; then break; fi
+              if [ "$i" = 3 ]; then echo "❌ push 3회 실패"; exit 1; fi
+              echo "push 거절 — 최신 main 반영 후 재시도 ($i/3)"
+              git pull --rebase origin main
+            done
           fi
       - name: 📲 텔레그램 발송 (네이티브 음성 우선, 없으면 링크)
         run: |

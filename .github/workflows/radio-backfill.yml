@@ -47,7 +47,13 @@ jobs:
             echo "변경 없음 (쿼터 소진 등 — 다음 날 재시도)"
           else
             git commit -m "chore(radio): 아카이브 라디오 오디오 백필"
-            git push origin HEAD:main
+            # main 이 앞서 나가 push 가 거절되면 rebase 후 재시도 (radio-audio.yml 과 같은 처리)
+            for i in 1 2 3; do
+              if git push origin HEAD:main; then break; fi
+              if [ "$i" = 3 ]; then echo "❌ push 3회 실패"; exit 1; fi
+              echo "push 거절 — 최신 main 반영 후 재시도 ($i/3)"
+              git pull --rebase origin main
+            done
           fi
       - name: 🏁 전량 완료 시 워크플로우 자체 비활성화
         if: steps.backfill.outputs.done == 'true'
