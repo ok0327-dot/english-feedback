@@ -5,6 +5,48 @@
  "data": {
   "list": [
    {
+    "idxFeedback": 36521240,
+    "createDate": "2026-11-16",
+    "memo": "This lesson we discussed different textbook options after finishing Living Abroad and skipping over the series Pop English to Trendy English. Reviewed the topic of DIY projects and idioms for making repairs around the home. \nHere are today's notes:",
+    "subList": [
+     {
+      "idxFeedbackSub": 64159517,
+      "original": "Two people painting in their home, maybe they have a home improvement ",
+      "better": "Two people are painting in their home, maybe they have a home improvement ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 64159518,
+      "original": "He hold the step ",
+      "better": "He is standing on the stepladder ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 64159519,
+      "original": "If I use the strong skill, that colour is different to other side ",
+      "better": "If I paint with too much pressure, that wall's colour is different than the other side ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 64159520,
+      "original": "I changed the part that pours water ",
+      "better": "I changed my showerhead ",
+      "betterTrans": null,
+      "isSave": "N"
+     },
+     {
+      "idxFeedbackSub": 64159521,
+      "original": "We have to repeat the work and have a detailed work finishing touch ",
+      "better": "We have to repeat the work and have a detailed finishing touch ",
+      "betterTrans": null,
+      "isSave": "N"
+     }
+    ]
+   },
+   {
     "idxFeedback": 36511364,
     "createDate": "2026-11-13",
     "memo": "You did a great job with free talk today!  I am very impressed with your skills with AI!",
