@@ -62,7 +62,7 @@ def _tts_chunk(chunk, cfgs):
     transcript = ("Read this radio dialogue as a warm, lively two-host learning podcast. "
                   "Speak naturally and expressively, with genuine back-and-forth energy, "
                   "at a relaxed and clear pace for an English learner (A2-B1 level). "
-                  "Mostly English, with occasional Korean lines spoken natively:\n" +
+                  "Mostly English, with short Korean reminder lines spoken natively in Korean:\n" +
                   "\n".join(f"{SPEAKERS.get(sp, (sp, 'Kore'))[0]}: {txt}" for sp, _, txt in chunk))
     body = {
         "contents": [{"parts": [{"text": transcript}]}],
