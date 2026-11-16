@@ -5,6 +5,8 @@
 검사 내용 / what is checked:
   - 형식: 모든 줄이 '민지|알렉스' · 'en|ko' · 빈 글 없음 · 글 안에 '|' 없음 · 빈 줄 없음
   - 한국어(ko) 줄 비율 30% 이하 · 200줄 이하(오디오 무료 한도)
+  - 최소 분량 120줄 이상(보충 코너) — 예외는 '얇은 주'(교정 < THIN_WEEK_ITEMS)뿐이고, 그땐 짧은 회차 안내 줄이 있다
+  - 같은 줄 되풀이 금지: 바로 앞 줄과 똑같은 줄 없음 · 어떤 줄도 세 번 이상 안 나옴
   - 강사(carrot) 데이터가 있으면 Tutor Rewind(요일 + 수업 주제 + 퀴즈) + 교정마다 '한 줄 정리' ko 줄
   - 강사 데이터가 없는 주도 대본이 정상(AI 교정으로 Rewind)
   - 학습자 문장은 입력 데이터에 있는 것만(지어내지 않음) · 문법책 용어 없음 · 같은 입력 → 같은 대본
@@ -15,6 +17,7 @@ import os
 import re
 import sys
 import tempfile
+from collections import Counter
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(ROOT, "scripts"))
@@ -72,6 +75,24 @@ def format_problems(lines):
     return bad
 
 
+def repeat_problems(lines):
+    """같은 줄 되풀이: 바로 앞 줄과 똑같은 줄 + 세 번 이상 나온 줄."""
+    texts = [t for _, _, t in lines]
+    consec = [t for a, t in zip(texts, texts[1:]) if a == t]
+    many = sorted(t for t, c in Counter(texts).items() if c > 2)
+    return consec + many
+
+
+def is_thin(iso, wk, cmap, memos):
+    mat = R.week_material(iso, wk, cmap, memos)
+    return len(mat["tutor"]) + len(mat["ai"]) < R.THIN_WEEK_ITEMS
+
+
+def jargon_hits(lines):
+    return [(w, t) for _, lang, t in lines for w in (EN_JARGON if lang == "en" else KO_JARGON)
+            if (re.search(r"\b" + re.escape(w) + r"\b", t.lower()) if lang == "en" else w in t)]
+
+
 def main():
     failures = []
 
@@ -90,6 +111,10 @@ def main():
     check("ko 비율 30% 이하", ratio <= 0.30)
     check("ko 줄이 한국어 상기용으로 충분(10% 이상)", ratio >= 0.10)
     check("200줄 이하(오디오 무료 한도)", n <= 200)
+    check(f"최소 분량 {R.RADIO_MIN_LINES}줄 이상(스펙 120~200줄)", n >= R.RADIO_MIN_LINES)
+    check("같은 줄 되풀이 없음(연속 중복 없음 · 세 번 이상 없음)", not repeat_problems(lines))
+    if repeat_problems(lines):
+        print("   repeats:", repeat_problems(lines)[:3])
 
     # 2) 라디오 장치: 스테이션 ID · 콜드 오픈 · 사인오프
     check("스테이션 ID(첫 줄 Joey FM)", "Joey FM" in texts[0])
@@ -153,8 +178,47 @@ def main():
     check("강사 데이터 없음: 짧게 알리고 AI 교정으로 Rewind", any("No tutor notes" in t for t in nt) and any(t.startswith("Here's your AI coach's fix") for t in nt))
     check("강사 데이터 없음: 교정마다 한 줄 정리", sum(1 for _, lang, t in nl if lang == "ko" and t.startswith("한 줄 정리")) == sum(1 for t in nt if t.startswith("Here's your AI coach's fix")))
     check("강사 데이터 없음: ko 30% 이하", R.script_stats(nl)[2] <= 0.30)
+    nn_, _, nr_ = R.script_stats(nl)
+    print(f"   (synthetic W46 강사 없음: {nn_} lines, ko {nr_:.0%})")
+    check(f"강사 데이터 없음: 최소 분량 {R.RADIO_MIN_LINES}줄 이상", nn_ >= R.RADIO_MIN_LINES)
+    check("강사 데이터 없음: ko 10% 이상", nr_ >= 0.10)
+    check("강사 데이터 없음: 같은 줄 되풀이 없음", not repeat_problems(nl))
+    check("강사 데이터 없음: 'Tutor Rewind'라고 부르지 않음", not any("Tutor Rewind" in t for t in nt))
+    check("AI 교정을 '강사가 고쳤다'고 하지 않음", not any(t.startswith("Your tutor rebuilt") for t in nt))
     empty = R.build_script(ISO, [dict(WK[0], pairs=[], vocab=[])], WK[:1], {}, {})
     check("교정이 하나도 없는 주도 대본 생성", empty and not format_problems(empty))
+    check("교정이 하나도 없는 주: 되풀이로 채우지 않음", not repeat_problems(empty))
+
+    # 8-1) 최소 분량 보충 코너 + 얇은 주(교정 < THIN_WEEK_ITEMS) 규칙
+    thin_wk = [WK[0]]                                     # 수업 1회 · AI 교정 2개 · 강사 없음
+    th = R.build_script(ISO, thin_wk, thin_wk, {}, {})
+    tt = [t for _, _, t in th]
+    check("얇은 주로 분류됨(교정 2개 < 기준)", is_thin(ISO, thin_wk, {}, {}))
+    check("얇은 주: 형식 정상 · 되풀이로 채우지 않음", not format_problems(th) and not repeat_problems(th))
+    check("얇은 주: 120줄 미만이면 짧은 회차 안내 줄", len(th) >= R.RADIO_MIN_LINES or R.SHORT_SHOW_LINE in tt)
+    check("얇은 주: 쓸 수 있는 보충 코너는 다 넣음(게임·Repeat After Me·Pattern Practice·보너스 Culture)",
+          any("It's game time" in t for t in tt) and any("Repeat After Me" in t for t in tt)
+          and any("Pattern Practice" in t for t in tt) and any("one more Did You Know" in t for t in tt))
+    check("120줄 이상이면 짧은 회차 안내 없음", R.SHORT_SHOW_LINE not in texts and R.SHORT_SHOW_LINE not in nt)
+    check("보충 코너가 들어가도 학습자 문장은 실제 데이터만",
+          all(re.split(r"[Yy]ou said: ", t, 1)[1].split(" Better: ")[0] in real_said
+              for t in nt + tt if re.search(r"[Yy]ou said: ", t)))
+    # 주차 회전(게임·Culture Corner·문구가 매주 바뀜) 12주 전부: 분량·되풀이·문법 용어·ko 비율·게임 수
+    rot = []
+    for w in range(40, 52):
+        iso_w = (2026, w)
+        wk_w = [dict(l, iso=iso_w) for l in WK]
+        for cmap, mm in ((CARROT, MEMOS), ({}, {})):
+            ls = R.build_script(iso_w, wk_w, wk_w, cmap, mm)
+            nw, _, rw = R.script_stats(ls)
+            tw = [t for _, _, t in ls]
+            ng = sum(1 for g in ("Mistake Top 3 Countdown", "Spot the Mistake", "Real or Wrong", "Fix it in Three Seconds") if any(g in t for t in tw))
+            if (nw < R.RADIO_MIN_LINES or nw > R.RADIO_MAX_LINES or not 0.10 <= rw <= 0.30 or repeat_problems(ls)
+                    or jargon_hits(ls) or format_problems(ls) or not 1 <= ng <= 2):
+                rot.append((w, bool(cmap), nw, round(rw, 2), repeat_problems(ls)[:1], jargon_hits(ls)[:1], ng))
+    check("주차 회전 12주 × (강사 있음/없음): 120~200줄 · ko 10~30% · 되풀이·문법 용어 없음 · 게임 1~2개", not rot)
+    if rot:
+        print("   rotation problems:", rot[:3])
 
     # 9) 주제: AI 일일 피드백 Topic, 없으면 강사 메모
     mat = R.week_material(ISO, WK, CARROT, MEMOS)
@@ -221,17 +285,34 @@ def main():
         weeks = {}
         for l in real:
             weeks.setdefault(l["iso"], []).append(l)
-        probs = []
+        probs, short, reps, thin_short, sizes = [], [], [], [], {True: [], False: []}
         for iso, wk in weeks.items():
             cum = [l for l in real if l["iso"] <= iso]
             for cmap in (cm, {}):
                 ls = R.build_script(iso, wk, cum, cmap, memos)
                 nn, _, rr = R.script_stats(ls)
+                sizes[bool(cmap)].append(nn)
                 if format_problems(ls) or rr > 0.30 or nn > 200:
                     probs.append((W.week_label(iso), nn, round(rr, 2), bool(cmap)))
+                if nn < R.RADIO_MIN_LINES:
+                    lt = [t for _, _, t in ls]
+                    if is_thin(iso, wk, cmap, memos) and (R.SHORT_SHOW_LINE in lt or any("notebook is a little empty" in t for t in lt)):
+                        thin_short.append((W.week_label(iso), nn, bool(cmap)))
+                    else:
+                        short.append((W.week_label(iso), nn, bool(cmap)))
+                if repeat_problems(ls):
+                    reps.append((W.week_label(iso), bool(cmap), repeat_problems(ls)[:1]))
+        print(f"   (실데이터 줄 수: 강사 있음 {min(sizes[True])}~{max(sizes[True])} · 강사 없음 {min(sizes[False])}~{max(sizes[False])}"
+              f" · 얇은 주라 짧게 둔 경우 {thin_short})")
         check(f"실데이터 {len(weeks)}주 × (강사 있음/없음): 형식·ko≤30%·≤200줄", not probs)
         if probs:
             print("   problems:", probs[:5])
+        check(f"실데이터 {len(weeks)}주 × (강사 있음/없음): {R.RADIO_MIN_LINES}줄 이상 (예외는 안내 줄 있는 얇은 주뿐)", not short)
+        if short:
+            print("   too short:", short[:5])
+        check(f"실데이터 {len(weeks)}주 × (강사 있음/없음): 같은 줄 되풀이 없음", not reps)
+        if reps:
+            print("   repeats:", reps[:3])
 
     print(f"\n{'ALL PASS' if not failures else 'FAILED: ' + ', '.join(failures)}")
     return 1 if failures else 0
