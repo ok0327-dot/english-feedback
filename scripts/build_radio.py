@@ -239,6 +239,50 @@ WEEKDAY_EN = ("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"
 WEEKDAY_KO = ("월요일", "화요일", "수요일", "목요일", "금요일", "토요일", "일요일")
 ORDINAL_KO = ("첫째", "둘째", "셋째", "넷째")
 SENTENCE_GAMES = ("spot", "real", "fix3")   # Spot the Mistake · Real or Wrong? · Fix it in 3 seconds
+GAME_TITLES = {"spot": "Spot the Mistake", "real": "Real or Wrong", "fix3": "Fix it in Three Seconds"}
+GAME_RULES = {"spot": "I read a real sentence from your week. You find the slip before Alex tells you.",
+              "real": "I read a sentence. Some are exactly what you said, some are the fixed version. You decide: real English, or wrong?",
+              "fix3": "Alex reads one of your sentences, and you have three seconds to fix it out loud."}
+# 문장 게임 카운트다운 — 문제마다 돌려 써서 같은 줄이 두 번 넘게 나오지 않게(한 게임 최대 6문제 = 변형 3개 × 2).
+GAME_BEATS = {
+    "spot": ("Spot it? Three, two, one.", "Can you hear the slip? Three, two, one.", "Where's the little bump? Three, two, one."),
+    "real": ("Real, or wrong? Decide now. Three, two, one.", "Real English, or a slip? Three, two, one.",
+             "Your call. Real or wrong? Three, two, one."),
+    "fix3": ("Three, two, one!", "Quick, fix it! Three, two, one!", "Go! Three, two, one!"),
+}
+REAL_YES = ("Real! That's the natural version. On {d}, you first said it a different way.",
+            "Real! That's the fixed one. On {d}, your first try sounded a little different.",
+            "Real English! But on {d}, you said it another way first.")
+SAME_LESSON = ("Still on {d}, same lesson. One more.", "Same {d} lesson, next sentence.", "One more from that {d} lesson.")
+
+# ───────── 최소 분량(120줄) 보충 코너 / minimum-length fillers ─────────
+# 스펙(radio_script_spec.md): 120~200줄. 기본 런다운이 120줄 미만이면 아래 우선순위로 '보충 코너'를 하나씩 끼워 넣는다
+# (모두 그 주 실제 데이터 또는 고정 교재 문구 — 학습자 문장을 지어내지 않고, 같은 줄을 되풀이해 채우지 않는다):
+#   1 Correction Clinic 추가분(아직 안 쓴 교정) → 2 게임 한 판 더 → 3 Repeat After Me(고친 덩어리 따라 하기)
+#   → 4 2위 습관 짧은 심화 → 5 Joey's Line of the Week → 6 Topic Talk 단어 추가 → 7 Pattern Practice(1위 습관 예문)
+#   → 8 보너스 Culture Corner.
+# 쓸 수 있는 교정(강사+AI)이 THIN_WEEK_ITEMS 개 미만인 '얇은 주'는 다 넣어도 120줄이 안 될 수 있다 →
+# 그대로 짧게 두고 대본에 SHORT_SHOW_LINE(짧은 회차 안내)을 넣는다. 120줄 미만인 대본은 얇은 주뿐이어야 한다(테스트로 확인).
+RADIO_MIN_LINES = 120
+RADIO_MAX_LINES = 200      # 오디오 무료 한도
+THIN_WEEK_ITEMS = 3
+SHORT_SHOW_LINE = "That's everything in the notebook this week, so today's show is a short one. Short, but every line counts."
+# Pattern Practice: 1위 습관을 짧은 모범 문장 3개로 입에 붙이기 (고정 교재 문구 — 학습자 문장 아님, 문법 용어 없음).
+PATTERN_DRILLS = {
+    "article": ("I saw a movie. The movie was great.", "I have a car. The car is blue.", "Can you close the door, please?"),
+    "preposition": ("I'm on the bus.", "I'm in the car.", "Let's meet at the station."),
+    "who": ("I went there yesterday.", "It is cold today.", "They said it was fine."),
+    "agreement": ("She works at a bank.", "It looks great.", "My son likes soccer."),
+    "verbform": ("Did you go?", "Does it work?", "Have you seen it?"),
+    "time": ("Yesterday I went to the store.", "Last week I called my mom.", "This morning I ate toast."),
+    "ing": ("I'm good at cooking.", "I'm thinking about going.", "I'm interested in learning."),
+    "determiner": ("How many apples?", "How much time?", "A few friends and a little money."),
+    "compare": ("Seoul is bigger than Ulsan.", "This one is harder than that one.", "It's more expensive than before."),
+    "order": ("I ride a bike.", "She drinks coffee.", "Are you ready?"),
+    "extra": ("I went home.", "It was fun.", "We talked a lot."),
+    "shape": ("It's so difficult.", "I'm so drowsy.", "It was so painful."),
+    "word": ("What's it called?", "What's the word for this?", "How do you say this in English?"),
+}
 
 
 def _insight_for(top):
@@ -528,6 +572,8 @@ def _why_en(it):
     t = FAMS[it["fam"]][1]
     if ("{a}" in t and not it.get("a")) or ("{b}" in t and not it.get("b")):
         t = "Same idea, just the natural English habit on top: {fix}."
+    if it.get("src") == "ai":               # AI 교정인데 '강사가 고쳤다'고 말하지 않게
+        t = t.replace("Your tutor", "Your AI coach")
     return t.format(a=it.get("a", ""), b=it.get("b", ""), fix=it["fix_chunk"])
 
 
@@ -680,11 +726,42 @@ def _pick_rewind(cands, flags, n):
     return sorted(picked, key=lambda it: (it["date"], it["idx"]))
 
 
+def _uniq_items(xs):
+    """같은 문장 쌍(대소문자 무시) 중복 제거 — 순서 유지. / drop repeated (said, fix) pairs, keep order."""
+    out, seen = [], set()
+    for it in xs:
+        k = (it["said"].lower(), it["fix"].lower())
+        if k not in seen:
+            seen.add(k)
+            out.append(it)
+    return out
+
+
+def _tidy(lines):
+    """최종 안전망: 바로 앞 줄과 똑같은 줄, 이미 두 번 나온 줄은 뺀다 (같은 말 되풀이로 분량 채우기 금지).
+    Safety net: drop a line equal to the previous one, or one already used twice."""
+    out, seen = [], Counter()
+    for ln in lines:
+        t = ln[2]
+        if (out and out[-1][2] == t) or seen[t] >= 2:
+            continue
+        seen[t] += 1
+        out.append(ln)
+    return out
+
+
+def _closeness(it):
+    """틀린 문장과 고친 문장이 얼마나 비슷한지(0~1). 1에 가까울수록 '거의 다 맞은' 문장."""
+    return difflib.SequenceMatcher(None, _toks(it["said"])[1], _toks(it["fix"])[1], autojunk=False).ratio()
+
+
 def build_script(wk_iso, wk, lessons, carrot_map, memos=None):
     """규칙기반 '라디오쇼' 대본 → [(speaker, lang, text), ...]. (scripts/radio_script_spec.md 의 런다운)
     Station ID·콜드 오픈 → 오프닝 → Tutor Rewind(요일+수업 주제+퀴즈+한 줄 정리) → 게임 → Why It Happens →
     한국어 중간 정리 → Correction Clinic → Culture Corner → Topic Talk → 한국어 3줄 요약 → 미션·사인오프.
     학습자 문장은 전부 실제 데이터(강사 JSON·일일 피드백)에서만 가져오고, 게임/문구는 주차 번호로 회전한다.
+    기본 런다운이 RADIO_MIN_LINES(120) 미만이면 보충 코너를 우선순위대로 제자리(슬롯)에 끼워 120줄 이상으로 맞춘다
+    (위 '최소 분량' 주석 참고). 얇은 주(교정 < THIN_WEEK_ITEMS)는 짧게 두고 SHORT_SHOW_LINE 으로 알린다.
     lessons = 그 주말까지 누적. (금요일 루틴의 Claude가 허브 #radio-src 를 더 깊은 담화로 교체)"""
     wnum = wk_iso[1] if isinstance(wk_iso, tuple) else 0
     mat = week_material(wk_iso, wk, carrot_map, memos)
@@ -702,12 +779,23 @@ def build_script(wk_iso, wk, lessons, carrot_map, memos=None):
     nick2 = GROUP_INSIGHT[g2]["nick"] if g2 in GROUP_INSIGHT else ""
     fun_en, fun_ko = FUN_FACTS[wnum % len(FUN_FACTS)]
 
-    L = []
+    L = []          # 기본 런다운 / core rundown
+    buf = [L]       # add() 가 쓰는 곳(보충 코너는 따로 모았다가 슬롯에 끼운다)
+    slots = {}      # 보충 코너를 끼울 자리: 이름 → L 의 위치
 
     def add(s, lang, t):
         t = _clean1(t)
         if t:
-            L.append((s, lang, t))
+            buf[-1].append((s, lang, t))
+
+    def capture(fn):
+        out = []
+        buf.append(out)
+        try:
+            ok = fn()
+        finally:
+            buf.pop()
+        return [] if ok is False else out
 
     def day_en(d):
         return _weekday(d)[0]
@@ -721,10 +809,14 @@ def build_script(wk_iso, wk, lessons, carrot_map, memos=None):
     used = []
 
     def mark(it):
-        used.append(it)
+        if it not in used:
+            used.append(it)
 
     def unused(xs):
         return [x for x in xs if x not in used]
+
+    def pool_key(it):
+        return (len(it["said"].split()) > 16, it["src"] != "tutor", it["date"], it["idx"])
 
     rewind_src = "tutor" if tutor else "ai"
     rewind = _pick_rewind(tutor, flags, 4) if tutor else _pick_rewind(ai, flags, 3)
@@ -760,14 +852,16 @@ def build_script(wk_iso, wk, lessons, carrot_map, memos=None):
         add("알렉스", "en", "Let's start with Rewind. No tutor notes came in for this week, so today we replay what your AI coach caught.")
     add("민지", "en", "I love this part. Let's go back in time.")
     told = set()
+    run = 0
     for k, it in enumerate(rewind):
         d = it["date"]
         if k and rewind[k - 1]["date"] == d:
-            scene = f"Still on {day_en(d)}, same lesson. One more."
+            scene = SAME_LESSON[run % len(SAME_LESSON)].format(d=day_en(d))
+            run += 1
         elif topic_of(d):
-            scene = f"Rewind to {day_en(d)}. You were talking about {topic_of(d)}."
+            scene, run = f"Rewind to {day_en(d)}. You were talking about {topic_of(d)}.", 0
         else:
-            scene = f"Rewind to {day_en(d)}, in your lesson."
+            scene, run = f"Rewind to {day_en(d)}, in your lesson.", 0
         add("민지", "en", scene)
         add("알렉스", "en", f"And at one point you said: {it['said']}")
         add("민지", "en", QUIZ_BEATS[(wnum + k) % len(QUIZ_BEATS)])
@@ -788,6 +882,7 @@ def build_script(wk_iso, wk, lessons, carrot_map, memos=None):
                 add("민지", "en", f"There it is again, {g_nick}. Tutor and AI coach agree on this one.")
             told.add(it["group"])
         add("민지", "ko", f"한 줄 정리: {day_ko(d)}에 '{it['wrong_chunk']}'라고 했는데, '{ch}'라고 하면 자연스러워요. {_why_ko(it)}")
+    slots["rewind"] = len(L)
     if not rewind:
         add("알렉스", "en", "This week the notebook is a little empty, so we'll keep it short and sweet.")
     add("민지", "en", f"Coming up: game time, and then we dig into why {nick1} keeps coming back. Stay with us.")
@@ -796,7 +891,9 @@ def build_script(wk_iso, wk, lessons, carrot_map, memos=None):
     by_group = {}
     for it in tutor + ai:
         by_group.setdefault(it["group"], []).append(it)
-    pool = sorted(unused(tutor) + unused(ai), key=lambda it: (len(it["said"].split()) > 16, it["src"] != "tutor", it["date"], it["idx"]))
+    pool = sorted(unused(tutor) + unused(ai), key=pool_key)
+    gamed = []                                   # 문장 게임에 이미 낸 문제(한 게임에서 같은 문장 두 번 안 냄)
+    played = {"top3": False, "kind": "", "n": 0}
 
     def game_top3():
         top = [(g, n) for g, n in rank if g in GROUP_INSIGHT][:3]
@@ -822,46 +919,52 @@ def build_script(wk_iso, wk, lessons, carrot_map, memos=None):
                 add("민지", "ko", f"이번 주 1위는 {gi['nick_ko']}예요. {gi['tip_ko']}")
             else:
                 add("민지", "ko", f"{pos}위, {gi['nick_ko']}. {gi['tip_ko']}")
+        played["top3"] = True
         return True
+
+    def play_items(kind, items, start):
+        """문장 게임 문제들. 번호(start~)로 카운트다운 변형을 돌린다."""
+        for k, it in enumerate(items, start):
+            mark(it)
+            gamed.append(it)
+            beat = GAME_BEATS[kind][(k - 1) % len(GAME_BEATS[kind])]
+            memo = f"정답 메모: '{it['wrong_chunk']}' 말고 '{it['fix_chunk']}'."
+            if kind == "spot":
+                add("민지", "en", f"Number {k}. {it['said']}")
+                add("알렉스", "en", beat)
+                add("알렉스", "en", f"Answer: {it['fix']}")
+                add("민지", "ko", memo)
+            elif kind == "real":
+                show_real = (k + wnum) % 2 == 0
+                add("민지", "en", f"Number {k}. {it['fix'] if show_real else it['said']}")
+                add("알렉스", "en", beat)
+                if show_real:
+                    add("알렉스", "en", REAL_YES[(k - 1) % len(REAL_YES)].format(d=day_en(it["date"])))
+                    add("민지", "ko", f"이건 맞는 문장이에요. 원래는 '{it['wrong_chunk']}'라고 했었죠.")
+                else:
+                    add("알렉스", "en", f"Wrong! The natural way is: {it['fix']}")
+                    add("민지", "ko", memo)
+            else:
+                add("알렉스", "en", f"Fix this in three seconds: {it['said']}")
+                add("민지", "en", beat)
+                add("알렉스", "en", it["fix"])
+                add("민지", "ko", memo)
 
     def game_sentences(kind):
         items = [it for it in pool if it not in used][:3]
         if len(items) < 2:
             return False
-        title = {"spot": "Spot the Mistake", "real": "Real or Wrong", "fix3": "Fix it in Three Seconds"}[kind]
-        rule = {"spot": "I read a real sentence from your week. You find the slip before Alex tells you.",
-                "real": "I read a sentence. Some are exactly what you said, some are the fixed version. You decide: real English, or wrong?",
-                "fix3": "Alex reads one of your sentences, and you have three seconds to fix it out loud."}[kind]
-        add("민지", "en", f"It's game time! This one is called {title}. {rule}")
-        for k, it in enumerate(items, 1):
-            mark(it)
-            if kind == "spot":
-                add("민지", "en", f"Number {k}. {it['said']}")
-                add("알렉스", "en", "Spot it? Three, two, one.")
-                add("알렉스", "en", f"Answer: {it['fix']}")
-                add("민지", "ko", f"정답 메모: '{it['wrong_chunk']}' 말고 '{it['fix_chunk']}'.")
-            elif kind == "real":
-                show_real = (k + wnum) % 2 == 0
-                add("민지", "en", f"Number {k}. {it['fix'] if show_real else it['said']}")
-                add("알렉스", "en", "Real, or wrong? Decide now. Three, two, one.")
-                if show_real:
-                    add("알렉스", "en", f"Real! That's the natural version. On {day_en(it['date'])}, you first said it a different way.")
-                    add("민지", "ko", f"이건 맞는 문장이에요. 원래는 '{it['wrong_chunk']}'라고 했었죠.")
-                else:
-                    add("알렉스", "en", f"Wrong! The natural way is: {it['fix']}")
-                    add("민지", "ko", f"정답 메모: '{it['wrong_chunk']}' 말고 '{it['fix_chunk']}'.")
-            else:
-                add("알렉스", "en", f"Fix this in three seconds: {it['said']}")
-                add("민지", "en", "Three, two, one!")
-                add("알렉스", "en", it["fix"])
-                add("민지", "ko", f"정답 메모: '{it['wrong_chunk']}' 말고 '{it['fix_chunk']}'.")
+        add("민지", "en", f"It's game time! This one is called {GAME_TITLES[kind]}. {GAME_RULES[kind]}")
+        play_items(kind, items, 1)
         add("알렉스", "en", "How many did you get? Even one is a win.")
+        played["kind"], played["n"] = kind, len(items)
         return True
 
     sent = SENTENCE_GAMES[wnum % len(SENTENCE_GAMES)]
     order = (game_top3, lambda: game_sentences(sent)) if wnum % 2 == 0 else (lambda: game_sentences(sent), game_top3)
     for g in order:
         g()
+    slots["game"] = len(L)
 
     # 5) Why It Happens — 이번 주 1위 습관 심화
     add("민지", "en", f"Now, Why It Happens. This week's number one habit is {nick1}. Alex, why does it keep coming back?")
@@ -876,8 +979,10 @@ def build_script(wk_iso, wk, lessons, carrot_map, memos=None):
     if not exs:
         cb = [e for e in rewind if e["group"] == g1][:1]
         for e in cb:
-            add("민지", "en", f"Remember {day_en(e['date'])}'s sentence from the Tutor Rewind? {e['fix']} Same habit.")
+            corner = "the Tutor Rewind" if rewind_src == "tutor" else "the Rewind"
+            add("민지", "en", f"Remember {day_en(e['date'])}'s sentence from {corner}? {e['fix']} Same habit.")
     add("알렉스", "en", "Rule of thumb: " + ins["tip_en"])
+    slots["why"] = len(L)
 
     # 6) 한국어 중간 정리 — 지금까지 고친 것
     recap = rewind[:3]
@@ -889,21 +994,26 @@ def build_script(wk_iso, wk, lessons, carrot_map, memos=None):
             add("민지", "ko", f"그리고 이번 주 1위 습관은 {ins['nick_ko']}였어요.")
 
     # 7) Correction Clinic — 남은 교정 빠르게 (강사 먼저), 2개마다 한국어 메모
+    def clinic_item(it, memo):
+        mark(it)
+        lead = f"From your tutor on {day_en(it['date'])}" if it["src"] == "tutor" else "You said"
+        add("알렉스", "en", f"{lead}: {it['said']}")
+        add("민지", "en", f"Better: {it['fix']}")
+        if memo:
+            add("민지", "ko", f"짧게 메모: '{it['wrong_chunk']}' 말고 '{it['fix_chunk']}'. {_why_ko(it)}")
+
     clinic = (unused(tutor)[:3] + unused(ai))[:6]
     if clinic:
         add("알렉스", "en", "Time for the Correction Clinic. Quick-fire, and repeat after us if you can.")
         for k, it in enumerate(clinic, 1):
-            mark(it)
-            lead = f"From your tutor on {day_en(it['date'])}" if it["src"] == "tutor" else "You said"
-            add("알렉스", "en", f"{lead}: {it['said']}")
-            add("민지", "en", f"Better: {it['fix']}")
-            if it["src"] == "tutor" or k % 2 == 0 or k == len(clinic):
-                add("민지", "ko", f"짧게 메모: '{it['wrong_chunk']}' 말고 '{it['fix_chunk']}'. {_why_ko(it)}")
+            clinic_item(it, it["src"] == "tutor" or k % 2 == 0 or k == len(clinic))
+    slots["clinic"] = len(L)
 
     # 8) Culture Corner / Did You Know — 흥미 이야기(회전)
     add("민지", "en", "Let's take a little break from corrections. It's Culture Corner. Did you know?")
     add("알렉스", "en", fun_en)
     add("민지", "ko", fun_ko)
+    slots["culture"] = len(L)
 
     # 9) Topic Talk — 이번 주 주제 단어를 실제 문장과 함께
     seen, words = set(), []
@@ -915,28 +1025,34 @@ def build_script(wk_iso, wk, lessons, carrot_map, memos=None):
         seen.add(w.lower())
         sent_hit = next((s for s in real if re.search(r"\b" + re.escape(w.lower()) + r"\b", s.lower())), "")
         words.append((0 if sent_hit else 1, d, w, v.get("meaning", ""), sent_hit))
-    words = sorted(words, key=lambda x: (x[0], x[1]))[:4]
-    words.sort(key=lambda x: x[1])
-    if words or alts:
-        add("알렉스", "en", "Next up, Topic Talk. A few words from this week's lessons that you can use right away.")
-    for _, d, w, meaning, s in words:
-        tp = topic_of(d)
-        add("민지", "en", f"From {day_en(d)}'s lesson" + (f" on {tp}" if tp else "") + f": {w}.")
-        if s:
-            add("알렉스", "en", f"Here it is in a sentence from this week's corrections: {s}")
-        else:
-            add("알렉스", "en", f"{w}. Say it with me: {w}. Try it in one sentence today.")
-    if words:
+    ranked_words = sorted(words, key=lambda x: (x[0], x[1]))
+    words = sorted(ranked_words[:4], key=lambda x: x[1])
+    more_words = sorted(ranked_words[4:8], key=lambda x: x[1])   # 보충 코너(Topic Talk 추가분)용
+
+    def word_lines(ws, ko_lead):
+        for _, d, w, meaning, s in ws:
+            tp = topic_of(d)
+            add("민지", "en", f"From {day_en(d)}'s lesson" + (f" on {tp}" if tp else "") + f": {w}.")
+            if s:
+                add("알렉스", "en", f"Here it is in a sentence from this week's corrections: {s}")
+            else:
+                add("알렉스", "en", f"{w}. Say it with me: {w}. Try it in one sentence today.")
         ms = []
-        for _, _, w, meaning, _ in words:
+        for _, _, w, meaning, _ in ws:
             m = re.split(r"[,(※/;]", str(meaning or ""))[0].strip()
             if m:
                 ms.append(f"{w}, {m}")
         if ms:
-            add("민지", "ko", "뜻 정리할게요. " + ". ".join(ms) + ".")
+            add("민지", "ko", ko_lead + ". ".join(ms) + ".")
+
+    if words or alts:
+        add("알렉스", "en", "Next up, Topic Talk. A few words from this week's lessons that you can use right away.")
+    if words:
+        word_lines(words, "뜻 정리할게요. ")
     if alts:
         a = alts[0]
         add("알렉스", "en", f"Bonus tip from your tutor on {day_en(a['date'])}. Instead of {a['said']} you can also say: {a['fix']}")
+    slots["topic"] = len(L)
 
     # 10) 한국어 3줄 요약 — 오늘 꼭 기억할 세 가지
     keep3 = (rewind + [it for it in used if it not in rewind])[:2]
@@ -966,7 +1082,161 @@ def build_script(wk_iso, wk, lessons, carrot_map, memos=None):
     add("알렉스", "en", "Thanks for spending this time with us. Mistakes are just English habits waiting to click.")
     add("민지", "en", SIGNOFFS[wnum % len(SIGNOFFS)])
     add("알렉스", "en", "Bye, Joey! Keep talking!")
-    return L
+
+    # ───── 12) 최소 분량 보충 코너 (120줄 미만일 때만, 우선순위대로) ─────
+    def f_clinic_more():
+        """Correction Clinic 추가분 — 아직 안 쓴 실제 교정(강사 먼저). 2개마다 ko 메모."""
+        more = _uniq_items(sorted(unused(tutor) + unused(ai), key=pool_key))[:6]
+        if not more:
+            return False
+        add("알렉스", "en", "A few more from this week. Keep going, you're doing great." if len(more) > 1
+            else "One more from this week. Keep going.")
+        for k, it in enumerate(more, 1):
+            clinic_item(it, k % 2 == 0 or k == len(more))
+
+    def f_game2():
+        """게임 한 판 더: 게임이 둘 다 나왔으면 같은 문장 게임 2라운드, 하나뿐이면 다른 문장 게임(회전),
+        하나도 없었으면 이번 주 문장 게임. 안 쓴 교정 먼저, 모자라면 앞에서 들은 문장 복습."""
+        if played["kind"] and played["top3"]:
+            kind, again = played["kind"], True
+        elif played["kind"]:
+            kind, again = SENTENCE_GAMES[(SENTENCE_GAMES.index(played["kind"]) + 1) % len(SENTENCE_GAMES)], False
+        else:
+            kind, again = sent, False
+        fresh = sorted(unused(tutor) + unused(ai), key=pool_key)
+        items = [it for it in _uniq_items(fresh + rewind + used) if it not in gamed][:3]
+        if len(items) < 2:
+            return False
+        replay = any(it in used for it in items)
+        if again:
+            add("민지", "en", f"Bonus round! It's {GAME_TITLES[kind]}, round two. Same rules, new numbers.")
+        else:
+            add("민지", "en", f"It's game time! This one is called {GAME_TITLES[kind]}. {GAME_RULES[kind]}")
+        if replay:
+            add("알렉스", "en", "Some of these you already heard today. Let's see if they stuck.")
+        play_items(kind, items, played["n"] + 1 if again else 1)
+        if again:
+            add("알렉스", "en", "Round two, done. Hearing a fix again and again is exactly how it sticks.")
+        elif played["kind"]:
+            add("알렉스", "en", "That's game two. Every answer you said out loud counts.")
+        else:
+            add("알렉스", "en", "How many did you get? Even one is a win.")
+
+    def f_drill():
+        """Repeat After Me — 이번 주 고친 덩어리를 알렉스가 말하고 민지(=청취자)가 따라 한다."""
+        items, keys = [], set()
+        for it in rewind + used:
+            key = it["fix_chunk"].lower()
+            if key not in keys and len(it["fix_chunk"].split()) >= 2:
+                keys.add(key)
+                items.append(it)
+        items = items[:5]
+        if len(items) < 2:
+            return False
+        add("민지", "en", "Now, a quick Repeat After Me drill. Alex says each fixed chunk from this week. I copy him, and you copy too.")
+        for k, it in enumerate(items, 1):
+            add("알렉스", "en", f"Chunk {k}, from {day_en(it['date'])}: {it['fix_chunk']}. Your turn.")
+            fc = it["fix_chunk"]
+            add("민지", "en", f"{fc[:1].upper() + fc[1:]}. {it['fix']}")
+            if k % 2 == 0 or k == len(items):
+                pair = items[k - 2:k] if k % 2 == 0 else items[k - 1:k]
+                add("민지", "ko", "따라 하기 메모: " + ", ".join(f"'{p['wrong_chunk']}' 대신 '{p['fix_chunk']}'" for p in pair)
+                    + ". 덩어리째 입에 붙여요.")
+        add("알렉스", "en", "Great job. Say those chunks out loud once more on your way to work tomorrow.")
+
+    def f_why2():
+        """2위 습관 짧은 심화 — 왜(en/ko) + 실제 예문 1개 + rule of thumb."""
+        if g2 not in GROUP_INSIGHT or g2 == g1:
+            return False
+        i2 = GROUP_INSIGHT[g2]
+        add("민지", "en", f"Before we move on, a quick look at habit number two: {i2['nick']}. Alex, what's the story there?")
+        add("알렉스", "en", i2["why_en"])
+        add("민지", "ko", i2["why_ko"])
+        ex = sorted(by_group.get(g2, []), key=lambda e: (e in used, e["src"] != "tutor", len(e["said"].split()), e["date"]))[:1]
+        for e in ex:
+            if e in used:                     # 이미 들은 문장이면 통째로 다시 읽지 않고 짧게 콜백
+                add("알렉스", "en", f"Remember {day_en(e['date'])}'s sentence? {e['fix']} That's this habit, fixed.")
+            else:
+                mark(e)
+                add("알렉스", "en", f"Here's a real one from {day_en(e['date'])}. You said: {e['said']} Better: {e['fix']}")
+        add("알렉스", "en", "Rule of thumb for this one: " + i2["tip_en"])
+
+    def f_line():
+        """Joey's Line of the Week — 거의 다 맞았던 실제 문장 하나(작은 차이로 고쳐진 것)를 다시 들려준다."""
+        cands = [it for it in _uniq_items(tutor + ai)
+                 if it["fam"] != "rephrase" and 4 <= len(it["said"].split()) <= 16 and _closeness(it) >= 0.6]
+        if not cands:
+            return False
+        it = sorted(cands, key=lambda e: (e in rewind, -round(_closeness(e), 2), e["src"] != "tutor", e["date"], e["idx"]))[0]
+        mark(it)
+        tp = topic_of(it["date"])
+        add("민지", "en", "And now, a listener favourite. It's Joey's Line of the Week!")
+        add("알렉스", "en", f"This one is from {day_en(it['date'])}" + (f", when you were talking about {tp}" if tp else "")
+            + f". You said: {it['said']}")
+        add("민지", "en", "Ooh, so close. Just one small step away from perfect.")
+        add("알렉스", "en", f"Exactly. Here's the polished version: {it['fix']} That's your line of the week. Use it again before next Friday.")
+        add("민지", "ko", f"이번 주의 한 문장: '{it['fix_chunk']}'. 거의 다 맞았어요, 이 덩어리만 챙겨요.")
+
+    def f_topic():
+        """Topic Talk 추가분 — 기본 4개 다음 단어(최대 4개 더)."""
+        if not more_words:
+            return False
+        n = len(more_words)
+        lead = "One more word" if n == 1 else f"{('Two', 'Three', 'Four')[n - 2]} more words"
+        add("알렉스", "en", f"{lead} from this week's lessons, because they're too useful to skip.")
+        word_lines(more_words, "추가 단어 뜻이에요. ")
+
+    def f_pattern():
+        """Pattern Practice — 1위 습관을 짧은 모범 문장 3개로(고정 교재 문구)."""
+        dr = PATTERN_DRILLS.get(g1)
+        if not dr:
+            return False
+        add("민지", "en", f"Let's lock in that rule of thumb with a quick Pattern Practice for {nick1}. Three short sentences. Say each one after Alex.")
+        for k, c in enumerate(dr):
+            add("알렉스", "en", f"{('One', 'Two', 'Three')[k]}. {c} Again. {c}")
+        add("민지", "ko", f"패턴 연습 정리: {ins['tip_ko']}")
+        add("알렉스", "en", "Short and natural. Say them out loud a few times, and the pattern starts to feel automatic.")
+
+    def f_culture():
+        """보너스 Culture Corner — 기본 이야기와 다른 FUN_FACTS 하나(주차로 회전)."""
+        fe, fk = FUN_FACTS[(wnum + len(FUN_FACTS) // 2) % len(FUN_FACTS)]
+        if fe == fun_en:
+            return False
+        add("민지", "en", "Okay, one more Did You Know, because this one is too good to skip.")
+        add("알렉스", "en", fe)
+        add("민지", "ko", fk)
+        add("알렉스", "en", "Now you have a fun story for your next lesson. Try telling it to your tutor in English.")
+
+    # (슬롯, 슬롯 안 순서, 함수) — 리스트 순서 = 넣는 우선순위, 슬롯 안 순서 = 방송에서 나오는 순서
+    fillers = (("clinic", 0, f_clinic_more), ("game", 0, f_game2), ("clinic", 1, f_drill), ("why", 1, f_why2),
+               ("clinic", 2, f_line), ("topic", 0, f_topic), ("why", 0, f_pattern), ("culture", 0, f_culture))
+    slot_order = ("rewind", "game", "why", "clinic", "culture", "topic")
+    extra = []
+
+    def assemble():
+        at = {}
+        for name in slot_order:
+            for _, _, ls in sorted((x for x in extra if x[0] == name), key=lambda x: x[1]):
+                at.setdefault(slots[name], []).extend(ls)
+        out = []
+        for i in range(len(L) + 1):
+            out += at.get(i, [])
+            if i < len(L):
+                out.append(L[i])
+        return _tidy(out)
+
+    script = assemble()
+    for slot, pos, fn in fillers:
+        if len(script) >= RADIO_MIN_LINES:
+            break
+        ls = capture(fn)
+        if ls and len(script) + len(ls) <= RADIO_MAX_LINES:
+            extra.append((slot, pos, ls))
+            script = assemble()
+    if len(script) < RADIO_MIN_LINES and rewind:     # 얇은 주: 늘리지 않고 짧은 회차라고 알린다
+        extra.append(("rewind", -1, [("알렉스", "en", SHORT_SHOW_LINE)]))
+        script = assemble()
+    return script
 
 
 def script_stats(lines):
