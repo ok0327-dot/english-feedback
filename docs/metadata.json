@@ -496,5 +496,10 @@
     "topic": "Daily Routines, a Self-Built AI English Assistant, and Life at a Korean Conglome",
     "target_grammar": "verb tense",
     "engine": "claude"
+  },
+  "2026-11-16": {
+    "topic": "Sorting Out a Textbook Change & Talking About DIY Home Improvement",
+    "target_grammar": "word order (adverb placement)",
+    "engine": "claude"
   }
 }

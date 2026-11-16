@@ -1,0 +1,57 @@
+{
+ "date": "2026-11-16",
+ "iso": [
+  2026,
+  47
+ ],
+ "topic": "Sorting Out a Textbook Change & Talking About DIY Home Improvement",
+ "grammar": "word order",
+ "grammar_norm": "Word Order",
+ "score": 6.0,
+ "pairs": [
+  {
+   "said": "Yeah, it's okay, but I need to help to change my textbook. Is it possible to help?",
+   "natural": "Could you help me change my textbook?"
+  },
+  {
+   "said": "That is permanently finished or just finished temporarily, the textbook?",
+   "natural": "Is the textbook gone for good, or is it just temporary?"
+  },
+  {
+   "said": "I changed my showerhead because before the change, my showerhead leaked the small water, and that water power is so weak.",
+   "natural": "I replaced my showerhead because the old one was leaking a little, and the water pressure was really weak."
+  },
+  {
+   "said": "What's mean the patching up?",
+   "natural": "What does 'patching up' mean?"
+  }
+ ],
+ "vocab": [
+  {
+   "word": "finishing touch",
+   "pos": "noun phrase",
+   "meaning": "마무리 손질, 최종 마무리 (보통 \"put / add the finishing touches to / on ~\" 덩어리로 써요)"
+  },
+  {
+   "word": "patch up",
+   "pos": "phrasal verb",
+   "meaning": "(임시로) 고치다, 땜질하다. 다툰 사이를 수습한다는 뜻도 있어요."
+  },
+  {
+   "word": "mend",
+   "pos": "verb",
+   "meaning": "수선하다, 고치다"
+  },
+  {
+   "word": "water pressure",
+   "pos": "noun",
+   "meaning": "수압"
+  },
+  {
+   "word": "stepladder",
+   "pos": "noun",
+   "meaning": "접이식 사다리 (Joey가 \"stepper\"라고 찾던 그 단어예요)"
+  }
+ ],
+ "_html_md5": "422c22f3fc23d056f7bbf9ccafcfe901"
+}
