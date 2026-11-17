@@ -501,5 +501,10 @@
     "topic": "Sorting Out a Textbook Change & Talking About DIY Home Improvement",
     "target_grammar": "word order (adverb placement)",
     "engine": "claude"
+  },
+  "2026-11-17": {
+    "topic": "Is Stress Always Negative? – The Downsides of Stress",
+    "target_grammar": "subject-verb agreement",
+    "engine": "claude"
   }
 }
