@@ -1,0 +1,61 @@
+{
+ "date": "2026-11-17",
+ "iso": [
+  2026,
+  47
+ ],
+ "topic": "Is Stress Always Negative? – The Downsides of Stress",
+ "grammar": "subject-verb agreement",
+ "grammar_norm": "Subject–Verb Agreement",
+ "score": 6.0,
+ "pairs": [
+  {
+   "said": "Many employees had a distress during the work, during the task, during their task, due to their task.",
+   "natural": "A lot of employees are stressed out because of their workload."
+  },
+  {
+   "said": "That is impossible to get sleep in the night.",
+   "natural": "It's when you can't fall asleep at night."
+  },
+  {
+   "said": "I'm almost understanding this paragraph. So yeah, I have no question.",
+   "natural": "I understand most of this paragraph, so I don't have any questions."
+  },
+  {
+   "said": "Ten years later, I supposedly become rich.",
+   "natural": "Ten years from now, I'll hopefully be rich."
+  },
+  {
+   "said": "Sometimes I turn on the YouTube and do yoga with my family. … sometimes I can listen the birds singing.",
+   "natural": "Sometimes I put on a yoga video on YouTube and do it with my family. With the windows open, I can hear the birds singing."
+  }
+ ],
+ "vocab": [
+  {
+   "word": "distress",
+   "pos": "noun",
+   "meaning": "극심한 걱정·괴로움, 고통"
+  },
+  {
+   "word": "relieve",
+   "pos": "verb",
+   "meaning": "(스트레스·고통을) 덜어 주다, 풀어 주다"
+  },
+  {
+   "word": "manifest",
+   "pos": "verb",
+   "meaning": "(증상·문제가) 드러나다, 나타나다"
+  },
+  {
+   "word": "supposedly",
+   "pos": "adverb",
+   "meaning": "소문에 의하면, ~라고들 하던데 (확실하지 않다는 느낌)"
+  },
+  {
+   "word": "eustress",
+   "pos": "noun",
+   "meaning": "긍정적인 스트레스 (나를 성장시키는 좋은 긴장감)"
+  }
+ ],
+ "_html_md5": "2bfd361c13595ad357566cf1f9f467d2"
+}
