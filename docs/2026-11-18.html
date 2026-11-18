@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#0f0f13"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="당근영어"><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="icon" type="image/png" sizes="192x192" href="icon-192.png"><script src="install-banner.js" defer></script><script src="sw-reg.js" defer></script>
+    <title>전화영어 복습 - 2026년 11월 18일</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Noto Sans KR',sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.75;min-height:100vh}
+        .header{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);border-bottom:1px solid rgba(255,255,255,.06);padding:48px 24px 40px;text-align:center}
+        .header-date{font-size:13px;color:#94a3b8;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+        .header h1{font-size:28px;font-weight:700;color:#f1f5f9;margin-bottom:16px}
+        .header-meta{display:flex;justify-content:center;gap:24px;font-size:14px;color:#64748b}
+        .header-meta span{display:flex;align-items:center;gap:6px}
+        .cta-section{text-align:center;padding:40px 24px}
+        .cta-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:linear-gradient(135deg,#38bdf8,#818cf8);color:#fff;font-size:16px;font-weight:600;font-family:'Noto Sans KR',sans-serif;border:none;border-radius:50px;cursor:pointer;transition:all .3s;text-decoration:none;box-shadow:0 4px 24px rgba(56,189,248,.25)}
+        .cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(56,189,248,.35)}
+        .cta-btn svg{width:20px;height:20px}
+        .cta-sub{margin-top:12px;font-size:13px;color:#64748b}
+        .toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#38bdf8;padding:14px 28px;border-radius:12px;font-size:14px;font-weight:500;border:1px solid rgba(56,189,248,.2);box-shadow:0 8px 32px rgba(0,0,0,.4);opacity:0;transition:all .4s cubic-bezier(.16,1,.3,1);z-index:1000}
+        .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+        .container{max-width:720px;margin:0 auto;padding:0 24px 80px}
+        .tabs{display:flex;gap:4px;background:#1a1a24;padding:4px;border-radius:12px;margin-bottom:32px}
+        .tab{flex:1;padding:12px;text-align:center;font-size:14px;font-weight:500;color:#64748b;background:0 0;border:none;border-radius:8px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all .2s}
+        .tab.active{background:#262636;color:#f1f5f9}
+        .tab-content{display:none}.tab-content.active{display:block}
+        .feedback h2{font-size:18px;font-weight:700;color:#f1f5f9;margin:36px 0 16px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.06)}
+        .feedback h2:first-child{margin-top:0}
+        .feedback p{margin:8px 0;color:#cbd5e1}
+        .feedback .item{padding:6px 0 6px 16px;border-left:2px solid #334155;margin:6px 0;color:#cbd5e1}
+        .feedback .numbered{padding:8px 0 8px 16px;color:#cbd5e1}
+        .feedback .numbered strong{color:#38bdf8}
+        .feedback strong{color:#f1f5f9}
+        .feedback code{background:#1e293b;padding:2px 8px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#38bdf8}
+        .feedback table{width:100%;border-collapse:collapse;margin:12px 0}
+        .feedback th,.feedback td{padding:10px 14px;text-align:left;border-bottom:1px solid #262636}
+        .feedback th{color:#94a3b8;font-weight:500;font-size:13px}
+        .feedback td{color:#cbd5e1}
+        .arrow{color:#38bdf8;font-weight:700}
+        .transcript{background:#1a1a24;border-radius:12px;padding:28px;font-size:14px;line-height:2;color:#94a3b8;white-space:pre-wrap;word-break:break-word;font-family:'JetBrains Mono','Noto Sans KR',monospace}
+        .transcript .tutor{color:#38bdf8}
+        .transcript .student{color:#a78bfa}
+        @media(max-width:640px){.header{padding:32px 16px}.header h1{font-size:22px}.cta-btn{padding:14px 28px;font-size:15px}.container{padding:0 16px 60px}}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-date">2026년 11월 18일</div>
+        <h1>📚 전화영어 복습</h1>
+        <div class="header-meta">
+            <span>⏱ 20분 14초</span>
+            <span>🎙 전화영어_025180304_20261118080017.m4a</span>
+        </div>
+    </div>
+    <div class="cta-section">
+        <button class="cta-btn" onclick="startReview()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Gemini에서 복습 대화 시작하기
+        </button>
+        <div class="cta-sub">클릭하면 프롬프트가 복사되고 Gemini가 열립니다</div>
+    </div>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('feedback')">📋 AI 피드백</button>
+            <button class="tab" onclick="switchTab('transcript')">🎙 수업 전사</button>
+        </div>
+        <div id="tab-feedback" class="tab-content active">
+            <div class="feedback"><p><strong>0. 📌 Topic</strong></p>
+<br>
+<p>Topic: The Upside of Stress – Can Stress Be Positive?</p>
+<br>
+<br>
+<p><strong>1. 📊 오늘의 대화 요약 (Summary)</strong></p>
+<br>
+<div class="item">새 교재의 'Is stress always negative? – Part B, The upside of stress' 단원을 했어요. 핵심 어휘 목록을 소리 내어 읽은 뒤 발음 체크를 직접 부탁했고, stimulating과 equipped 발음을 교정받았어요. 이어서 perception, eustress, immune system, stimulating으로 자기 예문을 만들어 봤어요.</div>
+<div class="item">기사를 소리 내어 읽고 True/False 문제를 풀었어요. 그다음 두 가지 주제로 이야기했어요.</div>
+<div class="item">스트레스를 받을 때 나타나는 신호와 푸는 방법: 두통이나 눈 피로가 오면 요가, 수영, 산책을 해요.</div>
+<div class="item">적당한 스트레스가 업무 효율에 주는 좋은 효과</div>
+<div class="item">중간에 "Metabolic is a similar immune system?"이라고 직접 질문해서 metabolism(신진대사)과 immune system(면역 체계)의 차이도 정리했어요.</div>
+<br>
+<br>
+<p><strong>2. 💬 유창성 업그레이드 (Fluency & Natural Flow)</strong></p>
+<br>
+<p><strong>① 평범한 하루 소개하기</strong></p>
+<div class="item">❌ 학습자 원문 (As Said): "Today, it's a normal Wednesday, the middle of week. So, maybe it is, I have some routine of my normal days."</div>
+<div class="item">✅ 자연스러운 표현 (Natural): "It's just a regular Wednesday, the middle of the week. I'm sticking to my usual routine today."</div>
+<div class="item">💎 비즈니스 표현 (Professional): "It's a typical midweek day for me, so I'll be following my usual routine."</div>
+<div class="item">💡 코칭 포인트: "Stick to my usual routine" is a ready-made chunk. You don't need "maybe it is" to warm up. Start right away with "It's just a…", which sounds relaxed and confident. Also, say "the middle <strong>of the</strong> week" as one chunk.</div>
+<p><span class="arrow">→</span> "stick to my usual routine(늘 하던 루틴대로 하다)"는 통째로 외워 두면 좋은 덩어리예요. "maybe it is"처럼 말을 고르는 군더더기 없이 "It's just a…"로 바로 시작하면 여유 있고 자신감 있게 들려요. "the middle <strong>of the</strong> week"도 한 덩어리로 입에 붙여 두세요.</p>
+<br>
+<p><strong>② 스트레스 신호 말하기</strong></p>
+<div class="item">❌ 학습자 원문 (As Said): "I think if I have a headache or my eye was sick, sore my eyes, and this signal is that I had so many stress."</div>
+<div class="item">✅ 자연스러운 표현 (Natural): "When I get a headache or my eyes feel sore, that's a sign I'm under a lot of stress."</div>
+<div class="item">💎 비즈니스 표현 (Professional): "Headaches and eye strain are usually my first signs that I'm under too much stress."</div>
+<div class="item">💡 코칭 포인트: Stress isn't something you count one by one, so say "a lot of stress," not "many stress." "That's a sign (that) ~" and "I'm under a lot of stress" are two handy chunks.</div>
+<p><span class="arrow">→</span> stress는 한 개, 두 개로 세는 말이 아니라서 many 대신 <strong>a lot of stress</strong>라고 해요. "~하면 그게 신호예요"는 <strong>"That's a sign ~"</strong>, "스트레스를 많이 받고 있어요"는 <strong>"I'm under a lot of stress"</strong>를 한 덩어리로 쓰면 돼요. 눈이 아플 때는 "my eye was sick" 대신 <strong>"my eyes feel sore"</strong>라고 하면 자연스러워요.</p>
+<br>
+<p><strong>③ 스트레스 푸는 방법 말하기</strong></p>
+<div class="item">❌ 학습자 원문 (As Said): "So just I release my stress to yoga, to yoga in the weekends, or to swimming in a hotel pool, or walk the near park."</div>
+<div class="item">✅ 자연스러운 표현 (Natural): "I usually relieve stress by doing yoga on weekends, swimming in a hotel pool, or taking a walk in a nearby park."</div>
+<div class="item">💎 비즈니스 표현 (Professional): "To manage stress, I make time for yoga, swimming, and walks in the park on weekends."</div>
+<div class="item">💡 코칭 포인트: Native speakers usually say "relieve stress" rather than "release stress." Use "by + -ing" to list your methods. It keeps the sentence clean and easy to follow. Also, "on weekends" and "a nearby park" are fixed chunks.</div>
+<p><span class="arrow">→</span> 원어민은 스트레스를 '푼다'고 할 때 release보다 <strong>relieve stress</strong>를 더 많이 써요. 방법을 나열할 때는 "<strong>by + -ing</strong>(~하면서, ~함으로써)" 덩어리를 쓰면 문장이 깔끔하게 이어져요: by doing yoga, swimming, taking a walk. "주말에"는 <strong>on weekends</strong>, "근처 공원"은 <strong>a nearby park</strong>로 통째로 기억하세요.</p>
+<br>
+<p><strong>④ 발음 피드백 요청하기</strong></p>
+<div class="item">❌ 학습자 원문 (As Said): "Is there some different pronunciation in the word?"</div>
+<div class="item">✅ 자연스러운 표현 (Natural): "Did I mispronounce any of the words?"</div>
+<div class="item">💎 비즈니스 표현 (Professional): "Could you point out any words I didn't pronounce correctly?"</div>
+<div class="item">💡 코칭 포인트: "Mispronounce" says exactly what you mean in one word. "Point out" is a polite, professional way to ask for corrections.</div>
+<p><span class="arrow">→</span> "mispronounce(잘못 발음하다)" 한 단어로 의도가 딱 전달돼요. "point out(짚어 주다)"은 피드백을 정중하게 부탁할 때 회의에서도 쓰기 좋은 표현이에요.</p>
+<br>
+<br>
+<p><strong>3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)</strong></p>
+<br>
+<p>Category: verb form (redundant 'be' before a main verb)</p>
+<br>
+<p>🎯 오늘의 패턴: "~에 도움이 돼"를 말할 때 is/are와 help를 한꺼번에 붙이는 습관</p>
+<br>
+<p>Joey는 오늘 "도움이 된다", "향상시킨다"를 말할 때 <strong>is/are</strong>와 <strong>help, step up 같은 '하다' 말</strong>을 겹쳐 쓰는 일이 반복됐어요. 한국어 "도움<strong>이 돼</strong>"의 '이 돼'를 is로 옮기려다 생긴 습관이에요.</p>
+<br>
+<table>
+<tr><th>❌ 원문 (As Said)</th><th>✅ 교정 (Corrected)</th></tr>
+<tr><td>"that both activities are help to my body and my mental."</td><td>Both activities <strong>help</strong> my body and mind. / Both activities <strong>are good for</strong> my body and mind.</td></tr>
+<tr><td>"it is help to cure of the Alzheimer's."</td><td>It <strong>can help</strong> protect against Alzheimer's.</td></tr>
+<tr><td>"it is helped to become our body and mind strong."</td><td>It <strong>helps</strong> make our body and mind strong.</td></tr>
+<tr><td>"it is a step up our life and our body immune system."</td><td>It <strong>boosts</strong> our quality of life and our immune system.</td></tr>
+</table>
+<br>
+<p>📌 핵심 규칙: <strong>help는 혼자서도 '도움이 돼'라는 뜻이에요. 앞에 is를 붙이지 말고 "It helps ~"로 바로 말하세요.</strong> is를 꼭 쓰고 싶다면 "It <strong>is good for</strong> ~" 덩어리로 바꾸면 돼요.</p>
+<p>(✔ It helps me. ✔ It is good for me. ✘ It is help me.)</p>
+<p>※ "마음, 정신"은 my mental이 아니라 <strong>my mind</strong>라고 해요: my body and mind.</p>
+<br>
+<p>🔁 따라 읽기:</p>
+<div class="item">🗣️ "Both activities help my body and mind."</div>
+<div class="item">🗣️ "It helps make our body and mind strong."</div>
+<div class="item">🗣️ "A little stress is good for my work performance."</div>
+<br>
+<br>
+<p><strong>4. 📗 어휘 확장 (Vocabulary Vault)</strong></p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>perception</strong> /pərˈsepʃən/ (noun)</div>
+<div class="item">뜻: 인식, 사람들이 무언가를 바라보는 시각</div>
+<div class="item">실전 예문: *The client's perception of our audit process has improved this year.*</div>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>stimulate</strong> /ˈstɪmjəleɪt/ (verb)</div>
+<div class="item">뜻: 자극하다, 활성화하다</div>
+<div class="item">※ 오늘 교정받은 발음: s<strong>t</strong>imulate예요. T 소리를 꼭 살리세요! T를 빼고 simulate라고 하면 '흉내 내다, 모의실험하다'라는 전혀 다른 단어로 들려요.</div>
+<div class="item">실전 예문: *Lower energy prices could stimulate demand for imports.*</div>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>relieve</strong> /rɪˈliːv/ (verb)</div>
+<div class="item">뜻: (고통이나 스트레스를) 덜어 주다, 풀다</div>
+<div class="item">실전 예문: *A short walk after lunch helps me relieve stress during audit season.*</div>
+<br>
+<div class="numbered"><strong>4.</strong> <strong>metabolism</strong> /məˈtæbəlɪzəm/ (noun)</div>
+<div class="item">뜻: 신진대사, 음식을 에너지로 바꾸는 몸의 과정</div>
+<div class="item">실전 예문: *Regular exercise keeps my metabolism active even with a desk job.*</div>
+<br>
+<div class="numbered"><strong>5.</strong> <strong>equipped</strong> /ɪˈkwɪpt/ (adjective)</div>
+<div class="item">뜻: (능력이나 장비를) 갖춘</div>
+<div class="item">※ 끝의 -pped는 '프드'가 아니라 짧은 '트' 소리예요. '이큅트'처럼 한 번에 끊어 말하세요.</div>
+<div class="item">실전 예문: *Our team is well equipped to handle the new reporting standards.*</div>
+<br>
+<br>
+<p><strong>5. 📝 실전 복습 챌린지 (Practice)</strong></p>
+<br>
+<p><strong>Q1. (쉬움)</strong> 동료에게 "명상은 내 마음에 도움이 돼"라고 말해 보세요. (is 없이 help로!)</p>
+<p>👉 모범 답안: *Meditation helps my mind.* / *Meditation helps me feel calm.*</p>
+<br>
+<p><strong>Q2. (보통)</strong> 튜터에게 "나는 보통 주말에 수영을 하면서 스트레스를 풀어"라고 말해 보세요. (relieve stress by + -ing 활용)</p>
+<p>👉 모범 답안: *I usually relieve stress by swimming on weekends.*</p>
+<br>
+<p><strong>Q3. (어려움)</strong> 팀 회의에서 "약간의 압박감은 오히려 우리 업무 효율에 도움이 되지만, 스트레스가 감당 못할 정도가 되면 문제가 됩니다"라고 말해 보세요.</p>
+<p>👉 모범 답안: *A little pressure actually helps our work efficiency, but it becomes a problem when the stress gets too much to handle.*</p>
+<br>
+<br>
+<p><strong>6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)</strong></p>
+<br>
+<p>✨ <strong>Good Job</strong></p>
+<p>> "Nothing special, but it is also special."</p>
+<br>
+<p>Joey, 이 한 문장 정말 멋졌어요! "평범한 일상이지만 그 자체로 특별하다"는 생각을 짧고 리듬감 있게 표현했어요. 서로 반대되는 두 말(nothing special ↔ special)을 나란히 놓아서, 원어민이 들어도 "Oh, nice!" 하고 미소 지을 문장이에요. 복잡한 단어 없이도 내 생각을 또렷하게 전달할 수 있다는 걸 보여 줬어요.</p>
+<br>
+<p>🚀 <strong>내일의 한 문장</strong></p>
+<p>> 🗣️ "Yesterday's lesson really helped me. These days, I relieve stress by taking a walk after work. How do you usually unwind?"</p>
+<br>
+<p>(오늘의 패턴인 <strong>helped</strong>(is 없이!)와 <strong>relieve stress by + -ing</strong>를 한 번에 써 보는 문장이에요.)</p>
+<br>
+<br>
+<p><strong>[성과 지표]</strong></p>
+<br>
+<p>📈 <strong>유창성 점수: 6 / 10</strong></p>
+<br>
+<p><strong>근거:</strong></p>
+<div class="item">👍 강점: 어휘 뜻을 읽은 뒤 자기 경험(근육 회복, 독감 주사, 명상)과 연결해 예문을 만들려는 시도가 꾸준했어요. 발음 체크를 먼저 부탁하고, 모르는 개념(metabolism)은 바로 질문했어요. 튜터에게 "How about you?"로 대화를 되돌려 주는 등 대화를 주도하는 힘도 좋아요.</div>
+<div class="item">🔧 보완점:</div>
+<div class="item">한국어 "~이 돼"를 옮기다 보니 <strong>is + help, is + step up</strong>처럼 '하다' 말 앞에 is를 겹쳐 쓰는 일이 잦았어요.</div>
+<div class="item">생각을 정리하는 동안 "maybe it is", "just" 같은 채움말이 많아 문장이 길어지는 경향도 있었어요.</div>
+<div class="item">기사를 다 읽고 나서 한 "I done."은 <strong>"I'm done."</strong> 한 덩어리로 기억해 두세요.</div>
+<br>
+<p>🎯 <strong>다음 수업 원포인트 액션 플랜:</strong></p>
+<p>> <strong>"is help" 금지 챌린지</strong>: 다음 수업에서 "도움이 된다"를 말할 때마다 <strong>"It helps ~"</strong> 또는 <strong>"It's good for ~"</strong> 두 덩어리만 쓰기! 수업 전에 🔁 따라 읽기 3문장을 소리 내어 5번씩 읽고 입에 붙이고 들어가세요.</p></div>
+        </div>
+        <div id="tab-transcript" class="tab-content">
+            <div class="transcript"><span class="student">[Student]</span> Hello, Bell [?Belle]. Good morning.
+
+<span class="tutor">[Tutor]</span> Yes, hi. How are you?
+
+<span class="student">[Student]</span> Good, yeah. How are you today?
+
+<span class="tutor">[Tutor]</span> Yeah, I&#x27;m good.
+
+<span class="student">[Student]</span> Yeah, excellent. [?]
+
+<span class="tutor">[Tutor]</span> Yeah, I&#x27;m good. Any plans for today?
+
+<span class="student">[Student]</span> Today, it&#x27;s a normal Wednesday, the middle of week. So, maybe it is, I have some routine of my normal days. Just work, go for a walk, take a bicycle, and do exercise in the gym, etc. Nothing special, but it is also special.
+
+<span class="tutor">[Tutor]</span> Routine day?
+
+<span class="student">[Student]</span> Yes, it is my routine day. How was your day? Maybe this is afternoon, right?
+
+<span class="tutor">[Tutor]</span> Yeah, it&#x27;s afternoon right now.
+
+<span class="student">[Student]</span> Yes. How about your day?
+
+<span class="tutor">[Tutor]</span> In the morning, yeah, I went to the dentist.
+
+<span class="student">[Student]</span> Dentist.
+
+<span class="tutor">[Tutor]</span> Yes.
+
+<span class="student">[Student]</span> Maybe some pain [?paint] of teeth [?tea] or some care of your teeth [?tea]?
+
+<span class="tutor">[Tutor]</span> Yeah, just a regular, regular checkup.
+
+<span class="student">[Student]</span> Okay, I see. Good. [?]
+
+<span class="tutor">[Tutor]</span> Well, today did you want to look at the textbook here?
+
+<span class="student">[Student]</span> Oh. Oh yes, today&#x27;s topic is... Ah yes, I changed my textbook. Yeah, and it is active discussion first. And today&#x27;s topic is, Is stress always negative? Part B, the upside of stress.
+
+<span class="tutor">[Tutor]</span> Okay, so looking at A, Stretch [?the stretch of] Your Thinking. When you think of positive stress, which words do you think of?
+
+<span class="student">[Student]</span> Positive stress. Eustress [?Use stress], perform a simulating and exercise and self-medicate. Step up my body condition. Yeah, it&#x27;s all.
+
+<span class="tutor">[Tutor]</span> So can it improve your physical body or mental?
+
+<span class="student">[Student]</span> Yeah, both. I think my mental and body are similar. If I meditate or do exercise, that both activities are help to my body and my mental. Just I receive some stress, my muscle, but my muscle is more recovery, the recovery ends better, strong. And mental is similar. If I meditate, meditate something, and just deep thinking and control my mind and meantime my mind also strong and more peaceful. So I think it is similar, yeah, to both way, both way.
+
+<span class="tutor">[Tutor]</span> Okay, so both, both are similar. So both are good [?goal], both are... yeah, both similar.
+
+<span class="student">[Student]</span> Yes, you&#x27;re right.
+
+<span class="tutor">[Tutor]</span> Would you like any questions about the key vocabulary?
+
+<span class="student">[Student]</span> I think it&#x27;s the same one. Just I read that. Could you check my pronunciation?
+
+<span class="tutor">[Tutor]</span> The key vocabulary?
+
+<span class="student">[Student]</span> Is it possible?
+
+<span class="tutor">[Tutor]</span> Yes, would you like to read?
+
+<span class="student">[Student]</span> Okay. Self-medicate, distress, react, unrelieved, supposedly, manifest, perception, eustress, self-improvement, immune system, Alzheimer, simulating, equipped, insomnia, adrenaline, utilizing. Is there some different pronunciation in the word?
+
+<span class="tutor">[Tutor]</span> So for stimulating, so that T, stimulating.
+
+<span class="student">[Student]</span> Stimulating, simulating.
+
+<span class="tutor">[Tutor]</span> So T, stimulating.
+
+<span class="student">[Student]</span> Ah, stimulating, stimulating, stimulating.
+
+<span class="tutor">[Tutor]</span> Okay, good, stimulating. And another, equipped.
+
+<span class="student">[Student]</span> Equipped, equipped, equipped.
+
+<span class="tutor">[Tutor]</span> Better. Okay.
+
+<span class="student">[Student]</span> Equipped, equipped, equipped. Stimulating, stimulating.
+
+<span class="tutor">[Tutor]</span> Okay. So would you like to look at the first key expression?
+
+<span class="student">[Student]</span> Uh, perception. That&#x27;s meaning is there a belief or opinions often [?open] held by many people and based on how things seem. Hmm, we have a challenge, we have to challenge, we have to change the public perception that money is being wasted. Waste. Hmm, okay. In our company, many co-workers have a perception that we don&#x27;t wait for work. [?] How about that?
+
+<span class="tutor">[Tutor]</span> You have a perception not to be late to work?
+
+<span class="student">[Student]</span> Yeah, that is our perception in employing. [?]
+
+<span class="student">[Student]</span> Is it real? [?]
+
+<span class="tutor">[Tutor]</span> So it&#x27;s the perception employees have to be on time?
+
+<span class="student">[Student]</span> Yeah, have to be on time. Yeah, we have that perception. Yes, usually. [?]
+
+<span class="tutor">[Tutor]</span> Yeah, work perception. And did you want to look at the next expression?
+
+<span class="student">[Student]</span> Next expression, eustress. That meaning is stress that is not too extreme and is good for someone. Eustress is positive stress that comes from positive challenge, challenges or exciting experience. Positive stress. Okay. Meditated and no. To exercise give the eustress in our body. [?]
+
+<span class="tutor">[Tutor]</span> So it makes you feel good?
+
+<span class="student">[Student]</span> Yeah, maybe. My body condition step up. First, broke my tissue and then recovered my tissue and give some nutrients. Meantime my muscle is better, get better and get bigger, get strong. Yeah, that is the eustress.
+
+<span class="tutor">[Tutor]</span> Eustress means just like it feels good. Oh, feels good. Another physical. [?]
+
+<span class="student">[Student]</span> I see. Yeah, it is also similar. Yeah, just if I do exercise, I receive, I have a eustress [?re-eustress], my feeling is better. After taking a shower, I feel better.
+
+<span class="tutor">[Tutor]</span> The positive effects?
+
+<span class="student">[Student]</span> Yeah, more fresh and more clean.
+
+<span class="tutor">[Tutor]</span> How about the next expression?
+
+<span class="student">[Student]</span> Okay, immune system. That&#x27;s meaning the cell and tissue in body that makes it able to protect itself against infection. Immune system. And it&#x27;s because their immune system isn&#x27;t so strong. In modern society, the immune system is, the research discover the immune system is so important in our body.
+
+<span class="tutor">[Tutor]</span> The immune system is very important. Having a healthy immune system.
+
+<span class="student">[Student]</span> Yes, yes. Yes, I think every December or November the winter is coming and meantime we have injection prevent to catch a cold. So it is similar to develop our immune system. And nowadays the product, the drinking or some pure drugs can develop our immune system.
+
+<span class="tutor">[Tutor]</span> Okay, definitely, like flu shots, vitamin.
+
+<span class="student">[Student]</span> Injection, flu shot, right? Okay, vitamin.
+
+<span class="tutor">[Tutor]</span> Okay, right. And how about the next expression?
+
+<span class="student">[Student]</span> Okay, the next. Stimulating: raise level of psychological or nervous activity in body or any biological system. Stimulating. Okay, exercising stimulating body system, so that&#x27;s metabolic efficiency is step up. Teacher, I have a question. Metabolic is a similar immune system?
+
+<span class="tutor">[Tutor]</span> So your metabolism is digestion. So when you eat food, when you eat food and get energy from eating food, is your metabolism.
+
+<span class="student">[Student]</span> Ah, the metabolic. I see. Understand. If I&#x27;m eating food or some, that is process of my absorb [?observer], absorb [?observe] some nutrition, right?
+
+<span class="tutor">[Tutor]</span> Well, your body turning food into energy is your metabolism. So your stomach, your digestive system.
+
+<span class="student">[Student]</span> Understand.
+
+<span class="tutor">[Tutor]</span> They&#x27;re all part of your metabolism.
+
+<span class="student">[Student]</span> Metabolic efficiency.
+
+<span class="tutor">[Tutor]</span> Okay.
+
+<span class="student">[Student]</span> Okay. The meditative simulate our, our, our mental system.
+
+<span class="tutor">[Tutor]</span> Meditation stimulates...
+
+<span class="student">[Student]</span> Yeah, mental system. Just a moment, I forgot that word. Not meditative. Just a moment.
+
+<span class="tutor">[Tutor]</span> Meditation?
+
+<span class="student">[Student]</span> Meditation, yeah, meditation. Meditation develops our mental and our mind.
+
+<span class="tutor">[Tutor]</span> Yeah, it stimulates our minds.
+
+<span class="student">[Student]</span> For mind, okay. To give the peace of my mind.
+
+<span class="tutor">[Tutor]</span> Yeah, and so any questions about the vocabulary?
+
+<span class="student">[Student]</span> Oh, yeah, it&#x27;s okay. Yeah, I understand almost.
+
+<span class="tutor">[Tutor]</span> Would you like to read the article C, Is Stress Always Negative?
+
+<span class="student">[Student]</span> Okay, I&#x27;ll read the whole page. The upside of stress. Many people have a very negative perception of stress, but stress is not all bad. Recently, research proves that a reasonable amount of stress can affect us positively. Positive stress, also known as eustress, can help motivate us toward self-improvement and improve job performance by encouraging us to get things done. Okay, next page. Stress causes the release of harmonies such as adrenaline, which have a very positive effect in small amount. [?] Their hormones give us the boost of energy necessary to get things done. Some research suggests their hormones have a positive effect on their immune system and can even protect against diseases like Alzheimer&#x27;s by simulating brain functions. Everyone needs some stress in their life in order to feel changed and satisfied. [?] It is when this stress becomes too much to handle that negative side effects come into play. The trick to successfully utilizing stress to your benefit is not to try to emulate it, but to try to manage the negative symptoms. [?] Yes, I done.
+
+<span class="tutor">[Tutor]</span> So what do you think of the article?
+
+<span class="student">[Student]</span> I think this article about the eustress [?youth stress], and if we had a man stress, that is harmful to my body, our body. [?] If that is the small stress, give the help our immune system and improvement our body system. So, and also the eustress give the adrenaline, that adrenaline give us, give our body make powerful to do something. Yeah, I understand that article.
+
+<span class="tutor">[Tutor]</span> And now [?I know] D, the true or false. Would you like to read?
+
+<span class="student">[Student]</span> Okay. Eustress can provide us with the motivation that we need to get things done. Yes, that&#x27;s true. Yes, that provides us motivation to something. And second, stress always damages, always damages the brain, causing disease such as Alzheimer&#x27;s. No, always damage. Sometimes it&#x27;s possible but not always, and it is help to cure of the Alzheimer&#x27;s. Yeah, that is false. And teacher, what is the right pronunciation? False.
+
+<span class="tutor">[Tutor]</span> False. [?]
+
+<span class="student">[Student]</span> False. [?]
+
+<span class="tutor">[Tutor]</span> False. [?]
+
+<span class="student">[Student]</span> True. False. False. False. [?]
+
+<span class="tutor">[Tutor]</span> And the question here, question one: how do you recognize when you are stressed and what signs do you show?
+
+<span class="student">[Student]</span> I think if I have a headache or my eye was sick, sore my eyes, and this signal is that I had so many stress. So just I release my stress to yoga, to yoga in the weekends, or to swimming in a hotel pool, or walk the near park. That is a good impact. Yeah, that exercise good impact to my body and release my mind and body, so it is good for me.
+
+<span class="tutor">[Tutor]</span> Yeah, maybe like the pressure, you&#x27;re tired.
+
+<span class="student">[Student]</span> Yeah, yeah. How about you? What is your way to release in your stress when you have a stress?
+
+<span class="tutor">[Tutor]</span> I might try to keep busy, like do something, keep doing things, minor things like cleaning, or yeah, finding something to do.
+
+<span class="student">[Student]</span> Ah, you, you find your release in your life, don&#x27;t arrive, right? [?]
+
+<span class="tutor">[Tutor]</span> Yeah, I try to find something to take my mind off it, or distract.
+
+<span class="student">[Student]</span> Yes, it&#x27;s good way.
+
+<span class="tutor">[Tutor]</span> And do you think stress can affect you positively?
+
+<span class="student">[Student]</span> Yes, before we read the article. Yeah, I agree that article because if a small stress always our, give my work efficiency is to get better, get step up, just step up, and it is helped to become our body and mind strong. So everyone wanted to more peaceful and release life, but small stress give our body and our mind.
+
+<span class="tutor">[Tutor]</span> Yeah, I agree with that. It keeps motivated, keeps people busy.
+
+<span class="student">[Student]</span> Yeah, it is a step up our life and our body immune system.
+
+<span class="tutor">[Tutor]</span> So the last bit, can you remember any expression from today?
+
+<span class="student">[Student]</span> Okay, I remember stimulating, immune system, eustress, perception.
+
+<span class="tutor">[Tutor]</span> Okay. Perfect. Yeah. And I&#x27;ll send you corrections in just a bit. Any questions before I go?
+
+<span class="student">[Student]</span> Oh, no. Thanks for your class every day. Yeah. Have a special day, teacher.
+
+<span class="tutor">[Tutor]</span> Oh, thank you. You too.
+
+<span class="student">[Student]</span> You&#x27;re welcome. Goodbye.</div>
+        </div>
+    </div>
+    <div class="toast" id="toast">✅ 프롬프트가 복사되었습니다!</div>
+    <script>
+        const REVIEW_PROMPT="너는 나의 영어 회화 복습 파트너야. 오늘 내 전화영어 수업 내용을 기반으로 대화하면서 복습을 도와줘.\n\n[오늘 수업 전사 내용]\n[Student] Hello, Bell [?Belle]. Good morning.\n\n[Tutor] Yes, hi. How are you?\n\n[Student] Good, yeah. How are you today?\n\n[Tutor] Yeah, I'm good.\n\n[Student] Yeah, excellent. [?]\n\n[Tutor] Yeah, I'm good. Any plans for today?\n\n[Student] Today, it's a normal Wednesday, the middle of week. So, maybe it is, I have some routine of my normal days. Just work, go for a walk, take a bicycle, and do exercise in the gym, etc. Nothing special, but it is also special.\n\n[Tutor] Routine day?\n\n[Student] Yes, it is my routine day. How was your day? Maybe this is afternoon, right?\n\n[Tutor] Yeah, it's afternoon right now.\n\n[Student] Yes. How about your day?\n\n[Tutor] In the morning, yeah, I went to the dentist.\n\n[Student] Dentist.\n\n[Tutor] Yes.\n\n[Student] Maybe some pain [?paint] of teeth [?tea] or some care of your teeth [?tea]?\n\n[Tutor] Yeah, just a regular, regular checkup.\n\n[Student] Okay, I see. Good. [?]\n\n[Tutor] Well, today did you want to look at the textbook here?\n\n[Student] Oh. Oh yes, today's topic is... Ah yes, I changed my textbook. Yeah, and it is active discussion first. And today's topic is, Is stress always negative? Part B, the upside of stress.\n\n[Tutor] Okay, so looking at A, Stretch [?the stretch of] Your Thinking. When you think of positive stress, which words do you think of?\n\n[Student] Positive stress. Eustress [?Use stress], perform a simulating and exercise and self-medicate. Step up my body condition. Yeah, it's all.\n\n[Tutor] So can it improve your physical body or mental?\n\n[Student] Yeah, both. I think my mental and body are similar. If I meditate or do exercise, that both activities are help to my body and my mental. Just I receive some stress, my muscle, but my muscle is more recovery, the recovery ends better, strong. And mental is similar. If I meditate, meditate something, and just deep thinking and control my mind and meantime my mind also strong and more peaceful. So I think it is similar, yeah, to both way, both way.\n\n[Tutor] Okay, so both, both are similar. So both are good [?goal], both are... yeah, both similar.\n\n[Student] Yes, you're right.\n\n[Tutor] Would you like any questions about the key vocabulary?\n\n[Student] I think it's the same one. Just I read that. Could you check my pronunciation?\n\n[Tutor] The key vocabulary?\n\n[Student] Is it possible?\n\n[Tutor] Yes, would you like to read?\n\n[Student] Okay. Self-medicate, distress, react, unrelieved, supposedly, manifest, perception, eustress, self-improvement, immune system, Alzheimer, simulating, equipped, insomnia, adrenaline, utilizing. Is there some different pronunciation in the word?\n\n[Tutor] So for stimulating, so that T, stimulating.\n\n[Student] Stimulating, simulating.\n\n[Tutor] So T, stimulating.\n\n[Student] Ah, stimulating, stimulating, stimulating.\n\n[Tutor] Okay, good, stimulating. And another, equipped.\n\n[Student] Equipped, equipped, equipped.\n\n[Tutor] Better. Okay.\n\n[Student] Equipped, equipped, equipped. Stimulating, stimulating.\n\n[Tutor] Okay. So would you like to look at the first key expression?\n\n[Student] Uh, perception. That's meaning is there a belief or opinions often [?open] held by many people and based on how things seem. Hmm, we have a challenge, we have to challenge, we have to change the public perception that money is being wasted. Waste. Hmm, okay. In our company, many co-workers have a perception that we don't wait for work. [?] How about that?\n\n[Tutor] You have a perception not to be late to work?\n\n[Student] Yeah, that is our perception in employing. [?]\n\n[Student] Is it real? [?]\n\n[Tutor] So it's the perception employees have to be on time?\n\n[Student] Yeah, have to be on time. Yeah, we have that perception. Yes, usually. [?]\n\n[Tutor] Yeah, work perception. And did you want to look at the next expression?\n\n[Student] Next expression, eustress. That meaning is stress that is not too extreme and is good for someone. Eustress is positive stress that comes from positive challenge, challenges or exciting experience. Positive stress. Okay. Meditated and no. To exercise give the eustress in our body. [?]\n\n[Tutor] So it makes you feel good?\n\n[Student] Yeah, maybe. My body condition step up. First, broke my tissue and then recovered my tissue and give some nutrients. Meantime my muscle is better, get better and get bigger, get strong. Yeah, that is the eustress.\n\n[Tutor] Eustress means just like it feels good. Oh, feels good. Another physical. [?]\n\n[Student] I see. Yeah, it is also similar. Yeah, just if I do exercise, I receive, I have a eustress [?re-eustress], my feeling is better. After taking a shower, I feel better.\n\n[Tutor] The positive effects?\n\n[Student] Yeah, more fresh and more clean.\n\n[Tutor] How about the next expression?\n\n[Student] Okay, immune system. That's meaning the cell and tissue in body that makes it able to protect itself against infection. Immune system. And it's because their immune system isn't so strong. In modern society, the immune system is, the research discover the immune system is so important in our body.\n\n[Tutor] The immune system is very important. Having a healthy immune system.\n\n[Student] Yes, yes. Yes, I think every December or November the winter is coming and meantime we have injection prevent to catch a cold. So it is similar to develop our immune system. And nowadays the product, the drinking or some pure drugs can develop our immune system.\n\n[Tutor] Okay, definitely, like flu shots, vitamin.\n\n[Student] Injection, flu shot, right? Okay, vitamin.\n\n[Tutor] Okay, right. And how about the next expression?\n\n[Student] Okay, the next. Stimulating: raise level of psychological or nervous activity in body or any biological system. Stimulating. Okay, exercising stimulating body system, so that's metabolic efficiency is step up. Teacher, I have a question. Metabolic is a similar immune system?\n\n[Tutor] So your metabolism is digestion. So when you eat food, when you eat food and get energy from eating food, is your metabolism.\n\n[Student] Ah, the metabolic. I see. Understand. If I'm eating food or some, that is process of my absorb [?observer], absorb [?observe] some nutrition, right?\n\n[Tutor] Well, your body turning food into energy is your metabolism. So your stomach, your digestive system.\n\n[Student] Understand.\n\n[Tutor] They're all part of your metabolism.\n\n[Student] Metabolic efficiency.\n\n[Tutor] Okay.\n\n[Student] Okay. The meditative simulate our, our, our mental system.\n\n[Tutor] Meditation stimulates...\n\n[Student] Yeah, mental system. Just a moment, I forgot that word. Not meditative. Just a moment.\n\n[Tutor] Meditation?\n\n[Student] Meditation, yeah, meditation. Meditation develops our mental and our mind.\n\n[Tutor] Yeah, it stimulates our minds.\n\n[Student] For mind, okay. To give the peace of my mind.\n\n[Tutor] Yeah, and so any questions about the vocabulary?\n\n[Student] Oh, yeah, it's okay. Yeah, I understand almost.\n\n[Tutor] Would you like to read the article C, Is Stress Always Negative?\n\n[Student] Okay, I'll read the whole page. The upside of stress. Many people have a very negative perception of stress, but stress is not all bad. Recently, research proves that a reasonable amount of stress can affect us positively. Positive stress, also known as eustress, can help motivate us toward self-improvement and improve job performance by encouraging us to get things done. Okay, next page. Stress causes the release of harmonies such as adrenaline, which have a very positive effect in small amount. [?] Their hormones give us the boost of energy necessary to get things done. Some research suggests their hormones have a positive effect on their immune system and can even protect against diseases like Alzheimer's by simulating brain functions. Everyone needs some stress in their life in order to feel changed and satisfied. [?] It is when this stress becomes too much to handle that negative side effects come into play. The trick to successfully utilizing stress to your benefit is not to try to emulate it, but to try to manage the negative symptoms. [?] Yes, I done.\n\n[Tutor] So what do you think of the article?\n\n[Student] I think this article about the eustress [?youth stress], and if we had a man stress, that is harmful to my body, our body. [?] If that is the small stress, give the help our immune system and improvement our body system. So, and also the eustress give the adrenaline, that adrenaline give us, give our body make powerful to do something. Yeah, I understand that article.\n\n[Tutor] And now [?I know] D, the true or false. Would you like to read?\n\n[Student] Okay. Eustress can provide us with the motivation that we need to get things done. Yes, that's true. Yes, that provides us motivation to something. And second, stress always damages, always damages the brain, causing disease such as Alzheimer's. No, always damage. Sometimes it's possible but not always, and it is help to cure of the Alzheimer's. Yeah, that is false. And teacher, what is the right pronunciation? False.\n\n[Tutor] False. [?]\n\n[Student] False. [?]\n\n[Tutor] False. [?]\n\n[Student] True. False. False. False. [?]\n\n[Tutor] And the question here, question one: how do you recognize when you are stressed and what signs do you show?\n\n[Student] I think if I have a headache or my eye was sick, sore my eyes, and this signal is that I had so many stress. So just I release my stress to yoga, to yoga in the weekends, or to swimming in a hotel pool, or walk the near park. That is a good impact. Yeah, that exercise good impact to my body and release my mind and body, so it is good for me.\n\n[Tutor] Yeah, maybe like the pressure, you're tired.\n\n[Student] Yeah, yeah. How about you? What is your way to release in your stress when you have a stress?\n\n[Tutor] I might try to keep busy, like do something, keep doing things, minor things like cleaning, or yeah, finding something to do.\n\n[Student] Ah, you, you find your release in your life, don't arrive, right? [?]\n\n[Tutor] Yeah, I try to find something to take my mind off it, or distract.\n\n[Student] Yes, it's good way.\n\n[Tutor] And do you think stress can affect you positively?\n\n[Student] Yes, before we read the article. Yeah, I agree that article because if a small stress always our, give my work efficiency is to get better, get step up, just step up, and it is helped to become our body and mind strong. So everyone wanted to more peaceful and release life, but small stress give our body and our mind.\n\n[Tutor] Yeah, I agree with that. It keeps motivated, keeps people busy.\n\n[Student] Yeah, it is a step up our life and our body immune system.\n\n[Tutor] So the last bit, can you remember any expression from today?\n\n[Student] Okay, I remember stimulating, immune system, eustress, perception.\n\n[Tutor] Okay. Perfect. Yeah. And I'll send you corrections in just a bit. Any questions before I go?\n\n[Student] Oh, no. Thanks for your class every day. Yeah. Have a special day, teacher.\n\n[Tutor] Oh, thank you. You too.\n\n[Student] You're welcome. Goodbye.\n\n[AI 피드백]\n**0. 📌 Topic**\n\nTopic: The Upside of Stress – Can Stress Be Positive?\n\n---\n\n**1. 📊 오늘의 대화 요약 (Summary)**\n\n- 새 교재의 'Is stress always negative? – Part B, The upside of stress' 단원을 했어요. 핵심 어휘 목록을 소리 내어 읽은 뒤 발음 체크를 직접 부탁했고, stimulating과 equipped 발음을 교정받았어요. 이어서 perception, eustress, immune system, stimulating으로 자기 예문을 만들어 봤어요.\n- 기사를 소리 내어 읽고 True/False 문제를 풀었어요. 그다음 두 가지 주제로 이야기했어요.\n - 스트레스를 받을 때 나타나는 신호와 푸는 방법: 두통이나 눈 피로가 오면 요가, 수영, 산책을 해요.\n - 적당한 스트레스가 업무 효율에 주는 좋은 효과\n- 중간에 \"Metabolic is a similar immune system?\"이라고 직접 질문해서 metabolism(신진대사)과 immune system(면역 체계)의 차이도 정리했어요.\n\n---\n\n**2. 💬 유창성 업그레이드 (Fluency & Natural Flow)**\n\n**① 평범한 하루 소개하기**\n- ❌ 학습자 원문 (As Said): \"Today, it's a normal Wednesday, the middle of week. So, maybe it is, I have some routine of my normal days.\"\n- ✅ 자연스러운 표현 (Natural): \"It's just a regular Wednesday, the middle of the week. I'm sticking to my usual routine today.\"\n- 💎 비즈니스 표현 (Professional): \"It's a typical midweek day for me, so I'll be following my usual routine.\"\n- 💡 코칭 포인트: \"Stick to my usual routine\" is a ready-made chunk. You don't need \"maybe it is\" to warm up. Start right away with \"It's just a…\", which sounds relaxed and confident. Also, say \"the middle **of the** week\" as one chunk.\n → \"stick to my usual routine(늘 하던 루틴대로 하다)\"는 통째로 외워 두면 좋은 덩어리예요. \"maybe it is\"처럼 말을 고르는 군더더기 없이 \"It's just a…\"로 바로 시작하면 여유 있고 자신감 있게 들려요. \"the middle **of the** week\"도 한 덩어리로 입에 붙여 두세요.\n\n**② 스트레스 신호 말하기**\n- ❌ 학습자 원문 (As Said): \"I think if I have a headache or my eye was sick, sore my eyes, and this signal is that I had so many stress.\"\n- ✅ 자연스러운 표현 (Natural): \"When I get a headache or my eyes feel sore, that's a sign I'm under a lot of stress.\"\n- 💎 비즈니스 표현 (Professional): \"Headaches and eye strain are usually my first signs that I'm under too much stress.\"\n- 💡 코칭 포인트: Stress isn't something you count one by one, so say \"a lot of stress,\" not \"many stress.\" \"That's a sign (that) ~\" and \"I'm under a lot of stress\" are two handy chunks.\n → stress는 한 개, 두 개로 세는 말이 아니라서 many 대신 **a lot of stress**라고 해요. \"~하면 그게 신호예요\"는 **\"That's a sign ~\"**, \"스트레스를 많이 받고 있어요\"는 **\"I'm under a lot of stress\"**를 한 덩어리로 쓰면 돼요. 눈이 아플 때는 \"my eye was sick\" 대신 **\"my eyes feel sore\"**라고 하면 자연스러워요.\n\n**③ 스트레스 푸는 방법 말하기**\n- ❌ 학습자 원문 (As Said): \"So just I release my stress to yoga, to yoga in the weekends, or to swimming in a hotel pool, or walk the near park.\"\n- ✅ 자연스러운 표현 (Natural): \"I usually relieve stress by doing yoga on weekends, swimming in a hotel pool, or taking a walk in a nearby park.\"\n- 💎 비즈니스 표현 (Professional): \"To manage stress, I make time for yoga, swimming, and walks in the park on weekends.\"\n- 💡 코칭 포인트: Native speakers usually say \"relieve stress\" rather than \"release stress.\" Use \"by + -ing\" to list your methods. It keeps the sentence clean and easy to follow. Also, \"on weekends\" and \"a nearby park\" are fixed chunks.\n → 원어민은 스트레스를 '푼다'고 할 때 release보다 **relieve stress**를 더 많이 써요. 방법을 나열할 때는 \"**by + -ing**(~하면서, ~함으로써)\" 덩어리를 쓰면 문장이 깔끔하게 이어져요: by doing yoga, swimming, taking a walk. \"주말에\"는 **on weekends**, \"근처 공원\"은 **a nearby park**로 통째로 기억하세요.\n\n**④ 발음 피드백 요청하기**\n- ❌ 학습자 원문 (As Said): \"Is there some different pronunciation in the word?\"\n- ✅ 자연스러운 표현 (Natural): \"Did I mispronounce any of the words?\"\n- 💎 비즈니스 표현 (Professional): \"Could you point out any words I didn't pronounce correctly?\"\n- 💡 코칭 포인트: \"Mispronounce\" says exactly what you mean in one word. \"Point out\" is a polite, professional way to ask for corrections.\n → \"mispronounce(잘못 발음하다)\" 한 단어로 의도가 딱 전달돼요. \"point out(짚어 주다)\"은 피드백을 정중하게 부탁할 때 회의에서도 쓰기 좋은 표현이에요.\n\n---\n\n**3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)**\n\nCategory: verb form (redundant 'be' before a main verb)\n\n🎯 오늘의 패턴: \"~에 도움이 돼\"를 말할 때 is/are와 help를 한꺼번에 붙이는 습관\n\nJoey는 오늘 \"도움이 된다\", \"향상시킨다\"를 말할 때 **is/are**와 **help, step up 같은 '하다' 말**을 겹쳐 쓰는 일이 반복됐어요. 한국어 \"도움**이 돼**\"의 '이 돼'를 is로 옮기려다 생긴 습관이에요.\n\n| ❌ 원문 (As Said) | ✅ 교정 (Corrected) |\n|---|---|\n| \"that both activities are help to my body and my mental.\" | Both activities **help** my body and mind. / Both activities **are good for** my body and mind. |\n| \"it is help to cure of the Alzheimer's.\" | It **can help** protect against Alzheimer's. |\n| \"it is helped to become our body and mind strong.\" | It **helps** make our body and mind strong. |\n| \"it is a step up our life and our body immune system.\" | It **boosts** our quality of life and our immune system. |\n\n📌 핵심 규칙: **help는 혼자서도 '도움이 돼'라는 뜻이에요. 앞에 is를 붙이지 말고 \"It helps ~\"로 바로 말하세요.** is를 꼭 쓰고 싶다면 \"It **is good for** ~\" 덩어리로 바꾸면 돼요.\n (✔ It helps me. ✔ It is good for me. ✘ It is help me.)\n ※ \"마음, 정신\"은 my mental이 아니라 **my mind**라고 해요: my body and mind.\n\n🔁 따라 읽기:\n- 🗣️ \"Both activities help my body and mind.\"\n- 🗣️ \"It helps make our body and mind strong.\"\n- 🗣️ \"A little stress is good for my work performance.\"\n\n---\n\n**4. 📗 어휘 확장 (Vocabulary Vault)**\n\n1. **perception** /pərˈsepʃən/ (noun)\n - 뜻: 인식, 사람들이 무언가를 바라보는 시각\n - 실전 예문: *The client's perception of our audit process has improved this year.*\n\n2. **stimulate** /ˈstɪmjəleɪt/ (verb)\n - 뜻: 자극하다, 활성화하다\n - ※ 오늘 교정받은 발음: s**t**imulate예요. T 소리를 꼭 살리세요! T를 빼고 simulate라고 하면 '흉내 내다, 모의실험하다'라는 전혀 다른 단어로 들려요.\n - 실전 예문: *Lower energy prices could stimulate demand for imports.*\n\n3. **relieve** /rɪˈliːv/ (verb)\n - 뜻: (고통이나 스트레스를) 덜어 주다, 풀다\n - 실전 예문: *A short walk after lunch helps me relieve stress during audit season.*\n\n4. **metabolism** /məˈtæbəlɪzəm/ (noun)\n - 뜻: 신진대사, 음식을 에너지로 바꾸는 몸의 과정\n - 실전 예문: *Regular exercise keeps my metabolism active even with a desk job.*\n\n5. **equipped** /ɪˈkwɪpt/ (adjective)\n - 뜻: (능력이나 장비를) 갖춘\n - ※ 끝의 -pped는 '프드'가 아니라 짧은 '트' 소리예요. '이큅트'처럼 한 번에 끊어 말하세요.\n - 실전 예문: *Our team is well equipped to handle the new reporting standards.*\n\n---\n\n**5. 📝 실전 복습 챌린지 (Practice)**\n\n**Q1. (쉬움)** 동료에게 \"명상은 내 마음에 도움이 돼\"라고 말해 보세요. (is 없이 help로!)\n 👉 모범 답안: *Meditation helps my mind.* / *Meditation helps me feel calm.*\n\n**Q2. (보통)** 튜터에게 \"나는 보통 주말에 수영을 하면서 스트레스를 풀어\"라고 말해 보세요. (relieve stress by + -ing 활용)\n 👉 모범 답안: *I usually relieve stress by swimming on weekends.*\n\n**Q3. (어려움)** 팀 회의에서 \"약간의 압박감은 오히려 우리 업무 효율에 도움이 되지만, 스트레스가 감당 못할 정도가 되면 문제가 됩니다\"라고 말해 보세요.\n 👉 모범 답안: *A little pressure actually helps our work efficiency, but it becomes a problem when the stress gets too much to handle.*\n\n---\n\n**6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)**\n\n✨ **Good Job**\n> \"Nothing special, but it is also special.\"\n\nJoey, 이 한 문장 정말 멋졌어요! \"평범한 일상이지만 그 자체로 특별하다\"는 생각을 짧고 리듬감 있게 표현했어요. 서로 반대되는 두 말(nothing special ↔ special)을 나란히 놓아서, 원어민이 들어도 \"Oh, nice!\" 하고 미소 지을 문장이에요. 복잡한 단어 없이도 내 생각을 또렷하게 전달할 수 있다는 걸 보여 줬어요.\n\n🚀 **내일의 한 문장**\n> 🗣️ \"Yesterday's lesson really helped me. These days, I relieve stress by taking a walk after work. How do you usually unwind?\"\n\n(오늘의 패턴인 **helped**(is 없이!)와 **relieve stress by + -ing**를 한 번에 써 보는 문장이에요.)\n\n---\n\n**[성과 지표]**\n\n📈 **유창성 점수: 6 / 10**\n\n**근거:**\n- 👍 강점: 어휘 뜻을 읽은 뒤 자기 경험(근육 회복, 독감 주사, 명상)과 연결해 예문을 만들려는 시도가 꾸준했어요. 발음 체크를 먼저 부탁하고, 모르는 개념(metabolism)은 바로 질문했어요. 튜터에게 \"How about you?\"로 대화를 되돌려 주는 등 대화를 주도하는 힘도 좋아요.\n- 🔧 보완점:\n - 한국어 \"~이 돼\"를 옮기다 보니 **is + help, is + step up**처럼 '하다' 말 앞에 is를 겹쳐 쓰는 일이 잦았어요.\n - 생각을 정리하는 동안 \"maybe it is\", \"just\" 같은 채움말이 많아 문장이 길어지는 경향도 있었어요.\n - 기사를 다 읽고 나서 한 \"I done.\"은 **\"I'm done.\"** 한 덩어리로 기억해 두세요.\n\n🎯 **다음 수업 원포인트 액션 플랜:**\n> **\"is help\" 금지 챌린지**: 다음 수업에서 \"도움이 된다\"를 말할 때마다 **\"It helps ~\"** 또는 **\"It's good for ~\"** 두 덩어리만 쓰기! 수업 전에 🔁 따라 읽기 3문장을 소리 내어 5번씩 읽고 입에 붙이고 들어가세요.\n\n위 내용을 바탕으로:\n1. 먼저 오늘 수업에서 내가 틀렸거나 어색했던 표현을 하나 골라서, 관련된 상황을 영어로 질문해줘.\n2. 내가 영어로 대답하면, 자연스러운지 확인하고 더 나은 표현이 있으면 알려줘.\n3. 특히 \"반복 실수 패턴\"에서 지적된 부분을 집중적으로 연습시켜줘.\n4. 이런 식으로 오늘 배운 표현들을 하나씩 복습하자.\n5. 한국어 설명은 필요할 때만 간단히, 대화는 최대한 영어로 진행해줘.\n\n그럼 시작하자!";
+        function startReview(){navigator.clipboard.writeText(REVIEW_PROMPT).then(()=>{showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)}).catch(()=>{const t=document.createElement('textarea');t.value=REVIEW_PROMPT;document.body.appendChild(t);t.select();document.execCommand('copy');document.body.removeChild(t);showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)})}
+        function showToast(){const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500)}
+        function switchTab(n){document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',n==='feedback'?i===0:i===1));document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));document.getElementById('tab-'+n).classList.add('active')}
+    </script>
+</body>
+</html>

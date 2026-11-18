@@ -506,5 +506,10 @@
     "topic": "Is Stress Always Negative? – The Downsides of Stress",
     "target_grammar": "subject-verb agreement",
     "engine": "claude"
+  },
+  "2026-11-18": {
+    "topic": "The Upside of Stress – Can Stress Be Positive?",
+    "target_grammar": "verb form (redundant 'be' before a main verb)",
+    "engine": "claude"
   }
 }
