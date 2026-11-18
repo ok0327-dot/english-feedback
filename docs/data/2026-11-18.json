@@ -1,0 +1,57 @@
+{
+ "date": "2026-11-18",
+ "iso": [
+  2026,
+  47
+ ],
+ "topic": "The Upside of Stress – Can Stress Be Positive?",
+ "grammar": "verb form",
+ "grammar_norm": "Verb Forms / Auxiliaries",
+ "score": 6.0,
+ "pairs": [
+  {
+   "said": "Today, it's a normal Wednesday, the middle of week. So, maybe it is, I have some routine of my normal days.",
+   "natural": "It's just a regular Wednesday, the middle of the week. I'm sticking to my usual routine today."
+  },
+  {
+   "said": "I think if I have a headache or my eye was sick, sore my eyes, and this signal is that I had so many stress.",
+   "natural": "When I get a headache or my eyes feel sore, that's a sign I'm under a lot of stress."
+  },
+  {
+   "said": "So just I release my stress to yoga, to yoga in the weekends, or to swimming in a hotel pool, or walk the near park.",
+   "natural": "I usually relieve stress by doing yoga on weekends, swimming in a hotel pool, or taking a walk in a nearby park."
+  },
+  {
+   "said": "Is there some different pronunciation in the word?",
+   "natural": "Did I mispronounce any of the words?"
+  }
+ ],
+ "vocab": [
+  {
+   "word": "perception",
+   "pos": "noun",
+   "meaning": "인식, 사람들이 무언가를 바라보는 시각"
+  },
+  {
+   "word": "stimulate",
+   "pos": "verb",
+   "meaning": "자극하다, 활성화하다"
+  },
+  {
+   "word": "relieve",
+   "pos": "verb",
+   "meaning": "(고통이나 스트레스를) 덜어 주다, 풀다"
+  },
+  {
+   "word": "metabolism",
+   "pos": "noun",
+   "meaning": "신진대사, 음식을 에너지로 바꾸는 몸의 과정"
+  },
+  {
+   "word": "equipped",
+   "pos": "adjective",
+   "meaning": "(능력이나 장비를) 갖춘"
+  }
+ ],
+ "_html_md5": "a6ce4ab050eb0c7257860359cd8586ce"
+}
