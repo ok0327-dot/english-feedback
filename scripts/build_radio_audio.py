@@ -6,15 +6,20 @@
 docs/radio.html 의 <pre id="radio-src"> 대본(진행자|lang|문장)을 읽어
 실제 음성 MP3를 만든다:
   1순위) Gemini 멀티스피커 TTS(두 진행자 다른 목소리, 한/영 자동). PCM→MP3.
-  폴백)  gTTS(무료, 언어별 합성 후 이어붙임) — Gemini 실패/쿼터 시에도 에피소드 보장.
+         기본 모델이 실패하면(일일 한도 등) 대체 모델로 에피소드 전체를 다시 합성 — 한 회차 안에서 모델을 섞지 않는다.
+  폴백)  gTTS(무료, 언어별 합성 후 이어붙임) — Gemini 모델이 전부 실패해도 에피소드 보장.
 → docs/radio/ep-YYYY-Www.mp3 저장 + docs/radio/episodes.json 갱신.
 
-자격증명: GEMINI_API_KEY(env, 기존 시크릿 재사용). 모델: GEMINI_TTS_MODEL(기본 2.5-flash-preview-tts).
+자격증명: GEMINI_API_KEY(env, 기존 시크릿 재사용).
+모델: GEMINI_TTS_MODEL(기본 gemini-3.8-flash-tts) → 실패 시 GEMINI_TTS_FALLBACK_MODELS(쉼표, 기본 gemini-3.8-flash-lite-tts).
 의존성: requests, gTTS, pydub + ffmpeg.
 
 CLI:  python3 scripts/build_radio_audio.py                # 현재 주(docs/radio.html)
       python3 scripts/build_radio_audio.py --week 2026-W25  # 아카이브 특정 주
       python3 scripts/build_radio_audio.py --backfill       # MP3 없는 아카이브 전 주차 (Gemini 전용, 실패 주는 건너뜀)
+      python3 scripts/build_radio_audio.py --sample 20 --start 14 --models a,b --out-dir DIR
+            # 🧪 모델 비교: 같은 대본 일부(N줄)를 모델마다 합성해 DIR/sample-<모델>.mp3 + 길이·음량·무음 지표.
+            #    episodes.json·docs/ 는 건드리지 않고 gTTS 폴백도 없다.
 """
 import os, sys, re, html, json, base64, wave, io, glob, time, subprocess, tempfile, datetime
 import requests
@@ -25,8 +30,13 @@ RADIO_DIR = os.path.join(DOCS, "radio")
 KST = datetime.timezone(datetime.timedelta(hours=9))
 
 GEMINI_KEY = os.environ.get("GEMINI_API_KEY", "").strip()
-# 빈 문자열(env는 설정됐지만 값이 없음 — 워크플로우 dispatch 기본값)도 기본 모델로 처리
-TTS_MODEL = (os.environ.get("GEMINI_TTS_MODEL") or "").strip() or "gemini-3.1-flash-tts-preview"
+# 빈 문자열(env는 설정됐지만 값이 없음 — 워크플로우 dispatch 기본값)도 기본 모델로 처리.
+# 2026-11-19: gemini-3.1-flash-tts-preview 는 공식 폐기표(ai.google.dev/gemini-api/docs/deprecations)상
+# 가장 이른 종료일 2026-12-18, 대체 = gemini-3.8-flash-tts / gemini-3.8-flash-lite-tts → 3.8 로 이전.
+TTS_MODEL = (os.environ.get("GEMINI_TTS_MODEL") or "").strip() or "gemini-3.8-flash-tts"
+# 기본 모델이 실패하면 차례로 시도할 대체 모델. 일일 한도는 모델마다 따로라 lite 는 기본 모델 한도와 별개다.
+TTS_FALLBACK_MODELS = [m.strip() for m in (os.environ.get("GEMINI_TTS_FALLBACK_MODELS")
+                                           or "gemini-3.8-flash-lite-tts").split(",") if m.strip()]
 # 진행자 → (TTS용 ASCII 라벨, Gemini 프리빌트 보이스)
 SPEAKERS = {"민지": ("Minji", "Kore"), "알렉스": ("Alex", "Puck")}
 
@@ -57,8 +67,13 @@ def parse_radio_html(path=None):
 CHUNK_LINES = int(os.environ.get("TTS_CHUNK_LINES", "20"))
 
 
-def _tts_chunk(chunk, cfgs):
+class DailyQuotaExceeded(RuntimeError):
+    """모델의 '하루' 요청 한도 소진(429 · PerDay). 기다려도 오늘은 안 풀리므로 재시도하지 않는다."""
+
+
+def _tts_chunk(chunk, cfgs, model=None):
     """대사 청크 하나 → (pcm_bytes, rate). Gemini 멀티스피커 TTS 단일 호출."""
+    model = model or TTS_MODEL
     transcript = ("Read this radio dialogue as a warm, lively two-host learning podcast. "
                   "Speak naturally and expressively, with genuine back-and-forth energy, "
                   "at a relaxed and clear pace for an English learner (A2-B1 level). "
@@ -71,11 +86,15 @@ def _tts_chunk(chunk, cfgs):
             "speechConfig": {"multiSpeakerVoiceConfig": {"speakerVoiceConfigs": cfgs}},
         },
     }
-    url = f"https://generativelanguage.googleapis.com/v1beta/models/{TTS_MODEL}:generateContent"
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
     r = requests.post(url, headers={"x-goog-api-key": GEMINI_KEY, "Content-Type": "application/json"},
                       json=body, timeout=240)
+    if r.status_code == 429 and "PerDay" in r.text:
+        lim = re.search(r"limit: (\d+)", r.text)
+        raise DailyQuotaExceeded(f"Gemini TTS 429 일일 한도 소진 [{model}]"
+                                 + (f" (하루 {lim.group(1)}회)" if lim else ""))
     if r.status_code != 200:
-        raise RuntimeError(f"Gemini TTS {r.status_code}: {re.sub(chr(10), ' ', r.text)[:300]}")
+        raise RuntimeError(f"Gemini TTS {r.status_code} [{model}]: {re.sub(chr(10), ' ', r.text)[:300]}")
     j = r.json()
     parts = (j.get("candidates") or [{}])[0].get("content", {}).get("parts", [])
     for part in parts:
@@ -92,11 +111,14 @@ def _tts_chunk(chunk, cfgs):
 TTS_PACE_SEC = float(os.environ.get("TTS_PACE_SEC", "12"))  # 청크 사이 최소 간격(RPM 한도 회피)
 
 
-def _tts_chunk_retry(chunk, cfgs, tries=4):
-    """청크 TTS + 재시도(429 속도제한·일시 오류에 backoff). 실패 시 마지막 예외 전파."""
+def _tts_chunk_retry(chunk, cfgs, model=None, tries=4):
+    """청크 TTS + 재시도(429 속도제한·일시 오류에 backoff). 실패 시 마지막 예외 전파.
+    일일 한도 소진(DailyQuotaExceeded)은 기다려도 안 풀리므로 바로 전파 → 대체 모델로 넘어간다."""
     for attempt in range(tries):
         try:
-            return _tts_chunk(chunk, cfgs)
+            return _tts_chunk(chunk, cfgs, model)
+        except DailyQuotaExceeded:
+            raise
         except Exception as e:
             if attempt == tries - 1:
                 raise
@@ -105,7 +127,7 @@ def _tts_chunk_retry(chunk, cfgs, tries=4):
             time.sleep(wait)
 
 
-def gemini_tts(lines):
+def gemini_tts(lines, model=None):
     """긴 대본을 청크로 나눠 TTS 후 PCM 이어붙임 → (pcm_bytes, rate).
     청크 사이 300ms 무음을 넣어 이음새를 자연스럽게 한다."""
     if not GEMINI_KEY:
@@ -122,11 +144,27 @@ def gemini_tts(lines):
     for i in range(0, len(lines), CHUNK_LINES):
         if i:
             time.sleep(TTS_PACE_SEC)  # 속도 제한(RPM) 회피용 페이싱
-        pcm, rate = _tts_chunk_retry(lines[i:i + CHUNK_LINES], cfgs)
+        pcm, rate = _tts_chunk_retry(lines[i:i + CHUNK_LINES], cfgs, model)
         pcm_parts.append(pcm)
         print(f"  …TTS 청크 {i // CHUNK_LINES + 1}/{n} ({len(pcm)//1024}KB)")
     gap = b"\x00\x00" * int(0.3 * rate)  # 300ms 무음(16-bit mono)
     return gap.join(pcm_parts), rate
+
+
+def gemini_tts_ladder(lines):
+    """기본 모델 → 대체 모델 순으로 에피소드 전체 합성 → (pcm, rate, 쓴 모델).
+    중간에 실패하면 그 모델로 만든 조각은 버리고 다음 모델로 처음부터(한 회차 = 한 모델 목소리)."""
+    models = list(dict.fromkeys([TTS_MODEL] + TTS_FALLBACK_MODELS))
+    last = None
+    for i, model in enumerate(models):
+        try:
+            pcm, rate = gemini_tts(lines, model)
+            return pcm, rate, model
+        except Exception as e:
+            last = e
+            if i + 1 < len(models):
+                print(f"⚠️ {model} 실패 ({str(e)[:160]}) → 대체 모델 {models[i + 1]} 로 다시 합성")
+    raise last
 
 
 def pcm_to_mp3(pcm, rate, out):
@@ -163,8 +201,8 @@ def gtts_fallback(lines, out):
     combined.export(out, format="mp3", bitrate="48k")
 
 
-def update_episodes(week, engine, nlines):
-    """episodes.json 에 항목 추가/교체(최신순) + 오래된 mp3 정리."""
+def update_episodes(week, engine, nlines, model=None):
+    """episodes.json 에 항목 추가/교체(최신순) + 오래된 mp3 정리. model = 실제로 쓴 TTS 모델(gTTS 면 None)."""
     epf = os.path.join(RADIO_DIR, "episodes.json")
     eps = []
     if os.path.exists(epf):
@@ -173,8 +211,11 @@ def update_episodes(week, engine, nlines):
         except Exception:
             eps = []
     eps = [e for e in eps if e.get("week") != week]
-    eps.append({"week": week, "date": datetime.datetime.now(KST).strftime("%Y-%m-%d"),
-                "file": f"ep-{week}.mp3", "engine": engine, "lines": nlines})
+    ep = {"week": week, "date": datetime.datetime.now(KST).strftime("%Y-%m-%d"),
+          "file": f"ep-{week}.mp3", "engine": engine, "lines": nlines}
+    if model:
+        ep["model"] = model
+    eps.append(ep)
     eps.sort(key=lambda e: e.get("week", ""), reverse=True)
 
     KEEP = int(os.environ.get("RADIO_KEEP", "16"))
@@ -197,25 +238,110 @@ def build_episode(html_path, allow_fallback):
         print(f"⚠️ {week}: 대본 라인 없음 — 건너뜀")
         return None
     out = os.path.join(RADIO_DIR, f"ep-{week}.mp3")
-    engine = "gemini"
+    engine, model = "gemini", None
     try:
-        pcm, rate = gemini_tts(lines)
+        pcm, rate, model = gemini_tts_ladder(lines)
         pcm_to_mp3(pcm, rate, out)
     except Exception as e:
         if not allow_fallback:
             print(f"⚠️ {week}: Gemini TTS 실패 ({str(e)[:80]}) — 폴백 없이 건너뜀")
             return None
         print(f"⚠️ Gemini TTS 실패 ({e}) → gTTS 폴백")
-        engine = "gtts"
+        engine, model = "gtts", None
         gtts_fallback(lines, out)
-    update_episodes(week, engine, len(lines))
+    update_episodes(week, engine, len(lines), model)
     size_kb = os.path.getsize(out) // 1024
-    print(f"✅ {engine} TTS · docs/radio/ep-{week}.mp3 · {size_kb}KB · {len(lines)}줄")
+    print(f"✅ {engine} TTS{' (' + model + ')' if model else ''} · docs/radio/ep-{week}.mp3 · {size_kb}KB · {len(lines)}줄")
     return week, engine, len(lines)
+
+
+def audio_stats(pcm, rate):
+    """16-bit mono PCM → 비교용 지표: 길이(초)·평균 음량(RMS dBFS)·최대 음량(peak dBFS)·
+    무음 비율(%)·가장 긴 무음(초). 무음 = 50ms 구간 RMS 가 -40 dBFS 미만."""
+    import array, math
+    a = array.array("h")
+    a.frombytes(pcm[:len(pcm) // 2 * 2])
+    if sys.byteorder == "big":
+        a.byteswap()
+    n = len(a)
+    if not n:
+        return {"sec": 0.0, "rms_dbfs": -120.0, "peak_dbfs": -120.0, "silence_pct": 100.0, "longest_silence": 0.0}
+
+    def db(v):
+        return round(20 * math.log10(max(v, 1e-9) / 32768.0), 1)
+
+    win = max(1, int(rate * 0.05))
+    thr = 32768.0 * 10 ** (-40 / 20)
+    silent = longest = run = frames = 0
+    for i in range(0, n, win):
+        seg = a[i:i + win]
+        frames += 1
+        if math.sqrt(sum(x * x for x in seg) / len(seg)) < thr:
+            silent += 1
+            run += 1
+            longest = max(longest, run)
+        else:
+            run = 0
+    return {"sec": round(n / rate, 1),
+            "rms_dbfs": db(math.sqrt(sum(x * x for x in a) / n)),
+            "peak_dbfs": db(max(abs(min(a)), abs(max(a)))),
+            "silence_pct": round(silent * 100 / frames, 1),
+            "longest_silence": round(longest * win / rate, 2)}
+
+
+def build_samples(html_path, models, n, start, out_dir):
+    """🧪 모델 비교: 대본 lines[start:start+n] 을 모델마다 합성 → out_dir/sample-<모델>.mp3 + 지표 출력.
+    episodes.json·docs/ 는 건드리지 않고 gTTS 폴백도 없다. 한 모델이 실패해도 나머지는 계속.
+    반환: [(모델, 지표 dict 또는 None, 오류 문자열 또는 None)]"""
+    week, lines = parse_radio_html(html_path)
+    window = lines[start:start + n]
+    if not window:
+        sys.exit(f"❌ 샘플 구간이 비었음 (대본 {len(lines)}줄, start={start}, n={n})")
+    os.makedirs(out_dir, exist_ok=True)
+    ko = sum(1 for _, lang, _ in window if lang == "ko")
+    chars = sum(len(t) for _, _, t in window)
+    print(f"🧪 {week} 대본 {start}~{start + len(window) - 1}줄 ({len(window)}줄 · ko {ko}줄 · {chars}자) × 모델 {len(models)}개")
+    results = []
+    for i, model in enumerate(models):
+        if i:
+            time.sleep(TTS_PACE_SEC)
+        try:
+            pcm, rate = gemini_tts(window, model)
+            out = os.path.join(out_dir, f"sample-{re.sub(r'[^A-Za-z0-9._-]', '_', model)}.mp3")
+            pcm_to_mp3(pcm, rate, out)
+            st = audio_stats(pcm, rate)
+            st.update(rate=rate, sec_per_line=round(st["sec"] / len(window), 2),
+                      chars_per_sec=round(chars / st["sec"], 1) if st["sec"] else 0.0,
+                      kb=os.path.getsize(out) // 1024, file=os.path.basename(out))
+            results.append((model, st, None))
+            print(f"SAMPLE {model} · {st['sec']}초 · 줄당 {st['sec_per_line']}초 · 초당 {st['chars_per_sec']}자 · "
+                  f"RMS {st['rms_dbfs']}dBFS · peak {st['peak_dbfs']}dBFS · 무음 {st['silence_pct']}% · "
+                  f"최장 무음 {st['longest_silence']}초 · {st['kb']}KB")
+        except Exception as e:
+            results.append((model, None, str(e)[:300]))
+            print(f"SAMPLE {model} · ❌ 실패: {str(e)[:300]}")
+    base = next((st for _, st, _ in results if st), None)
+    if base:
+        for model, st, _ in results:
+            if st and base["sec"]:
+                print(f"  길이 비율 {model}: {st['sec'] / base['sec']:.2f} (첫 성공 모델 = 1.00)")
+    return results
 
 
 def main():
     args = sys.argv[1:]
+
+    def opt(name, default):
+        return args[args.index(name) + 1] if name in args else default
+
+    if "--sample" in args:  # 🧪 모델 비교 — docs/radio/ 를 만들거나 건드리지 않는다
+        models = [m.strip() for m in opt("--models", TTS_MODEL).split(",") if m.strip()]
+        res = build_samples(os.path.join(DOCS, "radio.html"), models, int(opt("--sample", "20")),
+                            int(opt("--start", "0")), opt("--out-dir", "radio-samples"))
+        if not any(st for _, st, _ in res):
+            sys.exit("❌ 모든 모델 샘플 실패")
+        return
+
     os.makedirs(RADIO_DIR, exist_ok=True)
     targets = []  # (html_path, allow_fallback)
     if "--backfill" in args:
