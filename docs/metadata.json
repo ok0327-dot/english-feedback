@@ -511,5 +511,10 @@
     "topic": "The Upside of Stress – Can Stress Be Positive?",
     "target_grammar": "verb form (redundant 'be' before a main verb)",
     "engine": "claude"
+  },
+  "2026-11-19": {
+    "topic": "The Dieter's Dilemma – Why Diets Fail and How to Stay Consistent",
+    "target_grammar": "quantifiers (almost vs. most / almost all)",
+    "engine": "claude"
   }
 }

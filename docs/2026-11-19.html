@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#0f0f13"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="당근영어"><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="icon" type="image/png" sizes="192x192" href="icon-192.png"><script src="install-banner.js" defer></script><script src="sw-reg.js" defer></script>
+    <title>전화영어 복습 - 2026년 11월 19일</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Noto Sans KR',sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.75;min-height:100vh}
+        .header{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);border-bottom:1px solid rgba(255,255,255,.06);padding:48px 24px 40px;text-align:center}
+        .header-date{font-size:13px;color:#94a3b8;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+        .header h1{font-size:28px;font-weight:700;color:#f1f5f9;margin-bottom:16px}
+        .header-meta{display:flex;justify-content:center;gap:24px;font-size:14px;color:#64748b}
+        .header-meta span{display:flex;align-items:center;gap:6px}
+        .cta-section{text-align:center;padding:40px 24px}
+        .cta-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:linear-gradient(135deg,#38bdf8,#818cf8);color:#fff;font-size:16px;font-weight:600;font-family:'Noto Sans KR',sans-serif;border:none;border-radius:50px;cursor:pointer;transition:all .3s;text-decoration:none;box-shadow:0 4px 24px rgba(56,189,248,.25)}
+        .cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(56,189,248,.35)}
+        .cta-btn svg{width:20px;height:20px}
+        .cta-sub{margin-top:12px;font-size:13px;color:#64748b}
+        .toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#38bdf8;padding:14px 28px;border-radius:12px;font-size:14px;font-weight:500;border:1px solid rgba(56,189,248,.2);box-shadow:0 8px 32px rgba(0,0,0,.4);opacity:0;transition:all .4s cubic-bezier(.16,1,.3,1);z-index:1000}
+        .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+        .container{max-width:720px;margin:0 auto;padding:0 24px 80px}
+        .tabs{display:flex;gap:4px;background:#1a1a24;padding:4px;border-radius:12px;margin-bottom:32px}
+        .tab{flex:1;padding:12px;text-align:center;font-size:14px;font-weight:500;color:#64748b;background:0 0;border:none;border-radius:8px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all .2s}
+        .tab.active{background:#262636;color:#f1f5f9}
+        .tab-content{display:none}.tab-content.active{display:block}
+        .feedback h2{font-size:18px;font-weight:700;color:#f1f5f9;margin:36px 0 16px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.06)}
+        .feedback h2:first-child{margin-top:0}
+        .feedback p{margin:8px 0;color:#cbd5e1}
+        .feedback .item{padding:6px 0 6px 16px;border-left:2px solid #334155;margin:6px 0;color:#cbd5e1}
+        .feedback .numbered{padding:8px 0 8px 16px;color:#cbd5e1}
+        .feedback .numbered strong{color:#38bdf8}
+        .feedback strong{color:#f1f5f9}
+        .feedback code{background:#1e293b;padding:2px 8px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#38bdf8}
+        .feedback table{width:100%;border-collapse:collapse;margin:12px 0}
+        .feedback th,.feedback td{padding:10px 14px;text-align:left;border-bottom:1px solid #262636}
+        .feedback th{color:#94a3b8;font-weight:500;font-size:13px}
+        .feedback td{color:#cbd5e1}
+        .arrow{color:#38bdf8;font-weight:700}
+        .transcript{background:#1a1a24;border-radius:12px;padding:28px;font-size:14px;line-height:2;color:#94a3b8;white-space:pre-wrap;word-break:break-word;font-family:'JetBrains Mono','Noto Sans KR',monospace}
+        .transcript .tutor{color:#38bdf8}
+        .transcript .student{color:#a78bfa}
+        @media(max-width:640px){.header{padding:32px 16px}.header h1{font-size:22px}.cta-btn{padding:14px 28px;font-size:15px}.container{padding:0 16px 60px}}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-date">2026년 11월 19일</div>
+        <h1>📚 전화영어 복습</h1>
+        <div class="header-meta">
+            <span>⏱ 20분 24초</span>
+            <span>🎙 전화영어_025180304_20261119080018.m4a</span>
+        </div>
+    </div>
+    <div class="cta-section">
+        <button class="cta-btn" onclick="startReview()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Gemini에서 복습 대화 시작하기
+        </button>
+        <div class="cta-sub">클릭하면 프롬프트가 복사되고 Gemini가 열립니다</div>
+    </div>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('feedback')">📋 AI 피드백</button>
+            <button class="tab" onclick="switchTab('transcript')">🎙 수업 전사</button>
+        </div>
+        <div id="tab-feedback" class="tab-content active">
+            <div class="feedback"><p><strong>0. 📌 Topic</strong></p>
+<br>
+<p>Topic: The Dieter's Dilemma – Why Diets Fail and How to Stay Consistent</p>
+<br>
+<br>
+<p><strong>1. 📊 오늘의 대화 요약 (Summary)</strong></p>
+<br>
+<div class="item">수능 날이라 많은 사람이 10시에 출근한다는 이야기와, AI로 부정행위를 한 수험생 뉴스로 가볍게 대화를 열었습니다.</div>
+<div class="item">'The Dieter's Dilemma' 수업에서 accountable, cookie-cutter, appropriate, fad diet 등 핵심 어휘의 발음과 예문을 연습했습니다. 이어서 다이어트가 실패하는 이유(유행 다이어트, 꾸준함 부족, diet buddy의 필요성)에 관한 지문을 읽고 True/False 문제를 풀었습니다.</div>
+<div class="item">마지막으로 Joey의 체중 관리 습관을 이야기했습니다. 요가·달리기·수영을 하고, 매일 아침 잰 몸무게가 앱에 연결되어 4년 가까이 기록되고 있다는 내용이었습니다.</div>
+<br>
+<br>
+<p><strong>2. 💬 유창성 업그레이드 (Fluency & Natural Flow)</strong></p>
+<br>
+<p><strong>① 컨디션 표현</strong></p>
+<div class="item">❌ 학습자 원문 (As Said): "Yeah, it is a little chilly, but everything's beautiful and my condition is also great."</div>
+<div class="item">✅ 자연스러운 표현 (Natural): "It's a little chilly, but it's a beautiful day, and I'm feeling great too."</div>
+<div class="item">💎 비즈니스 표현 (Professional): "It's a bit chilly, but it's a lovely day, and I'm feeling energized and ready to go."</div>
+<div class="item">💡 코칭 포인트:</div>
+<p>Native speakers rarely say "my condition is great." Talking about your 'condition' sounds medical, like a doctor's report. Use "I'm feeling ~" to talk about how you feel today.</p>
+<p><span class="arrow">→</span> 원어민은 "my condition is great"라고 거의 말하지 않아요. 'condition'이라고 하면 병원 진료 기록처럼 들리거든요. 오늘 몸 상태를 말할 때는 "I'm feeling ~"을 한 덩어리로 쓰세요. (I'm feeling great / I'm feeling a bit tired)</p>
+<br>
+<p><strong>② 뉴스 전하기</strong></p>
+<div class="item">❌ 학습자 원문 (As Said): "Some guy passed the exams to use the AI. I heard."</div>
+<div class="item">✅ 자연스러운 표현 (Natural): "I heard someone used AI to cheat on the exam."</div>
+<div class="item">💎 비즈니스 표현 (Professional): "According to the news, a test-taker was caught using AI during the exam."</div>
+<div class="item">💡 코칭 포인트:</div>
+<p>Start with "I heard ~" so the listener knows it's news right away. Also, "passed the exams to use AI" sounds like the goal of passing was to use AI. "Used AI to cheat" puts the action first and the purpose after.</p>
+<p><span class="arrow">→</span> "I heard ~"로 문장을 시작하면 듣는 사람이 바로 '아, 들은 소식이구나' 하고 알아들어요. 또 "passed the exams to use AI"라고 하면 'AI를 쓰려고 시험에 붙었다'처럼 거꾸로 들려요. "used AI to cheat"처럼 한 일을 먼저 말하고, 목적은 "to + 하다"로 뒤에 붙이세요.</p>
+<br>
+<p><strong>③ 체중계에 올라가기</strong></p>
+<div class="item">❌ 학습자 원문 (As Said): "And every morning, I on the scale and check my weight."</div>
+<div class="item">✅ 자연스러운 표현 (Natural): "Every morning, I step on the scale and check my weight."</div>
+<div class="item">💎 비즈니스 표현 (Professional): "I weigh myself every morning, and the data syncs automatically to my app."</div>
+<div class="item">💡 코칭 포인트:</div>
+<p>The action word is missing here. "Step on the scale" is the natural chunk native speakers use. "Weigh myself" is even shorter and cleaner.</p>
+<p><span class="arrow">→</span> 지금 문장에는 '무엇을 하는지'에 해당하는 말이 빠져 있어서, 원어민 귀엔 말이 중간에 툭 끊긴 것처럼 들려요. "step on the scale"(체중계에 올라가다)을 한 덩어리로 외워 두세요. 더 짧게 "weigh myself"(몸무게를 재다)라고 해도 깔끔합니다.</p>
+<br>
+<p><strong>④ 책임이 있다고 말하기</strong></p>
+<div class="item">❌ 학습자 원문 (As Said): "The team leader usually have accountable to the task."</div>
+<div class="item">✅ 자연스러운 표현 (Natural): "The team leader is usually accountable for the task."</div>
+<div class="item">💎 비즈니스 표현 (Professional): "The team leader is ultimately accountable for the project's outcome."</div>
+<div class="item">💡 코칭 포인트:</div>
+<p>"Accountable" describes what someone *is*, so it goes with "is," not "have." Remember the chunk "be accountable for + the task," and "be accountable to + a person" (like "accountable to the voters").</p>
+<p><span class="arrow">→</span> accountable은 '책임이 있는 상태'를 말하는 단어라 have가 아니라 is와 짝이에요. 맡은 일에는 <strong>"be accountable for + 일"</strong>, 보고해야 하는 사람에게는 <strong>"be accountable to + 사람"</strong> 덩어리로 외워 두세요. 그리고 주인공이 '팀장 한 사람'이면 have가 아니라 is·has 쪽이 붙어요. (He is accountable for… / She has a lot of work.)</p>
+<br>
+<br>
+<p><strong>3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)</strong></p>
+<br>
+<p>Category: quantifiers (almost vs. most / almost all)</p>
+<br>
+<p>🎯 오늘의 패턴: '거의 다·대부분'을 말할 때 almost 하나만 덜렁 쓰는 습관</p>
+<br>
+<p>Joey는 '대부분'이라는 뜻으로 almost를 혼자 쓰는 경우가 많았어요. 하지만 almost는 혼자서 '대부분'이 되지 못해요. 늘 all, every, 숫자 같은 말 앞에 붙어서 '거의 ~'를 만드는 꼬리표 같은 말이에요.</p>
+<br>
+<table>
+<tr><th>❌ 원문 (As Said)</th><th>✅ 교정 예시</th></tr>
+<tr><td>"Yeah, almost many people go for work at 10 a.m. because it is an important day."</td><td>"Most people go to work at 10 a.m. because it's an important day."</td></tr>
+<tr><td>"...because almost the house is similar in Asia."</td><td>"...because almost all the houses look similar in Asia."</td></tr>
+<tr><td>"And I have that data almost during four years."</td><td>"I've had that data for almost four years."</td></tr>
+<tr><td>"Almost. But metabolism is a little difficult for me." (단어를 대부분 안다는 답변)</td><td>"I know most of them, but metabolism is a little difficult for me."</td></tr>
+</table>
+<br>
+<p>📌 핵심 규칙: '대부분'은 <strong>most</strong>, '거의 다'는 <strong>almost all / almost every</strong>, '거의 4년 동안'은 <strong>for almost four years</strong>. almost는 꼭 all, every, 숫자 같은 말과 붙여서 한 덩어리로 쓰세요.</p>
+<br>
+<p>🔁 따라 읽기:</p>
+<div class="item">🗣️ "Most people go to work late on exam day."</div>
+<div class="item">🗣️ "Almost all the houses in my neighborhood look the same."</div>
+<div class="item">🗣️ "Almost every morning, I go for a run."</div>
+<br>
+<br>
+<p><strong>4. 📗 어휘 확장 (Vocabulary Vault)</strong></p>
+<br>
+<p><strong>1) accountable</strong> /əˈkaʊntəbl/ (adjective)</p>
+<div class="item">뜻: 책임이 있는, 결과를 설명할 의무가 있는</div>
+<div class="item">실전 예문: "The project manager is accountable for the final audit report."</div>
+<br>
+<p><strong>2) consistency</strong> /kənˈsɪstənsi/ (noun)</p>
+<div class="item">뜻: 꾸준함, 일관성</div>
+<div class="item">실전 예문: "Consistency matters more than speed when you invest in the long term."</div>
+<br>
+<p><strong>3) metabolism</strong> /məˈtæbəlɪzəm/ (noun) ※ 힘은 두 번째 'TA'에 꾹: me-TA-bolism</p>
+<div class="item">뜻: 신진대사 (먹은 음식을 몸속에서 에너지로 바꾸는 과정)</div>
+<div class="item">실전 예문: "I go for a run before work to boost my metabolism."</div>
+<br>
+<p><strong>4) appropriate</strong> /əˈproʊpriət/ (adjective) ※ 끝을 숫자 eight('에잇')처럼 말하지 말고 짧게 '엇'</p>
+<div class="item">뜻: 적절한, 알맞은</div>
+<div class="item">실전 예문: "Is this format appropriate for the client presentation?"</div>
+<br>
+<p><strong>5) cookie-cutter</strong> /ˈkʊki ˌkʌtər/ (adjective)</p>
+<div class="item">뜻: 똑같이 찍어낸 듯한, 개성 없는</div>
+<div class="item">실전 예문: "We can't use a cookie-cutter approach for every energy contract."</div>
+<br>
+<br>
+<p><strong>5. 📝 실전 복습 챌린지 (Practice)</strong></p>
+<br>
+<p><strong>Q1. (쉬움)</strong> 동료가 오늘 어떠냐고 물어요. "어젯밤에 잠을 잘 못 자서 좀 피곤하지만, 일할 준비는 됐어요"라고 답해 보세요.</p>
+<div class="item">모범 답안: "I'm feeling a bit tired because I didn't sleep well last night, but I'm ready to go."</div>
+<br>
+<p><strong>Q2. (보통)</strong> 회의에서 "우리 팀원 대부분이 그 보고서를 읽었어요. 그리고 저는 이 데이터를 거의 3년째 모으고 있어요."라고 말해 보세요.</p>
+<div class="item">모범 답안: "Most of my team members have read the report, and I've been collecting this data for almost three years."</div>
+<br>
+<p><strong>Q3. (어려움)</strong> 새 프로젝트에 대해 이렇게 의견을 내 보세요. "모든 고객에게 똑같은 방식은 안 통해요. 꾸준함이 핵심이고, 각 담당자가 결과에 책임을 져야 해요."</p>
+<div class="item">모범 답안: "A cookie-cutter approach won't work for every client. Consistency is key, and each manager should be accountable for the results."</div>
+<br>
+<br>
+<p><strong>6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)</strong></p>
+<br>
+<p>✨ <strong>Good Job</strong></p>
+<p>> "In my case, I usually control my body weight using yoga or running or swimming."</p>
+<br>
+<p>"In my case,"로 이제 내 이야기를 한다고 자연스럽게 알렸고, "using ~"으로 방법을 깔끔하게 덧붙였어요. 원어민 귀에도 막힘없이 매끄럽게 들리는 문장입니다. 이렇게 '내 경우 <span class="arrow">→</span> 무엇을 <span class="arrow">→</span> 어떻게' 순서로 말하는 흐름을 계속 살려 보세요!</p>
+<br>
+<p>🚀 <strong>내일의 한 문장</strong></p>
+<p>> "Good morning! I weighed myself this morning, and it was almost the same as yesterday. Most days, my weight doesn't change much!"</p>
+<br>
+<br>
+<p><strong>[성과 지표]</strong></p>
+<br>
+<p><strong>유창성 점수: 6.5 / 10</strong></p>
+<br>
+<p><strong>근거</strong></p>
+<div class="item">👍 튜터가 수능 이야기를 꺼내자 AI 부정행위 뉴스로 대화를 스스로 이어 갔고, "How was your day?"처럼 먼저 질문하며 대화를 주고받았어요.</div>
+<div class="item">👍 "lazy potato"라는 재치 있는 표현을 직접 만들어 냈고(원어민은 "couch potato"라고 해요), "It's change process in our body"처럼 새 단어를 자기 말로 풀어 확인하는 태도가 좋았어요.</div>
+<div class="item">🔧 almost를 '대부분'의 뜻으로 혼자 쓰는 습관이 4번 나와 의미가 흐려졌어요.</div>
+<div class="item">🔧 "I on the scale", "usually have accountable"처럼 핵심 동작 단어가 빠지거나 짝이 맞지 않는 순간이 있었어요.</div>
+<div class="item">🔧 physiology, appropriate, metabolism, dilemma, latest 등 긴 단어의 힘주는 위치와 끝소리가 불안정했어요. 지문을 빨리 읽을 때 buddy <span class="arrow">→</span> body, progress <span class="arrow">→</span> process처럼 비슷한 단어로 바뀌어 읽히기도 했으니, 튜터 말처럼 천천히 읽어 보세요.</div>
+<br>
+<p><strong>🎯 원포인트 액션 플랜</strong></p>
+<p>다음 수업에서 '대부분/거의 다'를 말하고 싶을 때마다 머릿속으로 <strong>"most? almost all?"</strong> 을 한 번 떠올린 뒤 말해 보세요. 수업 전에 아래 문장을 3번 소리 내어 연습하세요.</p>
+<p>"Most people… / Almost all the houses… / for almost four years…"</p></div>
+        </div>
+        <div id="tab-transcript" class="tab-content">
+            <div class="transcript"><span class="tutor">[Tutor]</span> Hello. Good morning. [?]
+
+<span class="student">[Student]</span> Yeah, of course. It&#x27;s a good day. Yeah, it is a little chilly, but everything&#x27;s beautiful and my condition is also great.
+
+<span class="tutor">[Tutor]</span> Wonderful. Good to hear.
+
+<span class="student">[Student]</span> How was your day?
+
+<span class="tutor">[Tutor]</span> Well, my day has been kind of unusual. I&#x27;ve had clients that are having to leave their classes early or they don&#x27;t answer. I know that today is the big exam day in your country.
+
+<span class="student">[Student]</span> Oh, that&#x27;s right.
+
+<span class="tutor">[Tutor]</span> Is that affecting a lot of people? Does it affect a lot of people?
+
+<span class="student">[Student]</span> Yeah, almost many people go for work at 10 a.m. because it is an important day. And before the day ago, it is some big event.
+
+<span class="tutor">[Tutor]</span> Yeah. Okay.
+
+<span class="student">[Student]</span> Some guy passed the exams to use the AI. I heard.
+
+<span class="tutor">[Tutor]</span> You heard.
+
+<span class="student">[Student]</span> Yeah.
+
+<span class="tutor">[Tutor]</span> Oh, my goodness gracious.
+
+<span class="student">[Student]</span> Well, and they said that he could be banned for a year, up to 10 years maybe. [?]
+
+<span class="tutor">[Tutor]</span> Oh, yeah. It&#x27;s going to be interesting to see what happens. But apparently you&#x27;re okay. You&#x27;re here now, so we can begin your class.
+
+<span class="student">[Student]</span> Okay.
+
+<span class="tutor">[Tutor]</span> Do you need a moment to bring up today&#x27;s topic? I can wait.
+
+<span class="student">[Student]</span> Oh, yeah. I&#x27;m okay. I&#x27;m prepared. And today&#x27;s topic is the dietary dilemma. And today, girls give logical opinions about dieting and exercising. [?]
+
+<span class="tutor">[Tutor]</span> Very good. Thank you. All right. Now, so as they do for each of these two-part lessons is they give us a vocabulary.
+
+<span class="student">[Student]</span> Okay.
+
+<span class="tutor">[Tutor]</span> And once again, what I&#x27;ll get you to do, starting on the left-hand side, is I&#x27;ll get you to try reading those words. Then we&#x27;ll check your pronunciation and see if you understand what they mean.
+
+<span class="student">[Student]</span> Okay. Yes.
+
+<span class="tutor">[Tutor]</span> Good.
+
+<span class="student">[Student]</span> The left side, accountable, metabolic, psychology, right? [?]
+
+<span class="tutor">[Tutor]</span> Okay. Let&#x27;s pause for a minute. You&#x27;re very close. I&#x27;m going to get you to try after me. Physiology.
+
+<span class="student">[Student]</span> Physiology.
+
+<span class="tutor">[Tutor]</span> Physiology.
+
+<span class="student">[Student]</span> Physiology.
+
+<span class="tutor">[Tutor]</span> Physiology. Yeah, I&#x27;m going to send it in a sentence with the sound bites, the visual sound bites, so that you can practice it because it is a little bit of a tongue twister.
+
+<span class="student">[Student]</span> Okay.
+
+<span class="tutor">[Tutor]</span> All right, let&#x27;s continue.
+
+<span class="student">[Student]</span> Physiology, determines, routine, appropriate, boosting.
+
+<span class="tutor">[Tutor]</span> Okay. Let&#x27;s try determines. Let&#x27;s try determines.
+
+<span class="student">[Student]</span> Determine.
+
+<span class="tutor">[Tutor]</span> Determine.
+
+<span class="student">[Student]</span> Okay.
+
+<span class="tutor">[Tutor]</span> All right. All right. And you said appropriate. Let&#x27;s try appropriate. Appropriate.
+
+<span class="student">[Student]</span> Appropriate.
+
+<span class="tutor">[Tutor]</span> Very good. Appropriate.
+
+<span class="student">[Student]</span> Appropriate.
+
+<span class="tutor">[Tutor]</span> Okay. What&#x27;s happening, Joey, is you&#x27;re saying the number eight at the end of that word. And if it was a verb, then you would. But this word is an adjective. So I&#x27;ve got to get you to say &quot;at.&quot; Appropriate.
+
+<span class="student">[Student]</span> Appropriate.
+
+<span class="tutor">[Tutor]</span> Appropriate.
+
+<span class="student">[Student]</span> Appropriate. Oh, my God.
+
+<span class="tutor">[Tutor]</span> You&#x27;re trying very hard. It&#x27;s okay. I&#x27;ll send some practice. Let&#x27;s try the next column.
+
+<span class="student">[Student]</span> Okay. Next, the right side. Consistency.
+
+<span class="tutor">[Tutor]</span> Consistency.
+
+<span class="student">[Student]</span> Consistency.
+
+<span class="tutor">[Tutor]</span> Better.
+
+<span class="student">[Student]</span> Present. Cookie cutter. Cookie cutter approach. [?]
+
+<span class="tutor">[Tutor]</span> Cookie cutter approach. Approaches.
+
+<span class="student">[Student]</span> Approaches. Cookie cutter approaches. Dilemma.
+
+<span class="tutor">[Tutor]</span> Okay. That second last word, you pronounced as dilemma.
+
+<span class="student">[Student]</span> Dilemma.
+
+<span class="tutor">[Tutor]</span> But there&#x27;s no R. So let&#x27;s try dilemma.
+
+<span class="student">[Student]</span> Dilemma.
+
+<span class="tutor">[Tutor]</span> Better. Okay, better. Dilemma.
+
+<span class="student">[Student]</span> Dilemma.
+
+<span class="tutor">[Tutor]</span> Dilemma.
+
+<span class="student">[Student]</span> Okay. Yes.
+
+<span class="tutor">[Tutor]</span> Dilemma. Very good. Okay. Now, we&#x27;ve gone through the pronunciation. Are there any words there that you&#x27;re not familiar with that I could explain to you?
+
+<span class="student">[Student]</span> Almost. But metabolism is a little difficult for me.
+
+<span class="tutor">[Tutor]</span> Okay. So you said metabolism. Metabolism. Metab... Yeah. Yeah. You put the stress on the third word part; we put it on the second. Metabolism.
+
+<span class="student">[Student]</span> Okay.
+
+<span class="tutor">[Tutor]</span> Metabolism is a chemical process where food and nutrients are converted into energy, into calories.
+
+<span class="student">[Student]</span> I see. It&#x27;s change process in our body.
+
+<span class="tutor">[Tutor]</span> Okay.
+
+<span class="student">[Student]</span> Metabolism.
+
+<span class="tutor">[Tutor]</span> Yeah. And then that next one, maybe you found a little bit difficult. Physiology is a word that describes studying the structure of the body.
+
+<span class="student">[Student]</span> Yeah. Physiology. Physiology.
+
+<span class="tutor">[Tutor]</span> Okay. Good. Yes. Good. All right. Let&#x27;s move on. We&#x27;re going to go right into our key expressions. We have four of them. You know what to do.
+
+<span class="student">[Student]</span> Okay. Accountable. Accountable. Accountable. Require or expected to adjust to action or decision responsible. Politicans are ultimately accountable to the voters. [?]
+
+<span class="tutor">[Tutor]</span> Okay. I&#x27;m just going to help you fine-tune that first word. You were almost there. You said political. I&#x27;m going to get you to repeat after me. Politicians.
+
+<span class="student">[Student]</span> Politicians.
+
+<span class="tutor">[Tutor]</span> Excellent.
+
+<span class="student">[Student]</span> Politicians are ultimately accountable to the voter.
+
+<span class="tutor">[Tutor]</span> Okay.
+
+<span class="student">[Student]</span> Yes.
+
+<span class="tutor">[Tutor]</span> I&#x27;m going to ask you to try and make a second sentence with this word accountable, please, Joey.
+
+<span class="student">[Student]</span> Okay. The team leader usually have accountable to the task.
+
+<span class="tutor">[Tutor]</span> Okay, that worked. Very good.
+
+<span class="student">[Student]</span> Okay.
+
+<span class="tutor">[Tutor]</span> Let&#x27;s go on to the next phrase from our vocabulary.
+
+<span class="student">[Student]</span> Okay, cookie cutter. Cookie cutter: similar to other things of the same type, especially in a way that shows little imagination.
+
+<span class="tutor">[Tutor]</span> That was very close. May I help you? Imagination.
+
+<span class="student">[Student]</span> Imagination.
+
+<span class="tutor">[Tutor]</span> Imagination.
+
+<span class="student">[Student]</span> Little imagination. Okay, cookie cutter.
+
+<span class="tutor">[Tutor]</span> Imagination.
+
+<span class="student">[Student]</span> Okay.
+
+<span class="tutor">[Tutor]</span> Very good.
+
+<span class="student">[Student]</span> I wouldn&#x27;t live in other those cookie cutter house for a million dollars. [?]
+
+<span class="tutor">[Tutor]</span> Really? Okay, very good. Well, no, like, so what they&#x27;re talking about is when you look down the street and all the houses are the same design, the same color, the same landscaping.
+
+<span class="student">[Student]</span> Yes, maybe if that guy lived in Korea, he lived in a cookie cutter house because almost the house is similar in Asia.
+
+<span class="tutor">[Tutor]</span> Oh, sure. Now, we do that on purpose. We call them townhomes.
+
+<span class="student">[Student]</span> Townhomes.
+
+<span class="tutor">[Tutor]</span> And they&#x27;re collections, yeah, they&#x27;re collections of homes on a set piece of land. So they all look alike, but they have different house numbers. Okay, I&#x27;m not going to ask for a second sentence for this because it&#x27;s more of an expression, an idiom.
+
+<span class="student">[Student]</span> Okay.
+
+<span class="tutor">[Tutor]</span> Let&#x27;s go on to the third word. This is great. We get to practice this word.
+
+<span class="student">[Student]</span> Okay. Appropriate.
+
+<span class="tutor">[Tutor]</span> Appropriate.
+
+<span class="student">[Student]</span> Appropriate.
+
+<span class="tutor">[Tutor]</span> Okay. Let me do it for you one more time. Appropriate.
+
+<span class="student">[Student]</span> Appropriate.
+
+<span class="tutor">[Tutor]</span> Appropriate. Yes. Appropriate.
+
+<span class="student">[Student]</span> Appropriate.
+
+<span class="tutor">[Tutor]</span> Okay, let&#x27;s read the meaning.
+
+<span class="student">[Student]</span> Uh-huh. Oh, suitable or right for particular situation or occasion.
+
+<span class="tutor">[Tutor]</span> Occasion. Okay, I&#x27;m gonna get you try the one word: suitable.
+
+<span class="student">[Student]</span> Suitable.
+
+<span class="tutor">[Tutor]</span> Very good. No SH. Suitable. Very good. Yay.
+
+<span class="student">[Student]</span> Suitable or right for a particular situation or occasions.
+
+<span class="tutor">[Tutor]</span> You got it. Good work. Let&#x27;s try the sentence.
+
+<span class="student">[Student]</span> Okay, is this form appropriate for small children? [?]
+
+<span class="tutor">[Tutor]</span> Okay, okay. No, it is. Can you make a second sentence?
+
+<span class="student">[Student]</span> Oh, yes. This couch is appropriate for lazy potato.
+
+<span class="tutor">[Tutor]</span> For relaxing?
+
+<span class="student">[Student]</span> Okay, lazy potato.
+
+<span class="tutor">[Tutor]</span> Oh, sure, for a couch potato?
+
+<span class="student">[Student]</span> Yes.
+
+<span class="tutor">[Tutor]</span> Yeah, this couch is appropriate for a couch potato. That was great.
+
+<span class="student">[Student]</span> Okay, good.
+
+<span class="tutor">[Tutor]</span> Yes. All right. You&#x27;re doing fantastic.
+
+<span class="student">[Student]</span> Okay.
+
+<span class="tutor">[Tutor]</span> Okay. We&#x27;re on to our last expression. When you&#x27;re ready.
+
+<span class="student">[Student]</span> Fad [?Fat] diet. Fad [?Fat] diet.
+
+<span class="tutor">[Tutor]</span> Good.
+
+<span class="student">[Student]</span> A popular diet used to lose as much weight as possible in a short amount of time.
+
+<span class="tutor">[Tutor]</span> Good.
+
+<span class="student">[Student]</span> A diet. Okay. Did you hear about the latest fad [?fat] diet? You can lose five pounds in only two days.
+
+<span class="tutor">[Tutor]</span> Just a couple of things I want to tweak with you. You said &quot;lattice.&quot; Let&#x27;s try latest.
+
+<span class="student">[Student]</span> Latest.
+
+<span class="tutor">[Tutor]</span> Did you hear about the latest fad diet?
+
+<span class="student">[Student]</span> Okay, latest.
+
+<span class="tutor">[Tutor]</span> In the next part, you said you can lose five pounds.
+
+<span class="student">[Student]</span> Pounds.
+
+<span class="tutor">[Tutor]</span> Let&#x27;s try 50 pounds.
+
+<span class="student">[Student]</span> Yes, 50 pounds.
+
+<span class="tutor">[Tutor]</span> P-p-pounds. 50 pounds. [?]
+
+<span class="student">[Student]</span> Okay, 50 pounds. It&#x27;s early in the morning.
+
+<span class="tutor">[Tutor]</span> Okay. So, yeah, did you hear about the latest fad diet? You can lose 50 pounds in two days. You just cut off parts of your body.
+
+<span class="student">[Student]</span> Yikes, 50 pounds in two days. That&#x27;s crazy. [?]
+
+<span class="tutor">[Tutor]</span> Yeah, it&#x27;s a boxer. [?] I&#x27;m not going to ask you to make a sentence with that, okay?
+
+<span class="student">[Student]</span> Okay.
+
+<span class="tutor">[Tutor]</span> All right. Oh, yeah. Let&#x27;s move on to part C. And below the picture, I&#x27;ll have you read the title and start reading the paragraph. And again, please take your time. What I&#x27;m noticing is if you read a little too fast, you make more mistakes. Okay. Just take your time.
+
+<span class="student">[Student]</span> Is your diet working? The diet dilemma, dieter&#x27;s dilemma. Anyone who has ever diet, diet, dieted, know that losing weight isn&#x27;t always easy.
+
+<span class="tutor">[Tutor]</span> Right.
+
+<span class="student">[Student]</span> You might follow your diet and exercise plan to a T, but still fail to see the scale budget at the end of the day. How can you seemingly be doing everything right but still not losing a pound? This is a dilemma which affects dieters in the world over. [?]
+
+<span class="tutor">[Tutor]</span> Okay. Let&#x27;s fine-tune two words if we could.
+
+<span class="student">[Student]</span> Yes.
+
+<span class="tutor">[Tutor]</span> Okay, fourth line from the bottom. This word you tripped on a little bit. Try this. Seemingly.
+
+<span class="student">[Student]</span> Seemingly?
+
+<span class="tutor">[Tutor]</span> Seemingly.
+
+<span class="student">[Student]</span> Just a moment. What kind of word? Seemingly?
+
+<span class="tutor">[Tutor]</span> Seemingly is an adverb.
+
+<span class="student">[Student]</span> Ah, seemingly.
+
+<span class="tutor">[Tutor]</span> It&#x27;s in the fourth line from the bottom.
+
+<span class="student">[Student]</span> Ah, yes. You can seemingly, yeah.
+
+<span class="tutor">[Tutor]</span> Yeah, very good.
+
+<span class="student">[Student]</span> Sounds like a Chinese thing. [?]
+
+<span class="tutor">[Tutor]</span> You got it.
+
+<span class="student">[Student]</span> Okay.
+
+<span class="tutor">[Tutor]</span> All right. And the other word, you said &quot;affects.&quot; Affects. Let&#x27;s try the F.
+
+<span class="student">[Student]</span> Affects.
+
+<span class="tutor">[Tutor]</span> Affects.
+
+<span class="student">[Student]</span> Affects.
+
+<span class="tutor">[Tutor]</span> Better.
+
+<span class="student">[Student]</span> Okay.
+
+<span class="tutor">[Tutor]</span> All right. Next one. [?]
+
+<span class="student">[Student]</span> Dieter. Okay. There are several factors that contribute heavily to dieting success and failure. One common problem is directly adhering, adhering to fad [?fat] diet that do not take into concentration your unique physically and metabolism. This diet, diet, cookie cutter approach to weight lose may not approach for you. For long-term success, it&#x27;s essential to find a routine that works for your body. [?]
+
+<span class="tutor">[Tutor]</span> Okay.
+
+<span class="student">[Student]</span> And lack of consistency is one of the biggest diet killers.
+
+<span class="tutor">[Tutor]</span> Okay.
+
+<span class="student">[Student]</span> You might go on a diet for a while then quick and then quick before you have made any measurable process. [?]
+
+<span class="tutor">[Tutor]</span> Yeah.
+
+<span class="student">[Student]</span> For this reason, it is helpful to have a daring body to be accountable to. You and your partner can motivate each other to continue. Most importantly, to achieve success, you must continue to think positively and keep going until your end goal is in sight. [?]
+
+<span class="tutor">[Tutor]</span> Very good. That was a mouthful.
+
+<span class="student">[Student]</span> A mouthful.
+
+<span class="tutor">[Tutor]</span> Okay. You did a good job. No worries. All right. Let&#x27;s move on to the part D, true or false. I&#x27;ll get you to read the statement and then tell me if you think it&#x27;s true or false.
+
+<span class="student">[Student]</span> Okay. A dieting body can help you maintain motivation to contribute to your diet. Maybe that&#x27;s right. And maybe just a moment, I can find this article. [?]
+
+<span class="tutor">[Tutor]</span> Sure.
+
+<span class="student">[Student]</span> Anyway. [?]
+
+<span class="tutor">[Tutor]</span> You were correct.
+
+<span class="student">[Student]</span> I can&#x27;t believe it. [?]
+
+<span class="tutor">[Tutor]</span> It is true. Often if you have a diet buddy, you support each other and it helps you to continue longer. You&#x27;re right. You&#x27;re right. A diet buddy, a diet friend can help.
+
+<span class="student">[Student]</span> Okay.
+
+<span class="tutor">[Tutor]</span> Okay.
+
+<span class="student">[Student]</span> And second question?
+
+<span class="tutor">[Tutor]</span> Let&#x27;s get you to read. Yes, please.
+
+<span class="student">[Student]</span> Okay. Fad [?Fat] diet provide a good well-tasting way to achieve your dieting goal. Provide a good well-tasting. Maybe this article says the fad [?fat] diet has a side effect. So that is false.
+
+<span class="tutor">[Tutor]</span> You&#x27;re absolutely right. Very good.
+
+<span class="student">[Student]</span> Okay.
+
+<span class="tutor">[Tutor]</span> Uh-huh. Yeah. Back in the 90s and in the early 2000s, people went on what was called a low-carbohydrate diet. And they lost weight. But the problem was is that if you started eating bread and other carbohydrates, all the weight came back.
+
+<span class="student">[Student]</span> Ah, yes. You&#x27;re right.
+
+<span class="tutor">[Tutor]</span> Yeah, so dieting can be complicated. All right, you did a great job.
+
+<span class="student">[Student]</span> Okay.
+
+<span class="tutor">[Tutor]</span> We&#x27;re moving on to part E, what&#x27;s your opinion?
+
+<span class="student">[Student]</span> Uh-huh.
+
+<span class="tutor">[Tutor]</span> And let&#x27;s get you to read the questions for number one, please.
+
+<span class="student">[Student]</span> Have you ever been on a diet? If so, what was your reason for the diet? How long did it last? In my case, I usually control my body weight using yoga or running or swimming. But that is not regular. And every morning, I on the scale and check my weight. And that is connected to my application. And I have that data almost during four years.
+
+<span class="tutor">[Tutor]</span> Sure.
+
+<span class="student">[Student]</span> Yeah, and if I believe that it&#x27;s overcount, at that dinner, I eat more right or do exercise in the gym. [?]
+
+<span class="tutor">[Tutor]</span> Sure. Yeah. Yep, that makes a lot of sense. If you&#x27;re gaining a little bit of extra weight or a little extra fluff, we call it in English, then yeah, sometimes you want to go back to just watching what you eat and watching the amount.
+
+<span class="student">[Student]</span> Yeah.
+
+<span class="tutor">[Tutor]</span> Yeah. All right. Very well done. All right, my friend, we&#x27;re going to stop there. You did a lot of hard work today. A lot of tongue twisters. I&#x27;m going to get everything typed up and sent to you so you can see the sound bites. And if I&#x27;ll find some pronunciation videos, I&#x27;ll send those as well. Did you have any questions or concerns?
+
+<span class="student">[Student]</span> Oh, no. Thank you for your craft for every day, teacher. [?]
+
+<span class="tutor">[Tutor]</span> Yeah. You&#x27;re very, very welcome. Enjoy your day. I&#x27;ll talk to you again soon.
+
+<span class="student">[Student]</span> Thank you.
+
+<span class="tutor">[Tutor]</span> Yeah.
+
+<span class="student">[Student]</span> Have a nice day. Bye-bye.
+
+<span class="tutor">[Tutor]</span> Bye-bye.</div>
+        </div>
+    </div>
+    <div class="toast" id="toast">✅ 프롬프트가 복사되었습니다!</div>
+    <script>
+        const REVIEW_PROMPT="너는 나의 영어 회화 복습 파트너야. 오늘 내 전화영어 수업 내용을 기반으로 대화하면서 복습을 도와줘.\n\n[오늘 수업 전사 내용]\n[Tutor] Hello. Good morning. [?]\n\n[Student] Yeah, of course. It's a good day. Yeah, it is a little chilly, but everything's beautiful and my condition is also great.\n\n[Tutor] Wonderful. Good to hear.\n\n[Student] How was your day?\n\n[Tutor] Well, my day has been kind of unusual. I've had clients that are having to leave their classes early or they don't answer. I know that today is the big exam day in your country.\n\n[Student] Oh, that's right.\n\n[Tutor] Is that affecting a lot of people? Does it affect a lot of people?\n\n[Student] Yeah, almost many people go for work at 10 a.m. because it is an important day. And before the day ago, it is some big event.\n\n[Tutor] Yeah. Okay.\n\n[Student] Some guy passed the exams to use the AI. I heard.\n\n[Tutor] You heard.\n\n[Student] Yeah.\n\n[Tutor] Oh, my goodness gracious.\n\n[Student] Well, and they said that he could be banned for a year, up to 10 years maybe. [?]\n\n[Tutor] Oh, yeah. It's going to be interesting to see what happens. But apparently you're okay. You're here now, so we can begin your class.\n\n[Student] Okay.\n\n[Tutor] Do you need a moment to bring up today's topic? I can wait.\n\n[Student] Oh, yeah. I'm okay. I'm prepared. And today's topic is the dietary dilemma. And today, girls give logical opinions about dieting and exercising. [?]\n\n[Tutor] Very good. Thank you. All right. Now, so as they do for each of these two-part lessons is they give us a vocabulary.\n\n[Student] Okay.\n\n[Tutor] And once again, what I'll get you to do, starting on the left-hand side, is I'll get you to try reading those words. Then we'll check your pronunciation and see if you understand what they mean.\n\n[Student] Okay. Yes.\n\n[Tutor] Good.\n\n[Student] The left side, accountable, metabolic, psychology, right? [?]\n\n[Tutor] Okay. Let's pause for a minute. You're very close. I'm going to get you to try after me. Physiology.\n\n[Student] Physiology.\n\n[Tutor] Physiology.\n\n[Student] Physiology.\n\n[Tutor] Physiology. Yeah, I'm going to send it in a sentence with the sound bites, the visual sound bites, so that you can practice it because it is a little bit of a tongue twister.\n\n[Student] Okay.\n\n[Tutor] All right, let's continue.\n\n[Student] Physiology, determines, routine, appropriate, boosting.\n\n[Tutor] Okay. Let's try determines. Let's try determines.\n\n[Student] Determine.\n\n[Tutor] Determine.\n\n[Student] Okay.\n\n[Tutor] All right. All right. And you said appropriate. Let's try appropriate. Appropriate.\n\n[Student] Appropriate.\n\n[Tutor] Very good. Appropriate.\n\n[Student] Appropriate.\n\n[Tutor] Okay. What's happening, Joey, is you're saying the number eight at the end of that word. And if it was a verb, then you would. But this word is an adjective. So I've got to get you to say \"at.\" Appropriate.\n\n[Student] Appropriate.\n\n[Tutor] Appropriate.\n\n[Student] Appropriate. Oh, my God.\n\n[Tutor] You're trying very hard. It's okay. I'll send some practice. Let's try the next column.\n\n[Student] Okay. Next, the right side. Consistency.\n\n[Tutor] Consistency.\n\n[Student] Consistency.\n\n[Tutor] Better.\n\n[Student] Present. Cookie cutter. Cookie cutter approach. [?]\n\n[Tutor] Cookie cutter approach. Approaches.\n\n[Student] Approaches. Cookie cutter approaches. Dilemma.\n\n[Tutor] Okay. That second last word, you pronounced as dilemma.\n\n[Student] Dilemma.\n\n[Tutor] But there's no R. So let's try dilemma.\n\n[Student] Dilemma.\n\n[Tutor] Better. Okay, better. Dilemma.\n\n[Student] Dilemma.\n\n[Tutor] Dilemma.\n\n[Student] Okay. Yes.\n\n[Tutor] Dilemma. Very good. Okay. Now, we've gone through the pronunciation. Are there any words there that you're not familiar with that I could explain to you?\n\n[Student] Almost. But metabolism is a little difficult for me.\n\n[Tutor] Okay. So you said metabolism. Metabolism. Metab... Yeah. Yeah. You put the stress on the third word part; we put it on the second. Metabolism.\n\n[Student] Okay.\n\n[Tutor] Metabolism is a chemical process where food and nutrients are converted into energy, into calories.\n\n[Student] I see. It's change process in our body.\n\n[Tutor] Okay.\n\n[Student] Metabolism.\n\n[Tutor] Yeah. And then that next one, maybe you found a little bit difficult. Physiology is a word that describes studying the structure of the body.\n\n[Student] Yeah. Physiology. Physiology.\n\n[Tutor] Okay. Good. Yes. Good. All right. Let's move on. We're going to go right into our key expressions. We have four of them. You know what to do.\n\n[Student] Okay. Accountable. Accountable. Accountable. Require or expected to adjust to action or decision responsible. Politicans are ultimately accountable to the voters. [?]\n\n[Tutor] Okay. I'm just going to help you fine-tune that first word. You were almost there. You said political. I'm going to get you to repeat after me. Politicians.\n\n[Student] Politicians.\n\n[Tutor] Excellent.\n\n[Student] Politicians are ultimately accountable to the voter.\n\n[Tutor] Okay.\n\n[Student] Yes.\n\n[Tutor] I'm going to ask you to try and make a second sentence with this word accountable, please, Joey.\n\n[Student] Okay. The team leader usually have accountable to the task.\n\n[Tutor] Okay, that worked. Very good.\n\n[Student] Okay.\n\n[Tutor] Let's go on to the next phrase from our vocabulary.\n\n[Student] Okay, cookie cutter. Cookie cutter: similar to other things of the same type, especially in a way that shows little imagination.\n\n[Tutor] That was very close. May I help you? Imagination.\n\n[Student] Imagination.\n\n[Tutor] Imagination.\n\n[Student] Little imagination. Okay, cookie cutter.\n\n[Tutor] Imagination.\n\n[Student] Okay.\n\n[Tutor] Very good.\n\n[Student] I wouldn't live in other those cookie cutter house for a million dollars. [?]\n\n[Tutor] Really? Okay, very good. Well, no, like, so what they're talking about is when you look down the street and all the houses are the same design, the same color, the same landscaping.\n\n[Student] Yes, maybe if that guy lived in Korea, he lived in a cookie cutter house because almost the house is similar in Asia.\n\n[Tutor] Oh, sure. Now, we do that on purpose. We call them townhomes.\n\n[Student] Townhomes.\n\n[Tutor] And they're collections, yeah, they're collections of homes on a set piece of land. So they all look alike, but they have different house numbers. Okay, I'm not going to ask for a second sentence for this because it's more of an expression, an idiom.\n\n[Student] Okay.\n\n[Tutor] Let's go on to the third word. This is great. We get to practice this word.\n\n[Student] Okay. Appropriate.\n\n[Tutor] Appropriate.\n\n[Student] Appropriate.\n\n[Tutor] Okay. Let me do it for you one more time. Appropriate.\n\n[Student] Appropriate.\n\n[Tutor] Appropriate. Yes. Appropriate.\n\n[Student] Appropriate.\n\n[Tutor] Okay, let's read the meaning.\n\n[Student] Uh-huh. Oh, suitable or right for particular situation or occasion.\n\n[Tutor] Occasion. Okay, I'm gonna get you try the one word: suitable.\n\n[Student] Suitable.\n\n[Tutor] Very good. No SH. Suitable. Very good. Yay.\n\n[Student] Suitable or right for a particular situation or occasions.\n\n[Tutor] You got it. Good work. Let's try the sentence.\n\n[Student] Okay, is this form appropriate for small children? [?]\n\n[Tutor] Okay, okay. No, it is. Can you make a second sentence?\n\n[Student] Oh, yes. This couch is appropriate for lazy potato.\n\n[Tutor] For relaxing?\n\n[Student] Okay, lazy potato.\n\n[Tutor] Oh, sure, for a couch potato?\n\n[Student] Yes.\n\n[Tutor] Yeah, this couch is appropriate for a couch potato. That was great.\n\n[Student] Okay, good.\n\n[Tutor] Yes. All right. You're doing fantastic.\n\n[Student] Okay.\n\n[Tutor] Okay. We're on to our last expression. When you're ready.\n\n[Student] Fad [?Fat] diet. Fad [?Fat] diet.\n\n[Tutor] Good.\n\n[Student] A popular diet used to lose as much weight as possible in a short amount of time.\n\n[Tutor] Good.\n\n[Student] A diet. Okay. Did you hear about the latest fad [?fat] diet? You can lose five pounds in only two days.\n\n[Tutor] Just a couple of things I want to tweak with you. You said \"lattice.\" Let's try latest.\n\n[Student] Latest.\n\n[Tutor] Did you hear about the latest fad diet?\n\n[Student] Okay, latest.\n\n[Tutor] In the next part, you said you can lose five pounds.\n\n[Student] Pounds.\n\n[Tutor] Let's try 50 pounds.\n\n[Student] Yes, 50 pounds.\n\n[Tutor] P-p-pounds. 50 pounds. [?]\n\n[Student] Okay, 50 pounds. It's early in the morning.\n\n[Tutor] Okay. So, yeah, did you hear about the latest fad diet? You can lose 50 pounds in two days. You just cut off parts of your body.\n\n[Student] Yikes, 50 pounds in two days. That's crazy. [?]\n\n[Tutor] Yeah, it's a boxer. [?] I'm not going to ask you to make a sentence with that, okay?\n\n[Student] Okay.\n\n[Tutor] All right. Oh, yeah. Let's move on to part C. And below the picture, I'll have you read the title and start reading the paragraph. And again, please take your time. What I'm noticing is if you read a little too fast, you make more mistakes. Okay. Just take your time.\n\n[Student] Is your diet working? The diet dilemma, dieter's dilemma. Anyone who has ever diet, diet, dieted, know that losing weight isn't always easy.\n\n[Tutor] Right.\n\n[Student] You might follow your diet and exercise plan to a T, but still fail to see the scale budget at the end of the day. How can you seemingly be doing everything right but still not losing a pound? This is a dilemma which affects dieters in the world over. [?]\n\n[Tutor] Okay. Let's fine-tune two words if we could.\n\n[Student] Yes.\n\n[Tutor] Okay, fourth line from the bottom. This word you tripped on a little bit. Try this. Seemingly.\n\n[Student] Seemingly?\n\n[Tutor] Seemingly.\n\n[Student] Just a moment. What kind of word? Seemingly?\n\n[Tutor] Seemingly is an adverb.\n\n[Student] Ah, seemingly.\n\n[Tutor] It's in the fourth line from the bottom.\n\n[Student] Ah, yes. You can seemingly, yeah.\n\n[Tutor] Yeah, very good.\n\n[Student] Sounds like a Chinese thing. [?]\n\n[Tutor] You got it.\n\n[Student] Okay.\n\n[Tutor] All right. And the other word, you said \"affects.\" Affects. Let's try the F.\n\n[Student] Affects.\n\n[Tutor] Affects.\n\n[Student] Affects.\n\n[Tutor] Better.\n\n[Student] Okay.\n\n[Tutor] All right. Next one. [?]\n\n[Student] Dieter. Okay. There are several factors that contribute heavily to dieting success and failure. One common problem is directly adhering, adhering to fad [?fat] diet that do not take into concentration your unique physically and metabolism. This diet, diet, cookie cutter approach to weight lose may not approach for you. For long-term success, it's essential to find a routine that works for your body. [?]\n\n[Tutor] Okay.\n\n[Student] And lack of consistency is one of the biggest diet killers.\n\n[Tutor] Okay.\n\n[Student] You might go on a diet for a while then quick and then quick before you have made any measurable process. [?]\n\n[Tutor] Yeah.\n\n[Student] For this reason, it is helpful to have a daring body to be accountable to. You and your partner can motivate each other to continue. Most importantly, to achieve success, you must continue to think positively and keep going until your end goal is in sight. [?]\n\n[Tutor] Very good. That was a mouthful.\n\n[Student] A mouthful.\n\n[Tutor] Okay. You did a good job. No worries. All right. Let's move on to the part D, true or false. I'll get you to read the statement and then tell me if you think it's true or false.\n\n[Student] Okay. A dieting body can help you maintain motivation to contribute to your diet. Maybe that's right. And maybe just a moment, I can find this article. [?]\n\n[Tutor] Sure.\n\n[Student] Anyway. [?]\n\n[Tutor] You were correct.\n\n[Student] I can't believe it. [?]\n\n[Tutor] It is true. Often if you have a diet buddy, you support each other and it helps you to continue longer. You're right. You're right. A diet buddy, a diet friend can help.\n\n[Student] Okay.\n\n[Tutor] Okay.\n\n[Student] And second question?\n\n[Tutor] Let's get you to read. Yes, please.\n\n[Student] Okay. Fad [?Fat] diet provide a good well-tasting way to achieve your dieting goal. Provide a good well-tasting. Maybe this article says the fad [?fat] diet has a side effect. So that is false.\n\n[Tutor] You're absolutely right. Very good.\n\n[Student] Okay.\n\n[Tutor] Uh-huh. Yeah. Back in the 90s and in the early 2000s, people went on what was called a low-carbohydrate diet. And they lost weight. But the problem was is that if you started eating bread and other carbohydrates, all the weight came back.\n\n[Student] Ah, yes. You're right.\n\n[Tutor] Yeah, so dieting can be complicated. All right, you did a great job.\n\n[Student] Okay.\n\n[Tutor] We're moving on to part E, what's your opinion?\n\n[Student] Uh-huh.\n\n[Tutor] And let's get you to read the questions for number one, please.\n\n[Student] Have you ever been on a diet? If so, what was your reason for the diet? How long did it last? In my case, I usually control my body weight using yoga or running or swimming. But that is not regular. And every morning, I on the scale and check my weight. And that is connected to my application. And I have that data almost during four years.\n\n[Tutor] Sure.\n\n[Student] Yeah, and if I believe that it's overcount, at that dinner, I eat more right or do exercise in the gym. [?]\n\n[Tutor] Sure. Yeah. Yep, that makes a lot of sense. If you're gaining a little bit of extra weight or a little extra fluff, we call it in English, then yeah, sometimes you want to go back to just watching what you eat and watching the amount.\n\n[Student] Yeah.\n\n[Tutor] Yeah. All right. Very well done. All right, my friend, we're going to stop there. You did a lot of hard work today. A lot of tongue twisters. I'm going to get everything typed up and sent to you so you can see the sound bites. And if I'll find some pronunciation videos, I'll send those as well. Did you have any questions or concerns?\n\n[Student] Oh, no. Thank you for your craft for every day, teacher. [?]\n\n[Tutor] Yeah. You're very, very welcome. Enjoy your day. I'll talk to you again soon.\n\n[Student] Thank you.\n\n[Tutor] Yeah.\n\n[Student] Have a nice day. Bye-bye.\n\n[Tutor] Bye-bye.\n\n[AI 피드백]\n**0. 📌 Topic**\n\nTopic: The Dieter's Dilemma – Why Diets Fail and How to Stay Consistent\n\n---\n\n**1. 📊 오늘의 대화 요약 (Summary)**\n\n- 수능 날이라 많은 사람이 10시에 출근한다는 이야기와, AI로 부정행위를 한 수험생 뉴스로 가볍게 대화를 열었습니다.\n- 'The Dieter's Dilemma' 수업에서 accountable, cookie-cutter, appropriate, fad diet 등 핵심 어휘의 발음과 예문을 연습했습니다. 이어서 다이어트가 실패하는 이유(유행 다이어트, 꾸준함 부족, diet buddy의 필요성)에 관한 지문을 읽고 True/False 문제를 풀었습니다.\n- 마지막으로 Joey의 체중 관리 습관을 이야기했습니다. 요가·달리기·수영을 하고, 매일 아침 잰 몸무게가 앱에 연결되어 4년 가까이 기록되고 있다는 내용이었습니다.\n\n---\n\n**2. 💬 유창성 업그레이드 (Fluency & Natural Flow)**\n\n**① 컨디션 표현**\n- ❌ 학습자 원문 (As Said): \"Yeah, it is a little chilly, but everything's beautiful and my condition is also great.\"\n- ✅ 자연스러운 표현 (Natural): \"It's a little chilly, but it's a beautiful day, and I'm feeling great too.\"\n- 💎 비즈니스 표현 (Professional): \"It's a bit chilly, but it's a lovely day, and I'm feeling energized and ready to go.\"\n- 💡 코칭 포인트:\n  Native speakers rarely say \"my condition is great.\" Talking about your 'condition' sounds medical, like a doctor's report. Use \"I'm feeling ~\" to talk about how you feel today.\n  → 원어민은 \"my condition is great\"라고 거의 말하지 않아요. 'condition'이라고 하면 병원 진료 기록처럼 들리거든요. 오늘 몸 상태를 말할 때는 \"I'm feeling ~\"을 한 덩어리로 쓰세요. (I'm feeling great / I'm feeling a bit tired)\n\n**② 뉴스 전하기**\n- ❌ 학습자 원문 (As Said): \"Some guy passed the exams to use the AI. I heard.\"\n- ✅ 자연스러운 표현 (Natural): \"I heard someone used AI to cheat on the exam.\"\n- 💎 비즈니스 표현 (Professional): \"According to the news, a test-taker was caught using AI during the exam.\"\n- 💡 코칭 포인트:\n  Start with \"I heard ~\" so the listener knows it's news right away. Also, \"passed the exams to use AI\" sounds like the goal of passing was to use AI. \"Used AI to cheat\" puts the action first and the purpose after.\n  → \"I heard ~\"로 문장을 시작하면 듣는 사람이 바로 '아, 들은 소식이구나' 하고 알아들어요. 또 \"passed the exams to use AI\"라고 하면 'AI를 쓰려고 시험에 붙었다'처럼 거꾸로 들려요. \"used AI to cheat\"처럼 한 일을 먼저 말하고, 목적은 \"to + 하다\"로 뒤에 붙이세요.\n\n**③ 체중계에 올라가기**\n- ❌ 학습자 원문 (As Said): \"And every morning, I on the scale and check my weight.\"\n- ✅ 자연스러운 표현 (Natural): \"Every morning, I step on the scale and check my weight.\"\n- 💎 비즈니스 표현 (Professional): \"I weigh myself every morning, and the data syncs automatically to my app.\"\n- 💡 코칭 포인트:\n  The action word is missing here. \"Step on the scale\" is the natural chunk native speakers use. \"Weigh myself\" is even shorter and cleaner.\n  → 지금 문장에는 '무엇을 하는지'에 해당하는 말이 빠져 있어서, 원어민 귀엔 말이 중간에 툭 끊긴 것처럼 들려요. \"step on the scale\"(체중계에 올라가다)을 한 덩어리로 외워 두세요. 더 짧게 \"weigh myself\"(몸무게를 재다)라고 해도 깔끔합니다.\n\n**④ 책임이 있다고 말하기**\n- ❌ 학습자 원문 (As Said): \"The team leader usually have accountable to the task.\"\n- ✅ 자연스러운 표현 (Natural): \"The team leader is usually accountable for the task.\"\n- 💎 비즈니스 표현 (Professional): \"The team leader is ultimately accountable for the project's outcome.\"\n- 💡 코칭 포인트:\n  \"Accountable\" describes what someone *is*, so it goes with \"is,\" not \"have.\" Remember the chunk \"be accountable for + the task,\" and \"be accountable to + a person\" (like \"accountable to the voters\").\n  → accountable은 '책임이 있는 상태'를 말하는 단어라 have가 아니라 is와 짝이에요. 맡은 일에는 **\"be accountable for + 일\"**, 보고해야 하는 사람에게는 **\"be accountable to + 사람\"** 덩어리로 외워 두세요. 그리고 주인공이 '팀장 한 사람'이면 have가 아니라 is·has 쪽이 붙어요. (He is accountable for… / She has a lot of work.)\n\n---\n\n**3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)**\n\nCategory: quantifiers (almost vs. most / almost all)\n\n🎯 오늘의 패턴: '거의 다·대부분'을 말할 때 almost 하나만 덜렁 쓰는 습관\n\nJoey는 '대부분'이라는 뜻으로 almost를 혼자 쓰는 경우가 많았어요. 하지만 almost는 혼자서 '대부분'이 되지 못해요. 늘 all, every, 숫자 같은 말 앞에 붙어서 '거의 ~'를 만드는 꼬리표 같은 말이에요.\n\n| ❌ 원문 (As Said) | ✅ 교정 예시 |\n|---|---|\n| \"Yeah, almost many people go for work at 10 a.m. because it is an important day.\" | \"Most people go to work at 10 a.m. because it's an important day.\" |\n| \"...because almost the house is similar in Asia.\" | \"...because almost all the houses look similar in Asia.\" |\n| \"And I have that data almost during four years.\" | \"I've had that data for almost four years.\" |\n| \"Almost. But metabolism is a little difficult for me.\" (단어를 대부분 안다는 답변) | \"I know most of them, but metabolism is a little difficult for me.\" |\n\n📌 핵심 규칙: '대부분'은 **most**, '거의 다'는 **almost all / almost every**, '거의 4년 동안'은 **for almost four years**. almost는 꼭 all, every, 숫자 같은 말과 붙여서 한 덩어리로 쓰세요.\n\n🔁 따라 읽기:\n- 🗣️ \"Most people go to work late on exam day.\"\n- 🗣️ \"Almost all the houses in my neighborhood look the same.\"\n- 🗣️ \"Almost every morning, I go for a run.\"\n\n---\n\n**4. 📗 어휘 확장 (Vocabulary Vault)**\n\n**1) accountable** /əˈkaʊntəbl/ (adjective)\n- 뜻: 책임이 있는, 결과를 설명할 의무가 있는\n- 실전 예문: \"The project manager is accountable for the final audit report.\"\n\n**2) consistency** /kənˈsɪstənsi/ (noun)\n- 뜻: 꾸준함, 일관성\n- 실전 예문: \"Consistency matters more than speed when you invest in the long term.\"\n\n**3) metabolism** /məˈtæbəlɪzəm/ (noun) ※ 힘은 두 번째 'TA'에 꾹: me-TA-bolism\n- 뜻: 신진대사 (먹은 음식을 몸속에서 에너지로 바꾸는 과정)\n- 실전 예문: \"I go for a run before work to boost my metabolism.\"\n\n**4) appropriate** /əˈproʊpriət/ (adjective) ※ 끝을 숫자 eight('에잇')처럼 말하지 말고 짧게 '엇'\n- 뜻: 적절한, 알맞은\n- 실전 예문: \"Is this format appropriate for the client presentation?\"\n\n**5) cookie-cutter** /ˈkʊki ˌkʌtər/ (adjective)\n- 뜻: 똑같이 찍어낸 듯한, 개성 없는\n- 실전 예문: \"We can't use a cookie-cutter approach for every energy contract.\"\n\n---\n\n**5. 📝 실전 복습 챌린지 (Practice)**\n\n**Q1. (쉬움)** 동료가 오늘 어떠냐고 물어요. \"어젯밤에 잠을 잘 못 자서 좀 피곤하지만, 일할 준비는 됐어요\"라고 답해 보세요.\n- 모범 답안: \"I'm feeling a bit tired because I didn't sleep well last night, but I'm ready to go.\"\n\n**Q2. (보통)** 회의에서 \"우리 팀원 대부분이 그 보고서를 읽었어요. 그리고 저는 이 데이터를 거의 3년째 모으고 있어요.\"라고 말해 보세요.\n- 모범 답안: \"Most of my team members have read the report, and I've been collecting this data for almost three years.\"\n\n**Q3. (어려움)** 새 프로젝트에 대해 이렇게 의견을 내 보세요. \"모든 고객에게 똑같은 방식은 안 통해요. 꾸준함이 핵심이고, 각 담당자가 결과에 책임을 져야 해요.\"\n- 모범 답안: \"A cookie-cutter approach won't work for every client. Consistency is key, and each manager should be accountable for the results.\"\n\n---\n\n**6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)**\n\n✨ **Good Job**\n> \"In my case, I usually control my body weight using yoga or running or swimming.\"\n\n\"In my case,\"로 이제 내 이야기를 한다고 자연스럽게 알렸고, \"using ~\"으로 방법을 깔끔하게 덧붙였어요. 원어민 귀에도 막힘없이 매끄럽게 들리는 문장입니다. 이렇게 '내 경우 → 무엇을 → 어떻게' 순서로 말하는 흐름을 계속 살려 보세요!\n\n🚀 **내일의 한 문장**\n> \"Good morning! I weighed myself this morning, and it was almost the same as yesterday. Most days, my weight doesn't change much!\"\n\n---\n\n**[성과 지표]**\n\n**유창성 점수: 6.5 / 10**\n\n**근거**\n- 👍 튜터가 수능 이야기를 꺼내자 AI 부정행위 뉴스로 대화를 스스로 이어 갔고, \"How was your day?\"처럼 먼저 질문하며 대화를 주고받았어요.\n- 👍 \"lazy potato\"라는 재치 있는 표현을 직접 만들어 냈고(원어민은 \"couch potato\"라고 해요), \"It's change process in our body\"처럼 새 단어를 자기 말로 풀어 확인하는 태도가 좋았어요.\n- 🔧 almost를 '대부분'의 뜻으로 혼자 쓰는 습관이 4번 나와 의미가 흐려졌어요.\n- 🔧 \"I on the scale\", \"usually have accountable\"처럼 핵심 동작 단어가 빠지거나 짝이 맞지 않는 순간이 있었어요.\n- 🔧 physiology, appropriate, metabolism, dilemma, latest 등 긴 단어의 힘주는 위치와 끝소리가 불안정했어요. 지문을 빨리 읽을 때 buddy → body, progress → process처럼 비슷한 단어로 바뀌어 읽히기도 했으니, 튜터 말처럼 천천히 읽어 보세요.\n\n**🎯 원포인트 액션 플랜**\n다음 수업에서 '대부분/거의 다'를 말하고 싶을 때마다 머릿속으로 **\"most? almost all?\"** 을 한 번 떠올린 뒤 말해 보세요. 수업 전에 아래 문장을 3번 소리 내어 연습하세요.\n\"Most people… / Almost all the houses… / for almost four years…\"\n\n위 내용을 바탕으로:\n1. 먼저 오늘 수업에서 내가 틀렸거나 어색했던 표현을 하나 골라서, 관련된 상황을 영어로 질문해줘.\n2. 내가 영어로 대답하면, 자연스러운지 확인하고 더 나은 표현이 있으면 알려줘.\n3. 특히 \"반복 실수 패턴\"에서 지적된 부분을 집중적으로 연습시켜줘.\n4. 이런 식으로 오늘 배운 표현들을 하나씩 복습하자.\n5. 한국어 설명은 필요할 때만 간단히, 대화는 최대한 영어로 진행해줘.\n\n그럼 시작하자!";
+        function startReview(){navigator.clipboard.writeText(REVIEW_PROMPT).then(()=>{showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)}).catch(()=>{const t=document.createElement('textarea');t.value=REVIEW_PROMPT;document.body.appendChild(t);t.select();document.execCommand('copy');document.body.removeChild(t);showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)})}
+        function showToast(){const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500)}
+        function switchTab(n){document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',n==='feedback'?i===0:i===1));document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));document.getElementById('tab-'+n).classList.add('active')}
+    </script>
+</body>
+</html>
