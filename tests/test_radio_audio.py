@@ -198,6 +198,36 @@ def main():
             check("docs/radio·episodes.json 안 건드림", not os.path.exists(A.RADIO_DIR))
             A.RADIO_DIR = old_dir
 
+        # 8-0) 시간 예산: 응답 없이 멈추는(timeout) 최악의 경우에도 예산 안에서 멈추고 대체 모델은 건너뜀
+        #      (코덱스 리뷰 2026-11-19: 예산 없으면 두 모델 × (4×240초 + 180초) = 38분 > 작업 제한 40분 - 준비)
+        print("8-0) 시간 예산")
+        clock = [0.0]
+        real_mono = A.time.monotonic
+        A.time.monotonic = lambda: clock[0]
+        A.time.sleep = lambda s: clock.__setitem__(0, clock[0] + s)
+        urls = []
+
+        def post_hang(url, **kw):
+            urls.append(url)
+            clock[0] += kw["timeout"]  # 응답 없이 timeout 까지 멈춤
+            raise A.requests.exceptions.Timeout("read timed out")
+        A.requests.post = post_hang
+        old_main, old_fb, old_budget = A.TTS_MODEL, A.TTS_FALLBACK_MODELS, A.GEMINI_BUDGET_SEC
+        A.TTS_MODEL, A.TTS_FALLBACK_MODELS, A.GEMINI_BUDGET_SEC = "main-m", ["lite-m"], 600
+        try:
+            A.gemini_tts_ladder([("민지", "en", "Hi.")] * 3)
+            check("멈춤 → 예외", False)
+        except A.TTSBudgetExceeded:
+            check("멈춤 → TTSBudgetExceeded", True)
+        except Exception as e:
+            check(f"멈춤 → TTSBudgetExceeded (실제: {type(e).__name__})", False)
+        check("예산(600초) 안에서 끝남", clock[0] <= 600)
+        check("예산 소진 뒤 대체 모델은 부르지 않음", urls and all("/models/main-m:" in u for u in urls))
+        check("예산은 호출이 끝나면 해제", A._deadline is None)
+        A.TTS_MODEL, A.TTS_FALLBACK_MODELS, A.GEMINI_BUDGET_SEC = old_main, old_fb, old_budget
+        A.time.monotonic = real_mono
+        A.time.sleep = lambda s: sleeps.append(s)
+
         # 8) CLI --sample: 전부 실패면 종료 코드 ≠ 0
         print("8) CLI")
         with tempfile.TemporaryDirectory() as td:

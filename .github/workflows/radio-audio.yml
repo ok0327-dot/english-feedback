@@ -29,7 +29,8 @@ concurrency:
 jobs:
   audio:
     runs-on: ubuntu-latest
-    # 기본 모델이 일일 한도로 중간에 실패하면 대체 모델(lite)로 에피소드 전체를 다시 합성 → 최악 약 2배 시간
+    # 기본 모델이 일일 한도로 중간에 실패하면 대체 모델(lite)로 에피소드 전체를 다시 합성(정상 ≈ 9분, 다시 합성 포함 ≈ 18분).
+    # Gemini 는 모델·재시도 합계 25분 예산(GEMINI_TTS_BUDGET_SEC)에서 끊고 gTTS 로 → 준비 + 25분 + gTTS 가 40분 안
     timeout-minutes: 40
     steps:
       - name: 📥 체크아웃
