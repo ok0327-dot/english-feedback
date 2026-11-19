@@ -1,0 +1,47 @@
+{
+ "date": "2026-11-19",
+ "iso": [
+  2026,
+  47
+ ],
+ "topic": "The Dieter's Dilemma – Why Diets Fail and How to Stay Consistent",
+ "grammar": "quantifiers",
+ "grammar_norm": "Determiners / Quantifiers",
+ "score": 6.5,
+ "pairs": [
+  {
+   "said": "Yeah, it is a little chilly, but everything's beautiful and my condition is also great.",
+   "natural": "It's a little chilly, but it's a beautiful day, and I'm feeling great too."
+  },
+  {
+   "said": "Some guy passed the exams to use the AI. I heard.",
+   "natural": "I heard someone used AI to cheat on the exam."
+  },
+  {
+   "said": "And every morning, I on the scale and check my weight.",
+   "natural": "Every morning, I step on the scale and check my weight."
+  },
+  {
+   "said": "The team leader usually have accountable to the task.",
+   "natural": "The team leader is usually accountable for the task."
+  }
+ ],
+ "vocab": [
+  {
+   "word": "accountable",
+   "pos": "adjective",
+   "meaning": "책임이 있는, 결과를 설명할 의무가 있는"
+  },
+  {
+   "word": "consistency",
+   "pos": "noun",
+   "meaning": "꾸준함, 일관성"
+  },
+  {
+   "word": "cookie-cutter",
+   "pos": "adjective",
+   "meaning": "똑같이 찍어낸 듯한, 개성 없는"
+  }
+ ],
+ "_html_md5": "b8fcd0f6aaceaee7c97f3a3e164f5ea7"
+}
