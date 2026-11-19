@@ -38,6 +38,8 @@ jobs:
           fi
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          # 작업 제한 25분 안에 준비·커밋 여유를 남기도록 Gemini 합성 예산은 20분 (기본 25분은 radio-audio.yml 40분 기준)
+          GEMINI_TTS_BUDGET_SEC: '1200'
       - name: 💾 커밋·푸시
         run: |
           git config user.email "actions@github.com"
