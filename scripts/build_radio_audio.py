@@ -85,21 +85,51 @@ def _remaining():
     return float("inf") if _deadline is None else _deadline - time.monotonic()
 
 
+class NonRetryable(RuntimeError):
+    """다시 보내도 같은 결과인 요청 오류(400·401·403·404 등) — 재시도하지 않고 다음 모델로."""
+
+
+# 대본 전체에 거는 말투 지시. 옛 모델(대본 한 덩어리)은 맨 앞 안내문으로, 3.8+ 는 대사마다 style 로 붙인다.
+STYLE_EN = ("warm, lively two-host learning podcast; natural and expressive, genuine back-and-forth energy; "
+            "relaxed and clear pace for an English learner (A2-B1 level)")
+STYLE_KO = "warm and clear; speak this short Korean reminder line natively in Korean"
+
+
+def _legacy_tts_format(model):
+    """3.1·2.5 TTS = 대본 한 덩어리('이름: 대사' 줄) 형식. 3.8+ 는 대사마다 part + speechMetadata.speaker 필수
+    (안 붙이면 400 'Multi-speaker generation requests must specify speech_metadata.speaker…', 2026-11-19 실측)."""
+    return re.search(r"gemini-(2\.5|3\.1)-", model) is not None
+
+
+def _tts_body(chunk, cfgs, model):
+    speech = {"responseModalities": ["AUDIO"],
+              "speechConfig": {"multiSpeakerVoiceConfig": {"speakerVoiceConfigs": cfgs}}}
+    if _legacy_tts_format(model):
+        transcript = ("Read this radio dialogue as a " + STYLE_EN + ". "
+                      "Mostly English, with short Korean reminder lines spoken natively in Korean:\n" +
+                      "\n".join(f"{SPEAKERS.get(sp, (sp, 'Kore'))[0]}: {txt}" for sp, _, txt in chunk))
+        return {"contents": [{"parts": [{"text": transcript}]}], "generationConfig": speech}
+    parts = [{"text": txt, "speechMetadata": {"speaker": SPEAKERS.get(sp, (sp, "Kore"))[0],
+                                              "style": STYLE_KO if lang == "ko" else STYLE_EN}}
+             for sp, lang, txt in chunk]
+    return {"contents": [{"role": "user", "parts": parts}], "generationConfig": speech}
+
+
+def _audio_to_pcm(data, mime):
+    """응답 오디오 → (16-bit mono PCM, rate). 3.1 은 헤더 없는 PCM(audio/L16;rate=…), 3.8 은 기본이 WAV(RIFF 헤더)."""
+    if data[:4] == b"RIFF":
+        with wave.open(io.BytesIO(data)) as w:
+            if w.getsampwidth() != 2 or w.getnchannels() != 1:
+                raise RuntimeError(f"예상 밖 WAV 형식 ({w.getnchannels()}ch · {8 * w.getsampwidth()}bit)")
+            return w.readframes(w.getnframes()), w.getframerate()
+    mm = re.search(r"rate=(\d+)", mime or "")
+    return data, int(mm.group(1)) if mm else 24000
+
+
 def _tts_chunk(chunk, cfgs, model=None):
     """대사 청크 하나 → (pcm_bytes, rate). Gemini 멀티스피커 TTS 단일 호출."""
     model = model or TTS_MODEL
-    transcript = ("Read this radio dialogue as a warm, lively two-host learning podcast. "
-                  "Speak naturally and expressively, with genuine back-and-forth energy, "
-                  "at a relaxed and clear pace for an English learner (A2-B1 level). "
-                  "Mostly English, with short Korean reminder lines spoken natively in Korean:\n" +
-                  "\n".join(f"{SPEAKERS.get(sp, (sp, 'Kore'))[0]}: {txt}" for sp, _, txt in chunk))
-    body = {
-        "contents": [{"parts": [{"text": transcript}]}],
-        "generationConfig": {
-            "responseModalities": ["AUDIO"],
-            "speechConfig": {"multiSpeakerVoiceConfig": {"speakerVoiceConfigs": cfgs}},
-        },
-    }
+    body = _tts_body(chunk, cfgs, model)
     url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
     left = _remaining()
     if left < 10:
@@ -111,17 +141,15 @@ def _tts_chunk(chunk, cfgs, model=None):
         raise DailyQuotaExceeded(f"Gemini TTS 429 일일 한도 소진 [{model}]"
                                  + (f" (하루 {lim.group(1)}회)" if lim else ""))
     if r.status_code != 200:
-        raise RuntimeError(f"Gemini TTS {r.status_code} [{model}]: {re.sub(chr(10), ' ', r.text)[:300]}")
+        detail = " ".join(r.text.split())[:300]  # f-string 안 백슬래시는 3.11 문법 오류 → 밖에서 정리
+        msg = f"Gemini TTS {r.status_code} [{model}]: {detail}"
+        raise (NonRetryable if r.status_code in (400, 401, 403, 404) else RuntimeError)(msg)
     j = r.json()
     parts = (j.get("candidates") or [{}])[0].get("content", {}).get("parts", [])
     for part in parts:
         inl = part.get("inlineData") or part.get("inline_data")
         if inl and inl.get("data"):
-            rate = 24000
-            mm = re.search(r"rate=(\d+)", inl.get("mimeType") or inl.get("mime_type") or "")
-            if mm:
-                rate = int(mm.group(1))
-            return base64.b64decode(inl["data"]), rate
+            return _audio_to_pcm(base64.b64decode(inl["data"]), inl.get("mimeType") or inl.get("mime_type"))
     raise RuntimeError("Gemini TTS 응답에 오디오(inlineData) 없음")
 
 
@@ -134,7 +162,7 @@ def _tts_chunk_retry(chunk, cfgs, model=None, tries=4):
     for attempt in range(tries):
         try:
             return _tts_chunk(chunk, cfgs, model)
-        except (DailyQuotaExceeded, TTSBudgetExceeded):
+        except (DailyQuotaExceeded, TTSBudgetExceeded, NonRetryable):
             raise
         except Exception as e:
             if attempt == tries - 1:

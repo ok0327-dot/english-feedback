@@ -113,6 +113,38 @@ def main():
             pass
         check("분당 429 는 재시도(3번 호출)", len(calls) == 3)
 
+        # 3-1) 요청 형식: 3.8+ = 대사마다 part + speechMetadata.speaker (2026-11-19 실측 400 대응) / 3.1 = 한 덩어리
+        print("3-1) 요청 형식·응답 오디오")
+        chunk = [("민지", "en", "Hello, hello!"), ("알렉스", "en", "Hi Minji."), ("민지", "ko", "한 줄 정리예요.")]
+        new = A._tts_body(chunk, cfgs, "gemini-3.8-flash-tts")
+        parts = new["contents"][0]["parts"]
+        check("3.8: 대사 수 = part 수", len(parts) == 3)
+        check("3.8: part 마다 speaker(Minji/Alex) + style", [p["speechMetadata"]["speaker"] for p in parts] == ["Minji", "Alex", "Minji"]
+              and all(p["speechMetadata"]["style"] for p in parts))
+        check("3.8: 대사 글자는 그대로(지시문 섞지 않음)", [p["text"] for p in parts] == [t for _, _, t in chunk])
+        check("3.8: 한국어 줄은 한국어 style", parts[2]["speechMetadata"]["style"] == A.STYLE_KO)
+        check("3.8-lite 도 새 형식", "speechMetadata" in A._tts_body(chunk, cfgs, "gemini-3.8-flash-lite-tts")["contents"][0]["parts"][0])
+        old = A._tts_body(chunk, cfgs, "gemini-3.1-flash-tts-preview")["contents"][0]["parts"]
+        check("3.1: 한 덩어리('Minji: …' 줄)", len(old) == 1 and "Minji: Hello, hello!" in old[0]["text"] and "speechMetadata" not in old[0])
+        check("목소리 설정은 두 형식 공통", new["generationConfig"]["speechConfig"]["multiSpeakerVoiceConfig"]["speakerVoiceConfigs"] == cfgs)
+        import io as _io
+        import wave as _wave
+        buf = _io.BytesIO()
+        with _wave.open(buf, "wb") as w:
+            w.setnchannels(1); w.setsampwidth(2); w.setframerate(24000); w.writeframes(b"\x05\x00" * 100)
+        pcm, rate = A._audio_to_pcm(buf.getvalue(), "audio/wav")
+        check("WAV(RIFF) 응답 → 헤더 뺀 PCM·rate", pcm == b"\x05\x00" * 100 and rate == 24000)
+        pcm, rate = A._audio_to_pcm(b"\x07\x00" * 10, "audio/L16;codec=pcm;rate=16000")
+        check("헤더 없는 PCM 응답 → 그대로·mime 의 rate", pcm == b"\x07\x00" * 10 and rate == 16000)
+        calls.clear()
+        A.requests.post = lambda url, **kw: calls.append(url) or FakeResp(400, text='{"error":{"code":400,"message":"bad"}}')
+        try:
+            A._tts_chunk_retry(chunk, cfgs, "m-400")
+            check("400 → NonRetryable", False)
+        except A.NonRetryable:
+            check("400 → NonRetryable", True)
+        check("400 은 재시도 안 함(호출 1번)", len(calls) == 1)
+
         # 4) 대체 단계: 한 회차 = 한 모델
         print("4) 대체 모델 단계")
         real_chunk = A._tts_chunk
