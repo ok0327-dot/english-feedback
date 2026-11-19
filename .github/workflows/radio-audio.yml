@@ -6,9 +6,21 @@ on:
   workflow_dispatch:
     inputs:
       model:
-        description: 'Gemini TTS 모델 override (비우면 기본 2.5-flash-preview-tts)'
+        description: 'Gemini TTS 모델 override (비우면 스크립트 기본값 gemini-3.8-flash-tts → 실패 시 lite)'
         required: false
         default: ''
+      sample_models:
+        description: '🧪 모델 비교 샘플: 쉼표로 모델 나열 → 같은 대본 일부를 모델마다 합성해 아티팩트로만 올림(커밋·텔레그램 없음). 비우면 평소 실행'
+        required: false
+        default: ''
+      sample_lines:
+        description: '샘플 줄 수 (20 = 실제 TTS 한 번 분량)'
+        required: false
+        default: '20'
+      sample_start:
+        description: '샘플 시작 줄 (0부터)'
+        required: false
+        default: '0'
 permissions:
   contents: write
 concurrency:
@@ -17,7 +29,9 @@ concurrency:
 jobs:
   audio:
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    # 기본 모델이 일일 한도로 중간에 실패하면 대체 모델(lite)로 에피소드 전체를 다시 합성(정상 ≈ 9분, 다시 합성 포함 ≈ 18분).
+    # Gemini 는 모델·재시도 합계 25분 예산(GEMINI_TTS_BUDGET_SEC)에서 끊고 gTTS 로 → 준비 + 25분 + gTTS 가 40분 안
+    timeout-minutes: 40
     steps:
       - name: 📥 체크아웃
         uses: actions/checkout@v4
@@ -31,7 +45,8 @@ jobs:
         run: |
           sudo apt-get update && sudo apt-get install -y ffmpeg
           pip install requests gTTS pydub
-      - name: 🎙️ 라디오 오디오 생성 (Gemini TTS → MP3, 실패 시 gTTS)
+      - name: 🎙️ 라디오 오디오 생성 (Gemini TTS → MP3, 실패 시 대체 모델 → gTTS)
+        if: ${{ !inputs.sample_models }}
         run: |
           python scripts/build_radio_audio.py | tee /tmp/radio_out.txt
           grep '^EPISODE_FILE=' /tmp/radio_out.txt >> "$GITHUB_ENV"
@@ -39,7 +54,30 @@ jobs:
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GEMINI_TTS_MODEL: ${{ github.event.inputs.model }}
+      # 🧪 모델 비교: docs/ 는 안 건드리고 샘플 MP3 + 지표만 아티팩트로 (모델 교체 전 귀로 비교용)
+      - name: 🧪 모델 비교 샘플 (커밋·발송 없음)
+        if: ${{ inputs.sample_models }}
+        run: |
+          set -o pipefail
+          mkdir -p radio-samples
+          python -u scripts/build_radio_audio.py --sample "$SAMPLE_LINES" --start "$SAMPLE_START" \
+            --models "$SAMPLE_MODELS" --out-dir radio-samples | tee radio-samples/metrics.txt
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          SAMPLE_MODELS: ${{ inputs.sample_models }}
+          SAMPLE_LINES: ${{ inputs.sample_lines || '20' }}
+          SAMPLE_START: ${{ inputs.sample_start || '0' }}
+      - name: 📦 샘플 올리기 (Actions 아티팩트)
+        if: ${{ always() && inputs.sample_models }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: radio-tts-samples-${{ github.run_id }}
+          path: radio-samples/
+          retention-days: 14
+          if-no-files-found: warn
       - name: 💾 커밋·푸시
+        # main 에서만: 브랜치로 수동 실행하면 아래 'push HEAD:main' 이 브랜치 커밋을 main 에 밀어 넣는다
+        if: ${{ !inputs.sample_models && github.ref == 'refs/heads/main' }}
         run: |
           git config user.email "actions@github.com"
           git config user.name "GitHub Actions"
@@ -58,6 +96,7 @@ jobs:
             done
           fi
       - name: 📲 텔레그램 발송 (네이티브 음성 우선, 없으면 링크)
+        if: ${{ !inputs.sample_models && github.ref == 'refs/heads/main' }}
         run: |
           BASE="https://ok0327-dot.github.io/english-feedback"
           PAGE="$BASE/radio.html"
@@ -82,7 +121,7 @@ jobs:
           TG_CHAT: ${{ secrets.TELEGRAM_CHAT_ID }}
           KNH: ${{ secrets.KNH_SEND_SECRET }}
       - name: 🔔 실패 시 알림
-        if: failure()
+        if: ${{ failure() && !inputs.sample_models }}
         run: |
           curl -s -X POST "https://telegram-notify-hub.dk0327.workers.dev/send" \
             -H "X-Notify-Secret: $KNH" -H "Content-Type: application/json" \
