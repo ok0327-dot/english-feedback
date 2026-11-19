@@ -71,6 +71,20 @@ class DailyQuotaExceeded(RuntimeError):
     """모델의 '하루' 요청 한도 소진(429 · PerDay). 기다려도 오늘은 안 풀리므로 재시도하지 않는다."""
 
 
+class TTSBudgetExceeded(RuntimeError):
+    """Gemini 합성에 쓸 전체 시간 예산 소진 → 더 재시도·다른 모델 없이 gTTS 로 넘어간다."""
+
+
+# Gemini 합성(모든 모델·재시도 합계) 시간 예산. 응답 없이 멈추는 최악의 경우에도
+# 준비 + 이 예산 + gTTS 가 워크플로 제한(40분) 안에 끝나게 한다. 정상 9청크 ≈ 9분, lite 다시 합성 포함 ≈ 18분.
+GEMINI_BUDGET_SEC = float(os.environ.get("GEMINI_TTS_BUDGET_SEC", "1500"))
+_deadline = None  # gemini_tts_ladder 가 설정. None = 예산 없음(샘플 모드·단독 호출)
+
+
+def _remaining():
+    return float("inf") if _deadline is None else _deadline - time.monotonic()
+
+
 def _tts_chunk(chunk, cfgs, model=None):
     """대사 청크 하나 → (pcm_bytes, rate). Gemini 멀티스피커 TTS 단일 호출."""
     model = model or TTS_MODEL
@@ -87,8 +101,11 @@ def _tts_chunk(chunk, cfgs, model=None):
         },
     }
     url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
+    left = _remaining()
+    if left < 10:
+        raise TTSBudgetExceeded(f"Gemini TTS 시간 예산 소진 [{model}]")
     r = requests.post(url, headers={"x-goog-api-key": GEMINI_KEY, "Content-Type": "application/json"},
-                      json=body, timeout=240)
+                      json=body, timeout=min(240, left))
     if r.status_code == 429 and "PerDay" in r.text:
         lim = re.search(r"limit: (\d+)", r.text)
         raise DailyQuotaExceeded(f"Gemini TTS 429 일일 한도 소진 [{model}]"
@@ -117,12 +134,14 @@ def _tts_chunk_retry(chunk, cfgs, model=None, tries=4):
     for attempt in range(tries):
         try:
             return _tts_chunk(chunk, cfgs, model)
-        except DailyQuotaExceeded:
+        except (DailyQuotaExceeded, TTSBudgetExceeded):
             raise
         except Exception as e:
             if attempt == tries - 1:
                 raise
             wait = 30 * (attempt + 1)
+            if _remaining() < wait + 10:  # 기다렸다 다시 해 볼 시간이 예산에 없음
+                raise TTSBudgetExceeded(f"Gemini TTS 시간 예산 소진 — 재시도 중단 ({str(e)[:120]})") from e
             print(f"  ⚠️ TTS 재시도 {attempt + 1}/{tries - 1} ({str(e)[:160]}) — {wait}s 대기")
             time.sleep(wait)
 
@@ -154,16 +173,24 @@ def gemini_tts(lines, model=None):
 def gemini_tts_ladder(lines):
     """기본 모델 → 대체 모델 순으로 에피소드 전체 합성 → (pcm, rate, 쓴 모델).
     중간에 실패하면 그 모델로 만든 조각은 버리고 다음 모델로 처음부터(한 회차 = 한 모델 목소리)."""
+    global _deadline
     models = list(dict.fromkeys([TTS_MODEL] + TTS_FALLBACK_MODELS))
     last = None
-    for i, model in enumerate(models):
-        try:
-            pcm, rate = gemini_tts(lines, model)
-            return pcm, rate, model
-        except Exception as e:
-            last = e
-            if i + 1 < len(models):
-                print(f"⚠️ {model} 실패 ({str(e)[:160]}) → 대체 모델 {models[i + 1]} 로 다시 합성")
+    _deadline = time.monotonic() + GEMINI_BUDGET_SEC
+    try:
+        for i, model in enumerate(models):
+            try:
+                pcm, rate = gemini_tts(lines, model)
+                return pcm, rate, model
+            except Exception as e:
+                last = e
+                if isinstance(e, TTSBudgetExceeded) or _remaining() < 60:
+                    print(f"⚠️ {model} 실패 ({str(e)[:160]}) — Gemini 시간 예산이 남지 않아 대체 모델은 건너뜀")
+                    break
+                if i + 1 < len(models):
+                    print(f"⚠️ {model} 실패 ({str(e)[:160]}) → 대체 모델 {models[i + 1]} 로 다시 합성")
+    finally:
+        _deadline = None
     raise last
 
 
