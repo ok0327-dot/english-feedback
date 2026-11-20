@@ -1,0 +1,53 @@
+{
+ "date": "2026-11-20",
+ "iso": [
+  2026,
+  47
+ ],
+ "topic": "Key Vocabulary and Reading Practice on Diet, Exercise, and Weight Loss",
+ "grammar": "prepositions",
+ "grammar_norm": "Prepositions",
+ "score": 6.0,
+ "pairs": [
+  {
+   "said": "What does it mean, finish the practice?",
+   "natural": "What do you mean by 'finish the week with some practice'?"
+  },
+  {
+   "said": "So your feedback is that if some word, I or E, it is more shrink, that word pronunciation, right?",
+   "natural": "So you mean the I and the E are short sounds in this word, right?"
+  },
+  {
+   "said": "Frankly speaking, I'm so busy, so I can check the video sometimes.",
+   "natural": "To be honest, I've been really busy, so I can only watch the videos once in a while."
+  }
+ ],
+ "vocab": [
+  {
+   "word": "boost",
+   "pos": "v.",
+   "meaning": "끌어올리다, 증진시키다"
+  },
+  {
+   "word": "determine",
+   "pos": "v.",
+   "meaning": "결정하다, 좌우하다 (가운데 -TER- 를 세게. 끝은 \"마인\"이 아니라 짧게 \"-민\" )"
+  },
+  {
+   "word": "accelerate",
+   "pos": "v.",
+   "meaning": "가속화하다, 앞당기다"
+  },
+  {
+   "word": "excess",
+   "pos": "adj.",
+   "meaning": "초과한, 여분의"
+  },
+  {
+   "word": "guarantee",
+   "pos": "v.",
+   "meaning": "보장하다 (맨 끝 -TEE 를 세게)"
+  }
+ ],
+ "_html_md5": "176a27d3eee26ab5e1b0d08317dac24e"
+}
