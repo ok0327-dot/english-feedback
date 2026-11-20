@@ -1,5 +1,13 @@
 [
  {
+  "week": "2026-W47",
+  "date": "2026-11-21",
+  "file": "ep-2026-W47.mp3",
+  "engine": "gemini",
+  "lines": 124,
+  "model": "gemini-3.8-flash-tts"
+ },
+ {
   "week": "2026-W46",
   "date": "2026-11-16",
   "file": "ep-2026-W46.mp3",
@@ -103,12 +111,5 @@
   "file": "ep-2026-W30.mp3",
   "engine": "gemini",
   "lines": 120
- },
- {
-  "week": "2026-W29",
-  "date": "2026-07-17",
-  "file": "ep-2026-W29.mp3",
-  "engine": "gemini",
-  "lines": 121
  }
 ]
