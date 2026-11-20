@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#0f0f13"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="당근영어"><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="icon" type="image/png" sizes="192x192" href="icon-192.png"><script src="install-banner.js" defer></script><script src="sw-reg.js" defer></script>
+    <title>전화영어 복습 - 2026년 11월 20일</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Noto Sans KR',sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.75;min-height:100vh}
+        .header{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);border-bottom:1px solid rgba(255,255,255,.06);padding:48px 24px 40px;text-align:center}
+        .header-date{font-size:13px;color:#94a3b8;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+        .header h1{font-size:28px;font-weight:700;color:#f1f5f9;margin-bottom:16px}
+        .header-meta{display:flex;justify-content:center;gap:24px;font-size:14px;color:#64748b}
+        .header-meta span{display:flex;align-items:center;gap:6px}
+        .cta-section{text-align:center;padding:40px 24px}
+        .cta-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:linear-gradient(135deg,#38bdf8,#818cf8);color:#fff;font-size:16px;font-weight:600;font-family:'Noto Sans KR',sans-serif;border:none;border-radius:50px;cursor:pointer;transition:all .3s;text-decoration:none;box-shadow:0 4px 24px rgba(56,189,248,.25)}
+        .cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(56,189,248,.35)}
+        .cta-btn svg{width:20px;height:20px}
+        .cta-sub{margin-top:12px;font-size:13px;color:#64748b}
+        .toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#38bdf8;padding:14px 28px;border-radius:12px;font-size:14px;font-weight:500;border:1px solid rgba(56,189,248,.2);box-shadow:0 8px 32px rgba(0,0,0,.4);opacity:0;transition:all .4s cubic-bezier(.16,1,.3,1);z-index:1000}
+        .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+        .container{max-width:720px;margin:0 auto;padding:0 24px 80px}
+        .tabs{display:flex;gap:4px;background:#1a1a24;padding:4px;border-radius:12px;margin-bottom:32px}
+        .tab{flex:1;padding:12px;text-align:center;font-size:14px;font-weight:500;color:#64748b;background:0 0;border:none;border-radius:8px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all .2s}
+        .tab.active{background:#262636;color:#f1f5f9}
+        .tab-content{display:none}.tab-content.active{display:block}
+        .feedback h2{font-size:18px;font-weight:700;color:#f1f5f9;margin:36px 0 16px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.06)}
+        .feedback h2:first-child{margin-top:0}
+        .feedback p{margin:8px 0;color:#cbd5e1}
+        .feedback .item{padding:6px 0 6px 16px;border-left:2px solid #334155;margin:6px 0;color:#cbd5e1}
+        .feedback .numbered{padding:8px 0 8px 16px;color:#cbd5e1}
+        .feedback .numbered strong{color:#38bdf8}
+        .feedback strong{color:#f1f5f9}
+        .feedback code{background:#1e293b;padding:2px 8px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#38bdf8}
+        .feedback table{width:100%;border-collapse:collapse;margin:12px 0}
+        .feedback th,.feedback td{padding:10px 14px;text-align:left;border-bottom:1px solid #262636}
+        .feedback th{color:#94a3b8;font-weight:500;font-size:13px}
+        .feedback td{color:#cbd5e1}
+        .arrow{color:#38bdf8;font-weight:700}
+        .transcript{background:#1a1a24;border-radius:12px;padding:28px;font-size:14px;line-height:2;color:#94a3b8;white-space:pre-wrap;word-break:break-word;font-family:'JetBrains Mono','Noto Sans KR',monospace}
+        .transcript .tutor{color:#38bdf8}
+        .transcript .student{color:#a78bfa}
+        @media(max-width:640px){.header{padding:32px 16px}.header h1{font-size:22px}.cta-btn{padding:14px 28px;font-size:15px}.container{padding:0 16px 60px}}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-date">2026년 11월 20일</div>
+        <h1>📚 전화영어 복습</h1>
+        <div class="header-meta">
+            <span>⏱ 21분 33초</span>
+            <span>🎙 전화영어_025180304_20261120080030.m4a</span>
+        </div>
+    </div>
+    <div class="cta-section">
+        <button class="cta-btn" onclick="startReview()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Gemini에서 복습 대화 시작하기
+        </button>
+        <div class="cta-sub">클릭하면 프롬프트가 복사되고 Gemini가 열립니다</div>
+    </div>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('feedback')">📋 AI 피드백</button>
+            <button class="tab" onclick="switchTab('transcript')">🎙 수업 전사</button>
+        </div>
+        <div id="tab-feedback" class="tab-content active">
+            <div class="feedback"><p><strong>0. 📌 Topic</strong></p>
+<br>
+<p>Topic: Key Vocabulary and Reading Practice on Diet, Exercise, and Weight Loss</p>
+<br>
+<br>
+<p><strong>1. 📊 오늘의 대화 요약 (Summary)</strong></p>
+<br>
+<div class="item">핵심 단어 4개(<strong>boost, pleasant, determine, metabolism</strong>)의 뜻을 읽고, Joey가 직접 두 번째 예문을 만들었습니다. *pleasant*를 *present*처럼 발음하는 부분, 그리고 *determine / directly / metabolism*에서 어디를 세게 읽는지와 I·E 소리를 집중해서 교정했습니다.</div>
+<div class="item">"Is Your Diet Working?" 지문(운동과 체중 감량, 칼로리 계산, 질병 예방)을 소리 내어 읽고 True/False 문제를 풀었습니다. *guaranteeing, activity, overall, speedier, diabetes, false* 발음도 연습했습니다.</div>
+<div class="item">마지막에 Joey가 "발음 습관이 굳어서 고치기 어렵다"는 고민을 털어놓았습니다. 튜터는 <strong>"지금 수준에서 발음은 충분히 좋다"</strong>고 격려했고, 영상은 시간 날 때 보면 된다고 안심시켜 주었습니다.</div>
+<br>
+<br>
+<p><strong>2. 💬 유창성 업그레이드 (Fluency & Natural Flow)</strong></p>
+<br>
+<p><strong>① 상대 말을 확인할 때</strong></p>
+<div class="item">❌ <strong>As Said</strong>: "What does it mean, finish the practice?"</div>
+<div class="item">✅ <strong>Natural</strong>: "What do you mean by 'finish the week with some practice'?"</div>
+<div class="item">💎 <strong>Professional</strong>: "Could you clarify what you mean by 'finishing the week with some practice'?"</div>
+<div class="item">💡 <strong>코칭 포인트</strong>: "What does it mean?" asks what a word means in the dictionary. "What do you mean by ~?" asks what the *speaker* wants to say. That fits better when you're checking someone's message.</div>
+<p><span class="arrow">→</span> "What does it mean?"은 단어 자체의 뜻을 묻는 느낌입니다. 상대가 <strong>무슨 생각으로 한 말인지</strong> 확인할 때는 "What do you mean by ~?"를 한 덩어리로 쓰는 게 훨씬 자연스러워요. 회의에서 "Could you clarify what you mean by ~?"라고 하면 정중하고 프로답게 들립니다.</p>
+<br>
+<p><strong>② 내가 이해한 내용을 정리해서 확인할 때</strong></p>
+<div class="item">❌ <strong>As Said</strong>: "So your feedback is that if some word, I or E, it is more shrink, that word pronunciation, right?"</div>
+<div class="item">✅ <strong>Natural</strong>: "So you mean the I and the E are short sounds in this word, right?"</div>
+<div class="item">💎 <strong>Professional</strong>: "So if I understand correctly, both the I and the E are pronounced as short sounds here?"</div>
+<div class="item">💡 <strong>코칭 포인트</strong>: Start with "So you mean ~" and put the main point (the I and the E) right after it. Then the listener catches your idea right away.</div>
+<p><span class="arrow">→</span> "So you mean ~" 뒤에 <strong>핵심(무엇이 어떻다)</strong>을 바로 붙이면 듣는 사람이 한 번에 알아들어요. "shrink(쪼그라들다)" 대신 <strong>short sound(짧은 소리)</strong>라고 하면 발음 이야기라는 게 바로 전달됩니다. 업무에서는 "If I understand correctly, ~"가 무엇이든 확인할 때 쓰기 좋은 덩어리예요.</p>
+<br>
+<p><strong>③ 바빠서 자주 못 한다고 말할 때</strong></p>
+<div class="item">❌ <strong>As Said</strong>: "Frankly speaking, I'm so busy, so I can check the video sometimes."</div>
+<div class="item">✅ <strong>Natural</strong>: "To be honest, I've been really busy, so I can only watch the videos once in a while."</div>
+<div class="item">💎 <strong>Professional</strong>: "To be candid, my schedule has been quite packed, so I'm only able to review the videos occasionally."</div>
+<div class="item">💡 <strong>코칭 포인트</strong>: "I can check the video sometimes" sounds positive, like "I'm able to do it sometimes." Adding "only" shows what you really mean: "I can't do it often." Also, "Frankly speaking" can sound a bit blunt. "To be honest" is softer.</div>
+<p><span class="arrow">→</span> "I can check sometimes"는 "가끔은 볼 수 있어요"라는 긍정으로 들려요. <strong>only</strong>를 넣어야 "가끔밖에 못 봐요"라는 진짜 마음이 전달됩니다. "Frankly speaking"은 원어민 귀엔 살짝 딱딱하거나 직설적으로 들릴 수 있어요. 일상에서는 <strong>"To be honest"</strong>가 더 부드럽습니다.</p>
+<br>
+<br>
+<p><strong>3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)</strong></p>
+<br>
+<p>Category: prepositions</p>
+<p>🎯 <strong>오늘의 패턴</strong>: 단어마다 늘 붙어 다니는 짝꿍(at, with, to 같은 작은 연결 단어, 이른바 전치사)이 정해져 있는데, 아무 짝꿍이나 끼우는 습관</p>
+<br>
+<table>
+<tr><th>#</th><th>❌ Joey의 원문</th><th>✅ 교정 예시</th><th>짝꿍 덩어리</th></tr>
+<tr><td>1</td><td>"Friday is my present day because I can see my family <strong>in my home</strong>."</td><td>Friday is a pleasant day for me because I can see my family <strong>at home</strong>.</td><td>집에서 = <strong>at home</strong></td></tr>
+<tr><td>2</td><td>"Oh, no. Let's <strong>continue to the process</strong>."</td><td>Let's <strong>continue with</strong> the lesson.</td><td>~을 계속하다 = <strong>continue with ~</strong></td></tr>
+<tr><td>3</td><td>"Metabolism is <strong>a key to keep</strong> our body healthy."</td><td>Metabolism is <strong>the key to keeping</strong> our body healthy.</td><td>~하는 비결 = <strong>the key to + -ing</strong></td></tr>
+<tr><td>4</td><td>"So it is a little <strong>habit to pronunciation</strong>."</td><td>I have some old <strong>habits in my pronunciation</strong>.</td><td>발음 습관 = <strong>habits in my pronunciation</strong></td></tr>
+</table>
+<br>
+<p>(1번의 *present*는 *pleasant*를 말하려던 것이었어요. pleasant는 혀끝을 윗니 뒤에 붙이는 <strong>L</strong> 소리로 "플레즌트"처럼 시작합니다.)</p>
+<br>
+<p>📌 <strong>핵심 규칙</strong>: 이 짝꿍들은 규칙으로 따지지 말고 앞 단어와 <strong>한 덩어리로 통째로 외우세요.</strong> "at home", "continue with", "the key to + -ing"처럼 붙여서 입에 익혀 두면 됩니다.</p>
+<p>(특히 <strong>the key to</strong>의 to는 "~로 가는 열쇠"라는 방향의 to예요. 그래서 뒤에 keep이 아니라 <strong>keeping</strong>처럼 -ing 모양이 붙습니다.)</p>
+<br>
+<p>🔁 <strong>따라 읽기</strong></p>
+<div class="item">🗣️ "I can finally see my family <strong>at home</strong> this weekend."</div>
+<div class="item">🗣️ "Let's <strong>continue with</strong> the next page."</div>
+<div class="item">🗣️ "Regular exercise is <strong>the key to keeping</strong> our body healthy."</div>
+<br>
+<br>
+<p><strong>4. 📗 어휘 확장 (Vocabulary Vault)</strong></p>
+<br>
+<div class="numbered"><strong>1.</strong> <strong>boost</strong> /buːst/ (v.)</div>
+<div class="item">뜻: 끌어올리다, 증진시키다</div>
+<div class="item">실전 예문: *The new contract could boost our LNG import volume next year.*</div>
+<br>
+<div class="numbered"><strong>2.</strong> <strong>determine</strong> /dɪˈtɜːrmɪn/ (v.)</div>
+<div class="item">뜻: 결정하다, 좌우하다 (가운데 <strong>-TER-</strong>를 세게. 끝은 "마인"이 아니라 짧게 <strong>"-민"</strong>)</div>
+<div class="item">실전 예문: *Oil prices largely determine our energy import costs.*</div>
+<br>
+<div class="numbered"><strong>3.</strong> <strong>accelerate</strong> /əkˈseləreɪt/ (v.)</div>
+<div class="item">뜻: 가속화하다, 앞당기다</div>
+<div class="item">실전 예문: *We need to accelerate the audit process before the deadline.*</div>
+<br>
+<div class="numbered"><strong>4.</strong> <strong>excess</strong> /ˈekses/ (adj.)</div>
+<div class="item">뜻: 초과한, 여분의</div>
+<div class="item">실전 예문: *The audit found excess inventory in the storage terminal.*</div>
+<br>
+<div class="numbered"><strong>5.</strong> <strong>guarantee</strong> /ˌɡærənˈtiː/ (v.)</div>
+<div class="item">뜻: 보장하다 (맨 끝 <strong>-TEE</strong>를 세게)</div>
+<div class="item">실전 예문: *We can't guarantee the delivery date due to shipping delays.*</div>
+<br>
+<br>
+<p><strong>5. 📝 실전 복습 챌린지 (Practice)</strong></p>
+<br>
+<p><strong>Q1. (쉬움)</strong> 튜터에게 "이번 주말엔 집에서 가족이랑 쉴 거예요."라고 말해 보세요.</p>
+<p>> ✅ *I'm going to relax with my family <strong>at home</strong> this weekend.*</p>
+<br>
+<p><strong>Q2. (중간)</strong> 회의 중에 잠깐 다른 이야기가 나왔습니다. "좋아요, 다음 안건으로 계속 진행하죠."라고 말해 보세요.</p>
+<p>> ✅ *Okay, let's <strong>continue with</strong> the next item on the agenda.*</p>
+<br>
+<p><strong>Q3. (어려움)</strong> "꾸준한 연습이 발음을 개선하는 비결이에요. 그리고 AI 앱이 제 학습 속도를 높여 줘요."라고 말해 보세요. (the key to + -ing, boost 활용)</p>
+<p>> ✅ *Consistent practice is <strong>the key to improving</strong> my pronunciation, and AI apps <strong>boost</strong> my learning speed.*</p>
+<br>
+<br>
+<p><strong>6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)</strong></p>
+<br>
+<p>✨ <strong>Good Job</strong></p>
+<p>> 🗣️ "I was wondering about the pronunciation of false."</p>
+<br>
+<p><strong>"I was wondering about ~"</strong>은 원어민이 궁금한 점을 <strong>부드럽고 예의 바르게</strong> 꺼낼 때 쓰는 고급 덩어리입니다. 실수 없이 깔끔한 문장이었어요. 수업 흐름을 끊지 않으면서 궁금한 걸 스스로 질문한 태도도 훌륭했습니다. 이 표현은 비즈니스 이메일이나 회의에서도 그대로 쓸 수 있어요. 👏</p>
+<br>
+<p>🚀 <strong>내일의 한 문장</strong></p>
+<p>> 🗣️ "Hi! I was wondering if we could practice *determine* again. I've been working on it <strong>at home</strong>, and I think practice is <strong>the key to fixing</strong> my old habits."</p>
+<br>
+<br>
+<p><strong>[성과 지표]</strong></p>
+<br>
+<p><strong>🎯 유창성 점수: 6 / 10</strong></p>
+<br>
+<p><strong>근거</strong></p>
+<div class="item">👍 발음하기 어려운 단어가 많은 건강 기사를 끝까지 포기하지 않고 읽었습니다. 교정을 받으면 바로 따라 고치는 반응 속도도 좋았습니다.</div>
+<div class="item">👍 "The AI boosts our knowledge skill for the people.", "How to think determines our life."처럼 배운 단어로 자기 생각을 담은 문장을 직접 만들었습니다. 튜터가 we를 넣어 주자 바로 "How we think determines our life"로 고쳐 말했고, 발음 질문도 적극적으로 했습니다.</div>
+<div class="item">👎 자기 생각을 길게 말할 때(발음 고민, 피드백 확인) 문장이 끊기고 단어를 나열하는 식이 되는 경우가 있었습니다.</div>
+<div class="item">👎 at / with / to처럼 단어마다 붙어 다니는 짝꿍을 섞어 쓰는 실수가 반복되었습니다.</div>
+<br>
+<p><strong>🛠️ 원포인트 액션 플랜</strong></p>
+<p>> <strong>"말하기 전에 핵심 한 덩어리부터!"</strong></p>
+<p>> 다음 수업에서 무언가를 확인하거나 설명할 때는 <strong>"So you mean ~"</strong> 또는 <strong>"I was wondering ~"</strong>으로 문장을 시작해 보세요. 시작 덩어리가 정해지면 뒤 문장이 훨씬 덜 끊깁니다. 출근길에는 오늘의 짝꿍 3개(<strong>at home / continue with / the key to + -ing</strong>)를 각각 소리 내어 3번씩 말해 보세요. 💪</p></div>
+        </div>
+        <div id="tab-transcript" class="tab-content">
+            <div class="transcript"><span class="student">[Student]</span> Hello, Carly. [?]
+
+<span class="tutor">[Tutor]</span> Hi, Joey. [?Ben] Happy Friday.
+
+<span class="student">[Student]</span> Yeah, happy Thursday. [?]
+
+<span class="tutor">[Tutor]</span> Thank you. Okay. Do you have time to finish your week with some English practice?
+
+<span class="student">[Student]</span> English practice?
+
+<span class="tutor">[Tutor]</span> Yes, your class.
+
+<span class="student">[Student]</span> What does it mean, finish the practice?
+
+<span class="tutor">[Tutor]</span> English practice means, that&#x27;s another way of me asking you if you have time for your class this morning. We&#x27;re practicing your English.
+
+<span class="student">[Student]</span> Okay. Frankly speaking, I can understand the poetry, your meaning. [?]
+
+<span class="tutor">[Tutor]</span> Okay. Let me explain it.
+
+<span class="student">[Student]</span> Sorry.
+
+<span class="tutor">[Tutor]</span> Yeah. No, no. Don&#x27;t apologize.
+
+<span class="student">[Student]</span> Okay.
+
+<span class="tutor">[Tutor]</span> Every day that we meet by phone, you have a class about a certain topic. And during that class, you are learning and practicing your English skills.
+
+<span class="student">[Student]</span> Yes, you&#x27;re right.
+
+<span class="tutor">[Tutor]</span> So when I ask you if you&#x27;re ready for some English practice, it&#x27;s another way of asking you if you&#x27;re ready to have your class.
+
+<span class="student">[Student]</span> Oh, yes. No problem. I&#x27;m ready.
+
+<span class="tutor">[Tutor]</span> Okay.
+
+<span class="student">[Student]</span> Just a moment. I&#x27;ll check them.
+
+<span class="tutor">[Tutor]</span> That&#x27;s fine. Take all the time. You&#x27;re my last class.
+
+<span class="student">[Student]</span> Yes.
+
+<span class="student">[Student]</span> ...styling, and exercising. [?]
+
+<span class="tutor">[Tutor]</span> Okay. You said options. You started saying opinions. So you were almost there. Good job. No problem. Okay. So not logical options, logical opinions. Very good. All right. Now, once again, they show us the words that we went through.
+
+<span class="student">[Student]</span> Yes.
+
+<span class="tutor">[Tutor]</span> And I&#x27;m not going to ask you to read them again, but I&#x27;ll ask you to look at them and just ask me, do you need me to explain any of them again or like their meaning or their pronunciation for you?
+
+<span class="student">[Student]</span> Okay. Almost I know that about yes word and it&#x27;s good. [?]
+
+<span class="tutor">[Tutor]</span> That&#x27;s fine. It&#x27;s there just for review. But if you&#x27;re comfortable, then let&#x27;s continue on to our key expression.
+
+<span class="student">[Student]</span> Okay, no problem.
+
+<span class="tutor">[Tutor]</span> All right. You know what to do. And if possible, I&#x27;ll ask you to make a second sentence when sentence one is finished.
+
+<span class="student">[Student]</span> Okay. The first, the next page, right? And boost?
+
+<span class="tutor">[Tutor]</span> Yes, boost.
+
+<span class="student">[Student]</span> Boost meaning is to improve or increase something. We took various steps to try to boost sales.
+
+<span class="tutor">[Tutor]</span> Very good. So boost is a verb and it means to increase or improve something.
+
+<span class="student">[Student]</span> Improve something. [?]
+
+<span class="tutor">[Tutor]</span> Can I ask you to take a moment and see if you can think of a second sentence, okay?
+
+<span class="student">[Student]</span> Okay. The AI boosts our knowledge skill for the people.
+
+<span class="tutor">[Tutor]</span> Yeah, that app helps you a lot that you told me about.
+
+<span class="student">[Student]</span> Okay.
+
+<span class="tutor">[Tutor]</span> Very good. Very good. All right, let&#x27;s go on to the next word. This is an adjective.
+
+<span class="student">[Student]</span> Okay, pleasant. That meaning is enjoyable, attractive, friendly, or easy to like. It was pleasant to sit down after standing for hours.
+
+<span class="tutor">[Tutor]</span> Yeah, I agree with that. All right, can you try to make a second sentence with the word pleasant?
+
+<span class="student">[Student]</span> Present. Present. Present. [?]
+
+<span class="tutor">[Tutor]</span> Better.
+
+<span class="student">[Student]</span> Present. Yes. [?] Friday is my present day because I can see my family in my home. [?]
+
+<span class="tutor">[Tutor]</span> That&#x27;s right. Yeah, you get to go home this afternoon. That&#x27;s great.
+
+<span class="student">[Student]</span> Yes.
+
+<span class="tutor">[Tutor]</span> All right. Very nicely done. All right, friend. Let&#x27;s go on to the third one. And this is the verb.
+
+<span class="student">[Student]</span> Determine. Determine. Determine.
+
+<span class="tutor">[Tutor]</span> Actually, it&#x27;s a short I. You got it right the first time. Determine.
+
+<span class="student">[Student]</span> Okay. Determine.
+
+<span class="tutor">[Tutor]</span> Better.
+
+<span class="student">[Student]</span> Okay.
+
+<span class="tutor">[Tutor]</span> May I help you?
+
+<span class="student">[Student]</span> Oh, yes.
+
+<span class="tutor">[Tutor]</span> What&#x27;s happening is that the word has three syllables.
+
+<span class="student">[Student]</span> Uh-huh.
+
+<span class="tutor">[Tutor]</span> And you&#x27;re stressing the second syllable. Let&#x27;s try it a different way. Instead of saying determine, try this. Determine.
+
+<span class="student">[Student]</span> Uh-huh. Determine. [?]
+
+<span class="tutor">[Tutor]</span> Yeah, third syllable.
+
+<span class="student">[Student]</span> Yeah, determine, determine. Uh, syllable [?silver] is the, uh, that is meaning the third one sound? Yeah, three sound. Yeah, uh, determined. I see. Okay. Understand. The meaning is to control or influence [?imprints] something directly or decide what will happen. Sometimes I&#x27;m confused. I is a D or I... [?] directly, directly, determined. So, yeah, it&#x27;s a little confused. I need to be more effective.
+
+<span class="tutor">[Tutor]</span> I understand. Okay. Directly. What&#x27;s happening with this word is we do have exceptions to the rule, but the way it works out, this particular word, the I at the end is always short, like I, and the E is silent.
+
+<span class="student">[Student]</span> Directly [?Directory].
+
+<span class="tutor">[Tutor]</span> Okay.
+
+<span class="student">[Student]</span> It&#x27;s better, right? [?]
+
+<span class="tutor">[Tutor]</span> All right. Directly.
+
+<span class="student">[Student]</span> Yeah.
+
+<span class="tutor">[Tutor]</span> Yeah. And direct, yeah, directly. Both the I and the E in directly are short vowels.
+
+<span class="student">[Student]</span> So your feedback is that if some word, I or E, it is more shrink, that word pronunciation, right?
+
+<span class="tutor">[Tutor]</span> Directly. The word directly, because the I follows an R and then the E follows a C, you have vowel, consonant, vowel, consonant. Both those vowels will often say their short names.
+
+<span class="student">[Student]</span> Directly. Directly [?Directory]. Okay. I see. Thank you so much.
+
+<span class="tutor">[Tutor]</span> No problem. Both of these words, directly and determined, can be very confusing. All right. Now, before you read sentence one, just take a look at it and decide, do you have to change the verb tense for the word determine to fit the sentence?
+
+<span class="student">[Student]</span> Oh, determine. Determine. Just, I guess. Determine.
+
+<span class="tutor">[Tutor]</span> Well, this is one of those words where the spelling, sorry, the pronunciation doesn&#x27;t change, but instead, we add a D. So instead of saying determine, we say determined.
+
+<span class="student">[Student]</span> Determined.
+
+<span class="tutor">[Tutor]</span> Yes.
+
+<span class="student">[Student]</span> Okay.
+
+<span class="tutor">[Tutor]</span> Yes. Try that in sentence one.
+
+<span class="student">[Student]</span> Okay. Determined. Determined.
+
+<span class="tutor">[Tutor]</span> Okay. Yes. Finish. Finished. [?]
+
+<span class="student">[Student]</span> Yes. Okay.
+
+<span class="tutor">[Tutor]</span> I told you example, right? [?]
+
+<span class="student">[Student]</span> Yes.
+
+<span class="tutor">[Tutor]</span> Please read number one.
+
+<span class="student">[Student]</span> Okay, your health is determined in part by what you eat.
+
+<span class="tutor">[Tutor]</span> Yes.
+
+<span class="student">[Student]</span> Yes.
+
+<span class="tutor">[Tutor]</span> Your health is determined by what you eat. Okay. Now, we&#x27;re having a lot of fun with this word today. Can you think of a second sentence?
+
+<span class="student">[Student]</span> Okay. How to think determines our life.
+
+<span class="tutor">[Tutor]</span> Okay. May I help you? You&#x27;re very good. How we think determines our life.
+
+<span class="student">[Student]</span> Our life.
+
+<span class="tutor">[Tutor]</span> Okay. You were so close. How we think. Very good. Yeah, we need a subject. How we think.
+
+<span class="student">[Student]</span> How we think.
+
+<span class="tutor">[Tutor]</span> Yeah. Determines.
+
+<span class="student">[Student]</span> Determines our life.
+
+<span class="tutor">[Tutor]</span> OK. You got it. Good job. All right. Hopefully the next one will be a little easier. This is a noun, a thing.
+
+<span class="student">[Student]</span> OK. Yesterday we learned the word metabolism.
+
+<span class="tutor">[Tutor]</span> Yes, we did.
+
+<span class="student">[Student]</span> Yes. Okay. The chemical process where food is changed into energy. Exercise is supposed to speed up your metabolism. Metabolism is a key to keep our body healthy.
+
+<span class="tutor">[Tutor]</span> Yes, yes, it&#x27;s very... Okay, now, we had a little problem yesterday with figuring out where to put the stress in this word. And what I&#x27;m hearing you say is metabolism. Metabolism. I&#x27;m going to get you to try this. Metabolism. Metabolism.
+
+<span class="student">[Student]</span> Metabolism.
+
+<span class="tutor">[Tutor]</span> Yeah, you&#x27;re putting it on the third syllable.
+
+<span class="student">[Student]</span> Metabolism. Metabolism. Metabolism.
+
+<span class="tutor">[Tutor]</span> Yes. Okay. There you go. All right.
+
+<span class="student">[Student]</span> Okay.
+
+<span class="tutor">[Tutor]</span> I&#x27;m not going to ask you to make a second sentence. You&#x27;re working very hard today.
+
+<span class="student">[Student]</span> Yeah, it&#x27;s fine.
+
+<span class="tutor">[Tutor]</span> All right, my friend. You&#x27;re doing great. Any questions?
+
+<span class="student">[Student]</span> Oh, no. Let&#x27;s continue to the process.
+
+<span class="tutor">[Tutor]</span> All right. Let&#x27;s continue.
+
+<span class="student">[Student]</span> Yes.
+
+<span class="tutor">[Tutor]</span> Okay. Yeah. Part C, the title is, Is Your Diet Working? And once again, you&#x27;re going to practice your speaking and fluency by reading the subtitle and the paragraph.
+
+<span class="student">[Student]</span> Okay. I see.
+
+<span class="tutor">[Tutor]</span> Okay.
+
+<span class="student">[Student]</span> Just I read the first. Eat and exercise. [?]
+
+<span class="tutor">[Tutor]</span> Yes.
+
+<span class="student">[Student]</span> Regular exercise can have a big impact on the overall success of your weight loss plan. To understand how this works, it&#x27;s helpful to think of weight loss as a simple math. The number of calories that you eat minus that number of calories that you burn determines your weight. Balancing these numbers effectively is the key to grant... just a moment. Grant, grant, grant, grant.
+
+<span class="tutor">[Tutor]</span> You&#x27;re trying. May I help you?
+
+<span class="student">[Student]</span> Okay.
+
+<span class="tutor">[Tutor]</span> Guaranteeing.
+
+<span class="student">[Student]</span> Guaranteeing. Guaranteeing. Guaranteeing the way to loss. [?]
+
+<span class="tutor">[Tutor]</span> Okay. Very nice. All right, let&#x27;s continue on the next page.
+
+<span class="student">[Student]</span> Okay. As well as burning off excess calories, regular exercise also helps boosting your metabolism. For this reason, combined exercise with dieting is more effective than just dieting on its own. And on an ad bonus is that by boosting your metabolism, physical activity, activity, activity, activity, activity, my god, activity happy your perhaps you lose weight [?] while eating more, making your overweight loss [?overall weight loss] excess experience [?] speeder and more pleasant.
+
+<span class="tutor">[Tutor]</span> Okay.
+
+<span class="student">[Student]</span> In addition to...
+
+<span class="tutor">[Tutor]</span> Can we pause for a minute? Okay. You&#x27;re doing great. This is a lot of words, a lot of tongue twisters.
+
+<span class="student">[Student]</span> Okay.
+
+<span class="tutor">[Tutor]</span> So, in the fourth line from the bottom of that paragraph, let me just review the word you worked so hard on. It has four syllables. A-C-T-I-V-I-T-Y.
+
+<span class="student">[Student]</span> Activity.
+
+<span class="tutor">[Tutor]</span> Yeah, activity. You did it. Okay. Now, in the second last line, you said making your overweight loss. Let&#x27;s try saying overall.
+
+<span class="student">[Student]</span> Overall.
+
+<span class="tutor">[Tutor]</span> Overall weight loss.
+
+<span class="student">[Student]</span> Yeah, weight loss. Overall weight loss.
+
+<span class="tutor">[Tutor]</span> Okay. Okay, and in the last line, you said experience speeder.
+
+<span class="student">[Student]</span> Yeah.
+
+<span class="tutor">[Tutor]</span> Let&#x27;s try three syllables.
+
+<span class="student">[Student]</span> Speedy-er.
+
+<span class="tutor">[Tutor]</span> Speedy-er.
+
+<span class="student">[Student]</span> Speedy-er.
+
+<span class="tutor">[Tutor]</span> You did it.
+
+<span class="student">[Student]</span> Yeah.
+
+<span class="tutor">[Tutor]</span> There you go. That was a hill. All right, my friend. Now we&#x27;re ready for the next paragraph.
+
+<span class="student">[Student]</span> Yeah, I&#x27;m ready. In addition to accelerating weight loss, physical exercise can improve your overall health. Research has proven that regular exercise can help prevent serious health problems such as heart disease, stroke, hypertension, and diabetes. Diabetes. [?]
+
+<span class="tutor">[Tutor]</span> You&#x27;re very close. Diabetes.
+
+<span class="student">[Student]</span> Diabetes. Diabetes. [?]
+
+<span class="tutor">[Tutor]</span> Diabetes.
+
+<span class="student">[Student]</span> Diabetes. [?]
+
+<span class="tutor">[Tutor]</span> Four of them. Diabetes.
+
+<span class="student">[Student]</span> Diabetes. Diabetes. Diabetes.
+
+<span class="tutor">[Tutor]</span> You did it.
+
+<span class="student">[Student]</span> Okay. Making exercise a part of your daily routine is the key to long-term weight loss and physical health. Yeah, it&#x27;s true.
+
+<span class="tutor">[Tutor]</span> Right. Okay. That was a difficult article, but you did a great job. Nicely done.
+
+<span class="student">[Student]</span> Thank you so much.
+
+<span class="tutor">[Tutor]</span> All right. Let&#x27;s go on to part D, the true and false. I&#x27;ll have you read the sentence and tell me if it&#x27;s true or false.
+
+<span class="student">[Student]</span> Okay. A healthy diet is the most important factor in, in achieving weight loss. Yeah, it&#x27;s true. The last sentence, the sentence says it&#x27;s key to keep our dieting and health. The second question?
+
+<span class="tutor">[Tutor]</span> Yes, please.
+
+<span class="student">[Student]</span> Okay, exercising daily is the key to short-term weight loss and physical health. No, it is not true. Because these scientists don&#x27;t say that. It is just routine and just keep their health. But this question about the short-term weight, it is not true.
+
+<span class="tutor">[Tutor]</span> Yeah, that&#x27;s right. Unfortunately, it&#x27;s a combination of things. All right, my friend, we&#x27;re almost done. Let&#x27;s go to part E. What&#x27;s your opinion?
+
+<span class="student">[Student]</span> And teacher, before this question, true and false, is the false is the right? The pronunciation? False or false?
+
+<span class="tutor">[Tutor]</span> False. Number one was true. Number two was false.
+
+<span class="student">[Student]</span> False. I was wondering about the pronunciation of false. False. False.
+
+<span class="tutor">[Tutor]</span> Yeah.
+
+<span class="student">[Student]</span> Okay.
+
+<span class="tutor">[Tutor]</span> False.
+
+<span class="student">[Student]</span> False.
+
+<span class="tutor">[Tutor]</span> Very good.
+
+<span class="student">[Student]</span> Okay.
+
+<span class="tutor">[Tutor]</span> What I&#x27;ll do, once again, if I&#x27;m not... First of all, I&#x27;ll ask you, am I sending you too many videos, Joey?
+
+<span class="student">[Student]</span> I&#x27;m sorry, teacher. Frankly speaking, I&#x27;m so busy, so I can check the video sometimes.
+
+<span class="tutor">[Tutor]</span> That&#x27;s okay. I&#x27;m not asking you... I&#x27;m just asking, am I sending you too much assistance? Too much help. I know you are busy. I know you cannot watch videos at work.
+
+<span class="student">[Student]</span> And sometimes I started to study English when I was a university student. So it is a little habit to pronunciation. So it is a little difficult to change my pronunciation. I need to practice, practice, practice, and then it&#x27;s possible to change because my pronunciation is fixed. The bad routine.
+
+<span class="tutor">[Tutor]</span> No. Joey, let me state to you right now. Clearly and truthfully, your pronunciation is good for the level you are at.
+
+<span class="student">[Student]</span> Okay.
+
+<span class="tutor">[Tutor]</span> We have talked. Well, you&#x27;re working hard as well. There are going to be certain pronunciation sounds that you may not master. And that is okay. Because everyone knows that English is not your second language.
+
+<span class="student">[Student]</span> Okay. Yes.
+
+<span class="tutor">[Tutor]</span> So when you say D for T-H or when you mix up your F and P sounds, people, nice people understand.
+
+<span class="student">[Student]</span> Okay. Okay.
+
+<span class="tutor">[Tutor]</span> Yeah. I send you the videos because I feel like they are an easy and passive way to practice what we do in class each week.
+
+<span class="student">[Student]</span> Okay.
+
+<span class="tutor">[Tutor]</span> If you have time, wonderful. If you don&#x27;t, just put the information away. Put the video link away and then try to watch it when you have time. I know you are separating your life between your job during the week and your focus on the weekends is your family.
+
+<span class="student">[Student]</span> And couch potatoes.
+
+<span class="tutor">[Tutor]</span> Well, yeah, yeah. But not to sound critical, but you can be a couch potato and watch YouTube.
+
+<span class="student">[Student]</span> Thank you.
+
+<span class="tutor">[Tutor]</span> You&#x27;re doing fine. You&#x27;re doing fine, Joey. No worries. All right, my friend. You know what we&#x27;re going to do? We&#x27;re going to stop right there. You&#x27;ve done a lot of work today. I have lots to type up and I&#x27;ll send some videos for you. You have a lovely trip home. Have a good weekend. And we&#x27;ll start all over again on Monday.
+
+<span class="student">[Student]</span> I hope you two have a great weekend, too. [?]
+
+<span class="tutor">[Tutor]</span> Thank you, dear. Take care. Bye-bye.
+
+<span class="student">[Student]</span> Bye-bye.</div>
+        </div>
+    </div>
+    <div class="toast" id="toast">✅ 프롬프트가 복사되었습니다!</div>
+    <script>
+        const REVIEW_PROMPT="너는 나의 영어 회화 복습 파트너야. 오늘 내 전화영어 수업 내용을 기반으로 대화하면서 복습을 도와줘.\n\n[오늘 수업 전사 내용]\n[Student] Hello, Carly. [?]\n\n[Tutor] Hi, Joey. [?Ben] Happy Friday.\n\n[Student] Yeah, happy Thursday. [?]\n\n[Tutor] Thank you. Okay. Do you have time to finish your week with some English practice?\n\n[Student] English practice?\n\n[Tutor] Yes, your class.\n\n[Student] What does it mean, finish the practice?\n\n[Tutor] English practice means, that's another way of me asking you if you have time for your class this morning. We're practicing your English.\n\n[Student] Okay. Frankly speaking, I can understand the poetry, your meaning. [?]\n\n[Tutor] Okay. Let me explain it.\n\n[Student] Sorry.\n\n[Tutor] Yeah. No, no. Don't apologize.\n\n[Student] Okay.\n\n[Tutor] Every day that we meet by phone, you have a class about a certain topic. And during that class, you are learning and practicing your English skills.\n\n[Student] Yes, you're right.\n\n[Tutor] So when I ask you if you're ready for some English practice, it's another way of asking you if you're ready to have your class.\n\n[Student] Oh, yes. No problem. I'm ready.\n\n[Tutor] Okay.\n\n[Student] Just a moment. I'll check them.\n\n[Tutor] That's fine. Take all the time. You're my last class.\n\n[Student] Yes.\n\n[Student] ...styling, and exercising. [?]\n\n[Tutor] Okay. You said options. You started saying opinions. So you were almost there. Good job. No problem. Okay. So not logical options, logical opinions. Very good. All right. Now, once again, they show us the words that we went through.\n\n[Student] Yes.\n\n[Tutor] And I'm not going to ask you to read them again, but I'll ask you to look at them and just ask me, do you need me to explain any of them again or like their meaning or their pronunciation for you?\n\n[Student] Okay. Almost I know that about yes word and it's good. [?]\n\n[Tutor] That's fine. It's there just for review. But if you're comfortable, then let's continue on to our key expression.\n\n[Student] Okay, no problem.\n\n[Tutor] All right. You know what to do. And if possible, I'll ask you to make a second sentence when sentence one is finished.\n\n[Student] Okay. The first, the next page, right? And boost?\n\n[Tutor] Yes, boost.\n\n[Student] Boost meaning is to improve or increase something. We took various steps to try to boost sales.\n\n[Tutor] Very good. So boost is a verb and it means to increase or improve something.\n\n[Student] Improve something. [?]\n\n[Tutor] Can I ask you to take a moment and see if you can think of a second sentence, okay?\n\n[Student] Okay. The AI boosts our knowledge skill for the people.\n\n[Tutor] Yeah, that app helps you a lot that you told me about.\n\n[Student] Okay.\n\n[Tutor] Very good. Very good. All right, let's go on to the next word. This is an adjective.\n\n[Student] Okay, pleasant. That meaning is enjoyable, attractive, friendly, or easy to like. It was pleasant to sit down after standing for hours.\n\n[Tutor] Yeah, I agree with that. All right, can you try to make a second sentence with the word pleasant?\n\n[Student] Present. Present. Present. [?]\n\n[Tutor] Better.\n\n[Student] Present. Yes. [?] Friday is my present day because I can see my family in my home. [?]\n\n[Tutor] That's right. Yeah, you get to go home this afternoon. That's great.\n\n[Student] Yes.\n\n[Tutor] All right. Very nicely done. All right, friend. Let's go on to the third one. And this is the verb.\n\n[Student] Determine. Determine. Determine.\n\n[Tutor] Actually, it's a short I. You got it right the first time. Determine.\n\n[Student] Okay. Determine.\n\n[Tutor] Better.\n\n[Student] Okay.\n\n[Tutor] May I help you?\n\n[Student] Oh, yes.\n\n[Tutor] What's happening is that the word has three syllables.\n\n[Student] Uh-huh.\n\n[Tutor] And you're stressing the second syllable. Let's try it a different way. Instead of saying determine, try this. Determine.\n\n[Student] Uh-huh. Determine. [?]\n\n[Tutor] Yeah, third syllable.\n\n[Student] Yeah, determine, determine. Uh, syllable [?silver] is the, uh, that is meaning the third one sound? Yeah, three sound. Yeah, uh, determined. I see. Okay. Understand. The meaning is to control or influence [?imprints] something directly or decide what will happen. Sometimes I'm confused. I is a D or I... [?] directly, directly, determined. So, yeah, it's a little confused. I need to be more effective.\n\n[Tutor] I understand. Okay. Directly. What's happening with this word is we do have exceptions to the rule, but the way it works out, this particular word, the I at the end is always short, like I, and the E is silent.\n\n[Student] Directly [?Directory].\n\n[Tutor] Okay.\n\n[Student] It's better, right? [?]\n\n[Tutor] All right. Directly.\n\n[Student] Yeah.\n\n[Tutor] Yeah. And direct, yeah, directly. Both the I and the E in directly are short vowels.\n\n[Student] So your feedback is that if some word, I or E, it is more shrink, that word pronunciation, right?\n\n[Tutor] Directly. The word directly, because the I follows an R and then the E follows a C, you have vowel, consonant, vowel, consonant. Both those vowels will often say their short names.\n\n[Student] Directly. Directly [?Directory]. Okay. I see. Thank you so much.\n\n[Tutor] No problem. Both of these words, directly and determined, can be very confusing. All right. Now, before you read sentence one, just take a look at it and decide, do you have to change the verb tense for the word determine to fit the sentence?\n\n[Student] Oh, determine. Determine. Just, I guess. Determine.\n\n[Tutor] Well, this is one of those words where the spelling, sorry, the pronunciation doesn't change, but instead, we add a D. So instead of saying determine, we say determined.\n\n[Student] Determined.\n\n[Tutor] Yes.\n\n[Student] Okay.\n\n[Tutor] Yes. Try that in sentence one.\n\n[Student] Okay. Determined. Determined.\n\n[Tutor] Okay. Yes. Finish. Finished. [?]\n\n[Student] Yes. Okay.\n\n[Tutor] I told you example, right? [?]\n\n[Student] Yes.\n\n[Tutor] Please read number one.\n\n[Student] Okay, your health is determined in part by what you eat.\n\n[Tutor] Yes.\n\n[Student] Yes.\n\n[Tutor] Your health is determined by what you eat. Okay. Now, we're having a lot of fun with this word today. Can you think of a second sentence?\n\n[Student] Okay. How to think determines our life.\n\n[Tutor] Okay. May I help you? You're very good. How we think determines our life.\n\n[Student] Our life.\n\n[Tutor] Okay. You were so close. How we think. Very good. Yeah, we need a subject. How we think.\n\n[Student] How we think.\n\n[Tutor] Yeah. Determines.\n\n[Student] Determines our life.\n\n[Tutor] OK. You got it. Good job. All right. Hopefully the next one will be a little easier. This is a noun, a thing.\n\n[Student] OK. Yesterday we learned the word metabolism.\n\n[Tutor] Yes, we did.\n\n[Student] Yes. Okay. The chemical process where food is changed into energy. Exercise is supposed to speed up your metabolism. Metabolism is a key to keep our body healthy.\n\n[Tutor] Yes, yes, it's very... Okay, now, we had a little problem yesterday with figuring out where to put the stress in this word. And what I'm hearing you say is metabolism. Metabolism. I'm going to get you to try this. Metabolism. Metabolism.\n\n[Student] Metabolism.\n\n[Tutor] Yeah, you're putting it on the third syllable.\n\n[Student] Metabolism. Metabolism. Metabolism.\n\n[Tutor] Yes. Okay. There you go. All right.\n\n[Student] Okay.\n\n[Tutor] I'm not going to ask you to make a second sentence. You're working very hard today.\n\n[Student] Yeah, it's fine.\n\n[Tutor] All right, my friend. You're doing great. Any questions?\n\n[Student] Oh, no. Let's continue to the process.\n\n[Tutor] All right. Let's continue.\n\n[Student] Yes.\n\n[Tutor] Okay. Yeah. Part C, the title is, Is Your Diet Working? And once again, you're going to practice your speaking and fluency by reading the subtitle and the paragraph.\n\n[Student] Okay. I see.\n\n[Tutor] Okay.\n\n[Student] Just I read the first. Eat and exercise. [?]\n\n[Tutor] Yes.\n\n[Student] Regular exercise can have a big impact on the overall success of your weight loss plan. To understand how this works, it's helpful to think of weight loss as a simple math. The number of calories that you eat minus that number of calories that you burn determines your weight. Balancing these numbers effectively is the key to grant... just a moment. Grant, grant, grant, grant.\n\n[Tutor] You're trying. May I help you?\n\n[Student] Okay.\n\n[Tutor] Guaranteeing.\n\n[Student] Guaranteeing. Guaranteeing. Guaranteeing the way to loss. [?]\n\n[Tutor] Okay. Very nice. All right, let's continue on the next page.\n\n[Student] Okay. As well as burning off excess calories, regular exercise also helps boosting your metabolism. For this reason, combined exercise with dieting is more effective than just dieting on its own. And on an ad bonus is that by boosting your metabolism, physical activity, activity, activity, activity, activity, my god, activity happy your perhaps you lose weight [?] while eating more, making your overweight loss [?overall weight loss] excess experience [?] speeder and more pleasant.\n\n[Tutor] Okay.\n\n[Student] In addition to...\n\n[Tutor] Can we pause for a minute? Okay. You're doing great. This is a lot of words, a lot of tongue twisters.\n\n[Student] Okay.\n\n[Tutor] So, in the fourth line from the bottom of that paragraph, let me just review the word you worked so hard on. It has four syllables. A-C-T-I-V-I-T-Y.\n\n[Student] Activity.\n\n[Tutor] Yeah, activity. You did it. Okay. Now, in the second last line, you said making your overweight loss. Let's try saying overall.\n\n[Student] Overall.\n\n[Tutor] Overall weight loss.\n\n[Student] Yeah, weight loss. Overall weight loss.\n\n[Tutor] Okay. Okay, and in the last line, you said experience speeder.\n\n[Student] Yeah.\n\n[Tutor] Let's try three syllables.\n\n[Student] Speedy-er.\n\n[Tutor] Speedy-er.\n\n[Student] Speedy-er.\n\n[Tutor] You did it.\n\n[Student] Yeah.\n\n[Tutor] There you go. That was a hill. All right, my friend. Now we're ready for the next paragraph.\n\n[Student] Yeah, I'm ready. In addition to accelerating weight loss, physical exercise can improve your overall health. Research has proven that regular exercise can help prevent serious health problems such as heart disease, stroke, hypertension, and diabetes. Diabetes. [?]\n\n[Tutor] You're very close. Diabetes.\n\n[Student] Diabetes. Diabetes. [?]\n\n[Tutor] Diabetes.\n\n[Student] Diabetes. [?]\n\n[Tutor] Four of them. Diabetes.\n\n[Student] Diabetes. Diabetes. Diabetes.\n\n[Tutor] You did it.\n\n[Student] Okay. Making exercise a part of your daily routine is the key to long-term weight loss and physical health. Yeah, it's true.\n\n[Tutor] Right. Okay. That was a difficult article, but you did a great job. Nicely done.\n\n[Student] Thank you so much.\n\n[Tutor] All right. Let's go on to part D, the true and false. I'll have you read the sentence and tell me if it's true or false.\n\n[Student] Okay. A healthy diet is the most important factor in, in achieving weight loss. Yeah, it's true. The last sentence, the sentence says it's key to keep our dieting and health. The second question?\n\n[Tutor] Yes, please.\n\n[Student] Okay, exercising daily is the key to short-term weight loss and physical health. No, it is not true. Because these scientists don't say that. It is just routine and just keep their health. But this question about the short-term weight, it is not true.\n\n[Tutor] Yeah, that's right. Unfortunately, it's a combination of things. All right, my friend, we're almost done. Let's go to part E. What's your opinion?\n\n[Student] And teacher, before this question, true and false, is the false is the right? The pronunciation? False or false?\n\n[Tutor] False. Number one was true. Number two was false.\n\n[Student] False. I was wondering about the pronunciation of false. False. False.\n\n[Tutor] Yeah.\n\n[Student] Okay.\n\n[Tutor] False.\n\n[Student] False.\n\n[Tutor] Very good.\n\n[Student] Okay.\n\n[Tutor] What I'll do, once again, if I'm not... First of all, I'll ask you, am I sending you too many videos, Joey?\n\n[Student] I'm sorry, teacher. Frankly speaking, I'm so busy, so I can check the video sometimes.\n\n[Tutor] That's okay. I'm not asking you... I'm just asking, am I sending you too much assistance? Too much help. I know you are busy. I know you cannot watch videos at work.\n\n[Student] And sometimes I started to study English when I was a university student. So it is a little habit to pronunciation. So it is a little difficult to change my pronunciation. I need to practice, practice, practice, and then it's possible to change because my pronunciation is fixed. The bad routine.\n\n[Tutor] No. Joey, let me state to you right now. Clearly and truthfully, your pronunciation is good for the level you are at.\n\n[Student] Okay.\n\n[Tutor] We have talked. Well, you're working hard as well. There are going to be certain pronunciation sounds that you may not master. And that is okay. Because everyone knows that English is not your second language.\n\n[Student] Okay. Yes.\n\n[Tutor] So when you say D for T-H or when you mix up your F and P sounds, people, nice people understand.\n\n[Student] Okay. Okay.\n\n[Tutor] Yeah. I send you the videos because I feel like they are an easy and passive way to practice what we do in class each week.\n\n[Student] Okay.\n\n[Tutor] If you have time, wonderful. If you don't, just put the information away. Put the video link away and then try to watch it when you have time. I know you are separating your life between your job during the week and your focus on the weekends is your family.\n\n[Student] And couch potatoes.\n\n[Tutor] Well, yeah, yeah. But not to sound critical, but you can be a couch potato and watch YouTube.\n\n[Student] Thank you.\n\n[Tutor] You're doing fine. You're doing fine, Joey. No worries. All right, my friend. You know what we're going to do? We're going to stop right there. You've done a lot of work today. I have lots to type up and I'll send some videos for you. You have a lovely trip home. Have a good weekend. And we'll start all over again on Monday.\n\n[Student] I hope you two have a great weekend, too. [?]\n\n[Tutor] Thank you, dear. Take care. Bye-bye.\n\n[Student] Bye-bye.\n\n[AI 피드백]\n**0. 📌 Topic**\n\nTopic: Key Vocabulary and Reading Practice on Diet, Exercise, and Weight Loss\n\n---\n\n**1. 📊 오늘의 대화 요약 (Summary)**\n\n- 핵심 단어 4개(**boost, pleasant, determine, metabolism**)의 뜻을 읽고, Joey가 직접 두 번째 예문을 만들었습니다. *pleasant*를 *present*처럼 발음하는 부분, 그리고 *determine / directly / metabolism*에서 어디를 세게 읽는지와 I·E 소리를 집중해서 교정했습니다.\n- \"Is Your Diet Working?\" 지문(운동과 체중 감량, 칼로리 계산, 질병 예방)을 소리 내어 읽고 True/False 문제를 풀었습니다. *guaranteeing, activity, overall, speedier, diabetes, false* 발음도 연습했습니다.\n- 마지막에 Joey가 \"발음 습관이 굳어서 고치기 어렵다\"는 고민을 털어놓았습니다. 튜터는 **\"지금 수준에서 발음은 충분히 좋다\"**고 격려했고, 영상은 시간 날 때 보면 된다고 안심시켜 주었습니다.\n\n---\n\n**2. 💬 유창성 업그레이드 (Fluency & Natural Flow)**\n\n**① 상대 말을 확인할 때**\n- ❌ **As Said**: \"What does it mean, finish the practice?\"\n- ✅ **Natural**: \"What do you mean by 'finish the week with some practice'?\"\n- 💎 **Professional**: \"Could you clarify what you mean by 'finishing the week with some practice'?\"\n- 💡 **코칭 포인트**: \"What does it mean?\" asks what a word means in the dictionary. \"What do you mean by ~?\" asks what the *speaker* wants to say. That fits better when you're checking someone's message.\n → \"What does it mean?\"은 단어 자체의 뜻을 묻는 느낌입니다. 상대가 **무슨 생각으로 한 말인지** 확인할 때는 \"What do you mean by ~?\"를 한 덩어리로 쓰는 게 훨씬 자연스러워요. 회의에서 \"Could you clarify what you mean by ~?\"라고 하면 정중하고 프로답게 들립니다.\n\n**② 내가 이해한 내용을 정리해서 확인할 때**\n- ❌ **As Said**: \"So your feedback is that if some word, I or E, it is more shrink, that word pronunciation, right?\"\n- ✅ **Natural**: \"So you mean the I and the E are short sounds in this word, right?\"\n- 💎 **Professional**: \"So if I understand correctly, both the I and the E are pronounced as short sounds here?\"\n- 💡 **코칭 포인트**: Start with \"So you mean ~\" and put the main point (the I and the E) right after it. Then the listener catches your idea right away.\n → \"So you mean ~\" 뒤에 **핵심(무엇이 어떻다)**을 바로 붙이면 듣는 사람이 한 번에 알아들어요. \"shrink(쪼그라들다)\" 대신 **short sound(짧은 소리)**라고 하면 발음 이야기라는 게 바로 전달됩니다. 업무에서는 \"If I understand correctly, ~\"가 무엇이든 확인할 때 쓰기 좋은 덩어리예요.\n\n**③ 바빠서 자주 못 한다고 말할 때**\n- ❌ **As Said**: \"Frankly speaking, I'm so busy, so I can check the video sometimes.\"\n- ✅ **Natural**: \"To be honest, I've been really busy, so I can only watch the videos once in a while.\"\n- 💎 **Professional**: \"To be candid, my schedule has been quite packed, so I'm only able to review the videos occasionally.\"\n- 💡 **코칭 포인트**: \"I can check the video sometimes\" sounds positive, like \"I'm able to do it sometimes.\" Adding \"only\" shows what you really mean: \"I can't do it often.\" Also, \"Frankly speaking\" can sound a bit blunt. \"To be honest\" is softer.\n → \"I can check sometimes\"는 \"가끔은 볼 수 있어요\"라는 긍정으로 들려요. **only**를 넣어야 \"가끔밖에 못 봐요\"라는 진짜 마음이 전달됩니다. \"Frankly speaking\"은 원어민 귀엔 살짝 딱딱하거나 직설적으로 들릴 수 있어요. 일상에서는 **\"To be honest\"**가 더 부드럽습니다.\n\n---\n\n**3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)**\n\nCategory: prepositions\n🎯 **오늘의 패턴**: 단어마다 늘 붙어 다니는 짝꿍(at, with, to 같은 작은 연결 단어, 이른바 전치사)이 정해져 있는데, 아무 짝꿍이나 끼우는 습관\n\n| # | ❌ Joey의 원문 | ✅ 교정 예시 | 짝꿍 덩어리 |\n|---|---|---|---|\n| 1 | \"Friday is my present day because I can see my family **in my home**.\" | Friday is a pleasant day for me because I can see my family **at home**. | 집에서 = **at home** |\n| 2 | \"Oh, no. Let's **continue to the process**.\" | Let's **continue with** the lesson. | ~을 계속하다 = **continue with ~** |\n| 3 | \"Metabolism is **a key to keep** our body healthy.\" | Metabolism is **the key to keeping** our body healthy. | ~하는 비결 = **the key to + -ing** |\n| 4 | \"So it is a little **habit to pronunciation**.\" | I have some old **habits in my pronunciation**. | 발음 습관 = **habits in my pronunciation** |\n\n(1번의 *present*는 *pleasant*를 말하려던 것이었어요. pleasant는 혀끝을 윗니 뒤에 붙이는 **L** 소리로 \"플레즌트\"처럼 시작합니다.)\n\n📌 **핵심 규칙**: 이 짝꿍들은 규칙으로 따지지 말고 앞 단어와 **한 덩어리로 통째로 외우세요.** \"at home\", \"continue with\", \"the key to + -ing\"처럼 붙여서 입에 익혀 두면 됩니다.\n(특히 **the key to**의 to는 \"~로 가는 열쇠\"라는 방향의 to예요. 그래서 뒤에 keep이 아니라 **keeping**처럼 -ing 모양이 붙습니다.)\n\n🔁 **따라 읽기**\n- 🗣️ \"I can finally see my family **at home** this weekend.\"\n- 🗣️ \"Let's **continue with** the next page.\"\n- 🗣️ \"Regular exercise is **the key to keeping** our body healthy.\"\n\n---\n\n**4. 📗 어휘 확장 (Vocabulary Vault)**\n\n1. **boost** /buːst/ (v.)\n - 뜻: 끌어올리다, 증진시키다\n - 실전 예문: *The new contract could boost our LNG import volume next year.*\n\n2. **determine** /dɪˈtɜːrmɪn/ (v.)\n - 뜻: 결정하다, 좌우하다 (가운데 **-TER-**를 세게. 끝은 \"마인\"이 아니라 짧게 **\"-민\"**)\n - 실전 예문: *Oil prices largely determine our energy import costs.*\n\n3. **accelerate** /əkˈseləreɪt/ (v.)\n - 뜻: 가속화하다, 앞당기다\n - 실전 예문: *We need to accelerate the audit process before the deadline.*\n\n4. **excess** /ˈekses/ (adj.)\n - 뜻: 초과한, 여분의\n - 실전 예문: *The audit found excess inventory in the storage terminal.*\n\n5. **guarantee** /ˌɡærənˈtiː/ (v.)\n - 뜻: 보장하다 (맨 끝 **-TEE**를 세게)\n - 실전 예문: *We can't guarantee the delivery date due to shipping delays.*\n\n---\n\n**5. 📝 실전 복습 챌린지 (Practice)**\n\n**Q1. (쉬움)** 튜터에게 \"이번 주말엔 집에서 가족이랑 쉴 거예요.\"라고 말해 보세요.\n> ✅ *I'm going to relax with my family **at home** this weekend.*\n\n**Q2. (중간)** 회의 중에 잠깐 다른 이야기가 나왔습니다. \"좋아요, 다음 안건으로 계속 진행하죠.\"라고 말해 보세요.\n> ✅ *Okay, let's **continue with** the next item on the agenda.*\n\n**Q3. (어려움)** \"꾸준한 연습이 발음을 개선하는 비결이에요. 그리고 AI 앱이 제 학습 속도를 높여 줘요.\"라고 말해 보세요. (the key to + -ing, boost 활용)\n> ✅ *Consistent practice is **the key to improving** my pronunciation, and AI apps **boost** my learning speed.*\n\n---\n\n**6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)**\n\n✨ **Good Job**\n> 🗣️ \"I was wondering about the pronunciation of false.\"\n\n**\"I was wondering about ~\"**은 원어민이 궁금한 점을 **부드럽고 예의 바르게** 꺼낼 때 쓰는 고급 덩어리입니다. 실수 없이 깔끔한 문장이었어요. 수업 흐름을 끊지 않으면서 궁금한 걸 스스로 질문한 태도도 훌륭했습니다. 이 표현은 비즈니스 이메일이나 회의에서도 그대로 쓸 수 있어요. 👏\n\n🚀 **내일의 한 문장**\n> 🗣️ \"Hi! I was wondering if we could practice *determine* again. I've been working on it **at home**, and I think practice is **the key to fixing** my old habits.\"\n\n---\n\n**[성과 지표]**\n\n**🎯 유창성 점수: 6 / 10**\n\n**근거**\n- 👍 발음하기 어려운 단어가 많은 건강 기사를 끝까지 포기하지 않고 읽었습니다. 교정을 받으면 바로 따라 고치는 반응 속도도 좋았습니다.\n- 👍 \"The AI boosts our knowledge skill for the people.\", \"How to think determines our life.\"처럼 배운 단어로 자기 생각을 담은 문장을 직접 만들었습니다. 튜터가 we를 넣어 주자 바로 \"How we think determines our life\"로 고쳐 말했고, 발음 질문도 적극적으로 했습니다.\n- 👎 자기 생각을 길게 말할 때(발음 고민, 피드백 확인) 문장이 끊기고 단어를 나열하는 식이 되는 경우가 있었습니다.\n- 👎 at / with / to처럼 단어마다 붙어 다니는 짝꿍을 섞어 쓰는 실수가 반복되었습니다.\n\n**🛠️ 원포인트 액션 플랜**\n> **\"말하기 전에 핵심 한 덩어리부터!\"**\n> 다음 수업에서 무언가를 확인하거나 설명할 때는 **\"So you mean ~\"** 또는 **\"I was wondering ~\"**으로 문장을 시작해 보세요. 시작 덩어리가 정해지면 뒤 문장이 훨씬 덜 끊깁니다. 출근길에는 오늘의 짝꿍 3개(**at home / continue with / the key to + -ing**)를 각각 소리 내어 3번씩 말해 보세요. 💪\n\n위 내용을 바탕으로:\n1. 먼저 오늘 수업에서 내가 틀렸거나 어색했던 표현을 하나 골라서, 관련된 상황을 영어로 질문해줘.\n2. 내가 영어로 대답하면, 자연스러운지 확인하고 더 나은 표현이 있으면 알려줘.\n3. 특히 \"반복 실수 패턴\"에서 지적된 부분을 집중적으로 연습시켜줘.\n4. 이런 식으로 오늘 배운 표현들을 하나씩 복습하자.\n5. 한국어 설명은 필요할 때만 간단히, 대화는 최대한 영어로 진행해줘.\n\n그럼 시작하자!";
+        function startReview(){navigator.clipboard.writeText(REVIEW_PROMPT).then(()=>{showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)}).catch(()=>{const t=document.createElement('textarea');t.value=REVIEW_PROMPT;document.body.appendChild(t);t.select();document.execCommand('copy');document.body.removeChild(t);showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)})}
+        function showToast(){const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500)}
+        function switchTab(n){document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',n==='feedback'?i===0:i===1));document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));document.getElementById('tab-'+n).classList.add('active')}
+    </script>
+</body>
+</html>

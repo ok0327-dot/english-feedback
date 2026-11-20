@@ -516,5 +516,10 @@
     "topic": "The Dieter's Dilemma – Why Diets Fail and How to Stay Consistent",
     "target_grammar": "quantifiers (almost vs. most / almost all)",
     "engine": "claude"
+  },
+  "2026-11-20": {
+    "topic": "Key Vocabulary and Reading Practice on Diet, Exercise, and Weight Loss",
+    "target_grammar": "prepositions",
+    "engine": "claude"
   }
 }
