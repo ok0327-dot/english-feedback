@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#0f0f13"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="당근영어"><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="icon" type="image/png" sizes="192x192" href="icon-192.png"><script src="install-banner.js" defer></script><script src="sw-reg.js" defer></script>
+    <title>전화영어 복습 - 2026년 11월 23일</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Noto Sans KR',sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.75;min-height:100vh}
+        .header{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);border-bottom:1px solid rgba(255,255,255,.06);padding:48px 24px 40px;text-align:center}
+        .header-date{font-size:13px;color:#94a3b8;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+        .header h1{font-size:28px;font-weight:700;color:#f1f5f9;margin-bottom:16px}
+        .header-meta{display:flex;justify-content:center;gap:24px;font-size:14px;color:#64748b}
+        .header-meta span{display:flex;align-items:center;gap:6px}
+        .cta-section{text-align:center;padding:40px 24px}
+        .cta-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:linear-gradient(135deg,#38bdf8,#818cf8);color:#fff;font-size:16px;font-weight:600;font-family:'Noto Sans KR',sans-serif;border:none;border-radius:50px;cursor:pointer;transition:all .3s;text-decoration:none;box-shadow:0 4px 24px rgba(56,189,248,.25)}
+        .cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(56,189,248,.35)}
+        .cta-btn svg{width:20px;height:20px}
+        .cta-sub{margin-top:12px;font-size:13px;color:#64748b}
+        .toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#38bdf8;padding:14px 28px;border-radius:12px;font-size:14px;font-weight:500;border:1px solid rgba(56,189,248,.2);box-shadow:0 8px 32px rgba(0,0,0,.4);opacity:0;transition:all .4s cubic-bezier(.16,1,.3,1);z-index:1000}
+        .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+        .container{max-width:720px;margin:0 auto;padding:0 24px 80px}
+        .tabs{display:flex;gap:4px;background:#1a1a24;padding:4px;border-radius:12px;margin-bottom:32px}
+        .tab{flex:1;padding:12px;text-align:center;font-size:14px;font-weight:500;color:#64748b;background:0 0;border:none;border-radius:8px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all .2s}
+        .tab.active{background:#262636;color:#f1f5f9}
+        .tab-content{display:none}.tab-content.active{display:block}
+        .feedback h2{font-size:18px;font-weight:700;color:#f1f5f9;margin:36px 0 16px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.06)}
+        .feedback h2:first-child{margin-top:0}
+        .feedback p{margin:8px 0;color:#cbd5e1}
+        .feedback .item{padding:6px 0 6px 16px;border-left:2px solid #334155;margin:6px 0;color:#cbd5e1}
+        .feedback .numbered{padding:8px 0 8px 16px;color:#cbd5e1}
+        .feedback .numbered strong{color:#38bdf8}
+        .feedback strong{color:#f1f5f9}
+        .feedback code{background:#1e293b;padding:2px 8px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#38bdf8}
+        .feedback table{width:100%;border-collapse:collapse;margin:12px 0}
+        .feedback th,.feedback td{padding:10px 14px;text-align:left;border-bottom:1px solid #262636}
+        .feedback th{color:#94a3b8;font-weight:500;font-size:13px}
+        .feedback td{color:#cbd5e1}
+        .arrow{color:#38bdf8;font-weight:700}
+        .transcript{background:#1a1a24;border-radius:12px;padding:28px;font-size:14px;line-height:2;color:#94a3b8;white-space:pre-wrap;word-break:break-word;font-family:'JetBrains Mono','Noto Sans KR',monospace}
+        .transcript .tutor{color:#38bdf8}
+        .transcript .student{color:#a78bfa}
+        @media(max-width:640px){.header{padding:32px 16px}.header h1{font-size:22px}.cta-btn{padding:14px 28px;font-size:15px}.container{padding:0 16px 60px}}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-date">2026년 11월 23일</div>
+        <h1>📚 전화영어 복습</h1>
+        <div class="header-meta">
+            <span>⏱ 19분 49초</span>
+            <span>🎙 전화영어_025180304_20261123080020.m4a</span>
+        </div>
+    </div>
+    <div class="cta-section">
+        <button class="cta-btn" onclick="startReview()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Gemini에서 복습 대화 시작하기
+        </button>
+        <div class="cta-sub">클릭하면 프롬프트가 복사되고 Gemini가 열립니다</div>
+    </div>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('feedback')">📋 AI 피드백</button>
+            <button class="tab" onclick="switchTab('transcript')">🎙 수업 전사</button>
+        </div>
+        <div id="tab-feedback" class="tab-content active">
+            <div class="feedback"><p><strong>Topic: Discussing Fair Skin as the Beauty Ideal in Asia</strong></p>
+<br>
+<br>
+<p><strong>1. 📊 오늘의 대화 요약 (Summary)</strong></p>
+<br>
+<div class="item">쌀쌀해진 날씨(한국 2도, 튜터 쪽 9도)와 Joey의 점심 산책 습관 이야기로 수업을 시작했어요.</div>
+<div class="item">교재 *"Tanned skin vs. Fair skin – Fair skin, the Asian ideal"*을 공부했어요. epitome, pigment, mainstream, complexion 같은 핵심 어휘를 익혔어요. 이어서 아시아의 미백 산업(대만 사례, 180억 규모 시장, 건강 위험)에 대한 기사를 소리 내어 읽었어요.</div>
+<div class="item">True/False 문제를 풀었어요. 마지막으로 Joey는 미백이 아니라 햇빛 차단을 위해 선크림을 쓴다는 경험을 나눴어요.</div>
+<br>
+<br>
+<p><strong>2. 💬 유창성 업그레이드 (Fluency & Natural Flow)</strong></p>
+<br>
+<p><strong>① 날씨 이야기</strong></p>
+<div class="item">❌ <strong>As Said:</strong> "Oh, there is a cold. It is hard to get up early, yeah, because outside is cold and it's getting there, going down temperature, yeah."</div>
+<div class="item">✅ <strong>Natural:</strong> "It's so cold! It's hard to get up early because it's freezing outside, and the temperature keeps dropping."</div>
+<div class="item">💎 <strong>Professional:</strong> "It's been quite cold lately. The temperature has been dropping steadily, so getting up early has been a challenge."</div>
+<div class="item">💡 <strong>코칭 포인트:</strong> "There is a cold" sounds like "someone has a cold." For weather, just say "It's cold." Also, "The temperature keeps dropping" is one natural chunk.</div>
+<p><span class="arrow">→</span> "There is a cold"는 원어민 귀에 "감기가 있다"처럼 들려요. 날씨는 그냥 <strong>It's cold.</strong> 로 충분해요. "기온이 계속 떨어져요"는 <strong>The temperature keeps dropping.</strong> 을 한 덩어리로 외워 두세요.</p>
+<br>
+<p><strong>② 오늘 일정 설명</strong></p>
+<div class="item">❌ <strong>As Said:</strong> "Just every lunch time I go for walk near park. So except that situation, maybe I work inside in my office."</div>
+<div class="item">✅ <strong>Natural:</strong> "I go for a walk in the park every lunchtime. Other than that, I'll be working in my office."</div>
+<div class="item">💎 <strong>Professional:</strong> "Aside from my lunchtime walk, I'll be in the office for the rest of the day."</div>
+<div class="item">💡 <strong>코칭 포인트:</strong> "Except that situation" sounds stiff and textbook-like. Natives say "Other than that" or "Aside from that." It's short, smooth, and super common. Also, "go for <strong>a</strong> walk" always comes with "a."</div>
+<p><span class="arrow">→</span> "except that situation"은 딱딱하게 들려요. 원어민은 <strong>Other than that, ~</strong> (그거 말고는요)를 훨씬 많이 써요. "산책 가다"는 a를 넣은 <strong>go for a walk</strong> 를 통째로 입에 붙이세요. "the rest of the day"(나머지 하루 동안)도 같이 챙겨 두세요.</p>
+<br>
+<p><strong>③ 나이 들면 머리가 하얘지는 이유</strong></p>
+<div class="item">❌ <strong>As Said:</strong> "Okay, when we get older, get it, get old orders, our melanin pigment is lower, so our hair become to change to white."</div>
+<div class="item">✅ <strong>Natural:</strong> "As we get older, our bodies make less melanin, so our hair turns white."</div>
+<div class="item">💎 <strong>Professional:</strong> "As we age, melanin production decreases, which is why our hair turns gray or white."</div>
+<div class="item">💡 <strong>코칭 포인트:</strong> "Become to change to white" stacks three words that all mean "change." Just say "turns white." It's one short chunk. And "make less melanin" sounds more natural than "melanin is lower."</div>
+<p><span class="arrow">→</span> "become to change to white"는 '바뀌다'를 세 번 겹쳐 말한 셈이에요. "하얘지다"는 <strong>turns white</strong> 한 덩어리면 끝나요(turns gray, turns red도 같은 모양). "멜라닌이 덜 만들어져요"는 <strong>make less melanin</strong> 으로 말해 보세요.</p>
+<br>
+<p><strong>④ 기사에 대한 의견</strong></p>
+<div class="item">❌ <strong>As Said:</strong> "I think this article is quite long time ago because these days the culture is a little changed in Asia."</div>
+<div class="item">✅ <strong>Natural:</strong> "I think this article is a bit outdated. The culture in Asia has changed a little these days."</div>
+<div class="item">💎 <strong>Professional:</strong> "This article seems somewhat dated. Attitudes in Asia have shifted quite a bit in recent years."</div>
+<div class="item">💡 <strong>코칭 포인트:</strong> An article can't "be a long time ago." Instead, it's "outdated" or "dated." One word says it all. And "has changed" shows the change is still true now.</div>
+<p><span class="arrow">→</span> 기사가 "오래 전"일 수는 없어요. "좀 옛날 얘기 같다"는 <strong>a bit outdated</strong> 한 단어로 끝나요. "바뀌어서 지금도 그 상태"라는 느낌은 <strong>has changed</strong> 덩어리로 말해요.</p>
+<br>
+<br>
+<p><strong>3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)</strong></p>
+<br>
+<p>Category: verb patterns (want + noun vs. want to + verb)</p>
+<br>
+<p>🎯 오늘의 패턴: "~을 원해"는 <strong>want + 그것</strong>, "~하고 싶어"는 <strong>want to + 하다</strong>예요. fair는 '하다'가 아니라서 want to 뒤에 바로 붙일 수 없어요.</p>
+<br>
+<p>Joey는 오늘 "하얀 피부를 원한다"를 말할 때마다 <strong>want to + fair</strong>라고 했어요. to 뒤에는 go, have, get, look처럼 '무언가를 하는 말'이 와야 해요. fair(하얀)는 모습을 나타내는 말이라, to 뒤에 오면 소리가 툭 끊겨 어색하게 들려요.</p>
+<br>
+<table>
+<tr><th>❌ 원문 (As Said)</th><th>✅ 교정 (Corrected)</th></tr>
+<tr><td>"Okay, many East Asia, East South Asia people want to fair skin."</td><td>Many East and Southeast Asian people <strong>want fair skin</strong>.</td></tr>
+<tr><td>"So they want to fair skin."</td><td>So they <strong>want to have fair skin</strong>.</td></tr>
+<tr><td>"Many people want to fair face."</td><td>Many people <strong>want a fair complexion</strong>.</td></tr>
+</table>
+<br>
+<p>📌 <strong>핵심 규칙:</strong> 갖고 싶은 '것'이면 <strong>want + 그것</strong> (want fair skin)이에요. '하고 싶은 일'이면 <strong>want to + 하는 말</strong> (want to have / want to get / want to look)이에요. 헷갈리면 <strong>want to have</strong>를 통째로 쓰면 안전해요!</p>
+<br>
+<p>🔁 <strong>따라 읽기</strong></p>
+<div class="item">🗣️ "Many Asian people want fair skin."</div>
+<div class="item">🗣️ "So they want to have fair skin."</div>
+<div class="item">🗣️ "Many people want to look brighter."</div>
+<br>
+<br>
+<p><strong>4. 📗 어휘 확장 (Vocabulary Vault)</strong></p>
+<br>
+<p><strong>① epitome</strong> /ɪˈpɪtəmi/ (noun)</p>
+<div class="item">뜻: 전형, 완벽한 본보기 (발음은 '에피톰'이 아니라 '이피터미'예요. 끝에 '-미' 소리가 살아 있어요)</div>
+<div class="item">덩어리: <strong>the epitome of ~</strong> (~의 완벽한 본보기)</div>
+<div class="item">실전 예문: *Our CFO is the epitome of a careful investor.*</div>
+<br>
+<p><strong>② quintessential</strong> /ˌkwɪntɪˈsenʃəl/ (adjective)</p>
+<div class="item">뜻: 가장 전형적인, 딱 ~다운</div>
+<div class="item">실전 예문: *This is a quintessential example of poor internal control.*</div>
+<br>
+<p><strong>③ pigment</strong> /ˈpɪɡmənt/ (noun)</p>
+<div class="item">뜻: 색을 내는 성분, 색소 (옷을 염색하는 물감, 피부색을 정하는 멜라닌 같은 것)</div>
+<div class="item">실전 예문: *Melanin is the pigment that gives our skin and hair their color.*</div>
+<br>
+<p><strong>④ mainstream</strong> /ˈmeɪnstriːm/ (adjective/noun)</p>
+<div class="item">뜻: 주류의, 대세의</div>
+<div class="item">덩어리: <strong>It's mainstream (in ~) for people to + 하다</strong> (~에서는 사람들이 …하는 게 대세예요)</div>
+<div class="item">실전 예문: *LNG has become a mainstream energy source in Korea.*</div>
+<br>
+<p><strong>⑤ hefty</strong> /ˈhefti/ (adjective)</p>
+<div class="item">뜻: (가격·금액이) 꽤 큰, 묵직한</div>
+<div class="item">덩어리: <strong>a hefty price / a hefty penalty</strong></div>
+<div class="item">실전 예문: *The company had to pay a hefty penalty after the audit.*</div>
+<br>
+<br>
+<p><strong>5. 📝 실전 복습 챌린지 (Practice)</strong></p>
+<br>
+<p><strong>Q1. (쉬움)</strong> 동료에게 "요즘 많은 사람들이 전기차를 원해요"라고 말해 보세요.</p>
+<p>✅ <strong>모범 답안:</strong> *These days, many people want electric cars.*</p>
+<br>
+<p><strong>Q2. (중간)</strong> 회의에서 "이 보고서는 좀 오래된 것 같아요. 시장이 많이 바뀌었거든요"라고 말해 보세요.</p>
+<p>✅ <strong>모범 답안:</strong> *I think this report is a bit outdated. The market has changed a lot.*</p>
+<br>
+<p><strong>Q3. (어려움)</strong> 투자 모임에서 "한국에서는 사람들이 ETF에 투자하고 싶어 하는 게 대세예요. 그건 분산 투자의 전형이죠"라고 말해 보세요.</p>
+<p>✅ <strong>모범 답안:</strong> *In Korea, it's mainstream for people to want to invest in ETFs. It's the epitome of diversified investing.*</p>
+<br>
+<br>
+<p><strong>6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)</strong></p>
+<br>
+<p>✨ <strong>Good Job</strong></p>
+<p>> "Not change, just protect from the sun."</p>
+<br>
+<p>튜터가 "피부톤을 바꾸려고 제품을 써 본 적 있나요?"라고 물었을 때, Joey는 <strong>바로, 짧게, 핵심만</strong> 대답했어요. "바꾸려는 게 아니라 그냥 햇빛 차단용"이라는 대조를 한 문장에 담았어요. 원어민도 대화할 때는 이렇게 짧게 끊어 말해요. 여기에 <strong>to</strong>만 붙이면 완벽해요: *"Not to change it, just to protect it from the sun."* 👏</p>
+<br>
+<p>🚀 <strong>내일의 한 문장</strong></p>
+<p>> 🗣️ *"It's getting colder every day, so I really want a warm coffee before my lunchtime walk!"*</p>
+<br>
+<p>(오늘의 <strong>want + 그것</strong> 패턴과 <strong>lunchtime walk</strong> 덩어리를 함께 연습할 수 있어요.)</p>
+<br>
+<br>
+<p><strong>[성과 지표]</strong></p>
+<br>
+<p>📈 <strong>유창성 점수: 5.5 / 10</strong></p>
+<br>
+<p><strong>근거</strong></p>
+<div class="item">👍 <strong>좋았던 점:</strong> 어려운 기사를 끝까지 소리 내어 읽었어요. 모르는 단어(hefty, pigment)와 발음(epitome)은 그 자리에서 바로 물어봤어요. 단어마다 직접 문장을 만들어 보려 했고, "half is right and half is changed"처럼 자기 의견을 균형 있게 표현했어요.</div>
+<div class="item">🔧 <strong>아쉬운 점:</strong> "yeah"를 채움말로 자주 써서 문장이 길게 늘어졌어요. fair/pair, light/right 발음이 섞이기도 했어요. want to + fair나 become to change처럼 말의 뼈대가 흔들리는 순간도 있었어요.</div>
+<br>
+<p>🎯 <strong>원포인트 액션 플랜</strong></p>
+<p>다음 수업에서는 <strong>"want + 그것 / want to + 하다"</strong> 를 의식하며 말해 보세요. 문장을 시작하기 전에 속으로 "내가 원하는 게 '물건'이야, '행동'이야?"를 1초만 체크하면 돼요. 덤으로 <strong>fair의 f 발음</strong>(윗니를 아랫입술에 살짝 대고 바람 빼기)도 3번 연습하고 들어가세요! 💪</p></div>
+        </div>
+        <div id="tab-transcript" class="tab-content">
+            <div class="transcript"><span class="tutor">[Tutor]</span> Hello there, good morning, good evening.
+
+<span class="student">[Student]</span> Hi. Yeah, good morning.
+
+<span class="tutor">[Tutor]</span> Yeah, hi, how are you doing today?
+
+<span class="student">[Student]</span> Oh, there is a cold. It is hard to get up early, yeah, because outside is cold and it&#x27;s getting there, going down temperature, yeah. So, yeah, how are you? [?]
+
+<span class="tutor">[Tutor]</span> Oh, it&#x27;s pretty chilly.
+
+<span class="student">[Student]</span> It&#x27;s coming winter.
+
+<span class="tutor">[Tutor]</span> Yes, it&#x27;s only about nine degrees here today.
+
+<span class="student">[Student]</span> Nine [?Ninety]? Oh, it&#x27;s similar in Korea.
+
+<span class="tutor">[Tutor]</span> Yeah. [?]
+
+<span class="student">[Student]</span> We also five. Today is two. Yeah, two degrees. It&#x27;s cold.
+
+<span class="tutor">[Tutor]</span> Do you have to go outside today? Or will you be inside today?
+
+<span class="student">[Student]</span> Just every lunch time [?rush time] I go for walk [?work] near park. So except that situation, maybe I work inside in my office. Yeah.
+
+<span class="tutor">[Tutor]</span> Okay, you&#x27;re still going to go out for a walk today.
+
+<span class="student">[Student]</span> Yeah, every lunch time I go for a walk near park.
+
+<span class="tutor">[Tutor]</span> Today, did you want to have a look at the textbook here?
+
+<span class="student">[Student]</span> Oh, yes. I&#x27;m prepared and the topic is tanned skin vs. fair skin. Which is more beautiful? Part A. Fair skin, the Asian ideal.
+
+<span class="tutor">[Tutor]</span> So looking at the key vocabulary, would you like to read?
+
+<span class="student">[Student]</span> Oh, yes. The key vocabulary. Fair [?Pair]. Oh, my God. Itom. Itom. Is your right pronunciation, teacher? Epitom. Epitom. How about that?
+
+<span class="tutor">[Tutor]</span> With this one?
+
+<span class="student">[Student]</span> Yes. Fair [?Pair] and epitoms.
+
+<span class="tutor">[Tutor]</span> Epitome. Yeah, epitome.
+
+<span class="student">[Student]</span> Ah, epitome. Epitome.
+
+<span class="tutor">[Tutor]</span> Okay, just a moment. So it&#x27;s a perfect example of something. The epitome of.
+
+<span class="student">[Student]</span> Ah, it is a perfect example, ideal example. Epitome. Epitome. Epidemy.
+
+<span class="tutor">[Tutor]</span> The example of the epitome. Yeah. [?]
+
+<span class="student">[Student]</span> Example of epitome. That is the example of epitome.
+
+<span class="tutor">[Tutor]</span> Okay. Continue. [?]
+
+<span class="student">[Student]</span> Melanin, pulse script, high-end, pigment, inventions, exposure, publicity, mainstream, innocent, complexion, quintessential, status symbol. I said so many words. Is this some different pronunciation? [?]
+
+<span class="tutor">[Tutor]</span> Melanin.
+
+<span class="student">[Student]</span> Melanin.
+
+<span class="tutor">[Tutor]</span> Yeah, melanin. Prescribed.
+
+<span class="student">[Student]</span> Prescribed. [?]
+
+<span class="tutor">[Tutor]</span> Prescribed. This one, yeah, that quintessential. Quintessential.
+
+<span class="student">[Student]</span> Quintessential. [?]
+
+<span class="tutor">[Tutor]</span> Quintessential. [?]
+
+<span class="student">[Student]</span> Quintessential. Okay, I see. Quintessential.
+
+<span class="tutor">[Tutor]</span> Any questions with the vocabulary?
+
+<span class="student">[Student]</span> Itami and quintessential and pigment is a little difficult meaning for me. [?]
+
+<span class="tutor">[Tutor]</span> Pigment, yeah. So color.
+
+<span class="student">[Student]</span> Color.
+
+<span class="tutor">[Tutor]</span> The word for pigment is color. Pigment is color. The pigment of the shirt is the color of the shirt, like the dye, the color.
+
+<span class="student">[Student]</span> Oh, pigment. What means the pigment? Means like colors? Color? Different colors?
+
+<span class="tutor">[Tutor]</span> Yeah.
+
+<span class="student">[Student]</span> Ah, pigment is color of a paste, right? [?]
+
+<span class="tutor">[Tutor]</span> Pigment. So like, it&#x27;s just like you use it to change the color, like you dye clothing. I use red pigment to change.
+
+<span class="student">[Student]</span> Okay, okay, yes, understand.
+
+<span class="tutor">[Tutor]</span> Did you want... So when you think of fair skin, what words do you think of?
+
+<span class="student">[Student]</span> Fair skin, I think it is so bright and sometimes I can see the bright and, how can I say, white color in their face, yeah, that is so...
+
+<span class="tutor">[Tutor]</span> Yeah, fair, light complexion, white, pale.
+
+<span class="student">[Student]</span> Yes, that is fair [?pair].
+
+<span class="tutor">[Tutor]</span> And let&#x27;s go, yeah, the first key expression.
+
+<span class="student">[Student]</span> Okay. Fair [?pair]. Yes, this person... Fair [?Pears], light complexion [?right complexion], white, pale. Complexion, light complexion [?right complexion], light complexion, light complexion, white, pale. It&#x27;s important to protect my fair [?pear] skin from the sun. Okay, many East Asia, East South Asia people want to fair skin.
+
+<span class="tutor">[Tutor]</span> Yeah. So many East Asian people want fair skin?
+
+<span class="student">[Student]</span> Yes, because the North Asian people, usually the sun is not right, not strong. But Southeast and East Asia, that people live their country, that sun is so powerful and strong. So they want to fair skin. It is their good value of their life. Yeah. So sometimes, yeah, usually the rich guy is to have a fair skin better than poor people. Yes, in Asia. [?]
+
+<span class="tutor">[Tutor]</span> How about the next one?
+
+<span class="student">[Student]</span> Okay, pigment [?pig month]. Pigment: a substance that gives something of particular color. Pigment. Melanin [?Melanie] is the pigment that determines, determines skin or hair color.
+
+<span class="tutor">[Tutor]</span> Yes, it&#x27;s right. Okay, in your sentence [?sense]?
+
+<span class="student">[Student]</span> Okay, when we get older, get it, get old orders, our melanin pigment is lower, so our hair become to change to white. [?]
+
+<span class="tutor">[Tutor]</span> So the hair changes white?
+
+<span class="student">[Student]</span> Yeah, white, yes, yes, because we have to, we don&#x27;t have a melanin pigment in our body.
+
+<span class="tutor">[Tutor]</span> Mm-hmm. Okay, and how about the next expression?
+
+<span class="student">[Student]</span> Okay, mainstream, mainstream. A commons and shared by most people and representing such belief or behavior. Many stories were largely ignored by mainstream press. Is there some ugly pronunciation? Differentious sentence? [?]
+
+<span class="tutor">[Tutor]</span> Mainstream? Mainstream. The whole sentence?
+
+<span class="student">[Student]</span> Yes, just I read some sentence. So is there some difference pronunciation or some corrections?
+
+<span class="tutor">[Tutor]</span> No, you said it. The story was largely ignored by the mainstream press.
+
+<span class="student">[Student]</span> Okay, yes. Can I say [?see] my sentence? In many mainstream of Asia people, they want to have fair skin in their face. How about that?
+
+<span class="tutor">[Tutor]</span> So it&#x27;s mainstream in Asia for people to want fair skin?
+
+<span class="student">[Student]</span> Yes, people of Asia have a mainstream, they come to fair skin. Better? [?]
+
+<span class="tutor">[Tutor]</span> In Asia, it&#x27;s mainstream that people want fair hair or fair skin. [?]
+
+<span class="student">[Student]</span> Okay. Okay, I see.
+
+<span class="tutor">[Tutor]</span> You can say it&#x27;s mainstream in Asia for people to want...
+
+<span class="student">[Student]</span> Okay.
+
+<span class="tutor">[Tutor]</span> And how about the next one?
+
+<span class="student">[Student]</span> Okay. Next one is complexion. The color or appearance of skin of person face. Complexion. She had short bright hair and a pale complexion. Complexion. Yeah, understand. My complexion is bright and yellow. [?]
+
+<span class="tutor">[Tutor]</span> You can say appearance. You can say like &quot;clear complexion&quot; means you don&#x27;t have any like bumps or pimples or no breakouts or acne. Complexion. Any questions with these ones?
+
+<span class="student">[Student]</span> Oh no, I don&#x27;t have questions.
+
+<span class="tutor">[Tutor]</span> So looking at C, the article, &quot;Fair Skin,&quot; would you like to read?
+
+<span class="student">[Student]</span> Fair skin, the Asian ideal. In countries across Asia, fair skin is often viewed as the epitome of beauty. This view has caused skin whitening to become a huge industry in countries like Taiwan, where an estimated 50% of women shell out big cash to brighten their skin tone. The Asian skin whitening market is valued at over 18 billion. The products have become too mainstream. Even high-end Western cosmetic brands such as Chanel and Christian Dior pulling out Asian exclusive whitening lines. Skin whitening typically involves using chemicals to try to whiten or even out the complexion by listening the amount of melanin in the skin. Many whitening treatments come with a hefty price. Hefty? Hefty price. [?]
+
+<span class="tutor">[Tutor]</span> Hefty?
+
+<span class="student">[Student]</span> Hefty? What&#x27;s mean, teacher?
+
+<span class="tutor">[Tutor]</span> Hefty? Hefty? Heavy.
+
+<span class="student">[Student]</span> Heavy.
+
+<span class="tutor">[Tutor]</span> Big. Hefty price.
+
+<span class="student">[Student]</span> Okay. Tag ants can be found in a variety of forms, including lotion, pills, injections, and even laser treatments. Despite their seemingly innocent promise, their pigment-reduced treatments are not without their risks. By removing pigments like the melanin from the skin, the treatment reduces your body natural protection against the sun rays. This increases the likelihood of skin damage and skin cancer. Despite of damage dangers, whitening products and treatments have found a frame place in the Asian beauty market. It&#x27;s difficult to read. [?]
+
+<span class="tutor">[Tutor]</span> Yeah.
+
+<span class="student">[Student]</span> Could you repeat back some for me? Something for me? The correction [?connotation] or word or something?
+
+<span class="tutor">[Tutor]</span> Yeah. So just remember that, &quot;these pigment-reducing treatments.&quot; So just...
+
+<span class="student">[Student]</span> Yeah. Pigment reduce.
+
+<span class="tutor">[Tutor]</span> Treatments [?Three months]. Watch the S, plurals, and...
+
+<span class="student">[Student]</span> Uh-huh. Uh-huh.
+
+<span class="tutor">[Tutor]</span> Or like, &quot;despite the dangers, whitening products and treatments.&quot;
+
+<span class="student">[Student]</span> Okay, yes.
+
+<span class="tutor">[Tutor]</span> Good. What do you think about the article?
+
+<span class="student">[Student]</span> I think this article is quite long time ago because these days the culture is a little changed in Asia. So I think half is right and half is changed. So yeah, sure. Almost it&#x27;s right. Many people want to fair face [?fail PACE]. [?]
+
+<span class="tutor">[Tutor]</span> It&#x27;s pretty common. Did you want to look at the next one, D, the true and false?
+
+<span class="student">[Student]</span> Okay, yeah, the first question. Skin lightening is healthy because it prevents exposure to some harmful rays. No, it&#x27;s not right because everybody have a pigment their pain, yeah, so that melanin [?Melanie] protect from the skin. And the second, skin whitening treatment usually use chemical to, right, to lighten the complexion by reducing the amount of melanin [?Melanie] in the skin [?key]. Yes, it&#x27;s, yeah, it&#x27;s right. Yeah, maybe I forgot that, but maybe I remember that. Line [?Ryan], many whitening [?whiting] treatment come with... Oh, it is not right. [?]
+
+<span class="tutor">[Tutor]</span> They say it typically involves using chemicals to try to lighten the skin.
+
+<span class="student">[Student]</span> Okay, what&#x27;s line [?Ryan], teacher? I can&#x27;t find [?can find]. [?]
+
+<span class="tutor">[Tutor]</span> It&#x27;s true. So the sentence, &quot;Skin whitening typically involves using chemicals to try to lighten or even out the complexion.&quot;
+
+<span class="student">[Student]</span> Yeah, you&#x27;re right.
+
+<span class="tutor">[Tutor]</span> That is true from the discussion.
+
+<span class="student">[Student]</span> Yeah, yeah, it&#x27;s true.
+
+<span class="tutor">[Tutor]</span> Yeah. Looking at E now, have you ever used skin products to change your skin tone?
+
+<span class="student">[Student]</span> Not change, just protect from the sun. So usually every day I go for walk [?work] near park and the sun is so strong, sunshine is so strong. So before to work, I use the skincare product like the sun cream. So it is possible to protect from the sun. But I don&#x27;t use to change my skin tone because just continue and protect from the sun and just keep my skin tone. Yeah, that&#x27;s my way.
+
+<span class="tutor">[Tutor]</span> You&#x27;d definitely like to use or put on some sunscreen before you go out.
+
+<span class="student">[Student]</span> Yeah, you&#x27;re right. Just winter time and autumn and spring time. But these days, I&#x27;m not using the skincare, yeah, cosmetic.
+
+<span class="tutor">[Tutor]</span> A lot of times, yeah, the sunscreen is also sometimes moisturizer, like a cosmetic.
+
+<span class="student">[Student]</span> Yeah.
+
+<span class="tutor">[Tutor]</span> So that&#x27;s about it for time. I will send you some corrections in just a moment. Did you have any questions before I go?
+
+<span class="student">[Student]</span> Oh no, thank you so much, teacher. Yeah, maybe your Sunday night. Yeah, thank you for your class and have a nice your day.
+
+<span class="tutor">[Tutor]</span> Oh, thank you, you too. Goodbye.
+
+<span class="student">[Student]</span> Bye bye, teacher.</div>
+        </div>
+    </div>
+    <div class="toast" id="toast">✅ 프롬프트가 복사되었습니다!</div>
+    <script>
+        const REVIEW_PROMPT="너는 나의 영어 회화 복습 파트너야. 오늘 내 전화영어 수업 내용을 기반으로 대화하면서 복습을 도와줘.\n\n[오늘 수업 전사 내용]\n[Tutor] Hello there, good morning, good evening.\n\n[Student] Hi. Yeah, good morning.\n\n[Tutor] Yeah, hi, how are you doing today?\n\n[Student] Oh, there is a cold. It is hard to get up early, yeah, because outside is cold and it's getting there, going down temperature, yeah. So, yeah, how are you? [?]\n\n[Tutor] Oh, it's pretty chilly.\n\n[Student] It's coming winter.\n\n[Tutor] Yes, it's only about nine degrees here today.\n\n[Student] Nine [?Ninety]? Oh, it's similar in Korea.\n\n[Tutor] Yeah. [?]\n\n[Student] We also five. Today is two. Yeah, two degrees. It's cold.\n\n[Tutor] Do you have to go outside today? Or will you be inside today?\n\n[Student] Just every lunch time [?rush time] I go for walk [?work] near park. So except that situation, maybe I work inside in my office. Yeah.\n\n[Tutor] Okay, you're still going to go out for a walk today.\n\n[Student] Yeah, every lunch time I go for a walk near park.\n\n[Tutor] Today, did you want to have a look at the textbook here?\n\n[Student] Oh, yes. I'm prepared and the topic is tanned skin vs. fair skin. Which is more beautiful? Part A. Fair skin, the Asian ideal.\n\n[Tutor] So looking at the key vocabulary, would you like to read?\n\n[Student] Oh, yes. The key vocabulary. Fair [?Pair]. Oh, my God. Itom. Itom. Is your right pronunciation, teacher? Epitom. Epitom. How about that?\n\n[Tutor] With this one?\n\n[Student] Yes. Fair [?Pair] and epitoms.\n\n[Tutor] Epitome. Yeah, epitome.\n\n[Student] Ah, epitome. Epitome.\n\n[Tutor] Okay, just a moment. So it's a perfect example of something. The epitome of.\n\n[Student] Ah, it is a perfect example, ideal example. Epitome. Epitome. Epidemy.\n\n[Tutor] The example of the epitome. Yeah. [?]\n\n[Student] Example of epitome. That is the example of epitome.\n\n[Tutor] Okay. Continue. [?]\n\n[Student] Melanin, pulse script, high-end, pigment, inventions, exposure, publicity, mainstream, innocent, complexion, quintessential, status symbol. I said so many words. Is this some different pronunciation? [?]\n\n[Tutor] Melanin.\n\n[Student] Melanin.\n\n[Tutor] Yeah, melanin. Prescribed.\n\n[Student] Prescribed. [?]\n\n[Tutor] Prescribed. This one, yeah, that quintessential. Quintessential.\n\n[Student] Quintessential. [?]\n\n[Tutor] Quintessential. [?]\n\n[Student] Quintessential. Okay, I see. Quintessential.\n\n[Tutor] Any questions with the vocabulary?\n\n[Student] Itami and quintessential and pigment is a little difficult meaning for me. [?]\n\n[Tutor] Pigment, yeah. So color.\n\n[Student] Color.\n\n[Tutor] The word for pigment is color. Pigment is color. The pigment of the shirt is the color of the shirt, like the dye, the color.\n\n[Student] Oh, pigment. What means the pigment? Means like colors? Color? Different colors?\n\n[Tutor] Yeah.\n\n[Student] Ah, pigment is color of a paste, right? [?]\n\n[Tutor] Pigment. So like, it's just like you use it to change the color, like you dye clothing. I use red pigment to change.\n\n[Student] Okay, okay, yes, understand.\n\n[Tutor] Did you want... So when you think of fair skin, what words do you think of?\n\n[Student] Fair skin, I think it is so bright and sometimes I can see the bright and, how can I say, white color in their face, yeah, that is so...\n\n[Tutor] Yeah, fair, light complexion, white, pale.\n\n[Student] Yes, that is fair [?pair].\n\n[Tutor] And let's go, yeah, the first key expression.\n\n[Student] Okay. Fair [?pair]. Yes, this person... Fair [?Pears], light complexion [?right complexion], white, pale. Complexion, light complexion [?right complexion], light complexion, light complexion, white, pale. It's important to protect my fair [?pear] skin from the sun. Okay, many East Asia, East South Asia people want to fair skin.\n\n[Tutor] Yeah. So many East Asian people want fair skin?\n\n[Student] Yes, because the North Asian people, usually the sun is not right, not strong. But Southeast and East Asia, that people live their country, that sun is so powerful and strong. So they want to fair skin. It is their good value of their life. Yeah. So sometimes, yeah, usually the rich guy is to have a fair skin better than poor people. Yes, in Asia. [?]\n\n[Tutor] How about the next one?\n\n[Student] Okay, pigment [?pig month]. Pigment: a substance that gives something of particular color. Pigment. Melanin [?Melanie] is the pigment that determines, determines skin or hair color.\n\n[Tutor] Yes, it's right. Okay, in your sentence [?sense]?\n\n[Student] Okay, when we get older, get it, get old orders, our melanin pigment is lower, so our hair become to change to white. [?]\n\n[Tutor] So the hair changes white?\n\n[Student] Yeah, white, yes, yes, because we have to, we don't have a melanin pigment in our body.\n\n[Tutor] Mm-hmm. Okay, and how about the next expression?\n\n[Student] Okay, mainstream, mainstream. A commons and shared by most people and representing such belief or behavior. Many stories were largely ignored by mainstream press. Is there some ugly pronunciation? Differentious sentence? [?]\n\n[Tutor] Mainstream? Mainstream. The whole sentence?\n\n[Student] Yes, just I read some sentence. So is there some difference pronunciation or some corrections?\n\n[Tutor] No, you said it. The story was largely ignored by the mainstream press.\n\n[Student] Okay, yes. Can I say [?see] my sentence? In many mainstream of Asia people, they want to have fair skin in their face. How about that?\n\n[Tutor] So it's mainstream in Asia for people to want fair skin?\n\n[Student] Yes, people of Asia have a mainstream, they come to fair skin. Better? [?]\n\n[Tutor] In Asia, it's mainstream that people want fair hair or fair skin. [?]\n\n[Student] Okay. Okay, I see.\n\n[Tutor] You can say it's mainstream in Asia for people to want...\n\n[Student] Okay.\n\n[Tutor] And how about the next one?\n\n[Student] Okay. Next one is complexion. The color or appearance of skin of person face. Complexion. She had short bright hair and a pale complexion. Complexion. Yeah, understand. My complexion is bright and yellow. [?]\n\n[Tutor] You can say appearance. You can say like \"clear complexion\" means you don't have any like bumps or pimples or no breakouts or acne. Complexion. Any questions with these ones?\n\n[Student] Oh no, I don't have questions.\n\n[Tutor] So looking at C, the article, \"Fair Skin,\" would you like to read?\n\n[Student] Fair skin, the Asian ideal. In countries across Asia, fair skin is often viewed as the epitome of beauty. This view has caused skin whitening to become a huge industry in countries like Taiwan, where an estimated 50% of women shell out big cash to brighten their skin tone. The Asian skin whitening market is valued at over 18 billion. The products have become too mainstream. Even high-end Western cosmetic brands such as Chanel and Christian Dior pulling out Asian exclusive whitening lines. Skin whitening typically involves using chemicals to try to whiten or even out the complexion by listening the amount of melanin in the skin. Many whitening treatments come with a hefty price. Hefty? Hefty price. [?]\n\n[Tutor] Hefty?\n\n[Student] Hefty? What's mean, teacher?\n\n[Tutor] Hefty? Hefty? Heavy.\n\n[Student] Heavy.\n\n[Tutor] Big. Hefty price.\n\n[Student] Okay. Tag ants can be found in a variety of forms, including lotion, pills, injections, and even laser treatments. Despite their seemingly innocent promise, their pigment-reduced treatments are not without their risks. By removing pigments like the melanin from the skin, the treatment reduces your body natural protection against the sun rays. This increases the likelihood of skin damage and skin cancer. Despite of damage dangers, whitening products and treatments have found a frame place in the Asian beauty market. It's difficult to read. [?]\n\n[Tutor] Yeah.\n\n[Student] Could you repeat back some for me? Something for me? The correction [?connotation] or word or something?\n\n[Tutor] Yeah. So just remember that, \"these pigment-reducing treatments.\" So just...\n\n[Student] Yeah. Pigment reduce.\n\n[Tutor] Treatments [?Three months]. Watch the S, plurals, and...\n\n[Student] Uh-huh. Uh-huh.\n\n[Tutor] Or like, \"despite the dangers, whitening products and treatments.\"\n\n[Student] Okay, yes.\n\n[Tutor] Good. What do you think about the article?\n\n[Student] I think this article is quite long time ago because these days the culture is a little changed in Asia. So I think half is right and half is changed. So yeah, sure. Almost it's right. Many people want to fair face [?fail PACE]. [?]\n\n[Tutor] It's pretty common. Did you want to look at the next one, D, the true and false?\n\n[Student] Okay, yeah, the first question. Skin lightening is healthy because it prevents exposure to some harmful rays. No, it's not right because everybody have a pigment their pain, yeah, so that melanin [?Melanie] protect from the skin. And the second, skin whitening treatment usually use chemical to, right, to lighten the complexion by reducing the amount of melanin [?Melanie] in the skin [?key]. Yes, it's, yeah, it's right. Yeah, maybe I forgot that, but maybe I remember that. Line [?Ryan], many whitening [?whiting] treatment come with... Oh, it is not right. [?]\n\n[Tutor] They say it typically involves using chemicals to try to lighten the skin.\n\n[Student] Okay, what's line [?Ryan], teacher? I can't find [?can find]. [?]\n\n[Tutor] It's true. So the sentence, \"Skin whitening typically involves using chemicals to try to lighten or even out the complexion.\"\n\n[Student] Yeah, you're right.\n\n[Tutor] That is true from the discussion.\n\n[Student] Yeah, yeah, it's true.\n\n[Tutor] Yeah. Looking at E now, have you ever used skin products to change your skin tone?\n\n[Student] Not change, just protect from the sun. So usually every day I go for walk [?work] near park and the sun is so strong, sunshine is so strong. So before to work, I use the skincare product like the sun cream. So it is possible to protect from the sun. But I don't use to change my skin tone because just continue and protect from the sun and just keep my skin tone. Yeah, that's my way.\n\n[Tutor] You'd definitely like to use or put on some sunscreen before you go out.\n\n[Student] Yeah, you're right. Just winter time and autumn and spring time. But these days, I'm not using the skincare, yeah, cosmetic.\n\n[Tutor] A lot of times, yeah, the sunscreen is also sometimes moisturizer, like a cosmetic.\n\n[Student] Yeah.\n\n[Tutor] So that's about it for time. I will send you some corrections in just a moment. Did you have any questions before I go?\n\n[Student] Oh no, thank you so much, teacher. Yeah, maybe your Sunday night. Yeah, thank you for your class and have a nice your day.\n\n[Tutor] Oh, thank you, you too. Goodbye.\n\n[Student] Bye bye, teacher.\n\n[AI 피드백]\n**Topic: Discussing Fair Skin as the Beauty Ideal in Asia**\n\n---\n\n**1. 📊 오늘의 대화 요약 (Summary)**\n\n- 쌀쌀해진 날씨(한국 2도, 튜터 쪽 9도)와 Joey의 점심 산책 습관 이야기로 수업을 시작했어요.\n- 교재 *\"Tanned skin vs. Fair skin – Fair skin, the Asian ideal\"*을 공부했어요. epitome, pigment, mainstream, complexion 같은 핵심 어휘를 익혔어요. 이어서 아시아의 미백 산업(대만 사례, 180억 규모 시장, 건강 위험)에 대한 기사를 소리 내어 읽었어요.\n- True/False 문제를 풀었어요. 마지막으로 Joey는 미백이 아니라 햇빛 차단을 위해 선크림을 쓴다는 경험을 나눴어요.\n\n---\n\n**2. 💬 유창성 업그레이드 (Fluency & Natural Flow)**\n\n**① 날씨 이야기**\n- ❌ **As Said:** \"Oh, there is a cold. It is hard to get up early, yeah, because outside is cold and it's getting there, going down temperature, yeah.\"\n- ✅ **Natural:** \"It's so cold! It's hard to get up early because it's freezing outside, and the temperature keeps dropping.\"\n- 💎 **Professional:** \"It's been quite cold lately. The temperature has been dropping steadily, so getting up early has been a challenge.\"\n- 💡 **코칭 포인트:** \"There is a cold\" sounds like \"someone has a cold.\" For weather, just say \"It's cold.\" Also, \"The temperature keeps dropping\" is one natural chunk.\n  → \"There is a cold\"는 원어민 귀에 \"감기가 있다\"처럼 들려요. 날씨는 그냥 **It's cold.** 로 충분해요. \"기온이 계속 떨어져요\"는 **The temperature keeps dropping.** 을 한 덩어리로 외워 두세요.\n\n**② 오늘 일정 설명**\n- ❌ **As Said:** \"Just every lunch time I go for walk near park. So except that situation, maybe I work inside in my office.\"\n- ✅ **Natural:** \"I go for a walk in the park every lunchtime. Other than that, I'll be working in my office.\"\n- 💎 **Professional:** \"Aside from my lunchtime walk, I'll be in the office for the rest of the day.\"\n- 💡 **코칭 포인트:** \"Except that situation\" sounds stiff and textbook-like. Natives say \"Other than that\" or \"Aside from that.\" It's short, smooth, and super common. Also, \"go for **a** walk\" always comes with \"a.\"\n  → \"except that situation\"은 딱딱하게 들려요. 원어민은 **Other than that, ~** (그거 말고는요)를 훨씬 많이 써요. \"산책 가다\"는 a를 넣은 **go for a walk** 를 통째로 입에 붙이세요. \"the rest of the day\"(나머지 하루 동안)도 같이 챙겨 두세요.\n\n**③ 나이 들면 머리가 하얘지는 이유**\n- ❌ **As Said:** \"Okay, when we get older, get it, get old orders, our melanin pigment is lower, so our hair become to change to white.\"\n- ✅ **Natural:** \"As we get older, our bodies make less melanin, so our hair turns white.\"\n- 💎 **Professional:** \"As we age, melanin production decreases, which is why our hair turns gray or white.\"\n- 💡 **코칭 포인트:** \"Become to change to white\" stacks three words that all mean \"change.\" Just say \"turns white.\" It's one short chunk. And \"make less melanin\" sounds more natural than \"melanin is lower.\"\n  → \"become to change to white\"는 '바뀌다'를 세 번 겹쳐 말한 셈이에요. \"하얘지다\"는 **turns white** 한 덩어리면 끝나요(turns gray, turns red도 같은 모양). \"멜라닌이 덜 만들어져요\"는 **make less melanin** 으로 말해 보세요.\n\n**④ 기사에 대한 의견**\n- ❌ **As Said:** \"I think this article is quite long time ago because these days the culture is a little changed in Asia.\"\n- ✅ **Natural:** \"I think this article is a bit outdated. The culture in Asia has changed a little these days.\"\n- 💎 **Professional:** \"This article seems somewhat dated. Attitudes in Asia have shifted quite a bit in recent years.\"\n- 💡 **코칭 포인트:** An article can't \"be a long time ago.\" Instead, it's \"outdated\" or \"dated.\" One word says it all. And \"has changed\" shows the change is still true now.\n  → 기사가 \"오래 전\"일 수는 없어요. \"좀 옛날 얘기 같다\"는 **a bit outdated** 한 단어로 끝나요. \"바뀌어서 지금도 그 상태\"라는 느낌은 **has changed** 덩어리로 말해요.\n\n---\n\n**3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)**\n\nCategory: verb patterns (want + noun vs. want to + verb)\n\n🎯 오늘의 패턴: \"~을 원해\"는 **want + 그것**, \"~하고 싶어\"는 **want to + 하다**예요. fair는 '하다'가 아니라서 want to 뒤에 바로 붙일 수 없어요.\n\nJoey는 오늘 \"하얀 피부를 원한다\"를 말할 때마다 **want to + fair**라고 했어요. to 뒤에는 go, have, get, look처럼 '무언가를 하는 말'이 와야 해요. fair(하얀)는 모습을 나타내는 말이라, to 뒤에 오면 소리가 툭 끊겨 어색하게 들려요.\n\n| ❌ 원문 (As Said) | ✅ 교정 (Corrected) |\n|---|---|\n| \"Okay, many East Asia, East South Asia people want to fair skin.\" | Many East and Southeast Asian people **want fair skin**. |\n| \"So they want to fair skin.\" | So they **want to have fair skin**. |\n| \"Many people want to fair face.\" | Many people **want a fair complexion**. |\n\n📌 **핵심 규칙:** 갖고 싶은 '것'이면 **want + 그것** (want fair skin)이에요. '하고 싶은 일'이면 **want to + 하는 말** (want to have / want to get / want to look)이에요. 헷갈리면 **want to have**를 통째로 쓰면 안전해요!\n\n🔁 **따라 읽기**\n- 🗣️ \"Many Asian people want fair skin.\"\n- 🗣️ \"So they want to have fair skin.\"\n- 🗣️ \"Many people want to look brighter.\"\n\n---\n\n**4. 📗 어휘 확장 (Vocabulary Vault)**\n\n**① epitome** /ɪˈpɪtəmi/ (noun)\n- 뜻: 전형, 완벽한 본보기 (발음은 '에피톰'이 아니라 '이피터미'예요. 끝에 '-미' 소리가 살아 있어요)\n- 덩어리: **the epitome of ~** (~의 완벽한 본보기)\n- 실전 예문: *Our CFO is the epitome of a careful investor.*\n\n**② quintessential** /ˌkwɪntɪˈsenʃəl/ (adjective)\n- 뜻: 가장 전형적인, 딱 ~다운\n- 실전 예문: *This is a quintessential example of poor internal control.*\n\n**③ pigment** /ˈpɪɡmənt/ (noun)\n- 뜻: 색을 내는 성분, 색소 (옷을 염색하는 물감, 피부색을 정하는 멜라닌 같은 것)\n- 실전 예문: *Melanin is the pigment that gives our skin and hair their color.*\n\n**④ mainstream** /ˈmeɪnstriːm/ (adjective/noun)\n- 뜻: 주류의, 대세의\n- 덩어리: **It's mainstream (in ~) for people to + 하다** (~에서는 사람들이 …하는 게 대세예요)\n- 실전 예문: *LNG has become a mainstream energy source in Korea.*\n\n**⑤ hefty** /ˈhefti/ (adjective)\n- 뜻: (가격·금액이) 꽤 큰, 묵직한\n- 덩어리: **a hefty price / a hefty penalty**\n- 실전 예문: *The company had to pay a hefty penalty after the audit.*\n\n---\n\n**5. 📝 실전 복습 챌린지 (Practice)**\n\n**Q1. (쉬움)** 동료에게 \"요즘 많은 사람들이 전기차를 원해요\"라고 말해 보세요.\n✅ **모범 답안:** *These days, many people want electric cars.*\n\n**Q2. (중간)** 회의에서 \"이 보고서는 좀 오래된 것 같아요. 시장이 많이 바뀌었거든요\"라고 말해 보세요.\n✅ **모범 답안:** *I think this report is a bit outdated. The market has changed a lot.*\n\n**Q3. (어려움)** 투자 모임에서 \"한국에서는 사람들이 ETF에 투자하고 싶어 하는 게 대세예요. 그건 분산 투자의 전형이죠\"라고 말해 보세요.\n✅ **모범 답안:** *In Korea, it's mainstream for people to want to invest in ETFs. It's the epitome of diversified investing.*\n\n---\n\n**6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)**\n\n✨ **Good Job**\n> \"Not change, just protect from the sun.\"\n\n튜터가 \"피부톤을 바꾸려고 제품을 써 본 적 있나요?\"라고 물었을 때, Joey는 **바로, 짧게, 핵심만** 대답했어요. \"바꾸려는 게 아니라 그냥 햇빛 차단용\"이라는 대조를 한 문장에 담았어요. 원어민도 대화할 때는 이렇게 짧게 끊어 말해요. 여기에 **to**만 붙이면 완벽해요: *\"Not to change it, just to protect it from the sun.\"* 👏\n\n🚀 **내일의 한 문장**\n> 🗣️ *\"It's getting colder every day, so I really want a warm coffee before my lunchtime walk!\"*\n\n(오늘의 **want + 그것** 패턴과 **lunchtime walk** 덩어리를 함께 연습할 수 있어요.)\n\n---\n\n**[성과 지표]**\n\n📈 **유창성 점수: 5.5 / 10**\n\n**근거**\n- 👍 **좋았던 점:** 어려운 기사를 끝까지 소리 내어 읽었어요. 모르는 단어(hefty, pigment)와 발음(epitome)은 그 자리에서 바로 물어봤어요. 단어마다 직접 문장을 만들어 보려 했고, \"half is right and half is changed\"처럼 자기 의견을 균형 있게 표현했어요.\n- 🔧 **아쉬운 점:** \"yeah\"를 채움말로 자주 써서 문장이 길게 늘어졌어요. fair/pair, light/right 발음이 섞이기도 했어요. want to + fair나 become to change처럼 말의 뼈대가 흔들리는 순간도 있었어요.\n\n🎯 **원포인트 액션 플랜**\n다음 수업에서는 **\"want + 그것 / want to + 하다\"** 를 의식하며 말해 보세요. 문장을 시작하기 전에 속으로 \"내가 원하는 게 '물건'이야, '행동'이야?\"를 1초만 체크하면 돼요. 덤으로 **fair의 f 발음**(윗니를 아랫입술에 살짝 대고 바람 빼기)도 3번 연습하고 들어가세요! 💪\n\n위 내용을 바탕으로:\n1. 먼저 오늘 수업에서 내가 틀렸거나 어색했던 표현을 하나 골라서, 관련된 상황을 영어로 질문해줘.\n2. 내가 영어로 대답하면, 자연스러운지 확인하고 더 나은 표현이 있으면 알려줘.\n3. 특히 \"반복 실수 패턴\"에서 지적된 부분을 집중적으로 연습시켜줘.\n4. 이런 식으로 오늘 배운 표현들을 하나씩 복습하자.\n5. 한국어 설명은 필요할 때만 간단히, 대화는 최대한 영어로 진행해줘.\n\n그럼 시작하자!";
+        function startReview(){navigator.clipboard.writeText(REVIEW_PROMPT).then(()=>{showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)}).catch(()=>{const t=document.createElement('textarea');t.value=REVIEW_PROMPT;document.body.appendChild(t);t.select();document.execCommand('copy');document.body.removeChild(t);showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)})}
+        function showToast(){const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500)}
+        function switchTab(n){document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',n==='feedback'?i===0:i===1));document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));document.getElementById('tab-'+n).classList.add('active')}
+    </script>
+</body>
+</html>
