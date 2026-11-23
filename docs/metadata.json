@@ -521,5 +521,10 @@
     "topic": "Key Vocabulary and Reading Practice on Diet, Exercise, and Weight Loss",
     "target_grammar": "prepositions",
     "engine": "claude"
+  },
+  "2026-11-23": {
+    "topic": "Discussing Fair Skin as the Beauty Ideal in Asia",
+    "target_grammar": "verb patterns (want + noun vs. want to + verb)",
+    "engine": "claude"
   }
 }

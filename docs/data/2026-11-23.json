@@ -1,0 +1,57 @@
+{
+ "date": "2026-11-23",
+ "iso": [
+  2026,
+  48
+ ],
+ "topic": "Discussing Fair Skin as the Beauty Ideal in Asia",
+ "grammar": "verb patterns",
+ "grammar_norm": "Verb Patterns",
+ "score": 5.5,
+ "pairs": [
+  {
+   "said": "Oh, there is a cold. It is hard to get up early, yeah, because outside is cold and it's getting there, going down temperature, yeah.",
+   "natural": "It's so cold! It's hard to get up early because it's freezing outside, and the temperature keeps dropping."
+  },
+  {
+   "said": "Just every lunch time I go for walk near park. So except that situation, maybe I work inside in my office.",
+   "natural": "I go for a walk in the park every lunchtime. Other than that, I'll be working in my office."
+  },
+  {
+   "said": "Okay, when we get older, get it, get old orders, our melanin pigment is lower, so our hair become to change to white.",
+   "natural": "As we get older, our bodies make less melanin, so our hair turns white."
+  },
+  {
+   "said": "I think this article is quite long time ago because these days the culture is a little changed in Asia.",
+   "natural": "I think this article is a bit outdated. The culture in Asia has changed a little these days."
+  }
+ ],
+ "vocab": [
+  {
+   "word": "epitome",
+   "pos": "noun",
+   "meaning": "전형, 완벽한 본보기 (발음은 '에피톰'이 아니라 '이피터미'예요. 끝에 '-미' 소리가 살아 있어요)"
+  },
+  {
+   "word": "quintessential",
+   "pos": "adjective",
+   "meaning": "가장 전형적인, 딱 ~다운"
+  },
+  {
+   "word": "pigment",
+   "pos": "noun",
+   "meaning": "색을 내는 성분, 색소 (옷을 염색하는 물감, 피부색을 정하는 멜라닌 같은 것)"
+  },
+  {
+   "word": "mainstream",
+   "pos": "adjective/noun",
+   "meaning": "주류의, 대세의"
+  },
+  {
+   "word": "hefty",
+   "pos": "adjective",
+   "meaning": "(가격·금액이) 꽤 큰, 묵직한"
+  }
+ ],
+ "_html_md5": "12fe4eaf1c3e6fab2f3e4e5d34601b8d"
+}
