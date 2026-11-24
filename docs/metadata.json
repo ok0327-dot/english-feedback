@@ -526,5 +526,10 @@
     "topic": "Discussing Fair Skin as the Beauty Ideal in Asia",
     "target_grammar": "verb patterns (want + noun vs. want to + verb)",
     "engine": "claude"
+  },
+  "2026-11-24": {
+    "topic": "Free Talk on English Learning Struggles and Rearranging the Class Schedule",
+    "target_grammar": "verb tense",
+    "engine": "claude"
   }
 }

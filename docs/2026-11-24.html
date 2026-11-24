@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#0f0f13"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="당근영어"><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="icon" type="image/png" sizes="192x192" href="icon-192.png"><script src="install-banner.js" defer></script><script src="sw-reg.js" defer></script>
+    <title>전화영어 복습 - 2026년 11월 24일</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Noto Sans KR',sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.75;min-height:100vh}
+        .header{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);border-bottom:1px solid rgba(255,255,255,.06);padding:48px 24px 40px;text-align:center}
+        .header-date{font-size:13px;color:#94a3b8;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+        .header h1{font-size:28px;font-weight:700;color:#f1f5f9;margin-bottom:16px}
+        .header-meta{display:flex;justify-content:center;gap:24px;font-size:14px;color:#64748b}
+        .header-meta span{display:flex;align-items:center;gap:6px}
+        .cta-section{text-align:center;padding:40px 24px}
+        .cta-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:linear-gradient(135deg,#38bdf8,#818cf8);color:#fff;font-size:16px;font-weight:600;font-family:'Noto Sans KR',sans-serif;border:none;border-radius:50px;cursor:pointer;transition:all .3s;text-decoration:none;box-shadow:0 4px 24px rgba(56,189,248,.25)}
+        .cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(56,189,248,.35)}
+        .cta-btn svg{width:20px;height:20px}
+        .cta-sub{margin-top:12px;font-size:13px;color:#64748b}
+        .toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#38bdf8;padding:14px 28px;border-radius:12px;font-size:14px;font-weight:500;border:1px solid rgba(56,189,248,.2);box-shadow:0 8px 32px rgba(0,0,0,.4);opacity:0;transition:all .4s cubic-bezier(.16,1,.3,1);z-index:1000}
+        .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+        .container{max-width:720px;margin:0 auto;padding:0 24px 80px}
+        .tabs{display:flex;gap:4px;background:#1a1a24;padding:4px;border-radius:12px;margin-bottom:32px}
+        .tab{flex:1;padding:12px;text-align:center;font-size:14px;font-weight:500;color:#64748b;background:0 0;border:none;border-radius:8px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all .2s}
+        .tab.active{background:#262636;color:#f1f5f9}
+        .tab-content{display:none}.tab-content.active{display:block}
+        .feedback h2{font-size:18px;font-weight:700;color:#f1f5f9;margin:36px 0 16px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.06)}
+        .feedback h2:first-child{margin-top:0}
+        .feedback p{margin:8px 0;color:#cbd5e1}
+        .feedback .item{padding:6px 0 6px 16px;border-left:2px solid #334155;margin:6px 0;color:#cbd5e1}
+        .feedback .numbered{padding:8px 0 8px 16px;color:#cbd5e1}
+        .feedback .numbered strong{color:#38bdf8}
+        .feedback strong{color:#f1f5f9}
+        .feedback code{background:#1e293b;padding:2px 8px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#38bdf8}
+        .feedback table{width:100%;border-collapse:collapse;margin:12px 0}
+        .feedback th,.feedback td{padding:10px 14px;text-align:left;border-bottom:1px solid #262636}
+        .feedback th{color:#94a3b8;font-weight:500;font-size:13px}
+        .feedback td{color:#cbd5e1}
+        .arrow{color:#38bdf8;font-weight:700}
+        .transcript{background:#1a1a24;border-radius:12px;padding:28px;font-size:14px;line-height:2;color:#94a3b8;white-space:pre-wrap;word-break:break-word;font-family:'JetBrains Mono','Noto Sans KR',monospace}
+        .transcript .tutor{color:#38bdf8}
+        .transcript .student{color:#a78bfa}
+        @media(max-width:640px){.header{padding:32px 16px}.header h1{font-size:22px}.cta-btn{padding:14px 28px;font-size:15px}.container{padding:0 16px 60px}}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-date">2026년 11월 24일</div>
+        <h1>📚 전화영어 복습</h1>
+        <div class="header-meta">
+            <span>⏱ 22분 49초</span>
+            <span>🎙 전화영어_025180304_20261124080044.m4a</span>
+        </div>
+    </div>
+    <div class="cta-section">
+        <button class="cta-btn" onclick="startReview()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Gemini에서 복습 대화 시작하기
+        </button>
+        <div class="cta-sub">클릭하면 프롬프트가 복사되고 Gemini가 열립니다</div>
+    </div>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('feedback')">📋 AI 피드백</button>
+            <button class="tab" onclick="switchTab('transcript')">🎙 수업 전사</button>
+        </div>
+        <div id="tab-feedback" class="tab-content active">
+            <div class="feedback"><p><strong>0. 📌 Topic</strong></p>
+<br>
+<p>Topic: Free Talk on English Learning Struggles and Rearranging the Class Schedule</p>
+<br>
+<br>
+<p><strong>1. 📊 오늘의 대화 요약 (Summary)</strong></p>
+<br>
+<p>교재(Part B, Tanning in Western Countries) 대신 Joey의 요청으로 <strong>"영어 학습"을 주제로 free talk</strong>를 했어요. 튜터가 준비한 주제는 "Benefits of learning a new language"였어요.</p>
+<div class="item">영어를 배우는 이유: 10년 뒤 아들과 세계 여행하기</div>
+<div class="item">요즘 고민: 실력이 제자리인 것 같음</div>
+<div class="item">공부 방식: 하루 20분 공부, 직접 만든 AI 프로그램 활용</div>
+<div class="item">튜터의 제안: 언어 앱(Duolingo 등), 한국어 자막을 켜고 영어 프로그램 보기</div>
+<br>
+<p>후반에는 <strong>Daily Topic 교재 추가와 1월 수업 시간(오전 5시 슬롯) 재조정</strong>을 논의했어요. 마지막 질문 "영어를 마스터하려면 몇 년이 걸릴까?"에 Joey는 "평생"이라고 답했어요. 튜터는 "성인은 보통 약 7년이면 유창해질 수 있으니 터널이 생각만큼 길지 않다"며 격려해 줬습니다.</p>
+<br>
+<br>
+<p><strong>2. 💬 유창성 업그레이드 (Fluency & Natural Flow)</strong></p>
+<br>
+<p><strong>① 영어의 장점 말하기</strong></p>
+<div class="item">❌ <strong>As Said:</strong> "I think the language skill is possible to travel anywhere."</div>
+<div class="item">✅ <strong>Natural:</strong> "I think English makes it possible to travel anywhere."</div>
+<div class="item">💎 <strong>Professional:</strong> "Being proficient in English allows me to travel virtually anywhere."</div>
+<div class="item">💡 <strong>코칭 포인트:</strong> "A skill" can't *be* possible. It *makes* something possible. Use the chunk "A makes it possible to ~."</div>
+<p><span class="arrow">→</span> '실력'이 가능한 게 아니라, 실력이 무언가를 <strong>가능하게 만들어</strong> 주는 거예요. "A makes it possible to + 하다"를 한 덩어리로 외워 두세요.</p>
+<br>
+<p><strong>② 더 나은 공부법이 필요하다고 말하기</strong></p>
+<div class="item">❌ <strong>As Said:</strong> "So, I need to more way, I need to find more way how to speak better or more remember and make a sentence."</div>
+<div class="item">✅ <strong>Natural:</strong> "I need to find better ways to speak more naturally and remember what I learn."</div>
+<div class="item">💎 <strong>Professional:</strong> "I need to find more effective ways to build my speaking skills and retain what I've learned."</div>
+<div class="item">💡 <strong>코칭 포인트:</strong> "Find better ways to ~" is one smooth chunk. You don't need "how" after "ways."</div>
+<p><span class="arrow">→</span> "find better ways to + 하다"를 통째로 쓰면 깔끔해요. ways 뒤에 how를 또 붙이지 않아도 돼요. 그리고 "more remember"보다 "remember more"가 자연스러워요.</p>
+<br>
+<p><strong>③ 실력이 제자리라는 느낌 말하기</strong></p>
+<div class="item">❌ <strong>As Said:</strong> "sometimes my ability of English is stable, not a good achievement"</div>
+<div class="item">✅ <strong>Natural:</strong> "Sometimes I feel like I've hit a plateau."</div>
+<div class="item">💎 <strong>Professional:</strong> "Lately, my progress in English seems to have plateaued."</div>
+<div class="item">💡 <strong>코칭 포인트:</strong> "Stable" sounds positive, like "safe and steady." To say you're stuck, native speakers use "hit a plateau."</div>
+<p><span class="arrow">→</span> "stable"은 원어민 귀에 '안정적이라 좋다'로 들려요. '늘지 않고 멈춰 있다'는 뜻이라면 "hit a plateau"가 딱 맞아요. 오늘 Joey가 가장 하고 싶었던 말이죠!</p>
+<br>
+<p><strong>④ 영어 공부가 스트레스는 아니라고 말하기</strong></p>
+<div class="item">❌ <strong>As Said:</strong> "So my, I don't have a stress learning English"</div>
+<div class="item">✅ <strong>Natural:</strong> "Learning English doesn't stress me out."</div>
+<div class="item">💎 <strong>Professional:</strong> "I don't find learning English stressful at all."</div>
+<div class="item">💡 <strong>코칭 포인트:</strong> Stress isn't something you "have a" of. Say "~ stresses me out" or "I'm stressed about ~."</div>
+<p><span class="arrow">→</span> stress는 하나, 둘 세는 물건이 아니라서 "a stress"라고 하면 어색하게 들려요. "~ stresses me out(~때문에 스트레스 받아)" / "I'm stressed about ~"를 덩어리로 기억하세요.</p>
+<br>
+<p><strong>⑤ 짝꿍 단어 빠뜨리지 않기</strong></p>
+<div class="item">❌ <strong>As Said:</strong> "how to communicate to my teacher and how to use the sentence and listen your sentence"</div>
+<div class="item">✅ <strong>Natural:</strong> "how to talk with my teacher, use sentences, and listen to what you say"</div>
+<div class="item">💎 <strong>Professional:</strong> "how to communicate with my teacher, put sentences together, and follow what you're saying"</div>
+<div class="item">💡 <strong>코칭 포인트:</strong> Some words always travel with a buddy: *listen <strong>to</strong>*, *communicate <strong>with</strong>*, *travel <strong>to</strong>*.</div>
+<p><span class="arrow">→</span> 몇몇 단어는 늘 짝꿍과 함께 다녀요. <strong>listen to</strong> you, <strong>communicate with</strong> my teacher, <strong>travel to</strong> Japan. 오늘 "if I travel Japan"처럼 짝꿍이 빠지면 말이 중간에 툭 끊긴 것처럼 들려요. 짝꿍까지 한 덩어리로 입에 붙여 두세요.</p>
+<br>
+<br>
+<p><strong>3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)</strong></p>
+<br>
+<p>Category: verb tense</p>
+<br>
+<p>🎯 오늘의 패턴: <strong>이미 지나간 일</strong>(오늘 아침, 어젯밤)을 <strong>지금 모양</strong>(get, is, go)으로 말하는 습관</p>
+<br>
+<p>Joey는 "today morning", "last night"처럼 시간 말은 잘 붙여 놓고도 동사는 지금 모양으로 말했어요. 원어민 귀엔 "어젯밤에… 추워요"처럼 시간이 엇갈려 들립니다.</p>
+<br>
+<table>
+<tr><th>❌ 원문 (As Said)</th><th>✅ 교정 (Corrected)</th></tr>
+<tr><td>"because last night it <strong>is</strong> so cold"</td><td>"because it <strong>was</strong> so cold last night"</td></tr>
+<tr><td>"So today morning I <strong>get</strong> up early and just <strong>go</strong> to the gym."</td><td>"This morning I <strong>got</strong> up early and <strong>went</strong> to the gym."</td></tr>
+<tr><td>"I <strong>can't</strong> prepare my textbook because today morning I <strong>get</strong> up early…"</td><td>"I <strong>couldn't</strong> prepare for the lesson because I <strong>got</strong> up early this morning…"</td></tr>
+<tr><td>"I think this day, you and me, we just <strong>have</strong> a free talking twice."</td><td>"I think we<strong>'ve had</strong> free talk twice so far."</td></tr>
+</table>
+<br>
+<p>📌 <strong>핵심 규칙:</strong> 입에서 "last night / this morning / yesterday"가 나오면 동사도 <strong>지나간 모양</strong>으로 바꿔요. get <span class="arrow">→</span> got, go <span class="arrow">→</span> went, is <span class="arrow">→</span> was, can't <span class="arrow">→</span> couldn't. "지금까지 몇 번 해 왔다"는 <strong>have + 해 본 모양</strong> 덩어리(we've had, I've done)로 말합니다.</p>
+<p>(덤 팁: "today morning"이 아니라 <strong>"this morning"</strong>이에요!)</p>
+<br>
+<p>🔁 <strong>따라 읽기</strong></p>
+<p>🗣️ "This morning I had breakfast and went to work early."</p>
+<p>🗣️ "Yesterday I practiced English for 20 minutes."</p>
+<p>🗣️ "We've had free talk twice, and I really liked it."</p>
+<br>
+<br>
+<p><strong>4. 📗 어휘 확장 (Vocabulary Vault)</strong></p>
+<br>
+<p><strong>1. plateau</strong> /plæˈtoʊ/ (noun / verb)</p>
+<div class="item">뜻: 정체기, 제자리걸음 (하다)</div>
+<div class="item">실전 예문: *Our energy import volume has plateaued since last quarter.*</div>
+<br>
+<p><strong>2. carve out</strong> /kɑːrv aʊt/ (verb phrase)</p>
+<div class="item">뜻: 바쁜 와중에 시간을 따로 떼어 내다</div>
+<div class="item">실전 예문: *I carve out 20 minutes every morning for English.*</div>
+<br>
+<p><strong>3. pencil in</strong> /ˈpensl ɪn/ (verb phrase)</p>
+<div class="item">뜻: (일정을) 임시로 잡아 두다</div>
+<div class="item">실전 예문: *Can we pencil in the audit meeting for next Tuesday?*</div>
+<br>
+<p><strong>4. language barrier</strong> /ˈlæŋɡwɪdʒ ˈbæriər/ (noun)</p>
+<div class="item">뜻: 언어 장벽</div>
+<div class="item">실전 예문: *The language barrier slowed down our negotiation with the supplier.*</div>
+<br>
+<p><strong>5. lifelong learner</strong> /ˈlaɪflɔːŋ ˈlɜːrnər/ (noun)</p>
+<div class="item">뜻: 평생 배우는 사람</div>
+<div class="item">실전 예문: *In investing, you have to be a lifelong learner.*</div>
+<br>
+<br>
+<p><strong>5. 📝 실전 복습 챌린지 (Practice)</strong></p>
+<br>
+<p><strong>Q1. (쉬움)</strong> 어젯밤 일을 튜터에게 말해 보세요. "어젯밤에 너무 추워서 샤워하고 일찍 잤어요."</p>
+<p>👉 <strong>모범 답안:</strong> *It was so cold last night, so I took a shower and went to bed early.*</p>
+<br>
+<p><strong>Q2. (중간)</strong> 요즘 영어 실력이 늘지 않아 답답하다고 털어놓아 보세요. "요즘 영어가 정체기에 온 것 같아서, 더 나은 공부법을 찾아야 할 것 같아요."</p>
+<p>👉 <strong>모범 답안:</strong> *I feel like I've hit a plateau in English lately, so I need to find better ways to practice.*</p>
+<br>
+<p><strong>Q3. (어려움)</strong> 어제 한 일을 보고해 보세요. "어제 Carrot English에 전화해서 Daily Topic을 추가했고, 1월 수업도 임시로 잡아 뒀어요."</p>
+<p>👉 <strong>모범 답안:</strong> *I called Carrot English yesterday, added Daily Topic English, and penciled in my January classes.*</p>
+<br>
+<br>
+<p><strong>6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)</strong></p>
+<br>
+<p>✨ <strong>Good Job</strong></p>
+<p>> "I always wanted to take class with you, but your schedule is a little difficult."</p>
+<br>
+<p>Joey, 이 문장 정말 좋았어요! 👏</p>
+<div class="item"><strong>"always wanted to"</strong>로 "예전부터 쭉 그러고 싶었다"는 마음을 지나간 모양으로 전했어요. 오늘의 패턴을 스스로 쓴 순간이에요.</div>
+<div class="item"><strong>"but"</strong>으로 바람과 현실을 자연스럽게 이었어요. 칭찬과 아쉬움을 한 문장에 담아서 튜터의 마음을 움직였죠.</div>
+<div class="item">작은 다듬기: "I<strong>'ve</strong> always wanted to take classes with you, but your schedule is pretty full."</div>
+<div class="item">"예전부터 지금까지 쭉"이라는 느낌은 <strong>I've always wanted to</strong> 덩어리가 더 원어민답게 들려요.</div>
+<div class="item">스케줄이 꽉 찼다는 말은 "difficult"보다 <strong>"pretty full"</strong>이 자연스러워요.</div>
+<br>
+<p>🚀 <strong>내일의 한 문장</strong></p>
+<p>🗣️ *"I'll call Carrot English today, and then I'll tell you which day I want Daily Topic."*</p>
+<p>(오늘 "I call… I report…"라고 했던 문장을 앞으로 할 일 모양 <strong>I'll + 하다</strong>로 바꿔 말해 보는 연습이에요!)</p>
+<br>
+<br>
+<p><strong>[성과 지표]</strong></p>
+<br>
+<p>📈 <strong>유창성 점수: 6 / 10</strong></p>
+<br>
+<p><strong>근거</strong></p>
+<div class="item">👍 <strong>좋았던 점:</strong> 교재 준비를 못 한 상황에서 free talk를 먼저 제안했어요. 수업 방식(free talk와 문법 수업 병행)까지 스스로 설계해서 말했고요. 말이 끊기지 않고 길게 이어졌고, 자기 생각을 끝까지 전달하려는 태도가 훌륭했어요.</div>
+<div class="item">🔧 <strong>아쉬운 점:</strong></div>
+<div class="item">지나간 일과 앞으로 할 일을 모두 지금 모양으로 말하는 경우가 많았어요. 예를 들어 "I call Carrot English, and then I report to you."는 "I'll call… and then I'll report to you."가 맞아요.</div>
+<div class="item">listen <strong>to</strong>, travel <strong>to</strong> 같은 짝꿍 단어가 자주 빠졌어요.</div>
+<div class="item">문장이 길어지면 "So… so… just…"로 이어 붙이면서 핵심이 흐려졌어요.</div>
+<br>
+<p>🎯 <strong>다음 수업 원포인트 액션 플랜</strong></p>
+<p>> <strong>"시간 말 = 동사 신호등"</strong></p>
+<p>> 수업 첫 2분 동안 <strong>"Yesterday I ~ / This morning I ~"</strong>로 시작하는 문장 3개를 말해 보세요. 시간 말을 먼저 꺼내면 동사가 저절로 got, went, was로 바뀌도록 입을 길들이는 연습이에요. 튜터에게 "Please stop me if I use the wrong tense!"라고 미리 부탁해 두면 효과가 두 배예요. 💪</p></div>
+        </div>
+        <div id="tab-transcript" class="tab-content">
+            <div class="transcript"><span class="student">[Student]</span> Hello teacher, good morning.
+
+<span class="tutor">[Tutor]</span> Hi again, Joey. How are you today?
+
+<span class="student">[Student]</span> I&#x27;m good. So you&#x27;re good?
+
+<span class="tutor">[Tutor]</span> Yes, of course. Everything is good.
+
+<span class="student">[Student]</span> Nice to hear your voice. [?]
+
+<span class="tutor">[Tutor]</span> Yes. Oh, and yours as well. Thank you. That&#x27;s very thoughtful. All right. If you&#x27;re ready, we&#x27;ll begin your lesson.
+
+<span class="student">[Student]</span> Okay.
+
+<span class="tutor">[Tutor]</span> And last, yeah, last class, you did Part A, Fair Skin, the Asian Idea. And today, we&#x27;re going to do Part B, Tanning in Western Countries.
+
+<span class="student">[Student]</span> Yes.
+
+<span class="tutor">[Tutor]</span> The tan.
+
+<span class="student">[Student]</span> Yes.
+
+<span class="tutor">[Tutor]</span> Great. Okay.
+
+<span class="student">[Student]</span> Yes. I can&#x27;t [?can] prepare my textbook because today morning I get up early and I work too early to my office because last night it is so cold. [?] So take a shower after I go back to my bed early. So today morning I get up early and just go to the gym.
+
+<span class="tutor">[Tutor]</span> Yeah.
+
+<span class="student">[Student]</span> To exercise.
+
+<span class="tutor">[Tutor]</span> That&#x27;s good. You&#x27;re concerned that you&#x27;re not prepared? I think you&#x27;re going to do just fine, Joey. You always do a wonderful job.
+
+<span class="student">[Student]</span> Okay, yes. Just I want to do free talking. Is it possible?
+
+<span class="tutor">[Tutor]</span> You want to do free talk today? Yes, absolutely. If you&#x27;d rather do that, that is just fine.
+
+<span class="student">[Student]</span> Yes.
+
+<span class="tutor">[Tutor]</span> All right. Would you like me to find us a conversation topic?
+
+<span class="student">[Student]</span> Okay. Yes. How about the English?
+
+<span class="tutor">[Tutor]</span> Yes.
+
+<span class="student">[Student]</span> Because I think these days my English level and skill is the same. And don&#x27;t move. [?]
+
+<span class="tutor">[Tutor]</span> Oh, you do?
+
+<span class="student">[Student]</span> So I worry about my English. So how about the topic, the English?
+
+<span class="tutor">[Tutor]</span> Yes. Okay. I&#x27;m just going to, I have something for that. Just let me find it.
+
+<span class="student">[Student]</span> Okay.
+
+<span class="tutor">[Tutor]</span> I&#x27;ve got benefits of learning a new language. Let&#x27;s take a look.
+
+<span class="student">[Student]</span> Okay.
+
+<span class="tutor">[Tutor]</span> So what do you feel are the most notable benefits of learning English? What is it about learning English that makes you want to learn it and master it?
+
+<span class="student">[Student]</span> I think I understand your question. I think the language skill is possible to travel anywhere. For example, if I travel Japan or China or some country, non-English country, but it&#x27;s possible to use the English in hotel or public place. So that is benefit to travel to anywhere.
+
+<span class="tutor">[Tutor]</span> Okay.
+
+<span class="student">[Student]</span> So maybe 10 years later, I will go travel in a world with my son. Just my wish.
+
+<span class="tutor">[Tutor]</span> Uh-huh.
+
+<span class="student">[Student]</span> Meantime my English skill is to help us to travel more good skill, yeah.
+
+<span class="tutor">[Tutor]</span> Well, you know what, you&#x27;re absolutely right, and it&#x27;s a very reasonable goal. That&#x27;s what it was like for me back in 2020 when I decided I wanted to teach English in Spanish-speaking countries.
+
+<span class="student">[Student]</span> Oh, yeah.
+
+<span class="tutor">[Tutor]</span> I wanted to have enough mastery of the language that I could communicate with them even if the language barrier was there. If I couldn&#x27;t tell them in English, then I could tell them in Spanish. So, yeah.
+
+<span class="student">[Student]</span> Yeah, it&#x27;s wonderful. I think it&#x27;s really great. [?]
+
+<span class="tutor">[Tutor]</span> Okay, so would you... So I&#x27;ve gotten from you that you think learning English is also going to have positive effects on your career. Yes?
+
+<span class="student">[Student]</span> Yes, you&#x27;re right. But these days I worry about something.
+
+<span class="tutor">[Tutor]</span> Oh?
+
+<span class="student">[Student]</span> Yes, because I live in Korea. So usually I speak Korean.
+
+<span class="tutor">[Tutor]</span> Yeah.
+
+<span class="student">[Student]</span> So I&#x27;ve just forgotten my words and sentences and English skills. So, just I practiced 20 minutes, but it is not, it&#x27;s just read and remember words and check my pronunciation. So, I think I forgot made a sentence and speak, etc. So, I need to more way, I need to find more way how to speak better or more remember and make a sentence. Yes, for myself.
+
+<span class="tutor">[Tutor]</span> I understand.
+
+<span class="student">[Student]</span> Yes.
+
+<span class="tutor">[Tutor]</span> But, you know, I got to tell you, 20 minutes, that&#x27;s a very good chunk of time.
+
+<span class="student">[Student]</span> Oh.
+
+<span class="tutor">[Tutor]</span> It is. 20 minutes, you know, that&#x27;s giving you enough time to really practice and get involved with it before you move on to your next task. I know that when I was learning Spanish, I studied about an hour a day.
+
+<span class="student">[Student]</span> Oh, yes.
+
+<span class="tutor">[Tutor]</span> But I had a different schedule than you do.
+
+<span class="student">[Student]</span> Understand.
+
+<span class="tutor">[Tutor]</span> Okay?
+
+<span class="student">[Student]</span> Yeah.
+
+<span class="tutor">[Tutor]</span> So I had the time to do it. One of the things that I did that was quite helpful is when I wasn&#x27;t taking Spanish classes, I was using online language apps like Duolingo, Babbel, and Rosetta Stone. And I could do those for an hour, and I felt like I accomplished something. It&#x27;s not for everybody, but it might be something to think about, you know, because when you&#x27;re on an app, they give you a directed task or directed practice. So, you know, that&#x27;s, but no, you&#x27;re working very hard. I&#x27;m very pleased to hear that you&#x27;re trying to carve out 20 minutes a day. That&#x27;s excellent. That&#x27;s very good.
+
+<span class="student">[Student]</span> I consider, I think this day, you and me, we just have a free talking [?pre-talking] twice. And meantime I feel, oh, that is good way to make a sentence, the freestyle communication, because I remember how to make a sentence and how to communicate to my teacher and how to use the sentence and listen your sentence. So I think that is good way. So how about change the top, my textbook, textbook, the free talking [?pre-talking] daily topic or something. [?]
+
+<span class="tutor">[Tutor]</span> Okay. Well, I just want to make sure I&#x27;m understanding what you&#x27;re saying. So I&#x27;m just looking at your textbook now.
+
+<span class="student">[Student]</span> Okay.
+
+<span class="tutor">[Tutor]</span> So right now we&#x27;re working on the active discussion where we have slides with pictures, sentences, and discussion questions. If you&#x27;re interested in more conversation and discussion, then we have a couple of options. The first option is you mentioned having free talk twice a week. I can do that. I have dozens of conversation topic questions that allow me to help guide you and work with you through different topics and different ideas.
+
+<span class="student">[Student]</span> Yes, that&#x27;s a good way. So I think if we select the PDF textbook, we select two eyes of the textbook. [?] So I think if I select one is the daily topic and another is the use another topic textbook, it&#x27;s possible to your way. Just one or two days we have free talking [?pre-talking] and next class we learn about some grammar or some words or some pattern of English. So that is a good way. After your call, I will call my Carrot [?carrot] manager and then change my textbook.
+
+<span class="tutor">[Tutor]</span> Yes. Okay. And you know what? I kind of like your idea of using the Daily Topic English. Can I tell you why? Because it will let you view the topic ahead of time before class, and it&#x27;ll help you to prepare for that conversation and that discussion. When I do free talk like this, you don&#x27;t have any idea of what I&#x27;m bringing to class that day, and I feel that you would like an opportunity to be better prepared. So if you wanted to do Daily Topic twice a week and then the active discussion the other three days, I think that would be a really good change up.
+
+<span class="student">[Student]</span> Yes, and you are a good teacher. So I wanted to, yeah, I always wanted to take class with you, but your schedule is a little difficult.
+
+<span class="tutor">[Tutor]</span> Yeah, difficult.
+
+<span class="student">[Student]</span> So every Monday and Wednesday, I take a class with another teacher because we are so busy. So, yeah. So I consider. I consider.
+
+<span class="tutor">[Tutor]</span> Yeah, and I apologize for that. I guess I need to apologize. I have quite a few loyal clients. And so, you know, I have some clients that I&#x27;ve had for, oh gosh, 18 months to two years. But, you know, I consider you one of those dedicated clients. And that means something to me.
+
+<span class="student">[Student]</span> Oh, that is good. Also good. But I think the teacher is the truth. [?] So Monday, Wednesday teacher just free [?pre] or your class have a regular class. So I looking at our schedule. Yeah, the schedule, and remake my English class because...
+
+<span class="tutor">[Tutor]</span> Well, yeah, right now we have you Tuesdays, Thursdays, and Fridays.
+
+<span class="student">[Student]</span> Yeah, you&#x27;re right.
+
+<span class="tutor">[Tutor]</span> That&#x27;s great. So I&#x27;ll ask you to think about this. Of those three days of classes, which class would you like to have for Daily Topic? Would you like to have it on Fridays or Tuesdays? Like, you can ask them to assign each textbook to a certain day.
+
+<span class="student">[Student]</span> Ah, yes, yes, okay. Today I make a plan how to take a class or textbook or, yeah. So and then, and then I will tell you about my class way.
+
+<span class="tutor">[Tutor]</span> It&#x27;s a good way. [?]
+
+<span class="student">[Student]</span> Yeah.
+
+<span class="tutor">[Tutor]</span> Okay. Now, I&#x27;m looking into the new year right now, Joey. I&#x27;m looking at my calendar.
+
+<span class="student">[Student]</span> Yes.
+
+<span class="tutor">[Tutor]</span> And I don&#x27;t know how far ahead your company will let you book your classes.
+
+<span class="student">[Student]</span> Yes.
+
+<span class="tutor">[Tutor]</span> But in the new year, my schedule gets rather quiet. So you would have an opportunity to get slotted in at different times.
+
+<span class="student">[Student]</span> Yes.
+
+<span class="tutor">[Tutor]</span> And that might be something to think about. Like right now, we have your class at 8 o&#x27;clock in the morning.
+
+<span class="student">[Student]</span> Yes.
+
+<span class="tutor">[Tutor]</span> But come in January, I start having classes that open on Tuesdays and Thursdays. They open at 5 a.m.
+
+<span class="student">[Student]</span> Oh, 5 a.m.
+
+<span class="tutor">[Tutor]</span> Uh-huh.
+
+<span class="student">[Student]</span> Yeah, yeah. In Korean time, right?
+
+<span class="tutor">[Tutor]</span> Yes, yes. I&#x27;m talking about Korean time. So what I&#x27;m mentioning is when you speak to your study coach, if you explain to them that you want to change your timetable for the three classes, maybe they can tentatively, as we say, pencil you in for different times coming into January. Like right now, I&#x27;m looking at my December list of clients, and you&#x27;re in there. You&#x27;re solid right up until the 24th, three days a week at 8 a.m. And then in January, they do not have you booked in yet.
+
+<span class="student">[Student]</span> I see. I understand.
+
+<span class="tutor">[Tutor]</span> Yeah.
+
+<span class="student">[Student]</span> So just share first your time in January, right? [?]
+
+<span class="tutor">[Tutor]</span> Uh-huh. Again, I usually, my schedule, it usually starts at 5 a.m. your time.
+
+<span class="student">[Student]</span> I see. Yes. So, yeah, I reschedule and remake plan in my English.
+
+<span class="tutor">[Tutor]</span> Yes. Okay.
+
+<span class="student">[Student]</span> Thank you so much.
+
+<span class="tutor">[Tutor]</span> That would be wonderful. [?] Oh, you&#x27;re very, very welcome. You know, I want to be able to give you that opportunity because I believe very firmly that if I have students that are dedicated such as you are, I want to help you succeed.
+
+<span class="student">[Student]</span> I see. Yes. I understand.
+
+<span class="tutor">[Tutor]</span> All right. Okay. So let&#x27;s take a moment and just think about another question in our discussion today, okay?
+
+<span class="student">[Student]</span> Yes, good.
+
+<span class="tutor">[Tutor]</span> How does learning English affect your sense of identity, identity and self-esteem? Does it make you feel good that you&#x27;re learning a new language, or are you getting discouraged?
+
+<span class="student">[Student]</span> Yeah, I think I study English a long time but it&#x27;s a short time. Yeah. So only 20 minutes. So I think it is so just in part of life. So I, I don&#x27;t feel anything. Just, yeah, normal feeling of learning English. So, it&#x27;s better to press to myself. Press something, yeah. Press the textbook or press topic or press time. [?] So, that&#x27;s why I think learning English, how to speak learning English. And I think my skill of making sentences is weak. So I consider how to solve that problem. Anyway, is the right answer for your question or not?
+
+<span class="tutor">[Tutor]</span> Well, I basically wanted to know, do you feel like your English journey is a positive and encouraging one, or are you finding it a bit scary, a bit disappointing? Maybe it&#x27;s harder than you thought?
+
+<span class="student">[Student]</span> Yeah, 17 is nice and good, but 30 is a little stress. [?]
+
+<span class="tutor">[Tutor]</span> Absolutely. [?]
+
+<span class="student">[Student]</span> But it is not a reason to learn English to pass the exam. Just that is the port of travel. [?] So, the purpose is so great. So my, I don&#x27;t have a stress learning English, but sometimes my ability of English is stable, not a good achievement, have a good achievement. Yeah, that&#x27;s stressful for me.
+
+<span class="tutor">[Tutor]</span> Learning English is like climbing a mountain, Joey, because sometimes when you&#x27;re climbing a mountain, you can go from the bottom straight to the top. And other times you have to go sideways on the mountain or take another path or route to climb that mountain. So learning English is not a direct path. Sometimes you have to stop and stay at one place for a while. Or sometimes you have to try learning a different way.
+
+<span class="student">[Student]</span> Yeah.
+
+<span class="tutor">[Tutor]</span> Okay. So let&#x27;s talk a little bit more about how you&#x27;ve been learning.
+
+<span class="student">[Student]</span> Okay.
+
+<span class="tutor">[Tutor]</span> So you&#x27;re taking classes with me. So you&#x27;re taking audio classes. You said you created an AI program that&#x27;s helping you.
+
+<span class="student">[Student]</span> Yes.
+
+<span class="tutor">[Tutor]</span> So that&#x27;s good. And we talked about computer application. Can you think of any other way that would help you to learn English?
+
+<span class="student">[Student]</span> Okay, I understand. Yes, I think about that. Yeah, I will think about that.
+
+<span class="tutor">[Tutor]</span> Okay. What I would suggest right now, and again, I know you have a busy schedule. I&#x27;ve mentioned to you in the past that I get to watch Korean television shows and movies on Netflix, and it comes with English subtitles. You can do the same with English programming. You can listen to it in English but run the Korean subtitles underneath.
+
+<span class="student">[Student]</span> Okay, yes. I forgot that.
+
+<span class="tutor">[Tutor]</span> That&#x27;s another option, yeah. And I believe there is another program. I&#x27;m going to have to research it, where they give you a program, and then you can use subtitles or not. And like I said, it&#x27;s a different program from watching Netflix, but I will see if I can find it and figure out its name and send you that information.
+
+<span class="student">[Student]</span> Okay.
+
+<span class="tutor">[Tutor]</span> Okay. One last question and then I&#x27;m going to let you go. Okay?
+
+<span class="student">[Student]</span> Okay.
+
+<span class="tutor">[Tutor]</span> How long do you think it&#x27;s going to take you to learn and master English? How many years?
+
+<span class="student">[Student]</span> I think whole life because that is not my main language. So I forgot and forgot in my brain. So I need to have a process learning English my whole life.
+
+<span class="tutor">[Tutor]</span> Okay. Fair enough.
+
+<span class="student">[Student]</span> Yeah. Time is so short. But the period of process, the learning English, that is a long time, 20 years, 30 years or more, I guess.
+
+<span class="tutor">[Tutor]</span> Okay. The reason I ask this is because studies have been done that show most adults, they usually have to take about seven years.
+
+<span class="student">[Student]</span> Oh, seven years.
+
+<span class="tutor">[Tutor]</span> Now, compare that to your answer where you said it&#x27;s going to take you all your life. That&#x27;s kind of encouraging, wouldn&#x27;t you say? So, basically, although you&#x27;re saying you&#x27;re going to be a lifelong learner, which is not a bad thing at all, the idea of learning a language in seven years to fluency, that&#x27;s achievable.
+
+<span class="student">[Student]</span> Okay, yes. Thank you so much.
+
+<span class="tutor">[Tutor]</span> Yeah, the tunnel&#x27;s not as long as you think it is. All right, friend, I&#x27;m going to let you go. I will listen to the audio and see if there&#x27;s anything else I can suggest by way of pronunciation and comments. But, yes, talk to Carrot English about adding Daily Topic English, and then talk to them. It&#x27;s three things here. I hope you can remember. So, add Daily Topic English, assign what day you want Daily Topic, or if you want access to it all three days, and ask them about booking in January.
+
+<span class="student">[Student]</span> Okay, yes.
+
+<span class="tutor">[Tutor]</span> All right.
+
+<span class="student">[Student]</span> I call Carrot English [?Carol English], and then I report to you.
+
+<span class="tutor">[Tutor]</span> I&#x27;ll put those goals in the comments for you. All right, friend, you have a great day. This was wonderful. Take care.
+
+<span class="student">[Student]</span> Okay, you take care. Bye-bye, teacher.
+
+<span class="tutor">[Tutor]</span> Bye-bye.</div>
+        </div>
+    </div>
+    <div class="toast" id="toast">✅ 프롬프트가 복사되었습니다!</div>
+    <script>
+        const REVIEW_PROMPT="너는 나의 영어 회화 복습 파트너야. 오늘 내 전화영어 수업 내용을 기반으로 대화하면서 복습을 도와줘.\n\n[오늘 수업 전사 내용]\n[Student] Hello teacher, good morning.\n\n[Tutor] Hi again, Joey. How are you today?\n\n[Student] I'm good. So you're good?\n\n[Tutor] Yes, of course. Everything is good.\n\n[Student] Nice to hear your voice. [?]\n\n[Tutor] Yes. Oh, and yours as well. Thank you. That's very thoughtful. All right. If you're ready, we'll begin your lesson.\n\n[Student] Okay.\n\n[Tutor] And last, yeah, last class, you did Part A, Fair Skin, the Asian Idea. And today, we're going to do Part B, Tanning in Western Countries.\n\n[Student] Yes.\n\n[Tutor] The tan.\n\n[Student] Yes.\n\n[Tutor] Great. Okay.\n\n[Student] Yes. I can't [?can] prepare my textbook because today morning I get up early and I work too early to my office because last night it is so cold. [?] So take a shower after I go back to my bed early. So today morning I get up early and just go to the gym.\n\n[Tutor] Yeah.\n\n[Student] To exercise.\n\n[Tutor] That's good. You're concerned that you're not prepared? I think you're going to do just fine, Joey. You always do a wonderful job.\n\n[Student] Okay, yes. Just I want to do free talking. Is it possible?\n\n[Tutor] You want to do free talk today? Yes, absolutely. If you'd rather do that, that is just fine.\n\n[Student] Yes.\n\n[Tutor] All right. Would you like me to find us a conversation topic?\n\n[Student] Okay. Yes. How about the English?\n\n[Tutor] Yes.\n\n[Student] Because I think these days my English level and skill is the same. And don't move. [?]\n\n[Tutor] Oh, you do?\n\n[Student] So I worry about my English. So how about the topic, the English?\n\n[Tutor] Yes. Okay. I'm just going to, I have something for that. Just let me find it.\n\n[Student] Okay.\n\n[Tutor] I've got benefits of learning a new language. Let's take a look.\n\n[Student] Okay.\n\n[Tutor] So what do you feel are the most notable benefits of learning English? What is it about learning English that makes you want to learn it and master it?\n\n[Student] I think I understand your question. I think the language skill is possible to travel anywhere. For example, if I travel Japan or China or some country, non-English country, but it's possible to use the English in hotel or public place. So that is benefit to travel to anywhere.\n\n[Tutor] Okay.\n\n[Student] So maybe 10 years later, I will go travel in a world with my son. Just my wish.\n\n[Tutor] Uh-huh.\n\n[Student] Meantime my English skill is to help us to travel more good skill, yeah.\n\n[Tutor] Well, you know what, you're absolutely right, and it's a very reasonable goal. That's what it was like for me back in 2020 when I decided I wanted to teach English in Spanish-speaking countries.\n\n[Student] Oh, yeah.\n\n[Tutor] I wanted to have enough mastery of the language that I could communicate with them even if the language barrier was there. If I couldn't tell them in English, then I could tell them in Spanish. So, yeah.\n\n[Student] Yeah, it's wonderful. I think it's really great. [?]\n\n[Tutor] Okay, so would you... So I've gotten from you that you think learning English is also going to have positive effects on your career. Yes?\n\n[Student] Yes, you're right. But these days I worry about something.\n\n[Tutor] Oh?\n\n[Student] Yes, because I live in Korea. So usually I speak Korean.\n\n[Tutor] Yeah.\n\n[Student] So I've just forgotten my words and sentences and English skills. So, just I practiced 20 minutes, but it is not, it's just read and remember words and check my pronunciation. So, I think I forgot made a sentence and speak, etc. So, I need to more way, I need to find more way how to speak better or more remember and make a sentence. Yes, for myself.\n\n[Tutor] I understand.\n\n[Student] Yes.\n\n[Tutor] But, you know, I got to tell you, 20 minutes, that's a very good chunk of time.\n\n[Student] Oh.\n\n[Tutor] It is. 20 minutes, you know, that's giving you enough time to really practice and get involved with it before you move on to your next task. I know that when I was learning Spanish, I studied about an hour a day.\n\n[Student] Oh, yes.\n\n[Tutor] But I had a different schedule than you do.\n\n[Student] Understand.\n\n[Tutor] Okay?\n\n[Student] Yeah.\n\n[Tutor] So I had the time to do it. One of the things that I did that was quite helpful is when I wasn't taking Spanish classes, I was using online language apps like Duolingo, Babbel, and Rosetta Stone. And I could do those for an hour, and I felt like I accomplished something. It's not for everybody, but it might be something to think about, you know, because when you're on an app, they give you a directed task or directed practice. So, you know, that's, but no, you're working very hard. I'm very pleased to hear that you're trying to carve out 20 minutes a day. That's excellent. That's very good.\n\n[Student] I consider, I think this day, you and me, we just have a free talking [?pre-talking] twice. And meantime I feel, oh, that is good way to make a sentence, the freestyle communication, because I remember how to make a sentence and how to communicate to my teacher and how to use the sentence and listen your sentence. So I think that is good way. So how about change the top, my textbook, textbook, the free talking [?pre-talking] daily topic or something. [?]\n\n[Tutor] Okay. Well, I just want to make sure I'm understanding what you're saying. So I'm just looking at your textbook now.\n\n[Student] Okay.\n\n[Tutor] So right now we're working on the active discussion where we have slides with pictures, sentences, and discussion questions. If you're interested in more conversation and discussion, then we have a couple of options. The first option is you mentioned having free talk twice a week. I can do that. I have dozens of conversation topic questions that allow me to help guide you and work with you through different topics and different ideas.\n\n[Student] Yes, that's a good way. So I think if we select the PDF textbook, we select two eyes of the textbook. [?] So I think if I select one is the daily topic and another is the use another topic textbook, it's possible to your way. Just one or two days we have free talking [?pre-talking] and next class we learn about some grammar or some words or some pattern of English. So that is a good way. After your call, I will call my Carrot [?carrot] manager and then change my textbook.\n\n[Tutor] Yes. Okay. And you know what? I kind of like your idea of using the Daily Topic English. Can I tell you why? Because it will let you view the topic ahead of time before class, and it'll help you to prepare for that conversation and that discussion. When I do free talk like this, you don't have any idea of what I'm bringing to class that day, and I feel that you would like an opportunity to be better prepared. So if you wanted to do Daily Topic twice a week and then the active discussion the other three days, I think that would be a really good change up.\n\n[Student] Yes, and you are a good teacher. So I wanted to, yeah, I always wanted to take class with you, but your schedule is a little difficult.\n\n[Tutor] Yeah, difficult.\n\n[Student] So every Monday and Wednesday, I take a class with another teacher because we are so busy. So, yeah. So I consider. I consider.\n\n[Tutor] Yeah, and I apologize for that. I guess I need to apologize. I have quite a few loyal clients. And so, you know, I have some clients that I've had for, oh gosh, 18 months to two years. But, you know, I consider you one of those dedicated clients. And that means something to me.\n\n[Student] Oh, that is good. Also good. But I think the teacher is the truth. [?] So Monday, Wednesday teacher just free [?pre] or your class have a regular class. So I looking at our schedule. Yeah, the schedule, and remake my English class because...\n\n[Tutor] Well, yeah, right now we have you Tuesdays, Thursdays, and Fridays.\n\n[Student] Yeah, you're right.\n\n[Tutor] That's great. So I'll ask you to think about this. Of those three days of classes, which class would you like to have for Daily Topic? Would you like to have it on Fridays or Tuesdays? Like, you can ask them to assign each textbook to a certain day.\n\n[Student] Ah, yes, yes, okay. Today I make a plan how to take a class or textbook or, yeah. So and then, and then I will tell you about my class way.\n\n[Tutor] It's a good way. [?]\n\n[Student] Yeah.\n\n[Tutor] Okay. Now, I'm looking into the new year right now, Joey. I'm looking at my calendar.\n\n[Student] Yes.\n\n[Tutor] And I don't know how far ahead your company will let you book your classes.\n\n[Student] Yes.\n\n[Tutor] But in the new year, my schedule gets rather quiet. So you would have an opportunity to get slotted in at different times.\n\n[Student] Yes.\n\n[Tutor] And that might be something to think about. Like right now, we have your class at 8 o'clock in the morning.\n\n[Student] Yes.\n\n[Tutor] But come in January, I start having classes that open on Tuesdays and Thursdays. They open at 5 a.m.\n\n[Student] Oh, 5 a.m.\n\n[Tutor] Uh-huh.\n\n[Student] Yeah, yeah. In Korean time, right?\n\n[Tutor] Yes, yes. I'm talking about Korean time. So what I'm mentioning is when you speak to your study coach, if you explain to them that you want to change your timetable for the three classes, maybe they can tentatively, as we say, pencil you in for different times coming into January. Like right now, I'm looking at my December list of clients, and you're in there. You're solid right up until the 24th, three days a week at 8 a.m. And then in January, they do not have you booked in yet.\n\n[Student] I see. I understand.\n\n[Tutor] Yeah.\n\n[Student] So just share first your time in January, right? [?]\n\n[Tutor] Uh-huh. Again, I usually, my schedule, it usually starts at 5 a.m. your time.\n\n[Student] I see. Yes. So, yeah, I reschedule and remake plan in my English.\n\n[Tutor] Yes. Okay.\n\n[Student] Thank you so much.\n\n[Tutor] That would be wonderful. [?] Oh, you're very, very welcome. You know, I want to be able to give you that opportunity because I believe very firmly that if I have students that are dedicated such as you are, I want to help you succeed.\n\n[Student] I see. Yes. I understand.\n\n[Tutor] All right. Okay. So let's take a moment and just think about another question in our discussion today, okay?\n\n[Student] Yes, good.\n\n[Tutor] How does learning English affect your sense of identity, identity and self-esteem? Does it make you feel good that you're learning a new language, or are you getting discouraged?\n\n[Student] Yeah, I think I study English a long time but it's a short time. Yeah. So only 20 minutes. So I think it is so just in part of life. So I, I don't feel anything. Just, yeah, normal feeling of learning English. So, it's better to press to myself. Press something, yeah. Press the textbook or press topic or press time. [?] So, that's why I think learning English, how to speak learning English. And I think my skill of making sentences is weak. So I consider how to solve that problem. Anyway, is the right answer for your question or not?\n\n[Tutor] Well, I basically wanted to know, do you feel like your English journey is a positive and encouraging one, or are you finding it a bit scary, a bit disappointing? Maybe it's harder than you thought?\n\n[Student] Yeah, 17 is nice and good, but 30 is a little stress. [?]\n\n[Tutor] Absolutely. [?]\n\n[Student] But it is not a reason to learn English to pass the exam. Just that is the port of travel. [?] So, the purpose is so great. So my, I don't have a stress learning English, but sometimes my ability of English is stable, not a good achievement, have a good achievement. Yeah, that's stressful for me.\n\n[Tutor] Learning English is like climbing a mountain, Joey, because sometimes when you're climbing a mountain, you can go from the bottom straight to the top. And other times you have to go sideways on the mountain or take another path or route to climb that mountain. So learning English is not a direct path. Sometimes you have to stop and stay at one place for a while. Or sometimes you have to try learning a different way.\n\n[Student] Yeah.\n\n[Tutor] Okay. So let's talk a little bit more about how you've been learning.\n\n[Student] Okay.\n\n[Tutor] So you're taking classes with me. So you're taking audio classes. You said you created an AI program that's helping you.\n\n[Student] Yes.\n\n[Tutor] So that's good. And we talked about computer application. Can you think of any other way that would help you to learn English?\n\n[Student] Okay, I understand. Yes, I think about that. Yeah, I will think about that.\n\n[Tutor] Okay. What I would suggest right now, and again, I know you have a busy schedule. I've mentioned to you in the past that I get to watch Korean television shows and movies on Netflix, and it comes with English subtitles. You can do the same with English programming. You can listen to it in English but run the Korean subtitles underneath.\n\n[Student] Okay, yes. I forgot that.\n\n[Tutor] That's another option, yeah. And I believe there is another program. I'm going to have to research it, where they give you a program, and then you can use subtitles or not. And like I said, it's a different program from watching Netflix, but I will see if I can find it and figure out its name and send you that information.\n\n[Student] Okay.\n\n[Tutor] Okay. One last question and then I'm going to let you go. Okay?\n\n[Student] Okay.\n\n[Tutor] How long do you think it's going to take you to learn and master English? How many years?\n\n[Student] I think whole life because that is not my main language. So I forgot and forgot in my brain. So I need to have a process learning English my whole life.\n\n[Tutor] Okay. Fair enough.\n\n[Student] Yeah. Time is so short. But the period of process, the learning English, that is a long time, 20 years, 30 years or more, I guess.\n\n[Tutor] Okay. The reason I ask this is because studies have been done that show most adults, they usually have to take about seven years.\n\n[Student] Oh, seven years.\n\n[Tutor] Now, compare that to your answer where you said it's going to take you all your life. That's kind of encouraging, wouldn't you say? So, basically, although you're saying you're going to be a lifelong learner, which is not a bad thing at all, the idea of learning a language in seven years to fluency, that's achievable.\n\n[Student] Okay, yes. Thank you so much.\n\n[Tutor] Yeah, the tunnel's not as long as you think it is. All right, friend, I'm going to let you go. I will listen to the audio and see if there's anything else I can suggest by way of pronunciation and comments. But, yes, talk to Carrot English about adding Daily Topic English, and then talk to them. It's three things here. I hope you can remember. So, add Daily Topic English, assign what day you want Daily Topic, or if you want access to it all three days, and ask them about booking in January.\n\n[Student] Okay, yes.\n\n[Tutor] All right.\n\n[Student] I call Carrot English [?Carol English], and then I report to you.\n\n[Tutor] I'll put those goals in the comments for you. All right, friend, you have a great day. This was wonderful. Take care.\n\n[Student] Okay, you take care. Bye-bye, teacher.\n\n[Tutor] Bye-bye.\n\n[AI 피드백]\n**0. 📌 Topic**\n\nTopic: Free Talk on English Learning Struggles and Rearranging the Class Schedule\n\n---\n\n**1. 📊 오늘의 대화 요약 (Summary)**\n\n교재(Part B, Tanning in Western Countries) 대신 Joey의 요청으로 **\"영어 학습\"을 주제로 free talk**를 했어요. 튜터가 준비한 주제는 \"Benefits of learning a new language\"였어요.\n- 영어를 배우는 이유: 10년 뒤 아들과 세계 여행하기\n- 요즘 고민: 실력이 제자리인 것 같음\n- 공부 방식: 하루 20분 공부, 직접 만든 AI 프로그램 활용\n- 튜터의 제안: 언어 앱(Duolingo 등), 한국어 자막을 켜고 영어 프로그램 보기\n\n후반에는 **Daily Topic 교재 추가와 1월 수업 시간(오전 5시 슬롯) 재조정**을 논의했어요. 마지막 질문 \"영어를 마스터하려면 몇 년이 걸릴까?\"에 Joey는 \"평생\"이라고 답했어요. 튜터는 \"성인은 보통 약 7년이면 유창해질 수 있으니 터널이 생각만큼 길지 않다\"며 격려해 줬습니다.\n\n---\n\n**2. 💬 유창성 업그레이드 (Fluency & Natural Flow)**\n\n**① 영어의 장점 말하기**\n- ❌ **As Said:** \"I think the language skill is possible to travel anywhere.\"\n- ✅ **Natural:** \"I think English makes it possible to travel anywhere.\"\n- 💎 **Professional:** \"Being proficient in English allows me to travel virtually anywhere.\"\n- 💡 **코칭 포인트:** \"A skill\" can't *be* possible. It *makes* something possible. Use the chunk \"A makes it possible to ~.\"\n  → '실력'이 가능한 게 아니라, 실력이 무언가를 **가능하게 만들어** 주는 거예요. \"A makes it possible to + 하다\"를 한 덩어리로 외워 두세요.\n\n**② 더 나은 공부법이 필요하다고 말하기**\n- ❌ **As Said:** \"So, I need to more way, I need to find more way how to speak better or more remember and make a sentence.\"\n- ✅ **Natural:** \"I need to find better ways to speak more naturally and remember what I learn.\"\n- 💎 **Professional:** \"I need to find more effective ways to build my speaking skills and retain what I've learned.\"\n- 💡 **코칭 포인트:** \"Find better ways to ~\" is one smooth chunk. You don't need \"how\" after \"ways.\"\n  → \"find better ways to + 하다\"를 통째로 쓰면 깔끔해요. ways 뒤에 how를 또 붙이지 않아도 돼요. 그리고 \"more remember\"보다 \"remember more\"가 자연스러워요.\n\n**③ 실력이 제자리라는 느낌 말하기**\n- ❌ **As Said:** \"sometimes my ability of English is stable, not a good achievement\"\n- ✅ **Natural:** \"Sometimes I feel like I've hit a plateau.\"\n- 💎 **Professional:** \"Lately, my progress in English seems to have plateaued.\"\n- 💡 **코칭 포인트:** \"Stable\" sounds positive, like \"safe and steady.\" To say you're stuck, native speakers use \"hit a plateau.\"\n  → \"stable\"은 원어민 귀에 '안정적이라 좋다'로 들려요. '늘지 않고 멈춰 있다'는 뜻이라면 \"hit a plateau\"가 딱 맞아요. 오늘 Joey가 가장 하고 싶었던 말이죠!\n\n**④ 영어 공부가 스트레스는 아니라고 말하기**\n- ❌ **As Said:** \"So my, I don't have a stress learning English\"\n- ✅ **Natural:** \"Learning English doesn't stress me out.\"\n- 💎 **Professional:** \"I don't find learning English stressful at all.\"\n- 💡 **코칭 포인트:** Stress isn't something you \"have a\" of. Say \"~ stresses me out\" or \"I'm stressed about ~.\"\n  → stress는 하나, 둘 세는 물건이 아니라서 \"a stress\"라고 하면 어색하게 들려요. \"~ stresses me out(~때문에 스트레스 받아)\" / \"I'm stressed about ~\"를 덩어리로 기억하세요.\n\n**⑤ 짝꿍 단어 빠뜨리지 않기**\n- ❌ **As Said:** \"how to communicate to my teacher and how to use the sentence and listen your sentence\"\n- ✅ **Natural:** \"how to talk with my teacher, use sentences, and listen to what you say\"\n- 💎 **Professional:** \"how to communicate with my teacher, put sentences together, and follow what you're saying\"\n- 💡 **코칭 포인트:** Some words always travel with a buddy: *listen **to***, *communicate **with***, *travel **to***.\n  → 몇몇 단어는 늘 짝꿍과 함께 다녀요. **listen to** you, **communicate with** my teacher, **travel to** Japan. 오늘 \"if I travel Japan\"처럼 짝꿍이 빠지면 말이 중간에 툭 끊긴 것처럼 들려요. 짝꿍까지 한 덩어리로 입에 붙여 두세요.\n\n---\n\n**3. 🔧 고질적 문법 '한 놈만 패기' (Target Grammar)**\n\nCategory: verb tense\n\n🎯 오늘의 패턴: **이미 지나간 일**(오늘 아침, 어젯밤)을 **지금 모양**(get, is, go)으로 말하는 습관\n\nJoey는 \"today morning\", \"last night\"처럼 시간 말은 잘 붙여 놓고도 동사는 지금 모양으로 말했어요. 원어민 귀엔 \"어젯밤에… 추워요\"처럼 시간이 엇갈려 들립니다.\n\n| ❌ 원문 (As Said) | ✅ 교정 (Corrected) |\n|---|---|\n| \"because last night it **is** so cold\" | \"because it **was** so cold last night\" |\n| \"So today morning I **get** up early and just **go** to the gym.\" | \"This morning I **got** up early and **went** to the gym.\" |\n| \"I **can't** prepare my textbook because today morning I **get** up early…\" | \"I **couldn't** prepare for the lesson because I **got** up early this morning…\" |\n| \"I think this day, you and me, we just **have** a free talking twice.\" | \"I think we**'ve had** free talk twice so far.\" |\n\n📌 **핵심 규칙:** 입에서 \"last night / this morning / yesterday\"가 나오면 동사도 **지나간 모양**으로 바꿔요. get → got, go → went, is → was, can't → couldn't. \"지금까지 몇 번 해 왔다\"는 **have + 해 본 모양** 덩어리(we've had, I've done)로 말합니다.\n(덤 팁: \"today morning\"이 아니라 **\"this morning\"**이에요!)\n\n🔁 **따라 읽기**\n🗣️ \"This morning I had breakfast and went to work early.\"\n🗣️ \"Yesterday I practiced English for 20 minutes.\"\n🗣️ \"We've had free talk twice, and I really liked it.\"\n\n---\n\n**4. 📗 어휘 확장 (Vocabulary Vault)**\n\n**1. plateau** /plæˈtoʊ/ (noun / verb)\n- 뜻: 정체기, 제자리걸음 (하다)\n- 실전 예문: *Our energy import volume has plateaued since last quarter.*\n\n**2. carve out** /kɑːrv aʊt/ (verb phrase)\n- 뜻: 바쁜 와중에 시간을 따로 떼어 내다\n- 실전 예문: *I carve out 20 minutes every morning for English.*\n\n**3. pencil in** /ˈpensl ɪn/ (verb phrase)\n- 뜻: (일정을) 임시로 잡아 두다\n- 실전 예문: *Can we pencil in the audit meeting for next Tuesday?*\n\n**4. language barrier** /ˈlæŋɡwɪdʒ ˈbæriər/ (noun)\n- 뜻: 언어 장벽\n- 실전 예문: *The language barrier slowed down our negotiation with the supplier.*\n\n**5. lifelong learner** /ˈlaɪflɔːŋ ˈlɜːrnər/ (noun)\n- 뜻: 평생 배우는 사람\n- 실전 예문: *In investing, you have to be a lifelong learner.*\n\n---\n\n**5. 📝 실전 복습 챌린지 (Practice)**\n\n**Q1. (쉬움)** 어젯밤 일을 튜터에게 말해 보세요. \"어젯밤에 너무 추워서 샤워하고 일찍 잤어요.\"\n👉 **모범 답안:** *It was so cold last night, so I took a shower and went to bed early.*\n\n**Q2. (중간)** 요즘 영어 실력이 늘지 않아 답답하다고 털어놓아 보세요. \"요즘 영어가 정체기에 온 것 같아서, 더 나은 공부법을 찾아야 할 것 같아요.\"\n👉 **모범 답안:** *I feel like I've hit a plateau in English lately, so I need to find better ways to practice.*\n\n**Q3. (어려움)** 어제 한 일을 보고해 보세요. \"어제 Carrot English에 전화해서 Daily Topic을 추가했고, 1월 수업도 임시로 잡아 뒀어요.\"\n👉 **모범 답안:** *I called Carrot English yesterday, added Daily Topic English, and penciled in my January classes.*\n\n---\n\n**6. ✨ 자신감 충전 & 내일의 미션 (Confidence & Mission)**\n\n✨ **Good Job**\n> \"I always wanted to take class with you, but your schedule is a little difficult.\"\n\nJoey, 이 문장 정말 좋았어요! 👏\n- **\"always wanted to\"**로 \"예전부터 쭉 그러고 싶었다\"는 마음을 지나간 모양으로 전했어요. 오늘의 패턴을 스스로 쓴 순간이에요.\n- **\"but\"**으로 바람과 현실을 자연스럽게 이었어요. 칭찬과 아쉬움을 한 문장에 담아서 튜터의 마음을 움직였죠.\n- 작은 다듬기: \"I**'ve** always wanted to take classes with you, but your schedule is pretty full.\"\n  - \"예전부터 지금까지 쭉\"이라는 느낌은 **I've always wanted to** 덩어리가 더 원어민답게 들려요.\n  - 스케줄이 꽉 찼다는 말은 \"difficult\"보다 **\"pretty full\"**이 자연스러워요.\n\n🚀 **내일의 한 문장**\n🗣️ *\"I'll call Carrot English today, and then I'll tell you which day I want Daily Topic.\"*\n(오늘 \"I call… I report…\"라고 했던 문장을 앞으로 할 일 모양 **I'll + 하다**로 바꿔 말해 보는 연습이에요!)\n\n---\n\n**[성과 지표]**\n\n📈 **유창성 점수: 6 / 10**\n\n**근거**\n- 👍 **좋았던 점:** 교재 준비를 못 한 상황에서 free talk를 먼저 제안했어요. 수업 방식(free talk와 문법 수업 병행)까지 스스로 설계해서 말했고요. 말이 끊기지 않고 길게 이어졌고, 자기 생각을 끝까지 전달하려는 태도가 훌륭했어요.\n- 🔧 **아쉬운 점:**\n  - 지나간 일과 앞으로 할 일을 모두 지금 모양으로 말하는 경우가 많았어요. 예를 들어 \"I call Carrot English, and then I report to you.\"는 \"I'll call… and then I'll report to you.\"가 맞아요.\n  - listen **to**, travel **to** 같은 짝꿍 단어가 자주 빠졌어요.\n  - 문장이 길어지면 \"So… so… just…\"로 이어 붙이면서 핵심이 흐려졌어요.\n\n🎯 **다음 수업 원포인트 액션 플랜**\n> **\"시간 말 = 동사 신호등\"**\n> 수업 첫 2분 동안 **\"Yesterday I ~ / This morning I ~\"**로 시작하는 문장 3개를 말해 보세요. 시간 말을 먼저 꺼내면 동사가 저절로 got, went, was로 바뀌도록 입을 길들이는 연습이에요. 튜터에게 \"Please stop me if I use the wrong tense!\"라고 미리 부탁해 두면 효과가 두 배예요. 💪\n\n위 내용을 바탕으로:\n1. 먼저 오늘 수업에서 내가 틀렸거나 어색했던 표현을 하나 골라서, 관련된 상황을 영어로 질문해줘.\n2. 내가 영어로 대답하면, 자연스러운지 확인하고 더 나은 표현이 있으면 알려줘.\n3. 특히 \"반복 실수 패턴\"에서 지적된 부분을 집중적으로 연습시켜줘.\n4. 이런 식으로 오늘 배운 표현들을 하나씩 복습하자.\n5. 한국어 설명은 필요할 때만 간단히, 대화는 최대한 영어로 진행해줘.\n\n그럼 시작하자!";
+        function startReview(){navigator.clipboard.writeText(REVIEW_PROMPT).then(()=>{showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)}).catch(()=>{const t=document.createElement('textarea');t.value=REVIEW_PROMPT;document.body.appendChild(t);t.select();document.execCommand('copy');document.body.removeChild(t);showToast();setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600)})}
+        function showToast(){const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500)}
+        function switchTab(n){document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',n==='feedback'?i===0:i===1));document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));document.getElementById('tab-'+n).classList.add('active')}
+    </script>
+</body>
+</html>
