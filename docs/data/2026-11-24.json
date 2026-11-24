@@ -1,0 +1,61 @@
+{
+ "date": "2026-11-24",
+ "iso": [
+  2026,
+  48
+ ],
+ "topic": "Free Talk on English Learning Struggles and Rearranging the Class Schedule",
+ "grammar": "verb tense",
+ "grammar_norm": "Verb Tense",
+ "score": 6.0,
+ "pairs": [
+  {
+   "said": "I think the language skill is possible to travel anywhere.",
+   "natural": "I think English makes it possible to travel anywhere."
+  },
+  {
+   "said": "So, I need to more way, I need to find more way how to speak better or more remember and make a sentence.",
+   "natural": "I need to find better ways to speak more naturally and remember what I learn."
+  },
+  {
+   "said": "sometimes my ability of English is stable, not a good achievement",
+   "natural": "Sometimes I feel like I've hit a plateau."
+  },
+  {
+   "said": "So my, I don't have a stress learning English",
+   "natural": "Learning English doesn't stress me out."
+  },
+  {
+   "said": "how to communicate to my teacher and how to use the sentence and listen your sentence",
+   "natural": "how to talk with my teacher, use sentences, and listen to what you say"
+  }
+ ],
+ "vocab": [
+  {
+   "word": "plateau",
+   "pos": "noun / verb",
+   "meaning": "정체기, 제자리걸음 (하다)"
+  },
+  {
+   "word": "carve out",
+   "pos": "verb phrase",
+   "meaning": "바쁜 와중에 시간을 따로 떼어 내다"
+  },
+  {
+   "word": "pencil in",
+   "pos": "verb phrase",
+   "meaning": "(일정을) 임시로 잡아 두다"
+  },
+  {
+   "word": "language barrier",
+   "pos": "noun",
+   "meaning": "언어 장벽"
+  },
+  {
+   "word": "lifelong learner",
+   "pos": "noun",
+   "meaning": "평생 배우는 사람"
+  }
+ ],
+ "_html_md5": "34dd24c6d5ee3c4ae1f50a0a674d5f73"
+}
