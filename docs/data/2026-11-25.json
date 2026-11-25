@@ -1,0 +1,61 @@
+{
+ "date": "2026-11-25",
+ "iso": [
+  2026,
+  48
+ ],
+ "topic": "Talking About Neighbors and Neighborhoods (\"Who Lives Next Door\")",
+ "grammar": "subject-verb agreement",
+ "grammar_norm": "Subject–Verb Agreement",
+ "score": 6.0,
+ "pairs": [
+  {
+   "said": "So I want the new style textbook, select the new style textbook, and just go, yeah, that textbook, use that textbook.",
+   "natural": "I switched to a new textbook."
+  },
+  {
+   "said": "I feel a little difficulty that word suburb.",
+   "natural": "The word 'suburb' is a little tricky for me."
+  },
+  {
+   "said": "These days, it is more high, better than Korea.",
+   "natural": "It's warmer there than in Korea these days."
+  },
+  {
+   "said": "So, sometimes I moved another room and then get sleep.",
+   "natural": "Sometimes I moved to another room to get some sleep."
+  },
+  {
+   "said": "So it is difficult situation, and so sometimes I can focus on my work because I can sleep enough.",
+   "natural": "Sometimes I couldn't focus on my work because I couldn't get enough sleep."
+  }
+ ],
+ "vocab": [
+  {
+   "word": "suburban",
+   "pos": "adjective",
+   "meaning": "교외의, 도심에서 떨어진 주거지역의 (반대말: urban = 도심의)"
+  },
+  {
+   "word": "snore",
+   "pos": "verb",
+   "meaning": "코를 골다 (코 고는 사람 = a snorer)"
+  },
+  {
+   "word": "gesture",
+   "pos": "noun",
+   "meaning": "(마음을 표현하는) 행동, 성의 표시"
+  },
+  {
+   "word": "complaint",
+   "pos": "noun",
+   "meaning": "불만 제기, 항의 (make a complaint = 항의하다)"
+  },
+  {
+   "word": "mild",
+   "pos": "adjective",
+   "meaning": "(날씨가) 온화한, 포근한"
+  }
+ ],
+ "_html_md5": "fd0a9a9793a1b5ac74533780ca36f13e"
+}

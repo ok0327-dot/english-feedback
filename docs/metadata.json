@@ -531,5 +531,10 @@
     "topic": "Free Talk on English Learning Struggles and Rearranging the Class Schedule",
     "target_grammar": "verb tense",
     "engine": "claude"
+  },
+  "2026-11-25": {
+    "topic": "Talking About Neighbors and Neighborhoods (\"Who Lives Next Door\")",
+    "target_grammar": "subject-verb agreement",
+    "engine": "claude"
   }
 }
