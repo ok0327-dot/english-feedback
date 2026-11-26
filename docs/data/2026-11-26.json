@@ -1,0 +1,57 @@
+{
+ "date": "2026-11-26",
+ "iso": [
+  2026,
+  48
+ ],
+ "topic": "Cultural Understanding — Meeting Styles at Work",
+ "grammar": "plural nouns",
+ "grammar_norm": "Subject–Verb Agreement",
+ "score": 6.0,
+ "pairs": [
+  {
+   "said": "So it is different to what kind of meeting and purpose and attending member etc.",
+   "natural": "So it depends on the type of meeting, the purpose, and who's attending."
+  },
+  {
+   "said": "So sometimes it is impossible physical meeting.",
+   "natural": "So sometimes it's impossible to meet in person."
+  },
+  {
+   "said": "I think their communication way is more directly better than our culture.",
+   "natural": "I think they communicate much more directly than we do."
+  },
+  {
+   "said": "And first, I can understand their communication.",
+   "natural": "At first, I couldn't really understand them because they spoke fast and used a lot of technical terms."
+  }
+ ],
+ "vocab": [
+  {
+   "word": "chair",
+   "pos": "verb",
+   "meaning": "(회의를) 주재하다, 진행하다"
+  },
+  {
+   "word": "agenda",
+   "pos": "noun",
+   "meaning": "회의 안건, 의제"
+  },
+  {
+   "word": "interviewee",
+   "pos": "noun",
+   "meaning": "면담 대상자, 인터뷰를 받는 사람"
+  },
+  {
+   "word": "strategic",
+   "pos": "adjective",
+   "meaning": "전략적인"
+  },
+  {
+   "word": "variety",
+   "pos": "noun",
+   "meaning": "다양함, 여러 종류 → \"a wide variety of + 여러 개(-s)\" 덩어리로 쓰세요"
+  }
+ ],
+ "_html_md5": "b7aefd191eafb5fe7633afab235b2ce7"
+}

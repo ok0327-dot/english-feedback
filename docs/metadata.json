@@ -536,5 +536,10 @@
     "topic": "Talking About Neighbors and Neighborhoods (\"Who Lives Next Door\")",
     "target_grammar": "subject-verb agreement",
     "engine": "claude"
+  },
+  "2026-11-26": {
+    "topic": "Cultural Understanding — Meeting Styles at Work",
+    "target_grammar": "plural nouns (countable nouns)",
+    "engine": "claude"
   }
 }
