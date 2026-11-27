@@ -1,0 +1,61 @@
+{
+ "date": "2026-11-27",
+ "iso": [
+  2026,
+  48
+ ],
+ "topic": "Talking About Family Pets and Choosing the Right Pet for Your Lifestyle",
+ "grammar": "articles",
+ "grammar_norm": "Articles (a/an/the)",
+ "score": 5.5,
+ "pairs": [
+  {
+   "said": "Yes, I don't have experience, but it's okay, it's possible to answer.",
+   "natural": "I've never had a pet like that, but that's okay. I can still talk about it."
+  },
+  {
+   "said": "In my case, yeah, maybe 10 years ago, I take the fish.",
+   "natural": "About 10 years ago, I had a pet fish."
+  },
+  {
+   "said": "But one month later, when I came back to my home after school, that dog is gone somewhere.",
+   "natural": "But a month later, when I came home from school, the dog was gone."
+  },
+  {
+   "said": "if some guy have a big family and live the suburbans, that is good chance to take care the dog",
+   "natural": "If someone has a big family and lives in the suburbs, it's a good chance to take care of a dog."
+  },
+  {
+   "said": "Is it out of the question, or I need to change my question?",
+   "natural": "Is that okay to ask, or should I ask something else?"
+  }
+ ],
+ "vocab": [
+  {
+   "word": "low-maintenance",
+   "pos": "adjective",
+   "meaning": "손이 많이 안 가는, 관리가 쉬운"
+  },
+  {
+   "word": "commitment",
+   "pos": "noun",
+   "meaning": "(시간·노력을 쏟겠다는) 약속, 책임"
+  },
+  {
+   "word": "stray",
+   "pos": "adjective",
+   "meaning": "길 잃은, 주인 없는 (stray dog / stray cat)"
+  },
+  {
+   "word": "feral",
+   "pos": "adjective",
+   "meaning": "야생화된 (사람 손을 떠나 야생처럼 사는)"
+  },
+  {
+   "word": "accommodate",
+   "pos": "verb",
+   "meaning": "수용하다, 맞춰 주다"
+  }
+ ],
+ "_html_md5": "3d76152205470e4fb4c95dd13e89edc8"
+}

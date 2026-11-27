@@ -541,5 +541,10 @@
     "topic": "Cultural Understanding — Meeting Styles at Work",
     "target_grammar": "plural nouns (countable nouns)",
     "engine": "claude"
+  },
+  "2026-11-27": {
+    "topic": "Talking About Family Pets and Choosing the Right Pet for Your Lifestyle",
+    "target_grammar": "articles (a/an/the)",
+    "engine": "claude"
   }
 }
