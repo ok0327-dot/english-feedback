@@ -1,0 +1,263 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#0f0f13"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="당근영어"><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="icon" type="image/png" sizes="192x192" href="icon-192.png"><script src="install-banner.js" defer></script><script src="sw-reg.js" defer></script>
+<title>🎙️ 라디오 2026-W47</title><style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Noto Sans KR',-apple-system,sans-serif;background:#0f0f13;color:#e4e4e7;line-height:1.7}
+.header{background:linear-gradient(135deg,#241a3a,#3a2410,#0f3460);padding:42px 24px 30px;text-align:center;border-bottom:1px solid rgba(255,255,255,.06)}
+.header h1{font-size:24px;color:#f5f0ff;margin-bottom:8px}
+.header .range{font-size:13px;color:#c4b5fd;letter-spacing:1px}
+.nav{max-width:760px;margin:0 auto;padding:14px 20px 0;display:flex;justify-content:space-between;font-size:13px}
+.nav a{color:#64748b;text-decoration:none;padding:6px 10px;border-radius:8px}.nav a:hover{color:#a78bfa;background:#16161d}
+.container{max-width:760px;margin:0 auto;padding:18px 20px 80px}
+.card{background:#16161d;border:1px solid rgba(255,255,255,.06);border-radius:16px;padding:20px;margin-bottom:18px}
+.card h2{font-size:16px;color:#f1f5f9;margin-bottom:12px}
+.player{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-bottom:14px}
+.pbtn{border:none;border-radius:10px;padding:12px 18px;font-size:14px;font-weight:700;cursor:pointer;font-family:inherit;color:#0f0f13;background:linear-gradient(135deg,#a78bfa,#818cf8)}
+.pbtn.alt{background:#1e293b;color:#cbd5e1}
+.pbtn:active{transform:translateY(1px)}
+.speed{display:flex;align-items:center;gap:6px;font-size:12px;color:#94a3b8;margin-left:auto}
+.speed input{accent-color:#a78bfa}
+.stage{display:flex;flex-direction:column;gap:10px;margin-top:6px}
+.bubble{max-width:88%;padding:11px 14px;border-radius:14px;font-size:14px;border:1px solid transparent;transition:all .2s}
+.bubble .who{display:block;font-size:11px;font-weight:700;margin-bottom:3px;opacity:.8}
+.bubble.mc{align-self:flex-start;background:#1e1b2e;border-color:rgba(167,139,250,.25)}.bubble.mc .who{color:#a78bfa}
+.bubble.coach{align-self:flex-end;background:#1a2433;border-color:rgba(56,189,248,.22)}.bubble.coach .who{color:#38bdf8}
+.bubble.on{border-color:#fbbf24;box-shadow:0 0 0 1px #fbbf24}
+.modes{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.mode{display:flex;flex-direction:column;gap:4px;align-items:center;padding:16px 10px;background:#0f0f13;border:1px solid rgba(255,255,255,.08);border-radius:12px;color:#cbd5e1;cursor:pointer;font-size:13px;text-align:center}
+.mode:hover{border-color:rgba(167,139,250,.4);color:#a78bfa}.mode .ico{font-size:22px}.mode .sub{font-size:11px;color:#64748b}
+.muted{color:#64748b;font-size:12px}
+.toast{position:fixed;bottom:28px;left:50%;transform:translateX(-50%) translateY(80px);background:#1e293b;color:#a78bfa;padding:13px 26px;border-radius:12px;font-size:14px;border:1px solid rgba(167,139,250,.25);opacity:0;transition:all .4s;z-index:99}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+.epweek{font-size:13px;color:#a78bfa;font-weight:700;margin-bottom:6px}
+audio{width:100%;margin-top:4px}
+.archive{display:flex;flex-direction:column;gap:6px;margin-top:10px}
+.archive a{font-size:12.5px;color:#94a3b8;text-decoration:none;padding:8px 12px;background:#0f0f13;border:1px solid rgba(255,255,255,.06);border-radius:8px}
+.archive a:hover{color:#a78bfa;border-color:rgba(167,139,250,.3)}
+.weeklist{display:flex;flex-direction:column;gap:6px;margin-top:4px}
+.weekrow{display:flex;align-items:center;gap:10px;font-size:13px;color:#cbd5e1;text-decoration:none;padding:11px 13px;background:#0f0f13;border:1px solid rgba(255,255,255,.06);border-radius:10px}
+.weekrow:hover{border-color:rgba(167,139,250,.4);color:#a78bfa}
+.weekrow.active{border-color:rgba(167,139,250,.5);background:#1e1b2e}
+.weekrow .wk{font-weight:700;color:#a78bfa;white-space:nowrap}
+.weekrow .wr{color:#64748b}
+.weekrow .wk-audio{margin-left:auto;font-size:14px;min-width:18px;text-align:right}
+.foot{text-align:center;font-size:11px;color:#475569;margin-top:26px;line-height:1.8}
+</style></head><body>
+<div class="header"><h1>🎙️ 라디오 · 2026-W47</h1>
+<div class="range">11/16~11/20 · 주차 기록 · 브라우저 음성으로 청취</div></div>
+<div class="nav"><a href="radio.html">← 최신 라디오</a><a href="review-index.html">📚 복습 목록 →</a></div>
+<div class="container">
+
+  <div class="card"><h2>🎧 오디오 에피소드 <span class="muted" style="font-weight:400">· 진짜 음성 · 이 주차</span></h2>
+    <div id="audio-latest" class="muted">에피소드 불러오는 중…</div></div>
+
+  <div class="card"><h2>🗂 주차별 라디오 기록 <span class="muted" style="font-weight:400">· 최신순 · 누적</span></h2>
+    <div class="weeklist"><a class="weekrow" data-wk="2026-W48" href="radio.html"><span class="wk">2026-W48</span><span class="wr">11/23~11/27 · 4회</span><span class="wk-audio"></span></a><a class="weekrow active" data-wk="2026-W47" href="radio-2026-W47.html"><span class="wk">2026-W47 · 현재</span><span class="wr">11/16~11/20 · 5회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W46" href="radio-2026-W46.html"><span class="wk">2026-W46</span><span class="wr">11/9~11/13 · 5회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W45" href="radio-2026-W45.html"><span class="wk">2026-W45</span><span class="wr">11/2~11/6 · 5회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W44" href="radio-2026-W44.html"><span class="wk">2026-W44</span><span class="wr">10/26~10/30 · 4회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W43" href="radio-2026-W43.html"><span class="wk">2026-W43</span><span class="wr">10/19~10/23 · 5회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W42" href="radio-2026-W42.html"><span class="wk">2026-W42</span><span class="wr">10/12~10/16 · 5회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W41" href="radio-2026-W41.html"><span class="wk">2026-W41</span><span class="wr">10/5~10/9 · 4회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W39" href="radio-2026-W39.html"><span class="wk">2026-W39</span><span class="wr">9/21~9/25 · 3회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W38" href="radio-2026-W38.html"><span class="wk">2026-W38</span><span class="wr">9/14~9/18 · 5회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W37" href="radio-2026-W37.html"><span class="wk">2026-W37</span><span class="wr">9/7~9/11 · 5회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W36" href="radio-2026-W36.html"><span class="wk">2026-W36</span><span class="wr">8/31~9/4 · 4회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W34" href="radio-2026-W34.html"><span class="wk">2026-W34</span><span class="wr">8/17~8/21 · 8회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W33" href="radio-2026-W33.html"><span class="wk">2026-W33</span><span class="wr">8/10~8/14 · 5회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W32" href="radio-2026-W32.html"><span class="wk">2026-W32</span><span class="wr">8/3~8/7 · 5회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W31" href="radio-2026-W31.html"><span class="wk">2026-W31</span><span class="wr">7/27~7/31 · 3회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W30" href="radio-2026-W30.html"><span class="wk">2026-W30</span><span class="wr">7/20~7/24 · 5회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W29" href="radio-2026-W29.html"><span class="wk">2026-W29</span><span class="wr">7/13~7/17 · 4회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W28" href="radio-2026-W28.html"><span class="wk">2026-W28</span><span class="wr">7/6~7/10 · 5회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W27" href="radio-2026-W27.html"><span class="wk">2026-W27</span><span class="wr">6/29~7/3 · 3회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W26" href="radio-2026-W26.html"><span class="wk">2026-W26</span><span class="wr">6/22~6/26 · 5회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W25" href="radio-2026-W25.html"><span class="wk">2026-W25</span><span class="wr">6/15~6/19 · 5회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W24" href="radio-2026-W24.html"><span class="wk">2026-W24</span><span class="wr">6/8~6/12 · 5회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W23" href="radio-2026-W23.html"><span class="wk">2026-W23</span><span class="wr">6/1~6/5 · 1회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W22" href="radio-2026-W22.html"><span class="wk">2026-W22</span><span class="wr">5/25~5/29 · 3회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W21" href="radio-2026-W21.html"><span class="wk">2026-W21</span><span class="wr">5/18~5/22 · 3회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W20" href="radio-2026-W20.html"><span class="wk">2026-W20</span><span class="wr">5/11~5/15 · 4회</span><span class="wk-audio"></span></a><a class="weekrow" data-wk="2026-W19" href="radio-2026-W19.html"><span class="wk">2026-W19</span><span class="wr">5/4~5/8 · 1회</span><span class="wk-audio"></span></a></div></div>
+
+  <div class="card"><h2>▶ 바로 듣기 <span class="muted" style="font-weight:400">· 브라우저 음성(즉시·폴백)</span></h2>
+    <div class="player">
+      <button class="pbtn" id="play">▶ 재생</button>
+      <button class="pbtn alt" id="pause">⏸ 일시정지</button>
+      <button class="pbtn alt" id="resume">▶ 이어듣기</button>
+      <button class="pbtn alt" id="stop">⏹ 처음부터</button>
+      <label class="speed">속도 <input type="range" id="rate" min="0.7" max="1.3" step="0.1" value="1"> <span id="rv">1.0x</span></label>
+    </div>
+    <div class="muted" id="ttswarn" style="margin-bottom:8px"></div>
+    <div class="muted" style="margin:2px 0 10px;font-size:11.5px;line-height:1.7">💡 재생 중에는 화면이 자동으로 꺼지지 않게 막아요(Wake&nbsp;Lock). 다만 직접 화면을 끄면 브라우저 음성은 멈출 수 있어요 — <b>화면을 끈 채 듣고 싶다면 맨 위 🎧 오디오 에피소드(MP3)</b>를 쓰세요. 잠금화면에서도 재생됩니다.</div>
+    <div class="stage" id="stage"></div>
+  </div>
+
+  <div class="card"><h2>💬 이 내용으로 AI와 이야기하기</h2>
+    <div class="muted" style="margin-bottom:10px">클릭하면 이 주차 요약 프롬프트가 복사되고 Gemini가 열립니다. 붙여넣고 대화하세요.</div>
+    <div class="modes">
+      <div class="mode" onclick="copyOpen('chat')"><span class="ico">💬</span>튜터 대화<span class="sub">약점 집중 연습</span></div>
+      <div class="mode" onclick="copyOpen('lecture')"><span class="ico">🎓</span>강의식 설명<span class="sub">규칙+예문+퀴즈</span></div>
+      <div class="mode" onclick="copyOpen('radio')"><span class="ico">🎙</span>라디오 인터뷰<span class="sub">게스트 롤플레이</span></div>
+    </div>
+  </div>
+
+  <div class="card"><h2>📓 NotebookLM 팟캐스트로 듣기 <span class="sub">고품질·무료</span></h2>
+    <div class="muted" style="margin-bottom:12px">이번 주 학습 다이제스트(교정·강사 피드백·어휘 전부)를 복사해 <b>NotebookLM</b>에 붙여넣고 <b>Audio Overview</b>를 만들면, 2인 진행 영어 팟캐스트가 무료로 생성됩니다(현재 TTS보다 자연스러움).</div>
+    <div class="modes">
+      <div class="mode" onclick="window.open('https://notebooklm.google.com/','_blank');copyDigest()"><span class="ico">📓</span>복사+NotebookLM 열기<span class="sub">원클릭 반자동</span></div>
+      <div class="mode" onclick="copyDigest()"><span class="ico">📋</span>다이제스트만 복사<span class="sub">붙여넣기용 텍스트</span></div>
+    </div>
+  </div>
+
+  <div class="foot">대본: scripts/build_radio.py · 다이제스트: scripts/build_digest.py · 음성: 브라우저 Web Speech(무료) · 주차별 누적 · 매주 금요일 Claude 갱신</div>
+</div>
+
+<pre id="radio-src" hidden>민지|en|You&#x27;re tuned in to Joey FM, ninety-nine point one. English that sticks, every single week.
+알렉스|en|This week your tutor caught something you said on Monday. The teaser: He hold the step. Can you hear what&#x27;s wrong? Stay tuned, it&#x27;s coming up first.
+민지|en|Hi everyone! I&#x27;m Minji, your host.
+알렉스|en|And I&#x27;m Alex, your English coach. Week 47, four lessons down.
+민지|en|Four lessons: textbook swap, home improvement, stress talk, and why diets don&#x27;t stick.
+알렉스|en|Real situations, real sentences. Monday through Thursday, you were there for all of it.
+민지|en|And today we rewind, replay, and fix. Let&#x27;s go.
+알렉스|en|Main segment first. Tutor Rewind: your time-travel back to the actual classroom.
+민지|en|Rewind to Monday. Your tutor showed you a picture of two people working on a home. One guy is up on a stepladder.
+알렉스|en|And you said: He hold the step.
+민지|en|Can you hear what&#x27;s off? Think for three seconds. Three, two, one.
+알렉스|en|Your tutor&#x27;s fix: He is standing on the stepladder.
+민지|en|Two little words made all the difference: He is. When something is happening right now, is or are has to be in there.
+알렉스|en|Let&#x27;s say it. He is standing on the stepladder. One more time. He is standing on the stepladder.
+민지|en|And your AI coach flagged the same kind of slip on Thursday too. When both your tutor and your AI coach catch the same thing, that&#x27;s your real priority.
+민지|ko|한 줄 정리: 월요일에 &#x27;He hold the step&#x27;라고 했는데, &#x27;He is standing on the stepladder&#x27;가 맞아요. 지금 일어나는 일이면 is나 are를 반드시 넣어요.
+알렉스|en|Same Monday lesson, same picture. You were describing both people this time.
+민지|en|And you said: Two people painting in their home, maybe they have a home improvement.
+알렉스|en|Same question. What&#x27;s missing? Three, two, one.
+민지|en|Your tutor&#x27;s fix: Two people are painting in their home, maybe they have a home improvement.
+알렉스|en|Same idea. It&#x27;s happening right now, so you need are. Two people are painting. That are is not optional.
+알렉스|en|Try it once. Two people are painting. Two people are painting in their home.
+민지|ko|한 줄 정리: 월요일에 &#x27;Two people painting&#x27;이라고 했는데, &#x27;Two people are painting&#x27;이 맞아요. 지금 하는 중이면 is나 are를 먼저 넣어요.
+민지|en|One more from Monday. You were explaining what DIY project you did at home.
+알렉스|en|And you said: I changed the part that pours water.
+민지|en|That&#x27;s very creative, actually. What&#x27;s the natural English word? Three, two, one.
+알렉스|en|Your tutor&#x27;s fix: I changed my showerhead.
+민지|en|Just one word! That&#x27;s the power of knowing the right chunk.
+알렉스|en|English has a word for almost every household thing. The trick is to know the chunk and say it. Changed my showerhead. Changed my showerhead.
+민지|ko|한 줄 정리: 월요일에 &#x27;the part that pours water&#x27;라고 설명했는데, &#x27;showerhead&#x27; 한 단어예요. 길게 설명하는 대신 딱 맞는 영어 단어를 외워 두세요.
+민지|en|Coming up after the game: we dig deep into why is and are keep disappearing. Stay with us.
+알렉스|en|Game time! This one is called Spot the Mistake. I read a sentence, you find the mistake fast. Ready?
+민지|en|Ready!
+알렉스|en|Sentence one. And every morning, I on the scale and check my weight.
+민지|en|Spot it! Three, two, one!
+알렉스|en|The fix: Every morning, I step on the scale and check my weight. The verb step was completely missing.
+민지|ko|정답: &#x27;I on the scale&#x27; 말고 &#x27;I step on the scale&#x27;. 행동을 나타내는 동사가 빠졌어요.
+알렉스|en|Sentence two. The team leader usually have accountable to the task.
+민지|en|Two mistakes this time! Three, two, one!
+알렉스|en|The fix: The team leader is usually accountable for the task. Have becomes is, to becomes for.
+민지|ko|정답: &#x27;usually have accountable to&#x27; 말고 &#x27;is usually accountable for&#x27;. 주어가 한 명이면 is이고, accountable 뒤엔 for가 짝이에요.
+알렉스|en|Last one for Spot the Mistake. If I use the strong skill, that colour is different to other side.
+민지|en|Find the fix! Three, two, one.
+알렉스|en|The natural English: If I paint with too much pressure, that wall&#x27;s colour is different than the other side.
+민지|ko|정답: 비교할 땐 &#x27;different to&#x27; 말고 &#x27;different than&#x27;. 그리고 &#x27;strong skill&#x27; 말고 &#x27;too much pressure&#x27;가 더 자연스러워요.
+알렉스|en|How many did you get? Even one is a win.
+민지|en|Round two. This one is Real or Wrong? I say a sentence, you say out loud: real English or wrong English. Quick!
+알렉스|en|Ten years later, I supposedly become rich.
+민지|en|Real or wrong? Three, two, one. That&#x27;s wrong!
+알렉스|en|The natural version: Ten years from now, I&#x27;ll hopefully be rich. Later becomes from now, supposedly becomes hopefully.
+민지|ko|정답: &#x27;Ten years later, I supposedly&#x27; 말고 &#x27;Ten years from now, I&#x27;ll hopefully&#x27;. 미래 소망은 hopefully, 미래 시점엔 from now.
+알렉스|en|Next one. It&#x27;s a little chilly, but it&#x27;s a beautiful day, and I&#x27;m feeling great.
+민지|en|Real or wrong? Three, two, one. That&#x27;s real! Nice.
+알렉스|en|Clean sentence. Hold onto that one.
+알렉스|en|Last one. That is impossible to get sleep in the night.
+민지|en|Real or wrong? Go! Three, two, one. Wrong!
+알렉스|en|The natural fix: It&#x27;s when you can&#x27;t fall asleep at night. Fall asleep is the natural chunk.
+민지|ko|정답: &#x27;That is impossible to get sleep&#x27; 말고 &#x27;It&#x27;s when you can&#x27;t fall asleep&#x27;. &#x27;fall asleep&#x27;이 자연스러운 덩어리예요.
+민지|en|Now, Why It Happens. Alex, tell us: why do is and are keep disappearing from the sentences?
+알렉스|en|Great question. Here&#x27;s the thing: in Korean, you can describe a scene without an extra helper word and the sentence works. But in English, is and are are doing real work.
+민지|en|What work exactly?
+알렉스|en|They show that something is happening right now. He painting doesn&#x27;t work. He is painting works. The is turns on the right-now signal.
+민지|ko|핵심: 지금 보이는 장면을 말할 때 is나 are가 반드시 필요해요. 한국어는 없어도 되지만 영어는 아니에요.
+알렉스|en|Here&#x27;s a simple rule of thumb: when you describe what you see happening right now, always start with someone is or they are. Someone is standing. They are painting.
+알렉스|en|And once you start hearing it, you can&#x27;t unhear it. All those -ing words without is or are will start to sound incomplete.
+민지|en|Tutor caught it on Monday, AI caught it on Thursday. Same habit, different days. That&#x27;s your real priority this week.
+민지|ko|강사랑 AI가 둘 다 잡은 게 있으면 그게 진짜 우선순위예요. 이번 주엔 is나 are가 빠진 문장들이 그 주인공이에요.
+민지|en|Halfway through the show. Quick check in Korean.
+민지|ko|중간 정리 첫째, 월요일 수업: &#x27;He hold the step&#x27; 말고 &#x27;He is standing on the stepladder&#x27;. is나 are 뒤에 -ing.
+민지|ko|중간 정리 둘째, 월요일 수업: &#x27;Two people painting&#x27; 말고 &#x27;Two people are painting&#x27;. 지금 일어나는 일이면 is나 are 먼저.
+민지|ko|중간 정리 셋째, 월요일 수업: &#x27;the part that pours water&#x27; 말고 &#x27;showerhead&#x27;. 집 관련 단어는 덩어리로 외워요.
+민지|ko|그리고 이번 주 1위 패턴: is나 are가 빠진 문장. 지금 하는 일이면 is나 are를 먼저 넣어요.
+알렉스|en|Correction Clinic. I&#x27;ll say the original, Minji gives the fix. Try to beat her to it.
+알렉스|en|Yeah, it&#x27;s okay, but I need to help to change my textbook. Is it possible to help?
+민지|en|Natural version: Could you help me change my textbook?
+알렉스|en|That is permanently finished or just finished temporarily, the textbook?
+민지|en|Natural version: Is the textbook gone for good, or is it just temporary?
+민지|ko|메모: &#x27;gone for good&#x27;은 영원히 사라진 뜻. 아주 자주 쓰는 덩어리예요.
+알렉스|en|What&#x27;s mean the patching up?
+민지|en|Natural version: What does patching up mean?
+알렉스|en|Many employees had a distress during the work, during the task, during their task, due to their task.
+민지|en|Natural version: A lot of employees are stressed out because of their workload.
+민지|ko|메모: &#x27;stressed out because of workload&#x27;. stressed out은 스트레스를 많이 받은 상태예요.
+알렉스|en|I&#x27;m almost understanding this paragraph. So yeah, I have no question.
+민지|en|Natural version: I understand most of this paragraph, so I don&#x27;t have any questions.
+알렉스|en|Sometimes I turn on the YouTube and do yoga with my family. Sometimes I can listen the birds singing.
+민지|en|Natural version: Sometimes I put on a yoga video on YouTube. With the windows open, I can hear the birds singing.
+민지|ko|메모: &#x27;listen&#x27; 뒤엔 to나 hear를 써요. &#x27;can listen the birds&#x27; 말고 &#x27;can hear the birds&#x27;.
+알렉스|en|I think if I have a headache or my eye was sick, sore my eyes, and this signal is that I had so many stress.
+민지|en|Natural version: When I get a headache or my eyes feel sore, that&#x27;s a sign I&#x27;m under a lot of stress.
+알렉스|en|So just I release my stress to yoga, to yoga in the weekends, or to swimming in a hotel pool, or walk the near park.
+민지|en|Natural version: I usually relieve stress by doing yoga on weekends, swimming in a hotel pool, or taking a walk in a nearby park.
+민지|ko|메모: &#x27;relieve stress&#x27;가 스트레스를 푼다는 말. &#x27;release&#x27; 말고 &#x27;relieve&#x27;를 써요.
+알렉스|en|Some guy passed the exams to use the AI. I heard.
+민지|en|Natural version: I heard someone used AI to cheat on the exam.
+알렉스|en|We have to repeat the work and have a detailed work finishing touch.
+민지|en|Natural version: We have to repeat the work and have a detailed finishing touch.
+민지|ko|메모: &#x27;detailed finishing touch&#x27;. &#x27;work&#x27;가 하나 불필요하게 끼어들었어요. 덩어리 그대로: &#x27;a detailed finishing touch&#x27;.
+민지|en|Let&#x27;s take a little detour. Culture Corner!
+알렉스|en|Did you know the word stress came from the Latin word strictus, which means pulled tight? Like a rope under tension.
+민지|en|That&#x27;s perfect for this week&#x27;s theme.
+알렉스|en|And scientists gave the good kind of stress its own name: eustress. The eu part comes from Greek and means good.
+민지|ko|문화 한 줄: stress의 긍정적 버전이 &#x27;eustress&#x27;예요. 성장을 위한 좋은 긴장감이에요.
+알렉스|en|English speakers say I&#x27;m under stress, as if stress is a heavy weight sitting on top of them. Very physical image.
+알렉스|en|Now, Topic Talk. This week&#x27;s themes were stress and diets. Here are words you can use right away.
+민지|en|First: relieve. As in, I relieve stress by swimming or doing yoga.
+알렉스|en|And we heard it this week: I usually relieve stress by doing yoga on weekends.
+민지|en|Next: distress. That&#x27;s the bad kind of stress, extreme worry or pain.
+알렉스|en|As in: I could see the distress on her face when she heard the news.
+민지|en|Next: consistency. The key to any diet or long-term habit.
+알렉스|en|As in: Consistency is more important than intensity when you&#x27;re building a new habit.
+민지|en|And bonus: eustress. The good kind that pushes you to grow.
+민지|ko|이번 주 단어: relieve는 풀다, distress는 극심한 걱정, consistency는 꾸준함, eustress는 좋은 스트레스.
+알렉스|en|And now, today&#x27;s three-line summary in Korean.
+민지|ko|하나, &#x27;He hold&#x27;나 &#x27;Two people painting&#x27; 말고 is나 are 먼저: &#x27;He is standing&#x27;, &#x27;Two people are painting&#x27;. 지금 일어나는 일엔 is나 are가 반드시 있어야 해요.
+민지|ko|둘, &#x27;the part that pours water&#x27; 말고 &#x27;showerhead&#x27; 한 단어. 영어엔 집 관련 딱 맞는 단어가 많으니 덩어리로 익혀요.
+민지|ko|셋, &#x27;relieve stress&#x27;를 외워 두세요. 스트레스를 푼다고 할 때 가장 자연스러운 표현이에요.
+알렉스|en|Your fluency average this week: 6.1 out of ten. It dipped a little from your overall average of 7.1.
+민지|en|That just means there&#x27;s room to climb, and we know exactly what to work on.
+알렉스|en|Your mission for next week: every time you describe something happening right now, say is or are out loud before the action word. And keep half an eye on a and the in front of nouns.
+민지|ko|다음 주 미션: 지금 일어나는 일이면 is나 are 먼저. 그리고 a와 the도 신경 써요.
+알렉스|en|Awareness first, perfection later. You&#x27;re noticing these patterns, and that&#x27;s exactly how they click.
+민지|en|This has been Joey FM, ninety-nine point one.
+알렉스|en|See you next Friday, Joey. Keep talking, keep growing!</pre>
+<div class="toast" id="toast">✅ 복사됐어요! Gemini에 붙여넣으세요</div>
+<script>
+const PAGE_WEEK="2026-W47";
+const PROMPTS={chat:"아래는 이번 주 내 전화영어 학습 요약이야.\n\n[이번 주: 2026-W47 · 5회 수업]\n누적 약점 Top: Articles (a/an/the)(19회), Subject–Verb Agreement(17회), Verb Tense(16회)\nAI 교정(❌→✅):\n  - Yeah, it's okay, but I need to help to change my textbook. Is it possible to help? → Could you help me change my textbook?\n  - That is permanently finished or just finished temporarily, the textbook? → Is the textbook gone for good, or is it just temporary?\n  - I changed my showerhead because before the change, my showerhead leaked the small water, and that water power is so weak. → I replaced my showerhead because the old one was leaking a little, and the water pressure was really weak.\n  - What's mean the patching up? → What does 'patching up' mean?\n  - Many employees had a distress during the work, during the task, during their task, due to their task. → A lot of employees are stressed out because of their workload.\n  - That is impossible to get sleep in the night. → It's when you can't fall asleep at night.\n강사 교정(❌→✅):\n  - Do you have time to do your English practice? → Alternative:  You are ready/prepared to start your class today?\n  - Today's class was very PLEASANT (pronounced PRE-SENT) → Today's class was very PLEASANT (pronounced PLEH-SANT).\n  - Your health is DETERMINE (pronounced DEE-TER-MINE long i sound) in part by what you eat. → Your health is DETERMINE (pronounced dee-TER-muhnd), short u sound) in part by what you eat.\n  - Fad diets don't take into consideration your unique PHYSIOLOGY  (pronounced FRIZ-EE-OH-LOH-JEE and METABOLISM (pronounced meh-tah-BOH-lih-zim) → Fad diets don't take into consideration your unique PHYSIOLOGY.(pronounced FIZ-EE-OH-LOH-JEE) and METABOLISM (pronounced meh-tah-BOH-lih-zim).\n  - POLITICIANS (pronounced POH-LIT-CANS) are ultimately accountable to the voters . → POLITICIANS (pronounced POH-LIH-TIH-SHUNS) are ultimately accountable to the voters .\n  - Is this film APPROPRIATE (pronounced AH-PRO-PREE-ATE) for small children? → Is this film APPROPRIATE (pronounced AH-PRO-PREE-ATE) for small children?\n핵심 어휘: finishing touch(마무리 손질, 최종 마무리 (보통 \"put / add the finishing touches to / on ~\" 덩어리로 써요)), patch up((임시로) 고치다, 땜질하다. 다툰 사이를 수습한다는 뜻도 있어요.), mend(수선하다, 고치다), water pressure(수압), stepladder(접이식 사다리 (Joey가 \"stepper\"라고 찾던 그 단어예요)), distress(극심한 걱정·괴로움, 고통)\n\n위 약점·교정을 주제로 나와 영어로 대화하면서 복습시켜줘. 먼저 약점 1개와 관련된 상황을 영어로 질문하고, 내 대답이 자연스러운지 교정해줘. 한국어 설명은 필요할 때만 짧게.",lecture:"아래는 이번 주 내 전화영어 학습 요약이야.\n\n[이번 주: 2026-W47 · 5회 수업]\n누적 약점 Top: Articles (a/an/the)(19회), Subject–Verb Agreement(17회), Verb Tense(16회)\nAI 교정(❌→✅):\n  - Yeah, it's okay, but I need to help to change my textbook. Is it possible to help? → Could you help me change my textbook?\n  - That is permanently finished or just finished temporarily, the textbook? → Is the textbook gone for good, or is it just temporary?\n  - I changed my showerhead because before the change, my showerhead leaked the small water, and that water power is so weak. → I replaced my showerhead because the old one was leaking a little, and the water pressure was really weak.\n  - What's mean the patching up? → What does 'patching up' mean?\n  - Many employees had a distress during the work, during the task, during their task, due to their task. → A lot of employees are stressed out because of their workload.\n  - That is impossible to get sleep in the night. → It's when you can't fall asleep at night.\n강사 교정(❌→✅):\n  - Do you have time to do your English practice? → Alternative:  You are ready/prepared to start your class today?\n  - Today's class was very PLEASANT (pronounced PRE-SENT) → Today's class was very PLEASANT (pronounced PLEH-SANT).\n  - Your health is DETERMINE (pronounced DEE-TER-MINE long i sound) in part by what you eat. → Your health is DETERMINE (pronounced dee-TER-muhnd), short u sound) in part by what you eat.\n  - Fad diets don't take into consideration your unique PHYSIOLOGY  (pronounced FRIZ-EE-OH-LOH-JEE and METABOLISM (pronounced meh-tah-BOH-lih-zim) → Fad diets don't take into consideration your unique PHYSIOLOGY.(pronounced FIZ-EE-OH-LOH-JEE) and METABOLISM (pronounced meh-tah-BOH-lih-zim).\n  - POLITICIANS (pronounced POH-LIT-CANS) are ultimately accountable to the voters . → POLITICIANS (pronounced POH-LIH-TIH-SHUNS) are ultimately accountable to the voters .\n  - Is this film APPROPRIATE (pronounced AH-PRO-PREE-ATE) for small children? → Is this film APPROPRIATE (pronounced AH-PRO-PREE-ATE) for small children?\n핵심 어휘: finishing touch(마무리 손질, 최종 마무리 (보통 \"put / add the finishing touches to / on ~\" 덩어리로 써요)), patch up((임시로) 고치다, 땜질하다. 다툰 사이를 수습한다는 뜻도 있어요.), mend(수선하다, 고치다), water pressure(수압), stepladder(접이식 사다리 (Joey가 \"stepper\"라고 찾던 그 단어예요)), distress(극심한 걱정·괴로움, 고통)\n\n위 내용을 강의식으로 차근차근 설명해줘. 각 약점이 왜 틀렸는지 규칙을 짚고, 쉬운 예문 2~3개씩 더 들어주고, 마지막에 1분 요약과 연습문제 3개를 줘.",radio:"아래는 이번 주 내 전화영어 학습 요약이야.\n\n[이번 주: 2026-W47 · 5회 수업]\n누적 약점 Top: Articles (a/an/the)(19회), Subject–Verb Agreement(17회), Verb Tense(16회)\nAI 교정(❌→✅):\n  - Yeah, it's okay, but I need to help to change my textbook. Is it possible to help? → Could you help me change my textbook?\n  - That is permanently finished or just finished temporarily, the textbook? → Is the textbook gone for good, or is it just temporary?\n  - I changed my showerhead because before the change, my showerhead leaked the small water, and that water power is so weak. → I replaced my showerhead because the old one was leaking a little, and the water pressure was really weak.\n  - What's mean the patching up? → What does 'patching up' mean?\n  - Many employees had a distress during the work, during the task, during their task, due to their task. → A lot of employees are stressed out because of their workload.\n  - That is impossible to get sleep in the night. → It's when you can't fall asleep at night.\n강사 교정(❌→✅):\n  - Do you have time to do your English practice? → Alternative:  You are ready/prepared to start your class today?\n  - Today's class was very PLEASANT (pronounced PRE-SENT) → Today's class was very PLEASANT (pronounced PLEH-SANT).\n  - Your health is DETERMINE (pronounced DEE-TER-MINE long i sound) in part by what you eat. → Your health is DETERMINE (pronounced dee-TER-muhnd), short u sound) in part by what you eat.\n  - Fad diets don't take into consideration your unique PHYSIOLOGY  (pronounced FRIZ-EE-OH-LOH-JEE and METABOLISM (pronounced meh-tah-BOH-lih-zim) → Fad diets don't take into consideration your unique PHYSIOLOGY.(pronounced FIZ-EE-OH-LOH-JEE) and METABOLISM (pronounced meh-tah-BOH-lih-zim).\n  - POLITICIANS (pronounced POH-LIT-CANS) are ultimately accountable to the voters . → POLITICIANS (pronounced POH-LIH-TIH-SHUNS) are ultimately accountable to the voters .\n  - Is this film APPROPRIATE (pronounced AH-PRO-PREE-ATE) for small children? → Is this film APPROPRIATE (pronounced AH-PRO-PREE-ATE) for small children?\n핵심 어휘: finishing touch(마무리 손질, 최종 마무리 (보통 \"put / add the finishing touches to / on ~\" 덩어리로 써요)), patch up((임시로) 고치다, 땜질하다. 다툰 사이를 수습한다는 뜻도 있어요.), mend(수선하다, 고치다), water pressure(수압), stepladder(접이식 사다리 (Joey가 \"stepper\"라고 찾던 그 단어예요)), distress(극심한 걱정·괴로움, 고통)\n\n너는 라디오 진행자, 나는 오늘의 게스트야. 내 이번 주 영어 학습 여정을 주제로 인터뷰하듯 대화해줘. 가볍고 격려하는 톤으로, 중간중간 위 교정 표현을 자연스럽게 연습시켜줘. 영어 위주, 한국어는 가끔."};
+function showToast(m){const t=document.getElementById('toast');t.textContent=m;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500);}
+function copyOpen(mode){const txt=PROMPTS[mode]||'';const go=()=>{showToast('✅ 복사됐어요! Gemini에 붙여넣으세요');setTimeout(()=>window.open('https://gemini.google.com/app','_blank'),600);};navigator.clipboard.writeText(txt).then(go).catch(()=>{const a=document.createElement('textarea');a.value=txt;document.body.appendChild(a);a.select();document.execCommand('copy');a.remove();go();});}
+function clip(txt,msg){const go=()=>showToast(msg);navigator.clipboard.writeText(txt).then(go).catch(()=>{const a=document.createElement('textarea');a.value=txt;document.body.appendChild(a);a.select();document.execCommand('copy');a.remove();go();});}
+function copyDigest(){fetch('digest-latest.txt',{cache:'no-store'}).then(r=>{if(!r.ok)throw 0;return r.text();}).then(t=>clip(t,'📓 다이제스트 복사됨! NotebookLM에 붙여넣으세요')).catch(()=>showToast('⚠️ 다이제스트가 아직 없어요 (금요일 생성)'));}
+
+// ── 라디오 플레이어 (Web Speech API) ──
+const RAW=document.getElementById('radio-src').textContent.trim();
+const LINES=RAW.split('\n').map(l=>l.trim()).filter(Boolean).map(l=>{const i1=l.indexOf('|'),i2=l.indexOf('|',i1+1);return{sp:l.slice(0,i1),lang:l.slice(i1+1,i2),text:l.slice(i2+1)};});
+const stage=document.getElementById('stage');
+LINES.forEach((ln,i)=>{const d=document.createElement('div');d.className='bubble '+(ln.sp==='민지'?'mc':'coach');d.dataset.idx=i;d.innerHTML='<span class="who">'+ln.sp+'</span>'+ln.text;stage.appendChild(d);});
+const synth=window.speechSynthesis;
+let voices=[],koV=null,enV=null;
+function pickVoices(){voices=synth?synth.getVoices():[];koV=voices.find(v=>v.lang&&v.lang.toLowerCase().startsWith('ko'))||null;enV=voices.find(v=>v.lang&&v.lang.toLowerCase().startsWith('en'))||null;}
+if(synth){pickVoices();synth.onvoiceschanged=pickVoices;}
+let idx=0,playing=false,rate=1,wakeLock=null;
+async function acquireWake(){try{if('wakeLock' in navigator){wakeLock=await navigator.wakeLock.request('screen');wakeLock.addEventListener('release',()=>{wakeLock=null;});}}catch(e){}}
+function releaseWake(){try{if(wakeLock){wakeLock.release();wakeLock=null;}}catch(e){}}
+function highlight(i){document.querySelectorAll('.bubble').forEach(b=>b.classList.toggle('on',(+b.dataset.idx)===i));const el=document.querySelector('.bubble.on');if(el)el.scrollIntoView({block:'center',behavior:'smooth'});}
+function speakAt(i){if(!synth||i>=LINES.length){playing=false;releaseWake();highlight(-1);idx=0;return;}idx=i;highlight(i);const ln=LINES[i];const u=new SpeechSynthesisUtterance(ln.text);u.lang=ln.lang==='ko'?'ko-KR':'en-US';const v=ln.lang==='ko'?koV:enV;if(v)u.voice=v;u.rate=rate;u.pitch=ln.sp==='민지'?1.15:0.85;u.onend=()=>{if(playing)speakAt(i+1);};u.onerror=()=>{if(playing)setTimeout(()=>speakAt(i+1),250);};synth.speak(u);}
+document.getElementById('play').onclick=()=>{if(!synth){document.getElementById('ttswarn').textContent='이 브라우저는 음성 재생을 지원하지 않아요. 대본을 읽어주세요.';return;}if(playing)return;playing=true;acquireWake();synth.cancel();speakAt(idx>=LINES.length?0:idx);};
+document.getElementById('pause').onclick=()=>{if(synth&&synth.speaking)synth.pause();};
+document.getElementById('resume').onclick=()=>{if(synth){synth.resume();if(playing)acquireWake();}};
+document.getElementById('stop').onclick=()=>{playing=false;releaseWake();if(synth)synth.cancel();idx=0;highlight(-1);};
+document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='visible'&&playing){if(synth)synth.resume();acquireWake();}});
+const rE=document.getElementById('rate');rE.oninput=()=>{rate=parseFloat(rE.value);document.getElementById('rv').textContent=rate.toFixed(1)+'x';};
+if(!synth)document.getElementById('ttswarn').textContent='⚠️ 이 브라우저는 음성 합성을 지원하지 않아 대본만 표시됩니다.';
+
+// ── 오디오 에피소드: 이 페이지의 주차(PAGE_WEEK) MP3 표시 + 목록에 🎧 뱃지 ──
+fetch('radio/episodes.json',{cache:'no-store'}).then(r=>r.ok?r.json():[]).then(eps=>{
+  if(!Array.isArray(eps))eps=[];
+  eps.forEach(e=>{const row=document.querySelector('.weekrow[data-wk="'+e.week+'"] .wk-audio');if(row)row.textContent='🎧';});
+  const L=document.getElementById('audio-latest');
+  const mine=eps.find(e=>e.week===PAGE_WEEK);
+  if(mine){
+    L.innerHTML='<div class="epweek">'+mine.week+' · '+(mine.date||'')+'</div><audio id="ep-audio" controls preload="none" src="radio/'+mine.file+'"></audio>';
+    const au=document.getElementById('ep-audio');
+    // 잠금화면/화면 꺼짐에서도 재생 + 컨트롤 노출(MediaSession). 진짜 음성 파일이라 백그라운드 OK.
+    if(au&&'mediaSession' in navigator){
+      try{navigator.mediaSession.metadata=new MediaMetadata({title:'영어 주간 라디오 '+mine.week,artist:'민지 & 알렉스 · 당근영어',album:'Weekly English Radio'});}catch(e){}
+      try{navigator.mediaSession.setActionHandler('play',()=>au.play());navigator.mediaSession.setActionHandler('pause',()=>au.pause());}catch(e){}
+    }
+  }
+  else{L.textContent='이 주차 오디오(MP3)는 아직 없어요. 아래 ▶ 바로 듣기(브라우저 음성)로 들어보세요.';}
+}).catch(()=>{document.getElementById('audio-latest').textContent='오디오 목록을 불러오지 못했어요. 아래 ▶ 바로 듣기로 들어보세요.';});
+</script>
+</body></html>
