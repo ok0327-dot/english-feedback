@@ -85,6 +85,24 @@ jobs:
           KNH_SEND_SECRET: ${{ secrets.KNH_SEND_SECRET }}
           KNH_CHANNEL: telegram
 
+      # 노션 「영어복습」에 수업(피드백+전사)을 하루 한 페이지로 올린다 (best-effort).
+      # Codex 음성 복습이 이 기록을 읽는다. 빠진 날은 다음 실행이 메우므로, 실패해도 작업은 성공으로 남고
+      # 텔레그램으로만 알린다. NOTION_TOKEN 시크릿이 없으면 아무것도 하지 않는다.
+      - name: 📓 노션 영어복습 기록
+        continue-on-error: true
+        timeout-minutes: 4
+        run: |
+          python scripts/push_notion.py || {
+            curl -s -X POST "https://telegram-notify-hub.dk0327.workers.dev/send" \
+              -H "X-Notify-Secret: $KNH_SEND_SECRET" -H "Content-Type: application/json" \
+              -d '{"channel":"telegram","text":"⚠️ 노션 영어복습 기록 실패 — 다음 실행 때 다시 시도합니다. 계속되면 GitHub Actions 로그 확인"}' || true
+            exit 1
+          }
+        env:
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+          GITHUB_PAGES_URL: ${{ secrets.PAGES_URL }}
+          KNH_SEND_SECRET: ${{ secrets.KNH_SEND_SECRET }}
+
       # 빠진 Whisper 원본 채우기 (best-effort): 원본 보관이 실패한 날을 다음 실행이 메운다.
       # 위 단계의 페이지·메일·알림은 이미 끝났고, 이 단계가 실패해도 작업은 성공으로 남는다.
       - name: 🗄️ 빠진 원본 채우기
