@@ -201,8 +201,9 @@ def title_key(title):
     return (m.group(1), int(m.group(2) or 1)) if m else None
 
 
-def build_lesson(slug, docs_dir=DOCS, pages_url=DEFAULT_PAGES_URL):
-    """복습 페이지 하나를 (제목, 덩어리 목록)으로 만든다. 올리기에 모자라면 Postpone."""
+def build_lesson(slug, docs_dir=DOCS, pages_url=DEFAULT_PAGES_URL, guide_url=None):
+    """복습 페이지 하나를 (제목, 덩어리 목록)으로 만든다. 올리기에 모자라면 Postpone.
+    guide_url 은 진행 안내가 있는 상위 「영어복습」 페이지 주소 — 수업 페이지로 바로 들어온 AI 가 안내를 찾게 한다."""
     key = slug_key(slug)
     if not key:
         raise Postpone("복습 페이지 이름이 아닙니다")
@@ -234,7 +235,10 @@ def build_lesson(slug, docs_dir=DOCS, pages_url=DEFAULT_PAGES_URL):
     head = [(f"수업일 {date} ({weekday})" + (f" · 수업 길이 {m.group(1).strip()}" if m else "") + " · ",
              False, False, None),
             ("원본 복습 페이지", False, False, f"{pages_url.rstrip('/')}/{slug}.html")]
-    blocks = [("p", head), ("h2", [("AI 피드백", False, False, None)])]
+    pointer = [("🤖 이 기록으로 복습할 때는 상위 페이지 ", False, False, None),
+               ("「영어복습」 맨 위 안내", False, False, guide_url),
+               ("를 먼저 읽고 그대로 진행한다.", False, False, None)]
+    blocks = [("p", head), ("p", pointer), ("h2", [("AI 피드백", False, False, None)])]
     blocks += feedback
     blocks += [("h2", [("수업 전사", False, False, None)]),
                ("p", [("Student 가 사용자, Tutor 가 강사입니다. [?] 는 잘 안 들린 부분입니다.", False, False, None)])]
@@ -436,11 +440,12 @@ def run(api, parent, slugs, docs_dir=DOCS, pages_url=DEFAULT_PAGES_URL, dry_run=
             if key:
                 have.add(key)
     pushed = postponed = failed = 0
+    guide_url = "https://www.notion.so/" + parent.replace("-", "")
     for slug in slugs:
         if slug_key(slug) in have:
             continue
         try:
-            title, blocks = build_lesson(slug, docs_dir, pages_url)
+            title, blocks = build_lesson(slug, docs_dir, pages_url, guide_url)
         except Postpone as e:
             postponed += 1
             log(f"⏸️ {slug}: 미룸 — {e}")

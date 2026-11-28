@@ -191,14 +191,16 @@ def plain(block):
 # ── 검사 ───────────────────────────────────────────────────────────
 def test_page_becomes_blocks():
     docs = make_docs({"2026-11-27": make_page()})
-    title, blocks = pn.build_lesson("2026-11-27", docs, "https://example.test")
+    title, blocks = pn.build_lesson("2026-11-27", docs, "https://example.test", "https://www.notion.so/guide")
     assert title == "2026-11-27 (금) Test Topic", title
     out = pn.to_notion(blocks)
     kinds = [b["type"] for b in out]
     texts = [plain(b) for b in out]
     assert kinds[0] == "paragraph" and "수업 길이 20분 1초" in texts[0]
     assert out[0]["paragraph"]["rich_text"][-1]["text"]["link"]["url"] == "https://example.test/2026-11-27.html"
-    assert texts[1] == "AI 피드백" and kinds[1] == "heading_2"
+    assert "「영어복습」 맨 위 안내" in texts[1], "수업 페이지 맨 위에 안내 위치가 있어야 한다"
+    assert out[1]["paragraph"]["rich_text"][1]["text"]["link"]["url"] == "https://www.notion.so/guide"
+    assert texts[2] == "AI 피드백" and kinds[2] == "heading_2"
     assert "0. 📌 Topic" in texts and kinds[texts.index("0. 📌 Topic")] == "heading_3"
     assert '❌ As Said: "I go yesterday."' in texts
     assert kinds[texts.index('❌ As Said: "I go yesterday."')] == "bulleted_list_item"
@@ -235,7 +237,8 @@ def test_push_in_chunks_and_idempotent():
     assert (pushed, postponed, failed) == (1, 0, 0)
     assert fake.live_titles() == ["2026-11-27 (금) Test Topic"]
     page = fake.pages["page-1"]
-    _, blocks = pn.build_lesson("2026-11-27", docs, "https://example.test")
+    _, blocks = pn.build_lesson("2026-11-27", docs, "https://example.test",
+                                "https://www.notion.so/" + PARENT.replace("-", ""))
     assert page["children"] == pn.to_notion(blocks), "덩어리 순서·내용이 그대로 올라가야 한다"
     assert len(page["children"]) > 200
     writes = [c for c in fake.calls if c[0] != "GET"]
